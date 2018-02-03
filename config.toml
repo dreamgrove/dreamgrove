@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://confident-hoover-c2ccdd.netlify.com"
 languageCode = "en-us"
 title = "Dreamgrove"
 theme = "ananke" 
