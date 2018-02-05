@@ -1,7 +1,6 @@
 ---
 published: true
 title: Test Post
-draft: false
 ---
 ## Test Post
 
