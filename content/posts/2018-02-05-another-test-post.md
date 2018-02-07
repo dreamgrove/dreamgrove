@@ -1,5 +1,4 @@
 ---
-date: '2018-02-05 11:22 -0700'
 published: false
 title: Another test post
 ---
