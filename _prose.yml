@@ -15,4 +15,6 @@ prose:
       - name: "author"
         field:
           element: "text"
+          label: "Author"
           placeholder: CURRENT_USER
+          value: CURRENT_USER
