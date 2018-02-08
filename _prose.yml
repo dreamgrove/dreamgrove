@@ -2,7 +2,7 @@ prose:
   rooturl: 'content'
   media: 'static/images'
   metadata:
-    content/posts:
+    content/post:
       - name: "title"
         field:
           element: "text"
