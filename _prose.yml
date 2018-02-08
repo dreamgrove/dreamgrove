@@ -18,3 +18,6 @@ prose:
           label: "Author"
           placeholder: CURRENT_USER
           value: CURRENT_USER
+  users:
+    - login: "faideww"
+      user: "Faide"
