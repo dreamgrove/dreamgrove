@@ -1,7 +1,7 @@
 ---
 date: '2018-02-08'
-published: false
-title: ''
+published: true
+title: 'Testing the date '
 ---
 ## A New Post
 
