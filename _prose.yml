@@ -1,5 +1,6 @@
 prose:
-  rooturl: 'content'
+  rooturl: 'content/post'
+  ignore: ['_prose.yml', 'config.toml', 'netlify.toml']
   media: 'static/images'
   metadata:
     content/post:
