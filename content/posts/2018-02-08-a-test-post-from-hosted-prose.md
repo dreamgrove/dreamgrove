@@ -1,6 +1,6 @@
 ---
 date: '2018-02-08'
-published: false
+published: true
 title: A test post from hosted prose
 ---
 ## A New Post
