@@ -12,3 +12,7 @@ prose:
         field:
           element: "hidden"
           value: CURRENT_DATE
+      - name: "author"
+        field:
+          element: "text"
+          placeholder: CURRENT_USER
