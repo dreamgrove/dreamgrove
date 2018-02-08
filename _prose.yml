@@ -8,3 +8,7 @@ prose:
           element: "text"
           label: "Title"
           placeholder: "Post Title"
+      - name: "date"
+        field:
+          element: "hidden"
+          value: CURRENT_DATE
