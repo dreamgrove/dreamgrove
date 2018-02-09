@@ -11,7 +11,7 @@ First, what are they?
 
 {{< wowhead "spell=251791" >}}: When Gore is consumed, the cooldown of Barkskin is reduced by 1 second.
 
-{{< wowhead "spell=251791" >}}: When Barkskin fades, all healing done to you is increased by 10% for 20 seconds.
+{{< wowhead "spell=251792" >}}: When Barkskin fades, all healing done to you is increased by 10% for 20 seconds.
 
 I want to talk about what each bonus does, how they may impact gameplay and talent choices, and then I’ll give my overall impressions of them.  
 
