@@ -22,7 +22,7 @@ I want to talk about what each bonus does, how they may impact gameplay and tale
 
 The definition of “consuming Gore” is as follows: you have a {{< wowhead "spell=93622" >}} proc, you cast Mangle, and Gore is consumed.  This means it’s not enough to have Gore activate, you have to spend the proc to get the benefit. As it turns out this is not terribly important, since Gore has the same chance to proc regardless of target count (unlike {{< wowhead "spell=203964" >}}, Gore’s chance is defined per cast, not per target hit), but it does slightly reduce the effectiveness since you have a small chance to overwrite existing procs when prioritizing Thrash over Mangle.
 
-The most obvious benefit of this set bonus is that it gives you more flexibility with your {{< wowhead "spell=22812" >}} usage, which may save you an external or trinket on certain encounters. If you synchronize Barkskin with {{< wowhead "spell=200851" >}}, which is common if you’re talented into {{ wowhead "spell=203953" >}} and focusing on DPS, this bonus gives you no benefit.
+The most obvious benefit of this set bonus is that it gives you more flexibility with your {{< wowhead "spell=22812" >}} usage, which may save you an external or trinket on certain encounters. If you synchronize Barkskin with {{< wowhead "spell=200851" >}}, which is common if you’re talented into {{< wowhead "spell=203953" >}} and focusing on DPS, this bonus gives you no benefit.
 
 To discuss the value of the set bonus, let’s express it in terms of damage reduction gains.  I’ll make the following assumptions:
 
@@ -106,4 +106,3 @@ The T20 2pc ({{< wowhead "spell=242236" >}} significantly improves your self-hea
 The T19 4pc ({{< wowhead "spell=211150" >}}) currently grants approximately 5% additional physical DR, in addition to creating opportunities to FR for 0 rage. (I say currently because the 4pc was actually far more valuable during Nighthold, due to {{< wowhead "spell=192081" >}} being a higher % armor per stack and it affecting Mark of Ursol as well.)  Meanwhile the T21 4pc, in the best possible circumstances (7/7 Perpetual Spring, 7/7 Ursoc's Endurance, Survival of the Fittest) is equivalent to 4.4% DR, and in more practical terms is closer to 2% DR.  
 
 In conclusion, I’m very disappointed with this set, and I can’t recommend that anyone aim to use them in their current state.  If these bonuses are what we end up with until the next expansion, I can’t say I’m looking forward to it. We’re still quite a few weeks out from Antorus release, so here’s hoping that we see some positive change between now and then.
-
