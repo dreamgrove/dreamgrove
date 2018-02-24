@@ -1,3 +1,10 @@
+---
+date: '2018-02-24'
+author: Nick
+published: false
+title: Dad Build Guide
+---
+
 <center> An alternative to the current single target staple that is OI/IFE/Incarn, the ‘Dad’ build is called such because of it’s ease and passive play nature. The recommended single target setup for mythic plus, you run SOTF / OI / RM for single target bosses and Sephuz/LATC for trash and some AOE bosses. It has some uses in raid, but not nearly as much as for in the mythic plus scene </center>
 
 **The rotation priority is as follows:**
