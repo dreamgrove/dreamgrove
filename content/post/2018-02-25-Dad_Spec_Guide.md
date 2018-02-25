@@ -52,3 +52,5 @@ The way that you use Dad Build in M+ is you permanently talent Soul of the Fores
 
 3. You effectively gain a extra legendary (Sephuz primarily) on AOE. SOTA was decent and still is decent, but Sephuz + LATC on AOE and Dad Build ST is just too hard to compete with. 
 
+### <center> Sincere thanks are directed to </center>
+#### <center> Jundarer, Nagura, Tettles and Bora for their input and offering of knowledge, as well as also coming up with various common and good talent/legendary combinations. </center>
