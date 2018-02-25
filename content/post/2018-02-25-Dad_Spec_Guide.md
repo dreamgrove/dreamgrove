@@ -8,6 +8,7 @@ title: Dad Build Guide
 <center> An alternative to the current single target staple that is OI/IFE/Incarn, the ‘Dad’ build is called such because of it’s ease and passive play nature. The recommended single target setup for mythic plus, you run SOTF / OI / RM for single target bosses and Sephuz/LATC for trash and some AOE bosses. It has some uses in raid, but not nearly as much as for in the mythic plus scene </center>
 
 **The rotation priority is as follows:**
+
 1. Dots up
 2. Starfall Down / T21 4pc up
 3. Moons on CD
@@ -16,6 +17,7 @@ title: Dad Build Guide
 6. Wrath Filler     
       
 **The cooldown rotation is as follows:**
+
 Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Full Moon -> Starfall -> CA
 
 
@@ -27,6 +29,7 @@ Keep in mind that RM is the crux of this setup. When choosing between RM and OI 
 ## <center> Raid </center>
 
 **The criteria for this build to perform competitively in raids is as follows:**
+
 1. If your fight times do not allow you an extra incarn or the encounter ends right as        
     your cooldown comes backup
     
