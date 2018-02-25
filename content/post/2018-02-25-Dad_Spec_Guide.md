@@ -16,8 +16,7 @@ title: Dad Build Guide
 5. If you have 80+ AP, cast one starsurge
 6. Wrath Filler     
       
-**The cooldown rotation is as follows:**
-
+**The cooldown rotation is as follows:** <br>
 Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Full Moon -> Starfall -> CA
 
 
