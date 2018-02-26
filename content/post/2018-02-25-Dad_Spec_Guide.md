@@ -1,6 +1,6 @@
 ---
 date: '2018-02-24'
-author: Nick, Jundarer, Nagura
+author: ["Nick","Jundarer","Nagura"]
 published: false
 title: Dad Build Guide
 ---
