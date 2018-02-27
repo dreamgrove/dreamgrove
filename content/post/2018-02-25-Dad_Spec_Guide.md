@@ -14,7 +14,8 @@ title: Dad Build Guide
 3. Moons on CD
 4. OI Procs
 5. If you have 80+ AP, cast one starsurge
-6. Wrath Filler     
+6. Spend Empowerments
+7. Wrath Filler     
       
 **The cooldown rotation is as follows:** <br>
 Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Full Moon -> Starfall -> CA
@@ -22,7 +23,7 @@ Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Full Moon -> Starfall -> CA
 
 You now have placed one Starfall down before your CA and will place one more as it expires in the middle of your cooldown. During your CA you cast as many Starsurges as possible apart from bracer procs or your one vanilla starfall.
 
-Keep in mind that RM is the crux of this setup. When choosing between RM and OI to take off, considering OI is always better. 
+Keep in mind that RM is the crux of this setup. When choosing between RM and OI to take off, you should take off OI. 
 
 
 ## <center> Raid </center>
