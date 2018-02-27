@@ -1,6 +1,6 @@
 ---
 date: '2018-02-24'
-author: ["Nick","Jundarer","Nagura"]
+author: ["Jundarer","Nagura","Nick","Tettles","Bora"]
 published: false
 title: Dad Build Guide
 ---
@@ -51,6 +51,3 @@ The way that you use Dad Build in M+ is you permanently talent Soul of the Fores
 2. Incarnation: Chosen of Elune is a very difficult ability to use in mythic +. This is because of the 30 seconds required for trash to live so you would be able to get maximum efficiency out of incarn.
 
 3. You effectively gain a extra legendary (Sephuz primarily) on AOE. SOTA was decent and still is decent, but Sephuz + LATC on AOE and Dad Build ST is just too hard to compete with. 
-
-### <center> Sincere thanks are directed to </center>
-#### <center> Jundarer, Nagura, Tettles and Bora for their input and offering of knowledge, as well as also coming up with various common and good talent/legendary combinations. </center>
