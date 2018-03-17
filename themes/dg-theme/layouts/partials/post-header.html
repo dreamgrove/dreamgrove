@@ -1,17 +1,6 @@
       <hgroup class="article-header">
       <h2 class="article-title">{{ .Title }}</h2>
       <h3 class="article-byline">
-        posted
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ dateFormat "2 January 2006" .Date }}</time>
-        by
-        {{ range $index, $author := .Params.authors }}
-          {{ if gt $index 0 }}, {{ end }}<a href="{{ "/authors/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-      ,
-      {{ if .Params.tags }}
-        in
-        {{ range $index, $tag := .Params.tag }}
-          {{ if gt $index 0 }}, {{ end }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-      {{ end }}
+        {{ partial "post-byline.html" }}
+      </h3>
       </hgroup>

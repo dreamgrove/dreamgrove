@@ -6,3 +6,4 @@ theme = "ghostwriter"
 
 [Taxonomies]
   tag = "tags"
+  author = "authors"

@@ -1,0 +1,297 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  font-size: 62.5%;
+  color: rgba(0, 0, 0, 0.84);
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  margin: 0 auto;
+
+  background: url('/images/bg-splash.png'), url('/images/bg-pattern.png');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+
+  display: grid;
+}
+
+body.home-body {
+  grid-template-areas:
+    "header-title"
+    "header-nav"
+    "jumbotron"
+    "main"
+    "footer";
+}
+
+body.article-body {
+  grid-template-rows: 0fr 0fr 1fr 0fr;
+  grid-template-areas:
+    "header-title"
+    "header-nav"
+    "main"
+    "footer";
+}
+
+.header {
+  background-color: white;
+  width: 100%;
+}
+
+.header-title {
+  grid-area: header-title;
+  text-align: center;
+  color: #1a9c82;
+  font-size: 6rem;
+  margin: 0;
+}
+
+.header-nav {
+  grid-area: header-nav;
+  display: flex;
+  justify-content:space-around;
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+.header-nav>a {
+  text-align: center;
+  padding: 1rem 0;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+
+.header-nav>a:hover {
+  background-color: #ccc;
+}
+
+.header-nav>a:visited {
+  color: black;
+}
+
+.site-crest {
+  display: none;
+}
+
+.jumbotron-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 5rem;
+}
+
+.jumbotron-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.jumbotron-content h2 {
+  font-size: 5rem;
+  margin: 0;
+  font-family: "Arvo";
+}
+
+.jumbotron-content h2>a {
+  text-decoration: none;
+}
+
+.jumbotron-content a {
+  color: white;
+}
+
+.jumbotron-content a:visited {
+  color: white;
+}
+
+.jumbotron-content h3 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.jumbotron-content-subtitle {
+  font-size: 2.5rem;
+}
+
+.jumbotron-content-byline {
+  font-size: 2rem;
+}
+
+.jumbotron-content>a {
+  font-size: 1.5rem;
+  color: white;
+
+
+}
+
+.site-crest {
+  width: 100%;
+}
+
+.main {
+  background-color: white;
+  grid-area: main;
+}
+
+.main section {
+  padding: 2em;
+}
+
+.section-header {
+  border-bottom: 1px solid #000;
+  font-size: 2rem;
+}
+
+.spec-selection {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec {
+  height: 10rem;
+  overflow: hidden;
+
+  width: 100%;
+  font-size: 4rem;
+  line-height: 10rem;
+  text-align: center;
+  color: white;
+
+  background-position: center ;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.spec.balance {
+  background-image: url("/images/spec-balance.png");
+}
+
+.spec.feral {
+  background-image: url("/images/spec-feral.png");
+}
+
+.spec.guardian {
+  background-image: url("/images/spec-guardian.png");
+}
+
+.spec.resto {
+  background-image: url("/images/spec-resto.png");
+}
+
+.article-list, .article {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 0 2em;
+}
+
+.article .article-title {
+  font-size: 5rem;
+  font-family: "Arvo", serif;
+  margin-bottom: 0px;
+}
+
+.article .article-title a {
+  color: rgba(0, 0, 0, 0.84);
+  text-decoration: none;
+}
+
+.article .article-byline {
+  font-size: 1.5rem;
+}
+
+.article .article-preview, .article-body {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  line-height: 150%;
+}
+
+.article.with-image .article-image {
+  display: none;
+}
+
+.footer {
+  background-color: white;
+  grid-area: footer;
+  text-align: center;
+}
+
+.footer h1 {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: grid;
+  }
+
+  body.home-body {
+    grid-template-areas:
+      "header"
+      "jumbotron"
+      "main"
+      "footer";
+  }
+
+  body.article-body {
+  grid-template-rows: 0fr 1fr 0fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  .header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
+
+  .header-title {
+    font-size: 6rem;
+    line-height: 10rem;
+  }
+
+  .header-nav {
+    margin: inherit;
+  }
+
+  .header-nav>a {
+    font-size: 2rem;
+    line-height: 8rem;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .jumbotron-content {
+    padding: 8rem;
+  }
+
+  .main section {
+    padding: 0 2rem;
+  }
+  .spec-selection {
+    height: 400px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .spec {
+    height: 100%;
+    line-height: 72rem;
+    text-align:right;
+    padding-right: 2rem;
+  }
+}
