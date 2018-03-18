@@ -24,12 +24,14 @@
 }
 
 .article-content h1, .article-content h2, .article-content h3 {
+  margin: 6rem 0 3rem;
   font-family: "Arvo";
 }
 
 .article-content p {
   margin-top: 3.8rem;
 }
+
 
 .article-content p:first-child {
   margin-top: 0;
