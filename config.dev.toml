@@ -8,3 +8,4 @@ buildFuture = "true"
 
 [Taxonomies]
   tag = "tags"
+  spec = "specs"

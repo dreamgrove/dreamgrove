@@ -1,12 +1,6 @@
 {{ define "main" }}
-  <header class="header">
-    <h1 class="header-title tk-pauline">{{ .Site.Title }}</h1>
-    <nav class="header-nav">
-      <a href="#">About</a>
-      <a href="#">Authors</a>
-      <a href="#">Discord</a>
-    </nav>
-  </header>
+<body class="home-body">
+  {{ partial "header.html" . }}
   <section class="jumbotron">
     <img src="images/druid-crest.png" class="site-crest" alt=""/>
     {{ partial "jumbotron-content.html" }}
@@ -20,4 +14,5 @@
       {{ end }}
     </section>
   </main>
+</body>
 {{ end }}

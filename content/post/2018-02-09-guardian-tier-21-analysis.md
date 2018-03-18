@@ -1,6 +1,6 @@
 ---
 date: '2018-02-09'
-author: Faide
+authors: ['Faide']
 published: false
 spec: Guardian
 title: Guardian Tier 21 Analysis
@@ -10,9 +10,9 @@ Let’s talk about the Guardian Tier 21 set bonuses.
 
 First, what are they?
 
-{{< wowhead "spell=251791" >}}: When Gore is consumed, the cooldown of Barkskin is reduced by 1 second.
+{{< wowhead "spell=251791" "2pc" >}}: When Gore is consumed, the cooldown of Barkskin is reduced by 1 second.
 
-{{< wowhead "spell=251792" >}}: When Barkskin fades, all healing done to you is increased by 10% for 20 seconds.
+{{< wowhead "spell=251792" "4pc" >}}: When Barkskin fades, all healing done to you is increased by 10% for 20 seconds.
 
 I want to talk about what each bonus does, how they may impact gameplay and talent choices, and then I’ll give my overall impressions of them.
 

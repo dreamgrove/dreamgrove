@@ -1,1 +1,3 @@
-<a href="#" data-wowhead="{{ .Get 0 }}">.</a>
+<a href="#" data-wowhead="{{ .Get 0 }}">
+  {{ if .Get 1 }}{{ .Get 1 }}{{ else }}.{{ end }}
+</a>

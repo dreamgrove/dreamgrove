@@ -1,3 +1,15 @@
+/*
+ * colors: 
+ *  highlight (wordmark, links): #1a9c82
+ *  primary text: rgba(0,0,0,0.84)
+ *  background: rgb(255, 255, 255);
+ * */
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -11,7 +23,6 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-color: green;
   margin: 0 auto;
 
   background: url('/images/bg-splash.png'), url('/images/bg-pattern.png');
@@ -19,6 +30,10 @@ body {
   background-size: cover, auto;
 
   display: grid;
+}
+
+.header, .main, .footer {
+  background-color: rgb(255, 255, 255);
 }
 
 body.home-body {
@@ -40,14 +55,18 @@ body.article-body {
 }
 
 .header {
-  background-color: white;
   width: 100%;
+  color: #1a9c82;
+}
+
+body.article-body .header {
+  background-color: #1a9c82;
+  color: white;
 }
 
 .header-title {
   grid-area: header-title;
   text-align: center;
-  color: #1a9c82;
   font-size: 6rem;
   margin: 0;
 }
@@ -63,8 +82,6 @@ body.article-body {
 .header-nav>a {
   text-align: center;
   padding: 1rem 0;
-  color: black;
-  text-decoration: none;
   font-weight: 700;
   font-size: 2rem;
   line-height: 5rem;
@@ -74,12 +91,8 @@ body.article-body {
   background-color: #ccc;
 }
 
-.header-nav>a:visited {
-  color: black;
-}
-
-.site-crest {
-  display: none;
+.jumbotron {
+  display: flex;
 }
 
 .jumbotron-content {
@@ -102,18 +115,6 @@ body.article-body {
   font-family: "Arvo";
 }
 
-.jumbotron-content h2>a {
-  text-decoration: none;
-}
-
-.jumbotron-content a {
-  color: white;
-}
-
-.jumbotron-content a:visited {
-  color: white;
-}
-
 .jumbotron-content h3 {
   font-weight: normal;
   margin: 0;
@@ -129,22 +130,10 @@ body.article-body {
 
 .jumbotron-content>a {
   font-size: 1.5rem;
-  color: white;
-
-
-}
-
-.site-crest {
-  width: 100%;
 }
 
 .main {
-  background-color: white;
   grid-area: main;
-}
-
-.main section {
-  padding: 2em;
 }
 
 .section-header {
@@ -158,6 +147,7 @@ body.article-body {
 }
 
 .spec {
+  cursor: pointer;
   height: 10rem;
   overflow: hidden;
 
@@ -170,6 +160,11 @@ body.article-body {
   background-position: center ;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.spec:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .spec.balance {
@@ -190,37 +185,39 @@ body.article-body {
 
 .article-list, .article {
   max-width: 700px;
-  margin: 0px auto;
+  margin: 2rem auto;
   padding: 0 2em;
 }
 
-.article .article-title {
+.article {
+  margin-top: 5rem;
+}
+
+.article-summary {
+  margin-bottom: 5rem; 
+}
+
+.article-title {
   font-size: 5rem;
   font-family: "Arvo", serif;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
-.article .article-title a {
-  color: rgba(0, 0, 0, 0.84);
-  text-decoration: none;
+.article-byline {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
 }
 
-.article .article-byline {
+.article-spec {
   font-size: 1.5rem;
 }
 
-.article .article-preview, .article-body {
-  font-family: "Georgia", serif;
-  font-size: 2rem;
-  line-height: 150%;
-}
-
-.article.with-image .article-image {
-  display: none;
+.article .article-content {
+  margin-top: 5rem;
 }
 
 .footer {
-  background-color: white;
   grid-area: footer;
   text-align: center;
 }
@@ -228,6 +225,7 @@ body.article-body {
 .footer h1 {
   font-size: 1.5rem;
   color: #777;
+  margin: 5rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -264,6 +262,9 @@ body.article-body {
     line-height: 10rem;
   }
 
+  .header-title a, .header-title a:hover, .header-title a:visited {
+  }
+
   .header-nav {
     margin: inherit;
   }
@@ -279,7 +280,7 @@ body.article-body {
     padding: 8rem;
   }
 
-  .main section {
+  .main {
     padding: 0 2rem;
   }
   .spec-selection {
