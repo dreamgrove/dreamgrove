@@ -1,0 +1,18 @@
+{{ define "title" }}
+
+{{ .Title }} | {{ .Site.Title }}
+
+{{ end }}
+
+{{ define "main" }}
+<body class="article-body">
+{{ partial "header.html" . }}
+<main class="main">
+  <article class="article">
+    {{ partial "post-header.html" . }}
+    {{ partial "post-content.html" . }}
+    {{ partial "post-footer.html" . }}
+  </article>
+</main>
+</body>
+{{ end }}

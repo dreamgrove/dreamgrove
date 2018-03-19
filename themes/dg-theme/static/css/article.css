@@ -1,0 +1,64 @@
+.article img {
+  max-width: 100%;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.article .author {
+  color: #1a9c82;
+  font-weight: bold;
+}
+
+.article a {
+  color: #1a9c82;
+  text-decoration: underline;
+}
+
+.article-preview, .article-content {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  line-height: 170%;
+  padding: 2rem 0;
+}
+
+.article-content h1, .article-content h2, .article-content h3 {
+  margin: 6rem 0 3rem;
+  font-family: "Arvo";
+}
+
+.article-content p {
+  margin-top: 3.8rem;
+}
+
+
+.article-content p:first-child {
+  margin-top: 0;
+}
+
+.article-spec {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.article-spec a {
+  text-decoration: none;
+}
+
+.article-spec .spec-icon {
+  height: 2.5rem;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.spec-name {
+  font-size: 2rem;
+  vertical-align: top;
+  text-decoration: underline;
+}
