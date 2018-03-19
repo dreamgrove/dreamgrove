@@ -3,12 +3,7 @@
   <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
   by
   {{ range $index, $author := .Params.authors }}
-    {{ if gt $index 0 }}, {{ end }}<a href="{{ "/authors/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ if gt $index 0 }}, {{ end }}<span class="author">{{ . }}</span>
   {{ end }}
-  {{ if .Params.tags }}
-    in
-    {{ range $index, $tag := .Params.tag }}
-      {{ if gt $index 0 }}, {{ end }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-    {{ end }}
-  {{ end }}
+  in {{ partial "post-spec.html" . }}
 </h3>

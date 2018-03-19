@@ -1,0 +1,19 @@
+<span class="article-spec">
+  {{ range $index, $spec := .Params.specs }}
+  {{ if gt $index 0 }}, {{ end }}
+  <a href="{{ "/specs/" | relLangURL }}{{ . | urlize }}">
+    {{ if eq . "Balance" }}
+      <img class="spec-icon" src="/images/icon-balance.jpg" alt="Balance"/>
+    {{ else if eq . "Feral" }}
+      <img class="spec-icon" src="/images/icon-feral.jpg" alt="Feral"/>
+    {{ else if eq . "Guardian" }}
+      <img class="spec-icon" src="/images/icon-guardian.jpg" alt="Guardian"/>
+    {{ else if eq . "Restoration" }}
+      <img class="spec-icon" src="/images/icon-resto.jpg" alt="Restoration"/>
+    {{ else if eq . "Druid" }}
+      <img class="spec-icon" src="/images/icon-druid.jpg" alt="Druid"/>
+    {{ end }}
+    <span class="spec-name">{{ . }}</span>
+  </a>
+  {{ end }}
+</span>

@@ -1,12 +1,14 @@
+{{ define "title"}}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
 {{ define "main" }}
-<body class="home-body">
+<body class="home-body {{ lower .Title }}">
   {{ partial "header.html" . }}
   <section class="jumbotron">
-    <img src="images/druid-crest.png" class="site-crest" alt=""/>
-    {{ partial "jumbotron-content.html" . }}
+    {{ partial "jumbotron-spec.html" . }}
   </section>
   <main class="main">
-  {{ partial "spec-select.html" . }}
     <section class="article-list">
       <h1 class="section-header">Recent Articles</h1>
       {{ range first 10 .Data.Pages }}

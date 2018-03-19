@@ -43,6 +43,32 @@ body.home-body {
     "jumbotron"
     "main"
     "footer";
+
+  grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
+}
+
+body.home-body.balance {
+  background: url('/images/spec-balance.png'), url('/images/bg-pattern.png');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+}
+
+body.home-body.feral {
+  background: url('/images/spec-feral.png'), url('/images/bg-pattern.png');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+}
+
+body.home-body.guardian {
+  background: url('/images/spec-guardian.png'), url('/images/bg-pattern.png');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
+}
+
+body.home-body.restoration {
+  background: url('/images/spec-resto.png'), url('/images/bg-pattern.png');
+  background-repeat: no-repeat, repeat;
+  background-size: cover, auto;
 }
 
 body.article-body {
@@ -88,11 +114,21 @@ body.article-body .header {
 }
 
 .header-nav>a:hover {
-  background-color: #ccc;
+  background-color: #1a9c82;
+  color: #fff;
+}
+
+body.article-body .header-nav>a:hover {
+  background-color: #fff;
+  color: #1a9c82;
 }
 
 .jumbotron {
   display: flex;
+}
+
+.jumbotron .site-crest {
+  margin-top: -2rem;
 }
 
 .jumbotron-content {
@@ -101,6 +137,7 @@ body.article-body .header {
   justify-content: center;
   color: white;
   padding: 5rem;
+  width: 100%;
 }
 
 .jumbotron-content h1 {
@@ -130,6 +167,10 @@ body.article-body .header {
 
 .jumbotron-content>a {
   font-size: 1.5rem;
+}
+
+.jumbotron-spec-header {
+  text-align: center;
 }
 
 .main {
@@ -165,6 +206,10 @@ body.article-body .header {
 .spec:hover {
   color: white;
   text-decoration: underline;
+}
+
+.spec:visited {
+  color: white;
 }
 
 .spec.balance {
@@ -209,10 +254,6 @@ body.article-body .header {
   margin: 0;
 }
 
-.article-spec {
-  font-size: 1.5rem;
-}
-
 .article .article-content {
   margin-top: 5rem;
 }
@@ -239,6 +280,8 @@ body.article-body .header {
       "jumbotron"
       "main"
       "footer";
+  
+    grid-template-rows: 0fr 0fr 1fr 0fr;
   }
 
   body.article-body {
@@ -295,4 +338,10 @@ body.article-body .header {
     text-align:right;
     padding-right: 2rem;
   }
+}
+
+.not-found {
+  margin-top: 10rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }

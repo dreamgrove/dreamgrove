@@ -1,7 +1,7 @@
 ---
 date: '2018-02-24'
 authors: ["Jundarer","Nagura","Nick","Tettles","Bora"]
-spec: Balance
+specs: ["Balance"]
 published: false
 title: Dad Build Guide
 ---

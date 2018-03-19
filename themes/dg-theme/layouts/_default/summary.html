@@ -1,6 +1,6 @@
 <article class="article-summary">
-  <div class="article-spec">[{{ .Params.spec }}]</div>
   <h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+  {{ partial "post-spec.html" . }}
   <!-- <div class="article-byline"> -->
   <!--   {{ partial "post-byline.html" . }} -->
   <!-- </div> -->
