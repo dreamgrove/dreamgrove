@@ -11,7 +11,7 @@ This project has been incubating for quite a while and I'm happy to see it final
 
 One thing you may notice is that the Resto link takes you to our sister site, [Questionably Epic](http://questionablyepic.com/). QE is already a well-established and comprehensive source on resto druids (and healers in general), so we've decided that we will not host any resto druid content ourselves. I highly encourage you to check out their site instead, it's a fantastic resource.
 
-We're starting out with a small batch of guides that are being re-hosted from old Google Docs stuff, but we've also got a brand new [Balance Dad Build Guide]({{< ref "2018-02-25-Dad_Spec_Guide.md" >}}) that is being launched with the site. (thanks Nick for being so patient!)
+<!-- We're starting out with a small batch of guides that are being re-hosted from old Google Docs stuff, but we've also got a brand new [Balance Dad Build Guide]({{< ref "2018-02-25-Dad_Spec_Guide.md" >}}) that is being launched with the site. (thanks Nick for being so patient!) -->
 
 Oh, and one final note. **The content here will be hosted ad-free, in perpetuity.  We don't have a Patreon or special donator roles/perks - everyone will always have access to all of the content**.
 
