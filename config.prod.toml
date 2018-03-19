@@ -2,9 +2,12 @@ baseURL = "https://confident-hoover-c2ccdd.netlify.com/"
 languageCode = "en-us"
 title = "Dreamgrove"
 copyright = "Dreamgrove"
-theme = "ghostwriter"
+theme = "dg-theme"
 buildDrafts = "false"
 buildFuture = "false"
 
 [Taxonomies]
   tag = "tags"
+
+[taxonomies]
+  spec = "specs"
