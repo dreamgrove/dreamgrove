@@ -25,7 +25,7 @@ body {
   width: 100%;
   margin: 0 auto;
 
-  background: url('/images/bg-splash.png'), url('/images/bg-pattern.png');
+  background: url('/images/bg-splash.jpg'), url('/images/bg-pattern.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover, auto;
 
@@ -48,25 +48,25 @@ body.home-body {
 }
 
 body.home-body.balance {
-  background: url('/images/spec-balance.png'), url('/images/bg-pattern.png');
+  background: url('/images/spec-balance.jpg'), url('/images/bg-pattern.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover, auto;
 }
 
 body.home-body.feral {
-  background: url('/images/spec-feral.png'), url('/images/bg-pattern.png');
+  background: url('/images/spec-feral.jpg'), url('/images/bg-pattern.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover, auto;
 }
 
 body.home-body.guardian {
-  background: url('/images/spec-guardian.png'), url('/images/bg-pattern.png');
+  background: url('/images/spec-guardian.jpg'), url('/images/bg-pattern.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover, auto;
 }
 
 body.home-body.restoration {
-  background: url('/images/spec-resto.png'), url('/images/bg-pattern.png');
+  background: url('/images/spec-resto.jpg'), url('/images/bg-pattern.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover, auto;
 }
@@ -214,19 +214,19 @@ body.article-body .header-nav>a:hover {
 }
 
 .spec.balance {
-  background-image: url("/images/spec-balance.png");
+  background-image: url("/images/spec-balance.jpg");
 }
 
 .spec.feral {
-  background-image: url("/images/spec-feral.png");
+  background-image: url("/images/spec-feral.jpg");
 }
 
 .spec.guardian {
-  background-image: url("/images/spec-guardian.png");
+  background-image: url("/images/spec-guardian.jpg");
 }
 
 .spec.resto {
-  background-image: url("/images/spec-resto.png");
+  background-image: url("/images/spec-resto.jpg");
 }
 
 .article-list, .article {
