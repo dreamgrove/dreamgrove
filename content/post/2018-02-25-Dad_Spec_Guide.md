@@ -18,7 +18,7 @@ title: Dad Build Guide
 7. Wrath Filler     
       
 **The cooldown rotation is as follows:** <br>
-Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Full Moon -> Starfall -> CA
+2) Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Starfall -> Full Moon -> Full Moon -> CA -> SS
 
 
 You now have placed one Starfall down before your CA and will place one more as it expires in the middle of your cooldown. During your CA you cast as many Starsurges as possible apart from bracer procs or your one vanilla starfall.
