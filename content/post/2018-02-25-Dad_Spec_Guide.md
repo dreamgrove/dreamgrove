@@ -18,7 +18,7 @@ title: Dad Build Guide
 7. Wrath Filler     
       
 **The cooldown rotation is as follows:** <br>
-Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Full Moon -> Starfall -> CA
+Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Starfall -> Full Moon -> Full Moon -> CA -> SS
 
 
 You now have placed one Starfall down before your CA and will place one more as it expires in the middle of your cooldown. During your CA you cast as many Starsurges as possible apart from bracer procs or your one vanilla starfall.
@@ -36,6 +36,8 @@ Keep in mind that RM is the crux of this setup. When choosing between RM and OI 
 2. If there are short durations of cleave during the encounter
  
 3. You have very strong off pieces to replace your T20
+
+4. When talented into Blessing of the Ancients, you should be Elune during Celestial Alignment and An'She outside of Celestial Alignment
 
 We would like to add that while this build will not always be as strong as the current favored build, it can almost always be an option on single target if you feel you struggle with movement and mechanics.
 
