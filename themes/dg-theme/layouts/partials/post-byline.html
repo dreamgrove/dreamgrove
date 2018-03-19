@@ -5,5 +5,5 @@
   {{ range $index, $author := .Params.authors }}
     {{ if gt $index 0 }}, {{ end }}<span class="author">{{ . }}</span>
   {{ end }}
-  in {{ partial "post-spec.html" . }}
+  {{ if .Section }} in {{ partial "post-spec.html" . }} {{ end }}
 </h3>
