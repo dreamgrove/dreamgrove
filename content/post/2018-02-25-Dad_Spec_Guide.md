@@ -1,6 +1,6 @@
 ---
 date: '2018-02-24'
-author: ["Jundarer","Nagura","Nick","Tettles","Bora"]
+author: ["Jundarer","Nagura","Nick","Tettles","Bora","Gastank"]
 published: false
 title: Dad Build Guide
 ---
@@ -54,7 +54,9 @@ The way that you use Dad Build in M+ is you permanently talent Soul of the Fores
 3. You effectively gain a extra legendary (Sephuz primarily) on AOE. SOTA was decent and still is decent, but Sephuz + LATC on AOE and Dad Build ST is just too hard to compete with. 
 
 
-## <center> SimC APL </center>
+## <center> SimC Comparison Scripts </center>
+
+Put this into Raidbots / Simulationcraft if you'd like to see where you stand
 
 **Dad Build Kill Time Comparison:**
 [Pastebin Link](https://pastebin.com/LrzMDcA4)
