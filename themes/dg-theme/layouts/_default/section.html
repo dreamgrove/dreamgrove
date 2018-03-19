@@ -1,4 +1,4 @@
-{{ define "title"}}
+{{ define "title" }}
 {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
@@ -6,12 +6,12 @@
 <body class="home-body {{ lower .Title }}">
   {{ partial "header.html" . }}
   <section class="jumbotron">
-    {{ partial "jumbotron-spec.html" . }}
+    {{ partial "jumbotron-section.html" . }}
   </section>
   <main class="main">
     <section class="article-list">
       <h1 class="section-header">Recent Articles</h1>
-      {{ range first 10 .Data.Pages }}
+      {{ range .Paginator.Pages }}
         {{ .Render "summary" }}
       {{ end }}
     </section>

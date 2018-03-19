@@ -1,5 +1,5 @@
 /*
- * colors: 
+ * colors:
  *  highlight (wordmark, links): #1a9c82
  *  primary text: rgba(0,0,0,0.84)
  *  background: rgb(255, 255, 255);
@@ -111,6 +111,7 @@ body.article-body .header {
   font-weight: 700;
   font-size: 2rem;
   line-height: 5rem;
+  flex-grow: 1;
 }
 
 .header-nav>a:hover {
@@ -239,7 +240,7 @@ body.article-body .header-nav>a:hover {
 }
 
 .article-summary {
-  margin-bottom: 5rem; 
+  margin-bottom: 5rem;
 }
 
 .article-title {
@@ -269,6 +270,13 @@ body.article-body .header-nav>a:hover {
   margin: 5rem;
 }
 
+@media screen and (max-width: 800px) {
+  /* Hide crest on small displays */
+  .site-crest {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   body {
     display: grid;
@@ -280,7 +288,7 @@ body.article-body .header-nav>a:hover {
       "jumbotron"
       "main"
       "footer";
-  
+
     grid-template-rows: 0fr 0fr 1fr 0fr;
   }
 
