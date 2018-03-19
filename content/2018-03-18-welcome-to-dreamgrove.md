@@ -2,7 +2,7 @@
 title: Welcome to Dreamgrove!
 date: '2018-03-18'
 authors: ['Faide']
-published: false
+published: true
 ---
 
 Hey everyone! If you're reading this, you've made it to the brand-new website for resources, guides, theorycrafting, and discussion about all things Druid.
