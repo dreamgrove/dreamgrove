@@ -1,10 +1,13 @@
-baseURL = "https://nervous-shockley-8d1c89.netlify.com/"
+baseURL = "https://vigilant-fermi-011301.netlify.com/"
 languageCode = "en-us"
 title = "Dreamgrove"
 copyright = "Dreamgrove"
-theme = "ghostwriter"
+theme = "dg-theme"
 buildDrafts = "true"
 buildFuture = "true"
 
-[Taxonomies]
-  tag = "tags"
+[params]
+  restoExternalURL = "http://questionablyepic.com"
+
+[taxonomies]
+  spec = "specs"

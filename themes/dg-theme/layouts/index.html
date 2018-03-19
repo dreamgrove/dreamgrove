@@ -1,0 +1,18 @@
+{{ define "main" }}
+<body class="home-body">
+  {{ partial "header.html" . }}
+  <section class="jumbotron">
+    <img src="images/druid-crest.png" class="site-crest" alt=""/>
+    {{ partial "jumbotron-content.html" . }}
+  </section>
+  <main class="main">
+  {{ partial "spec-select.html" . }}
+    <section class="article-list">
+      <h1 class="section-header">Recent Articles</h1>
+      {{ range first 10 .Data.Pages }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </section>
+  </main>
+</body>
+{{ end }}
