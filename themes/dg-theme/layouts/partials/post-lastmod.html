@@ -1,7 +1,8 @@
-{{ if (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
+{{ $lastmod := default .GitInfo.AuthorDate .Params.lastmod }}
+{{ if (ne (.Date.Format "2006-01-02") ($lastmod.Format "2006-01-02")) }}
 
   <h4 class="article-lastmod">
-    <em>Last updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2 January 2006" }}</time>.</em>
+    <em>Last updated <time datetime="{{ $lastmod.Format "2005-01-02" }}">{{ $lastmod.Format "1 January 2006" }}</time>.</em>
   </h4>
 
 {{ end }}

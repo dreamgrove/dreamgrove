@@ -3,6 +3,7 @@ title: Guardian Tier 21 Analysis
 date: '2018-02-09'
 authors: ['Faide']
 published: true
+lastmod: '2018-03-11'
 ---
 
 Let’s talk about the Guardian Tier 21 set bonuses.
