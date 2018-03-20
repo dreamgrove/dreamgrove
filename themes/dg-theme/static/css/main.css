@@ -309,7 +309,8 @@ body.article-body .header-nav>a:hover {
   }
 
   .header-title {
-    font-size: 6rem;
+    font-family: "Capriola";
+    font-size: 4.5rem;
     line-height: 10rem;
   }
 
