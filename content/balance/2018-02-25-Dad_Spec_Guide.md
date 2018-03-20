@@ -5,7 +5,7 @@ published: true
 title: Dad Build Guide
 ---
 
-<center> An alternative to the current single target staple that is {{< item 137092 "OI" >}} / {{< item 137039 "IFE" >}} / {{< spell 102560 "Incarn" >}}, the ‘Dad’ build is called such because of it’s ease and passive play nature. The recommended single target setup for mythic plus, you run {{< spell 114107 "SOTF" >}} / {{< item 137092 "OI" >}} / {{< item 151800 "RM" >}} for single target bosses and {{< item 132452 "Sephuz" >}}/{{< item 144295 "LATC" >}} for trash and some AOE bosses. It has some uses in raid, but not nearly as much as for in the mythic plus scene </center>
+<center> An alternative to the current single target staple that is {{< item 137092 "OI" >}} / {{< item 137039 "IFE" >}} / {{< spell 102560 "Incarn" >}}, the ‘Dad’ build is called such because of it’s ease and passive play nature. The recommended single target setup for mythic plus, you run {{< spell 114107 "SOTF" >}} / {{< item 137092 "OI" >}} / {{< item 151800 "RM" >}} for single target bosses and {{< item 132452 "Sephuz" >}} / {{< item 144295 "LATC" >}} for trash and some AOE bosses. It has some uses in raid, but not nearly as much as for in the mythic plus scene </center>
 
 **The rotation priority is as follows:**
 
