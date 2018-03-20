@@ -1,8 +1,14 @@
-{{ $lastmod := default .GitInfo.AuthorDate .Params.lastmod }}
-{{ if (ne (.Date.Format "2006-01-02") ($lastmod.Format "2006-01-02")) }}
+<!--
+  Workaround for .Lastmod not properly preferring .Params.lastmod
+  over GitInfo:
 
+  if Params.lastmod != .Date:
+    show Params.lastmod
+  else
+    show .Lastmod (.GitInfo.AuthorDate)
+-->
+
+  {{ $lastmodified := cond (ne .Params.lastmod .Date) .Params.lastmod .Lastmod }}
   <h4 class="article-lastmod">
-    <em>Last updated <time datetime="{{ $lastmod.Format "2005-01-02" }}">{{ $lastmod.Format "1 January 2006" }}</time>.</em>
+    <em>Last updated <time datetime="{{ $lastmodified.Format "2005-01-02" }}">{{ $lastmodified.Format "1 January 2006" }}</time>.</em>
   </h4>
-
-{{ end }}
