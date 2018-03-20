@@ -10,9 +10,13 @@
   </section>
   <main class="main">
     <section class="article-list">
-      <h1 class="section-header">Recent Articles</h1>
-      {{ range .Paginator.Pages }}
-        {{ .Render "summary" }}
+      {{ if eq (len (.Paginator.Pages)) 0 }}
+        <h1 class="empty-list">Coming Soon!</h1>
+      {{ else }}
+        <h1 class="section-header">Recent Articles</h1>
+        {{ range .Paginator.Pages }}
+          {{ .Render "summary" }}
+        {{ end }}
       {{ end }}
     </section>
   </main>

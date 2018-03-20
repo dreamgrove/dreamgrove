@@ -230,6 +230,13 @@ body.article-body .header-nav>a:hover {
   background-image: url("/images/spec-resto.jpg");
 }
 
+.article-list .empty-list {
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 5rem;
+}
+
 .article-list, .article {
   max-width: 700px;
   margin: 2rem auto;
