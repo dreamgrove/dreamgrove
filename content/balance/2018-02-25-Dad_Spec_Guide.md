@@ -1,7 +1,7 @@
 ---
 date: '2018-02-24'
 authors: ["Jundarer","Nagura","Nick","Tettles","Bora","Gastank"]
-published: false
+published: true
 title: Dad Build Guide
 ---
 
