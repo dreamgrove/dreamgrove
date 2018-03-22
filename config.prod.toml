@@ -6,8 +6,8 @@ theme = "dg-theme"
 buildDrafts = "false"
 buildFuture = "false"
 
-[Taxonomies]
-  tag = "tags"
+[params]
+  description = "Home of all things Druid"
 
 [taxonomies]
   spec = "specs"
