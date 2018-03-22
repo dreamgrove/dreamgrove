@@ -4,6 +4,14 @@
 
 {{ end }}
 
+{{ define "metadata" }}
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }} " />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}/images/logo.png" />
+{{ end }}
+
 {{ define "main" }}
 <body class="article-body">
 {{ partial "header.html" . }}

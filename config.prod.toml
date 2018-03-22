@@ -5,9 +5,10 @@ copyright = "Dreamgrove"
 theme = "dg-theme"
 buildDrafts = "false"
 buildFuture = "false"
+enableRobotsTXT = "true"
 
-[Taxonomies]
-  tag = "tags"
+[params]
+  description = "Home of all things Druid"
 
 [taxonomies]
   spec = "specs"
