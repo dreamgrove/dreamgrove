@@ -3,6 +3,7 @@ title: Guardian Tier 21 Analysis
 date: '2017-10-20'
 authors: ['Faide']
 published: true
+hasMath: true
 showModified: true
 ---
 
@@ -54,8 +55,7 @@ We can now say that the value of the T21 set bonus is a potential DR gain of 1 -
 
 Additionally, if you run {{< spell 203965 "Survival of the Fittest" >}}, the cooldown on Barkskin can be reduced to 47.9s, for an average DR of 5.84%.  Thus, the value of the set bonus with SotF is a DR gain of 0.6%.
 
-There is also a very small DPS benefit to the set bonus if you use Barkskin on cooldown (Baseline is syncing Barkskin with RotS):
-![]({{site.baseurl}}/static/images/barkskin_dps.png)
+There is also a very small DPS benefit to the set bonus if you use Barkskin on cooldown (Baseline is syncing Barkskin with RotS).
 
 ## 4pc
 

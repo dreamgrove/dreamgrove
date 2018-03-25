@@ -22,3 +22,12 @@
 </main>
 </body>
 {{ end }}
+
+{{ define "injects" }}
+{{ if .Params.hasMath }}
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/vendor/katex.min.css" />
+  <script src="{{ .SiteBaseURL }}/vendor/katex.min.js"></script>
+  <script src="{{ .SiteBaseURL }}/vendor/auto-render.min.js"></script>
+  <script>renderMathInElement(document.body);</script>
+{{ end }}
+{{ end }}

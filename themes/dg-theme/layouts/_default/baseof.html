@@ -26,6 +26,7 @@
 <body class="home-body">
 </body>
   {{ end }}
+  {{ block "injects" . }}
   {{ block "footer" . }}
   <footer class="footer">
     <h1>Dreamgrove {{ now.Format "2006" }}</h1>
