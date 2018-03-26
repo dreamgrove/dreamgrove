@@ -10,8 +10,9 @@
 <meta property="og:image" content="{{ .Site.BaseURL }}/images/logo.png" />
 {{ end }}
 
+{{ define "bodyclass" }}home-body {{ lower .Title }}{{end}}
+
 {{ define "main" }}
-<body class="home-body {{ lower .Title }}">
   {{ partial "header.html" . }}
   <section class="jumbotron">
     {{ partial "jumbotron-section.html" . }}
@@ -28,5 +29,4 @@
       {{ end }}
     </section>
   </main>
-</body>
 {{ end }}
