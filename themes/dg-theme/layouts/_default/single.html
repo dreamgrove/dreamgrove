@@ -10,8 +10,8 @@
 <meta property="og:image" content="{{ .Site.BaseURL }}/images/logo.png" />
 {{ end }}
 
+{{ define "bodyclass" }}article-body{{ end }}
 {{ define "main" }}
-<body class="article-body">
 {{ partial "header.html" . }}
 <main class="main">
   <article class="article">
@@ -20,5 +20,18 @@
     {{ partial "post-footer.html" . }}
   </article>
 </main>
-</body>
+{{ end }}
+
+{{ define "head-injects" }}
+  {{ if .Params.hasMath }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/vendor/katex.min.css" />
+    <script src="{{ .Site.BaseURL }}/vendor/katex.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/vendor/auto-render.min.js"></script>
+  {{ end }}
+{{ end }}
+
+{{ define "body-injects" }}
+  {{ if .Params.hasMath }}
+    <script>renderMathInElement(document.body);</script>
+  {{ end }}
 {{ end }}
