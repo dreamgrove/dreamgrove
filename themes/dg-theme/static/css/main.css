@@ -94,7 +94,7 @@ body.article-body .header {
   font-family: "Capriola";
   grid-area: header-title;
   text-align: center;
-  font-size: 6rem;
+  font-size: 4.5rem;
   margin: 0;
 }
 
@@ -104,6 +104,15 @@ body.article-body .header {
   justify-content:space-around;
   max-width: 700px;
   margin: 0px auto;
+}
+
+.header-logo {
+  width: 6rem;
+  vertical-align:bottom;
+}
+
+.article-body .header-logo {
+  filter: grayscale(1) sepia(100) hue-rotate(116deg);
 }
 
 .header-nav>a {
@@ -131,6 +140,7 @@ body.article-body .header-nav>a:hover {
 
 .jumbotron .site-crest {
   margin-top: -2rem;
+  margin-left: 6rem;
 }
 
 .jumbotron-content {
@@ -230,6 +240,13 @@ body.article-body .header-nav>a:hover {
   background-image: url("/images/spec-resto.jpg");
 }
 
+.article-list .empty-list {
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 5rem;
+}
+
 .article-list, .article {
   max-width: 700px;
   margin: 2rem auto;
@@ -254,6 +271,11 @@ body.article-body .header-nav>a:hover {
   font-size: 2rem;
   font-weight: normal;
   margin: 0;
+}
+
+.article-lastmod {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .article .article-content {
@@ -312,6 +334,12 @@ body.article-body .header-nav>a:hover {
   .header-title {
     font-size: 4.5rem;
     line-height: 10rem;
+  }
+
+  .header-logo {
+    width: 6rem;
+    margin-top: -0.9rem;
+    vertical-align: middle;
   }
 
   .header-title a, .header-title a:hover, .header-title a:visited {

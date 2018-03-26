@@ -2,19 +2,31 @@
 {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
+{{ define "metadata" }}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }} " />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}/images/logo.png" />
+{{ end }}
+
+{{ define "bodyclass" }}home-body {{ lower .Title }}{{end}}
+
 {{ define "main" }}
-<body class="home-body {{ lower .Title }}">
   {{ partial "header.html" . }}
   <section class="jumbotron">
     {{ partial "jumbotron-section.html" . }}
   </section>
   <main class="main">
     <section class="article-list">
-      <h1 class="section-header">Recent Articles</h1>
-      {{ range .Paginator.Pages }}
-        {{ .Render "summary" }}
+      {{ if eq (len (.Paginator.Pages)) 0 }}
+        <h1 class="empty-list">Coming Soon!</h1>
+      {{ else }}
+        <h1 class="section-header">Recent Articles</h1>
+        {{ range .Paginator.Pages }}
+          {{ .Render "summary" }}
+        {{ end }}
       {{ end }}
     </section>
   </main>
-</body>
 {{ end }}

@@ -2,6 +2,5 @@
 title = ""
 date = ""
 authors = []
-spec = ""
-tags = []
+hasMath = ""
 +++

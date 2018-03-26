@@ -7,6 +7,7 @@ buildDrafts = "true"
 buildFuture = "true"
 
 [params]
+  description = "Home of all things Druid"
   restoExternalURL = "http://questionablyepic.com"
 
 [taxonomies]
