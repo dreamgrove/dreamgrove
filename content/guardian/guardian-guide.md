@@ -134,15 +134,15 @@ See [the defensive trinket guide](https://goo.gl/u7s0nm).
 
 #### DPS
 
-See [the offensive trinket sims](https://faideww.github.io/guardian-trinkets/).
+See this [offensive trinket sims chart](https://faideww.github.io/guardian-trinkets/) for a rough outline of what to aim for.  To obtain the most accurate results, you should sim yourself.
 
 #### Pantheon Trinkets
 
 Generally you will want to use a Pantheon trinket (particularly in raids). You have three options - {{< item 154172 "Aman'Thul's Vision" >}} (if you’re lucky enough to get one); {{< item 154173 "Aggramar’s Conviction" >}}; and {{< item 154174 "Golganneth’s Vitality" >}}.
 
-Realistically in raids you will be choosing between Aman’Thul’s and Aggramar’s, since you are one of the two members of the raid who can produce the “Tank proc” (the other being your co-tank), which will improve proc diversity and in general boost average uptime on the pantheon empowerment buff for the entire raid. Both defensively and offensively Aman’Thul’s is better than Aggramar’s at item level 1000, with the added benefit of dropping at 1000 and not needing to be upgraded.
+Realistically in raids you will be choosing between {{< item 154172 "Aman'Thul's Vision" >}} and {{< item 154173 "Aggramar’s Conviction" >}}, since you are one of the two members of the raid who can produce the “Tank proc” (the other being your co-tank), which will improve proc diversity and in general boost average uptime on the pantheon empowerment buff for the entire raid. Both defensively and offensively {{< item 154172 "Aman'Thul's Vision" >}} is better than {{< item 154173 "Aggramar’s Conviction" >}} at item level 1000, with the added benefit of dropping at 1000 and not needing to be upgraded.
 
-Outside of raids you have one additional choice. Since Golganneth’s provides negligible defensive value, it should only be considered offensively.  On single target at ilevel 1000 and with {{< item 151802 "Fury of Nature" >}} equipped, Golganneth’s (despite it having a reduced proc rate and damage for tanks) performs slightly better than Aggramar’s, which performs far better than Aman’Thuls due to the vast majority of Aman’Thul’s value for Guardians being tied into its Pantheon empowerment (which cannot activate outside of raid zones).  In AoE Aggramar’s pulls far ahead thanks to Golganneth’s split damage.
+Outside of raids you have one additional choice. Since {{< item 154174 "Golganneth’s Vitality" >}} provides negligible defensive value, it should only be considered offensively.  On single target at ilevel 1000 and with {{< item 151802 "Fury of Nature" >}} equipped, {{< item 154174 "Golganneth’s Vitality" >}} (despite it having a reduced proc rate and damage for tanks) performs slightly better than {{< item 154173 "Aggramar’s Conviction" >}}, which performs far better than {{< item 154172 "Aman'Thul's Vision" >}} due to the vast majority of {{< item 154172 "Aman'Thul's Vision" >}} value for Guardians being tied into its Pantheon empowerment (which cannot activate outside of raid zones).  In AoE {{< item 154173 "Aggramar’s Conviction" >}} pulls far ahead thanks to {{< item 154174 "Golganneth’s Vitality" >}} split damage.
 
 ### Tier
 
@@ -156,7 +156,7 @@ A guide to where relics can be looted, sorted by their default trait, can be fou
 
 Relic item level does not matter for survivability almost at all compared to the traits themselves. All the netherlight crucible traits that give healing are basically worthless for survivability; the only relevant ones are the ones that give stats. Although avoidance is generally negligible (except on certain specific boss mechanics), you get a very large amount of avoidance from the {{< spell 252091 "Master of Shadows" >}} trait, in addition to Mastery, which is a good defensive stat. {{< spell 252088 "Light Speed" >}} is also reasonable defensively.
 
-More important than the secondary traits from the Crucible are the main traits. {{< spell 200399 "Ursoc's Endurance" >}} and {{< spell 238049 "Scintillating Moonlight" >}} are the best defensive traits by far; though 200400Wildflesh and {{< spell 200395 "Reinforced Fur" >}} are not very far behind at 3 and 4. {{< spell 200414 "Bestial Fortitude" >}} is okay but not very good. {{< spell 200415 "Sharpened Instincts" >}} and {{< spell 200402 "Perpetual Spring" >}} are negligible.
+More important than the secondary traits from the Crucible are the main traits. {{< spell 200399 "Ursoc's Endurance" >}} and {{< spell 238049 "Scintillating Moonlight" >}} are the best defensive traits by far; though {{< spell 200400 "Wildflesh" >}} and {{< spell 200395 "Reinforced Fur" >}} are not very far behind at 3 and 4. {{< spell 200414 "Bestial Fortitude" >}} is okay but not very good. {{< spell 200415 "Sharpened Instincts" >}} and {{< spell 200402 "Perpetual Spring" >}} are negligible.
 
 #### DPS
 
@@ -215,7 +215,7 @@ If you do not have both of the best legendaries and want to know what your best 
 
 {{< spell 102359 "Mass Entanglement" >}} (talent) – AoE root. Usually not very good, but excellent in certain specific situations, such as on Coven of Shivarra or Aggramar, both from the Antorus raid.
 
-{{< spell 200851 "Rage of the Sleeper" >}} – Ordinarily used as a DPS or Survivability cooldown, this ability also (thanks to the artifact trait 200855Embrace) makes you immune to being CC’d if you have it up whilst you are hit with the CC. This is very useful in certain particular dungeon or raid encounters - for example, you can get rid of the whirlwinds that stun on contact from the last boss of Court of Stars by using {{< spell 200851 "Rage of the Sleeper" >}} and running into them; or you can immune the fear from the Felhounds of Sargeras raid encounter by using {{< spell 200851 "Rage of the Sleeper" >}} before it goes on you.
+{{< spell 200851 "Rage of the Sleeper" >}} – Ordinarily used as a DPS or Survivability cooldown, this ability also (thanks to the artifact trait {{< spell 200855 "Embrace of the Nightmare" >}}) makes you immune to being CC’d if you have it up whilst you are hit with the CC. This is very useful in certain particular dungeon or raid encounters - for example, you can get rid of the whirlwinds that stun on contact from the last boss of Court of Stars by using {{< spell 200851 "Rage of the Sleeper" >}} and running into them; or you can immune the fear from the Felhounds of Sargeras raid encounter by using {{< spell 200851 "Rage of the Sleeper" >}} before it goes on you.
 
 {{< spell 20484 "Rebirth" >}} – Combat resurrection.
 
