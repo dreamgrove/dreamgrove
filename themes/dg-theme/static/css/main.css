@@ -267,6 +267,11 @@ body.article-body .header-nav>a:hover {
   margin: 0px;
 }
 
+.article-short-summary>.article-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
 .article-byline {
   font-size: 2rem;
   font-weight: normal;
