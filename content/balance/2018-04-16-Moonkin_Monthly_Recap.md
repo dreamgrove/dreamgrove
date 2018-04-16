@@ -12,4 +12,4 @@ Our hope and goals for this series is to create an long term discussion for Bala
 This is the introduction to the series, which happens to be a Legion recap. Hope you all enjoy! 
 </center>
 
-{{< youtube IiQAgq6vEUY&t >}}
+{{< youtube IiQAgq6vEUY >}}
