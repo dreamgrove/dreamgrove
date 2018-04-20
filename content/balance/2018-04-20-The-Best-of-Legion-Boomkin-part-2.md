@@ -1,5 +1,5 @@
 ---
-date: '2018-04-20'
+date: '2018-04-20T9:10:00'
 authors: ["Gebuz"]
 published: true
 title: "The Best of Legion Boomkin: Part 2, Moon Moon & Radiant Moonlight"
