@@ -1,5 +1,5 @@
 ---
-date: '2018-04-20'
+date: '2018-04-20T9:20:00'
 authors: ["Gebuz"]
 published: true
 title: "The Best of Legion Boomkin: Part 3, Starfall Single Target"
