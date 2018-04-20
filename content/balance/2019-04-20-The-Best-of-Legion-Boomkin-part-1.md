@@ -21,12 +21,12 @@ Luckily, I was far from the only one that had enjoyed the Surgeweaving play styl
 
 <center>
         <img src="https://gebuz.files.wordpress.com/2018/04/eduptimeen.png?w=840&h=165" ></img>
-        The Emerald Dreamcatcher uptime in Emerald Nightmare
+        *The Emerald Dreamcatcher uptime in Emerald Nightmare*
 </center>
 
 <center>
         <img src="https://gebuz.files.wordpress.com/2018/04/eduptimenh.png?w=840&h=163" ></img>
-        The Emerald Dreamcatcher uptime in The Nighthold
+        *The Emerald Dreamcatcher uptime in The Nighthold*
 </center>
 
 As you can see, the duration of the burn phases outside of Incarnation was reduced from roughly of 30 seconds to 15 seconds. The total uptime was not significantly reduced since the time of the conservation phase was not increased, and the uptime during Incarnation was unaffected. It went from ~80% to ~70%. I personally think that the Nighthold version was better, as the 30 second burn phases was definitely on the long side.
@@ -38,21 +38,21 @@ In patch 7.2.5 The Emerald Dreamcatcher was changed to only reduce the cost of S
 I would love to see Surgeweaving being reintroduced as an alternative to the otherwise very open Balance Druid rotation. Ideally it should be as a talent as that would allow players to opt in or out of the rotation at will. In order to address the issue of haste breakpoints,  spell queuing and high latency I have come up with a few ideas for possible implementations.
 
 #### The Tier 20 Approach
-```
-Casting Starsurge reduces the cost of Starsurge by 5 for 15 seconds. Stacks up to 4 times, but gaining a stack does not refresh the duration.
-```
+
+>Casting Starsurge reduces the cost of Starsurge by 5 for 15 seconds. Stacks up to 4 times, but gaining a stack does not refresh the >duration.
+
 This copies the idea of the 4p20 bonus from Tomb of Sargeras where the buff has a set duration that can not be extended but stacks can be added. It would ensure that you have a burn phase and a conservation phase since the buff always has a set duration. This would also avoid any haste breakpoints and spell queuing issues. The downside is that it would not create the same strict rotation that Surgeweaving had; you will be able to cast your spells in any order you want aslong as you dumb all your Astral Power in the window. It also has the downside that in cases where you have to pool Astral Power for a specific time during an encounter you might end up having to /cancelaura so you can spend a bit of Astral Power without starting a burn phase.
 
 #### The X Casts Approach
-```
-Casting Starsurge reduces the cost of the next Starsurge cast within 3 casts by 5. Stacks up to 3 times.
-```
+
+>Casting Starsurge reduces the cost of the next Starsurge cast within 3 casts by 5. Stacks up to 3 times.
+
 This idea would rely on the buff disappearing after casting X spells that is not Starsurge. This way you could ensure that it is dropped eventually, and it would force a weave playstyle where you want to always have X casts between the Starsurges. The downside to this solution is that it might not feel as fluid when the time between the Starsurges changes based on the cast time of the spells used in between. It also has the downside that there might not be a very intuitive way to track it, and it might be a problem to know which spells count and which does not. For instance, Solar Beam probably should not count.
 
 #### The Haste Scaling Approach
-```
-Casting Starsurge reduces the cost of Starsurge by 7 for 5 seconds. Stacks up to 2 times. The duration of this buff is reduced by haste.
-```
+
+>Casting Starsurge reduces the cost of Starsurge by 7 for 5 seconds. Stacks up to 2 times. The duration of this buff is reduced by >haste.
+
 This would basically be the same as the version that was on the 7.1 PTR for a short time except with a longer base duration to allow other casts between. The duration of the buff would scale with haste so you could always fit the same spells in between your Starsurges no matter your haste. My biggest issue with this solution is that it does not feel very intuitive that more haste does not allow for more casts between Starsurges, and we would likely drop the buff during Incarnation.
 
 Personally I think the first option is the most reasonable. It would create the burn and conservation phases, but it would also keep the rotation open enough to allow for less experienced players to get some benefit from it, as the only real skill cap comes from ensuring you are always close to max Astral Power when you cast the first Starsurge, and always close to zero when you drop the buff.
