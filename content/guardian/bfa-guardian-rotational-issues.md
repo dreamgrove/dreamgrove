@@ -2,7 +2,6 @@
 title: BFA Guardian - Rotational Issues
 date: '2018-04-19'
 authors: ['Faide']
-published: false
 showModified: true
 ---
 
