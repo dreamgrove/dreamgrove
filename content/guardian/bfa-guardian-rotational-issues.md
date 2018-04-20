@@ -6,7 +6,7 @@ published: false
 showModified: true
 ---
 
-*This is a copy of a post I intend to post to the Alpha Class Development Forums. I've saved a record of it here for posterity when the forums are closed. Feel free to follow along while the thread is open [here](https://us.battle.net/forums/en/wow/22814068/).*
+*This is a copy of a post I intend to post to the Alpha Class Development Forums. I've saved a record of it here in its entirety for posterity when the forums are closed. Feel free to follow along while the thread is open [here](https://us.battle.net/forums/en/wow/topic/20762177673).*
 
 Let’s talk about Guardian Druid. While I don’t think anyone would argue that Guardian was the king of Legion raid tanking, nobody would argue against it being the most dull either. And while I can respect Guardian’s role as the “beginner tank”, I do not think it’s healthy for the spec to push away high skill players who are looking to be challenged. Those players are the ones who experiment, innovate, and ultimately discover new ways to unlock the spec’s full potential, and they set the standard for everyone else.
 
