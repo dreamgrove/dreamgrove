@@ -1,5 +1,5 @@
 ---
-date: '2018-03-04'
+date: '2018-04-20'
 authors: ["Gebuz"]
 published: true
 title: "The Best of Legion Boomkin: Part 1, The Emerald Dreamcatcher"
