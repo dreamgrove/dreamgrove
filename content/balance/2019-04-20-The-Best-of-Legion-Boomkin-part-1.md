@@ -39,7 +39,7 @@ I would love to see Surgeweaving being reintroduced as an alternative to the oth
 
 #### The Tier 20 Approach
 
->Casting Starsurge reduces the cost of Starsurge by 5 for 15 seconds. Stacks up to 4 times, but gaining a stack does not refresh the >duration.
+>Casting Starsurge reduces the cost of Starsurge by 5 for 15 seconds. Stacks up to 4 times, but gaining a stack does not refresh the duration.
 
 This copies the idea of the 4p20 bonus from Tomb of Sargeras where the buff has a set duration that can not be extended but stacks can be added. It would ensure that you have a burn phase and a conservation phase since the buff always has a set duration. This would also avoid any haste breakpoints and spell queuing issues. The downside is that it would not create the same strict rotation that Surgeweaving had; you will be able to cast your spells in any order you want aslong as you dumb all your Astral Power in the window. It also has the downside that in cases where you have to pool Astral Power for a specific time during an encounter you might end up having to /cancelaura so you can spend a bit of Astral Power without starting a burn phase.
 
@@ -51,7 +51,7 @@ This idea would rely on the buff disappearing after casting X spells that is not
 
 #### The Haste Scaling Approach
 
->Casting Starsurge reduces the cost of Starsurge by 7 for 5 seconds. Stacks up to 2 times. The duration of this buff is reduced by >haste.
+>Casting Starsurge reduces the cost of Starsurge by 7 for 5 seconds. Stacks up to 2 times. The duration of this buff is reduced by haste.
 
 This would basically be the same as the version that was on the 7.1 PTR for a short time except with a longer base duration to allow other casts between. The duration of the buff would scale with haste so you could always fit the same spells in between your Starsurges no matter your haste. My biggest issue with this solution is that it does not feel very intuitive that more haste does not allow for more casts between Starsurges, and we would likely drop the buff during Incarnation.
 
