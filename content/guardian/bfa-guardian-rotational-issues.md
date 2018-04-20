@@ -2,7 +2,6 @@
 title: BFA Guardian - Rotational Issues
 date: '2018-04-19'
 authors: ['Faide']
-showModified: true
 ---
 
 *This is a copy of a post I intend to post to the Alpha Class Development Forums. I've saved a record of it here in its entirety for posterity when the forums are closed. Feel free to follow along while the thread is open [here](https://us.battle.net/forums/en/wow/topic/20762177673).*
