@@ -11,4 +11,4 @@ enableRobotsTXT = "true"
   description = "Home of all things Druid"
 
 [taxonomies]
-  spec = "specs"
+  series = "series"

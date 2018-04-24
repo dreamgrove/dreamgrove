@@ -15,7 +15,13 @@
 {{ partial "header.html" . }}
 <main class="main">
   <article class="article">
+    {{ .Weight }}
     {{ partial "post-header.html" . }}
+
+    {{ with .Params.series }}
+      {{ partial "post-series.html" . }}
+    {{ end }}
+
     {{ partial "post-content.html" . }}
     {{ partial "post-footer.html" . }}
   </article>

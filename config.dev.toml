@@ -8,7 +8,6 @@ buildFuture = "true"
 
 [params]
   description = "Home of all things Druid"
-  restoExternalURL = "http://questionablyepic.com"
 
 [taxonomies]
-  spec = "specs"
+  series = "series"
