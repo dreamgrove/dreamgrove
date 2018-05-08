@@ -4,7 +4,7 @@ date: '2018-05-08'
 authors: ['Faide']
 ---
 
-*This is a mirror of the post I made on the Beta Class Forums. I've saved a record of it here in its entirety for posterity when the forums are closed. Feel free to follow along while the thread is open [here]().*
+*This is a mirror of the post I made on the Beta Class Forums. I've saved a record of it here in its entirety for posterity when the forums are closed. Feel free to follow along while the thread is open [here](https://us.battle.net/forums/en/wow/topic/2076389637).*
 
 Hi everyone, I want to talk about talents today. For the most part, Guardian talents are in a pretty good spot. But there are some problematic rows that didn’t play out well in Legion and I’d like to address those here, as well as offer some potential solutions to fix them.
 
