@@ -57,6 +57,10 @@ The way that you use Dad Build in M+ is you permanently talent {{< spell 114107 
 3. You effectively gain a extra legendary (Sephuz primarily) on AOE. SOTA was decent and still is decent, but Sephuz + LATC on AOE and Dad Build ST is just too hard to compete with.
 
 
+## <center> Crucible Weights </center>
+
+3 ilevel > FS > Tier 2 Stats > 2 ilevel = Tier 2 Procs = SotS/TG/SB > 1 ilevel = Everything else
+
 ## <center> SimC Comparison Scripts </center>
 
 Put this into Raidbots / Simulationcraft if you'd like to see where you stand
