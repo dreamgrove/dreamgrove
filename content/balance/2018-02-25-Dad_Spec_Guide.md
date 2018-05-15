@@ -12,15 +12,15 @@ title: Dad Build Guide
 **The rotation priority is as follows:**
 
 1. Dots up
-2. Starfall down / Tier 21 {{< spell 251809 "4pc" >}} up
+2. Starfall down
 3. Moons on CD
 4. OI Procs
-5. If you have 60+ AP, cast one Starsurge
+5. If you have 60+ AP, cast one Starsurge to maintain Tier 21 {{< spell 251809 "4pc" >}}
 6. Spend Empowerments
 7. Wrath Filler
 
 **The cooldown rotation is as follows:** <br>
-Wrath -> Wrath -> New Moon -> Dots -> Half Moon -> Starfall -> Full Moon -> Full Moon -> CA -> SS
+Wrath -> Wrath -> New Moon -> Sunfire -> Moonfire -> Half Moon -> Starfall -> Full Moon -> Full Moon -> CA -> SS
 
 You now have placed one Starfall down before your CA and will place one more as it expires in the middle of your cooldown. During your CA you cast as many Starsurges as possible apart from bracer procs or your one vanilla starfall.
 
@@ -42,6 +42,8 @@ Keep in mind that RM is the crux of this setup. When choosing between RM and OI 
 
 We would like to add that while this build will not always be as strong as the current favored build, it can almost always be an option on single target if you feel you struggle with movement and mechanics.
 
+Another caveat to Dad Build during CA is to really try to spend as much AP on Starsurge as you can during your cooldowns.
+
 ## <center> Mythic + </center>
 
 ##### <center> DO NOT EQUIP SOTA WHILE IN A DUNGEON IF YOU’RE TALENTED INTO SOTF </center>
@@ -61,12 +63,4 @@ The way that you use Dad Build in M+ is you permanently talent {{< spell 114107 
 
 3 ilevel > FS > Tier 2 Stats > 2 ilevel = Tier 2 Procs = SotS/TG/SB > 1 ilevel = Everything else
 
-## <center> SimC Comparison Scripts </center>
 
-Put this into Raidbots / Simulationcraft if you'd like to see where you stand
-
-**Dad Build Kill Time Comparison:**
-[Pastebin Link](https://pastebin.com/LrzMDcA4)
-
-**Dad Build Talent Comparison:**
-[Pastebin Link](https://pastebin.com/Q5P7ytii)
