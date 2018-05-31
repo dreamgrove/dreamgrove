@@ -9,7 +9,7 @@ title: "Moonkin Monthly - BFA Changes"
 {{< youtube  >}}
 
 <center>  
-Hey all, we are back with another Episode of Moonkin Monthly. We go over the latest Balance changes on the beta with our first guest Davidq of <Vodkaz> (Zul'jin-US)
+Hey all, we are back with another Episode of Moonkin Monthly. We go over the latest Balance changes on the beta with our first guest Davidq of Vodkaz (Zul'jin-US)
 </center>
 
 ## <center> Changes </center>
