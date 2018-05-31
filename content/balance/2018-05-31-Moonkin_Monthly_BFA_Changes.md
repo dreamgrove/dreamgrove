@@ -1,5 +1,5 @@
 ---
-date: '2018-04-16'
+date: '2018-05-31'
 authors: ["Nick","Tettles"]
 published: false
 title: "Moonkin Monthly - BFA Changes"
@@ -10,6 +10,7 @@ title: "Moonkin Monthly - BFA Changes"
 
 <center>  
 Hey all, we are back with another Episode of Moonkin Monthly, we go over the latets Balance changes on the beta with our first guest Davidq of vodkaz (Zul'jin-US)
+</center>
 
 ## <center> Changes </center>
 
@@ -17,11 +18,9 @@ Hey all, we are back with another Episode of Moonkin Monthly, we go over the lat
         <img src="https://i.imgur.com/1TRjxUb.png" ></img>
 </center>
 
-**Celestial Alignment (Changed)** 
-Increasing the damage of all your spells by 20% and granting you 15% Haste for 20 sec.
+**Celestial Alignment (Changed):** Increasing the damage of all your spells by 20% and granting you 15% Haste for 20 sec.
 
-**Eclipse (New)** 
-Lunar Strike has a 20% chance to grant you Solar Empowerment. Solar Wrath has a 20% chance to grant you Lunar Empowerment.
+**Eclipse (New):** Lunar Strike has a 20% chance to grant you Solar Empowerment. Solar Wrath has a 20% chance to grant you Lunar Empowerment.
 
 **Solar Empowerment (Changed):** Causes your next Solar Wrath to explode for an additional 10% of its damage to all nearby enemies and reduces its cast time by 15%.
 
@@ -40,4 +39,3 @@ Lunar Strike has a 20% chance to grant you Solar Empowerment. Solar Wrath has a 
 **Twin Moons (New):** Moonfire deals 20% increased damage and also hits another nearby enemy within 20 yds of the target.
 
 **Warrior of Elune (Changed):** Your next 3 Lunar Strikes are instant cast and generate 40% additional Astral Power.
-</center>
