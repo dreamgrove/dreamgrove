@@ -22,7 +22,7 @@ Hey all, we are back with another Episode of Moonkin Monthly. We go over the lat
 
 **Celestial Alignment (Changed):** Increasing the damage of all your spells by 20% and granting you 15% Haste for 20 sec.
 
-**{{< spell 1279619 "Eclipse" >}} (New):** Lunar Strike has a 20% chance to grant you Solar Empowerment. Solar Wrath has a 20% chance to grant you Lunar Empowerment.
+{{< spell 1279619 "Eclipse" >}} (New): Lunar Strike has a 20% chance to grant you Solar Empowerment. Solar Wrath has a 20% chance to grant you Lunar Empowerment.
 
 **Solar Empowerment (Changed):** Causes your next Solar Wrath to explode for an additional 10% of its damage to all nearby enemies and reduces its cast time by 15%.
 
