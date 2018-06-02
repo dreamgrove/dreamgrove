@@ -6,6 +6,9 @@ theme = "dg-theme"
 buildDrafts = "true"
 buildFuture = "true"
 
+[blackfriday]
+  hrefTargetBlank = true
+
 [params]
   description = "Home of all things Druid"
   restoExternalURL = "http://questionablyepic.com"

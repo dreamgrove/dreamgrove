@@ -6,11 +6,13 @@
   </section>
   <main class="main">
   {{ partial "spec-select.html" . }}
-    <section class="article-list">
-      <h1 class="section-header">Recent Articles</h1>
-      {{ range first 10 .Data.Pages }}
-        {{ .Render "summary" }}
-      {{ end }}
-    </section>
+    <div class="main-wrapper">
+      <section class="article-list">
+        <h1 class="section-header">Recent Articles</h1>
+        {{ range first 10 .Data.Pages }}
+          {{ .Render "summary" }}
+        {{ end }}
+      </section>
+    </div>
   </main>
 {{ end }}

@@ -189,12 +189,27 @@ body.article-body .header-nav>a:hover {
   grid-area: main;
 }
 
-.section-header {
+.main-wrapper {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 2em;
+}
+
+.main-wrapper.with-sidebar {
+  display: grid;
+  grid-template-areas: 
+  "section-overview"
+  "article-list";
+
+  grid-row-gap: 2rem;
+}
+
+.section-overview h1, .section-header {
   border-bottom: 1px solid #000;
   font-size: 2rem;
 }
 
-.spec-selection {
+.spec-selector {
   display: flex;
   flex-direction: column;
 }
@@ -240,6 +255,23 @@ body.article-body .header-nav>a:hover {
   background-image: url("/images/spec-resto.jpg");
 }
 
+.section-overview {
+  grid-area: section-overview;
+  font-size: 1.5rem;
+}
+
+.section-overview a {
+  text-decoration: underline;
+}
+
+.section-overview a:hover {
+  color: #1a9c82;
+}
+
+.article-list {
+  grid-area: article-list;
+}
+
 .article-list .empty-list {
   text-align: center;
   font-size: 2rem;
@@ -248,9 +280,6 @@ body.article-body .header-nav>a:hover {
 }
 
 .article-list, .article {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 2em;
 }
 
 .article {
@@ -363,7 +392,19 @@ body.article-body .header-nav>a:hover {
   .main {
     padding: 0 2rem;
   }
-  .spec-selection {
+  
+  .main-wrapper.with-sidebar {
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas: 
+      "section-overview article-list";
+
+    grid-template-columns: 1fr 700px;
+    grid-column-gap: 2rem;
+  }
+
+
+  .spec-selector {
     height: 400px;
     flex-direction: row;
     align-items: stretch;
