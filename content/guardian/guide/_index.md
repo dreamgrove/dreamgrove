@@ -1,8 +1,9 @@
 ---
 title: Guardian Druid Guide
-articleListTitle: "Pages"
+articleListTitle: "Table of Contents"
 hideSummaries: true
 hideSpecs: true
+showSectionToC: true
 description: "Welcome to the Guardian Druid guide! Here you will find all the information you need to play Guardian Druid to its maximum effectiveness."
 ---
 

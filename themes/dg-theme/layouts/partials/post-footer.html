@@ -12,12 +12,12 @@ https://github.com/gohugoio/hugo/issues/1061
 <div class="article-navigation">
 {{ if .NextInSection }}
   <div class="prev-article">
-    <a href="{{ .NextInSection.Permalink }}">&laquo; Previous Article: {{ .NextInSection.Title }}</a>
+    <a href="{{ .NextInSection.Permalink }}">&laquo; Previous: {{ .NextInSection.Title }}</a>
   </div>
 {{ end }}
 {{ if .PrevInSection }}
   <div class="next-article">
-    <a href="{{ .PrevInSection.Permalink }}">Next Article: {{ .PrevInSection.Title }} &raquo;</a>
+    <a href="{{ .PrevInSection.Permalink }}">Next: {{ .PrevInSection.Title }} &raquo;</a>
   </div>
 {{ end }}
 </div>

@@ -107,3 +107,20 @@
 .expandable {
   cursor: pointer;
 }
+
+.toc {
+  margin-top: 8rem;
+  position: relative;
+}
+
+.toc .active {
+  color: #1a9c82;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+  .sticky-toc {
+    position: fixed;
+    width: 280px;
+  }
+}

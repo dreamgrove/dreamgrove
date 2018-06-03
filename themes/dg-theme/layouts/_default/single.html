@@ -14,7 +14,12 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 <main class="main">
-  <div class="main-wrapper">
+  <div class="main-wrapper{{ if .Parent.Params.showsectiontoc }} with-sidebar{{ end }}">
+    {{ if .Parent.Params.showsectiontoc }}
+      <section class="section-overview toc">
+        {{ partial "section-toc.html" . }}
+      </section>
+    {{ end }}
     <article class="article">
       {{ partial "breadcrumb.html" . }}
       {{ partial "post-header.html" . }}
