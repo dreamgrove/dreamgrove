@@ -66,3 +66,40 @@
 .katex {
   font-size: 1.1em;
 }
+
+.breadcrumbs {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-navigation {
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+.article-navigation .prev-article {
+  float: left;
+}
+.article-navigation .next-article {
+  float: right;
+}
+
+.breadcrumbs a, .article-navigation a {
+  color: rgba(0, 0, 0, 0.84);
+  text-decoration: none;
+}
+
+.breadcrumbs a {
+}
+
+.article-navigation a {
+}
+
+.breadcrumbs a:hover, .article-navigation a:hover {
+  text-decoration: underline;
+  color: #1a9c82;
+}
+
+.footnotes {
+  font-size: 1.8rem;
+}

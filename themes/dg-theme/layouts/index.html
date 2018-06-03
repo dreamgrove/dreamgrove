@@ -9,7 +9,7 @@
     <div class="main-wrapper">
       <section class="article-list">
         <h1 class="section-header">Recent Articles</h1>
-        {{ range first 10 .Data.Pages }}
+        {{ range first 10 (where .Data.Pages "Params.showonfrontpage" "!=" false) }}
           {{ .Render "summary" }}
         {{ end }}
       </section>

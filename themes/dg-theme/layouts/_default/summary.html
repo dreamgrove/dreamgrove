@@ -1,10 +1,14 @@
 <article class="article-summary">
   <h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-  {{ partial "post-spec.html" . }}
+  {{ if not .CurrentSection.Params.hidespecs }}
+    {{ partial "post-spec.html" . }}
+  {{ end }}
   <!-- <div class="article-byline"> -->
   <!--   {{ partial "post-byline.html" . }} -->
   <!-- </div> -->
-  <section class="article-content">
-    {{ .Summary }}
-  </section>
+  {{ if not .CurrentSection.Params.hidesummaries }}
+    <section class="article-content">
+      {{ .Summary }}
+    </section>
+  {{ end }}
 </article>
