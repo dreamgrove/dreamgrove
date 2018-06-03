@@ -1,4 +1,4 @@
-<article class="article-summary">
+<article class="article-summary{{ if .CurrentSection.Params.hidesummaries }} no-summary{{ end }}">
   <h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
   {{ if not .CurrentSection.Params.hidespecs }}
     {{ partial "post-spec.html" . }}
@@ -8,7 +8,7 @@
   <!-- </div> -->
   {{ if not .CurrentSection.Params.hidesummaries }}
     <section class="article-content">
-      {{ .Summary }}
+      {{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}
     </section>
   {{ end }}
 </article>

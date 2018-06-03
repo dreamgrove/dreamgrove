@@ -287,6 +287,10 @@ body.article-body .header-nav>a:hover {
   margin-bottom: 5rem;
 }
 
+.article-summary.no-summary {
+  margin-bottom: 3rem;
+}
+
 .article-title {
   font-size: 5rem;
   font-family: "Arvo", serif;
