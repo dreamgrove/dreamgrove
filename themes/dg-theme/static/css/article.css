@@ -17,8 +17,12 @@
 }
 
 .article a {
-  color: #1a9c82;
+  color: #0E8DCF;
   text-decoration: underline;
+}
+
+a.tooltip {
+  color: #D57F43;
 }
 
 .article-preview, .article-content {
@@ -58,6 +62,7 @@
 }
 
 .spec-name {
+  color: #0E8DCF;
   font-size: 2rem;
   vertical-align: top;
   text-decoration: underline;
@@ -79,9 +84,11 @@
 
 .article-navigation .prev-article {
   float: left;
+  max-width: 40%;
 }
 .article-navigation .next-article {
   float: right;
+  max-width: 40%;
 }
 
 .breadcrumbs a, .article-navigation a {
@@ -97,7 +104,7 @@
 
 .breadcrumbs a:hover, .article-navigation a:hover {
   text-decoration: underline;
-  color: #1a9c82;
+  color: #0E8DCF;
 }
 
 .footnotes {
