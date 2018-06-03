@@ -20,7 +20,7 @@ Whilst levelling, don’t worry about what you spend artifact power on. It doesn
  - {{< spell 22812 "Barkskin" >}} – Small defensive cooldown
  - {{< spell 61336 "Survival Instincts" >}} – Large defensive cooldown
 
-### Talents for Beginners
+### Talents for beginners
 
 These are not necessarily the best talents to use in any particular situation. They are, however, the easiest.
 

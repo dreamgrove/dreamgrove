@@ -103,3 +103,7 @@
 .footnotes {
   font-size: 1.8rem;
 }
+
+.expandable {
+  cursor: pointer;
+}
