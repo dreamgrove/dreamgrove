@@ -17,5 +17,5 @@ Macrologia, Faide
 
 See also
 ===
- - [Icy Veins Guide](#)
- - [Wowhead Guide](#)
+ - [Icy Veins Guide](https://www.icy-veins.com/wow/guardian-druid-pve-tank-guide)
+ - [Wowhead Guide](https://www.wowhead.com/guardian-druid-guide)
