@@ -1,11 +1,10 @@
 ---
 title: "Gearing"
-date: 2018-01-22
+date: 2018-06-02
 authors: ['Macrologia', 'Faide']
 published: false
-showModified: true
-series: ["Guardian Guide"]
-weight: 1
+showOnFrontpage: false
+weight: 3
 ---
 
 Generally, with the exception of trinkets, you will just want to use whatever is the highest item level items you have available.

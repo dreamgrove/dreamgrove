@@ -1,10 +1,10 @@
 ---
-title: "Overview"
-date: 2018-01-22
+title: "General Principles"
+date: 2018-06-02
 authors: ['Macrologia', 'Faide']
 published: false
-showModified: true
-series: ["Guardian Guide"]
+showOnFrontpage: false
+weight: 1
 ---
 
 Your job as a tank is the same as every group member’s job – to do everything you can to help defeat the encounter.

@@ -1,10 +1,10 @@
 ---
-title: "Utility"
-date: 2018-01-22
+title: "Utility Spells"
+date: 2018-06-02
 authors: ['Macrologia', 'Faide']
 published: false
-showModified: true
-series: ["Guardian Guide"]
+showOnFrontpage: false
+weight: 4
 ---
 
 {{< spell 106839 "Skull Bash" >}} – your basic interrupt. Can be used from slightly-further-than-melee-range away from the target (and more, if using {{< spell 197632 "Balance Affinity" >}}).

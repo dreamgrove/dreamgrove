@@ -1,20 +1,21 @@
 ---
 title: "Rotation"
-date: 2018-01-22
+date: 2018-06-02
 authors: ['Macrologia', 'Faide']
 published: false
-showModified: true
-series: ["Guardian Guide"]
+showOnFrontpage: false
+weight: 6
 ---
+
+Below you will find rotational priority lists for different scenarios.
 
 ### Survivability
 
 The following will only include abilities that are on the global cooldown. You should use {{< spell 192081 "Ironfur" >}} when you are about to take physical damage, and you should use {{< spell 22842 "Frenzied Regeneration" >}} either when it’s going to do lots of healing for you, or when you need to use it to survive. If you are finding it difficult to keep track of {{< spell 192081 "Ironfur" >}}, [this weakaura package](https://wago.io/EJCMTR_PZ) depicts it visually. If you are finding it hard to know when {{< spell 22842 "Frenzied Regeneration" >}} will do a lot of healing, [this weakaura](https://wago.io/NkogH0_D-) displays it well.
 
 #### Without Galactic Guardian
-
 1. {{< spell 33917 "Mangle" >}}
-2. Maintain {{< spell 8921 "Moonfire" >}} on the target (cast {{< spell 8921 "Moonfire" >}} if the dot has less than 4.8 seconds remaining)
+2. Maintain {{< trimmer >}}{{< spell 8921 "Moonfire" >}}{{< /trimmer >}} on the target (cast {{< spell 8921 "Moonfire" >}} if the dot has less than 4.8 seconds remaining)
 3. {{< spell 77758 "Thrash" >}}
 4. {{< spell 213764 "Swipe" >}}
 

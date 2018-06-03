@@ -1,10 +1,10 @@
 ---
 title: "Guardian for Beginners"
-date: 2018-01-22
+date: 2018-06-02
 authors: ['Macrologia', 'Faide']
 published: false
-showModified: true
-series: ["Guardian Guide"]
+showOnFrontpage: false
+weight: 2
 ---
 
 Whilst levelling, don’t worry about what you spend artifact power on. It doesn’t matter; you will have a fully empowered artifact immediately after hitting 110 anyway.

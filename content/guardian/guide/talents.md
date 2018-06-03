@@ -1,10 +1,10 @@
 ---
 title: "Talents"
-date: 2018-01-22
+date: 2018-06-02
 authors: ['Macrologia', 'Faide']
 published: false
-showModified: true
-series: ["Guardian Guide"]
+showOnFrontpage: false
+weight: 5
 ---
 
 ### Level 15
