@@ -15,7 +15,7 @@ The following will only include abilities that are on the global cooldown. You s
 
 #### Without Galactic Guardian
 1. {{< spell 33917 "Mangle" >}}
-2. Maintain {{< trimmer >}}{{< spell 8921 "Moonfire" >}}{{< /trimmer >}} on the target (cast {{< spell 8921 "Moonfire" >}} if the dot has less than 4.8 seconds remaining)
+2. Maintain {{< spell 8921 "Moonfire" >}} on the target (cast {{< spell 8921 "Moonfire" >}} if the dot has less than 4.8 seconds remaining)
 3. {{< spell 77758 "Thrash" >}}
 4. {{< spell 213764 "Swipe" >}}
 
