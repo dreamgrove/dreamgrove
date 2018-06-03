@@ -3,6 +3,7 @@ title: Guardian Druid Guide
 articleListTitle: "Pages"
 hideSummaries: true
 hideSpecs: true
+description: "Welcome to the Guardian Druid guide! Here you will find all the information you need to play Guardian Druid to its maximum effectiveness."
 ---
 
 Summary
