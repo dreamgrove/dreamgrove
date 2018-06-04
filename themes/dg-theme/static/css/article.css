@@ -17,8 +17,16 @@
 }
 
 .article a {
-  color: #1a9c82;
+  color: #0E8DCF;
   text-decoration: underline;
+}
+
+a.tooltip {
+  color: #D57F43;
+}
+
+.article-content {
+  grid-area: article-content;
 }
 
 .article-preview, .article-content {
@@ -58,6 +66,7 @@
 }
 
 .spec-name {
+  color: #0E8DCF;
   font-size: 2rem;
   vertical-align: top;
   text-decoration: underline;
@@ -65,4 +74,77 @@
 
 .katex {
   font-size: 1.1em;
+}
+
+.breadcrumbs {
+  grid-area: breadcrumbs;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-header {
+  grid-area: article-header;
+}
+
+.article-footer {
+  grid-area: article-footer;
+}
+
+.article-navigation {
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+.article-navigation .prev-article {
+  float: left;
+  max-width: 40%;
+}
+.article-navigation .next-article {
+  float: right;
+  max-width: 40%;
+}
+
+.breadcrumbs a, .article-navigation a {
+  color: rgba(0, 0, 0, 0.84);
+  text-decoration: none;
+}
+
+.breadcrumbs a {
+}
+
+.article-navigation a {
+}
+
+.breadcrumbs a:hover, .article-navigation a:hover {
+  text-decoration: underline;
+  color: #0E8DCF;
+}
+
+.footnotes {
+  font-size: 1.8rem;
+}
+
+.expandable {
+  cursor: pointer;
+}
+
+.toc a {
+  color: rgba(0,0,0,0.84);
+}
+
+.toc .active {
+  color: #1a9c82;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+  .toc {
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .sticky-toc {
+    position: fixed;
+    width: 280px;
+  }
 }
