@@ -53,10 +53,11 @@ If you have reasonably good gear (approximately 950-960 on average or higher), a
 For survivability, use versatility gems. For DPS, sim yourself and use the gems corresponding to whatever your best stat is. Often, versatility will be at least very nearly the best stat for DPS if not the best, so you may just want to use versatility gems to cover both bases. The same applies for ring enchants. Agility is usually the go-to cloak enchant although the Warlords of Draenor versatility enchant is marginally better for survivability.
 
 For neck enchants:
- - Survivability (against physical damage, i.e. most damage) - {{< spell 141908 "Mark of the Heavy Hide" >}}
- - Survivability (against magic damage specifically) - {{< spell 141909 "Mark of the Trained Soldier" >}}
- - DPS (on 1 to approximately 3 targets) - {{< spell 141909 "Mark of the Hidden Satyr" >}}
- - DPS (on 4+ targets) - {{< spell 128551 "Mark of the Claw" >}}
+
+ - Survivability (against physical damage, i.e. most damage) - {{< item 141908 "Mark of the Heavy Hide" >}}
+ - Survivability (against magic damage specifically) - {{< item 141909 "Mark of the Trained Soldier" >}}
+ - DPS (on 1 to approximately 3 targets) - {{< item 128553 "Mark of the Hidden Satyr" >}}
+ - DPS (on 4+ targets) - {{< item 128551 "Mark of the Claw" >}}
 
 ### Trinkets
 
