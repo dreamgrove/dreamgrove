@@ -2,7 +2,7 @@
 title: "Guardian for Beginners"
 date: 2018-06-02
 authors: ['Macrologia', 'Faide']
-published: false
+published: true
 showOnFrontpage: false
 weight: 2
 ---
