@@ -9,15 +9,17 @@ to myself for whenever this bug is fixed in Hugo.
 https://github.com/gohugoio/hugo/issues/1061
 
 */}}
-<div class="article-navigation">
-{{ if .NextInSection }}
-  <div class="prev-article">
-    <a href="{{ .NextInSection.Permalink }}">&laquo; Previous: {{ .NextInSection.Title }}</a>
+<section class="article-footer">
+  <div class="article-navigation">
+  {{ if .NextInSection }}
+    <div class="prev-article">
+      <a href="{{ .NextInSection.Permalink }}">&laquo; Previous: {{ .NextInSection.Title }}</a>
+    </div>
+  {{ end }}
+  {{ if .PrevInSection }}
+    <div class="next-article">
+      <a href="{{ .PrevInSection.Permalink }}">Next: {{ .PrevInSection.Title }} &raquo;</a>
+    </div>
+  {{ end }}
   </div>
-{{ end }}
-{{ if .PrevInSection }}
-  <div class="next-article">
-    <a href="{{ .PrevInSection.Permalink }}">Next: {{ .PrevInSection.Title }} &raquo;</a>
-  </div>
-{{ end }}
-</div>
+</section>

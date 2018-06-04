@@ -197,16 +197,29 @@ body.article-body .header-nav>a:hover {
 
 .main-wrapper.with-sidebar {
   display: grid;
-  grid-template-areas: 
-  "section-overview"
-  "main-article";
+  grid-row-gap: 1rem;
+}
 
-  grid-row-gap: 2rem;
+.home-body .with-sidebar {
+  grid-template-areas: 
+    "section-overview"
+    "main-article";
+}
+
+.article-body .with-sidebar {
+  grid-template-areas: 
+    "breadcrumbs"
+    "article-header"
+    "section-overview"
+    "article-content"
+    "article-footer";
 }
 
 .section-overview h1, .section-header {
   border-bottom: 1px solid #000;
   font-size: 2rem;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
 }
 
 .spec-selector {
@@ -279,9 +292,9 @@ body.article-body .header-nav>a:hover {
   grid-area: main-article;
 }
 
-.article {
-  margin-top: 5rem;
-}
+/* .article { */
+/*   margin-top: 5rem; */
+/* } */
 
 .article-summary {
   margin-bottom: 5rem;
@@ -306,10 +319,6 @@ body.article-body .header-nav>a:hover {
 .article-lastmod {
   font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.6);
-}
-
-.article .article-content {
-  margin-top: 5rem;
 }
 
 .footer {
@@ -397,13 +406,29 @@ body.article-body .header-nav>a:hover {
   .main-wrapper.with-sidebar {
     max-width: 1000px;
     display: grid;
-    grid-template-areas: 
-      "section-overview main-article";
-
     grid-template-columns: 1fr 700px;
     grid-column-gap: 2rem;
+    grid-row-gap: 0;
   }
 
+  .home-body .with-sidebar {
+    grid-template-areas: 
+      "section-overview main-article";
+  }
+
+  .article-body article {
+    margin-top: 5rem;
+  }
+
+  .article-body .with-sidebar {
+    margin-top: 7rem;
+    grid-template-areas: 
+      "section-overview breadcrumbs"
+      "section-overview article-header"
+      "section-overview article-content"
+      "article-footer article-footer";
+
+  }
 
   .spec-selector {
     height: 400px;
@@ -417,6 +442,11 @@ body.article-body .header-nav>a:hover {
     text-align:right;
     padding-right: 2rem;
   }
+  
+  .article .article-content {
+    margin-top: 5rem;
+  }
+
 }
 
 .not-found {

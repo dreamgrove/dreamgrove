@@ -25,6 +25,10 @@ a.tooltip {
   color: #D57F43;
 }
 
+.article-content {
+  grid-area: article-content;
+}
+
 .article-preview, .article-content {
   font-family: "Georgia", serif;
   font-size: 2rem;
@@ -73,8 +77,17 @@ a.tooltip {
 }
 
 .breadcrumbs {
+  grid-area: breadcrumbs;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.article-header {
+  grid-area: article-header;
+}
+
+.article-footer {
+  grid-area: article-footer;
 }
 
 .article-navigation {
@@ -115,9 +128,8 @@ a.tooltip {
   cursor: pointer;
 }
 
-.toc {
-  margin-top: 8rem;
-  position: relative;
+.toc a {
+  color: rgba(0,0,0,0.84);
 }
 
 .toc .active {
@@ -126,6 +138,11 @@ a.tooltip {
 }
 
 @media screen and (min-width: 1200px) {
+  .toc {
+    margin-top: 3rem;
+    position: relative;
+  }
+
   .sticky-toc {
     position: fixed;
     width: 280px;
