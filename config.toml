@@ -1,0 +1,14 @@
+languageCode = "en-us"
+title = "Dreamgrove"
+copyright = "Dreamgrove"
+theme = "dg-theme"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  description = "Home of all things Druid"
+  restoExternalURL = "http://questionablyepic.com"
+
+[taxonomies]
+  series = "series"

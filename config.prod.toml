@@ -1,17 +1,4 @@
 baseURL = "https://www.dreamgrove.gg/"
-languageCode = "en-us"
-title = "Dreamgrove"
-copyright = "Dreamgrove"
-theme = "dg-theme"
 buildDrafts = "false"
 buildFuture = "false"
 enableRobotsTXT = "true"
-
-[blackfriday]
-  hrefTargetBlank = true
-
-[params]
-  description = "Home of all things Druid"
-
-[taxonomies]
-  spec = "specs"
