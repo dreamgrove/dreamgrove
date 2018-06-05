@@ -1,5 +1,5 @@
 {{ define "title" }}
-{{ .Title }} | {{ .Site.Title }}
+  {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "metadata" }}
@@ -16,10 +16,15 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 <main class="main">
-  <article class="article main-wrapper{{ if .Parent.Params.showsectiontoc }} with-sidebar{{ end }}">
+  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series) }} with-sidebar{{ end }}">
     {{ if .Parent.Params.showsectiontoc }}
       <section class="section-overview toc">
         {{ partial "section-toc.html" . }}
+      </section>
+    {{ end }}
+    {{ if .Params.series }}
+      <section class="section-overview toc">
+        {{ partial "series-toc.html" . }}
       </section>
     {{ end }}
     {{ partial "breadcrumb.html" . }}

@@ -1,0 +1,16 @@
+{{ $series := (index .Params.series 0) }}
+{{ $otherPages := (index .Site.Taxonomies.series (urlize $series)) }}
+{{ $current := . }}
+<div class="sticky-toc">
+  <h1>{{ $series }}</h1>
+  This article is part of the "{{ $series }}" series.
+  <ul>
+    {{ range $otherPages.Pages }}
+      {{ if (eq $current .) }}
+      <li class="active">{{ or .Params.series_title .Title }}</li>
+      {{ else }}
+        <li><a href="{{ .Permalink }}">{{ or .Params.series_title .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
