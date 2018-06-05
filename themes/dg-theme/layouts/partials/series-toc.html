@@ -1,13 +1,20 @@
 {{ $series := (index .Params.series 0) }}
-{{ $otherPages := (index .Site.Taxonomies.series (urlize $series)) }}
+{{ $seriesPages := (index .Site.Taxonomies.series (urlize $series)) }}
 {{ $current := . }}
+{{ $pageCount := len $seriesPages }}
 <div class="sticky-toc">
   <h1>{{ $series }}</h1>
-  This article is part of the "{{ $series }}" series.
+  This article is part of the <a href="{{ "/series/" | relLangURL }}{{ $series | urlize }}">{{ $series }}</a> series.
+
+  <p>
+    {{ if (gt $pageCount 5) }}
+      There are {{ $pageCount }} articles in this series. Here are the most recent 5:
+    {{ end }}
+  </p>
   <ul>
-    {{ range $otherPages.Pages }}
+    {{ range (last 5 $seriesPages.Pages) }}
       {{ if (eq $current .) }}
-      <li class="active">{{ or .Params.series_title .Title }}</li>
+      <li class="active">{{ or .Params.articleListTitle .Title }}</li>
       {{ else }}
         <li><a href="{{ .Permalink }}">{{ or .Params.series_title .Title }}</a></li>
       {{ end }}
