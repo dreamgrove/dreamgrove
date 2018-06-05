@@ -7,7 +7,7 @@ theme = "dg-theme"
   hrefTargetBlank = true
 
 [params]
-  description = "Home of all things Druid"
+  description = "Dreamgrove is the home of all things Druid. Guides, articles, theorycrafting, and more!"
   restoExternalURL = "http://questionablyepic.com"
 
 [taxonomies]
