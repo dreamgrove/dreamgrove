@@ -9,6 +9,8 @@
   <link rel="icon" href="{{ .Site.BaseURL }}/favicon.ico" />
   {{ .Hugo.Generator }}
   {{ block "metadata" . }}
+		<meta charset="utf-8">
+		<meta name="description" content="{{ .Site.Params.description }}" />
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="{{ .Site.Title }}" />
 		<meta property="og:description" content="{{ .Site.Params.description }}" />

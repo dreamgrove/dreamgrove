@@ -3,6 +3,8 @@
 {{ end }}
 
 {{ define "metadata" }}
+<meta charset="utf-8">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }} " />
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
