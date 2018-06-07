@@ -1,0 +1,14 @@
+{{ $spec := .Get "spec" }}
+{{ $source := .Get "src" | default "live" }}
+{{ $sourceFile := cond (eq $source "beta") "talents_beta" "talents" }}
+{{ $class := "11" }}
+{{ $data := index (index $.Site.Data $sourceFile) "11" }}
+
+{{ range $data.specs }}
+  {{ if eq (.name | lower) $spec }}
+    {{ $.Scratch.Set "spec" . }}
+  {{ end }}
+{{ end }}
+
+
+{{ $data.talents }}
