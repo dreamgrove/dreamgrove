@@ -423,7 +423,7 @@ body.article-body .header-nav>a:hover {
   .article-body .with-sidebar {
     margin-top: 7rem;
     grid-template-areas:
-      "section-overview breadcrumbs"
+      ". breadcrumbs"
       "section-overview article-header"
       "section-overview article-content"
       "article-footer article-footer";

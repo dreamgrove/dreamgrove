@@ -3,6 +3,9 @@ date: '2018-04-20T9:00:00'
 authors: ["Gebuz"]
 published: true
 title: "The Best of Legion Boomkin: Part 1, The Emerald Dreamcatcher"
+series: ["The Best of Legion Boomkin"]
+series_title: "Part 1, The Emerald Dreamcatcher"
+series_weight: 1
 ---
 With Legion drawing to an end I figured it would be a good time to go over what I think has worked well for Balance Druid during the expansion. While it is unavoidable to not  also touch on some aspects that I disliked, I will try to keep the focus primarily on the positives and how some of them might be incorporated into the Battle for Azeroth Balance Druid.
 
