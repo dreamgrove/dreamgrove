@@ -14,7 +14,7 @@
   <ul>
     {{ range (last 5 $seriesPages.Pages) }}
       {{ if (eq $current .) }}
-      <li class="active">{{ or .Params.articleListTitle .Title }}</li>
+      <li class="active">{{ or .Params.series_title .Title }}</li>
       {{ else }}
         <li><a href="{{ .Permalink }}">{{ or .Params.series_title .Title }}</a></li>
       {{ end }}

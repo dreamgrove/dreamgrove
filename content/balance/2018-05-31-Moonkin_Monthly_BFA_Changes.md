@@ -3,12 +3,14 @@ date: '2018-05-31'
 authors: ["Tettles","Nick"]
 published: true
 title: "Moonkin Monthly - BFA Changes"
+series: ["Moonkin Monthly"]
+series_title: "BFA Changes"
 ---
 
 
 {{< youtube 6_KF9UivdLQ >}}
 
-<center>  
+<center>
 Hey all, we are back with another Episode of Moonkin Monthly. We go over the latest Balance changes on the beta with our first guest Davidq of Vodkaz (Zul'jin-US)
 </center>
 
