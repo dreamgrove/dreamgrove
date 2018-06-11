@@ -5,5 +5,5 @@ authors: ['Faide']
 published: false
 ---
 
-{{< talents spec="feral" src="beta" select="1231231" >}}
+{{< talents spec="feral" src="beta" select="1230231" >}}
 

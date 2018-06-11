@@ -155,6 +155,9 @@ a.tooltip {
   font-size: 1.7rem;
   font-family: sans-serif;
   line-height: 115%;
+
+  box-sizing: border-box;
+  height: 4.8rem;
 }
 
 .talent-spell.selected {
