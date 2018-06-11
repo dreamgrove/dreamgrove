@@ -446,6 +446,16 @@ body.article-body .header-nav>a:hover {
   .article .article-content {
     margin-top: 5rem;
   }
+
+  .toc {
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .sticky-toc {
+    position: fixed;
+    width: 280px;
+  }
 }
 
 .not-found {
