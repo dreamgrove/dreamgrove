@@ -1,0 +1,58 @@
+{{ $spec := .Get "spec" | lower }}
+{{ $source := .Get "src" | default "live" }}
+{{ $sourceFile := cond (eq $source "beta") "talents_beta" "talents" }}
+{{ $class := "11" }}
+{{ $selectArray := split (.Get "select") "" | default "0000000" }}
+{{ $data := index (index $.Site.Data $sourceFile) "11" }}
+
+{{/* Find the spec data */}}
+{{ range $data.specs }}
+  {{ if eq (.name | lower) $spec }}
+    {{ $.Scratch.Set "spec" . }}
+  {{ end }}
+{{ end }}
+
+<div class="talents-tree">
+{{ range $tierNum, $tier := $data.talents }}
+  {{ $tierSelect := index $selectArray $tierNum }}
+  {{ $.Scratch.Set "actualColumn" 1 }}
+  {{ range $colNum, $column := $tier }}
+    {{ $selected := eq (int $tierSelect) ($.Scratch.Get "actualColumn") }}
+    {{ $.Scratch.Set "foundSpecSpell" false }}
+    {{/* Check for spec specific talents */}}
+    {{ range $spell := $column }}
+      {{ $specMatches := (eq ($.Scratch.Get "spec").name $spell.spec.name) }}
+      {{ if $specMatches }}
+        <div class="talent-spell{{ if $selected }} selected{{ end }}" data-tooltip-href="http://{{ cond (eq $source "live") "www" $source }}.wowdb.com/spells/{{ $spell.spell.id }}">
+          <div class="talent-icon-wrapper">
+            <img class="talent-icon" src="{{ $.Site.BaseURL }}/images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
+          </div>
+          <div class="talent-name">
+            {{ $spell.spell.name }}
+          </div>
+        </div>
+        {{ $.Scratch.Set "foundSpecSpell" true }}
+        {{ $.Scratch.Add "actualColumn" 1 }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Check again for shared talents */}}
+    {{ if (not ($.Scratch.Get "foundSpecSpell")) }}
+      {{ range $spell := $column }}
+        {{ $noSpecSet := (not (isset $spell "spec")) }}
+        {{ if $noSpecSet }}
+          <div class="talent-spell{{ if $selected }} selected{{ end }}" data-tooltip-href="http://{{ cond (eq $source "live") "www" $source }}.wowdb.com/spells/{{ $spell.spell.id }}">
+            <div class="talent-icon-wrapper">
+              <img class="talent-icon" src="{{ $.Site.BaseURL }}/images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
+            </div>
+            <div class="talent-name">
+              {{ $spell.spell.name }}
+            </div>
+          </div>
+          {{ $.Scratch.Add "actualColumn" 1 }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+</div>

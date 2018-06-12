@@ -8,6 +8,7 @@ weight: 5
 ---
 
 ### Level 15
+{{< talent-row spec="guardian" tier="15" src="live" >}}
 
 {{< spell 203953 "Brambles" >}} generally provides the highest DPS, since it gives more throughput than the extra {{< spell 6807 "Maul" >}}s you would get from the rage gained through the alternatives. Use it paired with {{< spell 200851 "Rage of the Sleeper" >}}, unless you are using {{< spell 203965 "Survival of the Fittest" >}}, in which case it should be used on cooldown, to maximise DPS.
 
@@ -18,6 +19,7 @@ weight: 5
 {{< spell 203962 "Blood Frenzy" >}} can be worth taking when you have several targets within {{< spell 77758 "Thrash" >}} range throughout the entire encounter. It may be worth using on very high fortified mythic+ dungeons, as enemies survive a reasonably long time, and do damage in a constant manner rather than in short bursts. It is generally not worth taking on fewer than 3 constant targets.
 
 ### Level 30
+{{< talent-row spec="guardian" tier="30" src="live" >}}
 
 {{< spell 204012 "Guttural Roars" >}} is a sensible default option, although note that it will make the range of {{< spell 99 "Incapacitating Roar" >}} so large it may be unusable in dungeons if you are also using {{< spell 197488 "Balance Affinity" >}}.
 
@@ -27,6 +29,7 @@ weight: 5
 
 
 ### Level 45
+{{< talent-row spec="guardian" tier="45" src="live" >}}
 
 {{< spell 197492 "Restoration Affinity" >}} is a sensible default option if you are looking for any additional survivability. The healing it provides is rarely operative or overly impactful, but that doesn’t mean it isn’t there.
 
@@ -35,10 +38,12 @@ weight: 5
 {{< spell 202155 "Feral Affinity" >}} is useful for certain situations where the extra movement speed helps deal with a particular mechanic. It is never in practice worth changing into Cat Form to try to do more DPS.
 
 ### Level 60
+{{< talent-row spec="guardian" tier="60" src="live" >}}
 
 {{< spell 5211 "Mighty Bash" >}} or {{< spell 132469 "Typhoon" >}} will be the most useful depending on what you’re doing, although {{< spell 102359 "Mass Entanglement" >}} is extremely good in certain specific situations.
 
 ### Level 75
+{{< talent-row spec="guardian" tier="75" src="live" >}}
 
 {{< spell 158477 "Soul of the Forest" >}} is the best talent defensively on exactly one target. If there are two or more targets, and/or you are using {{< item 151636 "Soul of the Archdruid" >}}, then the best defensive talent is {{< spell 203964 "Galactic Guardian" >}}.
 
@@ -46,9 +51,8 @@ The best talent for DPS is almost always {{< spell 203964 "Galactic Guardian" >}
 
 For extreme burst aoe, {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} is better for that particular period whilst it’s up. Naturally you lose a significant amount of DPS whilst it’s on cooldown, but this may still be worth it depending on your pulls. If you have the best legendaries for DPS ({{< item 144295 "Lady and the Child" >}} + {{< item 151802 "Fury of Nature" >}}), you will prefer using those with {{< spell 203964 "Galactic Guardian" >}} for DPS in mythic+ dungeons, as your DPS with all your CDs up will not be much lower than with {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} and your DPS without CDs will be much higher; but if you do not have one of them, and do have {{< item 137056 "Luffa Wrappings" >}}, you may want to consider using {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} in dungeons instead. To best make use of {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you should use it on a large pull when your DPS do not have their cooldowns ready, in order to maximise its usage.
 
-
-
 ### Level 90
+{{< talent-row spec="guardian" tier="90" src="live" >}}
 
 {{< spell 155578 "Guardian of Elune" >}} is ordinarily the best talent. It does not matter if you waste procs - this is irrelevant even in optimal play. To use it optimally, try to ensure that every {{< spell 192081 "Ironfur" >}} and {{< spell 22842 "Frenzied Regeneration" >}} you cast is buffed by {{< spell 155578 "Guardian of Elune" >}} - though naturally sometimes you will need to forego this in order to survive, and that’s fine.
 
@@ -59,6 +63,7 @@ For extreme burst aoe, {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} is 
 {{< spell 203965 "Survival of the Fittest" >}} is generally very weak for survivability. It is only useful (but does become the best talent) if you gain additional casts of {{< spell 61336 "Survival Instincts" >}} throughout the encounter that you actually need in order to survive particular boss mechanics.
 
 ### Level 100
+{{< talent-row spec="guardian" tier="100" src="live" >}}
 
 {{< spell 80313 "Pulverize" >}} is the best talent for survivability, unless you are using the legendary {{< item 137067 "Elize's Everlasting Encasement" >}}’s Everlasting Encasement. However if you have other survivability legendaries, you should prefer to use those and use {{< spell 80313 "Pulverize" >}} rather than using {{< spell 204053 "Rend and Tear" >}} with {{< item 137067 "Elize's Everlasting Encasement" >}}.
 
