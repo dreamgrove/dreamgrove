@@ -171,8 +171,7 @@ a.tooltip {
 }
 
 .talent-icon-wrapper {
-  width: 36px;
-  height: 36px;
+  width: 3.6rem;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -180,7 +179,6 @@ a.tooltip {
 .talent-icon {
   vertical-align: middle;
   font-size: 1.2rem;
-  width: 36px;
   transform: scale(1.2);
 }
 
