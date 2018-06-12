@@ -25,7 +25,7 @@
       {{ if $specMatches }}
         <div class="talent-spell{{ if $selected }} selected{{ end }}" data-tooltip-href="http://{{ cond (eq $source "live") "www" $source }}.wowdb.com/spells/{{ $spell.spell.id }}">
           <div class="talent-icon-wrapper">
-            <img class="talent-icon" src="{{ $.Site.BaseURL }}images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
+            <img class="talent-icon" src="{{ $.Site.BaseURL }}/images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
           </div>
           <div class="talent-name">
             {{ $spell.spell.name }}
@@ -43,7 +43,7 @@
         {{ if $noSpecSet }}
           <div class="talent-spell{{ if $selected }} selected{{ end }}" data-tooltip-href="http://{{ cond (eq $source "live") "www" $source }}.wowdb.com/spells/{{ $spell.spell.id }}">
             <div class="talent-icon-wrapper">
-              <img class="talent-icon" src="{{ $.Site.BaseURL }}images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
+              <img class="talent-icon" src="{{ $.Site.BaseURL }}/images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
             </div>
             <div class="talent-name">
               {{ $spell.spell.name }}
