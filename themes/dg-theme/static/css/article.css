@@ -41,7 +41,7 @@ a.tooltip {
   font-family: "Arvo";
 }
 
-.article-content *:first-child {
+.article-content h1:first-child, .article-content h2:first-child, .article-content h3:first-child {
   margin-top: 0;
 }
 
