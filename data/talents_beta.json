@@ -8610,9 +8610,9 @@
             "tier": "4",
             "column": "1",
             "spell": {
-              "id": "279620",
-              "name": "Twin Moons",
-              "icon": "spell_nature_starfall"
+              "id": "202345",
+              "name": "Starlord",
+              "icon": "spell_shaman_measuredinsight"
             },
             "spec": {
               "id": "102",
@@ -8723,9 +8723,9 @@
             "tier": "5",
             "column": "0",
             "spell": {
-              "id": "202345",
-              "name": "Starlord",
-              "icon": "spell_shaman_measuredinsight"
+              "id": "202354",
+              "name": "Stellar Drift",
+              "icon": "ability_druid_starfall"
             },
             "spec": {
               "id": "102",
@@ -8781,9 +8781,9 @@
             "tier": "5",
             "column": "1",
             "spell": {
-              "id": "202354",
-              "name": "Stellar Drift",
-              "icon": "ability_druid_starfall"
+              "id": "279620",
+              "name": "Twin Moons",
+              "icon": "spell_nature_starfall"
             },
             "spec": {
               "id": "102",
