@@ -165,9 +165,18 @@ a.tooltip {
   color: rgba(255, 255, 255, 1);
 }
 
+.talent-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
 .talent-icon {
   vertical-align: middle;
   font-size: 1.2rem;
+  width: 36px;
+  transform: scale(1.2);
 }
 
 .talent-name {
