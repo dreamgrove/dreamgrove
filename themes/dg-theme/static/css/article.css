@@ -171,6 +171,21 @@ a.tooltip {
   color: rgba(255, 255, 255, 1);
 }
 
+.talent-spell.recommended-1 {
+  background-color: #cd3737;
+  color: rgba(255, 255, 255, 1);
+}
+
+.talent-spell.recommended-2 {
+  background-color: #e9c744;
+  /* color: rgba(255, 255, 255, 1); */
+}
+
+.talent-spell.recommended-3 {
+  background-color: #2dcf63;
+  /* color: rgba(255, 255, 255, 1); */
+}
+
 .talent-icon-wrapper {
   width: 3.6rem;
   overflow: hidden;
