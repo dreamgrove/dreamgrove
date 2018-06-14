@@ -26,7 +26,7 @@ In total, the results were pleasing. The average score was 11.74, just short of 
 
 ![Imgur](https://i.imgur.com/pewiHXg.png)
 
-The red line superimposed over the results graph is a **skew-t** distribution, with parameters {{< tex "$\mu = 14.37, \omega = 3.92, \alpha = -5, \nu = 14$">}}. The skewness is shown in the {{< tex "$\alpha$">}} parameter, with a clear negative sign, indicating the negative skew. One such explanation for this result is that the test had a good amount of easy questions -- which was definitely the case. 11 out of the 16 questions were correctly answered over 75% of the time, while only 2 questions had a correct answer rate under 50% (for the questions worth 1 point, anyway). This bias clearly pushed results upward, and resulted in the nice slant to the curve.
+The red line superimposed over the results graph is a **skew-t** distribution, with parameters {{< tex "\mu = 14.37, \omega = 3.92, \alpha = -5, \nu = 14">}}. The skewness is shown in the {{< tex "\alpha">}} parameter, with a clear negative sign, indicating the negative skew. One such explanation for this result is that the test had a good amount of easy questions -- which was definitely the case. 11 out of the 16 questions were correctly answered over 75% of the time, while only 2 questions had a correct answer rate under 50% (for the questions worth 1 point, anyway). This bias clearly pushed results upward, and resulted in the nice slant to the curve.
 
 Following on, here are the questions with the lowest correct response rate:
 
