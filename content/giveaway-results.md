@@ -36,6 +36,7 @@ Note that three of these were the questions worth no points ("What is Slippykins
 
 And to those of you wondering -- my cat's name is Pixel, not Meowykins. Though, Hank does suit her sometimes.
 
+![angry hank](https://cdn.discordapp.com/attachments/282242289525587968/451343511489347584/IMG_20180530_211701_HHT.jpg)
 
 ## Answers and Response Distribution ##
 
