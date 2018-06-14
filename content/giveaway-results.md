@@ -6,8 +6,6 @@ hasMath: true
 title: Dreamgrove Beta Key Giveaway -- Results Summary
 ---
 
-//edit above as necessary
-
 
 With the Dreamgrove Beta Key Giveaway concluded, many players called for a comprehensive summary of the quiz, including in-depth statistics and a clear analysis of the results.
 
