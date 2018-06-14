@@ -2,6 +2,7 @@
 date: '2018-06-14'
 authors: ["Slippykins"]
 published: false
+hasMath: true
 title: Dreamgrove Beta Key Giveaway -- Results Summary
 ---
 
