@@ -54,7 +54,7 @@ Alternatively, if the targets are not stacked, you will take Shooting Stars star
 <center>
 M+ Beta Talent recommendations:
 
-{{< talents spec="balance" src="beta" select="2,3,2,3,3,2,2" >}}
+{{< talents spec="balance" src="beta" select="2323322" >}}
 </center>
 
 
