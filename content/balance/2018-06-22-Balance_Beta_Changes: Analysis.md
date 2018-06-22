@@ -16,18 +16,18 @@ http://www.wowhead.com/news=285032/battle-for-azeroth-26871-class-changes-abilit
 
 
 <center>
-{{< spell [77492] "[Mastery: Starlight:]" "[beta]" >}}
+{{< spell "[77492]" "[Mastery: Starlight:]" "[beta]" >}}
 Mastery Scaling was added to {{< spell [164812] "[Moonfire]" "[beta]" >}} and {{< spell [164815] "[Sunfire]" "[beta]" >}}
 Mastery Scaling on {{< spell [202770] "[Fury of Elune]" "[beta]" >}} was removed
 Stellar Empowerment was removed entirely
 
-{{< spell [202345] "[Starlord:]" "[beta]" >}}
+{{< spell "[202345]" "[Starlord:]" "[beta]" >}}
 Duration got changed to 20sec instead of 15sec
 
-{{< spell [202347] "[Stellar Flare:]" "[beta]" >}}
+{{< spell "[202347]" "[Stellar Flare:]" "[beta]" >}}
 Now generates 8 Astral Power
 
-{{< spell [79620] "[Twin Moons:]" "[beta]" >}}
+{{< spell "[79620]" "[Twin Moons:]" "[beta]" >}}
 Range got decreased to 15yds from 20yds
 </center>
 
