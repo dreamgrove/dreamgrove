@@ -1,8 +1,8 @@
 ---
+title: Balance Beta Changes: Analysis
 date: '2018-06-22'
 authors: ["Tettles","Nick"]
 published: false
-title: Balance Beta Changes: Analysis
 ---
 
 <center>
