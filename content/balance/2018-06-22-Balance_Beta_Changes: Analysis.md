@@ -40,11 +40,11 @@ Cooldown changed from 30 sec recharge to 25 sec recharge
 **How does this impact our talent choices?**
 
 **Level 75 Changes** <br>
-{{< spell 114107 "Soul of the Forest" "beta" >}} was overvalued in the previous builds of Beta Moonkin, and we were unaware until recently. This means, you will now want to take {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} on patchwork, 3 target, and 5 target situations. Even though {{< spell 202345 "Starlord:" "beta" >}} received buffs, it did not put it ahead in any category and by design gets impacted more by boss downtime than {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} does.
+{{< spell 114107 "Soul of the Forest" "beta" >}} was overvalued in the previous builds of Beta Moonkin, and we were unaware until recently. This means, you will now want to take {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} on patchwerk, 3 target, and 5 target situations. Even though {{< spell 202345 "Starlord:" "beta" >}} received buffs, it did not put it ahead in any category and by design gets impacted more by boss downtime than {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} does.
 
 **Level 90 Changes** <br>
 With the heavy nerfs to {{< spell 202347 "Stellar Flare:" "beta" >}}, you will now take {{< spell 279620 "Twin Moons:" "beta" >}} in all hybrid and 2+ target situations. 
-The only time that it is profitable to take {{< spell 202347 "Stellar Flare:" "beta" >}} will be patchwork single target encounters, because it is ~.8% damage increase over {{< spell 279620 "Twin Moons:" "beta" >}} on patchwork.
+The only time that it is profitable to take {{< spell 202347 "Stellar Flare:" "beta" >}} will be patchwerk single target encounters, because it is ~.8% damage increase over {{< spell 279620 "Twin Moons:" "beta" >}} on patchwerk.
 
 **Level 100 Changes** <br>
 {{< spell 274281 "New Moon" "beta" >}} even at a 25 second recharge, is still worse than {{< spell 202770 "Fury of Elune" "beta" >}} without the mastery coefficient. 
