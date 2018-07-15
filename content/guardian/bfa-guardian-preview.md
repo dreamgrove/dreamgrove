@@ -16,7 +16,7 @@ As a quick aside, I have been working hard on the Guardian pre-patch guide, incl
 First, what we lost:
 
 - {{< spell 200851 "Rage of the Sleeper" >}} has been removed, and with it, all of the traits associated with the artifact.
-- All legendar
+- All legendaries are disabled at level 116 and will no longer provide their bonuses at 120.
 - {{< spell 204012 "Guttural Roars" >}} has been replaced with {{< spell 252216 "Tiger Dash" "beta" >}}.
 
 What we gained:
