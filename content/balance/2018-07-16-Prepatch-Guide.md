@@ -18,7 +18,7 @@ How the class functions has changed a bit. Due to the new eclipse system and the
 | Soothe          | Blessing of the Ancient   |
 | Hibernate       | Displacer Beast           |
 | {{< spell 252216 "Tiger Dash" "beta" >}}      | Stellar Empowerment       |
-| {{< spell 279620 "Twin Moons:" "beta" >}}      |                           |
+| {{< spell 279620 "Twin Moons" "beta" >}}      |                           |
 | Eclipse         |                           |
 
 
@@ -27,7 +27,7 @@ The abilities getting removed are largely shifting power away from certain spell
 
 
 ### Added Abilities:
-{{< spell 252216 "Tiger Dash" "beta" >}} will be the new form of long distance travel in both instanced and uninstanced content. While it is weaker than the now removed Displacer Beast, with the global cooldown attached to {{< spell 16979 "Wild Charge" "beta" >}}, there is no other strong choice on the row to compete for a spot. {{< spell 279620 "Twin Moons:" "beta" >}} and Eclipse are the most rotationally impactful changes. {{< spell 279620 "Twin Moons:" "beta" >}} has been a staple of our multi-target in Legion in the form of Lady and the Child, so this returning as a talent is always a welcome change. The addition of Eclipse allows our single target rotation to have more complexity and changes the rotation. 
+{{< spell 252216 "Tiger Dash" "beta" >}} will be the new form of long distance travel in both instanced and uninstanced content. While it is weaker than the now removed Displacer Beast, with the global cooldown attached to {{< spell 16979 "Wild Charge" "beta" >}}, there is no other strong choice on the row to compete for a spot. {{< spell 279620 "Twin Moons" "beta" >}} and Eclipse are the most rotationally impactful changes. {{< spell 279620 "Twin Moons" "beta" >}} has been a staple of our multi-target in Legion in the form of Lady and the Child, so this returning as a talent is always a welcome change. The addition of Eclipse allows our single target rotation to have more complexity and changes the rotation. 
 
 
 ### Reworked Abilities:
@@ -84,7 +84,7 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 
 **Promises of Elune, The Moon Goddess** - This legendary is really strong on pure patchwerk fights due to the increase in value of our builders. This legendary will see use on fights without additional cleavable targets such as Imonar, Kingaroth, and Garothi.
 
-**Anything Els**e - Sim yourself, they are all awful.
+**Anything Else** - Sim yourself, they are all awful.
 
 
 
@@ -130,7 +130,7 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 ### Tier 90: 
 *	**{{< spell 202354 "Stellar Drift" "beta" >}}(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
 
-*	**{{< spell 279620 "Twin Moons:" "beta" >}}(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare:" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare:" "beta" >}} it is also currently a good option on pure single target.
+*	**{{< spell 279620 "Twin Moons" "beta" >}}(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare:" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare:" "beta" >}} it is also currently a good option on pure single target.
 	
 *	**{{< spell 202347 "Stellar Flare:" "beta" >}}(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. {{< spell 202347 "Stellar Flare:" "beta" >}} is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
 
@@ -172,7 +172,7 @@ Begin pre-casting {{< spell 190984 "Solar Wrath" "beta" >}} 2.5 seconds prior to
 
 ### Multi-Target
 
-**1. Maintain 100% uptime on your DoTs:** Take {{< spell 279620 "Twin Moons:" "beta" >}} to help cut down on the GCD’s required to maintain {{< spell 164812 "Moonfire" "beta" >}}s on all targets.
+**1. Maintain 100% uptime on your DoTs:** Take {{< spell 279620 "Twin Moons" "beta" >}} to help cut down on the GCD’s required to maintain {{< spell 164812 "Moonfire" "beta" >}}s on all targets.
 
 **2. Spend Astral Power on {{< spell 191034 "Starfall" "beta" >}}:** You begin {{< spell 191034 "Starfall" "beta" >}}ing on 3 targets. If it is 2 targets, you still cast {{< spell 78674 "Starsurge" "beta" >}} as your primary spender. 
 
@@ -219,48 +219,28 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 
 **Base Abilities**
 
-{{< spell 164812 "Moonfire" "beta" >}}= MF
-
-{{< spell 194153 "Lunar Strike" "beta" >}}= LS
-
-{{< spell 190984 "Solar Wrath" "beta" >}}= SW
-
-{{< spell 194223 "Celestial Alignment" "beta" >}}= CA
-
-{{< spell 164815 "Sunfire" "beta" >}}= SF
-
-{{< spell 191034 "Starfall" "beta" >}}= Also SF
-
-{{< spell 78674 "Starsurge" "beta" >}}= SS
+- {{< spell 164812 "Moonfire" "beta" >}}= MF
+- {{< spell 194153 "Lunar Strike" "beta" >}}= LS
+- {{< spell 190984 "Solar Wrath" "beta" >}}= SW
+- {{< spell 194223 "Celestial Alignment" "beta" >}}= CA
+- {{< spell 164815 "Sunfire" "beta" >}}= SF
+- {{< spell 191034 "Starfall" "beta" >}}= Also SF
+- {{< spell 78674 "Starsurge" "beta" >}}= SS
 
 
 **Talents**
 
-{{< spell 202430 "Nature’s Balance" "beta" >}}= NB
- 
-{{< spell 202345 "Starlord" "beta" >}}= SL
- 
-{{< spell 202425 "Warrior of Elune" "beta" >}}= WOE
-
-{{< spell 205636 "Force of Nature" "beta" >}}= FON
- 
-{{< spell 252216 "Tiger Dash" "beta" >}}= TD
- 
-{{< spell 16979 "Wild Charge" "beta" >}}= WC
-
-{{< spell 114107 "Soul of the Forest" "beta" >}}= SOTF
-
-{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}= Incarn or INC
- 
-{{< spell 274281 "New Moon" "beta" >}}= Moons or NM
-  
+{{< spell 202430 "Nature’s Balance" "beta" >}}= NB<br />
+{{< spell 202345 "Starlord" "beta" >}}= SL<br />
+{{< spell 202425 "Warrior of Elune" "beta" >}}= WOE<br />
+{{< spell 205636 "Force of Nature" "beta" >}}= FON<br />
+{{< spell 252216 "Tiger Dash" "beta" >}}= TD<br />
+{{< spell 16979 "Wild Charge" "beta" >}}= WC<br />
+{{< spell 114107 "Soul of the Forest" "beta" >}}= SOTF<br />
+{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}= Incarn or INC<br />
+{{< spell 274281 "New Moon" "beta" >}}= Moons or NM<br />
 {{< spell 202354 "Stellar Drift" "beta" >}}= SD
- 
-{{< spell 279620 "Twin Moons:" "beta" >}}= TM
- 
+{{< spell 279620 "Twin Moons" "beta" >}}= TM
 {{< spell 202347 "Stellar Flare:" "beta" >}}= STFL
- 
 {{< spell 202342 "Shooting Stars" "beta" >}}= SHS
- 
 {{< spell 202770 "Fury of Elune" "beta" >}}= FOE
- 
