@@ -14,13 +14,13 @@ Insert Glossary Here could also add sims at the end
 ## What is Changing?
 How the class functions has changed a bit. Due to the new eclipse system and the changing of our Mastery, the Spenders of Starsurge and Starfall have seen a decrease in power, while the builders of Lunar Strike and Solar Wraith with their associated Empowerments have seen increases in power by comparison.
 
-| Added         | Removed                 |
-| ------------- |-------------------------|
-| Soothe        | Blessing of the Ancient |
-| Hibernate     | Displacer Beast         |
-| Tiger Dash    | Stellar Empowerment     |
-| Twin Moons    |                         |
-| Eclipse       |                         |
+| Added           | Removed                   |
+| :-------------: |:-------------------------:|
+| Soothe          | Blessing of the Ancient   |
+| Hibernate       | Displacer Beast           |
+| Tiger Dash      | Stellar Empowerment       |
+| Twin Moons      |                           |
+| Eclipse         |                           |
 
 
 ### Removed Abilities:
@@ -32,8 +32,8 @@ Tiger Dash will be the new form of long distance travel in both instanced and un
 
 
 ### Reworked Abilities:
-Nature’s Balance - Nature’s Balance has been reworked to give 2 Astral Power per 3 seconds. Astral Power levels to 50 instead of 0 out of combat as well.
 
+**Nature’s Balance** - Nature’s Balance has been reworked to give 2 Astral Power per 3 seconds. Astral Power levels to 50 instead of 0 out of combat as well.
 
 **Starlord** - Starlord is now a throwback to the Balance Tier 20 4-piece buff. It allows Starsurge and Starfall to grant you 3% Haste for 20 seconds stacking up to 3 times.
 
@@ -54,7 +54,6 @@ Nature’s Balance - Nature’s Balance has been reworked to give 2 Astral Power
 ### Strengths:
 
 **Priority Target Damage** - Balance Druid can handle target swapping very well when properly prepared for the target swap. Pooling Astral Power, Empowerment charges, Force of Nature, and even Warrior of Elune, the Balance toolkit is exceptional at burning down high-priority targets.
-
 
 **Sustained Multi-Target** - Balance’s multi-target damage is one of the highest sustained multi-target damage due to very little fall-off outside of our cooldowns. With the removal of Stellar Empowerment, there is no longer a restriction on the distance our targets are apart to do max damage with Sunfire and Moonfire. 
 
@@ -98,11 +97,11 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 >*Of Note: Many talents are subject to change based on tuning from Blizzard, so these will be updated in the future based on new sims. Additionally, talents have significantly less power in Battle for Azeroth than they did Legion.*
 
 ### Tier 15:
-	**Nature’s Balance(NB):** Great for sustained multi-target scenarios, as the constant generation of Astral Power is great. This will particularly be good in M+, as you have the opportunity to generate the 50 Astral Power after combat very quickly. This is most useful in open world content and dungeons such as Upper Karazhan with large downtime between trash and boss pulls.
+**	Nature’s Balance(NB):** Great for sustained multi-target scenarios, as the constant generation of Astral Power is great. This will particularly be good in M+, as you have the opportunity to generate the 50 Astral Power after combat very quickly. This is most useful in open world content and dungeons such as Upper Karazhan with large downtime between trash and boss pulls.
 
-	**Warrior of Elune(WoE):** This talent is ideal for hybrid encounters as well as being useful for priority target swaps and burst cleave. The three free Lunar Strikes you still want to use back-to-back, and ideally with empowerments if possible, as it is important to keep it on cooldown. Fights that this talent would be usable are Portal Keeper, as it has small adds that need bursted and periods of single and multi-target. 
+**	Warrior of Elune(WoE): This talent is ideal for hybrid encounters as well as being useful for priority target swaps and burst cleave. The three free Lunar Strikes you still want to use back-to-back, and ideally with empowerments if possible, as it is important to keep it on cooldown. Fights that this talent would be usable are Portal Keeper, as it has small adds that need bursted and periods of single and multi-target.**
 	
-	**Force of Nature(FoN/trees):** Trees are ideal for pure patchwerk single target, as this talent does not scale with the number of targets. Therefore use them on cooldown on single target fights, in M+ if tanks are having issues with threat, as well as during world quests/leveling. 
+*	**Force of Nature(FoN/trees):** Trees are ideal for pure patchwerk single target, as this talent does not scale with the number of targets. Therefore use them on cooldown on single target fights, in M+ if tanks are having issues with threat, as well as during world quests/leveling. 
 
 ### Tier 30: 
 	**Tiger Dash:** Only would be used on fights like Imonar or when world questing/leveling. Good for covering large distances fast. 
