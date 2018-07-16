@@ -2,7 +2,7 @@
 date: '2018-07-16'
 authors: ["Tettles","Nick","Bora","Spy"]
 published: true
-title: "Prepatch Guide"
+title: "Balance Prepatch Guide"
 ---
 
 ## Introduction
