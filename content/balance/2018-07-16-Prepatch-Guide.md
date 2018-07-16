@@ -218,6 +218,7 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 ## Glossary 
 
 **Base Abilities**
+
 - {{< spell 164812 "Moonfire" "beta" >}}= MF
 - {{< spell 194153 "Lunar Strike" "beta" >}}= LS
 - {{< spell 190984 "Solar Wrath" "beta" >}}= SW
@@ -228,6 +229,7 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 
 
 **Talents**
+
 - {{< spell 202430 "Nature’s Balance" "beta" >}}= NB
 - {{< spell 202345 "Starlord" "beta" >}}= SL
 - {{< spell 202425 "Warrior of Elune" "beta" >}}= WOE
