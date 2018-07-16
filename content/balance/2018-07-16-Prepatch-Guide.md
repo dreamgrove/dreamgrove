@@ -130,7 +130,7 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 ### Tier 90: 
 *	**{{< spell 202354 "Stellar Drift" "beta" >}}(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
 
-*	**{{< spell 279620 "Twin Moons" "beta" >}}(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare" "beta" >}} it is also currently a good option on pure single target.
+*	**{{< spell 279620 "Twin Moons" "beta" >}}( TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare" "beta" >}} it is also currently a good option on pure single target.
 	
 *	**{{< spell 202347 "Stellar Flare" "beta" >}}(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. {{< spell 202347 "Stellar Flare" "beta" >}} is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
 
@@ -152,7 +152,7 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 
 Begin pre-casting {{< spell 190984 "Solar Wrath" "beta" >}} 2.5 seconds prior to the encounter starting while standing away from the boss. Then as soon as that {{< spell 190984 "Solar Wrath" "beta" >}} is completed begin pre-casting a second one. As soon as the timer on the pull hits 0, apply your dots {{< spell 164815 "Sunfire" "beta" >}}, {{< spell 164812 "Moonfire" "beta" >}}, and {{< spell 202347 "Stellar Flare" "beta" >}}*. Spend {{< spell 190984 "Solar Wrath" "beta" >}} to get above 40 Astral Power then use the cooldown, {{< spell 194223 "Celestial Alignment" "beta" >}} / {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}*.
 
->*Wrath>Wrath>Dot>Dot>({{< spell 202347 "Stellar Flare" "beta" >}}**)>Wrath to 40> CA*/Incarn* > (FOE* and Trees*)> Rotation*
+>*Wrath > Wrath > Dot > Dot > (Stellar Flare**) > Wrath to 40 > CA*/Incarn* > (FOE* and Trees*) > Rotation
 
 *=if talented
 
