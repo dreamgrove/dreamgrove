@@ -35,6 +35,11 @@ What's been changed for Guardian:
 - {{< spell 197488 "Balance Affinity" "beta" >}}'s range has been reduced to 3 yards (from 5).
 - {{< spell 203964 "Galactic Guardian" "beta" >}}'s proc chance has been reduced to 5% (from 7%).
 - {{< spell 155835 "Bristling Fur" "beta" >}}, {{< spell 1850 "Dash" "beta" >}}, {{< spell 22842 "Frenzied Regeneration" "beta" >}}, {{< spell 204066 "Lunar Beam" "beta" >}}, {{< spell 102401 "Wild Charge" "beta" >}}, and {{< spell 102558 "Incarnation: Guardian of Ursoc" "beta" >}} are all now subject to the GCD. Wild Charge in particular is on a 0.5s GCD.
+- Rage generation has been rebalanced. Specifically:
+  - New: being hit by a melee attack generates 3 rage (can only occur once per second).
+  - Melee attacks generate 4 rage per hit (down from 6).
+  - Mangle generates 8 rage (up from 5).
+  - Thrash generates 5 rage (up from 4).
 
 And finally, some other non-Guardian (but still relevant) changes:
 
