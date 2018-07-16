@@ -5,13 +5,13 @@ published: false
 title: "Prepatch Guide"
 ---
 
-# Introduction
+## Introduction
 
 With the Battle for Azeroth pre-patch coming, Moonkin has received some pretty extensive changes affecting our playstyle, talents, and legendary choices. This is a guide in regards to what is currently known about Battle for Azeroth Moonkin. Our focus is to build off the knowledge of the systems in Legion as opposed to a complete new player guide. A new player friendly guide will be created in the launch of BFA. We hope this helps, and if you have any questions in regards to this guide feel free to hit us up in the Dreamgrove!
 
 Insert Glossary Here could also add sims at the end
 
-## What is Changing?
+### What is Changing?
 How the class functions has changed a bit. Due to the new eclipse system and the changing of our Mastery, the Spenders of Starsurge and Starfall have seen a decrease in power, while the builders of Lunar Strike and Solar Wraith with their associated Empowerments have seen increases in power by comparison.
 
 | Added           | Removed                   |
