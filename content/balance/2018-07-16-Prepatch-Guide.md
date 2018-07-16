@@ -1,7 +1,7 @@
 ---
 date: '2018-07-16'
 authors: ["Tettles","Nick","Bora","Spy"]
-published: false
+published: true
 title: "Prepatch Guide"
 ---
 
