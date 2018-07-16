@@ -11,23 +11,23 @@ With the Battle for Azeroth pre-patch coming, Moonkin has received some pretty e
 
 
 ### What is Changing?
-How the class functions has changed a bit. Due to the new eclipse system and the changing of our Mastery, the Spenders of {{< spell 78674 "Starsurge" "beta" >}} and {{< spell 191034 "Starfall" "beta" >}} have seen a decrease in power, while the builders of {{< spell 194153 "Lunar Strike" "beta" >}} and Solar Wraith with their associated Empowerments have seen increases in power by comparison.
+How the class functions has changed a bit. Due to the new {{< spell 279619 "Eclipse" "beta" >}} system and the changing of our {{< spell 77492 "Mastery" "beta" >}}, the Spenders of {{< spell 78674 "Starsurge" "beta" >}} and {{< spell 191034 "Starfall" "beta" >}} have seen a decrease in power, while the builders of {{< spell 194153 "Lunar Strike" "beta" >}} and Solar Wraith with their associated Empowerments have seen increases in power by comparison.
 
 | Added           | Removed                   |
 | :-------------: |:-------------------------:|
-| Soothe          | Blessing of the Ancient   |
-| Hibernate       | Displacer Beast           |
-| {{< spell 252216 "Tiger Dash" "beta" >}}      | Stellar Empowerment       |
-| {{< spell 279620 "Twin Moons" "beta" >}}      |                           |
-| Eclipse         |                           |
+| {{< spell 2908 "Soothe" "beta" >}}           | {{< spell 202360 "Blessing of the Ancients" "live" >}} |
+| {{< spell 2637 "Hibernate" "beta" >}}        | {{< spell 102280 "Displacer Beast" "live" >}}          |
+| {{< spell 252216 "Tiger Dash" "beta" >}}     | {{< spell 197637 "Stellar Empowerment" "live" >}}      |
+| {{< spell 279620 "Twin Moons" "beta" >}}     |                        				|
+| {{< spell 279619 "Eclipse" "beta" >}}        |                        				|
 
 
 ### Removed Abilities:
-The abilities getting removed are largely shifting power away from certain spells. Removing Stellar Empowerment takes power away from our {{< spell 191034 "Starfall" "beta" >}} in favor of the base damage from {{< spell 164815 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}}. The loss of Displacer Beast negatively affects our ability to cheese movement during certain encounters. The theme of these changes seemed to be to even out the power stuffed into certain abilities and talents and spread it out to the rest of the toolkit.
+The abilities getting removed are largely shifting power away from certain spells. Removing {{< spell 197637 "Stellar Empowerment" "live" >}} takes power away from our {{< spell 191034 "Starfall" "beta" >}} in favor of the base damage from {{< spell 164815 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}}. The loss of {{< spell 102280 "Displacer Beast" "live" >}} negatively affects our ability to cheese movement during certain encounters. The theme of these changes seemed to be to even out the power stuffed into certain abilities and talents and spread it out to the rest of the toolkit.
 
 
 ### Added Abilities:
-{{< spell 252216 "Tiger Dash" "beta" >}} will be the new form of long distance travel in both instanced and uninstanced content. While it is weaker than the now removed Displacer Beast, with the global cooldown attached to {{< spell 16979 "Wild Charge" "beta" >}}, there is no other strong choice on the row to compete for a spot. {{< spell 279620 "Twin Moons" "beta" >}} and Eclipse are the most rotationally impactful changes. {{< spell 279620 "Twin Moons" "beta" >}} has been a staple of our multi-target in Legion in the form of Lady and the Child, so this returning as a talent is always a welcome change. The addition of Eclipse allows our single target rotation to have more complexity and changes the rotation. 
+{{< spell 252216 "Tiger Dash" "beta" >}} will be the new form of long distance travel in both instanced and uninstanced content. While it is weaker than the now removed {{< spell 102280 "Displacer Beast" "live" >}}, with the global cooldown attached to {{< spell 16979 "Wild Charge" "beta" >}}, there is no other strong choice on the row to compete for a spot. {{< spell 279620 "Twin Moons" "beta" >}} and {{< spell 279619 "Eclipse" "beta" >}} are the most rotationally impactful changes. {{< spell 279620 "Twin Moons" "beta" >}} has been a staple of our multi-target in Legion in the form of Lady and the Child, so this returning as a talent is always a welcome change. The addition of {{< spell 279619 "Eclipse" "beta" >}} allows our single target rotation to have more complexity and changes the rotation. 
 
 
 ### Reworked Abilities:
@@ -218,7 +218,6 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 ## Glossary 
 
 **Base Abilities**
-
 - {{< spell 164812 "Moonfire" "beta" >}}= MF
 - {{< spell 194153 "Lunar Strike" "beta" >}}= LS
 - {{< spell 190984 "Solar Wrath" "beta" >}}= SW
@@ -229,18 +228,17 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 
 
 **Talents**
-
-{{< spell 202430 "Nature’s Balance" "beta" >}}= NB<br />
-{{< spell 202345 "Starlord" "beta" >}}= SL<br />
-{{< spell 202425 "Warrior of Elune" "beta" >}}= WOE<br />
-{{< spell 205636 "Force of Nature" "beta" >}}= FON<br />
-{{< spell 252216 "Tiger Dash" "beta" >}}= TD<br />
-{{< spell 16979 "Wild Charge" "beta" >}}= WC<br />
-{{< spell 114107 "Soul of the Forest" "beta" >}}= SOTF<br />
-{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}= Incarn or INC<br />
-{{< spell 274281 "New Moon" "beta" >}}= Moons or NM<br />
-{{< spell 202354 "Stellar Drift" "beta" >}}= SD
-{{< spell 279620 "Twin Moons" "beta" >}}= TM
-{{< spell 202347 "Stellar Flare:" "beta" >}}= STFL
-{{< spell 202342 "Shooting Stars" "beta" >}}= SHS
-{{< spell 202770 "Fury of Elune" "beta" >}}= FOE
+- {{< spell 202430 "Nature’s Balance" "beta" >}}= NB
+- {{< spell 202345 "Starlord" "beta" >}}= SL
+- {{< spell 202425 "Warrior of Elune" "beta" >}}= WOE
+- {{< spell 205636 "Force of Nature" "beta" >}}= FON
+- {{< spell 252216 "Tiger Dash" "beta" >}}= TD
+- {{< spell 16979 "Wild Charge" "beta" >}}= WC
+- {{< spell 114107 "Soul of the Forest" "beta" >}}= SOTF
+- {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}= Incarn or INC
+- {{< spell 274281 "New Moon" "beta" >}}= Moons or NM
+- {{< spell 202354 "Stellar Drift" "beta" >}}= SD
+- {{< spell 279620 "Twin Moons" "beta" >}}= TM
+- {{< spell 202347 "Stellar Flare:" "beta" >}}= STFL
+- {{< spell 202342 "Shooting Stars" "beta" >}}= SHS
+- {{< spell 202770 "Fury of Elune" "beta" >}}= FOE
