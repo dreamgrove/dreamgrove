@@ -139,7 +139,7 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 
 *	**{{< spell 202770 "Fury of Elune" "beta" >}}(FoE):**  At current tuning, this talent is by far the best in this row for anything 1-4 targets. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle. 
 	
-*	**{{< spell 274281 "New Moon" "beta" >}}(moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage.  Currently, they are slightly ahead on ST by a few dps points, which makes FoE still more desirable if any 2nd target comes into play or movement is involved.
+*	**{{< spell 274281 "New Moon" "beta" >}}(Moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage.  Currently, they are slightly ahead on ST by a few dps points, which makes FoE still more desirable if any 2nd target comes into play or movement is involved.
 
 
 
