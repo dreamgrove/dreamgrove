@@ -18,7 +18,7 @@ How the class functions has changed a bit. Due to the new {{< spell 279619 "Ecli
 | {{< spell 2908 "Soothe" "beta" >}}           | {{< spell 202360 "Blessing of the Ancients" "live" >}} |
 | {{< spell 2637 "Hibernate" "beta" >}}        | {{< spell 102280 "Displacer Beast" "live" >}}          |
 | {{< spell 252216 "Tiger Dash" "beta" >}}     | {{< spell 197637 "Stellar Empowerment" "live" >}}      |
-| {{< spell 279620 "Twin Moons" "beta" >}}     |                        				|
+| {{< spell 279620 "Twin Moons" "beta" >}}     | {{< spell 202359 "Astral Communion" "live" >}}         |
 | {{< spell 279619 "Eclipse" "beta" >}}        |                        				|
 
 
@@ -40,9 +40,9 @@ The abilities getting removed are largely shifting power away from certain spell
 
 **{{< spell 274281 "New Moon" "beta" >}}** - {{< spell 274281 "New Moon" "beta" >}} is a 3 charge spell on a 25-second recharge rate. The first charge does a minor amount of damage, generates a small amount of Astral Power, and has a very short cast time. The other two spells ramp up in cast time, Astral Power generation, and damage. This is now a talent on the Tier 100 row.
 
-**{{< spell 202347 "Stellar Flare:" "beta" >}}** - Generates 8 Astral Power and has Mastery scaling. The damage done by {{< spell 202347 "Stellar Flare:" "beta" >}} has been decreased to deal slightly less damage than both {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 164815 "Sunfire" "beta" >}}.
+**{{< spell 202347 "Stellar Flare" "beta" >}}** - Generates 8 Astral Power and has {{< spell 77492 "Mastery" "beta" >}} scaling. The damage done by {{< spell 202347 "Stellar Flare" "beta" >}} has been decreased to deal slightly less damage than both {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 164815 "Sunfire" "beta" >}}.
 
-**Empowerments** - Now have a 15% reduced cast time and Solar Empowerment now cleaves multi-target.
+**Empowerments** - Now have a 15% reduced cast time and {{< spell 164545 "Solar Empowerment" "beta" >}} now cleaves multi-target.
 
 
 ## Strengths and Weaknesses?
@@ -51,11 +51,11 @@ The abilities getting removed are largely shifting power away from certain spell
 
 **Priority Target Damage** - Balance Druid can handle target swapping very well when properly prepared for the target swap. Pooling Astral Power, Empowerment charges, {{< spell 205636 "Force of Nature" "beta" >}}, and even {{< spell 202425 "Warrior of Elune" "beta" >}}, the Balance toolkit is exceptional at burning down high-priority targets.
 
-**Sustained Multi-Target** - Balance’s multi-target damage is one of the highest sustained multi-target damage due to very little fall-off outside of our cooldowns. With the removal of Stellar Empowerment, there is no longer a restriction on the distance our targets are apart to do max damage with {{< spell 164815 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}}. 
+**Sustained Multi-Target** - Balance’s multi-target damage is one of the highest sustained multi-target damage due to very little fall-off outside of our cooldowns. With the removal of {{< spell 197637 "Stellar Empowerment" "live" >}}, there is no longer a restriction on the distance our targets are apart to do max damage with {{< spell 164815 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}}. 
 
-**Defensives** - Bark Skin and Bear Form when used in conjunction give us huge boost to our survivability, but when used as singular cooldowns (IE: Bear form without Barkskin or Barkskin without Bear form) then they are both pretty lackluster as a whole. Thankfully, with Guardian Affinity providing a flat 6% damage reduction, Balance Druids can still be tanky without cooldowns. 
+**Defensives** - {{< spell 22812 "Barkskin" "beta" >}} and {{< spell 5487 "Bear Form" "beta" >}} when used in conjunction give us huge boost to our survivability, but when used as singular cooldowns (IE: Bear Form without Barkskin or Barkskin without Bear form) then they are both pretty lackluster as a whole. Thankfully, with {{< spell 197491 "Guardian Affinity" "beta" >}} providing a flat 6% damage reduction, Balance Druids can still be tanky without cooldowns. 
 
-**Utility** - Balance has a large amount of utility in form of Typhoon, Mass Entanglement, Mighty Bash and Entangling Roots, Treants, Innervate, and now Soothe and Hibernate.
+**Utility** - Balance has a large amount of utility in form of {{< spell 132469 "Typhoon" "beta" >}}, {{< spell 102359 "Mass Entanglement" "beta" >}}, {{< spell 5211 "Mighty Bash" "beta" >}} and {{< spell 339 "Entangling Roots" "beta" >}}, Treants, {{< spell 29166 "Innervate" "beta" >}}, and now {{< spell 2908 "Soothe" "beta" >}} and {{< spell 2637 "Hibernate" "beta" >}}.
 
 ### Weaknesses:
 
@@ -102,23 +102,23 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 ### Tier 30: 
 *	**{{< spell 252216 "Tiger Dash" "beta" >}}:** Only would be used on fights like Imonar or when world questing/leveling. Good for covering large distances fast. 
 
-*	**Renewal:** Good on pure single target, low movement fights as movement isn’t an issue.
+*	**{{< spell 108238 "Renewal" "beta" >}}:** Good on pure single target, low movement fights as movement isn’t an issue.
 
 *	**{{< spell 16979 "Wild Charge" "beta" >}}:** Even with the 0.5 global cooldown associated with this spell, our disengage is still going to be the best talent for most all situations. Just be sure to get used to not being able to instantly use it to dodge mechanics or you might find yourself dying more often. 
 
 ### Tier 45:
-*	**Feral Affinity:** Gives 15% passive movement speed and access to some feral specific abilities that you as a moonkin have no reason to use.
+*	**{{< spell 202157 "Feral Affinity" "beta" >}}:** Gives 15% passive movement speed and access to some feral specific abilities that you as a moonkin have no reason to use.
 
-*	**Restoration Affinity:** Heals you for 3% of your maximum health every 5 seconds and gives you access to some notable restoration spells such as Wild Growth, Swift Mend, and Rejuvenation.
+*	**{{< spell 197492 "Restoration Affinity" "beta" >}}:** Heals you for 3% of your maximum health every 5 seconds and gives you access to some notable restoration spells such as Wild Growth, Swift Mend, and Rejuvenation.
 
-*	**Guardian Affinity:** This will be your default pick generally speaking. Gives you a passive 6% damage reduction and access to notable Guardian abilities such as Frenzied Regeneration and Ironfur.
+*	**{{< spell 197491 "Guardian Affinity" "beta" >}}:** This will be your default pick generally speaking. Gives you a passive 6% damage reduction and access to notable Guardian abilities such as Frenzied Regeneration and Ironfur.
 
 ### Tier 60:
-*	**Mighty Bash:** Mighty bash is a single target 5 second stun. This talent sees limited use, but whenever you need a stun it is pretty powerful overall.
+*	**{{< spell 5211 "Mighty Bash" "beta" >}}:** {{< spell 5211 "Mighty Bash" "beta" >}} is a single target 5 second stun. This talent sees limited use, but whenever you need a stun it is pretty powerful overall.
 
-*	**Mass Entanglement:** Mass Entanglement is always strong on a few fights per tier whenever you can cheese mechanics with it. It will continue to be strong on fights like Coven and Aggramar and to lazily instant proc Sephuz.
+*	**{{< spell 102359 "Mass Entanglement" "beta" >}}:** {{< spell 102359 "Mass Entanglement" "beta" >}} is always strong on a few fights per tier whenever you can cheese mechanics with it. It will continue to be strong on fights like Coven and Aggramar and to lazily instant proc Sephuz.
 
-*	**Typhoon:** This is your default talent for this row. The displacement on the knockback is very powerful for many situations such as Aggramar add management or questing. Typhoon also knocks back 10 yards further than it used to.
+*	**{{< spell 132469 "Typhoon" "beta" >}}:** This is your default talent for this row. The displacement on the knockback is very powerful for many situations such as Aggramar add management or questing. {{< spell 132469 "Typhoon" "beta" >}} also knocks back 10 yards further than it used to.
 
 ### Tier 75: 
 *	**{{< spell 114107 "Soul of the Forest" "beta" >}}(Sotf):** This talent is ideal for sustained multi-target fights with 4+ targets (which is very rare), or when a target needs high burst constantly. You will rarely use this in its current form. 
@@ -130,9 +130,9 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 ### Tier 90: 
 *	**{{< spell 202354 "Stellar Drift" "beta" >}}(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
 
-*	**{{< spell 279620 "Twin Moons" "beta" >}}(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare:" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare:" "beta" >}} it is also currently a good option on pure single target.
+*	**{{< spell 279620 "Twin Moons" "beta" >}}(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare" "beta" >}} it is also currently a good option on pure single target.
 	
-*	**{{< spell 202347 "Stellar Flare:" "beta" >}}(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. {{< spell 202347 "Stellar Flare:" "beta" >}} is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
+*	**{{< spell 202347 "Stellar Flare" "beta" >}}(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. {{< spell 202347 "Stellar Flare" "beta" >}} is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
 
 ### Tier 100: 
 *	**{{< spell 202342 "Shooting Stars" "beta" >}}(ShS):** This talent is rather weak in its current state, as the breakpoint for it to be usable than its counterparts is 4 target sustained scenarios.
@@ -150,9 +150,9 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 
 ### Opener
 
-Begin pre-casting {{< spell 190984 "Solar Wrath" "beta" >}} 2.5 seconds prior to the encounter starting while standing away from the boss. Then as soon as that {{< spell 190984 "Solar Wrath" "beta" >}} is completed begin pre-casting a second one. As soon as the timer on the pull hits 0, apply your dots {{< spell 164815 "Sunfire" "beta" >}}, {{< spell 164812 "Moonfire" "beta" >}}, and {{< spell 202347 "Stellar Flare:" "beta" >}}*. Spend {{< spell 190984 "Solar Wrath" "beta" >}} to get above 40 Astral Power then use the cooldown, {{< spell 194223 "Celestial Alignment" "beta" >}} / {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}*.
+Begin pre-casting {{< spell 190984 "Solar Wrath" "beta" >}} 2.5 seconds prior to the encounter starting while standing away from the boss. Then as soon as that {{< spell 190984 "Solar Wrath" "beta" >}} is completed begin pre-casting a second one. As soon as the timer on the pull hits 0, apply your dots {{< spell 164815 "Sunfire" "beta" >}}, {{< spell 164812 "Moonfire" "beta" >}}, and {{< spell 202347 "Stellar Flare" "beta" >}}*. Spend {{< spell 190984 "Solar Wrath" "beta" >}} to get above 40 Astral Power then use the cooldown, {{< spell 194223 "Celestial Alignment" "beta" >}} / {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}*.
 
->*Wrath>Wrath>Dot>Dot>({{< spell 202347 "Stellar Flare:" "beta" >}}**)>Wrath to 40> CA*/Incarn* > (FOE* and Trees*)> Rotation*
+>*Wrath>Wrath>Dot>Dot>({{< spell 202347 "Stellar Flare" "beta" >}}**)>Wrath to 40> CA*/Incarn* > (FOE* and Trees*)> Rotation*
 
 *=if talented
 
@@ -161,9 +161,9 @@ Begin pre-casting {{< spell 190984 "Solar Wrath" "beta" >}} 2.5 seconds prior to
 
 **1. Capping Astral Power:** One of the quickest ways to do significantly less damage is to exceed the 100 Astral Power cap. This is mitigated by using {{< spell 78674 "Starsurge" "beta" >}} when available. 
 
-**2. Maintain 100% uptime on your DoTs:** {{< spell 164812 "Moonfire" "beta" >}}, {{< spell 164815 "Sunfire" "beta" >}}, and {{< spell 202347 "Stellar Flare:" "beta" >}}. In addition make sure you do not over DoT. Pay attention to the pandemic window (the mark in which dots have 30% of their duration left remaining and you are able to refresh the dot without any loss), which is 6.6s for {{< spell 164812 "Moonfire" "beta" >}}, 5.4s for {{< spell 164815 "Sunfire" "beta" >}}, and 7.2s for {{< spell 202347 "Stellar Flare:" "beta" >}}.
+**2. Maintain 100% uptime on your DoTs:** {{< spell 164812 "Moonfire" "beta" >}}, {{< spell 164815 "Sunfire" "beta" >}}, and {{< spell 202347 "Stellar Flare" "beta" >}}. In addition make sure you do not over DoT. Pay attention to the pandemic window (the mark in which dots have 30% of their duration left remaining and you are able to refresh the dot without any loss), which is 6.6s for {{< spell 164812 "Moonfire" "beta" >}}, 5.4s for {{< spell 164815 "Sunfire" "beta" >}}, and 7.2s for {{< spell 202347 "Stellar Flare" "beta" >}}.
 
-**3. Spend your Lunar and Solar Empowerments:** From Legion to BFA, there is a large increase in priority in Empowerment spending. Make sure to not cast {{< spell 190984 "Solar Wrath" "beta" >}} when your {{< spell 194153 "Lunar Strike" "beta" >}} is at 3 stacks and vice versa due to the Eclipse mechanic for potential overcapping.
+**3. Spend your Lunar and {{< spell 164545 "Solar Empowerments" "beta" >}}:** From Legion to BFA, there is a large increase in priority in Empowerment spending. Make sure to not cast {{< spell 190984 "Solar Wrath" "beta" >}} when your {{< spell 194153 "Lunar Strike" "beta" >}} is at 3 stacks and vice versa due to the {{< spell 279619 "Eclipse" "beta" >}} mechanic for potential overcapping.
 
 **4. Use your cooldowns effectively:** Saving cooldowns for burst windows is incredibly smart, but losing a usage is not always worth. Try to see the fight length and weigh how you should be using your {{< spell 194223 "Celestial Alignment" "beta" >}}, {{< spell 202770 "Fury of Elune" "beta" >}}, {{< spell 205636 "Force of Nature" "beta" >}}, {{< spell 202425 "Warrior of Elune" "beta" >}}.
 
@@ -177,9 +177,9 @@ Begin pre-casting {{< spell 190984 "Solar Wrath" "beta" >}} 2.5 seconds prior to
 **2. Spend Astral Power on {{< spell 191034 "Starfall" "beta" >}}:** You begin {{< spell 191034 "Starfall" "beta" >}}ing on 3 targets. If it is 2 targets, you still cast {{< spell 78674 "Starsurge" "beta" >}} as your primary spender. 
 
 
-**3. Spend Lunar Empowerments:** If you have a Lunar Empowerment off your {{< spell 190984 "Solar Wrath" "beta" >}} cast, it is beneficial to spend this before your Solar Empowerments.
+**3. Spend {{< spell 164547 "Lunar Empowerments" "beta" >}}:** If you have a {{< spell 164547 "Lunar Empowerment" "beta" >}} off your {{< spell 190984 "Solar Wrath" "beta" >}} cast, it is beneficial to spend this before your {{< spell 164545 "Solar Empowerments" "beta" >}}.
 
-**4. Spend Solar Empowerments:** Whenever you get an Eclipse proc off your {{< spell 194153 "Lunar Strike" "beta" >}} it is beneficial to spend your Solar Empowerment first.
+**4. Spend {{< spell 164545 "Solar Empowerments" "beta" >}}:** Whenever you get an {{< spell 279619 "Eclipse" "beta" >}} proc off your {{< spell 194153 "Lunar Strike" "beta" >}} it is beneficial to spend your Solar Empowerment first.
 
 **5. Fill with {{< spell 190984 "Solar Wrath" "beta" >}}:** Whenever you have nothing else to do, fill with {{< spell 190984 "Solar Wrath" "beta" >}}. If you can hit one additional target with it, begin casting {{< spell 194153 "Lunar Strike" "beta" >}} as a filler instead.
 
@@ -204,7 +204,7 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 
 **Legendaries** are Sephuz, Lady and the Child or Promise of Elune(if low movement and only on single target). 
  
-**Talents Single Target** use WoE, SL, TM, FoE in most situations. If the encounter is pure single target with little downtime, consider {{< spell 274281 "New Moon" "beta" >}}, {{< spell 202347 "Stellar Flare:" "beta" >}}, and Trees where necessary.
+**Talents Single Target** use WoE, SL, TM, FoE in most situations. If the encounter is pure single target with little downtime, consider {{< spell 274281 "New Moon" "beta" >}}, {{< spell 202347 "Stellar Flare" "beta" >}}, and Trees where necessary.
 
 **Talents Multi Target** use WoE, SOTF, SD, ShS(if more than 4 targets for sustained periods of time else take FoE).
 
@@ -239,6 +239,6 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 - {{< spell 274281 "New Moon" "beta" >}}= Moons or NM
 - {{< spell 202354 "Stellar Drift" "beta" >}}= SD
 - {{< spell 279620 "Twin Moons" "beta" >}}= TM
-- {{< spell 202347 "Stellar Flare:" "beta" >}}= STFL
+- {{< spell 202347 "Stellar Flare" "beta" >}}= STFL
 - {{< spell 202342 "Shooting Stars" "beta" >}}= SHS
 - {{< spell 202770 "Fury of Elune" "beta" >}}= FOE
