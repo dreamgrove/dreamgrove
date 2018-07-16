@@ -14,13 +14,13 @@ Insert Glossary Here could also add sims at the end
 ## What is Changing?
 How the class functions has changed a bit. Due to the new eclipse system and the changing of our Mastery, the Spenders of Starsurge and Starfall have seen a decrease in power, while the builders of Lunar Strike and Solar Wraith with their associated Empowerments have seen increases in power by comparison.
 
-| Added           | Removed                   |
-| :-------------: |:-------------------------:|
-| Soothe          | Blessing of the Ancient   |
-| Hibernate       | Displacer Beast           |
-| Tiger Dash      | Stellar Empowerment       |
-| Twin Moons      |                           |
-| Eclipse         |                           |
+| Added           |  | Removed                   |
+| :-------------: |--|:-------------------------:|
+| Soothe          |  | Blessing of the Ancient   |
+| Hibernate       |  | Displacer Beast           |
+| Tiger Dash      |  | Stellar Empowerment       |
+| Twin Moons      |  |                           |
+| Eclipse         |  |                           |
 
 
 ### Removed Abilities:
@@ -97,53 +97,53 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 >*Of Note: Many talents are subject to change based on tuning from Blizzard, so these will be updated in the future based on new sims. Additionally, talents have significantly less power in Battle for Azeroth than they did Legion.*
 
 ### Tier 15:
-**	Nature’s Balance(NB):** Great for sustained multi-target scenarios, as the constant generation of Astral Power is great. This will particularly be good in M+, as you have the opportunity to generate the 50 Astral Power after combat very quickly. This is most useful in open world content and dungeons such as Upper Karazhan with large downtime between trash and boss pulls.
+*	**Nature’s Balance(NB):** Great for sustained multi-target scenarios, as the constant generation of Astral Power is great. This will particularly be good in M+, as you have the opportunity to generate the 50 Astral Power after combat very quickly. This is most useful in open world content and dungeons such as Upper Karazhan with large downtime between trash and boss pulls.
 
-**	Warrior of Elune(WoE): This talent is ideal for hybrid encounters as well as being useful for priority target swaps and burst cleave. The three free Lunar Strikes you still want to use back-to-back, and ideally with empowerments if possible, as it is important to keep it on cooldown. Fights that this talent would be usable are Portal Keeper, as it has small adds that need bursted and periods of single and multi-target.**
+*	**Warrior of Elune(WoE):** This talent is ideal for hybrid encounters as well as being useful for priority target swaps and burst cleave. The three free Lunar Strikes you still want to use back-to-back, and ideally with empowerments if possible, as it is important to keep it on cooldown. Fights that this talent would be usable are Portal Keeper, as it has small adds that need bursted and periods of single and multi-target.
 	
 *	**Force of Nature(FoN/trees):** Trees are ideal for pure patchwerk single target, as this talent does not scale with the number of targets. Therefore use them on cooldown on single target fights, in M+ if tanks are having issues with threat, as well as during world quests/leveling. 
 
 ### Tier 30: 
-	**Tiger Dash:** Only would be used on fights like Imonar or when world questing/leveling. Good for covering large distances fast. 
+*	**Tiger Dash:** Only would be used on fights like Imonar or when world questing/leveling. Good for covering large distances fast. 
 
-	**Renewal:** Good on pure single target, low movement fights as movement isn’t an issue.
+*	**Renewal:** Good on pure single target, low movement fights as movement isn’t an issue.
 
-	**Wild Charge:** Even with the 0.5 global cooldown associated with this spell, our disengage is still going to be the best talent for most all situations. Just be sure to get used to not being able to instantly use it to dodge mechanics or you might find yourself dying more often. 
+*	**Wild Charge:** Even with the 0.5 global cooldown associated with this spell, our disengage is still going to be the best talent for most all situations. Just be sure to get used to not being able to instantly use it to dodge mechanics or you might find yourself dying more often. 
 
 ### Tier 45:
-    **Feral Affinity:** Gives 15% passive movement speed and access to some feral specific abilities that you as a moonkin have no reason to use.
+*	**Feral Affinity:** Gives 15% passive movement speed and access to some feral specific abilities that you as a moonkin have no reason to use.
 
-   ** Restoration Affinity:** Heals you for 3% of your maximum health every 5 seconds and gives you access to some notable restoration spells such as Wild Growth, Swift Mend, and Rejuvenation.
+*	**Restoration Affinity:** Heals you for 3% of your maximum health every 5 seconds and gives you access to some notable restoration spells such as Wild Growth, Swift Mend, and Rejuvenation.
 
-    **Guardian Affinity:** This will be your default pick generally speaking. Gives you a passive 6% damage reduction and access to notable Guardian abilities such as Frenzied Regeneration and Ironfur.
+*	**Guardian Affinity:** This will be your default pick generally speaking. Gives you a passive 6% damage reduction and access to notable Guardian abilities such as Frenzied Regeneration and Ironfur.
 
 ### Tier 60:
-	**Mighty Bash:** Mighty bash is a single target 5 second stun. This talent sees limited use, but whenever you need a stun it is pretty powerful overall.
+*	**Mighty Bash:** Mighty bash is a single target 5 second stun. This talent sees limited use, but whenever you need a stun it is pretty powerful overall.
 
-	**Mass Entanglement:** Mass Entanglement is always strong on a few fights per tier whenever you can cheese mechanics with it. It will continue to be strong on fights like Coven and Aggramar and to lazily instant proc Sephuz.
+*	**Mass Entanglement:** Mass Entanglement is always strong on a few fights per tier whenever you can cheese mechanics with it. It will continue to be strong on fights like Coven and Aggramar and to lazily instant proc Sephuz.
 
-	**Typhoon:** This is your default talent for this row. The displacement on the knockback is very powerful for many situations such as Aggramar add management or questing. Typhoon also knocks back 10 yards further than it used to.
+*	**Typhoon:** This is your default talent for this row. The displacement on the knockback is very powerful for many situations such as Aggramar add management or questing. Typhoon also knocks back 10 yards further than it used to.
 
 ### Tier 75: 
-	**Soul of the Forest(Sotf):** This talent is ideal for sustained multi-target fights with 4+ targets (which is very rare), or when a target needs high burst constantly. You will rarely use this in its current form. 
+*	**Soul of the Forest(Sotf):** This talent is ideal for sustained multi-target fights with 4+ targets (which is very rare), or when a target needs high burst constantly. You will rarely use this in its current form. 
 
-	**Starlord(SL):** Reiteration of our T20 as previously stated. This is best for pure single target patchwerk fights. You want to play it similar how we did in Tomb of Sargeras, which is when you are getting close to the last 4 seconds of the buff try to not spend astral power so as to get the new buff right when the previous one ends.
+*	**Starlord(SL):** Reiteration of our T20 as previously stated. This is best for pure single target patchwerk fights. You want to play it similar how we did in Tomb of Sargeras, which is when you are getting close to the last 4 seconds of the buff try to not spend astral power so as to get the new buff right when the previous one ends.
 	
-	**Incarnation: Chosen of Elune(Incarn):** This replaces Celestial Alignment as our primary dps cooldown still. This talent will be used on 2 - 4 sustained targets and on any fights with intermittent multi-target.
+*	**Incarnation: Chosen of Elune(Incarn):** This replaces Celestial Alignment as our primary dps cooldown still. This talent will be used on 2 - 4 sustained targets and on any fights with intermittent multi-target.
 
 ### Tier 90: 
-	**Stellar Drift(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
+*	**Stellar Drift(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
 
-	**Twin Moons(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind Stellar Flare on single target (0.5% or so), so if you don’t want the hassle of managing Stellar Flare it is also currently a good option on pure single target.
+*	**Twin Moons(TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind Stellar Flare on single target (0.5% or so), so if you don’t want the hassle of managing Stellar Flare it is also currently a good option on pure single target.
 	
-	**Stellar Flare(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. Stellar Flare is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
+*	**Stellar Flare(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. Stellar Flare is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
 
 ### Tier 100: 
-	**Shooting Stars(ShS):** This talent is rather weak in its current state, as the breakpoint for it to be usable than its counterparts is 4 target sustained scenarios.
+*	**Shooting Stars(ShS):** This talent is rather weak in its current state, as the breakpoint for it to be usable than its counterparts is 4 target sustained scenarios.
 
-	**Fury of Elune(FoE):**  At current tuning, this talent is by far the best in this row for anything 1-4 targets. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle. 
+*	**Fury of Elune(FoE):**  At current tuning, this talent is by far the best in this row for anything 1-4 targets. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle. 
 	
-	**New Moon(moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage.  Currently, they are slightly ahead on ST by a few dps points, which makes FoE still more desirable if any 2nd target comes into play or movement is involved.
+*	**New Moon(moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage.  Currently, they are slightly ahead on ST by a few dps points, which makes FoE still more desirable if any 2nd target comes into play or movement is involved.
 
 
 
