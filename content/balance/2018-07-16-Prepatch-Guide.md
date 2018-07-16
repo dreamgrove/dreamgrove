@@ -14,13 +14,13 @@ Insert Glossary Here could also add sims at the end
 ## What is Changing?
 How the class functions has changed a bit. Due to the new eclipse system and the changing of our Mastery, the Spenders of Starsurge and Starfall have seen a decrease in power, while the builders of Lunar Strike and Solar Wraith with their associated Empowerments have seen increases in power by comparison.
 
-| Added           | -     | Removed                   |
-| :-------------: | :---: |:-------------------------:|
-| Soothe          |       | Blessing of the Ancient   |
-| Hibernate       |       | Displacer Beast           |
-| Tiger Dash      |       | Stellar Empowerment       |
-| Twin Moons      |       |                           |
-| Eclipse         |       |                           |
+| Added           | Removed                   |
+| :-------------: |:-------------------------:|
+| Soothe          | Blessing of the Ancient   |
+| Hibernate       | Displacer Beast           |
+| Tiger Dash      | Stellar Empowerment       |
+| Twin Moons      |                           |
+| Eclipse         |                           |
 
 
 ### Removed Abilities:
