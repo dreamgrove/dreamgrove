@@ -197,9 +197,6 @@ Notable trinkets for single target that you should look at / sim yourself are No
 
 Notable trinkets for multi-target are Prototype Personnel Decimator, Terminus Signaling Beacon, Norgannon’s Prowess, and Acrid Catalyst Injector. The same as above, always sim for accuracy because these are just general trends that we have seen from sims.
 
-### Haste Breakpoint?!?!
-Yes, we’ve gotten this question many times. It’s finally happened. Balance has a Haste breakpoint. If you have 40% Haste on your gear, wear Sephuz’s Secret, have Bloodlust, and {{< spell 194223 "Celestial Alignment" "beta" >}} rolling all at the same time, then you will hit 100% Haste lowering your GCD to its minimum making Haste worth far less than before. It’s a Haste soft cap, do not go over 40% Haste. 
-
 
 ## TLDR:
 
