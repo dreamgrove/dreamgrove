@@ -9,7 +9,7 @@ Hi everyone!
 
 With the Battle for Azeroth beta winding down and pre-patch dropping in a few days, it's time to talk about what's in store for Guardian Druids in 8.0. Keep in mind that while we don't expect any more major changes coming for the spec, tuning is still underway and as always, conclusions drawn in this piece are subject to change.
 
-As a quick aside, I have been working hard on the Guardian pre-patch guide, including taking over the Wowhead and Icy Veins guides (Wowhead is live [now](https://ptr.wowhead.com/guides/guardian-druid-tank-bfa-battle-for-azeroth-pre-patch), Icy Veins will go up on Tuesday). Of course, there will be a version of the guide hosted on Dreamgrove.gg as well, if those sites aren't to your taste. The Dreamgrove version will go live soon&trade;.
+As a quick aside, I have been working hard on the Guardian pre-patch guide, including taking over the [Wowhead](https://ptr.wowhead.com/guides/guardian-druid-tank-bfa-battle-for-azeroth-pre-patch) and [Icy Veins](https://www.icy-veins.com/wow/guardian-druid-pve-tank-guide) guides (both are now live and you can find them at the links provided). Of course, there will be a version of the guide hosted on Dreamgrove.gg as well, if those sites aren't to your taste. The Dreamgrove version will go live soon&trade;.
 
 ## What's Changed
 
@@ -38,8 +38,8 @@ What's been changed for Guardian:
 - Rage generation has been rebalanced. Specifically:
   - New: being hit by a melee attack generates 3 rage (can only occur once per second).
   - Melee attacks generate 4 rage per hit (down from 6).
-  - Mangle generates 8 rage (up from 5).
-  - Thrash generates 5 rage (up from 4).
+  - {{< spell 33917 "Mangle" "beta" >}} generates 8 rage (up from 5).
+  - {{< spell 77758 "Thrash" "beta" >}} generates 5 rage (up from 4).
 
 And finally, some other non-Guardian (but still relevant) changes:
 
