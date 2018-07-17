@@ -136,11 +136,11 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 *	**{{< spell 202347 "Stellar Flare" "beta" >}}(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. {{< spell 202347 "Stellar Flare" "beta" >}} is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
 
 ### Tier 100: 
-*	**{{< spell 202342 "Shooting Stars" "beta" >}}(ShS):** This talent is rather weak in its current state, as the breakpoint for it to be usable than its counterparts is 4 target sustained scenarios.
+*	**{{< spell 202342 "Shooting Stars" "beta" >}}(ShS):** Due to the buffs to this talent, {{< spell 202342 "Shooting Stars" "beta" >}} is now the premiere option for most damage profiles. The only time that you would take anything else would be for burst Single Target or burst Multi-Target in which you would opt into {{< spell 202770 "Fury of Elune" "beta" >}}.
 
-*	**{{< spell 202770 "Fury of Elune" "beta" >}}(FoE):**  At current tuning, this talent is by far the best in this row for anything 1-4 targets. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle. 
+*	**{{< spell 202770 "Fury of Elune" "beta" >}}(FoE):** {{< spell 202770 "Fury of Elune" "beta" >}} is a very powerful talent for burst, but is unfortunately overshadowed by {{< spell 202342 "Shooting Stars" "beta" >}} balance wise at this moment. You should take {{< spell 202770 "Fury of Elune" "beta" >}} whenever you need burst Single Target on a target that has increased damage taken or sporadic Multi-Target in which you can get benefit from {{< spell 202770 "Fury of Elune" "beta" >}}. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle.
 	
-*	**{{< spell 274281 "New Moon" "beta" >}}(Moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage.  Currently, they are slightly ahead on ST by a few dps points, which makes FoE still more desirable if any 2nd target comes into play or movement is involved.
+*	**{{< spell 274281 "New Moon" "beta" >}}(Moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage. Currently, they are outclassed in most situations compared to the other T100 options. They are close on Single Target if you care about playing with moons!
 
 
 
@@ -205,9 +205,9 @@ Yes, we’ve gotten this question many times. It’s finally happened. Balance h
 
 **Legendaries** are Sephuz, Lady and the Child or Promise of Elune(if low movement and only on single target). 
  
-**Talents Single Target** use WoE, SL, TM, FoE in most situations. If the encounter is pure single target with little downtime, consider {{< spell 274281 "New Moon" "beta" >}}, {{< spell 202347 "Stellar Flare" "beta" >}}, and Trees where necessary.
+**Talents Single Target** use WoE, SL, TM, SHS in most situations. If the encounter requires burst Multi-Target or Single Target, then {{< spell 202770 "Fury of Elune" "beta" >}} could potentially be a viable option. If the encounter is a pure patchwerk encounter, then {{< spell 202347 "Stellar Flare" "beta" >}} and {{< spell 205636 "Force of Nature" "beta" >}} are pretty good.
 
-**Talents Multi Target** use WoE, SOTF, SD, ShS(if more than 4 targets for sustained periods of time else take FoE).
+**Talents Multi Target** use WoE, SOTF, SD, ShS.
 
 **Talents leveling** use Trees, Soul, TM, FoE. If you pull very heavy using Incarn can be more beneficial.
 
