@@ -12,7 +12,7 @@ Hey guys, we decided to help everybody out who is raiding on the pre-patch with 
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,312,213,321,231,321,132" >}}
+{{< talents spec="balance" src="beta" recommend="213,312,213,321,231,321,132" >}}
 
 The only really contested talents are Warrior of Elune vs Force of Nature and Twin Moons vs Stellar Flare. For a fight like Garothi we think Warrior of Elune will give you slightly more mobility in order to be able to dodge the beams and soak the circles on the ground. As for Stellar Flare vs Twin Moons, even though you can cleave the 2 cannons for a bit, it is not better than the .6% that Stellar Flare provides.
 
