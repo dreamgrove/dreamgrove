@@ -12,14 +12,15 @@ Hey guys, we decided to help everybody out who is raiding on the pre-patch with 
 <center>
 ## Garothi Worldbreaker
 
-### Talents:
-</center>
+### Talents: <br>
+
 {{< talents spec="balance" src="beta" recommend="132,123,231,123,132,123,321" >}}
 
-<center>
+
 The only really contested talents are Warrior of Elune vs Force of Nature and Twin Moons vs Stellar Flare. For a fight like Garothi we think Warrior of Elune will give you slightly more mobility in order to be able to dodge the beams and soak the circles on the ground. As for Stellar Flare vs Twin Moons, even though you can cleave the 2 cannons for a bit, it is not better than the .6% that Stellar Flare provides.
 </center>
 
+<center>
 ## Fel-Hounds
 
 ### Talents:
@@ -27,137 +28,94 @@ The only really contested talents are Warrior of Elune vs Force of Nature and Tw
 {{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,321" >}}
 
 As for the talents here, none of them are really questionable. With the recent buffs to Shooting Stars, this talent has increased in DPS by a fair amount. Remember that you are still Starsurging on 2 targets regardless of whether the dogs are stacked or not.
-
-### Legendaries:
-
-<center>
-        <img src="https://puu.sh/AYbTo/11ceb4541d.png" ></img>
 </center>
 
-Lady and the Child and Sephuz’s Secret are the default choices. If you are able to stack the dogs for the full duration of the encounter, then play Oneth’s Intuition.
-
+<center>
 ## Anotoran High Command
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="132,123,231,231,132,132,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="231,123,231,231,231,231,321" >}}
 
 .....
+</center>
 
+<center>
 ## Portal Keeper Hasabel
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="132,123,231,132,132,132,321" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="232,123,231,132,231,231,321" >}}
 
 .....
+</center>
 
+<center>
 ## The Defense of Eonar
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="213,321,213,213,123,123,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="231,123,231,232,321,321,321" >}}
 
 .....
+</center>
 
+<center>
 ## Imonar the Soulhunter
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,321,213,321,231,321,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,321" >}}
 
 .....
+</center>
 
+<center>
 ## Kin'garoth
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,321,213,321,231,231,213" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,231" >}}
 
 .....
+</center>
 
+<center>
 ## Varimathras
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,321,213,321,231,321,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,321" >}}
 
 .....
+</center>
 
+<center>
 ## The Coven of Shivarra
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,321,213,231,231,231,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="132,123,231,132,231,132,321" >}}
 
 .....
+</center>
 
+<center>
 ## Aggramar
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,321,213,213,231,231,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,321" >}}
 
 .....
+</center>
 
+<center>
 ## Argus the Unmaker
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="231,321,213,321,231,231,123" >}}
-
-### Legendaries:
-
-<center>
-        <img src="" ></img>
-</center>
+{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,321" >}}
 
 .....
+</center>
