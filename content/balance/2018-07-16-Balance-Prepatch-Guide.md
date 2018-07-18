@@ -81,6 +81,8 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 
 **Impeccable Fel Essence** - This legendary is very good when paired with {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} and is also very good depending on fight kill time.
 
+**Oneth's Intuition** - Oneth's Intuition has seen a very high decrease in power moving from Legion into Battle for Azeroth. This legendary is very strong on 2 targets and can be powerful on single target if you have very high levels of mastery. 
+
 **Kil’Jaeden’s Burning Wish** - This trinket is a viable choice if your other slots do not have high level trinkets. With the increase of value to intellect, this item becomes the strongest stat stick in the game.
 
 **Promises of Elune, The Moon Goddess** - This legendary is really strong on pure patchwerk fights due to the increase in value of our builders. This legendary will see use on fights without additional cleavable targets such as Imonar, Kingaroth, and Garothi.
