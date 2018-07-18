@@ -1,8 +1,8 @@
 ---
 title: Balance Antorus Talent Guide (Prepatch)
-date: '2018-07-17'
+date: '2018-07-18'
 authors: ["Nick","Tettles"]
-published: false
+published: true
 ---
 
 <center>
