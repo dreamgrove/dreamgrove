@@ -122,11 +122,11 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 *	**{{< spell 132469 "Typhoon" "beta" >}}:** This is your default talent for this row. The displacement on the knockback is very powerful for many situations such as Aggramar add management or questing. {{< spell 132469 "Typhoon" "beta" >}} also knocks back 10 yards further than it used to.
 
 ### Tier 75: 
-*	**{{< spell 114107 "Soul of the Forest" "beta" >}}(Sotf):** This talent is ideal for sustained multi-target fights with 4+ targets (which is very rare), or when a target needs high burst constantly. You will rarely use this in its current form. 
+*	**{{< spell 114107 "Soul of the Forest" "beta" >}}(Sotf):** This talent is ideal for sustained multi-target fights with 3+ targets, or when there is sporadic heavy AOE. 
 
-*	**{{< spell 202345 "Starlord" "beta" >}}(SL):** Reiteration of our T20 as previously stated. This is best for pure single target patchwerk fights. You want to play it similar how we did in Tomb of Sargeras, which is when you are getting close to the last 4 seconds of the buff try to not spend astral power so as to get the new buff right when the previous one ends.
+*	**{{< spell 202345 "Starlord" "beta" >}}(SL):** Reiteration of our T20 as previously stated. This is best for Single Target and 2 Target encounters due to the buffs to shooting stars. You want to play it similar how we did in Tomb of Sargeras, which is when you are getting close to the last 4 seconds of the buff try to not spend astral power so as to get the new buff right when the previous one ends.
 	
-*	**{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}(Incarn):** This replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our primary dps cooldown still. This talent will be used on 2 - 4 sustained targets and on any fights with intermittent multi-target.
+*	**{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}(Incarn):** This replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our primary dps cooldown still. This talent will be used only when the need for 30 seconds worth of burst comes out.
 
 ### Tier 90: 
 *	**{{< spell 202354 "Stellar Drift" "beta" >}}(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
