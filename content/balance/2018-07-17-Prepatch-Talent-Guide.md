@@ -65,7 +65,7 @@ This will be one of the better fights for Balance Druid’s sustained Multi-Targ
 
 ### Talents:
 
-{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,321" >}}
+{{< talents spec="balance" src="beta" recommend="132,123,231,123,132,132,231" >}}
 
 Everything is pretty standard here for a Single Target encounter. Twin Moons seems better than Stellar Flare due to the amount of unpredictable movement sometimes. Try to steal the interrupt on the boss for your Sephuz proc.
 </center>
