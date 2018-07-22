@@ -9,12 +9,17 @@ title: "The Emerald Dreamcatcher Prepatch Guide"
 
 Recently, The Emerald Dreamcatcher has seen some updates in Simulationcraft Modules. These updates made us see something we were missing prior with The Emerald Dreamcatcher which was an inability to have virtually 100% Empowerment uptime. This legendary requires precise casting and may not be be the optimal choice in all situations or for all players. The legendary itself relies on maintaining a 5 second buff and casting combos to maintain the buff while at the same time managing dots, empowerments, and the encounter itself. Feel free to play around with it, as it is very powerful and will likely be your best option on single target even if you mess it up. Reaching 32% haste makes keeping the buff up far easier, however sacrificing too much item level will create more harm than good. 
 
+Nick has made a Weakaura that helps you know which casting combos you can cast. You can get it [Here](https://wago.io/H1hRA6WNQ).
+
 **What talents to take**
 
-{{< spell 205636 "Force of Nature" "beta" >}} is slightly better than {{< spell 202425 "Warrior of Elune" "beta" >}}, however Warrior of Elune gives slightly more leeway while playing due to the higher amounts of Astral Power it gives you.
-{{< spell 202345 "Starlord" "beta" >}} is best in all situations. The haste coupled with the other talents being pretty weak makes this a very good choice.
-{{< spell 202347 "Stellar Flare" "beta" >}} is slightly better than {{< spell 279620 "Twin Moons" "beta" >}}, but you also have to manage a third dot while keeping in mind The Emerald Dreamcatcher buff at the same time.
-{{< spell 202342 "Shooting Stars" "beta" >}} is the best talent on this row, and the passive Astral Power generation is very strong.
+{{< talents spec="balance" src="beta" recommend="123,123,231,123,132,123,321" >}}
+
+- You can choose between {{< spell 205636 "Force of Nature" "beta" >}} and {{< spell 202425 "Warrior of Elune" "beta" >}} as well as {{< spell 202347 "Stellar Flare" "beta" >}} and {{< spell 279620 "Twin Moons" "beta" >}}. The secondary options will allow a slightly easier / more forgiving rotation
+
+- {{< spell 202345 "Starlord" "beta" >}} is best in all situations. The haste coupled with the other talents being pretty weak makes this a very good choice.
+
+- {{< spell 202342 "Shooting Stars" "beta" >}} is the best talent on this row, and the passive Astral Power generation is very strong.
 
 **Legendary Pairings**
 
@@ -49,9 +54,5 @@ All players should pair The Emerald Dreamcatcher with the talent Starlord. Doing
 
 *A GCD is defined as an instant cast ability, so in this case the ones that are relevant are: {{< spell 164812 "Moonfire" "beta" >}}, {{< spell 164815 "Sunfire" "beta" >}}, {{< spell 202347 "Stellar Flare" "beta" >}}, {{< spell 194223 "Celestial Alignment" "beta" >}}, Unempowered {{< spell 190984 "Solar Wrath" "beta" >}}, {{< spell 205636 "Force of Nature" "beta" >}}, Lunar Strikes casted from {{< spell 202425 "Warrior of Elune" "beta" >}}, and Procs from {{< item 137092 "Oneth’s Intuition" "beta" >}}.
 
-
-
-Casting Combinations Assuming 32% Haste (Note: All spells listed are empowered)  
-
-
+Special shout-out to Jundarer and Gastank for all the work they put in!
 
