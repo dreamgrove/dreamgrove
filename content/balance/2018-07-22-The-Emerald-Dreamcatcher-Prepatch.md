@@ -1,3 +1,9 @@
+---
+date: '2018-07-22'
+authors: ["Tettles","Nick"]
+published: true
+title: "The Emerald Dreamcatcher Prepatch Guide"
+---
 
 **The Emerald Dreamcatcher**
 
