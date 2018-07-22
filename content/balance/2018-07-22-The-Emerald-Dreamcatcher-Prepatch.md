@@ -36,8 +36,6 @@ The Emerald Dreamcatcher excels due to a style of casting commonly known as surg
 - Prioritize Empowered Lunar Strike over Empowered Solar Wrath in most situations
 - If you have no Empowerments and more than 50 Astral Power, then you cast Starsurge even if the buff is not about to expire.
 
-Casting Combinations Assuming 32% Haste (Note: All spells listed are empowered)  
-
 |                 Combinations                |   Haste     |
 |---------------------------------------------|-------------|
 | Solar Wrath + GCD + GCD                     | 15.5% Haste  |
@@ -48,7 +46,7 @@ Casting Combinations Assuming 32% Haste (Note: All spells listed are empowered)
 | Lunar Strike + Solar Wrath + Solar Wrath + GCD | 49.2% Haste |
 | Lunar Strike + Lunar Strike + Solar Wrath + Solar Wrath | 57.5% Haste |
 
-32% Haste at 0 latency (meaning you definitely want a slight buffer) allows you to cast Lunar Strike + Lunar Strike + Solar Wrath, which completely refunds a Starsurge affected by 2-stacks of the Emerald Dreamcatcher buff. Because of that we recommend aiming for 32% Haste. Also, with that amount of base Haste paired with just Celestial Alignment, you can hit those final two spell combinations. Just note that you do need a stack of Starlord to hit the final combo with just Celestial Alignment active at our recommend Haste. 
+32% Haste at 0 latency (meaning you definitely want a slight buffer) allows you to cast Lunar Strike + Lunar Strike + Solar Wrath, which completely refunds a Starsurge affected by 2-stacks of the Emerald Dreamcatcher buff. Because of that, we recommend aiming for 32% Haste. Also, with that amount of base Haste paired with just Celestial Alignment, you can hit those final two spell combinations. Just note that you do need a stack of Starlord to hit the final combo with just Celestial Alignment active at our recommend Haste. 
 
 All players should pair The Emerald Dreamcatcher with the talent Starlord. Doing this allows players just on the cusp of certain breakpoints to reach them. Spend a few minutes on the dummies and see if 1-stack or even 2-stacks of Starlord helps you reach the breakpoints listed [Here](https://docs.google.com/spreadsheets/d/1F4Xup4FBRC517rkBA6OdzdXw5O1MU5AU37lztQq9Ox8/edit#gid=0).
 
