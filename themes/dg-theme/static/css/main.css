@@ -141,6 +141,7 @@ body.article-body .header-nav>a:hover {
 .jumbotron .site-crest {
   margin-top: -2rem;
   margin-left: 6rem;
+  height: 100%;
 }
 
 .jumbotron-content {
