@@ -5,9 +5,9 @@ published: true
 title: BFA Boomkin Theorycrafting -- introduction to chickendb
 ---
 
-#Preamble
+#Preamble#
 
-##Introduction to chickendb
+##Introduction to chickendb##
 Hey all!
 
 It has been a while since I’ve been able to write up an in-depth piece of theorycrafting, and I couldn’t be more excited to share this innovative update with you all.
@@ -26,7 +26,7 @@ We hope you all enjoy this first introduction to chickendb. We are looking for f
 Cheers!
 
 
-##About the authors
+##About the authors##
 Chickendb is run by two long-time Boomkin players -- Slippykins and Iskalla.
 
 Slippykins has played Boomkin since BC, and has been theorycrafting since the end of Wrath. This was back when we used WrathCalcs to do our analysis, written and maintained by Hamlet on the EJ forums. Times have changed a lot since then, notwithstanding the spec itself. Slip has played casual, hardcore and semi-hardcore for most of his raiding experience, with his top achievements during his time with Arathian Knights on US-Cenarius. Since then, he has lived in two countries and finished a Bachelor's degree in Economics and Finance along the way. Slip has a passion for data analytics and econometrics, with proficiency in R, Matlab, Power BI and SQL. Slip currently moderates the Druid forum on MMO-Champion and Dreamgrove, the Druid discord.
@@ -36,7 +36,7 @@ Iskalla has also played Moonkin (she doesn’t like the term Boomkin) since BC, 
 Slippykins and Iskalla met on the Druid discord, and now live together in Melbourne (best city in Australia). You can contact them via Discord: Slippykins#0001 and Iskalla#0001.
 
 
-##What is chickendb?
+##What is chickendb?##
 Chickendb is our solution to assuaging the hold feelcrafting has on contemporary spec analysis. With our roots deep in data analysis and telling stories with visuals, we have found the levels of hand-waving and weak opinions to be too high. Additionally, the gap between simulations and WarcraftLogs rankings has tended to make sims look inconsistent, inaccurate and inapplicable. The argument usually devoles to ‘ideal world vs. real world,’ implying that sims are too basic to give meaningful results.
 
 However, we argue that sims are powerful, and can provide much more than what has been shown. Sims are our most powerful theorycrafting tool, and to simply dismiss them is not only wasteful but criminal. If the sims are wrong, it’s because it hasn’t been written properly, or we have made the wrong assumptions. You put in crap, you get crap. It’s that simple.
@@ -44,7 +44,7 @@ However, we argue that sims are powerful, and can provide much more than what ha
 Chickendb is a way to report and analyse raw sim data, delivering clean, intuitive and interactive visuals for everyone to consume. We provide the data so guide writers can be confident in their analysis and know the data they’re using is the best available. Chickendb aims to be a one-stop-shop for all analytics pertaining to Boomkins, providing the basis for all guides and information needed.
 
 
-##Phases and goals
+##Phases and goals##
 Chickendb is currently in beta -- we have only just created the skeleton, and will be quickly adding new features and tools to the site as we wrap up phase 1. By the end of phase 1, we plan to have the following available at a minimum:
 
 - Sim breakdowns by talent, azerite and trinket
@@ -60,19 +60,19 @@ Phase 3 of the project will be the transition from Boomkin analytics to general 
 
 We’re excited to share all of this with you, and hope that you will be able to grow and learn with us along the way!
 
-# Contents
+# Contents#
 {:.no_toc}
 
 - Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-#How to use Chickendb
+#How to use Chickendb#
 
-##General information
+##General information##
 Chickendb is designed to be updated with every change to the spec, so that you can see exactly what those change notes really mean. In the future we hope to have an automatic refresh cycle, but for the moment we will be only updating when changes come for Boomkins. Expect frequent updates while we push out the phase 1 modules!
 
 
-##Site navigation
+##Site navigation##
 When you first visit chickendb, you will be greeted with the landing page.
 
 All of our theorycrafting and data analytics will be available through the “Analytics” menu item.
@@ -90,12 +90,12 @@ We also have a handy Simcraft code generator, available through the “Simc tool
 Now that we’ve covered navigating the site, we’ll delve into manipulating the report through the embedded and interactive tools of Power BI.
 
 
-##Power BI basics
+##Power BI basics##
 
 Chickendb uses Power BI to provide the interactive visuals for the site. Since Power BI is a very powerful tool, it can be a little daunting when first using it. As such, here are some handy tips and tricks to help you get started!
 
 
-###Filters
+###Filters##
 Filters are the lifeblood of Power BI, and are important for using our reports. The main report filters are typically on the left-hand side and will have a few different metrics to choose from.
 
 Simply select the filters to generate the report you’re interested in. For example, selecting “cleave” in Sim Type and “4” in Targets will show the 4 target cleave sim. This will filter the two graphs on the right-hand side to show you only the results relevant to your selection.
@@ -103,7 +103,7 @@ Simply select the filters to generate the report you’re interested in. For exa
 Filters are prevalent on each page of the report, and allow you to see the results of multiple simulation sets at the click of a button!
 
 
-###Highlighting
+###Highlighting##
 Power BI also allows you to select items within a visual, and show you related information in the other visuals on the same page! The default behaviour is highlighting. To see this in action, watch what happens when we select “Shooting Stars” in the Talent DPS graph.
 
 <!?>
@@ -112,16 +112,16 @@ As you can see, the DPS Breakdown chart now highlights the Shooting Stars portio
 
 
 
-###Focus mode
+###Focus mode###
 In the case where you want to see a particular visual in more detail, or you would like to take a screenshot of something for your guide, focus mode is your friend. Hovering over the top-right corner of any visual will allow you to expand it to the full size of the report. This is especially handy when you want to take a high-resolution image of the visual for publishing later (just make sure to credit us as your source!).
 
 
-#BFA changes
+#BFA changes#
 As with every expansion, Boomkin has been changed again, but not too much this time. Lunar and Solar empowerments have been changed and now give meaning to both spells in ST and AoE, while also giving the spec a base amount of RNG above crit.
 
 Besides that, there are three main areas of change: the removal of Legion systems, the addition of Azerite and the reconfigured talent tree. We’ll go through them one-by-one before we step into our sim analysis.
 
-##Removal of Legion systems
+##Removal of Legion systems##
 With the end of Legion imminent, all the unique Legion-esque systems are being retired and rejigged for BFA. Gone is the Scythe of Elune, meaning we will actually have to answer that “1h + offhand vs. 2h” question again, as well as the loss of all those cool traits we’ve grown to love.
 
 Long live the blue doggo and his courageous howl as he runs into our main target.
@@ -129,18 +129,18 @@ Long live the blue doggo and his courageous howl as he runs into our main target
 Importantly, we’re losing traits like Scythe of the Stars (Starsurge crit) and Moon and Stars (Inc haste buff), but some traits are being baked into our spec, like Sunblind (Sunfire radius). New Moon has become a talent, but more on that in the talent section.
 
 
-##Azerite
+##Azerite##
 Azerite is essentially the artifact trait system of Legion, combined with the Tier system being removed with BFA as well. More to follow on the effect of Azerite once we have more data and sims to play with.
 
 
-##Talents
+##Talents##
 Boomkin talents have been moved around, removed and new ones added with BFA, mainly in order to address the homogeneity of builds we saw in Legion. Some talents like Fury of Elune and Stellar Flare were completely ignored all expansion, and have been redesigned to (hopefully) ignite their use in BFA. For reference, here’s the current Boomkin talents as of 16th July.
 
 <!?>
 
 Going tier-by-tier, we have:
 
-###Tier 15
+###Tier 15###
 - Starlord has been baked into the spec.
 - Starlord’s spot has been replaced with a new version of Nature’s Balance.
 - Nature’s Balance now passively generates AP, and allows you to start fights with 50 AP instead of 0.
@@ -150,7 +150,7 @@ Going tier-by-tier, we have:
 Overall, Tier 15 is about AP generation. Of note is that FoN does *not* scale with targets well (only through it’s meagre AP generation), while NB and WoE do. It will be interesting to see how WoE goes this expansion, as burst AP generation tied to an AoE spell can be extremely powerful in burst AoE cleave.
 
 
-###Tier 75
+###Tier 75###
 - Soul of the Forest now reduced Starfall’s AP cost by 10 (down from 20).
 - Stellar Flare has been moved to Tier 90, and has been replaced with a new version of Starlord. Starlord (new version) is now a copy of the T20 4pc -- a stacking haste buff.
 - Incarnation now grants 15% haste instead of increasing AP generation by 25%.
@@ -158,7 +158,7 @@ Overall, Tier 15 is about AP generation. Of note is that FoN does *not* scale wi
 This tier has changed a little -- Incarnation is less bursty, Soul of the Forest has less synergy with Starfall + Stellar Drift, and Starlord is a good talent that is target agnostic. All three talents have the ability to function well in single-target and AoE scenarios, with clear synergies between SotF and SD, and Incarnation and FoE. Definitely a competitive tier, and it will be interesting to see where Starlord fits in the puzzle.
 
 
-###Tier 90
+###Tier 90###
 - Big changes for this tier. Astral Communion and Blessing of the Ancients have been removed.
 - Shooting Stars has been moved to Tier 100, and has been replaced with Stellar Drift.
 - Twin Moons, the effect from the legendary shoulders in Legion, has now joined this tier, along with Stellar Flare.
@@ -167,7 +167,7 @@ This tier has changed a little -- Incarnation is less bursty, Soul of the Forest
 This is a great tier too. We all know how powerful the legendary shoulders are in cleave scenarios, and now we have it directly competing with Stellar Drift as the go-to AoE talent for Tier 90. On top of this, Stellar Flare is here to fill in those DoT-cleave instances where the targets are too far apart for Stellar Drift. Importantly, Twin Moons is still strong in DoT-cleave as the 20% Moonfire damage is a significant increase. Overall, a strong tier focused on different AoE scenarios.
 
 
-###Tier 100
+###Tier 100###
 - The crowd favourite, Fury of Elune, has been changed and buffed. FoE now follows the target and generates 40 AP over its duration. It’s also slightly wider.
 - Shooting Stars has replaced Stellar Drift, and does basically the same thing.
 - New Moon has taken the place of Nature’s Balance, and functions identical to the artifact trait.
@@ -177,12 +177,12 @@ You can’t get more excited for FoE than right now. FoE is B I G D E E P S, muc
 Overall, the talent changes are some of the most exciting things coming with BFA, and I don’t think we could be more excited to create that awesome burst AoE spec centred on FoE and WoE.
 
 
-#Sim analysis
+#Sim analysis#
 Finally, we get to our main contribution -- analysis of the first round of BFA sims. We will be walking through the visuals available on chickendb, and will provide screenshots to illustrate our points. However, we encourage you to go to the site and explore for yourself, to see how everything works together and maybe discover something interesting on your own!
 
 First up, we will cover our main assumptions and inputs to our models.
 
-##Parameters and assumptions
+##Parameters and assumptions##
 As with any model, we must make some assumptions in order to limit the problem space to something feasible. We routinely do this with all problems in life, and running simulations is no different.
 The main parameters used for the sims on chickendb are as follows:
 
@@ -234,13 +234,13 @@ This additional line has been configured for Incarnation, CA and FoE. WoE has no
 Now that we have covered the main modelling parameters and assumptions, we will step into our first analysis of BFA using chickendb: Talents.
 
 
-##Talents
+##Talents##
 In this section, we will be covering the results for single-target, target scaling, fight lengths and build synergies. We will conclude the section with the headline results -- the best builds for each scenario. We would like to start with the basics and explore our earlier predictions before stepping into our aggregated build analysis, as we believe this provides a better base for why each build functions the way it does. Additionally, we have the ability to split builds into their constituent talent DPS and aggregate synergies -- this allows us to really show what talents work well together, and when these synergies are particularly pertinent.
 
 First off: single-target.
 
 
-###Single-target analysis
+###Single-target analysis###
 You can always rely on single-target sims. The world you’re trying to model is pretty simple, the rotation is formulaic and requires little to no reactions or decision-making, and there’s no fire to avoid. At its core, a single-target sim is almost identical to a single-target fight, give or take a few DPS percent.
 
 To start, let’s select the relevant single-target filters. I highly encourage you to play with the site while I guide you through this theorycrafting section -- I promise it’s much better than just looking at images.
@@ -265,7 +265,7 @@ The biggest underperformers for ST are clearly NB, TM and SotF. NB is only featu
 All of these combinations do relatively the same DPS for ST.
 
 
-###Cleave analysis
+###Cleave analysis###
 Next, we step into the other favourite for sims -- cleave fights. The idea here is that we want to map the strength of each talent to a generic AoE scenario, and then extrapolate to boss fights with high amounts of cleave uptime.
 
 Note that when we talk about cleave in this section, we’re *specifically* referring to clumped AoE, where all AoE effects hit all targets.
@@ -286,7 +286,7 @@ We can also see that the synergy between talents is quite strong between ShS and
 All 6 builds do relatively the same DPS for 5 target cleave.
 
 
-###DoT-cleave analysis
+###DoT-cleave analysis###
 One of the new types of sims we’re presenting with this set of theorycrafting is DoT-cleave! Once one of the niche strengths of Boomkins, DoT-cleave is a place where Boomkins can be relatively competitive in raid.
 
 Again, we have sims ranging from 2 to 5 DoT-cleave targets, and for this analysis we will focus on the 2 target DoT-cleave scenario.
@@ -305,7 +305,7 @@ As such, we see a lot of builds in the top section centred around */*/(StFl or T
 All 6 of these builds are, again, relatively close for 2 target DoT-cleave.
 
 
-###Add wave analysis
+###Add wave analysis###
 One of the most exciting contributions we have to showcase with chickendb is our add wave module! We can now explore fights that are a mixture of ST and cleave, enabling us to suggest builds that do well in hybrid fights, arguably the majority of fights in the game.
 
 We have add uptimes ranging from 10% to 100%, at 10% intervals, so there is a wide array of options for you to explore in your own time. For this analysis, we will look at 30% uptime.
@@ -324,12 +324,12 @@ In terms of builds, all are very close in the top 20. TM is featured in nearly a
 We’ve suggested 18 builds here, pick what you like. They all function slightly different, the only definite talent to take is TM. Taking FoE will depend on how well FoE’s cooldown syncs up with the add waves -- if you have to hold FoE for 30 seconds or more each cooldown, you’re probably better off taking ShS.
 
 
-###Target scaling analysis
+###Target scaling analysis###
 Now that we’ve explored the Main report page to death, it’s time to look at a different set of analytics: target scaling. We now have the capability to explore the effect of each talent individually, as well as how it changes with the amount of targets you’re fighting.
 
 We will go tier-by-tier, and see if we can support the choices we made above with just this simple target scaling metric.
 
-####Tier 15
+####Tier 15####
 For reference, here is the Tier 15 DPS by targets report for 20th July:
 
 <!?>
@@ -340,7 +340,7 @@ For DoT-cleave, all three talents pretty much don’t scale at all.
 
 This is quite consistent with our build ranking from before, as we were quite indifferent on Tier 15 choice throughout.
 
-####Tier 75
+####Tier 75####
 <!?>
 
 Inc, SotF and SL all seem to scale quite similarly for cleave fights, and they are all quite close together. In this case, the only separation would be each talent’s synergy with the overall build, which we showed does matter in the case of taking ShS with SD for instance.
@@ -349,14 +349,14 @@ SotF does relatively poor for DoT-cleave, which makes sense as we will not use S
 
 Again, our predictions are consistent with the results for the Tier 75 row.
 
-####Tier 90
+####Tier 90####
 <!?>
 
 Now we start to see some real deviation. You can see just how much TM really scales with targets, and SD just can’t keep up. StFl seems to increase up to 3 targets but then decrease for 4 and 5 targets. This is likely due to a deficiency in the APL -- we will seek to rectify this in the near future.
 
 StFL and TM scaling for DoT-cleave is again very apparent, with both talents neck-and-neck for the most part. However, it looks like TM is overtaking StFl by 3 targets, implying that TM is likely to be the better talent for 3+ targets. Note that the damage of TM may be slightly inflated in the DoT-cleave sims, as the extra Moonfire doesn’t have a max range in SimC (yet).
 
-####Tier 100
+####Tier 100####
 <!?>
 
 Let’s start with the unsurprising results of DoT-cleave: considering we know that Full Moon and FoE can only hit one target, it’s obvious that ShS will be the clear winner even without the recent buff. With the buff, it’s just monstrous.
@@ -371,7 +371,7 @@ A quick summary for the above synopsis on target scaling is available in the bot
 Here we’ve shown the percentage of ST DPS each talent increases by per target. This certainly suggests our best scaling talents are TM, ShS, SotF and FoE for cleave, and TM, ShS, StFl for DoT-cleave.
 
 
-###Add wave scaling
+###Add wave scaling###
 If you hop on over to the Add Cleave tab, we can see how our talents scale with add uptime. For the most part, these results are pretty much identical to the Cleave report, however I will draw your attention to the Tier 100 sims.
 
 <!?>
@@ -379,7 +379,7 @@ If you hop on over to the Add Cleave tab, we can see how our talents scale with 
 What’s interesting to see here is just how much FoE relies on add waves syncing up with its cooldown. There’s a clear sinusoidal curve to the DPS of FoE, indicating that for add uptimes for 40 to 70%, the cooldown of FoE was out-of-sync with the wave cooldown, and therefore the actual DPS of FoE falls. This indicates that add wave cooldowns are integral in assessing whether you should take FoE to a fight or not.
 
 
-###Fight length analysis
+###Fight length analysis###
 We know that not all fights are 300 seconds long. We also know that as the fight length increases, all builds converge to their steady-state DPS.
 
 But what about those fights that are really short? When you have the tier on farm, and you’re blasting through bosses in 100-150 seconds? Do we still take our progression build?
@@ -417,7 +417,7 @@ Secondly, he notices that the FoN/Inc/StFl/FoE build has the biggest DPS spike a
 What a team player.
 
 
-###Build synergies
+###Build synergies###
 Our last tab (for the moment) shows the build DPS synergies. This is the remaining DPS of a build, when you control for base DPS (no talents) and for the DPS contributions of each talent within a build.
 
 Build synergy can be either positive or negative. When the talents within a build all complement each other, the total build synergy will be positive. When the talents work against each other, build synergy will be zero, or even negative.
@@ -435,7 +435,7 @@ Our synergistic losers are all Inc/StFl builds. Interesting, as the only issue t
 We will conclude this section with a summary of the above results, and quick-reference for suggested builds.
 
 
-#Summary of results
+#Summary of results#
 To summarise as a quick reference, here are our top 4 builds based on our analysis so far.
 
 **Build 1**: (FoN or WoE)/SL/StFl/ShS
@@ -479,13 +479,13 @@ This build is all about cooldown synergy. Popping Inc, WoE and FoE altogether fe
 - (WoE or NB or FoN)/(SL or SotF or Inc)/TM/(ShS or FoE)
 
 
-#Upcoming
+#Upcoming#
 There are four major additions to chickendb coming in the near future: stat scaling, azerite, trinkets and movement sims. We’re really excited to share these analytics with you, but we have a few creases to smooth out before we can make these details public. As soon as we’re ready, we will make another post showcasing these new items and exploring them with you. Stay tuned!
 
 Following these sim-related changes, we will also be looking to integrate WarcraftLogs and Mythic+ data to compare and contrast results, as well as provide additional analytics. Once complete, we will be in a great position to start incorporating other specs into chickendb, allowing inter-spec comparisons.
 
 
-#Conclusion
+#Conclusion#
 We hope you’ve enjoyed your first taste of chickendb. We will be producing sims for every major change to Boomkins, and will be working diligently over the expansion to get the other specs in as well.
 
 If you have any questions, queries, comments or feedback, we’re more than happy to hear it! Please let us know either here or on Discord (Slippykins#0001 & Iskalla#0001).
