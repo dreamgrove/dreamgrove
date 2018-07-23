@@ -2,12 +2,13 @@
 date: '2018-07-23'
 authors: ["Slippykins", "Iskalla"]
 published: true
-title: BFA Boomkin Theorycrafting -- introduction to chickendb
+hasMath: true
+title: BFA Boomkin Theorycrafting -- introduction to chickendb.com
 ---
 
 # Preamble #
 
-## Introduction to chickendb ##
+## Introduction to chickendb.com ##
 Hey all!
 
 It has been a while since I’ve been able to write up an in-depth piece of theorycrafting, and I couldn’t be more excited to share this innovative update with you all.
@@ -19,7 +20,7 @@ Iskalla and I have teamed up to create a new way to display, disseminate and doc
 
 This style of theorycrafting, while correct in most instances, lacked further data analysis and explorative insights. In general this approach works, and the inconsistencies with top builds in WarcraftLogs can be hand-waved as “simulation error” or “sims are junk.” We strongly refute this point, and argue that sims are only as good as the model and assumptions behind it. As such, a large part of this project has been to target these deficiencies, and relax some of the constricting assumptions we have historically clung to.
 
-Chickendb is the first major step into data analytics and data aggregation, combined with a shiny front-end with Power BI visuals and interactivity. We’re putting a whole new spin on theorycrafting, and letting the user become the one in charge of what they see. You can explore the results of over 50 separate sims with 95+ profiles per sim, and go straight to the information you need. We’ve cleaned, cut-up and reported the actual insightful items hiding in each sim report, giving you the ability to really see what makes up your DPS and how impactful your decisions really are.
+Chickendb ([chickendb.com](http://www.chickendb.com)) is the first major step into data analytics and data aggregation, combined with a shiny front-end with Power BI visuals and interactivity. We’re putting a whole new spin on theorycrafting, and letting the user become the one in charge of what they see. You can explore the results of over 50 separate sims with 95+ profiles per sim, and go straight to the information you need. We’ve cleaned, cut-up and reported the actual insightful items hiding in each sim report, giving you the ability to really see what makes up your DPS and how impactful your decisions really are.
 
 We hope you all enjoy this first introduction to chickendb. We are looking for feedback on the analytics, look-and-feel and general usability of the site, so please contact us if you have any suggestions, comments or queries.
 
@@ -72,15 +73,15 @@ When you first visit chickendb, you will be greeted with the landing page.
 
 All of our theorycrafting and data analytics will be available through the “Analytics” menu item.
 
-<!?>
+![analyticstab](https://puu.sh/B0YRL/95c2ad660a.png)
 
 Once you’ve selected the report you wish to view, you can navigate around the report pages by clicking on the tabs along the bottom of the report.
 
-<!?>
+![tabs](https://puu.sh/AZS1b/b2e1b97e0d.png)
 
 We also have a handy Simcraft code generator, available through the “Simc tools” menu item! In this tool, you can generate talent, azerite and raid_event scripts to add to your own sims.
 
-<!?>
+![simctoolstab](https://puu.sh/AZS1M/41fed30c0a.png)
 
 Now that we’ve covered navigating the site, we’ll delve into manipulating the report through the embedded and interactive tools of Power BI.
 
@@ -101,7 +102,7 @@ Filters are prevalent on each page of the report, and allow you to see the resul
 ### Highlighting ###
 Power BI also allows you to select items within a visual, and show you related information in the other visuals on the same page! The default behaviour is highlighting. To see this in action, watch what happens when we select “Shooting Stars” in the Talent DPS graph.
 
-<!?>
+![highlighting](https://cdn.discordapp.com/attachments/303500704394379266/470543884947030047/highlights.png)
 
 As you can see, the DPS Breakdown chart now highlights the Shooting Stars portion of each build where it appears. This allows you to easily see the impact of each talent -- as you can see above, Shooting Stars is in all the top builds, indicating that it’s most likely overpowered in this scenario.
 
@@ -109,6 +110,8 @@ As you can see, the DPS Breakdown chart now highlights the Shooting Stars portio
 
 ### Focus mode ###
 In the case where you want to see a particular visual in more detail, or you would like to take a screenshot of something for your guide, focus mode is your friend. Hovering over the top-right corner of any visual will allow you to expand it to the full size of the report. This is especially handy when you want to take a high-resolution image of the visual for publishing later (just make sure to credit us as your source!).
+
+![filtering](https://puu.sh/AZS42/4b59276a1b.png)
 
 
 # BFA changes #
@@ -131,7 +134,7 @@ Azerite is essentially the artifact trait system of Legion, combined with the Ti
 ## Talents ##
 Boomkin talents have been moved around, removed and new ones added with BFA, mainly in order to address the homogeneity of builds we saw in Legion. Some talents like Fury of Elune and Stellar Flare were completely ignored all expansion, and have been redesigned to (hopefully) ignite their use in BFA. For reference, here’s the current Boomkin talents as of 16th July.
 
-<!?>
+![talentswowhead](https://puu.sh/B1z7m/53f8287e61.png)
 
 Going tier-by-tier, we have:
 
@@ -242,7 +245,7 @@ To start, let’s select the relevant single-target filters. I highly encourage 
 
 As of 20th of July, this is what the main report page for Balance Druids appears like:
 
-<!?>
+![mainpage](https://puu.sh/B0Zax/1a323f6df9.png)
 
 What we can see here is that the Shooting Stars change this week has really pushed it to be the top talent by far, even for single-target. This is a passive talent giving us a little over 5% of our total DPS -- if we were to predict anything, it’s that this talent will likely be nerfed, or the others in its row (FoE and NM) buffed to compensate.
 
@@ -269,7 +272,7 @@ On the main chickendb report page for Balance Druid, we can see the cleave repor
 
 Here’s the 5 target cleave report as of 20th July:
 
-<!?>
+![cleave](https://puu.sh/B0Zbb/33833cc970.png)
 
 It’s no surprise that Shooting Stars is dominating at over 13% DPS in this scenario, given how strong it was just in ST. Since a 5 target cleave sim is sustained AoE, we’re not surprised that the ordering of talents follows ShS > TM > FoE > SD > Inc > SotF > others. It seems the T15 choice favours WoE over NB, but it’s clear FoN is not good for AoE, as expected.
 
@@ -288,7 +291,7 @@ Again, we have sims ranging from 2 to 5 DoT-cleave targets, and for this analysi
 
 Here’s the 2 target DoT-cleave report as of 20th July:
 
-<!?>
+![dotcleave](https://puu.sh/B0ZbH/d519014b10.png)
 
 It’s almost getting a little boring with all this talk about ShS, but here it is again: Shooting Stars continues to outshine all other talents. Importantly though, Stellar Flare has been bumped up a few places, as we would expect for a DoT-cleave fight. The only issue: StFl shares a row with TM, which is arguably another DoT-cleave talent with its Moonfire damage component.
 
@@ -307,7 +310,7 @@ We have add uptimes ranging from 10% to 100%, at 10% intervals, so there is a wi
 
 Snapshot of the add waves 30% uptime report for 20th July:
 
-<!?>
+![addwaves](https://puu.sh/B0Zee/621625efe2.png)
 
 Finally, a different Talent DPS graph: ShS has almost been toppled by Fury of Elune. This is likely because the 30% add uptime for our model is lining up nicely with the cooldown of FoE. The top three talents in this scenario are a cut above the rest: ShS > FoE > TM, all of which are significantly above 8% DPS each.
 
@@ -327,7 +330,7 @@ We will go tier-by-tier, and see if we can support the choices we made above wit
 #### Tier 15 ####
 For reference, here is the Tier 15 DPS by targets report for 20th July:
 
-<!?>
+![targetstier15](https://puu.sh/B1zaE/16d9419199.png)
 
 Yikes. No wonder we didn’t really care that much between FoN, NB and WoE when looking at the cleave and DoT-cleave fights. All of these talents scale quite poorly with targets, though NB and WoE do scale relatively better than FoN, since FoN doesn’t scale at all.
 
@@ -336,7 +339,7 @@ For DoT-cleave, all three talents pretty much don’t scale at all.
 This is quite consistent with our build ranking from before, as we were quite indifferent on Tier 15 choice throughout.
 
 #### Tier 75 ####
-<!?>
+![targetstier75](https://puu.sh/B0Zkt/a9ec25897c.png)
 
 Inc, SotF and SL all seem to scale quite similarly for cleave fights, and they are all quite close together. In this case, the only separation would be each talent’s synergy with the overall build, which we showed does matter in the case of taking ShS with SD for instance.
 
@@ -345,14 +348,14 @@ SotF does relatively poor for DoT-cleave, which makes sense as we will not use S
 Again, our predictions are consistent with the results for the Tier 75 row.
 
 #### Tier 90 ####
-<!?>
+![targetstier90](https://puu.sh/B0ZkY/97f496cfed.png)
 
 Now we start to see some real deviation. You can see just how much TM really scales with targets, and SD just can’t keep up. StFl seems to increase up to 3 targets but then decrease for 4 and 5 targets. This is likely due to a deficiency in the APL -- we will seek to rectify this in the near future.
 
 StFL and TM scaling for DoT-cleave is again very apparent, with both talents neck-and-neck for the most part. However, it looks like TM is overtaking StFl by 3 targets, implying that TM is likely to be the better talent for 3+ targets. Note that the damage of TM may be slightly inflated in the DoT-cleave sims, as the extra Moonfire doesn’t have a max range in SimC (yet).
 
 #### Tier 100 ####
-<!?>
+![targetstier100](https://puu.sh/B0Zlf/141df24855.png)
 
 Let’s start with the unsurprising results of DoT-cleave: considering we know that Full Moon and FoE can only hit one target, it’s obvious that ShS will be the clear winner even without the recent buff. With the buff, it’s just monstrous.
 
@@ -360,7 +363,7 @@ Cleave: things are a little more tame. ShS scales faster than FoE, with both tal
 
 A quick summary for the above synopsis on target scaling is available in the bottom two visuals of the Targets page:
 
-<!?> talent scaling pic
+![talentscaling](https://puu.sh/B0ZlR/e0fab79516.png)
 
 
 Here we’ve shown the percentage of ST DPS each talent increases by per target. This certainly suggests our best scaling talents are TM, ShS, SotF and FoE for cleave, and TM, ShS, StFl for DoT-cleave.
@@ -369,7 +372,7 @@ Here we’ve shown the percentage of ST DPS each talent increases by per target.
 ### Add wave scaling ###
 If you hop on over to the Add Cleave tab, we can see how our talents scale with add uptime. For the most part, these results are pretty much identical to the Cleave report, however I will draw your attention to the Tier 100 sims.
 
-<!?>
+![addwavescaling](https://puu.sh/B0ZmV/387f00e093.png)
 
 What’s interesting to see here is just how much FoE relies on add waves syncing up with its cooldown. There’s a clear sinusoidal curve to the DPS of FoE, indicating that for add uptimes for 40 to 70%, the cooldown of FoE was out-of-sync with the wave cooldown, and therefore the actual DPS of FoE falls. This indicates that add wave cooldowns are integral in assessing whether you should take FoE to a fight or not.
 
@@ -387,13 +390,13 @@ What Megachicken does is he goes to the Fight Length tab of chickendb and ticks 
 
 This is what Megachicken sees:
 
-<!?>
+![fightlength1](https://puu.sh/B0Xly/9587d97e2a.png)
 
 He was right in taking WoE/SotF/TM/ShS for the 5 minute progression fights -- this build is the clear winner when he mouses over the graph at 300 seconds.
 
 However, mousing over 100 seconds, he sees this:
 
-<!?>
+![fightlength2](https://puu.sh/B0Xm1/76b2bd27db.png)
 
 Megachicken notes he can increase his DPS by swapping to WoE/Inc/TM/FoE! He swaps his talents in raid next week, and gets rank 1 with his cool new build.
 
@@ -403,7 +406,7 @@ Great job, Megachicken.
 
 Megachicken goes to his handy Fight Length tab again, and inputs his FoN/SL/StFl/ShS single-target build, along with Incarnation and FoE to see if swapping to this build is going to be viable. This is what Megachicken sees, and he notices a couple of interesting points:
 
-<!?>
+![fightlength3](https://puu.sh/B0Xz7/010e556797.png)
 
 He first notices that all of the four builds are ridiculously close at the 300 second mark, so he doesn’t feel like his choice will affect his overall DPS much.
 
@@ -419,11 +422,11 @@ Build synergy can be either positive or negative. When the talents within a buil
 
 We’ll focus on the top 5 and bottom 5 synergies for 5 target cleave, but note that this analysis is applicable to any scenario.
 
-<!?>
+![syn1](https://puu.sh/B0XKp/bb4fbf831a.png)
 
 What’s readily apparent about the top 5 synergies is that they are all \*/\*/SD/ShS builds, implying that it’s actually just SD/ShS synergy driving this massive gain. These build synergies are almost 6% DPS, which is huge given that you get this DPS entirely as a bonus. Also note that that the Tier 15 talent rarely matters, as all of them are represented in the top 5, but Incarnation for Tier 75 is missing.
 
-<!?>
+![syn2](https://puu.sh/B0XNC/94b3dd1e06.png)
 
 Our synergistic losers are all Inc/StFl builds. Interesting, as the only issue that could come about between Inc and StFl are spell cast time conflicts with Inc being on the GCD with BFA. Regardless the negative synergy isn’t particularly high, so we don’t need to delve into this analysis much.
 
