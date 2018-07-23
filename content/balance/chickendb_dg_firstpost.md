@@ -60,11 +60,6 @@ Phase 3 of the project will be the transition from Boomkin analytics to general 
 
 We’re excited to share all of this with you, and hope that you will be able to grow and learn with us along the way!
 
-# Contents #
-{:.no_toc}
-
-- Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
 
 # How to use Chickendb #
 
