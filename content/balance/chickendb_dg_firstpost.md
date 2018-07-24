@@ -225,7 +225,7 @@ For add waves, it’s our strong opinion that add wave uptime is the only parame
 
 The important thing to note here is that with predictable timing of add waves, the optimal behaviour for the player is to hold cooldowns when it’s optimal for them to do so. As such, we have made further edits to the Boomkin APL to calculate the optimal decision of whether to hold cooldowns for the upcoming add wave. The value of delaying your cooldowns for an add wave is therefore:
 
-{{< tex "value_to_delay = \frac{duration_of_add_wave}{duration_of_buff} * (number_of_adds - 1) - \frac{time_until_adds_spawn}{cooldown_of_spell}">}}
+{{< tex "value_to_delay = \frac{durationOfAddWave}{durationOfBuff} * (numberOfAdds - 1) - \frac{timeUntilAddsSpawn}{cooldownOfSpell}">}}
 
 This additional line has been configured for Incarnation, CA and FoE. WoE has not been configured to delay, but will be done in the future.
 
