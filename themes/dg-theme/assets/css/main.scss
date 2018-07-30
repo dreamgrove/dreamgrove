@@ -1,10 +1,7 @@
 @import "./colors.scss";
-/*
- * colors:
- *  highlight (wordmark, links): #1a9c82
- *  primary text: rgba(0,0,0,0.84)
- *  background: rgb(255, 255, 255);
- * */
+$screen-small: 800px;
+$screen-medium: 1200px;
+$screen-wide: 1300px;
 
 a, a:hover, a:visited, a:active {
   color: inherit;
@@ -46,6 +43,16 @@ body.home-body {
     "footer";
 
   grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
+
+  @media screen and (min-width: $screen-medium) {
+    grid-template-areas:
+      "header"
+      "jumbotron"
+      "main"
+      "footer";
+
+    grid-template-rows: 0fr 0fr 1fr 0fr;
+  }
 }
 
 body.home-body.balance {
@@ -79,11 +86,27 @@ body.article-body {
     "header-nav"
     "main"
     "footer";
+
+  @media screen and (min-width: $screen-medium) {
+    grid-template-rows: 0fr 1fr 0fr;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+  }
 }
 
 .header {
   width: 100%;
   color: $primary-accent;
+
+  @media screen and (min-width: $screen-medium) {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
 }
 
 body.article-body .header {
@@ -97,6 +120,11 @@ body.article-body .header {
   text-align: center;
   font-size: 4.5rem;
   margin: 0;
+
+  @media screen and (min-width: $screen-medium) {
+    font-size: 4.5rem;
+    line-height: 10rem;
+  }
 }
 
 .header-nav {
@@ -105,11 +133,21 @@ body.article-body .header {
   justify-content:space-around;
   max-width: 700px;
   margin: 0px auto;
+
+  @media screen and (min-width: $screen-medium) {
+    margin: inherit;
+  }
 }
 
 .header-logo {
   width: 6rem;
   vertical-align:bottom;
+
+  @media screen and (min-width: $screen-medium) {
+    width: 6rem;
+    margin-top: -0.9rem;
+    vertical-align: middle;
+  }
 }
 
 .article-body .header-logo {
@@ -123,6 +161,14 @@ body.article-body .header {
   font-size: 2rem;
   line-height: 5rem;
   flex-grow: 1;
+
+  @media screen and (min-width: $screen-medium) {
+    font-size: 2rem;
+    line-height: 8rem;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .header-nav>a:hover {
@@ -143,6 +189,11 @@ body.article-body .header-nav>a:hover {
   margin-top: -2rem;
   margin-left: 6rem;
   height: 100%;
+
+  @media screen and (max-width: $screen-small) {
+    /* Hide crest on small displays */
+    display: none;
+  }
 }
 
 .jumbotron-content {
@@ -152,6 +203,10 @@ body.article-body .header-nav>a:hover {
   color: white;
   padding: 5rem;
   width: 100%;
+
+  @media screen and (min-width: $screen-medium) {
+    padding: 8rem;
+  }
 }
 
 .jumbotron-content h1 {
@@ -189,6 +244,10 @@ body.article-body .header-nav>a:hover {
 
 .main {
   grid-area: main;
+
+  @media screen and (min-width: $screen-medium) {
+    padding: 0 2rem;
+  }
 }
 
 .main-wrapper {
@@ -198,14 +257,38 @@ body.article-body .header-nav>a:hover {
 }
 
 .main-wrapper.with-sidebar {
-  display: grid;
   grid-row-gap: 1rem;
+
+  @media screen and (min-width: $screen-medium) {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 700px;
+    grid-column-gap: 2rem;
+    grid-row-gap: 0;
+  }
+
+  @media screen and (min-width: $screen-wide) {
+    max-width: 1200px;
+    grid-template-columns: 1fr 900px;
+  }
 }
 
 .home-body .with-sidebar {
   grid-template-areas:
     "section-overview"
     "main-article";
+
+  @media screen and (min-width: $screen-medium) {
+    grid-template-areas:
+      "section-overview main-article"
+      "pagination pagination";
+  }
+}
+
+.article-body article {
+  @media screen and (min-width: $screen-medium) {
+    margin-top: 5rem;
+  }
 }
 
 .article-body .with-sidebar {
@@ -215,6 +298,16 @@ body.article-body .header-nav>a:hover {
     "section-overview"
     "article-content"
     "article-footer";
+
+  @media screen and (min-width: $screen-medium) {
+
+  margin-top: 7rem;
+  grid-template-areas:
+    ". breadcrumbs"
+    "section-overview article-header"
+    "section-overview article-content"
+    "article-footer article-footer";
+  }
 }
 
 .section-overview h1, .section-header {
@@ -243,11 +336,25 @@ body.article-body .header-nav>a:hover {
   background-position: center ;
   background-size: 100%;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: $screen-medium) {
+    box-sizing: border-box;
+    height: 7.5rem;
+    text-align:right;
+    padding-right: 2rem;
+    font-size: 3rem;
+    line-height: 7.5rem;
+    transition: padding-right 0.5s;
+  }
 }
 
 .spec:hover {
   color: white;
   text-decoration: underline;
+
+  @media screen and (min-width: $screen-medium) {
+    padding-right: 4rem;
+  }
 }
 
 .spec:visited {
@@ -326,6 +433,27 @@ body.article-body .header-nav>a:hover {
   font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.6);
 }
+  
+.article .article-content {
+  @media screen and (min-width: $screen-medium) {
+    margin-top: 5rem;
+  }
+}
+
+
+.toc {
+  @media screen and (min-width: $screen-medium) {
+    margin-top: 3rem;
+    position: relative;
+  }
+}
+
+.sticky-toc {
+  @media screen and (min-width: $screen-medium) {
+    position: fixed;
+    width: 280px;
+  }
+}
 
 .footer {
   grid-area: footer;
@@ -336,140 +464,6 @@ body.article-body .header-nav>a:hover {
   font-size: 1.5rem;
   color: #777;
   margin: 5rem;
-}
-
-@media screen and (max-width: 800px) {
-  /* Hide crest on small displays */
-  .site-crest {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  body {
-    display: grid;
-  }
-
-  body.home-body {
-    grid-template-areas:
-      "header"
-      "jumbotron"
-      "main"
-      "footer";
-
-    grid-template-rows: 0fr 0fr 1fr 0fr;
-  }
-
-  body.article-body {
-  grid-template-rows: 0fr 1fr 0fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-
-  .header {
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 0 2rem;
-  }
-
-  .header-title {
-    font-size: 4.5rem;
-    line-height: 10rem;
-  }
-
-  .header-logo {
-    width: 6rem;
-    margin-top: -0.9rem;
-    vertical-align: middle;
-  }
-
-  .header-title a, .header-title a:hover, .header-title a:visited {
-  }
-
-  .header-nav {
-    margin: inherit;
-  }
-
-  .header-nav>a {
-    font-size: 2rem;
-    line-height: 8rem;
-
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .jumbotron-content {
-    padding: 8rem;
-  }
-
-  .main {
-    padding: 0 2rem;
-  }
-
-  .main-wrapper.with-sidebar {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: 1fr 900px;
-    grid-column-gap: 2rem;
-    grid-row-gap: 0;
-  }
-
-  .home-body .with-sidebar {
-    grid-template-areas:
-      "section-overview main-article"
-      "pagination pagination";
-  }
-
-  .article-body article {
-    margin-top: 5rem;
-  }
-
-  .article-body .with-sidebar {
-    margin-top: 7rem;
-    grid-template-areas:
-      ". breadcrumbs"
-      "section-overview article-header"
-      "section-overview article-content"
-      "article-footer article-footer";
-
-  }
-
-  .spec-selector {
-    /* height: 400px; */
-    /* flex-direction: row; */
-    /* align-items: stretch; */
-  }
-
-  .spec {
-    box-sizing: border-box;
-    height: 7.5rem;
-    text-align:right;
-    padding-right: 2rem;
-    font-size: 3rem;
-    line-height: 7.5rem;
-    transition: padding-right 0.5s;
-  }
-
-  .spec:hover {
-    padding-right: 4rem;
-  }
-
-  .article .article-content {
-    margin-top: 5rem;
-  }
-
-  .toc {
-    margin-top: 3rem;
-    position: relative;
-  }
-
-  .sticky-toc {
-    position: fixed;
-    width: 280px;
-  }
 }
 
 .not-found {
