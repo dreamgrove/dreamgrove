@@ -25,7 +25,7 @@
   {{ $mainStyle := resources.Get "css/main.scss" | resources.ToCSS }}
   {{ $articleStyle := resources.Get "css/article.scss" | resources.ToCSS }}
   {{ $compiledMainStyle := (cond .Site.IsServer ($mainStyle) ($mainStyle | minify | fingerprint)) }}
-  {{ $compiledArticleStyle := (cond .Site.IsServer ($articleStyle) ($mainStyle | minify | fingerprint)) }}
+  {{ $compiledArticleStyle := (cond .Site.IsServer ($articleStyle) ($articleStyle | minify | fingerprint)) }}
   <link rel="stylesheet" href="{{ $compiledMainStyle.Permalink }}" />
   <link rel="stylesheet" href="{{ $compiledArticleStyle.Permalink }}" />
 </head>
