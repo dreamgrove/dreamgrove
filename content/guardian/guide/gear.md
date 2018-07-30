@@ -79,7 +79,7 @@ Outside of raids you have one additional choice. Since {{< item 154174 "Golganne
 
 ### Tier
 
-Tier 21 is very weak. It’s not actively harmful and naturally you should use tier items if they are your best items anyway; but it’s generally barely worth considering at all. If you have exceptionally high item level tier 20 or tier 19 gear it may be worth considering defensively, but only if it competes in item level with your other gear. A more detailed analysis of why the tier 21 gear is not particularly good can be found [here]({{< ref "guardian/2018-02-09-guardian-tier-21-analysis.md" >}}).
+Tier 21 is very weak. It’s not actively harmful and naturally you should use tier items if they are your best items anyway; but it’s generally barely worth considering at all. If you have exceptionally high item level tier 20 or tier 19 gear it may be worth considering defensively, but only if it competes in item level with your other gear. A more detailed analysis of why the tier 21 gear is not particularly good can be found [here]({{< relref "/guardian/2018-02-09-guardian-tier-21-analysis.md" >}}).
 
 ### Relics
 
