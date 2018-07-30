@@ -22,8 +22,12 @@
   <script type="text/javascript" src="//static-azeroth.cursecdn.com/current/js/syndication/tt.js"></script>
   <link href="//fonts.googleapis.com/css?family=Open+Sans|Arvo|Capriola" rel="stylesheet">
   {{ block "head-injects" . }}{{ end }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/article.css" />
+  {{ $mainStyle := resources.Get "css/main.scss" | resources.ToCSS }}
+  {{ $articleStyle := resources.Get "css/article.scss" | resources.ToCSS }}
+  {{ $compiledMainStyle := (cond .Site.IsServer ($mainStyle) ($mainStyle | minify | fingerprint)) }}
+  {{ $compiledArticleStyle := (cond .Site.IsServer ($articleStyle) ($mainStyle | minify | fingerprint)) }}
+  <link rel="stylesheet" href="{{ $compiledMainStyle.Permalink }}" />
+  <link rel="stylesheet" href="{{ $compiledArticleStyle.Permalink }}" />
 </head>
 <body class="{{ block "bodyclass" . }}home-body{{ end }}">
   {{ block "main" . }}

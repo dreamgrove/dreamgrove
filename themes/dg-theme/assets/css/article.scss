@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 .article img {
   max-width: 100%;
 }
@@ -12,17 +14,17 @@
 }
 
 .article .author {
-  color: #1a9c82;
+  color: $primary-accent;
   font-weight: bold;
 }
 
 .article a {
-  color: #0E8DCF;
+  color: $text-link;
   text-decoration: underline;
 }
 
 a.tooltip {
-  color: #D57F43;
+  color: $text-tooltip;
 }
 
 .article-content {
@@ -30,7 +32,7 @@ a.tooltip {
 }
 
 .article-preview, .article-content {
-  font-family: "Georgia", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   line-height: 170%;
   padding: 2rem 0;
@@ -41,7 +43,19 @@ a.tooltip {
   font-family: "Arvo";
 }
 
-.article-content h1:first-child, .article-content h2:first-child, .article-content h3:first-child {
+.article-content h1 {
+  font-size: 2em;
+}
+
+.article-content h2 {
+  font-size: 1.5em;
+}
+
+.article-content h3 {
+  font-size: 1.17em;
+}
+
+.article-content *:first-child {
   margin-top: 0;
 }
 
@@ -50,10 +64,6 @@ a.tooltip {
   margin-top: 3.8rem;
 }
 
-
-.article-content p:first-child {
-  margin-top: 0;
-}
 
 .article-spec {
   margin-bottom: 0;
@@ -71,7 +81,7 @@ a.tooltip {
 }
 
 .spec-name {
-  color: #0E8DCF;
+  color: $text-link;
   font-size: 2rem;
   vertical-align: top;
   text-decoration: underline;
@@ -122,7 +132,7 @@ a.tooltip {
 
 .breadcrumbs a:hover, .article-navigation a:hover {
   text-decoration: underline;
-  color: #0E8DCF;
+  color: $text-link;
 }
 
 .footnotes {
@@ -167,7 +177,7 @@ a.tooltip {
 }
 
 .talent-spell.selected {
-  background-color: #0E8DCF;
+  background-color: $text-link;
   color: rgba(255, 255, 255, 1);
 }
 
