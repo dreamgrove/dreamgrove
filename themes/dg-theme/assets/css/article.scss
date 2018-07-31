@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@import "./common.scss";
 
 .article img {
   max-width: 100%;
@@ -32,9 +32,9 @@ a.tooltip {
 }
 
 .article-preview, .article-content {
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-body;
   font-size: 2rem;
-  line-height: 170%;
+  line-height: 3.2rem;
   padding: 2rem 0;
 }
 
@@ -59,12 +59,6 @@ a.tooltip {
   margin-top: 0;
 }
 
-
-.article-content p {
-  margin-top: 3.8rem;
-}
-
-
 .article-spec {
   margin-bottom: 0;
   display: inline-block;
@@ -84,7 +78,7 @@ a.tooltip {
   color: $text-link;
   font-size: 2rem;
   vertical-align: top;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .katex {
@@ -93,7 +87,7 @@ a.tooltip {
 
 .breadcrumbs {
   grid-area: breadcrumbs;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
@@ -119,12 +113,9 @@ a.tooltip {
   max-width: 40%;
 }
 
-.breadcrumbs a, .article-navigation a {
+.article-navigation a {
   color: rgba(0, 0, 0, 0.84);
   text-decoration: none;
-}
-
-.breadcrumbs a {
 }
 
 .article-navigation a {

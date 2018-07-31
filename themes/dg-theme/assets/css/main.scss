@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@import "./common.scss";
 $screen-small: 800px;
 $screen-medium: 1200px;
 $screen-wide: 1300px;
@@ -15,7 +15,10 @@ html {
 
   font-size: 62.5%;
   color: $text-primary;
-  font-family: "Open Sans", sans-serif;
+  font-family: $font-body;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -251,26 +254,26 @@ body.article-body .header-nav>a:hover {
 }
 
 .main-wrapper {
-  max-width: 900px;
+  max-width: 768px;
   margin: 2rem auto;
   padding: 0 2em;
 }
 
 .main-wrapper.with-sidebar {
+  max-width: 1068px;
   grid-row-gap: 1rem;
 
   @media screen and (min-width: $screen-medium) {
-    max-width: 1000px;
     display: grid;
-    grid-template-columns: 1fr 700px;
+    grid-template-columns: 1fr 768px;
     grid-column-gap: 2rem;
     grid-row-gap: 0;
   }
 
-  @media screen and (min-width: $screen-wide) {
-    max-width: 1200px;
-    grid-template-columns: 1fr 900px;
-  }
+  // @media screen and (min-width: $screen-wide) {
+  //   max-width: 1200px;
+  //   grid-template-columns: 1fr 900px;
+  // }
 }
 
 .home-body .with-sidebar {
@@ -286,9 +289,7 @@ body.article-body .header-nav>a:hover {
 }
 
 .article-body article {
-  @media screen and (min-width: $screen-medium) {
-    margin-top: 5rem;
-  }
+  margin-top: 5rem;
 }
 
 .article-body .with-sidebar {
@@ -363,18 +364,22 @@ body.article-body .header-nav>a:hover {
 
 .spec.balance {
   background-image: url("/images/spec-balance.jpg");
+  background-position-y: -20px;
 }
 
 .spec.feral {
   background-image: url("/images/spec-feral.jpg");
+  background-position-y: 45%;
 }
 
 .spec.guardian {
   background-image: url("/images/spec-guardian.jpg");
+  background-position-y: 19%;
 }
 
 .spec.resto {
   background-image: url("/images/spec-resto.jpg");
+  background-position-y: 15%;
 }
 
 .section-overview {
@@ -410,7 +415,13 @@ body.article-body .header-nav>a:hover {
 /* } */
 
 .article-summary {
+  font-size: 1.8rem;
   margin-bottom: 5rem;
+
+  .summary-prompt {
+    color: $text-link;
+    text-decoration: underline;
+  }
 }
 
 .article-summary.no-summary {
@@ -421,6 +432,11 @@ body.article-body .header-nav>a:hover {
   font-size: 5rem;
   font-family: "Arvo", serif;
   margin: 0px;
+  margin-bottom: 0.5rem;
+
+  a:hover {
+    color: $text-link;
+  }
 }
 
 .article-byline {

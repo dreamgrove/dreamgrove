@@ -24,9 +24,9 @@ a.tooltip {
   grid-area: article-content; }
 
 .article-preview, .article-content {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
-  line-height: 170%;
+  line-height: 3.2rem;
   padding: 2rem 0; }
 
 .article-content h1, .article-content h2, .article-content h3 {
@@ -45,9 +45,6 @@ a.tooltip {
 .article-content *:first-child {
   margin-top: 0; }
 
-.article-content p {
-  margin-top: 3.8rem; }
-
 .article-spec {
   margin-bottom: 0;
   display: inline-block; }
@@ -63,15 +60,14 @@ a.tooltip {
 .spec-name {
   color: #0E8DCF;
   font-size: 2rem;
-  vertical-align: top;
-  text-decoration: underline; }
+  vertical-align: top; }
 
 .katex {
   font-size: 1.1em; }
 
 .breadcrumbs {
   grid-area: breadcrumbs;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem; }
 
 .article-header {
@@ -92,7 +88,7 @@ a.tooltip {
   float: right;
   max-width: 40%; }
 
-.breadcrumbs a, .article-navigation a {
+.article-navigation a {
   color: rgba(0, 0, 0, 0.84);
   text-decoration: none; }
 
