@@ -14,6 +14,10 @@ You are always guaranteed at least one Guardian specific trait on any azerite pi
 
 Because some of the effects on the traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values.
 
+ - focus mainly on single ranks, since majority of value is in non-scaling effects
+ - focus only on tier 3 traits: guardian traits and general traits that directly compete 
+ - 
+
 # Druid Traits
 
 The following traits are available only to Druids. Most of these are Guardian specific, but some are shared between Feral and Balance as well. You are guaranteed at least one Guardian specific trait and one generic trait on every azerite piece, although it is possible to have more if one of the shared traits is present for another spec.
@@ -39,19 +43,71 @@ That being said, while this trait looks very good (under certain circumstances) 
 
 ## Guardian's Wrath
 
+{{< spell 279541 "Guardian's Wrath" >}} - {{< spell 6807 "Maul" >}} deals X additional damage and reduces the cost of your next {{< spell 192081 "Ironfur" >}} by 15 Rage, stacking up to 3 times.
+
+At 370, value of the additional damage is 1048. 
+
+This is a great trait all around. Not only is it a significant boost to Maul's damage, but it affords you some flexibility in your Rage management. Particularly in situations with tank swaps, this allows you to safely spend Rage on Maul and still be able to have an Ironfur up for when you taunt back. Offensively, this is one of the strongest Guardian specific traits out there.
+
 ## Layered Mane
+
+{{< spell 279552 "Layered Mane" >}} - {{< spell 192081 "Ironfur" >}} increases your Agility by X, and casting Ironfur has a chance to grant 2 applications.
+
+At 370 you gain 175 extra agility, per {{< spell 192081 "Ironfur" >}} stack. This means that the more Ironfur you have, the stronger each individual stack becomes (since Ironfur dynamically benefits from your Agility).
+
+This looks to be the strongest Guardian-specific defensive trait available. It effectively increases your average  stacks over an encounter by 10%, while also making each stack slightly stronger through its bonus Agility. It's difficult to pin down an exact value for this trait, since the value of an additional Ironfur differs depending on how many stacks you already have rolling; going from 0 to 2 stacks is far more valuable than going from 2 to 4 stacks, for example. It is however always beneficial to have an additional stack at any point, unless it puts you over the armor cap (and even then, every point of armor up to the cap has value).
+
+Not only is it incredibly strong defensively, but the bonus Agility grants an offensive bonus as well. I'd consider this a must-have trait for just about all purposes.
 
 ## Masterful Instincts
 
+{{< spell 273344 "Masterful Instincts" >}} - After {{< spell 61336 "Survival Instincts" >}} fades, you gain X Mastery and Y Armor for 10 seconds.
+
+At 370, you gain 173 Mastery and 693 Armor.
+
+Another victim of terrible tuning. The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. The amount of stats you gain is completely pitiful for how rarely you'll have the buff up, however.
+
 ## Twisted Claws
+
+{{< spell 275906 "Twisted Claws" >}} - The direct damage of {{< spell 77758 "Thrash" >}} has a 50% chance to grant you X Agility for 12 seconds, stacking up to 5 times.
+
+At 370, you gain 89 Agility per stack, for a gain of 445 Agility at 5 stacks. Notably, you have a chance to proc a stack for every target hit by {{< spell 77758 "Thrash" >}}, meaning you are significantly more likely to maintain your stacks on multitarget.
+
+Notably, this trait improves dramatically with Haste. Because Haste lowers the cooldown of Thrash, the more Haste you have the more chances throughout a fight you have to apply a stack of Twisted Claws. While Haste won't improve your chances of maintaining an already existing buff until you have quite high amounts of it (you need at least 50% Haste to be able to fit another Thrash into the buff duration), it will reduce the time you spend at 0 stacks, raising your average stacks over an encounter.
+
+Here are some charts showing the relative uptimes of various stack counts, and average stack counts, at varying levels of Haste.
+
+![Twisted Claws Stack Uptimes](/guardian/images/twisted-claws-uptimes.png)
+
+![Twisted Claws Average Stacks](/guardian/images/twisted-claws-stacks.png)
+
+The sharp increases in uptimes/stack counts correspond to haste amounts at which you can fit extra global cooldowns into the buff duration, and exist because occasionally you will delay {{< spell 77758 "Thrash" >}} by one or two casts to prioritize a {{< spell 210706 "Gore" >}} proc or to dump Rage on Maul. The major spike at 50% Haste denotes the aforementioned boundary where you can fit a third Thrash cast into a single buff.
+
+###TODO: put some mathematics here
+
+This trait looks to be very strong both offensively and defensively, provided you can maintain reasonably good uptimes at high stacks. On one target this may prove difficult; at normal haste levels, you will get two chances to refresh the buff if you are casting Thrash on cooldown (which you should be doing anyway).
 
 ## Ursoc's Endurance
 
+{{< spell 280161 "Ursoc's Endurance ">}} Gain an absorb for X damage over 8 seconds when you use Barkskin or Survival Instincts.
+
+At 370, the value of the absorb is 3015. 
+
+As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping with your already strong defensive cooldowns. The absorb is better than it may first appear due to the fact that absorbs are consumed after damage reduction. That is to say, if you use Survival Instincts, while it is active the absorb has essentially double the value since the damage is first reduced by 50%. The major downside is that it only has value during your defensives, when your risk of dying is already considerably lowered.
+
 ## Wild Fleshrending
 
+{{< spell 279527 "Wild Fleshrending" >}} causes {{< spell 5221 "Shred" >}} to deal X additional damage and {{< spell 213771 "Swipe" >}} to deal Y additional damage to targets affected by your {{< spell 77758 "Thrash" >}}.
 
+At 370, {{< spell 5221 "Shred" >}} deals 698 extra damage, and {{< spell 213771 "Swipe" >}} deals 262 extra damage.
+
+Obviously the Shred portion of this trait has no value unless you are catweaving. The extra Swipe damage is a moderate damage boost, although if you are catweaving you will be casting far fewer Swipes than you would be staying in Bear Form. This trait has the potential to be quite strong in multitarget/dungeon scenarios where you are casting Swipe a lot and hitting many targets.
+
+*Note that this trait is primarily a Feral trait that happens to be available to Guardians, and when I attempted to test it the trait was not working at all for either spec. I don't know for sure whether the trait is intended to be selectable by Guardians, or if it is meant to deal as much damage as it does. When the trait is fixed I will update this section with further testing.*
 
 # General Tanking Traits
+
+These traits are available for all tanks, 
 
 ## Ablative Shielding
 
