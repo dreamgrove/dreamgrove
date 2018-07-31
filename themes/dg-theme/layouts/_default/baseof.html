@@ -24,10 +24,13 @@
   {{ block "head-injects" . }}{{ end }}
   {{ $mainStyle := resources.Get "css/main.scss" | resources.ToCSS }}
   {{ $articleStyle := resources.Get "css/article.scss" | resources.ToCSS }}
-  {{ $compiledMainStyle := (cond .Site.IsServer ($mainStyle) ($mainStyle | minify | fingerprint)) }}
-  {{ $compiledArticleStyle := (cond .Site.IsServer ($articleStyle) ($articleStyle | minify | fingerprint)) }}
-  <link rel="stylesheet" href="{{ $compiledMainStyle.Permalink }}" />
-  <link rel="stylesheet" href="{{ $compiledArticleStyle.Permalink }}" />
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $mainStyle.Permalink }}" />
+    <link rel="stylesheet" href="{{ $articleStyle.Permalink }}" />
+  {{ else }}
+    {{ $css := slice $mainStyle $articleStyle | resources.Concat "css/style.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" />
+  {{ end }}
 </head>
 <body class="{{ block "bodyclass" . }}home-body{{ end }}">
   {{ block "main" . }}
