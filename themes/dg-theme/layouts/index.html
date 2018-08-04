@@ -7,8 +7,8 @@
     {{ partial "jumbotron-content.html" . }}
   </section>
   <main class="main">
-  {{ partial "spec-select.html" . }}
-    <div class="main-wrapper">
+    <div class="main-wrapper with-sidebar">
+      {{ partial "spec-select.html" . }}
       <section class="article-list">
         <h1 class="section-header">Recent Articles</h1>
         {{ range .Paginator.Pages }}

@@ -17,8 +17,11 @@
 
 <article class="article-summary{{ if $hidesummaries }} no-summary{{ end }}">
   <h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+  {{ if not $hidesummaries }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+  {{ end }}
   {{ if not $hidespecs }}
-    {{ partial "post-spec.html" . }}
+    in {{ partial "post-spec.html" . }}
   {{ end }}
   <!-- <div class="article-byline"> -->
   <!--   {{ partial "post-byline.html" . }} -->
@@ -27,5 +30,6 @@
     <section class="article-content">
       {{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}
     </section>
+    <a class="summary-prompt" href="{{ .Permalink }}">Continue Reading &raquo;</a>
   {{ end }}
 </article>

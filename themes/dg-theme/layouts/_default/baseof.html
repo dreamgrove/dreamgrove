@@ -20,10 +20,17 @@
   <meta name="robots" content="index,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="//static-azeroth.cursecdn.com/current/js/syndication/tt.js"></script>
-  <link href="//fonts.googleapis.com/css?family=Open+Sans|Arvo|Capriola" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro|Arvo|Capriola" rel="stylesheet">
   {{ block "head-injects" . }}{{ end }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/article.css" />
+  {{ $mainStyle := resources.Get "css/main.scss" | resources.ToCSS }}
+  {{ $articleStyle := resources.Get "css/article.scss" | resources.ToCSS }}
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $mainStyle.Permalink }}" />
+    <link rel="stylesheet" href="{{ $articleStyle.Permalink }}" />
+  {{ else }}
+    {{ $css := slice $mainStyle $articleStyle | resources.Concat "css/style.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" />
+  {{ end }}
 </head>
 <body class="{{ block "bodyclass" . }}home-body{{ end }}">
   {{ block "main" . }}
