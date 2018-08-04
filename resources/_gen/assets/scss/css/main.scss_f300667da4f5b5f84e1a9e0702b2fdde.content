@@ -342,12 +342,13 @@ body.article-body .header-nav > a:hover {
 
 .footer {
   grid-area: footer;
-  text-align: center; }
+  text-align: center;
+  padding: 5rem; }
 
 .footer h1 {
   font-size: 1.5rem;
-  color: #777;
-  margin: 5rem; }
+  margin-top: 2rem;
+  color: #777; }
 
 .not-found {
   margin-top: 10rem;
@@ -371,3 +372,18 @@ body.article-body .header-nav > a:hover {
 .pagination li.active {
   color: #0E8DCF;
   text-decoration: none; }
+
+.top {
+  position: absolute;
+  top: 0; }
+
+.back-to-top {
+  font-size: 1.5rem; }
+  @media screen and (min-width: 1200px) {
+    .back-to-top {
+      position: fixed;
+      bottom: 5rem;
+      right: 5rem; } }
+  .back-to-top:hover {
+    color: #0E8DCF;
+    text-decoration: underline; }
