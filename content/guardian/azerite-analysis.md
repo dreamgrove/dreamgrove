@@ -29,7 +29,7 @@ Here is a graph of how delaying Barkskin relates to the average damage reduction
 
 ![Craggy Bark DRPS](/guardian/images/craggy-bark-drps.png)
 
-Frankly, this trait is pretty terrible. Not only is it only active during {{< spell 22812 "Barkskin" >}} when you already have a 10% damage reduction going, but the amount that it reduces is not especially meaningful *and* it only works on melee attacks. Unless this trait is buffed, I'd recommend avoiding it where possible. 
+Frankly, this trait is pretty terrible. Not only is it only active during {{< spell 22812 "Barkskin" >}} when you already have a 20% damage reduction going, but the amount that it reduces is not especially meaningful *and* it only works on melee attacks. Unless this trait is buffed, I'd recommend avoiding it where possible.
 
 ## Gory Regeneration
 
