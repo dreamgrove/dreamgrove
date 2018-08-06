@@ -43,7 +43,9 @@ The discontinuity in the 1 target plot is the point at which you can sustain a {
 
 This trait basically lives or dies by whether or not you're talented into {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}. If you aren't, Mangle's cooldown is so long that you will get at most 1 second of extension (you can get 2 in theory if you have around 88% haste, which may be possible with lust/berserking and a lot of haste rating). If you are, this trait becomes an incredibly powerful boost to your self-healing capabilities. 
 
-That being said, while this trait looks very good on paper (under certain circumstances), I'm not convinced it has the same value in practice. For one, the HPS of {{< spell 22842 "Frenzied Regeneration" >}} is still quite low, at 6% HP per tick baseline (with the bonus healing from the trait it is probably closer to 7%). The extension component of Gory Regeneration does not improve the HPS output at all, it merely prolongs its duration. This would be fine in isolation, but in reality you don't have infinite health and you will have external healing. Extending FR increases the chance that it will cause overhealing, either for you or for your healers, which eliminates the benefit of receiving more healing altogether. 
+While this trait looks very good on paper, I'm not convinced it has the same value in practice. For one, the HPS of {{< spell 22842 "Frenzied Regeneration" >}} is still quite low, at 6% HP per tick baseline (with the bonus healing from the trait it is probably closer to 7%). The extension component of Gory Regeneration does not improve the HPS output of Frenzied Regen while it's ticking, it only increases the number of seconds it ticks for. This would be fine in isolation, but in reality you don't have infinite health and you will have external healing. Extending FR increases the chance that it will cause overhealing, either for you or for your healers, which eliminates the benefit of receiving more healing altogether. 
+
+If there is ever a reason to take Incarnation to an encounter, Gory Regeneration would be quite strong defensively. It is not, however, a reason to take Incarnation in and of itself. 
 
 ## Guardian's Wrath
 
@@ -53,13 +55,13 @@ At 370, Maul deals 1048 additional damage.
 
 ![Guardian's Wrath bonus damage](/guardian/images/guardians-wrath-damage.png)
 
-In order to evaluate this trait, let's consider its offensive value. Assuming you are casting {{< spell 192081 "Ironfur" >}} at least enough to consume every stack that you generate, you can consider {{< spell 6807 "Maul" >}} to effectively cost 30 Rage per cast. The Rage you would have spent on Ironfur is now refunded to you, allowing you to cast more Mauls over the course of a fight. This is effectively a 33.3% gain in Mauls which, in addition to the additional damage, significantly improves your DPS output when you are using a combination of Ironfur and Maul. Of course, if you never cast Ironfur (or if you waste stacks by not casting it enough), you will get less value out of the trait.
+In order to evaluate this trait, let's consider its offensive value. Assuming you are casting {{< spell 192081 "Ironfur" >}} at least enough to consume every stack that you generate, you can consider {{< spell 6807 "Maul" >}} to effectively cost 30 Rage per cast. The Rage you would have spent on Ironfur is now refunded to you, allowing you to cast more Mauls over the course of a fight. This is in effect a 33.3% gain in Mauls which, in addition to the additional damage, significantly improves your DPS output when you are using a combination of Ironfur and Maul. Of course, if you never cast Ironfur (or if you waste stacks by not casting it enough), you will get less value out of the trait.
 
 Defensively, this trait is not very strong. Obviously while not tanking, you can bank a free {{< spell 192081 "Ironfur" >}} for instant mitigation when you taunt back, which allows you to spend more Rage on {{< spell 6807 "Maul" >}} during times when you aren't actively tanking. But from a pure survivability perspective, if you were concerned only about your defensive capacity you would spend Rage exclusively on Ironfur and this trait would provide no value. It's the hybrid nature of the trait that gives it its value.
 
 This is a great trait all around. Not only is it a significant boost to {{< spell 6807 "Maul" >}}'s damage, but it affords you some flexibility in your Rage management. Particularly in situations with tank swaps, this allows you to safely spend Rage on Maul and still be able to have an {{< spell 192081 "Ironfur" >}} up for when you taunt back. Offensively, this is one of the strongest Guardian specific traits out there.
 
-*As an aside, I love the design of this trait personally and I wish there were more of this style in the Azerite system in general. It creates an interesting interaction between our spenders and goes beyond the typical "heal for X/gain an absorb/gain a stat" design, and while it doesn't really affect the gameplay in super meaningful ways, it does incentivize using both offensive and defensive skills in tandem.*
+*As an aside, I really like the design of Guardian's Wrath personally and I wish there were more traits like this in general. It creates an interesting interaction between our spenders and goes beyond the typical "heal for X/gain an absorb/gain a stat" design, and while it doesn't really affect the gameplay in super meaningful ways, it does incentivize using both offensive and defensive skills in tandem.*
 
 ## Layered Mane
 
@@ -81,7 +83,7 @@ At 370, you gain 285 Mastery and 623 Armor.
 
 ![Masterful Instincts bonus Mastery and Armor](/guardian/images/masterful-instincts-stats.png)
 
-Another victim of terrible tuning. The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. The amount of stats you gain is completely pitiful for how rarely you'll have the buff up, however. Additionally, it provides no benefit outside of SI, a spell you use very few times during a fight.
+Another victim of poor tuning. The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. The amount of stats you gain is completely pitiful for how rarely you'll have the buff up, however. 
 
 ## Twisted Claws
 
@@ -93,7 +95,7 @@ At 370, you gain 89 Agility per stack, for a gain of 445 Agility at 5 stacks. No
 
 Notably, this trait improves dramatically with Haste. Because Haste lowers the cooldown of {{< spell 77758 "Thrash" >}}, the more Haste you have the more chances throughout a fight you have to apply a stack of Twisted Claws. 
 
-![Twisted Claws Stack Uptimes](/guardian/images/twisted-claws-average-stack.png)
+![Twisted Claws Stack Uptimes](/guardian/images/twisted-claws-stacks.png)
 
 The sharp increases in uptimes/stack counts correspond to haste amounts at which you can fit extra global cooldowns into the buff duration, and exist because occasionally you will delay {{< spell 77758 "Thrash" >}} by one or two casts to prioritize a {{< spell 210706 "Gore" >}} proc or to dump Rage on Maul. The major spike at 50% Haste indicates the point at which you can fit a third Thrash cast into a single buff, when it has a 4 second cooldown.
 
@@ -105,11 +107,11 @@ This trait looks to be very strong both offensively and defensively, provided yo
 
 I'm only including this trait for completeness' sake. It is absolutely not worth taking for Guardian, as it only works with Cat Form {{< spell 211141 "Thrash" >}}, and does not work at all on {{< spell 5221 "Shred" >}} if you are in Guardian spec. 
 
-
+---
 
 # Middle/Inner Rings
 
-These traits are available for all classes, and populate the inner rows of Azerite gear. They primarily compete with each other (and {{< spell 280161 "Ursoc's Endurance ">}}), as you can find most of the possible combinations of inner and outer traits on available gear.
+These traits are available for all classes, and populate the inner rows of Azerite gear. They primarily compete with each other and not with the outer traits, as you can find most of the possible combinations of inner and outer traits on available gear.
 
 Note that this is not an exhaustive list of all available general traits, but for the sake of brevity I will only talk about the ones that you might consider taking for survivability purposes. If a trait is not listed here, it is because it either provides little or no defensive benefit, or is too unreliable to be considered for tanking.
 
@@ -188,6 +190,14 @@ You can think of this trait as granting you around 650 healing per second. The n
 At 370, the size of the absorb is 11131.
 
 {{< item 132444 "Prydaz, Xavaric's Magnum Opus" >}}-lite. If the full shield is consumed every time, this trait results in ~370 healing per second. The pure throughput is lower than other traits that grant healing like {{< spell 268437 "Impassive Visage" >}}, however absorbs also increase your effective health and reduce your chances of being one-shot. The absorb also provides benefit while you're at or near full health, unlike healing traits which are only effective when they don't overheal.
+
+## Shimmering Haven
+
+- {{< spell 271557 "Shimmering Haven" >}} - Taking damage has a chance to create an upwelling of Azerite beneath your feet, increasing your Health by X and your Armor by Y while you stand within it, for 10 seconds.
+
+At 370, you gain 13431 health and 380 armor.
+
+Based on what data I could find of people using this trait, it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to get its benefit, which may have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
 
 ## Ursoc's Endurance
 
