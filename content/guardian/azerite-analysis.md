@@ -105,7 +105,7 @@ This trait looks to be very strong both offensively and defensively, provided yo
 
 - {{< spell 279527 "Wild Fleshrending" >}} causes {{< spell 5221 "Shred" >}} to deal X additional damage and {{< spell 213771 "Swipe" >}} to deal Y additional damage to targets affected by your {{< spell 211141 "Thrash" >}}.
 
-I'm only including this trait for completeness' sake. It is absolutely not worth taking for Guardian, as it only works with Cat Form {{< spell 211141 "Thrash" >}}, and does not work at all on {{< spell 5221 "Shred" >}} if you are in Guardian spec. 
+This is a Feral trait that is also selectable as Guardian, and I'm only including it for completeness' sake. It is absolutely not worth taking for Guardian, as it only works with Cat Form {{< spell 211141 "Thrash" >}}, and does not work at all on {{< spell 5221 "Shred" >}} if you are in Guardian spec. 
 
 ---
 
@@ -113,7 +113,7 @@ I'm only including this trait for completeness' sake. It is absolutely not worth
 
 These traits are available for all classes, and populate the inner rows of Azerite gear. They primarily compete with each other and not with the outer traits, as you can find most of the possible combinations of inner and outer traits on available gear.
 
-Note that this is not an exhaustive list of all available general traits, but for the sake of brevity I will only talk about the ones that you might consider taking for survivability purposes. If a trait is not listed here, it is because it either provides little or no defensive benefit, or is too unreliable to be considered for tanking.
+Note that this is not an exhaustive list of all available general traits, but for the sake of brevity I will only talk about the ones that you might consider taking for survivability purposes. If a trait is not listed here, it is likely because it either provides little or no defensive benefit, or is too unreliable to be considered for tanking. 
 
 ## Ablative Shielding
 
@@ -163,7 +163,7 @@ This trait results in around 1k healing per second average, assuming the full ab
 
 At 370, you gain 124 Armor and deal 107 damage.
 
-This trait has nearly 100% uptime while tanking. The armor bonus is nothing special, but it is very consistent and reliable. This trait is very similar to {{< spell 268596 "Gemhide" >}} in function, except Crystalline Carapace deals damage instead of also granting Avoidance. There are a few more differences that I'll outline in the Gemhide description.
+This trait has nearly 100% uptime while tanking. The armor bonus is nothing special, but it is very consistent and reliable. This trait is very similar to {{< spell 268596 "Gemhide" >}} in function, except Crystalline Carapace deals damage instead of also granting Avoidance. 
 
 ## Gemhide
 
@@ -171,7 +171,7 @@ This trait has nearly 100% uptime while tanking. The armor bonus is nothing spec
 
 At 370, this trait grants 211 Armor and 128 Avoidance.
 
-As mentioned above, this trait is very similar to {{< spell 271536 "Crystalline Carapace" >}} &mdash; both are high-uptime Armor buffs that have very reliable ways to proc them when needed. Defensively, Gemhide is strictly better. Not only does it grant more Armor at all item levels, but instead of dealing damage as a secondary effect like Crystalline Carapace, it also grants Avoidance, which works on not only raid-wide damage, but also on cleaving tank damage as well (any attack with an AoE component).
+As mentioned above, this trait is very similar to {{< spell 271536 "Crystalline Carapace" >}} &mdash; both are high-uptime Armor buffs that have very reliable ways to proc them when needed. Defensively, Gemhide is strictly better. Not only does it grant more Armor at all item levels, but instead of dealing damage as a secondary effect like Crystalline Carapace, it also grants Avoidance, which works on not only raid-wide damage, but also on cleaving tank damage as well (any attack with an AoE component will be reduced by Avoidance).
 
 ![Crystalline Carapace vs Gemhide bonus Armor](/guardian/images/crystalline-carapace-vs-gemhide.png)
 
@@ -197,7 +197,7 @@ At 370, the size of the absorb is 11131.
 
 At 370, you gain 13431 health and 380 armor.
 
-I wasn't able to test this trait either, but based on what data I could find of people using this trait, it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to get its benefit, which may have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
+I wasn't able to test this trait either, but based on what data I could find it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to benefit from it. This might have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
 
 ## Ursoc's Endurance
 
