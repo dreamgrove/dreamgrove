@@ -197,7 +197,7 @@ At 370, the size of the absorb is 11131.
 
 At 370, you gain 13431 health and 380 armor.
 
-Based on what data I could find of people using this trait, it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to get its benefit, which may have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
+I wasn't able to test this trait either, but based on what data I could find of people using this trait, it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to get its benefit, which may have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
 
 ## Ursoc's Endurance
 
