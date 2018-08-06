@@ -1,6 +1,6 @@
 ---
 title: "Guardian Druid Azerite Traits: Analysis"
-date: '2018-08-05'
+date: '2018-08-06'
 authors: ['Faide']
 description: "Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. Here is a detailed analysis of the azerite traits available to Guardians in Battle for Azeroth."
 showtoc: true
