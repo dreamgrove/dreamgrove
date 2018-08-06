@@ -16,10 +16,15 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 <main class="main">
-  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series) }} with-sidebar{{ end }}">
+  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series .Params.showtoc) }} with-sidebar{{ end }}">
     {{ if .Parent.Params.showsectiontoc }}
       <section class="section-overview toc">
         {{ partial "section-toc.html" . }}
+      </section>
+    {{ end }}
+    {{ if .Params.showtoc }}
+      <section class="section-overview toc">
+        {{ partial "post-toc.html" . }}
       </section>
     {{ end }}
     {{ if .Params.series }}
