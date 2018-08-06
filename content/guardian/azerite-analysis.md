@@ -1,6 +1,6 @@
 ---
 title: "Guardian Druid Azerite Traits: Analysis"
-date: '2018-07-26'
+date: '2018-08-05'
 authors: ['Faide']
 description: "Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. Here is a detailed analysis of the azerite traits available to Guardians in Battle for Azeroth."
 showtoc: true
@@ -9,13 +9,13 @@ patch: 8.0.1
 
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
-Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). 
+Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values.
 
 I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, stacking more than one of a particular trait will have reduced value and almost always be worse than taking the first instance of another trait. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
 
-Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values.
+Disclaimer: Blizzard have been pushing out hotfixes to Azerite traits almost daily for the last week or so, often changing the values on traits by 5x or more. As a result, the values and assessments in this post are subject to change. They are accurate as of the date of this post, and I will try to keep them up to date in case further changes are made.
 
-# Druid Traits
+# Outer Ring 
 
 The following traits are available only to Druids. Most of these are Guardian specific, but some are shared between Feral and Balance as well. You are guaranteed at least one Guardian specific trait and one generic trait on every azerite piece, although it is possible to have more if one of the shared traits is present for another spec.
 
@@ -23,7 +23,9 @@ The following traits are available only to Druids. Most of these are Guardian sp
 
 - {{< spell 276157 "Craggy Bark" >}} - {{< spell 22812 "Barkskin" >}} reduces melee attacks against you by X damage.
 
-At 370, the value of the reduction is 538 damage per melee. If we assume a standardized enemy swing timer of 2 seconds per melee, with a {{< spell 22812 "Barkskin" >}} duration of 12 seconds you will reduce 6 melees per use, per enemy. That's a total reduction of 3230 (give or take a few points due to rounding) damage per Barkskin, per target. If you use Barkskin on cooldown, you will average around 36 damage reduced per second over the course of a fight, but this is atypical since you will often want to save Barkskin for specific mechanics which may not necessarily align with the cooldown. Here is a graph of how delaying Barkskin relates to the average damage reduction of Craggy Bark:
+At 370, the value of the reduction is 538 damage per melee. If we assume a standardized enemy swing timer of 2 seconds per melee, with a {{< spell 22812 "Barkskin" >}} duration of 12 seconds you will reduce 6 melees per use, per enemy. That's a total reduction of 3230 (give or take a few points due to rounding) damage per Barkskin, per target. If you use Barkskin on cooldown, you will average around 36 damage reduced per second over the course of a fight, but this is atypical since you will often want to save Barkskin for specific mechanics which may not necessarily align with the cooldown. 
+
+Here is a graph of how delaying Barkskin relates to the average damage reduction of Craggy Bark:
 
 ![Craggy Bark DRPS](/guardian/images/craggy-bark-drps.png)
 
@@ -57,6 +59,8 @@ Defensively, this trait is not very strong. Obviously while not tanking, you can
 
 This is a great trait all around. Not only is it a significant boost to {{< spell 6807 "Maul" >}}'s damage, but it affords you some flexibility in your Rage management. Particularly in situations with tank swaps, this allows you to safely spend Rage on Maul and still be able to have an {{< spell 192081 "Ironfur" >}} up for when you taunt back. Offensively, this is one of the strongest Guardian specific traits out there.
 
+*As an aside, I love the design of this trait personally and I wish there were more of this style in the Azerite system in general. It creates an interesting interaction between our spenders and goes beyond the typical "heal for X/gain an absorb/gain a stat" design, and while it doesn't really affect the gameplay in super meaningful ways, it does incentivize using both offensive and defensive skills in tandem.*
+
 ## Layered Mane
 
 - {{< spell 279552 "Layered Mane" >}} - {{< spell 192081 "Ironfur" >}} increases your Agility by X, and casting Ironfur has a chance to grant 2 applications.
@@ -87,22 +91,13 @@ At 370, you gain 89 Agility per stack, for a gain of 445 Agility at 5 stacks. No
 
 ![Twisted Claws bonus Agility and Armor](/guardian/images/twisted-claws-stats.png)
 
-Notably, this trait improves dramatically with Haste. Because Haste lowers the cooldown of {{< spell 77758 "Thrash" >}}, the more Haste you have the more chances throughout a fight you have to apply a stack of Twisted Claws. Here are some charts showing the relative uptimes of various stack counts, and average stack counts, at varying levels of Haste.
+Notably, this trait improves dramatically with Haste. Because Haste lowers the cooldown of {{< spell 77758 "Thrash" >}}, the more Haste you have the more chances throughout a fight you have to apply a stack of Twisted Claws. 
 
-![Twisted Claws Average Stacks](/guardian/images/twisted-claws-stacks.png)
 ![Twisted Claws Stack Uptimes](/guardian/images/twisted-claws-average-stack.png)
 
 The sharp increases in uptimes/stack counts correspond to haste amounts at which you can fit extra global cooldowns into the buff duration, and exist because occasionally you will delay {{< spell 77758 "Thrash" >}} by one or two casts to prioritize a {{< spell 210706 "Gore" >}} proc or to dump Rage on Maul. The major spike at 50% Haste indicates the point at which you can fit a third Thrash cast into a single buff, when it has a 4 second cooldown.
 
-This trait looks to be very strong both offensively and defensively, provided you can maintain reasonably good uptimes at high stacks. On one target this may prove difficult; at normal haste levels, you will get two chances to refresh the buff if you are casting {{< spell 77758 "Thrash" >}} on cooldown (which you should be doing anyway).
-
-## Ursoc's Endurance
-
-- {{< spell 280161 "Ursoc's Endurance ">}} Gain an absorb for X damage over 8 seconds when you use {{< spell 22812 "Barkskin" >}} or {{< spell 61336 "Survival Instincts" >}}.
-
-At 370, the value of the absorb is 18700. 
-
-As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping with your already strong defensive cooldowns. The absorb is better than it may first appear due to the fact that absorbs are consumed after damage reduction. That is to say, if you use {{< spell 61336 "Survival Instincts" >}}, while it is active the absorb has essentially double the value since the damage is first reduced by 50%. The major downside is that it only has value during your defensives, when your risk of dying is already considerably lowered. However, this trait is on the inner ring and therefore does not compete with the other traits outlined here.
+This trait looks to be very strong both offensively and defensively, provided you can maintain reasonably good uptimes at high stacks. On one target this may prove difficult; at normal haste levels, you will get two chances to refresh the buff if you are casting {{< spell 77758 "Thrash" >}} on cooldown (which you should more or less be doing anyway).
 
 ## Wild Fleshrending
 
@@ -112,7 +107,7 @@ I'm only including this trait for completeness' sake. It is absolutely not worth
 
 
 
-# General Tanking Traits
+# Middle/Inner Rings
 
 These traits are available for all classes, and populate the inner rows of Azerite gear. They primarily compete with each other (and {{< spell 280161 "Ursoc's Endurance ">}}), as you can find most of the possible combinations of inner and outer traits on available gear.
 
@@ -188,11 +183,19 @@ You can think of this trait as granting you around 650 healing per second. The n
 
 ## Resounding Protection
 
-- {{< spell 263962 "Resounding Protection" >}} - Every 30 seconds, gain an absorb for 30 seconds.
+- {{< spell 263962 "Resounding Protection" >}} - Every 30 seconds, gain a shield that absorbs X for 30 seconds.
 
 At 370, the size of the absorb is 11131.
 
 {{< item 132444 "Prydaz, Xavaric's Magnum Opus" >}}-lite. If the full shield is consumed every time, this trait results in ~370 healing per second. The pure throughput is lower than other traits that grant healing like {{< spell 268437 "Impassive Visage" >}}, however absorbs also increase your effective health and reduce your chances of being one-shot. The absorb also provides benefit while you're at or near full health, unlike healing traits which are only effective when they don't overheal.
+
+## Ursoc's Endurance
+
+- {{< spell 280161 "Ursoc's Endurance ">}} - Gain an absorb for X damage over 8 seconds when you use {{< spell 22812 "Barkskin" >}} or {{< spell 61336 "Survival Instincts" >}}.
+
+At 370, the value of the absorb is 18700. 
+
+As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping with your already strong defensive cooldowns. The absorb is better than it may first appear due to the fact that absorbs are consumed after damage reduction. That is to say, if you use {{< spell 61336 "Survival Instincts" >}}, while it is active the absorb has essentially double the value since the damage is first reduced by 50%. The major downside is that it only has value during your defensives, when your risk of dying is already considerably lowered. 
 
 ## Winds of War
 
@@ -201,3 +204,22 @@ At 370, the size of the absorb is 11131.
 At 370 you gain 37 Dodge rating per stack, for a total of 370 Dodge rating at max stacks.
 
 While Dodge is very inconsistent as a damage-reducing mechanic and should not be relied on as a survivability tool, it does reduce your overall damage taken over the course of a fight. Assuming you're at an average of 370 item level and have an equal distribution of secondaries (3732 Agility and 704 Crit rating from gear), adding 370 Dodge rating will improve your chance to dodge by 3.18%.
+
+
+
+# Recommendations
+
+With all that being said, here are the traits I'd recommend paying attention to, in no particular order:
+
+## Outer Ring
+
+- {{< spell 279552 "Layered Mane" >}} - Easily our best defensive trait. Extra stacks of Ironfur will almost always be useful, and a buff to every stack of Ironfur is the cherry on top.
+- {{< spell 275906 "Twisted Claws" >}} - Free Agility for what is essentially performing the rotation correctly. Holds its own in single target but really shines on 2+ targets.
+- {{< spell 279541 "Guardian's Wrath" >}} - Increases the amount of spenders you can cast and gives you a safety net to spend Rage aggressively on tank swap fights.
+
+## Middle/Inner Rings
+
+- {{< spell 268596 "Gemhide" >}} - A reliably high-uptime Armor and Avoidance buff.
+- {{< spell 271536 "Crystalline Carapace" >}} - A slightly worse (defensively) version of {{< spell 268596 "Gemhide" >}}.
+- {{< spell 268437 "Impassive Visage" >}} - A healing trait that is almost guaranteed to not overheal.
+- {{< spell 268595 "Bulwark of the Masses" >}} - If you can proc the effect, a very powerful absorb.
