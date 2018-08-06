@@ -79,7 +79,7 @@ Not only is it incredibly strong defensively, but the bonus Agility grants an of
 
 - {{< spell 273344 "Masterful Instincts" >}} - After {{< spell 61336 "Survival Instincts" >}} fades, you gain X Mastery and Y Armor for 10 seconds.
 
-At 370, you gain 285 Mastery and 623 Armor.
+At 370, you gain 661 Mastery and 623 Armor.
 
 ![Masterful Instincts bonus Mastery and Armor](/guardian/images/masterful-instincts-stats.png)
 
@@ -145,7 +145,7 @@ There are some pretty major drawbacks to the trait: the fact that it has a very 
 - {{< spell 267665 "Lifespeed" >}} - Increases your Haste by X and your Avoidance by Y.
 - {{< spell 264108 "On My Way" >}} - Increases your Versatility by X and your Speed by Y.
 
-At 370, the amount of secondary you gain is 121, and the amount of tertiary you gain is 37.
+At 370, the amount of secondary you gain is 74, and the amount of tertiary you gain is 37.
 
 I've grouped these traits together because they all provide the same sort of benefit &mdash; a flat secondary and tertiary stat gain. These are by no means the best traits, but they do provide a consistent, non-gimmicky boost to your stats and aren't terrible. Of the three, {{< spell 264108 "Blood Siphon" >}} is the strongest, as both Mastery and Leech are strong stats for survivability. 
 
