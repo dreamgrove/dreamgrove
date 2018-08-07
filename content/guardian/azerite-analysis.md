@@ -237,7 +237,7 @@ As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping 
 
 - {{< spell 280181 "Personal Absorb-o-Tron" >}} - Taking damage has a chance to grant you a shield that absorbs X damage over 1 minute.
 
-At 355, this shield absorbs 47791 damage. It has an RPPM of 1.5.
+At 340, this shield absorbs 47791 damage. It has an RPPM of 1.5.
 
 This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. This shield is incredibly strong; not only is it absolutely enormous compared to its contemporaries on the inner ring, the RPPM is very high for this category of traits. The absorb averages out to roughly 1195 healing per second, which is far and away the strongest of its kind. This is almost too good to pass up; if you are at all considering taking engineering, this is a must-have trait.
 
@@ -245,7 +245,7 @@ This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Ge
 
 - {{< spell 280172 "Auto-Self-Cauterizer" >}} - Taking damage has a chance to heal you for X, remove most bleed effects, and slow nearby enemies by 30% for 5 seconds.
 
-At 355, you heal for 9533, with an RPPM of 1.5.
+At 340, you heal for 9533, with an RPPM of 1.5.
 
 The value of this trait depends entirely on what types of bleeds it can remove. If, for example, there are tank mechanic style bleeds in raids and dungeons (like Ursoc's {{< spell 197942 "Rend Flesh" >}}, for example), and those are removable by this trait, then it will be extraordinarily powerful. 
 
