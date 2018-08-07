@@ -9,7 +9,7 @@ patch: 8.0.1
 
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
-Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 355.
+Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 340.
 
 I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
 
@@ -111,9 +111,9 @@ This is a Feral trait that is also selectable as Guardian, and I'm only includin
 
 - {{< spell 280174 "Synaptic Spark Capacitor" >}} - Your abilities have a chance to apply Spark Coil to a target for 10 seconds, which will cause enemies within 8 years to take X damage every 2 seconds and deal 5% less damage to you.
 
-At 355, this deals 882 damage every 2 seconds. It has an RPPM of 1.5.
+At 340, this deals 763 damage every 2 seconds. It has an RPPM of 1.5.
 
-This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking. The real reason you may want to take the engineering goggles is for the inner ring trait {{< spell 280181 "Peronsal Absorb-o-Tron" >}}.
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking. The real reason you may want to take the engineering goggles is for the inner ring trait {{< spell 280181 "Personal Absorb-o-Tron" >}}.
 
 ---
 
@@ -235,21 +235,21 @@ As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping 
 
 ## Personal Absorb-o-Tron
 
-- {{< spell 280181 "Peronsal Absorb-o-Tron" >}} - Taking damage has a chance to grant you a shield that absorbs X damage over 1 minute.
+- {{< spell 280181 "Personal Absorb-o-Tron" >}} - Taking damage has a chance to grant you a shield that absorbs X damage over 1 minute.
 
-At 355, this shield absorbs 54883 damage. It has an RPPM of 1.5.
+At 355, this shield absorbs 47791 damage. It has an RPPM of 1.5.
 
-This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. This shield is incredibly strong; not only is it absolutely enormous compared to its contemporaries on the inner ring, the RPPM is very high for this category of traits. The absorb averages out to roughly 1370 healing per second, which is far and away the strongest of its kind. This is almost too good to pass up; if you are at all considering taking engineering, this is a must-have trait.
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. This shield is incredibly strong; not only is it absolutely enormous compared to its contemporaries on the inner ring, the RPPM is very high for this category of traits. The absorb averages out to roughly 1195 healing per second, which is far and away the strongest of its kind. This is almost too good to pass up; if you are at all considering taking engineering, this is a must-have trait.
 
 ## Auto-Self-Cauterizer
 
 - {{< spell 280172 "Auto-Self-Cauterizer" >}} - Taking damage has a chance to heal you for X, remove most bleed effects, and slow nearby enemies by 30% for 5 seconds.
 
-At 355, you heal for 11028, with an RPPM of 1.5.
+At 355, you heal for 9533, with an RPPM of 1.5.
 
 The value of this trait depends entirely on what types of bleeds it can remove. If, for example, there are tank mechanic style bleeds in raids and dungeons (like Ursoc's {{< spell 197942 "Rend Flesh" >}}, for example), and those are removable by this trait, then it will be extraordinarily powerful. 
 
-If not, then the trait becomes a basic heal (at 275 healing per second) with a moderate slow, which is not nearly as valuable.
+If not, then the trait becomes a basic heal (at roughly 240 healing per second) with a moderate slow, which is not nearly as valuable.
 
 ---
 
@@ -271,7 +271,7 @@ With all that being said, here are the traits I'd recommend paying attention to,
 
 ## Inner Ring
 
-- {{< spell 280181 "Peronsal Absorb-o-Tron" >}} - If you have engineering, this is by far the strongest inner trait.
+- {{< spell 280181 "Personal Absorb-o-Tron" >}} - If you have engineering, this is by far the strongest inner trait.
 - {{< spell 268437 "Impassive Visage" >}} - A healing trait that is almost guaranteed to not overheal.
 - {{< spell 268595 "Bulwark of the Masses" >}} - If you can proc the effect, a very powerful absorb.
 - {{< spell 268596 "Gemhide" >}} - A reliably high-uptime Armor and Avoidance buff.
