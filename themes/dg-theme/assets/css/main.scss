@@ -2,6 +2,7 @@
 $screen-small: 800px;
 $screen-medium: 1200px;
 $screen-wide: 1300px;
+$screenheight-short: 900px;
 
 a, a:hover, a:visited, a:active {
   color: inherit;
@@ -301,13 +302,12 @@ body.article-body .header-nav>a:hover {
     "article-footer";
 
   @media screen and (min-width: $screen-medium) {
-
-  margin-top: 7rem;
-  grid-template-areas:
-    ". breadcrumbs"
-    "section-overview article-header"
-    "section-overview article-content"
-    "article-footer article-footer";
+    margin-top: 7rem;
+    grid-template-areas:
+      "section-overview breadcrumbs"
+      "section-overview article-header"
+      "section-overview article-content"
+      "article-footer article-footer";
   }
 }
 
@@ -465,7 +465,7 @@ body.article-body .header-nav>a:hover {
 }
 
 .sticky-toc {
-  @media screen and (min-width: $screen-medium) {
+  @media screen and (min-width: $screen-medium) and (min-height: $screenheight-short) {
     position: fixed;
     width: 280px;
   }
