@@ -9,7 +9,7 @@ patch: 8.0.1
 
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
-Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values.
+Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 355.
 
 I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
 
@@ -103,17 +103,27 @@ This trait looks to be very strong both offensively and defensively, provided yo
 
 ## Wild Fleshrending
 
-- {{< spell 279527 "Wild Fleshrending" >}} causes {{< spell 5221 "Shred" >}} to deal X additional damage and {{< spell 213771 "Swipe" >}} to deal Y additional damage to targets affected by your {{< spell 211141 "Thrash" >}}.
+- {{< spell 279527 "Wild Fleshrending" >}} - {{< spell 5221 "Shred" >}} to deal X additional damage and {{< spell 213771 "Swipe" >}} to deal Y additional damage to targets affected by your {{< spell 211141 "Thrash" >}}.
 
 This is a Feral trait that is also selectable as Guardian, and I'm only including it for completeness' sake. It is absolutely not worth taking for Guardian, as it only works with Cat Form {{< spell 211141 "Thrash" >}}, and does not work at all on {{< spell 5221 "Shred" >}} if you are in Guardian spec. 
 
+## Synaptic Spark Capacitor
+
+- {{< spell 280174 "Synaptic Spark Capacitor" >}} - Your abilities have a chance to apply Spark Coil to a target for 10 seconds, which will cause enemies within 8 years to take X damage every 2 seconds and deal 5% less damage to you.
+
+At 355, this deals 882 damage every 2 seconds. It has an RPPM of 1.5.
+
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking. The real reason you may want to take the engineering goggles is for the inner ring trait {{< spell 280181 "Peronsal Absorb-o-Tron" >}}.
+
 ---
 
-# Middle/Inner Rings
+# Middle Ring
 
-These traits are available for all classes, and populate the inner rows of Azerite gear. They primarily compete with each other and not with the outer traits, as you can find most of the possible combinations of inner and outer traits on available gear.
+These traits are available for all classes, and populate the middle ring of Azerite gear. They primarily consist of throughput traits; for tanks, these are stat procs, absorbs, and heals that trigger under certain circumstances. These traits are not exclusive with outer ring or inner ring traits. This ring is sometimes not present on lower level gear.
 
-Note that this is not an exhaustive list of all available general traits, but for the sake of brevity I will only talk about the ones that you might consider taking for survivability purposes. If a trait is not listed here, it is likely because it either provides little or no defensive benefit, or is too unreliable to be considered for tanking. 
+Note that this is not an exhaustive list of all available middle ring traits, but for the sake of brevity I will only talk about the ones that you might consider taking for survivability purposes. If a trait is not listed here, it is likely because it either provides little or no defensive benefit, or is too unreliable to be considered for tanking. 
+
+Broadly speaking, the defensive options on this row are quite weak. Unless you have a serious need for a small amount of Armor or Dodge, you should consider opting for a damage-oriented trait instead of one of these options. 
 
 ## Ablative Shielding
 
@@ -122,14 +132,6 @@ Note that this is not an exhaustive list of all available general traits, but fo
 At 370, you gain 1086 Armor. 
 
 I wasn't able to test this trait personally, so I don't know exactly how the "taking further Physical damage" portion of this trait works. Regardless, this is a poor trait even without considering that part of it. It has no value above 40% health, and it isn't a reliable death save like some of the other "when you drop below X% health" effects. Armor only reduces damage, unlike absorbs or cheat deaths which negate damage entirely. This is a trait you can safely avoid.
-
-## Azerite Fortification
-
-- {{< spell 268435 "Azerite Fortification" >}} - When stunned, immobilized, or knocked back, you heal for X.
-
-At 370, you heal for 13246.
-
-This is a situational pick. There are several bosses in Uldir that have knockback mechanics (Taloc, Zul) where this trait could potentially be very strong as I don't think it has any internal cooldown. Because this depends so heavily on whether or not you can get CC'd, it's hard to value this trait generally, and I do not recommend it for general purpose survivability.
 
 ## Azerite Veins
 
@@ -149,14 +151,6 @@ At 370, the amount of secondary you gain is 74, and the amount of tertiary you g
 
 I've grouped these traits together because they all provide the same sort of benefit &mdash; a flat secondary and tertiary stat gain. These are by no means the best traits, but they do provide a consistent, non-gimmicky boost to your stats and aren't terrible. Of the three, {{< spell 264108 "Blood Siphon" >}} is the strongest, as both Mastery and Leech are strong stats for survivability. 
 
-## Bulwark of the Masses
-
-- {{< spell 268595 "Bulwark of the Masses" >}} - When you are surrounded by 4 or more enemies, gain a shield that absorbs X damage. Cannot occur more than once every 15 seconds.
-
-At 370, the size of the absorb is 14842. 
-
-This trait results in around 1k healing per second average, assuming the full absorb is consumed every 15 seconds. It's quite strong (relative to the other absorb-type traits) if you can reliably trigger the effect, for example in dungeons when pulling large packs of trash.
-
 ## Crystalline Carapace
 
 - {{< spell 271536 "Crystalline Carapace" >}} - When dealt damage greater than 10% of your maximum health, gain X Armor and deal Y damage to attackers.
@@ -165,13 +159,53 @@ At 370, you gain 124 Armor and deal 107 damage.
 
 This trait has nearly 100% uptime while tanking. The armor bonus is nothing special, but it is very consistent and reliable. This trait is very similar to {{< spell 268596 "Gemhide" >}} in function, except Crystalline Carapace deals damage instead of also granting Avoidance. 
 
+## Shimmering Haven
+
+- {{< spell 271557 "Shimmering Haven" >}} - Taking damage has a chance to create an upwelling of Azerite beneath your feet, increasing your Health by X and your Armor by Y while you stand within it, for 10 seconds.
+
+At 370, you gain 13431 health and 380 armor.
+
+I wasn't able to test this trait either, but based on what data I could find it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to benefit from it. This might have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
+
+## Winds of War
+
+- {{< spell 267671 "Winds of War" >}} - Taking damage grants X Dodge for 3 seconds, stacking up to 10 times.
+
+At 370 you gain 37 Dodge rating per stack, for a total of 370 Dodge rating at max stacks.
+
+While Dodge is very inconsistent as a damage-reducing mechanic and should not be relied on as a survivability tool, it does reduce your overall damage taken over the course of a fight. Assuming you're at an average of 370 item level and have an equal distribution of secondaries (3732 Agility and 704 Crit rating from gear), adding 370 Dodge rating will improve your chance to dodge by 3.18%.
+
+---
+
+# Inner Ring
+
+These traits populate the inner ring of Azerite Gear. Like the middle ring, they consist mostly of general defensive benefits. They don't compete with traits on the outer and middle rings.
+
+As with the middle ring section, this list is not exhaustive. If a trait is not listed here, it is because it either provides little or no defensive benefit, or is too unreliable to be considered for tanking. 
+
+## Azerite Fortification
+
+- {{< spell 268435 "Azerite Fortification" >}} - When stunned, immobilized, or knocked back, you heal for X.
+
+At 370, you heal for 13246.
+
+This is a situational pick. There are several bosses in Uldir that have knockback mechanics (Taloc, Zul) where this trait could potentially be very strong as I don't think it has any internal cooldown. Because this depends so heavily on whether or not you can get CC'd, it's hard to value this trait generally, and I do not recommend it for general purpose survivability.
+
+## Bulwark of the Masses
+
+- {{< spell 268595 "Bulwark of the Masses" >}} - When you are surrounded by 4 or more enemies, gain a shield that absorbs X damage. Cannot occur more than once every 15 seconds.
+
+At 370, the size of the absorb is 14842. 
+
+This trait results in around 1k healing per second average, assuming the full absorb is consumed every 15 seconds. It's quite strong (relative to the other absorb-type traits) if you can reliably trigger the effect, for example in dungeons when pulling large packs of trash.
+
 ## Gemhide
 
 - {{< spell 268596 "Gemhide" >}} - When dealt damage greater than 10% of your maximum health, gain X Armor and Y Avoidance.
 
 At 370, this trait grants 211 Armor and 128 Avoidance.
 
-As mentioned above, this trait is very similar to {{< spell 271536 "Crystalline Carapace" >}} &mdash; both are high-uptime Armor buffs that have very reliable ways to proc them when needed. Defensively, Gemhide is strictly better. Not only does it grant more Armor at all item levels, but instead of dealing damage as a secondary effect like Crystalline Carapace, it also grants Avoidance, which works on not only raid-wide damage, but also on cleaving tank damage as well (any attack with an AoE component will be reduced by Avoidance).
+As mentioned above, this trait is very similar to {{< spell 271536 "Crystalline Carapace" >}} &mdash; both are high-uptime Armor buffs that have very reliable ways to proc them when needed. Defensively, Gemhide is strictly better. Not only does it grant more Armor at all item levels, but instead of dealing damage as a secondary effect like Crystalline Carapace, it also grants Avoidance, which works on not only raid-wide damage, but also on cleaving tank damage as well (any attack with an AoE component will be reduced by Avoidance). Keep in mind that Gemhide and Crystalline Carapace do not directly compete on the same row.
 
 ![Crystalline Carapace vs Gemhide bonus Armor](/guardian/images/crystalline-carapace-vs-gemhide.png)
 
@@ -191,14 +225,6 @@ At 370, the size of the absorb is 11131.
 
 {{< item 132444 "Prydaz, Xavaric's Magnum Opus" >}}-lite. If the full shield is consumed every time, this trait results in ~370 healing per second. The pure throughput is lower than other traits that grant healing like {{< spell 268437 "Impassive Visage" >}}, however absorbs also increase your effective health and reduce your chances of being one-shot. The absorb also provides benefit while you're at or near full health, unlike healing traits which are only effective when they don't overheal.
 
-## Shimmering Haven
-
-- {{< spell 271557 "Shimmering Haven" >}} - Taking damage has a chance to create an upwelling of Azerite beneath your feet, increasing your Health by X and your Armor by Y while you stand within it, for 10 seconds.
-
-At 370, you gain 13431 health and 380 armor.
-
-I wasn't able to test this trait either, but based on what data I could find it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to benefit from it. This might have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
-
 ## Ursoc's Endurance
 
 - {{< spell 280161 "Ursoc's Endurance ">}} - Gain an absorb for X damage over 8 seconds when you use {{< spell 22812 "Barkskin" >}} or {{< spell 61336 "Survival Instincts" >}}.
@@ -207,15 +233,25 @@ At 370, the value of the absorb is 18700.
 
 As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping with your already strong defensive cooldowns. The absorb is better than it may first appear due to the fact that absorbs are consumed after damage reduction. That is to say, if you use {{< spell 61336 "Survival Instincts" >}}, while it is active the absorb has essentially double the value since the damage is first reduced by 50%. The major downside is that it only has value during your defensives, when your risk of dying is already considerably lowered. 
 
-## Winds of War
+## Personal Absorb-o-Tron
 
-- {{< spell 267671 "Winds of War" >}} - Taking damage grants X Dodge for 3 seconds, stacking up to 10 times.
+- {{< spell 280181 "Peronsal Absorb-o-Tron" >}} - Taking damage has a chance to grant you a shield that absorbs X damage over 1 minute.
 
-At 370 you gain 37 Dodge rating per stack, for a total of 370 Dodge rating at max stacks.
+At 355, this shield absorbs 54883 damage. It has an RPPM of 1.5.
 
-While Dodge is very inconsistent as a damage-reducing mechanic and should not be relied on as a survivability tool, it does reduce your overall damage taken over the course of a fight. Assuming you're at an average of 370 item level and have an equal distribution of secondaries (3732 Agility and 704 Crit rating from gear), adding 370 Dodge rating will improve your chance to dodge by 3.18%.
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. This shield is incredibly strong; not only is it absolutely enormous compared to its contemporaries on the inner ring, the RPPM is very high for this category of traits. The absorb averages out to roughly 1370 healing per second, which is far and away the strongest of its kind. This is almost too good to pass up; if you are at all considering taking engineering, this is a must-have trait.
 
+## Auto-Self-Cauterizer
 
+- {{< spell 280172 "Auto-Self-Cauterizer" >}} - Taking damage has a chance to heal you for X, remove most bleed effects, and slow nearby enemies by 30% for 5 seconds.
+
+At 355, you heal for 11028, with an RPPM of 1.5.
+
+The value of this trait depends entirely on what types of bleeds it can remove. If, for example, there are tank mechanic style bleeds in raids and dungeons (like Ursoc's {{< spell 197942 "Rend Flesh" >}}, for example), and those are removable by this trait, then it will be extraordinarily powerful. 
+
+If not, then the trait becomes a basic heal (at 275 healing per second) with a moderate slow, which is not nearly as valuable.
+
+---
 
 # Recommendations
 
@@ -227,9 +263,15 @@ With all that being said, here are the traits I'd recommend paying attention to,
 - {{< spell 275906 "Twisted Claws" >}} - Free Agility for what is essentially performing the rotation correctly. Holds its own in single target but really shines on 2+ targets.
 - {{< spell 279541 "Guardian's Wrath" >}} - Increases the amount of spenders you can cast and gives you a safety net to spend Rage aggressively on tank swap fights.
 
-## Middle/Inner Rings
+## Middle Ring
 
-- {{< spell 268596 "Gemhide" >}} - A reliably high-uptime Armor and Avoidance buff.
-- {{< spell 271536 "Crystalline Carapace" >}} - A slightly worse (defensively) version of {{< spell 268596 "Gemhide" >}}.
+- {{< spell 271536 "Crystalline Carapace" >}} - A slightly worse (defensively) version of {{< spell 268596 "Gemhide" >}} with a small DPS component.
+- {{< spell 267671 "Winds of War" >}} - While you can't rely on dodge to keep you alive, it will reduce your overall damage taken, making this essentially a 3% damage reduction (against dodgeable attacks).
+- {{< spell 264108 "Blood Siphon" >}} /{{< spell 267665 "Lifespeed" >}} /{{< spell 264108 "On My Way" >}} - Free stats are free stats. 
+
+## Inner Ring
+
+- {{< spell 280181 "Peronsal Absorb-o-Tron" >}} - If you have engineering, this is by far the strongest inner trait.
 - {{< spell 268437 "Impassive Visage" >}} - A healing trait that is almost guaranteed to not overheal.
 - {{< spell 268595 "Bulwark of the Masses" >}} - If you can proc the effect, a very powerful absorb.
+- {{< spell 268596 "Gemhide" >}} - A reliably high-uptime Armor and Avoidance buff.
