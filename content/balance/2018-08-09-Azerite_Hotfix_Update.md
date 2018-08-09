@@ -9,7 +9,7 @@ published: true
 Special Thanks to Jundarer and Gastank for all the work that they have done to get us the available information in regards to these changes! If you see them around thank them!
 
 Hey guys, recently there was a hotfix to all of the Moonkin specific Azerite traits. These changes are massive and change a lot about the spec so it was decided we should make an update so you all know what is going on. We’re just going to go down the list and explain one trait at a time. If you haven’t already seen the changes, here they are:
-</center>
+
 
 |          Trait             | Changed By  |
 |----------------------------|---------------|
@@ -20,7 +20,7 @@ Hey guys, recently there was a hotfix to all of the Moonkin specific Azerite tra
 | {{< spell 279070 "High Noon" "beta" >}} 	 	     | 81% Buf |
 | {{< spell 278507 "Lunar Shrapnel" "beta" >}}	   | 73% Nerf |
 
-
+</center>
 
 {{< spell 272871 "Streaking Stars" "beta" >}} - Streaking Stars is now our top single target Azerite trait, making the trait worth almost 5% damage per trait on single target, that is much more than any other Azerite trait it competes against. This trait also makes Incarnation a much stronger cooldown (Celestial Alignment as well), being the best talent on single target now and giving us very potent burst.
 
