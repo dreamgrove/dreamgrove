@@ -6,10 +6,10 @@ published: true
 ---
 
 <center>
-**8/8 Azerite Hotfixes/Update**
-</center>
+Special Thanks to Jundarer and Gastank for all the work that they have done to get us the available information in regards to these changes! If you see them around thank them!
 
 Hey guys, recently there was a hotfix to all of the Moonkin specific Azerite traits. These changes are massive and change a lot about the spec so it was decided we should make an update so you all know what is going on. We’re just going to go down the list and explain one trait at a time. If you haven’t already seen the changes, here they are:
+</center>
 
 |          Trait             | Changed By  |
 |----------------------------|---------------|
