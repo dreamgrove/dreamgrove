@@ -17,20 +17,27 @@ Hey guys, recently there was a hotfix to all of the Moonkin specific Azerite tra
 | {{< spell 273389 "Power of the Moon" "beta" >}} | 50% Buff |
 | {{< spell 274399 "Sunblaze" "beta" >}} 		       | 250% Buff |
 | {{< spell 276152 "Dawning Sun" "beta" >}}		     | .4% Buff |
-| {{< spell 279070 "High Noon" "beta" >}} 	 	     | 81% Buf |
+| {{< spell 279070 "High Noon" "beta" >}} 	 	     | 81% Buff |
 | {{< spell 278507 "Lunar Shrapnel" "beta" >}}	   | 73% Nerf |
 
 </center>
 
-{{< spell 272871 "Streaking Stars" "beta" >}} - Streaking Stars is now our top single target Azerite trait, making the trait worth almost 5% damage per trait on single target, that is much more than any other Azerite trait it competes against. This trait also makes Incarnation a much stronger cooldown (Celestial Alignment as well), being the best talent on single target now and giving us very potent burst.
+{{< spell 272871 "Streaking Stars" "beta" >}} - Streaking Stars is now our top single target Azerite trait, making the trait worth almost 5% damage per trait on single target, that is much more than any other Azerite trait it competes against. This trait also makes Incarnation: Chosen of Elune a much stronger cooldown (Celestial Alignment as well), being the best talent on single target now and giving us very potent burst.
 
-{{< spell 273389 "Power of the Moon" "beta" >}} - This trait is by far the most precarious change. Basically, this trait is memefire from Antorus on steroids. Making you spam Moonfire on 2 targets with 1 trait and only casting Starsurge and Sunfire otherwise. Causing you to spam Moonfire on 3-5 targets with 2 traits and only spending Empowerments, Starfalling, and keeping Sunfire up. The truly baffling thing is when you have 3 Power of the Moon traits you will cast moonfire on up to 7 targets, again only spending Empowerments (on 3+ targets), Starsurging/Starfalling, and keeping Sunfire applied. This includes single target, yes with 3 Power of the Moon traits you fill with Moonfire instead of unempowered Solar Wraths. While it isn’t as strong as Streaking Stars on single target, it is only about 6-7% worse, so Power of the Moon could be the go to on high movement fights.
+{{< spell 273389 "Power of the Moon" "beta" >}} -
+This trait is by far the most precarious change. Basically, this trait is memefire from Antorus on steroids. This trait allows for you to:
 
-{{< spell 274399 "Sunblaze" "beta" >}} - The buff this Azerite trait got is enormous, but it doesn’t amount to much. The trait is quite weak, amounting for not even 2% damage per trait on single target. This trait is mediocre compared to other traits still.
+* On Single target with 3 Power of the Moon traits you fill with Moonfire instead of unempowered Solar Wraths. While it isn’t as strong as Streaking Stars on single target, it is only about 6-7% worse, so Power of the Moon could be the go to on high movement fights.
+
+* You spam Moonfire on 2 targets with 1 trait and only casting Starsurge and Sunfire otherwise. With 3 Traits on 2 targets, it is not worth to cast Starsurge at all.
+
+* Moonfire Spam on 3-5 targets with 2-3 traits and only spending Empowerments, Starfalling, and keeping Sunfire up.
+
+{{< spell 274399 "Sunblaze" "beta" >}} - The buff this Azerite trait got is enormous, but it doesn’t amount to much. Sunblaze itself is quite weak, amounting for not even 2% damage per trait on single target. This trait is mediocre compared to other traits still.
 
 {{< spell 276152 "Dawning Sun" "beta" >}} - Possibly an error, this trait only received a .4% increase. This trait much like Sunblaze is mediocre compared to other traits, accounting for not even a 2% increase on single target.
 
-{{< spell 279070 "High Noon" "beta" >}} - While not nearly as bad this trait suffers from a similar problem that Power of the Moon does, the damage affecting the direct damage of the ability. This means that if you have 3 High Noon traits it becomes better to spam Sunfire on pure single target, only keeping Moonfire up, casting Starsurge, and spending Empowerments.
+{{< spell 279070 "High Noon" "beta" >}} - While not nearly as bad this trait suffers from a similar problem that Power of the Moon does, the damage affecting the direct damage of the ability. This means that if you have 3 High Noon traits it becomes better to spam Sunfire on pure single target, only keeping Moonfire up, casting Starsurge, and spending Empowerments. This allows for significant increases in your movement, while still retaining competitive DPS (about 1% behind x3 Streaking Stars). 
 
 {{< spell 278507 "Lunar Shrapnel" "beta" >}} - The trait is infamous for being extremely over tuned, well it has now been brought in line. Lunar Shrapnel currently only becomes the best trait on 5+ target sustained AoE. For now, it loses a lot of value due to the overwhelming power of Power of the Moon though. This means, as it stands, Lunar Shrapnel doesn’t really fit any realistic situation in raids or dungeons.
 
@@ -48,3 +55,5 @@ Hey guys, recently there was a hotfix to all of the Moonkin specific Azerite tra
 
 - Your heroic 325 POTM’s will be about even with mythic non-potm azerite on 2t
 (realistically less since you don't have middle ring, but still)
+
+
