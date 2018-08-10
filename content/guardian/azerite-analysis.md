@@ -7,6 +7,8 @@ showtoc: true
 patch: 8.0.1
 ---
 
+*Update 9 Aug 2018: {{< spell 280181 "Personal Absorb-o-Tron" >}} was nerfed fairly significantly, and I was able to get my hands on the remaining Azerite traits to test them. The relevant sections have been updated accordingly.*
+
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
 Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 340.
@@ -79,7 +81,7 @@ Not only is it incredibly strong defensively, but the bonus Agility grants an of
 
 - {{< spell 273344 "Masterful Instincts" >}} - After {{< spell 61336 "Survival Instincts" >}} fades, you gain X Mastery and Y Armor for 10 seconds.
 
-At 370, you gain 661 Mastery and 623 Armor.
+At 370, you gain 560 Mastery and 543 Armor.
 
 ![Masterful Instincts bonus Mastery and Armor](/guardian/images/masterful-instincts-stats.png)
 
@@ -113,7 +115,7 @@ This is a Feral trait that is also selectable as Guardian, and I'm only includin
 
 At 340, this deals 763 damage every 2 seconds. It has an RPPM of 1.5.
 
-This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking. The real reason you may want to take the engineering goggles is for the inner ring trait {{< spell 280181 "Personal Absorb-o-Tron" >}}.
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking.
 
 ---
 
@@ -131,15 +133,15 @@ Broadly speaking, the defensive options on this row are quite weak. Unless you h
 
 At 370, you gain 1086 Armor. 
 
-I wasn't able to test this trait personally, so I don't know exactly how the "taking further Physical damage" portion of this trait works. Regardless, this is a poor trait even without considering that part of it. It has no value above 40% health, and it isn't a reliable death save like some of the other "when you drop below X% health" effects. Armor only reduces damage, unlike absorbs or cheat deaths which negate damage entirely. This is a trait you can safely avoid.
+Every time you take Physical damage, the amount of Armor you gain from the buff is reduced by 10% of the original amount. It is a fairly large Armor proc, but it has no value above 40% health, and it isn't a reliable death save like some of the other "when you drop below X% health" effects. Armor only reduces damage, unlike absorbs or cheat deaths which negate damage entirely. 
 
 ## Azerite Veins
 
 - {{< spell 267683 "Azerite Veins" >}} - Taking damage has a chance to heal you for X every 3 seconds for 18 seconds or until you are fully healed.
 
-At 370, you are healed for 6750 every 3 seconds (reduced by Haste), for a maximum potential of 40500. The RPPM is 1.  Assuming you always get the full value of the heal, this trait averages ~670 healing per second. I wasn't able to get my hands on one for testing, but it appears to have some sort of Haste scaling as well. 
+At 370, you are healed for 6750 every 3 seconds (reduced by Haste), for a maximum potential of 40500. The RPPM is 1.  Assuming you always get the full value of the heal, this trait averages ~670 healing per second. It's also one of the few generic traits that scales with Haste (Haste adds ticks to the duration).
 
-There are some pretty major drawbacks to the trait: the fact that it has a very low RPPM makes it unreliable in terms of providing defensive value, and the fact that the effect is cancelled when you reach full health devalues it further, because in cases where you are topped off briefly at the beginning of a proc, and then brought low again you will get next to no value out of the proc. 
+There are some drawbacks to the trait: the fact that it has a very low RPPM makes it unreliable in terms of providing defensive value, and the fact that the effect is cancelled when you reach full health devalues it further, because in cases where you are topped off briefly at the beginning of a proc, and then brought low again you will get next to no value out of the proc. The trade-off is that when it does proc, it's an extremely potent heal.
 
 ## Blood Siphon/Lifespeed/On My Way
 
@@ -165,7 +167,7 @@ This trait has nearly 100% uptime while tanking. The armor bonus is nothing spec
 
 At 370, you gain 13431 health and 380 armor.
 
-I wasn't able to test this trait either, but based on what data I could find it appears to proc once every minute or so, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to benefit from it. This might have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
+This trait has roughly 1 RPPM, making it very unreliable at less than 20% uptime. Additionally, this trait forces you to stand in one location and not move in order to benefit from it. This might have been fine if you could control when it procced and therefore decide when to stay still, but since you have no control over when it procs you cannot guarantee you won't have to move while the buff is up.
 
 ## Winds of War
 
@@ -197,7 +199,7 @@ This is a situational pick. There are several bosses in Uldir that have knockbac
 
 At 370, the size of the absorb is 14842. 
 
-This trait results in around 1k healing per second average, assuming the full absorb is consumed every 15 seconds. It's quite strong (relative to the other absorb-type traits) if you can reliably trigger the effect, for example in dungeons when pulling large packs of trash.
+This trait results in around 1k healing per second average, assuming the full absorb is consumed every 15 seconds. It's very strong if you can reliably trigger the effect, for example in dungeons when pulling large packs of trash.
 
 ## Gemhide
 
@@ -235,11 +237,13 @@ As with {{< spell 276157 "Craggy Bark" >}}, this trait suffers from overlapping 
 
 ## Personal Absorb-o-Tron
 
-- {{< spell 280181 "Personal Absorb-o-Tron" >}} - Taking damage has a chance to grant you a shield that absorbs X damage over 1 minute.
+- {{< spell 280181 "Personal Absorb-o-Tron" >}} - Taking damage has a chance to grant you a shield that absorbs X damage over 20 seconds.
 
-At 340, this shield absorbs 47791 damage. It has an RPPM of 1.5.
+At 340, this shield absorbs 16830 damage. It has an RPPM of 1.5, and an internal cooldown of 20 seconds.
 
-This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. This shield is incredibly strong; not only is it absolutely enormous compared to its contemporaries on the inner ring, the RPPM is very high for this category of traits. The absorb averages out to roughly 1195 healing per second, which is far and away the strongest of its kind. This is almost too good to pass up; if you are at all considering taking engineering, this is a must-have trait.
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. It's not immediately clear how the internal cooldown interacts with the RPPM in this case, as it is very rare for a spell to have both. Either the RPPM is reset when the spell procs, and proc chance accumulates during the internal cooldown, or the RPPM is reset after the internal cooldown ends. 
+
+For the sake of argument let's assume the better case, where the proc chance accumulates. In this case you will average a proc every 40 seconds, for an average of roughly 420 healing per second from the absorb. This puts it quite a bit ahead of {{< spell 263962 "Resounding Protection" >}} at similar ilevel (Resounding Protection at 340 is roughly 280 HPS) in terms of raw absorb. If you already have Engineering as a profession or are considering picking it up, this trait is probably worth grabbing a pair of goggles for; at least until the raid is open and higher ilevel azerite gear is more readily available.
 
 ## Auto-Self-Cauterizer
 
@@ -247,7 +251,7 @@ This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Ge
 
 At 340, you heal for 9533, with an RPPM of 1.5.
 
-The value of this trait depends entirely on what types of bleeds it can remove. If, for example, there are tank mechanic style bleeds in raids and dungeons (like Ursoc's {{< spell 197942 "Rend Flesh" >}}, for example), and those are removable by this trait, then it will be extraordinarily powerful. 
+This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. The value of this trait depends entirely on what types of bleeds it can remove. If, for example, there are tank mechanic style bleeds in raids and dungeons (like Ursoc's {{< spell 197942 "Rend Flesh" >}}, for example), and those are removable by this trait, then it will be extraordinarily powerful. 
 
 If not, then the trait becomes a basic heal (at roughly 240 healing per second) with a moderate slow, which is not nearly as valuable.
 
@@ -265,13 +269,14 @@ With all that being said, here are the traits I'd recommend paying attention to,
 
 ## Middle Ring
 
+- {{< spell 267683 "Azerite Veins" >}} - The raw HPS of this trait outweighs the unreliability of it, compared to its contemporaries on this ring.
 - {{< spell 271536 "Crystalline Carapace" >}} - A slightly worse (defensively) version of {{< spell 268596 "Gemhide" >}} with a small DPS component.
 - {{< spell 267671 "Winds of War" >}} - While you can't rely on dodge to keep you alive, it will reduce your overall damage taken, making this essentially a 3% damage reduction (against dodgeable attacks).
 - {{< spell 264108 "Blood Siphon" >}} /{{< spell 267665 "Lifespeed" >}} /{{< spell 264108 "On My Way" >}} - Free stats are free stats. 
 
 ## Inner Ring
 
-- {{< spell 280181 "Personal Absorb-o-Tron" >}} - If you have engineering, this is by far the strongest inner trait.
+- {{< spell 263962 "Resounding Protection" >}} - Absorbs are always good.
 - {{< spell 268437 "Impassive Visage" >}} - A healing trait that is almost guaranteed to not overheal.
 - {{< spell 268595 "Bulwark of the Masses" >}} - If you can proc the effect, a very powerful absorb.
 - {{< spell 268596 "Gemhide" >}} - A reliably high-uptime Armor and Avoidance buff.
