@@ -8,17 +8,17 @@ published: true
 
 ## Introduction
 
-Hey guys, this FAQ should answer most of your important questions about leveling as a Balance Druid. This is primarily for Balance Druid and otherwise will cover basic leveling information outside of Moonkin. I hope this guide helps anyone reading it and if you have any questions, feel free to contact me on discord.
+Hey guys, this FAQ should answer most of your important questions about leveling as a Balance Druid. This is primarily for Balance Druid and otherwise will cover basic leveling information outside of Moonkin. We hope this FAQ helps anyone reading it and if you have any questions, feel free to contact us on discord.
 
 
 ### Is it Worth Playing in Warmode?
 
-It is highly recommended that you play with Warmode on as it speeds up leveling by a considerable amount. 10% XP and heavily increased damage from honor talents mainly in the form of {{< spell 200567 "Crecent Burns" "beta" >}}´far outweighs the risk of dying in world pvp. If you choose to turn Warmode off due to not wanting to pvp or heavy faction imbalance, it won’t make or break your experience, but it will cost you some extra time. It’s worth noting that early on in the expansion there will be few people pvping as they will also be leveling in their own factions zone.
+It is highly recommended that you play with Warmode on as it speeds up leveling by a considerable amount. 10% XP and heavily increased damage from honor talents mainly in the form of {{< spell 200567 "Crescent Burn" "beta" >}} far outweighs the risk of dying in world pvp. If you choose to turn Warmode off due to not wanting to pvp or heavy faction imbalance, it won’t make or break your experience, but it will cost you some extra time. It’s worth noting that early on in the expansion there will be few people pvping as they will also be leveling in their own factions zone.
 
 
 ### What is the Strategy?
 
-Basically, the optimal strategy as Balance Druid leveling from 110-115 is to be in Balance Specialization, but be in Bear Form and spam {{< spell 164812 "Moonfire" "beta" >}}. The reason for being in Balance spec is so you can talent {{< spell 200567 "Crecent Burns" "beta" >}}, an honor talent, and also have {{< spell 279620 "Twin Moons" "beta" >}}.
+Basically, the optimal strategy as Balance Druid leveling from 110-115 is to be in Balance Specialization, but be in Bear Form and spam {{< spell 164812 "Moonfire" "beta" >}}. The reason for being in Balance spec is so you can talent {{< spell 200567 "Crescent Burns" "beta" >}}, an honor talent, and also have {{< spell 279620 "Twin Moons" "beta" >}}.
 
 
 ### What is the Best Order of Zones for Leveling?
@@ -34,7 +34,7 @@ If you’re Horde it’s a good idea to have Goblin Glider Kits. Otherwise, make
 
 ### What Azerite Traits Do I Want for Leveling?
 
-You want to get Power of the Moon traits whenever possible so you can easily kill quest enemies while on the move towards other objectives. You can get this trait very early by choosing the chestplate reward from the Heart of Azeroth quest where you get your artifact neck. 
+You want to get {{< spell 273367 "Power of the Moon" "beta" >}} traits whenever possible so you can easily kill quest enemies while on the move towards other objectives. You can get this trait very early by choosing the chestplate reward from the Heart of Azeroth quest where you get your artifact neck. 
 
 
 ### What Legendaries Should I Use?
@@ -60,8 +60,3 @@ It’s recommended to switch to Guardian specialization if you’re leveling alo
 
 It’s worth mentioning that a very useful addon while leveling is Azeroth Auto Pilot, which will guide you through every zone and give you the most efficient routes for leveling.
 It’s also worth noting that you should save any gear you get from leveling as it can be scrapped for materials at the Scrapper in your factions main hub.
-
-
-
-
-
