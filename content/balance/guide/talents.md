@@ -72,3 +72,11 @@ Fury of Elune (FoE): Our ultimate burst ability, awarding unmatched burst in a s
 
 New Moon (Moons): An ability which cycles through 3 types of moons that increase in power, cast time, and Astral Power Generation. The weakest option in the row, Moons lack any real niche and just aren’t worth taking in any situation.
 
+
+### General Single Target Build:
+
+{{< talents spec="balance" src="beta" recommend="123,223,132,233,132,123,322" >}}
+
+### General AoE Build:
+
+{{< talents spec="balance" src="beta" recommend="232,223,132,233,322,231,231" >}}
