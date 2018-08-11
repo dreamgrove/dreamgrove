@@ -1,5 +1,5 @@
 ---
-title: "Myhthic Plus"
+title: "Mythic Plus"
 date: 2018-08-11
 authors: ['Goosy', 'Nick']
 published: true
