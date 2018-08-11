@@ -7,8 +7,6 @@ showOnFrontpage: false
 weight: 4
 ---
 
-## Rotation / Priority List	
-
 *Balance doesn’t follow a strict rotation, it’s more of a priority list.*
 
 ### Opener
