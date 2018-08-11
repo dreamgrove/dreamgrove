@@ -10,11 +10,11 @@ weight: 6
 
 ## Bear Only
 
-The following rotation is idential for both survivability and DPS, with the exception of what to spend Rage on. 
+The following rotation is identical for both survivability and DPS, with the exception of what to spend Rage on. 
 
 Offensively, you should cast Maul to replace a Swipe, or immediately to avoid Rage capping.
 
-Defensively, You should use {{< spell 192081 "Ironfur" >}} when you are about to take physical damage, and you should use {{< spell 22842 "Frenzied Regeneration" >}} when you think you won't cause overhealing for you or your healers by using it. If you are finding it difficult to keep track of {{< spell 192081 "Ironfur" >}}, [this weakaura package](https://wago.io/EJCMTR_PZ) depicts it visually. 
+Defensively, You should use {{< spell 192081 "Ironfur" >}} when you are about to take physical damage, and you should use {{< spell 22842 "Frenzied Regeneration" >}} when you think you won't cause overhealing for you or your healers by using it.
 
 {{< expandable "1 target" >}}
   1. Maintain {{< spell 8921 "Moonfire" >}}.
@@ -26,7 +26,7 @@ Defensively, You should use {{< spell 192081 "Ironfur" >}} when you are about to
   7. Fill with {{< spell 213764 "Swipe" >}}.
 {{< /expandable >}}
 
-{{< expandable "2-3 targets" >}}
+{{< expandable "2 targets" >}}
   1. Maintain {{< spell 8921 "Moonfire" >}}.
   2. Use {{< spell 77758 "Thrash" >}} to build stacks if the target is not already at maximum stacks.
   4. Use {{< spell 33917 "Mangle" >}} if the target is bleeding.
@@ -47,7 +47,7 @@ Defensively, You should use {{< spell 192081 "Ironfur" >}} when you are about to
   7. Fill with {{< spell 213764 "Swipe" >}}.
 {{< /expandable >}}
 
-If you are using {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you should spam {{< spell 33917 "Mangle" >}} at 1-3 targets, and {{< spell 77758 "Thrash" >}} at 4 or more. Only maintain {{< spell 8921 "Moonfire" >}} on single target.
+If you are using {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you should spam {{< spell 33917 "Mangle" >}} at 1-3 targets, and {{< spell 77758 "Thrash" >}} at 4 or more. While Incarnation is active, only maintain {{< spell 8921 "Moonfire" >}} on single target.
 
 When using {{< spell 80313 "Pulverize" >}}, ideally you cast it on a global where you would have otherwise cast {{< spell 213764 "Swipe" >}}, and before the next {{< spell 77758 "Thrash" >}}, in order to not waste stacks.
 

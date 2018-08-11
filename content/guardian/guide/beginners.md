@@ -13,10 +13,10 @@ weight: 2
  - {{< spell 33917 "Mangle" >}} – Single target, generates rage – note that its cooldown can be reset by other abilities via {{< spell 210706 "Gore" >}}
  - {{< spell 77758 "Thrash" >}} – AoE, generates rage, better than Swipe
  - {{< spell 213764 "Swipe" >}} – AoE, filler
- - {{< spell 8921 "Moonfire" >}} – Generates rage with {{< spell 203964 "Galactic Guardian" >}} talented
+ - {{< spell 8921 "Moonfire" >}} – Generates rage with {{< spell 203964 "Galactic Guardian" >}} talented, with a proc
  - {{< spell 192081 "Ironfur" >}} – Active mitigation, and primary defensive spender. Reduces physical damage taken
  - {{< spell 22842 "Frenzied Regeneration" >}} – Heals you for a percentage of your maximum health over time
- - {{< spell 22812 "Barkskin" >}} – Minorj defensive cooldown
+ - {{< spell 22812 "Barkskin" >}} – Minor defensive cooldown
  - {{< spell 61336 "Survival Instincts" >}} – Major defensive cooldown
 
 ### Talents for beginners
