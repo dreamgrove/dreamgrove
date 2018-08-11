@@ -4,7 +4,7 @@ date: 2018-08-11
 authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
-weight: 3
+weight: 4
 ---
 
 ## Rotation / Priority List	
