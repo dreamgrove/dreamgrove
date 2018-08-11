@@ -46,15 +46,19 @@ Lady and the Child and Fury of Nature are both very powerful leveling legendarie
 
 {{< talents spec="balance" src="beta" recommend="223,323,323,132,312,131,321" >}}
 
+**Honor Talents:** {{< spell 200567 "Crescent Burn" "beta" >}}, {{< spell 236696 "Thorns" "beta" >}}, {{< spell 233752 "Ironfeather Armor" "beta" >}}
+
 These talents give you a mix of powerful protection and healing in the case of {{< spell 205636 "Force of Nature" "beta" >}} and {{< spell 197492 "Restoration Affinity" "beta" >}}, and great dps while moving in the form of {{< spell 279620 "Twin Moons" "beta" >}} and {{< spell 202342 "Shooting Stars" "beta" >}}.
 
-It’s also a viable option to talent {{< spell 202430 "Nature’s Balance" "beta" >}} and {{< spell 202157 "Feral Affinity" "beta" >}} in a group as you won’t need the extra defense of the treants or healing from {{< spell 197492 "Restoration Affinity" "beta" >}}. Moonkin Aura and {{< spell 233752 "Ironfeather Armor" "beta" >}} can be taken over {{< spell 236696 "Thorns" "beta" >}} and {{< spell 233755 "Deep Roots" "beta" >}} if you choose to level in moonkin form and are not scared of being ganked.
+It’s also a viable option to talent {{< spell 202430 "Nature’s Balance" "beta" >}} and {{< spell 202157 "Feral Affinity" "beta" >}} in a group as you won’t need the extra defense of the treants or healing from {{< spell 197492 "Restoration Affinity" "beta" >}}. {{< spell 209740 "Moonkin Aura" "beta" >}} and {{< spell 233752 "Ironfeather Armor" "beta" >}} can be taken over {{< spell 236696 "Thorns" "beta" >}} and {{< spell 233755 "Deep Roots" "beta" >}} if you choose to level in Moonkin Form and are not scared of being ganked.
 
 #### Level 116
 
 It’s recommended to switch to Guardian specialization if you’re leveling alone at this point as it’s significantly faster than leveling as balance. If you choose to do this, make sure you have an agility weapon. These are the recommended talents and honor talents: 
 
 {{< talents spec="guardian" src="beta" recommend="312,213,321,113,132,132,311" >}}
+
+**Honor Talents:** {{< spell 236147 "Marlorne's Swiftness" "beta" >}}, {{< spell 202110 "Shrapened Claws" "beta" >}}, {{< spell 236148 "Roaring Speed" "beta" >}}
 
 ### Tips and Tricks
 
