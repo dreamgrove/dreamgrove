@@ -13,7 +13,7 @@ Azerite powers are a new system in Battle for Azeroth, similar to the Netherligh
 
 Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 340.
 
-I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
+I'll only be focusing on the value of single traits ufor now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
 
 Disclaimer: Blizzard have been pushing out hotfixes to Azerite traits almost daily for the last week or so, often changing the values on traits by 5x or more. As a result, the values and assessments in this post are subject to change. They are accurate as of the date of this post, and I will try to keep them up to date in case further changes are made.
 
@@ -111,7 +111,7 @@ This is a Feral trait that is also selectable as Guardian, and I'm only includin
 
 ## Synaptic Spark Capacitor
 
-- {{< spell 280174 "Synaptic Spark Capacitor" >}} - Your abilities have a chance to apply Spark Coil to a target for 10 seconds, which will cause enemies within 8 years to take X damage every 2 seconds and deal 5% less damage to you.
+- {{< spell 280174 "Synaptic Spark Capacitor" >}} - Your abilities have a chance to apply Spark Coil to a target for 10 seconds, which will cause enemies within 8 yards to take X damage every 2 seconds and deal 5% less damage to you.
 
 At 340, this deals 763 damage every 2 seconds. It has an RPPM of 1.5.
 
