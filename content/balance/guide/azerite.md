@@ -11,7 +11,7 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 ### Balance Druid Traits 
 
-- {{< spell 276153 "Dawning Sun" "beta" >}} - {{< spell 194153 "Lunar Strike" "beta" >}}s increases the damage of all {{< spell 190984 "Solar Wrath" "beta" >}}s within the next 8 seconds. There is nothing special about Dawning Sun, only increasing the damage of your filler spell and spicing up the rotation slightly.
+- {{< spell 276153 "Dawning Sun" "beta" >}} - {{< spell 194153 "Lunar Strike" "beta" >}} increases the damage of all {{< spell 190984 "Solar Wrath" "beta" >}}s within the next 8 seconds. There is nothing special about Dawning Sun, only increasing the damage of your filler spell and spicing up the rotation slightly.
 
 - {{< spell 274398 "Sunblaze" "beta" >}} - Causes Solar Wrath to increase the damage of {{< spell 78674 "Starsurge" "beta" >}}. This trait does not scale with more targets in any way. In a niche encounter where you need constant single target priority damage, Sunblaze could be useful.
 
@@ -25,9 +25,9 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 ### Notable General/Non-Balance Specific Azerite Traits
 
-- {{< spell 280559 "Laser Matrix" "beta" >}} - Laser Matrix Causes your spells and abilities to shoot a blast of lasers, dealing split damage and healing friendly targets. It is safe to say this trait is going to be highly desired as it also actives Reorigination Array, a passive buff in Uldir that gives you a huge amount of your most plentiful secondary stat based on how many bosses in Uldir you have slain.  
+- {{< spell 280559 "Laser Matrix" "beta" >}} - Laser Matrix causes your spells and abilities to shoot a blast of lasers, dealing split damage and healing friendly targets. It is safe to say this trait is going to be highly desired as it also actives Reorigination Array, a passive buff in Uldir that gives you a huge amount of your most plentiful secondary stat based on how many bosses in Uldir you have slain.  
 
-- {{< spell 279642 "Lively Spirit" "beta" >}} - Awards you with an impressive amount of intellect based on how many spells the healer you {{< spell 29166 "Innervated" "beta" >}} casts, lasting 20 seconds. Albeit more complicated to pull off, Lively Spirit has a reward for using it correctly, granting high damage burst similar to Streaking Stars on both single target and multi-target.
+- {{< spell 279642 "Lively Spirit" "beta" >}} - Awards you with an impressive amount of intellect based on how many spells the healer you {{< spell 29166 "Innervate" "beta" >}} casts, lasting 20 seconds. Albeit more complicated to pull off, Lively Spirit has a reward for using it correctly, granting high damage burst similar to Streaking Stars on both single target and multi-target.
 
 ### Recommended Azerite Traits to Look out For
 
