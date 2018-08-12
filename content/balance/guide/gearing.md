@@ -15,19 +15,19 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 ### Enchants:
 
-{{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}}
-{{< item 153443 "Enchant Ring - Pact of Haste" "beta" >}}
+- {{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}}
+- {{< item 153443 "Enchant Ring - Pact of Haste" "beta" >}}
 
 ### Consumables: 
 
-{{< item 152639 "Flask of Endless Fathoms" "beta" >}}
-{{< item 163222 "Battle Potion of Intellect" "beta" >}}
-{{< item 156526 "Bountiful Captain’s Feast" "beta" >}} or {{< item 154884 "Swamp Fish ‘n Chips" "beta" >}}
+- {{< item 152639 "Flask of Endless Fathoms" "beta" >}}
+- {{< item 163222 "Battle Potion of Intellect" "beta" >}}
+- {{< item 156526 "Bountiful Captain’s Feast" "beta" >}} or {{< item 154884 "Swamp Fish ‘n Chips" "beta" >}}
 
 ### Sockets: 
 
-One {{< item 153709 "Kraken’s Eye of Intellect" "beta" >}} 
-{{< item 154127 "Quick Owlseye" "beta" >}} in your remaining slots.
+- One {{< item 153709 "Kraken’s Eye of Intellect" "beta" >}} 
+- {{< item 154127 "Quick Owlseye" "beta" >}} in your remaining slots.
 
 ### Notable trinkets you should consider are the following: 
 
