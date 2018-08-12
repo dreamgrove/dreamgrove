@@ -52,11 +52,3 @@ weight: 10
 /cast [talent:2/2] displacer beast
 /cast [talent:2/3] wild charge
 ```
-
-**Tier 100 Row Macro:**
-
-```
-#showtooltip
-/cast [talent: 7/2] Fury of Elune
-/cast [talent: 7/3] New Moon
-```
