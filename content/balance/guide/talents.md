@@ -70,7 +70,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 202770 "Fury of Elune" "beta" >}} (FoE): Our ultimate burst ability, awarding unmatched burst in a short 1 minute cooldown in the form of a tremendous laser which cleaves every target in an 8 yard radius. Any time there is 3+ targets Fury of Elune will tend to be the best option unless the targets aren’t stacked. In addition to doing a lot of damage, FoE grants you 40 Astral Power which can keep the burst going, generally making spell the go-to for heavy burst as well.
 
-{{< spell 274281 "New Moon" "beta" >}} (Moons): An ability which cycles through 3 types of moons that increase in power, cast time, and Astral Power Generation. The weakest option in the row, Moons lack any real niche and just aren’t worth taking in any situation.
+{{< spell 274281 "New Moon" "beta" >}} (Moons): An ability which cycles through 3 types of moons that increase in power, cast time, and Astral Power generation. The weakest option in the row, Moons lack any real niche and just aren’t worth taking in any situation.
 
 
 ### General Single Target Build:
