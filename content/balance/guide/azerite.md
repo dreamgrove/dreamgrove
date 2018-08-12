@@ -19,7 +19,7 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 - {{< spell 278507 "Lunar Shrapnel" "beta" >}} - Enemies with {{< spell 164812 "Moonfire" "beta" >}} applied who are hit by Starfall pulse damage to themselves and enemies around them. Lunar Shrapnel’s damage scales exponentially, possibly proving useful on large groups of stacked mobs, but at the loss of single target damage.
 
-- {{< spell 273389 "Power of the Moon" "beta" >}} - The direct damage of {{< spell 164812 "Moonfire" "beta" >}} does additional damage and has a 5% chance to generate a Lunar Empowerment. Power of the Moon changes the rotation by making spamming Moonfire worth it on 2 or 3 targets. For more information on Moonfire spam, look in the Rotation section.
+- {{< spell 273389 "Power of the Moon" "beta" >}} - The direct damage of {{< spell 164812 "Moonfire" "beta" >}} does additional damage and has a 5% chance to generate a Lunar Empowerment. Power of the Moon changes the rotation by making spamming Moonfire worth it on 2-4 targets. For more information on Moonfire spam, look in the Rotation section.
 
 - {{< spell 279070 "High Noon" "beta" >}} - The direct damage and DoT effect of {{< spell 93402 "Sunfire" "beta" >}} is increased and Sunfire gains a 3 yard radius increase. Similar to {{< spell 273389 "Power of the Moon" "beta" >}}, High Noon has the possibility of making you spam Sunfire on a single target, resulting in no loss of damage through movement. For more information on Sunfire spam, look in the Rotation section.
 
