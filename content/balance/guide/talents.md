@@ -59,7 +59,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 202354 "Stellar Drift" "beta" >}} (SD): Allows you to freely move within {{< spell 191034 "Starfall’s" "beta" >}} radius and increases Starfalls damage, Stellar Drift is sadly outclassed by {{< spell 279620 "Twin Moons" "beta" >}} outside of niche situations
 
-{{< spell 279620 "Twin Moons" "beta" >}} (TM): Causes your {{< spell 123413 "Moonfire" "beta" >}} to spread to one extra target. Twin Moons is generally the best on most raid bosses and in dungeons as it is nearly the highest damage on single target and is amazing for multi-target due to raw throughput and reducing our ramp time significantly.
+{{< spell 279620 "Twin Moons" "beta" >}} ( TM): Causes your {{< spell 123413 "Moonfire" "beta" >}} to spread to one extra target. Twin Moons is generally the best on most raid bosses and in dungeons as it is nearly the highest damage on single target and is amazing for multi-target due to raw throughput and reducing our ramp time significantly.
 
 {{< spell 202347 "Stellar Flare" "beta" >}} (StFl): A third DoT and the top single target option by a small margin, this spell falls off with any new targets being introduced. But, it can be decent if there are a low amount of spread targets.
 
