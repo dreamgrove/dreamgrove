@@ -17,7 +17,7 @@ Generally the best way to use your cooldowns is by casting them as soon as theyâ
 
 The biggest loss of damage comes from lack of planning and incurring downtime, that goes for every caster. To combat movement you should fully understand a fight before even starting it, and watch timers throughout the fight, being ready for the mechanics. 
 
-Say you have 40 Astral Power, no {{< spell 279708 "Empowerments" "beta" >}}, and the boss will use an ability that will force you to move in 3 seconds. Instead of using a {{< spell 78674 "Starsurge" "beta" >}}, it is better to instead cast 2 unempowered {{< spell 190984 "Solar Wrath" "beta" >}}s and step out of the mechanic with a Starsurge. This will result in you saving a whole gcd of damage you would have otherwise lost to casting {{< spell 93402 "Sunfire" "beta" >}}/{{< spell 123413 "Moonfire" "beta" >}}. Throughout an entire fight these gcds will add up and it is paramount you get that idea down. 
+Say you have 40 Astral Power, no {{< spell 279708 "Empowerments" "beta" >}}, and the boss will use an ability that will force you to move in 3 seconds. Instead of using a {{< spell 78674 "Starsurge" "beta" >}}, it is better to instead cast 2 unempowered {{< spell 190984 "Solar Wrath" "beta" >}}s and step out of the mechanic with a Starsurge. This will result in you saving a whole gcd of damage you would have otherwise lost to casting {{< spell 93402 "Sunfire" "beta" >}}/{{< spell 164812 "Moonfire" "beta" >}}. Throughout an entire fight these gcds will add up and it is paramount you get that idea down. 
 
 ### Taking Advantage of Forced Downtime
 
