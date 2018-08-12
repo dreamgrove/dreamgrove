@@ -18,7 +18,7 @@ weight: 4
 3. Stellar Flare
 4. Solar Wrath to 40 AsP
 5. Celestial Alignment / Incarnation
-6. Fury of Elune / Force of Nature/ Warrior of Eluen
+6. Fury of Elune / Force of Nature/ Warrior of Elune
 
 ### Single Target and Two Targets
 
