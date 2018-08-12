@@ -17,7 +17,7 @@ Utility - Moonkin offers strong utility through the three choices of {{< spell 1
 
 Priority Damage - If planned accordingly, Balance has capable priority damage, being able to pool resources to quickly burst down a target with {{< spell 78674 "Starsurges" "beta" >}} and through those, {{< spell 279708 "Empowerments" "beta" >}}. Talenting {{< spell 202425 "Warrior of Elune" "beta" >}} and {{< spell 202770 "Fury of Elune" "beta" >}} further strengthens our already potent priority damage, making us high tier in this regard.
 
-Sustained Multi-Target - Outside of cooldowns, Moonkin brings good sustained damage on multiple targets. We bring sustained multi-target through our DoTs and {{< spell 191034 "Starfall" "beta" >}}, giving us consistent damage once {{< spell 93402 "Sunfire" "beta" >}} and {{< spell 123413 "Moonfire" "beta" >}} are up and running and we can start generating Astral Power to lay blankets of Starfalls. This is the strength we’re known for and we are nearly unmatched in that aspect.
+Sustained Multi-Target - Outside of cooldowns, Moonkin brings good sustained damage on multiple targets. We bring sustained multi-target through our DoTs and {{< spell 191034 "Starfall" "beta" >}}, giving us consistent damage once {{< spell 93402 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}} are up and running and we can start generating Astral Power to lay blankets of Starfalls. This is the strength we’re known for and we are nearly unmatched in that aspect.
 
 ### Weaknesses:
 
