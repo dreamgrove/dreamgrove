@@ -31,7 +31,7 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 ### Notable trinkets you should consider are the following: 
 
-- {{< item 159624 "Rotcrusted Voodoo Doll" "beta" >}} and {{< item 159631 "Lady Waycrest’s Music Box" "beta" >}} for single target
+- {{< item 159624 "Rotcrusted Voodoo Doll" "beta" >}} and {{< item 159631 "Lady Waycrest’s Music Box" "beta" >}} for single target.
 - {{< item 159615 "Ignition Mage’s Fuse" "beta" >}} and {{< item 159620 "Conch of Dark Whispers" "beta" >}} for multi-target.
 - {{< item 161377 "Azurethos’ Singed Plumage" "beta" >}} and {{< item 161380 "Drust-Runed Icicle" "beta" >}} are strong overall.
 
