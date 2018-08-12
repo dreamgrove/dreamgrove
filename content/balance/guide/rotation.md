@@ -13,14 +13,12 @@ weight: 4
 
 2.5 seconds before the pull cast two {{< spell 190984 "Solar Wraths" "beta" >}} standing away from the boss. As soon as the timer hits 0 and the boss is pulled apply {{< spell 93402 "Sunfire" "beta" >}}, {{< spell 123413 "Moonfire" "beta" >}}, and if talented, {{< spell 202347 "Stellar Flare" "beta" >}}. At this point spam Solar wrath until you reach at least 40 Astral Power and activate {{< spell 194223 "Celestial Alignment" "beta" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}.
 
-- 2x Solar Wrath
-- Sunfire and Moonfire
-- * Stellar Flare
-- Solar Wrath to 40 AsP
-- Celestial Alignment / Incarnation
-- * Fury of Elune / Force of Nature/ Warrior of Eluen
-<br>
-* if talented
+1. 2x Solar Wrath
+2. Sunfire and Moonfire
+3. Stellar Flare
+4. Solar Wrath to 40 AsP
+5. Celestial Alignment / Incarnation
+6. Fury of Elune / Force of Nature/ Warrior of Eluen
 
 ### Single Target and Two Targets
 
