@@ -13,7 +13,7 @@ weight: 1
 
 {{< spell 194153 "Lunar Strike" "beta" >}} (LS) - Calls down a beam of Arcane energy to deal damage to the target and nearby enemies, generating 12 Astral Power.
 
-{{< spell 123413 "Moonfire" "beta" >}} (MF) - Strikes the target with a beam of Arcane damage, leaving a damage over time effect on the target, generates 3 Astral Power.
+{{< spell 164812 "Moonfire" "beta" >}} (MF) - Strikes the target with a beam of Arcane damage, leaving a damage over time effect on the target, generates 3 Astral Power.
 
 {{< spell 93402 "Sunfire" "beta" >}} (SF) - Strikes the target with a beam of Nature damage, leaving a damage over time effect on the target and surrounding targets, generates 3 Astral Power
 
