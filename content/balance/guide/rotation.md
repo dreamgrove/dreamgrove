@@ -28,7 +28,7 @@ weight: 4
 
 3. Spend Solar and Lunar {{< spell 279708 "Empowerments" "beta" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Lunar Empowerment is worth more and you should waste a Solar Empowerment.
 
-4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 "Solar Wrath" "beta" >}}. If you’re able to hit even one extra target, you should instead fill with {{< spell 194153 "Lunar Strike" "beta" >}}.
+4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 "Solar Wrath" "beta" >}}.
 
 ### Multi-Target
 
