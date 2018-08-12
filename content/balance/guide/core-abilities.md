@@ -21,6 +21,6 @@ weight: 1
 
 {{< spell 191034 "Starfall" "beta" >}} (SF) - At the cost of 50 Astral Power, you call down stars over the targeted area, hitting all enemies in the area.
 
-{{< spell 279708 "Empowerments" "beta" >}} (Emp) - Increases the power of {{< spell 190984 “Solar Wrath" "beta" >}} and {{< spell 194153 "Lunar Strike" "beta" >}} based on mastery and increases their cast speed by 15%, generated through Starsurge and Solar Wrath or Lunar Strike.
+{{< spell 279708 "Empowerments" "beta" >}} (Emp) - Increases the power of {{< spell 190984 "Solar Wrath" "beta" >}} and {{< spell 194153 "Lunar Strike" "beta" >}} based on mastery and increases their cast speed by 15%, generated through Starsurge and Solar Wrath or Lunar Strike.
 
 {{< spell 279619 "Eclipse" "beta" >}} - Solar Wrath has a 20% chance to grant a Lunar Empowerment. Likewise, Lunar Strike has a 20% chance to grant a Solar Empowerment.
