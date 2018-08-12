@@ -9,7 +9,7 @@ weight: 9
 
 ### Baseline Abilities
 
-- {{< spell 123413 "Moonfire" "beta" >}} = MF
+- {{< spell 164812 "Moonfire" "beta" >}} = MF
 - {{< spell 93402 "Sunfire" "beta" >}} = SF
 - {{< spell 194153 "Lunar Strike" "beta" >}} = LS
 - {{< spell 190984 "Solar Wrath" "beta" >}} = SW
