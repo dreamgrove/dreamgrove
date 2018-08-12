@@ -52,7 +52,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 202345 "Starlord" "beta" >}} (SL): Causes your spenders to award a stack of 3% haste, stacking up to 3 times and not refreshing the duration with a new stack. Offering the best 1-3 target damage and great multi-target, this talent can be utilized to its fullest by not spending any Astral Power in the last 5 seconds of the buff. Starlord isn’t heavily impacted by kill time like incarnation is, but suffers more in heavy movement.
 
-{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} (Incarn): This talent replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our 3 minute cooldown enhancing our damage cooldown with longer duration and more % damage gain. Incarnation can be very potent in situations where large burst is required. Otherwise it falls behind the other options in raw output and is massively impacted by kill time. If you are mostly spamming {{< spell 93402 "Sunfire" "beta" >}} or {{< spell 123413 "Moonfire" "beta" >}} (due to Azerite traits), Incarnation gains a lot of value, becoming the best talent in the row (explained later in the guide).
+{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} (Incarn): This talent replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our 3 minute cooldown enhancing our damage cooldown with longer duration and more % damage gain. Incarnation can be very potent in situations where large burst is required. Otherwise it falls behind the other options in raw output and is massively impacted by kill time. If you are mostly spamming {{< spell 93402 "Sunfire" "beta" >}} or {{< spell 164812 "Moonfire" "beta" >}} (due to Azerite traits), Incarnation gains a lot of value, becoming the best talent in the row (explained later in the guide).
 
 ### Tier 90: 
 {{< talent-row spec="balance" tier="90" src="beta" >}}
@@ -66,7 +66,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 ### Tier 100:
 {{< talent-row spec="balance" tier="100" src="beta" >}}
 
-{{< spell 202342 "Shooting Stars" "beta" >}} (ShS): {{< spell 123413 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}} have a chance to generate a shooting star which damages the enemy and grants you 4 Astral Power. This ability is the best pure single target and two target option. There is a hidden diminishing return attached to Shooting Stars which is why it loses value with more targets unless they are spread.
+{{< spell 202342 "Shooting Stars" "beta" >}} (ShS): {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}} have a chance to generate a shooting star which damages the enemy and grants you 4 Astral Power. This ability is the best pure single target and two target option. There is a hidden diminishing return attached to Shooting Stars which is why it loses value with more targets unless they are spread.
 
 {{< spell 202770 "Fury of Elune" "beta" >}} (FoE): Our ultimate burst ability, awarding unmatched burst in a short 1 minute cooldown in the form of a tremendous laser which cleaves every target in an 8 yard radius. Any time there is 3+ targets Fury of Elune will tend to be the best option unless the targets aren’t stacked. In addition to doing a lot of damage, FoE grants you 40 Astral Power which can keep the burst going, generally making spell the go-to for heavy burst as well.
 
