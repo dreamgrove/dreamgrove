@@ -11,46 +11,46 @@ weight: 4
 
 ### Opener
 
-2.5 seconds before the pull cast two Solar Wraths standing away from the boss. As soon as the timer hits 0 and the boss is pulled apply Sunfire, Moonfire, and if talented, Stellar Flare. At this point spam Solar wrath until you reach at least 40 Astral Power and activate Celestial Alignment/Incarnation: Chosen of Elune.
+2.5 seconds before the pull cast two {{< spell 190984 “Solar Wrath" "beta" >}}s standing away from the boss. As soon as the timer hits 0 and the boss is pulled apply {{< spell 93402 "Sunfire" "beta" >}}, {{< spell 123413 "Moonfire" "beta" >}}, and if talented, {{< spell 202347 “Stellar Flare" "beta" >}}. At this point spam Solar wrath until you reach at least 40 Astral Power and activate {{< spell 194223 “Celestial Alignment" "beta" >}}/{{< spell 102560 “Incarnation: Chosen of Elune" "beta" >}}.
 
-- Wrath > Wrath > DoT > DoT > (Stellar Flare*) > Wrath until 40 > Cooldowns > (FoE* and FoN*) > Rotation
+- Solar Wrath > Solar Wrath > DoT > DoT > ({{< spell 202347 “Stellar Flare" "beta" >}}*) > Solar Wrath until 40 > Cooldowns > ({{< spell 202770 “Fury of Elune" "beta" >}}* and Fury of Nature*) > Rotation
 
 ### Single Target and Two Targets
 
-1. Maintain 100% uptime on Moonfire, Sunfire, and Stellar Flare if talented. Make sure you only refresh DoTs when they’re within pandemic range (30% of the original DoT, this is 6.6 seconds for Moonfire, 5.4 seconds for Sunfire, and 7.2 seconds for Stellar Flare.)
+1. Maintain 100% uptime on {{< spell 123413 "Moonfire" "beta" >}}, {{< spell 93402 "Sunfire" "beta" >}}, and Stellar Flare if talented. Make sure you only refresh DoTs when they’re within pandemic range (30% of the original DoT, this is 6.6 seconds for Moonfire, 5.4 seconds for Sunfire, and 7.2 seconds for Stellar Flare.)
 
-2. Avoid capping Astral Power by casting Starsurge
+2. Avoid capping Astral Power by casting {{< spell 78674 “Starsurge" "beta" >}}
 
-3. Spend Solar and Lunar Empowerments. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Lunar Empowerment is worth more and you should waste a Solar Empowerment.
+3. Spend Solar and Lunar {{< spell 279708 “Empowerments" "beta" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Lunar Empowerment is worth more and you should waste a Solar Empowerment.
 
-4. When you have no DoTs to apply and no Empowerments to spend, you should fill with Solar Wrath. If you’re able to hit even one extra target, you should instead fill with Lunar Strike.
+4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 “Solar Wrath" "beta" >}}. If you’re able to hit even one extra target, you should instead fill with {{< spell 194153 “Lunar Strike" "beta" >}}.
 
 ### Multi-Target
 
-1. Maintain 100% uptime on Moonfire and Sunfire. Make sure you only refresh DoTs when they’re within pandemic range.
+1. Maintain 100% uptime on {{< spell 123413 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Use Astral Power on Starfall if you can hit at least 3 targets with it, otherwise spend your Astral Power on Starsurge.
+2. Use Astral Power on {{< spell 191034 “Starfall" "beta" >}} if you can hit at least 3 targets with it, otherwise spend your Astral Power on {{< spell 78674 “Starsurge" "beta" >}}.
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
-4. When you have no DoTs to apply and no Empowerments to spend, you should fill with Solar Wrath. If you’re able to hit at least 3 targets, you should instead fill with Lunar Strike.
+4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 “Solar Wrath" "beta" >}}. If you’re able to hit at least 3 targets, you should instead fill with {{< spell 194153 “Lunar Strike" "beta" >}}.
 
-Rotation With 2-3 Power of the Moon Traits
+Rotation With 2-3 {{< spell 273389 “Power of the Moon" "beta" >}} Traits
 
-If you have 2 Power of the Moon traits it is important to understand the rotation changes on 2 targets, instead filling with Moonfire and not casting Empowerments. With 3 traits, Moonfire spam becomes best on 2-3 targets.
+If you have 2 Power of the Moon traits it is important to understand the rotation changes on 2 targets, instead filling with Moonfire and not casting {{< spell 279708 “Empowerments" "beta" >}}. With 3 traits, Moonfire spam becomes best on 2-3 targets.
 
-1. Maintain 100% uptime on Moonfire and Sunfire. Make sure you only refresh DoTs when they’re within pandemic range.
+1. Maintain 100% uptime on {{< spell 123413 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Avoid overcapping Astral Power by casting Starsurge on 2 targets and Starfall on 3 targets.
+2. Avoid overcapping Astral Power by casting {{< spell 78674 “Starsurge" "beta" >}} on 2 targets and {{< spell 191034 “Starfall" "beta" >}} on 3 targets.
 
-3. Fill with Moonfire.
+3. Fill with {{< spell 123413 "Moonfire" "beta" >}}.
 
-### Rotation With 3 High Noon Traits
+### Rotation With 3 {{< spell 279070 “High Noon" "beta" >}} Traits
 
-Much like Power of the Moon, having 3 High Noon traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking a single target. In this situation you should follow a similar priority:
+Much like {{< spell 273389 “Power of the Moon" "beta" >}}, having 3 High Noon traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking a single target. In this situation you should follow a similar priority:
 
-1. Maintain 100% uptime on Moonfire and Sunfire. Make sure you only refresh DoTs when they’re within pandemic range.
+1. Maintain 100% uptime on {{< spell 123413 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Avoid overcapping Astral Power by casting Starsurge.
+2. Avoid overcapping Astral Power by casting {{< spell 78674 “Starsurge" "beta" >}}.
 
-3. Fill with Sunfire
+3. Fill with {{< spell 93402 "Sunfire" "beta" >}}.
