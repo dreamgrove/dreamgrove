@@ -48,7 +48,7 @@ weight: 10
 
 ```
 #showtooltip
-/cast [talent:2/1] renewal
-/cast [talent:2/2] displacer beast
+/cast [talent:2/1] tiger dash
+/cast [talent:2/2] renewal
 /cast [talent:2/3] wild charge
 ```
