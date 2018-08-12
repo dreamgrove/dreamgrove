@@ -50,9 +50,9 @@ If you have 2 Power of the Moon traits it is important to understand the rotatio
 
 3. Fill with {{< spell 123413 "Moonfire" "beta" >}}.
 
-### Rotation With 3 {{< spell 279070 "High Noon" "beta" >}} Traits
+### Rotation With 3 High Noon Traits
 
-Much like {{< spell 273389 "Power of the Moon" "beta" >}}, having 3 High Noon traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking a single target. In this situation you should follow a similar priority:
+Much like {{< spell 273389 "Power of the Moon" "beta" >}}, having 3 {{< spell 279070 "High Noon" "beta" >}} traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking a single target. In this situation you should follow a similar priority:
 
 1. Maintain 100% uptime on {{< spell 123413 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
