@@ -18,7 +18,7 @@ It is highly recommended that you play with Warmode on as it speeds up leveling 
 
 ### What is the Strategy?
 
-Basically, the optimal strategy as Balance Druid leveling from 110-115 is to be in Balance Specialization, but be in Bear Form and spam {{< spell 164812 "Moonfire" "beta" >}}. The reason for being in Balance spec is so you can talent {{< spell 200567 "Crescent Burns" "beta" >}}, an honor talent, and also have {{< spell 279620 "Twin Moons" "beta" >}}.
+Basically, the optimal strategy as Balance Druid leveling from 110-115 is to be in Balance Specialization, but be in Bear Form and spam {{< spell 164812 "Moonfire" "beta" >}} with the legendary Fury of Nature equipped. The reason for being in Balance spec is so you can talent {{< spell 200567 "Crescent Burns" "beta" >}}, an honor talent, and also have {{< spell 279620 "Twin Moons" "beta" >}}.
 
 
 ### What is the Best Order of Zones for Leveling?
