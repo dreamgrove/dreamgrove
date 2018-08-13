@@ -14,7 +14,7 @@ Battle for Azeroth is upon us! Here's a list of the most common questions I get 
 
 Guardian is a great candidate for leveling! Leveling as a tank has historically been very strong, as it allows you to pull a ton of mobs at once and AoE them all down while not taking a lot of damage and healing back what little you do take. Especially if you're coming into BfA slightly behind the gear curve you won't be able to one-shot mobs in a DPS spec, so the extra survivability boost will be a big help.
 
-If you're leveling in a group, it might be more efficient for you to level in Balance spec. With a full party, enemies won't live long enough for you as a tank to be fully effective. Right now Balance's dots are hitting very hard making them ideal for leveling as they can pull mobs from long range and the rest of the group can AoE them down as they come in.
+If you're leveling in a group, it might be more efficient for you to level in Balance spec. With a full party, enemies won't live long enough for you as a tank to be fully effective. Right now Balance's dots are hitting very hard making them ideal for leveling as they can pull mobs from long range and the rest of the group can AoE them down as they come in. If you want to know more about leveling as Balance, check out the [Balance leveling FAQ]({{< relref "/balance/2018-08-10_Balance_Leveling_FAQ.md" >}}).
 
 # What legendaries should I wear?
 
