@@ -48,7 +48,7 @@ You cannot realistically sim yourself for survivability. The primary reason for 
 
 #### DPS
 
-**Agility > Haste >= Crit >= Haste >= Mastery**
+**Agility > Haste >= Crit >= Versatility >= Mastery**
 
 Realistically, all of our secondaries are very close in value and will depend on how much you already have of each. They are all worse than Agility per point. If you are catweaving, Haste is far better than everything, including Agility. To determine which stats will give you the highest gain, you should sim your character on [Raidbots](https://www.raidbots.com).
 
