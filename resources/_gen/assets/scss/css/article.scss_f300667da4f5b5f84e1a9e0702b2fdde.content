@@ -36,7 +36,8 @@ a.tooltip {
   font-family: "Arvo"; }
 
 .article-content h1 {
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1.5em; }
 
 .article-content h2 {
   font-size: 1.5em; }
