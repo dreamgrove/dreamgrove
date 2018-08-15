@@ -46,7 +46,7 @@ weight: 5
 ### Level 75
 {{< talent-row spec="guardian" tier="75" >}}
 
-{{< spell 158477 "Soul of the Forest" >}} is the best talent defensively and offensively on exactly one target. If there are two or more targets, {{< spell 203964 "Galactic Guardian" >}} outperforms Soul offensively and defensively.
+{{< spell 158477 "Soul of the Forest" >}} is the best talent defensively and offensively on exactly one target. If there are two or more targets or you are catweaving, {{< spell 203964 "Galactic Guardian" >}} outperforms Soul offensively and defensively.
 
 For extreme burst aoe, {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} is better for that particular period whilst it’s up. Naturally you lose a significant amount of DPS whilst it’s on cooldown, but this may still be worth it depending on your pulls. To best make use of {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you should use it on a large pull when your DPS do not have their cooldowns ready.
 

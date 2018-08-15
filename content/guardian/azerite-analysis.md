@@ -7,13 +7,14 @@ showtoc: true
 patch: 8.0.1
 ---
 
+*Update 15 Aug 2018: {{< spell 279536 "Gory Regeneration" >}} has been changed from beta to live to only grant extension from Mangle once per Frenzied Regeneration, significantly reducing its power with Incarnation talented. The evaluation has been updated to reflect this.*
 *Update 9 Aug 2018: {{< spell 280181 "Personal Absorb-o-Tron" >}} was nerfed fairly significantly, and I was able to get my hands on the remaining Azerite traits to test them. The relevant sections have been updated accordingly.*
 
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
 Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 340.
 
-I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
+I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, **stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait**. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
 
 Disclaimer: Blizzard have been pushing out hotfixes to Azerite traits almost daily for the last week or so, often changing the values on traits by 5x or more. As a result, the values and assessments in this post are subject to change. They are accurate as of the date of this post, and I will try to keep them up to date in case further changes are made.
 
@@ -37,17 +38,11 @@ Frankly, this trait is pretty terrible. Not only is it only active during {{< sp
 
 - {{< spell 279536 "Gory Regeneration" >}} - {{< spell 33917 "Mangle" >}} increases the duration of an active {{< spell 22842 "Frenzied Regeneration" >}} by 1 second. Additionally, Frenzied Regeneration heals for X more per second.
 
-At 370 the extra heal is valued at 1573 extra healing per second, for a total of 6292 additional healing per cast. This extra healing is present regardless of whether the {{< spell 22842 "Frenzied Regeneration" >}} is empowered by {{< spell 33917 "Mangle" >}} or not. Additionally, the extension occurs *per target hit*, meaning that if you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} and you can hit 3 targets with Mangle, you will get 3 seconds of extension per cast. That in addition to the cooldown of Mangle being reduced means you can sustain an FR for a very long time while Incarnation is active.
+At 370 the extra heal is valued at 1573 extra healing per second, for a total of 6292 additional healing per cast. This extra healing is present regardless of whether the {{< spell 22842 "Frenzied Regeneration" >}} is empowered by {{< spell 33917 "Mangle" >}} or not. Additionally, the extension occurs *per target hit*, meaning that if you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} and you can hit 3 targets with Mangle, you will get 3 seconds of extension. You can only have one extension per cast of Frenzied Regeneration however; subsequent Mangles will not further extend the duration.
 
-![Gory Regeneration healing](/guardian/images/gory-regeneration-healing.png)
+This trait is not very good. If you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you can add an extra 3 seconds to your {{< spell 22842 "Frenzied Regeneration" >}} at most, which is 75% increased healing from at most 2 FRs in a span of 30 seconds, every 3 minutes. Outside of that, it's a pseudo {{< spell 155578 "Guardian of Elune" >}} (the Frenzied Regeneration portion), without the flexibility to pool the buff for a later cast or spend it on empowering {{< spell 192081 "Ironfur" >}} instead.
 
-The discontinuity in the 1 target plot is the point at which you can sustain a {{< spell 22842 "Frenzied Regeneration" >}} beyond the duration of {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, after which point the duration (and by extension, the healing) stops increasing at such a dramatic rate.
-
-This trait basically lives or dies by whether or not you're talented into {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}. If you aren't, Mangle's cooldown is so long that you will get at most 1 second of extension (you can get 2 in theory if you have around 88% haste, which may be possible with lust/berserking and a lot of haste rating). If you are, this trait becomes an incredibly powerful boost to your self-healing capabilities. 
-
-While this trait looks very good on paper, I'm not convinced it has the same value in practice. For one, the HPS of {{< spell 22842 "Frenzied Regeneration" >}} is still quite low, at 6% HP per tick baseline (with the bonus healing from the trait it is probably closer to 7%). The extension component of Gory Regeneration does not improve the HPS output of Frenzied Regen while it's ticking, it only increases the number of seconds it ticks for. This would be fine in isolation, but in reality you don't have infinite health and you will have external healing. Extending FR increases the chance that it will cause overhealing, either for you or for your healers, which eliminates the benefit of receiving more healing altogether. 
-
-If there is ever a reason to take Incarnation to an encounter, Gory Regeneration would be quite strong defensively. It is not, however, a reason to take Incarnation in and of itself. 
+While this trait might look okay on paper, I'm not convinced it has the same value in practice. For one, the HPS of {{< spell 22842 "Frenzied Regeneration" >}} is still quite low, at 6% HP per tick baseline (with the bonus healing from the trait it is probably closer to 7%). The extension component of Gory Regeneration does not improve the HPS output of Frenzied Regen while it's ticking, it only increases the number of seconds it ticks for. This would be fine in isolation, but in reality you don't have infinite health and you will have external healing. Extending FR increases the chance that it will cause overhealing, either for you or for your healers, which eliminates the benefit of receiving more healing altogether. 
 
 ## Guardian's Wrath
 

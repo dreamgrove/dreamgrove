@@ -53,11 +53,13 @@ When using {{< spell 80313 "Pulverize" >}}, ideally you cast it on a global wher
 
 ## Catweaving
 
-If you are catweaving, your rotation should be similar to the single target rotation above, except when you reach the point where you cannot cast anything but {{< spell 213764 "Swipe" >}}, you instead shift into {{< spell 768 "Cat Form" >}} and being a "cat cycle".
+If you are catweaving, your rotation should be similar to the single target rotation above, except when you reach the point where you cannot cast anything but {{< spell 213764 "Swipe" >}}, you instead shift into {{< spell 768 "Cat Form" >}} and begin a "cat cycle".
 
 Cat cycles last until you run out of energy (after which you switch back into {{< spell 5487 "Bear Form" >}}), and obey the following priority list:
 
 - If you are at 5 combo points:
+  - If {{< spell 1079 "Rip" >}} is ticking and your target is below 25% health:
+    - Cast {{< spell 22568 "Ferocious Bite" >}}.
   - If {{< spell 1079 "Rip" >}} is not ticking, in pandemic, or will fall off before your next chance to refresh:
     - Cast {{< spell 1079 "Rip" >}}.
   - Otherwise:
@@ -67,3 +69,6 @@ Cat cycles last until you run out of energy (after which you switch back into {{
     - Cast {{< spell 1822 "Rake" >}}.
   - Otherwise:
     - Cast {{< spell 5221 "Shred" >}}.
+
+Note that below 25% health, provided you won't die by doing so, it is worth dropping everything to maintain a ticking {{< spell 1079 "Rip" >}} by shifting into {{< spell 768 "Cat Form" >}}, and applying a 1 combo point {{< spell 22568 "Ferocious Bite" >}} to refresh the duration of Rip, then shifting back into Bear Form.
+
