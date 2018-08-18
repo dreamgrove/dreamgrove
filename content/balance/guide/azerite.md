@@ -27,14 +27,13 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 - {{< spell 280559 "Laser Matrix" "beta" >}} - Laser Matrix causes your spells and abilities to shoot a blast of lasers, dealing split damage and healing friendly targets. It is safe to say this trait is going to be highly desired as it also actives Reorigination Array, a passive buff in Uldir that gives you a huge amount of your most plentiful secondary stat based on how many bosses in Uldir you have slain.  
 
-- {{< spell 279642 "Lively Spirit" "beta" >}} - Awards you with an impressive amount of intellect based on how many spells the healer you {{< spell 29166 "Innervate" "beta" >}} casts, lasting 20 seconds. Albeit more complicated to pull off, Lively Spirit has a reward for using it correctly, granting high damage burst similar to Streaking Stars on both single target and multi-target.
 
 ### Recommended Azerite Traits to Look out For
 
 #### Single Target
 
-{{< spell 272871 "Streaking Stars" "beta" >}}, {{< spell 279642 "Lively Spirit" "beta" >}}, {{< spell 280383 "Thunderous Blast" "beta" >}}, {{< spell 280285 "Dagger in the Back" "beta" >}}, and {{< spell 280559 "Laser Matrix" "beta" >}} (especially when inside of Uldir) are all traits you should be aiming for. These traits perform well on single target by a considerable amount over other competitors. Lively Spirit and Streaking Stars specifically offer powerful burst that could be invaluable in certain environments. Thunderous Blast and Dagger in the Back do good damage and can definitely be useful traits to have if you obtain high item level pieces. 
+{{< spell 272871 "Streaking Stars" "beta" >}}, {{< spell 280383 "Thunderous Blast" "beta" >}}, {{< spell 280285 "Dagger in the Back" "beta" >}}, and {{< spell 280559 "Laser Matrix" "beta" >}} (especially when inside of Uldir) are all traits you should be aiming for. These traits perform well on single target by a considerable amount over other competitors. Streaking Stars specifically offers powerful burst that could be invaluable in certain environments, while still dealing high tier damage. Thunderous Blast and Dagger in the Back do good damage and can definitely be useful traits to have if you obtain high item level pieces. 
 
 #### Multi-Target
 
-{{< spell 278507 "Lunar Shrapnel" "beta" >}}, {{< spell 279642 "Lively Spirit" "beta" >}}, and {{< spell 273389 "Power of the Moon" "beta" >}} stand out on multi-target above the rest in raw throughput and should be sought after for multi-target. Lively Spirit like on single target can award high damage multi-target burst if used correctly. Power of the Moon and Lunar Shrapnel will deal consistent strong damage on 2-3 targets and 4+ targets respectively.
+{{< spell 278507 "Lunar Shrapnel" "beta" >}} and {{< spell 273389 "Power of the Moon" "beta" >}} stand out on multi-target above the rest in raw throughput and should be sought after for multi-target. They will deal consistent strong damage on 2-3 targets and 4+ targets respectively. Lunar Shrapnel should not be underestimated, bringing to the table exponentially scaling damage which can be amazing should the situation see fit.
