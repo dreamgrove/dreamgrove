@@ -53,6 +53,4 @@ In Battle for Azeroth, the gear you have equipped once the key begins is the gea
 
 - {{< spell 278507 "Lunar Shrapnel" "beta" >}} - This will be the general go-to Azerite in pugs and high density dungeons, being easy to use and effective, requiring little communication to pull off. Lunar Shrapnel will leave your single target something to be desired, but it’s worth it for the massive payoff.
 
-- {{< spell 279642 "Lively Spirit" "beta" >}} - Lively Spirit can be highly effective in a cohesive group. Being one of our strongest single targets and multi-target traits. With good communication and planning you can use Lively Spirit to deal ludicrous burst damage.
-
 - {{< spell 273389 "Power of the Moon" "beta" >}} - A more niche option, offering quick constant burst for affixes like Explosive. Possibly Power of the Moon could be powerful in dungeons where there are little amounts of trash and/or even bosses that include 2 target cleave.
