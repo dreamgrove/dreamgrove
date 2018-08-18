@@ -49,7 +49,7 @@ As a Balance Druid it is vital you capitalize on your very useful utility. {{< s
 
 ### Azerite Traits
 
-In Battle for Azeroth, the gear you have equipped once the key begins is the gear you will have throughout the entire dungeon, so it is crucial you prepare accordingly and choose the best Azerite pieces for the job. Currently there are 3 Azerite traits that stick out in Mythic+.
+In Battle for Azeroth, the gear you have equipped once the key begins is the gear you will have throughout the entire dungeon, so it is crucial you prepare accordingly and choose the best Azerite pieces for the job. Currently there are 2 Azerite traits that stick out in Mythic+.
 
 - {{< spell 278507 "Lunar Shrapnel" "beta" >}} - This will be the general go-to Azerite in pugs and high density dungeons, being easy to use and effective, requiring little communication to pull off. Lunar Shrapnel will leave your single target something to be desired, but it’s worth it for the massive payoff.
 
