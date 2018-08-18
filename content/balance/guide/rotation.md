@@ -42,19 +42,21 @@ weight: 4
 
 Rotation With 2-3 {{< spell 273389 "Power of the Moon" "beta" >}} Traits
 
-If you have at least 2 Power of the Moon traits it is important to understand the rotation changes on 2-3 targets, instead filling with Moonfire and only casting Lunar {{< spell 279708 "Empowerments" "beta" >}} on 3+ targets. With 3 traits equipped, Moonfire spam should be used on 2-4 targets.
+If you have at least 2 Power of the Moon traits it is important to understand the rotation changes on 2 targets, instead filling with Moonfire. With 3 traits equipped, Moonfire spam should be used on 2-4 targets, ignoring Empowerments entirely on 2 targets and only casting Lunar Empowerments on 3+ targets.
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
 2. Avoid overcapping Astral Power by casting {{< spell 78674 "Starsurge" "beta" >}} on 2 targets and {{< spell 191034 "Starfall" "beta" >}} on 3+ targets.
 
-3. Spend Lunar Empowerments on 3+ targets.
+3. Spend {{< spell 279708 "Empowerments" "beta" >}} on 2+ targets (skip this step with 3 Power of the Moon traits).
 
-4. Fill with {{< spell 164812 "Moonfire" "beta" >}}.
+4. Spend Lunar Empowerments on 3+ targets.
+
+5. Fill with {{< spell 164812 "Moonfire" "beta" >}}.
 
 ### Rotation With 3 High Noon Traits
 
-Much like {{< spell 273389 "Power of the Moon" "beta" >}}, having 3 {{< spell 279070 "High Noon" "beta" >}} traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking a single target. In this situation you should follow a similar priority:
+Much like {{< spell 273389 "Power of the Moon" "beta" >}}, having 3 {{< spell 279070 "High Noon" "beta" >}} traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking 1-2 targets. In this situation you should follow a similar priority:
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
