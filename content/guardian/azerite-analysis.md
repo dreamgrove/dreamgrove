@@ -27,7 +27,7 @@ For example: if you have more than one {{< spell 279552 "Layered Mane" >}} trait
 
 Defensively speaking, the generic traits that grant primary stat are not terrible usually, but they will typically be worse than the Guardian specific traits. The remaining generic traits (the ones that grant secondaries or deal damage) are not worth taking. Use your best judgement when deciding whether or not to take a generic trait for defensive value.
 
-Offensively, many generic traits are very strong for DPS and will typically be stronger than Guardian specific traits (the exception being {{< spell 275906 "Twisted Claws" >}}, which is very competitive). You should always sim your trait options to determine which are the strongest for your character's DPS. To get a general idea of what DPS traits you should aim for, check out [Bloodmallet](https://bloodmallet.com/index.html#druid_guardian?data_view=azerite_traits&type=itemlevel&fight_style=patchwerk).
+Offensively, many generic traits are very strong for DPS and will typically be stronger than Guardian specific traits (the exceptions being {{< spell 275906 "Twisted Claws" >}}, {{< spell 273367 "Power of the Moon" >}}, and {{< spell 279527 "Wild Fleshrending" >}}, which are very competitive). You should always sim your trait options to determine which are the strongest for your character's DPS. To get a general idea of what DPS traits you should aim for, check out [Bloodmallet](https://bloodmallet.com/index.html#druid_guardian?data_view=azerite_traits&type=itemlevel&fight_style=patchwerk).
 
 # Outer Ring 
 
@@ -129,11 +129,11 @@ This is a Balance trait that is not selectable as Guardian, however it will work
 
 ## Waking Dream
 
-- {{< spell 278958 "Waking Dream" >}} - {{< spell 145108 "Ysera's Gift" >}} now heals every 4 seconds, and heals for an additional X for each of your active {{< spell 774 "Rejuvenations" >}}s.
+- {{< spell 278958 "Waking Dream" >}} - {{< spell 145108 "Ysera's Gift" >}} now heals every 4 seconds, and heals for an additional X for each of your active {{< spell 774 "Rejuvenation" >}}s.
 
-At 370, {{< spell 145108 "Ysera's Gift" >}} heals for 311 more per {{< spell 774 "Rejuvenations" >}}.
+At 370, {{< spell 145108 "Ysera's Gift" >}} heals for 311 more per {{< spell 774 "Rejuvenation" >}}.
 
-This is a Restoration trait that is not selectable as Guardian, however it will work if you have selected it from Restoration spec and switched into Guardian spec after selecting it. The effect is only active if you have {{< spell 197492 "Restoration Affinity" >}} talented. If you do, this is a 20% increase to the healing from {{< spell 145108 "Ysera's Gift" >}}, which is not amazing but it is worth noting. If you are tanking it's unlikely you will have any {{< spell 774 "Rejuvenations" >}}s out so this part of the effect is mostly negligible. 
+This is a Restoration trait that is not selectable as Guardian, however it will work if you have selected it from Restoration spec and switched into Guardian spec after selecting it. The effect is only active if you have {{< spell 197492 "Restoration Affinity" >}} talented. If you do, this is a 20% increase to the healing from {{< spell 145108 "Ysera's Gift" >}}, which is not amazing but it is worth noting. If you are tanking it's unlikely you will have any {{< spell 774 "Rejuvenation" >}}s out so this part of the effect is mostly negligible. 
 
 Overall this trait is a boost to your healing if you have {{< spell 197492 "Restoration Affinity" >}}, but it is much worse than the strong defensive traits available to Guardians.
 
