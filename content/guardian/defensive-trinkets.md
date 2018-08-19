@@ -10,7 +10,7 @@ Tanking trinkets in BFA **suck** for survivability.
 
 That’s fine, you probably shouldn’t be relying on your trinkets to survive anyway.
 
-Remember that your main stat is good defensively in this expansion, and take whatever high item level trinkets with your main stat as the base stat that you can. Also remember that for survivability, on-use and flat stat gains are generally better than procs. You may want to consider just picking any trinket with base main stat that is good for DPS in your spec.
+Remember that your main stat is good defensively in this expansion, and take whatever high item level trinkets with your main stat as the base stat that you can. Know what secondary stats are good for your spec, and try to get trinkets with your main primary as a base and main secondary. Also remember that for survivability, on-use trinkets are generally better than procs. You may want to consider just picking any trinket with base main stat that is good for DPS in your spec.
 
 There is one trinket which is reasonably good for tanking. It’s your main stat + versatility on use:
 
@@ -23,3 +23,15 @@ For Druids, Monks, and Demon Hunters, this trinket is {{< item 159617 "Lustrous 
 {{< item 159125 "Darkmoon Deck: Fathoms" >}} deserves a special mention because it’s basically just a main stat trinket with no secondary effect, as far as tanking is concerned - i.e. identical to {{< item 159128 "Blockades" >}} - but is extremely good for damage done. It’s usually much more expensive (and for good reason). You can use both.
 
 I'm sure there will be better ones later in the expansion.
+
+There are also some trinkets from Legion which are extremely powerful now. I expect these will be nerfed. For the time being, however:
+
+In raids:
+
+- {{< item 151978 "Smoldering Titanguard" >}}
+
+In dungeons:
+
+- {{< item 151312 "Ampoule of Pure Void" >}} (also very good for damage done!)
+- {{< item 151975 "Apocalypse Drive" >}}
+- {{< item 151976 "Riftworld Codex" >}} 
