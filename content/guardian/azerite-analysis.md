@@ -7,8 +7,7 @@ showtoc: true
 patch: 8.0.1
 ---
 
-*Update 15 Aug 2018: {{< spell 279536 "Gory Regeneration" >}} has been changed from beta to live to only grant extension from Mangle once per Frenzied Regeneration, significantly reducing its power with Incarnation talented. The evaluation has been updated to reflect this.*
-*Update 9 Aug 2018: {{< spell 280181 "Personal Absorb-o-Tron" >}} was nerfed fairly significantly, and I was able to get my hands on the remaining Azerite traits to test them. The relevant sections have been updated accordingly.*
+*Update 18 Aug 2018: {{< spell 279527 "Wild Fleshrending" >}} was fixed, and added a few non-guardian traits of note. Also, added a section for frequently asked questions.*
 
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
@@ -16,7 +15,19 @@ Let's take a look at the traits available to Guardians. First, I'll cover the se
 
 I'll only be focusing on the value of single traits for now (that is, going from having none of a trait to having one of that trait), since much of the value comes from the effects that don't scale with the number of instances of that trait that are present. As a result, **stacking more than one of a particular trait will have reduced value and usually be worse than taking the first instance of another trait**. As a general rule: values that are denoted by the variables X or Y scale with item level and trait stacking.
 
-Disclaimer: Blizzard have been pushing out hotfixes to Azerite traits almost daily for the last week or so, often changing the values on traits by 5x or more. As a result, the values and assessments in this post are subject to change. They are accurate as of the date of this post, and I will try to keep them up to date in case further changes are made.
+# Frequently Asked Questions
+
+## Do azerite traits stack?
+
+Sort of. Only parts of the traits stack, while other parts do not. In general: stat buff values and damage numbers do stack, while proc chances, durations, percentages, and resource modifiers do not.
+
+For example: if you have more than one {{< spell 279552 "Layered Mane" >}} trait, the Agility buff component will stack, but the chance to proc will remain 10% no matter how many traits you have.
+
+## Are generic outer ring traits worth using?
+
+Defensively speaking, the generic traits that grant primary stat are not terrible usually, but they will typically be worse than the Guardian specific traits. The remaining generic traits (the ones that grant secondaries or deal damage) are not worth taking. Use your best judgement when deciding whether or not to take a generic trait for defensive value.
+
+Offensively, many generic traits are very strong for DPS and will typically be stronger than Guardian specific traits (the exception being {{< spell 275906 "Twisted Claws" >}}, which is very competitive). You should always sim your trait options to determine which are the strongest for your character's DPS. To get a general idea of what DPS traits you should aim for, check out [Bloodmallet](https://bloodmallet.com/index.html#druid_guardian?data_view=azerite_traits&type=itemlevel&fight_style=patchwerk).
 
 # Outer Ring 
 
@@ -100,9 +111,31 @@ This trait looks to be very strong both offensively and defensively, provided yo
 
 ## Wild Fleshrending
 
-- {{< spell 279527 "Wild Fleshrending" >}} - {{< spell 5221 "Shred" >}} to deal X additional damage and {{< spell 213771 "Swipe" >}} to deal Y additional damage to targets affected by your {{< spell 211141 "Thrash" >}}.
+- {{< spell 279527 "Wild Fleshrending" >}} - {{< spell 5221 "Shred" >}} to deal X additional damage and {{< spell 213771 "Swipe" >}} to deal Y additional damage to targets affected by your {{< spell 77758 "Thrash" >}}.
 
-This is a Feral trait that is also selectable as Guardian, and I'm only including it for completeness' sake. It is absolutely not worth taking for Guardian, as it only works with Cat Form {{< spell 211141 "Thrash" >}}, and does not work at all on {{< spell 5221 "Shred" >}} if you are in Guardian spec. 
+At 370, {{< spell 5221 "Shred" >}} deals 706 extra damage and {{< spell 213771 "Swipe" >}} deals 229 extra damage.
+
+This is a Feral trait that is also selectable as Guardian, and does work with {{< spell 77754 "Thrash" >}} in Bear Form. If you are not catweaving, It is about equal for DPS benefit with {{< spell 275906 "Twisted Claws" >}}; where Twisted Claws is very slightly better below 5 targets and Wild Fleshrending is very slightly better above 5 targets. If you are catweaving, Wild Fleshrending wins out on 1 target, and is the second best DPS trait behind {{< spell 273367 "Power of the Moon" >}}.
+
+Unlike Twisted Claws, it does not provide any defensive benefit, which makes Twisted Claws better in almost every circumstance if you have the option, but this is a solid choice for DPS.
+
+## Power of the Moon
+
+- {{< spell 273367 "Power of the Moon" >}} - Moonfire deals X additional direct damage, and has a 5% chance to grant you {{< spell 164547 "Lunar Empowerment" >}}.
+
+At 370, Moonfire deals 945 additional damage. The Lunar Empowerment chance does not work for Guardians.
+
+This is a Balance trait that is not selectable as Guardian, however it will work if you have selected it from Balance spec and switched into Guardian spec after selecting it. It is the strongest single target trait for damage, but it loses handily to {{< spell 275906 "Twisted Claws" >}} on 2 or more targets. It stacks with {{< spell 203964 "Galactic Guardian" >}} meaning you will want to always have this talent selected if you are running one or more of these traits. It also works with Catweaving.
+
+## Waking Dream
+
+- {{< spell 278958 "Waking Dream" >}} - {{< spell 145108 "Ysera's Gift" >}} now heals every 4 seconds, and heals for an additional X for each of your active {{< spell 774 "Rejuvenations" >}}s.
+
+At 370, {{< spell 145108 "Ysera's Gift" >}} heals for 311 more per {{< spell 774 "Rejuvenations" >}}.
+
+This is a Restoration trait that is not selectable as Guardian, however it will work if you have selected it from Restoration spec and switched into Guardian spec after selecting it. The effect is only active if you have {{< spell 197492 "Restoration Affinity" >}} talented. If you do, this is a 20% increase to the healing from {{< spell 145108 "Ysera's Gift" >}}, which is not amazing but it is worth noting. If you are tanking it's unlikely you will have any {{< spell 774 "Rejuvenations" >}}s out so this part of the effect is mostly negligible. 
+
+Overall this trait is a boost to your healing if you have {{< spell 197492 "Restoration Affinity" >}}, but it is much worse than the strong defensive traits available to Guardians.
 
 ## Synaptic Spark Capacitor
 
@@ -275,3 +308,4 @@ With all that being said, here are the traits I'd recommend paying attention to,
 - {{< spell 268437 "Impassive Visage" >}} - A healing trait that is almost guaranteed to not overheal.
 - {{< spell 268595 "Bulwark of the Masses" >}} - If you can proc the effect, a very powerful absorb.
 - {{< spell 268596 "Gemhide" >}} - A reliably high-uptime Armor and Avoidance buff.
+
