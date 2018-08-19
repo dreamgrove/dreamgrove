@@ -1,7 +1,6 @@
 ---
 title: Defensive Trinkets
 date: '2018-08-19'
-description: "I'm sure there will be better ones later in the expansion."
 authors: ['Macrologia']
 published: true
 patch: 8.0.1
@@ -21,4 +20,6 @@ For Druids, Monks, and Demon Hunters, this trinket is {{< item 159617 "Lustrous 
 
 {{< item 159128 "Darkmoon Deck: Blockades" >}} deserves a special mention because it’s exceptionally bad. The effect of the trinket is unbelievably small (so much so that you may expect it to be enormously buffed, but don’t count on it). The main stat on it is still good, and it’s quite a high item level compared to other pre-raid trinkets, so you may want to consider buying it if it’s particularly cheap despite the effect of the trinket itself being completely and utterly negligible.
 
-{{< item 159125 "Darkmoon Deck: Fathoms" >}} deserves a special mention because it’s basically just a main stat trinket with no secondary effect, as far as tanking is concerned - i.e. identical to {{< item 159128 "Darkmoon Deck: Blockades" >}} - but is extremely good for damage done. It’s usually much more expensive (and for good reason). You can use both.
+{{< item 159125 "Darkmoon Deck: Fathoms" >}} deserves a special mention because it’s basically just a main stat trinket with no secondary effect, as far as tanking is concerned - i.e. identical to {{< item 159128 "Blockades" >}} - but is extremely good for damage done. It’s usually much more expensive (and for good reason). You can use both.
+
+I'm sure there will be better ones later in the expansion.
