@@ -6,7 +6,7 @@ published: true
 patch: 8.0.1
 ---
 
-Tanking trinkets in BFA suck for survivability.
+Tanking trinkets in BFA **suck** for survivability.
 
 That’s fine, you probably shouldn’t be relying on your trinkets to survive anyway.
 
@@ -14,7 +14,7 @@ Remember that your main stat is good defensively in this expansion, and take wha
 
 There is one trinket which is reasonably good for tanking. It’s your main stat + versatility on use:
 
-For Death Knights, Warriors and Paladins, this trinket is {{< item 159627 "Jes' Howler" >}}, which drops from Tol Dagor.
+For Death Knights, Warriors, and Paladins, this trinket is {{< item 159627 "Jes' Howler" >}}, which drops from Tol Dagor.
 
 For Druids, Monks, and Demon Hunters, this trinket is {{< item 159617 "Lustrous Golden Plumage" >}}, which drops from King’s Rest.
 
