@@ -62,4 +62,6 @@ Much like {{< spell 273389 "Power of the Moon" "beta" >}}, having 3 {{< spell 27
 
 2. Avoid overcapping Astral Power by casting {{< spell 78674 "Starsurge" "beta" >}}.
 
-3. Fill with {{< spell 93402 "Sunfire" "beta" >}}.
+3. Spend Empowerments on 2+ targets.
+
+4. Fill with {{< spell 93402 "Sunfire" "beta" >}}.
