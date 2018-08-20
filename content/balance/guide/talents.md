@@ -34,7 +34,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 197491 "Guardian Affinity" "beta" >}}: As said before, Guardian Affinity talent is the go-to for most situations, granting generous survivability through the 6% damage reduction and decent healing through Frenzied Regeneration.
 
-{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world to keep your health topped off.
+{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world or dungeons to keep your allies health topped off. With the nerfs to {{< spell 5487 "Bear Form" "beta" >}}, Restoration Affinity could see some use in a raiding environment as Swiftmend can instantly heal someone for 50% of their health, very useful for high damage fights when your healers can't keep up.  
 
 ### Tier 60:
 {{< talent-row spec="balance" tier="60" src="beta" >}}
