@@ -18,6 +18,54 @@ For Death Knights, Warriors, and Paladins, this trinket is {{< item 159627 "Jes'
 
 For Druids, Monks, and Demon Hunters, this trinket is {{< item 159617 "Lustrous Golden Plumage" >}}, which drops from King’s Rest.
 
+**In general, you will want whatever trinkets have main stat as a base, at the highest item level you can find.**
+
+Here are a few notable trinkets that you should keep an eye out for, organized by class:
+
+{{< expandable "Death Knight" >}}
+- {{< item 161379 "Galecaller's Beak" >}} (World Boss - Azurethos)
+- {{< item 158712 "Rezan's Gleaming Eye" >}} (Atal'Dazar - Rezan)
+- {{< item 159625 "Vial of Animated Blood" >}} (The Underrot - Unbound Abomination)
+- {{< item 163936 "'Bygone Bee' Almanac" >}} (BoE)
+{{< /expandable >}}
+
+{{< expandable "Demon Hunter" >}}
+- {{< item 161473 "Lion's Guile" >}} (World Boss - Doom's Howl)
+- {{< item 161381 "Permafrost-Encrusted Heart" >}} (World Boss - Hailstone Construct)
+- {{< item 160652 "Construct Overcharger" >}} (Uldir - Taloc)
+- {{< item 159614 "Galecaller's Boon" >}} (Shrine of the Storm - Tidesage Council)
+- {{< item 163935 "Landoi's Scrutiny" >}} (BoE)
+{{< /expandable >}}
+
+{{< expandable "Druid" >}}
+- {{< item 161473 "Lion's Guile" >}} (World Boss - Doom's Howl)
+- {{< item 161381 "Permafrost-Encrusted Heart" >}} (World Boss - Hailstone Construct)
+{{< /expandable >}}
+
+{{< expandable "Monk" >}}
+- {{< item 161473 "Lion's Guile" >}} (World Boss - Doom's Howl)
+- {{< item 161381 "Permafrost-Encrusted Heart" >}} (World Boss - Hailstone Construct)
+- {{< item 159623 "Dead-Eye Spyglass" >}} (Siege of Boralus - Dread Captain Lockwood)
+- {{< item 155881 "Harlan's Loaded Dice" >}} (Freehold - Harlan Sweete)
+{{< /expandable >}}
+
+{{< expandable "Paladin" >}}
+- {{< item 161379 "Galecaller's Beak" >}} (World Boss - Azurethos)
+- {{< item 158712 "Rezan's Gleaming Eye" >}} (Atal'Dazar - Rezan)
+- {{< item 159625 "Vial of Animated Blood" >}} (The Underrot - Unbound Abomination)
+- {{< item 163936 "'Bygone Bee' Almanac" >}} (BoE)
+{{< /expandable >}}
+
+{{< expandable "Warrior" >}}
+- {{< item 161379 "Galecaller's Beak" >}} (World Boss - Azurethos)
+- {{< item 158712 "Rezan's Gleaming Eye" >}} (Atal'Dazar - Rezan)
+- {{< item 159625 "Vial of Animated Blood" >}} (The Underrot - Unbound Abomination)
+- {{< item 163936 "'Bygone Bee' Almanac" >}} (BoE)
+{{< /expandable >}}
+
+
+
+
 {{< item 159128 "Darkmoon Deck: Blockades" >}} deserves a special mention because it’s exceptionally bad. The effect of the trinket is unbelievably small (so much so that you may expect it to be enormously buffed, but don’t count on it). The main stat on it is still good, and it’s quite a high item level compared to other pre-raid trinkets, so you may want to consider buying it if it’s particularly cheap despite the effect of the trinket itself being completely and utterly negligible.
 
 {{< item 159125 "Darkmoon Deck: Fathoms" >}} deserves a special mention because it’s basically just a main stat trinket with no secondary effect, as far as tanking is concerned - i.e. identical to {{< item 159128 "Blockades" >}} - but is extremely good for damage done. It’s usually much more expensive (and for good reason). You can use both.
