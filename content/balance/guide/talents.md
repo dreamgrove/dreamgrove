@@ -12,7 +12,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 ### Tier 15:
 {{< talent-row spec="balance" tier="15" src="beta" >}}
 
-{{< spell 202430 "Nature’s Balance" "beta" >}} (NB): Generates 2 Astral Power every 3 seconds and also makes your base Astral Power out of combat 50 rather than 0. Decent for sustained multi-target giving us constantly generating Astral Power. This talent, albeit niche, has the potential to be advantageous in Mythic+, notably those with long spans of downtime, giving the talent time to recharge your Astral Power to 50. Meaning it is also great in open world content as you’re regularly walking from place to place. Otherwise, Nature’s Balance tends to become your strongest damage option at 4+ targets.	
+{{< spell 202430 "Nature’s Balance" "beta" >}} (NB): Generates 2 Astral Power every 3 seconds and also makes your base Astral Power out of combat 50 rather than 0. Decent for sustained multi-target giving us constantly generating Astral Power. This talent, albeit niche, has the potential to be advantageous in Mythic+, notably those with long spans of downtime, giving the talent time to recharge your Astral Power to 50. Meaning it is also great in open world content as you’re regularly walking from place to place. Otherwise, Nature’s Balance tends to become your strongest damage option at 5+ targets.	
 
 {{< spell 202425 "Warrior of Elune" "beta" >}} (WoE): On activation, causes your next 3 {{< spell 194153 "Lunar Strikes" "beta" >}} to be instant cast and award 40% more astral power. This talent grants useful burst and priority target damage. Warrior of Elune is the best in the Tier 15 row for dealing with high movement encounters, generating 3 GCDs (Global Cooldowns) of movement and enough Astral Power for a spender. The three free Lunar Strikes should be used back to back regardless of if they’re empowered or not unless you’d overcap Astral Power.
 
@@ -34,7 +34,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 197491 "Guardian Affinity" "beta" >}}: As said before, Guardian Affinity talent is the go-to for most situations, granting generous survivability through the 6% damage reduction and decent healing through Frenzied Regeneration.
 
-{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world to keep your health topped off.
+{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world or dungeons to keep your allies health topped off. With the nerfs to {{< spell 5487 "Bear Form" "beta" >}}, Restoration Affinity could see some use in a raiding environment as Swiftmend can instantly heal someone for 50% of their health, very useful for high damage fights when your healers can't keep up.  
 
 ### Tier 60:
 {{< talent-row spec="balance" tier="60" src="beta" >}}
