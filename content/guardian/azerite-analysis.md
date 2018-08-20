@@ -91,7 +91,7 @@ At 370, you gain 560 Mastery and 543 Armor.
 
 ![Masterful Instincts bonus Mastery and Armor](/guardian/images/masterful-instincts-stats.png)
 
-The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. However, the amount of stats gained is still quite low; on average, you will gain around 70 Mastery and 68 Armor, assuming you are using a Survival Instincts charge once every 4 minutes (you will probably use them more frequently since fights don't normally last long enough to worry about the full recharge time). 
+The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. However, the amount of stats gained is still quite low; on average, you will gain around 70 Mastery and 68 Armor, assuming you are using a Survival Instincts charge once every 4 minutes (and bearing in mind that you will probably use them more frequently since fights don't normally last long enough to worry about the full recharge time). 
 
 ## Twisted Claws
 
