@@ -175,7 +175,7 @@ There are some drawbacks to the trait: the fact that it has a very low RPPM make
 
 - {{< spell 264108 "Blood Siphon" >}} - Increases your Mastery by X and your Leech by Y.
 - {{< spell 267665 "Lifespeed" >}} - Increases your Haste by X and your Avoidance by Y.
-- {{< spell 264108 "On My Way" >}} - Increases your Versatility by X and your Speed by Y.
+- {{< spell 267879 "On My Way" >}} - Increases your Versatility by X and your Speed by Y.
 
 At 370, the amount of secondary you gain is 74, and the amount of tertiary you gain is 37.
 
@@ -300,7 +300,7 @@ With all that being said, here are the traits I'd recommend paying attention to,
 - {{< spell 267683 "Azerite Veins" >}} - The raw HPS of this trait outweighs the unreliability of it, compared to its contemporaries on this ring.
 - {{< spell 271536 "Crystalline Carapace" >}} - A slightly worse (defensively) version of {{< spell 268596 "Gemhide" >}} with a small DPS component.
 - {{< spell 267671 "Winds of War" >}} - While you can't rely on dodge to keep you alive, it will reduce your overall damage taken, making this essentially a 3% damage reduction (against dodgeable attacks).
-- {{< spell 264108 "Blood Siphon" >}} /{{< spell 267665 "Lifespeed" >}} /{{< spell 264108 "On My Way" >}} - Free stats are free stats. 
+- {{< spell 264108 "Blood Siphon" >}} /{{< spell 267665 "Lifespeed" >}} /{{< spell 267879 "On My Way" >}} - Free stats are free stats. 
 
 ## Inner Ring
 
