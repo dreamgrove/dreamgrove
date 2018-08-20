@@ -85,13 +85,13 @@ Not only is it incredibly strong defensively, but the bonus Agility grants an of
 
 ## Masterful Instincts
 
-- {{< spell 273344 "Masterful Instincts" >}} - After {{< spell 61336 "Survival Instincts" >}} fades, you gain X Mastery and Y Armor for 10 seconds.
+- {{< spell 273344 "Masterful Instincts" >}} - After {{< spell 61336 "Survival Instincts" >}} fades, you gain X Mastery and Y Armor for 30 seconds.
 
 At 370, you gain 560 Mastery and 543 Armor.
 
 ![Masterful Instincts bonus Mastery and Armor](/guardian/images/masterful-instincts-stats.png)
 
-Another victim of poor tuning. The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. The amount of stats you gain is completely pitiful for how rarely you'll have the buff up, however. 
+The design of this trait isn't terrible, as it's essentially extending your {{< spell 61336 "Survival Instincts" >}} beyond its normal duration which could be useful in many situations. However, the amount of stats gained is still quite low; on average, you will gain around 70 Mastery and 68 Armor, assuming you are using a Survival Instincts charge once every 4 minutes (you will probably use them more frequently since fights don't normally last long enough to worry about the full recharge time). 
 
 ## Twisted Claws
 
