@@ -21,7 +21,7 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 ### Consumables: 
 
 - {{< item 152639 "Flask of Endless Fathoms" "beta" >}}
-- {{< item 163222 "Battle Potion of Intellect" "beta" >}}
+- {{< item 163222 "Battle Potion of Intellect" "beta" >}} for 3+ targets or {{< item 152559 "Potion of Rising Death" "beta" >}} for 1-2 targets
 - {{< item 156526 "Bountiful Captain’s Feast" "beta" >}} or {{< item 154884 "Swamp Fish ‘n Chips" "beta" >}}
 
 ### Sockets: 
@@ -35,4 +35,4 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 - {{< item 159615 "Ignition Mage’s Fuse" "beta" >}} and {{< item 159620 "Conch of Dark Whispers" "beta" >}} for multi-target.
 - {{< item 161377 "Azurethos’ Singed Plumage" "beta" >}} and {{< item 161380 "Drust-Runed Icicle" "beta" >}} are strong overall.
 
-Once trinket simulations are more concrete, a trinket spreadsheet will be added here to give a more full rough estimate of useful trinkets you should look out for. Until then it is recommended you sim all trinkets you think may be upgrades and hold onto those. These listed trinkets are not always going to be upgrades for your own character.
+To get a full picture of potentially useful trinkets, and for the most up to date simulation information, make sure to use [Chickendb](http://www.chickendb.com "Chickendb").
