@@ -35,4 +35,4 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 - {{< item 159615 "Ignition Mage’s Fuse" "beta" >}} and {{< item 159620 "Conch of Dark Whispers" "beta" >}} for multi-target.
 - {{< item 161377 "Azurethos’ Singed Plumage" "beta" >}} and {{< item 161380 "Drust-Runed Icicle" "beta" >}} are strong overall.
 
-To get a full picture of potentially useful trinkets, and for the most up to date simulation information, make sure to use Chickendb.com.
+To get a full picture of potentially useful trinkets, and for the most up to date simulation information, make sure to use [Chickendb](http://www.chickendb.com "Chickendb").
