@@ -64,7 +64,7 @@ Here are a few notable trinkets that you should keep an eye out for, organized b
 {{< /expandable >}}
 
 
-**{{< item 159128 "Darkmoon Deck: Blockades" >}} has been buffed.** It's now quite good for a trinket of its item level. The heal is negligible, but it's on average 328 stamina (min 72, max 583).
+**{{< item 159128 "Darkmoon Deck: Blockades" >}} has been buffed.** It's now quite good for a trinket of its item level. The heal &emdash; while small &emdash; is a nice bonus, but the primary benefit is the Stamina, which grants an average of 328 (min 72, max 583).
 
 Stamina is less good relative to e.g. Armour or other secondaries for EHP than it was in Legion, but it's still reasonable. This is still a very over-budget trinket for pure survivability.
 
