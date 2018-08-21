@@ -64,11 +64,15 @@ Here are a few notable trinkets that you should keep an eye out for, organized b
 {{< /expandable >}}
 
 
+**{{< item 159128 "Darkmoon Deck: Blockades" >}} has been buffed.** It's now quite good for a trinket of its item level. The heal is negligible, but it's on average 328 stamina (min 72, max 583).
 
+Stamina is less good relative to e.g. Armour or other secondaries for EHP than it was in Legion, but it's still reasonable. This is still a very over-budget trinket for pure survivability.
 
-{{< item 159128 "Darkmoon Deck: Blockades" >}} deserves a special mention because it’s exceptionally bad. The effect of the trinket is unbelievably small (so much so that you may expect it to be enormously buffed, but don’t count on it). The main stat on it is still good, and it’s quite a high item level compared to other pre-raid trinkets, so you may want to consider buying it if it’s particularly cheap despite the effect of the trinket itself being completely and utterly negligible.
+For pure survivability this trinket is now bis pre-Uldir, and probably one of the better trinkets in general; higher item level trinkets will of course win out, particularly {{< item 159627 "Jes' Howler" >}} / {{< item 159617 "Lustrous Golden Plumage" >}}.
 
-{{< item 159125 "Darkmoon Deck: Fathoms" >}} deserves a special mention because it’s basically just a main stat trinket with no secondary effect, as far as tanking is concerned - i.e. identical to {{< item 159128 "Blockades" >}} - but is extremely good for damage done. It’s usually much more expensive (and for good reason). You can use both.
+As always, if you don't think you need the (relatively minor) survivability gain from using a survivability trinket, consider using a DPS trinket instead.
+
+{{< item 159125 "Darkmoon Deck: Fathoms" >}} deserves a special mention because it’s basically just a main stat trinket with no secondary effect, as far as tanking is concerned but is extremely good for damage done. It’s usually much more expensive (and for good reason). You can use both.
 
 I'm sure there will be better ones later in the expansion.
 
