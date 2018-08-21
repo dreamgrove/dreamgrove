@@ -10,6 +10,8 @@ html {
   color: rgba(0, 0, 0, 0.84);
   font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 body {

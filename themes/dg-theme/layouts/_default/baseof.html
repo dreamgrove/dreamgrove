@@ -24,11 +24,15 @@
   {{ block "head-injects" . }}{{ end }}
   {{ $mainStyle := resources.Get "css/main.scss" | resources.ToCSS }}
   {{ $articleStyle := resources.Get "css/article.scss" | resources.ToCSS }}
+  {{ $eluneStyle := resources.Get "css/elune.scss" | resources.ToCSS }}
   {{ if .Site.IsServer }}
     <link rel="stylesheet" href="{{ $mainStyle.Permalink }}" />
     <link rel="stylesheet" href="{{ $articleStyle.Permalink }}" />
+    {{ if .Site.Params.enableelune }}
+      <link rel="stylesheet" href="{{ $eluneStyle.Permalink }}" />
+    {{ end }}
   {{ else }}
-    {{ $css := slice $mainStyle $articleStyle | resources.Concat "css/style.css" | minify | fingerprint }}
+    {{ $css := (cond .Site.Params.enableelune (slice $mainStyle $articleStyle $eluneStyle) (slice $mainStyle $articleStyle)) | resources.Concat "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" />
   {{ end }}
 </head>

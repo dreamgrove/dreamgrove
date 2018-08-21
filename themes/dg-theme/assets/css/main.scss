@@ -19,6 +19,8 @@ html {
   font-family: $font-body;
 
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
