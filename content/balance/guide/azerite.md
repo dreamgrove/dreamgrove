@@ -64,6 +64,6 @@ This is a list of our most potent traits, ones that you should seek out if you c
 - {{< spell 280559 "Laser Matrix" "beta" >}} - Laser Matrix is a decent trait on single target and mediocre on multi-target, but also activates Reorigination Array in Uldir. This buff will eventually be awarding us with up to over 800 of our highest secondary stat, easily surpassing other traits in damage at this point.
 
 
-### Sims [CHickendb](http://www.chickendb.com)
+### Sims [Chickendb](http://www.chickendb.com)
 
 For the most up to date simulations of our Azerite traits, you should use [Chickendb.com](http://www.chickendb.com). This website will compare Azerite traits both on an individual level and with multiple traits, being a useful way to figure out everything you need to know about this system. Remember to use logic when referring to sims and if you have any questions, be sure to talk to us in the Dreamgrove!
