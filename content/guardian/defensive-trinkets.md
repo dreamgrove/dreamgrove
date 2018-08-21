@@ -68,7 +68,7 @@ Here are a few notable trinkets that you should keep an eye out for, organized b
 
 Stamina is less good relative to e.g. Armour or other secondaries for EHP than it was in Legion, but it's still reasonable. This is still a very over-budget trinket for pure survivability.
 
-For pure survivability this trinket is now bis pre-Uldir, and probably one of the better trinkets in general; higher item level trinkets will of course win out, particularly {{< item 159627 "Jes' Howler" >}} / {{< item 159617 "Lustrous Golden Plumage" >}}.
+For pure survivability this trinket is now bis pre-Uldir (due to the item level cap before its release), and probably one of the better trinkets in general; higher item level trinkets will of course win out, particularly {{< item 159627 "Jes' Howler" >}} / {{< item 159617 "Lustrous Golden Plumage" >}}.
 
 As always, if you don't think you need the (relatively minor) survivability gain from using a survivability trinket, consider using a DPS trinket instead.
 
