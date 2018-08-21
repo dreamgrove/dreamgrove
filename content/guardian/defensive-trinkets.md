@@ -63,6 +63,7 @@ Here are a few notable trinkets that you should keep an eye out for, organized b
 - {{< item 163936 "'Bygone Bee' Almanac" >}} (BoE)
 {{< /expandable >}}
 
+There are a couple of trinkets from world quests which can be reasonably competitive for survivability, but can't reliably be obtained at a competitive item level. Consider using them if you get them.
 
 **{{< item 159128 "Darkmoon Deck: Blockades" >}} has been buffed.** It's now quite good for a trinket of its item level. The heal &emdash; while small &emdash; is a nice bonus, but the primary benefit is the Stamina, which grants an average of 328 (min 72, max 583).
 
