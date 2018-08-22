@@ -3,7 +3,7 @@ title: Azerite Hotfix Update
 date: '2018-08-09'
 authors: ["Goosy","Nick","Tettles"]
 showOnFrontpage: false
-published: true
+published: false
 ---
 
 <center>
