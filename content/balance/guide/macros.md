@@ -33,7 +33,7 @@ weight: 10
 
 ```
 #showtooltip
-/cast [@mouseover,help,nodead][help,nodead][@player] Rebirth
+/cast [@mouseover,help,exists][] Rebirth
 ```
 
 **Tier 15 WoE/Treants:**
