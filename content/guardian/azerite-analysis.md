@@ -199,11 +199,11 @@ This trait has roughly 1 RPPM, making it very unreliable at less than 20% uptime
 
 ## Winds of War
 
-- {{< spell 267671 "Winds of War" >}} - Taking damage grants X Dodge for 3 seconds, stacking up to 10 times.
+- {{< spell 267671 "Winds of War" >}} - Taking damage grants X Dodge for 3 seconds, stacking up to 5 times.
 
-At 370 you gain 37 Dodge rating per stack, for a total of 370 Dodge rating at max stacks.
+At 370 you gain 37 Dodge rating per stack, for a total of 185 Dodge rating at max stacks.
 
-While Dodge is very inconsistent as a damage-reducing mechanic and should not be relied on as a survivability tool, it does reduce your overall damage taken over the course of a fight. Assuming you're at an average of 370 item level and have an equal distribution of secondaries (3732 Agility and 704 Crit rating from gear), adding 370 Dodge rating will improve your chance to dodge by 3.18%.
+While Dodge is very inconsistent as a damage-reducing mechanic and should not be relied on as a survivability tool, it does reduce your overall damage taken over the course of a fight. Assuming you're at an average of 370 item level and have an equal distribution of secondaries (3732 Agility and 704 Crit rating from gear), adding 185 Dodge rating will improve your chance to dodge by 1.62%.
 
 ---
 
@@ -299,7 +299,6 @@ With all that being said, here are the traits I'd recommend paying attention to,
 
 - {{< spell 267683 "Azerite Veins" >}} - The raw HPS of this trait outweighs the unreliability of it, compared to its contemporaries on this ring.
 - {{< spell 271536 "Crystalline Carapace" >}} - A slightly worse (defensively) version of {{< spell 268596 "Gemhide" >}} with a small DPS component.
-- {{< spell 267671 "Winds of War" >}} - While you can't rely on dodge to keep you alive, it will reduce your overall damage taken, making this essentially a 3% damage reduction (against dodgeable attacks).
 - {{< spell 264108 "Blood Siphon" >}} /{{< spell 267665 "Lifespeed" >}} /{{< spell 267879 "On My Way" >}} - Free stats are free stats. 
 
 ## Inner Ring

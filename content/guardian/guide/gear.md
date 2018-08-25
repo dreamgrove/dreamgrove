@@ -18,7 +18,7 @@ If you are dying, or taking too much damage, it is because you or members of you
 
 For items with Agility, Armour, and Stamina on them, any item level upgrade will be an upgrade defensively. Sockets should be ignored when valuing pieces with those statsa.
 
-For rings, if it has versatility and mastery, consider it to be +10 item levels. If it has versatility or mastery but not both, consider it to be +5. If it has versatility or mastery as the lower stat, consider it to be +5. Sockets are worth ~10 item levels on a ring.
+For rings, if it has versatility and mastery, consider it to be +10 item levels. If it has versatility or mastery but not both, consider it to be +5. If it has versatility or mastery as the lower stat, consider it to be +5. Sockets are worth ~15 item levels on a ring.
 
 #### DPS
 

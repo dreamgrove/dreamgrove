@@ -77,14 +77,3 @@ As always, if you don't think you need the (relatively minor) survivability gain
 
 I'm sure there will be better ones later in the expansion.
 
-There are also some trinkets from Legion which are extremely powerful now. I expect these will be nerfed. For the time being, however:
-
-In raids:
-
-- {{< item 151978 "Smoldering Titanguard" >}}
-
-In dungeons:
-
-- {{< item 151312 "Ampoule of Pure Void" >}} (also very good for damage done!)
-- {{< item 151975 "Apocalypse Drive" >}}
-- {{< item 151976 "Riftworld Codex" >}} 
