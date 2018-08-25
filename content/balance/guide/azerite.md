@@ -46,8 +46,6 @@ Keep in mind that while Streaking Stars affects abilities such as {{< spell 1910
 
 - {{< spell 273389 "Power of the Moon" "beta" >}} - Opens up the possibility of spamming {{< spell 164812 "Moonfire" "beta" >}} on 2-4 targets. {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} also gains power in the tier 75 row, becoming the best of the three due to the other two relying on Astral Power generation to get great effect, something Moonfire spam lacks. Nature’s Balance gains some leeway as well since the other options lose strength in multi-target or just aren’t worth as much since Moonfire hits so hard and taking them would mean less Moonfires. For more info on the Moonfire spam rotation, see the Rotation section.
 
-- {{< spell 279070 "High Noon" "beta" >}} - Much like Power of the Moon, High Noon can possibly change your rotation by spamming {{< spell 93402 "Sunfire" "beta" >}} on 1-2 targets if you have access to 3 High Noon traits. Incarnation also becomes the go to talent of the tier 75 row as you generate much less Astral Power, reducing the competitors power. For more info on the Sunfire spam rotation, see the Rotation section.
-
 
 ### Top Traits
 
@@ -58,8 +56,6 @@ This is a list of our most potent traits, ones that you should seek out if you c
 - {{< spell 278507 "Lunar Shrapnel" "beta" >}} - A niche, yet powerful trait in the right situation. At 4+ targets Lunar Shrapnel becomes our best trait and only scales more and more with enemies. If an encounter calls for as much multi-target damage as you can push and there are many targets to hit, this should be in your mind when choosing your Azerite gear.
 
 - {{< spell 273389 "Power of the Moon" "beta" >}} - In constant 2-3 target cleave encounters, Power of the Moon is unmatched, allowing for absolutely no downtime and consistent damage. When there is multi-target, but not enough to warrant full on mass AoE, Power of the Moon is a wise choice.
-
-- {{< spell 279070 "High Noon" "beta" >}} - The ultimate single target trait when stacked 3 times, High Noon brings incredible single target damage with no loss of damage due to movement.  High Noon is at it’s best in high movement fights where the fight lacks high priority burst periods and or ends at bad kill times for your damage cooldowns. This trait also scales better and better at higher item levels, eventually becoming our highest simming trait in roughly heroic Uldir level gear.
 
 - {{< spell 280559 "Laser Matrix" "beta" >}} - Laser Matrix is a decent trait on single target and mediocre on multi-target, but also activates Reorigination Array in Uldir. This buff will eventually be awarding us with up to over 800 of our highest secondary stat, easily surpassing other traits in damage at this point.
 
