@@ -53,15 +53,3 @@ If you have at least 2 Power of the Moon traits it is important to understand th
 4. Spend Lunar Empowerments on 3+ targets.
 
 5. Fill with {{< spell 164812 "Moonfire" "beta" >}}.
-
-### Rotation With 3 High Noon Traits
-
-Much like {{< spell 273389 "Power of the Moon" "beta" >}}, having 3 {{< spell 279070 "High Noon" "beta" >}} traits makes it worth mostly spamming a single ability, Sunfire being that ability, and only if you are attacking 1-2 targets. In this situation you should follow a similar priority:
-
-1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
-
-2. Avoid overcapping Astral Power by casting {{< spell 78674 "Starsurge" "beta" >}}.
-
-3. Spend Empowerments on 2+ targets.
-
-4. Fill with {{< spell 93402 "Sunfire" "beta" >}}.
