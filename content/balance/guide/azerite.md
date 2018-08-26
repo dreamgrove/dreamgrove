@@ -15,7 +15,7 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 - {{< spell 274398 "Sunblaze" "beta" >}} - Causes Solar Wrath to increase the damage of {{< spell 78674 "Starsurge" "beta" >}}. 
 
-- {{< spell 272871 "Streaking Stars" "beta" >}} - During {{< spell 194223 "Celestial Alignment" "beta" >}} or {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} every non repeated spell inflicts bonus damage upon the target. 
+- {{< spell 272871 "Streaking Stars" "beta" >}} - During {{< spell 194223 "Celestial Alignment" "beta" >}} or {{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} every non repeated spell inflicts bonus damage upon the target once it strikes them.
 
 - {{< spell 278507 "Lunar Shrapnel" "beta" >}} - Enemies with {{< spell 164812 "Moonfire" "beta" >}} applied who are hit by {{< spell 191034 "Starfall" "beta" >}} pulse damage to themselves and enemies around them. 
 
@@ -38,7 +38,7 @@ Stacking traits tends to be the way to go as Balance Druid as we don’t lose mu
 
 - {{< spell 276153 "Dawning Sun" "beta" >}} - Slightly alters the rotation by incentivizing you to always have the 8 second buff up before casting {{< spell 190984 "Solar Wrath" "beta" >}}s, even if the {{< spell 194153 "Lunar Strike" "beta" >}} is unempowered.
 
-- {{< spell 272871 "Streaking Stars" "beta" >}} - Besides the obvious gameplay change of not repeating the same ability twice in a row, it’s worth noting that if you have no Astral Power left to cast your spenders and or Empowerments on single target, you should spam {{< spell 190984 "Solar Wrath" "beta" >}} followed by {{< spell 93402 "Sunfire" "beta" >}} until you can cast one of the two only if you have at least 2 traits. 
+- {{< spell 272871 "Streaking Stars" "beta" >}} - Besides the obvious gameplay change of not repeating the same ability twice in a row, it’s worth noting that you should cast a {{< spell 190984 "Solar Wrath" "beta" >}} after every ability (besides Solar Wrath) unless it would cause you to overcap Astral Power or Empowerments. 
 
 Keep in mind that while Streaking Stars affects abilities such as {{< spell 191034 "Starfall" "beta" >}} and {{< spell 202770 "Fury of Elune" "beta" >}}, it is only the first tick of the ability. Also, this trait has a reduced amount of damage in conjunction with Incarnation: Chosen of Elune (so Streaking Stars doesn’t make Incarnation a more viable pick).
 
