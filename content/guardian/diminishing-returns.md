@@ -19,23 +19,24 @@ When talking about diminishing returns in World of Warcraft, we are typically re
 
 ### Diminishing Returns as Marginal Utility
 
-The first is the property of **diminishing marginal utility**, which is the idea that every point of a stat added to a total is less valuable than the previous. For example: adding 1 rating when you have 100 rating to begin with is a larger marginal gain than adding 1 rating when you have 200 rating. 
+The first is the property of **diminishing marginal utility**, which is the idea that every point of a stat added to a total is less valuable relative to the previous. For example: adding 1 rating when you have 100 rating to begin with is a larger marginal gain than adding 1 rating when you have 200 rating. 
 
 {{< texblock >}}
 \begin{aligned}
-\frac{100 + 1}{100} &> \frac{200 + 1}{200} \\[3ex]
-\frac{101}{100} &> \frac{201}{200} \\[3ex]
-1.01 &> 1.005
+\frac{100 + 1}{100} &= \frac{101}{100} &= 1.01  \\[3ex]
+\frac{200 + 1}{200} &= \frac{201}{200} &= 1.005
 \end{aligned}
 {{< /texblock >}}
 
-Many people understand this intuitively as "stat X gets worse the more you have of it". When we talk about stats having diminishing returns in this manner, we are typically referring to diminishing marginal utility. This is inherent in the way that WoW computes stat ratings, and all stats are affected equally by this phenomenon.
+![Marginal Gain of Adding 1 Stat](/guardian/images/marginal-gains.png)
+
+Many people understand this intuitively as "stat X gets worse the more you have of it". This is inherent in the way that WoW computes stat ratings, and all stats are affected equally by this phenomenon. 
 
 ### Diminishing Returns as Penalty
 
-A second use of the term diminishing returns refers to ex post facto conversions applied to some values to reduce their effectiveness from what is advertised on the tooltip. Things such as CC durations, taunt effectiveness, and dodge/parry rating to percent conversions are all examples of in-game values which incur a diminishing returns penalty. This is the classic definition of "diminishing returns" that players use most often in WoW, and will be the primary focus of this article.
+A second use of the term diminishing returns refers to ex post facto conversions applied to some values to reduce their effectiveness from what is advertised on the tooltip. Stats such as armor, block, and dodge/parry are all subject to a diminishing returns penalty. This is the classic definition of "diminishing returns" that players use most often in WoW, and will be the primary focus of this article.
 
-Particularly relevant to tanks is the dodge/parry conversion. For simplicity's sake I will use terms relevant to Guardian, but know that anywhere that "Dodge" is mentioned, it can be replaced with "Parry" (and "Agility" with "Strength") as the formula is the same for both.
+Let's take the dodge/parry conversion, for example. For simplicity's sake I will use terms relevant to Guardian, but know that anywhere that "Dodge" is mentioned, it can be replaced with "Parry" (and "Agility" with "Strength") as the formula is the same for both.
 
 Dodge chance gained from gear is subject to a diminishing returns penalty. The full dodge formula is longer (and not all dodge is penalized), but only this part of the equation is relevant to the current discussion.
 
@@ -60,18 +61,19 @@ where K is 6300 for a level 123 attacker (the level of raid bosses).
 
 ![Damage Reduction from Armor against a Level 123 Attacker](/guardian/images/damage-reduction-from-armor.png)
 
+Notably, Versatility is *not* subject to any diminishing returns penalties. You gain the same amount of damage reduction from 1 point of Versatility rating at 90% Versatility as you do at 10% Versatility.
 
 ## How is diminishing returns related to damage reduction?
 
 A misconception I often hear is that stats that reduce your damage taken like Armor are subject to diminishing returns and therefore provide less value when you already have a lot of Armor. This is partially true, but it's only half the story.
 
-Let's consider for a moment what damage reduction actually implies. Suppose you currently have 0% damage reduction from Versatility, and you take a hit for 100 damage. You reduce 0 of that incoming damage, and so you take the full 100 to the face.  Now, suppose you gain enough Versatility rating to have 1% damage reduction, and you take another 100 damage hit. You are now reducing 1% of that damage, and taking 99 damage. Going from 0% to 1% damage reduction has decreased the amount of damage you take by 1%. This might seem painfully obvious, but bear with me for a moment.
+Consider for a moment what damage reduction actually implies. Suppose you currently have 0% damage reduction, and you take a hit for 100 damage. You reduce 0 of that incoming damage, and so you take the full 100 to the face.  Now, suppose you gain 1% damage reduction, and you take another 100 damage hit. You are now reducing 1% of that damage, and taking 99 damage. Going from 0% to 1% damage reduction has decreased the amount of damage you take by 1%. This might seem painfully obvious, but bear with me for a moment.
 
-Now suppose you currently have 98% damage reduction from Versatility. A 100 damage hit would be reduced to 2 damage. If you then gained another 1% in rating, that 100 damage hit is now reduced by 99%, and you take 1 damage. Going from taking 2 damage to 1 damage is decreasing the amount of damage you take by 50%. As such, **gaining 1% Versatility is 50 times more valuable when you already have 98% Versatility than it is when you have 0% Versatility**.
+Now suppose you currently have 98% damage reduction. A 100 damage hit would be reduced to 2 damage. If you then gained another 1%, that 100 damage hit is now reduced by 99%, and you take 1 damage. Going from taking 2 damage to 1 damage has decreased the amount of damage you take by 50%. 
 
-Because Versatility is not subject to any diminishing returns penalties, we say the damage reduction from Versatility has "increasing returns", and this is what we mean when we say that "versatility gets better the more you have of it."
+As such, **gaining 1% damage reduction is 50 times more valuable when you already have 98% damage reduction than it is when you have 0% damage reduction**.
 
-To see this more clearly, let's express it in terms of effective health. Effective health (or EHP) refers to the amount of damage required to kill you, taking into account all of your damage reductions. This is very useful for judging exactly how much impact a gain in damage reduction will have on our survivability, as we can now express it in terms of how much damage we can take. 
+To see this more clearly, let's express it in terms of effective health. Effective health (or EHP) refers to the amount of damage required to kill you, taking into account all of your damage reductions. This is very useful for judging exactly how much impact a gain in damage reduction will have on our survivability, as we can now define it in terms of how much additional damage we can take. 
 
 Effective health can be calculated as a function of damage reduction:
 
@@ -123,9 +125,9 @@ With a bit of arithmetic, we arrive at a slightly unintuitive (and maybe surpris
 
 ![Effective Health vs Armor Rating](/guardian/images/ehp-armor.png)
 
-The same is true for Dodge rating, the proof of which I'll leave as an exercise to the reader.
+The same is true for Dodge and Block, the proofs of which I'll leave as exercises to the reader.
 
-Finally, let's confirm something I claimed earlier with Versatility --- namely, that every point of Versatility rating is more valuable than the last (for damage reduction).
+Finally, let's confirm a theory about Versatility. As I mentioned earlier, every point of Versatility rating provides the same amount of damage reduction regardless of how much Versatility you already have. We also know that every percent of damage reduction provides more effective health than the last. Therefore, Versatility should have the same effect.
 
 The formula for converting Versatility rating to percent damage reduction is {{< tex "damageReduction = \frac{versRating}{ratingPerPercent * 2 * 100}" >}}, where ratingPerPercent is 85 at level 120.
 
@@ -142,15 +144,15 @@ effectiveHealth &= \frac{1}{1 - damageReduction} \\[2ex]
 
 ![Effective Health vs Versatility Rating](/guardian/images/ehp-versatility-rating.png)
 
+We can see that Versatility has increasing marginal gains with respect to effective health. This is what we mean when we say "Versatility gets better the more you have of it."
+
 ## Conclusion
 
-idk what to put here lol
+What are we to make of all this? Well, let's review what we know.
 
---- 
+1. Stats like Dodge/Parry, Block, and Armor, have diminishing returns penalties applied to their conversion from rating to damage reduction.
+2. Damage reduction increases in value the more you have of it. This is because when you have more damage reduction, adding an additional 1% of reduction is reducing a larger amount of the remaining damage. 
+3. Expressing damage reduction gains in terms of effective health demonstrates that the stats that have diminishing returns applied to them cancel out the increasing returns of damage reduction, resulting in linear gains.
+4. Versatility is exceptional in that it is not subject to diminishing returns, and as such its damage reduction component will continue to increase in value as you gain more of it.
 
-- how diminishing returns interacts with damage reduction
- - percent damage reduction has inverse scaling (better the more you have of it)
- - some stats when converted to %dr have diminishing returns applied to prevent them
-   from being stronger per point 
- - these two effects cancel out and we are left with linear scaling (represented as ehp), but still subject to diminishing marginal utility
- - notably, versatility does not have diminishing returns applied, so it does get stronger the more you have of it
+Hopefully this has helped clarify some of the less intuitive parts of diminishing returns. 
