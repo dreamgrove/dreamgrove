@@ -10,6 +10,8 @@ series_title: "Beta except Live instead"
 
 {{< youtube I-EQR7gO_64 >}}
 
-In this (emergency) Cat Chat Xanzar and Guiltyas discuss the 5 minute old feral hotfixes and their notes for the future. 
+In this (emergency) Cat Chat Xanzara and Guiltyas discuss the 5 minute old feral hotfixes and their notes for the future. 
 
-To stress, we should be gratefull we got these changes. It's exceedingly rare that blizzard make Mechanical changes in hotfixes so this is a good sign that they are listening and paying attention. Number tuning will come with Heroic Week.
+Quick summary: These are not primarily number changes, they don't intended to buff/nerf us. Its more about gameplay feel. These type of changes would typically occur on PTR or during Betas - it is very rare that Blizzard do these kinds of changes mid-patch via hotfixes. We should probably be grateful that Blizzard is at all willing to make these types of adjustments right now and we look forward to near guranteed "mini-rework" in a future patch.
+
+A tuning pass is still expected after the heroic week like usual.
