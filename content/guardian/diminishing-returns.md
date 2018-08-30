@@ -9,7 +9,7 @@ patch: 8.0.1
 
 I've seen a lot of questions surface recently about diminishing returns --- what it is, how it is (or isn't) related to damage reduction, and what stats are and aren't affected. Let's break it down.
 
-Be warned: we're doing a deep dive into the theory of diminishing returns and damage reduction, there will be math.
+Be warned: we're doing a deep dive into the theory of diminishing returns and damage reduction. Here be ~~dragons~~ mathematics.
 
 ## What is diminishing returns?
 
@@ -19,20 +19,21 @@ When talking about diminishing returns in World of Warcraft, we are typically re
 
 ### Diminishing Returns as Marginal Utility
 
-The first is the property of **diminishing marginal utility**, which is the idea that every point of a stat added is less valuable than the previous. For example: adding 72 Crit rating (the equivalent of 1% Crit) when you have 0 rating is a larger marginal gain (going from 0% Crit to 1% Crit) than adding 72 Crit rating when you have 7056 rating (going from 98% Crit to 99% Crit). 
+The first is the property of **diminishing marginal utility**, which is the idea that every point of a stat added to a total is less valuable than the previous. For example: adding 1 rating when you have 100 rating to begin with is a larger marginal gain than adding 1 rating when you have 200 rating. 
 
 {{< texblock >}}
 \begin{aligned}
-\frac{1.01}{1.00} &> \frac{1.99}{1.98} \\ \\
+\frac{100 + 1}{100} &> \frac{200 + 1}{200} \\[3ex]
+\frac{101}{100} &> \frac{201}{200} \\[3ex]
 1.01 &> 1.005
 \end{aligned}
 {{< /texblock >}}
 
-Many people understand this intuitively as "stat X gets worse the more you have of it". When we talk about stats having diminishing returns in this manner, we are typically referring to diminishing marginal utility. Diminished marginal utility is inherent in 
+Many people understand this intuitively as "stat X gets worse the more you have of it". When we talk about stats having diminishing returns in this manner, we are typically referring to diminishing marginal utility. This is inherent in the way that WoW computes stat ratings, and all stats are affected equally by this phenomenon.
 
-### Diminishing Returns as Penalties
+### Diminishing Returns as Penalty
 
-A second use of the term diminishing returns refers to ex post facto conversions applied to some mechanics to reduce their effectiveness from what is advertised on the tooltip. Things such as CC durations, taunt effectiveness, and dodge/parry rating to percent conversions are all examples of game mechanics which incur a diminishing returns penalty. This is the classic definition of "diminishing returns" that players use most often in WoW.
+A second use of the term diminishing returns refers to ex post facto conversions applied to some values to reduce their effectiveness from what is advertised on the tooltip. Things such as CC durations, taunt effectiveness, and dodge/parry rating to percent conversions are all examples of in-game values which incur a diminishing returns penalty. This is the classic definition of "diminishing returns" that players use most often in WoW, and will be the primary focus of this article.
 
 Particularly relevant to tanks is the dodge/parry conversion. For simplicity's sake I will use terms relevant to Guardian, but know that anywhere that "Dodge" is mentioned, it can be replaced with "Parry" (and "Agility" with "Strength") as the formula is the same for both.
 
@@ -104,11 +105,48 @@ EHP &= \frac{health}{1 - 0.99} \\[2ex]
 
 As you can see, at higher levels of base damage reduction, adding additional damage reduction has a significantly higher impact than adding the same amount at a lower level of base damage reduction.
 
-So, why does this matter?
+So, why does this matter? 
 
-Recall 
+Recall that the Armor to damage reduction formula is {{< tex "damageReduction = \frac{armor}{armor + K}" >}}, which inherently suffers diminishing returns when expressed in terms of damage reduction. Let's try and express this in terms of effective health by substituting the Armor formula into the EHP formula.
 
----
+{{< texblock >}}
+\begin{aligned}
+effectiveHealth &= \frac{1}{1 - damageReduction} \\[2ex]
+&= \frac{1}{1 - \big(\frac{armor}{armor + K}\big)} \\[2ex]
+&= \frac{1}{\big(\frac{armor + K}{armor + K}\big) - \big(\frac{armor}{armor + K}\big)} \\[2ex]
+&= \frac{1}{\big(\frac{K}{armor + K}\big)} \\[3ex]
+&= \frac{armor + K}{K}
+\end{aligned}
+{{< /texblock >}}
+
+With a bit of arithmetic, we arrive at a slightly unintuitive (and maybe surprising) result. Since K is constant, effective health has a *linear* relationship with Armor. That is, **every point of Armor increases effective health by the same amount, regardless of how much Armor you already have**.
+
+![Effective Health vs Armor Rating](/guardian/images/ehp-armor.png)
+
+The same is true for Dodge rating, the proof of which I'll leave as an exercise to the reader.
+
+Finally, let's confirm something I claimed earlier with Versatility --- namely, that every point of Versatility rating is more valuable than the last (for damage reduction).
+
+The formula for converting Versatility rating to percent damage reduction is {{< tex "damageReduction = \frac{versRating}{ratingPerPercent * 2 * 100}" >}}, where ratingPerPercent is 85 at level 120.
+
+{{< texblock >}}
+\text{let P} = ratingPerPercent * 2 * 100 \\[3ex]
+\begin{aligned}
+effectiveHealth &= \frac{1}{1 - damageReduction} \\[2ex]
+&= \frac{1}{1 - \big(\frac{versRating }{P}\big)} \\[2ex]
+&= \frac{1}{\big(\frac{P}{P}\big) - \big(\frac{versRating}{P}\big)} \\[2ex]
+&= \frac{1}{\big(\frac{P - versRating}{P}\big)} \\[2ex]
+&= \frac{P}{P - versRating} \\[2ex]
+\end{aligned}
+{{< /texblock >}}
+
+![Effective Health vs Versatility Rating](/guardian/images/ehp-versatility-rating.png)
+
+## Conclusion
+
+idk what to put here lol
+
+--- 
 
 - how diminishing returns interacts with damage reduction
  - percent damage reduction has inverse scaling (better the more you have of it)
