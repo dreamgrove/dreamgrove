@@ -35,7 +35,7 @@ title: Balance BFA FAQ
 
 
 ## Seabreeze is it good? 
-- Decent for dungeons, not so hot for raid as its a rppm weapon.
+- Not so hot as its a rppm weapon.
 
 
 ## Squalls? Squalls? Squalls?
