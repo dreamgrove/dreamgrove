@@ -54,6 +54,7 @@ title: Balance BFA FAQ
 - Very good single target trait, try to get 3x of this. On opener build to 40 astral power, no more no less, as 40 astral power is the perfect number.
 
 Then start rotation:
+
 1. Use CDs
 2. Maintain DoTs
 3. Cast LS to avoid capping
