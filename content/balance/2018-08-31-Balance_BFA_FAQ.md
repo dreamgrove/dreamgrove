@@ -19,7 +19,7 @@ title: Balance BFA FAQ
 
 
 ## What talents?
-- Check out dg.gg or wowhead or icyveins. All 3 guides are reputable and great.
+- Check out dreamgrove.gg or wowhead or icyveins. All 3 guides are reputable and great.
 
 
 ## Enchants?
