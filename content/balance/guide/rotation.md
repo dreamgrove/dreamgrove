@@ -24,7 +24,7 @@ weight: 4
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}}, {{< spell 93402 "Sunfire" "beta" >}}, and Stellar Flare if talented. Make sure you only refresh DoTs when they’re within pandemic range (30% of the original DoT, this is 6.6 seconds for Moonfire, 5.4 seconds for Sunfire, and 7.2 seconds for Stellar Flare.)
 
-2. Avoid capping Astral Power by casting {{< spell 78674 "Starsurge" "beta" >}}.
+2. Avoid capping Astral Power and generate Empowerments by casting {{< spell 78674 "Starsurge" "beta" >}}.
 
 3. Spend Solar and Lunar {{< spell 279708 "Empowerments" "beta" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Lunar Empowerment is worth more and you should waste a Solar Empowerment.
 
@@ -42,7 +42,7 @@ weight: 4
 
 Rotation With 2-3 {{< spell 273389 "Power of the Moon" "beta" >}} Traits
 
-If you have at least 2 Power of the Moon traits it is important to understand the rotation changes on 2 targets, instead filling with Moonfire. With 3 traits equipped, Moonfire spam should be used on 2-4 targets, ignoring Empowerments entirely on 2 targets and only casting Lunar Empowerments on 3+ targets.
+If you have at least 2 Power of the Moon traits it is important to understand the rotation changes on 2 targets, instead filling with Moonfire. With 3 traits equipped, Moonfire spam should be used on 2-4 targets, ignoring Empowerments entirely on 2 targets and only casting Lunar Empowerments on 3+ targets. If there is only 1 target, or there is 5 or more targets, then you should follow the normal rotation.
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
@@ -53,3 +53,19 @@ If you have at least 2 Power of the Moon traits it is important to understand th
 4. Spend Lunar Empowerments on 3+ targets.
 
 5. Fill with {{< spell 164812 "Moonfire" "beta" >}}.
+
+### Streaking Stars Rotation During Cooldowns
+
+Streaking Stars changes your playstyle during {{< spell 194223 "Celestial Alignment" "beta" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}. Basically you should never repeat the same ability twice in a row, and should {{< spell 190984 "Solar Wrath" "beta" >}} after every ability that isn't Solar Wrath, regardless of if it is empowered. It should be noted that you cast all your talented cooldowns after Celestial Alignment/Incarnation: Chosen of Elune, including {{< spell 202425 "Warrior of Elune" "beta" >}}, in which case you should simply spend the {{< spell 194153 "Lunar Strikes" "beta" >}} as fast as possible without repeating the same ability.
+
+1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
+
+2. Don't cap on Astral Power by casting {{< spell 78674 "Starsurge" "beta" >}} or {{< spell 191034 "Starfall" "beta" >}}.
+
+3. Don't cap {{< spell 279708 "Empowerments" "beta" >}}.
+
+4. Cast {{< spell 190984 "Solar Wrath" "beta" >}} if the last spell casted wasn't Solar Wrath.
+
+5. Spend any Empowerments.
+
+6. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on, you should simply fill with Solar Wrath > Sunfire > Solar Wrath.
