@@ -13,6 +13,11 @@ title: Balance BFA FAQ
 ## Starlord Optimization?
 - Don’t worry about it too much, just don't spend astral power with 4 secs left.
 
+## Optimal Opener: 
+- Starting at -2s before pull -> wrath, wrath, dot, dot, wrath to ~40 astral power, CA/Incarn, FoN/FoE/WoE, regular rotation. 
+
+*Based on sims ran, starting at 40 astral power is optimal*
+
 
 ## What stats do I need? 
 - Simming yourself using raidbots.com is easy and painless and is far more accurate to get stat weights for yourself. Gearing purely based on stats is an archaic way of thinking. 
