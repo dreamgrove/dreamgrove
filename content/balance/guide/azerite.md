@@ -31,7 +31,7 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 ### Stacking Traits
 
-Stacking traits tends to be the way to go as Balance Druid as we don’t lose much, if any damage from stacking multiple of the same effect. In fact, stacking the same Azerite traits can exponentially increase your damage per trait and even change the basic rotation of Moonkin. Percent chances such as the 5% empowerment chance on {{< spell 273389 "Power of the Moon" "beta" >}} are not affected by having multiple traits.
+Stacking traits tends to be the way to go as Balance Druid as we don’t lose much, if any damage from stacking multiple of the same effect. In fact, stacking the same Azerite traits can exponentially increase your damage per trait and even change the basic rotation of Moonkin. Percent chances such as the 5% empowerment chance on {{< spell 273389 "Power of the Moon" "beta" >}} do not stack with multiple traits, but the damage of a trait or the stat gain of a trait will.
 
 
 ### Rotation/Talent Changing Traits
