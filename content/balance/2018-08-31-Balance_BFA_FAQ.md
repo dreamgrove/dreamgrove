@@ -59,7 +59,7 @@ Then start rotation:
 2. Maintain DoTs
 3. Cast LS to avoid capping
 4. Cast SW if last spell cast was not SW and you will not cap AP
-5+. Normal priority beyond this point
+5. Normal priority beyond this point
 
 All offensive spells proc this trait!
 
