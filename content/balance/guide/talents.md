@@ -34,7 +34,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 197491 "Guardian Affinity" "beta" >}}: As said before, Guardian Affinity talent is the go-to for most situations, granting generous survivability through the 6% damage reduction and decent healing through Frenzied Regeneration.
 
-{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world or dungeons to keep your allies health topped off. With the nerfs to {{< spell 5487 "Bear Form" "beta" >}}, Restoration Affinity could see some use in a raiding environment as Swiftmend can instantly heal someone for 50% of their health, very useful for high damage fights when your healers can't keep up.  
+{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world or dungeons to keep your allies health topped off. With the nerfs to {{< spell 5487 "Bear Form" "beta" >}}, Restoration Affinity could see some use in a raiding environment as Swiftmend can instantly heal someone for 50% of their health, which is very useful for high damage fights when your healers can't keep up.  
 
 ### Tier 60:
 {{< talent-row spec="balance" tier="60" src="beta" >}}
@@ -48,11 +48,11 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 ### Tier 75:
 {{< talent-row spec="balance" tier="75" src="beta" >}}
 
-{{< spell 114107 "Soul of the Forest" "beta" >}} (SotF): Reduces the cost of {{< spell 191034 "Starfall" "beta" >}} by 10 Astral Power and grants {{< spell 279708 "Empowerments" "beta" >}} a 30% multiplicative scaling. The best in the row when it comes to sustained multi-target (4+ targets), making your Empowerments hit harder and saving you Astral Power to throw more Starfalls out.
+{{< spell 114107 "Soul of the Forest" "beta" >}} (SotF): Reduces the cost of {{< spell 191034 "Starfall" "beta" >}} by 10 Astral Power and grants {{< spell 279708 "Empowerments" "beta" >}} a 30% multiplicative scaling. Relies quite heavily on Azerite traits to stand a chance against competition, requiring {{< spell 278507 "Lunar Shrapnel" "beta" >}} traits to ever be worth using, and even in that case only barely in pure sustained multi-target.
 
 {{< spell 202345 "Starlord" "beta" >}} (SL): Causes your spenders to award a stack of 3% haste, stacking up to 3 times and not refreshing the duration with a new stack. Offering the best 1-3 target damage and great multi-target, this talent can be utilized to its fullest by not spending any Astral Power in the last 5 seconds of the buff. Starlord isn’t heavily impacted by kill time like incarnation is, but suffers more in heavy movement.
 
-{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} (Incarn): This talent replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our 3 minute cooldown enhancing our damage cooldown with longer duration and more % damage gain. Incarnation can be very potent in situations where large burst is required. Otherwise it falls behind the other options in raw output and is massively impacted by kill time. If you are mostly spamming {{< spell 93402 "Sunfire" "beta" >}} or {{< spell 164812 "Moonfire" "beta" >}} (due to Azerite traits), Incarnation gains a lot of value, becoming the best talent in the row (explained later in the guide).
+{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}} (Incarn): This talent replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our 3 minute cooldown, enhancing our damage cooldown with longer duration and more % damage gain. Incarnation can be very potent in situations where large burst is required, the fight length is short, or the fight has heavy downtime, but still allows you to get your cooldowns off without interruption. Otherwise it falls behind Starlord by a small amount in raw output and is massively impacted by kill time. If you are mostly spamming {{< spell 164812 "Moonfire" "beta" >}} (due to Azerite traits), Incarnation gains a lot of value, becoming the best talent in the row (explained later in the guide).
 
 ### Tier 90: 
 {{< talent-row spec="balance" tier="90" src="beta" >}}
@@ -79,4 +79,4 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 ### General AoE Build:
 
-{{< talents spec="balance" src="beta" recommend="232,223,132,233,322,231,231" >}}
+{{< talents spec="balance" src="beta" recommend="232,223,132,233,233,231,231" >}}
