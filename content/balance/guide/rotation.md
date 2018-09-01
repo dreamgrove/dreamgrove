@@ -24,7 +24,7 @@ weight: 4
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}}, {{< spell 93402 "Sunfire" "beta" >}}, and Stellar Flare if talented. Make sure you only refresh DoTs when they’re within pandemic range (30% of the original DoT, this is 6.6 seconds for Moonfire, 5.4 seconds for Sunfire, and 7.2 seconds for Stellar Flare.)
 
-2. Avoid capping Astral Power by casting {{< spell 78674 "Starsurge" "beta" >}}.
+2. Avoid capping Astral Power and generate Empowerments by casting {{< spell 78674 "Starsurge" "beta" >}}.
 
 3. Spend Solar and Lunar {{< spell 279708 "Empowerments" "beta" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Lunar Empowerment is worth more and you should waste a Solar Empowerment.
 
