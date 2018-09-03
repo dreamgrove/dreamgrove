@@ -1,4 +1,11 @@
-
+---
+title: "Taloc"
+date: 2018-09-03
+authors: ['Nick']
+published: true
+showOnFrontpage: false
+weight: 1
+---
 
 
 ## Heroic
