@@ -23,7 +23,7 @@ Sustained Multi-Target - Outside of cooldowns, Moonkin brings good sustained dam
 
 Weak Cooldowns - {{< spell 194223 "Celestial Alignment" "beta" >}} is one of the weakest cooldowns in the entire game in comparison to other classes. Offering very little for a 3 minute cooldown, you would see very little difference in your overall damage if you didn’t use it at all.
 
-Long AoE Ramp Time - Moonkin requires a long amount of time to get its damage going compared to other classes. In multi-target situations you must DoT every target and in single target situations, you must build up enough Astral Power to start firing out {{< spell 78674 "Starsurges" "beta" >}} and {{< spell 279708 "Empowerments" "beta" >}}.
+Long AoE Ramp Time - Moonkin requires a long amount of time to get its damage going compared to other classes. In multi-target situations you must DoT every target and then generate enough Astral Power to start your damage in a meaningful way.
 
 Mobility While Casting - Being a caster, it is imperative you are prepared for movement and deal with mechanics while also dealing damage, but Balance has huge problems achieving that. With our slow Astral Power generation it can be difficult to have enough resources to be able to Starsurge out of a mechanic.
 
