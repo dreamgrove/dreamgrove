@@ -13,7 +13,7 @@ This section of the guide will explain the basics of Mythic+ as a Balance Druid.
 
 The generic talents you would take in Mythic+ are: 
 
-{{< talents spec="balance" src="beta" recommend="003,003,030,003,003,030,030" >}}
+{{< talents spec="balance" src="beta" recommend="003,003,003,003,003,030,030" >}}
 
 Notable Alternative Talents and When to Use Them
 
@@ -25,7 +25,7 @@ Notable Alternative Talents and When to Use Them
 
 #### Tier 45:
 
-- {{< spell 197492 "Restoration Affinity" "beta" >}} is potentially very helpful in certain dungeons as sometimes it can be difficult for your healer to keep the group alive. Even though it will cost you some damage, a quick {{< spell 18562 "Swiftmend" "beta" >}} can easily save someone's life, and on a short 25 second cooldown. Likewise, a group wide Wild Growth can give the healer a bit more time to deal with incoming damage.
+- {{< spell 197491 "Guardian Affinity" "beta" >}} could prove useful if it's required to negate a one shot, otherwise {{< spell 197492 "Restoration Affinity" "beta" >}} is generally better.
 
 #### Tier 60:
 
@@ -43,7 +43,7 @@ As a Balance Druid it is vital you capitalize on your very useful utility. {{< s
 
 In Battle for Azeroth, the gear you have equipped once the key begins is the gear you will have throughout the entire dungeon, so it is crucial you prepare accordingly and choose the best Azerite pieces for the job. The Azerite traits that you choose should be determined based on your group composition, the dungeon itself, and affixes. You should try to cover the weaknesses of you group as much as possible.
 
-- {{< spell 278507 "Lunar Shrapnel" "beta" >}} - This will be the general go-to Azerite in pugs and high density dungeons, being easy to use and effective, requiring little communication to pull off. Lunar Shrapnel will leave your single target something to be desired, but it’s worth it for the massive payoff.
+- {{< spell 278507 "Lunar Shrapnel" "beta" >}} - The safe Azerite trait in pugs and high density dungeons, being easy to use and effective, requiring little communication to pull off. Lunar Shrapnel will leave your single target something to be desired, but it’s worth it for the massive payoff.
 
 - {{< spell 273389 "Power of the Moon" "beta" >}} - A more niche option, offering quick constant burst for affixes like Explosive. Power of the Moon could possibly be powerful in dungeons where there is a medium amount of trash and/or even bosses that include 2 target cleave.
 
