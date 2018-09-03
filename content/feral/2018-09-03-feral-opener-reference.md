@@ -24,6 +24,7 @@ Cast {{<spell 106951 "Berserk">}} (but not if you have Incarnation)
 
 # Start of combat
 *As combat starts:*
+
 1. Cast {{<spell 5217 "Tiger's Fury">}}, unless you have both {{<spell 202031 "Sabertooth">}} & {{<spell 155672 "Bloodtalons">}} but not {{<spell 155580 "Lunar Inspiration">}}.
 2. Cast {{<spell 1822 "Rake">}}, exiting {{<spell 5215 "Prowl">}} and consuming one stack of {{<spell 155672 "Bloodtalons">}}.
 3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
@@ -37,6 +38,7 @@ Cast {{<spell 106951 "Berserk">}} (but not if you have Incarnation)
 11. Cast {{<spell 8936 "Regrowth">}}, breaking form and hardcasting, if you have {{<spell 155672 "Bloodtalons">}} and {{<spell 202031 "Sabertooth">}} talented but no active stack of BT.
 12. Cast {{<spell 5217 "Tiger's Fury">}} to re-enter cat form if you hardcasted regrowth in the previous stack.
 13. Cast {{<spell 1079 "Rip">}} to finish the opener sequence when you have 5 combo points.
+
 *Continue with normal rotation from this point.*
 
 # Notes about the opener
