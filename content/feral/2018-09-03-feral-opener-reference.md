@@ -1,7 +1,7 @@
 ---
 title: "Feral Opener Reference"
 data: 2018-09-03
-authors: Xanzara
+authors: ['Xanzara']
 published: true
 ---
 
