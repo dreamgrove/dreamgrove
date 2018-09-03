@@ -10,7 +10,7 @@ weight: 9
 ### Baseline Abilities
 
 - {{< spell 164812 "Moonfire" "beta" >}} = MF
-- {{< spell 93402 "Sunfire" "beta" >}} = SF
+- {{< spell 93402 "Sunfire" "beta" >}} = SnF
 - {{< spell 194153 "Lunar Strike" "beta" >}} = LS
 - {{< spell 190984 "Solar Wrath" "beta" >}} = SW
 - {{< spell 78674 "Starsurge" "beta" >}} = SS
@@ -42,7 +42,7 @@ weight: 9
 - {{< spell 274398 "Sunblaze" "beta" >}} = Sb
 - {{< spell 276153 "Dawning Sun" "beta" >}} = DS
 - {{< spell 279070 "High Noon" "beta" >}} = HN
-- {{< spell 278507 "Lunar Shrapnel" "beta" >}} = LS
+- {{< spell 278507 "Lunar Shrapnel" "beta" >}} = LuSh
 
 ### General
 
