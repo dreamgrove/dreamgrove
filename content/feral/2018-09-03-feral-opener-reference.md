@@ -3,8 +3,6 @@ title: "Feral Opener Reference"
 data: 2018-09-03
 authors: Xanzara
 published: true
-showOnFrontpage: false
-weight: 4
 ---
 
 ### General Feral Opener Sequence
