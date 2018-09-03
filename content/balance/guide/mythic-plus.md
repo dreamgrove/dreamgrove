@@ -33,7 +33,7 @@ Notable Alternative Talents and When to Use Them
 
 #### Tier 100: 
 
-- {{< spell 202342 "Shooting Stars" "beta" >}} can be taken over {{< spell 202770 "Fury of Elune" "beta" >}} in dungeons where there are many spread out adds or. Also, if the dungeon is low level and trash dies before you get a chance to ramp, this could be useful just for higher ST damage on bosses.
+- {{< spell 202342 "Shooting Stars" "beta" >}} can be taken over {{< spell 202770 "Fury of Elune" "beta" >}} in dungeons where there are many spread out adds. Also, if the dungeon is low level and trash dies before you get a chance to ramp, this could be useful just for higher single target damage on bosses.
 
 ### Utility
 
@@ -47,12 +47,12 @@ In Battle for Azeroth, the gear you have equipped once the key begins is the gea
 
 - {{< spell 273389 "Power of the Moon" "beta" >}} - A more niche option, offering quick constant burst for affixes like Explosive. Power of the Moon could possibly be powerful in dungeons where there is a medium amount of trash and/or even bosses that include 2 target cleave.
 
-- {{< spell 279646 "Lively Spirit" "beta" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting a decent multi-target and single target trait unlike the rest of our considerable mythic+ traits. It is not recommended to use this trait in pugs.
+- {{< spell 279646 "Lively Spirit" "beta" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting both decent multi-target and single target damage overall unlike most of our considerable Mythic+ traits. It is not recommended to use this trait in pugs.
 
-- {{< spell 272871 "Streaking Stars" "beta" >}} - While benefiting you very little on multi-target, Streaking Stars will allow for nearly unmatched burst, great for the generally short boss fights of mythic+ dungeons. It is recommended to take this trait on high level tyrannical weeks or in low level keys where trash isn't a major problem and you want to just obliterate bosses.
+- {{< spell 272871 "Streaking Stars" "beta" >}} - While benefiting you very little on multi-target, Streaking Stars will allow for nearly unmatched single target burst, great for the generally short boss fights of Mythic+ dungeons. It is recommended to take this trait on high level Tyrannical weeks or in low level keys where trash isn't a major problem and you want to just obliterate bosses.
 
 - Stat Increasing Traits - Generic Stat increasing traits such as {{< spell 280429 "Swirling Sands" "beta" >}} or {{< spell 273823 "Blightborne Infusion" "beta" >}} can be a decent choice especially if you lack the prior listed traits. These traits much like Lively Spirit act as a mix of single target and multi-target, but don't require communication.
 
 ### Trinkets
 
-As it stands there is no trinket that is notably special for mythic+. That being said, it is recommended you take trinkets that are both strong on multi-target and single target if you have the choice. Simming your character will generally give the best results in figuring out your trinket choice. 
+As it stands there is no trinket that is notably special for Mythic+. That being said, it is recommended you take trinkets that are both strong on multi-target and single target if you have the choice. Simming your character will generally give the best results in figuring out your trinket choice. 
