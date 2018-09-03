@@ -13,13 +13,17 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 
 # Precombat
 During early countdown:
-* If you have bloodtalons: Precast {{<spell 8936 "Regrowth">}} to gain 2 stacks of {{<spell 155672 "Bloodtalons">}}.
-* Enter {{<spell 5215 "Prowl">}}.
+
+If you have bloodtalons: Precast {{<spell 8936 "Regrowth">}} to gain 2 stacks of {{<spell 155672 "Bloodtalons">}}.
+ 
+Enter {{<spell 5215 "Prowl">}}
+ 
 1 seconds before combat start:
-* Cast {{<spell 106951 "Berserk">}} (but not if you have Incarnation)
+
+Cast {{<spell 106951 "Berserk">}} (but not if you have Incarnation)
 
 # Start of combat
-*As combat starts:
+*As combat starts:*
 1. Cast {{<spell 5217 "Tiger's Fury">}}, unless you have both {{<spell 202031 "Sabertooth">}} & {{<spell 155672 "Bloodtalons">}} but not {{<spell 155580 "Lunar Inspiration">}}.
 2. Cast {{<spell 1822 "Rake">}}, exiting {{<spell 5215 "Prowl">}} and consuming one stack of {{<spell 155672 "Bloodtalons">}}.
 3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
@@ -33,7 +37,7 @@ During early countdown:
 11. Cast {{<spell 8936 "Regrowth">}}, breaking form and hardcasting, if you have {{<spell 155672 "Bloodtalons">}} and {{<spell 202031 "Sabertooth">}} talented but no active stack of BT.
 12. Cast {{<spell 5217 "Tiger's Fury">}} to re-enter cat form if you hardcasted regrowth in the previous stack.
 13. Cast {{<spell 1079 "Rip">}} to finish the opener sequence when you have 5 combo points.
-*Continue with normal rotation from this point.
+*Continue with normal rotation from this point.*
 
 # Notes about the opener
 This opener can look quite complex, and it is - mostly because of how many talents we have that affect it but once you understand the fundamentals of the feral rotation you will realise that there is really nothing unique about this opener. Every step here is just the application of the normal rotation from the opener stage. The most odd-looking part is the fact that you end up spamming moonfire in a lot of situations, this is because Moonfire doesn't consume BT stacks, allowing you keep your original pre-casted BT stack until your application of Rip without consuming it in the process. This is uncommon in normal gameplay, but can arise if you for example have to use your PS charge earlier than 4 combo points.
