@@ -26,4 +26,4 @@ Taloc is a mostly single target fight with medium movement and an intermission p
 
 ## Mythic
 
-{{< talents spec="balance" src="beta" recommend="123,213,232,223,033,023,302" >}}
+{{< talents spec="balance" src="beta" recommend="123,213,232,223,133,123,312" >}}
