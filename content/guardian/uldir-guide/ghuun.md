@@ -25,7 +25,7 @@ In Phase 2 and 3, the forced tank swap is {{< spell 270447 "Growing Corruption" 
 
 Mythic G'huun was not tested, so we are unsure how the mechanics are intended to work. However, as far as changes relevant to tanking go:
 
-- Gibbering Horrors can only permanently die during Reorigination Blast.
+- Gibbering Horrors can only permanently die during {{< spell 263482 "Reorigination Blast" >}}.
 
 ## Tips and Tricks
 
