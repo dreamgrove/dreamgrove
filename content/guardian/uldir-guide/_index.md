@@ -22,4 +22,4 @@ Faide
 
 See also
 ===
-[Uldir TankNotes (tanknotes.tk)](https://tanknotes.tk/)
+[TankNotes Uldir Guide](https://tanknotes.tk/)
