@@ -15,7 +15,7 @@ Note that these suggestions are tailored towards a progression-oriented mindset 
 
 Also note that **this guide is a work in progress**. Boss encounters and tuning often change during the first few weeks of progression, and new strategies will be uncovered as the weeks go by. I will update this guide with relevant new information as it appears, and I welcome feedback, corrections, and suggestions in Discord.
 
-These are not general encounter guides; if you want a more detailed look at each boss and its mechanics, check out [Wowhead's Uldir Strategy Guides](https://www.wowhead.com/news=286871/uldir-raid-strategy-guides-for-all-bosses-by-fatbosstv-now-live).
+These are not general encounter guides; if you want a more detailed look at each boss and its mechanics, check out [TankNotes](https://tanknotes.tk/).
 
 ### Where are the trinket recommendations?
 

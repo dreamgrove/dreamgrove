@@ -20,3 +20,6 @@ Authors
 ===
 Faide
 
+See also
+===
+[Uldir TankNotes (tanknotes.tk)](https://tanknotes.tk/)
