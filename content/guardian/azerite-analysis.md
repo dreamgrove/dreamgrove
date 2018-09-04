@@ -27,6 +27,12 @@ Defensively speaking, the generic traits that grant primary stat are not terribl
 
 Offensively, many generic traits are very strong for DPS and will typically be stronger than Guardian specific traits (the exceptions being {{< spell 275906 "Twisted Claws" >}}, {{< spell 273367 "Power of the Moon" >}}, and {{< spell 279527 "Wild Fleshrending" >}}, which are very competitive). You should always sim your trait options to determine which are the strongest for your character's DPS. To get a general idea of what DPS traits you should aim for, check out [Bloodmallet](https://bloodmallet.com/index.html#druid_guardian?data_view=azerite_traits&type=itemlevel&fight_style=patchwerk).
 
+## How many item levels is a trait worth?
+
+Defensively, if you have one of the strong outer ring traits ({{< spell 279552 "Layered Mane" >}} or {{< spell 275906 "Twisted Claws" >}}), they are worth more than any realistic item level upgrade.
+
+Offensively, you should sim your options to determine what is strongest for your character specifically.
+
 # Outer Ring 
 
 The following traits are available only to Druids. Most of these are Guardian specific, but some are shared between Feral and Balance as well. You are guaranteed at least one Guardian specific trait and one generic trait on every azerite piece, although it is possible to have more if one of the shared traits is present for another spec.
