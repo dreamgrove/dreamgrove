@@ -21,17 +21,12 @@ Power of the Moon
 
 <b>Notes</b>
 
-If primarily on boss side, talent Stellar Drift and use Starfall for mobility, if on add side talent Twin Moons. Mother is a heavy movement patchwerk fight with adds. You will either be fighting the mother itself or the adds, but never both at the same time. At the end of the encounter there is a vulnerability phase on the boss in which you will lust and burn making streaking and other burst talents ideal. Warrior of Elune is better than Force of Nature due to the extra GCD's that you are allotted for mobility.
-
-<b>Boss side</b>
-
-If you are assigned to the boss for the majority of the encounter, run pure single target
+Boss side: If you are assigned to the boss for the majority of the encounter, run pure single target
 with the exception of Warrior of Elune over Force of Nature to help with the movement required. Consider
 Stellar Drift and place one Starfall down for every set of winds (40~ second intervals). We value Incarnation 
 on this fight due to the extended 100% damage taken phase at the end of the encounter.
 
-<b>Add duty</b>
-If you are sent over quickly and are meant to be add focused, take Warrior of Elune and Twin Moons 
+Add duty: If you are sent over quickly and are meant to be add focused, take Warrior of Elune and Twin Moons 
 without a doubt to best assist your cleave damage.   
 
 </center>
