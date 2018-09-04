@@ -28,7 +28,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 
 1. Cast {{<spell 5217 "Tiger's Fury">}}, if you either have {{<spell 155580 "Lunar Inspiration">}}, **or** do NOT have {{<spell 155672 "Bloodtalons">}}.
 2. Cast {{<spell 1822 "Rake">}}.
-3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented
+3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to step 8.
 4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
 5. If do not have {{<spell 155672 "Bloodtalons">}} talented:
    * Apply {{<spell 106832 "Thrash">}}
@@ -51,23 +51,26 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 
 1. Cast {{<spell 5217 "Tiger's Fury">}}
 2. Cast {{<spell 1822 "Rake">}}
-3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
-4. Cast {{<spell 52610 "Savage Roar">}}, if talented.
-5. Cast {{<spell 274837 "Feral Frenzy">}}, if talented.
-6. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have {{<spell 155672 "Bloodtalons">}} talented:
+3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented, but {{<spell 52610 "Savage Roar">}} is not talented and skip to 8.
+4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
+5. Cast {{<spell 52610 "Savage Roar">}}, if talented.
+6. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to 8.
+7. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have {{<spell 155672 "Bloodtalons">}} talented:
    * Cast {{<spell 106832 "Thrash">}}
    * Cast {{<spell 5221 "Shred">}} until 5 combo points.
    * Cast {{<spell 8936 "Regrowth">}}, if you have {{<spell 155672 "Bloodtalons">}}
-   * Skip to 8
-7. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast, or don't have SR:
-   * Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points and skip to 8.
+   * Skip to 9
+8. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast, or don't have SR:
+   * Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points and skip to 9.
    * Cast {{<spell 106832 "Thrash">}}
    * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges.
    * Cast {{<spell 5221 "Shred">}} until 5 combo points.
-   * Skip to 8
-8. Cast {{<spell 1079 "Rip">}} to finish the opener sequence
+   * Skip to 9
+9. Cast {{<spell 1079 "Rip">}} to finish the opener sequence
 
 *Continue with normal rotation from this point.*
 
 # Notes about the opener
-This opener can look quite complex, and it is - mostly because of how many talents we have that affect it but once you understand the fundamentals of the feral rotation you will realise that there is really nothing unique about this opener. Every step here is just the application of the normal rotation from the opener stage. The most odd-looking part is the fact that you end up spamming moonfire in a lot of situations, this is because Moonfire doesn't consume BT stacks, allowing you keep your original pre-casted BT stack until your application of Rip without consuming it in the process. This is uncommon in normal gameplay, but can arise if you for example have to use your PS charge earlier than 4 combo points.
+This opener can look quite complex, and it is - mostly because of how many talents we have that affect it. But once you understand the fundamentals of the feral rotation you will quickly realise that there is really nothing unique about this opener. Almost every step here (with the exception of the hardcast regrowth) is just the application of the normal rotation.
+
+The most odd-looking part to most people is the fact that you end up spamming moonfire in a lot of situations, this is because Moonfire doesn't consume BT stacks, allowing you keep your original pre-casted BT stack until your application of Rip without consuming it in the process. This is uncommon in normal gameplay outside of the opener, but can arise if you for example have to use your PS charge earlier than 4 combo points.
