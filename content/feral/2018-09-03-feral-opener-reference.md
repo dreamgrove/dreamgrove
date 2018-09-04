@@ -27,22 +27,17 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 *As combat starts:*
 1. Cast {{<spell 5217 "Tiger's Fury">}}, if you either have {{<spell 155580 "Lunar Inspiration">}}, **or** do NOT have {{<spell 155672 "Bloodtalons">}}.
 2. Cast {{<spell 1822 "Rake">}}.
-  *(This will cause you to exit {{<spell 5215 "Prowl">}} and leave you with 1 stack of Bloodtalons (if you have it talented) and both Berserk & TF running, and a strong Rake applied to the target.)*
-3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented **AND** you don't have {{<spell 52610 "Savage Roar">}} talented.
-  *(Since BT and FF are exclusive, we don't have to worry about BT stacks.)*
-3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
-  *(This will leave you at anywhere between 1 and 4 combo points depending on talents and luck.)*
-4. Cast {{<spell 52610 "Savage Roar">}}, if talented.
-  *(This will leave us at 0 combo points, with a single {{<spell 155672 "Bloodtalons">}} charge and depending on luck you will either have a {{<spell 16974 "Predatory Swiftness">}} proc or not, this creates an important difference in the next few steps.)*
-5. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and you didn't in an earlier step.
-6. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have {{<spell 155672 "Bloodtalons">}} talented:
-   * Apply {{<spell 106832 "Thrash">}}, consuming your bloodtalons stack
+3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented
+4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
+5. If do not have {{<spell 155672 "Bloodtalons">}} talented:
+   * Apply {{<spell 106832 "Thrash">}}
    * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
-   * At 5 combo points if you have BT, cast {{<spell 8936 "Regrowth">}} consuming your Predatory Swiftness.
    * Skip to step 8.
-7. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have SR.
-   * Cast {{<spell 155625 "Moonfire">}} if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points, saving your last remaining BT stack and then skip to step 8.
-   * Without LI we have to hardcast for BT in that case cast {{<spell 106832 "Thrash">}}, consuming your BT stack.
+6. If you have {{<spell 155672 "Bloodtalons">}} and {{<spell 155580 "Lunar Inspiration">}} talented:
+   * Cast {{<spell 155625 "Moonfire">}} until 5 combo points, saving your last remaining BT stack
+   * Skip to step 8.
+7. If you have {{<spell 155672 "Bloodtalons">}} but not {{<spell 155580 "Lunar Inspiration">}} talented:
+   * Cast {{<spell 106832 "Thrash">}}, consuming your last BT stack.
    * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
    * Break form and hardcast {{<spell 8936 "Regrowth">}}
    * Re-enter form by casting {{<spell 5217 "Tiger's Fury">}}.
@@ -53,7 +48,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 
 *As combat starts:*
 
-1. Cast {{<spell 5217 "Tiger's Fury">}}:
+1. Cast {{<spell 5217 "Tiger's Fury">}}
 2. Cast {{<spell 1822 "Rake">}}
 3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
 4. Cast {{<spell 52610 "Savage Roar">}}, if talented.
