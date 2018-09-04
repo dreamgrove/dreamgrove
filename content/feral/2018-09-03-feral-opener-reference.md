@@ -9,36 +9,67 @@ published: true
 
 ## Note about openers
 An opener is not a big part of your dps. To most this might be immediately obvious, but a lot of people tend to vastly overrated the importance of a good opener. With that caveat out of the way, here is the current reference opener which we intend to keep up-to-date through the expansion. If you have any ideas about how to improve this opener, feel free to contact me. This opener is a intended to be generally useful, but obviously there might be niche situations where something else is better.
+
 **If you are a novice at feral, I'd strongly recommend starting with a guide aimed at novices as opener optimizations are completely useless effort before you are atleast an intermediate feral**
 
 # Precombat
-During early countdown:
+*During countdown:*
 
-If you have bloodtalons: Precast {{<spell 8936 "Regrowth">}} to gain 2 stacks of {{<spell 155672 "Bloodtalons">}}.
- 
-Enter {{<spell 5215 "Prowl">}}
- 
-1 seconds before combat start:
-
-Cast {{<spell 106951 "Berserk">}} (but not if you have Incarnation)
+1. If you have bloodtalons: Precast {{<spell 8936 "Regrowth">}} to gain 2 stacks of {{<spell 155672 "Bloodtalons">}}.
+2. Enter {{<spell 5215 "Prowl">}}
+3. Cast {{<spell 106951 "Berserk">}} (but not {{<spell 102543 "Incarnation">}}) 1 seconds before combat start
 
 # Start of combat
+**The opener sequence divides into two from here, one sabertooth-centric one and a more normal one. Because of Sabertooths Rip refresh mechanic, it is of utmost importance to apply a rip with the highest possible strength as early as possible - this may include hardcasting Regrowth, which is otherwise a loss.**
+
+**For any build containing Sabertooth:**
+
+*As combat starts:*
+1. Cast {{<spell 5217 "Tiger's Fury">}}, if you either have {{<spell 155580 "Lunar Inspiration">}}, **or** do NOT have {{<spell 155672 "Bloodtalons">}}.
+2. Cast {{<spell 1822 "Rake">}}.
+  (*This will cause you to exit {{<spell 5215 "Prowl">}} and leave you with 1 stack of Bloodtalons (if you have it talented) and both Berserk & TF running, and a strong Rake applied to the target.*)
+3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented **AND** you don't have {{<spell 52610 "Savage Roar">}} talented.
+  *(Since BT and FF are exclusive, we don't have to worry about BT stacks.)*
+3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
+  *(This will leave you at anywhere between 1 and 4 combo points depending on talents and luck.)*
+4. Cast {{<spell 52610 "Savage Roar">}}, if talented.
+  *(This will leave us at 0 combo points, with a single {{<spell 155672 "Bloodtalons">}} charge and depending on luck you will either have a {{<spell 16974 "Predatory Swiftness">}} proc or not, this creates an important difference in the next few steps.)*
+5. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and you didn't in an earlier step.
+6. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have {{<spell 155672 "Bloodtalons">}} talented:
+   * Apply {{<spell 106832 "Thrash">}}, consuming your bloodtalons stack
+   * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
+   * At 5 combo points if you have BT, cast {{<spell 8936 "Regrowth">}} consuming your Predatory Swiftness.
+   * Skip to step 8.
+7. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have SR.
+   * Cast {{<spell 155625 "Moonfire">}} if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points, saving your last remaining BT stack and then skip to step 8.
+   * Without LI we have to hardcast for BT in that case cast {{<spell 106832 "Thrash">}}, consuming your BT stack.
+   * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
+   * Break form and hardcast {{<spell 8936 "Regrowth>}}
+   * Re-enter form by casting {{<spell 5217 "Tiger's Fury">}}.
+   * Skip to step 8.
+8.  Cast Rip, if executed correctly it should be applied at 5 combo points with all your available damage mods.
+
+**For any build without Sabertooth:**
+
 *As combat starts:*
 
-1. Cast {{<spell 5217 "Tiger's Fury">}}, unless you have both {{<spell 202031 "Sabertooth">}} & {{<spell 155672 "Bloodtalons">}} but not {{<spell 155580 "Lunar Inspiration">}}.
-2. Cast {{<spell 1822 "Rake">}}, exiting {{<spell 5215 "Prowl">}} and consuming one stack of {{<spell 155672 "Bloodtalons">}}.
+1. Cast {{<spell 5217 "Tiger's Fury">}}:
+2. Cast {{<spell 1822 "Rake">}}
 3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
 4. Cast {{<spell 52610 "Savage Roar">}}, if talented.
 5. Cast {{<spell 274837 "Feral Frenzy">}}, if talented.
-6. Cast {{<spell 106832 "Thrash">}} (as long as you don't have 5 combo points), if you have a {{<spell 16974 "Predatory Swfitness">}} buff or {{<spell 155672 "Bloodtalons">}} is not talented
-7. Cast following abilities until 5 combo points
-   * Cast {{<spell 155625 "Moonfire">}} until five combo points, if you have {{<spell 155580 "Lunar Inspiration">}} and a stack of {{<spell 155672 "Bloodtalons">}} but no {{<spell 16974 "Predatory Swfiftness">}} buff.
+6. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have {{<spell 155672 "Bloodtalons">}} talented:
+   * Cast {{<spell 106832 "Thrash">}}
+   * Cast {{<spell 5221 "Shred">}} until 5 combo points.
+   * Cast {{<spell 8936 "Regrowth">}}, if you have {{<spell 155672 "Bloodtalons">}}
+   * Skip to 7
+6. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast, or don't have SR:
+   * Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points and skip to 7.
+   * Cast {{<spell 106832 "Thrash">}}
    * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges.
    * Cast {{<spell 5221 "Shred">}} until 5 combo points.
-8. Cast {{<spell 8936 "Regrowth">}} if you have {{<spell 155672 "Bloodtalons">}}, and a {{<spell 16974 "Predatory Swfitness">}} stack.
-9. Cast {{<spell 8936 "Regrowth">}}, breaking form and hardcasting, if you have {{<spell 155672 "Bloodtalons">}} and {{<spell 202031 "Sabertooth">}} talented but no active stack of BT.
-10. Cast {{<spell 5217 "Tiger's Fury">}} to re-enter cat form if you hardcasted regrowth in the previous stack.
-11. Cast {{<spell 1079 "Rip">}} to finish the opener sequence when you have 5 combo points.
+   * Skip to 7
+7. Cast {{<spell 1079 "Rip">}} to finish the opener sequence
 
 *Continue with normal rotation from this point.*
 
