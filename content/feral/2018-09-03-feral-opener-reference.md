@@ -31,13 +31,14 @@ Cast {{<spell 106951 "Berserk">}} (but not if you have Incarnation)
 4. Cast {{<spell 52610 "Savage Roar">}}, if talented.
 5. Cast {{<spell 274837 "Feral Frenzy">}}, if talented.
 6. Cast {{<spell 106832 "Thrash">}} (as long as you don't have 5 combo points), if you have a {{<spell 16974 "Predatory Swfitness">}} buff or {{<spell 155672 "Bloodtalons">}} is not talented
-7. Cast {{<spell 155625 "Moonfire">}} until five combo points, if you have {{<spell 155580 "Lunar Inspiration">}} and a stack of {{<spell 155672 "Bloodtalons">}} but no {{<spell 16974 "Predatory Swfitness">}} buff.
-8. Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges.
-9. Cast {{<spell 5221 "Shred">}} until 5 combo points.
-10. Cast {{<spell 8936 "Regrowth">}} if you have {{<spell 155672 "Bloodtalons">}}, and a {{<spell 16974 "Predatory Swfitness">}} stack.
-11. Cast {{<spell 8936 "Regrowth">}}, breaking form and hardcasting, if you have {{<spell 155672 "Bloodtalons">}} and {{<spell 202031 "Sabertooth">}} talented but no active stack of BT.
-12. Cast {{<spell 5217 "Tiger's Fury">}} to re-enter cat form if you hardcasted regrowth in the previous stack.
-13. Cast {{<spell 1079 "Rip">}} to finish the opener sequence when you have 5 combo points.
+7. Cast following abilities until 5 combo points
+   * Cast {{<spell 155625 "Moonfire">}} until five combo points, if you have {{<spell 155580 "Lunar Inspiration">}} and a stack of {{<spell 155672 "Bloodtalons">}} but no {{<spell 16974 "Predatory Swfiftness">}} buff.
+   * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges.
+   * Cast {{<spell 5221 "Shred">}} until 5 combo points.
+8. Cast {{<spell 8936 "Regrowth">}} if you have {{<spell 155672 "Bloodtalons">}}, and a {{<spell 16974 "Predatory Swfitness">}} stack.
+9. Cast {{<spell 8936 "Regrowth">}}, breaking form and hardcasting, if you have {{<spell 155672 "Bloodtalons">}} and {{<spell 202031 "Sabertooth">}} talented but no active stack of BT.
+10. Cast {{<spell 5217 "Tiger's Fury">}} to re-enter cat form if you hardcasted regrowth in the previous stack.
+11. Cast {{<spell 1079 "Rip">}} to finish the opener sequence when you have 5 combo points.
 
 *Continue with normal rotation from this point.*
 
