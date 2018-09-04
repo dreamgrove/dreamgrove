@@ -30,7 +30,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 2. Cast {{<spell 1822 "Rake">}}.
 3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to step 8.
 4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
-5. If do not have {{<spell 155672 "Bloodtalons">}} talented:
+5. If you do not have {{<spell 155672 "Bloodtalons">}} talented:
    * Apply {{<spell 106832 "Thrash">}}
    * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
    * Skip to step 8.
@@ -46,12 +46,11 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 8.  Cast {{<spell 1079 "Rip">}}, if executed correctly it should be applied at 5 combo points with all your available damage mods.
 
 **For any build without Sabertooth:**
-
 *As combat starts:*
 
 1. Cast {{<spell 5217 "Tiger's Fury">}}
 2. Cast {{<spell 1822 "Rake">}}
-3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented, but {{<spell 52610 "Savage Roar">}} is not talented and skip to 8.
+3. Cast {{<spell 274837 "Feral Frenzy">}}, if you have FF but not {{<spell 52610 "Savage Roar">}} talented and skip to 8.
 4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
 5. Cast {{<spell 52610 "Savage Roar">}}, if talented.
 6. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to 8.
