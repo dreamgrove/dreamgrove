@@ -19,10 +19,19 @@ These are not general encounter guides; if you want a more detailed look at each
 
 ### Where are the trinket recommendations?
 
-Trinkets in the first tier of Uldir are notoriously terrible for survivability. As such, there aren't really opportunities to leverage trinkets to help you deal with mechanics, the way there were in previous tiers like Antorus. Therefore, unless otherwise specified, I recommend that you run standard defensive-oriented trinkets in all situations. {{< item 159617 "Lustrous Golden Plumage" >}} and {{< item 159128 "Darkmoon Deck: Blockades" >}} are two very strong options.
+Trinkets in the first tier of Uldir are notoriously terrible for survivability. As such, there aren't really opportunities to leverage trinkets to help you deal with mechanics, the way there were in previous tiers like Antorus. Therefore, unless otherwise specified, I recommend that you run standard defensive-oriented trinkets in all situations. {{< item 159617 "Lustrous Golden Plumage" >}} and {{< item 159128 "Darkmoon Deck: Blockades" >}} are two very strong options. For more information, refer to the [Defensive Trinkets overview]({{< relref "/guardian/defensive-trinkets.md" >}}).
+
+### What azerite traits are best for raiding?
+
+For outer traits, you want one of each of the following:
+
+1. {{< spell 279552 "Layered Mane" >}}
+2. {{< spell 275906 "Twisted Claws" >}}
+3. {{< spell 280555 "Archive of the Titans" >}} (in order to take advantage of {{< spell 280573 "Reorigination Array" >}})
+
+For more information and for middle/inner ring trait recommendations, refer to the [Azerite Analysis]({{< relref "/guardian/azerite-analysis.md" >}}).
 
 ### Will Guardian be viable on every boss?
 
 Yes, Guardian will be more than fine on every boss. Aside from Monks, Guardians have some of the best damage smoothing capabilities of all tanks, thanks to our very reliable and high-uptime active mitigation spell {{< spell 192081 "Ironfur" >}} and strong defensive cooldowns. We also bring {{< spell 106898 "Stampeding Roar" >}}, arguably one of the strongest raid cooldowns in the game.
-
 
