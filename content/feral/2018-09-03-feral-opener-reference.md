@@ -27,7 +27,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 *As combat starts:*
 1. Cast {{<spell 5217 "Tiger's Fury">}}, if you either have {{<spell 155580 "Lunar Inspiration">}}, **or** do NOT have {{<spell 155672 "Bloodtalons">}}.
 2. Cast {{<spell 1822 "Rake">}}.
-  (*This will cause you to exit {{<spell 5215 "Prowl">}} and leave you with 1 stack of Bloodtalons (if you have it talented) and both Berserk & TF running, and a strong Rake applied to the target.*)
+  *(This will cause you to exit {{<spell 5215 "Prowl">}} and leave you with 1 stack of Bloodtalons (if you have it talented) and both Berserk & TF running, and a strong Rake applied to the target.)*
 3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented **AND** you don't have {{<spell 52610 "Savage Roar">}} talented.
   *(Since BT and FF are exclusive, we don't have to worry about BT stacks.)*
 3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
@@ -62,14 +62,14 @@ An opener is not a big part of your dps. To most this might be immediately obvio
    * Cast {{<spell 106832 "Thrash">}}
    * Cast {{<spell 5221 "Shred">}} until 5 combo points.
    * Cast {{<spell 8936 "Regrowth">}}, if you have {{<spell 155672 "Bloodtalons">}}
-   * Skip to 7
-6. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast, or don't have SR:
-   * Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points and skip to 7.
+   * Skip to 8
+7. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast, or don't have SR:
+   * Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points and skip to 8.
    * Cast {{<spell 106832 "Thrash">}}
    * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges.
    * Cast {{<spell 5221 "Shred">}} until 5 combo points.
-   * Skip to 7
-7. Cast {{<spell 1079 "Rip">}} to finish the opener sequence
+   * Skip to 8
+8. Cast {{<spell 1079 "Rip">}} to finish the opener sequence
 
 *Continue with normal rotation from this point.*
 
