@@ -11,7 +11,7 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Talents
 
-{{< talents spec="guardian" src="live" recommend="113,212,322,113,131,212,213" >}}
+{{< talents spec="guardian" src="live" recommend="123,212,322,113,131,223,213" >}}
 
 ## Playstyle
 
