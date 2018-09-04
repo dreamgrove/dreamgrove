@@ -44,7 +44,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
    * Cast {{<spell 155625 "Moonfire">}} if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points, saving your last remaining BT stack and then skip to step 8.
    * Without LI we have to hardcast for BT in that case cast {{<spell 106832 "Thrash">}}, consuming your BT stack.
    * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
-   * Break form and hardcast {{<spell 8936 "Regrowth>}}
+   * Break form and hardcast {{<spell 8936 "Regrowth">}}
    * Re-enter form by casting {{<spell 5217 "Tiger's Fury">}}.
    * Skip to step 8.
 8.  Cast Rip, if executed correctly it should be applied at 5 combo points with all your available damage mods.
