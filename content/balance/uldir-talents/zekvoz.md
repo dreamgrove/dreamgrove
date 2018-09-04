@@ -1,5 +1,5 @@
 ---
-title: "Zek'Voz"
+title: "Zek'Voz, Herald of N'zoth"
 date: 2018-09-04
 authors: ['Tettles','Nick','Bora','Goosy']
 published: true
