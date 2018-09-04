@@ -34,7 +34,7 @@ Guardians cannot reliably solo soak Enlarged Heart without external help, so I r
 
 Use {{< spell 132469 "Typhoon" >}} in Phase 2 to help manage the adds.
 
-Use {{< spell 1850 "Dash" >}}/{{< spell 252216 "Tiger Dash" >}} to dodge the Cudgel during {{< spell 271296 "Cudgel of Gore" >}}.
+Use {{< spell 1850 "Dash" >}}/{{< spell 252216 "Tiger Dash" >}} to dodge the Cudgel during {{< spell 271296 "Cudgel of Gore" >}}. If you are quick, you can avoid taking any damage from the toss.
 
 ### Mythic
 On Mythic, use {{< spell 106898 "Stampeding Roar" >}} during {{< spell 275189 "Hardened Arteries" >}} to help your raid with spreading out.
