@@ -14,7 +14,7 @@ weight: 1
 <b>Azerite</b>
   
 Streaking Stars / Laser Matrix / Thunderous Blast
-<br>
+
 
 <b>Notes</b>
 
