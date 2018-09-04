@@ -24,6 +24,8 @@ In phase 2, tank the Coalesced Bloods out of the raid stack so they don't drop n
 
 Repeat the Phase 1 positioning in Phase 3.
 
+**Catweavable**: Yes, but be ready to pick up and tank any Coalesced Bloods in Phase 3.
+
 ### Normal/Heroic
 On Normal/Heroic, there is no forced tank swap mechanic. 
 

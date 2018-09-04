@@ -35,3 +35,10 @@ For more information and for middle/inner ring trait recommendations, refer to t
 
 Yes, Guardian will be more than fine on every boss. Aside from Monks, Guardians have some of the best damage smoothing capabilities of all tanks, thanks to our very reliable and high-uptime active mitigation spell {{< spell 192081 "Ironfur" >}} and strong defensive cooldowns. We also bring {{< spell 106898 "Stampeding Roar" >}}, arguably one of the strongest raid cooldowns in the game.
 
+### Should I catweave?
+
+You may have noticed that I've noted on each boss page whether it is technically possible to catweave on the encounter. This takes into account the tank swap mechanic (or lack thereof), the damage profile, and the presence of any adds that need to be tanked, for each encounter to determine whether you can realistically perform a catweaving rotation while not tanking.
+
+As mentioned above, I always recommend playing it safe when you are progressing a boss and that includes not catweaving. Catweaving significantly increases your risk of death if done improperly or without consideration for a fight's mechanics and damage profile, and compromising the raid's success for a slight DPS gain is not a good idea. 
+
+That being said, if you are extremely comfortable with an encounter and you are deep into farm on a boss, catweaving can introduce a bit of variety and complexity into the rotation that you may find interesting, as well as boost your DPS and help get kills faster. 

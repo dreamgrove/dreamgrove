@@ -15,7 +15,7 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Playstyle
 
-Zek'voz deals approximately 70% Physical damage, 30% Magic damage.
+Zek'voz deals approximately 70% Physical damage, 30% Magic damage from {{< spell 265264 "Void Lash" >}}.
 
 The forced tank swap is the tank combo {{< spell 267312 "Might of the Void" >}}, which consists of the sequence {{< spell 265264 "Void Lash" >}} -> {{< spell 265248 "Shatter" >}} -> {{< spell 265264 "Void Lash" >}}.
 
@@ -28,6 +28,8 @@ Which strategy is right for you will depend on your tank composition and what yo
 Position the boss in the center of the room, between the raid and the spawn locations for the Silithid Warriors.
 
 In Phase 2, drag the boss onto the nearest Nerubian Voidweaver to maximize cleave.
+
+**Catweavable**: Yes
 
 ### Mythic
 

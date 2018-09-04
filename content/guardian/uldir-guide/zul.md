@@ -15,13 +15,15 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Playstyle
 
-Zul deals approximately 70% Physical damage, 30% Shadow damage.
+Zul deals approximately 70% Physical damage, 30% Shadow damage from unavoidable raid damage.
 
 In Phase 1, there is no forced tank swap. If you are tanking the Nazmani Crusher, face it away from the raid and pull it out of the group before it hits 100 energy to avoid buffing other enemies with {{< spell 273288 "Thrumming Pulse" >}}. If you are tanking the Bloodthirsty Crawgs, you can have defensives rolling to reduce the amount of leech they receive.
 
 In Phase 2 when Zul is active, he will apply {{< spell 274358 "Rupturing Blood" >}} to the active tank. When you swap (this should be after 4-ish stacks), take the debuff out to the edge of the room and drop the pool that spawns out there. If possible, try and overlap new pools with existing pools.
 
 Position Zul at the center of the room.
+
+**Catweavable**: No
 
 ### Mythic
 

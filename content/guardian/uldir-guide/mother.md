@@ -23,6 +23,8 @@ There is no forced tank swap on MOTHER; she will occasionally cast {{< spell 267
 
 Position MOTHER close to the force field leading to the next chamber, so the melee don't have to run too far to cross over. Face her away from the raid to prevent them from getting cleaved by {{< spell 267787 "Sanitizing Strike" >}}. 
 
+**Catweavable**: Yes
+
 ### Mythic
 
 When tanks cross through the defense grid they spawn a special tank add (The Resistant Bacterium) which  will cast {{< spell 279669 "Bacterial Outbreak" >}}. This add is top priority when it spawns.

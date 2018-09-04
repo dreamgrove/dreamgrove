@@ -21,6 +21,8 @@ There is no forced tank swap on this fight. This encounter does require two tank
 
 When the Corruption Corpuscles spawn, it may be optimal to drag the boss to one of them to maximize cleave. Otherwise, tank the boss in the center of the room to minimize travel time.
 
+**Catweavable**: No
+
 ### Mythic
 
 It is recommended that the boss be dragged on top of the Mutated Mass for maximum DPS.

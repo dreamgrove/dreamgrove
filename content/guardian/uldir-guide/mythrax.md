@@ -15,11 +15,13 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Playstyle
 
-The Mythrax encounter deals approximately 50% Physical damage and 50% Shadow damage.
+The Mythrax encounter deals approximately 50% Physical damage and 50% Shadow damage from {{< spell 273282 "Essence Shear" >}}.
 
 In Phase 1, the forced tank swap is {{< spell 273282 "Essence Shear" >}}, which gives you 15 stacks of {{< spell 272336 "Annihilation" >}} and prevents you from generating further {{< spell 272480 "Existence Fragments" >}} for 25 seconds. Swap when this is cast, then the off tank will gather fragments to clear their stacks. Tank Mythrax facing a wall to not cleave people with Essence Shear.
 
 In Phase 2, there is no tank swap. The N'raqi Destroyer adds will continue to cast {{< spell 273282 "Essence Shear" >}}, but since both tanks are receiving it they cannot swap. One Destroyer should be tanked in the raid group and the other 40 yards away to prevent {{< spell 276900 "Critical Mass" >}}.
+
+**Catweavable**: Yes, in Phase 1.
 
 ### Mythic
 
