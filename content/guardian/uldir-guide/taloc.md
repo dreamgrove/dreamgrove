@@ -22,6 +22,8 @@ In phase 1, position Taloc against a wall, and aim the cudgel at the group of pu
 
 In phase 2, tank the Coalesced Bloods out of the raid stack so they don't drop new pools on the group. If you are not tanking a Blood, help soak the Volatile Droplets.
 
+Repeat the Phase 1 positioning in Phase 3.
+
 ### Normal/Heroic
 On Normal/Heroic, there is no forced tank swap mechanic. 
 
