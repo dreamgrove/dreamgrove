@@ -18,7 +18,11 @@ Streaking Stars / Laser Matrix / Thunderous Blast
 
 <b>Notes</b>
 
-Taloc is a mostly single target fight with medium movement and an intermission phase where you must deal with a priority add and multiple spread adds. Warrior of Elune can be a good choice over Treants if you are having trouble with movement. Twin Moons can be a good choice if you decide to kill the exploding blobs in intermission.
+Taloc is primarily a single target fight with some minor add focus and medium to heavy movement. Use 
+Tiger Dash or Wild Charge to place your Plasmic Discharge in appropriate places. Treants/Warrior of Elune
+and Twin Moons/Stellar Flare are purely flavor picks on this fight. Trees offer more single target while Warrior of Elune 
+provides more burst during the intermission.
+
 </center>
 
 
