@@ -13,9 +13,7 @@ weight: 3
 <center>
 <b>Azerite</b>
   
-Streaking Stars / Laser Matrix / Thunderous Blast / Power of the Moon
-
-
+Streaking Stars / Laser Matrix / Thunderous Blast
 
 <b>Notes</b>
 
