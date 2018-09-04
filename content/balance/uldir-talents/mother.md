@@ -15,7 +15,9 @@ weight: 2
   
 Streaking Stars / Laser Matrix / Thunderous Blast
 
-If on Adds: Power of the Moon
+If on Adds
+
+Power of the Moon
 
 <b>Notes</b>
 
