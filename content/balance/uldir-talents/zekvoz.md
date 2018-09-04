@@ -15,9 +15,8 @@ weight: 4
   
 Streaking Stars / Laser Matrix / Thunderous Blast
 
-If you need add damage and are not getting a P3 buff
-
 Power of the Moon / Lunar Shrapnel
+(If you need add damage and are not getting a P3 buff)
 
 <b>Notes</b>
 
