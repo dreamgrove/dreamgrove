@@ -20,7 +20,3 @@ Authors
 ===
 Faide
 
-See also
-===
-- [Icy Veins Guardian Druid Boss by Boss Strategies](https://www.icy-veins.com/wow/guardian-druid-pve-tank-uldir-boss-by-boss)
-- [Wowhead Guardian Raid Guide](https://www.wowhead.com/guardian-druid-guide)
