@@ -43,7 +43,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
    * Break form and hardcast {{<spell 8936 "Regrowth">}}
    * Re-enter form by casting {{<spell 5217 "Tiger's Fury">}}.
    * Skip to step 8.
-8.  Cast Rip, if executed correctly it should be applied at 5 combo points with all your available damage mods.
+8.  Cast {{<spell 1079 "Rip">}}, if executed correctly it should be applied at 5 combo points with all your available damage mods.
 
 **For any build without Sabertooth:**
 
