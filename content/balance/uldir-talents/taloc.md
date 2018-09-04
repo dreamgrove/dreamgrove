@@ -7,8 +7,11 @@ showOnFrontpage: false
 weight: 1
 ---
 
-
-## Heroic
+<center>
+  <header>
+    <h1>Heroic</h1>
+  </header>
+</center>
 
 {{< talents spec="balance" src="beta" recommend="123,313,232,223,133,123,312" >}}
 
@@ -26,4 +29,7 @@ Taloc is a mostly single target fight with medium movement and an intermission p
 
 ## Mythic
 
-{{< talents spec="balance" src="beta" recommend="123,213,232,223,133,123,312" >}}
+<center>
+  <b>Coming Soon</b>
+</center>
+ 
