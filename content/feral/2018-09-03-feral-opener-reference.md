@@ -8,7 +8,7 @@ published: true
 ### General Feral Opener Sequence
 
 ## Note about openers
-An opener is not a big part of your dps. To most this might be immediately obvious, but a lot of people tend to vastly overrated the importance of a good opener. With that caveat out of the way, here is the current reference opener which we intend to keep up-to-date through the expansion. If you have any ideas about how to improve this opener, feel free to contact me. This opener is a intended to be generally useful, but obviously there might be niche situations where something else is better.
+An opener is not a big part of your dps. To most this might be immediately obvious, but a lot of people tend to vastly overrate the importance of a good opener. With that caveat out of the way, here is the current reference opener which we intend to keep up-to-date through the expansion. If you have any ideas about how to improve this opener, feel free to contact me. This opener is a intended to be generally useful, but obviously there might be niche situations where something else is better.
 
 **If you are a novice at feral, I'd strongly recommend starting with a guide aimed at novices as opener optimizations are completely useless effort before you are atleast an intermediate feral**
 
