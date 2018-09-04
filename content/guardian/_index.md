@@ -4,6 +4,7 @@ title: Guardian
 
 Quick Links
 ===
- - [Guardian Guide](/guardian/guide)
- - [BfA Launch Day FAQ](/guardian/bfa-launch-faq)
+ - [Uldir Boss by Boss Guide](/guardian/uldir-guide)
+ - [Defensive Trinkets Guide](/guardian/defensive-trinkets)
  - [Azerite Guide](/guardian/azerite-analysis)
+ - [Guardian Guide](/guardian/guide)

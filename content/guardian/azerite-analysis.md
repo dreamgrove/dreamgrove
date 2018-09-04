@@ -7,8 +7,6 @@ showtoc: true
 patch: 8.0.1
 ---
 
-*Update 18 Aug 2018: {{< spell 279527 "Wild Fleshrending" >}} was fixed, and added a few non-guardian traits of note. Also, added a section for frequently asked questions.*
-
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
 Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 340.
@@ -144,6 +142,18 @@ Overall this trait is a boost to your healing if you have {{< spell 197492 "Rest
 At 340, this deals 763 damage every 2 seconds. It has an RPPM of 1.5.
 
 This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking.
+
+## Archive of the Titans
+
+- {{< spell 280555 "Archive of the Titans" >}} - Every 5 seconds, increase your primary stat by X, increasing up to 20 times. This data decays while out of combat. Also enables {{< spell 280573 "Reorigination Array" >}} within Uldir.
+
+At 370, you gain 10 primary stat per stack.
+
+This trait is not especially powerful by itself, but it does enable {{< spell 280573 "Reorigination Array" >}}. 
+
+Reorigination Array is a persistent buff that increases in power the more bosses you kill in Uldir. It grants you more of your highest secondary stat (which hopefully is a stat you are stacking because you prefer it), and each week it will increase in value as you kill bosses. Reorigination Array looks to be extremely potent as the weeks go by, so you will definitely want at least one trait which enables this effect.
+
+Notably, {{< spell 280705 "Laser Matrix" >}} also enables {{< spell 280573 "Reorigination Array" >}}. {{< spell 280555 "Archive of the Titans" >}} is the more tank-relevant trait of the two, but you could use either trait in order to gain the effect.
 
 ---
 
@@ -294,6 +304,7 @@ With all that being said, here are the traits I'd recommend paying attention to,
 - {{< spell 279552 "Layered Mane" >}} - Easily our best defensive trait. Extra stacks of Ironfur will almost always be useful, and a buff to every stack of Ironfur is the cherry on top.
 - {{< spell 275906 "Twisted Claws" >}} - Free Agility for what is essentially performing the rotation correctly. Holds its own in single target but really shines on 2+ targets.
 - {{< spell 279541 "Guardian's Wrath" >}} - Increases the amount of spenders you can cast and gives you a safety net to spend Rage aggressively on tank swap fights.
+- {{< spell 280555 "Archive of the Titans" >}} - You should use at least one of these to enable {{< spell 280573 "Reorigination Array" >}}.
 
 ## Middle Ring
 
