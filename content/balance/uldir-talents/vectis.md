@@ -1,5 +1,5 @@
 ---
-title: "Zek'Voz"
+title: "Vectis"
 date: 2018-09-04
 authors: ['Tettles','Nick','Bora','Goosy']
 published: true
