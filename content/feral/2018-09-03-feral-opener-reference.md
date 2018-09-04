@@ -25,6 +25,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 **For any build containing Sabertooth:**
 
 *As combat starts:*
+
 1. Cast {{<spell 5217 "Tiger's Fury">}}, if you either have {{<spell 155580 "Lunar Inspiration">}}, **or** do NOT have {{<spell 155672 "Bloodtalons">}}.
 2. Cast {{<spell 1822 "Rake">}}.
 3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented
