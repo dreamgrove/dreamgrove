@@ -19,8 +19,6 @@ MOTHER deals primarily melee damage, and a small amount of Arcane damage from ra
 
 There is no forced tank swap on MOTHER; she will occasionally cast {{< spell 267787 "Sanitizing Strike" >}} at the tank but this is avoidable. 
 
-*(It has not been confirmed whether this is intended or not; during Beta testing this mechanic was dodgable. If it remains this way on live, you can hypothetically one-tank this encounter. If it is changed to be unavoidable, you will need to bring two tanks and swap every two stacks.)*
-
 Position MOTHER close to the force field leading to the next chamber, so the melee don't have to run too far to cross over. Face her away from the raid to prevent them from getting cleaved by {{< spell 267787 "Sanitizing Strike" >}}. 
 
 **Catweavable**: Yes

@@ -11,7 +11,7 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Talents
 
-{{< talents spec="guardian" src="live" recommend="113,212,123,113,311,213,213" >}}
+{{< talents spec="guardian" src="live" recommend="113,212,123,113,311,232,213" >}}
 
 ## Playstyle
 
@@ -29,5 +29,17 @@ It is recommended that the boss be dragged on top of the Mutated Mass for maximu
 
 ## Tips and Tricks
 
-Use {{< spell 106898 "Stampeding Roar" >}} during {{< spell 262288 "Shockwave Stomp" >}} to help the raid manage their movement, or when Corruption Corpuscles spawn.
+Use {{< spell 106898 "Stampeding Roar" >}} during {{< spell 262291 "Rotting Regurgitation" >}} to help the raid manage their movement, or when Corruption Corpuscles spawn.
 
+You can use {{< spell 106839 "Skull Bash" >}} or {{< spell 16979 "Wild Charge" >}} during {{< spell 262288 "Shockwave Stomp" >}} to quickly return to the boss, although keep your co-tank's movement options in mind as well; if they are not able to keep up with you, it's better to get knocked back with them.
+### Tanking Terrible Thrash
+
+While guardians are more suited to the main tank role due to gaining resources from being melee'd and their high uptime active mitigation, it is completely viable to have Guardian tank the {{< spell 262277 "Terrible Thrash" >}} mechanic.
+
+If you are the designated off tank, you will be taking a {{< spell 262277 "Terrible Thrash" >}} every 6 seconds. You *must* be topped off before each one, and have at a bare minimum 1 stack of {{< spell 192081 "Ironfur" >}} (ideally 2 or more). To be extra safe, you should cover any 1 stack Thrashes with {{< spell 22812 "Barkskin" >}} or an external cooldown, and if you can't have Ironfur up for a Thrash use {{< spell 61336 Survival Instincts >}}. 
+
+To get the most out of {{< spell 155835 "Bristling Fur" >}}, you should use it right before {{< spell 262277 "Terrible Thrash" >}} so that it covers two casts. Bristling Fur will cap your Rage both times you get hit, which will help you maintain your 2 stacks of {{< spell 192081 "Ironfur" >}}. 
+
+Be aware of Fetid's spell queueing as well; {{< spell 262277 "Terrible Thrash" >}} is one of the lowest priority spells, meaning he can (and will) cast any of his other spells even though the timers indicate Terrible Thrash is coming next. If you can, try and avoid spending Rage/using cooldowns until he actually starts the Terrible Thrash cast.
+
+Use the downtime during the {{< spell 262370 "Consume Corruption" >}} cast to catch up on Rage generation.
