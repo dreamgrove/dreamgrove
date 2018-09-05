@@ -40,6 +40,6 @@ If you are the designated off tank, you will be taking a {{< spell 262277 "Terri
 
 To get the most out of {{< spell 155835 "Bristling Fur" >}}, you should use it right before {{< spell 262277 "Terrible Thrash" >}} so that it covers two casts. Bristling Fur will cap your Rage both times you get hit, which will help you maintain your 2 stacks of {{< spell 192081 "Ironfur" >}}. 
 
-Be aware of Fetid's spell queueing as well; {{< spell 262277 "Terrible Thrash" >}} is one of the lowest priority spells, meaning he can (and will) cast any of his other abilities bbefore Terrible Thrash even though the timers indicate Terrible Thrash is coming next. If you can, try and avoid spending Rage/using cooldowns until he actually starts the Terrible Thrash cast.
+Be aware of Fetid's spell queueing as well; {{< spell 262277 "Terrible Thrash" >}} is one of the lowest priority spells, meaning he can (and will) cast any of his other abilities before Terrible Thrash even though the timers indicate Terrible Thrash is coming next. If you can, try and avoid spending Rage/using cooldowns until he actually starts the Terrible Thrash cast.
 
 Use the downtime during the {{< spell 262370 "Consume Corruption" >}} cast to catch up on Rage generation.
