@@ -36,7 +36,7 @@ You can use {{< spell 106839 "Skull Bash" >}} or {{< spell 16979 "Wild Charge" >
 
 While guardians are more suited to the main tank role due to gaining resources from being melee'd and their high uptime active mitigation, it is completely viable to have Guardian tank the {{< spell 262277 "Terrible Thrash" >}} mechanic.
 
-If you are the designated off tank, you will be taking a {{< spell 262277 "Terrible Thrash" >}} every 6 seconds. You *must* be topped off before each one, and have at a bare minimum 1 stack of {{< spell 192081 "Ironfur" >}} (ideally 2 or more). To be extra safe, you should cover any 1 stack Thrashes with {{< spell 22812 "Barkskin" >}} or an external cooldown, and if you can't have Ironfur up for a Thrash use {{< spell 61336 Survival Instincts >}}. 
+If you are the designated off tank, you will be taking a {{< spell 262277 "Terrible Thrash" >}} every 6 seconds. You *must* be topped off before each one, and have at a bare minimum 1 stack of {{< spell 192081 "Ironfur" >}} (ideally 2 or more). To be extra safe, you should cover any Thrashes where you only have 1 stack with {{< spell 22812 "Barkskin" >}} or an external cooldown, and if you can't have Ironfur up for a Thrash use {{< spell 61336 "Survival Instincts" >}}. 
 
 To get the most out of {{< spell 155835 "Bristling Fur" >}}, you should use it right before {{< spell 262277 "Terrible Thrash" >}} so that it covers two casts. Bristling Fur will cap your Rage both times you get hit, which will help you maintain your 2 stacks of {{< spell 192081 "Ironfur" >}}. 
 
