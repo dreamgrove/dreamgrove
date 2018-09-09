@@ -75,7 +75,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 ### General Single Target Build:
 
-{{< talents spec="balance" src="beta" recommend="223,223,223,233,133,123,322" >}}
+{{< talents spec="balance" src="beta" recommend="223,223,223,233,133,132,322" >}}
 
 ### General AoE Build:
 
