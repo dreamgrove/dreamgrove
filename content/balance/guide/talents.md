@@ -32,9 +32,9 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 202157 "Feral Affinity" "beta" >}}: Besides nearly useless Feral abilities, Feral Affinity gives you 15% movement speed, which is only useful if the other two options are completely worthless.
 
-{{< spell 197491 "Guardian Affinity" "beta" >}}: Guardian Affinity is a decent passive survivability talent, needing no change of play to gain the 6% mitigation. Generally will only see use if that 6% mitigation will stop you from being one shot.
+{{< spell 197491 "Guardian Affinity" "beta" >}}: Guardian Affinity is a decent passive survivability talent, needing no change of play to gain the 6% mitigation. This talent is competitive with Restoration Affinty and much depends on preference and the specific encounter.
 
-{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This can be a wise talent to take in open world or dungeons to keep your allies health topped off. Restoration Affinity is the go-to in a raiding environment as Swiftmend can instantly heal someone for 50% of their health, And Ysera's Gift's passive healing can be very useful for high damage fights when your healers can't keep up. 
+{{< spell 197492 "Restoration Affinity" "beta" >}}: Heals you for 3% of your maximum health every 5 seconds and allows you to access healing abilities such as Rejuvenation, Swiftmend, and Wild Growth. This is the go-to talent choice in open world or dungeons to keep your allies health topped off. Restoration Affinity is valuable in a raiding environment as Swiftmend can instantly heal someone for 50% of their health, And Ysera's Gift's passive healing can be very useful for high damage fights when your healers can't keep up. Restoration Affinity is competitive with Guardian Affinity in the sense of survivability. 
 
 ### Tier 60:
 {{< talent-row spec="balance" tier="60" src="beta" >}}
@@ -75,7 +75,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 ### General Single Target Build:
 
-{{< talents spec="balance" src="beta" recommend="223,223,223,233,132,123,322" >}}
+{{< talents spec="balance" src="beta" recommend="223,223,223,233,133,132,322" >}}
 
 ### General AoE Build:
 
