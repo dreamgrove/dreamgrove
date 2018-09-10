@@ -8,7 +8,7 @@ weight: 8
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="133,312,232,222,123,131,232" >}}
+{{< talents spec="balance" src="beta" recommend="123,312,232,222,123,131,322" >}}
 
 <center>
 <b>Azerite</b>
