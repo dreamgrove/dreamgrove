@@ -9,7 +9,7 @@ weight: 5
 
 ## Heroic
  
-{{< talents spec="balance" src="beta" recommend="223,312,232,222,133,131,232" >}}
+{{< talents spec="balance" src="beta" recommend="223,312,232,222,123,131,232" >}}
 
 <center>
 
