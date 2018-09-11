@@ -1,6 +1,6 @@
 ---
 title: On Diminishing Returns
-date: '2018-08-26'
+date: '2018-09-11'
 authors: ['Faide']
 published: false
 hasMath: true
@@ -165,8 +165,6 @@ What are we to make of all this? Well, let's review what we know.
 4. Versatility is exceptional in that it is not subject to diminishing returns, and as such its damage reduction component will continue to increase in value as you gain more of it.
 5. All stats are affected by diminishing marginal utility, which is distinct from the diminishing returns penalty that only affects particular stats.
 
-So when someone claims that "Armor has diminishing returns", they are correct; Armor does have a diminishing returns penalty. It is also true that Armor loses value the more you have of it, but *only in the context of diminishing marginal utility*. In terms of effective health gain, every point of Armor grants the same amount of effective health as the previous, and the next. In this way, the diminishing returns penalty counteracts the increasing returns of damage reduction. The same is true of Dodge/Parry, Block, and Stagger.
-
-The only stat that increases damage reduction that is *not* affected by a diminishing returns penalty
+So when someone claims that "Armor has diminishing returns", they are correct; Armor does have a diminishing returns penalty. It is also true that Armor loses value the more you have of it, but *only in the context of diminishing marginal utility*. In terms of effective health gain, every point of Armor grants the same amount of effective health as the previous, and the next. In this way, the diminishing returns penalty cancels out the increasing returns of damage reduction, resulting in a linear gain. The same is true of Dodge/Parry, Block, and Stagger.
 
 Hopefully this has helped clarify some of the less intuitive parts of this topic. 
