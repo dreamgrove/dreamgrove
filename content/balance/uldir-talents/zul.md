@@ -13,7 +13,7 @@ weight: 6
 <center>
 <b>Azerite</b>
   
-Lively Spirit / Power of the Moon / Lunar Shrapnel
+Streaking Stars / Lively Spirit / Power of the Moon / Lunar Shrapnel
 
 <b>Notes</b>
 
