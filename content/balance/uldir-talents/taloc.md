@@ -8,12 +8,12 @@ weight: 1
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="123,313,232,223,123,132,312" >}}
+{{< talents spec="balance" src="beta" recommend="123,213,233,223,123,132,312" >}}
 
 <center>
 <b>Azerite</b>
   
-Streaking Stars / Laser Matrix / Thunderous Blast
+Streaking Stars / Laser Matrix / Archive of the Titans
 
 
 <b>Notes</b>
@@ -27,8 +27,16 @@ provides more burst during the intermission.
 
 
 ## Mythic
-
+{{< talents spec="balance" src="beta" recommend="123,213,233,223,123,132,312" >}}
 <center>
-  <b>Coming Soon</b>
+<b>Azerite</b>
+  
+Streaking Stars / Laser Matrix / Archive of the Titans
+
+
+<b>Notes</b>
+
+Not much changes in mythic, Wild Charge gains some value due to the need for spreading (which slows you) and stacking throughout the fight. 
+
 </center>
  
