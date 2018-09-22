@@ -33,4 +33,5 @@ Streaking Stars / Laser Matrix / Archive of the Titans
 <b>Notes</b>
 
 Not much changes on Zul besides the revival type affects on mobs without the Decaying Flesh buff. For this reason it is important you do not use unnecessary AoE and focus mostly on boss damage, only AoEing the mobs at the correct time. Try to refresh your dots before new adds arrive at the boss as to lessen the useless padding damage and pool astral power for AoEing at the correct time.
+
 </center>
