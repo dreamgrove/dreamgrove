@@ -8,12 +8,12 @@ weight: 2
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="123,213,232,213,123,131,332" >}}
+{{< talents spec="balance" src="beta" recommend="123,213,233,213,123,131,321" >}}
 
 <center>
 <b>Azerite</b>
   
-Streaking Stars / Laser Matrix / Thunderous Blast / Power of the Moon
+Streaking Stars / Laser Matrix / Archive of the Titans 
 
 
 <b>Notes</b>
@@ -24,7 +24,16 @@ A fight with huge periods of downtime due to the winds mechanic. The normal sing
 
 
 ## Mythic
+{{< talents spec="balance" src="beta" recommend="123,213,233,213,123,131,321" >}}
 
 <center>
-  <b>Coming Soon</b>
+  <b>Azerite</b>
+  
+Streaking Stars / Laser Matrix / Archive of the Titans 
+
+
+<b>Notes</b>
+
+Not much changes on mythic for us, the add spawns are a bit more important to kill fast and the lasers throughout the fight come in pairs.
+
 </center>
