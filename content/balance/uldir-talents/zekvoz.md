@@ -8,16 +8,12 @@ weight: 4
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="133,313,232,313,123,131,131" >}}
+{{< talents spec="balance" src="beta" recommend="132,213,233,213,123,131,131" >}}
 
 <center>
 <b>Azerite</b>
   
-Streaking Stars / Laser Matrix / Thunderous Blast
-
-Power of the Moon / Lunar Shrapnel
-
-(If you need add damage and are not getting a P3 buff)
+Streaking Stars / Laser Matrix / Archive of the Titans
 
 <b>Notes</b>
 
@@ -30,8 +26,16 @@ Sort out which of these abilities will best help your raid by speaking with your
 
 
 ## Mythic
+{{< talents spec="balance" src="beta" recommend="132,213,233,213,123,131,131" >}}
 
 <center>
-  <b>Coming Soon</b>
+<b>Azerite</b>
+  
+Streaking Stars / Laser Matrix / Archive of the Titans
+
+<b>Notes</b>
+
+In mythic, the three casters and warriors spawn together, so add damage is much more urgent. Depending on how much add damage you need you should use Incarnation on pull, 2nd set of adds, and when you can get your damage buff or with lust. Or you can Incarnation on the 1st set of adds, 3rd set of adds, and with the damage buff or lust. The Roiling Deceit debuff is applied more frequently and ticks hard, potentially overlapping with other damage effects like Eye Beam and Surging Darkness, make sure you use Bear Form and Barkskin for these situations, or even call for externals. Typhoon for the warrior adds and Solar Beam for the casters during Surging Darkness overlaps can easily save the raid and should be used if needed. 
+
 </center>
  
