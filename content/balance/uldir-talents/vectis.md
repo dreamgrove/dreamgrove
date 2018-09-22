@@ -9,24 +9,34 @@ weight: 5
 
 ## Heroic
  
-{{< talents spec="balance" src="beta" recommend="223,312,232,222,123,131,232" >}}
+{{< talents spec="balance" src="beta" recommend="223,312,233,222,123,131,232" >}}
 
 <center>
 
 <b>Azerite</b>
   
-Power of the Moon / Streaking Stars / Laser Matrix
+Streaking Stars / Laser Matrix / Archive of the Titans
 
 <b>Notes</b>
  
-A single target fight that spawns a high priorty add that needs to be cleaved down periodically throughout the fight. There is guaranteed downtime on Vectis through the mechanics of the fight, making Incarnation and Fury of Elune more powerful than usual. The t15 row is purely personal preference as all talents are viable for this fight.
+A single target fight that spawns a high priorty add that needs to be cleaved down periodically throughout the fight. There is guaranteed downtime on Vectis through the mechanics of the fight, making Incarnation and Fury of Elune more powerful than usual. 
 
 </center>
  
 
 ## Mythic
- 
+
+{{< talents spec="balance" src="beta" recommend="223,312,223,222,123,131,232" >}} 
+
 <center>
-  <b>Coming Soon</b>
+
+<b>Azerite</b>
+
+Streaking Stars / Laser Matrix / Archive of the Titans
+
+<b>Notes</b>
+
+Not much changes from heroic, but the damage is much more intense and priority add damage gains a lot of value due to that fact. Try to sync Fury of Elune with add spawns and watch your dot uptime so that you can refresh them within pandemic while also hiting the adds with the dot. Restoration Affinity becomes very powerful on Vectis as your healers are constantly running on low mana.
+
 </center>
  
