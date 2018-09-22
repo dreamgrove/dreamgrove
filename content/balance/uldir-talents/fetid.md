@@ -24,6 +24,7 @@ Fetid is a Patchwerk fight with target swapping to blobs that are required to di
 
 ## Mythic
 {{< talents spec="balance" src="beta" recommend="123,213,233,222,123,132,232" >}}
+
 <center>
   <b>Azerite</b>
   
