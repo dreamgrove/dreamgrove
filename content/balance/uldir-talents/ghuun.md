@@ -23,7 +23,7 @@ A spread AoE fight turned into a single target dps check with light cleave. Stre
 
 
 ## Mythic
-{{< talents spec="balance" src="beta" recommend="13213,233,222,123,131,322" >}}
+{{< talents spec="balance" src="beta" recommend="132,113,233,222,123,131,322" >}}
 
 <center>
 <b>Azerite</b>
