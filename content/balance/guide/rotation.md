@@ -56,7 +56,7 @@ If you have at least 2 Power of the Moon traits it is important to understand th
 
 ### Streaking Stars Rotation During Cooldowns
 
-Streaking Stars changes your playstyle during {{< spell 194223 "Celestial Alignment" "beta" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}. Basically you should never repeat the same ability twice in a row, and should {{< spell 190984 "Solar Wrath" "beta" >}} after every ability that isn't Solar Wrath, regardless of if it is empowered. It should be noted that you cast all your talented cooldowns after Celestial Alignment/Incarnation: Chosen of Elune, including {{< spell 202425 "Warrior of Elune" "beta" >}}, in which case you should simply spend the {{< spell 194153 "Lunar Strikes" "beta" >}} as fast as possible without repeating the same ability.
+Streaking Stars changes your playstyle during {{< spell 194223 "Celestial Alignment" "beta" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}. Basically you should never repeat the same ability twice in a row, and should {{< spell 190984 "Solar Wrath" "beta" >}} after every ability that isn't Solar Wrath, regardless of if it is empowered. It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "beta" >}}, {{< spell 202770 "Fury of Elune" "beta" >}}, and {{< spell 205636 "Force of Nature" "beta" >}}.
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "beta" >}} and {{< spell 93402 "Sunfire" "beta" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
