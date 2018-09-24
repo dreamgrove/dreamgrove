@@ -1,245 +1,74 @@
 ---
 title: "Rotation"
-date: 2018-06-02
+date: 2018-08-11
 authors: ['Macrologia', 'Faide']
 published: true
 showOnFrontpage: false
+patch: 8.0.1
 weight: 6
 ---
 
-### Survivability
+## Bear Only
 
-The following will only include abilities that are on the global cooldown. You should use {{< spell 192081 "Ironfur" >}} when you are about to take physical damage, and you should use {{< spell 22842 "Frenzied Regeneration" >}} either when it’s going to do lots of healing for you, or when you need to use it to survive. If you are finding it difficult to keep track of {{< spell 192081 "Ironfur" >}}, [this weakaura package](https://wago.io/EJCMTR_PZ) depicts it visually. If you are finding it hard to know when {{< spell 22842 "Frenzied Regeneration" >}} will do a lot of healing, [this weakaura](https://wago.io/NkogH0_D-) displays it well.
+The following rotation is identical for both survivability and DPS, with the exception of what to spend Rage on. 
 
-#### Without Galactic Guardian
-{{< expandable "Any target count" >}}
-1. {{< spell 33917 "Mangle" >}}
-2. Maintain {{< spell 8921 "Moonfire" >}} on the target (cast {{< spell 8921 "Moonfire" >}} if the dot has less than 4.8 seconds remaining)
-3. {{< spell 77758 "Thrash" >}}
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
+Offensively, you should cast Maul to replace a Swipe, or immediately to avoid Rage capping.
 
-If you are using {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} and you need additional survivability whilst {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} is up (though you should not take this talent for survivability purposes), then spam {{< spell 33917 "Mangle" >}} during it; whilst maintaining the {{< spell 8921 "Moonfire" >}} debuff on any enemies with particularly threatening spike damage.
-#### With Galactic Guardian
-
-If the additional rage gained from {{< spell 8921 "Moonfire" >}} with a {{< spell 203964 "Galactic Guardian" >}} proc, compared to whatever your next cast was instead going to be, will cause you to be able to cast {{< spell 22842 "Frenzied Regeneration" >}} or {{< spell 192081 "Ironfur" >}} within your next Global Cooldown, and you would not otherwise have had enough rage to cast it, and you need to cast it within that Global Cooldown or else you will risk dying, then you should cast {{< spell 8921 "Moonfire" >}} instead.
-
-If you do not have {{< item 144295 "Lady and the Child" >}} equipped:
-
-{{< expandable "Any target count" >}}
-1. {{< spell 33917 "Mangle" >}}
-2. {{< spell 77758 "Thrash" >}}
-3. {{< spell 8921 "Moonfire" >}} when you have a {{< spell 203964 "Galactic Guardian" >}} proc
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-If you do have {{< item 144295 "Lady and the Child" >}} equipped:
+Defensively, You should use {{< spell 192081 "Ironfur" >}} when you are about to take physical damage, and you should use {{< spell 22842 "Frenzied Regeneration" >}} when you think you won't cause overhealing for you or your healers by using it.
 
 {{< expandable "1 target" >}}
-1. {{< spell 33917 "Mangle" >}}
-2. {{< spell 77758 "Thrash" >}}
-3. {{< spell 8921 "Moonfire" >}} when you have a {{< spell 203964 "Galactic Guardian" >}} proc
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "2-3 targets" >}}
-1. {{< spell 8921 "Moonfire" >}} only when {{< spell 203964 "Galactic Guardian" >}} is about to run out
-2. {{< spell 33917 "Mangle" >}}
-3. {{< spell 77758 "Thrash" >}}
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "4-6 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 8921 "Moonfire" >}} only when {{< spell 203964 "Galactic Guardian" >}} is about to run out
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "7-9 targets">}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 33917 "Mangle" >}}
-3. {{< spell 8921 "Moonfire" >}} only when {{< spell 203964 "Galactic Guardian" >}} is about to run out
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "10+ targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 33917 "Mangle" >}}
-3. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-### DPS
-
-#### Without Galactic Guardian
-
-Recall that {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} should only be used in mythic+ dungeons, and only if you do not have both of the best legendaries for mythic+ ({{< item 144295 "Lady and the Child" >}} + {{< item 151802 "Fury of Nature" >}}), but do have {{< item 137056 "Luffa Wrappings" >}}.
-
-When {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} is up:
-
-{{< expandable "1 target" >}}
-1. {{< spell 6807 "Maul" >}} to avoid rage capping
-2. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-3. {{< spell 77758 "Thrash" >}}
-{{< /expandable >}}
-
-{{< expandable "2+ targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-{{< /expandable >}}
-
-When {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} is not up (or if you are talented into Soul of the Forest):
-
-{{< expandable "1 target" >}}
-1. {{< spell 6807 "Maul" >}} to avoid rage capping
-2. {{< spell 77758 "Thrash" >}}
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "2-4 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 6807 "Maul" >}} to avoid rage capping
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "5 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 6807 "Maul" >}} to avoid rage capping
-3. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-4. {{< spell 6807 "Maul" >}}
-5. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "6-7 targets (without Fury of Nature)" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-3. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "8+ targets (without Fury of Nature)" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "6-10 targets (with Fury of Nature)" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-3. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "11+ targets (with Fury of Nature)" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-
-#### With Galactic Guardian
-
-Without {{< item 144295 "Lady and the Child" >}}
-
-{{< expandable "1 target" >}}
-1. {{< spell 6807 "Maul" >}} to avoid rage capping
-2. {{< spell 77758 "Thrash" >}}
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 8921 "Moonfire" >}} with a {{< spell 203964 "Galactic Guardian" >}} proc
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-7. {{< spell 213764 "Swipe" >}}
+  1. Maintain {{< spell 8921 "Moonfire" >}}.
+  2. Use {{< spell 77758 "Thrash" >}} to build stacks if the target is not already at maximum stacks.
+  3. Use {{< spell 80313 "Pulverize" >}} when your target is at maximum stacks, if talented.
+  4. Use {{< spell 33917 "Mangle" >}} if the target is bleeding.
+  5. Cast {{< spell 8921 "Moonfire" >}} when you have a {{< spell 203964 "Galactic Guardian" >}} proc.
+  6. Use {{< spell 77758 "Thrash" >}}.
+  7. Fill with {{< spell 213764 "Swipe" >}}.
 {{< /expandable >}}
 
 {{< expandable "2 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 6807 "Maul" >}} to avoid rage capping
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 8921 "Moonfire" >}} with a {{< spell 203964 "Galactic Guardian" >}} proc
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 8921 "Moonfire" >}} to avoid the debuff falling off
-7. {{< spell 213764 "Swipe" >}}
+  1. Maintain {{< spell 8921 "Moonfire" >}}.
+  2. Use {{< spell 77758 "Thrash" >}} to build stacks if the target is not already at maximum stacks.
+  4. Use {{< spell 33917 "Mangle" >}} if the target is bleeding.
+  5. Cast {{< spell 8921 "Moonfire" >}} when you have a {{< spell 203964 "Galactic Guardian" >}} proc.
+  6. Use {{< spell 77758 "Thrash" >}}.
+  7. Fill with {{< spell 213764 "Swipe" >}}.
 {{< /expandable >}}
 
 {{< expandable "3 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 6807 "Maul" >}} to avoid rage capping
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 6807 "Maul" >}}
-5. {{< spell 213764 "Swipe" >}}
+  1. Maintain {{< spell 8921 "Moonfire" >}}.
+  5. Cast {{< spell 8921 "Moonfire" >}} when you have a {{< spell 203964 "Galactic Guardian" >}} proc.
+  6. Use {{< spell 77758 "Thrash" >}}.
+  7. Fill with {{< spell 213764 "Swipe" >}}.
 {{< /expandable >}}
 
-{{< expandable "4 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 6807 "Maul" >}}
-3. {{< spell 213764 "Swipe" >}}
+{{< expandable "4+ targets" >}}
+  6. Use {{< spell 77758 "Thrash" >}}.
+  7. Fill with {{< spell 213764 "Swipe" >}}.
 {{< /expandable >}}
 
-{{< expandable "5+ targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
+If you are using {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you should spam {{< spell 33917 "Mangle" >}} at 1-3 targets, and {{< spell 77758 "Thrash" >}} at 4 or more. While Incarnation is active, only maintain {{< spell 8921 "Moonfire" >}} on single target.
 
-With {{< item 144295 "Lady and the Child" >}}, but without {{< item 151802 "Fury of Nature" >}}
+When using {{< spell 80313 "Pulverize" >}}, ideally you cast it on a global where you would have otherwise cast {{< spell 213764 "Swipe" >}}, and before the next {{< spell 77758 "Thrash" >}}, in order to not waste stacks.
 
-{{< expandable "1 target" >}}
-1. {{< spell 6807 "Maul" >}} to avoid rage capping
-2. {{< spell 77758 "Thrash" >}}
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 8921 "Moonfire" >}} with a {{< spell 203964 "Galactic Guardian" >}} proc
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
+## Catweaving
 
-{{< expandable "2-3 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 8921 "Moonfire" >}} only when {{< spell 203964 "Galactic Guardian" >}} is about to run out
-3. {{< spell 6807 "Maul" >}} to avoid rage capping
-4. {{< spell 33917 "Mangle" >}}
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
+If you are catweaving, your rotation should be similar to the single target rotation above, except when you reach the point where you cannot cast anything but {{< spell 213764 "Swipe" >}}, you instead shift into {{< spell 768 "Cat Form" >}} and begin a "cat cycle".
 
-{{< expandable "4 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 6807 "Maul" >}}
-3. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
+Cat cycles last until you run out of energy (after which you switch back into {{< spell 5487 "Bear Form" >}}), and obey the following priority list:
 
-{{< expandable "5+ targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
+- If you are at 5 combo points:
+  - If {{< spell 1079 "Rip" >}} is ticking and your target is below 25% health:
+    - Cast {{< spell 22568 "Ferocious Bite" >}}.
+  - If {{< spell 1079 "Rip" >}} is not ticking, in pandemic, or will fall off before your next chance to refresh:
+    - Cast {{< spell 1079 "Rip" >}}.
+  - Otherwise:
+    - Cast {{< spell 22568 "Ferocious Bite" >}}.
+- Otherwise:
+  - If {{< spell 1822 "Rake" >}} is not ticking, in pandemic, or will fall off before your next chance to refresh:
+    - Cast {{< spell 1822 "Rake" >}}.
+  - Otherwise:
+    - Cast {{< spell 5221 "Shred" >}}.
 
-With {{< item 144295 "Lady and the Child" >}} and {{< item 151802 "Fury of Nature" >}}
+Note that below 25% health, provided you won't die by doing so, it is worth dropping everything to maintain a ticking {{< spell 1079 "Rip" >}} by shifting into {{< spell 768 "Cat Form" >}}, and applying a 1 combo point {{< spell 22568 "Ferocious Bite" >}} to refresh the duration of Rip, then shifting back into Bear Form.
 
-{{< expandable "1 target" >}}
-1. {{< spell 6807 "Maul" >}} to avoid rage capping
-2. {{< spell 77758 "Thrash" >}}
-3. {{< spell 33917 "Mangle" >}}
-4. {{< spell 8921 "Moonfire" >}} with a {{< spell 203964 "Galactic Guardian" >}} proc
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "2-3 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 8921 "Moonfire" >}} only when {{< spell 203964 "Galactic Guardian" >}} is about to run out
-3. {{< spell 6807 "Maul" >}} to avoid rage capping
-4. {{< spell 33917 "Mangle" >}}
-5. {{< spell 6807 "Maul" >}}
-6. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "4 targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 8921 "Moonfire" >}} only when {{< spell 203964 "Galactic Guardian" >}} is about to run out
-3. {{< spell 6807 "Maul" >}}
-4. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}
-
-{{< expandable "5+ targets" >}}
-1. {{< spell 77758 "Thrash" >}}
-2. {{< spell 213764 "Swipe" >}}
-{{< /expandable >}}

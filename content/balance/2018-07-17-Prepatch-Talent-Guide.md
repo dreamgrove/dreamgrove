@@ -7,8 +7,6 @@ published: true
 
 <center>
 Hey guys, we decided to help everybody out who is raiding on the pre-patch with a pre-patch specific talent guide! The talent recommendations presented in this guide were made with progression in mind, not number “padding” or farm kills where most of the highest parses come from. Keep in mind that these recommendations are made to maximize the effectiveness of our class, but does not consider YOUR raid group composition. If your raid is full of burst AoE classes that absolutely destroy adds, then you may want to switch to a more single target build to provide more boss damage. This guide provides a general starting point, but adjusting talents to better fit what the raid needs will benefit the raid’s progression the most over stubbornly sticking to the one recommended build.
-
-We recommend Lady and the Child and Sephuz's Secret for most encounters except explicitly said otherwise in the description of the boss fight.
 </center>
 
 <center>
@@ -99,7 +97,7 @@ Try to line up your Warrior of Elune uses with shadow spawns. Other than that, t
 
 {{< talents spec="balance" src="beta" recommend="132,123,231,132,231,132,321" >}}
 
-Mass Entanglement here is very good for rooting the adds. You should use Lady and the Child and Oneth’s Intuition since the two targets are so close together to where you will benefit from the free starfalls. Continue to starsurge on 2 targets.
+Mass Entanglement here is very good for rooting the adds. You can use Oneth’s Intuition since the two targets are so close together to where you will benefit from the free starfalls. Continue to starsurge on 2 targets.
 </center>
 
 <center>

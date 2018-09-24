@@ -124,23 +124,23 @@ We recommend Sephuz’s Secret and Lady and the Child due to its power on hybrid
 *	**{{< spell 132469 "Typhoon" "beta" >}}:** This is your default talent for this row. The displacement on the knockback is very powerful for many situations such as Aggramar add management or questing. {{< spell 132469 "Typhoon" "beta" >}} also knocks back 10 yards further than it used to.
 
 ### Tier 75: 
-*	**{{< spell 114107 "Soul of the Forest" "beta" >}}(Sotf):** This talent is ideal for sustained multi-target fights with 3+ targets, or when there is sporadic heavy AOE. 
+*	**{{< spell 114107 "Soul of the Forest" "beta" >}}(Sotf):** This talent is ideal for sustained multi-target fights with 4+ targets, or when there is sporadic heavy AOE. 
 
-*	**{{< spell 202345 "Starlord" "beta" >}}(SL):** Reiteration of our T20 as previously stated. This is best for Single Target and 2 Target encounters due to the buffs to shooting stars. You want to play it similar how we did in Tomb of Sargeras, which is when you are getting close to the last 4 seconds of the buff try to not spend astral power so as to get the new buff right when the previous one ends.
+*	**{{< spell 202345 "Starlord" "beta" >}}(SL):** Reiteration of our T20 as previously stated. This is best for Single Target and up to 3 Target encounters. You want to play it similar how we did in Tomb of Sargeras, which is when you are getting close to the last 4 seconds of the buff try to not spend astral power so as to get the new buff right when the previous one ends.
 	
 *	**{{< spell 102560 "Incarnation: Chosen of Elune" "beta" >}}(Incarn):** This replaces {{< spell 194223 "Celestial Alignment" "beta" >}} as our primary dps cooldown still. This talent will be used only when the need for 30 seconds worth of burst comes out.
 
 ### Tier 90: 
-*	**{{< spell 202354 "Stellar Drift" "beta" >}}(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command. 
+*	**{{< spell 202354 "Stellar Drift" "beta" >}}(SD):** Needs to be paired with Lady and the Child legendary, and is better with 3+ sustained targets, so Eonar/High Command.
 
 *	**{{< spell 279620 "Twin Moons" "beta" >}}( TM):**  Acts like Lady, and stacks the damage from Lady. Use it on hybrid style fights with single and multi-target periods (Portal Keeper), or any fight with 2 targets (Dogs/Coven). Of note: this talent is not far behind {{< spell 202347 "Stellar Flare" "beta" >}} on single target (0.5% or so), so if you don’t want the hassle of managing {{< spell 202347 "Stellar Flare" "beta" >}} it is also currently a good option on pure single target.
 	
 *	**{{< spell 202347 "Stellar Flare" "beta" >}}(StFl):** Patchwerk single target option, as it is weak when any target is added in its current state. {{< spell 202347 "Stellar Flare" "beta" >}} is now a generator as opposed to a spender. Make sure you keep it up 100% of the time. 
 
 ### Tier 100: 
-*	**{{< spell 202342 "Shooting Stars" "beta" >}}(ShS):** Due to the buffs to this talent, {{< spell 202342 "Shooting Stars" "beta" >}} is now the premiere option for most damage profiles. The only time that you would take anything else would be for burst Single Target or burst Multi-Target in which you would opt into {{< spell 202770 "Fury of Elune" "beta" >}}.
+*	**{{< spell 202342 "Shooting Stars" "beta" >}}(ShS):** Recently {{< spell 202342 "Shooting Stars" "beta" >}} got changes making it the best option on single target, but giving diminishing returns on every additional target. Currently, this talent is good on 1-2 targets, then pretty bad beyond that. You should talent {{< spell 202770 "Fury of Elune" "beta" >}} for most other situations.
 
-*	**{{< spell 202770 "Fury of Elune" "beta" >}}(FoE):** {{< spell 202770 "Fury of Elune" "beta" >}} is a very powerful talent for burst, but is unfortunately overshadowed by {{< spell 202342 "Shooting Stars" "beta" >}} balance wise at this moment. You should take {{< spell 202770 "Fury of Elune" "beta" >}} whenever you need burst Single Target on a target that has increased damage taken or sporadic Multi-Target in which you can get benefit from {{< spell 202770 "Fury of Elune" "beta" >}}. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle.
+*	**{{< spell 202770 "Fury of Elune" "beta" >}}(FoE):** {{< spell 202770 "Fury of Elune" "beta" >}} is a very powerful talent for burst. You should take {{< spell 202770 "Fury of Elune" "beta" >}} whenever you need burst Single Target on a target that has increased damage taken, sporadic Multi-Target in which you can get benefit from {{< spell 202770 "Fury of Elune" "beta" >}}, or sustained 3+ targets. Make sure when you use FoE you are low on astral power (less than 50) so as to avoid overcapping astral power while it completes the damage and astral power cycle.
 	
 *	**{{< spell 274281 "New Moon" "beta" >}}(Moons):** Moons have seen slight nerfs by comparison to the Legion variant in the form of increased cooldown and less damage. Currently, they are outclassed in most situations compared to the other T100 options. They are close on Single Target if you care about playing with moons!
 

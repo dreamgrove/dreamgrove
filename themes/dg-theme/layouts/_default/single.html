@@ -16,10 +16,15 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 <main class="main">
-  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series) }} with-sidebar{{ end }}">
+  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series .Params.showtoc) }} with-sidebar{{ end }}">
     {{ if .Parent.Params.showsectiontoc }}
       <section class="section-overview toc">
         {{ partial "section-toc.html" . }}
+      </section>
+    {{ end }}
+    {{ if .Params.showtoc }}
+      <section class="section-overview toc">
+        {{ partial "post-toc.html" . }}
       </section>
     {{ end }}
     {{ if .Params.series }}
@@ -33,6 +38,13 @@
     {{ partial "post-footer.html" . }}
   </article>
 </main>
+{{ end }}
+
+{{ define "footer" }}
+<footer class="footer">
+  <a class="back-to-top" href="#top">Back to Top</a>
+  <h1>Dreamgrove {{ now.Format "2006" }}</h1>
+</footer>
 {{ end }}
 
 {{ define "head-injects" }}

@@ -1,0 +1,7 @@
+      <hgroup class="article-header">
+      <h2 class="article-title">{{ .Title }}</h2>
+      {{ partial "post-byline.html" . }}
+      {{ if (.Params.showModified) }}
+        {{ partial "post-lastmod.html" . }}
+      {{ end }}
+      </hgroup>
