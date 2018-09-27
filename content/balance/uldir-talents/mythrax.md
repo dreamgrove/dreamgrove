@@ -32,6 +32,6 @@ Streaking Stars / Laser Matrix / Archive of the Titans
 
 <b>Notes</b>
 
-Warrior of Elune syncs well with parts of the fight and allows for bursts of movement when needed. Fury of Elune is very strong for dealing with the boss add spawn and the stacked Visions of Madness. Save your first Incarnation for the boss add that spawns early into the fight.
+Warrior of Elune syncs well with parts of the fight and allows for bursts of movement when needed. Fury of Elune is very strong for dealing with the boss add spawn and the stacked Visions of Madness. Save your first Incarnation for one of the boss adds that spawns early into the fight, and plan your cooldowns from there for when your guild needs them most. Shooting Stars can be a better choice depending on your strategy and depending on how much you can benefit from Fury of Elune.
 
 </center>
