@@ -63,7 +63,7 @@ This is a list of our most potent traits, ones that you should seek out if you c
 
 - {{< spell 280555 "Archive of the Titans" "beta" >}} - Like Laser Matrix, Archive is a decent trait on single target, and quite good on multi-target. Activating Reorigination Array means having at least one of this trait or Laser Matrix is a must have in Uldir, especially when Reorigination Array is fully stacked.
 
--{{< spell 279647 "Lively Spirit" "beta" >}} - Assuming you can achieve 9 stacks of Lively Spirit per cast, it is similar to Streaking Stars in power, but comes with the bonus of scaling with multiple targets. Lively Spirit is not for everyone, as it can't be expected for you to be able to use {{< spell 29166 "Innervate" "beta" >}} for your own personal damage, but when you can use Lively, it is an exceptional trait.
+- {{< spell 279647 "Lively Spirit" "beta" >}} - Assuming you can achieve 9 stacks of Lively Spirit per cast, it is similar to Streaking Stars in power, but comes with the bonus of scaling with multiple targets. Lively Spirit is not for everyone, as it can't be expected for you to be able to use {{< spell 29166 "Innervate" "beta" >}} for your own personal damage, but when you can use Lively, it is an exceptional trait.
 
 
 ### Sims [Chickendb](http://www.chickendb.com)
