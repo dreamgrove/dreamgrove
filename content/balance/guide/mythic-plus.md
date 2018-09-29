@@ -49,7 +49,7 @@ In Battle for Azeroth, the gear you have equipped once the key begins is the gea
 
 - {{< spell 279646 "Lively Spirit" "beta" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting both decent multi-target and single target damage overall unlike most of our considerable Mythic+ traits and easily being our best trait. It is not recommended to use this trait in pugs. 
 
-{{< spell 280555 "Archive of the Titans" "beta" >}} - The recommended trait to use if you can't take advantage of Lively Spirit. Archive is a nice mix of single target and multi-target while also being sustained. 
+- {{< spell 280555 "Archive of the Titans" "beta" >}} - The recommended trait to use if you can't take advantage of Lively Spirit. Archive is a nice mix of single target and multi-target while also being sustained. 
 
 - Stat Increasing Traits - Generic Stat increasing traits such as {{< spell 280429 "Swirling Sands" "beta" >}} or {{< spell 273823 "Blightborne Infusion" "beta" >}} can be a decent choice especially if you lack the prior listed traits. These traits much like Lively Spirit act as a mix of single target and multi-target, but don't require communication.
 
