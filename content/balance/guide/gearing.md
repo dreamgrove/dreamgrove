@@ -15,7 +15,7 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 ### Enchants:
 
-- {{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}}
+- {{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}} or {{< item 153479 "Enchant Weapon - Torrent of Elements" "beta" >}} (Depending on what sims higher)
 - {{< item 153443 "Enchant Ring - Pact of Haste" "beta" >}}
 
 ### Consumables: 
