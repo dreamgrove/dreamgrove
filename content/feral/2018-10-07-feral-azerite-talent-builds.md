@@ -3,6 +3,8 @@ title: "Feral Azerite/Talent builds"
 date: 2018-10-07
 authors: ['Xanzara']
 published: true
+series: ["Feral Azerite Guide"]
+series_title: "Azerite Trait Overview"
 ---
 
 ### Feral Azerite/Talent builds
