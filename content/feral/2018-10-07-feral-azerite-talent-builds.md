@@ -7,7 +7,7 @@ series: ["Feral Azerite Guide"]
 series_title: "Azerite Trait Overview"
 ---
 
-### Feral Azerite/Talent builds
+# Feral Azerite/Talent builds
 Feral has been blessed/cursed with a lot of heavily impactful azerite traits, and while it is cool to use 
 class specific ones instead of generics, it means that gearing and slecting talents is a little bit more 
 involved than for some other classes. This Article will attempt to clarify and disentangle this topic a bit. 
@@ -21,7 +21,7 @@ To cover this, I'll go over three distinct sections - a more general trait overv
 First of, lets look at some generic traits - we won't cover all of them, but some of them are highly relevant and will reprsent
 the rest of the generics pretty well.
 
-# Archive of the Titans & Laser Matrix
+### Archive of the Titans & Laser Matrix
 The first two generics worth discussing are the two raid generics, they only drop from the raid azerite pieces (and are as such
 limited to BfA Season 1) - these two have the unique ability that they will activate the "reorigination array" when inside Uldir
 which will give you a significant increase in your best secondary stat. This factor alone makes them near mandatory, when 
@@ -35,7 +35,7 @@ Of the two, Archive is generally the better one for feral - both of single-targe
 Laser Matrix splits its damage between multiple targets whereas Archive will just provide stats (that scale with both) 
 it is much better in aoe scenarios.
 
-# Dagger in the Back
+### Dagger in the Back
 DitB is the best generic trait for single-target damage, it is highly competitive with class traits in that situation.
 It has a drawback if you are hitting a target from the front, where it stacks much slower - but for a melee this drawback is
 generally very small since we want to hit from the back anyway.
@@ -46,7 +46,7 @@ So while this trait will rank very highly in Patchwerk simulations, which has ma
 I'd not prioritize getting this for any other purpose than swapping it in on single-target fights, and our class traits are
 still better in that scenario.
 
-# Stat procs (Champion of Azeroth, Blightbone Infusion, et al)
+### Stat procs (Champion of Azeroth, Blightbone Infusion, et al)
 These are all fairly good, the value fluxuating with how good the given secondary stat is in your gearset.
 Champion of Azeroth is generally the best one, but is only available from one piece (the reputation chest from the CoA faction)
 and at a limited item level so it will fall of as you get higher item level pieces.
@@ -55,17 +55,17 @@ Blightborn Infusion, Blood Rite, Swirling Sands, Meticulous Scheming are the one
 for the moment) and will generally be the best of these, and are solid choices at the same item level but are generally
 outshined by our class traits at the moment.
 
-# Engineering traits (Synaptic Spark Capacitor)
+### Engineering traits (Synaptic Spark Capacitor)
 This (and Barrage of Many Bombs, from the same engineering headpiece) is a very good trait, especially in multi-target situation
 and does punch well above its weight - but given the limited item level available (340) it will be beaten by most traits
 when you reach into the higher item levels. A very good choice while lowly geared though.
 
-# Shredding Fury (Class)
+### Shredding Fury (Class)
 This trait is generally the weakest of our class traits, it will passively cause Tigers Fury to boost the damage of shred which
 is a solid perk. It shines a bit more on fights where you get predator procs but still mostly prioritize shredding one target
 but is will generally be worse than all but the worst of the generic trait.
 
-# Twisted Claws (Class)
+### Twisted Claws (Class)
 This is probably our most situational choice, **it is really bad on single-target**
 - but **very strong in aoe situations**, in fact it is almost always our strongest trait in that situation.
 When you have it, every time you thrash each target hit have a chance to give you a stack of agility (up to five stacks)
@@ -80,7 +80,7 @@ This balance dynamic creates a interesting question - if you are looking at doin
 get a full set (3x) of these but since most of us do a bit of M+ and a bit of raiding or pvp and with how limited azerite is
 it might be difficult to have two completely opposite sets without a lot of (expensive) reforging.
 
-# Blood Mist (Class)
+### Blood Mist (Class)
 This is a solid trait as a one pointer in most builds, but because the chance of getting a berserk proc does not increase
 with more points than one (only the rake damage increase does) it will never be very appealing to have multiple ones.
 To use this trait optimally you definitely need to have a good tracking of the proc, since it can occur at any time and 
@@ -91,7 +91,7 @@ dungeons than in raids but is still only good as a one pointer.
 
 Overall it iss a rather solidly strong trait as a one-off if you get a good piece with it, but nothing stellar.
 
-# Gushing Lacerations (Class)
+### Gushing Lacerations (Class)
 Very similiar to Blood Mist, the chance to gain combo points do not increase when you stack this trait only the Rip damage does
 therefore this trait is only really good as a one pointer. It does perform decently there, especially in situations where you
 can keep a lot of rips up and rolling (as both parts of the effect scale with targets in this regard).
@@ -102,7 +102,7 @@ get a proc.
 
 Overall, it is very similiar to Blood Mist in power level and is a solid one pointer but not amazing.
 
-# Raking Ferocity (Class)
+### Raking Ferocity (Class)
 One of our absolutely best single-target traits, and has a pretty dramatic impact on Ferocious Bite damage. It does however
 heavily relay on Sabertooth, both to cast more bites and by scaling with the damage increase. 
 
@@ -112,7 +112,7 @@ which means you passively gain the benefit on nearly every bite.
 Very solid trait all around whenever you are using Sabertooth, and pretty bad otherwise - which does reduce the value
 significantly in dungeons but keep it high in raids. (More on that below)
 
-# Iron Jaws (Class)
+### Iron Jaws (Class)
 This trait was long a bit of a meme, the low damage increase to maim meant that it was rarely worth using it even if you had the
 trait. Recent buffs have however changed this, and it is now a very viable choice. Much like Raking Ferocity above, this trait
 does heavily relay on Sabertooth, since it only procs from Ferocious Bite and you cast very few bites in non-Sabertooth builds.
@@ -122,7 +122,7 @@ if you are not running Sabertooth, since you need to fit it inbetween Rip (and/o
 
 Similiarily to Raking Ferocity it is all around solid when you have Sabertooth, and quite bad when you don't.
 
-# Power of the Moon (Class)
+### Power of the Moon (Class)
 This is a balance trait (which annoyingly require you to swap to balance to pick it) that does work with Feral Moonfire,
 and as such has a hard requirement on Lunar Inspiration to do anything at all for us. That doesn't stop the trait from being a
 good choice for us however.
@@ -142,7 +142,7 @@ situations too, it does however fall off in dungeons and larger aoe situations s
 and to a lesser degree Bloodscent both works better for aoe as well as the fact that Swipe start to overtake it as the number 
 of targets increase.
 
-# Wild Fleshrending (Class)
+### Wild Fleshrending (Class)
 A trait that has developed its own mythos and has a dedicated group of fans around it. Wild Fleshrending is a very good all
 around trait, it works well on aoe (with both Brutal Slash and Swipe), it works fairly well on single-target and is good for
 burst.
