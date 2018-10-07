@@ -12,8 +12,7 @@ involved than for some other classes. This Article will attempt to clarify and d
 As the subject matter is mostly relevant to people pushing more competitive content, it is aimed at intermediate 
 and above ferals but I make not presumptions about skill and so it should be usable even by beginners if they desire it.
 
-To cover this, I'll go over three distinct sections - a more general trait overview, talent build synergies and finally how
-to figure out which build to use.
+To cover this, I'll go over three distinct sections - a more general trait overview (this page), talent build synergies and finally how to figure out which build to use.
 
 ## Trait Overview
 
@@ -154,18 +153,3 @@ generators. This means that it makes maintaining thrash on single-target mandato
 
 Overall, while it is mostly not the best trait in any situation it is competitive in all cases and is therefore the best jack
 of all trades trait.
-
-## Talents, and builds
-
-There are a lot of mistaken opinions about our talents, and I will attempt to answer and correct a few mistaken beliefes here,
-before we get into more specific build questions and recommendations.
-
-Savage Roar vs Sabertooth (vs Brutal Slash),
-This seem to be a very common area of misunderstanding:
-Assuming you have no traits, and a relatively normal high gear set (with a heavy investment in haste and then 
-a bit more crit than mast/vers) and we disregard all traits, Sabertooth is roughly 1% stronger in overall damage
-for single-target. When you have regular add waves or in M+ situations with mixed damage, Brutal Slash is usually several %
-stronger than Sabertooth (2-5%+ depending on the situation). Savage Roar fits into this more neutral 
-
-
-
