@@ -9,7 +9,7 @@ weight: 5
 
 ## Heroic
  
-{{< talents spec="balance" src="beta" recommend="223,312,233,222,123,131,232" >}}
+{{< talents spec="balance" src="beta" recommend="223,132,233,222,123,131,232" >}}
 
 <center>
 
@@ -26,7 +26,7 @@ A single target fight that spawns a high priorty add that needs to be cleaved do
 
 ## Mythic
 
-{{< talents spec="balance" src="beta" recommend="223,312,223,222,123,131,232" >}} 
+{{< talents spec="balance" src="beta" recommend="223,132,223,222,123,131,232" >}} 
 
 <center>
 
