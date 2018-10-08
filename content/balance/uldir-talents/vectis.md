@@ -19,7 +19,7 @@ Streaking Stars / Laser Matrix / Archive of the Titans
 
 <b>Notes</b>
  
-A single target fight that spawns a high priorty add that needs to be cleaved down periodically throughout the fight. There is guaranteed downtime on Vectis through the mechanics of the fight, making Incarnation and Fury of Elune more powerful than usual. Renewal is quite powerful due to the low movement of this fight and for topping yourself off before Contagion. 
+A single target fight that spawns a high priorty add that needs to be cleaved down periodically throughout the fight. There is guaranteed downtime on Vectis through the mechanics of the fight, making Incarnation and Fury of Elune more powerful than usual. Renewal is useful due to the low movement of this fight and for topping yourself off before Contagion. 
 
 </center>
  
