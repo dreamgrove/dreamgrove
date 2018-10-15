@@ -23,7 +23,7 @@ Fetid is a Patchwerk fight with target swapping to blobs that are required to di
 
 
 ## Mythic
-{{< talents spec="balance" src="beta" recommend="123,213,233,222,123,132,232" >}}
+{{< talents spec="balance" src="beta" recommend="123,213,233,222,123,132,332" >}}
 
 <center>
   <b>Azerite</b>
@@ -32,6 +32,6 @@ Streaking Stars / Laser Matrix / Archive of the Titans
 
 <b>Notes</b>
 
-The blob dps check is much harder on mythic, and much more important as the overall boss dps check is tight as well. Treants and Fury of Elune are recommended for priority add damage. You should cast these abilities before even casting your dots at the beginning of the boss fight so they line up for the adds through the rest of the fight. Your Incarnation should either be used on pull and the 3rd set of adds, or on the 1st set of adds and on the boss with the damage amplification effect, whichever your group needs more damage on.
+The blob dps check is much harder on mythic, and much more important as the overall boss dps check is tight as well. Treants and Fury of Elune are recommended for priority add damage (Shooting Stars is fine if you don't need that much add damage). You should cast these abilities before even casting your dots at the beginning of the boss fight so they line up for the adds through the rest of the fight. Your Incarnation should either be used on pull and the 3rd set of adds, or on the 1st set of adds and on the boss with the damage amplification effect, whichever your group needs more damage on.
 
 </center>
