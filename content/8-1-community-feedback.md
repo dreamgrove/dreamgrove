@@ -7,12 +7,12 @@ showtoc: true
 description: "An open letter to the community about the state of Druids in patch 8.1."
 ---
 
-*This is a supplementary post to the [8.1 Druid Megathread](#) on Reddit. You can follow the discussion there.*
+*This is a supplementary post to the [8.1 Druid Megathread](https://www.reddit.com/r/wow/comments/9oeh9z/patch_81_druid_community_feedback_megathread/) on Reddit. You can follow the discussion there.*
 
 # Balance
 
 **Authors**: Nick, Slippykins, Tettles \
-*[Reddit Thread](#)*
+*[Reddit Thread](https://www.reddit.com/r/wow/comments/9oeh9z/patch_81_druid_community_feedback_megathread/e7tevyy/)*
 
 **Balance** is in a decent state with decent DPS across all categories, but no considerable strengths. The {{< spell 272871 "Streaking Stars" >}} nerf hit ST DPS hard. Lively Spirit mechanically feels odd: it provides delayed burst DPS and inefficient use of a healing CD. Additionally, it places a contingency on someone else to maximise your own damage. Bottom line: **{{< spell 279647 "Lively Spirit" >}} does not feel good** to play, but it’s strength relative to other traits makes players incentivised to take it.
 
@@ -31,7 +31,7 @@ We feel the biggest improvements that can be made to the spec are: 1) rebalancin
 # Feral
 
 **Author:** Xanzara \
-*[Reddit Thread](#)*
+*[Reddit Thread](https://www.reddit.com/r/wow/comments/9oeh9z/patch_81_druid_community_feedback_megathread/e7tewj6/)*
 
 The state of feral is in a bit of flux. As few people can have missed, at the start of the expansion Feral was in a rather weak spot. In the early weeks, a combination of M0s and a rather hard dependency on secondary stats conspired to make feral feel (and indeed perform) particularly poor. Availability of better gear (including some specific, strong Azerite traits) over time, as well as the hotfix changes we received has alleviated these issues somewhat and I have personally felt it’s possible to perform alright in Mythic plus, although it would be a stretch to say that I’ve felt strong.
 
@@ -53,7 +53,7 @@ We have received rather large changes on the PTR, and the general sense of them 
 # Guardian
 
 **Author:** Faide \
-*[Reddit Thread](#)*
+*[Reddit Thread](https://www.reddit.com/r/wow/comments/9oeh9z/patch_81_druid_community_feedback_megathread/e7tex7q/)*
 
 You’d be hard-pressed to find someone who can say with a straight face that Guardian is in a good spot at the moment. There are several key factors that contribute to this, which I will explore in this post.
 
@@ -82,7 +82,7 @@ There have been no significant changes to Guardians on the PTR, although in the 
 # Restoration
 
 **Authors:** Broccoliz, Voulk \
-*[Reddit Thread](#)*
+*[Reddit Thread](https://www.reddit.com/r/wow/comments/9oeh9z/patch_81_druid_community_feedback_megathread/e7texiz/)*
 
 Resto is in a comfortable place in the middle of the pack with decent representation in top world kills while still suffering from ‘just not a disc priest’ syndrome in raids. Our talents are the most varied they’ve been in quite some time, with no talent demanding inclusion across all content and all three of our level 100s seeing usage in both dungeons and raids. The playstyle has still altered very little from Legion, with the tighter healing windows being the only major change courtesy of a shorter rejuv duration. The spec is fun to play. If you’ve always enjoyed resto druid then you’ll still enjoy resto druid now.
 
