@@ -17,9 +17,9 @@ Be warned: we're doing a deep dive into the theory of diminishing returns and da
 
 When talking about diminishing returns in World of Warcraft, we are typically referring to one of two different but related concepts by which the effects of our stats are diminished.
 
-### Diminishing Returns as Marginal Utility
+### Diminishing Returns from Marginal Utility
 
-The first is the property of **diminishing marginal utility**, which is the idea that every point of a stat added to a total is less valuable relative to the previous. For example: adding 1 rating when you have 100 rating to begin with is a larger marginal gain than adding 1 rating when you have 200 rating. 
+The first is the property of **diminishing marginal utility**, which is the idea that every point of a stat added to a total is less valuable *relative* to the previous point. For example: adding 1 rating when you have 100 rating to begin with is a larger marginal gain than adding 1 rating when you have 200 rating. 
 
 {{< texblock >}}
 \begin{aligned}
@@ -32,7 +32,7 @@ The first is the property of **diminishing marginal utility**, which is the idea
 
 Many people understand this intuitively as "stat X gets worse the more you have of it". This is inherent in the way that WoW computes stat ratings, and all stats are affected equally by this phenomenon. 
 
-### Diminishing Returns as Penalty
+### Diminishing Returns from Rating Penalty
 
 A second use of the term diminishing returns refers to ex post facto conversions applied to some values to reduce their effectiveness from what is advertised on the tooltip. Stats such as Armor, Block, Stagger, and Dodge/Parry are all subject to a diminishing returns penalty. This is the classic definition of "diminishing returns" that players use most often in WoW, and will be the primary focus of this article.
 
@@ -57,13 +57,13 @@ Armor is subject to a similar penalty, except it's baked directly into the conve
 damageReduction = \frac{armorRating}{armorRating + K}
 {{< /texblock >}}
 
-where K is 6300 for a level 123 attacker (the level of raid bosses).
+where K is a fixed constant that depends on the level your attacker and the type of content you are doing (for example, a Heroic raid boss has a K value of 8467.2).
 
 ![Damage Reduction from Armor against a Level 123 Attacker](/guardian/images/damage-reduction-from-armor.png)
 
-In fact --- any stat whose conversion formula is of the shape {{< tex "f(x) = \frac{x}{Ax + C}" >}} where A and C are constant, positive numbers --- will be subject to diminishing returns, as it is inherent in the equation itself.
+In fact --- any stat whose conversion formula is of the shape {{< tex "f(x) = \frac{x}{Ax + C}" >}} where A and C are constant numbers --- will be subject to diminishing returns, as it is inherent in the equation itself.
 
-Stats that use this type of formula and are thus subject to diminishing returns include:
+Stats that use this type of formula and are therefore subject to diminishing returns include:
 
  - Dodge/Parry
  - Armor
@@ -81,6 +81,15 @@ Consider for a moment what damage reduction actually implies. Suppose you curren
 Now suppose you currently have 98% damage reduction. A 100 damage hit would be reduced to 2 damage. If you then gained another 1%, that 100 damage hit is now reduced by 99%, and you take 1 damage. Going from taking 2 damage to 1 damage has decreased the amount of damage you take by 50%. 
 
 As such, **gaining 1% damage reduction is 50 times more valuable when you already have 98% damage reduction than it is when you have 0% damage reduction**. Rather than diminishing returns, damage reduction has "increasing returns" --- every percent of damage reduction you gain is more valuable than the last.
+
+Another example: let's say you have two stats that reduce your damage taken, stat A and stat B. You currently have 0% reduction from both. 
+
+
+# TODO: FLESH OUT THIS EXAMPLE
+
+
+
+
 
 To see this more clearly, let's express it in terms of effective health. Effective health (or EHP) refers to the amount of damage required to kill you, taking into account all of your damage reductions. This is very useful for judging exactly how much impact a gain in damage reduction will have on our survivability, as we can now define it in terms of how much additional damage we can take. 
 
@@ -165,6 +174,8 @@ What are we to make of all this? Well, let's review what we know.
 4. Versatility is exceptional in that it is not subject to diminishing returns, and as such its damage reduction component will continue to increase in value as you gain more of it.
 5. All stats are affected by diminishing marginal utility, which is distinct from the diminishing returns penalty that only affects particular stats.
 
-So when someone claims that "Armor has diminishing returns", they are correct; Armor does have a diminishing returns penalty. It is also true that Armor loses value the more you have of it, but *only in the context of diminishing marginal utility*. In terms of effective health gain, every point of Armor grants the same amount of effective health as the previous, and the next. In this way, the diminishing returns penalty cancels out the increasing returns of damage reduction, resulting in a linear gain. The same is true of Dodge/Parry, Block, and Stagger.
+So when someone claims that "Armor has diminishing returns", they are correct; Armor does have a diminishing returns penalty. In terms of effective health gain, every point of Armor grants the same amount of effective health as the previous, and the next. In this way, the diminishing returns penalty cancels out the increasing returns of damage reduction, resulting in a linear gain. The same is true of Dodge/Parry, Block, and Stagger.
+
+It is also true that Armor loses value the more you have of it, but *only in the context of diminishing marginal utility*. Every point of Armor you gain is a smaller relative increase than the previous, with respect to how much Armor you already have. The same is true of not only the damage reduction stats but of every stat in the game. We tend to ignore this factor when discussing the effects of diminishing returns from *rating penalties*, because it is not a distinguishing characteristic of the system like the penalties are and serves only to confuse those who are unfamiliar.
 
 Hopefully this has helped clarify some of the less intuitive parts of this topic. 
