@@ -27,11 +27,11 @@ body {
   background-color: white; }
 
 body.home-body {
-  grid-template-areas: "header-title" "header-nav" "jumbotron" "main" "footer";
+  grid-template-areas: "header-title" "header-nav" "jumbotron" "main" "footer";
   grid-template-rows: 0fr 0fr 0fr 1fr 0fr; }
   @media screen and (min-width: 1200px) {
     body.home-body {
-      grid-template-areas: "header" "jumbotron" "main" "footer";
+      grid-template-areas: "header" "jumbotron" "main" "footer";
       grid-template-rows: 0fr 0fr 1fr 0fr; } }
 
 body.home-body.balance {
@@ -56,11 +56,11 @@ body.home-body.restoration {
 
 body.article-body {
   grid-template-rows: 0fr 0fr 1fr 0fr;
-  grid-template-areas: "header-title" "header-nav" "main" "footer"; }
+  grid-template-areas: "header-title" "header-nav" "main" "footer"; }
   @media screen and (min-width: 1200px) {
     body.article-body {
       grid-template-rows: 0fr 1fr 0fr;
-      grid-template-areas: "header" "main" "footer"; } }
+      grid-template-areas: "header" "main" "footer"; } }
 
 .header {
   width: 100%;
@@ -203,20 +203,20 @@ body.article-body .header-nav > a:hover {
       grid-row-gap: 0; } }
 
 .home-body .with-sidebar {
-  grid-template-areas: "section-overview" "main-article"; }
+  grid-template-areas: "section-overview" "main-article"; }
   @media screen and (min-width: 1200px) {
     .home-body .with-sidebar {
-      grid-template-areas: "section-overview main-article" "pagination pagination"; } }
+      grid-template-areas: "section-overview main-article" "pagination pagination"; } }
 
 .article-body article {
   margin-top: 5rem; }
 
 .article-body .with-sidebar {
-  grid-template-areas: "breadcrumbs" "article-header" "section-overview" "article-content" "article-footer"; }
+  grid-template-areas: "breadcrumbs" "article-header" "section-overview" "article-content" "article-footer"; }
   @media screen and (min-width: 1200px) {
     .article-body .with-sidebar {
       margin-top: 7rem;
-      grid-template-areas: "section-overview breadcrumbs" "section-overview article-header" "section-overview article-content" "article-footer article-footer"; } }
+      grid-template-areas: "section-overview breadcrumbs" "section-overview article-header" "section-overview article-content" "article-footer article-footer"; } }
 
 .section-overview h1, .section-header {
   border-bottom: 1px solid #000;
