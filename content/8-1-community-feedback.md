@@ -84,17 +84,13 @@ There have been no significant changes to Guardians on the PTR, although in the 
 **Authors:** Broccoliz, Voulk \
 *[Reddit Thread](#)*
 
-**Dungeons**: Strong M+ presence. Top tier damage and utility packaged with a versatile healing style make us powerful dungeon healers. Multiple viable builds. Catweaving playstyle has a very high skill ceiling which is rewarding and fun to play. 
+We have a very strong **Mythic+ presence** on live with our top tier damage and utility complimenting our versatile healing style to make us powerful dungeon healers. We have multiple viable builds (With {{< spell 20738 "Abundance" >}} & {{< spell 155675 "Germination" >}} forming a healing-centric GCD-heavy package and {{< spell 102351 "Cenarion Ward" >}}, {{< spell 200390 "Cultivation" >}}, {{< spell 274902 "Photosynthesis" >}} providing us more opportunities to DPS) and the Catweaving playstyle has a very high skill ceiling which is rewarding and fun to play. 
+
+In **raids** our CD oriented playstyle feels impactful and provides significant healing during difficult parts of the fight. Unfortunately we share a similar healing niche with Discipline Priests who are a bit of a balance outlier. We still excel in mobility and survivability but those strengths haven’t been as relevant in Uldir. Our diverse talents serve us reasonably well and we can fill multiple roles depending on healing composition (while usually being slightly weaker than those that excel in each role). 
+
+The recent **azerite trait** rebalancing has broadened our top tier with multiple combinations now viable. We fall into a similar position as most specs with the majority of our best traits being passive and uninteresting. They aren’t weak - in fact several are very powerful - they just aren’t very exciting. There is an opportunity for creative, engaging traits that have an impact on our playstyle. Azerite could be a good system. The glimpse we’ve received from the PTR suggests they’re getting closer. We’ll stay tuned. 
 
 
-**Raids**: Represented well in top world kills. CD oriented playstyle is impactful and provides significant healing during difficult parts of the fight. Shares a healing niche with Discipline Priests, a balance outlier. A diverse enough set of talents to cover multiple healing roles depending on healing composition (while usually being slightly weaker than those that excel in each role).
-
-
-**Azerite Traits**: Recent Azerite rebalancing has broadened our top tier with multiple combinations now viable (including raid trait Archive of the Titans). 
-
-
-**Wishlist**: More engaging azerite traits that make an impact on our playstyle. Some trinkets that aren't another variation of a stat stick.
-
-
-**Patch 8.1 Changes**: All resto specific notes are tooltip updates. Changes have already been in live. 
+**Patch 8.1 PTR Changes** \
+The {{< spell src="ptr" id="740" name="Tranquility" >}} nerf can be acceptable **if** it comes bundled with sustained throughput increases since it wasn’t healthy for **so much** of our healing to come from one spell. The currently datamined 10% buff to {{< spell src="ptr" id="48438" name="Wild Growth" >}} is welcome but we’ll need more to offset the Tranquility nerfs. The {{< spell src="ptr" id="274432" name="Autumn Leaves" >}} change is a positive since the old design was irritating to talent around, so long as they keep the tuning competitive. The duration extension doesn’t currently stack so if it stays that way you’ll never run more than one of these. The new {{< spell src="ptr" id="287251" name="Early Harvest" >}} trait is kind of interesting but seems to be on the weak side with current tuning. Keep an eye on the pins in the dreamgrove discord server over the next few weeks for up to date information on 8.1.
 
