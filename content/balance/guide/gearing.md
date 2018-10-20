@@ -21,7 +21,7 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 ### Consumables: 
 
 - {{< item 152639 "Flask of Endless Fathoms" "beta" >}}
-- {{< item 163222 "Battle Potion of Intellect" "beta" >}} for 3+ targets or {{< item 152559 "Potion of Rising Death" "beta" >}} for 1-2 targets (Keep in mind that Rising Death requires you stand 20 yards away to be worth using and also is very rng)
+- {{< item 163222 "Battle Potion of Intellect" "beta" >}} for 3+ targets or {{< item 152559 "Potion of Rising Death" "beta" >}} for 1-2 targets (Keep in mind that Rising Death requires you stand 20 yards away to be worth using and is also highly random.)
 - {{< item 156526 "Bountiful Captain’s Feast" "beta" >}} or {{< item 154884 "Swamp Fish ‘n Chips" "beta" >}}
 
 ### Sockets: 
