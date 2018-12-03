@@ -1,0 +1,24 @@
+8.1 Changes Balance Druid
+
+Traits and Stats:
+Mastery increased baseline from 11% to 12%, and Starsurge/Solar Wrath now scale fully at that percentage. Overall buff 4-6%, Mastery should now sim *roughly* equal to other stats. Great change now Mastery is not a dead stat.
+
+Stellar Flare was buffed, Twin Moons nerfed. You will take StFl on Single Target/Two Target fights, with TM still being the choice on Multi Target. If you do not pick StFl you basically cancel out the buff gained from Mastery. StFl will be the option on Taloc/Mother/Vectis/Fetid/Zul/Mythrax, with Twin Moons for Zek/Ghuun.  
+
+New Azerite Trait: Arcanic Pulsar: Starsurge's damage is increased by 429. Every 9 Starsurges, gain Celestial Alignment for 6 sec. Replaces Sunblaze on gear, as Sunblaze is gone. Powerful value trait, offering significant synergy with Streaking Stars, as you can proc it during the 6 second window. You will want at least 1 of this trait, as traits past 1 are weaker than the initial. Would suggest using a weakaura to track the buff and pooling before proccing the 9th Starsurge to maximize Streaking Stars procs within the 6 second window. In its current tuning it is worth it to drop at least 15 ilevels for this trait. 
+
+High Noon/Power of the Moon: Now awards periodic damage over on hit, and now are additional options for multi target, but can be outclassed by Lively Spirit if used properly and within a group setting. For Power of the Moon, the chance to gain Lunar Empowerment proc was changed to be 2.5 procs per minute modified by haste. This makes PotM another great 1 value trait, as the extra Lunar Empowerments will be useful on both Single Target and Multi Target. High Noon remains the same with the range increase on Sunfire to 11 yards.
+
+Lively Spirit: Intellect nerfed by 30%, but now returns 0.5% mana per spell cast. Still useful on multi target and in particular M+ if in coordinated groups. The mana return is useless for us but makes it better for Resto.
+
+New slots of gear with the Battle for Dazarlor raid will have 1 more ring, so 6 total class traits available. The raid pieces for BfD are very good for us, with abundance of Pulsar and Streaking so gear that is more well itemized will be easier to come by.
+
+Talents:
+1T/2T ideal talents are FoN/SL/StFl/ShS. You can run Incarn over Starlord for Uldir still as the fights benefit it still more. If you prefer Starlord feel free to run it, as the gap is a bit more now since the bugfix to Dots being modified by 35% during Incarn.
+
+3T+ Sustained talents are WoE/SoTF/SD/FoE. These are best for sustained 3 targets, which is rare cases that unless there is a fight like High Command from Antorus, you will rarely use this setup. Ideally you will run WoE/Inc or SL/TM/FoE for scenarios in raids with multi target.
+
+M+ you will still use FoN/Inc/TM/FoE like we do currently, as the combination of Incarn with Lively is too good, as well as the utility provided from FoN is unparalleled. TM is still used for ease of dotting targets quickly to save GCD’s and FoE is still the best all around option for M+.
+
+Conclusion:
+Great patch for balance. The talent changes, Mastery buff, and new trait are amazing for us. BfD looks to be great for us as a class as well so stay in high spirits! Big thanks to Gastank for providing the sim results! If you are looking for more info on gear and traits, be sure to check out chickendb.com by Slippykins and Iskalla. And as always, be sure to sim yourself for best results regarding gear sets and for stat weights.
