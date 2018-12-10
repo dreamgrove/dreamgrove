@@ -43,11 +43,9 @@ As a Balance Druid it is vital you capitalize on your very useful utility. {{< s
 
 In Battle for Azeroth, the gear you have equipped once the key begins is the gear you will have throughout the entire dungeon, so it is crucial you prepare accordingly and choose the best Azerite pieces for the job. The Azerite traits that you choose should be determined based on your group composition, the dungeon itself, and affixes. You should try to cover the weaknesses of you group as much as possible.
 
-- {{< spell 278507 "Lunar Shrapnel" "beta" >}} - The safe Azerite trait in pugs and or high density dungeons where you are doing huge pulls, being easy to use and effective, requiring little communication to pull off. Lunar Shrapnel will leave your single target something to be desired, but it’s worth it for the massive payoff.
+- {{< spell 287773 "Arcanic Pulsar" "beta" >}} - A single Pulsar trait can be decent just for the powerful low target damage it provides, and can even be prepared before a big pull for impressive burst.
 
-- {{< spell 273389 "Power of the Moon" "beta" >}} - A more niche option, offering quick constant burst for affixes like Explosive. Power of the Moon could possibly be powerful in dungeons where there is a medium amount of trash and/or even bosses that include 2 target cleave.
-
-- {{< spell 279646 "Lively Spirit" "beta" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting both decent multi-target and single target damage overall unlike most of our considerable Mythic+ traits and easily being our best trait. It is not recommended to use this trait in pugs. 
+- {{< spell 279646 "Lively Spirit" "beta" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting both decent multi-target and single target damage overall unlike most of our considerable Mythic+ traits and easily being our best trait. It is not recommended to use this trait without voice communication. 
 
 - {{< spell 280555 "Archive of the Titans" "beta" >}} - The recommended trait to use if you can't take advantage of Lively Spirit. Archive is a nice mix of single target and multi-target while also being sustained. 
 
