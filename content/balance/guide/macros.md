@@ -1,5 +1,5 @@
 ---
-title: "Macros"
+title: "Macros/Weakauras"
 date: 2018-08-11
 authors: ['Goosy', 'Nick']
 published: true
@@ -52,3 +52,22 @@ weight: 10
 /cast [talent:2/2] renewal
 /cast [talent:2/3] wild charge
 ```
+ 
+ **Tier 100 Row Macro:**
+
+```
+#showtooltip
+/cast [talent: 7/2] Fury of Elune
+/cast [talent: 7/3] New Moon
+```
+
+**Starlord Cancelaura Macro:**
+
+```
+/cancelaura starlord
+```
+
+**AP Pro Bar:**
+
+
+[AP Pro Bar](https://wago.io/4y7qKOBVW)
