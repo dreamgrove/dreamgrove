@@ -50,7 +50,7 @@ Streaking Stars changes your playstyle during {{< spell 194223 "Celestial Alignm
 
 3. Don't cap {{< spell 279708 "Empowerments" "live" >}}.
 
-4. Cast {{< spell 190984 "Solar Wrath" live" >}} if the last spell casted wasn't Solar Wrath.
+4. Cast {{< spell 190984 "Solar Wrath" "live" >}} if the last spell casted wasn't Solar Wrath.
 
 5. Spend any Empowerments.
 
