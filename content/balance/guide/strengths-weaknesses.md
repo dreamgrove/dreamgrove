@@ -17,7 +17,7 @@ Utility - Moonkin offers strong utility through the three choices of {{< spell 1
 
 Single Target Priority Damage - If planned accordingly, Balance has capable single target priority damage, being able to pool resources to quickly burst down a target with multiple casts of {{< spell 78674 "Starsurge" "beta" >}} and through those, {{< spell 279708 "Empowerments" "beta" >}}. Talenting {{< spell 202425 "Warrior of Elune" "beta" >}} or {{< spell 205636 "Force of Nature" "beta" >}} and {{< spell 202770 "Fury of Elune" "beta" >}} further strengthens our already potent priority damage, making us high tier in this regard.
 
-Sustained Multi-Target - Outside of cooldowns, Moonkin brings good sustained damage on multiple targets. We bring sustained multi-target through our DoTs and {{< spell 191034 "Starfall" "beta" >}}, giving us consistent damage once {{< spell 93402 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}} are up and running and we can start generating Astral Power to lay blankets of Starfalls. This is the strength we’re known for and we are nearly unmatched in that aspect.
+Sustained Spread Multi-Target - Outside of cooldowns, Moonkin brings good sustained damage on multiple spread targets. We bring this through our DoTs and {{< spell 191034 "Starfall" "beta" >}}, giving us consistent damage once {{< spell 93402 "Sunfire" "beta" >}} and {{< spell 164812 "Moonfire" "beta" >}} are applied and we can start generating Astral Power to lay blankets of Starfalls. This is the strength we’re known for and we are nearly unmatched in that aspect.
 
 ### Weaknesses:
 
@@ -25,6 +25,6 @@ Weak Cooldowns - {{< spell 194223 "Celestial Alignment" "beta" >}} is one of the
 
 Long AoE Ramp Time - Moonkin requires a long amount of time to get its damage going compared to other classes. In multi-target situations you must DoT every target and then generate enough Astral Power to start your damage in a meaningful way.
 
-Mobility While Casting - Being a caster, it is imperative you are prepared for movement and deal with mechanics while also dealing damage, but Balance has huge problems achieving that. With our slow Astral Power generation it can be difficult to have enough resources to be able to Starsurge out of a mechanic.
+Mobility While Casting - Being a caster, it is imperative you are prepared for movement and deal with mechanics while also dealing damage, but Balance has huge problems achieving that. With our slow Astral Power generation it can be difficult to have enough resources to be able to {{< spell 78674 "Starsurge" "beta" >}} out of a mechanic.
 
-No Immunity or High Mitigation Cooldowns - Lacking an immunity can be a massive weakness on certain encounters as they can sometimes allow for a fight's mechanics to be negated. As well as lacking an immunity, we don't have any defensive that awards a huge amount of mitigation like many other specilizations. The most we have in this regard is {{< spell 5487 "Bear Form" "beta" >}} and {{< spell 22812 "Barkskin" "beta" >}} in conjunction.
+No Immunity - Lacking an immunity can be a massive weakness on certain encounters as they can sometimes allow for a fight's mechanics to be negated. We do however make up for this with decent soaking capabilities due to {{< spell 5487 "Bear Form" "beta" >}}.
