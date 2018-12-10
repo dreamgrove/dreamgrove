@@ -43,7 +43,7 @@ As a Balance Druid it is vital you capitalize on your very useful utility. {{< s
 
 In Battle for Azeroth, the gear you have equipped once the key begins is the gear you will have throughout the entire dungeon, so it is crucial you prepare accordingly and choose the best Azerite pieces for the job. The Azerite traits that you choose should be determined based on your group composition, the dungeon itself, and affixes. You should try to cover the weaknesses of you group as much as possible.
 
-- {{< spell 287773 "Arcanic Pulsar" "beta" >}} - A single Pulsar trait can be decent just for the powerful low target damage it provides, and can even be prepared before a big pull for impressive burst.
+- {{< spell 287773 "Arcanic Pulsar" "ptr" >}} - A single Pulsar trait can be decent just for the powerful low target damage it provides, and can even be prepared before a big pull for impressive burst.
 
 - {{< spell 279646 "Lively Spirit" "beta" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting both decent multi-target and single target damage overall unlike most of our considerable Mythic+ traits and easily being our best trait. It is not recommended to use this trait without voice communication. 
 
