@@ -3,7 +3,7 @@ title: Defensive Trinkets
 date: '2018-08-19'
 authors: ['Macrologia']
 published: true
-patch: 8.0.1
+patch: "8.0"
 ---
 
 Tanking trinkets in BFA **suck** for survivability.

@@ -4,6 +4,7 @@ date: '2018-10-14'
 published: true
 authors: ['The Dreamgrove']
 showtoc: true
+patch: "8.1"
 description: "An open letter to the community about the state of Druids in patch 8.1."
 ---
 

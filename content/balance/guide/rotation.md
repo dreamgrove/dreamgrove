@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 4
+patch: "8.0"
 ---
 
 *Balance doesn’t follow a strict rotation, it’s more of a priority list.*

@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 6
+patch: "8.0"
 ---
 
 Like other gear, Azerite gear should be simmed, just because a piece of gear has your best trait doesn’t mean it is an upgrade. Use logic when choosing between Azerite pieces as well, just because a trait sims less doesn’t mean it is worse if it gives more burst for example. When choosing between defensive vs. offensive Azerite, weigh how important survivability is and if it is needed. This can not be properly explained in a guide as these situations are much too specific.

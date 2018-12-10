@@ -4,7 +4,7 @@ articleListTitle: "Bosses"
 hideSummaries: true
 hideSpecs: true
 showSectionToC: true
-patch: 8.0.1
+patch: "8.0"
 description: A boss-by-boss look at talents, playstyle, and tips and tricks for Guardian Druids in Uldir.
 ---
 

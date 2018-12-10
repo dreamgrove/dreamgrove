@@ -3,6 +3,7 @@ date: '2018-07-22'
 authors: ["Tettles","Nick","Bora"]
 published: true
 title: "The Emerald Dreamcatcher Prepatch Guide"
+patch: "7.3.5"
 ---
  
 **The Emerald Dreamcatcher**

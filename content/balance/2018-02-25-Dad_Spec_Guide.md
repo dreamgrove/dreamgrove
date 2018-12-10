@@ -2,6 +2,7 @@
 date: '2018-02-24'
 authors: ["Jundarer","Nagura","Nick","Tettles","Bora","Gastank"]
 published: true
+patch: "8.0"
 title: Dad Build Guide
 ---
 

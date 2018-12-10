@@ -5,6 +5,7 @@ published: true
 title: "ChickenDB update #1 -- trait stacks, tooltips and feedback"
 showOnFrontpage: true
 description: In this ChickenDB update, we go over the main changes in this update, including all-new tooltips, trait stacking and more!
+patch: "8.0"
 ---
 
 One of the best things about running your own theorycrafting project is that you decide where things go and what you want to focus on. All your feedback has been immeasurable and awesome, and we would just like to thank everyone for the time they've given to ChickenDB and for helping it grow. Balance is an extremely lucky spec to have so many caring and thoughtful people playing it, and that's mainly why we created ChickenDB in the first place.

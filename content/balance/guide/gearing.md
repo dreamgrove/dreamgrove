@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 5
+patch: "8.0"
 ---
 
 It is heavily recommended you sim your character regardless of what guides say as that is almost always the best way to know if something is an upgrade as your best stats depend completely on your specific character.

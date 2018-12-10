@@ -5,6 +5,7 @@ authors: ['Tettles','Nick','Bora','Goosy']
 published: true
 showOnFrontpage: false
 weight: 5
+patch: "8.0"
 ---
 
 ## Heroic

@@ -3,6 +3,7 @@ title: "Balance Beta Changes: Analysis"
 date: '2018-06-22'
 authors: ["Tettles","Nick"]
 published: true
+patch: "8.0"
 ---
 
 <center>

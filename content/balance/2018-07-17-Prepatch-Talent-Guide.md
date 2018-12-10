@@ -3,6 +3,7 @@ title: Balance Antorus Talent Guide (Prepatch)
 date: '2018-07-18'
 authors: ["Nick","Tettles"]
 published: true
+patch: "7.3.5"
 ---
 
 <center>

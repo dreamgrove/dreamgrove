@@ -5,6 +5,7 @@ published: true
 title: "Cat Chat - Battle for Azeroth"
 series: ["Cat Chat"]
 series_title: "Battle for Azeroth"
+patch: "8.0"
 ---
 
 

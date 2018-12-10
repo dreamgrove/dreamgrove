@@ -3,6 +3,7 @@ title: Balance Leveling FAQ
 date: '2018-08-10'
 authors: ["Goosy","Nick"]
 published: true
+patch: "8.0"
 ---
 
 

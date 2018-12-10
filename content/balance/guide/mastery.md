@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 8
+patch: "8.0"
 ---
 
 Once you have gotten the basics down, you may wish to improve further with Moonkin. First off, the most important step to becoming a good player and specifically Balance Druid, is playing the spec and getting experience. Besides experience, which is essential, we have listed the general tips that should prove helpful in fully understanding even the most specific points of the specialization.

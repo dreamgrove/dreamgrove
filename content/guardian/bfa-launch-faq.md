@@ -5,7 +5,7 @@ description: "Battle for Azeroth is upon us! Here's everything you need to know 
 authors: ['Faide']
 published: true
 showtoc: true
-patch: 8.0.1
+patch: "8.0"
 ---
 
 Battle for Azeroth is upon us! Here's a list of the most common questions I get asked about launch day and leveling as a Guardian Druid.

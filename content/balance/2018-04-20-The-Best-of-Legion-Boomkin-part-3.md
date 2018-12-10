@@ -6,6 +6,7 @@ title: "The Best of Legion Boomkin: Part 3, Starfall Single Target"
 series: ["The Best of Legion Boomkin"]
 series_title: "Part 3, Starfall Single Target"
 series_weight: 3
+patch: "7.3.5"
 ---
 ## The Memekin Begins
 Using Starfall as the single target spender was first experimented with after the 7.1.5 changes that significantly buffed Starfall, taking Boomkin from one of the worst sustained AOE specs in the game to one of the best. It went under the name “Memekin” because it utilized talents that up until that patch had been completely useless. At the time the single target Starfall build was still significantly behind the standard Starsurge build on most encounters but due to the extremely high movement on Helya the Starfall build managed to pull ahead. You can see it in action in my first Helya kill after the patch:

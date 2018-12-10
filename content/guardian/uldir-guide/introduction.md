@@ -4,7 +4,7 @@ date: 2018-09-03
 authors: ['Faide']
 published: true
 showOnFrontpage: false
-patch: 8.0.1
+patch: "8.0"
 weight: 1
 description: A boss-by-boss look at talents, playstyle, and tips and tricks for Guardian Druids in Uldir.
 ---

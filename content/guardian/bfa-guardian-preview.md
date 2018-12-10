@@ -3,6 +3,7 @@ title: Battle for Azeroth Guardian Druid Preview
 date: '2018-07-14'
 authors: ['Faide']
 description: "Everything you need to know about Guardian Druids in Battle for Azeroth. What's changed, how does it affect us, and how are we looking going into the new expansion?"
+patch: "8.0"
 ---
 
 Hi everyone!

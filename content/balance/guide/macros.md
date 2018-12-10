@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 10
+patch: "8.0"
 ---
 
 **Innervate Mouseover/Focus Macro:**

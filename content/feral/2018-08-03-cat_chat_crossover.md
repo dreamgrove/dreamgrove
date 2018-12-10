@@ -5,6 +5,7 @@ published: True
 title: "Cat Chat - Moonkin Monthly Crossover"
 series: ["Cat Chat"]
 series_title: "Moonkin Monthly Crossover"
+patch: "8.0"
 ---
 
 

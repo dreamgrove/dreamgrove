@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 1
+patch: "8.0"
 ---
 
 ## Core Abilities

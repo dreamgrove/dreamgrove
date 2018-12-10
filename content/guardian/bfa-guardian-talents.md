@@ -2,6 +2,7 @@
 title: BFA Guardian - Talents Feedback
 date: '2018-05-08'
 authors: ['Faide']
+patch: "8.0"
 ---
 
 *This is a mirror of the post I made on the Beta Class Forums. I've saved a record of it here in its entirety for posterity when the forums are closed. Feel free to follow along while the thread is open [here](https://us.battle.net/forums/en/wow/topic/20763896378).*
