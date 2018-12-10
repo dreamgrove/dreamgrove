@@ -69,6 +69,5 @@ weight: 10
 
 **AP Pro Bar:**
 
-```
+
 [AP Pro Bar](https://wago.io/4y7qKOBVW)
-```
