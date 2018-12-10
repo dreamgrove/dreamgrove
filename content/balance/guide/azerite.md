@@ -40,13 +40,13 @@ Stacking traits tends to be the way to go as Balance Druid as we don’t lose mu
 
 ### Rotation/Talent Changing Traits
 
-- {{< spell 276153 "Dawning Sun" "ptr" >}} - Slightly alters the rotation by incentivizing you to always have the 8 second buff up before casting {{< spell 190984 "Solar Wrath" "ptr>}}s, even if the {{< spell 194153 "Lunar Strike" "ptr" >}} is unempowered.
+- {{< spell 276153 "Dawning Sun" "ptr" >}} - Slightly alters the rotation by incentivizing you to always have the 8 second buff up before casting {{< spell 190984 "Solar Wrath" "ptr" >}}s, even if the {{< spell 194153 "Lunar Strike" "ptr" >}} is unempowered.
 
-- {{< spell 272871 "Streaking Stars" "ptr >}} - Besides the obvious gameplay change of not repeating the same ability twice in a row, it’s worth noting that you should cast a {{< spell 190984 "Solar Wrath" "ptr" >}} after every ability (besides Solar Wrath) unless it would cause you to overcap Astral Power or Empowerments. 
+- {{< spell 272871 "Streaking Stars" "ptr" >}} - Besides the obvious gameplay change of not repeating the same ability twice in a row, it’s worth noting that you should cast a {{< spell 190984 "Solar Wrath" "ptr" >}} after every ability (besides Solar Wrath) unless it would cause you to overcap Astral Power or Empowerments. 
 
-Keep in mind that while Streaking Stars affects abilities such as {{< spell 191034 "Starfall" "ptr >}} and {{< spell 202770 "Fury of Elune" "ptr">}}, it is only the first tick of the ability. Also, this trait has a reduced amount of damage in conjunction with Incarnation: Chosen of Elune.
+Keep in mind that while Streaking Stars affects abilities such as {{< spell 191034 "Starfall" "ptr" >}} and {{< spell 202770 "Fury of Elune" "ptr">}}, it is only the first tick of the ability. Also, this trait has a reduced amount of damage in conjunction with Incarnation: Chosen of Elune.
 
-- {{< spell 287773 "Arcanic Pulsar" "ptr" >}} - Arcanic Pulsar indirectly changes how you play your character through making {{< spell 202345 "Starlord" "ptr" >}} a much more potent talent (and through Starlord, {{< spell 202430 "Nature's Balance" "ptr >}} becomes the top choice in the tier 15 row, at least in pure throughput). 
+- {{< spell 287773 "Arcanic Pulsar" "ptr" >}} - Arcanic Pulsar indirectly changes how you play your character through making {{< spell 202345 "Starlord" "ptr" >}} a much more potent talent (and through Starlord, {{< spell 202430 "Nature's Balance" "ptr" >}} becomes the top choice in the tier 15 row, at least in pure throughput). 
 
 
 ### Top Traits
