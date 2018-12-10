@@ -11,7 +11,7 @@ Summary
 ===
 Welcome to the Balance Druid guide! This guide will explain the basics of Moonkin and teach you the essential information needed to learn it.
 
-This guide is up to date as of BFA patch **8.0.1**.
+This guide is up to date as of BFA patch **8.1**.
 
 Authors
 ===
