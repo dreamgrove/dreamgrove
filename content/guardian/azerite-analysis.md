@@ -7,8 +7,6 @@ showtoc: true
 patch: 8.0.1
 ---
 
-*Update 18 Aug 2018: {{< spell 279527 "Wild Fleshrending" >}} was fixed, and added a few non-guardian traits of note. Also, added a section for frequently asked questions.*
-
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.
 
 Let's take a look at the traits available to Guardians. First, I'll cover the set of traits specific to Guardian (or traits from other Druid specs that Guardian can select) on the outer ring (Tier 3), and then some of the more general tanking-related traits that are available on the middle and inner rings (Tier 2 and Tier 1, respectively). Because many traits scale with item level, I will be assuming an item level of 370 (Heroic Uldir) for all trait values, except for the Engineering traits which are only available up to 340.
@@ -28,6 +26,12 @@ For example: if you have more than one {{< spell 279552 "Layered Mane" >}} trait
 Defensively speaking, the generic traits that grant primary stat are not terrible usually, but they will typically be worse than the Guardian specific traits. The remaining generic traits (the ones that grant secondaries or deal damage) are not worth taking. Use your best judgement when deciding whether or not to take a generic trait for defensive value.
 
 Offensively, many generic traits are very strong for DPS and will typically be stronger than Guardian specific traits (the exceptions being {{< spell 275906 "Twisted Claws" >}}, {{< spell 273367 "Power of the Moon" >}}, and {{< spell 279527 "Wild Fleshrending" >}}, which are very competitive). You should always sim your trait options to determine which are the strongest for your character's DPS. To get a general idea of what DPS traits you should aim for, check out [Bloodmallet](https://bloodmallet.com/index.html#druid_guardian?data_view=azerite_traits&type=itemlevel&fight_style=patchwerk).
+
+## How many item levels is a trait worth?
+
+Defensively, if you have one of the strong outer ring traits ({{< spell 279552 "Layered Mane" >}} or {{< spell 275906 "Twisted Claws" >}}), they are worth more than any realistic item level upgrade.
+
+Offensively, you should sim your options to determine what is strongest for your character specifically.
 
 # Outer Ring 
 
@@ -49,9 +53,9 @@ Frankly, this trait is pretty terrible. Not only is it only active during {{< sp
 
 - {{< spell 279536 "Gory Regeneration" >}} - {{< spell 33917 "Mangle" >}} increases the duration of an active {{< spell 22842 "Frenzied Regeneration" >}} by 1 second. Additionally, Frenzied Regeneration heals for X more per second.
 
-At 370 the extra heal is valued at 1573 extra healing per second, for a total of 6292 additional healing per cast. This extra healing is present regardless of whether the {{< spell 22842 "Frenzied Regeneration" >}} is empowered by {{< spell 33917 "Mangle" >}} or not. Additionally, the extension occurs *per target hit*, meaning that if you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} and you can hit 3 targets with Mangle, you will get 3 seconds of extension. You can only have one extension per cast of Frenzied Regeneration however; subsequent Mangles will not further extend the duration.
+At 370 the extra heal is valued at 1573 extra healing per second, for a total of 6292 additional healing per cast. This extra healing is present regardless of whether the {{< spell 22842 "Frenzied Regeneration" >}} is empowered by {{< spell 33917 "Mangle" >}} or not. Additionally, the extension occurs *per target hit*, meaning that if you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}} and you can hit 3 targets with Mangle, you will get 3 seconds of extension. You can extend a single Frenzied Regeneration by up to 3 seconds, regardless of number of targets hit; subsequent Mangles will not further extend the duration.
 
-This trait is not very good. If you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you can add an extra 3 seconds to your {{< spell 22842 "Frenzied Regeneration" >}} at most, which is 75% increased healing from at most 2 FRs in a span of 30 seconds, every 3 minutes. Outside of that, it's a pseudo {{< spell 155578 "Guardian of Elune" >}} (the Frenzied Regeneration portion), without the flexibility to pool the buff for a later cast or spend it on empowering {{< spell 192081 "Ironfur" >}} instead.
+If you have {{< spell 102558 "Incarnation: Guardian of Ursoc" >}}, you can add an extra 3 seconds to your {{< spell 22842 "Frenzied Regeneration" >}} at most, which is 75% increased healing from at most 2 FRs in a span of 30 seconds, every 3 minutes. Outside of that, it's a pseudo {{< spell 155578 "Guardian of Elune" >}} (the Frenzied Regeneration portion), without the flexibility to pool the buff for a later cast or spend it on empowering {{< spell 192081 "Ironfur" >}} instead.
 
 While this trait might look okay on paper, I'm not convinced it has the same value in practice. For one, the HPS of {{< spell 22842 "Frenzied Regeneration" >}} is still quite low, at 6% HP per tick baseline (with the bonus healing from the trait it is probably closer to 7%). The extension component of Gory Regeneration does not improve the HPS output of Frenzied Regen while it's ticking, it only increases the number of seconds it ticks for. This would be fine in isolation, but in reality you don't have infinite health and you will have external healing. Extending FR increases the chance that it will cause overhealing, either for you or for your healers, which eliminates the benefit of receiving more healing altogether. 
 
@@ -144,6 +148,18 @@ Overall this trait is a boost to your healing if you have {{< spell 197492 "Rest
 At 340, this deals 763 damage every 2 seconds. It has an RPPM of 1.5.
 
 This trait is exclusive to the Engineering goggles {{< item 160489 "AZ3-R1-T3 Gearspun Goggles" >}}. While this trait is not exceptional in its own right, it is the only option available on the goggles relevant for tanking.
+
+## Archive of the Titans
+
+- {{< spell 280555 "Archive of the Titans" >}} - Every 5 seconds, increase your primary stat by X, increasing up to 20 times. This data decays while out of combat. Also enables {{< spell 280573 "Reorigination Array" >}} within Uldir.
+
+At 370, you gain 10 primary stat per stack.
+
+This trait is not especially powerful by itself, but it does enable {{< spell 280573 "Reorigination Array" >}}. 
+
+Reorigination Array is a persistent buff that increases in power the more bosses you kill in Uldir. It grants you more of your highest secondary stat (which hopefully is a stat you are stacking because you prefer it), and each week it will increase in value as you kill bosses. Reorigination Array looks to be extremely potent as the weeks go by, so you will definitely want at least one trait which enables this effect.
+
+Notably, {{< spell 280705 "Laser Matrix" >}} also enables {{< spell 280573 "Reorigination Array" >}}. {{< spell 280555 "Archive of the Titans" >}} is the more tank-relevant trait of the two, but you could use either trait in order to gain the effect.
 
 ---
 
@@ -294,6 +310,7 @@ With all that being said, here are the traits I'd recommend paying attention to,
 - {{< spell 279552 "Layered Mane" >}} - Easily our best defensive trait. Extra stacks of Ironfur will almost always be useful, and a buff to every stack of Ironfur is the cherry on top.
 - {{< spell 275906 "Twisted Claws" >}} - Free Agility for what is essentially performing the rotation correctly. Holds its own in single target but really shines on 2+ targets.
 - {{< spell 279541 "Guardian's Wrath" >}} - Increases the amount of spenders you can cast and gives you a safety net to spend Rage aggressively on tank swap fights.
+- {{< spell 280555 "Archive of the Titans" >}} - You should use at least one of these to enable {{< spell 280573 "Reorigination Array" >}}.
 
 ## Middle Ring
 

@@ -7,21 +7,21 @@ showOnFrontpage: false
 weight: 5
 ---
 
-It is heavily recommended you sim your character regardless of what guides say as that is almost always the best way to know if something is an upgrade.
+It is heavily recommended you sim your character regardless of what guides say as that is almost always the best way to know if something is an upgrade as your best stats depend completely on your specific character.
 
 Intellect is your primary stat, it will be on almost all of your gear besides jewelry and some trinkets, usually you don’t want to sacrifice too much item level for secondaries stats as it is not worth losing too much intellect. Otherwise your secondary stat priority will usually look something like so: 
 
-- **Haste > Crit >= Vers > Mastery**
+- **Haste > Crit = Vers = Mastery**
 
 ### Enchants:
 
-- {{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}}
+- {{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}} or {{< item 153479 "Enchant Weapon - Torrent of Elements" "beta" >}} (Depending on what sims higher)
 - {{< item 153443 "Enchant Ring - Pact of Haste" "beta" >}}
 
 ### Consumables: 
 
 - {{< item 152639 "Flask of Endless Fathoms" "beta" >}}
-- {{< item 163222 "Battle Potion of Intellect" "beta" >}} for 3+ targets or {{< item 152559 "Potion of Rising Death" "beta" >}} for 1-2 targets
+- {{< item 163222 "Battle Potion of Intellect" "beta" >}}
 - {{< item 156526 "Bountiful Captain’s Feast" "beta" >}} or {{< item 154884 "Swamp Fish ‘n Chips" "beta" >}}
 
 ### Sockets: 
@@ -31,8 +31,6 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 ### Notable trinkets you should consider are the following: 
 
-- {{< item 159624 "Rotcrusted Voodoo Doll" "beta" >}} and {{< item 159631 "Lady Waycrest’s Music Box" "beta" >}} for single target.
-- {{< item 159615 "Ignition Mage’s Fuse" "beta" >}} and {{< item 159620 "Conch of Dark Whispers" "beta" >}} for multi-target.
-- {{< item 161377 "Azurethos’ Singed Plumage" "beta" >}} and {{< item 161380 "Drust-Runed Icicle" "beta" >}} are strong overall.
+- Any trinket that is of high item level.
 
-To get a full picture of potentially useful trinkets, and for the most up to date simulation information, make sure to use [Chickendb](http://www.chickendb.com "Chickendb").
+To get a full picture of potentially useful trinkets, and for the most up to date simulation information, make sure to use [Chickendb](http://www.chickendb.com "Chickendb"). As always sim your own character, don't just blindly follow these sims or even your own. Remember to also use logic when making gearing decisions!
