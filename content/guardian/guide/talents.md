@@ -4,7 +4,7 @@ date: 2018-08-09
 authors: ['Macrologia', 'Faide']
 published: true
 showOnFrontpage: false
-patch: 8.0.1
+patch: "8.0"
 weight: 5
 ---
 

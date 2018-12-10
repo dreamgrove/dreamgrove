@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 9
+patch: "8.0"
 ---
 
 ### Baseline Abilities

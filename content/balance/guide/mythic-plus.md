@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 7
+patch: "8.0"
 ---
 
 This section of the guide will explain the basics of Mythic+ as a Balance Druid. Moonkin brings a lot to the table in Mythic+ and is a viable caster at all levels of keys. Our main strengths come from sustained multi-target, a plethora of utility, consistent defensives, and very little loss of single target damage from talenting full AoE compared to other dps. 

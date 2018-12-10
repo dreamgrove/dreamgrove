@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 2
+patch: "8.0"
 ---
 
 Balance Druid brings many strengths, but also suffers from weaknesses like any specialization. It is important that you understand these if you wish to get the most out of Moonkin. 

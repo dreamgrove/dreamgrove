@@ -10,6 +10,8 @@ theme = "dg-theme"
   enableElune = true
   description = "Dreamgrove is the home of all things Druid. Guides, articles, theorycrafting, and more!"
   restoExternalURL = "http://questionablyepic.com"
+  currentPatch = "8.1"
+  pastPatches = "7.3.5,8.0"
 
 [taxonomies]
   series = "series"

@@ -4,7 +4,7 @@ date: 2018-09-03
 authors: ['Faide']
 published: true
 showOnFrontpage: false
-patch: 8.0.1
+patch: "8.0"
 weight: 9
 description: Recommendations for Guardian Druid talents, playstyle, and tips and tricks for G'huun in Uldir, on Normal/Heroic and Mythic difficulties.
 ---

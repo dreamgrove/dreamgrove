@@ -5,6 +5,7 @@ published: True
 title: "Cat Chat - Emergency Cat Chat"
 series: ["Cat Chat"]
 series_title: "Beta except Live instead"
+patch: "8.0"
 ---
 
 

@@ -4,7 +4,7 @@ date: '2018-08-06'
 authors: ['Faide']
 description: "Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. Here is a detailed analysis of the azerite traits available to Guardians in Battle for Azeroth."
 showtoc: true
-patch: 8.0.1
+patch: "8.0"
 ---
 
 Azerite powers are a new system in Battle for Azeroth, similar to the Netherlight Crucible from Legion. They provide various bonuses and augment your skills in ways similar to tier set bonuses or legendaries, but at a slightly lower power level.

@@ -1,10 +1,15 @@
+{{ $currentPatch := $.Site.Params.currentPatch }}
+{{ $pastPatches := split $.Site.Params.pastPatches "," }}
 {{ $spec := .Get "spec" | lower }}
-{{ $source := .Get "src" | default "live" }}
-{{ $sourceFile := cond (eq $source "beta") "talents_beta" "talents" }}
+{{ $patch := $.Page.Params.patch | default $currentPatch }}
+{{ $sourceFile := print "talents-" $patch }}
 {{ $class := "11" }}
+{{ $dataPath := (index $.Site.Data $sourceFile) }}
+{{ $dataFile := cond (eq $dataPath nil) (index $.Site.Data (print "talents-" $currentPatch)) $dataPath }}
+{{ $data := index $dataFile $class }}
 {{ $selectArray := split (.Get "select" | default "0000000") "" }}
 {{ $recommendRows := split (.Get "recommend" | default "000,000,000,000,000,000,000") ","}}
-{{ $data := index (index $.Site.Data $sourceFile) "11" }}
+{{ $dbsrc := cond (or (in $pastPatches $patch) (eq $patch $currentPatch)) "www" "ptr" }}
 
 {{/* Find the spec data */}}
 {{ range $data.specs }}
@@ -26,7 +31,7 @@
     {{ range $spell := $column }}
       {{ $specMatches := (eq ($.Scratch.Get "spec").name $spell.spec.name) }}
       {{ if $specMatches }}
-      <div class="talent-spell{{ if $selected }} selected{{ else }}{{ if (gt $recommend 0) }} recommended-{{ $recommend }}{{ end }}{{ end }}" data-tooltip-href="http://{{ cond (eq $source "live") "www" $source }}.wowdb.com/spells/{{ $spell.spell.id }}">
+      <div class="talent-spell{{ if $selected }} selected{{ else }}{{ if (gt $recommend 0) }} recommended-{{ $recommend }}{{ end }}{{ end }}" data-tooltip-href="http://{{ $dbsrc }}.wowdb.com/spells/{{ $spell.spell.id }}">
           <div class="talent-icon-wrapper">
             <img class="talent-icon" src="{{ $.Site.BaseURL }}/images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
           </div>
@@ -51,7 +56,7 @@
       {{ range $spell := $column }}
         {{ $noSpecSet := (not (isset $spell "spec")) }}
         {{ if $noSpecSet }}
-          <div class="talent-spell{{ if $selected }} selected{{ else }}{{ if (gt $recommend 0) }} recommended-{{ $recommend }}{{ end }}{{ end }}" data-tooltip-href="http://{{ cond (eq $source "live") "www" $source }}.wowdb.com/spells/{{ $spell.spell.id }}">
+          <div class="talent-spell{{ if $selected }} selected{{ else }}{{ if (gt $recommend 0) }} recommended-{{ $recommend }}{{ end }}{{ end }}" data-tooltip-href="http://{{ $dbsrc }}.wowdb.com/spells/{{ $spell.spell.id }}">
             <div class="talent-icon-wrapper">
               <img class="talent-icon" src="{{ $.Site.BaseURL }}/images/{{ $spell.spell.icon }}.png" alt="{{ $spell.spell.name }}"/>
             </div>

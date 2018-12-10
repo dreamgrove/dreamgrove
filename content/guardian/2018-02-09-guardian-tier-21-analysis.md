@@ -5,6 +5,7 @@ authors: ['Faide']
 published: true
 hasMath: true
 showModified: true
+patch: "7.3.5"
 ---
 
 Let’s talk about the Guardian Tier 21 set bonuses.

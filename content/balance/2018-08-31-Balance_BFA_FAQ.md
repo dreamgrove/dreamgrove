@@ -3,6 +3,7 @@ date: '2018-08-31'
 authors: ["Spy"]
 published: true
 title: Balance BFA FAQ
+patch: "8.0"
 ---
 
 

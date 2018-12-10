@@ -5,6 +5,7 @@ authors: ['Goosy', 'Nick']
 published: true
 showOnFrontpage: false
 weight: 3
+patch: "8.0"
 ---
 
 Currently Moonkin’s talents are generally extremely close in power overall, but it is still important that you choose the correct talents for the encounter if you wish to thrive as Balance. Understanding a talents’ strong suit is the key to playing optimally.

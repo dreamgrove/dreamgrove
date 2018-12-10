@@ -5,6 +5,7 @@ published: True
 title: "Cat Chat - M+ Woes and some Tuning Talk"
 series: ["Cat Chat"]
 series_title: "M+ Woes and Tuning"
+patch: "8.0"
 ---
 
 

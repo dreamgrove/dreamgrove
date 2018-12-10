@@ -3,6 +3,7 @@ title: "Feral Opener Reference"
 date: 2018-09-03
 authors: ['Xanzara']
 published: true
+patch: "8.0"
 ---
 
 ### General Feral Opener Sequence

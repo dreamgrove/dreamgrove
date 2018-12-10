@@ -5,6 +5,7 @@ published: true
 title: "Cat Chat - 8.1 PTR"
 series: ["Cat Chat"]
 series_title: "AOE talents and other 8.1 Changes"
+patch: "8.1"
 ---
 
 

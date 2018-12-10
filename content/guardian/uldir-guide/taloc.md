@@ -4,8 +4,8 @@ date: 2018-09-03
 authors: ['Faide']
 published: true
 showOnFrontpage: false
-patch: 8.0.1
 weight: 2
+patch: "8.0"
 description: Recommendations for Guardian Druid talents, and playstyle, and tips and tricks for Taloc in Uldir, on Normal/Heroic and Mythic difficulties.
 ---
 

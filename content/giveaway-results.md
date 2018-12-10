@@ -4,6 +4,7 @@ authors: ["Slippykins"]
 published: true
 hasMath: true
 title: Dreamgrove Beta Key Giveaway -- Results Summary
+patch: "8.0"
 ---
 
 

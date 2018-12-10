@@ -6,6 +6,7 @@ title: "The Best of Legion Boomkin: Part 2, Moon Moon & Radiant Moonlight"
 series: ["The Best of Legion Boomkin"]
 series_title: "Part 2, Moon Moon & Radiant Moonlight"
 series_weight: 2
+patch: "7.3.5"
 ---
 New Moon, Half Moon and Full Moon, the Moon spells, the artifact ability or my personal preference: Moon Moon, has been a core part of the Legion Balance Druid rotation. Not only does it provide a significant amount of Astral Power, greatly reducing the amount of unempowered Solar Wraths we have to cast, it also adds an extra button to our otherwise rather boring base rotation of Solar Wrath spam with the occasional Starsurge into Lunar Strike. I would really like and expect that it in some form remains in Battle for Azeroth. Personally I would like to see it become base, possibly in a slightly simplified version.
 

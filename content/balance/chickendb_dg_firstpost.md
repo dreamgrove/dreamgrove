@@ -4,6 +4,7 @@ authors: ["Slippykins", "Iskalla"]
 published: true
 hasMath: true
 title: BFA Boomkin Theorycrafting -- introduction to chickendb.com
+patch: "8.0"
 ---
 
 # Preamble #
