@@ -9,35 +9,27 @@ patch: "8.0"
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="123,213,233,223,123,132,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
 
 <center>
-<b>Azerite</b>
-  
-Streaking Stars / Laser Matrix / Archive of the Titans
-
-
 <b>Notes</b>
 
-Taloc is primarily a single target fight with some minor add focus and medium to heavy movement. Use 
-Tiger Dash or Wild Charge to place your Plasmic Discharge in appropriate places. Treants/Warrior of Elune
-and Twin Moons/Stellar Flare are purely flavor picks on this fight. Trees offer more single target while Warrior of Elune 
-provides more burst during the intermission.
+Taloc is primarily a single target fight with some minor add focus and medium movement. Use 
+Tiger Dash or Wild Charge to place your Plasmic Discharge in appropriate places.
+
+Run Starlord if you're capable of utilizing it well.
 
 </center>
 
 
 ## Mythic
-{{< talents spec="balance" src="beta" recommend="123,213,233,223,123,132,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
 <center>
-<b>Azerite</b>
-  
-Streaking Stars / Laser Matrix / Archive of the Titans
-
-
 <b>Notes</b>
 
 Not much changes in mythic, Wild Charge gains some value due to the need for spreading (which slows you) and stacking throughout the fight. 
+
+Run Starlord if you're capable of utilizing it well.
 
 </center>
  
