@@ -11,6 +11,7 @@ patch: "8.0"
 ## Heroic
 {{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
 
+<center>
 <b>Notes</b>
 
 Taloc is primarily a single target fight with some minor add focus and medium movement. Use 
@@ -23,7 +24,7 @@ Run Starlord if you're capable of utilizing it well.
 
 ## Mythic
 {{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
-
+<center>
 <b>Notes</b>
 
 Not much changes in mythic, Wild Charge gains some value due to the need for spreading (which slows you) and stacking throughout the fight. 
