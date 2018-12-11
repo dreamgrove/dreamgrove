@@ -8,6 +8,8 @@ weight: 8
 patch: "8.0"
 ---
 
+<center>
+
 ## Heroic
 {{< talents spec="balance" patch="8.1" recommend="332,213,223,222,133,132,322" >}}
 
@@ -17,7 +19,7 @@ A spread AoE fight turned into a single target dps check with light cleave. Stre
 
 Run Starlord if you're capable of utilizing it well.
 
-</center>
+
 
 
 ## Mythic
