@@ -9,7 +9,7 @@ patch: "8.0"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,132,322" >}}
+{{< talents spec="balance" patch="8.1" recommend="332,213,223,222,133,132,322" >}}
 
 <b>Notes</b>
 
