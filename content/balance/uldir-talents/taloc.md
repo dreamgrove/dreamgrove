@@ -9,7 +9,7 @@ patch: "8.0"
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="323,213,223,222,133,123,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
 
 <b>Notes</b>
 
@@ -22,7 +22,7 @@ Run Starlord if you're capable of utilizing it well.
 
 
 ## Mythic
-{{< talents spec="balance" src="beta" recommend="323,213,223,222,133,123,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
 
 <b>Notes</b>
 
