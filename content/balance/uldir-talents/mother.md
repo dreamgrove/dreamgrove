@@ -9,7 +9,7 @@ patch: "8.0"
 ---
 
 ## Heroic
-{{< talents spec="balance" src="beta" recommend="123,213,233,213,123,131,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="223,213,223,313,123,123,321" >}}
 
 <center>
 <b>Azerite</b>
@@ -25,7 +25,7 @@ A fight with huge periods of downtime due to the winds mechanic. The normal sing
 
 
 ## Mythic
-{{< talents spec="balance" src="beta" recommend="123,213,233,213,123,131,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="223,213,223,313,123,123,321" >}}
 
 <center>
   <b>Azerite</b>
