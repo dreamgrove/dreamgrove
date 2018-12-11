@@ -61,18 +61,19 @@ Streaking Stars changes your playstyle during {{< spell 194223 "Celestial Alignm
 
 Put simply, the entire purpose of this opener is to get 3 casts of {{< spell 78674 "Starsurge" "live" >}} off before popping {{< spell 194223 "Celestial Alignment" "live" >}} at 40 Astral Power, then at that point you should generate Astral Power until achieving 80 Astral power, cancelaura your Starlord, and start the normal rotation. It should look like this:
 
-1. Starsurge
-2. Apply Sunfire, Moonfire, and Stellar Flare (if talented)
-3. Generate 40 Astral Power with Empowerments and Solar Wrath
-4. Starsurge
-5. Generate 40 Astral Power with Empowerments and Solar Wrath
-6. Starsurge
-7. Generate 40 Astral power and cast Celestial Alignment
-8. Build up to 80 Astral Power
-9. Cancelaura Starlord
-10. Normal Rotation
+1. Pre cast x2 Solar Wraths 3 seconds before the pull
+2. Starsurge
+3. Apply Sunfire, Moonfire, and Stellar Flare (if talented)
+4. Generate 40 Astral Power with Empowerments and Solar Wrath
+5. Starsurge
+6. Generate 40 Astral Power with Empowerments and Solar Wrath
+7. Starsurge
+8. Generate 40 Astral power and cast Celestial Alignment
+9. Build up to 80 Astral Power
+10. Cancelaura Starlord
+11. Normal Rotation
 
-If you are not using {{< spell 202430 "Nature’s Balance" "live" >}}, it's worth noting you should open slightly different, instead with x2 Solar Wraths 3 seconds before the pull, with Force of Nature or Warrior of Elune directly after (Fury of Elune too if talented), with the goal still being to {{< spell 78674 "Starsurge" "live" >}} 3 times before casting Celestial Alignment.
+If you are not using {{< spell 202430 "Nature’s Balance" "live" >}}, it's worth noting you should open slightly different, instead with x2 Solar Wraths 3 seconds before the pull and manually generate 40 Astral Power for the 1st {{< spell 78674 "Starsurge" "live" >}}, with Force of Nature or Warrior of Elune being casted directly after activating Celestial Alignment (Fury of Elune too if talented), with the goal still being to Starsurge 3 times and have 40 Astral Power before casting Celestial Alignment.
 
 ### Starlord Rotation
 
