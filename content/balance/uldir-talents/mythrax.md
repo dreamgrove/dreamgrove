@@ -1,4 +1,4 @@
-``---
+---
 title: "Mythrax the Unraveler"
 date: 2018-09-04
 authors: ['Tettles','Nick','Bora','Goosy']
