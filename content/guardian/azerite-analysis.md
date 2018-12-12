@@ -107,7 +107,7 @@ At 385, you gain 102 Agility per stack, for a gain of 510 Agility at 5 stacks. N
 
 ![Twisted Claws bonus Agility and Armor](/guardian/images/twisted-claws-stats.png)
 
-Notably, this trait improves dramatically with Haste. Because Haste lowers the cooldown of {{< spell 77758 "Thrash" >}}, the more Haste you have the more chances throughout a fight you have to apply a stack of Twisted Claws. 
+This trait improves dramatically with Haste. Because Haste lowers the cooldown of {{< spell 77758 "Thrash" >}}, the more Haste you have the more chances throughout a fight you have to apply a stack of Twisted Claws. 
 
 ![Twisted Claws Stack Uptimes](/guardian/images/twisted-claws-stacks.png)
 
@@ -121,7 +121,7 @@ This trait looks to be very strong both offensively and defensively, provided yo
 
 At 385, {{< spell 5221 "Shred" >}} deals 1416 extra damage and {{< spell 213771 "Swipe" >}} deals 459 extra damage.
 
-This is a Feral trait that is also selectable as Guardian, and does work with {{< spell 77754 "Thrash" >}} in Bear Form. If you are not catweaving, It is about equal for DPS benefit with {{< spell 275906 "Twisted Claws" >}}; where Twisted Claws is very slightly better below 5 targets and Wild Fleshrending is very slightly better above 5 targets. If you are catweaving, Wild Fleshrending wins out on 1 target, and is the second best DPS trait behind {{< spell 273367 "Power of the Moon" >}}.
+This is a Feral trait that is also selectable as Guardian, and does work with {{< spell 77754 "Thrash" >}} in Bear Form. If you are not catweaving, It is about equal for DPS benefit with {{< spell 275906 "Twisted Claws" >}}; where Twisted Claws is very slightly better below 5 targets and Wild Fleshrending is very slightly better above 5 targets. If you are catweaving, Wild Fleshrending wins out on 1 target, and is the best DPS trait.
 
 Unlike Twisted Claws, it does not provide any defensive benefit, which makes Twisted Claws better in almost every circumstance if you have the option, but this is a solid choice for DPS.
 
