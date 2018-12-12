@@ -11,7 +11,7 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Talents
 
-{{< talents spec="guardian" src="live" recommend="123,212,322,113,131,223,213" >}}
+{{< talents spec="guardian" src="live" recommend="123,232,322,113,131,223,213" >}}
 
 ## Playstyle
 
@@ -34,5 +34,7 @@ On Mythic, during Phase 1 adds can only permanently die if they are affected by 
 Use {{< spell 106898 "Stampeding Roar" >}} during the intermission to help the raid spread out.
 
 Use {{< spell 132469 "Typhoon" >}} to knock back Animated Ichors and prevent them from reaching Zul.
+
+Use {{< spell 102793 "Ursol's Vortex" >}} to help control Crawgs.
 
 You can use {{< spell 339 "Entangling Roots" >}} to lock down Bloodhexers if necessary.

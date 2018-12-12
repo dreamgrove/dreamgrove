@@ -11,7 +11,7 @@ description: Recommendations for Guardian Druid talents, and playstyle, and tips
 
 ## Talents
 
-{{< talents spec="guardian" src="live" recommend="113,212,122,113,311,232,213" >}}
+{{< talents spec="guardian" src="live" recommend="113,232,122,113,311,232,213" >}}
 
 ## Playstyle
 
@@ -40,3 +40,5 @@ In Mythic, the Voidweavers are present in Phase 1 and Phase 2. There are no sign
 Use {{< spell 106898 "Stampeding Roar" >}} during {{< spell 265451 "Surging Darkness" >}} to help the raid dodge the rings.
 
 Use {{< spell 132469 "Typhoon" >}} to reposition the Voidweavers if necessary.
+
+Use {{< spell 102793 "Ursol's Vortex" >}} to control the small adds.
