@@ -8,7 +8,7 @@ weight: 4
 patch: "8.0"
 ---
 
-*Balance doesn’t follow a strict rotation, it’s more of a priority list.*
+*Balance doesn’t follow a strict rotation, it’s more of a priority list. This priority list builds upon itself depending on your trait and talent setup.*
 
 ### Opener
 
@@ -43,44 +43,50 @@ patch: "8.0"
 
 ### Streaking Stars Rotation During Cooldowns
 
-Streaking Stars changes your playstyle during {{< spell 194223 "Celestial Alignment" "live" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" "live" >}}. Basically you should never repeat the same ability twice in a row, and should {{< spell 190984 "Solar Wrath" "live" >}} after every ability that isn't Solar Wrath, regardless of if it is empowered. It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "live" >}}, {{< spell 202770 "Fury of Elune" "live" >}}, and {{< spell 205636 "Force of Nature" "live" >}}.
+Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celestial Alignment" "live" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" "live" >}}. Basically you should never repeat the same ability twice in a row. This is done by casting {{< spell 190984 "Solar Wrath" "live" >}} after every ability that isn't Solar Wrath (only with Incarnation), and should you run out of Astral Power and Empowerments, you should alternate between unempowered Solar Wrath and Lunar Strike (Sunfire instead of Lunar Strike with 3 Streaking traits). It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "live" >}}, {{< spell 202770 "Fury of Elune" "live" >}}, and {{< spell 205636 "Force of Nature" "live" >}}.
 
-1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "live" >}} and {{< spell 93402 "Sunfire" "live" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
+1. Don't repeat the same spell cast twice.
 
-2. Don't cap on Astral Power by casting {{< spell 78674 "Starsurge" "live" >}} or {{< spell 191034 "Starfall" "live" >}}.
+2. Maintain 100% uptime on {{< spell 164812 "Moonfire" "live" >}} and {{< spell 93402 "Sunfire" "live" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-3. Don't cap {{< spell 279708 "Empowerments" "live" >}}.
+3. Don't cap on Astral Power by casting {{< spell 78674 "Starsurge" "live" >}} or {{< spell 191034 "Starfall" "live" >}}.
 
-4. Cast {{< spell 190984 "Solar Wrath" "live" >}} if the last spell casted wasn't Solar Wrath.
+4. Don't cap {{< spell 279708 "Empowerments" "live" >}}.
 
-5. Spend any Empowerments.
+5. Cast {{< spell 190984 "Solar Wrath" "live" >}} if the last spell casted wasn't Solar Wrath. (Skip if not talented into Incarnation)
 
-6. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on, you should simply fill with Solar Wrath > Sunfire > Solar Wrath.
+6. Spend any Empowerments.
 
-### Starlord Opener With Arcanic Pulsar
+7. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on, you should simply fill with Solar Wrath > Lunar Strike (Sunfire with 3 Streaking traits) > Solar Wrath.
 
-Put simply, the entire purpose of this opener is to get 3 casts of {{< spell 78674 "Starsurge" "live" >}} off before popping {{< spell 194223 "Celestial Alignment" "live" >}} at 40 Astral Power, then at that point you should generate Astral Power until achieving 80 Astral power, cancelaura your Starlord, and start the normal rotation. It should look like this:
+### Starlord Opener
+
+Put simply, the entire purpose of this opener is to get 2 casts of {{< spell 78674 "Starsurge" "live" >}} off before popping {{< spell 194223 "Celestial Alignment" "live" >}} at 40 Astral Power, at that point you should start the normal rotation. It should look like this:
 
 1. Pre cast x2 Solar Wraths 3 seconds before the pull
 2. Starsurge
 3. Apply Sunfire, Moonfire, and Stellar Flare (if talented)
 4. Generate 40 Astral Power with Empowerments and Solar Wrath
 5. Starsurge
-6. Generate 40 Astral Power with Empowerments and Solar Wrath
-7. Starsurge
-8. Generate 40 Astral power and cast Celestial Alignment
-9. Build up to 80 Astral Power
-10. Cancelaura Starlord
-11. Normal Rotation
+6. Generate 40 Astral power and cast Celestial Alignment
+7. Normal Rotation
 
-If you are not using {{< spell 202430 "Nature’s Balance" "live" >}}, it's worth noting you should open slightly different, instead with x2 Solar Wraths 3 seconds before the pull and manually generate 40 Astral Power for the 1st {{< spell 78674 "Starsurge" "live" >}}, with Force of Nature or Warrior of Elune being casted directly after activating Celestial Alignment (Fury of Elune too if talented), with the goal still being to Starsurge 3 times and have 40 Astral Power before casting Celestial Alignment.
+If you are not using {{< spell 202430 "Nature’s Balance" "live" >}}, you should open slightly different, instead with x2 Solar Wraths 3 seconds before the pull into applying your DoTs and manually generating 40 Astral Power for the 1st {{< spell 78674 "Starsurge" "live" >}}, with Force of Nature or Warrior of Elune being casted directly after activating Celestial Alignment (Fury of Elune too if talented), with the goal still being to Starsurge 2 times and have 40 Astral Power before casting Celestial Alignment.
 
 ### Starlord Rotation
 
-The rotation when using {{< spell 202345 "Starlord" "live" >}} is the same as the normal rotation with one important rule to maximize the talents power. Basically, you will "cancelaura" the Starlord buff whenever you have less than 7 seconds remaining on the buff and you are about to cast {{< spell 78674 "Starsurge" "live" >}}. Cancelaura meaning to remove the Starlord buff from yourself. The optimal way of doing this is to start pooling Astral Power once you have less than 7 seconds remaining on Starlord until you have 88 Astral Power (this can be done with less Astral Power if needed to Starsurge for movement), at this point you should use your cancelaura macro and then Starsurge. The macro to cancelaura Starlord can be found below.
+The rotation when using {{< spell 202345 "Starlord" "live" >}} is the same as the normal rotation with one important rule to maximize the talents power. Basically, you will "cancelaura" the Starlord buff whenever you have less than 8 seconds remaining on the buff and you are about to cast {{< spell 78674 "Starsurge" "live" >}}. Cancelaura meaning to remove the Starlord buff from yourself. The optimal way of doing this is to start pooling Astral Power once you have less than 8 seconds remaining on Starlord until you have 87 Astral Power (this can be done with less Astral Power if needed to Starsurge for movement), at this point you should use your cancelaura macro and then Starsurge. 
+
+If done correctly, you will end most Starlord cycles with nearly capped Astral Power and the ability to quickly restack the new cycle. Ideally you will almost always cancel Starlord at the very end of the buffs duration if at all. 
+
+The macro to cancelaura Starlord can be found below.
 
 ```
 /cancelaura starlord
 ```
 
+If you don't want to use the cancelaura macro, simply pool Astral Power once you have less than 8 seconds on the Starlord buff, and only Starsurge to avoid capping Astral Power.
 
+### Arcanic Pulsar
+
+To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool as much Astral Power as you can without capping before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). 
