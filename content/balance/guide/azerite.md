@@ -36,7 +36,7 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 ### Stacking Traits
 
-Stacking traits tends to be the way to go as Balance Druid as we don’t lose much value if any from stacking most of our traits. The exceptions are are notably {{< spell 287773 "Arcanic Pulsar" "ptr" >}} and {{< spell 273389 "Power of the Moon" "ptr" >}}, which only increase the damage effect when adding additional traits. You should simulate these all azerite armor to be sure something is an upgrade as always though.
+Stacking traits tends to be the way to go as Balance Druid as we don’t lose much value if any from stacking most of our traits. The exceptions are notably {{< spell 287773 "Arcanic Pulsar" "ptr" >}} and {{< spell 273389 "Power of the Moon" "ptr" >}}, which only increase the damage effect when adding additional traits. You should simulate these all azerite armor to be sure something is an upgrade as always though.
 
 
 ### Rotation/Talent Changing Traits
