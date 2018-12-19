@@ -30,7 +30,6 @@ Notable Alternative Talents and When to Use Them
 
 - {{< spell 5211 "Mighty Bash" "live" >}} can come in handy when there are extremely dangerous singular mobs that aren’t affected by knockbacks and they need to be dealt with.
 
-
 ### Utility
 
 As a Balance Druid it is vital you capitalize on your very useful utility. {{< spell 132469 "Typhoon" "live" >}} and FoN will make you the tanks best friend, assisting them in moving mobs out of Sanguine or other mechanics, and helping them kite or stay alive in general. Dispelling enrage effects (even the Raging affix) with {{< spell 2908 "Soothe" "live" >}} will keep your tank and groups health much more stable and {{< spell 2637 "Hibernate" "live" >}} can even be used to completely take a mob and therefore a mechanic out of the fight, making everyone's lives much easier. {{< spell 78675 "Solar Beam" "live" >}} can completely shut down the threat of an entire group of trash when timed correctly. It’s worth noting a Moonkin also brings a battle rez in the form of {{< spell 20484 "Rebirth" "live" >}} as it is important you have at least one battle rez in a Mythic+ group.
