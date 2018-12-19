@@ -20,9 +20,7 @@ Notable Alternative Talents and When to Use Them
 
 #### Tier 15: 
 
-- {{< spell 202430 "Nature’s Balance" "live" >}} can be the strongest throughput of the entire row if the dungeon has a high amount of downtime in between packs and bosses so that you can benefit from the recharge out of combat.
-
-- {{< spell 202425 "Warrior of Elune" "live" >}} is the general damage talent when you don’t need treants as it offers ample burst on demand and can help deal with heavy movement.
+- {{< spell 202430 "Nature’s Balance" "live" >}} can be taken if you have no need for Treants.
 
 #### Tier 45:
 
@@ -32,9 +30,6 @@ Notable Alternative Talents and When to Use Them
 
 - {{< spell 5211 "Mighty Bash" "live" >}} can come in handy when there are extremely dangerous singular mobs that aren’t affected by knockbacks and they need to be dealt with.
 
-#### Tier 100: 
-
-- {{< spell 202342 "Shooting Stars" "ptr" >}} can be taken over {{< spell 202770 "Fury of Elune" "live" >}} in dungeons where there are many spread out adds. Also, if the dungeon is low level and trash dies before you get a chance to ramp, this could be useful just for higher single target damage on bosses.
 
 ### Utility
 
