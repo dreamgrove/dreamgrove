@@ -40,7 +40,7 @@ patch: "8.0"
 
 - {{< spell 272871 "Streaking Stars" "beta" >}} = StrS
 - {{< spell 273389 "Power of the Moon" "beta" >}} = PotM
-- {{< spell 274398 "Sunblaze" "beta" >}} = Sb
+- {{< spell 287773 "Arcanic Pulsar" "ptr" >}} = Pulsar
 - {{< spell 276153 "Dawning Sun" "beta" >}} = DS
 - {{< spell 279070 "High Noon" "beta" >}} = HN
 - {{< spell 278507 "Lunar Shrapnel" "beta" >}} = LuSh
