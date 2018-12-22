@@ -12,7 +12,7 @@ It is heavily recommended you sim your character regardless of what guides say a
 
 Intellect is your primary stat, it will be on almost all of your gear besides jewelry and some trinkets, usually you don’t want to sacrifice too much item level for secondaries stats as it is not worth losing too much intellect. Otherwise your secondary stat priority will usually look something like so: 
 
-- **Haste > Crit = Vers = Mastery**
+- **Haste >= Mastery > Critical Strike > Versatility**
 
 ### Enchants:
 
