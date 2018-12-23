@@ -17,7 +17,7 @@ patch: "8.0"
 Taloc is primarily a single target fight with some minor add focus and medium movement. Use 
 Tiger Dash or Wild Charge to place your Plasmic Discharge in appropriate places.
 
-Run Starlord if you're capable of utilizing it well.
+Starlord is competitive with Incarnation.
 
 </center>
 
@@ -29,7 +29,7 @@ Run Starlord if you're capable of utilizing it well.
 
 Not much changes in mythic, Wild Charge gains some value due to the need for spreading (which slows you) and stacking throughout the fight. 
 
-Run Starlord if you're capable of utilizing it well.
+Starlord is competitive with Incarnation.
 
 </center>
  
