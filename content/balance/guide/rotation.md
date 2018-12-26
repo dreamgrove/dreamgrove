@@ -35,7 +35,7 @@ patch: "8.0"
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" "live" >}} and {{< spell 93402 "Sunfire" "live" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Use Astral Power on {{< spell 191034 "Starfall" "live" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" "live" >}} and 5 targets with {{< spell 287773 "Arcanic Pulsar" "ptr" >}}), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" "live" >}}.
+2. Use Astral Power on {{< spell 191034 "Starfall" "live" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" "live" >}}, and on 5 targets Starfall is equal in damage per Astral Power versus Starsurge with {{< spell 287773 "Arcanic Pulsar" "ptr" >}}), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" "live" >}}.
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
