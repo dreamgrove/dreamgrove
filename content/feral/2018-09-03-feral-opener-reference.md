@@ -35,7 +35,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
    * Apply {{<spell 106832 "Thrash">}} if you have {{<spell 279527 "Wild Fleshrending">}}
    * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges. 
    * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
-6. Cast {{<spell 22568 "Ferocious Bite>}}
+6. Cast {{<spell 22568 "Ferocious Bite">}}
 
 **For any build without Sabertooth:**
 
@@ -54,7 +54,7 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 8. Spend Combo Points
    * Cast {{<spell 52610 "Savage Roar">}}, if talented.
    * Cast {{<spell 1079 "Rip">}} if it will drop off before the next finisher.
-   * Cast {{<spell 22568 "Ferocious Bite>}}
+   * Cast {{<spell 22568 "Ferocious Bite">}}
 
 *Continue with normal rotation from this point.*
 
