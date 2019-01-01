@@ -1,9 +1,9 @@
 ---
-title: "Feral Opener Reference"
+title: "Feral Opener Reference - Updated for 8.1"
 date: 2018-09-03
 authors: ['Xanzara']
 published: true
-patch: "8.0"
+patch: "8.1"
 ---
 
 ### General Feral Opener Sequence
@@ -29,22 +29,13 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 
 1. Cast {{<spell 5217 "Tiger's Fury">}}, if you either have {{<spell 155580 "Lunar Inspiration">}}, **or** do NOT have {{<spell 155672 "Bloodtalons">}}.
 2. Cast {{<spell 1822 "Rake">}}.
-3. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to step 8.
-4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
-5. If you do not have {{<spell 155672 "Bloodtalons">}} talented:
-   * Apply {{<spell 106832 "Thrash">}}
+3. Cast {{<spell 1079 "Rip">}}
+4. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to step 6.
+5. Generate Combo points using the following methods
+   * Apply {{<spell 106832 "Thrash">}} if you have {{<spell 279527 "Wild Fleshrending">}}
+   * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges. 
    * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
-   * Skip to step 8.
-6. If you have {{<spell 155672 "Bloodtalons">}} and {{<spell 155580 "Lunar Inspiration">}} talented:
-   * Cast {{<spell 155625 "Moonfire">}} until 5 combo points, saving your last remaining BT stack
-   * Skip to step 8.
-7. If you have {{<spell 155672 "Bloodtalons">}} but not {{<spell 155580 "Lunar Inspiration">}} talented:
-   * Cast {{<spell 106832 "Thrash">}}, consuming your last BT stack.
-   * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
-   * Break form and hardcast {{<spell 8936 "Regrowth">}}
-   * Re-enter form by casting {{<spell 5217 "Tiger's Fury">}}.
-   * Skip to step 8.
-8.  Cast {{<spell 1079 "Rip">}}, if executed correctly it should be applied at 5 combo points with all your available damage mods.
+6. Cast {{<spell 22568 "Ferocious Bite">}}
 
 **For any build without Sabertooth:**
 
@@ -52,26 +43,23 @@ An opener is not a big part of your dps. To most this might be immediately obvio
 
 1. Cast {{<spell 5217 "Tiger's Fury">}}
 2. Cast {{<spell 1822 "Rake">}}
-3. Cast {{<spell 274837 "Feral Frenzy">}}, if you have FF but not {{<spell 52610 "Savage Roar">}} talented and skip to 8.
-4. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}}.
-5. Cast {{<spell 52610 "Savage Roar">}}, if talented.
-6. Cast {{<spell 274837 "Feral Frenzy">}}, if talented and skip to 8.
-7. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast or don't have {{<spell 155672 "Bloodtalons">}} talented:
-   * Cast {{<spell 106832 "Thrash">}}
-   * Cast {{<spell 5221 "Shred">}} until 5 combo points.
-   * Cast {{<spell 8936 "Regrowth">}}, if you have {{<spell 155672 "Bloodtalons">}}
-   * Skip to 9
-8. If you didn't get a {{<spell 16974 "Predatory Swiftness">}} proc from your SR cast, or don't have SR:
-   * Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points and skip to 9.
-   * Cast {{<spell 106832 "Thrash">}}
-   * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges.
-   * Cast {{<spell 5221 "Shred">}} until 5 combo points.
-   * Skip to 9
-9. Cast {{<spell 1079 "Rip">}} to finish the opener sequence
+3. Cast {{<spell 155625 "Moonfire">}}, if you have {{<spell 155580 "Lunar Inspiration">}} until 5 combo points.
+4. Cast {{<spell 1079 "Rip">}}
+5. Cast {{<spell 274837 "Feral Frenzy">}}, if you have FF talented and skip to 7.
+6. Generate Combo points using the following methods
+   * Apply {{<spell 106832 "Thrash">}} if you have {{<spell 279527 "Wild Fleshrending">}}
+   * Cast {{<spell 202028 "Brutal Slash">}}, if talented, until 5 combo points or out of charges. 
+   * Cast {{<spell 5221 "Shred">}}, until 5 combo points.
+7. If you got a {{<spell 16974 "Predatory Swiftness">}} proc from your Rip cast, cast {{<spell 8936 "Regrowth">}}.
+8. Spend Combo Points
+   * Cast {{<spell 52610 "Savage Roar">}}, if talented.
+   * Cast {{<spell 1079 "Rip">}} if it will drop off before the next finisher.
+   * Cast {{<spell 22568 "Ferocious Bite">}}
 
 *Continue with normal rotation from this point.*
 
 # Notes about the opener
 This opener can look quite complex, and it is - mostly because of how many talents we have that affect it. But once you understand the fundamentals of the feral rotation you will quickly realise that there is really nothing unique about this opener. Almost every step here (with the exception of the hardcast regrowth) is just the application of the normal rotation.
 
-The most odd-looking part to most people is the fact that you end up spamming moonfire in a lot of situations, this is because Moonfire doesn't consume BT stacks, allowing you keep your original pre-casted BT stack until your application of Rip without consuming it in the process. This is uncommon in normal gameplay outside of the opener, but can arise if you for example have to use your PS charge earlier than 4 combo points.
+The most odd-looking part to most people is the fact that you end up spamming moonfire in some situations, this is because Moonfire doesn't consume BT stacks, allowing you keep your original pre-casted BT stack until your application of Rip without consuming it in the process. This is uncommon in normal gameplay outside of the opener, but can arise if you for example have to use your PS charge earlier than 4 combo points.
+
