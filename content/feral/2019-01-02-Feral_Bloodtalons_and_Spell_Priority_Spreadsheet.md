@@ -8,7 +8,7 @@ patch: "8.1"
 
 ***[Spreadsheet Link](https://docs.google.com/spreadsheets/d/1W1sjoMJJCzVFVnk0L5yDBg30UX2Msio2vF69uLMxlsg/edit#gid=956939905)***
 
-For proper {{<spell 155672 "Bloodtalons">}} usage, you want to buff the abilities that will do the most damage per cast, also known as damage per execute (DPE). In a single target scenario, this is easily done by using it on your finisher and {{<spell 1822 "Rake">}} (which will be your second most damaging ability. However, with more targets the priority will change.
+For proper {{<spell 155672 "Bloodtalons">}} usage, you want to buff the abilities that will do the most damage per cast, also known as damage per execute (DPE). In a single target scenario, this is easily done by using it on your finisher and {{<spell 1822 "Rake">}} (which will be your second most damaging ability). However, with more targets the priority will change.
 
 This spreadsheet will provide both the DPE and damage per energy (DPR) for all abilities including talents. You can use the {{<spell 202031 "Sabertooth">}} and {{<spell 158476 "Soul of the Forest">}} (SotF) dropdown menus to select whether or not you are using those talents.
 
