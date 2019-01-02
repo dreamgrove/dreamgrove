@@ -1,3 +1,11 @@
+---
+title: "Feral Bloodtalons and Spell Priority Spreadsheet"
+date: 2019-01-03
+authors: ['Night']
+published: true
+patch: "8.1"
+---
+
 ***[Spreadsheet Link](https://docs.google.com/spreadsheets/d/1W1sjoMJJCzVFVnk0L5yDBg30UX2Msio2vF69uLMxlsg/edit#gid=956939905)***
 
 For proper {{<spell 155672 "Bloodtalons">}} usage, you want to buff the abilities that will do the most damage per cast, also known as damage per execute (DPE). In a single target scenario, this is easily done by using it on your finisher and {{<spell 1822 "Rake">}} (which will be your second most damaging ability. However, with more targets the priority will change.
