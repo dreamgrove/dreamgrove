@@ -27,7 +27,7 @@ patch: "8.0"
 
 2. Avoid capping Astral Power and generate Empowerments by casting {{< spell 78674 "Starsurge" "live" >}}.
 
-3. Spend Solar and Lunar {{< spell 279708 "Empowerments" "live" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Lunar Empowerment is worth more and you should waste a Solar Empowerment.
+3. Spend Solar and Lunar {{< spell 279708 "Empowerments" "live" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Solar Empowerment is worth more and so you should waste a Lunar Empowerment.
 
 4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 "Solar Wrath" "live" >}}.
 
