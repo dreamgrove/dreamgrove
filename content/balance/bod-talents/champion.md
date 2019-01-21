@@ -24,7 +24,7 @@ This is a mostly stationary fight made up of 2 distinct phases, an add DPS phase
 <center>
 <b>Notes</b>
 
-TBD
+tbd
 
 </center>
  
