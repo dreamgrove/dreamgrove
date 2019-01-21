@@ -9,21 +9,20 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="223,213,223,222,123,123,322" >}}
+{{< talents spec="balance" patch="8.1" recommend="232,113,123,322,123,132,321" >}}
 <center>
 <b>Notes</b>
 
-Sample Text
+Jadefire Masters are a spread-cleave damage boss with spread add spawns. It’s recommended to take Warrior of Elune to burst add spawns down and also deal with movement. The Spirits of Xuen spawned by the boss are able to be stunned by Mighty Bash, so it should be the chosen tier 60 talent. Wild Charge is a must have to minimize downtime when dealing with the Magma Traps and also to mitigate the fall damage completely.
 
 </center>
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,332" >}}
+{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
 <center>
 <b>Notes</b>
 
-Sample Text
-
+tbd
 
 </center>
