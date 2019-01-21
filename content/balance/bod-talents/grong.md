@@ -23,6 +23,6 @@ A single target boss with strong add focus, it’s recommended to take full sing
 <center>
 <b>Notes</b>
 
-TBD
+tbd
 
 </center>
