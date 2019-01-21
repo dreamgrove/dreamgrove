@@ -14,7 +14,7 @@ patch: "8.1"
 Progressing new fights and instances is something that many high-end raiders take for granted. Progressing a new encounter outside top 10 world is just problem solving issues that you know the answer to. In this article, we are going to address everything that can be done to best prepare for progress and how to simplify raid encounters as much as possible. This is meant for players that are already familiar with their class as playing without high class knowledge will hinder your progress and your parties progress.
 
 
-##Research and Preparation
+## Research and Preparation
 
 The best way to learn a boss is to know what it does before you walk into the instance. This is not only limited to the dungeon journal and other basic information, but to the actual application and timings of the mechanics that affect you. 
 
