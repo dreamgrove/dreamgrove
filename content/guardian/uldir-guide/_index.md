@@ -12,8 +12,6 @@ Summary
 ===
 Welcome to this boss-by-boss Guardian guide for Uldir! In this guide, you will find recommended talent setups, Guardian specific strategies, and tips and tricks for the first tier of Battle for Azeroth.
 
-**This guide is a work in progress, and will be fleshed out as the tier progresses and new discoveries are made.**
-
 This guide is up to date as of Battle for Azeroth patch **8.0.1**.
 
 Authors
