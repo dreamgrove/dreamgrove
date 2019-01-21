@@ -20,11 +20,11 @@ This is a mostly stationary fight made up of 2 distinct phases, an add DPS phase
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
 <center>
 <b>Notes</b>
 
-Sample Text
+TBD
 
 </center>
  
