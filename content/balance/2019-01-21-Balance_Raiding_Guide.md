@@ -2,7 +2,7 @@
 date: '2019-01-21'
 authors: ["Bora"]
 published: true
-title: "Raiding Guide"
+title: "Balance Raiding Guide"
 patch: "8.1"
 ---
 
