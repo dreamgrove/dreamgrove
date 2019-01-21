@@ -9,21 +9,23 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="332,213,223,313,123,132,131" >}}
+{{< talents spec="balance" patch="8.1" recommend="232,213,123,222,123,132,321" >}}
 <center>
 <b>Notes</b>
 
-Sample Text
+Opulence starts out as a heavy movement single target fight, but upon defeating the guardians turns into a damage check with a large amount of add spawns. Warrior of Elune is highly recommended as otherwise no matter how much you prepare, you will be forced to eat downtime due to mechanics like Flames of Punishment.
+
+The jewel you take depends heavily on your raid group, but the default choice should be the Emerald of Earthen Roots.
 
 </center>
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="332,213,223,313,123,132,131" >}}
+{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
 <center>
 <b>Notes</b>
 
-Sample Text
+tbd
 
 </center>
  
