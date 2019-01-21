@@ -9,22 +9,22 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="232,213,123,222,123,123,321" >}}
 
 <center>
 <b>Notes</b>
 
-Sample Text
+Though mostly a single target focused fight, Jaina has multiple instances of add spawns, with the important add spawns being singular and needing high priority damage. It is ideal to have your cooldowns ready for the Wall of Ice towards the end of Phase 2. Making use of Restoration Affinities healing is a powerful strength in our kit, as the ticking damage through the fight can potentially be very threatening to your raid. Due to the high movement of this fight, Warrior of Elune is the fitting choice for our Tier 15 talent row.
 
 </center>
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="323,213,223,222,133,123,312" >}}
+{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
 <center>
 <b>Notes</b>
 
-Sample Text
+tbd
 
 </center>
  
