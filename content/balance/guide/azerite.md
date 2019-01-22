@@ -27,7 +27,7 @@ Like other gear, Azerite gear should be simmed, just because a piece of gear has
 
 ### Notable General/Non-Balance Specific Azerite Traits
 
-- {{< spell 280559 "Treacherous Covenant" >}} - Though potentially risky, Treacherous Covenant is an amazing trait on all amounts of targets, providing you with a lot of Intellect when above 50% health, but increasing damage taken by 15% when below 20% health.
+- {{< spell 280559 "Treacherous Covenant" >}} - Though potentially risky, Treacherous Covenant is an amazing trait on all amounts of targets, providing you with a large chunk of Intellect when above 50% health, but increasing damage taken by 15% when below 20% health.
 
 - {{< spell 279647 "Lively Spirit" >}} - Causes your {{< spell 29166 "Innervate" "ptr" >}} to grant a stack of Intellect for 20 seconds for each spell cast by the healer.
 
