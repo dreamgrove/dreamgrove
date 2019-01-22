@@ -26,7 +26,4 @@ Your tank swap should be performed such that one tank never takes more than 1 {{
 
 On Mythic difficulty, abilities during the combo occur faster (1.5 second casts, down from 2 second casts).
 
-## Tips and Tricks
-
-As the add tank, use {{< spell 132469 "Typhoon" >}} to re-position Crusaders before they die.
 
