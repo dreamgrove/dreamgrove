@@ -4,7 +4,7 @@ title: Guardian
 
 Quick Links
 ===
- - [Uldir Boss by Boss Guide](/guardian/uldir-guide)
- - [Defensive Trinkets Guide](/guardian/defensive-trinkets)
- - [Azerite Guide](/guardian/azerite-analysis)
- - [Guardian Guide](/guardian/guide)
+ - [Battle of Dazar'alor Boss by Boss Guide](/guardian/bod-guide)
+ - [Azerite Guide (not yet updated)](/guardian/azerite-analysis)
+ - [Guardian Guide (not yet updated)](/guardian/guide)
+ - [Defensive Trinkets Guide (not yet updated)](/guardian/defensive-trinkets)
