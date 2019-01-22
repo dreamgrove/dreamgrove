@@ -1,6 +1,6 @@
 ---
 title: "Introduction/FAQ"
-date: 2019-01-19
+date: 2019-01-21
 authors: ['Faide']
 published: true
 showOnFrontpage: false
@@ -13,6 +13,8 @@ This is a boss-by-boss guide to the Battle of Dazar'alor raid, specifically aime
 
 Note that these suggestions are tailored towards a progression-oriented mindset --- that is, the setups recommended will prioritize survivability first, while not trying to sacrifice too much DPS output in the process. These recommendations are aimed at players who are progressing these fights for the first time; once you are more comfortable with the encounters, you may elect to swap some of the more defensive options for offensive ones in order to improve your DPS output. **It is always recommended to play safe during progression: staying alive is far more important than a few hundred DPS**.
 
+This guide assumes you know the basics of raiding, and the basics of tanking. You should know how not to stand in fire, how to face enemies away from your raid, and how to execute your rotation in order to keep your active mitigation up. Instead it will focus on pointing out important tank mechanics, how and when to tank swap, and any Guardian-specific utility you can use on that specific encounter.
+
 Also note that **this guide is a work in progress**. Boss encounters and tuning often change during the first few weeks of progression (especially this tier, with limited testing and even more limited number of Guardians present during testing), and new strategies will be uncovered as the weeks go by. I will update this guide with relevant new information as it appears, and I welcome feedback, corrections, and suggestions in Discord.
 
 These are not intended to be comprehensive encounter guides; if you want a more detailed look at each boss and its mechanics, check out [TankNotes](https://tanknotes.tk/).
@@ -23,7 +25,7 @@ There are a few notable trinkets in Battle of Dazar'alor. Specifically, the two 
 
 As always, I recommend taking trinkets that are tailored to the specific encounter you are facing. If you need strong physical damage mitigation, a trinket that grants Agility will be preferred; if you're up against magic damage, you may want an absorb trinket. **For general purposes, I recommend {{< item 165573 "Diamond-Laced Refracting Prism" >}} {{< item 159617 "Lustrous Golden Plumage" >}}.**
 
-Side note: due to its item level cap of 355, {{< item 159128 "Darkmoon Deck: Blockades" >}} is no longer competitive with mythic level drops in my opinion. If you are looking for a strong, cheap crafted trinket to pick up at a competitive item level, you should look into the Alchemy trinket {{< item 166976 "Emblazoned Alchemist Stone" >}}.
+Side note: due to its item level cap of 355, {{< item 159128 "Darkmoon Deck: Blockades" >}} is no longer competitive with mythic level drops in my opinion. If you are looking for a strong, cheap crafted trinket to pick up at a competitive item level, you should look into the Alchemy trinket {{< item 165926 "Tidal Alchemist Stone" >}}.
 
 ### What azerite traits are best for raiding?
 

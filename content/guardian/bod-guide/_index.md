@@ -22,6 +22,6 @@ Faide
 
 See also
 ===
-[TankNotes Uldir Guide](https://tanknotes.tk/)
-[Icy Veins](https://www.icy-veins.com/wow/guardian-druid-pve-tank-battle-of-dazar-alor-raid-guide)
+[TankNotes Battle of Dazar'alor Guide](https://tanknotes.tk/Battle-of-Dazaralor)<br />
+[Icy Veins](https://www.icy-veins.com/wow/guardian-druid-pve-tank-battle-of-dazar-alor-raid-guide)<br />
 [Wowhead](https://www.icy-veins.com/wow/guardian-druid-pve-tank-battle-of-dazar-alor-raid-guide)
