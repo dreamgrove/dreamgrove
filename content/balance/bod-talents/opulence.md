@@ -15,7 +15,7 @@ patch: "8.1"
 
 Opulence starts out as a heavy movement single target fight, but upon defeating the guardians turns into a damage check with a large amount of add spawns. Warrior of Elune is highly recommended as otherwise no matter how much you prepare, you will be forced to eat downtime due to mechanics like Flames of Punishment.
 
-The jewel you take depends heavily on your raid group, but the default choice should be the Emerald of Earthen Roots.
+The jewel you take depends heavily on your raid group, but the default choice should be the Opal of Unleashed Rage.
 
 </center>
 
