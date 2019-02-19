@@ -41,11 +41,11 @@ Stacking traits tends to be the way to go as Balance Druid as we don’t lose mu
 
 - {{< spell 276153 "Dawning Sun" >}} - Slightly alters the rotation by incentivizing you to always have the 8 second buff up before casting {{< spell 190984 "Solar Wrath" "ptr" >}}s, even if the {{< spell 194153 "Lunar Strike" >}} is unempowered.
 
-- {{< spell 272871 "Streaking Stars" >}} - Besides the obvious gameplay change of not repeating the same ability twice in a row, it’s worth noting that you should cast a {{< spell 190984 "Solar Wrath" >}} after every ability (besides Solar Wrath) unless it would cause you to overcap Astral Power or Empowerments. 
+- {{< spell 272871 "Streaking Stars" >}} - Besides the obvious gameplay change of not repeating the same ability twice in a row, it’s worth noting that you should cast a {{< spell 190984 "Solar Wrath" >}} after every ability (besides Solar Wrath) unless it would cause you to overcap Astral Power or Empowerments (With Incarnation only). 
 
-Keep in mind that while Streaking Stars affects abilities such as {{< spell 191034 "Starfall" >}} and {{< spell 202770 "Fury of Elune" "ptr">}}, it is only the first tick of the ability. Also, this trait has a reduced amount of damage in conjunction with Incarnation: Chosen of Elune.
+Keep in mind that while Streaking Stars affects abilities such as {{< spell 191034 "Starfall" >}} and {{< spell 202770 "Fury of Elune" "ptr">}}, it is only the first tick of the ability. Also, this trait has a reduced amount of damage in conjunction with Incarnation: Chosen of Elune (66% of the full damage per proc).
 
-- {{< spell 287773 "Arcanic Pulsar" >}} - Arcanic Pulsar indirectly changes how you play your character through making {{< spell 202345 "Starlord" >}} a much more potent talent (and through Starlord, {{< spell 202430 "Nature's Balance" >}} becomes the top choice in the tier 15 row, at least in pure throughput). 
+- {{< spell 287773 "Arcanic Pulsar" >}} - Arcanic Pulsar changes your rotation leading up the 9th stack of Arcanic Pulsar, as you should pool accordingly and cast a specific sequence of abilities during the window depending on the distance from your target.
 
 
 ### Top Traits
@@ -58,12 +58,8 @@ This is a list of our most potent traits, ones that you should seek out if you c
 
 - {{< spell 280559 "Laser Matrix" >}} - Laser Matrix is a decent trait on single target and mediocre on multi-target, but also activates Reorigination Array in Uldir. This buff will eventually be awarding us with up to 750 of our highest secondary stat, easily surpassing other traits in damage at this point. You should strive to have at least one of Laser Matrix or Archive of the Titans while in Uldir.
 
-- {{< spell 280555 "Archive of the Titans" >}} - Like Laser Matrix, Archive is a decent trait on single target, and quite good on multi-target. Activating Reorigination Array means having at least one of this trait or Laser Matrix is a must have in Uldir, especially when Reorigination Array is fully stacked.
-
 - {{< spell 279647 "Lively Spirit" >}} - Assuming you can achieve a high amount of stacks of Lively Spirit per cast, it is similar to our top traits in power, but comes with the bonus of scaling with multiple targets. Lively Spirit is not for everyone, as it can't be expected for you to be able to use {{< spell 29166 "Innervate" >}} for your own personal damage, but when you can use Lively, it is an exceptional trait, especially in Mythic+.
 
 - {{< spell 273389 "Power of the Moon" >}} and {{< spell 279070 "High Noon" >}} - On encounters with lots of spread targets, these traits could potentially shine, being our most realistic choice for spread multi-target.
 
-### Sims [Chickendb](http://www.chickendb.com)
-
-For the most up to date simulations of our Azerite traits, you should use [Chickendb.com](http://www.chickendb.com). This website will compare Azerite traits both on an individual level and with multiple traits, being a useful way to figure out everything you need to know about this system. Remember to use logic when referring to sims and if you have any questions, be sure to talk to us in the Dreamgrove!
+- {{< spell 288989 "Treacherous Covenant" >}} - Though potentially risky, the payoff from Treacherous Covenant is large, being nearly as strong as Streaking Stars on single target and scaling with multiple targets.
