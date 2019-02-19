@@ -49,7 +49,7 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" >}}, and on 5 targets Starfall is equal in damage per Astral Power versus Starsurge with {{< spell 287773 "Arcanic Pulsar" >}}), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" >}}.
+2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" >}}, and on 5 targets Starfall is slightly more damage per Astral Power versus Starsurge with {{< spell 287773 "Arcanic Pulsar" >}}), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" >}}.
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
@@ -57,21 +57,23 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 ### Streaking Stars Rotation During Cooldowns
 
-Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" >}}. Basically you should never repeat the same ability twice in a row. This is done by casting {{< spell 190984 "Solar Wrath" >}} after every ability that isn't Solar Wrath (only with Incarnation), and should you run out of Astral Power and Empowerments, you should alternate between unempowered Solar Wrath and Lunar Strike (Sunfire instead of Lunar Strike with 3 Streaking traits). It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "live" >}}, {{< spell 202770 "Fury of Elune" >}}, and {{< spell 205636 "Force of Nature" >}}.
+Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" >}}. Basically you should never allow two of the same ability to hit the target in a row. The exception to this is should you run out of Astral Power and Empowerments, you should cast two Solar Wraths followed by a Starsurge, and then return to not repeating your abilities. Otherwise, alternate between unempowered Solar Wrath and Lunar Strike. It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "live" >}}, {{< spell 202770 "Fury of Elune" >}}, and {{< spell 205636 "Force of Nature" >}}.
 
-1. Don't repeat the same spell cast twice.
+1. Don't repeat the same spell cast twice (Unless following step 7).
 
 2. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-3. Don't cap on Astral Power by casting {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}}.
+3. If you will not have time to cast another ability during your cooldown window, refresh your lowest duration DoT.
 
-4. Don't cap {{< spell 279708 "Empowerments" >}}.
+4. Don't cap on Astral Power by casting {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}}.
 
-5. Cast {{< spell 190984 "Solar Wrath" >}} if the last spell casted wasn't Solar Wrath. (Skip if not talented into Incarnation)
+5. Don't cap {{< spell 279708 "Empowerments" >}}.
 
 6. Spend any Empowerments.
 
-7. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on, you should simply fill with Solar Wrath > Lunar Strike (Sunfire with 3 Streaking traits) > Solar Wrath.
+7. Cast two {{< spell 190984 "Solar Wrath" >}}s in a row if you lack Empowerments or Astral Power and those two Wraths will instantly allow you to Starsurge, then cast Starsurge
+
+8. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on you should simply fill with Solar Wrath or Lunar Strike, depending on what spell hit the target last.
 
 ### Starlord Opener
 
@@ -103,4 +105,8 @@ If you don't want to use the cancelaura macro, simply pool Astral Power once you
 
 ### Arcanic Pulsar
 
-To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool as much Astral Power as you can without capping before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). 
+To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 84 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Right before casting your 9th Starsurge you should cast a Solar Wrath and then follow these sequences depending on your range from the target.
+
+30+ yards: Solar Wrath (Before activating Pulsar) -> Starsurge -> Starsurge -> Solar Wrath -> Solar Wrath -> Lunar Strike -> Starsurge -> refresh lowest duration instant cast DoT.
+
+<30 yards: Solar Wrath (Before activating Pulsar) -> Starsurge -> Starsurge -> Solar Wrath -> Lunar Strike -> Solar Wrath -> Starsurge -> refresh lowest duration instant cast DoT.
