@@ -13,11 +13,11 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 ### Tier 15:
 {{< talent-row spec="balance" tier="15" src="live" >}}
 
-{{< spell 202430 "Nature’s Balance" "ptr" >}} (NB): Generates 2 Astral Power every 3 seconds and also makes your base Astral Power out of combat 50 rather than 0. Decent for sustained multi-target giving us constantly generating Astral Power. This talent, albeit niche, has the potential to be advantageous in Mythic+, notably those with long spans of downtime, giving the talent time to recharge your Astral Power to 50 (the out of combat Astral Power generation is greater than the in combat generation). Meaning it is also great in open world content as you’re regularly walking from place to place. Nature's Balance scales well on multiple targets and sees use even on single target when used along with {{< spell 202345 "Starlord" "ptr" >}}.
+{{< spell 202430 "Nature’s Balance" "ptr" >}} (NB): Generates 2 Astral Power every 3 seconds and also makes your base Astral Power out of combat 50 rather than 0. Decent for sustained multi-target giving us constantly generating Astral Power. This talent, albeit niche, has the potential to be advantageous in Mythic+, notably those with long spans of downtime, giving the talent time to recharge your Astral Power to 50 (the out of combat Astral Power generation is greater than the in combat generation). Meaning it is also great in open world content as you’re regularly walking from place to place. Nature's Balance is the go-to talent for pure damage.
 
 {{< spell 202425 "Warrior of Elune" "ptr" >}} (WoE): On activation, causes your next 3 {{< spell 194153 "Lunar Strikes" "ptr" >}} to be instant cast and award 40% more astral power. This talent grants useful burst and priority target damage. Warrior of Elune is the best in the Tier 15 row for dealing with high movement encounters and for when burst AoE is needed, generating 3 GCDs (Global Cooldowns) of movement and enough Astral Power for a spender. The three free Lunar Strikes should be used in rapid succession regardless of if they're empowered or not, unless you are using the {{< spell 272871 "Streaking Stars" "ptr" >}} trait or you'd overcap Astral Power.
 
-{{< spell 205636 "Force of Nature" "ptr" >}} (FoN): Summons 3 treants to taunt enemies in an area and deal damage. Being the best on pure single target Patchwerk fights when not using Starlord (dependent on how much mastery you have), these treants should generally be used on cooldown, unless single target burst is needed, as they are powerful in that respect. Their real strength comes in the form of Mythic+ utility, giving the tank breathing room against hard hitting mobs and is notably useful on Raging and Necrotic weeks. They are also strong for open world, allowing you to pull huge packs of enemies and effortlessly AoE them down.
+{{< spell 205636 "Force of Nature" "ptr" >}} (FoN): Summons 3 treants to taunt enemies in an area and deal damage. Though the weakest in the row for damage, they bring unmatched utility that makes Moonkin a useful dps to have dungeons. Their real strength comes in the form of Mythic+ utility, giving the tank breathing room against hard hitting mobs and is notably useful on Raging and Necrotic weeks, also for Reaping.  these treants should generally be used on cooldown, unless single target burst is needed or the tank needs them defensively. They are also strong for open world, allowing you to pull huge packs of enemies and effortlessly AoE them down.
 
 ### Tier 30:
 {{< talent-row spec="balance" tier="30" src="live" >}}
@@ -51,7 +51,7 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 {{< spell 114107 "Soul of the Forest" "live" >}} (SotF): Reduces the cost of {{< spell 191034 "Starfall" "live" >}} by 10 Astral Power and grants {{< spell 279708 "Empowerments" "live" >}} a 30% multiplicative scaling increase. SotF relies quite heavily on Azerite traits and unrealistic scenarios to stand a chance against the competition, requiring {{< spell 278507 "Lunar Shrapnel" "live" >}} (which tends to be on the weaker side) traits to ever be worth using, and even in that case only barely in pure sustained 4+ multi-target, as a lot of single target is lost taking it.
 
-{{< spell 202345 "Starlord" "live" >}} (SL): Causes your spenders to award a stack of 3% haste, stacking up to 3 times and not refreshing the duration with a new stack. Offering the best 1-4 target damage and great multi-target, this talent can be utilized to its fullest by not spending any Astral Power in the last 7 seconds of the buff. Starlord pulls ahead of Incarnation anytime the fight lasts more than roughly two minutes but suffers more in heavy movement, downtime, or when heavy burst is needed. 
+{{< spell 202345 "Starlord" "live" >}} (SL): Causes your spenders to award a stack of 3% haste, stacking up to 3 times and not refreshing the duration with a new stack. Offering the best 1-4 target damage and great multi-target, this talent can be utilized to its fullest by not spending any Astral Power in the last 8 seconds of the buff. Starlord pulls ahead of Incarnation anytime the fight lasts more than roughly two minutes but suffers more in heavy movement, downtime, or when heavy burst is needed. 
 
 {{< spell 102560 "Incarnation: Chosen of Elune" "live" >}} (Incarn): This talent replaces {{< spell 194223 "Celestial Alignment" "live" >}} as our 3 minute cooldown, enhancing our damage cooldown with longer duration and more % damage gain. Incarnation can be very potent in situations where large burst is required, the fight length is short, or the fight has heavy downtime, but still allows you to get your cooldowns off without interruption. Otherwise it falls behind Starlord by a small amount in raw output and is massively impacted by kill time.
 
@@ -76,8 +76,8 @@ Currently Moonkin’s talents are generally extremely close in power overall, bu
 
 ### General Single Target Build:
 
-{{< talents spec="balance" src="live" recommend="323,223,223,222,133,123,322" >}}
+{{< talents spec="balance" src="live" recommend="323,223,223,222,123,123,322" >}}
 
 ### General AoE Build:
 
-{{< talents spec="balance" src="live" recommend="332,223,223,222,233,232,231" >}}
+{{< talents spec="balance" src="live" recommend="332,223,223,222,223,232,231" >}}
