@@ -34,4 +34,3 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 - Any trinket that is of high item level.
 
-To get a full picture of potentially useful trinkets, and for the most up to date simulation information, make sure to use [Chickendb](http://www.chickendb.com "Chickendb"). As always sim your own character, don't just blindly follow these sims or even your own. Remember to also use logic when making gearing decisions!
