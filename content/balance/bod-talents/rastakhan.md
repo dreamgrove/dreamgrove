@@ -19,10 +19,10 @@ This boss starts out quite cleave heavy but eventually leads to multiple single 
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
+{{< talents spec="balance" patch="8.1" recommend="332,213,123,222,123,133,321" >}}
 <center>
 <b>Notes</b>
 
-tbd
+Pick Stellar Flare for phase 3 damage if you will be attacking Bwonsamdi as this phase is truly all that matters in terms of killing the boss. Always save your 2nd set of cooldowns for phase 3. Make sure to pool Astral Power before Inevitable Demise to minimize downtime and be in position to drop Death’s Doors in the proper spot to prepare for phase 3.
 
 </center>
