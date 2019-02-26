@@ -9,7 +9,7 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="332,213,123,222,123,133,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,213,123,222,123,133,321" >}}
 <center>
 <b>Notes</b>
 
@@ -19,7 +19,7 @@ This boss starts out quite cleave heavy but eventually leads to multiple single 
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="332,213,123,222,123,133,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,213,123,222,123,133,321" >}}
 <center>
 <b>Notes</b>
 
