@@ -19,10 +19,10 @@ Jadefire Masters are a spread-cleave damage boss with spread add spawns. It’s 
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
+{{< talents spec="balance" patch="8.1" recommend="232,113,123,322,123,132,321" >}}
 <center>
 <b>Notes</b>
 
-tbd
+Jadefire Masters is a sustained 2 target fight. The only important difference on this encounter is that the boss summons 2 Xuen tigers instead of 1, potentially becoming much more dangerous. Mighty Bash can be used to stun the tigers so your raid group can deal with them cleanly. Additionally there is a Spirit of Niuzao that will chase you around in the maze which acts as a soft enrage if you’re slow to destroy the barrier. Druid is one of the better classes at collecting the Force Orbs if your raid needs players to take that job. If soaking Magma Traps, be sure to use Wild Charge directly after being  knocked up to negate the mechanic, or Flap if Wild Charge is on cooldown.
 
 </center>
