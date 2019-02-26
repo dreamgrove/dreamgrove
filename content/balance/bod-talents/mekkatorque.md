@@ -9,7 +9,7 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="332,313,123,232,123,123,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,313,123,232,123,123,321" >}}
 <center>
 <b>Notes</b>
 
@@ -19,10 +19,10 @@ A pure single target fight, Nature’s Balance is nice due to the natural downti
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,313,123,131,123,123,321" >}}
 <center>
 <b>Notes</b>
 
-tbd
+Mekkatorque is a high sustained damage taken fight where defensives like Barkskin shine. Swiftmend yourself when you will dip out of line of sight to drop your gigavolt bomb. Dodge the Buster Cannon unlike [Tettles](https://www.twitch.tv/tettles/clip/AlluringSparklingSwanNotLikeThis). Mass Entangling is 100% required on this fight in order to keep the Spark Bots contained. Heal during the intermission. You should save your 2nd use of Incarnation for the last phase so it is lined up with lust.
 
 </center>
