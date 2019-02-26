@@ -23,6 +23,6 @@ A pure single target fight, Nature’s Balance is nice due to the natural downti
 <center>
 <b>Notes</b>
 
-Mekkatorque is a high sustained damage taken fight where defensives like Barkskin shine. Swiftmend yourself when you will dip out of line of sight to drop your gigavolt bomb. Dodge the Buster Cannon unlike Tettles. Mass Entangling is 100% required on this fight in order to keep the Spark Bots contained. Heal during the intermission. You should save your 2nd use of Incarnation for the last phase so it is lined up with lust.
+Mekkatorque is a high sustained damage taken fight where defensives like Barkskin shine. Swiftmend yourself when you will dip out of line of sight to drop your gigavolt bomb. Dodge the Buster Cannon unlike [Tettles](https://www.twitch.tv/tettles/clip/AlluringSparklingSwanNotLikeThis). Mass Entangling is 100% required on this fight in order to keep the Spark Bots contained. Heal during the intermission. You should save your 2nd use of Incarnation for the last phase so it is lined up with lust.
 
 </center>
