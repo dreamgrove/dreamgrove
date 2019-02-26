@@ -9,7 +9,7 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="322,213,123,222,133,132,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,233,123,222,133,132,321" >}}
 
 <center>
 <b>Notes</b>
@@ -20,11 +20,11 @@ This is a mostly stationary fight made up of 2 distinct phases, an add DPS phase
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="0,0,0,0,0,0,0" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,233,123,222,133,132,321" >}}
 <center>
 <b>Notes</b>
 
-tbd
+Even though Twin Moons is slightly more damage over the course of the encounter, Stellar Flare is more damage on the boss, which is all that matters. Renewal is fine to take here, but realistically you're not going to wipe because of healing. The fight just has 0 movement. 
 
 </center>
  
