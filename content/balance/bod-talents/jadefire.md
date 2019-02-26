@@ -13,7 +13,7 @@ patch: "8.1"
 <center>
 <b>Notes</b>
 
-Jadefire Masters are a spread-cleave damage boss with spread add spawns. It’s recommended to take Warrior of Elune to burst add spawns down and also deal with movement. The Spirits of Xuen spawned by the boss are able to be stunned by Mighty Bash, so it should be the chosen tier 60 talent. Wild Charge is a must have to minimize downtime when dealing with the Magma Traps and also to mitigate the fall damage completely.
+Jadefire Masters are a spread-cleave damage boss with spread add spawns. The Spirits of Xuen spawned by the boss are able to be stunned by Mighty Bash, so it should be the chosen tier 60 talent. Wild Charge is a must have to minimize downtime when dealing with the Magma Traps and also to mitigate the fall damage completely.
 
 </center>
 
