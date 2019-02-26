@@ -9,7 +9,7 @@ patch: "8.1"
 ---
 
 ## Heroic
-{{< talents spec="balance" patch="8.1" recommend="232,113,123,322,123,132,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,113,123,322,123,132,321" >}}
 <center>
 <b>Notes</b>
 
@@ -19,7 +19,7 @@ Jadefire Masters are a spread-cleave damage boss with spread add spawns. It’s 
 
 
 ## Mythic
-{{< talents spec="balance" patch="8.1" recommend="232,113,123,322,123,132,321" >}}
+{{< talents spec="balance" patch="8.1" recommend="322,113,123,322,123,132,321" >}}
 <center>
 <b>Notes</b>
 
