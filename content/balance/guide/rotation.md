@@ -49,7 +49,7 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it. If you have {{< spell 287773 "Arcanic Pulsar" >}}) this changes to 5 targets, Pulsar together with Starlord (or Incarnation with 3 Streaking Stars traits) changes this to 6 targets, and finally with Pulsar, Starlord, and 3 Streaking Stars Traits you should Starfall on 7 targets. Otherwise, cast Starsurge instead.
+2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" >}}, and on 5 targets while Starfall is slightly more damage per Astral Power versus Starsurge with {{< spell 287773 "Arcanic Pulsar" >}}, you lose priority damage casting Starfall over Starsurge), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" >}}.
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
