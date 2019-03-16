@@ -27,8 +27,7 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 ### Sockets: 
 
-- One {{< item 153709 "Kraken’s Eye of Intellect" "beta" >}} 
-- {{< item 154127 "Quick Owlseye" "beta" >}} in your remaining slots.
+- {{< item 154127 "Quick Owlseye" "beta" >}}
 
 ### Notable trinkets you should consider are the following: 
 

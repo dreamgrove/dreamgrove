@@ -17,19 +17,19 @@ patch: "8.1"
 1. 2x Solar Wrath
 2. Sunfire and Moonfire
 3. Stellar Flare
-4. Solar Wrath to 40 AsP
+4. Solar Wrath to at least 40 AsP
 5. Celestial Alignment / Incarnation
 6. Fury of Elune / Force of Nature/ Warrior of Elune
 
 ### Nature's Balance Opener
 
-When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly alter that opener so that you cast {{< spell 78674 "Starsurge" >}} just after pre-casting two wraths at 2.5 seconds before the pull. This opener should look like this. 
+When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly alter that opener so that you cast {{< spell 78674 "Starsurge" >}} just after pre-casting two wraths at 4 seconds before the pull. This allows you to gain 16 Astral Power from the Solar Wraths instead of having your Astral Power reset to 50 pull. Depending on how far you can stand from the boss before pulling, it is perfectly acceptable to only precast 1 Solar Wrath. This opener should look like this. 
 
-1. 2x Solar Wrath
+1. 2x Solar Wrath (Only 1 Solar Wrath if close to the boss).
 2. Starsurge
 3. Sunfire and Moonfire
 4. Stellar Flare
-5. Solar Wrath to 40 AsP
+5. Solar Wrath to at least 40 AsP
 6. Celestial Alignment / Incarnation
 7. Fury of Elune / Force of Nature/ Warrior of Elune
 
@@ -49,7 +49,7 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" >}}, and on 5 targets while Starfall is slightly more damage per Astral Power versus Starsurge with {{< spell 287773 "Arcanic Pulsar" >}}, you lose priority damage casting Starfall over Starsurge), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" >}}.
+2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it. If you have {{< spell 287773 "Arcanic Pulsar" >}}) this changes to 5 targets, Pulsar together with Starlord (or Incarnation with 3 Streaking Stars traits) changes this to 6 targets, and finally with Pulsar, Starlord, and 3 Streaking Stars Traits you should Starfall on 7 targets. Otherwise, cast Starsurge instead.
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
@@ -57,9 +57,9 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 ### Streaking Stars Rotation During Cooldowns
 
-Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" >}}. Basically you should never allow two of the same ability to hit the target in a row. The exception to this is should you run out of Astral Power and Empowerments, you should cast two Solar Wraths followed by a Starsurge, and then return to not repeating your abilities. Otherwise, alternate between unempowered Solar Wrath and Lunar Strike. It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "live" >}}, {{< spell 202770 "Fury of Elune" >}}, and {{< spell 205636 "Force of Nature" >}}.
+Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" >}}. Basically you should never allow two of the same ability to hit the target in a row. Additionally, every spell that isn't Solar Wrath, Moonfire, or Sunfire, should be followed up with a Solar Wrath, regardless of if empowered. It should be noted that you should cast all of your talented cooldowns directly after Celestial Alignment/Incarnation: Chosen of Elune, such as {{< spell 202425 "Warrior of Elune" "live" >}}, {{< spell 202770 "Fury of Elune" >}}, and {{< spell 205636 "Force of Nature" >}}.
 
-1. Don't repeat the same spell cast twice (Unless following step 7).
+1. Don't repeat the same spell cast twice.
 
 2. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
@@ -69,11 +69,11 @@ Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celesti
 
 5. Don't cap {{< spell 279708 "Empowerments" >}}.
 
-6. Spend any Empowerments.
+6. If your last spell was not Solar Wrath, Moonfire, or Sunfire, cast Solar Wrath.
 
-7. Cast two {{< spell 190984 "Solar Wrath" >}}s in a row if you lack Empowerments or Astral Power and those two Wraths will instantly allow you to Starsurge, then cast Starsurge
+7. Spend any Empowerments.
 
-8. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on you should simply fill with Solar Wrath or Lunar Strike, depending on what spell hit the target last.
+8. If you lack Empowerments, Astral Power for spenders, and DoTs to refresh the pandemic on you should simply alternate between Solar Wrath and Lunar Strike.
 
 ### Starlord Opener
 
@@ -84,7 +84,7 @@ Put simply, the entire purpose of this opener is to get 2 casts of {{< spell 786
 3. Apply Sunfire, Moonfire, and Stellar Flare (if talented)
 4. Generate 40 Astral Power with Empowerments and Solar Wrath
 5. Starsurge
-6. Generate 40 Astral power and cast Celestial Alignment
+6. Generate Astral Power until at least 40 Astral power and cast Celestial Alignment
 7. Normal Rotation
 
 If you are not using {{< spell 202430 "Nature’s Balance" >}}, you should open slightly different, instead with x2 Solar Wraths 3 seconds before the pull into applying your DoTs and manually generating 40 Astral Power for the 1st {{< spell 78674 "Starsurge" >}}, with Force of Nature or Warrior of Elune being casted directly after activating Celestial Alignment (Fury of Elune too if talented), with the goal still being to Starsurge 2 times and have 40 Astral Power before casting Celestial Alignment.
@@ -94,6 +94,8 @@ If you are not using {{< spell 202430 "Nature’s Balance" >}}, you should open 
 The rotation when using {{< spell 202345 "Starlord" >}} is the same as the normal rotation with one important rule to maximize the talents power. Basically, you will "cancelaura" the Starlord buff whenever you have less than 8 seconds remaining on the buff and you are about to cast {{< spell 78674 "Starsurge" >}}. Cancelaura meaning to remove the Starlord buff from yourself. The optimal way of doing this is to start pooling Astral Power once you have less than 8 seconds remaining on Starlord until you have 87 Astral Power (this can be done with less Astral Power if needed to Starsurge for movement), at this point you should use your cancelaura macro and then Starsurge. 
 
 If done correctly, you will end most Starlord cycles with nearly capped Astral Power and the ability to quickly restack the new cycle. Ideally you will almost always cancel Starlord at the very end of the buffs duration if at all. 
+
+Keep in mind that maximising Starlord usage is a very small increase, as in less than 1% gain.
 
 The macro to cancelaura Starlord can be found below.
 
@@ -105,8 +107,6 @@ If you don't want to use the cancelaura macro, simply pool Astral Power once you
 
 ### Arcanic Pulsar
 
-To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 84 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Right before casting your 9th Starsurge you should cast a Solar Wrath and then follow these sequences depending on your range from the target.
+To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 84 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Basically, you're aiming to get 2 Starsurges within the 6 second Pulsar window.
 
-30+ yards: Solar Wrath (Before activating Pulsar) -> Starsurge -> Starsurge -> Solar Wrath -> Solar Wrath -> Lunar Strike -> Starsurge -> refresh lowest duration instant cast DoT.
 
-<30 yards: Solar Wrath (Before activating Pulsar) -> Starsurge -> Starsurge -> Solar Wrath -> Lunar Strike -> Solar Wrath -> Starsurge -> refresh lowest duration instant cast DoT.
