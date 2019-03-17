@@ -49,7 +49,7 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}. Make sure you only refresh DoTs when they’re within pandemic range.
 
-2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it (3 targets with {{< spell 202354 "Stellar Drift" >}}, and on 5 targets while Starfall is slightly more damage per Astral Power versus Starsurge with {{< spell 287773 "Arcanic Pulsar" >}}, you lose priority damage casting Starfall over Starsurge), otherwise spend your Astral Power on {{< spell 78674 "Starsurge" >}}.
+2. Use Astral Power on {{< spell 191034 "Starfall" >}} if you can hit at least 4 targets with it. With Pulsar this changes to 5 targets.  This further changes to 6 targets with {{< spell 287773 "Arcanic Pulsar" >}} and Starlord. This finally changes to 7 targets with Pulsar and x3 {{< spell 272871 "Streaking Stars" >}}. Otherwise spend your Astral Power on {{< spell 78674 "Starsurge" >}}.
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
@@ -79,7 +79,7 @@ Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celesti
 
 Put simply, the entire purpose of this opener is to get 2 casts of {{< spell 78674 "Starsurge" >}} off before popping {{< spell 194223 "Celestial Alignment" >}} at 40 Astral Power, at that point you should start the normal rotation. It should look like this:
 
-1. Pre cast x2 Solar Wraths 3 seconds before the pull
+1. Pre cast x2 Solar Wraths 4 seconds before the pull
 2. Starsurge
 3. Apply Sunfire, Moonfire, and Stellar Flare (if talented)
 4. Generate 40 Astral Power with Empowerments and Solar Wrath
