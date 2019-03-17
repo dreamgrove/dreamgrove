@@ -33,8 +33,6 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 6. Celestial Alignment / Incarnation
 7. Fury of Elune / Force of Nature/ Warrior of Elune
 
-
-
 ### Single Target
 
 1. Maintain 100% uptime on {{< spell 164812 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, and Stellar Flare if talented. Make sure you only refresh DoTs when they’re within pandemic range (30% of the original DoT, this is 6.6 seconds for Moonfire, 5.4 seconds for Sunfire, and 7.2 seconds for Stellar Flare.)
@@ -77,17 +75,7 @@ Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celesti
 
 ### Starlord Opener
 
-Put simply, the entire purpose of this opener is to get 2 casts of {{< spell 78674 "Starsurge" >}} off before popping {{< spell 194223 "Celestial Alignment" >}} at 40 Astral Power, at that point you should start the normal rotation. It should look like this:
-
-1. Pre cast x2 Solar Wraths 4 seconds before the pull
-2. Starsurge
-3. Apply Sunfire, Moonfire, and Stellar Flare (if talented)
-4. Generate 40 Astral Power with Empowerments and Solar Wrath
-5. Starsurge
-6. Generate Astral Power until at least 40 Astral power and cast Celestial Alignment
-7. Normal Rotation
-
-If you are not using {{< spell 202430 "Nature’s Balance" >}}, you should open slightly different, instead with x2 Solar Wraths 3 seconds before the pull into applying your DoTs and manually generating 40 Astral Power for the 1st {{< spell 78674 "Starsurge" >}}, with Force of Nature or Warrior of Elune being casted directly after activating Celestial Alignment (Fury of Elune too if talented), with the goal still being to Starsurge 2 times and have 40 Astral Power before casting Celestial Alignment.
+Currently {{< spell 202345 "Starlord" >}} does not change your opener and you should follow the ones stated above.
 
 ### Starlord Rotation
 
