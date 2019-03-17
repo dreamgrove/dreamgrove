@@ -12,7 +12,7 @@ patch: "8.1"
 
 ### Opener
 
-2.5 seconds before the pull cast two {{< spell 190984 "Solar Wraths" >}} standing away from the boss. As soon as the timer hits 0 and the boss is pulled apply {{< spell 93402 "Sunfire" >}}, {{< spell 164812 "Moonfire" >}}, and if talented, {{< spell 202347 "Stellar Flare" >}}. At this point spam Solar wrath until you reach at least 40 Astral Power and activate {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" >}}.
+3 seconds before the pull cast two {{< spell 190984 "Solar Wraths" >}} standing away from the boss. As soon as the timer hits 0 and the boss is pulled apply {{< spell 93402 "Sunfire" >}}, {{< spell 164812 "Moonfire" >}}, and if talented, {{< spell 202347 "Stellar Flare" >}}. At this point spam Solar wrath until you reach at least 40 Astral Power and activate {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation: Chosen of Elune" >}}.
 
 1. 2x Solar Wrath
 2. Sunfire and Moonfire
