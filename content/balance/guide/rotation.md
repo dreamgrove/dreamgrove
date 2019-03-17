@@ -75,7 +75,7 @@ Streaking Stars changes your playstyle slightly during {{< spell 194223 "Celesti
 
 ### Starlord Opener
 
-Currently {{< spell 202345 "Starlord" >}} opens with the normal openers listed above.
+Currently {{< spell 202345 "Starlord" >}} does not change your opener and you should follow the ones stated above.
 
 ### Starlord Rotation
 
