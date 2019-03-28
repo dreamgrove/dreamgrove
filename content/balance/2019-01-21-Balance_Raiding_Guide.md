@@ -70,7 +70,7 @@ Obliteration Blast, Roiling Deceit, and priority target spawns are all things th
 Weakauras fill in where boss mods fail. Searching or creating your own weakauras can greatly assist you in handling boss mechanics. There are weakauras that monitor your own buffs and play, weakauras that will tell you if you are safe from a mechanics, weakauras that will blare horns at you everytime you receive a mechanic. Identify what mechanics are giving you a difficult time and then find a weakaura that will assist you with handling those mechanics via tracking a debuff, showing a timer, or any of the other amazing things weakauras can do.
 
 
-###Self Review
+### Self Review
 
 While this is not necessarily progression related, reviewing your own play is important for player growth. If you do not acknowledge where you stand, you will never improve. If you find yourself messing up your rotation while handling mechanics, you need to realize that what you are doing is not optimal. Spamming DoTs, misusing cooldowns, being unprepared for movement or priority targets will hinder your progress. Auto-piloting encounters will not lead to success. 
 
