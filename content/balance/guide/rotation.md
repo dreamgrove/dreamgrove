@@ -95,6 +95,6 @@ If you don't want to use the cancelaura macro, simply pool Astral Power once you
 
 ### Arcanic Pulsar
 
-To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 84 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Basically, you're aiming to get 2 Starsurges within the 6 second Pulsar window.
+To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 75 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Basically, you're aiming to get 2 Starsurges within the 6 second Pulsar window and then end the Pulsar window with a DoT cast of your lowest duration instant cast DoT if you can't fit another Solar Wrath in.
 
 
