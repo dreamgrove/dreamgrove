@@ -30,6 +30,10 @@ Notable Alternative Talents and When to Use Them
 
 - {{< spell 5211 "Mighty Bash" "live" >}} can come in handy when there are extremely dangerous singular mobs that aren’t affected by knockbacks and they need to be dealt with.
 
+#### Tier 75:
+
+{{< spell 202345 "Starlord" "live" >}} is a decent talent in mythic plus, especially when your group isn't very organized and you can't play around Incarnation.
+
 ### Utility
 
 As a Balance Druid it is vital you capitalize on your very useful utility. {{< spell 132469 "Typhoon" "live" >}} and FoN will make you the tanks best friend, assisting them in moving mobs out of Sanguine or other mechanics, and helping them kite or stay alive in general. Dispelling enrage effects (even the Raging affix) with {{< spell 2908 "Soothe" "live" >}} will keep your tank and groups health much more stable and {{< spell 2637 "Hibernate" "live" >}} can even be used to completely take a mob and therefore a mechanic out of the fight, making everyone's lives much easier. {{< spell 78675 "Solar Beam" "live" >}} can completely shut down the threat of an entire group of trash when timed correctly. It’s worth noting a Moonkin also brings a battle rez in the form of {{< spell 20484 "Rebirth" "live" >}} as it is important you have at least one battle rez in a Mythic+ group.
@@ -38,15 +42,15 @@ As a Balance Druid it is vital you capitalize on your very useful utility. {{< s
 
 In Battle for Azeroth, the gear you have equipped once the key begins is the gear you will have throughout the entire dungeon, so it is crucial you prepare accordingly and choose the best Azerite pieces for the job. The Azerite traits that you choose should be determined based on your group composition, the dungeon itself, and affixes. You should try to cover the weaknesses of you group as much as possible.
 
-- {{< spell 287773 "Arcanic Pulsar" "ptr" >}} - A single Pulsar trait can be decent just for the powerful low target damage it provides, and can even be prepared before a big pull for impressive burst.
+- {{< spell 287773 "Arcanic Pulsar" "ptr" >}} - It is highly recommended to have at least one Pulsar trait, it is just so powerful in any situation where you're casting Starsurge, which is basically almost always.
 
-- {{< spell 279646 "Lively Spirit" "ptr" >}} - Though Lively Spirit requires more communication, it can be potent for burst in both single target and multi-target, granting both decent multi-target and single target damage overall unlike most of our considerable Mythic+ traits and easily being our best trait. It is not recommended to use this trait without voice communication. 
+- {{< spell 272871 "Streaking Stars" >}} - Streaking Stars simply gives us insane single target and burst priority, which is one of our main strengths in mythic plus.
 
-- {{< spell 288989 "Treacherous Covenant" >}} - The recommended trait to use if you can't take advantage of Lively Spirit. Covenant is a nice mix of single target and multi-target while also being sustained.
+- {{< spell 288989 "Treacherous Covenant" >}} - One of the best pure stat traits. Covenant is a nice mix of single target and multi-target while also being sustained.
 
 - {{< spell 273389 "Power of the Moon" >}} - a single trait of Power of the Moon is quite powerful for aoe, further traits aren't nearly as useful though.
 
-- Stat Increasing Traits - Generic Stat increasing traits such as {{< spell 280429 "Swirling Sands" "live" >}} or {{< spell 273823 "Blightborne Infusion" "live" >}} can be a decent choice especially if you lack the prior listed traits. These traits much like Lively Spirit act as a mix of single target and multi-target, but don't require communication.
+- Stat Increasing Traits - Generic Stat increasing traits such as {{< spell 280429 "Swirling Sands" "live" >}} or {{< spell 273823 "Blightborne Infusion" "live" >}} can be a decent choice especially if you lack the prior listed traits. 
 
 ### Trinkets
 
