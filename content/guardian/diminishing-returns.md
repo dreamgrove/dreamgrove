@@ -38,7 +38,7 @@ For the sake of simplicity I'll be ignoring diminishing marginal utility in this
 
 ### Diminishing Returns from Rating Penalty
 
-A second use of the term diminishing returns refers to ex post facto conversions applied to some values to reduce their effectiveness from what is advertised on the tooltip. Stats such as Armor, Block, Stagger, and Dodge/Parry are all subject to a diminishing returns penalty as part of the formula that converts stat rating into percentage. This is the definition of "diminishing returns" that players use most often in WoW, especially in discussions involving tanking stats, and will be the primary focus of this article.
+A second use of the term diminishing returns refers to penalties applied to some stats to reduce their effectiveness from what is advertised on the tooltip. Stats such as Armor, Block, Stagger, and Dodge/Parry are all subject to a diminishing returns penalty as part of the formula that converts stat rating into percentage. This is the definition of "diminishing returns" that players use most often in WoW, especially in discussions involving tanking stats, and will be the primary focus of this article.
 
 Let's take the dodge/parry conversion, for example. For simplicity's sake I will use terms relevant to Guardian, but know that anywhere that "Dodge" is mentioned, it can be replaced with "Parry" (and "Agility" with "Strength") as the formula is the same for both.
 
@@ -82,11 +82,11 @@ A misconception I often hear is that because stats that reduce your damage intak
 
 Consider for a moment what damage reduction actually implies. Suppose you currently have 0% damage reduction, and you take a hit for 100 damage. You reduce 0 of that incoming damage, and so you take the full 100 damage to the face.  Now, suppose you gain 1% damage reduction, and you take another 100 damage hit. You are now reducing 1% of that damage, and taking 99 damage. Going from 0% to 1% damage reduction has decreased the amount of damage you take by 1%. This might seem painfully obvious, but bear with me for a moment.
 
-Now suppose you currently have 98% damage reduction. A 100 damage hit would be reduced to 2 damage. If you then gained another 1%, that 100 damage hit is now reduced by 99%, and you take 1 damage. Going from taking 2 damage to 1 damage has decreased the amount of damage you take by 50%. You're removing the same amount of damage, but the pool you're drawing from is much smaller.
+Now suppose you currently have 98% damage reduction. A 100 damage hit would be reduced to 2 damage. If you then gained another 1%, that 100 damage hit is now reduced by 99%, and you take 1 damage. Going from taking 2 damage to 1 damage has decreased the amount of damage you take by 50%. You're removing the same amount of damage, but the pool you're removing from is much smaller.
 
 As such, gaining 1% damage reduction is **50 times more valuable** when you already have 98% damage reduction than it is when you have 0% damage reduction. Rather than diminishing returns, damage reduction has "increasing returns" --- every percent of damage reduction you gain is more valuable than the last.
 
-To see this more clearly, let's express it in terms of effective health. Effective health (or EHP) refers to the amount of damage required to kill you, taking into account all of your damage reductions. This is very useful for judging exactly how much impact a gain in damage reduction will have on our survivability, as we can now define it in terms of how much additional damage we can take. 
+To see this more clearly, let's express it in terms of effective health. Effective health (or EHP) refers to the amount of damage required to kill you, taking into account all of your damage reductions. This is very useful for judging exactly how much impact an increase in damage reduction will have on our survivability, as we can now define it in terms of how much additional damage we can take. 
 
 Effective health can be calculated as a function of damage reduction:
 
@@ -114,7 +114,7 @@ EHP &= \frac{health}{1 - 0.99} \\[2ex]
 \end{array}
 {{< /texblock >}}
 
-> *When we talk about the theory of effective health, we typically consider base "health" to be 1, in order to simplify the equations.*
+> *To make the comparison more clear, I'm assuming that health = 1.*
 
 ![Effective Health vs Damage Reduction](/guardian/images/ehp-damage-reduction.png)
 
@@ -122,7 +122,7 @@ As you can see, at higher levels of base damage reduction, adding additional dam
 
 So, why does this matter? 
 
-Recall that the Armor to damage reduction formula is {{< tex "damageReduction = \frac{armor}{armor + K}" >}}, which inherently suffers diminishing returns when expressed in terms of damage reduction. Let's try and express this in terms of effective health by substituting the Armor formula into the EHP formula.
+Recall that the Armor to damage reduction formula is {{< tex "damageReduction = \frac{armor}{armor + K}" >}}, which inherently suffers diminishing returns when expressed as damage reduction. Let's try and express it as effective health by substituting the Armor formula into the EHP formula.
 
 {{< texblock >}}
 \begin{aligned}
@@ -167,12 +167,12 @@ What are we to make of all this? Well, let's review what we know.
 
 1. Stats like Block, Stagger, and Armor, have diminishing returns penalties applied to their conversion from rating into damage reduction. Dodge/Parry also has a diminishing returns penalty to its conversion from rating into Dodge/Parry chance.
 2. Damage reduction increases in value the more you have of it. This is because when you have more damage reduction, adding an additional 1% of reduction is reducing a larger fraction of the remaining damage. 
-3. Expressing damage reduction gains in terms of effective health demonstrates that the diminishing returns penalties applied to some stats cancel out the increasing returns of damage reduction, resulting in linear gains.
-4. Versatility is exceptional in that it is not subject to diminishing returns, and as such its damage reduction component will continue to increase in value as you gain more of it.
-5. All stats are affected by diminishing marginal utility, which is distinct from diminishing returns penalty.
+3. Expressing damage reduction gains in terms of effective health demonstrates that the diminishing returns penalties applied to some stats cancel out the increasing returns of damage reduction. This results in a linear relation between those stats and survivability.
+4. Versatility is exceptional in that it is not subject to diminishing returns. Each point of Versatility you gain will be more valuable than the last, in terms of damage reduction. 
+5. All stats are affected by diminishing marginal utility, which is distinct from the diminishing returns penalty.
 
-So when someone claims that "Armor has diminishing returns", they are correct; Armor is subject to a diminishing returns penalty. However: in terms of effective health gain, every point of Armor grants the same amount of effective health as the previous, and the next. In this way, the diminishing returns penalty cancels out the increasing returns of damage reduction, resulting in a linear gain. The same is true of Dodge/Parry, Block, and Stagger.
+So when someone claims that "Armor has diminishing returns", they are correct; Armor is subject to a diminishing returns penalty. However: in terms of effective health gain, every point of Armor grants the same amount of effective health as the previous, and the next. In this way, the diminishing returns penalty cancels out the increasing returns of damage reduction, resulting in a linear return. In practical terms, an increase in Armor is always worth the same amount, regardless of how much Armor you already have. The same is true of Dodge/Parry, Block, and Stagger.
 
-It is also true that Armor loses value the more you have of it, but *only in the context of diminishing marginal utility*. Every point of Armor you gain is a smaller relative increase than the previous, with respect to how much Armor you already have. The same is true of not only the damage reduction stats but of every stat in the game. We tend to ignore this factor when discussing the effects of diminishing returns from *rating penalties*, because it is not a distinguishing characteristic of the system like the penalties are and serves only to confuse those who are unfamiliar with the topic. 
+It is also true that Armor loses value the more you have of it, but *only in the context of diminishing marginal utility*. Every point of Armor you gain is a smaller relative increase than the previous, with respect to how much Armor you already have. The same is true of not only the damage reduction stats but of every stat in the game. We tend to ignore this factor when comparing the values of different damage reduction stats, because it affects them all equally and whether a stat has a diminishing returns penalty is far more important. Being pedantic about whether a stat actually has linear returns because of diminishing marginal utility serves only to confuse those who are unfamiliar with the topic. 
 
 Hopefully this has helped clarify some of the less intuitive parts of diminishing returns, and enables you to make more informed decisions about defensive stats in the future. 
