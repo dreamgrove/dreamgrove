@@ -4,7 +4,7 @@ title: Balance
 
 Quick Links
 ===
- - [Crucible of Storms](/balance/cos-talents)
+ - [Crucible of Storms Talent/Trait Guide](/balance/cos-talents)
  - [Battle of Dazar'alor Talent/Trait Guide](/balance/bod-talents)
  - [Uldir Talent/Trait Guide](/balance/uldir-talents)
  - [Balance Guide](/balance/guide)
