@@ -2,6 +2,7 @@ languageCode = "en-us"
 title = "Dreamgrove"
 copyright = "Dreamgrove"
 theme = "dg-theme"
+enableGitInfo = true
 
 [blackfriday]
   hrefTargetBlank = true
