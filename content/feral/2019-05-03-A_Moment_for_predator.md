@@ -13,7 +13,7 @@ patch: "8.1.5"
 
 
 <center>
-We come together (late again) to discuss a variety of hot topics, from Moment of Clarity and Predator in m+, to the upcoming Azerite changes in 8.2!
+We come together (late again) to discuss a variety of hot topics, from Moment of Clarity and Predator in m+, to how feral ended up doing in Battle For Dazar'alor and the new Crucible Loot.
 
 Since this episode was recorded prior to the release of the new raid we can now update with regards to the strength of the raid items that we discussed.
 
