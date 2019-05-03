@@ -12,7 +12,7 @@
     {{ end }}
   </p>
   <ul>
-    {{ range (last 5 $seriesPages.Pages) }}
+    {{ range (first 5 $seriesPages.Pages) }}
       {{ if (eq $current .) }}
       <li class="active">{{ or .Params.series_title .Title }}</li>
       {{ else }}
