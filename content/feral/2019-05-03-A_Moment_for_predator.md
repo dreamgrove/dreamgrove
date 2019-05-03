@@ -2,7 +2,7 @@
 date: '2019-05-03'
 authors: ["Xanzara","Guiltyas"]
 published: true
-title: "Cat Chat - "A Moment For Predator""
+title: "Cat Chat - A Moment For Predator"
 series: ["Cat Chat"]
 series_title: "A Moment for Predator"
 patch: "8.1.5"
