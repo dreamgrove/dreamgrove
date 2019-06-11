@@ -68,12 +68,11 @@ patch: "8.0"
 /cancelaura starlord
 ```
 
-**AP Pro Bar:**
+** [AP Pro Bar](https://wago.io/4y7qKOBVW):**
 
 
-[AP Pro Bar](https://wago.io/4y7qKOBVW)
 
-**Nickdruid's Balance Auras:**
+**[Nickdruid's Balance Auras](https://wago.io/HJQsdOyIm):**
 
 
-[Nickdruid's Balance Auras](https://wago.io/HJQsdOyIm)
+
