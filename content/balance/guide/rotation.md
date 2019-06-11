@@ -41,7 +41,7 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 3. Spend Solar and Lunar {{< spell 279708 "Empowerments" >}}. It is important you don’t cap Empowerments unless you would otherwise cap Astral Power. If you must waste one of the two, the Solar Empowerment is worth more and so you should waste a Lunar Empowerment.
 
-4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 "Solar Wrath" >}}.
+4. When you have no DoTs to apply and no Empowerments or Astral Power to spend, you should fill with {{< spell 190984 "Solar Wrath" >}}.
 
 ### Multi-Target
 
@@ -51,7 +51,7 @@ When talented into {{< spell 202430 "Nature’s Balance" >}} you should slightly
 
 3. Spend any Solar or Lunar Empowerments you gain from casting fillers.
 
-4. When you have no DoTs to apply and no Empowerments to spend, you should fill with {{< spell 190984 "Solar Wrath" >}}. If you’re able to hit at least 2 targets, you should instead fill with {{< spell 194153 "Lunar Strike" >}}.
+4. When you have no DoTs to apply and no Empowerments or Astral Power to spend, you should fill with {{< spell 190984 "Solar Wrath" >}}. If you’re able to hit at least 2 targets, you should instead fill with {{< spell 194153 "Lunar Strike" >}}.
 
 ### Streaking Stars Rotation During Cooldowns
 
@@ -79,11 +79,11 @@ Currently {{< spell 202345 "Starlord" >}} does not change your opener and you sh
 
 ### Starlord Rotation
 
-The rotation when using {{< spell 202345 "Starlord" >}} is the same as the normal rotation with one important rule to maximize the talents power. Basically, you will "cancelaura" the Starlord buff whenever you have less than 8 seconds remaining on the buff and you are about to cast {{< spell 78674 "Starsurge" >}}. Cancelaura meaning to remove the Starlord buff from yourself. The optimal way of doing this is to start pooling Astral Power once you have less than 8 seconds remaining on Starlord until you have 87 Astral Power (this can be done with less Astral Power if needed to Starsurge for movement), at this point you should use your cancelaura macro and then Starsurge. 
+Keep in mind that maximising Starlord usage with the cancelaura macro is a very small increase, as in less than .3% gain. So you should only bother using it if you are extremely comfortable with Moonkin.
 
-If done correctly, you will end most Starlord cycles with nearly capped Astral Power and the ability to quickly restack the new cycle. Ideally you will almost always cancel Starlord at the very end of the buffs duration if at all. 
+The rotation when using {{< spell 202345 "Starlord" >}} is the same as the normal rotation with one important rule to maximize the talents power. Basically, you will "cancelaura" the Starlord buff whenever you have less than 5 seconds remaining on the buff and you are about to cast {{< spell 78674 "Starsurge" >}}. Cancelaura meaning to remove the Starlord buff from yourself. The optimal way of doing this is to start pooling Astral Power once you have less than 5 seconds remaining on Starlord until you have 87 Astral Power, at this point you should use your cancelaura macro and then Starsurge (this can be done with less Astral Power if needed to Starsurge for movement).
 
-Keep in mind that maximising Starlord usage is a very small increase, as in less than 1% gain.
+If done correctly, you will end most Starlord cycles with high amounts of Astral Power and the ability to quickly restack the new cycle. Ideally, if done correctly you won't cancel Starlord that often outside of for movement, and when you do, only at the very end of the Starlord window. 
 
 The macro to cancelaura Starlord can be found below.
 
@@ -95,6 +95,6 @@ If you don't want to use the cancelaura macro, simply pool Astral Power once you
 
 ### Arcanic Pulsar
 
-To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 75 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 8 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Basically, you're aiming to get 2 Starsurges within the 6 second Pulsar window and then end the Pulsar window with a DoT cast of your lowest duration instant cast DoT if you can't fit another Solar Wrath in.
+To maximize your Arcanic Pulsar windows, you should slightly change your playstyle upon getting the 8th stack of this effect and before casting your 9th Starsurge. What this means is you should pool to at least 75 Astral Power before the 9th Starsurge. If your 9th Starsurge happens to be within the last 5 seconds of Starlord, you should cancelaura the Starlord buff (if you're minmaxing with the cancelaura macro). Basically, you're aiming to get 2 Starsurges within the 6 second Pulsar window and then end the Pulsar window with a DoT cast of your lowest duration instant cast DoT if you can't fit another Solar Wrath in.
 
 
