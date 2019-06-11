@@ -72,3 +72,8 @@ patch: "8.0"
 
 
 [AP Pro Bar](https://wago.io/4y7qKOBVW)
+
+**Nickdruid's Balance Auras:**
+
+
+[Nickdruid's Balance Auras](https://wago.io/HJQsdOyIm)
