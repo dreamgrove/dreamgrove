@@ -52,6 +52,8 @@ In Battle for Azeroth, the gear you have equipped once the key begins is the gea
 
 - Stat Increasing Traits - Generic Stat increasing traits such as {{< spell 280429 "Swirling Sands" "live" >}} or {{< spell 273823 "Blightborne Infusion" "live" >}} can be a decent choice especially if you lack the prior listed traits. 
 
+The ideal setup for Mythic+ is to have 3 Streaking Stars traits, and 1 Arcanic Pulsar trait, with the last 2 traits simply being whatever you can get. Generally these last 2 traits are stat increasing traits like Treacherous Covenant or Blightborne Infusion, or a DoT trait like Power of the Moon. Of course make sure to sim your Azerite, that will ultimately tell you what traits to run.
+
 ### Trinkets
 
 As it stands there is no trinket that is notably special for Mythic+. That being said, it is recommended you take trinkets that are both strong on multi-target and single target if you have the choice. Simming your character will generally give the best results in figuring out your trinket choice. 
