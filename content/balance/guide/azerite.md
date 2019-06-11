@@ -56,10 +56,8 @@ This is a list of our most potent traits, ones that you should seek out if you c
 
 - {{< spell 272871 "Streaking Stars" >}} - Being one of our top single target traits and offering decent burst, this level of burst can be invaluable in raids especially if there is a period of damage amplification, a target needs to die fast, or the kill time lines up nicely with our cooldowns. Also synergizes nicely with Arcanic Pulsar
 
-- {{< spell 280559 "Laser Matrix" >}} - Laser Matrix is a decent trait on single target and mediocre on multi-target, but also activates Reorigination Array in Uldir. This buff will eventually be awarding us with up to 750 of our highest secondary stat, easily surpassing other traits in damage at this point. You should strive to have at least one of Laser Matrix or Archive of the Titans while in Uldir.
-
-- {{< spell 279647 "Lively Spirit" >}} - Assuming you can achieve a high amount of stacks of Lively Spirit per cast, it is similar to our top traits in power, but comes with the bonus of scaling with multiple targets. Lively Spirit is not for everyone, as it can't be expected for you to be able to use {{< spell 29166 "Innervate" >}} for your own personal damage, but when you can use Lively, it is an exceptional trait, especially in Mythic+.
-
 - {{< spell 273389 "Power of the Moon" >}} and {{< spell 279070 "High Noon" >}} - On encounters with lots of spread targets, these traits could potentially shine, being our most realistic choice for spread multi-target.
 
 - {{< spell 288989 "Treacherous Covenant" >}} - Though potentially risky, the payoff from Treacherous Covenant is large, being nearly as strong as Streaking Stars on single target and scaling with multiple targets.
+
+The ideal setup for almost all PvE situations is to have 3 Streaking Stars traits, and 1 Pulsar trait, with the last 2 traits simply being whatever you can get. Generally these last 2 traits are stat increasing traits like Treacherous Covenant or Blightborne Infusion, or a DoT trait like Power of the Moon. Of course make sure to sim your Azerite, that will ultimately tell you what traits to run.
