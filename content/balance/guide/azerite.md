@@ -60,4 +60,4 @@ This is a list of our most potent traits, ones that you should seek out if you c
 
 - {{< spell 288989 "Treacherous Covenant" >}} - Though potentially risky, the payoff from Treacherous Covenant is large, being nearly as strong as Streaking Stars on single target and scaling with multiple targets.
 
-The ideal setup for almost all PvE situations is to have 3 Streaking Stars traits, and 1 Pulsar trait, with the last 2 traits simply being whatever you can get. Generally these last 2 traits are stat increasing traits like Treacherous Covenant or Blightborne Infusion, or a DoT trait like Power of the Moon. Of course make sure to sim your Azerite, that will ultimately tell you what traits to run.
+The ideal setup for almost all PvE situations is to have 3 Streaking Stars traits, and 1 Arcanic Pulsar trait, with the last 2 traits simply being whatever you can get. Generally these last 2 traits are stat increasing traits like Treacherous Covenant or Blightborne Infusion, or a DoT trait like Power of the Moon. Of course make sure to sim your Azerite, that will ultimately tell you what traits to run.
