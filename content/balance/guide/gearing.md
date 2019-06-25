@@ -16,20 +16,20 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 
 ### Enchants:
 
-- {{< item 159786 "Enchant Weapon - Quick Navigation" "beta" >}} or {{< item 153479 "Enchant Weapon - Torrent of Elements" "beta" >}} (Depending on what sims higher)
-- {{< item 153443 "Enchant Ring - Pact of Haste" "beta" >}}
+- {{< spell 300769 "Machinist's Brilliance" >}}
+- {{< spell 297989 "Accord of Haste" >}}
 
 ### Consumables: 
 
-- {{< item 152639 "Flask of Endless Fathoms" "beta" >}}
-- {{< item 163222 "Battle Potion of Intellect" "beta" >}}
-- {{< item 156526 "Bountiful Captain’s Feast" "beta" >}} or {{< item 154884 "Swamp Fish ‘n Chips" "beta" >}}
+- {{< item 168652 "Greater Flask of Endless Fathoms" >}}
+- {{< item 168506 "Potion of Focused Resolve" >}} on pure single target, {{< item 169299 "Potion of Unbridled Fury" >}} on 2-4 targets, or 1 target with cleave and {{< item 168529 "Potion of Empowered Proximity" >}} on 5+ targets.
+- {{< item 168313 "Baked Port Tato" >}}
 
 ### Sockets: 
 
-- {{< item 154127 "Quick Owlseye" "beta" >}}
+- 1 {{< item 168638 "Leviathan's Eye of Intellect" >}} and the rest of your sockets with {{< item 168641 "Quick Sand Spinel" >}}
 
 ### Notable trinkets you should consider are the following: 
 
-- Any trinket that is of high item level.
+- Any trinket that is of high item level. You should sim your trinkets for accuracy.
 
