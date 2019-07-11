@@ -22,7 +22,7 @@ Intellect is your primary stat, it will be on almost all of your gear besides je
 ### Consumables: 
 
 - {{< item 168652 "Greater Flask of Endless Fathoms" >}}
-- {{< item 168506 "Potion of Focused Resolve" >}} on pure single target, {{< item 169299 "Potion of Unbridled Fury" >}} on 2-3 targets, or 1 target with cleave and {{< item 168529 "Potion of Empowered Proximity" >}} on 4+ targets.
+- {{< item 169299 "Potion of Unbridled Fury" >}} on 1-3 targets and {{< item 168529 "Potion of Empowered Proximity" >}} on 4+ targets.
 - {{< item 168313 "Baked Port Tato" >}}
 
 ### Sockets: 
