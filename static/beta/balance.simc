@@ -1,4 +1,5 @@
 actions.precombat=moonkin_form
+actions.precombat+=/variable,name=dadspec,value=0
 
 actions=moonfire,target_if=refreshable,if=cooldown.ca_inc.ready|eclipse.state=2&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10)
 actions+=/sunfire,target_if=refreshable
@@ -6,9 +7,9 @@ actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3
 actions+=/celestial_alignment
 actions+=/fury_of_elune
 actions+=/force_of_nature
-actions+=/starfall,if=!buff.starfall.up&spell_targets>1
-#actions+=/starsurge,if=(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)&!buff.starfall.up|astral_power>90
-actions+=/starsurge,if=spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90
+actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|variable.dadspec)
+actions+=/starsurge,if=!variable.dadspec&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90
+actions+=/starsurge,if=variable.dadspec&!buff.starfall.up&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)
 actions+=/new_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
 actions+=/half_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
 actions+=/full_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
