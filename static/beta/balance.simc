@@ -8,7 +8,7 @@ actions+=/fury_of_elune
 actions+=/force_of_nature
 actions+=/starfall,if=!buff.starfall.up&spell_targets>1
 #actions+=/starsurge,if=(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)&!buff.starfall.up|astral_power>90
-actions+=/starsurge,if=spell_targets.starfall<1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90
+actions+=/starsurge,if=spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90
 actions+=/new_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
 actions+=/half_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
 actions+=/full_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
