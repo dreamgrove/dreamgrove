@@ -16,7 +16,7 @@ talents=0000000
 
 actions.precombat=moonkin_form
 
-actions=moonfire,target_if=refreshable,if=((cooldown.ca_inc.ready|eclipse.state=2)&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10)
+actions=moonfire,target_if=refreshable,if=cooldown.ca_inc.ready|eclipse.state=2&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10)
 actions+=/sunfire,target_if=refreshable
 actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3
 actions+=/celestial_alignment
