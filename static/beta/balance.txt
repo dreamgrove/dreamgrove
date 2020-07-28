@@ -10,7 +10,7 @@ actions+=/force_of_nature
 actions+=/convoke_the_spirits,if=astral_power<30
 actions+=/kindred_spirits
 actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|variable.dadspec)
-actions+=/starsurge,if=!variable.dadspec&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90
+actions+=/starsurge,if=!variable.dadspec&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90|(covenant.night_fae&cooldown.convoke_the_spirits.up)
 actions+=/starsurge,if=variable.dadspec&!buff.starfall.up&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)
 actions+=/new_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
 actions+=/half_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
