@@ -7,7 +7,7 @@ actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3
 actions+=/celestial_alignment
 actions+=/fury_of_elune
 actions+=/force_of_nature
-actions+=/convoke_the_spirits,if=astral_power.deficit>40
+actions+=/convoke_the_spirits,if=astral_power<30
 actions+=/kindred_spirits
 actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|variable.dadspec)
 actions+=/starsurge,if=!variable.dadspec&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90
