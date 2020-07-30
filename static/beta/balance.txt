@@ -1,23 +1,26 @@
 actions.precombat=moonkin_form
 actions.precombat+=/variable,name=dadspec,value=0
 
-actions=moonfire,target_if=refreshable,if=cooldown.ca_inc.ready|eclipse.state=2&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10)
-actions+=/sunfire,target_if=refreshable
-actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3
-actions+=/celestial_alignment
-actions+=/fury_of_elune
+actions=moonfire,target_if=refreshable,if=(cooldown.ca_inc.ready|eclipse.state=2&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10))&!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up
+actions+=/sunfire,target_if=refreshable,if=!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up
+actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3&ap_check,if=!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up
+actions+=/celestial_alignment,if=floor((fight_remains-10)%cooldown)>floor((fight_remains-10-cooldown.convoke_the_spirits.remains)%cooldown)|cooldown.convoke_the_spirits.up|!covenant.night_fae&!buff.ca_inc.up&ap_check
+#replace previous line once a legendary condition exists
+#actions+=/celestial_alignment,if=floor((fight_remains-10)%cooldown)>floor((fight_remains-10-cooldown.convoke_the_spirits.remains)%cooldown)&!legendary.runeforge_3|cooldown.convoke_the_spirits.up|!covenant.night_fae&!buff.ca_inc.up&ap_check
+actions+=/convoke_the_spirits,if=floor((fight_remains-10)%cooldown)>floor((fight_remains-10-cooldown.ca_inc.remains)%cooldown)&((astral_power<30&eclipse.state=3)|buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)
+actions+=/fury_of_elune,if=eclipse.state=3&ap_check
 actions+=/force_of_nature
-actions+=/convoke_the_spirits,if=astral_power<30
 actions+=/kindred_spirits
 actions+=/ravenous_frenzy
 actions+=/adaptive_swarm
 actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|variable.dadspec|buff.oneths_perception.up)
 actions+=/starsurge,if=!variable.dadspec&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|astral_power>90|(covenant.night_fae&cooldown.convoke_the_spirits.up)
 actions+=/starsurge,if=variable.dadspec&(!buff.starfall.up&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1)|buff.oneths_clear_vision.up)
-actions+=/new_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
-actions+=/half_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
-actions+=/full_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3
+actions+=/new_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3&ap_check
+actions+=/half_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3&ap_check
+actions+=/full_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3&ap_check
 actions+=/wrath,if=buff.eclipse_solar.up&(!buff.eclipse_lunar.up|spell_targets.starfire=1)&spell_targets<=3&(buff.ca_inc.remains>execute_time|!buff.ca_inc.up)
 actions+=/warrior_of_elune
 actions+=/starfire,if=buff.eclipse_lunar.up|eclipse.state=1|eclipse.state=0&spell_targets=1|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
 actions+=/wrath
+
