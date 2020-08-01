@@ -1,6 +1,5 @@
 actions.precombat=moonkin_form
 actions.precombat+=/variable,name=dadspec,value=0
-
 # moonfire all targets when ca/inc is ready or about to enter lunar eclipse with less than 5 targets or 10 with tm. Also make sure not to use it during crit legi
 actions=moonfire,target_if=refreshable,if=(cooldown.ca_inc.ready|eclipse.state=2&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10))&!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up
 actions+=/variable,name=dreamcatcher_check,value=(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up|!runeforge.timeworn_dreamcatcher.equipped)
@@ -10,6 +9,7 @@ actions+=/sunfire,target_if=refreshable,if=!buff.runecarve_3_nature.up&!buff.run
 actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3&ap_check,if=!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up&(buff.ca_inc.remains>10|!buff.ca_inc.up)
 # dump asp before ca/inc+convoke with crit legi (seems logical but sometimes isn't a gain)
 actions+=/starsurge,if=cooldown.ca_inc.up&cooldown.convoke_the_spirits.up&covenant.night_fae&astral_power>40&runeforge.druid__balance_power_03_dnt.equipped
+actions+=/force_of_nature
 # use frenzy before ca/inc
 actions+=/ravenous_frenzy
 # desc to be done
@@ -21,27 +21,28 @@ actions+=/variable,name=convoke_condition,value=floor((fight_remains-10)%120)>fl
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
 actions+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(astral_power<30&eclipse.state=3&buff.primordial_arcanic_pulsar.value<340|runeforge.druid__balance_power_03_dnt.equipped)&(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|!runeforge.druid__balance_power_03_dnt.equipped)
 actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check
-actions+=/force_of_nature
 # needs changes in simc
 actions+=/adaptive_swarm,if=
 # make sure not to overwrite an oneths proc, possible overwrite seems to be a dps increase
-actions+=/starfall,if=buff.oneths_perception.up
+actions+=/starfall,if=buff.oneths_perception.up&(!buff.starfall.up|astral_power>90)
 # spam ss with the crit buff when fighting 1 targets
 actions+=/starsurge,if=(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)&spell_targets.starfall=1
 # dump asp when convoke is about to be used
 actions+=/starsurge,if=covenant.night_fae&variable.convoke_condition&(astral_power>80|spell_targets.starfall=1)&cooldown.convoke_the_spirits.up
+# dad build magic
+actions+=/starfall,if=variable.dadspec&spell_targets.starfall=1&!buff.starfall.up&eclipse.in_lunar
 # avoid capping and use up oneth procs unless dad build or aoe is active
-actions+=/starsurge,if=buff.oneths_clear_vision.up|astral_power>90&(spell_targets.starfall=1&!variable.dadspec|buff.starfall.up)
+actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(buff.starfall.up|spell_targets.starfall=1)
 # keep up dreamcatcher 
-actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(spell_targets.starfall=1&!variable.dadspec|astral_power>80-buff.starfall.remains*4)&((buff.eclipse_solar.up&spell_targets.starfire=1&buff.timeworn_dreamcatcher.remains<gcd.max)|(buff.eclipse_lunar.up&spell_targets.starfire>1&buff.timeworn_dreamcatcher.remains<gcd.max))
+actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(astral_power>80-buff.starfall.remains*4|spell_targets.starfall=1)&((buff.eclipse_solar.up&spell_targets.starfire=1&buff.timeworn_dreamcatcher.remains<gcd.max)|(buff.eclipse_lunar.up&spell_targets.starfire>1&buff.timeworn_dreamcatcher.remains<gcd.max))
 # with one target, without dad build when pulsar wouldnt be procced use ss in the "correct" eclipse. Dont use it when convoke is about to come up and you have the crit legi
-actions+=/starsurge,if=(spell_targets.starfall=1&!variable.dadspec)&buff.primordial_arcanic_pulsar.value<370&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&(!covenant.night_fae|!runeforge.druid__balance_power_03_dnt.equipped|cooldown.convoke_the_spirits.remains>15)&!runeforge.timeworn_dreamcatcher.equipped
+actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
 # use starfall if it isn't up and there's more than 1 target, dad build is active or you have an oneths proc
-actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|variable.dadspec|buff.oneths_perception.up)
+actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&variable.dadspec)
 # use moons when in lunar eclipse or you would cap charges while not overcapping asp
-actions+=/new_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3&ap_check
-actions+=/half_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3&ap_check
-actions+=/full_moon,if=buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3&ap_check
+actions+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
+actions+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
+actions+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 # catch edge case where starfire is always better during ca/inc mainly with venthyr
 actions+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up
 # use wrath either in solar eclipse with less than 4 targets or to active lunar eclipse
