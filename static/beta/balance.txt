@@ -1,5 +1,4 @@
 actions.precombat=moonkin_form
-actions.precombat+=/variable,name=dadspec,value=0
 # moonfire all targets when ca/inc is ready or about to enter lunar eclipse with less than 5 targets or 10 with tm. Also make sure not to use it during crit legi
 actions=moonfire,target_if=refreshable,if=(cooldown.ca_inc.ready|eclipse.state=2&spell_targets.starfire<5|(talent.twin_moons.enabled&spell_targets.starfire<10))&!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up
 actions+=/variable,name=dreamcatcher_check,value=(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up|!runeforge.timeworn_dreamcatcher.equipped)
@@ -30,7 +29,7 @@ actions+=/starsurge,if=(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)&s
 # dump asp when convoke is about to be used
 actions+=/starsurge,if=covenant.night_fae&variable.convoke_condition&(astral_power>80|spell_targets.starfall=1)&cooldown.convoke_the_spirits.up
 # dad build magic
-actions+=/starfall,if=variable.dadspec&spell_targets.starfall=1&!buff.starfall.up&eclipse.in_lunar
+actions+=/starfall,if=talent.stellar_drift.enabled&spell_targets.starfall=1&!buff.starfall.up&eclipse.in_lunar
 # avoid capping and use up oneth procs unless dad build or aoe is active
 actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(buff.starfall.up|spell_targets.starfall=1)
 # keep up dreamcatcher 
@@ -38,7 +37,7 @@ actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(astral_power>80
 # with one target, without dad build when pulsar wouldnt be procced use ss in the "correct" eclipse. Dont use it when convoke is about to come up and you have the crit legi
 actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
 # use starfall if it isn't up and there's more than 1 target, dad build is active or you have an oneths proc
-actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&variable.dadspec)
+actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&talent.stellar_drift.enabled)
 # use moons when in lunar eclipse or you would cap charges while not overcapping asp
 actions+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
