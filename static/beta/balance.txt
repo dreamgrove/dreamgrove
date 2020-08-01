@@ -8,7 +8,7 @@ actions+=/sunfire,target_if=refreshable,if=!buff.runecarve_3_nature.up&!buff.run
 # dot with less than 3 targets without overcapping and when the crit legi isnt active
 actions+=/stellar_flare,target_if=refreshable&spell_targets.starfire<3&ap_check,if=!buff.runecarve_3_nature.up&!buff.runecarve_3_arcane.up&(buff.ca_inc.remains>10|!buff.ca_inc.up)
 # dump asp before ca/inc+convoke with crit legi (seems logical but sometimes isn't a gain)
-actions+=/starsurge,if=cooldown.ca_inc.up&cooldown.convoke_the_spirits.up&covenant.night_fae&astral_power>40&runeforge.druid__balance_power_03_dnt.equipped
+actions+=/starfall,if=cooldown.ca_inc.up&cooldown.convoke_the_spirits.up&covenant.night_fae&astral_power>40&runeforge.druid__balance_power_03_dnt.equipped
 actions+=/force_of_nature
 # use frenzy before ca/inc
 actions+=/ravenous_frenzy
@@ -49,8 +49,6 @@ actions+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up
 actions+=/wrath,if=buff.eclipse_solar.up&(!buff.eclipse_lunar.up|spell_targets.starfire=1)&spell_targets<=3&(buff.ca_inc.remains>execute_time|!buff.ca_inc.up)
 actions+=/warrior_of_elune
 # use starfire when in lunar eclipse or fighting more than 3 targets or to activate solar eclipse
-actions+=/starfire,if=buff.eclipse_lunar.up|eclipse.state=1|eclipse.state=0&spell_targets=1|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
-actions+=/wrath
 actions+=/starfire,if=buff.eclipse_lunar.up|eclipse.state=1|eclipse.state=0&spell_targets=1|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
 actions+=/wrath
 
