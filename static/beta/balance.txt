@@ -19,7 +19,7 @@ actions+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(floor((fight_remains-
 actions+=/variable,name=convoke_condition,value=floor((fight_remains-10)%120)>floor((fight_remains-10-cooldown.ca_inc.remains)%120)
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
 actions+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(astral_power<30&eclipse.state=3&buff.primordial_arcanic_pulsar.value<340|runeforge.druid__balance_power_03_dnt.equipped)&(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|!runeforge.druid__balance_power_03_dnt.equipped)
-actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)
+actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|spell_targets>2)
 # may need optimization
 actions+=/adaptive_swarm,if=dot.adaptive_swarm.stack<3
 # make sure not to overwrite an oneths proc, possible overwrite seems to be a dps increase
