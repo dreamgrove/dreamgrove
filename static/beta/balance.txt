@@ -19,17 +19,17 @@ actions+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(floor((fight_remains-
 actions+=/variable,name=convoke_condition,value=floor((fight_remains-10)%120)>floor((fight_remains-10-cooldown.ca_inc.remains)%120)
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
 actions+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(astral_power<30&eclipse.state=3&buff.primordial_arcanic_pulsar.value<340|runeforge.druid__balance_power_03_dnt.equipped)&(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|!runeforge.druid__balance_power_03_dnt.equipped)
-actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check
+actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)
 # may need optimization
-actions+=/adaptive_swarm,if=
+actions+=/adaptive_swarm,if=dot.adaptive_swarm.stack<3
 # make sure not to overwrite an oneths proc, possible overwrite seems to be a dps increase
 actions+=/starfall,if=buff.oneths_perception.up&(!buff.starfall.up|astral_power>90)
 # spam ss with the crit buff when fighting 1 targets
 actions+=/starsurge,if=(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)&spell_targets.starfall=1&(!prev.starfire&eclipse.in_solar|!prev.wrath&eclipse.in_lunar)
 # dump asp when convoke is about to be used
 actions+=/starsurge,if=covenant.night_fae&variable.convoke_condition&(astral_power>80|spell_targets.starfall=1)&cooldown.convoke_the_spirits.up
-# use Starfall on st with Stellar Drift while in lunar eclipse
-actions+=/starfall,if=talent.stellar_drift.enabled&spell_targets.starfall=1&!buff.starfall.up&eclipse.in_lunar
+# use Starfall on st with Stellar Drift while in lunar eclipse or when the necrolord dot is ticking
+actions+=/starfall,if=talent.stellar_drift.enabled&spell_targets.starfall=1&!buff.starfall.up&(eclipse.in_lunar|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
 # avoid capping and use up oneth procs unless dad build or aoe is active
 actions+=/variable,name=starfall_wont_fall_off,value=astral_power>80-buff.starfall.remains*3&buff.starfall.up
 actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(variable.starfall_wont_fall_off|spell_targets.starfall=1)
