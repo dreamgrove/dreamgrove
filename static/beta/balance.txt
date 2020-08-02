@@ -20,7 +20,7 @@ actions+=/variable,name=convoke_condition,value=floor((fight_remains-10)%120)>fl
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
 actions+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(astral_power<30&eclipse.state=3&buff.primordial_arcanic_pulsar.value<340|runeforge.druid__balance_power_03_dnt.equipped)&(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|!runeforge.druid__balance_power_03_dnt.equipped)
 actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check
-# needs changes in simc
+# may need optimization
 actions+=/adaptive_swarm,if=
 # make sure not to overwrite an oneths proc, possible overwrite seems to be a dps increase
 actions+=/starfall,if=buff.oneths_perception.up&(!buff.starfall.up|astral_power>90)
@@ -28,16 +28,17 @@ actions+=/starfall,if=buff.oneths_perception.up&(!buff.starfall.up|astral_power>
 actions+=/starsurge,if=(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)&spell_targets.starfall=1&(!prev.starfire&eclipse.in_solar|!prev.wrath&eclipse.in_lunar)
 # dump asp when convoke is about to be used
 actions+=/starsurge,if=covenant.night_fae&variable.convoke_condition&(astral_power>80|spell_targets.starfall=1)&cooldown.convoke_the_spirits.up
-# dad build magic
+# use Starfall on st with Stellar Drift while in lunar eclipse
 actions+=/starfall,if=talent.stellar_drift.enabled&spell_targets.starfall=1&!buff.starfall.up&eclipse.in_lunar
 # avoid capping and use up oneth procs unless dad build or aoe is active
-actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(buff.starfall.up|spell_targets.starfall=1)
+actions+=/variable,name=starfall_wont_fall_off,value=astral_power>80-buff.starfall.remains*3&buff.starfall.up
+actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(variable.starfall_wont_fall_off|spell_targets.starfall=1)
 # keep up dreamcatcher 
-actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(astral_power>80-buff.starfall.remains*4|spell_targets.starfall=1)&((buff.eclipse_solar.up&spell_targets.starfire=1&buff.timeworn_dreamcatcher.remains<gcd.max)|(buff.eclipse_lunar.up&spell_targets.starfire>1&buff.timeworn_dreamcatcher.remains<gcd.max))
+actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(variable.starfall_wont_fall_off|spell_targets.starfall=1)&((buff.eclipse_solar.up&spell_targets.starfire=1&buff.timeworn_dreamcatcher.remains<gcd.max)|(buff.eclipse_lunar.up&spell_targets.starfire>1&buff.timeworn_dreamcatcher.remains<gcd.max))
 # with one target, without dad build when pulsar wouldnt be procced use ss in the "correct" eclipse. Dont use it when convoke is about to come up and you have the crit legi
 actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
 # use starfall if it isn't up and there's more than 1 target, dad build is active or you have an oneths proc
-actions+=/starfall,if=!buff.starfall.up&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&talent.stellar_drift.enabled)
+actions+=/starfall,if=buff.starfall.remains<gcd.max&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&talent.stellar_drift.enabled)
 # use moons when in lunar eclipse or you would cap charges while not overcapping asp
 actions+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
@@ -50,4 +51,3 @@ actions+=/warrior_of_elune
 # use starfire when in lunar eclipse or fighting more than 3 targets or to activate solar eclipse
 actions+=/starfire,if=buff.eclipse_lunar.up|eclipse.state=1|eclipse.state=0&spell_targets=1|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
 actions+=/wrath
-
