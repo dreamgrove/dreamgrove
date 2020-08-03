@@ -1,0 +1,15 @@
+druid="Sandbag"
+level=60
+race=tauren
+role=spell
+spec=balance
+
+chart_show_relative_difference=1
+max_time=300
+
+tabard=,id=31405
+gear_intellect=1500
+gear_crit_rating=350
+gear_haste_rating=500
+gear_mastery_rating=500
+gear_versatility_rating=300

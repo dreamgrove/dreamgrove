@@ -1,16 +1,15 @@
 name=base
 
 copy=oneth,base
-main_hand=,id=172196,ilevel=130,bonus_id=7087
+tabard=,id=31405,bonus_id=7087
 copy=pulsar,base
-main_hand=,id=172196,ilevel=130,bonus_id=7088
+tabard=,id=31405,bonus_id=7088
 copy=lego3,base
-main_hand=,id=172196,ilevel=130,bonus_id=7107
+tabard=,id=31405,bonus_id=7107
 copy=dream,base
-main_hand=,id=172196,ilevel=130,bonus_id=7108
+tabard=,id=31405,bonus_id=7108
 copy=lycaras,base
-main_hand=,id=172196,ilevel=130,bonus_id=7110
-
+tabard=,id=31405,bonus_id=7110
 
 copy=kyrian,base
 covenant="kyrian"
