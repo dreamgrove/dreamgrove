@@ -30,13 +30,14 @@ actions+=/starsurge,if=(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)&s
 actions+=/starsurge,if=covenant.night_fae&variable.convoke_condition&(astral_power>80|spell_targets.starfall=1)&cooldown.convoke_the_spirits.up
 # use Starfall on st with Stellar Drift while in lunar eclipse or when the necrolord dot is ticking
 actions+=/starfall,if=talent.stellar_drift.enabled&spell_targets.starfall=1&!buff.starfall.up&(eclipse.in_lunar|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
-# avoid capping and use up oneth procs unless dad build or aoe is active
+# variable to calculate whether a starsurge can be used without losing out on starfall uptime
 actions+=/variable,name=starfall_wont_fall_off,value=astral_power>80-buff.starfall.remains*3&buff.starfall.up
+# dump surges with an oneth proc, when ca/inc is about to fall off, when at 90+ asp and when you wouldn't lose starfall uptime on aoe
 actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(variable.starfall_wont_fall_off|spell_targets.starfall=1)
 # keep up dreamcatcher 
 actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(variable.starfall_wont_fall_off|spell_targets.starfall=1)&((buff.eclipse_solar.up&spell_targets.starfire=1&buff.timeworn_dreamcatcher.remains<gcd.max)|(buff.eclipse_lunar.up&spell_targets.starfire>1&buff.timeworn_dreamcatcher.remains<gcd.max))
 # with one target, without dad build when pulsar wouldnt be procced use ss in the "correct" eclipse. Dont use it when convoke is about to come up and you have the crit legi
-actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
+actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
 # use starfall if it will expire within the next gcd and there's more than 1 target, dad build is active or you have an oneths proc
 actions+=/starfall,if=buff.starfall.remains<gcd.max&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&talent.stellar_drift.enabled)
 # use moons when in lunar eclipse or you would cap charges while not overcapping asp
