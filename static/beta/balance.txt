@@ -20,31 +20,31 @@ actions+=/variable,name=convoke_condition,value=floor((fight_remains-10)%120)>fl
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
 actions+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(astral_power<30&eclipse.state=3&buff.primordial_arcanic_pulsar.value<340|runeforge.druid__balance_power_03_dnt.equipped)&(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|!runeforge.druid__balance_power_03_dnt.equipped)
 actions+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<340&variable.dreamcatcher_check&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up|spell_targets>2)
-# may need optimization
+# just use swarm on cd
 actions+=/adaptive_swarm,if=dot.adaptive_swarm.stack<3
-# make sure not to overwrite an oneths proc, possible overwrite seems to be a dps increase
+# make sure not to overwrite an oneths proc, possible starfall refresh seems to be a dps increase
 actions+=/starfall,if=buff.oneths_perception.up&(!buff.starfall.up|astral_power>90)
-# spam ss with the crit buff when fighting 1 targets
-actions+=/starsurge,if=(buff.runecarve_3_nature.up|buff.runecarve_3_arcane.up)&spell_targets.starfall=1&(!prev.starfire&eclipse.in_solar|!prev.wrath&eclipse.in_lunar)
+# spam ss with 5+ crit buff legi stacks when fighting 1 target
+actions+=/starsurge,if=(buff.runecarve_3_nature.stack>4|buff.runecarve_3_arcane.stack>4)&spell_targets.starfall=1&(!prev.starfire&eclipse.in_solar|!prev.wrath&eclipse.in_lunar)
 # dump asp when convoke is about to be used
 actions+=/starsurge,if=covenant.night_fae&variable.convoke_condition&(astral_power>80|spell_targets.starfall=1)&cooldown.convoke_the_spirits.up
-# use Starfall on st with Stellar Drift while in lunar eclipse or when the necrolord dot is ticking
+# use starfall on st with Stellar Drift while in lunar eclipse or when the necrolord dot is ticking
 actions+=/starfall,if=talent.stellar_drift.enabled&spell_targets.starfall=1&!buff.starfall.up&(eclipse.in_lunar|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
-# variable to calculate whether a starsurge can be used without losing out on starfall uptime
+# avoid capping and use up oneth procs unless dad build or aoe is active
 actions+=/variable,name=starfall_wont_fall_off,value=astral_power>80-buff.starfall.remains*3&buff.starfall.up
 # dump surges with an oneth proc, when ca/inc is about to fall off, when at 90+ asp and when you wouldn't lose starfall uptime on aoe
 actions+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.remains<5&buff.ca_inc.up|astral_power>90)&(variable.starfall_wont_fall_off|spell_targets.starfall=1)
 # keep up dreamcatcher 
 actions+=/starsurge,if=runeforge.timeworn_dreamcatcher.equipped&(variable.starfall_wont_fall_off|spell_targets.starfall=1)&((buff.eclipse_solar.up&spell_targets.starfire=1&buff.timeworn_dreamcatcher.remains<gcd.max)|(buff.eclipse_lunar.up&spell_targets.starfire>1&buff.timeworn_dreamcatcher.remains<gcd.max))
-# with one target, without dad build when pulsar wouldnt be procced use ss in the "correct" eclipse. Dont use it when convoke is about to come up and you have the crit legi
-actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&spell_targets.starfall=1&(buff.eclipse_solar.up&spell_targets.starfire=1|buff.eclipse_lunar.up&spell_targets.starfire>1&buff.eclipse_lunar.remains<gcd.max)&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
-# use starfall if it will expire within the next gcd and there's more than 1 target, dad build is active or you have an oneths proc
+# with one target when pulsar wouldnt be procced, the crit legi isnt used and you wont overwrite an oneth proc use ss in the "correct" eclipse(solar). Ignore this line with the dreamcatcher since that is handled above
+actions+=/starsurge,if=buff.primordial_arcanic_pulsar.value<370&spell_targets.starfall=1&buff.eclipse_solar.up&!runeforge.timeworn_dreamcatcher.equipped&!runeforge.druid__balance_power_03_dnt.equipped&!buff.oneths_perception.up
+# use starfall if it will expire within the next gcd and there's more than 1 target or you have stellar drift and the crit legi active
 actions+=/starfall,if=buff.starfall.remains<gcd.max&(spell_targets>1|runeforge.druid__balance_power_03_dnt.equipped&talent.stellar_drift.enabled)
 # use moons when in lunar eclipse or you would cap charges while not overcapping asp
 actions+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
-# catch edge case where starfire is always better during ca/inc mainly with venthyr
+# catch edge case where starfire is always better during ca/inc; mainly with venthyr
 actions+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up
 # use wrath either in solar eclipse with less than 4 targets or to active lunar eclipse
 actions+=/wrath,if=buff.eclipse_solar.up&(!buff.eclipse_lunar.up|spell_targets.starfire=1)&spell_targets<=3&(buff.ca_inc.remains>execute_time|!buff.ca_inc.up)
