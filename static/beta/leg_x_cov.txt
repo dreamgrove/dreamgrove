@@ -4,8 +4,8 @@ copy=oneth,base
 tabard=,id=31405,bonus_id=7087
 copy=pulsar,base
 tabard=,id=31405,bonus_id=7088
-copy=lego3,base
-tabard=,id=31405,bonus_id=7107
+#copy=lego3,base
+#tabard=,id=31405,bonus_id=7107
 copy=dream,base
 tabard=,id=31405,bonus_id=7108
 copy=lycaras,base
@@ -38,14 +38,14 @@ covenant="venthyr"
 copy=necrolord-pulsar,pulsar
 covenant="necrolord"
 
-copy=kyrian-lego3,lego3
-covenant="kyrian"
-copy=nightfae-lego3,lego3
-covenant="night_fae"
-copy=venthyr-lego3,lego3
-covenant="venthyr"
-copy=necrolord-lego3,lego3
-covenant="necrolord"
+#copy=kyrian-lego3,lego3
+#covenant="kyrian"
+#copy=nightfae-lego3,lego3
+#covenant="night_fae"
+#copy=venthyr-lego3,lego3
+#covenant="venthyr"
+#copy=necrolord-lego3,lego3
+#covenant="necrolord"
 
 copy=kyrian-dream,dream
 covenant="kyrian"
