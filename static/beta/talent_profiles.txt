@@ -10,6 +10,7 @@ profileset."___/____/SF/___"=talents=0000030
 profileset."___/____/__/SHS"=talents=0000001
 profileset."___/____/__/FOE"=talents=0000002
 profileset."___/____/__/NM_"=talents=0000003
+
 profileset."NB_/SOTF/SD/SHS"=talents=1000111
 profileset."NB_/SOTF/SD/FOE"=talents=1000112
 profileset."NB_/SOTF/SD/NM_"=talents=1000113
@@ -37,6 +38,7 @@ profileset."NB_/INC_/TM/NM_"=talents=1000323
 profileset."NB_/INC_/SF/SHS"=talents=1000331
 profileset."NB_/INC_/SF/FOE"=talents=1000332
 profileset."NB_/INC_/SF/NM_"=talents=1000333
+
 profileset."WOE/SOTF/SD/SHS"=talents=2000111
 profileset."WOE/SOTF/SD/FOE"=talents=2000112
 profileset."WOE/SOTF/SD/NM_"=talents=2000113
@@ -64,6 +66,7 @@ profileset."WOE/INC_/TM/NM_"=talents=2000323
 profileset."WOE/INC_/SF/SHS"=talents=2000331
 profileset."WOE/INC_/SF/FOE"=talents=2000332
 profileset."WOE/INC_/SF/NM_"=talents=2000333
+
 profileset."FON/SOTF/SD/SHS"=talents=3000111
 profileset."FON/SOTF/SD/FOE"=talents=3000112
 profileset."FON/SOTF/SD/NM_"=talents=3000113

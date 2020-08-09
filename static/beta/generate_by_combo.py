@@ -52,8 +52,8 @@ for cov in covs:
             dps_list[actor['name']] = actor['mean']
 
         dps_max = max(dps_list, key=dps_list.get)
-        name = name.ljust(20, '$')
-        html = '<div><a href=\"' + sim_url + '\" target=\"_top\">' + name.replace('$', '&nbsp') + '|' + str(dps_max) + ' ' + f'{dps_list[dps_max]:.2f}' + '</a></div>\n'
+        name2 = cov.rjust(9,'$') + '-' + leg.ljust(7,'$')
+        html = '<div><a href=\"' + sim_url + '\" target=\"_top\">' + name2.replace('$', '&nbsp') + '|' + str(dps_max) + ' ' + f'{dps_list[dps_max]:.2f}' + '</a></div>\n'
         betabot.write(html)
 
 betabot.write('</body></html>\n')

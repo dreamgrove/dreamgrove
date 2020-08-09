@@ -8,7 +8,7 @@
         for (let file of data) {
           if (file.name != 'index.html' && file.name != 'apikey' && file.name != 'generate.py' && file.name != '.gitignore') {
             let nametext = file.name.replace('.html', '');
-            htmlString += `<li><a href="${file.name}">${nametext}</a></li>`;
+            htmlString += `<li><a href="${file.name}" target="simframe">${nametext}</a></li>`;
           }
         }
         htmlString += '</ul>';
@@ -19,12 +19,12 @@
     <div style="display:flex">
       <div stype="display:flex; flex-direction:column;">
         <div><b>Legendary x Covenant</b></div>
-        <div><iframe src="by_combo.html" style="border:none; font-family:monospace; width:50ch; height:25em;"></iframe></div>
+        <div><iframe src="by_combo.html" style="border:none; font-family:monospace; width:46ch; height:25em;"></iframe></div>
         <div class="dir"></div>
       </div>
       <div style="display:flex; flex-direction:column;">
-        <div><b>Legendary x Covenant by Talents</b></div>
-        <iframe src="by_talent.html" style="border:none; height:94vh; width:1280px;"></iframe>
+        <div><b>Legendary x Covenant by Talents</b> <a href="by_talent.html" target="simframe" style="font-family:monospace;">reset</a></div>
+        <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;"></iframe>
       </div>
     </div>
   <body>
