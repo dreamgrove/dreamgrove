@@ -45,6 +45,6 @@ for line in sets:
         if (status['job']['state'] == 'complete'):
             break
 
-betabot.write('</ul></body></html>')
+betabot.write('</ul></body></html>\n')
 betabot.close()
 sets.close()
