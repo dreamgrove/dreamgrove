@@ -1,24 +1,26 @@
-name=base
-
-copy=oneth,base
+copy=oneth
 tabard=,id=31405,bonus_id=7087
-copy=pulsar,base
+copy=pulsar
 tabard=,id=31405,bonus_id=7088
-#copy=lego3,base
+#copy=lego3
 #tabard=,id=31405,bonus_id=7107
-copy=dream,base
+copy=dream
 tabard=,id=31405,bonus_id=7108
-copy=lycaras,base
+copy=lycaras
 tabard=,id=31405,bonus_id=7110
 
-copy=kyrian,base
+copy=kyrian
 covenant="kyrian"
-copy=nightfae,base
+tabard=,id=31405
+copy=nightfae
 covenant="night_fae"
-copy=venthyr,base
+tabard=,id=31405
+copy=venthyr
 covenant="venthyr"
-copy=necrolord,base
+tabard=,id=31405
+copy=necrolord
 covenant="necrolord"
+tabard=,id=31405
 
 copy=kyrian-oneth,oneth
 covenant="kyrian"

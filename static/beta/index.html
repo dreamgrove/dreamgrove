@@ -6,13 +6,20 @@
         const data = await response.json();
         let htmlString = '<ul>';
         for (let file of data) {
-          if (file.name != 'index.html') {
+          if (file.name != 'index.html' && file.name != 'apikey' && file.name != 'generate.py' && file.name != '.gitignore') {
             htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
           }
         }
         htmlString += '</ul>';
-        document.getElementsByTagName('body')[0].innerHTML = htmlString;
+        document.getElementsByClassName('dir')[0].innerHTML = htmlString;
       })()
     </script>
+    <div style="display:flex">
+      <div class="dir"></div>
+      <div style="display:flex; flex-direction:column;">
+        <div><b>Legendary x Covenant by Talents</b></div>
+        <iframe src="betabot.html" style="height:100%; border:none"></iframe>
+      </div>
+    </div>
   <body>
 </html>
