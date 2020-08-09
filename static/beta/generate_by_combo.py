@@ -7,10 +7,8 @@ report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
 profile = apl = api = sets = ""
 
-#covs = ['kyrian', 'night_fae', 'venthyr', 'necrolord']
-#legs = {'oneth':7087, 'pulsar':7088, 'dream':7108, 'lycaras':7110}
-covs = ['kyrian', 'night_fae']
-legs = {'oneth':7087, 'pulsar':7088}
+covs = ['kyrian', 'night_fae', 'venthyr', 'necrolord']
+legs = {'oneth':7087, 'pulsar':7088, 'dream':7108, 'lycaras':7110}
 
 with open('apikey', 'r') as fp:
     api = fp.read()
