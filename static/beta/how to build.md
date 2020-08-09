@@ -1,8 +1,8 @@
-How to build SimC command line interface on Windows 10
+### How to build SimC command line interface on Windows 10
 
 1. Install Visual Studio 2019 Community Edition from https://visualstudio.microsoft.com/downloads/ Download and run the installer. In the Workloads tab, select "Desktop development with C++". The optional features you must have are:
-    a. MSVC v142 - VS2019 C++ x64/x86 build tools
-    b. Windows 10 SDK (latest version)
+    * MSVC v142 - VS2019 C++ x64/x86 build tools
+    * Windows 10 SDK (latest version)
 2. Install git for Windows from https://git-scm.com/downloads Download and run the installer with default settings.
 3. Open command prompt and goto the directory where you want to download the SimC source code.
 4. Type in: git clone https://github.com/simulationcraft/simc.git
