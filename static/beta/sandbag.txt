@@ -6,7 +6,6 @@ spec=balance
 
 chart_show_relative_difference=1
 report_details=0
-target_error=0.1
 max_time=300
 
 tabard=,id=31405

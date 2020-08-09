@@ -1,5 +1,4 @@
 import requests
-import json
 import time
 
 post_url = 'https://mimiron.raidbots.com/sim'
@@ -21,30 +20,40 @@ with open('leg_x_cov.txt', 'r') as fp:
     combo = fp.read()
 
 sets = open('talent_profiles.txt', 'r')
-betabot = open('betabot.html', 'w')
-betabot.write('<html><body><ul>\n')
+betabot = open('by_talent.html', 'w')
+betabot.write('<html><body><style>a {text-decoration:none; font-family:monospace;}</style><div style=\"columns:4;\">\n')
 
 for line in sets:
     splits = line.split('=', 1)
     talent = splits[-1]
     name = splits[0].split('.')[-1]
-    simc = profile + '\n\n' + talent + '\n' + apl + '\n' + 'name=' + name + '\n\n' + combo
+    simc = profile + '\ntarget_error=0.1\n' + talent + '\n' + apl + '\n' + 'name=' + name + '\n\n' + combo
 
     post = requests.post(post_url, json={'type': 'advanced', 'apiKey': api, 'advancedInput': simc})
     reply = post.json()
     simID = reply['simId']
 
-    html = '<li><a href="' + report_url + simID + '/index.html">' + name.strip('\"') + '</a></li>\n'
-    print(html)
-    betabot.write(html)
+    sim_url = report_url + simID
+    print(sim_url)
 
     while True:
         get = requests.get(get_url + simID)
         status = get.json()
-        time.sleep(10)
+        time.sleep(5)
         if (status['job']['state'] == 'complete'):
             break
 
-betabot.write('</ul></body></html>\n')
+    data = requests.get(sim_url + '/data.json')
+    result = data.json()
+
+    dps_list = []
+    for actor in result['sim']['players']:
+        dps_list.append(actor['collected_data']['dps']['mean'])
+
+    dps_max = max(dps_list)
+    html = '<div><a href="' + sim_url + '/index.html">' + name.strip('\"') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
+    betabot.write(html)
+
+betabot.write('</div></body></html>\n')
 betabot.close()
 sets.close()

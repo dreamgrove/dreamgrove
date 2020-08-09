@@ -4,21 +4,27 @@
       (async () => {
         const response = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/beta/');
         const data = await response.json();
-        let htmlString = '<ul>';
+        let htmlString = '<b>List of Files</b><ul style=\"font-family:monospace\">';
         for (let file of data) {
           if (file.name != 'index.html' && file.name != 'apikey' && file.name != 'generate.py' && file.name != '.gitignore') {
-            htmlString += `<li><a href="${file.name}">${file.name}</a></li>`;
+            let nametext = file.name.replace('.html', '');
+            htmlString += `<li><a href="${file.name}">${nametext}</a></li>`;
           }
         }
         htmlString += '</ul>';
         document.getElementsByClassName('dir')[0].innerHTML = htmlString;
       })()
     </script>
+    <style>a {text-decoration:none;} ul {margin:0}</style>
     <div style="display:flex">
-      <div class="dir"></div>
-      <div style="display:flex; flex-direction:column; padding-left:10px;">
+      <div stype="display:flex; flex-direction:column;">
+        <div><b>Legendary x Covenant</b></div>
+        <div><iframe src="by_combo.html" style="border:none; font-family:monospace; width:50ch; height:25em;"></iframe></div>
+        <div class="dir"></div>
+      </div>
+      <div style="display:flex; flex-direction:column;">
         <div><b>Legendary x Covenant by Talents</b></div>
-        <iframe src="betabot.html" style="height:94vh; width:75%; border:none; position:absolute; padding-top:25px;"></iframe>
+        <iframe src="by_talent.html" style="border:none; height:94vh; width:1280px;"></iframe>
       </div>
     </div>
   <body>
