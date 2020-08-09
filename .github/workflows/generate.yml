@@ -23,8 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: generate sims
-        working-directory: static/beta
-        run: python generate.py
+        run: |
+          python generate_by_talent.py
+          python generate_by_combo.py
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
