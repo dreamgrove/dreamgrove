@@ -12,7 +12,8 @@ defaults:
 jobs:
   generate:
     runs-on: ubuntu-latest
-
+    env:
+      APIKEY: ${{ secrets.RAIDBOTSAPI }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -23,17 +24,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: talent sims
-        run: python generate_by_talent.py
+        run: python generate_by_talent.py $APIKEY
       - name: 1 target combo
-        run: python generate_by_combo.py -t 1
+        run: python generate_by_combo.py -t 1 $APIKEY
       - name: 2 target combo
-        run: python generate_by_combo.py -t 2
+        run: python generate_by_combo.py -t 2 $APIKEY
       - name: 3 target combo
-        run: python generate_by_combo.py -t 3
+        run: python generate_by_combo.py -t 3 $APIKEY
       - name: 4 target combo
-        run: python generate_by_combo.py -t 4
+        run: python generate_by_combo.py -t 4 $APIKEY
       - name: 5 target combo
-        run: python generate_by_combo.py -t 5
+        run: python generate_by_combo.py -t 5 $APIKEY
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

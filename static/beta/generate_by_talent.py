@@ -1,14 +1,19 @@
 import requests
 import time
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('apikey', type=str, help='raidbots apikey')
+#parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
+args = parser.parse_args()
+apikey = args.apikey
+#targets = str(args.targets)
 
 post_url = 'https://mimiron.raidbots.com/sim'
 get_url = 'https://mimiron.raidbots.com/api/job/'
 report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
-profile = apl = combo = api = sets = ""
-
-with open('apikey', 'r') as fp:
-    api = fp.read()
+profile = apl = combo = sets = ""
 
 with open('sandbag.txt', 'r') as fp:
     profile = fp.read()
@@ -34,7 +39,7 @@ for line in sets:
     name = splits[0].split('.')[-1]
     simc = profile + '\ntarget_error=0.1\n' + talent + '\n' + apl + '\n' + 'name=' + name + '\n\n' + combo
 
-    post = requests.post(post_url, json={'type': 'advanced', 'apiKey': api, 'advancedInput': simc})
+    post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
     reply = post.json()
     simID = reply['simId']
 

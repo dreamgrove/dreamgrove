@@ -6,7 +6,7 @@
         const data = await response.json();
         let htmlString = '<b>List of Files</b><ul style=\"font-family:monospace\">';
         for (let file of data) {
-          if (file.name != 'apikey' && file.name != '.gitignore') {
+          if (file.name != '.gitignore') {
             let nametext = file.name.replace('.html', '');
             htmlString += `<li><a href="${file.name}" target="simframe">${nametext}</a></li>`;
           }
