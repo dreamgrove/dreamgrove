@@ -1,0 +1,97 @@
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script>
+        $(function () {
+            var param = new URLSearchParams(window.location.search);
+            var simid = param.get('simid');
+            var json = 'https://www.raidbots.com/reports/' + simid + '/data.json';
+            $.getJSON(json, function(data) {
+                var base = data.sim.players[0].name;
+                var profiles = data.sim.profilesets.results;
+                var options = {
+                    chart: {
+                        type: 'bar',
+                        backgroundColor: '#242424',
+                        style: {
+                            fontFamily: 'monospace'
+                        }
+                    },
+                    title: {
+                        text: base,
+                        align: 'left',
+                        margin: 0,
+                        x: 5,
+                        style: {
+                            color: '#FF7D0A',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    subtitle: {
+                        text: '<a target=\"_top\" style=\"color:#FF7D0A;\" href=\"https://www.raidbots.com/simbot/report/' + simid + '\"">Click for Raidbots Report</a>',
+                        useHTML: true,
+                        floating: true,
+                        align: 'left',
+                        x: 222,
+                        y: 14,
+                        style: {
+                            color: '#FF7D0A'
+                        }
+                    },
+                    yAxis: {
+                        visible: false,
+                        width: '35%'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        lineWidth: 0,
+                        labels: {
+                            style: {
+                                color: '#FF7D0A',
+                                fontSize: '15px'
+                            },
+                            x: -85
+                        }
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    series: [{
+                        color: '#FF7D0A',
+                        pointWidth: 17,
+                        borderWidth: 0,
+                        dataLabels: {
+                            enabled: true,
+                            inside: true,
+                            align: 'left',
+                            format: '{y:.2f}',
+                            x: -80,
+                            style: {
+                                fontSize: '15px',
+                                color: '#FF7D0A',
+                                fontWeight: 'bold',
+                                textOutline: '0px'
+                            }
+                        },
+                        dataSorting: {
+                            enabled: true,
+                            sortKey: 'y'
+                        },
+                        data: []
+                    }]
+                };
+                $.each(profiles, function(k, v) {
+                    let temp = [];
+                    temp.push(v.name, v.mean);
+                    options.series[0].data[k] = temp;
+                });
+                Highcharts.chart('container', options);
+            });
+        });
+    </script>
+    </head>
+    <body style="margin:0;">
+        <div id="container" style="height:2200px"></div>
+    </body>
+</html>

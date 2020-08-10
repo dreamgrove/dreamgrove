@@ -53,7 +53,7 @@ for cov in covs:
 
         dps_max = max(dps_list, key=dps_list.get)
         name2 = cov.rjust(9,'$') + '-' + leg.ljust(7,'$')
-        html = '<div><a href=\"' + sim_url + '\" target=\"_top\">' + name2.replace('$', '&nbsp') + '|' + str(dps_max) + ' ' + f'{dps_list[dps_max]:.2f}' + '</a></div>\n'
+        html = '<div><a href=\"chart.html?simid=' + simID + '\" target=\"simframe\">' + name2.replace('$', '&nbsp') + '|' + str(dps_max) + ' ' + f'{dps_list[dps_max]:.2f}' + '</a></div>\n'
         betabot.write(html)
 
 betabot.write('</body></html>\n')
