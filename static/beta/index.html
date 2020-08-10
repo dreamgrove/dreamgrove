@@ -6,7 +6,7 @@
         const data = await response.json();
         let htmlString = '<b>List of Files</b><ul style=\"font-family:monospace\">';
         for (let file of data) {
-          if (file.name != 'index.html' && file.name != 'apikey' && file.name != 'generate.py' && file.name != '.gitignore') {
+          if (file.name != 'apikey' && file.name != '.gitignore') {
             let nametext = file.name.replace('.html', '');
             htmlString += `<li><a href="${file.name}" target="simframe">${nametext}</a></li>`;
           }
@@ -14,16 +14,30 @@
         htmlString += '</ul>';
         document.getElementsByClassName('dir')[0].innerHTML = htmlString;
       })()
+      function changeTarget(sel) {
+        idx2 = sel.selectedIndex;
+        if (sel.options[idx2].value != 'none') {
+          document.getElementById('frame2').src = sel.options[idx2].value;
+        }
+      }
     </script>
-    <style>a {text-decoration:none;} ul {margin:0}</style>
+    <style>body {background-color:#242424; color:#FF7D0A;} a {text-decoration:none; color:#FF7D0A;} ul {margin:0;} option, select {color:#FF7D0A; background-color:#242424; font-family:monospace; font-size:large;}</style>
     <div style="display:flex">
       <div stype="display:flex; flex-direction:column;">
-        <div><b>Legendary x Covenant</b></div>
-        <div><iframe src="by_combo.html" style="border:none; font-family:monospace; width:46ch; height:25em;"></iframe></div>
+        <div><b>Legendary x Covenant</b> <span style="font-family:monospace; font-size:large;">targets:</span>
+          <select name="targets" onchange="changeTarget(this)">
+            <option value="by_combo_1.html">1</option>
+            <option value="by_combo_2.html">2</option>
+            <option value="by_combo_3.html">3</option>
+            <option value="by_combo_4.html">4</option>
+            <option value="by_combo_5.html">5</option>
+          </select>
+        </div>
+        <div><iframe name="comboframe" id="frame2" src="by_combo_1.html" style="border:none; font-family:monospace; font-size:large; width:43ch; height:25em;"></iframe></div>
         <div class="dir"></div>
       </div>
       <div style="display:flex; flex-direction:column;">
-        <div><b>Legendary x Covenant by Talents</b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size: large;">reset</a></div>
+        <div><b>Legendary x Covenant by Talents</b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size:large;">reset</a></div>
         <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;"></iframe>
       </div>
     </div>

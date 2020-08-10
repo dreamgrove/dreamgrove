@@ -21,7 +21,7 @@ with open('leg_x_cov.txt', 'r') as fp:
 
 sets = open('talent_profiles.txt', 'r')
 betabot = open('by_talent.html', 'w')
-betabot.write('<html><body><style>a {text-decoration:none; font-family:monospace;}</style><div style=\"columns:6;\"><div style=\"display:inline-block;\">\n')
+betabot.write('<html><style>body {margin-left:0; margin-right:0} a {color:#FF7D0A; text-decoration:none; font-family:monospace; font-size:large;}</style><body><div style=\"columns:5;\"><div style=\"display:inline-block;\">\n')
 
 for line in sets:
     if line == '\n':
@@ -56,7 +56,7 @@ for line in sets:
         dps_list.append(actor['collected_data']['dps']['mean'])
 
     dps_max = max(dps_list)
-    html = '<div><a href="' + sim_url + '/index.html">' + name.strip('\"') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
+    html = '<div><a href="' + sim_url + '/index.html">' + name.strip('\"').replace('_','&nbsp') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
     betabot.write(html)
 
 betabot.write('</div></div></body></html>\n')

@@ -22,10 +22,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests
-      - name: generate sims
-        run: |
-          python generate_by_talent.py
-          python generate_by_combo.py
+      - name: talent sims
+        run: python generate_by_talent.py
+      - name: 1 target combo
+        run: python generate_by_combo.py -t 1
+      - name: 2 target combo
+        run: python generate_by_combo.py -t 2
+      - name: 3 target combo
+        run: python generate_by_combo.py -t 3
+      - name: 4 target combo
+        run: python generate_by_combo.py -t 4
+      - name: 5 target combo
+        run: python generate_by_combo.py -t 5
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
