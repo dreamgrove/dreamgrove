@@ -20,6 +20,16 @@
           document.getElementById('frame2').src = sel.options[idx2].value;
         }
       }
+      function changeBG(child) {
+        let ifdoc = child.contentWindow.document;
+        let iftype = ifdoc.contentType || ifdoc.mimeType;
+        if ( iftype == 'text/plain') {
+          ifdoc.body.style.backgroundcolor = 'white';
+          //let ifstyle = document.createElement('style');
+          //ifstyle.textContent = 'body {background-color:#FFFFFF}';
+          //ifdoc.head.appendChild(ifstyle);
+        }
+      }
     </script>
     <style>body {background-color:#242424; color:#FF7D0A;} a {text-decoration:none; color:#FF7D0A;} ul {margin:0;} option, select {color:#FF7D0A; background-color:#242424; font-family:monospace; font-size:large;}</style>
     <div style="display:flex">
@@ -38,7 +48,7 @@
       </div>
       <div style="display:flex; flex-direction:column;">
         <div><b>Legendary x Covenant by Talents</b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size:large;">reset</a></div>
-        <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;"></iframe>
+        <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;" onload="changeBG(this)"></iframe>
       </div>
     </div>
   <body>
