@@ -7,12 +7,11 @@
         let htmlString = '<b>List of Files</b><ul style=\"font-family:monospace\">';
         for (let file of data) {
           if (file.name != '.gitignore') {
-            let nametext = file.name.replace('.html', '');
-            htmlString += `<li><a href="${file.name}" target="simframe">${nametext}</a></li>`;
+            htmlString += `<li><a href="${file.name}" target="simframe">${file.name}</a></li>`;
           }
         }
         htmlString += '</ul>';
-        document.getElementsByClassName('dir')[0].innerHTML = htmlString;
+        document.getElementsById('dir').innerHTML = htmlString;
       })()
       function changeTarget(sel) {
         idx2 = sel.selectedIndex;
@@ -41,7 +40,7 @@
           </select>
         </div>
         <div><iframe name="comboframe" id="frame2" src="by_combo_1.html" style="border:none; font-family:monospace; font-size:large; width:43ch; height:25em;"></iframe></div>
-        <div class="dir"></div>
+        <div id="dir"></div>
       </div>
       <div style="display:flex; flex-direction:column;">
         <div><b>Legendary x Covenant by Talents</b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size:large;">reset</a></div>
