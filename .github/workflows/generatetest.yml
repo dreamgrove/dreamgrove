@@ -12,10 +12,8 @@ defaults:
 jobs:
   generate:
     runs-on: ubuntu-latest
-
-  env:
-    APIKEY: ${{ secrets.RAIDBOTSAPI }}
-
+    env:
+      APIKEY: ${{ secrets.RAIDBOTSAPI }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
