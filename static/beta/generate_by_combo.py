@@ -6,6 +6,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('apikey', type=str, help='raidbots apikey')
 parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
 args = parser.parse_args()
+apikey = args.apikey
 targets = str(args.targets)
 
 post_url = 'https://mimiron.raidbots.com/sim'
