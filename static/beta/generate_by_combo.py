@@ -28,8 +28,7 @@ with open('balance.txt', 'r') as fp:
 with open('talent_profiles.txt', 'r') as fp:
     sets = fp.read()
 
-betabot = open('by_combo_' + targets + '.html', 'w')
-betabot.write('<html><style>body {margin-left:0; margin-right:0} a {color:#FF7D0A; text-decoration:none; font-family:monospace; font-size:large;}</style><body>\n')
+buffer = {}
 
 for cov in covs:
     for leg, bonus in legs.items():
@@ -59,8 +58,16 @@ for cov in covs:
 
         dps_max = max(dps_list, key=dps_list.get)
         name2 = cov.rjust(9,'_') + '-' + leg.ljust(7,'_')
-        html = '<div><a href=\"chart.html?simid=' + simID + '\" target=\"simframe\">' + name2.replace('_', '&nbsp') + '|' + str(dps_max) + ' ' + f'{dps_list[dps_max]:.2f}' + '</a></div>\n'
-        betabot.write(html)
+        html = '<div><a href=\"chart.html?simid=' + simID + '\" target=\"simframe\">' + name2.replace('_', '&nbsp') + '|' + str(dps_max).replace('_', '&nbsp') + ' ' + f'{dps_list[dps_max]:.2f}' + '</a></div>\n'
+        buffer[html] = dps_list[dps_max]
+
+sorted_buf = sorted(buffer.items(), key=lambda x: x[1], reverse=True)
+
+betabot = open('by_combo_' + targets + '.html', 'w')
+betabot.write('<html><style>body {margin-left:0; margin-right:0} a {color:#FF7D0A; text-decoration:none; font-family:monospace; font-size:large;}</style><body>\n')
+
+for buf in sorted_buf:
+    betabot.write(buf[0])
 
 betabot.write('</body></html>\n')
 betabot.close()
