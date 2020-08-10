@@ -3,6 +3,7 @@ import time
 import argparse
 
 parser = argparse.ArgumentParser()
+parser.add_argument('apikey', type=str, help='raidbots apikey')
 parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
 args = parser.parse_args()
 targets = str(args.targets)
@@ -11,13 +12,10 @@ post_url = 'https://mimiron.raidbots.com/sim'
 get_url = 'https://mimiron.raidbots.com/api/job/'
 report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
-profile = apl = api = sets = ""
+profile = apl = sets = ""
 
 covs = ['kyrian', 'night_fae', 'venthyr', 'necrolord']
 legs = {'oneth':7087, 'pulsar':7088, 'dream':7108, 'lycaras':7110}
-
-with open('apikey', 'r') as fp:
-    api = fp.read()
 
 with open('sandbag.txt', 'r') as fp:
     profile = fp.read()
@@ -35,7 +33,7 @@ for cov in covs:
         name = cov + ' - ' + leg
         simc = profile + '\ntarget_error=0.1\ndesired_targets=' + targets + '\n\ntalents=0000000\ncovenant=' + cov + '\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + apl + sets
 
-        post = requests.post(post_url, json={'type': 'advanced', 'apiKey': api, 'advancedInput': simc})
+        post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
         reply = post.json()
         simID = reply['simId']
 

@@ -1,0 +1,29 @@
+# This is a basic workflow that is manually triggered
+
+name: Generate Test
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: static/beta
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+  env:
+    APIKEY: ${{ secrets.RAIDBOTSAPI }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: update python
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: 1 target combo
+        run: python generate_by_combo.py -t 1 $APIKEY
