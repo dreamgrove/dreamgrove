@@ -10,7 +10,7 @@ actions+=/force_of_nature
 # use frenzy before ca/inc
 actions+=/ravenous_frenzy
 # desc to be done
-actions+=/kindred_spirits,if=floor((fight_remains-10)%cooldown)>floor((fight_remains-10-cooldown.ca_inc.remains)%cooldown)&(eclipse.in_solar&spell_targets.starfire=1|eclipse.in_lunar&spell_targets.starfire>1)&(eclipse.solar_next&spell_targets.starfire=1|eclipse.lunar_next&spell_targets.starfire>1)&(spell_targets.starfall=1|buff.starfall.up)|cooldown.ca_inc.ready
+actions+=/kindred_spirits,if=floor((fight_remains-10)%cooldown)>floor((fight_remains-10-cooldown.ca_inc.remains)%cooldown)&((eclipse.in_solar&spell_targets.starfire=1|eclipse.in_lunar&spell_targets.starfire>1)|(eclipse.solar_next&spell_targets.starfire=1|eclipse.lunar_next&spell_targets.starfire>1))&(spell_targets.starfall=1|buff.starfall.up)|cooldown.ca_inc.ready|buff.primordial_arcanic_pulsar.value>=370&astral_power>50
 # dont overcap when using ca, dont overwrite an existing one and try to line up ca with convoke unless you would lose a cast
 actions+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(floor((fight_remains-10)%cooldown)>floor((fight_remains-10-cooldown.convoke_the_spirits.remains)%cooldown)|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 # calculates whether you would lose a convoke cast by lining up with CA/Inc
@@ -48,4 +48,3 @@ actions+=/warrior_of_elune
 # use starfire when in lunar eclipse or fighting more than 3 targets or to activate solar eclipse
 actions+=/starfire,if=buff.eclipse_lunar.up|eclipse.state=1|eclipse.state=0&spell_targets=1|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
 actions+=/wrath
-
