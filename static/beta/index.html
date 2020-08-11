@@ -22,7 +22,7 @@
       function changeBG(child) {
         let ifdoc = child.contentWindow.document;
         let iftype = ifdoc.contentType || ifdoc.mimeType;
-        if ( iftype == 'text/plain') {
+        if ( iftype != 'text/html') {
           ifdoc.body.style.backgroundColor = '#FFFFFF';
         }
       }
