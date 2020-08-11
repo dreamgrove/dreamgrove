@@ -7,6 +7,7 @@ parser.add_argument('apikey', type=str, help='raidbots apikey')
 #parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
 args = parser.parse_args()
 apikey = args.apikey
+#with open('apikey', 'r') as fp: apikey = fp.read()
 #targets = str(args.targets)
 
 post_url = 'https://mimiron.raidbots.com/sim'
@@ -14,6 +15,7 @@ get_url = 'https://mimiron.raidbots.com/api/job/'
 report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
 profile = apl = combo = sets = ""
+jso = {}
 
 with open('sandbag.txt', 'r') as fp:
     profile = fp.read()
@@ -61,9 +63,15 @@ for line in sets:
         dps_list.append(actor['collected_data']['dps']['mean'])
 
     dps_max = max(dps_list)
-    html = '<div><a href="' + sim_url + '/index.html">' + name.strip('\"').replace('_','&nbsp') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
+    name = name.strip('\"')
+    sim_url = sim_url + '/index.html'
+    html = '<div><a href="' + sim_url + '">' + name.replace('_','&nbsp') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
     betabot.write(html)
+    jso[name] = simID
 
 betabot.write('</div></div></body></html>\n')
 betabot.close()
 sets.close()
+
+with open('jso.js', 'w') as fp:
+    fp.write('var jso =' + str(jso) + ';')

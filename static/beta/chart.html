@@ -2,6 +2,7 @@
     <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="jso.js"></script>
     <script>
         $(function () {
             var param = new URLSearchParams(window.location.search);
@@ -19,7 +20,8 @@
                         }
                     },
                     title: {
-                        text: base,
+                        text: '<a target=\"_top\" style=\"text-decoration:none; color:#FF7D0A;\" href=\"https://mimiron.raidbots.com/simbot/report/' + simid + '\">' + base + '</a>',
+                        useHTML: true,
                         align: 'left',
                         margin: 0,
                         x: 5,
@@ -29,8 +31,7 @@
                         }
                     },
                     subtitle: {
-                        text: '<a target=\"_top\" style=\"color:#FF7D0A;\" href=\"https://www.raidbots.com/simbot/report/' + simid + '\"">Click for Raidbots Report</a>',
-                        useHTML: true,
+                        text: 'Click bar for single target Talent Sim',
                         floating: true,
                         align: 'left',
                         x: 222,
@@ -64,6 +65,13 @@
                         color: '#FF7D0A',
                         pointWidth: 17,
                         borderWidth: 0,
+                        point: {
+                            events: {
+                                click: function() {
+                                    location.href = this.options.url;
+                                }
+                            }
+                        },
                         dataLabels: {
                             enabled: true,
                             inside: true,
@@ -86,9 +94,11 @@
                     }]
                 };
                 $.each(profiles, function(k, v) {
-                    let temp = [];
-                    temp.push(v.name, v.mean);
-                    options.series[0].data[k] = temp;
+                    let url = '';
+                    if (typeof jso[v.name] != 'undefined') {
+                        url = 'https://mimiron.raidbots.com/simbot/report/' + jso[v.name] + '/index.html';
+                    }
+                    options.series[0].data[k] = {'name': v.name, 'y': v.mean, 'url': url};
                 });
                 Highcharts.chart('container', options);
             });
