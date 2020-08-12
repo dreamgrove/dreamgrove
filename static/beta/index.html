@@ -26,6 +26,10 @@
           ifdoc.body.style.backgroundColor = '#FFFFFF';
         }
       }
+      function resettitle() {
+        let title = document.getElementById('simtitle');
+        title.textContent = 'Legendary x Covenant by Talents';
+      }
     </script>
     <style>body {background-color:#242424; color:#FF7D0A;} a {text-decoration:none; color:#FF7D0A;} ul {margin:0;} option, select {color:#FF7D0A; background-color:#242424; font-family:monospace; font-size:large;}</style>
     <div style="display:flex">
@@ -43,7 +47,7 @@
         <div id="dir"></div>
       </div>
       <div style="display:flex; flex-direction:column;">
-        <div><span id="simtitle"><b>Legendary x Covenant by Talents</span></b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size:large;">reset</a></div>
+        <div><b><span id="simtitle">Legendary x Covenant by Talents</span></b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size:large;" onclick="resettitle()">reset</a></div>
         <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;" onload="changeFrame(this)"></iframe>
       </div>
     </div>
