@@ -1,6 +1,7 @@
 <html>
   <body>
     <script>
+      var simframeName = 'Legendary x Covenant by Talents';
       (async () => {
         const response = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/beta/');
         const data = await response.json();
@@ -22,19 +23,22 @@
       function changeFrame(child) {
         let ifdoc = child.contentWindow.document;
         let iftype = ifdoc.contentType || ifdoc.mimeType;
-        if ( iftype != 'text/html') {
+        if (iftype != 'text/html') {
           ifdoc.body.style.backgroundColor = '#FFFFFF';
         }
-      }
-      function resettitle() {
         let title = document.getElementById('simtitle');
-        title.textContent = 'Legendary x Covenant by Talents';
+        title.textContent = simframeName;
+      }
+      function resetTitle() {
+        simframeName = 'Legendary x Covenant by Talents'
+        //let title = document.getElementById('simtitle');
+        //title.textContent = 'Legendary x Covenant by Talents';
       }
     </script>
     <style>body {background-color:#242424; color:#FF7D0A;} a {text-decoration:none; color:#FF7D0A;} ul {margin:0;} option, select {color:#FF7D0A; background-color:#242424; font-family:monospace; font-size:large;}</style>
     <div style="display:flex">
       <div stype="display:flex; flex-direction:column;">
-        <div><b>Legendary x Covenant</b> <span style="font-family:monospace; font-size:large;">targets:</span>
+        <div><b>Legendary x Covenant</b> <span style="font-family:monospace;">targets:</span>
           <select name="targets" onchange="changeTarget(this)">
             <option value="by_combo_1.html">1</option>
             <option value="by_combo_2.html">2</option>
@@ -47,7 +51,7 @@
         <div id="dir"></div>
       </div>
       <div style="display:flex; flex-direction:column;">
-        <div><b><span id="simtitle">Legendary x Covenant by Talents</span></b> <a href="by_talent.html" target="simframe" style="font-family:monospace; font-size:large;" onclick="resettitle()">reset</a></div>
+        <div><b><span id="simtitle">Legendary x Covenant by Talents</span></b> <a href="by_talent.html" target="simframe" style="font-family:monospace;" onclick="resetTitle()">reset</a></div>
         <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;" onload="changeFrame(this)"></iframe>
       </div>
     </div>

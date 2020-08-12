@@ -20,14 +20,15 @@
                         }
                     },
                     title: {
-                        text: '<a target=\"_top\" style=\"text-decoration:none; color:#FF7D0A;\" href=\"https://mimiron.raidbots.com/simbot/report/' + simid + '\">' + base + '</a>',
+                        text: '<a target=\"_top\" style=\"text-decoration:none; color:#FF7D0A;\" href=\"https://mimiron.raidbots.com/simbot/report/' + simid + '\">Open Report</a>',
                         useHTML: true,
                         align: 'left',
                         margin: 0,
-                        x: 5,
+                        x: 60,
+                        y: 10,
                         style: {
                             color: '#FF7D0A',
-                            fontWeight: 'bold'
+                            fontSize: '1em'
                         }
                     },
                     subtitle: {
@@ -35,7 +36,7 @@
                         floating: true,
                         align: 'left',
                         x: 222,
-                        y: 14,
+                        y: 10,
                         style: {
                             color: '#FF7D0A'
                         }
@@ -101,8 +102,9 @@
                     options.series[0].data[k] = {'name': v.name, 'y': v.mean, 'url': url};
                 });
                 Highcharts.chart('container', options);
-                let title = parent.document.getElementById('simtitle');
-                title.textContent = base;
+                //let title = parent.document.getElementById('simtitle');
+                //title.textContent = base;
+                parent.simframeName = base;
             });
         });
     </script>
