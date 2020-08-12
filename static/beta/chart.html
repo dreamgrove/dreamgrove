@@ -103,7 +103,7 @@
                 });
                 Highcharts.chart('container', options);
                 let sel_tar = parent.document.getElementById('targets').selectedIndex + 1;
-                parent.setTitle(base + ' ' + sel_tar.toString() + ' target' + sel_tar == 1 ? '' : 's');
+                parent.setTitle(base + ' ' + sel_tar.toString() + ' target' + (sel_tar == 1 ? '' : 's'));
             });
         });
     </script>
