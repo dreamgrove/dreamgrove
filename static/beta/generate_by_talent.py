@@ -28,7 +28,7 @@ with open('leg_x_cov.txt', 'r') as fp:
 
 sets = open('talent_profiles.txt', 'r')
 betabot = open('by_talent.html', 'w')
-betabot.write('<html><style>body {margin-left:0; margin-right:0} a {color:#FF7D0A; text-decoration:none; font-family:monospace; font-size:large;}</style><body><div style=\"columns:5;\"><div style=\"display:inline-block;\">\n')
+betabot.write('<html><script>function newlink(e) {if (e.target.tagName === \'A\') {parent.setTitle(e.target.textContent);}} document.addEventListener(\'click\'", newlink, false);</script><style>body {margin-left:0; margin-right:0} a {color:#FF7D0A; text-decoration:none; font-family:monospace; font-size:large;}</style><body><div style=\"columns:5;\"><div style=\"display:inline-block;\">\n')
 
 for line in sets:
     if line == '\n':

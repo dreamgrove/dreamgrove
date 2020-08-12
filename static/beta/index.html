@@ -28,10 +28,15 @@
         }
       }
       function changeFrame(child) {
-        let ifdoc = child.contentWindow.document;
-        let iftype = ifdoc.contentType || ifdoc.mimeType;
-        if (iftype != 'text/html') {
-          ifdoc.body.style.backgroundColor = '#FFFFFF';
+        try {
+          let ifdoc = child.contentWindow.document;
+          let iftype = ifdoc.contentType || ifdoc.mimeType;
+          if (iftype != 'text/html') {
+            ifdoc.body.style.backgroundColor = '#FFFFFF';
+          }
+        }
+        catch(e) {
+          return;
         }
       }
     </script>
