@@ -14,7 +14,8 @@
         const data = await response.json();
         let htmlString = '<b>List of Files</b><ul style=\"font-family:monospace; font-size:large;\">';
         for (let file of data) {
-          if (file.name != '.gitignore') {
+          let ext = file.name.split('.').pop();
+          if (ext == 'txt' || ext =='rar') {
             htmlString += `<li><a href="${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a></li>`;
           }
         }
