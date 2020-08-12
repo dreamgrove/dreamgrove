@@ -70,6 +70,7 @@
                             events: {
                                 click: function() {
                                     location.href = this.options.url;
+                                    parent.setTitle(this.options.name);
                                 }
                             }
                         },
