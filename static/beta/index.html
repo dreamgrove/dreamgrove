@@ -39,7 +39,7 @@
     <div style="display:flex">
       <div stype="display:flex; flex-direction:column;">
         <div><b>Legendary x Covenant</b> <span style="font-family:monospace;">targets:</span>
-          <select name="targets" onchange="changeTarget(this)">
+          <select id="targets" onchange="changeTarget(this)">
             <option value="by_combo_1.html">1</option>
             <option value="by_combo_2.html">2</option>
             <option value="by_combo_3.html">3</option>
@@ -47,11 +47,11 @@
             <option value="by_combo_5.html">5</option>
           </select>
         </div>
-        <div><iframe name="comboframe" id="frame2" src="by_combo_1.html" style="border:none; font-family:monospace; font-size:large; width:43ch; height:25em;"></iframe></div>
+        <div><iframe id="frame2" src="by_combo_1.html" style="border:none; font-family:monospace; font-size:large; width:43ch; height:25em;"></iframe></div>
         <div id="dir"></div>
       </div>
       <div style="display:flex; flex-direction:column;">
-        <div><b><span id="simtitle">Legendary x Covenant by Talents</span></b> <a href="by_talent.html" target="simframe" style="font-family:monospace;" onclick="resetTitle()">reset</a></div>
+        <div>&nbsp;<b>&nbsp;<span id="simtitle">Legendary x Covenant by Talents</span></b> <a href="by_talent.html" target="simframe" style="font-family:monospace;" onclick="resetTitle()">reset</a></div>
         <iframe name="simframe" src="by_talent.html" style="border:none; height:94vh; width:1280px;" onload="changeFrame(this)"></iframe>
       </div>
     </div>
