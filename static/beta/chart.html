@@ -101,6 +101,8 @@
                     options.series[0].data[k] = {'name': v.name, 'y': v.mean, 'url': url};
                 });
                 Highcharts.chart('container', options);
+                let title = parent.document.getElementById('simtitle');
+                title.textContent = base;
             });
         });
     </script>
