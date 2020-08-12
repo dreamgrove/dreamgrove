@@ -102,7 +102,7 @@
                     options.series[0].data[k] = {'name': v.name, 'y': v.mean, 'url': url};
                 });
                 Highcharts.chart('container', options);
-                let sel_tar = parent.document.getAnimations('targets').selectedIndex + 1;
+                let sel_tar = parent.document.getElementById('targets').selectedIndex + 1;
                 parent.setTitle(base + ' ' + sel_tar.toString() + ' targets');
             });
         });
