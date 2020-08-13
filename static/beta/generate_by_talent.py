@@ -63,10 +63,10 @@ for line in sets:
         dps_list.append(actor['collected_data']['dps']['mean'])
 
     dps_max = max(dps_list)
-    name = name.strip('\"') + ' ' + f'{dps_max:.2f}'
+    name = name.strip('\"')
     sim_url = sim_url + '/index.html'
     #html = '<div><a href="' + sim_url + '">' + name.replace('_','&nbsp;') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
-    html = '<div><a href="' + sim_url + '">' + name + '</a></div>\n'
+    html = '<div><a href="' + sim_url + '">' + name + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
     betabot.write(html)
     jso[name] = simID
 
