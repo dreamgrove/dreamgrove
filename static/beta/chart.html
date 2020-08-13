@@ -22,7 +22,7 @@
                         }
                     },
                     title: {
-                        text: '<a target=\"_top\" style=\"color:#FF7D0A;\" href=\"https://mimiron.raidbots.com/simbot/report/' + simid + '\">Open Report</a>',
+                        text: '<a target=\"_top\" style=\"color:#FF7D0A;\" href=\"https://www.raidbots.com/simbot/report/' + simid + '\">Open Report</a>',
                         useHTML: true,
                         align: 'left',
                         margin: 0,
@@ -100,7 +100,7 @@
                 $.each(profiles, function(k, v) {
                     let url = '';
                     if (typeof jso[v.name] != 'undefined') {
-                        url = 'https://mimiron.raidbots.com/simbot/report/' + jso[v.name] + '/index.html';
+                        url = 'https://www.raidbots.com/reports/' + jso[v.name] + '/index.html';
                     }
                     options.series[0].data[k] = {'name': v.name, 'y': v.mean, 'url': url};
                 });

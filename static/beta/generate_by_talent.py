@@ -13,6 +13,7 @@ apikey = args.apikey
 post_url = 'https://mimiron.raidbots.com/sim'
 get_url = 'https://mimiron.raidbots.com/api/job/'
 report_url = 'https://mimiron.raidbots.com/simbot/report/'
+clean_url = 'https://www.raidbots.com/reports/'
 
 profile = apl = combo = sets = ""
 jso = {}
@@ -64,9 +65,8 @@ for line in sets:
 
     dps_max = max(dps_list)
     name = name.strip('\"')
-    sim_url = sim_url + '/index.html'
-    #html = '<div><a href="' + sim_url + '">' + name.replace('_','&nbsp;') + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
-    html = '<div><a href="' + sim_url + '">' + name + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
+    clean_url += simID + '/index.html'
+    html = '<div><a href="' + clean_url + '">' + name + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
     betabot.write(html)
     jso[name] = simID
 
