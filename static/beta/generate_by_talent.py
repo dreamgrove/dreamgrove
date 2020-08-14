@@ -65,8 +65,7 @@ for line in sets:
 
     dps_max = max(dps_list)
     name = name.strip('\"')
-    clean_url += simID + '/index.html'
-    html = '<div><a href="' + clean_url + '">' + name + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
+    html = '<div><a href=\"' + clean_url + simID + '/index.html\">' + name + ' ' + f'{dps_max:.2f}' + '</a></div>\n'
     betabot.write(html)
     jso[name] = simID
 
