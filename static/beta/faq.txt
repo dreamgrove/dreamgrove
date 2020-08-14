@@ -8,10 +8,10 @@
     * Souldbinds are not yet fully implemented in SimC.
 
 4. How does SimC handle Convoke the Spirits (Night Fae)?
-    * SimC assumes it will cast 2 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, then balance out the remaining between Starsurge, Wrath, and Moonfire on any further targets.
+    * SimC assumes it will cast 2 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, then balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
 
 5. How does SimC handle Kindred Spirits (Kyrian)?
-    * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage that you AND your partner get are attributed to you.
+    * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage done by you AND your partner are attributed to you.
 
 6. What are the base stats used in the sims?
     * The base profile can be found in `sandbag.txt`
