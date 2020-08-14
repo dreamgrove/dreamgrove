@@ -1,5 +1,5 @@
 1. Where is 'Druid Balance Runecarve 3' (crit legendary)?
-    * It is grossly overtuned. At it's current numerical values it is the best legendary and there is need to sim it. If it is re-tuned, or it goes live as-is, it will be included.
+    * It is grossly overtuned. At its current values, there is need to sim - it is the best. If it is re-tuned, or it goes live as-is, it will be included.
 
 2. Where are conduits?
     * Conduits will be added if they all become available on the Beta and can be tested & verified.
