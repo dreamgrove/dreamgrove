@@ -23,5 +23,14 @@
     * Instructions on creating the command line version can be found in `how to build.txt`
     * A copy of the command line program can be found as `simc.rar` but this will often be outdated.
 
-9. What about _____ ?
-    * Follow the `Improvements/Issues/Bugs/Questions` link on the front page to submit a report.
+9. How do I sim a covenant?
+    * Add the line covenant=covenant_name
+
+10. How do I sim a conduit?
+    * Add the line soulbind=conduit_name:rank/conduit2_name:rank/...
+
+11. How do I sim a legendary?
+    * Legendary effects are added to gear as a bonus_id. Open `leg_x_cov.txt` to get the strings for tabards with legendary effects.
+
+12. What about _____ ?
+    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
