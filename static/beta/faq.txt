@@ -5,7 +5,7 @@
     * Conduits will be added if they all become available on the Beta and can be tested & verified.
 
 3. Where are soulbinds?
-    * Souldbinds are not yet fully implemented in SimC.
+    * Soulbinds are not yet fully implemented in SimC.
 
 4. How does SimC handle Convoke the Spirits (Night Fae)?
     * SimC assumes it will cast 2 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, then balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
@@ -30,7 +30,7 @@
     * Add the line soulbind=conduit_name:rank/conduit2_name:rank/...
 
 11. How do I sim a legendary?
-    * Legendary effects are added to gear as a bonus_id. Open `leg_x_cov.txt` to get the strings for tabards with legendary effects.
+    * Legendary effects are added to gear as a bonus_id. Add the line for a tabard with the legendary effect from `leg_x_cov.txt`
 
 12. I found a bug! Something in the sims doesn't line up with what's in game!
     * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
