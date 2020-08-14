@@ -32,5 +32,14 @@
 11. How do I sim a legendary?
     * Legendary effects are added to gear as a bonus_id. Open `leg_x_cov.txt` to get the strings for tabards with legendary effects.
 
-12. What about _____ ?
+12. I found a bug! Something in the sims doesn't line up with what's in game!
+    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
+
+13. I found improvements to the APL that leads to higher DPS!
+    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
+
+14. The APL is doing weird things in X and Y situation!
+    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
+
+15. What about _____ ?
     * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
