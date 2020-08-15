@@ -46,3 +46,12 @@ copy=venthyr-lycaras,venthyr
 tabard=,id=31405,bonus_id=7110
 copy=necrolord-lycaras,necrolord
 tabard=,id=31405,bonus_id=7110
+
+copy=kyrian-crit,kyrian
+tabard=,id=31405,bonus_id=7107
+copy=nightfae-crit,nightfae
+tabard=,id=31405,bonus_id=7107
+copy=venthyr-crit,venthyr
+tabard=,id=31405,bonus_id=7107
+copy=necrolord-crit,necrolord
+tabard=,id=31405,bonus_id=7107
