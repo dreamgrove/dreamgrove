@@ -111,7 +111,7 @@ actions.dreamcatcher+=/variable,name=starfall_wont_fall_off,value=astral_power>8
 # Use starfall in aoe if it has less than half a gcd remaining
 actions.dreamcatcher+=/starfall,if=variable.is_aoe&buff.starfall.remains<gcd.max%2
 # Use starsurge if dreamcatcher is about to fall off or we are fighting 1 target and are in solar eclipse or the venthyr buff is about to fall off. With 2+ targets use when starfall wouldn't fall off and dump when at 90+asp at all times. Line can use cleaning up :)
-actions.dreamcatcher+=/starsurge,if=(!variable.safe_to_use_spell|!variable.is_aoe&((buff.eclipse_solar.remains<gcd.max&buff.eclipse_solar.up&!cooldown.ca_inc.up)|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up)))&(!variable.is_aoe&(buff.eclipse_solar.up|eclipse.solar_next|eclipse.any_next)|variable.starfall_wont_fall_off)|astral_power>90
+actions.dreamcatcher+=/starsurge,if=(!variable.safe_to_use_spell|!variable.is_aoe&((buff.eclipse_solar.remains<gcd.max&buff.eclipse_solar.up)|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up)))&(!variable.is_aoe&(buff.eclipse_solar.up|eclipse.solar_next|eclipse.any_next)|variable.starfall_wont_fall_off)|astral_power>90
 # Refresh moonfire on 5 or less targets or 11 or less with tm(Rough numbers, needs more testing) and kindred isn't up
 actions.dreamcatcher+=/moonfire,target_if=refreshable,if=!buff.kindred_empowerment_energize.up&(spell_targets.starfire<6|(talent.twin_moons.enabled&spell_targets.starfire<12))
 # Refresh sunfire when kindred isn't up
