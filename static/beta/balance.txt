@@ -111,7 +111,7 @@ actions.dreamcatcher+=/variable,name=starfall_wont_fall_off,value=astral_power>8
 # Use starfall in aoe if it has less than half a gcd remaining
 actions.dreamcatcher+=/starfall,if=variable.is_aoe&buff.starfall.remains<gcd.max%2
 # Use starsurge if dreamcatcher is about to fall off or we are fighting 1 target and are in solar eclipse or the venthyr buff is about to fall off. With 2+ targets use when starfall wouldn't fall off and dump when at 90+asp at all times. Line can use cleaning up :)
-actions.dreamcatcher+=/starsurge,if=(!variable.safe_to_use_spell|!variable.is_aoe&((buff.eclipse_solar.remains<gcd.max&buff.eclipse_solar.up)|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up)))&(!variable.is_aoe&(buff.eclipse_solar.up|eclipse.solar_next|eclipse.any_next)|variable.starfall_wont_fall_off)|astral_power>90
+actions.dreamcatcher+=/starsurge,if=(!variable.safe_to_use_spell|!variable.is_aoe&((buff.eclipse_solar.remains<gcd.max&buff.eclipse_solar.up&!cooldown.ca_inc.up)|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up)))&(!variable.is_aoe&(buff.eclipse_solar.up|eclipse.solar_next|eclipse.any_next)|variable.starfall_wont_fall_off)|astral_power>90
 # Refresh moonfire on 5 or less targets or 11 or less with tm(Rough numbers, needs more testing) and kindred isn't up
 actions.dreamcatcher+=/moonfire,target_if=refreshable,if=!buff.kindred_empowerment_energize.up&(spell_targets.starfire<6|(talent.twin_moons.enabled&spell_targets.starfire<12))
 # Refresh sunfire when kindred isn't up
@@ -119,7 +119,7 @@ actions.dreamcatcher+=/sunfire,target_if=refreshable,if=!buff.kindred_empowermen
 # Refresh stellar flare on 1 or 2 targets, ca/inc isn't about to fall off, you won't overcap asp and kindred isn't up (also rough estimates)
 actions.dreamcatcher+=/stellar_flare,target_if=refreshable,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&spell_targets.starfall<3&ap_check&!buff.kindred_empowerment_energize.up
 # Use frenzy on cd before ca/inc
-actions.dreamcatcher+=/ravenous_frenzy
+actions.dreamcatcher+=/ravenous_frenzy,if=astral_power<70&(buff.timeworn_dreamcatcher.remains>gcd.max*2|!buff.timeworn_dreamcatcher.up)
 # Use ca/inc with convoke unless losing a use and dreamcatcher won't fall off 
 actions.dreamcatcher+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up)&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 actions.dreamcatcher+=/incarnation,if=ap_check&!buff.ca_inc.up&(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up)&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
@@ -135,6 +135,8 @@ actions.dreamcatcher+=/convoke_the_spirits,if=variable.convoke_condition&(astral
 actions.dreamcatcher+=/fury_of_elune,if=eclipse.state=3&ap_check&variable.safe_to_use_spell&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|spell_targets>2)
 # Use swarm on up to 8 targets on cd
 actions.dreamcatcher+=/adaptive_swarm,if=spell_targets.starfall<9
+# Make sure you are able to use ca/inc when it's up
+actions.dreamcatcher+=/starsurge,if=!covenant.night_fae&cooldown.ca_inc.ready&astral_power>70
 # Dump asp before convoke with starsurge in st and starfall and then starsurge in aoe
 actions.dreamcatcher+=/starsurge,if=covenant.night_fae&variable.convoke_condition&astral_power>=30&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)&(!variable.is_aoe|buff.starfall.up)
 actions.dreamcatcher+=/starfall,if=covenant.night_fae&variable.convoke_condition&astral_power>=50&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%50)&!buff.starfall.up
@@ -150,5 +152,5 @@ actions.dreamcatcher+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up|buff.wa
 actions.dreamcatcher+=/wrath,if=buff.eclipse_solar.up&(!buff.eclipse_lunar.up|spell_targets.starfire=1)&spell_targets<=3&(buff.ca_inc.remains>execute_time|!buff.ca_inc.up)
 # Fill with starfire in lunar eclipse or to proc solar eclipse or in solar eclipse on 4+ targets
 actions.dreamcatcher+=/starfire,if=eclipse.in_lunar|eclipse.solar_next|eclipse.any_next|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
-# Procs lunar eclipse
+# Procs lunar eclipse 
 actions.dreamcatcher+=/wrath
