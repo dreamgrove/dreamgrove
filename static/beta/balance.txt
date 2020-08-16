@@ -5,6 +5,7 @@ actions.precombat+=/starsurge,if=spell_targets.starfall<4
 
 # decide action list based on situation
 actions=variable,name=is_aoe,value=spell_targets.starfall>1
+actions+=/berserking,if=buff.ca_inc.up&!cooldown.convoke_the_spirits.up
 actions+=/run_action_list,name=dreamcatcher,if=runeforge.timeworn_dreamcatcher.equipped
 actions+=/run_action_list,name=critlegi,if=runeforge.druid__balance_power_03_dnt.equipped
 actions+=/run_action_list,name=aoe,if=variable.is_aoe
@@ -22,8 +23,8 @@ actions.st+=/ravenous_frenzy
 # Use kindred spirits with solar eclipse and pulsar unless losing a use
 actions.st+=/kindred_spirits,if=fight_remains%%cooldown<10|(eclipse.in_solar|eclipse.solar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=370&astral_power>50
 # Use ca/inc with convoke unless losing a use and don't overwrite pulsar
-actions.st+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.st+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.st+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.st+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 # Calculates if convoke can be used with ca/inc or pulsar without losing a use
 actions.st+=/variable,name=convoke_condition,value=buff.primordial_arcanic_pulsar.value<340&(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|fight_remains%%120<15|buff.ca_inc.remains>7)&eclipse.state=3
 # Uses convoke if the above condition is true and you are below 30 asp
@@ -69,8 +70,8 @@ actions.aoe+=/force_of_nature
 # Use on cd, this will automatically line up with ca
 actions.aoe+=/ravenous_frenzy
 # Use on cd unless you can line it up with convoke without losing a cast
-actions.aoe+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.aoe+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 # Use within any eclipse and line it up with pulsar unless losing a use
 actions.aoe+=/kindred_spirits,if=fight_remains%%cooldown<15|(eclipse.in_lunar|eclipse.lunar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=350&astral_power>50
 # Calculates whether convoke can be saved for ca/inc or a pulsar proc without losing a use
@@ -123,8 +124,8 @@ actions.dreamcatcher+=/stellar_flare,target_if=refreshable,if=(buff.ca_inc.remai
 # Use frenzy on cd before ca/inc
 actions.dreamcatcher+=/ravenous_frenzy,if=astral_power<70&(buff.timeworn_dreamcatcher.remains>gcd.max*2|!buff.timeworn_dreamcatcher.up)
 # Use ca/inc with convoke unless losing a use and dreamcatcher won't fall off 
-actions.dreamcatcher+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up)&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.dreamcatcher+=/incarnation,if=ap_check&!buff.ca_inc.up&(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up)&(fight_remains<cooldown.convoke_the_spirit.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.dreamcatcher+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up)&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.dreamcatcher+=/incarnation,if=ap_check&!buff.ca_inc.up&(buff.timeworn_dreamcatcher.remains>gcd.max|!buff.timeworn_dreamcatcher.up)&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 # Use trees on cd
 actions.dreamcatcher+=/force_of_nature
 # Use kindred with a dreamcatcher buff in solar in st or lunar in aoe while also requiring a starfall there. Save for pulsar try to line up with ca/inc without losing a use
@@ -174,12 +175,12 @@ actions.critlegi+=/kindred_spirits,if=fight_remains%%cooldown<10|(eclipse.in_sol
 actions.critlegi+=/variable,name=starfall_wont_fall_off,value=astral_power>80-(buff.starfall.remains*4%spell_haste)-(dot.fury_of_elune.remains*5)&buff.starfall.up
 # spam ss with 5+ crit buff legi stacks when fighting 1 target
 #actions.critlegi+=/starsurge,if=(buff.runecarve_3_nature.stack>4|buff.runecarve_3_arcane.stack>4)&(!variable.is_aoe&variable.starfall_wont_fall_off)|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready)
-actions.critlegi+=/starsurge,if=(buff.runecarve_3_nature.stack>4|buff.runecarve_3_arcane.stack>4)&(!variable.is_aoe&(!cooldown.convoke_the_spirits.up|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
+actions.critlegi+=/starsurge,if=(buff.runecarve_3_nature.stack_value>30|buff.runecarve_3_arcane.stack_value>30)&(!variable.is_aoe&(!cooldown.convoke_the_spirits.up|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
 # dont overcap when using ca, dont overwrite an existing one and try to line up ca with convoke unless you would lose a cast
-actions.critlegi+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+6|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.critlegi+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirit.remains+6|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.critlegi+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.critlegi+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 # calculates whether you would lose a convoke cast by lining up with CA/Inc
-actions.critlegi+=/variable,name=convoke_condition,value=(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>6)&(buff.runecarve_3_nature.stack>5|buff.runecarve_3_arcane.stack>5)&!cooldown.ca_inc.ready|fight_remains%%120<6
+actions.critlegi+=/variable,name=convoke_condition,value=(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>6)&(buff.runecarve_3_nature.stack_value>30|buff.runecarve_3_arcane.stack_value>30)&!cooldown.ca_inc.ready|fight_remains%%120<6
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
 actions.critlegi+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)
 actions.critlegi+=/fury_of_elune,if=eclipse.state=3&ap_check&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|!variable.critnotup|spell_targets>2)
