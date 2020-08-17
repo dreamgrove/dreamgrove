@@ -24,8 +24,8 @@
     * The APL can be found in `balance.txt`
 
 9. How can I run my own beta sims?
-    * Instructions on creating the command line version can be found in `how to build.txt`
-    * A copy of the command line program can be found as `simc.rar` but this will often be outdated.
+    * Instructions on creating the command line version and how to use it can be found in `how to build.txt`
+    * A copy of the command line program can be found as `simc_(date).rar` but this can often be outdated.
 
 10. How do I sim a covenant?
     * Add the line covenant=covenant_name
