@@ -37,13 +37,10 @@
     * Legendary effects are added to gear as a bonus_id. Add the line for a tabard with the legendary effect from `leg_x_cov.txt`
 
 13. I found a bug! Something in the sims doesn't line up with what's in game!
-    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
+    * Submit an issue report with the `Bugs/Improvements/Questions` link.
 
 14. I found improvements to the APL that leads to higher DPS!
-    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
+    * Submit an issue report with the `Bugs/Improvements/Questions` link.
 
-15. The APL is doing weird things in X and Y situation!
-    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
-
-16. What about _____ ?
-    * Submit an issue report with the `Improvements/Issues/Bugs/Questions` link.
+15. What about _____ ?
+    * Submit an issue report with the `Bugs/Improvements/Questions` link.
