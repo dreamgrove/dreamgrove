@@ -16,7 +16,7 @@ report_url = 'https://mimiron.raidbots.com/simbot/report/'
 profile = apl = sets = ""
 
 covs = ['kyrian', 'night_fae', 'venthyr', 'necrolord']
-legs = {'oneth':7087, 'pulsar':7088, 'dream':7108, 'lycaras':7110}
+legs = {'oneth':7087, 'pulsar':7088, 'dream':7108, 'lycaras':7110, 'boat':7107}
 
 with open('sandbag.txt', 'r') as fp:
     profile = fp.read()
