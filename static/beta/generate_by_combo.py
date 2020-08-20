@@ -40,6 +40,7 @@ for cov in covs:
 
         sim_url = report_url + simID
         print(sim_url)
+        time.sleep(5)
 
         while True:
             get = requests.get(get_url + simID)
