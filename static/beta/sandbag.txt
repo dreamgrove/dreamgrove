@@ -14,3 +14,5 @@ gear_crit_rating=350
 gear_haste_rating=500
 gear_mastery_rating=500
 gear_versatility_rating=300
+
+soulbind=evolved_swarm:1/conflux_of_elements:1/endless_thirst:1/fury_of_the_skies:1
