@@ -180,19 +180,19 @@ actions.critlegi+=/starsurge,if=(buff.balance_of_all_things_nature.stack_value>3
 actions.critlegi+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 actions.critlegi+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 # calculates whether you would lose a convoke cast by lining up with CA/Inc
-actions.critlegi+=/variable,name=convoke_condition,value=(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>6)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)&!cooldown.ca_inc.ready|fight_remains%%120<6
+actions.critlegi+=/variable,name=convoke_condition,value=(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>6)&!cooldown.ca_inc.ready|fight_remains%%120<6
 # when the convoke cast fits, you are within the correct eclipse, pulsar isnt about to be procced, when not using the crit legi be below 30 asp and in the correct eclipse and otherwise have a fresh crit buff use convoke
-actions.critlegi+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)
+actions.critlegi+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)
 actions.critlegi+=/fury_of_elune,if=eclipse.state=3&ap_check&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|!variable.critnotup|spell_targets>2)
 # just use swarm on cd
 actions.critlegi+=/adaptive_swarm,if=spell_targets.starfire<9
 # dump asp when convoke is about to be used
-actions.critlegi+=/starsurge,if=covenant.night_fae&variable.convoke_condition&astral_power>=30&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)&(!variable.is_aoe|buff.starfall.up)
-actions.critlegi+=/starfall,if=covenant.night_fae&variable.convoke_condition&astral_power>=50&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%50)&!buff.starfall.up
+actions.critlegi+=/starsurge,if=covenant.night_fae&variable.convoke_condition&astral_power>=30&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)&(!variable.is_aoe|buff.starfall.up)&!eclipse.state=3
+actions.critlegi+=/starfall,if=covenant.night_fae&variable.convoke_condition&astral_power>=50&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%50)&!buff.starfall.up&!eclipse.state=3
 # use starfall on st with Stellar Drift while in lunar eclipse or when the necrolord dot is ticking
 actions.critlegi+=/starfall,if=talent.stellar_drift.enabled&!variable.is_aoe&!buff.starfall.up&(eclipse.in_lunar|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
 # dump surges when ca/inc is about to fall off, when at 90+ asp and when you wouldn't lose starfall uptime on aoe
-actions.critlegi+=/starsurge,if=((buff.ca_inc.remains<5&buff.ca_inc.up|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|astral_power>90)&(variable.starfall_wont_fall_off|!variable.is_aoe&!talent.stellar_drift.enabled)
+actions.critlegi+=/starsurge,if=((fight_remains<5|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|astral_power>90&eclipse.state=3)&(variable.starfall_wont_fall_off|!variable.is_aoe&!talent.stellar_drift.enabled)
 # use starfall if it will expire within the next gcd and there's more than 1 target or you have stellar drift and the crit legi active
 actions.critlegi+=/starfall,if=buff.starfall.refreshable&(spell_targets>1|talent.stellar_drift.enabled)
 # use moons when in lunar eclipse or you would cap charges while not overcapping asp
