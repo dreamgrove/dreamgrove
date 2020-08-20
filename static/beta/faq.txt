@@ -1,10 +1,13 @@
-1. Where is 'Druid Balance Runecarve 3' (crit legendary)?
-    * It is grossly overtuned. At its current values, there is no need to sim - it is the best. If it is re-tuned, or it goes live as-is, it will be included.
+1. What's new?
+    * Legendary & covenant changes from the August 19th build 9.0.1.35598 are included.
+    * Some conduits are included. See question below.
 
-2. Where are conduits?
-    * Conduits will be added if they all become available on the Beta and can be tested & verified.
+2. What about conduits?
+    * All sims include the covenant specific conduits (except for Kyrian) and the Fury of the Skies conduit at base rank.
+    * The other potency conduits at current tuning contribute less than 1% and are not worth simming.
+    * The Kyrian conduit can desync Kindred Spirits from other CDs so is not worth simming.
 
-3. Where are soulbinds?
+3. What about soulbinds?
     * Soulbinds are not yet fully implemented in SimC.
 
 4. How does SimC handle Convoke the Spirits (Night Fae)?
