@@ -47,11 +47,11 @@ tabard=,id=31405,bonus_id=7110
 copy=necrolord-lycaras,necrolord
 tabard=,id=31405,bonus_id=7110
 
-copy=kyrian-crit,kyrian
+copy=kyrian-boat,kyrian
 tabard=,id=31405,bonus_id=7107
-copy=nightfae-crit,nightfae
+copy=nightfae-boat,nightfae
 tabard=,id=31405,bonus_id=7107
-copy=venthyr-crit,venthyr
+copy=venthyr-boat,venthyr
 tabard=,id=31405,bonus_id=7107
-copy=necrolord-crit,necrolord
+copy=necrolord-boat,necrolord
 tabard=,id=31405,bonus_id=7107
