@@ -5,7 +5,8 @@
         <div id='content'></div>
         <script>
             var param = new URLSearchParams(window.location.search);
-            var filename = '/beta/' + param.get('file');
+            //var filename = '/beta/' + param.get('file');
+            var filename = 'https://raw.githubusercontent.com/dreamgrove/dreamgrove/master/static/beta/' + param.get('file');
             fetch(filename)
             .then(response => response.text())
             .then(text => {
