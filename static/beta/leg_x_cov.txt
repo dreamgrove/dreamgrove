@@ -61,11 +61,11 @@ tabard=,id=31405,bonus_id=7085
 copy=necrolord-circle,necrolord
 tabard=,id=31405,bonus_id=7085
 
-#copy=kyrian-1dot,kyrian
+#copy=kyrian-draught,kyrian
 #tabard=,id=31405,bonus_id=7086
-#copy=nightfae-1dot,nightfae
+#copy=nightfae-draught,nightfae
 #tabard=,id=31405,bonus_id=7086
-#copy=venthyr-1dot,venthyr
+#copy=venthyr-draught,venthyr
 #tabard=,id=31405,bonus_id=7086
-#copy=necrolord-1dot,necrolord
+#copy=necrolord-draught,necrolord
 #tabard=,id=31405,bonus_id=7086
