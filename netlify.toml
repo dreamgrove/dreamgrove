@@ -1,5 +1,5 @@
 [build]
-  ignore = "git diff --quiet HEAD^ HEAD -- . ':!static/beta/*.txt'
+  ignore = "git diff --quiet HEAD^ HEAD ':!static/beta/*.txt'
 
 [context.production.environment]
   HUGO_VERSION = "0.55.6"
