@@ -1,15 +1,11 @@
 copy=kyrian
 covenant="kyrian"
-#soulbind="druid_potency_kyrian_1:1"
 copy=nightfae
 covenant="night_fae"
-#soulbind="druid_potency_night_fae_1:1"
 copy=venthyr
 covenant="venthyr"
-#soulbind="druid_potency_venthyr_1:1"
 copy=necrolord
 covenant="necrolord"
-#soulbind="druid_potency_necrolord_1:1"
 
 copy=kyrian-oneth,kyrian
 tabard=,id=31405,bonus_id=7087
@@ -55,3 +51,21 @@ copy=venthyr-boat,venthyr
 tabard=,id=31405,bonus_id=7107
 copy=necrolord-boat,necrolord
 tabard=,id=31405,bonus_id=7107
+
+copy=kyrian-circle,kyrian
+tabard=,id=31405,bonus_id=7085
+copy=nightfae-circle,nightfae
+tabard=,id=31405,bonus_id=7085
+copy=venthyr-circle,venthyr
+tabard=,id=31405,bonus_id=7085
+copy=necrolord-circle,necrolord
+tabard=,id=31405,bonus_id=7085
+
+#copy=kyrian-1dot,kyrian
+#tabard=,id=31405,bonus_id=7086
+#copy=nightfae-1dot,nightfae
+#tabard=,id=31405,bonus_id=7086
+#copy=venthyr-1dot,venthyr
+#tabard=,id=31405,bonus_id=7086
+#copy=necrolord-1dot,necrolord
+#tabard=,id=31405,bonus_id=7086

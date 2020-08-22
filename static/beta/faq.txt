@@ -18,32 +18,32 @@
 
 6. Are the sims updated for _____ ?
     * At the top of the HTML report, in the SimulationCraft banner, you will find the git build code.
-    * Goto http://github.com/simulationcraft/simc/commits/<enter git build code here> to see all the changes to SimC that have been incorporated into the sim.
+    * Goto `http://github.com/simulationcraft/simc/commits/<enter git build code here>` to see all the changes to SimC that have been incorporated into the sim.
 
 7. What are the base stats used in the sims?
-    * The base profile can be found in `sandbag.txt`
+    * The base profile can be found in [sandbag.txt](sandbag.txt)
 
 8. What is the APL used in the sims?
-    * The APL can be found in `balance.txt`
+    * The APL can be found in [balance.txt](md.html?file=balance.txt) ([raw text](balance.txt))
 
 9. How can I run my own beta sims?
-    * Instructions on creating the command line version and how to use it can be found in `how to build.txt`
+    * Instructions on creating the command line version and how to use it can be found in [how_to_build.txt](md.html?file=how_to_build.txt)
     * A copy of the command line program can be found as `simc_(date).rar` but this can often be outdated.
 
 10. How do I sim a covenant?
-    * Add the line covenant=covenant_name
+    * Add the line **covenant=covenant_name**
 
 11. How do I sim a conduit?
-    * Add the line soulbind=conduit_name:rank/conduit2_name:rank/...
+    * Add the line **soulbind=conduit_name:rank/conduit2_name:rank/...**
 
 12. How do I sim a legendary?
-    * Legendary effects are added to gear as a bonus_id. Add the line for a tabard with the legendary effect from `leg_x_cov.txt`
+    * Legendary effects are added to gear as a bonus_id. Add the line for a tabard with the legendary effect from [leg_x_cov.txt](leg_x_cov.txt)
 
 13. I found a bug! Something in the sims doesn't line up with what's in game!
-    * Submit an issue report with the `Bugs/Improvements/Questions` link.
+    * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
 
 14. I found improvements to the APL that leads to higher DPS!
-    * Submit an issue report with the `Bugs/Improvements/Questions` link.
+    * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
 
 15. What about _____ ?
-    * Submit an issue report with the `Bugs/Improvements/Questions` link.
+    * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
