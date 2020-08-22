@@ -1,3 +1,6 @@
+[build]
+  ignore = "git diff --quiet HEAD^ HEAD -- . ':!static/beta/*.txt'
+
 [context.production.environment]
   HUGO_VERSION = "0.55.6"
   HUGO_ENABLEGITINFO = "true"
@@ -15,5 +18,3 @@
 
 [context.branch-deploy]
   command = "hugo -D --config=config.toml,config.dev.toml -b $DEPLOY_PRIME_URL"
-
-
