@@ -40,7 +40,7 @@ actions.st+=/adaptive_swarm,if=
 #### Use oneth starfall procs if starfall isn't up
 actions.st+=/starfall,if=buff.oneths_perception.up&buff.starfall.refreshable
 #### Dumps asp before convoke using the convoke condition to check if convoke is actually about to be cast
-actions.st+=/starsurge,if=covenant.night_fae&variable.convoke_conditio&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)
+actions.st+=/starsurge,if=covenant.night_fae&variable.convoke_condition&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)
 #### Use starfall with stellar drift, when no starfall is up, you are in lunar eclipse, proc pulsar when above 90 asp or adpative swarm has 8+secs remaining or is in flight
 actions.st+=/starfall,if=talent.stellar_drift.enabled&buff.starfall.refreshable&(buff.eclipse_lunar.remains>6&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>90|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
 #### Use ss oneth procs and dump asp when ca/inc or the venthyr buff is about to fall off or you'd cap asp
