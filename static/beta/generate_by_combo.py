@@ -15,8 +15,28 @@ report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
 profile = apl = sets = ""
 
-covs = ['kyrian', 'night_fae', 'venthyr', 'necrolord']
-legs = {'oneth':7087, 'pulsar':7088, 'dream':7108, 'lycaras':7110, 'boat':7107}
+covs = []
+legs = {}
+
+with open('leg_x_cov.txt', 'r') as fp:
+    while line_ := fp.readline():
+        if line_[0] == '#':
+            continue
+        split_ = line_.split('=')
+        if split_[0] == 'covenant':
+            covs.append(split_[1].strip('\"\n'))
+            continue
+        if line_ == '\n':
+            line_1 = fp.readline()
+            if line_1[0] == '#':
+                continue
+            key_ = line_1.split(',')[0].split('-')[-1]
+            line_2 = fp.readline()
+            if line_2[0] == '#':
+                continue
+            value_ = line_2.split('=')[-1]
+            legs[key_] = int(value_)
+            continue
 
 with open('sandbag.txt', 'r') as fp:
     profile = fp.read()
