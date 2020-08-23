@@ -11,7 +11,9 @@
             .then(text => {
                 const old_ = new RegExp('\nactions', 'g');
                 const new_ = '\n* actions';
-                document.getElementById('content').innerHTML = marked(text.replace(old_, new_));
+                const old2_ = new RegExp('\n####', 'g');
+                const new2_ = '\n\n####';
+                document.getElementById('content').innerHTML = marked(text.replace(old_, new_).replace(old2_, new2_));
             });
         </script>
     </body>
