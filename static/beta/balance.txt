@@ -17,9 +17,9 @@ actions+=/run_action_list,name=st
 
 ### Single target action list called when fighting 1 target. All action lists are mostly similar and can be combined but they are far easier to read when split up.
 #### Refresh dots unless ca/inc has less than 5 secs remaining, the venthyr buff or the kyrian buff is about to fall off to make sure all asp is spend in each
-actions.st=moonfire,target_if=refreshable&time_to_die>18,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
-actions.st+=/sunfire,target_if=refreshable&time_to_die>18,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
-actions.st+=/stellar_flare,target_if=refreshable&time_to_die>15,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
+actions.st=moonfire,target_if=refreshable&target.time_to_die>16,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
+actions.st+=/sunfire,target_if=refreshable&target.time_to_die>16,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
+actions.st+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
 #### Use FoN on cd without capping
 actions.st+=/force_of_nature,if=ap_check
 #### Use the venthyr ability on cd which is before ca/inc
@@ -75,9 +75,9 @@ actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.co
 #### Use within any eclipse and line it up with pulsar unless losing a use
 actions.aoe+=/kindred_spirits,if=fight_remains%%cooldown<15|(eclipse.in_lunar|eclipse.lunar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=250&astral_power>50
 #### Refresh moonfire if ca/inc is ready or there are less than 3 targets or less than 5 and you are in solar eclipse or lunar eclipse is next. Also don't refresh during kindred empowerment and don't overcap asp
-actions.aoe+=/moonfire,target_if=refreshable&time_to_die>18,if=(cooldown.ca_inc.ready|conduit.conflux_of_elements.enabled|spell_targets.starfall<3|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check
+actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>16,if=(cooldown.ca_inc.ready|conduit.conflux_of_elements.enabled|spell_targets.starfall<3|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check
 #### Refresh sunfire unless ca/inc has less than 10secs remaining and you won't overcap asp
-actions.aoe+=/sunfire,target_if=refreshable&time_to_die>18,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check
+actions.aoe+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check
 #### Refresh flare on up to 3 targets without inc/ca being about to expire and not overcapping
 actions.aoe+=/stellar_flare,target_if=refreshable&time_to_die>15,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up)
 #### Calculates whether convoke can be saved for ca/inc or a pulsar proc without losing a use
@@ -120,11 +120,11 @@ actions.dreambinder+=/starfall,if=variable.is_aoe&buff.starfall.refreshable
 #### Use starsurge if dreambinder is about to fall off or we are fighting 1 target and are in solar eclipse or the venthyr buff is about to fall off. With 2+ targets use when starfall wouldn't fall off and dump when at 90+asp at all times. Line can use some clean up :)
 actions.dreambinder+=/starsurge,if=(!variable.safe_to_use_spell|!variable.is_aoe&((buff.eclipse_solar.remains<gcd.max&buff.eclipse_solar.up)|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up)))&(!variable.is_aoe&(buff.eclipse_solar.up|eclipse.solar_next|eclipse.any_next)|variable.starfall_wont_fall_off)|astral_power>90
 #### Refresh moonfire on 5 or less targets or 11 or less with tm(Rough numbers, needs more testing) and kindred isn't up
-actions.dreambinder+=/moonfire,target_if=refreshable,if=!buff.kindred_empowerment_energize.up&(spell_targets.starfire<6|(talent.twin_moons.enabled&spell_targets.starfire<12))
+actions.dreambinder+=/moonfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=!buff.kindred_empowerment_energize.up&(spell_targets.starfire<6|(talent.twin_moons.enabled&spell_targets.starfire<12))
 #### Refresh sunfire when kindred isn't up
-actions.dreambinder+=/sunfire,target_if=refreshable,if=!buff.kindred_empowerment_energize.up
+actions.dreambinder+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=!buff.kindred_empowerment_energize.up
 #### Refresh stellar flare on less than 3 targets, ca/inc isn't about to fall off, you won't overcap asp and kindred isn't up (rough estimates)
-actions.dreambinder+=/stellar_flare,target_if=refreshable,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&spell_targets.starfall<3&ap_check&!buff.kindred_empowerment_energize.up
+actions.dreambinder+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&spell_targets.starfall<3&ap_check&!buff.kindred_empowerment_energize.up
 #### Use frenzy on cd before ca/inc without dropping dreambinder including the ca/inc cast in the following gcd
 actions.dreambinder+=/ravenous_frenzy,if=astral_power<70&(buff.timeworn_dreambinder.remains>gcd.max*2|!buff.timeworn_dreambinder.up)
 #### Use ca/inc with convoke unless losing a use and dreambinder won't fall off
@@ -166,11 +166,11 @@ actions.dreambinder+=/wrath
 #### Checks if the crit buff is not up for later use
 actions.boat=variable,name=critnotup,value=!buff.balance_of_all_things_nature.up&!buff.balance_of_all_things_arcane.up
 #### Refresh moonfire when ca/inc is ready or you are about to enter lunar eclipse on 4 or less targets(double with twin moons), the crit buff isn't up, you wouldn't overcap asp and you wouldn't let starfall drop in aoe
-actions.boat+=/moonfire,target_if=refreshable&time_to_die>18,if=(cooldown.ca_inc.ready|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&ap_check&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae))&!buff.kindred_empowerment_energize.up&(buff.starfall.remains>gcd.max|astral_power<50|!variable.is_aoe)
+actions.boat+=/moonfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=(cooldown.ca_inc.ready|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&ap_check&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae))&!buff.kindred_empowerment_energize.up&(buff.starfall.remains>gcd.max|astral_power<50|!variable.is_aoe)
 #### Refresh sunfire when crit legi isnt active, ca/inc isnt up or has 10+secs remaining, the crit buff isn't up, you wouldn't overcap asp and you wouldn't let starfall drop in aoe
-actions.boat+=/sunfire,target_if=refreshable&time_to_die>18,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae))&(buff.starfall.remains>gcd.max|astral_power<50|!variable.is_aoe)
+actions.boat+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae))&(buff.starfall.remains>gcd.max|astral_power<50|!variable.is_aoe)
 #### Refresh flare with less than 3 targets without overcapping and when the crit legi isnt active
-actions.boat+=/stellar_flare,target_if=refreshable&time_to_die>15,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up)&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae))
+actions.boat+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up)&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae))
 #### Dump asp before ca/inc+convoke with starfall when using drift or in aoe
 actions.boat+=/starfall,if=cooldown.ca_inc.up&cooldown.convoke_the_spirits.up&covenant.night_fae&(talent.stellar_drift.enabled|variable.is_aoe)
 #### Use fon on cd without cappiung
