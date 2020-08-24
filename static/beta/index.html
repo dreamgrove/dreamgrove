@@ -15,11 +15,7 @@
         let htmlString = '<ul style=\"font-family:monospace; font-size:large;\">';
         for (let file of data) {
           let ext = file.name.split('.').pop();
-          if (file.name == 'balance.txt') {
-            htmlString += `<li><a href="md.html?file=${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a> <a href="${file.name}" target="simframe" onclick="setTitle('${file.name}')">(raw text)</a></li>`;
-          } else if (file.name == 'how_to_build.txt' || file.name == 'faq.txt') {
-            htmlString += `<li><a href="md.html?file=${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a></li>`;
-          } else if (ext == 'txt' || ext == 'rar') {
+          if (ext == 'txt' || ext == 'rar') {
             htmlString += `<li><a href="${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a></li>`;
           }
         }
@@ -60,6 +56,7 @@
         </div>
         <div><iframe id="frame2" src="by_combo_1.html" style="border:none; font-family:monospace; font-size:large; width:44ch; height:28em;"></iframe></div>
         <div style="text-align:center; font-size:larger; margin-top:1em; margin-bottom:0.5em;"><a style="text-decoration:underline;" href="md.html?file=faq.txt" target="simframe" onclick="setTitle('Frequently Asked Questions')"><b>FAQ (click here for what's new)</b></a></div>
+        <div style="text-align:center; font-size:larger; margin-top:0.5em; margin-bottom:0.5em;"><a style="text-decoration:underline;" href="md.html?file=balance.txt" target="simframe" onclick="setTitle('Balance APL')"><b>Shadowlands BETA Balance APL</b></a></div>
         <div style="text-align:center; font-size:larger; margin-top:0.5em; margin-bottom:1em;"><a style="text-decoration:underline;" href="https://forms.gle/agYZeEkPCaonyJf5A"><b>Bugs/Improvements/Questions</b></a></div>
         <div id="dir"></div>
       </div>

@@ -75,7 +75,7 @@ actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.co
 #### Use within any eclipse and line it up with pulsar unless losing a use
 actions.aoe+=/kindred_spirits,if=fight_remains%%cooldown<15|(eclipse.in_lunar|eclipse.lunar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=250&astral_power>50
 #### Refresh moonfire if ca/inc is ready or there are less than 3 targets or less than 5 and you are in solar eclipse or lunar eclipse is next. Also don't refresh during kindred empowerment and don't overcap asp
-actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>16,if=(cooldown.ca_inc.ready|conduit.conflux_of_elements.enabled|spell_targets.starfall<3|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check
+actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>12,if=(cooldown.ca_inc.ready|conduit.conflux_of_elements.enabled|spell_targets.starfall<3|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check
 #### Refresh sunfire unless ca/inc has less than 10secs remaining and you won't overcap asp
 actions.aoe+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check
 #### Refresh flare on up to 3 targets without inc/ca being about to expire and not overcapping
