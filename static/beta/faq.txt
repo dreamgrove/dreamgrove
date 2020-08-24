@@ -1,6 +1,13 @@
 1. What's new?
     * Legendary & covenant changes from the August 19th build 9.0.1.35598 are included.
-    * Some conduits are included. See question below.
+    * Some conduits are included. See below for details.
+    * Random targets encounter approximation is added as 'M+' in the target dropdown. See below for details.
+
+1. What is the '*M+*' selection in the target dropdown?
+    * This is an *unoptimized, very crude approximation* of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
+        * ~360s total fight time
+        * ~130s to ~150s fighting one mob
+        * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
 
 1. What about conduits?
     * All sims include the covenant specific conduits (except for Kyrian) and the Fury of the Skies conduit at base rank.

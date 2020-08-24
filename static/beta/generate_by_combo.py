@@ -13,7 +13,7 @@ post_url = 'https://mimiron.raidbots.com/sim'
 get_url = 'https://mimiron.raidbots.com/api/job/'
 report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
-profile = apl = sets = ""
+profile = apl = sets = mplus = ""
 
 covs = []
 legs = {}
@@ -47,12 +47,20 @@ with open('balance.txt', 'r') as fp:
 with open('talent_profiles.txt', 'r') as fp:
     sets = fp.read()
 
+with open('mplus.txt', 'r') as fp:
+    mplus = fp.read()
+
 buffer = {}
 
 for cov in covs:
     for leg, bonus in legs.items():
         name = cov + ' - ' + leg
-        simc = profile + '\ntarget_error=0.1\ndesired_targets=' + targets + '\n\ntalents=0000000\ncovenant=' + cov + '\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + apl + sets
+        if args.targets == 0:
+            target_str = 'target_error=0.2\n' + mplus
+        else:
+            target_str = 'target_error=0.1\ndesired_targets=' + targets
+
+        simc = profile + '\ntalents=0000000\ncovenant=' + cov + '\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + target_str + '\n\n' + apl + sets
 
         post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
         reply = post.json()
