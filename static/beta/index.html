@@ -17,7 +17,7 @@
           let ext = file.name.split('.').pop();
           if (file.name == 'balance.txt') {
             htmlString += `<li><a href="md.html?file=${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a> <a href="${file.name}" target="simframe" onclick="setTitle('${file.name}')">(raw text)</a></li>`;
-          } else if (file.name == 'how to build.txt' || file.name == 'faq.txt') {
+          } else if (file.name == 'how_to_build.txt' || file.name == 'faq.txt') {
             htmlString += `<li><a href="md.html?file=${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a></li>`;
           } else if (ext == 'txt' || ext == 'rar') {
             htmlString += `<li><a href="${file.name}" target="simframe" onclick="setTitle('${file.name}')">${file.name}</a></li>`;
