@@ -35,6 +35,8 @@ jobs:
         run: python generate_by_combo.py -t 4 $APIKEY
       - name: 5 target combo
         run: python generate_by_combo.py -t 5 $APIKEY
+      - name: M+ combo
+        run: python generate_by_combo.py -t 0 $APIKEY
       - name: update repo
         run: git pull --rebase --autostash
       - name: commit changes
