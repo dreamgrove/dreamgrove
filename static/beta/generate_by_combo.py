@@ -68,12 +68,16 @@ for cov in covs:
 
         sim_url = report_url + simID
         print(sim_url)
-        time.sleep(5)
 
         while True:
-            get = requests.get(get_url + simID)
-            status = get.json()
             time.sleep(5)
+            get = requests.get(get_url + simID)
+
+            try:
+                status = get.json()
+            except:
+                continue
+
             if (status['job']['state'] == 'complete'):
                 break
 
