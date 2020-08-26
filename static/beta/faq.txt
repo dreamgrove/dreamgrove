@@ -8,6 +8,7 @@
         * ~360s total fight time
         * ~130s to ~150s fighting one mob
         * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
+        * Random 0s to ~20s wait after each fight
 
 1. What about conduits?
     * All sims include the covenant specific conduits (except for Kyrian) and the Fury of the Skies conduit at base rank.
