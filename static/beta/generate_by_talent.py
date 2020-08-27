@@ -70,7 +70,7 @@ for line in sets:
         except:
             continue
 
-        if results:
+        if result:
             break
 
     dps_list = []
