@@ -61,8 +61,17 @@ for line in sets:
         if (status['job']['state'] == 'complete'):
             break
 
-    data = requests.get(sim_url + '/data.json')
-    result = data.json()
+    while True:
+        time.sleep(5)
+        data = requests.get(sim_url + '/data.json')
+
+        try:
+            results = data.json()
+        except:
+            continue
+
+        if results:
+            break
 
     dps_list = []
     for actor in result['sim']['players']:
