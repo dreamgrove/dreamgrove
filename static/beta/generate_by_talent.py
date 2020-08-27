@@ -66,7 +66,7 @@ for line in sets:
         data = requests.get(sim_url + '/data.json')
 
         try:
-            results = data.json()
+            result = data.json()
         except:
             continue
 
