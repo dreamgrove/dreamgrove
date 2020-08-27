@@ -71,27 +71,18 @@ for cov in covs:
 
         while True:
             time.sleep(5)
-            get = requests.get(get_url + simID)
 
             try:
+                get = requests.get(get_url + simID)
                 status = get.json()
+                if (status['job']['state'] == 'complete'):
+                    data = requests.get(sim_url + '/data.json')
+                    results = data.json()
+                    if results:
+                        break
+                continue
             except:
                 continue
-
-            if (status['job']['state'] == 'complete'):
-                break
-
-        while True:
-            time.sleep(5)
-            data = requests.get(sim_url + '/data.json')
-
-            try:
-                results = data.json()
-            except:
-                continue
-
-            if results:
-                break
 
         dps_list = {}
         for actor in results['sim']['profilesets']['results']:

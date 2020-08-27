@@ -51,30 +51,21 @@ for line in sets:
 
     while True:
         time.sleep(5)
-        get = requests.get(get_url + simID)
 
         try:
+            get = requests.get(get_url + simID)
             status = get.json()
+            if (status['job']['state'] == 'complete'):
+                data = requests.get(sim_url + '/data.json')
+                results = data.json()
+                if results:
+                    break
+            continue
         except:
             continue
-
-        if (status['job']['state'] == 'complete'):
-            break
-
-    while True:
-        time.sleep(5)
-        data = requests.get(sim_url + '/data.json')
-
-        try:
-            result = data.json()
-        except:
-            continue
-
-        if result:
-            break
 
     dps_list = []
-    for actor in result['sim']['players']:
+    for actor in results['sim']['players']:
         dps_list.append(actor['collected_data']['dps']['mean'])
 
     dps_max = max(dps_list)
