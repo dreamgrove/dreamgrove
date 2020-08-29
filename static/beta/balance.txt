@@ -62,7 +62,11 @@ actions.st+=/wrath
 
 ### AoE action list called on 2+ targets since starfall and starfire is always better there
 #### Use starfall if it is within pandemic(30% of base duration)
-actions.aoe=starfall,if=buff.starfall.refreshable
+actions.aoe=starfall,if=buff.starfall.refreshable&(!runeforge.lycaras_fleeting_glimpse.equipped|time%%45>buff.starfall.remains+2)
+#### Refresh sunfire unless ca/inc has less than 10secs remaining and you won't overcap asp
+actions.aoe+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check&!(buff.ravenous_frenzy.up&!buff.ca_inc.up)
+#### Refresh moonfire if ca/inc is ready or there are less than 3 targets or less than 5 and you are in solar eclipse or lunar eclipse is next. Also don't refresh during kindred empowerment and don't overcap asp
+actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>(12+(spell_targets.starfire*1.5))%spell_targets,if=(cooldown.ca_inc.ready|spell_targets.starfall<3|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<10*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check&!(buff.ravenous_frenzy.up&!buff.ca_inc.up)
 #### Use fon on cd without capping
 actions.aoe+=/force_of_nature,if=ap_check
 #### Use frenzy on cd, this will automatically line up with ca
@@ -71,11 +75,7 @@ actions.aoe+=/ravenous_frenzy,if=astral_power<=70|fight_remains%%180<22
 actions.aoe+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 #### Use within any eclipse and line it up with pulsar unless losing a use
-actions.aoe+=/kindred_spirits,if=fight_remains%%cooldown<15|(eclipse.in_lunar|eclipse.lunar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=250&astral_power>50
-#### Refresh moonfire if ca/inc is ready or there are less than 3 targets or less than 5 and you are in solar eclipse or lunar eclipse is next. Also don't refresh during kindred empowerment and don't overcap asp
-actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>12,if=(cooldown.ca_inc.ready|conduit.conflux_of_elements.enabled|spell_targets.starfall<3|(eclipse.lunar_next|eclipse.any_next|eclipse.in_solar)&(spell_targets.starfire<5*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check
-#### Refresh sunfire unless ca/inc has less than 10secs remaining and you won't overcap asp
-actions.aoe+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=(buff.ca_inc.remains>10|!buff.ca_inc.up)&ap_check
+actions.aoe+=/kindred_spirits,if=fight_remains%%cooldown<15|(eclipse.in_lunar|eclipse.lunar_next|buff.ca_inc.up)&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>50
 #### Refresh flare on up to 3 targets without inc/ca being about to expire and not overcapping
 actions.aoe+=/stellar_flare,target_if=refreshable&time_to_die>15,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up)
 #### Calculates whether convoke can be saved for ca/inc or a pulsar proc without losing a use
@@ -85,7 +85,7 @@ actions.aoe+=/convoke_the_spirits,if=variable.convoke_condition&astral_power<50
 #### Uses FoE if inside an eclipse(eclipse.state=3) and lines it up with a pulsar proc and adaptive swarm
 actions.aoe+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<250&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord|spell_targets>2)
 #### Use swarm until 9 targets on cd
-actions.aoe+=/adaptive_swarm,if=spell_targets.starfall<9
+actions.aoe+=/adaptive_swarm,target_if=!ticking,if=spell_targets.starfall<9
 #### Use an oneth proc unless starfall is already up or you are about to overcap asp
 actions.aoe+=/starfall,if=buff.oneths_perception.up&(buff.starfall.refreshable|astral_power>90)
 #### Dump asp before convoke with starfall and then starsurge
@@ -94,17 +94,18 @@ actions.aoe+=/starsurge,if=covenant.night_fae&variable.convoke_condition&cooldow
 #### Calculates whether a starsurge use will cause starfall to fall off
 actions.aoe+=/variable,name=starfall_wont_fall_off,value=astral_power>80-(buff.starfall.remains*3%spell_haste)-(dot.fury_of_elune.remains*5)&buff.starfall.up
 #### Use starsurge with an oneth proc or you'd overcap asp with your next cast. Also dumps asp at the end of the venthyr buff if starfall wouldnt fall off on 4 or less targets
-actions.aoe+=/starsurge,if=buff.oneths_clear_vision.up|!starfire.ap_check|(buff.ca_inc.remains<5&buff.ca_inc.up|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))&variable.starfall_wont_fall_off&spell_targets.starfall<5
+actions.aoe+=/starsurge,if=buff.oneths_clear_vision.up|!starfire.ap_check|(buff.ca_inc.remains<5&buff.ca_inc.up|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))&variable.starfall_wont_fall_off&spell_targets.starfall<3
 #### Use moons during lunar unless overcapping (maybe needs changes with astral moons)
 actions.aoe+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions.aoe+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions.aoe+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 #### Use WoE during lunar eclipse
-actions.aoe+=/warrior_of_elune,if=buff.eclipse_lunar.up
-#### Use wrath in solar eclipse on 3 or less target (TODO: Needs to increase with mastery value) or the last starfire wont fit into a ca/inc buff
-actions.aoe+=/wrath,if=eclipse.in_solar&spell_targets<=3|buff.ca_inc.remains<action.starfire.execute_time&buff.ca_inc.up
+actions.aoe+=/warrior_of_elune
+actions.aoe+=/variable,name=starfire_in_solar,value=spell_targets.starfire>6+floor(mastery_value%20)+floor(buff.starsurge_empowerment.stack%4)
+#### Use wrath in solar eclipse or the last starfire wont fit into a ca/inc buff. TODO: check proper haste amount
+actions.aoe+=/wrath,if=eclipse.in_solar&!variable.starfire_in_solar|buff.ca_inc.remains<action.starfire.execute_time&buff.ca_inc.up|buff.ravenous_frenzy.up&spell_haste>0.6
 #### Use starfire if in lunar eclipse, in solar eclipse on 4+ targets or to proc solar eclipse
-actions.aoe+=/starfire,if=buff.eclipse_lunar.up|eclipse.solar_next|buff.eclipse_solar.up&spell_targets>3
+actions.aoe+=/starfire,if=buff.eclipse_lunar.up|eclipse.solar_next|eclipse.in_solar&variable.starfire_in_solar
 #### This line only becomes active to proc lunar eclipse
 actions.aoe+=/wrath
 
