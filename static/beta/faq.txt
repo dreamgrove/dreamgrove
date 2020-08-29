@@ -1,7 +1,15 @@
 1. What's new?
-    * Legendary & covenant changes from the August 19th build 9.0.1.35598 are included.
-    * Some conduits are included. See below for details.
-    * Random targets encounter approximation is added as 'M+' in the target dropdown. See below for details.
+    * Changes from the August 27th build 9.0.1.35707 are included.
+    * APL has been update for changes, but further optimization may be possible. If you discover an improvement, please submit a report.
+
+1. Is the new Solstice talent good?
+    * With the Night Fae covenant, in most situations Fury of Elune is better. While Solstice currently sims the highest by ~1%, this is ***ONLY ON SINGLE TARGET AND YOU MUST TAKE STELLAR FLARE*** with the Night Fae covenant and Balance of All Things legendary. The flexibility of Stellar Drift & Fury of Elune outweigh the trivial sim dps gain.
+
+1. What about bugs that are currently present on the Beta/PTR?
+    * The following bugfixes are assumed for the sims:
+        * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff, Fury of Elune Sunfire damage debuff.
+        * Endless Thirst conduit correctly provides 2% crit per stack.
+        * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
 
 1. What is the 'M+' selection in the target dropdown?
     * This is an **unoptimized, very crude approximation** of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
