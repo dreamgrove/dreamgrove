@@ -62,12 +62,18 @@ for cov in covs:
 
         simc = profile + '\ntalents=0000000\ncovenant=' + cov + '\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + target_str + '\n\n' + apl + sets
 
-        post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
-        reply = post.json()
-        simID = reply['simId']
+        while True:
+            time.sleep(5) 
 
-        sim_url = report_url + simID
-        print(sim_url)
+            try:
+                post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
+                reply = post.json()
+                simID = reply['simId']
+                sim_url = report_url + simID
+                print(sim_url)
+                break
+            except:
+                continue
 
         while True:
             time.sleep(5)
@@ -78,8 +84,7 @@ for cov in covs:
                 if (status['job']['state'] == 'complete'):
                     data = requests.get(sim_url + '/data.json')
                     results = data.json()
-                    if results:
-                        break
+                    break
                 continue
             except:
                 continue

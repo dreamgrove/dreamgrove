@@ -42,12 +42,18 @@ for line in sets:
     name = splits[0].split('.')[-1]
     simc = profile + '\ntarget_error=0.1\n' + talent + '\n' + apl + '\n' + 'name=' + name + '\n\n' + combo
 
-    post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
-    reply = post.json()
-    simID = reply['simId']
+    while True:
+        time.sleep(5)
 
-    sim_url = report_url + simID
-    print(sim_url)
+        try:
+            post = requests.post(post_url, json={'type': 'advanced', 'apiKey': apikey, 'advancedInput': simc})
+            reply = post.json()
+            simID = reply['simId']
+            sim_url = report_url + simID
+            print(sim_url)
+            break
+        except:
+            continue
 
     while True:
         time.sleep(5)
