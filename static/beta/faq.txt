@@ -1,6 +1,7 @@
 1. What's new?
     * Changes from the August 27th build 9.0.1.35707 are included.
     * APL has been update for changes, but further optimization may be possible. If you discover an improvement, please submit a report.
+    * Convoke the Spirits will cast ~3.5 heals, better reflecting real-encounter situations
 
 1. Is the new Solstice talent good?
     * With the Night Fae covenant, in most situations Fury of Elune is better. While Solstice currently sims the highest by ~1%, this is ***ONLY ON SINGLE TARGET AND YOU MUST TAKE STELLAR FLARE*** with the Night Fae covenant and Balance of All Things legendary. The flexibility of Stellar Drift & Fury of Elune outweigh the trivial sim dps gain.
@@ -27,7 +28,7 @@
     * Soulbinds are not yet fully implemented in SimC.
 
 1. How does SimC handle Convoke the Spirits (Night Fae)?
-    * SimC assumes it will cast 2 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, then balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
+    * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, then balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
 
 1. How does SimC handle Kindred Spirits (Kyrian)?
     * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage done by you AND your partner are attributed to you.
