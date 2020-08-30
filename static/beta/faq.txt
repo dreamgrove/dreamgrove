@@ -7,12 +7,12 @@
 
 1. What about bugs that are currently present on the Beta/PTR?
     * The following bugfixes are assumed for the sims:
-        * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff, Fury of Elune Sunfire damage debuff.
+        * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff, Fury of the Skies Sunfire damage debuff.
         * Endless Thirst conduit correctly provides 2% crit per stack.
         * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
 
 1. What is the 'M+' selection in the target dropdown?
-    * This is an **unoptimized, very crude approximation** of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
+    * This is an ***UNOPTIMIZED, VERY CRUDE APPROXIMATION*** of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
         * ~360s total fight time
         * ~130s to ~150s fighting one mob
         * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
