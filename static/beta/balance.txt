@@ -23,18 +23,19 @@ actions.st+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=(buff.
 #### Use FoN on cd without capping
 actions.st+=/force_of_nature,if=ap_check
 #### Use the venthyr ability on cd which is before ca/inc
-actions.st+=/ravenous_frenzy,if=astral_power<70
+actions.st+=/ravenous_frenzy,if=buff.ca_inc.up
 #### Use kindred spirits with solar eclipse and pulsar unless losing a use
 actions.st+=/kindred_spirits,if=fight_remains%%cooldown<10|(eclipse.in_solar|eclipse.solar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=270&astral_power>50
 #### Use ca/inc with convoke unless losing a use and don't overwrite pulsar
-actions.st+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.st+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.st+=/celestial_alignment,if=astral_power>50&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.st+=/incarnation,if=astral_power>50&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 #### Calculates if convoke can be used with ca/inc or pulsar without losing a use
-actions.st+=/variable,name=convoke_condition,value=buff.primordial_arcanic_pulsar.value<240&(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>7)&buff.eclipse_solar.remains>10|fight_remains%%120<15
+actions.st+=/variable,name=convoke_condition,value=covenant.night_fae&(buff.primordial_arcanic_pulsar.value<240&(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>7)&buff.eclipse_solar.remains>10|fight_remains%%120<15)
+actions.st+=/variable,name=save_for_ca_inc,value=(!cooldown.ca_inc.ready|!variable.convoke_condition&covenant.night_fae)
 #### Uses convoke if the above condition is true and you are below 30 asp
 actions.st+=/convoke_the_spirits,if=variable.convoke_condition&astral_power<30
 #### Uses FoE if in an eclipse and tries to line it up with pulsar and adaptive swarm
-actions.st+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<240&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord)
+actions.st+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_pulsar.value<240&(dot.adaptive_swarm_damage.ticking|!covenant.necrolord)&variable.save_for_ca_inc
 #### Use swarm on cd
 actions.st+=/adaptive_swarm,if=
 #### Use oneth starfall procs if starfall isn't up
@@ -42,17 +43,17 @@ actions.st+=/starfall,if=buff.oneths_perception.up&buff.starfall.refreshable
 #### Dumps asp before convoke using the convoke condition to check if convoke is actually about to be cast
 actions.st+=/starsurge,if=covenant.night_fae&variable.convoke_condition&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)
 #### Use starfall with stellar drift, when no starfall is up, you are in lunar eclipse, proc pulsar when above 90 asp or adpative swarm has 8+secs remaining or is in flight
-actions.st+=/starfall,if=talent.stellar_drift.enabled&buff.starfall.refreshable&(buff.eclipse_lunar.remains>6&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>90|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
+actions.st+=/starfall,if=talent.stellar_drift.enabled&!talent.starlord.enabled&buff.starfall.refreshable&(buff.eclipse_lunar.remains>6&eclipse.in_lunar&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>90|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
 #### Use ss oneth procs and dump asp when ca/inc or the venthyr buff is about to fall off or you'd cap asp
 actions.st+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.up&(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)|!buff.ravenous_frenzy.up)|astral_power>90)
 #### Try to make the best of starlord by stacking it up quickly in solar eclipse but pulsar isnt about to be procced
-actions.st+=/starsurge,if=talent.starlord.enabled&(buff.starlord.up|astral_power>50)&buff.starlord.stack<3&(eclipse.in_solar|eclipse.in_both)&buff.primordial_arcanic_pulsar.value<270
+actions.st+=/starsurge,if=talent.starlord.enabled&(buff.starlord.up|astral_power>50)&buff.starlord.stack<3&(eclipse.in_solar|eclipse.in_both)&buff.primordial_arcanic_pulsar.value<270&cooldown.ca_inc.remains>10
 #### Use starsurge in solar eclipse, don't let it proc pulsar (that is handled by either the starfall line or the asp>90 line for starsurge), don't overwrite an oneth proc and let the above line handle starlord
 actions.st+=/starsurge,if=(buff.primordial_arcanic_pulsar.value<270|buff.primordial_arcanic_pulsar.value<250&talent.stellar_drift.enabled)&buff.eclipse_solar.remains>7&eclipse.in_solar&!buff.oneths_perception.up&!talent.starlord.enabled&cooldown.ca_inc.remains>7
 #### Use moons during lunar eclipse or you'd otherwise overcap charges
-actions.st+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
-actions.st+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
-actions.st+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
+actions.st+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check&variable.save_for_ca_inc
+actions.st+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check&variable.save_for_ca_inc
+actions.st+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check&variable.save_for_ca_inc
 #### Use WoE on cd
 actions.st+=/warrior_of_elune
 #### Use starfire to proc solar eclipse, ca/inc has less time than a wrath execute left or only lunar eclipse is up
