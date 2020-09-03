@@ -1,14 +1,11 @@
 1. What's new?
-    * Changes from the August 27th build 9.0.1.35707 are included.
-    * APL has been update for changes, but further optimization may be possible. If you discover an improvement, please submit a report.
-    * Convoke the Spirits will cast ~3.5 heals, better reflecting real-encounter situations
-
-1. Is the new Solstice talent good?
-    * With the Night Fae covenant, in most situations Fury of Elune is better. While Solstice currently sims the highest by ~1%, this is ***ONLY ON SINGLE TARGET AND YOU MUST TAKE STELLAR FLARE*** with the Night Fae covenant and Balance of All Things legendary. The flexibility of Stellar Drift & Fury of Elune outweigh the trivial sim dps gain.
+    * Changes from the September 2nd build 9.0.1.35755 are included.
+    * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
+    * Any changes to spell selection for Convoke the Spirits remains to be investigated.
 
 1. What about bugs that are currently present on the Beta/PTR?
     * The following bugfixes are assumed for the sims:
-        * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff, Fury of the Skies Sunfire damage debuff.
+        * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
         * Endless Thirst conduit correctly provides 2% crit per stack.
         * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
 
@@ -52,6 +49,9 @@
 
 1. How do I sim a legendary?
     * Legendary effects are added to gear as a bonus_id. Add the line for a tabard with the legendary effect from [leg_x_cov.txt](leg_x_cov.txt)
+
+1. How can I see past sims to see how we've been nerfed/buffed?
+    * With the BETA state of Shadowlands and things constantly in development, we can't easily show pre-/post- sims. This may change during the major patches once Shadowlands goes live.
 
 1. I found a bug! Something in the sims doesn't line up with what's in game!
     * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
