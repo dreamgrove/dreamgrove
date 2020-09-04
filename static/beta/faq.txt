@@ -11,7 +11,7 @@
 
 1. What is the 'M+' selection in the target dropdown?
     * This is an ***UNOPTIMIZED, VERY CRUDE APPROXIMATION*** of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
-        * ~360s total fight time
+        * ~450s total fight time
         * ~130s to ~150s fighting one mob
         * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
         * Random 0s to ~20s wait after each fight
@@ -38,6 +38,7 @@
     * The base profile can be found in [sandbag.txt](sandbag.txt)
 
 1. How can I run my own beta sims?
+    * Full instructions for building SimC can be found in the SimC wiki [HowToBuild](https://github.com/simulationcraft/simc/wiki/HowToBuild) page.
     * Instructions on creating the command line version and how to use it can be found in [how_to_build.txt](how_to_build.txt)
     * A copy of the command line program can be found as `simc_(date).rar` but this can often be outdated.
 
