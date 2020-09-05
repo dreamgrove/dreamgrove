@@ -55,10 +55,10 @@
     * With the BETA state of Shadowlands and things constantly in development, we can't easily show pre-/post- sims. This may change during the major patches once Shadowlands goes live.
 
 1. I found a bug! Something in the sims doesn't line up with what's in game!
-    * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
+    * Submit an issue report with the [Bugs/Improvements/Questions](https://github.com/balance-simc/Balance-SimC/issues/new/choose) link
 
 1. I found improvements to the APL that leads to higher DPS!
-    * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
+    * Submit an issue report with the [Bugs/Improvements/Questions](https://github.com/balance-simc/Balance-SimC/issues/new/choose) link
 
 1. What about _____ ?
-    * Submit an issue report with the [Bugs/Improvements/Questions](https://forms.gle/agYZeEkPCaonyJf5A) link
+    * Submit an issue report with the [Bugs/Improvements/Questions](https://github.com/balance-simc/Balance-SimC/issues/new/choose) link
