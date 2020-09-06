@@ -1,7 +1,8 @@
 ## Shadowland BETA Balance Druid APL
 
 ### Precast 2 wrath and a surge if below 4 targets
-actions.precombat=moonkin_form
+actions.precombat=snapshot_stats
+actions.precombat+=/moonkin_form
 actions.precombat+=/wrath
 actions.precombat+=/wrath
 actions.precombat+=/starsurge,if=spell_targets.starfall<4
