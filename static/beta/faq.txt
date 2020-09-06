@@ -2,6 +2,7 @@
     * Changes from the September 2nd build 9.0.1.35755 are included.
     * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
     * Any changes to spell selection for Convoke the Spirits remains to be investigated.
+    * All profiles now include 3 conduits: the covenant one (except kyrian), Fury of the Skies, and Precise Alignment.
 
 1. What about bugs that are currently present on the Beta/PTR?
     * The following bugfixes are assumed for the sims:
@@ -17,8 +18,8 @@
         * Random 0s to ~20s wait after each fight
 
 1. What about conduits?
-    * All sims include the covenant specific conduits (except for Kyrian) and the Fury of the Skies conduit at base rank.
-    * The other potency conduits at current tuning contribute less than 1% and are not worth simming.
+    * All sims include the covenant specific conduits (except for Kyrian), Fury of the Skies, and Precise Alignment conduits at base rank.
+    * Umbral Intesity and Stellar Inspiration at current tuning contribute less than 1% and are not worth simming.
     * The Kyrian conduit can desync Kindred Spirits from other CDs so is not worth simming.
 
 1. What about soulbinds?
