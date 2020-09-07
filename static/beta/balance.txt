@@ -28,8 +28,8 @@ actions.st+=/ravenous_frenzy,if=buff.ca_inc.up
 #### Use kindred spirits with solar eclipse and pulsar unless losing a use
 actions.st+=/kindred_spirits,if=fight_remains%%cooldown<10|(eclipse.in_solar|eclipse.solar_next|buff.ca_inc.up)|buff.primordial_arcanic_pulsar.value>=270&astral_power>50
 #### Use ca/inc with convoke unless losing a use and don't overwrite pulsar
-actions.st+=/celestial_alignment,if=astral_power>50&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.st+=/incarnation,if=astral_power>50&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.st+=/celestial_alignment,if=astral_power>50&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains<22+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.st+=/incarnation,if=astral_power>50&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains<32+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 #### Calculates if convoke can be used with ca/inc or pulsar without losing a use
 actions.st+=/variable,name=convoke_condition,value=covenant.night_fae&(buff.primordial_arcanic_pulsar.value<240&(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>7)&buff.eclipse_solar.remains>10|fight_remains%%120<15)
 actions.st+=/variable,name=save_for_ca_inc,value=(!cooldown.ca_inc.ready|!variable.convoke_condition&covenant.night_fae)
@@ -45,10 +45,11 @@ actions.st+=/starfall,if=buff.oneths_perception.up&buff.starfall.refreshable
 actions.st+=/starsurge,if=covenant.night_fae&variable.convoke_condition&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)
 #### Use starfall with stellar drift, when no starfall is up, you are in lunar eclipse, proc pulsar when above 90 asp or adpative swarm has 8+secs remaining or is in flight
 actions.st+=/starfall,if=talent.stellar_drift.enabled&!talent.starlord.enabled&buff.starfall.refreshable&(buff.eclipse_lunar.remains>6&eclipse.in_lunar&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>90|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
+actions.st+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.eclipse_solar.up|buff.eclipse_lunar.up)&astral_power>90
 #### Use ss oneth procs and dump asp when ca/inc or the venthyr buff is about to fall off or you'd cap asp
 actions.st+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.up&(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)|!buff.ravenous_frenzy.up)|astral_power>90)
 #### Try to make the best of starlord by stacking it up quickly in solar eclipse but pulsar isnt about to be procced
-actions.st+=/starsurge,if=talent.starlord.enabled&(buff.starlord.up|astral_power>50)&buff.starlord.stack<3&(eclipse.in_solar|eclipse.in_both)&buff.primordial_arcanic_pulsar.value<270&cooldown.ca_inc.remains>10
+actions.st+=/starsurge,if=talent.starlord.enabled&(buff.starlord.up|astral_power>90)&buff.starlord.stack<3&(buff.eclipse_solar.up|buff.eclipse_lunar.up)&buff.primordial_arcanic_pulsar.value<270&(cooldown.ca_inc.remains>10|!variable.convoke_condition)
 #### Use starsurge in solar eclipse, don't let it proc pulsar (that is handled by either the starfall line or the asp>90 line for starsurge), don't overwrite an oneth proc and let the above line handle starlord
 actions.st+=/starsurge,if=(buff.primordial_arcanic_pulsar.value<270|buff.primordial_arcanic_pulsar.value<250&talent.stellar_drift.enabled)&buff.eclipse_solar.remains>7&eclipse.in_solar&!buff.oneths_perception.up&!talent.starlord.enabled&cooldown.ca_inc.remains>7
 #### Use moons during lunar eclipse or you'd otherwise overcap charges
@@ -177,18 +178,19 @@ actions.boat+=/starfall,if=cooldown.ca_inc.up&cooldown.convoke_the_spirits.up&co
 #### Use fon on cd without cappiung
 actions.boat+=/force_of_nature,if=ap_check
 #### Use frenzy before ca/inc below 70 asp
-actions.boat+=/ravenous_frenzy,if=astral_power<70
+actions.boat+=/ravenous_frenzy,if=buff.ca_inc.up
 #### Use kindred when you'd lose a use otherwise or in solar eclipse on st/lunar in aoe, starfall is up in aoe or when ca/inc is about to be used
 actions.boat+=/kindred_spirits,if=fight_remains%%cooldown<10|(eclipse.in_solar|eclipse.solar_next|buff.ca_inc.up)&(eclipse.solar_next&spell_targets.starfire=1|eclipse.lunar_next&spell_targets.starfire>1)&(!variable.is_aoe|buff.starfall.up)|(cooldown.ca_inc.ready&astral_power<70)
 #### As with the other action lists, calculates whether starfall won't fall off by using a ss
 actions.boat+=/variable,name=starfall_wont_fall_off,value=astral_power>80-(buff.starfall.remains*3%spell_haste)-(dot.fury_of_elune.remains*5)&buff.starfall.remains>gcd.max
 #### Calculates whether you would lose a convoke cast by lining up with ca/inc
 actions.boat+=/variable,name=convoke_condition,value=(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>6)&!cooldown.ca_inc.ready|fight_remains%%120<6
+actions.boat+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.balance_of_all_things_nature.stack_value>70|buff.balance_of_all_things_arcane.stack_value>70)&!variable.is_aoe
 #### Spam ss with 3+ crit buff legi stacks when fighting 1 target and ca/inc isn't about to be used
 actions.boat+=/starsurge,if=(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)&(!variable.is_aoe&(!cooldown.convoke_the_spirits.up|!variable.convoke_condition|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
 #### Use ca/inc without overcapping, dont overwrite an existing one and try to line up ca with convoke unless you would lose a cast
-actions.boat+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.boat+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.boat+=/celestial_alignment,if=(astral_power>50|covenant.night_fae)&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<22+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.boat+=/incarnation,if=(astral_power>50|covenant.night_fae)&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<32+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 #### Use convoke with the above condition and a new crit buff
 actions.boat+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)
 #### Use foe within any eclipse or with swarm
@@ -209,9 +211,8 @@ actions.boat+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|c
 actions.boat+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up
 #### Use woe on cd
 actions.boat+=/warrior_of_elune
-#### Use starfire when in lunar eclipse or fighting more than 3 targets or to activate solar eclipse
-actions.boat+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up|buff.warrior_of_elune.up&ap_check
-#### Use wrath either in solar eclipse with less than 4 targets or to active lunar eclipse
-actions.boat+=/wrath,if=buff.eclipse_solar.up&(!buff.eclipse_lunar.up|spell_targets.starfire=1)&spell_targets<=3&(buff.ca_inc.remains>execute_time|!buff.ca_inc.up)|eclipse.lunar_next|variable.is_aoe&(eclipse.any_next|buff.ca_inc.remains<action.starfire.execute_time&buff.ca_inc.up)
-#### Fill with starfire in lunar eclipse or to proc solar eclipse or in solar eclipse on 4+ targets
+actions.boat+=/variable,name=starfire_in_solar,value=spell_targets.starfire>6+floor(mastery_value%20)+floor(buff.starsurge_empowerment.stack%4)
+#### Use wrath in solar eclipse or the last starfire wont fit into a ca/inc buff. TODO: check proper haste amount
+actions.boat+=/wrath,if=!variable.is_aoe&(buff.eclipse_solar.remains>execute_time|eclipse.in_solar)|eclipse.in_solar&!variable.starfire_in_solar|buff.ca_inc.remains<action.starfire.execute_time&buff.ca_inc.up&variable.is_aoe|buff.ravenous_frenzy.up&spell_haste>0.6|eclipse.lunar_next
+#### Use starfire if in lunar eclipse, in solar eclipse on 4+ targets or to proc solar eclipse
 actions.boat+=/starfire
