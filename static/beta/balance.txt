@@ -41,13 +41,13 @@ actions.st+=/fury_of_elune,if=eclipse.state=3&ap_check&buff.primordial_arcanic_p
 actions.st+=/adaptive_swarm,if=
 #### Use oneth starfall procs if starfall isn't up
 actions.st+=/starfall,if=buff.oneths_perception.up&buff.starfall.refreshable
+actions.st+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.eclipse_solar.up|buff.eclipse_lunar.up)&astral_power>90
 #### Dumps asp before convoke using the convoke condition to check if convoke is actually about to be cast
 actions.st+=/starsurge,if=covenant.night_fae&variable.convoke_condition&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)
 #### Use starfall with stellar drift, when no starfall is up, you are in lunar eclipse, proc pulsar when above 90 asp or adpative swarm has 8+secs remaining or is in flight
 actions.st+=/starfall,if=talent.stellar_drift.enabled&!talent.starlord.enabled&buff.starfall.refreshable&(buff.eclipse_lunar.remains>6&eclipse.in_lunar&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>90|dot.adaptive_swarm_damage.remains>8|action.adaptive_swarm_damage.in_flight)
-actions.st+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.eclipse_solar.up|buff.eclipse_lunar.up)&astral_power>90
 #### Use ss oneth procs and dump asp when ca/inc or the venthyr buff is about to fall off or you'd cap asp
-actions.st+=/starsurge,if=buff.oneths_clear_vision.up|(buff.ca_inc.up&(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)|!buff.ravenous_frenzy.up)|astral_power>90)
+actions.st+=/starsurge,if=buff.oneths_clear_vision.up|buff.ca_inc.up&(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)|!buff.ravenous_frenzy.up)|astral_power>90&eclipse.state=3
 #### Try to make the best of starlord by stacking it up quickly in solar eclipse but pulsar isnt about to be procced
 actions.st+=/starsurge,if=talent.starlord.enabled&(buff.starlord.up|astral_power>90)&buff.starlord.stack<3&(buff.eclipse_solar.up|buff.eclipse_lunar.up)&buff.primordial_arcanic_pulsar.value<270&(cooldown.ca_inc.remains>10|!variable.convoke_condition)
 #### Use starsurge in solar eclipse, don't let it proc pulsar (that is handled by either the starfall line or the asp>90 line for starsurge), don't overwrite an oneth proc and let the above line handle starlord
