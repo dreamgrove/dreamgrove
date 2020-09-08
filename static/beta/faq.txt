@@ -3,6 +3,10 @@
     * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
     * Any changes to spell selection for Convoke the Spirits remains to be investigated.
     * All profiles now include 3 conduits: the covenant one (except kyrian), Fury of the Skies, and Precise Alignment.
+    * With Starlord, you will want to `/cancelaura` when you:
+        * Have less than 5 seconds remaining on the buff
+        * Enter a new Eclipse
+        * Have 90+ AP or are using BoAT
 
 1. What about bugs that are currently present on the Beta/PTR?
     * The following bugfixes are assumed for the sims:
@@ -26,7 +30,7 @@
     * Soulbinds are not yet fully implemented in SimC.
 
 1. How does SimC handle Convoke the Spirits (Night Fae)?
-    * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, then balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
+    * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, at least 1 Wrath, then roughly balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
 
 1. How does SimC handle Kindred Spirits (Kyrian)?
     * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage done by you AND your partner are attributed to you.
@@ -39,7 +43,7 @@
     * The base profile can be found in [sandbag.txt](sandbag.txt)
 
 1. How can I run my own beta sims?
-    * Full instructions for building SimC can be found in the SimC wiki [HowToBuild](https://github.com/simulationcraft/simc/wiki/HowToBuild) page.
+    * Full instructions for building SimC can be found in the SimC wiki <a href="https://github.com/simulationcraft/simc/wiki/HowToBuild" target="_top">HowToBuild</a> page.
     * Instructions on creating the command line version and how to use it can be found in [how_to_build.txt](how_to_build.txt)
     * A copy of the command line program can be found as `simc_(date).rar` but this can often be outdated.
 
