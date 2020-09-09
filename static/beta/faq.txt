@@ -4,15 +4,15 @@
     * Any changes to spell selection for Convoke the Spirits remains to be investigated.
     * All profiles now include 3 conduits: the covenant one (except kyrian), Fury of the Skies, and Precise Alignment.
     * With Starlord, you will want to `/cancelaura` when you:
-        * Have less than 5 seconds remaining on the buff
+        * Have less than 6 seconds remaining on the buff
         * Enter a new Eclipse
         * Have 90+ AP or are using BoAT
+    * Pool for 90+ AP before casting Celestial Alingment/Incarnation. ***This also applies to the opener***.
 
-1. What about bugs that are currently present on the Beta/PTR?
-    * The following bugfixes are assumed for the sims:
-        * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
-        * Endless Thirst conduit correctly provides 2% crit per stack.
-        * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
+1. What about bugs on the Beta/PTR? Whicha are assumed to be fixed for the sims?
+    * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
+    * Endless Thirst conduit correctly provides 2% crit per stack.
+    * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
 
 1. What is the 'M+' selection in the target dropdown?
     * This is an ***UNOPTIMIZED, VERY CRUDE APPROXIMATION*** of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
