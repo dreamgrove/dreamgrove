@@ -8,6 +8,7 @@
         * Enter a new Eclipse
         * Have 90+ AP or are using BoAT
     * Pool for 90+ AP before casting Celestial Alingment/Incarnation. ***This also applies to the opener***.
+    * Kyrian makes more effective alignment of Kindred Spirits & Balance of All Things crit buff.
 
 1. What about bugs on the Beta/PTR? Whicha are assumed to be fixed for the sims?
     * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
