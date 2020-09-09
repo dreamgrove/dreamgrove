@@ -10,4 +10,16 @@ Sep 9:
     * Pool for 90+ AP before casting Celestial Alingment/Incarnation. ***This also applies to the opener***.
     * Kyrian makes more effective alignment of Kindred Spirits & Balance of All Things crit buff.
 
-Sep 9:  Initial.
+Sep 3:
+    * Changes from the September 2nd build 9.0.1.35755 are included.
+    * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
+    * Any changes to spell selection for Convoke the Spirits remains to be investigated.
+
+Aug 30:
+    * Changes from the August 27th build 9.0.1.35707 are included.
+    * APL has been update for changes, but further optimization may be possible. If you discover an improvement, please submit a report.
+    * Convoke the Spirits will cast ~3.5 heals, better reflecting real-encounter situations
+
+Aug 19
+    * Legendary & covenant changes from the August 19th build 9.0.1.35598 are included.
+    * Some conduits are included. See question below.
