@@ -46,7 +46,7 @@ Shooting Stars baseline had an extremely minor impact as it’s tuned very low. 
 
 As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.
 
-The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
+The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea. 
 
 ## DPS Talents 
 
@@ -136,7 +136,9 @@ Outclassed in all aspects by nearly all other Legendaries in all scenarios. On s
 
 Has the upside of always having some value since it now works off Astral Power spent.
 
-If it extends Celestial ALignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
+If it extends Celestial Alignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
+
+Currently bugged with Incarnation and gives you 100% crit instead of 10%.
 
 ### Timeworn Dreambinder
 
@@ -178,9 +180,13 @@ Simple damage increase with the only caveat being that dots and Starfall cast by
 
 ## Bugs
 
+Moonkin currently has some pretty major bugs, some of which increase our damage output by a massive amount. This could potentially make it much harder to tune the spec if the bugs aren't fixed soon. A prime example of this is the Venthyr conduit Endless Thirst giving you 20% crit per stack instead of 2%. This comes out to being about a 10% overall damage increase over a non bugged conduit. Below are some of our most noticeable and important bugs currently.
+
 This will repeat some earlier mentioned bugs.
 
 Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.
+
+Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.  
 
 Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.
 
