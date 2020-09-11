@@ -1,7 +1,9 @@
 ## Shadowland BETA Balance Druid APL
 
 ### Precast 2 wrath and a surge if below 4 targets
-actions.precombat=snapshot_stats
+actions.precombat=flask
+actions.precombat+=/food
+actions.precombat+=/snapshot_stats
 actions.precombat+=/moonkin_form
 actions.precombat+=/wrath
 actions.precombat+=/wrath
@@ -10,6 +12,7 @@ actions.precombat+=/starsurge,if=spell_targets.starfall<4
 ### Decide action list based on situation
 actions=variable,name=is_aoe,value=spell_targets.starfall>1
 actions+=/berserking,if=buff.ca_inc.up&!cooldown.convoke_the_spirits.up
+actions+=/potion,if=buff.ca_inc.up
 actions+=/use_items
 actions+=/run_action_list,name=dreambinder,if=runeforge.timeworn_dreambinder.equipped
 actions+=/run_action_list,name=boat,if=runeforge.balance_of_all_things.equipped

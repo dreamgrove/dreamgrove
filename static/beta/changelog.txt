@@ -1,3 +1,10 @@
+Sep 11:
+    * The following consumables are used:
+        * Celestial Guidance weapon enchant
+        * Feast of Gluttonous Hedonism
+        * Flask of Spectral Power
+        * Potion of Sectral Intellect
+
 Sep 9: 
     * Changes from the September 2nd build 9.0.1.35755 are included.
     * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.

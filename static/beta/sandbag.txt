@@ -9,6 +9,8 @@ report_details=0
 max_time=300
 
 tabard=,id=31405
+shirt=,id=6833,enchant=celestial_guidance
+
 gear_intellect=1500
 gear_crit_rating=350
 gear_haste_rating=350
@@ -16,3 +18,7 @@ gear_mastery_rating=700
 gear_versatility_rating=175
 
 soulbind=evolved_swarm:1/conflux_of_elements:1/endless_thirst:1/fury_of_the_skies:1/precise_alignment:1
+
+potion=spectral_intellect
+flask=spectral_flask_of_power
+food=feast_of_gluttonous_hedonism

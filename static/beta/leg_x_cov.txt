@@ -1,11 +1,11 @@
 copy=kyrian
-covenant="kyrian"
+covenant=kyrian
 copy=nightfae
-covenant="night_fae"
+covenant=night_fae
 copy=venthyr
-covenant="venthyr"
+covenant=venthyr
 copy=necrolord
-covenant="necrolord"
+covenant=necrolord
 
 copy=kyrian-oneth,kyrian
 tabard=,id=31405,bonus_id=7087
