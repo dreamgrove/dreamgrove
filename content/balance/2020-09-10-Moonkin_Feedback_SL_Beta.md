@@ -46,7 +46,9 @@ Shooting Stars baseline had an extremely minor impact as it’s tuned very low. 
 
 As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.
 
-The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea. 
+The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
+
+Moonkin currently has some major bugs, some of which increase our damage output by a massive amount. Most notably the Venthyr conduit makes our output 10% higher than it is on its own. This means numbers seen on beta aren’t actually an accurate representation of our current tuning and could potentially make it much harder to tune the spec if the bugs aren’t fixed soon. All bugs are listed at the bottom of this post.
 
 ## DPS Talents 
 
@@ -179,8 +181,6 @@ Simple damage increase with the only caveat being that dots and Starfall cast by
 
 
 ## Bugs
-
-Moonkin currently has some pretty major bugs, some of which increase our damage output by a massive amount. This could potentially make it much harder to tune the spec if the bugs aren't fixed soon. A prime example of this is the Venthyr conduit Endless Thirst giving you 20% crit per stack instead of 2%. This comes out to being about a 10% overall damage increase over a non bugged conduit. Below are some of our most noticeable and important bugs currently.
 
 This will repeat some earlier mentioned bugs.
 
