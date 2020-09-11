@@ -7,8 +7,11 @@ title: Moonkin Feedback - Shadowlands Beta
 ---
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
-General
-Scaling
+## General
+
+
+### Scaling
+
 Wrath Haste caps at 70% Haste which is reached with just base 13.7% Haste during Bloodlust+Celestial Alignment/Incarnation making high Haste feel very bad. Previously we could make slight use of this Haste by switching to Starfire on single target but now due to Starsurge Empowerment you are often stuck casting Wraths far below the gcd cap.
 Our damage is very focused in our Celestial Alignment/Incarnation windows due to mastery double dipping and since it is our best stat by a mile we will have a lot of it. The more secondaries and thus mastery we have the more our damage will be focused into the cooldown window making all other timeframes feel worse and worse. Our cooldown being 3 minutes makes this worse.
 The plentiful amount of crit buffs make crit undesirable or even useless especially when combined with the legendary Balance of All Things (more about that later)
@@ -36,9 +39,10 @@ Shooting Stars baseline had an extremely minor impact as it’s tuned very low. 
 As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.
 The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
 
-### DPS Talents 
+## DPS Talents 
 
 ### Tier 15:
+
 Nature’s Balance is the clear winner here and solves the problem of having to generate up to 50 Astral Power to start using a filler. Starting from 0 Astral Power means that during AoE and no further CDs it takes about 12 seconds before you can use your first Starfall.
 Trees have their niche in tanking but Warrior of Elune is just there and fills a similar purpose as NB while being significantly worse on single target and being roughly on par in aoe.
 
@@ -58,8 +62,8 @@ Twin Moons and Stellar Drift both fit the exact same “niche” meaning one wil
 All talents fill the same role which is Astral Power generation and sqrt AoE scaling and with current tuning Fury of Elune simply stands out due to dealing significantly more damage while proving similar Astral Power.
 Moons do not scale as well with AoE since only Full Moon splashes meaning it will always fall off on multiple targets which is fine but even on single target it’s outclassed.
 
+## Covenants
 
-### Covenants
 Generally only Night Fae is the only Covenant ability that feels good to use (outside its major problems mentioned later). The others are either passive or just used on cd and have barely any impact if any at all on the rotation as they do not interact with the spec itself to a relevant degree.
  
 ### Kyrian
@@ -87,7 +91,7 @@ Further forces a significant amount of your damage into our cooldown window ever
 At higher ranks the conduit that increases the crit chance with each cast will make us go over 100% crit together with various base crit increases like Incarnation.
 Its downside seems out of place considering no other covenant ability has a negative effect and for a flavor effect it is way too dangerous. On high stacks it can nearly one shot you in the worst case.
 
-### Legendaries
+## Legendaries
  
 ### Balance of All Things
 
@@ -113,9 +117,7 @@ Significantly changes playstyle on single target
 Especially with the move away from spender damage it has lost a lot of value and has anti synergy with the Starsurge Empowerments making it fall off.
 Completely useless in AoE as it is impossible to keep up the buff when you can only cast Starfall every 10 seconds.
 
-
-
-### Conduits
+## Conduits
 
 These are weirdly or not all tuned. Fury of the Skies allows dots to be of use even with current tuning.
 The base profile used can be found at https://www.dreamgrove.gg/beta/ in the sandbad.txt file on the bottom left.
@@ -126,20 +128,20 @@ Single target:
 5 targets:  
 ![Image](https://i.gyazo.com/022b335be22c52f8eee7872a6b1eb06b.png)  
   
-## Deep Allegiance (Kyrian)
+### Deep Allegiance (Kyrian)
 
 At earlier ranks can be a dps loss due to desyncing with common 2min cds.
 
-## Endless Thirst (Venthyr)
+### Endless Thirst (Venthyr)
 
 Very strong but as mentioned in the Venthyr section can cause an overcap of Crit.
 Currently bugged to give 10 times the intended Crit
 
-## Evolved Swarm (Necrolord)
+### Evolved Swarm (Necrolord)
 
 Our dots being weak means this is weak as well.
 
-## Conflux of Elements (Night Fae)
+### Conflux of Elements (Night Fae)
 
 Simple damage increase with the only caveat being that dots and Starfall cast by Convoke are not affected by it.
 
