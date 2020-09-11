@@ -5,6 +5,9 @@ published: true
 patch: "8.0"
 title: Moonkin Feedback - Shadowlands Beta
 ---
+
+This is an article made to give feedback on Moonkins current state in the Shadowlands Beta. It also serves to educate people on many of the common problems Moonkin suffers from currently in Shadowlands. If you disagree with anything said in this article that is completely ok and you should voice your feedback on the forums or anywhere else regardless. 
+
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
 ## General
