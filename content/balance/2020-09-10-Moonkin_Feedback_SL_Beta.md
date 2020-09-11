@@ -25,7 +25,7 @@ The plentiful amount of crit buffs makes crit undesirable or even useless especi
 ### AoE and Starfall
 
 A lot of our AoE damage comes from Starfall of which you can’t have more than one up at any time. This means that once enough Astral Power is generated during AoE any further Astral Power has to be used on Starsurge which is not a relevant dps increase or even a dps loss with enough targets (this includes the Empowerment bonus).
-This means for high Haste or higher Astral Power generation to feel good we need to be able to effectively spend our Astral Power in some form. This could be done with a stackable Starfall, a hasted Starfall, an option to condense the Starfall damage, a way to empower Starfall with more Astral Power or something along those lines.
+This means for high Haste or higher Astral Power generation to feel good we need to be able to effectively spend our Astral Power in some form. A solution could be a stackable Starfall, a (duration) hasted Starfall, an option to condense the Starfall damage, a way to empower Starfall with more Astral Power or something of similar effect.
 
 Putting more power into Starsurge would start us down a road similar to BfA where we only used Starfall on 7 or more targets with the standard gear setup. Additionally casting a big single target nuke in AoE will always feel bad.
 
@@ -34,7 +34,7 @@ Putting more power into Starsurge would start us down a road similar to BfA wher
 This recent change made Starsurge buff all following fillers in that Eclipse hidden in the tooltip of each Eclipse. Wrath is buffed by an additive 8% during Solar Eclipse per starsurge cast, and the splash damage modifier of Starfire is buffed by an additive 25% with each cast during Lunar Eclipse.
 
 While more damage is better than no compensation for the removal of the Eclipse extension (which was arguably a good decision), this brings with it a number of problems.
-Later Starsurges become worth less than earlier Starsurges in each Eclipse. This means pooling Astral Power is now always a dps loss which is our only way of reliable handling movement during st encounters, effectively nerfing our already lacking movement.
+Later Starsurges become worth less than earlier Starsurges in each Eclipse. What this results in is that pooling Astral Power is now always a dps loss which is our only way of reliable handling movement during st encounters, effectively nerfing our already lacking movement.
 
 As mentioned earlier, making Starsurge increase AoE damage is a dangerous path as seen in BfA. As a whole the Starsurge Empowerment feels like an afterthought and only has a negative impact on gameplay.
 
@@ -62,7 +62,7 @@ Trees have their niche in tanking but Warrior of Elune is just there and fills a
 
 Soul of the Forest is significantly outclassed in all aspects which is fine as it’s the most passive talent.
 
-Starlord lasting 20 seconds has problematic timing implications with eclipses lasting 15 seconds. Currently it is the best play to cancel Starlord when it has a low duration left, allowing for a relevant 1.5% dps increase. Starlord becomes completely useless in AoE scenarios as Starfall costs 50 Astral Power and lasts 10 seconds meaning you will have at best 2 stacks for a short window.
+Starlord lasting 20 seconds has problematic timing implications with eclipses lasting 15 seconds. Currently it is the best play to cancel Starlord when it has a low duration left, allowing for a relevant 1.5% dps increase. Starlord becomes completely useless in AoE scenarios as Starfall costs 50 Astral Power and lasts 20 seconds meaning you will have at best 2 stacks for a short window.
 
 Incarnation ends up being the go to since it works in all scenarios.
 
@@ -70,7 +70,7 @@ Incarnation ends up being the go to since it works in all scenarios.
 
 Stellar Flare is similar to Starlord in that it is only good on single target and starts feeling very bad with any further added targets.
 
-Twin Moons and Stellar Drift both fit the exact same “niche” meaning one will always be picked over the other. Currently Starfall is strong enough and or dots are weak enough for Stellar Drift to always be the superior pick when deciding between the two. A talent move seems like the only good solution in this case.
+Twin Moons and Stellar Drift both fit the exact same “niche” meaning one will always be picked over the other. Currently Starfall is strong enough and or dots are weak enough for Stellar Drift to always be the superior pick when deciding between the two. A talent move seems like the only good solution in this case as both significantly improve how AoE feels.
 
 ### Tier 50:
 
