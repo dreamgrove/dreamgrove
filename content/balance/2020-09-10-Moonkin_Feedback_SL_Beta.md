@@ -189,4 +189,4 @@ Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though it
 
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
 
-Door of Shadows cannot be cast while moving with stellar drift.
+Door of Shadows cannot be cast while moving with Stellar Drift.
