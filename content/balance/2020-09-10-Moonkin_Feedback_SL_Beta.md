@@ -138,6 +138,8 @@ Has the upside of always having some value since it now works off Astral Power s
 
 If it extends Celestial Alignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
 
+Currently bugged with Incarnation and gives you 100% crit instead of 10%.
+
 ### Timeworn Dreambinder
 
 Significantly changes your playstyle on single target.
@@ -178,9 +180,13 @@ Simple damage increase with the only caveat being that dots and Starfall cast by
 
 ## Bugs
 
+Moonkin currently has some pretty major bugs, some of which increase our damage output by a massive amount. This could potentially make it much harder to tune the spec if the bugs aren't fixed soon. A prime example of this is the Venthyr conduit Endless Thirst giving you 20% crit per stack instead of 2%. This comes out to being about a 10% overall damage increase over a non bugged conduit. Below are some of our most noticeable and important bugs currently.
+
 This will repeat some earlier mentioned bugs.
 
 Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.
+
+Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.  
 
 Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.
 
@@ -193,5 +199,3 @@ Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though it
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
 
 Door of Shadows cannot be cast while moving with Stellar Drift.
-
-Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.  
