@@ -48,7 +48,7 @@ As a whole our Astral Power generation is very low which leads to rather stale g
 
 The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
 
-Moonkin currently has some major bugs, some of which increase our damage output by a massive amount. Most notably the Venthyr conduit makes our output 10% higher than it is on its own. This means numbers seen on beta aren’t actually an accurate representation of our current tuning and could potentially make it much harder to tune the spec if the bugs aren’t fixed soon. All bugs are listed at the bottom of this post.
+Moonkin currently has some major bugs, some of which increase our damage output by a massive amount. Most notably the Venthyr conduit makes our output 10% higher than it should be. This means numbers seen on beta aren’t actually an accurate representation of our current tuning and could potentially make it much harder to tune the spec if the bugs aren’t fixed soon. All bugs are listed at the bottom of this post.
 
 ## DPS Talents 
 
