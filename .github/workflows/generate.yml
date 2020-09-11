@@ -43,3 +43,10 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: update sims
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: generate_sims
+          path: |
+            static/beta/by_*.html
+            static/beta/*.js
