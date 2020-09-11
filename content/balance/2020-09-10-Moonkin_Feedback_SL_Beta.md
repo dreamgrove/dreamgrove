@@ -46,7 +46,7 @@ Shooting Stars baseline had an extremely minor impact as it’s tuned very low. 
 
 As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.
 
-The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
+The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea. 
 
 ## DPS Talents 
 
@@ -136,7 +136,7 @@ Outclassed in all aspects by nearly all other Legendaries in all scenarios. On s
 
 Has the upside of always having some value since it now works off Astral Power spent.
 
-If it extends Celestial ALignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
+If it extends Celestial Alignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
 
 ### Timeworn Dreambinder
 
@@ -193,3 +193,5 @@ Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though it
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
 
 Door of Shadows cannot be cast while moving with Stellar Drift.
+
+Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.  
