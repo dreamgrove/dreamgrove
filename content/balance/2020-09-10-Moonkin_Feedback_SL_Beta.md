@@ -25,7 +25,7 @@ The plentiful amount of crit buffs makes crit undesirable or even useless especi
 ### AoE and Starfall
 
 A lot of our AoE damage comes from Starfall of which you can’t have more than one up at any time. This means that once enough Astral Power is generated during AoE any further Astral Power has to be used on Starsurge which is not a relevant dps increase or even a dps loss with enough targets (this includes the Empowerment bonus).
-This means for high Haste or higher Astral Power generation to feel good we need to be able to effectively spend our Astral Power in some form. A solution could be a stackable Starfall, a (duration) hasted Starfall, an option to condense the Starfall damage, a way to empower Starfall with more Astral Power or something of similar effect.
+For high Haste or higher Astral Power generation to feel good we need to be able to effectively spend our Astral Power in some form. A solution could be a stackable Starfall, a (duration) hasted Starfall, an option to condense the Starfall damage, a way to empower Starfall with more Astral Power or something of similar effect.
 
 Putting more power into Starsurge would start us down a road similar to BfA where we only used Starfall on 7 or more targets with the standard gear setup. Additionally casting a big single target nuke in AoE will always feel bad.
 
