@@ -19,8 +19,9 @@
     * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
     * Endless Thirst conduit correctly provides 2% crit per stack.
     * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
+    * Feast of Gluttonous Hedonism grants 72 Intellect as per the tooltip instead of giving the same buff as the BFA feast.
 
-1. What is the 'M+' selection in the target dropdown?
+1. What is the 'D' selection in the target dropdown?
     * This is an ***UNOPTIMIZED, VERY CRUDE APPROXIMATION*** of a random dungeon-like encounter. The details can be found in [mplus.txt](mplus.txt). It consists of:
         * ~450s total fight time
         * ~130s to ~150s fighting one mob
@@ -33,7 +34,7 @@
     * The Kyrian conduit can desync Kindred Spirits from other CDs so is not worth simming.
 
 1. What about soulbinds?
-    * Soulbinds are not yet fully implemented in SimC.
+    * As the value of different soulbind paths depend on the relative value of traits versus the conduit sockets, soulbinds will be included once it is known what rank of conduits will be available during the first tier.
 
 1. How does SimC handle Convoke the Spirits (Night Fae)?
     * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, at least 1 Wrath, then roughly balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
