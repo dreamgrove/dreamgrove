@@ -1,3 +1,6 @@
+Sep 12:
+    * Add '1T Move' selection for approximation of random light movement.
+
 Sep 11:
     * The following consumables are used:
         * Celestial Guidance weapon enchant
