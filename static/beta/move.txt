@@ -1,0 +1,1 @@
+raid_events+=/movement,players_only=1,cooldown=45,cooldown_stddev=15,distance=25,distance_min=20,distance_max=30,first_pct=95

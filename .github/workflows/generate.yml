@@ -33,8 +33,10 @@ jobs:
         run: python generate_by_combo.py -t 4 $APIKEY
       - name: 5 target combo
         run: python generate_by_combo.py -t 5 $APIKEY
-      - name: M+ combo
+      - name: dungeon combo
         run: python generate_by_combo.py -t 0 $APIKEY
+      - name: 1t move combo
+        run: python generate_by_combo.py --target=-1 $APIKEY
       - name: talent sims
         run: python generate_by_talent.py $APIKEY
       - name: update repo

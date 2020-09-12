@@ -13,7 +13,7 @@ post_url = 'https://mimiron.raidbots.com/sim'
 get_url = 'https://mimiron.raidbots.com/api/job/'
 report_url = 'https://mimiron.raidbots.com/simbot/report/'
 
-profile = apl = sets = mplus = ""
+profile = apl = sets = mplus = move = ""
 
 covs = []
 legs = {}
@@ -50,6 +50,9 @@ with open('talent_profiles.txt', 'r') as fp:
 with open('mplus.txt', 'r') as fp:
     mplus = fp.read()
 
+with open('move.txt', 'r') as fp:
+    move = fp.read()
+
 buffer = {}
 
 for cov in covs:
@@ -57,6 +60,8 @@ for cov in covs:
         name = cov + ' - ' + leg
         if args.targets == 0:
             target_str = 'target_error=0.2\n' + mplus
+        elif args.targets < 0:
+            target_str = 'target_error=0.1\ndesired_targets=' + targets.strip('-') + '\n' + move
         else:
             target_str = 'target_error=0.1\ndesired_targets=' + targets
 

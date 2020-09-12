@@ -65,6 +65,8 @@ actions.st+=/warrior_of_elune
 actions.st+=/starfire,if=eclipse.in_lunar|eclipse.solar_next|eclipse.any_next|buff.warrior_of_elune.up&buff.eclipse_lunar.up|(buff.ca_inc.remains<action.wrath.execute_time&buff.ca_inc.up)
 #### Use wrath otherwise which is in solar eclipse, ca/inc or to proc lunar eclipse
 actions.st+=/wrath
+#### Fallthru
+actions.st+=/run_action_list,name=fallthru
 
 ### AoE action list called on 2+ targets since starfall and starfire is always better there
 #### Use starfall if it is within pandemic(30% of base duration)
@@ -114,6 +116,8 @@ actions.aoe+=/wrath,if=eclipse.in_solar&!variable.starfire_in_solar|buff.ca_inc.
 actions.aoe+=/starfire,if=buff.eclipse_lunar.up|eclipse.solar_next|eclipse.in_solar&variable.starfire_in_solar
 #### This line only becomes active to proc lunar eclipse
 actions.aoe+=/wrath
+#### Fallthru
+actions.aoe+=/run_action_list,name=fallthru
 
 ### Special action list for dreambinder. Has a lot of similarities but also a lot of extra checks for dreambinder. Biggest difference is the moving of starsurge/starfall much higher in the action list and every action making sure that the buff won't fall off
 #### Calculates whether starsurge/starfall will have to be used to keep up the buff. Uses the gcd during solar eclipse and the starfire execute time during lunar eclipse and the relevant cast for the next eclipse depending on st/aoe. Also returns true if the buff isn't up
@@ -166,6 +170,8 @@ actions.dreambinder+=/wrath,if=buff.eclipse_solar.up&(!buff.eclipse_lunar.up|spe
 actions.dreambinder+=/starfire,if=eclipse.in_lunar|eclipse.solar_next|eclipse.any_next|buff.eclipse_solar.up&spell_targets>3|buff.ca_inc.remains>action.wrath.execute_time&spell_targets=1
 #### Procs lunar eclipse
 actions.dreambinder+=/wrath
+#### Fallthru
+actions.dreambinder+=/run_action_list,name=fallthru
 
 ### Special action list for Balance of All Things (BoAT)
 #### Checks if the crit buff is not up for later use
@@ -219,3 +225,9 @@ actions.boat+=/variable,name=starfire_in_solar,value=spell_targets.starfire>6+fl
 actions.boat+=/wrath,if=!variable.is_aoe&(buff.eclipse_solar.remains>execute_time|eclipse.in_solar)|eclipse.in_solar&!variable.starfire_in_solar|buff.ca_inc.remains<action.starfire.execute_time&buff.ca_inc.up&variable.is_aoe|buff.ravenous_frenzy.up&spell_haste>0.6|eclipse.lunar_next
 #### Use starfire if in lunar eclipse, in solar eclipse on 4+ targets or to proc solar eclipse
 actions.boat+=/starfire
+#### Fallthru
+actions.boat+=/run_action_list,name=fallthru
+
+### Fallthru actions to cast when nothing else is priority or when moving
+actions.fallthru+=/sunfire,target_if=dot.moonfire.remains>remains
+actions.fallthru+=/moonfire
