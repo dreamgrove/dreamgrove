@@ -24,6 +24,10 @@
     * Full 6 mastery gems are socketted
     * No gear has extra ilevel for being legendary
 
+1. Why is does Incarnation & Starlord switch places so often in sims?
+    * Because Balance of All Things gives you a high-impact, short duration buff, and the number of stacks can have a large consequence, there are complex haste breakpoints that come into play. At certain points Incarnation is better than Starlord and vice versa. ***This is not a simple breakpoint where you can just gauge 'get X haste then Y'.*** If things go live as is, it will be more important than ever for you to sim your gear with Top Gear @ raidbots.com.
+    ![](boat_haste_weight.jpg)
+
 1. What is the '1T Move' selection in the target dropdown?
     * This is a ***LARGELY UNOPTIMIZED APPROXIMATION*** of a light movement encounter. The simc raid_events can be found in [move.txt](move.txt). It consists of:
         * Each movement has a random distance of 20yd to 30yd
