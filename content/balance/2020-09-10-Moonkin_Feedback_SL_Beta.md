@@ -19,7 +19,7 @@ Wrath Haste caps at 70% Haste which is reached with just base 13.7% Haste during
 
 Our damage is very focused on our Celestial Alignment/Incarnation windows due to mastery double dipping and since it is our best stat by a mile we will have a lot of it. The more secondaries and thus mastery we have the more our damage will be focused into the cooldown window making all other timeframes feel worse and worse. Our cooldown being 3 minutes makes this worse.
 
-The plentiful amount of crit buffs makes crit undesirable or even useless especially when combined with the legendary Balance of All Things (more about that later).
+The plentiful amount of crit buffs makes crit undesirable or even useless especially when combined with the legendary Balance of All Things (more about that later). Any crit increase means that this part of our damage now has zero scaling with crit making us inevitably scale worse than any spec that doesn't have crit increases in addition to the haste problems.
 
 
 ### AoE and Starfall
