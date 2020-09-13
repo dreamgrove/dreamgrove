@@ -107,9 +107,9 @@
                 Highcharts.chart('container', options);
                 let sel_tar = parent.document.getElementById('targets').selectedIndex + 1;
                 let tar_str = sel_tar.toString() + ' Target' + (sel_tar == 1 ? '' : 's');
-                if (sel_tar == 6) {
+                if (sel_tar == 7) {
                     tar_str = 'Dungeon';
-                } else if (sel_tar == 7) {
+                } else if (sel_tar == 6) {
                     tar_str = '1 Target Movement';
                 }
                 parent.setTitle(base + ' ' + tar_str);

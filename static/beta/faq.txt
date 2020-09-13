@@ -15,27 +15,32 @@
         * Flask of Spectral Power
         * Potion of Sectral Intellect
     * Add '1T Move' selection for approximation of random light movement.
+    * Rename 'M+' to 'Dungeon' and add movement events.
+    * Base profile has been updated, see question below.
 
-1. What about bugs on the Beta/PTR? Whicha are assumed to be fixed for the sims?
-    * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
-    * Endless Thirst conduit correctly provides 2% crit per stack.
-    * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
-    * Feast of Gluttonous Hedonism grants 72 Intellect as per the tooltip instead of giving the same buff as the BFA feast.
-
-1. What is the 'Dungeon' selection in the target dropdown?
-    * This is an ***UNOPTIMIZED, VERY CRUDE APPROXIMATION*** of a random dungeon-like encounter. The simc raid_events can be found in [mplus.txt](mplus.txt). It consists of:
-        * ~450s total fight time
-        * ~130s to ~150s fighting one mob
-        * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
-        * Random 0s to ~20s wait after each fight
+1. What are the base stats used in the sims?
+    * The base profile can be found in [sandbag.txt](sandbag.txt)
+    * All items are from Mythic Castle Nathira, except for placeholder trinkets
+    * Full 6 mastery gems are socketted
+    * No gear has extra ilevel for being legendary
 
 1. What is the '1T Move' selection in the target dropdown?
     * This is a ***LARGELY UNOPTIMIZED APPROXIMATION*** of a light movement encounter. The simc raid_events can be found in [move.txt](move.txt). It consists of:
         * Each movement has a random distance of 20yd to 30yd
         * Movement starts when boss health reaches 95%
         * Movement repeats every ~30s to ~60s
-    * There is no optimization of planning for movement
-    * Fallback casts during movement is repeating Sunfire/Moonfire, starting with the lowest remaining duration
+    * There is no optimization of pooling and planning for movement
+    * Fallback casts during movement are:
+        * Starsurge if Balance of All Things is not equipped
+        * Sunfire and Moonfire, starting with the lowest remaining duration
+
+1. What is the 'Dungeon' selection in the target dropdown?
+    * This is an ***UNOPTIMIZED, VERY CRUDE APPROXIMATION*** of a random dungeon-like encounter. The simc raid_events can be found in [mplus.txt](mplus.txt). It consists of:
+        * Random light movement as per the '1T Move' script
+        * ~450s total fight time
+        * ~130s to ~150s fighting one mob
+        * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
+        * Random 0s to ~20s wait after each fight
 
 1. What about conduits?
     * All sims include the covenant specific conduits (except for Kyrian), Fury of the Skies, and Precise Alignment conduits at base rank.
@@ -51,12 +56,15 @@
 1. How does SimC handle Kindred Spirits (Kyrian)?
     * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage done by you AND your partner are attributed to you.
 
+1. What about bugs on the Beta/PTR? Which are assumed to be fixed for the sims?
+    * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
+    * Endless Thirst conduit correctly provides 2% crit per stack.
+    * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
+    * Feast of Gluttonous Hedonism grants 72 Intellect as per the tooltip instead of giving the same buff as the BFA feast.
+
 1. Are the sims updated for _____ ?
     * At the top of the HTML report, in the SimulationCraft banner, you will find the git build code.
     * Goto `http://github.com/simulationcraft/simc/commits/<enter git build code here>` to see all the changes to SimC that have been incorporated into the sim.
-
-1. What are the base stats used in the sims?
-    * The base profile can be found in [sandbag.txt](sandbag.txt)
 
 1. How can I run my own beta sims?
     * Full instructions for building SimC can be found in the SimC wiki <a href="https://github.com/simulationcraft/simc/wiki/HowToBuild" target="_top">HowToBuild</a> page.

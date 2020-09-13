@@ -229,5 +229,8 @@ actions.boat+=/starfire
 actions.boat+=/run_action_list,name=fallthru
 
 ### Fallthru actions to cast when nothing else is priority or when moving
+#### Starsurge for movement unless using BoAT
+actions.fallthru+=/starsurge,if=!runeforge.balance_of_all_things.equipped
+#### Cast the dot with least time remaining
 actions.fallthru+=/sunfire,target_if=dot.moonfire.remains>remains
 actions.fallthru+=/moonfire

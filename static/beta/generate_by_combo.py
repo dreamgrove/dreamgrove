@@ -59,7 +59,7 @@ for cov in covs:
     for leg, bonus in legs.items():
         name = cov + ' - ' + leg
         if args.targets == 0:
-            target_str = 'target_error=0.2\n' + mplus
+            target_str = 'target_error=0.2\n' + mplus + '\n' + move
         elif args.targets < 0:
             target_str = 'target_error=0.1\ndesired_targets=' + targets.strip('-') + '\n' + move
         else:

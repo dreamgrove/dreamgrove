@@ -1,5 +1,9 @@
-Sep 12:
+Sep 13:
     * Add '1T Move' selection for approximation of random light movement.
+    * Add '1T Move' events to the 'Dungeon' script
+    * Base profile updated with:
+        * All items are from Mythic Castle Nathira, except for placeholder trinkets
+        * Full 6 mastery gems are socketted
 
 Sep 11:
     * The following consumables are used:
