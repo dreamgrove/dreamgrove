@@ -197,13 +197,13 @@ actions.boat+=/variable,name=starfall_wont_fall_off,value=astral_power>80-(buff.
 actions.boat+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.balance_of_all_things_nature.stack_value>70|buff.balance_of_all_things_arcane.stack_value>70)&!variable.is_aoe&astral_power>=60
 #### Spam ss with 3+ crit buff legi stacks when fighting 1 target and ca/inc isn't about to be used
 actions.boat+=/starsurge,if=(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30|buff.balance_of_all_things_arcane.up&buff.ca_inc.up)&(!variable.is_aoe&(!cooldown.convoke_the_spirits.up|!variable.convoke_condition|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
+#### Use convoke with the above condition and a new crit buff
+actions.boat+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)|fight_remains<10
 #### Use foe within any eclipse or with swarm
 actions.boat+=/fury_of_elune,if=eclipse.state=3&(cooldown.ca_inc.remains>40|astral_power>90|fight_remains<10|covenant.necrolord)&(dot.adaptive_swarm_damage.remains>4|!covenant.necrolord|!variable.critnotup|spell_targets>2)
 #### Use ca/inc without overcapping, dont overwrite an existing one and try to line up ca with convoke unless you would lose a cast
 actions.boat+=/celestial_alignment,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|variable.is_aoe|buff.bloodlust.up&buff.bloodlust.remains<20)&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<22+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 actions.boat+=/incarnation,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|variable.is_aoe|buff.bloodlust.up&buff.bloodlust.remains<30)&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<32+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-#### Use convoke with the above condition and a new crit buff
-actions.boat+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)
 #### Use swarm on cd until 9 targets
 actions.boat+=/adaptive_swarm,if=spell_targets.starfire<9
 #### Dump asp when convoke is about to be used and not inside an eclipse
