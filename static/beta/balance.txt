@@ -11,7 +11,7 @@ actions.precombat+=/starsurge,if=spell_targets.starfall<4
 
 ### Decide action list based on situation
 actions=variable,name=is_aoe,value=spell_targets.starfall>1
-actions+=/berserking,if=buff.ca_inc.up&!cooldown.convoke_the_spirits.up
+actions+=/berserking,if=covenant.night_fae&!cooldown.convoke_the_spirits.up&buff.ca_inc.up|covenant.venthyr&!buff.ravenous_frenzy.up|buff.ca_inc.up
 actions+=/potion,if=buff.ca_inc.up
 actions+=/use_items
 actions+=/run_action_list,name=dreambinder,if=runeforge.timeworn_dreambinder.equipped
