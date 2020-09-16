@@ -8,6 +8,7 @@ actions.precombat+=/moonkin_form
 actions.precombat+=/wrath
 actions.precombat+=/wrath
 actions.precombat+=/starsurge,if=spell_targets.starfall<4
+actions.precombat+=/variable,name=convoke_desync,value=floor((fight_remains-20)%120)>floor((fight_remains-25-(10*talent.incarnation.enabled)-(4*conduit.precise_alignment.enabled))%180)
 
 ### Decide action list based on situation
 actions=variable,name=is_aoe,value=spell_targets.starfall>1
@@ -15,7 +16,7 @@ actions+=/berserking,if=covenant.night_fae&!cooldown.convoke_the_spirits.up&buff
 actions+=/potion,if=buff.ca_inc.up
 actions+=/use_items
 actions+=/run_action_list,name=dreambinder,if=runeforge.timeworn_dreambinder.equipped
-actions+=/run_action_list,name=boat,if=runeforge.balance_of_all_things.equipped
+actions+=/run_action_list,name=boat,if=runeforge.balance_of_all_things.equipped&!variable.is_aoe
 actions+=/run_action_list,name=aoe,if=variable.is_aoe
 actions+=/run_action_list,name=st
 
@@ -176,42 +177,34 @@ actions.dreambinder+=/run_action_list,name=fallthru
 ### Special action list for Balance of All Things (BoAT)
 #### Checks if the crit buff is not up for later use
 actions.boat=variable,name=critnotup,value=!buff.balance_of_all_things_nature.up&!buff.balance_of_all_things_arcane.up
-#### Calculates whether you would lose a convoke cast by lining up with ca/inc
-actions.boat+=/variable,name=convoke_condition,value=(cooldown.ca_inc.remains+10>fight_remains|cooldown.ca_inc.remains+30<fight_remains&fight_remains>130|buff.ca_inc.remains>6)&!cooldown.ca_inc.ready|fight_remains%%120<6
 #### Refresh sunfire when crit legi isnt active, ca/inc isnt up or has 10+secs remaining, the crit buff isn't up, you wouldn't overcap asp and you wouldn't let starfall drop in aoe
-actions.boat+=/sunfire,target_if=refreshable&target.time_to_die>16%spell_targets,if=ap_check&(variable.critnotup|(astral_power<30&(!buff.ca_inc.up|variable.is_aoe))|cooldown.ca_inc.ready)&(buff.starfall.remains>gcd.max|astral_power<50|!variable.is_aoe)
+actions.boat+=/sunfire,target_if=refreshable&target.time_to_die>16,if=ap_check&(variable.critnotup|(astral_power<30&!buff.ca_inc.up)|cooldown.ca_inc.ready)
 #### Refresh moonfire when ca/inc is ready or you are about to enter lunar eclipse on 4 or less targets(double with twin moons), the crit buff isn't up, you wouldn't overcap asp and you wouldn't let starfall drop in aoe
-actions.boat+=/moonfire,target_if=refreshable&target.time_to_die>(12+(spell_targets.starfire*1.5))%spell_targets,if=((!buff.eclipse_lunar.up|spell_targets<3*(1+talent.twin_moons.enabled))&spell_targets.starfire<10*(1+talent.twin_moons.enabled))&ap_check&(variable.critnotup|(astral_power<30&(!buff.ca_inc.up|variable.is_aoe))|cooldown.ca_inc.ready)&!buff.kindred_empowerment_energize.up&(buff.starfall.remains>gcd.max|astral_power<50|!variable.is_aoe)
+actions.boat+=/moonfire,target_if=refreshable&target.time_to_die>13.5,if=ap_check&(variable.critnotup|(astral_power<30&!buff.ca_inc.up)|cooldown.ca_inc.ready)&!buff.kindred_empowerment_energize.up
 #### Refresh flare with less than 3 targets without overcapping and when the crit legi isnt active
-actions.boat+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up|cooldown.ca_inc.ready)&(variable.critnotup|cooldown.ca_inc.ready&(astral_power<30|!covenant.night_fae|variable.is_aoe))
-#### Dump asp before ca/inc+convoke with starfall when using drift or in aoe
-actions.boat+=/starfall,if=cooldown.ca_inc.up&cooldown.convoke_the_spirits.up&covenant.night_fae&variable.is_aoe
+actions.boat+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up|cooldown.ca_inc.ready)&(variable.critnotup|cooldown.ca_inc.ready)
 #### Use fon on cd without cappiung
 actions.boat+=/force_of_nature,if=ap_check&(variable.critnotup|astral_power<30)
 #### Use frenzy before ca/inc below 70 asp
 actions.boat+=/ravenous_frenzy,if=buff.ca_inc.up
 #### Use kindred when you'd lose a use otherwise or in solar eclipse on st/lunar in aoe, starfall is up in aoe or when ca/inc is about to be used
-actions.boat+=/kindred_spirits,if=(eclipse.lunar_next|eclipse.solar_next|eclipse.any_next|buff.ca_inc.up)&(!variable.is_aoe|buff.starfall.up)|cooldown.ca_inc.ready&(astral_power>90|variable.is_aoe)
-#### As with the other action lists, calculates whether starfall won't fall off by using a ss
-actions.boat+=/variable,name=starfall_wont_fall_off,value=astral_power>80-(buff.starfall.remains*3%spell_haste)-(dot.fury_of_elune.remains*5)&buff.starfall.remains>gcd.max
-actions.boat+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.balance_of_all_things_nature.stack_value>70|buff.balance_of_all_things_arcane.stack_value>70)&!variable.is_aoe&astral_power>=60
-#### Spam ss with 3+ crit buff legi stacks when fighting 1 target and ca/inc isn't about to be used
-actions.boat+=/starsurge,if=(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30|buff.balance_of_all_things_arcane.up&buff.ca_inc.up)&(!variable.is_aoe&(!cooldown.convoke_the_spirits.up|!variable.convoke_condition|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
-#### Use convoke with the above condition and a new crit buff
-actions.boat+=/convoke_the_spirits,if=variable.convoke_condition&(spell_targets.starfire<3|buff.eclipse_lunar.up&spell_targets.starfire>2)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)|fight_remains<10
+actions.boat+=/kindred_spirits,if=(eclipse.lunar_next|eclipse.solar_next|eclipse.any_next|buff.ca_inc.up)|cooldown.ca_inc.ready&astral_power>90
 #### Use foe within any eclipse or with swarm
-actions.boat+=/fury_of_elune,if=eclipse.state=3&(cooldown.ca_inc.remains>40|astral_power>90|fight_remains<10|covenant.necrolord)&(dot.adaptive_swarm_damage.remains>4|!covenant.necrolord|!variable.critnotup|spell_targets>2)
+actions.boat+=/fury_of_elune,if=eclipse.state=3&(!covenant.night_fae|(astral_power<95&(variable.critnotup|astral_power<30|variable.is_aoe)&(variable.convoke_desync&!cooldown.convoke_the_spirits.up|!variable.convoke_desync&!cooldown.ca_inc.up)))&(cooldown.ca_inc.remains>30|astral_power>90|fight_remains<10)&(dot.adaptive_swarm_damage.remains>4|!covenant.necrolord|!variable.critnotup)
 #### Use ca/inc without overcapping, dont overwrite an existing one and try to line up ca with convoke unless you would lose a cast
-actions.boat+=/celestial_alignment,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|variable.is_aoe|buff.bloodlust.up&buff.bloodlust.remains<20)&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<22+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<21&cooldown.convoke_the_spirits.remains<fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-actions.boat+=/incarnation,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|variable.is_aoe|buff.bloodlust.up&buff.bloodlust.remains<30)&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<32+(9*(buff.primordial_arcanic_pulsar.value>100))|fight_remains%%180<31&cooldown.convoke_the_spirits.remains+6>fight_remains|cooldown.convoke_the_spirits.up|!covenant.night_fae)
+actions.boat+=/celestial_alignment,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|variable.is_aoe|buff.bloodlust.up&buff.bloodlust.remains<20)&(!covenant.night_fae|cooldown.convoke_the_spirits.up|fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<20+(4*conduit.precise_alignment.enabled))
+actions.boat+=/incarnation,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|variable.is_aoe|buff.bloodlust.up&buff.bloodlust.remains<30)&(!covenant.night_fae|cooldown.convoke_the_spirits.up|variable.convoke_desync&fight_remains>180+20+(4*conduit.precise_alignment.enabled)|fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<30+(4*conduit.precise_alignment.enabled))
+#### Use convoke with the above condition and a new crit buff
+actions.boat+=/convoke_the_spirits,if=(variable.convoke_desync&fight_remains>130|buff.ca_inc.up)&(buff.balance_of_all_things_nature.stack_value>30|buff.balance_of_all_things_arcane.stack_value>30)|fight_remains<10
+actions.boat+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.balance_of_all_things_nature.stack_value>70|buff.balance_of_all_things_arcane.stack_value>70)&astral_power>=60
+#### Spam ss with 3+ crit buff legi stacks when fighting 1 target and ca/inc isn't about to be used
+actions.boat+=/starsurge,if=(buff.balance_of_all_things_nature.stack_value>15|buff.balance_of_all_things_arcane.stack_value>15|buff.balance_of_all_things_arcane.up&buff.ca_inc.up)&(!cooldown.convoke_the_spirits.up|!variable.convoke_condition|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up)|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
 #### Use swarm on cd until 9 targets
-actions.boat+=/adaptive_swarm,if=spell_targets.starfire<9
+actions.boat+=/adaptive_swarm,if=
 #### Dump asp when convoke is about to be used and not inside an eclipse
-actions.boat+=/starsurge,if=covenant.night_fae&variable.convoke_condition&astral_power>60&cooldown.convoke_the_spirits.remains<gcd.max*ceil(astral_power%30)&(!variable.is_aoe|buff.starfall.up)&(!buff.eclipse_lunar.up&!buff.eclipse_solar.up)
+actions.boat+=/starsurge,if=covenant.night_fae&(variable.convoke_desync|cooldown.ca_inc.remains<10)&astral_power>50&cooldown.convoke_the_spirits.remains<10
 #### Dump surges when ca/inc is about to fall off, when at 90+ asp and you wouldn't lose starfall uptime in aoe
-actions.boat+=/starsurge,if=((fight_remains<5|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|astral_power>90&eclipse.state=3&(!cooldown.ca_inc.up|covenant.night_fae)|buff.ca_inc.remains>8&!buff.ravenous_frenzy.up)&(variable.starfall_wont_fall_off|!variable.is_aoe)
-#### Use starfall if it will expire within the next gcd and there's more than 1 target or you have stellar drift
-actions.boat+=/starfall,if=buff.starfall.refreshable&variable.is_aoe
+actions.boat+=/starsurge,if=((fight_remains<5|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|astral_power>90&eclipse.state=3&(!cooldown.ca_inc.up|covenant.night_fae)|buff.ca_inc.remains>8&!buff.ravenous_frenzy.up)
 #### Use moons when in lunar eclipse or you would cap charges while not overcapping asp
 actions.boat+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions.boat+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
@@ -220,11 +213,10 @@ actions.boat+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|c
 actions.boat+=/starfire,if=spell_haste<0.4&buff.eclipse_lunar.up
 #### Use woe on cd
 actions.boat+=/warrior_of_elune
-actions.boat+=/variable,name=starfire_in_solar,value=spell_targets.starfire>6+floor(mastery_value%20)+floor(buff.starsurge_empowerment.stack%4)
-#### Use wrath in solar eclipse or the last starfire wont fit into a ca/inc buff. TODO: check proper haste amount
-actions.boat+=/wrath,if=!variable.is_aoe&(buff.eclipse_solar.remains>execute_time|eclipse.in_solar)|eclipse.in_solar&!variable.starfire_in_solar|buff.ca_inc.remains<action.starfire.execute_time&buff.ca_inc.up&variable.is_aoe|buff.ravenous_frenzy.up&spell_haste>0.6|eclipse.lunar_next
-#### Use starfire if in lunar eclipse, in solar eclipse on 4+ targets or to proc solar eclipse
-actions.boat+=/starfire
+#### Use starfire to proc solar eclipse, ca/inc has less time than a wrath execute left or only lunar eclipse is up
+actions.boat+=/starfire,if=eclipse.in_lunar|eclipse.solar_next|eclipse.any_next|buff.warrior_of_elune.up&buff.eclipse_lunar.up|(buff.ca_inc.remains<action.wrath.execute_time&buff.ca_inc.up)
+#### Use wrath otherwise which is in solar eclipse, ca/inc or to proc lunar eclipse
+actions.boat+=/wrath
 #### Fallthru
 actions.boat+=/run_action_list,name=fallthru
 
