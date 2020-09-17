@@ -10,7 +10,7 @@ head=sadists_sinister_mask,id=182980,ilevel=233,gems=16mastery
 shoulder=wicked_flankers_gorget,id=183029,ilevel=233
 chest=miasmalacquered_jerkin,id=183009,ilevel=226
 neck=charm_of_eternal_winter,id=183040,ilevel=226,gems=16mastery
-back=cowled_batwing_cloak,id=183034,ilevel=226
+back=crest_of_the_legionnaire_general,id=183032,ilevel=233
 wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16mastery
 hands=gloves_of_phantom_shadows,id=183026,ilevel=226
 waist=heedless_pugilists_harness,id=183005,ilevel=226,gems=16mastery
@@ -18,11 +18,11 @@ legs=volatile_shadestitch_legguards,id=183024,ilevel=226
 feet=enchanted_toetappers,id=183030,ilevel=226
 finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,gems=16mastery
 finger2=hyperlight_band,id=183038,ilevel=226,gems=16mastery
-main_hand=sinbearers_absolution_staff,id=182418,ilevel=233,enchant=celestial_guidance
+main_hand=sinbearers_absolution_rod,id=182418,ilevel=233,enchant=celestial_guidance
 
 #chest=corset_of_the_deft_duelist,id=182989,ilevel=226
 #neck=nobles_birthstone_pendant,id=183039,ilevel=226,gems=16mastery
-#back=crest_of_the_legionnaire_general,id=183032,ilevel=233
+#back=cowled_batwing_cloak,id=183034,ilevel=226
 #back=mantle_of_manifest_sins,id=183033,ilevel=226
 #hands=bleakwing_assassins_grips,id=183007,ilevel=226
 #waist=spell_woventourniquet,id=182995,ilevel=226,gems=16mastery
