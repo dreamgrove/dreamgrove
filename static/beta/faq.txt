@@ -25,12 +25,6 @@
 1. What about soulbinds?
     * As the value of different soulbind paths depend on the relative value of traits versus the conduit sockets, soulbinds will be included once it is known what rank of conduits will be available during the first tier.
 
-1. Why do Incarnation & Starlord switch places so often in sims?
-    * Because Balance of All Things gives you a high-impact, short duration buff, and the number of stacks can have large consequences, there are complex haste breakpoints that come into play. At certain points Incarnation is better than Starlord and vice versa.
-    * ***This is not a simple breakpoint where you can just gauge 'get X haste then Y'.***
-
-    ![](boat_haste_weight.jpg)
-
 1. What is the '1T Move' selection in the target dropdown?
     * This is a ***LARGELY UNOPTIMIZED APPROXIMATION*** of a light movement encounter. The simc raid_events can be found in [move.txt](move.txt). It consists of:
         * Each movement has a random distance of 20yd to 30yd
