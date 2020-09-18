@@ -10,17 +10,43 @@ This is an article made to give feedback on Moonkins current state in the Shadow
 
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
+Updated: 18-Sep-20
+
+## Comments on the 17-Sep-20 changes
+
+* Celestial Alignment/Incarnation now give 10% instead of 15% haste
+  * Does achieve the goal of reducing the power of our cooldowns a.nd very slighty increases the haste required to hit the gcd cap of Wrath.
+  * Indirectly nerfs mastery and Primordial Pulsar (legendary).
+* Lunar Eclipse now grants critical strike instead of more splash damage to Starfire and this bonus was moved to Soul of the Forest (talent)
+  * Further reduces the value of crit.
+  * Trades Lunar Eclipse feeling bad in single target for Lunar Eclipse feeling bad in AoE unless talented into SotF.
+  * SotF is now an AoE talent but is still significantly behind on single target.
+* Moonfire and Sunfire buffed by 20%
+  * Welcome buff but not enough.
+* Our mastery Total Eclipse has been nerfed by 20%
+  * Heavily nerfs our cooldowns and our scaling.
+  * Mastery was ahead but a lot of it was due to crit and haste both having little value. 20% is on the heavy-handed side.
+  * Mastery is still our best stat with haste sometimes pulling ahead.
+  * Ultimately means all of our stats no longer scale well.
+* Empower Bond (Kyrian Covenant ability) is now off the gcd
+  * Pushes Kyrian ahead on single target and in any situation where the person always does more damage than you do in the 10 second window.
+* Ravenous Frenzy now deals 1% of your max hp instead of 3% when triggered
+  * No longer deadly but still heavily punishes any you for no upside.
+  
+The article has been updated to reflect the changes.
+
 ## General
 
 
 ### Scaling
 
-Wrath Haste caps at 70% Haste which is reached with just base 13.7% Haste during Bloodlust+Celestial Alignment/Incarnation making high Haste feel very bad. Previously we could make slight use of this Haste by switching to Starfire on single target but now due to Starsurge Empowerment you are often stuck casting Wraths far below the gcd cap.
+Wrath Haste caps at 70% Haste which is reached with just base 18.9% Haste during Bloodlust+Celestial Alignment/Incarnation making high haste feel very bad. Previously we could make slight use of this Haste by switching to Starfire on single target but now due to Starsurge Empowerment you are often stuck casting Wraths far below the gcd cap.
 
-Our damage is very focused on our Celestial Alignment/Incarnation windows due to mastery double dipping and since it is our best stat by a mile we will have a lot of it. The more secondaries and thus mastery we have the more our damage will be focused into the cooldown window making all other timeframes feel worse and worse. Our cooldown being 3 minutes makes this worse.
+Our damage is very focused on our Celestial Alignment/Incarnation windows due to mastery double dipping and since it is our best stat by a mile we will have a lot of it. The more secondaries and thus mastery we have the more our damage will be focused into the cooldown window making all other timeframes feel worse and worse. Even the recent changes will inevtiably push us more towards our CD window as long as mastery double dipping exists.
 
 The plentiful amount of crit buffs makes crit undesirable or even useless especially when combined with the legendary Balance of All Things (more about that later). Any crit increase means that this part of our damage now has zero scaling with crit making us inevitably scale worse than any spec that doesn't have crit increases in addition to the haste problems.
 
+Since mastery has now been heavily nerfed for the second time we now have no stats left that scale well so even if we are tuned well at the start of a tier we will fall off the more gear people get. Due to that we will require new buffs every tier to keep up with others similar to how other specs like Windwalker have fallen off in the past.
 
 ### AoE and Starfall
 
@@ -31,7 +57,7 @@ Putting more power into Starsurge would start us down a road similar to BfA wher
 
 ### Starsurge Empowerment
 
-This recent change made Starsurge buff all following fillers in that Eclipse hidden in the tooltip of each Eclipse. Wrath is buffed by an additive 8% during Solar Eclipse per starsurge cast, and the splash damage modifier of Starfire is buffed by an additive 25% with each cast during Lunar Eclipse.
+This recent change made Starsurge buff all following fillers in that Eclipse hidden in the tooltip of each Eclipse. Wrath is buffed by an additive 6% during Solar Eclipse per starsurge cast, and the crit chance of Starfire is buffed by an additive 6% with each cast during Lunar Eclipse.
 
 While more damage is better than no compensation for the removal of the Eclipse extension (which was arguably a good decision), this brings with it a number of problems.
 Later Starsurges become worth less than earlier Starsurges in each Eclipse. What this results in is that pooling Astral Power is now always a dps loss which is our only way of reliable handling movement during st encounters, effectively nerfing our already lacking movement.
@@ -41,7 +67,7 @@ As mentioned earlier, making Starsurge increase AoE damage is a dangerous path a
 ### Tuning
 
 Currently Balance Druid is tuned very low, especially on single target.
-Dots deal a laughable amount of damage to the point of Moonfire sometimes not even be worth casting on multiple targets.
+Dots deal a low amount of damage to the point of Moonfire sometimes barely being worth casting on multiple targets. This is due to giving up significant amount of Astral Power generation and thus when having to dot more often not being able to keep up Starfall.
 Shooting Stars baseline had an extremely minor impact as it’s tuned very low. The extra Astral Power is of little use in AoE scenarios and on single target it generates as little as 4% of our total Astral Power, only going up a small amount with more targets. The increase in power mentioned in a blue post is not implemented as of now.
 
 As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.
@@ -54,21 +80,23 @@ Moonkin currently has some major bugs, some of which increase our damage output 
 
 ### Tier 15:
 
-Nature’s Balance is the clear winner here and solves the problem of having to generate up to 50 Astral Power to start using a filler. Starting from 0 Astral Power means that during AoE it takes about 12 seconds before you can use your first Starfall.
+Nature’s Balance is the strongest single target choice and solves the problem of having to generate up to 50 Astral Power to start using a filler. Starting from 0 Astral Power means that during AoE it takes about 12 seconds before you can use your first Starfall otherwise.
 
-Trees have their niche in tanking but Warrior of Elune is just there and fills a similar purpose as NB while being significantly worse on single target and being roughly on par in aoe.
+Trees have their niche in tanking but deal basically no damage.
+
+Warrior of Elune is now a competitive pick due to the Starfire buff on single target but requires SotF to be good on AoE.
 
 ### Tier 40:
 
-Soul of the Forest is significantly outclassed in all aspects which is fine as it’s the most passive talent.
+Soul of the Forest is now by far the best AoE talent as Starfire no longer deals AoE damage without it. On single target it is now even worse than before.
 
-Starlord lasting 20 seconds has problematic timing implications with eclipses lasting 15 seconds. Currently it is the best play to cancel Starlord when it has a low duration left, allowing for a relevant 1.5% dps increase. Starlord becomes completely useless in AoE scenarios as Starfall costs 50 Astral Power and lasts 20 seconds meaning you will have at best 2 stacks for a short window.
+Starlord lasting 20 seconds has problematic timing implications with eclipses lasting 15 seconds. Currently it is the best play to cancel Starlord when it has a low duration left, allowing for a relevant 1.5% dps increase. Opposite to SotF Starlord becomes nearly useless in AoE scenarios as Starfall costs 50 Astral Power and lasts 20 seconds meaning you will have at best 2 stacks for a short window.
 
-Incarnation ends up being the go to since it works in all scenarios.
+Incarnation has taken multiple hard hits with nerfs to our cooldowns and mastery. Its only niche is 30 second burst but outside that is worse than the other two talents in all situations.
 
 ### Tier 45:
 
-Stellar Flare is similar to Starlord in that it is only good on single target and starts feeling very bad with any further added targets.
+Stellar Flare is similar to Starlord in that it is only good on single target and starts being and feeling very bad with any further added targets.
 
 Twin Moons and Stellar Drift both fit the exact same “niche” meaning one will always be picked over the other. Currently Starfall is strong enough and or dots are weak enough for Stellar Drift to always be the superior pick when deciding between the two. A talent move seems like the only good solution in this case as both significantly improve how AoE feels.
 
@@ -85,13 +113,13 @@ Generally Night Fae is the only Covenant ability that feels good to use (outside
 ### Kyrian
 This covenant is dependent on your partner which can make or break it’s usability. Generally you will simply bind yourself to the highest dps player in the group/raid and hope for the best.
 
-This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 30%, more/less one way or the other, for 10 seconds.
-Many players feel that essentially giving another player a part of your dps is unfun in addition to the ability already being bland. Assuming both players deal the same amount of dps it’s competitive but outclassed currently.
+This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 30%, more/less one way or the other, for 10 seconds. The pooled damage is used up by 20% of damage done, healing done and damage taken over 20 seconds.
+Many players feel that essentially giving another player a part of your dps is unfun in addition to the ability already being bland. Assuming both players deal the same amount of dps it’s the best single target option, getting better when the other person deals more damage.
 
 ### Necrolord
 The effect buffs dots which interestingly enough includes Fury of Elune and Starfall.
 
-You can have a maximum of 2 debuffs on any targets at any time with just 1 being more common meaning that it has no scaling above 2 targets allowing for anything that does scale with more targets to quickly outscale it.
+You can have a maximum of two debuffs on any targets at any time with just one being more common meaning that it has no scaling above two targets allowing for anything that does scale with more targets to quickly outscale it.
 
 As the hot or dot increase is the same for all Druid specs and Balance Druid currently has the weakest dots, this ability can't be good for Moonkin without being potentially broken for other Druid specs.
 
@@ -118,11 +146,13 @@ The potential downside of taking damage and being stunned seems out of place con
  
 ### Balance of All Things
 
-Unique legendary that has a relevant impact on your rotation.
+Unique legendary that has a relevant impact on your rotation but heavily simplifies it. The resulting playstyle consists of casting fillers for about 15 seconds and then casting 3 Starsurges ad infinitum for single target with no impact in AoE.
 
-The resulting playstyle consists of casting fillers for about 15 seconds and then casting 3 Starsurges ad infinitum for single target.
+Creates haste breakpoints in single target due to being able to fit in more starsurges in the one second buff windows and caps how much astral power generation is worth between the crit windows as getting any more than going to 90+ astral power again have heavily reduced value.
 
-Devalues Haste as the only relevant parts of your damage are now the first few seconds of an Eclipse. The rest of the time is spent building Astral Power for the next Eclipse which soft caps the amount of value haste can get once you can build up enough Astral Power for 3 Starsurges.
+Very, very heavily reduces the value of crit making it by far our worst stat with this legendary.
+
+Due to various changes this is now the best legi in all situations.
 
 Has anti-synergy with our cooldowns which always feels bad.
 
@@ -141,6 +171,8 @@ Has the upside of always having some value since it now works off Astral Power s
 If it extends Celestial Alignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
 
 Currently bugged with Incarnation and gives you 100% crit instead of 10%.
+
+Due to various nerfs to our cooldowns and mastery it is now in a fairly bad state.
 
 ### Timeworn Dreambinder
 
@@ -163,7 +195,7 @@ Single target:
   
 ### Deep Allegiance (Kyrian)
 
-At earlier ranks can be a dps loss due to desyncing with common 2 minute cds.
+At earlier ranks can be a dps loss due to desyncing with common one and two minute cds.
 
 ### Endless Thirst (Venthyr)
 
@@ -186,7 +218,7 @@ This will repeat some earlier mentioned bugs.
 
 Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.
 
-Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.  
+~~Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.~~ Fixed
 
 Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.
 
