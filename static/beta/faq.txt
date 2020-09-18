@@ -1,28 +1,29 @@
 1. What's new?
-    * Changes from the September 2nd build 9.0.1.35755 are included.
+    * Changes from the September 17th build 9.0.2.35938 are included.
+        * Lunar Eclipse now grants 20% crit to Starfire
+        * Soul of the Forest doubles Starfire splash damage
+        * Sunfire/Moonfire damage increased by 20%
+        * Mastery nerfed by ~21%
+        * Kindreds Spirits is now off the GCD
+        * Celestial Alignment/Incarnation nerfed to 10% haste
+        * Feast of Gluttonous Hedonism nerfed from 72 Int to 20 Int
     * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
     * Any changes to spell selection for Convoke the Spirits remains to be investigated.
-    * All profiles now include 3 conduits: the covenant one (except kyrian), Fury of the Skies, and Precise Alignment.
-    * With Starlord, you will want to `/cancelaura` when you:
-        * Have less than 6 seconds remaining on the buff
-        * Enter a new Eclipse
-        * Have 90+ AP or are using BoAT
-    * Pool for 90+ AP before casting Celestial Alingment/Incarnation. ***This also applies to the opener***.
-    * Kyrian makes more effective alignment of Kindred Spirits & Balance of All Things crit buff.
-    * The following consumables are used:
-        * Celestial Guidance weapon enchant
-        * Feast of Gluttonous Hedonism
-        * Flask of Spectral Power
-        * Potion of Sectral Intellect
-    * Add '1T Move' selection for approximation of random light movement.
-    * Rename 'M+' to 'Dungeon' and add movement events.
-    * Base profile has been updated, see question below.
+    * Add trinkets from Sire Denathrius to the base profile.
 
-1. What are the base stats used in the sims?
+1. What is the base character used in the sims?
     * The base profile can be found in [sandbag.txt](sandbag.txt)
-    * All items are from Mythic Castle Nathira, except for placeholder trinkets
-    * Full 6 mastery gems are socketted
+    * All items are from Mythic Castle Nathira
+    * Full 6 mastery gems are socketted and the weapon is enchanted with Celestial Guidance
     * No gear has extra ilevel for being legendary
+
+1. What about conduits?
+    * All sims include the covenant specific conduits (except for Kyrian), Fury of the Skies, and Precise Alignment conduits at base rank.
+    * The Kyrian conduit can desync Kindred Spirits from other CDs so is not worth simming. Instead, Kyrian will use Umbral Intensity.
+    * Stellar Inspiration at current tuning contribute less than 1% and is not worth simming.
+
+1. What about soulbinds?
+    * As the value of different soulbind paths depend on the relative value of traits versus the conduit sockets, soulbinds will be included once it is known what rank of conduits will be available during the first tier.
 
 1. Why do Incarnation & Starlord switch places so often in sims?
     * Because Balance of All Things gives you a high-impact, short duration buff, and the number of stacks can have large consequences, there are complex haste breakpoints that come into play. At certain points Incarnation is better than Starlord and vice versa.
@@ -48,14 +49,6 @@
         * ~30s to ~50s fighting a wave of 3 to 7 mobs, each wave random and repeating until the end of the fight
         * Random 0s to ~20s wait after each fight
 
-1. What about conduits?
-    * All sims include the covenant specific conduits (except for Kyrian), Fury of the Skies, and Precise Alignment conduits at base rank.
-    * Umbral Intesity and Stellar Inspiration at current tuning contribute less than 1% and are not worth simming.
-    * The Kyrian conduit can desync Kindred Spirits from other CDs so is not worth simming.
-
-1. What about soulbinds?
-    * As the value of different soulbind paths depend on the relative value of traits versus the conduit sockets, soulbinds will be included once it is known what rank of conduits will be available during the first tier.
-
 1. How does SimC handle Convoke the Spirits (Night Fae)?
     * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, at least 1 Wrath, then roughly balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
 
@@ -66,7 +59,6 @@
     * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
     * Endless Thirst conduit correctly provides 2% crit per stack.
     * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
-    * Feast of Gluttonous Hedonism grants 72 Intellect as per the tooltip instead of giving the same buff as the BFA feast.
 
 1. Are the sims updated for _____ ?
     * At the top of the HTML report, in the SimulationCraft banner, you will find the git build code.

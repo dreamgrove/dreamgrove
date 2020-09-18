@@ -1,3 +1,16 @@
+Sep 18:
+    * Changes from the September 17th build 9.0.2.35938 are included.
+        * Lunar Eclipse now grants 20% crit to Starfire
+        * Soul of the Forest doubles Starfire splash damage
+        * Sunfire/Moonfire damage increased by 20%
+        * Mastery nerfed by ~21%
+        * Kindreds Spirits is now off the GCD
+        * Celestial Alignment/Incarnation nerfed to 10% haste
+        * Feast of Gluttonous Hedonism nerfed from 72 Int to 20 Int
+    * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
+    * Any changes to spell selection for Convoke the Spirits remains to be investigated.
+    * Add trinkets from Sire Denathrius to the base profile.
+
 Sep 13:
     * Add '1T Move' selection for approximation of random light movement.
     * Add '1T Move' events to the 'Dungeon' script
