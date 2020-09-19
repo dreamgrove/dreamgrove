@@ -13,7 +13,7 @@
 
 1. What is the base character used in the sims?
     * The base profile can be found in [sandbag.txt](sandbag.txt)
-    * All items are from Mythic Castle Nathira
+    * All items are from Mythic Castle Nathria
     * Full 6 mastery gems are socketted and the weapon is enchanted with Celestial Guidance
     * No gear has extra ilevel for being legendary
 
