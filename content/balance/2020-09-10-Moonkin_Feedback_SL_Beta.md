@@ -15,11 +15,11 @@ Updated: 18-Sep-20
 ## Comments on the 17-Sep-20 changes
 
 * Celestial Alignment/Incarnation now give 10% instead of 15% haste
-  * Does achieve the goal of reducing the power of our cooldowns a.nd very slighty increases the haste required to hit the gcd cap of Wrath.
-  * Indirectly nerfs mastery and Primordial Pulsar (legendary).
+  * Does achieve the goal of reducing the power of our cooldowns and very slighty increases the haste required to hit the gcd cap of Wrath.
+  * Indirectly nerfs mastery and Primordial Arcanic Pulsar (legendary).
 * Lunar Eclipse now grants critical strike instead of more splash damage to Starfire and this bonus was moved to Soul of the Forest (talent)
   * Further reduces the value of crit.
-  * Trades Lunar Eclipse feeling bad in single target for Lunar Eclipse feeling bad in AoE unless talented into SotF.
+  * Trades Lunar Eclipse feeling bad in single target situations for Lunar Eclipse feeling bad in AoE situations unless talented into SotF.
   * SotF is now an AoE talent but is still significantly behind on single target.
 * Moonfire and Sunfire buffed by 20%
   * Welcome buff but not enough.
@@ -29,7 +29,7 @@ Updated: 18-Sep-20
   * Mastery is still our best stat with haste sometimes pulling ahead.
   * Ultimately means all of our stats no longer scale well.
 * Empower Bond (Kyrian Covenant ability) is now off the gcd
-  * Pushes Kyrian ahead on single target and in any situation where the person always does more damage than you do in the 10 second window.
+  * Pushes Kyrian ahead in single target situations and in any situation where the bonded person always does more damage than you do in the 10 second window.
 * Ravenous Frenzy now deals 1% of your max hp instead of 3% when triggered
   * No longer deadly but still heavily punishes any you for no upside.
   
@@ -40,11 +40,11 @@ The article has been updated to reflect the changes.
 
 ### Scaling
 
-Wrath Haste caps at 70% Haste which is reached with just base 18.9% Haste during Bloodlust+Celestial Alignment/Incarnation making high haste feel very bad. Previously we could make slight use of this Haste by switching to Starfire on single target but now due to Starsurge Empowerment you are often stuck casting Wraths far below the gcd cap.
+Wrath Haste caps at 70% Haste which is reached with just base 18.9% Haste during Bloodlust+Celestial Alignment/Incarnation or 9.1% with Starlord added on top, making high haste feel very bad. Previously we could make slight use of this Haste by switching to Starfire on single target but now due to Starsurge Empowerment you are often stuck casting Wraths far below the gcd cap.
 
-Our damage is very focused on our Celestial Alignment/Incarnation windows due to mastery double dipping and since it is our best stat by a mile we will have a lot of it. The more secondaries and thus mastery we have the more our damage will be focused into the cooldown window making all other timeframes feel worse and worse. Even the recent changes will inevtiably push us more towards our CD window as long as mastery double dipping exists.
+Our damage is very focused in our Celestial Alignment/Incarnation windows due to mastery double dipping and since it is our best stat we will have a lot of it. The more secondaries and thus mastery we have the more our damage will be focused into the cooldown window making all other timeframes feel worse and worse. Even the recent changes will inevtiably push us more towards our CD window as long as mastery double dipping exists.
 
-The plentiful amount of crit buffs makes crit undesirable or even useless especially when combined with the legendary Balance of All Things (more about that later). Any crit increase means that this part of our damage now has zero scaling with crit making us inevitably scale worse than any spec that doesn't have crit increases in addition to the haste problems.
+The plentiful amount of crit buffs makes crit undesirable or even useless especially when combined with the legendary Balance of All Things (more about that later). Any crit increase means that this part of our damage now has zero scaling with crit making us scale worse than any spec that doesn't have crit increases in addition to the haste problems.
 
 Since mastery has now been heavily nerfed for the second time we now have no stats left that scale well so even if we are tuned well at the start of a tier we will fall off the more gear people get. Due to that we will require new buffs every tier to keep up with others similar to how other specs like Windwalker have fallen off in the past.
 
