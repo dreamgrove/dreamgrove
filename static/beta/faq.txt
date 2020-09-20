@@ -60,8 +60,6 @@
 
 1. How can I run my own beta sims?
     * Full instructions for building SimC can be found in the SimC wiki <a href="https://github.com/simulationcraft/simc/wiki/HowToBuild" target="_top">HowToBuild</a> page.
-    * Instructions on creating the command line version and how to use it can be found in [how_to_build.txt](how_to_build.txt)
-    * A copy of the command line program can be found as `simc_(date).rar` but this can often be outdated.
 
 1. How do I sim a covenant?
     * Add the line **covenant=covenant_name**
