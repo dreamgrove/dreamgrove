@@ -156,8 +156,6 @@ Due to various changes this is now the best legi in all situations.
 
 Has anti-synergy with our cooldowns which always feels bad.
 
-Currently bugged to not work on a queued spell when entering an Eclipse.
-
 ### Oneth’s Clear Vision
 
 An artifact from Legion with a nerfed proc chance in addition to spenders not being as strong anymore.
@@ -218,16 +216,16 @@ This will repeat some earlier mentioned bugs.
 
 Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.
 
-~~Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.~~ Fixed
-
 Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.
-
-Balance of All Things buff application is delayed and only applied after a queued instant spell such as Starsurge.
 
 Starfall and Fury of Elune are not affected by Circle of Life and Death legendary, despite it counting as a periodic effect for Adaptive Swarm.
 
 Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though its effect is meant to do so as shown by other specs. For example Elemental Shamans Storm Elemental Lightning Bolt cast time reduction.
 
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
+
+~~Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.~~ Fixed
+
+~~Balance of All Things buff application is delayed and only applied after a queued instant spell such as Starsurge.~~ Fixed
 
 ~~Door of Shadows cannot be cast while moving with Stellar Drift.~~ Fixed
