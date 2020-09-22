@@ -6,22 +6,18 @@ spec=balance
 
 talents=0000000
 
-head=sadists_sinister_mask,id=182980,ilevel=233,gems=16mastery
+head=sadists_sinister_mask,id=182980,ilevel=233,gems=16mastery,enchant=shadowcore_oil
 shoulder=wicked_flankers_gorget,id=183029,ilevel=233
-chest=miasmalacquered_jerkin,id=183009,ilevel=226
-#chest=miasmalacquered_jerkin,id=183009,ilevel=226,enchant=eternal_stats
+chest=miasmalacquered_jerkin,id=183009,ilevel=226,enchant=eternal_stats
 neck=charm_of_eternal_winter,id=183040,ilevel=226,gems=16mastery
 back=crest_of_the_legionnaire_general,id=183032,ilevel=233
-wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16mastery
-#wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16mastery,enchant=eternal_intellect
+wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16mastery,enchant=eternal_intellect
 hands=bleakwing_assassins_grips,id=183007,ilevel=226
 waist=heedless_pugilists_harness,id=183005,ilevel=226,gems=16mastery
 legs=volatile_shadestitch_legguards,id=183024,ilevel=226
 feet=enchanted_toetappers,id=183030,ilevel=226
-finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,gems=16mastery
-#finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,gems=16mastery,enchant=tenet_of_haste
-finger2=hyperlight_band,id=183038,ilevel=226,gems=16mastery
-#finger2=hyperlight_band,id=183038,ilevel=226,gems=16mastery,enchant=tenet_of_haste
+finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,gems=16mastery,enchant=tenet_of_haste
+finger2=hyperlight_band,id=183038,ilevel=226,gems=16mastery,enchant=tenet_of_haste
 trinket1=cabalists_effigy,id=184028,ilevel=233
 trinket2=dreadfire_vessel,id=184030,ilevel=233
 main_hand=sinbearers_absolution_rod,id=182418,ilevel=233,enchant=celestial_guidance
@@ -33,7 +29,7 @@ main_hand=sinbearers_absolution_rod,id=182418,ilevel=233,enchant=celestial_guida
 #hands=gloves_of_phantom_shadows,id=183026,ilevel=226
 #waist=spell_woventourniquet,id=182995,ilevel=226,gems=16mastery
 #legs=chiropteran_leggings,id=182993,ilevel=226
-#finger1=ritualists_treasured_ring,id=183037,ilevel=226,gems=16mastery,enchant=tenet_of_haste
+#finger2=ritualists_treasured_ring,id=183037,ilevel=226,gems=16mastery,enchant=tenet_of_haste
 
 tabard=,id=31405
 
