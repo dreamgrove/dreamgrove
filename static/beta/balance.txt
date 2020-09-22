@@ -22,9 +22,9 @@ actions+=/run_action_list,name=st
 
 ### Single target action list called when fighting 1 target. All action lists are mostly similar and can be combined but they are far easier to read when split up.
 #### Refresh dots unless ca/inc has less than 5 secs remaining, the venthyr buff or the kyrian buff is about to fall off to make sure all asp is spend in each
-actions.st=moonfire,target_if=refreshable&target.time_to_die>12,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
-actions.st+=/sunfire,target_if=refreshable&target.time_to_die>12,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
-actions.st+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=(buff.ca_inc.remains>5&buff.ravenous_frenzy.remains>5|!buff.ca_inc.up)&!buff.kindred_empowerment_energize.up&ap_check
+actions.st=moonfire,target_if=refreshable&target.time_to_die>12,if=(buff.ca_inc.remains>5&(buff.ravenous_frenzy.remains>5|!buff.ravenous_frenzy.up)|!buff.ca_inc.up)&(!buff.kindred_empowerment_energize.up|astral_power<30)&ap_check
+actions.st+=/sunfire,target_if=refreshable&target.time_to_die>12,if=(buff.ca_inc.remains>5&(buff.ravenous_frenzy.remains>5|!buff.ravenous_frenzy.up)|!buff.ca_inc.up)&(!buff.kindred_empowerment_energize.up|astral_power<30)&ap_check
+actions.st+=/stellar_flare,target_if=refreshable&target.time_to_die>16,if=(buff.ca_inc.remains>5&(buff.ravenous_frenzy.remains>5|!buff.ravenous_frenzy.up)|!buff.ca_inc.up)&(!buff.kindred_empowerment_energize.up|astral_power<30)&ap_check
 #### Use FoN on cd without capping
 actions.st+=/force_of_nature,if=ap_check
 #### Use the venthyr ability on cd which is before ca/inc
