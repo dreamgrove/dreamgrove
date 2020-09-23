@@ -12,7 +12,7 @@ actions.precombat+=/variable,name=convoke_desync,value=floor((fight_remains-20)%
 
 ### Decide action list based on situation
 actions=variable,name=is_aoe,value=spell_targets.starfall>1
-actions+=/berserking,if=covenant.night_fae&!cooldown.convoke_the_spirits.up&buff.ca_inc.up|!covenant.night_fae&buff.ca_inc.up
+actions+=/berserking,if=(!covenant.night_fae|!cooldown.convoke_the_spirits.up)&buff.ca_inc.up
 actions+=/potion,if=buff.ca_inc.up
 actions+=/use_items
 actions+=/run_action_list,name=aoe,if=variable.is_aoe
