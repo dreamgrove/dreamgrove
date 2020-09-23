@@ -1,6 +1,7 @@
 druid="Sandbag"
 level=60
-race=tauren
+#race=tauren
+race=troll
 role=spell
 spec=balance
 
