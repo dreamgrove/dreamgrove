@@ -74,8 +74,6 @@ As a whole our Astral Power generation is very low which leads to rather stale g
 
 The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
 
-Moonkin currently has some major bugs, some of which increase our damage output by a massive amount. Most notably the Venthyr conduit makes our output 10% higher than it should be. This means numbers seen on beta aren’t actually an accurate representation of our current tuning and could potentially make it much harder to tune the spec if the bugs aren’t fixed soon. All bugs are listed at the bottom of this post.
-
 ## DPS Talents 
 
 ### Tier 15:
@@ -214,8 +212,6 @@ Simple damage increase with the only caveat being that dots and Starfall cast by
 
 This will repeat some earlier mentioned bugs.
 
-Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.
-
 Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.
 
 Starfall and Fury of Elune are not affected by Circle of Life and Death legendary, despite it counting as a periodic effect for Adaptive Swarm.
@@ -223,6 +219,8 @@ Starfall and Fury of Elune are not affected by Circle of Life and Death legendar
 Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though its effect is meant to do so as shown by other specs. For example Elemental Shamans Storm Elemental Lightning Bolt cast time reduction.
 
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
+
+~~Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.~~ Fixed
 
 ~~Arcanic Pulsar procs with Incarnation give you 100% crit instead of 10%.~~ Fixed
 
