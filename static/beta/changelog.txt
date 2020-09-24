@@ -1,3 +1,9 @@
+Sep 23:
+    * APL optimizations for DoTs, AoE, CD timings, and Kindred Spirits
+    * Further optimization may be possible to the APL - if you discover an improvement, please submit a report
+    * Add full enchants to the base profile
+    * Change base profile race to Troll
+
 Sep 18:
     * Changes from the September 17th build 9.0.2.35938 are included.
         * Lunar Eclipse now grants 20% crit to Starfire

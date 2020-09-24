@@ -1,21 +1,14 @@
 1. What's new?
-    * Changes from the September 17th build 9.0.2.35938 are included.
-        * Lunar Eclipse now grants 20% crit to Starfire
-        * Soul of the Forest doubles Starfire splash damage
-        * Sunfire/Moonfire damage increased by 20%
-        * Mastery nerfed by ~21%
-        * Kindreds Spirits is now off the GCD
-        * Celestial Alignment/Incarnation nerfed to 10% haste
-        * Feast of Gluttonous Hedonism nerfed from 72 Int to 20 Int
-    * Further optimization may be possible to the APL. If you discover an improvement, please submit a report.
-    * Any changes to spell selection for Convoke the Spirits remains to be investigated.
-    * Add trinkets from Sire Denathrius to the base profile.
+    * APL optimizations for DoTs, AoE, CD timings, and Kindred Spirits
+    * Further optimization may be possible to the APL - if you discover an improvement, please submit a report
+    * Add full enchants to the base profile
+    * Change base profile race to Troll
 
 1. What is the base character used in the sims?
-    * The base profile can be found in [sandbag.txt](sandbag.txt)
-    * All items are from Mythic Castle Nathria
-    * Full 6 mastery gems are socketted and the weapon is enchanted with Celestial Guidance
-    * No gear has extra ilevel for being legendary
+    * The base profile can be found in [sandbag.txt](sandbag.txt).
+    * All items are from Mythic Castle Nathria.
+    * Full 6 mastery gems are socketted and all available enchants are applied.
+    * No gear has extra ilevel for being legendary.
 
 1. What about conduits?
     * All sims include the covenant specific conduits (except for Kyrian), Fury of the Skies, and Precise Alignment conduits at base rank.
@@ -50,9 +43,7 @@
     * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage done by you AND your partner are attributed to you.
 
 1. What about bugs on the Beta/PTR? Which are assumed to be fixed for the sims?
-    * Moons correctly benefit from nature buffs such as Solar Eclipse, Balance of All Things nature crit buff.
-    * Endless Thirst conduit correctly provides 2% crit per stack.
-    * The Balance of All Things crit buffs correctly applies to any queued instant spell that follows the wrath/starfire that procs Eclipse.
+    * Currently there are no known bugs for Balance.
 
 1. Are the sims updated for _____ ?
     * At the top of the HTML report, in the SimulationCraft banner, you will find the git build code.
