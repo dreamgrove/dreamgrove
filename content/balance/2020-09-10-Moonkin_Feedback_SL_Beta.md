@@ -212,13 +212,13 @@ Simple damage increase with the only caveat being that dots and Starfall cast by
 
 This will repeat some earlier mentioned bugs.
 
-Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.
-
 Starfall and Fury of Elune are not affected by Circle of Life and Death legendary, despite it counting as a periodic effect for Adaptive Swarm.
 
 Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though its effect is meant to do so as shown by other specs. For example Elemental Shamans Storm Elemental Lightning Bolt cast time reduction.
 
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
+
+~~Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.~~ Fixed
 
 ~~Endless Thirst (venthyr potency) grants 20% Crit per stack, not 2% at base level making it hard to get an accurate picture of how Venthyr actually performs during testing.~~ Fixed
 
