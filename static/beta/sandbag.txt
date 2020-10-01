@@ -9,7 +9,8 @@ talents=0000000
 
 head=sadists_sinister_mask,id=182980,ilevel=233,gems=16mastery,enchant=shadowcore_oil
 shoulder=wicked_flankers_gorget,id=183029,ilevel=233
-chest=miasmalacquered_jerkin,id=183009,ilevel=226,enchant=eternal_stats
+#chest=miasmalacquered_jerkin,id=183009,ilevel=226,enchant=eternal_stats
+chest=miasmalacquered_jerkin,id=183009,ilevel=226,enchant=eternal_insight
 neck=charm_of_eternal_winter,id=183040,ilevel=226,gems=16mastery
 back=crest_of_the_legionnaire_general,id=183032,ilevel=233
 wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16mastery,enchant=eternal_intellect
@@ -21,9 +22,9 @@ finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,gems=16mastery
 finger2=hyperlight_band,id=183038,ilevel=226,gems=16mastery,enchant=tenet_of_haste
 trinket1=cabalists_hymnal,id=184028,ilevel=233
 trinket2=dreadfire_vessel,id=184030,ilevel=233
-main_hand=sinbearers_absolution_rod,id=182418,ilevel=233,enchant=celestial_guidance
+main_hand=torch_of_fiery_atonement,id=182418,ilevel=233,enchant=celestial_guidance
 
-#chest=corset_of_the_deft_duelist,id=182989,ilevel=226,enchant=eternal_stats
+#chest=corset_of_the_deft_duelist,id=182989,ilevel=226,enchant=eternal_insight
 #neck=nobles_birthstone_pendant,id=183039,ilevel=226,gems=16mastery
 #back=cowled_batwing_cloak,id=183034,ilevel=226
 #back=mantle_of_manifest_sins,id=183033,ilevel=226
@@ -34,7 +35,7 @@ main_hand=sinbearers_absolution_rod,id=182418,ilevel=233,enchant=celestial_guida
 
 tabard=,id=31405
 
-soulbind=evolved_swarm:1/conflux_of_elements:1/endless_thirst:1/fury_of_the_skies:1/precise_alignment:1
+soulbind=deep_allegiance:7/evolved_swarm:7/conflux_of_elements:7/endless_thirst:7/fury_of_the_skies:7
 
 potion=spectral_intellect
 flask=spectral_flask_of_power

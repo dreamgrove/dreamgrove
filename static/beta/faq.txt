@@ -1,8 +1,6 @@
 1. What's new?
-    * APL optimizations for DoTs, AoE, CD timings, and Kindred Spirits
-    * Further optimization may be possible to the APL - if you discover an improvement, please submit a report
-    * Add full enchants to the base profile
-    * Change base profile race to Troll
+    * Changes from the September 30th build 9.0.2.36086 are included.
+    * Conduits are set to rank 7
 
 1. What is the base character used in the sims?
     * The base profile can be found in [sandbag.txt](sandbag.txt).
@@ -11,8 +9,7 @@
     * No gear has extra ilevel for being legendary.
 
 1. What about conduits?
-    * All sims include the covenant specific conduits (except for Kyrian), Fury of the Skies, and Precise Alignment conduits at base rank.
-    * The Kyrian conduit can desync Kindred Spirits from other CDs so is not worth simming. Instead, Kyrian will use Umbral Intensity.
+    * All sims include the covenant specific conduits, Fury of the Skies, and Precise Alignment conduits at rank 7.
     * Stellar Inspiration at current tuning contribute less than 1% and is not worth simming.
 
 1. What about soulbinds?
@@ -40,7 +37,7 @@
     * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, at least 1 Wrath, then roughly balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
 
 1. How does SimC handle Kindred Spirits (Kyrian)?
-    * SimC assumes that you are bonding with someone who does the exact same damage as you. The additional damage done by you AND your partner are attributed to you.
+    * SimC assumes that you are bonding with someone who does the exact same damage as you, and that neither player takes damage nor does any healing to use up part of the pool. The additional damage done by you AND your partner are attributed to you.
 
 1. What about bugs on the Beta/PTR? Which are assumed to be fixed for the sims?
     * Currently there are no known bugs for Balance.

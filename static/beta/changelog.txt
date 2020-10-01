@@ -1,3 +1,7 @@
+Oct 1:
+    * Changes from the September 30th build 9.0.2.36086 are included.
+    * Conduits are set to rank 7
+
 Sep 23:
     * APL optimizations for DoTs, AoE, CD timings, and Kindred Spirits
     * Further optimization may be possible to the APL - if you discover an improvement, please submit a report
