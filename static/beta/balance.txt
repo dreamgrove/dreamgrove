@@ -84,7 +84,7 @@ actions.aoe+=/ravenous_frenzy,if=buff.ca_inc.up
 actions.aoe+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 #### Use within any eclipse and line it up with pulsar unless losing a use
-actions.aoe+=/kindred_spirits,if=fight_remains%%cooldown<15|(eclipse.in_lunar|eclipse.lunar_next|buff.ca_inc.up)&buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250&astral_power>50
+actions.aoe+=/kindred_spirits,if=fight_remains<15|(buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250)&buff.starfall.up&cooldown.ca_inc.remains>50
 #### Refresh flare on up to 3 targets without inc/ca being about to expire and not overcapping
 actions.aoe+=/stellar_flare,target_if=refreshable&time_to_die>15,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up)
 #### Calculates whether convoke can be saved for ca/inc or a pulsar proc without losing a use
