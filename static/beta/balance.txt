@@ -74,8 +74,8 @@ actions.st+=/run_action_list,name=fallthru
 actions.aoe=starfall,if=buff.starfall.refreshable&(!runeforge.lycaras_fleeting_glimpse.equipped|time%%45>buff.starfall.remains+2)
 #### Refresh sunfire unless ca/inc has less than 10secs remaining and you won't overcap asp
 actions.aoe+=/sunfire,target_if=refreshable&target.time_to_die>14-spell_targets+remains,if=ap_check&eclipse.in_any
-#### Refresh moonfire if ca/inc is ready or there are less than 3 targets or less than 5 and you are in solar eclipse or lunar eclipse is next. Also don't refresh during kindred empowerment and don't overcap asp
-actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>(14+(spell_targets.starfire*1.5))%spell_targets+remains,if=(cooldown.ca_inc.ready|spell_targets.starfall<3|eclipse.in_any&(spell_targets.starfire<10*(1+talent.twin_moons.enabled)))&!buff.kindred_empowerment_energize.up&ap_check
+#### Refresh moonfire if ca/inc is ready or there are less than 3 targets or less than 10 and you are in any eclipse. Dont Moonfire in Lunar Eclipse with sotf and don't use Moonfire if the lack in Astral Power will not allow you to keep up Starfall. Don't refresh during kindred empowerment and don't overcap asp
+actions.aoe+=/moonfire,target_if=refreshable&target.time_to_die>(14+(spell_targets.starfire*1.5))%spell_targets+remains,if=(cooldown.ca_inc.ready|spell_targets.starfire<3|(eclipse.in_solar|eclipse.in_both|eclipse.in_lunar&!talent.soul_of_the_forest.enabled)&(spell_targets.starfire<10*(1+talent.twin_moons.enabled))&astral_power>50-buff.starfall.remains*6)&!buff.kindred_empowerment_energize.up&ap_check
 #### Use fon on cd without capping
 actions.aoe+=/force_of_nature,if=ap_check
 #### Use frenzy on cd, this will automatically line up with ca
@@ -83,7 +83,7 @@ actions.aoe+=/ravenous_frenzy,if=buff.ca_inc.up
 #### Use ca/inc on cd unless you can line it up with convoke without losing a cast
 actions.aoe+=/celestial_alignment,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<22|cooldown.convoke_the_spirits.up|!covenant.night_fae)
 actions.aoe+=/incarnation,if=ap_check&!buff.ca_inc.up&(fight_remains<cooldown.convoke_the_spirits.remains+7|fight_remains%%180<32|cooldown.convoke_the_spirits.up|!covenant.night_fae)
-#### Use within any eclipse and line it up with pulsar unless losing a use
+#### Use on cd with starfall up and save for pulsar
 actions.aoe+=/kindred_spirits,if=fight_remains<15|(buff.primordial_arcanic_pulsar.value<250|buff.primordial_arcanic_pulsar.value>=250)&buff.starfall.up&cooldown.ca_inc.remains>50
 #### Refresh flare on up to 3 targets without inc/ca being about to expire and not overcapping
 actions.aoe+=/stellar_flare,target_if=refreshable&time_to_die>15,if=spell_targets.starfire<4&ap_check&(buff.ca_inc.remains>10|!buff.ca_inc.up)
