@@ -10,7 +10,21 @@ This is an article made to give feedback on Moonkins current state in the Shadow
 
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
-Updated: 18-Sep-20
+Updated: 03-Oct-20
+
+
+## Comments on the 01-Oct-20 changes
+
+* Venthyr ability nerfed to 15 seconds duration from 20 seconds
+  * This nerfs the ability by than 25% due to its stacking nature making it far worse than it was before.
+  * Makes the ability also feel worse as it no longer lines up with at least the 20 second Celestial Alignment.
+  * A simpler nerf that wouldn't have impacted how it feels would have been to the haste or damage amp it gives.  
+
+* Kyrian ability nerfed to 25% from 30%
+  * Simple ~17% nerf.
+  * Since the hidden 20% max usage of the pool wasn't changed the other person can now do up to 60% more damage than you are doing and you will still be able to use up all of the pool.
+
+With these changes Kyrian is now the best ability for single target situations and about on par with Venthyr in AoE. Both still heavily outclass both Night Fae and especially Necrolord in all situations.
 
 ## Comments on the 17-Sep-20 changes
 
@@ -111,7 +125,7 @@ Generally Night Fae is the only Covenant ability that feels good to use (outside
 ### Kyrian
 This covenant is dependent on your partner which can make or break it’s usability. Generally you will simply bind yourself to the highest dps player in the group/raid and hope for the best.
 
-This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 30%, more/less one way or the other, for 10 seconds. The pooled damage is used up by 20% of damage done, healing done and damage taken over 20 seconds.
+This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 25%, more/less one way or the other, for 10 seconds while having zero gameplay interaction. The pooled damage is used up by 20% of damage done, healing done and damage taken over 20 seconds.
 Many players feel that essentially giving another player a part of your dps is unfun in addition to the ability already being bland. Assuming both players deal the same amount of dps it’s the best single target option, getting better when the other person deals more damage.
 
 ### Necrolord
@@ -141,7 +155,7 @@ At higher ranks the conduit that increases our crit chance with each cast will m
 The potential downside of taking damage and being stunned seems out of place considering no other covenant ability has a negative effect, and for a flavor effect it is way too dangerous. With high stacks it can nearly one shot you in the worst case.
 
 ## Legendaries
- 
+
 ### Balance of All Things
 
 Unique legendary that has a relevant impact on your rotation but heavily simplifies it. The resulting playstyle consists of casting fillers for about 15 seconds and then casting 3 Starsurges ad infinitum for single target with no impact in AoE.
@@ -160,6 +174,8 @@ An artifact from Legion with a nerfed proc chance in addition to spenders not be
 
 Outclassed in all aspects by nearly all other Legendaries in all scenarios. On single target the Starfall is only useful with Stellar Drift which you wouldn’t take on a single target encounter. In AoE the Starsurge has very little value and due to the high Astral Power cost of Starfall you get very few procs.
 
+As long as the vast cost difference between Starfall and Starsurge exists this will only be good on single target.
+
 ### Primordial Arcanic Pulsar 
 
 Has the upside of always having some value since it now works off Astral Power spent.
@@ -177,6 +193,11 @@ Significantly changes your playstyle on single target.
 Especially due to the nerfs to spender damage, it has lost a lot of value and has anti-synergy with the Starsurge Empowerments making it fall off.
 
 Completely useless in AoE as it is impossible to keep up the buff when you can only cast Starfall every 10 seconds.
+
+### Final thoughts on Balance legendaries
+
+Dreambinder and Oneth's will only ever be good on single target and if Balance of All Things isn't tuned heavily above the other options it will also be a single target legendary as it synergizes more with Starsurge dumping than our consistent AoE damage pattern with Starfall and dots. This means the only legendary that really works and feels good any time you Starfall (which is any time you fight more than 1 target) is Pulsar.
+The reason it is this way stems from the vast cost difference of our spenders and being unable to use multiple Starfalls within a short timeframe. The only real fix for this is to change Starfall so it once again works with these legendaries or redesign the legendaries.
 
 ## Conduits
 
@@ -212,11 +233,13 @@ Simple damage increase with the only caveat being that dots and Starfall cast by
 
 This will repeat some earlier mentioned bugs.
 
-Starfall and Fury of Elune are not affected by Circle of Life and Death legendary, despite it counting as a periodic effect for Adaptive Swarm.
-
 Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though its effect is meant to do so as shown by other specs. For example Elemental Shamans Storm Elemental Lightning Bolt cast time reduction.
 
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
+
+Rebirth revives with 60% of max hp instead of the 100% it should with rank 2 Rebirth.
+
+Starfall and Fury of Elune are not affected by Circle of Life and Death legendary, despite it counting as a periodic effect for Adaptive Swarm. Functionally this could be intended but is inconsistent.
 
 ~~Convoke the Spirits casts 13 instead of 12 spells since its tick rate is 0.333.~~ Fixed
 
