@@ -16,15 +16,14 @@ Updated: 03-Oct-20
 ## Comments on the 01-Oct-20 changes
 
 * Venthyr ability nerfed to 15 seconds duration from 20 seconds
-  * This nerfs the ability by than 25% due to its stacking nature making it far worse than it was before.
-  * Makes the ability also feel worse as it no longer lines up with at least the 20 second Celestial Alignment.
-  * A simpler nerf that wouldn't have impacted how it feels would have been to the haste or damage amp it gives.  
+  * This nerfs the ability by more than 25% due to its stacking nature making it far worse than it was before.
+  * A simpler nerf that wouldn't have impacted how it feels would have been to reduce the haste or damage amplification it gives.  
 
 * Kyrian ability nerfed to 25% from 30%
   * Simple ~17% nerf.
   * Since the hidden 20% max usage of the pool wasn't changed the other person can now do up to 60% more damage than you are doing and you will still be able to use up all of the pool.
 
-With these changes Kyrian is now the best ability for single target situations and about on par with Venthyr in AoE. Both still heavily outclass both Night Fae and especially Necrolord in all situations.
+With these changes Kyrian is now the best ability for single target situations and about on par with Venthyr in AoE. Both still heavily outclass both Night Fae and Necrolord in all situations only to a lesser degree.
 
 ## Comments on the 17-Sep-20 changes
 
