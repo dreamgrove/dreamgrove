@@ -183,7 +183,7 @@ actions.boat+=/force_of_nature,if=ap_check
 #### FoE before a crit window or inside an eclipse
 actions.boat+=/fury_of_elune,if=(eclipse.in_any|eclipse.solar_in_1|eclipse.lunar_in_1)&(!covenant.night_fae|(astral_power<95&(variable.critnotup|astral_power<30|variable.is_aoe)&(variable.convoke_desync&!cooldown.convoke_the_spirits.up|!variable.convoke_desync&!cooldown.ca_inc.up)))&(cooldown.ca_inc.remains>30|astral_power>90&cooldown.ca_inc.up&(cooldown.empower_bond.remains<action.starfire.execute_time|!covenant.kyrian)|fight_remains<10)&(dot.adaptive_swarm_damage.remains>4|!covenant.necrolord)
 #### Empower bond when outside an eclipse or ca/inc is about ot be used
-actions.boat+=/kindred_spirits,if=eclipse.lunar_next|eclipse.solar_next|eclipse.any_next|buff.ca_inc.up|cooldown.ca_inc.ready&astral_power>90
+actions.boat+=/kindred_spirits,if=(eclipse.lunar_next|eclipse.solar_next|eclipse.any_next|buff.ca_inc.up)&!cooldown.ca_inc.ready|astral_power>90
 #### Ca/Inc when at 90+ asp without losing time in bloodlust or just on cooldown when not lining up with convoke
 actions.boat+=/celestial_alignment,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|buff.bloodlust.up&buff.bloodlust.remains<20+(4*conduit.precise_alignment.enabled))&(!covenant.night_fae|cooldown.convoke_the_spirits.up|fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains%%180<20+(4*conduit.precise_alignment.enabled))
 actions.boat+=/incarnation,if=(astral_power>90&(buff.kindred_empowerment_energize.up|!covenant.kyrian)|covenant.night_fae|buff.bloodlust.up&buff.bloodlust.remains<30+(4*conduit.precise_alignment.enabled))&(!covenant.night_fae|cooldown.convoke_the_spirits.up|variable.convoke_desync&fight_remains>180+20+(4*conduit.precise_alignment.enabled)|fight_remains<cooldown.convoke_the_spirits.remains+6|fight_remains<30+(4*conduit.precise_alignment.enabled))
@@ -194,7 +194,8 @@ actions.boat+=/adaptive_swarm,if=
 #### Extra line for starsurge dump with convoke
 actions.boat+=/starsurge,if=covenant.night_fae&(variable.convoke_desync|cooldown.ca_inc.remains<10)&astral_power>50&cooldown.convoke_the_spirits.remains<10
 #### Dump starsurges when the fight is about to end, frenzy is about to end, you are at 90+ asp in an eclipse or ca/inc lasts another 8+secs
-actions.boat+=/starsurge,if=((fight_remains<4|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|astral_power>90&eclipse.in_any&((!cooldown.ca_inc.up|covenant.kyrian&!cooldown.empower_bond.up)|covenant.night_fae)|buff.ca_inc.remains>8&!buff.ravenous_frenzy.up)
+actions.boat+=/variable,name=aspPerSec,value=eclipse.in_lunar*8%action.starfire.execute_time+!eclipse.in_lunar*6%action.wrath.execute_time+0.2%spell_haste
+actions.boat+=/starsurge,if=((fight_remains<4|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|(astral_power+variable.aspPerSec*buff.eclipse_solar.remains+dot.fury_of_elune.ticks_remain*2.5>120|astral_power+variable.aspPerSec*buff.eclipse_lunar.remains+dot.fury_of_elune.ticks_remain*2.5>120)&((!cooldown.ca_inc.up|covenant.kyrian&!cooldown.empower_bond.up)|covenant.night_fae)|buff.ca_inc.remains>8&!buff.ravenous_frenzy.up)
 #### Use moons preferably in lunar eclipse
 actions.boat+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions.boat+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
