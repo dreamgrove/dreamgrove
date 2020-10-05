@@ -169,9 +169,9 @@ actions.boat=ravenous_frenzy,if=buff.ca_inc.up
 #### Checks if the crit buff is not up for later use
 actions.boat+=/variable,name=critnotup,value=!buff.balance_of_all_things_nature.up&!buff.balance_of_all_things_arcane.up
 #### Cancel starlord with less than 6 secs remaining and about to dump starsurges
-actions.boat+=/cancel_buff,name=starlord,if=buff.starlord.remains<6&(buff.balance_of_all_things_nature.stack_value>70|buff.balance_of_all_things_arcane.stack_value>70)&astral_power>=60&!cooldown.ca_inc.ready&(!cooldown.empower_bond.ready|!covenant.kyrian)
+actions.boat+=/cancel_buff,name=starlord,if=buff.starlord.remains<10&(buff.balance_of_all_things_nature.stack_value>70|buff.balance_of_all_things_arcane.stack_value>70)&astral_power>=60&(cooldown.ca_inc.remains>7|(cooldown.empower_bond.remains>7&!buff.kindred_empowerment_energize.up&covenant.kyrian))
 #### Dump starsurges with the crit buff and before using convoke
-actions.boat+=/starsurge,if=!variable.critnotup&((!cooldown.convoke_the_spirits.up|!variable.convoke_condition|!covenant.night_fae)&(covenant.night_fae|!cooldown.ca_inc.up))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
+actions.boat+=/starsurge,if=!variable.critnotup&((!cooldown.convoke_the_spirits.up|!variable.convoke_condition|!covenant.night_fae)&(covenant.night_fae|(cooldown.ca_inc.remains>7|(cooldown.empower_bond.remains>7&!buff.kindred_empowerment_energize.up&covenant.kyrian))))|(cooldown.convoke_the_spirits.up&cooldown.ca_inc.ready&covenant.night_fae)
 #### Sunfire when the crit buff isn't up, you won't overcap or ca/inc is about to be used
 actions.boat+=/sunfire,target_if=refreshable&target.time_to_die>16,if=ap_check&(variable.critnotup|(astral_power<30&!buff.ca_inc.up)|cooldown.ca_inc.ready)
 #### Moonfire when the crit buff isn't up, you won't overcap or ca/inc is about to be used and the kindred buff isn't up
@@ -195,8 +195,7 @@ actions.boat+=/adaptive_swarm,if=
 actions.boat+=/starsurge,if=covenant.night_fae&(variable.convoke_desync|cooldown.ca_inc.remains<10)&astral_power>50&cooldown.convoke_the_spirits.remains<10
 #### Dump starsurges when the fight is about to end, frenzy is about to end, you are at 90+ asp in an eclipse or ca/inc lasts another 8+secs
 actions.boat+=/variable,name=aspPerSec,value=eclipse.in_lunar*8%action.starfire.execute_time+!eclipse.in_lunar*6%action.wrath.execute_time+0.2%spell_haste
-actions.boat+=/starsurge,if=((fight_remains<4|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|(astral_power+variable.aspPerSec*buff.eclipse_solar.remains+dot.fury_of_elune.ticks_remain*2.5>120|astral_power+variable.aspPerSec*buff.eclipse_lunar.remains+dot.fury_of_elune.ticks_remain*2.5>120)&((!cooldown.ca_inc.up|covenant.kyrian&!cooldown.empower_bond.up)|covenant.night_fae)|buff.ca_inc.remains>8&!buff.ravenous_frenzy.up)
-#### Use moons preferably in lunar eclipse
+actions.boat+=/starsurge,if=((fight_remains<4|(buff.ravenous_frenzy.remains<gcd.max*ceil(astral_power%30)&buff.ravenous_frenzy.up))|(astral_power+variable.aspPerSec*buff.eclipse_solar.remains+dot.fury_of_elune.ticks_remain*2.5>120|astral_power+variable.aspPerSec*buff.eclipse_lunar.remains+dot.fury_of_elune.ticks_remain*2.5>120)&eclipse.in_any&((!cooldown.ca_inc.up|covenant.kyrian&!cooldown.empower_bond.up)|covenant.night_fae)|buff.ca_inc.remains>8&!buff.ravenous_frenzy.up)
 actions.boat+=/new_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions.boat+=/half_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
 actions.boat+=/full_moon,if=(buff.eclipse_lunar.up|(charges=2&recharge_time<5)|charges=3)&ap_check
