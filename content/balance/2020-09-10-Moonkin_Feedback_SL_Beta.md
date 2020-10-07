@@ -10,9 +10,6 @@ This is an article made to give feedback on Moonkins current state in the Shadow
 
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
-Updated: 03-Oct-20
-
-
 ## Comments on the 01-Oct-20 changes
 
 * Venthyr ability nerfed to 15 seconds duration from 20 seconds
@@ -24,29 +21,6 @@ Updated: 03-Oct-20
   * Since the hidden 20% max usage of the pool wasn't changed the other person can now do up to 60% more damage than you are doing and you will still be able to use up all of the pool.
 
 With these changes Kyrian is now the best ability for single target situations and about on par with Venthyr in AoE. Both still heavily outclass both Night Fae and Necrolord in all situations only to a lesser degree.
-
-## Comments on the 17-Sep-20 changes
-
-* Celestial Alignment/Incarnation now give 10% instead of 15% haste
-  * Does achieve the goal of reducing the power of our cooldowns and very slighty increases the haste required to hit the gcd cap of Wrath.
-  * Indirectly nerfs mastery and Primordial Arcanic Pulsar (legendary).
-* Lunar Eclipse now grants critical strike instead of more splash damage to Starfire and this bonus was moved to Soul of the Forest (talent)
-  * Further reduces the value of crit.
-  * Trades Lunar Eclipse feeling bad in single target situations for Lunar Eclipse feeling bad in AoE situations unless talented into SotF.
-  * SotF is now an AoE talent but is still significantly behind on single target.
-* Moonfire and Sunfire buffed by 20%
-  * Welcome buff but not enough.
-* Our mastery Total Eclipse has been nerfed by 20%
-  * Heavily nerfs our cooldowns and our scaling.
-  * Mastery was ahead but a lot of it was due to crit and haste both having little value. 20% is on the heavy-handed side.
-  * Mastery is still our best stat with haste sometimes pulling ahead.
-  * Ultimately means all of our stats no longer scale well.
-* Empower Bond (Kyrian Covenant ability) is now off the gcd
-  * Pushes Kyrian ahead in single target situations and in any situation where the bonded person always does more damage than you do in the 10 second window.
-* Ravenous Frenzy now deals 1% of your max hp instead of 3% when triggered
-  * No longer deadly but still heavily punishes any you for no upside.
-  
-The article has been updated to reflect the changes.
 
 ## General
 
@@ -113,9 +87,11 @@ Twin Moons and Stellar Drift both fit the exact same “niche” meaning one wil
 
 ### Tier 50:
 
-All talents fill the same role which is Astral Power generation and sqrt AoE scaling and with current tuning Fury of Elune simply stands out due to dealing significantly more damage while proving similar Astral Power.
+All talents fill the same role which is Astral Power generation and sqrt AoE scaling and with current tuning Fury of Elune simply stands out due to dealing more damage while providing similar Astral Power.
 
-Moons do not scale as well with AoE since only Full Moon splashes meaning it will always fall off on multiple targets which is fine but even on single target it’s outclassed.
+Solstice is a fun addition that fits as a passive talent but ultimately isn't doesn't feel too impactful due to ShS being so weak baseline.
+
+Moons do not scale as well with AoE since only Full Moon splashes meaning it will always fall off on multiple targets which is fine but even on single target it’s outclassed. Outside tuning Moons freshen up the rotation which is always positive.
 
 ## Covenants
 
@@ -126,6 +102,7 @@ This covenant is dependent on your partner which can make or break it’s usabil
 
 This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 25%, more/less one way or the other, for 10 seconds while having zero gameplay interaction. The pooled damage is used up by 20% of damage done, healing done and damage taken over 20 seconds.
 Many players feel that essentially giving another player a part of your dps is unfun in addition to the ability already being bland. Assuming both players deal the same amount of dps it’s the best single target option, getting better when the other person deals more damage.
+The pool being used up by taking damage or passive healing adds another layer of obsucrity of how much value you are actually getting.
 
 ### Necrolord
 The effect buffs dots which interestingly enough includes Fury of Elune and Starfall.
@@ -157,7 +134,7 @@ The potential downside of taking damage and being stunned seems out of place con
 
 ### Balance of All Things
 
-Unique legendary that has a relevant impact on your rotation but heavily simplifies it. The resulting playstyle consists of casting fillers for about 15 seconds and then casting 3 Starsurges ad infinitum for single target with no impact in AoE.
+Unique legendary that has a relevant impact on your rotation but heavily simplifies it. The resulting playstyle consists of casting fillers for about 15 seconds and then casting 3 Starsurges ad infinitum for single target but has no impact on the rotation in AoE.
 
 Creates haste breakpoints in single target due to being able to fit in more starsurges in the one second buff windows and caps how much astral power generation is worth between the crit windows as getting any more than going to 90+ astral power again have heavily reduced value.
 
@@ -169,7 +146,9 @@ Has anti-synergy with our cooldowns which always feels bad.
 
 ### Oneth’s Clear Vision
 
-An artifact from Legion with a nerfed proc chance in addition to spenders not being as strong anymore.
+An copied Legendary from Legion with a nerfed proc chance in addition to spenders not being as strong anymore.
+
+If tuned well enough it will have a positive impact on the rotation as it had in Legion.
 
 Outclassed in all aspects by nearly all other Legendaries in all scenarios. On single target the Starfall is only useful with Stellar Drift which you wouldn’t take on a single target encounter. In AoE the Starsurge has very little value and due to the high Astral Power cost of Starfall you get very few procs.
 
@@ -181,13 +160,11 @@ Has the upside of always having some value since it now works off Astral Power s
 
 If it extends Celestial Alignment or Incarnation it has very good value due to Starsurge Empowerments, but otherwise has anti-synergy with it since it resets all stacks upon entering and only last 9 seconds compared to the standard 15 seconds.
 
-Currently bugged with Incarnation and gives you 100% crit instead of 10%.
-
 Due to various nerfs to our cooldowns and mastery it is now in a fairly bad state.
 
 ### Timeworn Dreambinder
 
-Significantly changes your playstyle on single target.
+Significantly changes your playstyle on single target as you try to keep up the buff. It is possible to keep up the buff at all times with low haste already so there is no high skill floor like it used to have in Legion.
 
 Especially due to the nerfs to spender damage, it has lost a lot of value and has anti-synergy with the Starsurge Empowerments making it fall off.
 
@@ -217,16 +194,13 @@ At earlier ranks can be a dps loss due to desyncing with common one and two minu
 
 Very strong but as mentioned in the Venthyr section can cause an overcap of Crit.
 
-Currently bugged to give 10 times the intended Crit
-
 ### Evolved Swarm (Necrolord)
 
 Our dots being weak means this is weak as well.
 
 ### Conflux of Elements (Night Fae)
 
-Simple damage increase with the only caveat being that dots and Starfall cast by Convoke are not affected by it.
-
+Simple damage increase with the only caveat being that dots and Starfall cast by Convoke are not affected by it as most their damage comes after the channel.
 
 ## Bugs
 
