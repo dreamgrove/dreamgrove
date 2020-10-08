@@ -10,17 +10,24 @@ This is an article made to give feedback on Moonkins current state in the Shadow
 
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
-## Comments on the 01-Oct-20 changes
+## Comments on the 08-Oct-20 changes
 
-* Venthyr ability nerfed to 15 seconds duration from 20 seconds
-  * This nerfs the ability by more than 25% due to its stacking nature making it far worse than it was before.
-  * A simpler nerf that wouldn't have impacted how it feels would have been to reduce the haste or damage amplification it gives.  
+* Shooting Stars Astral Power generation buffed from 2 to 3 and proc rate buffed from 10% to 15%. DR for multiple targets still exists
+  * Much needed buff that was promised is now here making it finally generate relevant Astral Power.
+  * Makes Solstice easily the best T50 talent in all situations outside very specific burst scenarios.
+* Soul of the Forest buffed with Solar Eclipse making Wrath generate 50% more Astral Power instead of 25% and Starfire splash increased from 100% bonus to 150% bonus
+  * A bit weird of a buff because it was already the best talent for anything above 1 target in that row and stays this way but ultimately nothing negative
+* Starlord duration decreased from 20 seconds to 15 seconds and haste amount buffed from 3% to 4% per stack
+  * Finally no longer need to cancel Starlord since the duration matches Eclipses, only a bit weird with Celestial Alignment now but this is a good change either way
+  * Still doesn't work well with Starfall
+  * As before this was and stays the best single target talent
+* Necrolord Covenant ability Adaptive Swarm buffed by 22% for Balance Druids
+  * Makes it not beyond trash tier for single target and even competitive without the legendary Balance of All Things but still suffers from not scaling with targets
+* All damage buffed by 12.2%
+  * This mainly exists so that people will not be doing tank damage in beta and pre patch and will probably allow us to be somewhere at the bottom of middle tier and for specific fights even higher. Obviously this does not fix any issues with the spec itself.
+ 
+Overall the first positive patch of Beta/PTR for us. In total this is about a 15% damage buff and a 10-20% buff to our Astral Power generation depending on the situation which helps gameplay. The extra Astral Power in AoE is unfourtunately mostly wasted due to us already achieving 100% Starfall uptime and extra Starsurges not mattering too much. The only questionable result of this is that starting from 6 targets you will rather cap Astral Power than use leftover on Starsurges during Lunar Eclipse as Starfires will simply deal more damage even when including the additional Starfire crit.
 
-* Kyrian ability nerfed to 25% from 30%
-  * Simple ~17% nerf.
-  * Since the hidden 20% max usage of the pool wasn't changed the other person can now do up to 60% more damage than you are doing and you will still be able to use up all of the pool.
-
-With these changes Kyrian is now the best ability for single target situations and about on par with Venthyr in AoE. Both still heavily outclass both Night Fae and Necrolord in all situations only to a lesser degree.
 
 ## General
 
@@ -53,13 +60,17 @@ As mentioned earlier, making Starsurge increase AoE damage is a dangerous path a
 
 ### Tuning
 
-Currently Balance Druid is tuned very low, especially on single target.
-Dots deal a low amount of damage to the point of Moonfire sometimes barely being worth casting on multiple targets. This is due to giving up significant amount of Astral Power generation and thus when having to dot more often not being able to keep up Starfall.
-Shooting Stars baseline had an extremely minor impact as it’s tuned very low. The extra Astral Power is of little use in AoE scenarios and on single target it generates as little as 4% of our total Astral Power, only going up a small amount with more targets. The increase in power mentioned in a blue post is not implemented as of now.
+Currently Balance Druid is tuned low to okish.
+~~Dots deal a low amount of damage to the point of Moonfire sometimes barely being worth casting on multiple targets. This is due to giving up significant amount of Astral Power generation and thus when having to dot more often not being able to keep up Starfall.~~
+This is partly fixed due to Shooting Stars having been buffed a significant amount. Moonfire is still not worth casting during Lunar Eclipse in AoE with Soul of the Forest.
 
-As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.
+~~Shooting Stars baseline had an extremely minor impact as it’s tuned very low. The extra Astral Power is of little use in AoE scenarios and on single target it generates as little as 4% of our total Astral Power, only going up a small amount with more targets. The increase in power mentioned in a blue post is not implemented as of now.~~
+Shooting Stars is now a relevant increase in Astral Power generation.
 
-The various nerfs to our spenders have negatively impacted our potential single target burst and unique spread aoe. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea.
+~~As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.~~
+With the Shooting Stars/Solstice and Soul of the Forest buffs we are now in a much better shape in terms of Astral Power generation but the problem with Astral Power in AoE with Starfall still exists. How the increased generation feels in single target is to be seen.
+
+The various nerfs to our spenders have negatively impacted our potential single target burst. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea. This is mostly caused by Starsurge Empowerments.
 
 ## DPS Talents 
 
@@ -67,17 +78,17 @@ The various nerfs to our spenders have negatively impacted our potential single 
 
 Nature’s Balance is the strongest single target choice and solves the problem of having to generate up to 50 Astral Power to start using a filler. Starting from 0 Astral Power means that during AoE it takes about 12 seconds before you can use your first Starfall otherwise.
 
-Trees have their niche in tanking but deal basically no damage.
+Trees have their niche in tanking in M+ but deal basically no damage.
 
-Warrior of Elune is now a competitive pick due to the Starfire buff on single target but requires SotF to be good on AoE.
+Warrior of Elune is now a competitive pick due to the Starfire buff on single target but requires SotF to be good on AoE. Low cd, off gcd abilities can feel bad to use as we are a spec that is hardcasting most of the time.
 
 ### Tier 40:
 
-Soul of the Forest is now by far the best AoE talent as Starfire no longer deals AoE damage without it. On single target it is now even worse than before.
+Soul of the Forest is now by far the best AoE talent as Starfire no longer deals AoE damage without it. On single target it is very bad as half of its value has no effect there.
 
-Starlord lasting 20 seconds has problematic timing implications with eclipses lasting 15 seconds. Currently it is the best play to cancel Starlord when it has a low duration left, allowing for a relevant 1.5% dps increase. Opposite to SotF Starlord becomes nearly useless in AoE scenarios as Starfall costs 50 Astral Power and lasts 20 seconds meaning you will have at best 2 stacks for a short window.
+Starlord is now the best pick for anything single target and still doesn't work Starfall as you are unable to stack it up when you can only use your spender every 8-10 seconds.
 
-Incarnation has taken multiple hard hits with nerfs to our cooldowns and mastery. Its only niche is 30 second burst but outside that is worse than the other two talents in all situations.
+Incarnation has taken multiple hard hits with nerfs to our cooldowns and mastery. It is now a bad pick in all situations.
 
 ### Tier 45:
 
@@ -87,9 +98,9 @@ Twin Moons and Stellar Drift both fit the exact same “niche” meaning one wil
 
 ### Tier 50:
 
-All talents fill the same role which is Astral Power generation and sqrt AoE scaling and with current tuning Fury of Elune simply stands out due to dealing more damage while providing similar Astral Power.
+Fury of Elune has its only niche in burst damage but outside tuning feels good to press.
 
-Solstice is a fun addition that fits as a passive talent but ultimately isn't doesn't feel too impactful due to ShS being so weak baseline.
+Solstice is a fun addition that fits as a passive talent and with the Shooting Stars buff outperforms both other talents.
 
 Moons do not scale as well with AoE since only Full Moon splashes meaning it will always fall off on multiple targets which is fine but even on single target it’s outclassed. Outside tuning Moons freshen up the rotation which is always positive.
 
