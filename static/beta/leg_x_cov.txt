@@ -6,7 +6,6 @@ copy=necrolord
 covenant=necrolord
 copy=kyrian
 covenant=kyrian
-soulbind+=umbral_intensity:1
 
 copy=kyrian-oneth,kyrian
 tabard=,id=31405,bonus_id=7087

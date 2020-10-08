@@ -1,6 +1,13 @@
 1. What's new?
-    * Changes from the September 30th build 9.0.2.36086 are included.
-    * Conduits are set to rank 7
+    * Changes from the October 7th build 9.0.2.36165 are included.
+        * Adaptive Swarm damage increased by 22%
+    * Changes from the October 7th hotfix to PTR build 9.0.1.36131 are included.
+        * Shooting Stars proc rate increased to 15% and grants 3 AP per proc
+        * Soul of the Forest AP bonus to Wrath increased to 50%, AoE damage bonus to Starfire increased to 150%
+        * Starlord grants 4% haste per stack and lasts 15 seconds
+        * Balance Druid spec-wide aura changed from -18% to -8%
+    * Kyrian accounts for 15% of pool being lost to damage taken
+    * Precise Alignment conduit removed from base profiles
 
 1. What is the base character used in the sims?
     * The base profile can be found in [sandbag.txt](sandbag.txt).
@@ -9,7 +16,7 @@
     * No gear has extra ilevel for being legendary.
 
 1. What about conduits?
-    * All sims include the covenant specific conduits, Fury of the Skies, and Precise Alignment conduits at rank 7.
+    * All sims include the covenant specific conduits and Fury of the Skies at rank 7.
     * Stellar Inspiration at current tuning contribute less than 1% and is not worth simming.
 
 1. What about soulbinds?
@@ -37,7 +44,7 @@
     * SimC assumes it will cast ~3.5 healing spells, 1 Starfall if it isn't up, 1 Moonfire if you have a target without it, at least 1 Wrath, then roughly balance out the remaining between Starsurge, Wrath, and Moonfire on any further un-dotted targets.
 
 1. How does SimC handle Kindred Spirits (Kyrian)?
-    * SimC assumes that you are bonding with someone who does the exact same damage as you, and that neither player takes damage nor does any healing to use up part of the pool. The additional damage done by you AND your partner are attributed to you.
+    * SimC assumes that you are bonding with someone who does the exact same damage as you, and that 15% of the pool is lost from taking damage. The additional damage done by you AND your partner are attributed to you.
 
 1. What about bugs on the Beta/PTR? Which are assumed to be fixed for the sims?
     * Currently there are no known bugs for Balance.

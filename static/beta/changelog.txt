@@ -1,3 +1,14 @@
+Oct 8:
+    * Changes from the October 7th build 9.0.2.36165 are included.
+        * Adaptive Swarm damage increased by 22%
+    * Changes from the October 7th hotfix to PTR build 9.0.1.36131 are included.
+        * Shooting Stars proc rate increased to 15% and grants 3 AP per proc
+        * Soul of the Forest AP bonus to Wrath increased to 50%, AoE damage bonus to Starfire increased to 150%
+        * Starlord grants 4% haste per stack and lasts 15 seconds
+        * Balance Druid spec-wide aura changed from -18% to -8%
+    * Kyrian accounts for 15% of pool being lost to damage taken
+    * Precise Alignment conduit removed from base profiles
+
 Oct 1:
     * Changes from the September 30th build 9.0.2.36086 are included.
     * Conduits are set to rank 7

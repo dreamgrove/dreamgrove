@@ -33,6 +33,15 @@ main_hand=torch_of_fiery_atonement,id=182418,ilevel=233,enchant=celestial_guidan
 #legs=chiropteran_leggings,id=182993,ilevel=226
 #finger2=ritualists_treasured_ring,id=183037,ilevel=226,gems=16mastery,enchant=tenet_of_haste
 
+override.spell_data=effect.298537.base_value=30
+override.spell_data=effect.298290.base_value=15
+override.spell_data=effect.179696.base_value=-8
+override.spell_data=effect.191146.base_value=-8
+override.spell_data=effect.127234.base_value=50
+override.spell_data=effect.325445.base_value=150
+override.spell_data=effect.736174.base_value=4
+override.spell_data=spell.279709.duration=15000
+
 tabard=,id=31405
 
 soulbind=deep_allegiance:7/evolved_swarm:7/conflux_of_elements:7/endless_thirst:7/fury_of_the_skies:7

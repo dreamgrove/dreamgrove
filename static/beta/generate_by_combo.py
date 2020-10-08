@@ -65,10 +65,7 @@ for cov in covs:
         else:
             target_str = 'target_error=0.1\ndesired_targets=' + targets
 
-        if cov == 'kyrian':
-            simc = profile + '\ntalents=0000000\ncovenant=' + cov + '\nsoulbind+=umbral_intensity:1\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + target_str + '\n\n' + apl + sets
-        else:
-            simc = profile + '\ntalents=0000000\ncovenant=' + cov + '\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + target_str + '\n\n' + apl + sets
+        simc = profile + '\ntalents=0000000\ncovenant=' + cov + '\n\ntabard=,id=31405,bonus_id=' + str(bonus) + '\n\nname=\"' + name + '\"\n\n' + target_str + '\n\n' + apl + sets
 
         while True:
             time.sleep(5) 
