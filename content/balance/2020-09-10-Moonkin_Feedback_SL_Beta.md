@@ -2,7 +2,7 @@
 date: '2020-09-10'
 authors: ["Jundarer, Goosy"]
 published: true
-patch: "8.0"
+patch: "9.0"
 title: Moonkin Feedback - Shadowlands Beta
 ---
 
@@ -10,24 +10,43 @@ This is an article made to give feedback on Moonkins current state in the Shadow
 
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
-## Comments on the 08-Oct-20 changes
+## Comments on the 15-Oct-20 changes
 
-* Shooting Stars Astral Power generation buffed from 2 to 3 and proc rate buffed from 10% to 15%. DR for multiple targets still exists
-  * Much needed buff that was promised is now here making it finally generate relevant Astral Power.
-  * Makes Solstice easily the best T50 talent in all situations outside very specific burst scenarios.
-* Soul of the Forest buffed with Solar Eclipse making Wrath generate 50% more Astral Power instead of 25% and Starfire splash increased from 100% bonus to 150% bonus
-  * A bit weird of a buff because it was already the best talent for anything above 1 target in that row and stays this way but ultimately nothing negative
-* Starlord duration decreased from 20 seconds to 15 seconds and haste amount buffed from 3% to 4% per stack
-  * Finally no longer need to cancel Starlord since the duration matches Eclipses, only a bit weird with Celestial Alignment now but this is a good change either way
-  * Still doesn't work well with Starfall
-  * As before this was and stays the best single target talent
-* Necrolord Covenant ability Adaptive Swarm buffed by 22% for Balance Druids
-  * Makes it not beyond trash tier for single target and even competitive without the legendary Balance of All Things but still suffers from not scaling with targets
-* All damage buffed by 12.2%
-  * This mainly exists so that people will not be doing tank damage in beta and pre patch and will probably allow us to be somewhere at the bottom of middle tier and for specific fights even higher. Obviously this does not fix any issues with the spec itself.
+This patch was mostly focused on legendary and covenant tuning.
+* The legendary Balance of All Things now starts with 50% instead of 75% crit and decays by 10% every second instead of 15%
+  * No longer the king of all things as this is roughly a 33% nerf but still the king of single target.
+* Oneth's Clear Vision Starfall proc chance buffed from 15% to 20% and Starsurge proc chance buffed from 15% to 40%
+  * A significant buff and definitely in the right direction with Starfall having a higher chance to proc but still far from being competitive. 
+  * It now allows roughly 40% uptime of Starfall single target which may cause it to have a niche but that is to be seen.
+  * Starsurge in AoE when you are already Starfalling is weak however high the chance is, but adds more priority damage than other legendaries may.
+* Timeworn Dreambinder duration nerfed from 5 seconds to 6 seconds, and now reduces/increases both cost and damage by 10% instead of just cost by 15%
+  * Makes it much more appealing in single target as it is still possible to keep up a long time with the right talents and some haste.
+  * Unfourtunately doesn't solve the problem where it is not really usable with Starfall but technically allows for a slightly stronger Starfall for short living spawns.
+  * The duration nerf has the unfourtunate implication that you can no longer keep the buff up when using Convoke the Spirits.
+ * From a pure tuning perspective still slightly behind Balance of All Things
+* Fury of the Skies conduit heavily nerfed
+  * Was a lot stronger than the other conduits and is now a 1-2% increase.
+  * Other conduits are still behind it as a lot of them are just extremely weak in 0.2%-0.5% damage increase range. See conduit section for a more detailed breakdown.
+* Adaptive Swarm now has a Balance specific effect that increasese the periodic effectiveness by 30% instead of 20% and the jump range was increased for us form 25y to 35y.
+  * This is a very good change for Swarm as it needed exactly this Balance specific adjustment.
+  * Now competitive on single target when manipulating the refresh mechanic it has. General rule for usage:
+    * If damage is ticking and has less than 3 stacks wait to refresh as late as possible
+    * If 3+ stacks on the target, use so it arrives just after those stacks expires
+    * If you have 4+ stacks on an ally dont use a new swarm if the heal will arrive at the target in the next ~5 secs or less
+  * Still bad scaling with targets which may drive people away from it but it is no longer a troll pick
+* Kyrian covenant ability Kindred Spirits nerfed from 25% damage transfer to 20%
+  * This puts Kyrian in a more healthy spot where it is only the best option if you can make use of a much stronger ally or the absorb doesn't reduce its value instead of always.
+* Venthyr covenant ability duration increased back to 20 seconds but now gives 1% haste per stack instead of 2%
+  * Very happy they decided to nerf its value instead of its fun.
+  * The haste stacking was useless for us in single target situations anyways meaning it returns to its former glory there.
+  * Fairly significant AoE nerf as you cannot build up the stacks nearly as fast there now but still the best option with current tuning.
+  * It is unsure if the crit stack conduit is to be considered part of the ability as it is tuned a lot higher than all other conduits. It would be good to know if the current strength is to be judged with or without this conduit.
+* Draught of Deep Focus (Increases Moonfire, Rake, Rip, or Rejuvenation when they are only on one target) buffed from 30% to 40%
+ * This is beyond bad for us still but we welcome our Feral single target overlords
  
-Overall the first positive patch of Beta/PTR for us. In total this is about a 15% damage buff and a 10-20% buff to our Astral Power generation depending on the situation which helps gameplay. The extra Astral Power in AoE is unfourtunately mostly wasted due to us already achieving 100% Starfall uptime and extra Starsurges not mattering too much. The only questionable result of this is that starting from 6 targets you will rather cap Astral Power than use leftover on Starsurges during Lunar Eclipse as Starfires will simply deal more damage even when including the additional Starfire crit.
+Generally another positive patch for us putting us on a 2 week streak. All covenant changes went in the right direction as did the Legendary changes although I wish they went a bit further for those so that they also become usable for the scenarios they are good at. As always check out our sim page to see how all things stack up. Mind that this patch is a nerf for us as BoAT was our best legendary by a lot and is now heavily nerfed but hopefully this won't matter in the long run.
 
+On the topic of Covenant tuning Convoke desperatly needs a change similar to Necrolord where it has a different power level compared to what Restoration druids get. How it stacks up for Guardian and Feral I don't know but for Balance it has been the worst covenant since the big nerf a while ago. 
 
 ## General
 
@@ -45,9 +64,9 @@ Since mastery has now been heavily nerfed for the second time we now have no sta
 ### AoE and Starfall
 
 A lot of our AoE damage comes from Starfall of which you can’t have more than one up at any time. This means that once enough Astral Power is generated during AoE any further Astral Power has to be used on Starsurge which is not a relevant dps increase or even a dps loss with enough targets (this includes the Empowerment bonus).
-For high Haste or higher Astral Power generation to feel good we need to be able to effectively spend our Astral Power in some form. A solution could be a stackable Starfall, a (duration) hasted Starfall, an option to condense the Starfall damage, a way to empower Starfall with more Astral Power or something of similar effect.
+For high Haste or higher Astral Power generation to feel good we need to be able to effectively spend our Astral Power in some form. A solution would be any way to effectively spend Astral Power in AoE, be it a stackable Starfall, a (duration) hasted Starfall, an option to condense the Starfall damage, a way to empower Starfall with more Astral Power or anything of similar effect. 
 
-Putting more power into Starsurge would start us down a road similar to BfA where we only used Starfall on 7 or more targets with the standard gear setup. Additionally casting a big single target nuke in AoE will always feel bad.
+Putting more power into Starsurge would start us down a road similar to BfA where we only used Starfall on 7 or more targets with the standard gear setup. Additionally casting a big single target nuke in AoE will always feel bad. As an example completely ignoring Starsurge during Lunar Eclipse even when capping Astral Power ist just a 0.5% loss and on 6 targets it is a gain to overcap Astral Power.
 
 ### Starsurge Empowerment
 
@@ -60,7 +79,7 @@ As mentioned earlier, making Starsurge increase AoE damage is a dangerous path a
 
 ### Tuning
 
-Currently Balance Druid is tuned low to okish.
+Currently Balance Druid is tuned low to okish with now being good in their niches.
 ~~Dots deal a low amount of damage to the point of Moonfire sometimes barely being worth casting on multiple targets. This is due to giving up significant amount of Astral Power generation and thus when having to dot more often not being able to keep up Starfall.~~
 This is partly fixed due to Shooting Stars having been buffed a significant amount. Moonfire is still not worth casting during Lunar Eclipse in AoE with Soul of the Forest.
 
@@ -69,8 +88,6 @@ Shooting Stars is now a relevant increase in Astral Power generation.
 
 ~~As a whole our Astral Power generation is very low which leads to rather stale gameplay of pressing your filler about 5 times on single target and 6-7 times in AoE between each spender with dots slowing things down even more due to Shooting Stars generating so little Astral Power. On single target a higher Astral Power generation would help gameplay flow a significant amount but on AoE this would require changes to Starfall to have an impact as described in the AoE and Starfall section.~~
 With the Shooting Stars/Solstice and Soul of the Forest buffs we are now in a much better shape in terms of Astral Power generation but the problem with Astral Power in AoE with Starfall still exists. How the increased generation feels in single target is to be seen.
-
-The various nerfs to our spenders have negatively impacted our potential single target burst. Both fillers can make up an equal or close to equal percentage of our damage now depending on the situation which seemingly goes against the filler/spender idea. This is mostly caused by Starsurge Empowerments.
 
 ## DPS Talents 
 
@@ -111,7 +128,7 @@ Generally Night Fae is the only Covenant ability that feels good to use (outside
 ### Kyrian
 This covenant is dependent on your partner which can make or break it’s usability. Generally you will simply bind yourself to the highest dps player in the group/raid and hope for the best.
 
-This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 25%, more/less one way or the other, for 10 seconds while having zero gameplay interaction. The pooled damage is used up by 20% of damage done, healing done and damage taken over 20 seconds.
+This feels very bland to press as it’s basically a global that increases the damage of 2 people by roughly 20%, more/less one way or the other, for 10 seconds while having zero gameplay interaction. The pooled damage is used up by 20% of damage done, healing done and damage taken over 20 seconds.
 Many players feel that essentially giving another player a part of your dps is unfun in addition to the ability already being bland. Assuming both players deal the same amount of dps it’s the best single target option, getting better when the other person deals more damage.
 The pool being used up by taking damage or passive healing adds another layer of obsucrity of how much value you are actually getting.
 
@@ -120,7 +137,8 @@ The effect buffs dots which interestingly enough includes Fury of Elune and Star
 
 You can have a maximum of two debuffs on any targets at any time with just one being more common meaning that it has no scaling above two targets allowing for anything that does scale with more targets to quickly outscale it.
 
-As the hot or dot increase is the same for all Druid specs and Balance Druid currently has the weakest dots, this ability can't be good for Moonkin without being potentially broken for other Druid specs.
+~~As the hot or dot increase is the same for all Druid specs and Balance Druid currently has the weakest dots, this ability can't be good for Moonkin without being potentially broken for other Druid specs.~~
+This was fixed with the change to having a Balance specific effect.
 
 ### Night Fae
 Very volatile ability that as a whole has found the most positive reception in terms of gameplay.
@@ -136,10 +154,10 @@ A basically passive macro and forget ability that buffs your Celestial Alignment
 
 While boring this ability has the upside of always being useful as it simply buffs your damage. Heavily plays into the problem of Wrath quickly hitting the gcd cap. Even with 0% Haste you hit the gcd cap in only 6 casts during Bloodlust. 
 
-Further forces a significant amount of your damage into our cooldown window every 3 minutes which makes the other 2:40 min feel even worse than it already does.
-At higher ranks the conduit that increases our crit chance with each cast will make us go over 100% crit especially with various base crit increases like Incarnation.
+Further forces a significant amount of your damage into our cooldown window every 3 minutes which makes the other 2:40 min feel even worse than they already do.
+Due to the conduit this further reduces the value of crit for us.
 
-The potential downside of taking damage and being stunned seems out of place considering no other covenant ability has a negative effect, and for a flavor effect it is way too dangerous. With high stacks it can nearly one shot you in the worst case.
+The potential downside of taking damage and being stunned seems out of place considering no other covenant ability has a negative effect.
 
 ## Legendaries
 
@@ -151,19 +169,20 @@ Creates haste breakpoints in single target due to being able to fit in more star
 
 Very, very heavily reduces the value of crit making it by far our worst stat with this legendary.
 
-Due to various changes this is now the best legi in all situations.
+Due to various changes this is now the best legi in most situations.
 
 Has anti-synergy with our cooldowns which always feels bad.
 
 ### Oneth’s Clear Vision
 
-An copied Legendary from Legion with a nerfed proc chance in addition to spenders not being as strong anymore.
-
 If tuned well enough it will have a positive impact on the rotation as it had in Legion.
 
-Outclassed in all aspects by nearly all other Legendaries in all scenarios. On single target the Starfall is only useful with Stellar Drift which you wouldn’t take on a single target encounter. In AoE the Starsurge has very little value and due to the high Astral Power cost of Starfall you get very few procs.
+Outclassed in all aspects by nearly all other Legendaries in all scenarios.
 
-As long as the vast cost difference between Starfall and Starsurge exists this will only be good on single target.
+It allows you to play Stellar Drift on single target for only a very minor loss which heavily increased movement.
+
+~~As long as the vast cost difference between Starfall and Starsurge exists this will only be good on single target.~~
+This is partly fixed with the chance difference for each spell but since Starsurge is still useless in AoE this only fixes one part of the problem if it can be called a problem. However it is tuned it will end up being a single target legi.
 
 ### Primordial Arcanic Pulsar 
 
@@ -177,14 +196,12 @@ Due to various nerfs to our cooldowns and mastery it is now in a fairly bad stat
 
 Significantly changes your playstyle on single target as you try to keep up the buff. It is possible to keep up the buff at all times with low haste already so there is no high skill floor like it used to have in Legion.
 
-Especially due to the nerfs to spender damage, it has lost a lot of value and has anti-synergy with the Starsurge Empowerments making it fall off.
-
-Completely useless in AoE as it is impossible to keep up the buff when you can only cast Starfall every 10 seconds.
+Nearly useless in AoE as it is impossible to keep up the buff when you can only cast Starfall every 10 seconds.
 
 ### Final thoughts on Balance legendaries
 
-Dreambinder and Oneth's will only ever be good on single target and if Balance of All Things isn't tuned heavily above the other options it will also be a single target legendary as it synergizes more with Starsurge dumping than our consistent AoE damage pattern with Starfall and dots. This means the only legendary that really works and feels good any time you Starfall (which is any time you fight more than 1 target) is Pulsar.
-The reason it is this way stems from the vast cost difference of our spenders and being unable to use multiple Starfalls within a short timeframe. The only real fix for this is to change Starfall so it once again works with these legendaries or redesign the legendaries.
+Dreambinder and Oneth's will only ever be good on single target and if Balance of All Things isn't tuned heavily above the other options it will also be a single target legendary as it synergizes more with Starsurge dumping than our consistent AoE damage pattern with Starfall and dots. This means the only spec-specific legendary that really works and feels good any time you Starfall (which is any time you fight more than 1 target) is Pulsar.
+The generic druid legendary Circle of Life and Death is dangerously close to overtaking all other legendaries in all scenarios.
 
 ## Conduits
 
@@ -192,8 +209,8 @@ These are oddly or not completely tuned. Fury of the Skies allows dots to be of 
 The base profile used can be found at https://www.dreamgrove.gg/beta/ in the sandbag.txt file on the bottom left.
 
 Single target:
-![Image](https://i.gyazo.com/a5b0cac071f84a953d22ddf8e2603832.png)  
-  
+![Image](https://cdn.discordapp.com/attachments/370236266530471937/766430301937205268/unknown.png)  
+
 5 targets:  
 ![Image](https://i.gyazo.com/022b335be22c52f8eee7872a6b1eb06b.png)  
   
@@ -203,11 +220,11 @@ At earlier ranks can be a dps loss due to desyncing with common one and two minu
 
 ### Endless Thirst (Venthyr)
 
-Very strong but as mentioned in the Venthyr section can cause an overcap of Crit.
+Tuned a lot higher than all other conduits and further reduces the value of crit.
 
 ### Evolved Swarm (Necrolord)
 
-Our dots being weak means this is weak as well.
+Very simple increase that is rather weak as it isn't affected by the Balance specific increase but still ok.
 
 ### Conflux of Elements (Night Fae)
 
@@ -220,6 +237,8 @@ This will repeat some earlier mentioned bugs.
 Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though its effect is meant to do so as shown by other specs. For example Elemental Shamans Storm Elemental Lightning Bolt cast time reduction.
 
 Convoke the Spirits will only cast healing spells if you are further than 40yd from the target, even if the target is in range of the rest of your spells.
+
+Adaptive Swarm jump range appears to only be ~20m instead of the 35m it should be.
 
 Rebirth revives with 60% of max hp instead of the 100% it should with rank 2 Rebirth.
 
