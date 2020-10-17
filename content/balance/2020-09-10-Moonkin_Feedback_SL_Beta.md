@@ -14,7 +14,7 @@ All numbers mentioned are backed up using sims found at https://www.dreamgrove.g
 
 This patch was mostly focused on legendary and covenant tuning.
 * The legendary Balance of All Things now starts with 50% instead of 75% crit and decays by 10% every second instead of 15%
-  * No longer the king of all things as this is roughly a 33% nerf but still the king of single target.
+  * No longer the King of All Things as this is roughly a 33% nerf but still the king of single target.
 * Oneth's Clear Vision Starfall proc chance buffed from 15% to 20% and Starsurge proc chance buffed from 15% to 40%
   * A significant buff and definitely in the right direction with Starfall having a higher chance to proc but still far from being competitive. 
   * It now allows roughly 40% uptime of Starfall single target which may cause it to have a niche but that is to be seen.
@@ -29,7 +29,7 @@ This patch was mostly focused on legendary and covenant tuning.
   * Other conduits are still behind it as a lot of them are just extremely weak in 0.2%-0.5% damage increase range. See conduit section for a more detailed breakdown.
 * Adaptive Swarm now has a Balance specific effect that increasese the periodic effectiveness by 30% instead of 20% and the jump range was increased for us form 25y to 35y.
   * This is a very good change for Swarm as it needed exactly this Balance specific adjustment.
-  * Now competitive on single target when manipulating the refresh mechanic it has. General rule for usage:
+  * Now competitive on single target when manipulating the refresh mechanic it has which may be fun. General rule for usage I found if you want to try optimizing it:
     * If damage is ticking and has less than 3 stacks wait to refresh as late as possible
     * If 3+ stacks on the target, use so it arrives just after those stacks expires
     * If you have 4+ stacks on an ally dont use a new swarm if the heal will arrive at the target in the next ~5 secs or less
@@ -44,7 +44,9 @@ This patch was mostly focused on legendary and covenant tuning.
 * Draught of Deep Focus (Increases Moonfire, Rake, Rip, or Rejuvenation when they are only on one target) buffed from 30% to 40%
  * This is beyond bad for us still but we welcome our Feral single target overlords
  
-Generally another positive patch for us putting us on a 2 week streak. All covenant changes went in the right direction as did the Legendary changes although I wish they went a bit further for those so that they also become usable for the scenarios they are good at. As always check out our sim page to see how all things stack up. Mind that this patch is a nerf for us as BoAT was our best legendary by a lot and is now heavily nerfed but hopefully this won't matter in the long run.
+Generally another positive patch for us putting us on a 2 week streak. All covenant changes went in the right direction as did the Legendary changes although I wish they went a bit further for those so that they also become usable for the scenarios they are can be good at. As always check out our sim page to see how all things stack up. Mind that this patch is a nerf for us as BoAT was our best legendary by a lot and is now heavily nerfed but hopefully this won't matter in the long run.
+
+For anything that isn't single target our best legendary is now the Circle of Life and Death generic druid legendary by a small margin with Pulsar and BoAT being 2-3% behind. This also has the interesting implication that Twin Moons may see play as it synergizes with Circle and we now have enough Astral Power to keep up Starfall. In most cases the infinite mobility of Stellar Drift is not going to be worth giving up for a minor theoretical increase.
 
 On the topic of Covenant tuning Convoke desperatly needs a change similar to Necrolord where it has a different power level compared to what Restoration druids get. How it stacks up for Guardian and Feral I don't know but for Balance it has been the worst covenant since the big nerf a while ago. 
 
@@ -111,7 +113,9 @@ Incarnation has taken multiple hard hits with nerfs to our cooldowns and mastery
 
 Stellar Flare is similar to Starlord in that it is only good on single target and starts being and feeling very bad with any further added targets.
 
-Twin Moons and Stellar Drift both fit the exact same “niche” meaning one will always be picked over the other. Currently Starfall is strong enough and or dots are weak enough for Stellar Drift to always be the superior pick when deciding between the two. A talent move seems like the only good solution in this case as both significantly improve how AoE feels.
+Twin Moons and Stellar Drift both fit the exact same “niche” meaning one will always be picked over the other. ~~Currently Starfall is strong enough and or dots are weak enough for Stellar Drift to always be the superior pick when deciding between the two.~~ It is no longer always the strongest but even when slightly behind the mobility is too much of a factor to give up.
+
+One reason why Legion AoE felt so good is because we had access to both options.
 
 ### Tier 50:
 
@@ -143,11 +147,11 @@ This was fixed with the change to having a Balance specific effect.
 ### Night Fae
 Very volatile ability that as a whole has found the most positive reception in terms of gameplay.
 
-The non spec specific casts heavily depend on your surroundings. At range, and without any injured allies, and under the assumption it casts 13 spells as it currently does due to a bug, you end up with ~11.5 damage casts. Going into melee replaces 3-4 Balance Druid spells with Feral spells which deal close to no damage effectively reducing its value by ~30%. Having more injured allies which is usually the case in dungeons and raids replaces another ~2 Balance Druid spells with healing casts. In the worst case that means an unfavorable situation halves the potential damage of a Convoke cast.
+The non spec specific casts heavily depend on your surroundings. At range, and without any injured allies, and under the assumption it casts 13 spells as it currently does due to a bug, you end up with ~11.5 damage casts. Going into melee replaces 3-4 Balance Druid spells with Feral spells which deal close to no damage effectively reducing its value by ~30%. Having more injured allies which is usually the case in dungeons and raids replaces another ~2 Balance Druid spells with healing casts. In the worst case that means an unfavorable situation halves the potential damage of a Convoke cast compared to an optimal situation.
 
 The value of this ability lies in its high amount of single target burst but at the same time it has very little AoE value. The extra Starfall or Starsurges are not very useful as discussed in the earlier Starfall section. 
 
-It currently has no smart targeting meaning you cannot focus anything if there are any additional targets present and can hit immune targets which heavily diminishes its value.
+It currently has no smart targeting meaning you cannot focus anything if there are any additional targets present and can hit immune targets which heavily diminishes its value when those are present.
 
 ### Venthyr
 A basically passive macro and forget ability that buffs your Celestial Alignment or Incarnation.
@@ -157,7 +161,7 @@ While boring this ability has the upside of always being useful as it simply buf
 Further forces a significant amount of your damage into our cooldown window every 3 minutes which makes the other 2:40 min feel even worse than they already do.
 Due to the conduit this further reduces the value of crit for us.
 
-The potential downside of taking damage and being stunned seems out of place considering no other covenant ability has a negative effect.
+The potential downside of taking damage and being stunned seems out of place considering no other covenant ability has a negative effect but ultimately will only be problematic when frenzy was used in a suboptimal situation in the first place.
 
 ## Legendaries
 
@@ -230,7 +234,7 @@ Very simple increase that is rather weak as it isn't affected by the Balance spe
 
 Simple damage increase with the only caveat being that dots and Starfall cast by Convoke are not affected by it as most their damage comes after the channel.
 
-## Bugs
+## Bugs/Inconsistencies
 
 This will repeat some earlier mentioned bugs.
 
@@ -241,6 +245,8 @@ Convoke the Spirits will only cast healing spells if you are further than 40yd f
 Adaptive Swarm jump range appears to only be ~20m instead of the 35m it should be.
 
 Rebirth revives with 60% of max hp instead of the 100% it should with rank 2 Rebirth.
+
+Starfall will pull any mobs that are in fight with each other which causes you to not be able to do damage any time those type of packs are nearby.
 
 Starfall and Fury of Elune are not affected by Circle of Life and Death legendary, despite it counting as a periodic effect for Adaptive Swarm. Functionally this could be intended but is inconsistent.
 
