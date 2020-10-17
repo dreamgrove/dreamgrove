@@ -15,24 +15,29 @@ All numbers mentioned are backed up using sims found at https://www.dreamgrove.g
 This patch was mostly focused on legendary and covenant tuning.
 
 The legendary Balance of All Things now starts with 50% instead of 75% crit and decays by 10% every second instead of 15%
+
 - No longer the King of All Things as this is roughly a 33% nerf but still the king of single target.
     
 Oneth's Clear Vision Starfall proc chance buffed from 15% to 20% and Starsurge proc chance buffed from 15% to 40%
+
 - A significant buff and definitely in the right direction with Starfall having a higher chance to proc but still far from being competitive. 
 - It now allows roughly 40% uptime of Starfall single target which may cause it to have a niche but that is to be seen.
     Starsurge in AoE when you are already Starfalling is weak however high the chance is, but adds more priority damage than other legendaries may.
     
 Timeworn Dreambinder duration nerfed from 5 seconds to 6 seconds, and now reduces/increases both cost and damage by 10% instead of just cost by 15%
+
 - Makes it much more appealing in single target as it is still possible to keep up a long time with the right talents and some haste.
     Unfourtunately doesn't solve the problem where it is not really usable with Starfall but technically allows for a slightly stronger Starfall for short living spawns.
     The duration nerf has the unfourtunate implication that you can no longer keep the buff up when using Convoke the Spirits.
 - From a pure tuning perspective still slightly behind Balance of All Things
    
 Fury of the Skies conduit heavily nerfed
+
 - Was a lot stronger than the other conduits and is now a 1-2% increase.
 - Other conduits are still behind it as a lot of them are just extremely weak in 0.2%-0.5% damage increase range. See conduit section for a more detailed breakdown.
     
 Adaptive Swarm now has a Balance specific effect that increasese the periodic effectiveness by 30% instead of 20% and the jump range was increased for us form 25y to 35y.
+
 - This is a very good change for Swarm as it needed exactly this Balance specific adjustment.
 - Now competitive on single target when manipulating the refresh mechanic it has which may be fun. General rule for usage I found if you want to try optimizing it:
   - If damage is ticking and has less than 3 stacks wait to refresh as late as possible
@@ -41,15 +46,18 @@ Adaptive Swarm now has a Balance specific effect that increasese the periodic ef
 - Still bad scaling with targets which may drive people away from it but it is no longer a troll pick
     
 Kyrian covenant ability Kindred Spirits nerfed from 25% damage transfer to 20%
+
 - This puts Kyrian in a more healthy spot where it is only the best option if you can make use of a much stronger ally or the absorb doesn't reduce its value instead of always.
     
 Venthyr covenant ability duration increased back to 20 seconds but now gives 1% haste per stack instead of 2%
+
 - Very happy they decided to nerf its value instead of its fun.
 - The haste stacking was useless for us in single target situations anyways meaning it returns to its former glory there.
 - Fairly significant AoE nerf as you cannot build up the stacks nearly as fast there now but still the best option with current tuning.
 - It is unsure if the crit stack conduit is to be considered part of the ability as it is tuned a lot higher than all other conduits. It would be good to know if the current strength is to be judged with or without this conduit.
     
 Draught of Deep Focus (Increases Moonfire, Rake, Rip, or Rejuvenation when they are only on one target) buffed from 30% to 40%
+
 - This is beyond bad for us still but we welcome our Feral single target overlords
  
 Generally another positive patch for us putting us on a 2 week streak. All covenant changes went in the right direction as did the Legendary changes although I wish they went a bit further for those so that they also become usable for the scenarios they are can be good at. As always check out our sim page to see how all things stack up. Mind that this patch is a nerf for us as BoAT was our best legendary by a lot and is now heavily nerfed but hopefully this won't matter in the long run.
