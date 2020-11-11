@@ -10,61 +10,35 @@ This is an article made to give feedback on Moonkins current state in the Shadow
 
 All numbers mentioned are backed up using sims found at https://www.dreamgrove.gg/beta/. Please check out this site for detailed info on all combinations. Sims assume all bugs are fixed.
 
-## Comments on the 15-Oct-20 changes
+## Comments on recent changes
 
-This patch was mostly focused on legendary and covenant tuning.
+We have now reached a point where all covenants are fairly close on single target with the only exception being Kyrian. The main reason for this though is that the Kyrian soulbind tree for Pelagos allows you to pick 2 dps binds and 2 dps conduits while every other tree for any covenant only allows you to pick 3 dps binds/conduits total.
 
-The legendary Balance of All Things now starts with 50% instead of 75% crit and decays by 10% every second instead of 15%
+For AoE most being equal on single target means that starting on 3-4 targets Night Fae and Necrolord start falling off, making Venthyr and Kyrian the easy winners if they are very close enough in lower target situations.
 
-- No longer the King of All Things as this is roughly a 33% nerf but still the king of single target.
-    
-Oneth's Clear Vision Starfall proc chance buffed from 15% to 20% and Starsurge proc chance buffed from 15% to 40%
+Convoke the Spirits has recently gotten a change (https://us.forums.blizzard.com/en/wow/t/feedback-druid-class-changes/490706/987) which said that it was made to be more consistent. Recent raid testing has shown this to not be the case and even made it more inconsistent. You can now have Convokes with 0 Starsurge total, it sometimes doesn't cast Starfall and still completely breaks down if you cast it in melee.
+Example cases:
+7 heals:
 
-- A significant buff and definitely in the right direction with Starfall having a higher chance to proc but still far from being competitive. 
-- It now allows roughly 40% uptime of Starfall single target which may cause it to have a niche but that is to be seen.
-    Starsurge in AoE when you are already Starfalling is weak however high the chance is, but adds more priority damage than other legendaries may.
-    
-Timeworn Dreambinder duration nerfed from 5 seconds to 6 seconds, and now reduces/increases both cost and damage by 10% instead of just cost by 15%
+![Image](https://cdn.discordapp.com/attachments/370236266530471937/774434920343928882/unknown.png)
 
-- Makes it much more appealing in single target as it is still possible to keep up a long time with the right talents and some haste.
-    Unfourtunately doesn't solve the problem where it is not really usable with Starfall but technically allows for a slightly stronger Starfall for short living spawns.
-    The duration nerf has the unfourtunate implication that you can no longer keep the buff up when using Convoke the Spirits.
-- From a pure tuning perspective still slightly behind Balance of All Things
-   
-Fury of the Skies conduit heavily nerfed
+0 Starsurges:
 
-- Was a lot stronger than the other conduits and is now a 1-2% increase.
-- Other conduits are still behind it as a lot of them are just extremely weak in 0.2%-0.5% damage increase range. See conduit section for a more detailed breakdown.
-    
-Adaptive Swarm now has a Balance specific effect that increasese the periodic effectiveness by 30% instead of 20% and the jump range was increased for us form 25y to 35y.
+![Image](https://cdn.discordapp.com/attachments/370236266530471937/774423723289477120/unknown.png)
 
-- This is a very good change for Swarm as it needed exactly this Balance specific adjustment.
-- Now competitive on single target when manipulating the refresh mechanic it has which may be fun. General rule for usage I found if you want to try optimizing it:
-  - If damage is ticking and has less than 3 stacks wait to refresh as late as possible
-  - If 3+ stacks on the target, use so it arrives just after those stacks expires
-  - If you have 4+ stacks on an ally dont use a new swarm if the heal will arrive at the target in the next ~5 secs or less
-- Still bad scaling with targets which may drive people away from it but it is no longer a troll pick
-    
-Kyrian covenant ability Kindred Spirits nerfed from 25% damage transfer to 20%
+8 Off-spec casts in melee:
 
-- This puts Kyrian in a more healthy spot where it is only the best option if you can make use of a much stronger ally or the absorb doesn't reduce its value instead of always.
-    
-Venthyr covenant ability duration increased back to 20 seconds but now gives 1% haste per stack instead of 2%
+![Image](https://cdn.discordapp.com/attachments/370236266530471937/774407423695650816/unknown.png)
 
-- Very happy they decided to nerf its value instead of its fun.
-- The haste stacking was useless for us in single target situations anyways meaning it returns to its former glory there.
-- Fairly significant AoE nerf as you cannot build up the stacks nearly as fast there now but still the best option with current tuning.
-- It is unsure if the crit stack conduit is to be considered part of the ability as it is tuned a lot higher than all other conduits. It would be good to know if the current strength is to be judged with or without this conduit.
-    
-Draught of Deep Focus (Increases Moonfire, Rake, Rip, or Rejuvenation when they are only on one target) buffed from 30% to 40%
+Hopefully this will fixed so Convoke at least has a chance.
 
-- This is beyond bad for us still but we welcome our Feral single target overlords
- 
-Generally another positive patch for us putting us on a 2 week streak. All covenant changes went in the right direction as did the Legendary changes although I wish they went a bit further for those so that they also become usable for the scenarios they are can be good at. As always check out our sim page to see how all things stack up. Mind that this patch is a nerf for us as BoAT was our best legendary by a lot and is now heavily nerfed but hopefully this won't matter in the long run.
+Adaptive Swarm is also in an interesting spot where the best play is to have your entire raid/party bind /cancelaura Adaptive Swarm into their rotation so that you can get more uptime of the debuff for single target encounters. For example while gaming how the buff resets its duration without cancelaura gets you about 70% uptime, everyone using cancelaura will allow nearly 100% uptime meaning about 40% value will be gained if done correctly. 
 
-For anything that isn't single target our best legendary is now the Circle of Life and Death generic druid legendary by a small margin with Pulsar and BoAT being 2-3% behind. This also has the interesting implication that Twin Moons may see play as it synergizes with Circle and we now have enough Astral Power to keep up Starfall. In most cases the infinite mobility of Stellar Drift is not going to be worth giving up for a minor theoretical increase.
+Kyrian still feels horrible to use as it is off gcd and is entirely passive for both parties but is tuned well enough if Pelagos is fixed. Its value is highly volatile as any high damage taken during the buff can nearly nullify the damage gained and it still doesn't work with specs that use pets.
 
-On the topic of Covenant tuning Convoke desperatly needs a change similar to Necrolord where it has a different power level compared to what Restoration druids get. How it stacks up for Guardian and Feral I don't know but for Balance it has been the worst covenant since the big nerf a while ago. 
+Venthyr is the only Covenant that you don't have to work against to use properly and with the conduit nerf it is now on the bottom for single target by a very small margin but quickly catches back up with a few targets added.
+
+Legendaries haven't been touched at all meaning we are still stuck with always using Balance of All Things or Circle of Life and Death both of which outperform all other legendaries is all situations.
 
 ## General
 
