@@ -34,7 +34,7 @@ Hopefully this will fixed so Convoke at least has a chance.
 
 Adaptive Swarm is also in an interesting spot where the best play is to have your entire raid/party bind /cancelaura Adaptive Swarm into their rotation so that you can get more uptime of the debuff for single target encounters. For example while gaming how the buff resets its duration without cancelaura gets you about 70% uptime, everyone using cancelaura will allow nearly 100% uptime meaning about 40% value will be gained if done correctly. 
 
-Kyrian still feels horrible to use as it is off gcd and is entirely passive for both parties but is tuned well enough if Pelagos is fixed. Its value is highly volatile as any high damage taken during the buff can nearly nullify the damage gained and it still doesn't work with specs that use pets.
+Kyrian still feels horrible to use as it is off gcd and is entirely passive for both parties but is tuned well enough if Pelagos is fixed. Its value is highly volatile as any high damage taken during the buff can nearly nullify the damage gained and it's highly dependant on syncronizing damage windows.
 
 Venthyr is the only Covenant that you don't have to work against to use properly and with the conduit nerf it is now on the bottom for single target by a very small margin but quickly catches back up with a few targets added.
 
