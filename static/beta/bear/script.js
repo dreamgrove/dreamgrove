@@ -276,6 +276,24 @@ $(function() {
         $("#side").height("96vh");
     });
 });
+(async () => {
+    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/beta/bear/');
+    const c_json = await content.json();
+    let htmlString = '<ul>';
+    for (let file of c_json) {
+        let ext = file.name.split('.').pop();
+        if (ext == 'txt' && file != 'faq.txt') {
+            htmlString += `<li><a class="load" href="${file.name}" target="frame">${file.name}</a></li>`;
+        }
+    }
+    htmlString += '</ul>';
+    document.getElementById('dir').innerHTML = htmlString;
+    $("#dir").find("a.load").click(function(event) {
+        $("#main").remove();
+        $(".frames").width("100%");
+        $("#side").height("96vh");
+    });
+})()
 function loadiFrame(f) {
     try {
         let ifdoc = f.contentWindow.document;

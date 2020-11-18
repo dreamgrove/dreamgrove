@@ -28,11 +28,11 @@ talents = [
     ['RT ', 'TC ', 'PUL']
 ]
 legendaries = {
-    'lycaras': 'waist=,id=172320,bonus_id=7110/6716/7194/6649/6650/1487,gems=16vers'
-    'circle': 'finger1=,id=178926,bonus_id=7085/6716/7193/6649/6650/1487,gems=16vers,enchant=tenet_of_versatility'
-    'UFR': 'legs=,id=172318,bonus_id=6716/1487/7094/6649/6650'
-    'luffa': 'chest=,id=172314,bonus_id=7092/6716/6649/6650/1487,enchant=eternal_stats'
-    'legacy': 'feet=,id=172315,bonus_id=7095/6716/6649/6650/1487,enchant=eternal_agility'
+    'lycaras': 'waist=,id=172320,bonus_id=7110/6716/7194/6649/6650/1487,gems=16vers',
+    'circle': 'finger1=,id=178926,bonus_id=7085/6716/7193/6649/6650/1487,gems=16vers,enchant=tenet_of_versatility',
+    'UFR': 'legs=,id=172318,bonus_id=6716/1487/7094/6649/6650',
+    'luffa': 'chest=,id=172314,bonus_id=7092/6716/6649/6650/1487,enchant=eternal_stats',
+    'legacy': 'feet=,id=172315,bonus_id=7095/6716/6649/6650/1487,enchant=eternal_agility',
     'DoDF': 'chest=,id=172314,bonus_id=7086/6716/6649/6650/1487,enchant=eternal_stats'
 }
 conduits = [
