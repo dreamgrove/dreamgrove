@@ -3,6 +3,10 @@ name: Update JSON
 on:
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: static/beta/bear
+
 jobs:
   update_json_heroic:
     name: Update JSON (Heroic)
