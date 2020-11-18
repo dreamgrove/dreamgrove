@@ -1117,7 +1117,7 @@
           td.textContent = aggregator.format(val);
           td.setAttribute("data-value", val);
           if (getClickHandler != null) {
-            td.onclick = getClickHandler(val, rowKey, colKey);
+            td.ondblclick = getClickHandler(val, rowKey, colKey);
           }
           if (getMouseEnterHandler != null) {
             td.onmouseenter = getMouseEnterHandler(val, rowKey, colKey);
@@ -1135,7 +1135,7 @@
           td.textContent = totalAggregator.format(val);
           td.setAttribute("data-value", val);
           if (getClickHandler != null) {
-            td.onclick = getClickHandler(val, rowKey, []);
+            td.ondblclick = getClickHandler(val, rowKey, []);
           }
           if (getMouseEnterHandler != null) {
             td.onmouseenter = getMouseEnterHandler(val, rowKey, []);
@@ -1167,7 +1167,7 @@
           td.textContent = totalAggregator.format(val);
           td.setAttribute("data-value", val);
           if (getClickHandler != null) {
-            td.onclick = getClickHandler(val, [], colKey);
+            td.ondblclick = getClickHandler(val, [], colKey);
           }
           if (getMouseEnterHandler != null) {
             td.onmouseenter = getMouseEnterHandler(val, [], colKey);
@@ -1186,7 +1186,7 @@
           td.textContent = totalAggregator.format(val);
           td.setAttribute("data-value", val);
           if (getClickHandler != null) {
-            td.onclick = getClickHandler(val, [], []);
+            td.ondblclick = getClickHandler(val, [], []);
           }
           if (getMouseEnterHandler != null) {
             td.onmouseenter = getMouseEnterHandler(val, [], []);
