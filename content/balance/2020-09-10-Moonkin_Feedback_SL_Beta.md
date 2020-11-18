@@ -38,7 +38,7 @@ Kyrian still feels horrible to use as it is off gcd and is entirely passive for 
 
 Venthyr is the only Covenant that you don't have to work against to use properly and with the conduit nerf it is now on the bottom for single target by a very small margin but quickly catches back up with a few targets added.
 
-Legendaries haven't been touched at all meaning we are still stuck with always using Balance of All Things or Circle of Life and Death both of which outperform all other legendaries is all situations.
+Pulsar has joined the fray with the buff to 12s duration meaning we now have 3 viable legis with BoAT (significantly ahead for single target), Circle of Life and Death and Primordial Pulsar. Both Circle and Pulsar are better in AoE.
 
 ## General
 
@@ -199,14 +199,7 @@ The generic druid legendary Circle of Life and Death is dangerously close to ove
 
 ## Conduits
 
-These are oddly or not completely tuned. Fury of the Skies allows dots to be of use even with current tuning.
-The base profile used can be found at https://www.dreamgrove.gg/beta/ in the sandbag.txt file on the bottom left.
-
-Single target:
-![Image](https://cdn.discordapp.com/attachments/370236266530471937/766430301937205268/unknown.png)  
-
-5 targets:  
-![Image](https://i.gyazo.com/022b335be22c52f8eee7872a6b1eb06b.png)  
+Sims can be found at https://www.dreamgrove.gg/beta/.
   
 ### Deep Allegiance (Kyrian)
 
@@ -214,7 +207,7 @@ At earlier ranks can be a dps loss due to desyncing with common one and two minu
 
 ### Endless Thirst (Venthyr)
 
-Tuned a lot higher than all other conduits and further reduces the value of crit.
+~~Tuned a lot higher than all other conduits and further reduces the value of crit.~~ Fixed
 
 ### Evolved Swarm (Necrolord)
 
@@ -225,8 +218,6 @@ Very simple increase that is rather weak as it isn't affected by the Balance spe
 Simple damage increase with the only caveat being that dots and Starfall cast by Convoke are not affected by it as most their damage comes after the channel.
 
 ## Bugs/Inconsistencies
-
-This will repeat some earlier mentioned bugs.
 
 Solar Eclipse does not reduce the GCD of Wrath further than 0.75s even though its effect is meant to do so as shown by other specs. For example Elemental Shamans Storm Elemental Lightning Bolt cast time reduction.
 
