@@ -1,4 +1,4 @@
-name: Update JSON
+name: Manual
 
 on:
   workflow_dispatch:
