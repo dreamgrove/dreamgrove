@@ -257,9 +257,12 @@ $(function() {
         Cookies.set("bearpivotLayout", JSON.stringify(config_copy));
     });
     $("#load").on("click", function() {
-        let config = $("#pivot").data("pivotUIOptions");
-
-        $("#pivot").pivotUI(payload, $.extend(config, JSON.parse(Cookies.get("bearpivotLayout"))), true);
+        let tok = Cookies.get("bearpivotLayout");
+        if (tok) {
+            let config = $("#pivot").data("pivotUIOptions");
+            show_loading();
+            $("#pivot").pivotUI(payload, $.extend(config, JSON.parse(tok)), true);
+        }
     });
     $("#clear").on("click", function() {
         Cookies.remove("bearpivotLayout");
