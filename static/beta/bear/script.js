@@ -282,7 +282,7 @@ $(function() {
     let htmlString = '<ul>';
     for (let file of c_json) {
         let ext = file.name.split('.').pop();
-        if (ext == 'txt' && file != 'faq.txt') {
+        if (ext == 'txt' && file.name != 'faq.txt') {
             htmlString += `<li><a class="load" href="${file.name}" target="frame">${file.name}</a></li>`;
         }
     }

@@ -36,8 +36,8 @@ legendaries = {
     'DoDF': 'chest=,id=172314,bonus_id=7086/6716/6649/6650/1487,enchant=eternal_stats'
 }
 conduits = [
-    'savage_combatant:7',
-    'unchecked_aggression:7'
+    'savage_combatant:6',
+    'unchecked_aggression:6'
 ]
 cov_conduit = {
     'kyrian':'deep_allegiance:6',
