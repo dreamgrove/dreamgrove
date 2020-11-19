@@ -176,6 +176,14 @@ $(function() {
             $("#loading").hide();
 
             (async () => {
+                const runs = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/update_json.yml/runs');
+                const r_json = await runs.json();
+                console.log(r_json);
+                if (r_json["workflow_runs"][0]["status"] === "in_progress") {
+                    $("#update").html("<span id=\"inprogress\"><b>Currently Running Sims...</b></span>");
+                    return;
+                }
+
                 let file = $("#fightstyle").val();
                 const commit = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/commits?path=/static/beta/bear/' + file);
                 const d_json = await commit.json();

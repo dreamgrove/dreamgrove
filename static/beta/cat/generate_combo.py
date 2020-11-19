@@ -48,7 +48,7 @@ cov_conduit = {
 covenants = {
     'kyrian':{
         'pelagos':{
-            'base':'combat_meditation/let_go_of_the_past',
+            'base':'combat_meditation',
             'trait':[]
         },
         'kleia':{
@@ -70,7 +70,7 @@ covenants = {
             'trait':['gnashing_chompers']
         },
         'heirmir':{
-            'base':'',
+            'base':'forgeborne_reveries',
             'trait':['heirmirs_arsenal_marrowed_gemstone']
         }
     },
