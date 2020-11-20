@@ -24,7 +24,7 @@ with open('dungeon.txt', 'r') as fp:
 talents = [
     ['BRA', 'BF ', 'FUR'],
     ['SOTF', 'GG  ', 'INC '],
-    ['EW ', 'SOTF', 'GOE'],
+    ['EW ', 'SURV', 'GOE'],
     ['RT ', 'TC ', 'PUL']
 ]
 legendaries = {

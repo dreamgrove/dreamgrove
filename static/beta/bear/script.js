@@ -132,7 +132,6 @@ $(function() {
 
                             let cond = [];
                             if (soulbinds[r.soul] !== "") { cond.push(soulbinds[r.soul]) };
-                            if (r.soul === "pelagos" && !isHeroic()) { cond.push("let_go_of_the_past"); }
                             if (r.cond1 !== "none") { cond.push(r.cond1); }
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
                             buf.push("soulbind=" + cond.join("/"));

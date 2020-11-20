@@ -16,28 +16,30 @@ args = parser.parse_args()
 targets = str(max(1, args.targets))
 
 profile = dungeon = ""
-with open('sandbear.txt', 'r') as fp:
+with open('sandcat.txt', 'r') as fp:
     profile = fp.read()
 with open('dungeon.txt', 'r') as fp:
     dungeon = fp.read()
 
 talents = [
-    ['BRA', 'BF ', 'FUR'],
-    ['SOTF', 'GG  ', 'INC '],
-    ['EW ', 'SOTF', 'GOE'],
-    ['RT ', 'TC ', 'PUL']
+    ['PRED', 'SBT ', 'LI  '],
+    ['SOTF', 'SR  ', 'INC '],
+    ['SOB', 'BRS', 'PW '],
+    ['MOC', 'BT ', 'FF ']
 ]
 legendaries = {
-    'lycaras': 'waist=,id=172320,bonus_id=7110/6716/7194/6649/6650/1487,gems=16vers',
-    'circle': 'finger1=,id=178926,bonus_id=7085/6716/7193/6649/6650/1487,gems=16vers,enchant=tenet_of_versatility',
-    'UFR': 'legs=,id=172318,bonus_id=6716/1487/7094/6649/6650',
-    'luffa': 'chest=,id=172314,bonus_id=7092/6716/6649/6650/1487,enchant=eternal_stats',
-    'legacy': 'feet=,id=172315,bonus_id=7095/6716/6649/6650/1487,enchant=eternal_agility',
-    'DoDF': 'chest=,id=172314,bonus_id=7086/6716/6649/6650/1487,enchant=eternal_stats'
+    'draught':'chest=,id=172314,bonus_id=7086/6716/7193/6648/6647/1532,gems=16crit,enchant=eternal_skirmish',
+    'circle':'finger2=,id=178926,bonus_id=7085/6716/7193/6648/6647/1532,gems=16crit,enchant=tenet_of_critical_strike',
+    'symmetry':'hands=,id=172316,bonus_id=6716/7090/6647/6648/1517/1532',
+    'apex':'waist=,id=172320,bonus_id=6716/7091/6647/6648/1517/1532,gems=16crit',
+    'frenzy':'waist=,id=172320,bonus_id=6716/7109/6647/6648/1517/1532,gems=16crit',
+    'cat-eye':'finger2=,id=178926,bonus_id=7089/6717/7194/6647/6648/1532,gems=16crit,enchant=tenet_of_critical_strike'
 }
 conduits = [
-    'savage_combatant:7',
-    'unchecked_aggression:7'
+    'carnivorous_instinct:7',
+    'incessant_hunter:7',
+    'sudden_ambush:7',
+    'taste_for_blood:7'
 ]
 cov_conduit = {
     'kyrian':'deep_allegiance:7',

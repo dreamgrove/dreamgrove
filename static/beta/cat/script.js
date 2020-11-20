@@ -19,10 +19,10 @@ $(function() {
     rend["Area Chart"] = plot["Area Chart"];
 
     var talentCode = {
-        '15': { '1': "BRA",  '2': "BF",   '3': "FUR" },
-        '40': { '1': "SOTF", '2': "GG",   '3': "INC" },
-        '45': { '1': "EW",   '2': "SURV", '3': "GOE"  },
-        '50': { '1': "RT",   '2': "TC",   '3': "PUL"  }
+        '15': { '1': "PRED", '2': "SBT", '3': "LI" },
+        '40': { '1': "SOTF", '2': "SR",  '3': "INC" },
+        '45': { '1': "SOB",  '2': "BRS", '3': "PW"  },
+        '50': { '1': "MOC",  '2': "BT",  '3': "FF"  }
     }
     function getTalentNum(tier, tal) {
         let o = talentCode[tier];
@@ -34,21 +34,21 @@ $(function() {
     function getT50(r) { return talentCode['50'][r.tal.charAt(6)]; }
 
     var whLinks = {
-        'lycaras': "<a href=https://shadowlands.wowhead.com/spell=340059>Lycaras</a>",
         'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
-        'UFR': "<a href=https://shadowlands.wowhead.com/spell=339056>UfR</a>",
-        'luffa': "<a href=https://shadowlands.wowhead.com/spell=339060>Luffa</a>",
-        'legacy': "<a href=https://shadowlands.wowhead.com/spell=339062>Legacy</a>",
-        'DoDF': "<a href=https://shadowlands.wowhead.com/spell=338658>DoDF</a>",
+        'draught': "<a href=https://shadowlands.wowhead.com/spell=338658>Draught</a>",
+        'symmetry': "<a href=https://shadowlands.wowhead.com/spell=339141>Symmetry</a>",
+        'apex': "<a href=https://shadowlands.wowhead.com/spell=339139>Apex</a>",
+        'frenzy': "<a href=https://shadowlands.wowhead.com/spell=340053>Frenzy</a>",
+        'cat-eye': "<a href=https://shadowlands.wowhead.com/spell=339144>Cat-Eye</a>",
     }
 
     var legendaries = {
-        'lycaras': "waist=,id=172320,gems=16vers,bonus_id=7110/6716/7194/6649/6650/",
-        'circle': "finger1=,id=178926,gems=16vers,enchant=tenet_of_versatility,bonus_id=7085/6716/7193/6649/6650/",
-        'UFR': "legs=,id=172318,bonus_id=6716/7094/6649/6650",
-        'luffa': "chest=,id=172314,enchant=eternal_stats,bonus_id=7092/6716/6649/6650/",
-        'legacy': "feet=,id=172315,enchant=eternal_agility,bonus_id=7095/6716/6649/6650/",
-        'DoDF': "chest=,id=172314,enchant=eternal_stat,bonus_id=7086/6716/6649/6650/"
+        'draught':"chest=,id=172314,gems=16crit,enchant=eternal_skirmish,bonus_id=7086/6716/7193/6648/6647/",
+        'circle':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7085/6716/7193/6648/6647/",
+        'symmetry':"hands=,id=172316,bonus_id=6716/7090/6647/6648/1517/",
+        'apex':"waist=,id=172320,gems=16crit,bonus_id=6716/7091/6647/6648/1517/",
+        'frenzy':"waist=,id=172320,gems=16crit,bonus_id=6716/7109/6647/6648/1517/",
+        'cat-eye':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7089/6717/7194/6647/6648/"
     }
 
     var soulbinds = {
@@ -119,7 +119,7 @@ $(function() {
                     let $tar = $(e.target);
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
-                        let prof = isHeroic() ? "sandbear_h.txt" : "sandbear.txt";
+                        let prof = isHeroic() ? "sandcat_h.txt" : "sandcat.txt";
                         $.get(prof, (d) => {
                             let r = getRecord(filters, pivotData);
                             let bonus = isHeroic() ? "1522" : "1532";
@@ -132,7 +132,6 @@ $(function() {
 
                             let cond = [];
                             if (soulbinds[r.soul] !== "") { cond.push(soulbinds[r.soul]) };
-                            if (r.soul === "pelagos" && !isHeroic()) { cond.push("let_go_of_the_past"); }
                             if (r.cond1 !== "none") { cond.push(r.cond1); }
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
                             buf.push("soulbind=" + cond.join("/"));
@@ -185,7 +184,7 @@ $(function() {
                 }
 
                 let file = $("#fightstyle").val();
-                const commit = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/commits?path=/static/beta/bear/' + file);
+                const commit = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/commits?path=/static/beta/cat/' + file);
                 const d_json = await commit.json();
                 let date = new Date(d_json[0]['commit']['committer']['date']);
                 $("#update").html(date.toLocaleString());
@@ -262,10 +261,10 @@ $(function() {
         config_copy["inclusions"] = config.inclusions;
         config_copy["exclusions"] = config.exclusions;
 
-        Cookies.set("bearpivotLayout", JSON.stringify(config_copy));
+        Cookies.set("catpivotLayout", JSON.stringify(config_copy));
     });
     $("#load").on("click", function() {
-        let tok = Cookies.get("bearpivotLayout");
+        let tok = Cookies.get("catpivotLayout");
         if (tok) {
             let config = $("#pivot").data("pivotUIOptions");
             show_loading();
@@ -273,7 +272,7 @@ $(function() {
         }
     });
     $("#clear").on("click", function() {
-        Cookies.remove("bearpivotLayout");
+        Cookies.remove("catpivotLayout");
     });
     $("#reset").on("click", function() {
         let config = $("#pivot").data("pivotUIOptions");
@@ -288,7 +287,7 @@ $(function() {
     });
 });
 (async () => {
-    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/beta/bear/');
+    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/beta/cat/');
     const c_json = await content.json();
     let htmlString = '<ul>';
     for (let file of c_json) {
