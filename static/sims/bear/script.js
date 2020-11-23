@@ -175,7 +175,7 @@ $(function() {
             $("#loading").hide();
 
             (async () => {
-                const runs = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/update_json.yml/runs');
+                const runs = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/update_json_bear.yml/runs');
                 const r_json = await runs.json();
                 console.log(r_json);
                 if (r_json["workflow_runs"][0]["status"] === "in_progress") {
@@ -184,7 +184,7 @@ $(function() {
                 }
 
                 let file = $("#fightstyle").val();
-                const commit = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/commits?path=/static/beta/bear/' + file);
+                const commit = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/commits?path=/static/sims/bear/' + file);
                 const d_json = await commit.json();
                 let date = new Date(d_json[0]['commit']['committer']['date']);
                 $("#update").html(date.toLocaleString());
@@ -287,7 +287,7 @@ $(function() {
     });
 });
 (async () => {
-    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/beta/bear/');
+    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/sims/bear/');
     const c_json = await content.json();
     let htmlString = '<ul>';
     for (let file of c_json) {
