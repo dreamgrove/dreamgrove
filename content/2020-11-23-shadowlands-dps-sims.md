@@ -10,11 +10,13 @@ Shadowlands sims are here!
 
 As with all generalized charts, these are for informational purposes only and DO NOT accurately reflect your own character. You should ALWAYS use [top gear @ raidbots.com](https://www.raidbots.com/simbot/topgear) to sim your own character instead of relying solely on general charts like these.
 
-<div class="spec-selector">
+<center>
+<div class="spec-selector" style="width: 33%;">
 <a class="spec balance" href="https://balance-simc.github.io/Balance-SimC/">Balance</a>
 <a class="spec feral" href="/sims/cat">Feral</a>
 <a class="spec guardian" href="/sims/bear">Guardian</a>
 </div>
+</center>
 
 How to use:
 
