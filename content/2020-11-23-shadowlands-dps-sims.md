@@ -37,3 +37,7 @@ How to use:
 1. Other types of chart can be viewed by selecting from the drop down menu at the top left. ![](/sims/help6.png)
 
 1. You can save and load your favorite layouts using these buttons. ![](/sims/help7.png)
+
+1. Hover over a cell to see the details for the top simming setup for that row and column. ![](/sims/help9.png)
+
+1. Double-click on a cell to copy the SimC input for that setup to paste into Raidbots or SimulationCraft. ![](/sims/help10.png)
