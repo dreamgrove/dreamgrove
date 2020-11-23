@@ -1,11 +1,11 @@
-name: Update JSON
+name: Update JSON (Bear)
 
 on:
   workflow_dispatch:
 
 defaults:
   run:
-    working-directory: static/beta/bear
+    working-directory: static/sims/bear
 
 jobs:
   update_json_heroic:
