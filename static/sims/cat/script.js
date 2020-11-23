@@ -57,7 +57,7 @@ $(function() {
         'mikanikos': "brons_call_to_action",
         'marileth': "",
         'emeni': "lead_by_example",
-        'heirmir': "",
+        'heirmir': "forgeborne_reveries",
         'niya': "grove_invigoration",
         'dreamweaver': "field_of_blossoms",
         'korayn': "wild_hunt_tactics",
