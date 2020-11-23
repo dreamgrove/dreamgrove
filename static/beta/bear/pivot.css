@@ -260,6 +260,10 @@ td.pvtUnused, td.pvtVals.pvtUiCell {
 }
 
 .pvtCheckContainer p { margin: 5px; }
+.pvtCheckContainer a {
+    color: #FF7D0A;
+    text-decoration: none;
+}
 
 .pvtRendererArea {
      padding: 5px;

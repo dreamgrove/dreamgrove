@@ -1493,7 +1493,7 @@
               $("<input>").attr("type", "checkbox").addClass('pvtFilter').attr("checked", !filterItemExcluded).data("filter", [attr, value]).appendTo(filterItem).bind("change", function() {
                 return $(this).toggleClass("changed");
               });
-              filterItem.append($("<span>").addClass("value").text(value));
+              filterItem.append($("<span>").addClass("value").html(value));
               filterItem.append($("<span>").addClass("count").text("(" + valueCount + ")"));
               checkContainer.append($("<p>").append(filterItem));
             }
