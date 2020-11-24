@@ -48,7 +48,7 @@ $(function() {
         'UFR': "legs=,id=172318,bonus_id=6716/7094/6649/6650",
         'luffa': "chest=,id=172314,enchant=eternal_stats,bonus_id=7092/6716/6649/6650/",
         'legacy': "feet=,id=172315,enchant=eternal_agility,bonus_id=7095/6716/6649/6650/",
-        'DoDF': "chest=,id=172314,enchant=eternal_stat,bonus_id=7086/6716/6649/6650/"
+        'DoDF': "chest=,id=172314,enchant=eternal_stats,bonus_id=7086/6716/6649/6650/"
     }
 
     var soulbinds = {
