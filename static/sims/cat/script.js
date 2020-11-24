@@ -137,7 +137,6 @@ $(function() {
                             buf.push("soulbind=" + cond.join("/"));
 
                             el.value = buf.join("\n");
-                            console.log(el.value);
                             document.body.appendChild(el);
                             el.select();
                             document.execCommand('copy');
@@ -177,7 +176,6 @@ $(function() {
             (async () => {
                 const runs = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/update_json_cat.yml/runs');
                 const r_json = await runs.json();
-                console.log(r_json);
                 if (r_json["workflow_runs"][0]["status"] === "in_progress") {
                     $("#update").html("<span id=\"inprogress\"><b>Currently Running Sims...</b></span>");
                     return;
