@@ -33,7 +33,7 @@ legendaries = {
     'symmetry':'hands=,id=172316,bonus_id=6716/7090/6647/6648/1517/1532',
     'apex':'waist=,id=172320,bonus_id=6716/7091/6647/6648/1517/1532,gems=16crit',
     'frenzy':'waist=,id=172320,bonus_id=6716/7109/6647/6648/1517/1532,gems=16crit',
-    'cat-eye':'finger2=,id=178926,bonus_id=7089/6717/7194/6647/6648/1532,gems=16crit,enchant=tenet_of_critical_strike'
+    'cateye':'finger2=,id=178926,bonus_id=7089/6717/7194/6647/6648/1532,gems=16crit,enchant=tenet_of_critical_strike'
 }
 conduits = [
     'carnivorous_instinct:7',

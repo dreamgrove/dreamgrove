@@ -39,7 +39,7 @@ $(function() {
         'symmetry': "<a href=https://shadowlands.wowhead.com/spell=339141>Symmetry</a>",
         'apex': "<a href=https://shadowlands.wowhead.com/spell=339139>Apex</a>",
         'frenzy': "<a href=https://shadowlands.wowhead.com/spell=340053>Frenzy</a>",
-        'cat-eye': "<a href=https://shadowlands.wowhead.com/spell=339144>Cat-Eye</a>",
+        'cateye': "<a href=https://shadowlands.wowhead.com/spell=339144>Cat-Eye</a>",
     }
 
     var legendaries = {
@@ -48,7 +48,7 @@ $(function() {
         'symmetry':"hands=,id=172316,bonus_id=6716/7090/6647/6648/1517/",
         'apex':"waist=,id=172320,gems=16crit,bonus_id=6716/7091/6647/6648/1517/",
         'frenzy':"waist=,id=172320,gems=16crit,bonus_id=6716/7109/6647/6648/1517/",
-        'cat-eye':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7089/6717/7194/6647/6648/"
+        'cateye':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7089/6717/7194/6647/6648/"
     }
 
     var soulbinds = {
