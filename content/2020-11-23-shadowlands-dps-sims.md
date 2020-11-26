@@ -13,7 +13,7 @@ As with all generalized charts, these are for informational purposes only and DO
 <center>
 <div class="spec-selector" style="width: 33%;">
 <a class="spec balance" href="https://balance-simc.github.io/Balance-SimC/">Balance</a>
-<a class="spec feral" href="/sims/cat">Feral</a>
+<a class="spec feral" href="/sims/">Feral-Coming Soon(tm)</a>
 <a class="spec guardian" href="/sims/bear">Guardian</a>
 </div>
 </center>
