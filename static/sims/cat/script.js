@@ -45,9 +45,9 @@ $(function() {
     var legendaries = {
         'draught':"chest=,id=172314,gems=16crit,enchant=eternal_skirmish,bonus_id=7086/6716/7193/6648/6647/",
         'circle':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7085/6716/7193/6648/6647/",
-        'symmetry':"hands=,id=172316,bonus_id=6716/7090/6647/6648/1517/",
-        'apex':"waist=,id=172320,gems=16crit,bonus_id=6716/7091/6647/6648/1517/",
-        'frenzy':"waist=,id=172320,gems=16crit,bonus_id=6716/7109/6647/6648/1517/",
+        'symmetry':"hands=,id=172316,bonus_id=6716/7090/6647/6648/",
+        'apex':"waist=,id=172320,gems=16crit,bonus_id=6716/7091/6647/6648/",
+        'frenzy':"waist=,id=172320,gems=16crit,bonus_id=6716/7109/6647/6648/",
         'cateye':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7089/6717/7194/6647/6648/"
     }
 
