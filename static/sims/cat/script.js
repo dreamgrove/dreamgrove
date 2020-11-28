@@ -268,7 +268,9 @@ $(function() {
     show_loading();
 
     $("#fightstyle").change(function() {
-        $("#pivot").tooltip("destroy");
+        if ($("#pivot").tooltip("instance")) {
+            $("#pivot").tooltip("destroy");
+        }
         $(".pvtRendererArea").css("opacity", 0);
         show_loading();
         load_json($(this).val());
