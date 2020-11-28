@@ -24,3 +24,4 @@ main_hand=rod_of_the_stone_sentinels,id=182393,ilevel=233,enchant=celestial_guid
 chart_show_relative_difference=1
 report_details=0
 max_time=300
+ready_trigger=1
