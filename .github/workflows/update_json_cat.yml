@@ -50,7 +50,7 @@ jobs:
           path: |
             *.json
 
-  update_json_heroic:
+  update_json_heroic2:
     name: Update JSON (Heroic) 2
     needs: [ update_json_heroic ]
     runs-on: ubuntu-latest
