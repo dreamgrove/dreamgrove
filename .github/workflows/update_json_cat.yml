@@ -29,8 +29,6 @@ jobs:
         run: python generate_combo_h.py -t 4 ${{ secrets.RAIDBOTSAPI }}
       - name: five targets
         run: python generate_combo_h.py -t 5 ${{ secrets.RAIDBOTSAPI }}
-      - name: dungeon
-        run: python generate_combo_h.py -d ${{ secrets.RAIDBOTSAPI }}
       - name: commit
         run: |
           git config user.name dreamgrove
