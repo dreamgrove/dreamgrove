@@ -43,16 +43,16 @@ First off, your base spell {{< spell 326434 "Kindred Spirits" >}}) (2,5s cast ti
 You first have to use that spell to either bond yourself with an ally or, if there is no ally around, with yourself. You can change your bonded partner any time.
 Depending on the target you did bond yourself to, you gain different active spells, each with a 1 min CD:
 
-__On yourself:__ {{< spell 338018 "Lone Protection" >}}) - 10% less damage taken for 10s.
+**On yourself:** {{< spell 338018 "Lone Protection" >}}) - 10% less damage taken for 10s.
 
-__On another player:__ First off, 40% of the damage your partner takes for the next 10s is redirected to you (this effect stops after 10s or if you fall below 20% health, {{< spell 327037 "Kindred Protection" >}})
+**On another player:** First off, 40% of the damage your partner takes for the next 10s is redirected to you (this effect stops after 10s or if you fall below 20% health, {{< spell 327037 "Kindred Protection" >}})
 
 What do you gain in exchange?
 
-*Bonded to a tank*:
+**Bonded to a tank**:
 You gain also Kindred Protection, so 40% of the damage you'll take will be transferred to your co-tank - except the damage that got transferred from him at the same time. Mind that this only shifts damage and should only be used if one of you is dying to a certain mechanic otherwise.
 
-*Bonded to a healer*: 
+**Bonded to a healer**: 
 For the next 10s you receive 30% of the healing dealt by your bonded parter. {{< spell 327071 "Kindred Focus" >}})
 
 *Bonded to a DPS*: 
