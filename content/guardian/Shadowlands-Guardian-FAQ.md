@@ -60,8 +60,23 @@ For the next 10s you collect 20% of the damage they deal in a pool {{< spell 327
 You use this pool to strengthen your damage, your healing and your absorb by 15% for up to 20s after activating this ability (until you used up the pool).
 The "absorb" part means that hits against you during that time get reduced by 15% (similar to how "Ignore Pain" from warriors works).
 
-## Legendaries 
+# Gearing
 
+### Stats
+
+Generally speaking, Vers/mast is a good defensive setup but rarely does one need to go full defensive so alternatively going Vers/Haste is a good middle ground.
+
+Offensively secondary stats can change from player to player so the best bet is to refer to personal sims through [raidbots.](https://www.raidbots.com/simbot/stats)
+
+### Legendaries 
+
+Ignoring what your alternative items are for each slot, here's a rule of thumb for legendary crafting slot selection:
+
+Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wrist > Cloak
+
+
+
+This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.
 
 **What legendary do I want to build and on which piece?** 
 
@@ -97,6 +112,8 @@ For Raid, most are aiming for Draught or Luffa for damage. NOW is generally seen
 **This does not mean you have to create something else while waiting for those two. Waiting to craft is perfeclty fine, some recommend it as there's still chances of legendary tuning around raid/m+ releases.**
 
 *For a more thorough explanation and a recommendation on which piece you should build your legendary, check the [wowhead-section about legendaries.](https://www.wowhead.com/guides/guardian-druid-best-legendaries-shadowlands)*
+
+
 
 ## Threat, Damage, and You
 
