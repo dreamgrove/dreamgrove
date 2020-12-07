@@ -68,6 +68,7 @@ Generally speaking, Vers/mast is a good defensive setup but rarely does one need
 
 Offensively secondary stats can change from player to player so the best bet is to refer to personal sims through [raidbots.](https://www.raidbots.com/simbot/stats)
 
+For more information please visit the [Wowhead](https://www.wowhead.com/guardian-druid-stat-priority-guide) and [Icyveins](https://www.icy-veins.com/wow/guardian-druid-pve-tank-stat-priority) guides, both written by Pumps. 
 ### Legendaries 
 
 Ignoring what your alternative items are for each slot, here's a rule of thumb for legendary crafting slot selection:
@@ -145,6 +146,6 @@ PSA: **YOU DO NOT** blow a cd to switch form to do damage, that's a meme thing t
 
 As with all generalized charts, these are for informational purposes only and DO NOT accurately reflect your own character. You should ALWAYS use [Raidbots](https://www.raidbots.com/simbot/topgear) to sim your own character instead of relying solely on general charts like these.
 
-Currently the APL is going to cast convoke in the affinity form you have selected (boomkin affinity > convoke in boomkin); **if you wish to sim with bear convoke please select the restoration affinity talent
+Currently the APL is going to cast convoke in the affinity form you have selected (boomkin affinity > convoke in boomkin); **if you wish to sim with bear convoke please select the restoration affinity talent**
 
 The current Basic set up is using Balance affinity and HotW as talents (ergo sims will always use boomkin convoke, and always shift in boomkin form for lycara)
