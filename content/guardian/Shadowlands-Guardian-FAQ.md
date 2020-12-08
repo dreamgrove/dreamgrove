@@ -7,7 +7,7 @@ patch: "9.0.2"
 description: "The Most commonly asked questions, Shadowlands Guardian Edition."
 ---
 
-Shadowlands has finally arrived! Nartually theere are many questions to be had so here we go.
+Shadowlands has finally arrived! Nartually there are many questions to be had so here we go.
 # Covenants
 
 **What covenant should I choose?** 
@@ -29,7 +29,7 @@ TLDR; Pick the one you prefer it’s very close and is unlikely to make or break
 
 ### Nightfae
 
-**ALERT** Dreamweaver/Podtender is a trap for tanks, it may or may not be a bug but for the time being do not take it!
+**ALERT:** Dreamweaver/Podtender is a trap for tanks, it may or may not be a bug but for the time being do not take it!
 
 When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer.
 
@@ -38,16 +38,16 @@ When the cheat death is activated, all threat is reset thus redirecting every mo
 ### How To Kyrian Tether
 
 
-First off, your base spell {{< spell 326434 "Kindred Spirits" >}}) (2,5s cast time, only usable in caster form)
+First off, your base spell {{< spell 326434 "Kindred Spirits" >}} (2,5s cast time, only usable in caster form)
 
 You first have to use that spell to either bond yourself with an ally or, if there is no ally around, with yourself. You can change your bonded partner any time.
 Depending on the target you did bond yourself to, you gain different active spells, each with a 1 min CD:
 
-**On yourself:** {{< spell 338018 "Lone Protection" >}}) - 10% less damage taken for 10s.
+**On yourself:** {{< spell 338018 "Lone Protection" >}} - 10% less damage taken for 10s.
 
-**On another player:** First off, 40% of the damage your partner takes for the next 10s is redirected to you (this effect stops after 10s or if you fall below 20% health, {{< spell 327037 "Kindred Protection" >}})
+**On another player:** First off, 40% of the damage your partner takes for the next 10s is redirected to you (this effect stops after 10s or if you fall below 20% health, {{< spell 327037 "Kindred Protection" >}}
 
-What do you gain in exchange?
+*What do you gain in exchange?*
 
 **Bonded to a tank**:
 You gain also Kindred Protection, so 40% of the damage you'll take will be transferred to your co-tank - except the damage that got transferred from him at the same time. Mind that this only shifts damage and should only be used if one of you is dying to a certain mechanic otherwise.
@@ -55,7 +55,7 @@ You gain also Kindred Protection, so 40% of the damage you'll take will be trans
 **Bonded to a healer**: 
 For the next 10s you receive 30% of the healing dealt by your bonded parter. {{< spell 327071 "Kindred Focus" >}})
 
-*Bonded to a DPS*: 
+**Bonded to a DPS**: 
 For the next 10s you collect 20% of the damage they deal in a pool {{< spell 327022 "Kindred Empowerment" >}}. 
 You use this pool to strengthen your damage, your healing and your absorb by 15% for up to 20s after activating this ability (until you used up the pool).
 The "absorb" part means that hits against you during that time get reduced by 15% (similar to how "Ignore Pain" from warriors works).
@@ -86,21 +86,21 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
 * Defensively:
  
-  * Nature’s Order Will (NOW) - Will see use in cutting edge keys and in early raid progression when undergeared. Paired with Survival of the Fittest and Tough as Bark at Rank 7, this allows for 36% uptime on 30% DR  (Drops from Huntsman Altimor, Castle Nathria)
+  * {{< spell 339063 "The Natural Order's Will" >}} (NOW) - Will see use in cutting edge keys and in early raid progression when undergeared. Paired with Survival of the Fittest and Tough as Bark at Rank 7, this allows for 36% uptime on 30% DR  (Drops from Huntsman Altimor, Castle Nathria)
 
-  * Lycara’s Fleeting Glimpse (Lycara's) - Decent Barkskin uptimes, but currently falls victim to the proc happening within the first 45sec of combat and not after 45 sec of combat which makes it a bit unreliable in a dungeon environment though it has *some* potential play for shifting into Owl Form and Starfalling. (Drops from Mordretha, Theater of Pain)
+  * {{< spell 340059 "Lycara’s Fleeting Glimpse" >}} (Lycara's) - Decent Barkskin uptimes, but currently falls victim to the proc happening within the first 45sec of combat and not after 45 sec of combat which makes it a bit unreliable in a dungeon environment though it has *some* potential play for shifting into Owl Form and Starfalling. (Drops from Mordretha, Theater of Pain)
 
 * Offensively:
 
-  * Luffa-Infused Embrace (Luffa's) - Big Thrash Damage, also provides another stack of Rend and Tear. ((Drops from Kryxis the Voracious, Sanguine Depths))
+  * {{< spell 339060 "Luffa-Infused Embrace" >}} (Luffa's) - Big Thrash Damage, also provides another stack of Rend and Tear. ((Drops from Kryxis the Voracious, Sanguine Depths))
 
-  * Circle of Life and Death (Circle) - If you cat/owl weave it's equal to luffa in ST. (Drops from Stone Legion Generals, Castle Nathria)
+  * {{< spell 338657 "Circle of Life and Death" >}} (Circle) - If you cat/owl weave it's equal to luffa in ST. (Drops from Stone Legion Generals, Castle Nathria)
 
-  * Draught of Deep Focus (DoDF) - In pure ST, this will be the best leggo offensively for Kyrian and Venthyr. It'll be Best ST option for all convenants if you catweave. If you moonfire, rake, rip, or rejuve more than one target this becomes useless and the effect does not see use. (Drops from The Great Vault)
+  * {{< spell 338658 "Draught of Deep Focus" >}} (DoDF) - In pure ST, this will be the best leggo offensively for Kyrian and Venthyr. It'll be Best ST option for all convenants if you catweave. If you moonfire, rake, rip, or rejuve more than one target this becomes useless and the effect does not see use. (Drops from The Great Vault)
 
 * Both:
 
-  * Ursoc’s Fury (UFR) - Consistent absorb, more Thrash damage, falls off the higher you push in keys. Most players will not reach the thresh hold where it'll be weaker than NOW. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
+  * {{< spell 339056 "Ursoc’s Fury Remembered" >}} (UFR) - Consistent absorb, more Thrash damage, falls off the higher you push in keys. Most players will not reach the thresh hold where it'll be weaker than NOW. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
 
 *Coldheart Interstitia is in the 3rd week cycle of Torghast wings so we can't get UFR until Dec 8/9th. NOW comes from the raid so that also has to wait until Dec 8/9th.*
 
@@ -146,6 +146,6 @@ PSA: **YOU DO NOT** blow a cd to switch form to do damage, that's a meme thing t
 
 As with all generalized charts, these are for informational purposes only and DO NOT accurately reflect your own character. You should ALWAYS use [Raidbots](https://www.raidbots.com/simbot/topgear) to sim your own character instead of relying solely on general charts like these.
 
-Currently the APL is going to cast convoke in the affinity form you have selected (boomkin affinity > convoke in boomkin); **if you wish to sim with bear convoke please select the restoration affinity talent**
+Currently the APL is going to cast convoke in the affinity form you have selected (boomkin affinity > convoke in boomkin); **If you wish to sim with bear convoke please select the restoration affinity talent**
 
 The current Basic set up is using Balance affinity and HotW as talents (ergo sims will always use boomkin convoke, and always shift in boomkin form for lycara)
