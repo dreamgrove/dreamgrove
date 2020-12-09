@@ -66,7 +66,7 @@ The "absorb" part means that hits against you during that time get reduced by 15
 
 Generally speaking, Versatility/{{< spell 155783 "Mastery" >}} is a good defensive setup but rarely does one need to go full defensive so alternatively going Vers/Haste is a good middle ground.
 
-Offensively secondary stats can change from player to player so the best bet is to refer to personal sims through [raidbots.](https://www.raidbots.com/simbot/stats)
+Offensively secondary stats can change from player to player so the best bet is to refer to personal sims through [Raidbots.](https://www.raidbots.com/simbot/stats)
 
 For more information please visit the [Wowhead](https://www.wowhead.com/guardian-druid-stat-priority-guide) and [Icyveins](https://www.icy-veins.com/wow/guardian-druid-pve-tank-stat-priority) guides, both written by Pumps. 
 ### Legendaries 
@@ -146,6 +146,6 @@ PSA: **YOU DO NOT** blow a cd to switch form to do damage, that is a meme thing 
 
 As with all generalized charts, these are for informational purposes only and DO NOT accurately reflect your own character. You should ALWAYS use [Raidbots](https://www.raidbots.com/simbot/topgear) to sim your own character instead of relying solely on general charts like these.
 
-Currently the APL is going to cast {{< spell 323764 "Convoke" >}} in the affinity form you have selected ({{< spell 197488 "boomkin affinity " >}} {{< spell 323764 "Convoke" >}} in {{< spell 24858 "boomkin" >}); **If you wish to sim with bear {{< spell 323764 "Convoke" >}} please select the {{< spell 197492 "restoration affinity" >}} talent**
+Currently the APL is going to cast {{< spell 323764 "Convoke" >}} in the affinity form you have selected ({{< spell 197488 "boomkin affinity " >}} {{< spell 323764 "Convoke" >}} in {{< spell 24858 "boomkin" >}}); **If you wish to sim with bear {{< spell 323764 "Convoke" >}} please select the {{< spell 197492 "restoration affinity" >}} talent**
 
-The current Basic set up is using Balance affinity and {{< spell 319454 "Heart of the Wild" >}} as talents (ergo sims will always use {{< spell 24858 "boomkin" >} {{< spell 323764 "Convoke" >}}, and always shift in {{< spell 24858 "boomkin" >}} form for {{< spell 340059 "Lycara" >}})
+The current Basic set up is using Balance affinity and {{< spell 319454 "Heart of the Wild" >}} as talents (ergo sims will always use {{< spell 24858 "boomkin" >}} {{< spell 323764 "Convoke" >}}, and always shift in {{< spell 24858 "boomkin" >}} form for {{< spell 340059 "Lycara" >}})
