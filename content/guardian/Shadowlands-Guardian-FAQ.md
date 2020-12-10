@@ -102,7 +102,6 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
   * {{< spell 339056 "Ursoc’s Fury Remembered" >}} (UFR) - Consistent absorb, more {{< spell 77758 "Thrash" >}} damage, falls off the higher you push in keys. Most players will not reach the threshhold where it'll be weaker than {{< spell 339063 "NOW" >}}. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
 
-*Coldheart Interstitia is in the 3rd week cycle of Torghast wings so we can't get {{< spell 339056 "UFR" >}} until Dec 8/9th. {{< spell 339063 "NOW" >}} comes from the raid so that also has to wait until Dec 8/9th.*
 
 ***What are you building??***
 
@@ -118,16 +117,16 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 
 ## Threat, Damage, and You
 
-***I am having threat issues what do ???***
+***I am having threat issues, what do i do??***
 
 **The short answer:** Press thrash and swipe more
 
-**The long answer:** Above 3 targets anything outside of {{< spell 77758 "Thrash" >}}/{{< spell 213764 "swipe" >}} is a loss of aoe threat, ie your priority 99% of the time is to spam {{< spell 77758 "Thrash" >}}/{{< spell 213764 "Swipe" >}} on your opener. 
+**The long answer:** Above 3 targets anything outside of {{< spell 77758 "Thrash" >}}/{{< spell 213764 "Swipe" >}} is a loss of aoe threat, ie your priority 99% of the time is to spam {{< spell 77758 "Thrash" >}}/{{< spell 213764 "Swipe" >}} on your opener. 
 So for your opener, you want to use {{< spell 77758 "Thrash" >}} then 3 {{< spell 213764 "Swipes" >}} then {{< spell 77758 "Thrash" >}} again, rince and repeat, once you have built up threat, you can spread {{< spell 8921 "Moonfire" >}} to the mobs instead of {{< spell 213764 "Swipe" >}} for more damage and ***IF*** you have an issue on one mob don’t hesitate to use {{< spell 8921 "Moonfire" >}}/{{< spell 33917 "mangle" >}} on it to get some quick threat.
 Another good tip is to wait that all the trash is in range of {{< spell 77758 "Thrash" >}} before pressing it, as it's our best aoe ability and the only uncapped tool we have so you do not want to waste a use early.
 
 **Important to note:** - opening with {{< spell 6795 "Taunt" >}} on single target is highly advised, and {{< spell 102558 "Incarn" >}}/{{< spell 106951 "Zerk" >}} will reduce {{< spell 6795 "Taunt" >}} cd to the gcd.
--the cap on {{< spell 213764 "Swipe" >}} is proximity based, so if you have more than five mobs around you can wiggle around to hit different targets with each {{< spell 213764 "swipe" >}}.
+-the cap on {{< spell 213764 "Swipe" >}} is proximity based, so if you have more than five mobs around you can wiggle around to hit different targets with each {{< spell 213764 "Swipe" >}}.
 
 **I keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?**
 
@@ -135,7 +134,7 @@ Simply put catweaving and owlweaving is when you switch forms, when out of harms
 
 * **Catweaving:** Switch to {{< spell 768 "cat form" >}} when {{< spell 77758 "Thrash" >}}/{{< spell 33917 "Mangle" >}} is on cd and you have no rage to spend, apply {{< spell 1822 "Rake" >}}, deplete all your energy with {{< spell 5221 "Shred" >}}, and if at 4 or 5 combo points apply {{< spell 1079 "rip" >}}, switch back to {{< spell 5487 "bear" >}}, rince and repeat. This rotation is mostly concerning single target.
 
-* **Owlweaving:** Cast {{< spell 319454 "Heart of the Wild" >}}, cast {{< spell 8921 "Moonfire" >}}/{{< spell 93402 "SunFire" >}} on target cast two {{< spell 5176 "Wrath" >}} cast {{< spell 78674 "Starsurge" >}}, proceed to follow {{< spell 79577 "Eclipse" >}} rotation for the duration of {{< spell 319454 "Heart of the Wild" >}}, when out of it, if you have {{< spell 33917 "mangle" >}}/{{< spell 77758 "Thrash" >}} in cd, if you have no rage to spend, and if you're going to use {{< spell 213764 "Swipe" >}}, switch to {{< spell 24858 "boomy" >}} and cast {{< spell 93402 "SunFire" >}} on the target, switch back to {{< spell 5487 "bear" >}}. When in aoe, if you are outside of melee rage you can switch into {{< spell 24858 "boomy" >}} to put {{< spell 93402 "SunFire" >}} on mobs, it is quite solid damage.
+* **Owlweaving:** Cast {{< spell 319454 "Heart of the Wild" >}}, cast {{< spell 8921 "Moonfire" >}}/{{< spell 93402 "Sunfire" >}} on target cast two {{< spell 5176 "Wrath" >}} cast {{< spell 78674 "Starsurge" >}}, proceed to follow {{< spell 79577 "Eclipse" >}} rotation for the duration of {{< spell 319454 "Heart of the Wild" >}}, when out of it, if you have {{< spell 33917 "mangle" >}}/{{< spell 77758 "Thrash" >}} in cd, if you have no rage to spend, and if you're going to use {{< spell 213764 "Swipe" >}}, switch to {{< spell 24858 "boomy" >}} and cast {{< spell 93402 "Sunfire" >}} on the target, switch back to {{< spell 5487 "bear" >}}. When in aoe, if you are outside of melee rage you can switch into {{< spell 24858 "boomy" >}} to put {{< spell 93402 "Sunfire" >}} on mobs, it is quite solid damage.
 
 PSA: **YOU DO NOT** blow a cd to switch form to do damage, that is a meme thing to do in non relevant content, do not do it when progging in raids or pushing in m+.
 
