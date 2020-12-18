@@ -109,7 +109,7 @@ For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It'll be aw
 
 For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060 "Luffa" >}} for damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
 
-**This does not mean you have to create something else while waiting for those two. Waiting to craft is perfeclty fine.**
+**This does not mean you have to create something else while waiting for those two. Waiting to craft is perfectly fine.**
 
 *For a more thorough explanation and a recommendation on which piece you should build your legendary, check the [wowhead-section about legendaries.](https://www.wowhead.com/guides/guardian-druid-best-legendaries-shadowlands)*
 
