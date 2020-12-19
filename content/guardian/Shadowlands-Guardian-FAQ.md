@@ -33,7 +33,7 @@ TLDR; Pick the one you prefer it is rather very close and is unlikely to make or
 
 When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer.
 
-*This may be less relevant in raids, but is a big red flag for m+*
+*This may be less relevant in raids, but is a big red flag for m+.*
 
 ### How To Kyrian Tether
 
@@ -105,11 +105,11 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
 ***What are you building??***
 
-For M+, most people are aiming for {{< spell 339056 "UFR" >}} first. It'll be awhile before you'll need {{< spell 339063 "NOW" >}}. 
+For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It'll be awhile before you'll need {{< spell 339063 "NOW" >}}. 
 
 For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060 "Luffa" >}} for damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
 
-**This does not mean you have to create something else while waiting for those two. Waiting to craft is perfeclty fine, some recommend it as there's still chances of legendary tuning around raid/m+ releases.**
+**This does not mean you have to create something else while waiting for those two. Waiting to craft is perfectly fine.**
 
 *For a more thorough explanation and a recommendation on which piece you should build your legendary, check the [wowhead-section about legendaries.](https://www.wowhead.com/guides/guardian-druid-best-legendaries-shadowlands)*
 
@@ -146,5 +146,7 @@ PSA: **YOU DO NOT** blow a cd to switch form to do damage, that is a meme thing 
 As with all generalized charts, these are for informational purposes only and DO NOT accurately reflect your own character. You should ALWAYS use [Raidbots](https://www.raidbots.com/simbot/topgear) to sim your own character instead of relying solely on general charts like these.
 
 Currently the APL is going to cast {{< spell 323764 "Convoke" >}} in the affinity form you have selected ({{< spell 197488 "boomkin affinity " >}} {{< spell 323764 "Convoke" >}} in {{< spell 24858 "boomkin" >}}); **If you wish to sim with bear {{< spell 323764 "Convoke" >}} please select the {{< spell 197492 "restoration affinity" >}} talent**
+
+To sim Catweaving, one needs to add catweave_bear=1 into the **Custom APL** section. 
 
 The current Basic set up is using Balance affinity and {{< spell 319454 "Heart of the Wild" >}} as talents (ergo sims will always use {{< spell 24858 "boomkin" >}} {{< spell 323764 "Convoke" >}}, and always shift in {{< spell 24858 "boomkin" >}} form for {{< spell 340059 "Lycara" >}})
