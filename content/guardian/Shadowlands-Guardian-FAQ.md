@@ -147,6 +147,6 @@ As with all generalized charts, these are for informational purposes only and DO
 
 Currently the APL is going to cast {{< spell 323764 "Convoke" >}} in the affinity form you have selected ({{< spell 197488 "boomkin affinity " >}} {{< spell 323764 "Convoke" >}} in {{< spell 24858 "boomkin" >}}); **If you wish to sim with bear {{< spell 323764 "Convoke" >}} please select the {{< spell 197492 "restoration affinity" >}} talent**
 
-To sim Catweaving, one needs to add catweave_bear=1 into the **[Custom APL](https://i.imgur.com/ubOVQZ1.png)** section 
+To sim Catweaving, one needs to add catweave_bear=1 into the **Custom APL** section. 
 
 The current Basic set up is using Balance affinity and {{< spell 319454 "Heart of the Wild" >}} as talents (ergo sims will always use {{< spell 24858 "boomkin" >}} {{< spell 323764 "Convoke" >}}, and always shift in {{< spell 24858 "boomkin" >}} form for {{< spell 340059 "Lycara" >}})
