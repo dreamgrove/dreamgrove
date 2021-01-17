@@ -2,13 +2,14 @@
 date: '2020-01-14'
 authors: ["Foresight","Maystine"]
 published: true
-title: "Feral Mythic+ Deep Dive Part 1 "
+title: "Feral Mythic+ Deep Dive Part 1"
 series: ["M+ Deep Dive"]
 series_title: "Part 1"
-patch: "8.0"
+patch: "9.0"
 ---
 
 <center>
+    
 ## Feral Druid Mythic Plus - Deep Dive 
 
 
@@ -260,5 +261,6 @@ The sim profile was changed recently and does now include 7 mob packs, the chang
     6% of it’s time on 6 targets
     6% of it’s time on 7 targets
     
-To be Continued in Part 2...
+**To be Continued in Part 2...**
+
 </center>
