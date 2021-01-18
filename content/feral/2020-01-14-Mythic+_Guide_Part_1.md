@@ -8,7 +8,6 @@ series_title: "Part 1"
 patch: "9.0"
 ---
 
-<center>
     
 ## Feral Druid Mythic Plus - Deep Dive 
 
@@ -18,6 +17,7 @@ patch: "9.0"
 
 ### Authors
 https://raider.io/characters/eu/hyjal/Maystine 
+
 https://raider.io/characters/eu/kilrogg/Foresight 
 
 ### Contents
@@ -29,12 +29,16 @@ Conduits & Soulbinds
 Simming with “Dungeon Slice” for Mythic Plus
 
 
-## Other reading - for more info on all things talents, utility, gear, and more, check out the below two guides for an excellent write up on all things Feral.
+## Other reading 
+
+**For more info on all things talents, utility, gear, and more, check out the below two guides for an excellent write up on all things Feral.**
 
 Guilty’s WoWhead guide on M+
+
 https://www.wowhead.com/guides/feral-druid-basic-mythic-plus-keystone-dungeons 
 
 Wordup’s IcyVeins guide on M+
+
 https://www.icy-veins.com/wow/feral-druid-pve-dps-mythic-plus-tips 
 
 ### Part 1 - Basics and pre-key set up
@@ -137,13 +141,13 @@ Craft it on - Ring, as although Neck and Ring are identical, crafting it on Neck
 
 Craft it on - Helm or Hands, it doesn’t matter
 
-### Conduits & Soulbinds
+## Conduits & Soulbinds
 
-## General information
+### General information
 
 Feral conduits are pretty strong for M+ as they provide a lot of burst damage and defensive capabilities. Especially the following ...
 
-## Potency Conduits
+### Potency Conduits
 
 
 **Conflux of Elements** is a potency conduit that works perfectly with the current M+ meta. For most Ferals this will likely be simming highest in ST regardless, but in M+ it has the added benefit of being another multiplier to add to the pile, giving you …
@@ -170,7 +174,7 @@ For example, a +15 DoS Hakkar fight:
 ![Image](https://lh3.googleusercontent.com/hzQmwFjjgbRU02lyfr_GnMHFexy6Lnb87X9soX2LKNb3ZAieysfmOSiB7cxvipO-0h-5tkpxDJd9JEXFf4wUFiPyr1TefdC04jGuB-OxxZmPPHDMR4l4H4vhP5mowrs8TlovxCUq)
 
 
-## Utility Conduits
+### Utility Conduits
 
 **Born of the Wilds** provides a DPS gain if you are running Heart of the WIld, but for M+ Bash is better for 90% of the dungeons, and this provides a 16% reduction to the CD at 226, which puts Bash on a ~50s CD, that partnered with Maim gives feral a lot of mob control.
 Defensive Conduits
@@ -191,7 +195,7 @@ To make this conduit even better it procs the Rank3 version of Frenzied Regen, w
 
 Honestly these two together are nuts, they’re your go-to defensive conduits for everything.
 
-## Convoke burst build
+### Convoke burst build
 
 https://shadowlands.wowhead.com/soulbind-calc/night-fae/niya/druid/ApblAQU1ywYRBTXGBiIVMkkGJTI_Bg 
 
@@ -203,7 +207,7 @@ This also comes with two defensive conduits and a DPS Soulbind in Burrs.
 
 ![Image](https://lh5.googleusercontent.com/vmtow18w1KgtXLp6eDxJFjPHq5FrKoThOybIc-YKhjDMnDK1IcNDa6l_wOSGZvUXsRyok0CeyOaKGDIsat8tAHAJxtVKZ9vJToVRKbLweWxMVIu8MRxU5rXkw4K614Xr9qlVobtN)
 
-## Defensive build
+### Defensive build
 
 https://shadowlands.wowhead.com/soulbind-calc/night-fae/niya/druid/ApblAQU1ywYRBTXGBiIVMkkGJTI_Bg 
 
@@ -261,6 +265,7 @@ The sim profile was changed recently and does now include 7 mob packs, the chang
     6% of it’s time on 6 targets
     6% of it’s time on 7 targets
     
+<center>
 **To be Continued in Part 2...**
-
 </center>
+
