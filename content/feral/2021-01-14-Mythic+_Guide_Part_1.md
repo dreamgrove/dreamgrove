@@ -1,5 +1,5 @@
 ---
-date: '2020-01-14'
+date: '2021-01-14'
 authors: ["Foresight","Maystine"]
 published: true
 title: "Feral Mythic+ Deep Dive Part 1"
