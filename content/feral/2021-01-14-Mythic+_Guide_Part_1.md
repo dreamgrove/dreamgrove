@@ -11,35 +11,30 @@ patch: "9.0"
     
 ## Feral Druid Mythic Plus - Deep Dive 
 
-
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
-
 
 ### Authors
 https://raider.io/characters/eu/hyjal/Maystine 
-
 https://raider.io/characters/eu/kilrogg/Foresight 
 
 ### Contents
 
 ## Part 1 - Basics and pre-key set up
-Talents
-Legendaries
-Conduits & Soulbinds
-Simming with “Dungeon Slice” for Mythic Plus
 
+- Talents
+- Legendaries
+- Conduits & Soulbinds
+- Simming with “Dungeon Slice” for Mythic Plus
 
 ## Other reading 
 
 **For more info on all things talents, utility, gear, and more, check out the below two guides for an excellent write up on all things Feral.**
 
-Guilty’s WoWhead guide on M+
+> Guilty’s WoWhead guide on M+  
+> https://www.wowhead.com/guides/feral-druid-basic-mythic-plus-keystone-dungeons 
 
-https://www.wowhead.com/guides/feral-druid-basic-mythic-plus-keystone-dungeons 
-
-Wordup’s IcyVeins guide on M+
-
-https://www.icy-veins.com/wow/feral-druid-pve-dps-mythic-plus-tips 
+> Wordup’s IcyVeins guide on M+  
+> https://www.icy-veins.com/wow/feral-druid-pve-dps-mythic-plus-tips 
 
 ### Part 1 - Basics and pre-key set up
 
@@ -48,7 +43,7 @@ For a full talent write-up, check out Wordups IcyVeins guide which goes into det
 https://www.icy-veins.com/wow/feral-druid-pve-dps-spec-builds-talents  
 
 ### Fore’s go to cookie cutter build
-The below are the talents I run in 95% of dungeons, my M+ group tends to have a lot of strong burn with Boomies or Locks so I focus more on AoE and burst, meaning Pred and FF, I do run BT on occasions but I’m a big fan of simplifying your rotation in keys to allow for mob control and route editing on the fly to deal with things that crop up.
+The below are the talents I run in 95% of dungeons, my M+ group tends to have a lot of strong burn with Boomies or Locks so I focus more on AoE and burst, meaning Pred predominantly, I run BT more often than not these days, but I’m a big fan of simplifying your rotation in keys to allow for mob control and route editing on the fly to deal with things that crop up, which FF allows you to do, so if you are struggling with BT, i'd recommend FF instead.
 
 ![Image](https://lh3.googleusercontent.com/weedfbxrFIgGIiclqHInj_h2B3cD_2ELai8n4_m3sVW6SaXPQHaBezeYznnY2zzrv0ic40gUrHLS2WUdcSKk3a54mNjodwveTHnKT1H5QuWU7-ILiL36M-87Tm08Cg4LTmmBVTlc)
 
@@ -66,9 +61,8 @@ The below are the talents I run in 95% of dungeons, my M+ group tends to have a 
 
 **Row 50** - So this entire row is usable, though I would stay away from Moment of Clarity as it was gutted with the Swipe target cap, Feral Frenzy and Bloodtalons are your choices, with the differences being ...
 
-Feral Frenzy - Huge burst, sims close to Bloodtalons, much simpler, can abuse a lot of multipliers like Pride or damage boost mechanics (Mists, Wake spear, SoA, etc)
-
-Bloodtalons - More sustained overall damage, arguably more “complicated” to manage in M+, has ramp up from pack-to-pack but once you are up and running is the higher simming choice.
+- Feral Frenzy - Huge burst, sims close to Bloodtalons, much simpler, can abuse a lot of multipliers like Pride or damage boost mechanics (Mists, Wake spear, SoA, etc)
+- Bloodtalons - More sustained overall damage, arguably more “complicated” to manage in M+, has ramp up from pack-to-pack but once you are up and running is the higher simming choice.
 
 
 ### Maystine’s go to cookie cutter build
@@ -105,9 +99,7 @@ https://www.dreamgrove.gg/sims/cat/
 
 ### Best two legendary choices
 
-![Image](https://lh4.googleusercontent.com/3fsz-9utLZ3H_qeO_m3_bSo8TkBspGwHEBnm4pGoY7NYGWraQemzCAyDZetrjPB1vGWTLZGziz5m3TsZB8CV-bpWMB8IKR4sAfeVN2Y25MqhFz5r9iG_J47U_ADI06ztoxNvPxd_)
-![Image](https://lh3.googleusercontent.com/60LAdh9HpbTiuB5AKE3FN93Z2GbZE2QNB81xYsdkRkNV7Fd0Z7C3d1ru3KXGw5lifgPdG2m5ZhRVnTKizrIRwHk3p37OE_ZZQVYT9XaIMl_WA4oVr9c_JQUYNldZQolNc3xZd055)
-
+![Image](https://cdn.discordapp.com/attachments/740562855316946985/800649508253204491/unknown.png)
 
 Although there is a Team Apex vs Team Circle meme floating around (Fore: which I encourage, go team Circle), both are very much playable and competitive, they basically vary based on your group composition and the strengths and weaknesses of the other DPS.
 
@@ -138,11 +130,11 @@ I think the choice depends on your group composition, whether you need more dama
 
 **Cat-Eye** - If ash was unlimited, I would have made and recommended Cat-Eye to everyone for early M+, as it stands now it is a good all rounder, but not as good as the above two. A safe craft for those that enjoy the playstyle
 
-Craft it on - Ring, as although Neck and Ring are identical, crafting it on Neck means that any neck drops you get are useless, whereas Ring still gives you options.
+**Craft it on** - Ring, as although Neck and Ring are identical, crafting it on Neck means that any neck drops you get are useless, whereas Ring still gives you options.
 
 **Symmetry** - Similar to the above, Symm is a very fun legendary and best in slot for PvP, it works fine in M+ providing you with more finishers and giving good synergy with predator, but it is not as good as the above two
 
-Craft it on - Helm or Hands, it doesn’t matter
+**Craft it on** - Helm or Hands, it doesn’t matter
 
 ## Conduits & Soulbinds
 
@@ -188,7 +180,7 @@ Defensive Conduits
 
 ![Image](https://lh3.googleusercontent.com/OdPl7i_htqvCqli9gZtqAwdEbamCjpuI1xbQ3mSrrWAIvw8xVsleTSg4WrI8DgUfbC5Kba5AbIsuPRMpYCT8uNQdn491HhEmKXkHHF6r2EMUYaktlaYNSAD_Ka2XJWhgB1khFuai)
 
-To make this conduit even better it procs the Rank3 version of Frenzied Regen, which means during the FR that procs, you also receive 20% more healing, further increasing the heal from the automatic FR.
+To make this conduit even better it procs the Rank3 version of Frenzied Regen, which means during the FR that procs, you also receive 20% more healing.
 
 ![Image](https://lh4.googleusercontent.com/Wyqpo64MZGUOCh_ydd-8R7az7PkKDQdEwik_hxiY3hk69E3NEzpF3idgVoaBOyz87PS-4eDFp0WBF0GS7xmnRHtqbdC3wVKvBaP6SQ1lHS53eMnn8w3GYufXY6Qv6PCgVK_8vijY)
 
@@ -267,8 +259,20 @@ The sim profile was changed recently and does now include 7 mob packs, the chang
     6% of it’s time on 5 targets
     6% of it’s time on 6 targets
     6% of it’s time on 7 targets
-    
+
+So in summary, don't be afraid to use Dungeon Slice - it is as valuable for M+ as Patch sims are to raiding.
+
+---
+
 <center>
+    
 **To be Continued in Part 2...**
+
+- Rotational Plays
+- Affixes
+- Dungeon specific tips
+- Talent changes per key and why
+- Soulbind/Conduit changes per key and why
+
 </center>
 
