@@ -51,8 +51,8 @@ https://www.icy-veins.com/wow/feral-druid-pve-dps-spec-builds-talents
 The below are the talents I run in 95% of dungeons, my M+ group tends to have a lot of strong burn with Boomies or Locks so I focus more on AoE and burst, meaning Pred and FF, I do run BT on occasions but I’m a big fan of simplifying your rotation in keys to allow for mob control and route editing on the fly to deal with things that crop up.
 
 ![Image](https://lh3.googleusercontent.com/weedfbxrFIgGIiclqHInj_h2B3cD_2ELai8n4_m3sVW6SaXPQHaBezeYznnY2zzrv0ic40gUrHLS2WUdcSKk3a54mNjodwveTHnKT1H5QuWU7-ILiL36M-87Tm08Cg4LTmmBVTlc)
-## Row 15 
-As i’m focusing more on AoE, Pred is the obvious choice. I have run Sabertooth in a handful of dungeons and although it is good for more ST damage, I do not value that over AoE more often than with the people I play with, as the burst I build around covers ST.
+
+**Row 15** - As i’m focusing more on AoE, Pred is the obvious choice. I have run Sabertooth in a handful of dungeons and although it is good for more ST damage, I do not value that over AoE more often than with the people I play with, as the burst I build around covers ST.
 
 **Row 25** - This row you can take anything, I prefer Wild Charge purely because I value quick burst movement in M+ over the defensive of Renewal or the speed from Tiger Dash
 
@@ -106,6 +106,8 @@ https://www.dreamgrove.gg/sims/cat/
 ### Best two legendary choices
 
 ![Image](https://lh4.googleusercontent.com/3fsz-9utLZ3H_qeO_m3_bSo8TkBspGwHEBnm4pGoY7NYGWraQemzCAyDZetrjPB1vGWTLZGziz5m3TsZB8CV-bpWMB8IKR4sAfeVN2Y25MqhFz5r9iG_J47U_ADI06ztoxNvPxd_)
+![Image](https://lh3.googleusercontent.com/60LAdh9HpbTiuB5AKE3FN93Z2GbZE2QNB81xYsdkRkNV7Fd0Z7C3d1ru3KXGw5lifgPdG2m5ZhRVnTKizrIRwHk3p37OE_ZZQVYT9XaIMl_WA4oVr9c_JQUYNldZQolNc3xZd055)
+
 
 Although there is a Team Apex vs Team Circle meme floating around (Fore: which I encourage, go team Circle), both are very much playable and competitive, they basically vary based on your group composition and the strengths and weaknesses of the other DPS.
 
@@ -132,6 +134,7 @@ I think the choice depends on your group composition, whether you need more dama
 ## Honourable mentions
 
 ![Image](https://lh6.googleusercontent.com/2N9dMghwgWVOOK5tdzThnvdx6Lq_79khUTcilS6KNnZxr_-1GtgaMiS2-JZp2U61z9tm8ouzhtsNWOI9kgafIZmI9iOffVkqvgFs_nJspEx2Ago1cq8xZizleUo2fUje0fXz3Zxw)
+![Image](https://lh6.googleusercontent.com/htxlpdG_5mLe5qLXwtr8Uvx-l1FulSwXjPhI27USFT8hrjusicBokFeKjbFOcRtFoWtEcWtkZ3I-L6ukXsgJAlddY7Ml_J7VirVoAUE-qd5OT_EjAF92vKET4WLcRPMrSE7xA8cX)
 
 **Cat-Eye** - If ash was unlimited, I would have made and recommended Cat-Eye to everyone for early M+, as it stands now it is a good all rounder, but not as good as the above two. A safe craft for those that enjoy the playstyle
 
@@ -219,7 +222,7 @@ This Soulbind paired Well-Honed instincts + Innate Resolve is a very tanky M+ se
 
 ![Image](https://lh4.googleusercontent.com/bUHKa9N3F-T5Zm-mRe6Z9s0OQm5-YmzGUMrHc3MICXCtZUCcRWrteM9olPvt82gviKCQNgLykPfGWBIN3mN1js4N3PCKFj156gZkWCNHeB_-73uA6sfxSLtOH22q5v3C5IdaMBdQ)
 
-## Offensive build
+### Offensive build
 
 https://shadowlands.wowhead.com/soulbind-calc/night-fae/korayn/druid/ApZqAQU1ywYRBTXGBiIVMkkGJTI_Bg 
 
@@ -235,7 +238,7 @@ Fore: this will be my go-to build once unlocked, as it comes with big conflux mu
 
 ![Image](https://lh6.googleusercontent.com/D5GQq_DhMzoG8GhDMsTBYwvF-pEwT5Vivxc9ZGh3BzcbTTBOZ2PxfyoU2BYJxWrZRfDY1DfFJVu6Q4OWkq00jpjvwBZ8LPkrjwMfGBqZFsfoeVwOy_GPTM4V7qbPXArL59KhDUEP)
 
-###Simming with “Dungeon Slice” for Mythic Plus
+## Simming with “Dungeon Slice” for Mythic Plus
 
 Dungeon Slice is a good metric to use for M+ for Feral, stop putting together weird 6 boss patchwork fights for 45s to justify your gear/talent choices. Using this type of quick sim to explore certain situations or pulls is fine to plan around specific things, but for 95% of scenarios Dungeon Slice is the go-to.
 
