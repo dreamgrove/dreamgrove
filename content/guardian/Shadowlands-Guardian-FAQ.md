@@ -29,11 +29,13 @@ TLDR; Pick the one you prefer it is rather very close and is unlikely to make or
 
 ### Nightfae
 
-**ALERT:** Dreamweaver/{{< spell 319217 "Podtender" >}} is a trap for tanks, it may or may not be a bug but for the time being do not take it!
-
-When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer.
+**Dreamweaver** vs. **Niya**:
+The downside to **Dreamweaver's** Podtender, When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer. That being said, in a well organized group it is a non issue so that's particularly why you would see it in top keys. 
 
 *This may be less relevant in raids, but is a big red flag for m+.*
+
+**Niya** tends to sim higher for some but we understand that is not a priority for a select amount of people, {{< spell 322721 "Grove Invigoration" >}} gives a good amount of stats and health. 
+
 
 ### How To Kyrian Tether
 
@@ -140,8 +142,30 @@ PSA: **YOU DO NOT** blow a cd to switch form to do damage, that is a meme thing 
 
 ## Simulations
 
-[Shadowlands Bear Sims](https://www.dreamgrove.gg/sims)
+[Shadowlands Bear Sims.](https://www.dreamgrove.gg/sims)
 
+
+### HOW DO I SIM??
+
+**FIRST**: Understand that simming is only for dps, any website or person telling you they can sim survivability is either lying or being massively reductive, or both.
+
+Now that that’s out of the way, download the Simulationcraft [addon](https://www.curseforge.com/wow/addons/simulationcraft), take the input it gives you and go to [Raidbots](https://www.raidbots.com/simbot) pick the option you want; specifically the important ones are:
+
+* *[Quick sim](https://www.raidbots.com/simbot/quick)* will just run a sim of your character with your current gear.
+
+* *[Top gear](https://www.raidbots.com/simbot/topgear)* checks all the gear you have equipped (and if you have the weekly chest open it will take those into account as well) allows you to pick and choose every option you wanna check out (gear/talent/conduit/soulbind) run all the sims and tell you which one is the best for you.
+
+* *[Droptimizer](https://www.raidbots.com/simbot/droptimizer)* runs the loot from dungeons/raid/pvp and tells you where your biggest upgrade will come out.
+
+ Once you’ve chosen the one you’re interested in, select the fight style  you are interested in under simulation options;
+
+* **Patchwerk** is basically just you hitting a dummy (or several) for a certain amount of time, it’s good to see how much damage you can expect uninterrupted on a boss.
+
+* **Hectic add cleave** is more niche and is one dummy with several wave of small adds spawning to try and simulate bosses with adds that comes by wave, rarely used.
+
+* **Dungeonslice** tries to simulate a dungeon, it is not perfect, but if you wanna get the best bang for your buck in an m+ environment, it is fine for a premade profile.
+
+Once you picked that, click run the simulation, wait and after a while you will have your dps and the best gear you have available currently shown to you, by the power of my APL and computers.
 
 As with all generalized charts, these are for informational purposes only and DO NOT accurately reflect your own character. You should ALWAYS use [Raidbots](https://www.raidbots.com/simbot/topgear) to sim your own character instead of relying solely on general charts like these.
 
@@ -150,3 +174,16 @@ Currently the APL is going to cast {{< spell 323764 "Convoke" >}} in the affinit
 To sim Catweaving, one needs to add catweave_bear=1 into the **Custom APL** section. 
 
 The current Basic set up is using Balance affinity and {{< spell 319454 "Heart of the Wild" >}} as talents (ergo sims will always use {{< spell 24858 "boomkin" >}} {{< spell 323764 "Convoke" >}}, and always shift in {{< spell 24858 "boomkin" >}} form for {{< spell 340059 "Lycara" >}})
+
+# Talents
+
+***EARTHWARDEN Vs. SURVIVAL OF THE FITTEST***
+
+If you have crafted {{< spell 339063 "The Natural Order's Will" >}} (NOW), you have probably wondered if it is worth using {{< spell 203965 "SotF" >}} over {{< spell 203974 "EW" >}} all the time. The first thing you need to understand is that the choice *is not* legendary dependent, while it is true that {{< spell 339063 "The Natural Order's Will" >}} (NOW) render {{< spell 203965 "SotF" >}} more attractive, some situations warrant the use of {{< spell 203965 "SotF" >}} while not using it, or the use of {{< spell 203974 "EW" >}} while using {{< spell 339063 "NOW" >}}.
+
+***What does this mean?*** 
+- Essentially, you need to look at your damage breakdown, if you are in an encounter where you take a lot of melee damage (think Hungering destroyer or Mist of Tirna Scythe dungeon) {{< spell 203974 "EW" >}} will be significantly more attractive than {{< spell 203965 "SotF" >}} since it will allow you to mitigate the majority of your damage taken (ie melees) while still having access to {{< spell 22812 "bark" >}} on top.
+- On the other extreme, if you are taking more magic damage (such as on inerva in the raid), or physical damage not mitigated by {{< spell 203974 "EW" >}} (think mutilate from the abomination in Necrotic Wake) {{< spell 203965 "SotF" >}} will be more attractive.
+In short, look at your damage breakdown, if melee are the bigger damage intake, {{< spell 203974 "Earthwarden" >}} is better, if it is not it is possible that {{< spell 203965 "SotF" >}} is better. **AND THOSE THINGS MUST BE TAKEN INTO CONSIDERATION REGARDLESS OF YOU USING {{< spell 339063 "NOW" >}} OR NOT**
+
+As for the conduit {{< spell 340529 "TaB" >}}, it is our opinion that people tend to overestimate it, you absolutely do not need to use it if you use {{< spell 339063 "NOW" >}}, it’s a 9 to 6 sec reduction if used with {{< spell 203965 "SotF" >}}, which translate to maybe one more use in an entire fight in the raid, and in m+ you have period where {{< spell 22812 "bark" >}} will cool off, due to less damage intake/moving about. So for this, if {{< spell 340529 "TaB" >}} allows you more {{< spell 22812 "bark" >}} usage/mitigating something that would not be possible otherwise, consider it, otherwise it is not a *must always use* adapt your conduits to your situation.
