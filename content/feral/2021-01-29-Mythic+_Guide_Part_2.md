@@ -8,6 +8,8 @@ series_title: "Part 2"
 patch: "9.0"
 ---
 
+![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
+
 ## Part 2 - Getting the most inside the key
 
 In this section we will cover the following ...
@@ -19,10 +21,14 @@ In this section we will cover the following ...
 ---
 
 ##  Rotational Plays
-This section has been provided with BuffMe’s input (although he blames Shmoo) on the #Feral discord, so any errors please blame him.
+This section has been provided with BuffMe’s input (although he blames Shmoo) on the #Feral discord, so any errors please blame him - it is also somewhat volatile so any questions always check in with the Discord.
 
 ### General play
-When you first open on a pack, the main thing is to …
+Generally speaking, depending on your talents, you can follow the below priority per target count.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/804749398852239400/unknown.png)
+
+In terms of maximising what you do pack to pack, when you first open on a pack the main things to keep in mind aree as follows …
 
 - have combo points ready from the last pack (where possible)
 - have one/two Bloodtalons stack ready from last pack (where possible)
@@ -37,28 +43,22 @@ So, what about Rake - Well Rake in M+ is good, but only if the mob will live for
 - are there 3 or less targets
 - can you really be bothered for the gain over Swipe spam
 
-Generally speaking, depending on your talents, you can follow the below priority per target count.
+### Cooldown usage
+Generally, more CD usage in M+ is better than optimal CD usage, so you should be looking and planning ahead to squeeze in CD uses, talk to your team, particularly your tank, ask ask questions like "how long between know and boss X", to get an idea of when and how you can tweak routes to get more CD uses in play.
 
-<table>
-<tbody>
-<tr>
-<td>Target count<br></td>
-<td>Priority list<br></td>
-</tr>
-<tr>
-<td>1 target<br></td>
-<td>Maintain Rip<br>Spend combo points on Bite<br>Feral Frenzy on cooldown<br>Maintain Rake<br>Shred<br>Thrash only to proc BT</td>
-</tr>
-<tr>
-<td>2 targets</td>
-<td>Primal Wrath to maintain Rip<br>Spend combo points on Bite<br>Feral Frenzy on cooldown<br>Maintain Rake on both targets<br>Maintain Thrash<br>Swipe</td>
-</tr>
-<tr>
-<td>3 targets</td>
-<td>Primal Wrath to maintain Rip<br>Spend combo points on Bite OR Primal Wrath<br>Feral Frenzy on cooldown<br>Maintain Rake on targets (if you can be bothered)<br>Maintain Thrash<br>Swipe</td>
-</tr>
-</tbody>
-</table>
+Currently we have two very strong CDs in M+ that can be used for both ST and AoE as well as working well together.
+
+- **Berserk** - Berserk has undergone some changes since SL that make it pretty big on sustained AoE, it's no huge AoE burst like some specs have out there but it's still very solid all rounder.
+- **Convoke** - Convoke is huge, it's a 4s channelled nuke that switches up based on what form you are in. Feral convoke also casts the Lunar inspiration version of Moonfire, which means it's AoE potential in Feral form is bigger than some would give it credit for.
+
+*That said* there are times and routes where CD usage matters, for example if your group is planning around a Pride burst window to burn down a group or a boss, or a particularly nasty pull that needs to be burned down to be efficient (e.g. SoA double pack mid-way through between 1st and 2nd boss with spear), then you need to hold CDs. Talk to your group and coordinate these types of pulls to make sure you have yours ready.
+
+For more info on Convoke, check out the [Beta Convoke Test Data](https://docs.google.com/spreadsheets/d/e/2PACX-1vTwxWnGzNZw7CxBzN4XaoeW43Y0y2xjRnqEtpP76tTQ9GdB815wnhCA4Zm2ekofWZtkpWcuKqNcU3nv/pubhtml#)
+
+### In Berserk
+The Feral rotation changes a little in Berserk, as Combo Points gain value due to the refund and the Stealth-modified spells also gain value, it's worth being aware of how  to use Berserk in different situations:
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/804750128128589905/unknown.png)
 
 ### Boomkin in M+?
 Yup, this is a thing that exists, it’s feelycrafty more than factually mathed and simmed, but my (Fore’s) go-to is the below. The idea is to fish for Starfall, so make sure the pack will last long enough to get the full use of the Starfall AoE, and know that it has a 90% chance to roll on 4+ targets.
@@ -69,45 +69,13 @@ Yup, this is a thing that exists, it’s feelycrafty more than factually mathed 
 
 Sunfire - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. 
 
-### In Berserk
-
-<table>
-<tbody>
-<tr>
-<td>Target count</td>
-<td><br></td>
-</tr>
-<tr>
-<td>1 target</td>
-<td>Maintain Rip<br>Spend combo points on Bite<br>Maintain Rake<br>Shred<br>Thrash only to proc BT</td>
-</tr>
-<tr>
-<td>2 targets</td>
-<td>Primal Wrath to maintain Rip<br>Spend combo points on Bite<br>Maintain Rake on both targets<br>Maintain Thrash<br>Shred</td>
-</tr>
-<tr>
-<td>3 targets</td>
-<td>Primal Wrath to maintain Rip<br>Spend combo points on Bite OR Primal Wrath<br>Maintain<br>Rake on all three targets<br>Maintain Thrash<br>Shred</td>
-</tr>
-<tr>
-<td>4-7 targets<br><br>3 choices from strongest to weakest (though all close),<br> I tend to devolve into the bottom one</td>
-<td>Primal Wrath<br>Maintain Thrash<br>Tab-Rake<br>Swipe only to proc BT<br>
-<hr>Primal Wrath<br>Maintain Thrash<br>Rake as filler when you hit 4cps after Shred<br>Shred<br>
-<hr>Primal Wrath<br>Maintain Thrash<br>Swipe</td>
-</tr>
-<tr>
-<td>8 targets</td>
-<td>Primal Wrath<br>Maintain Thrash<br>Shred<br>Rake as filler when you hit 4cps after Shred
-</td>
-</tr>
-</tbody>
-</table>
-
 ---
 
 ## Affixes
 
 ### Seasonal and affixes on all keys
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_animarevendreth_buff.jpg)
 
 **Prideful** - *Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
 
@@ -126,9 +94,13 @@ This basically comes down to…
 
 In my M+ groups, we let the healer make the call, in pugs I'd probably make the call based on if the pride is at too many stacks at 50% hp left or if I want to pad ...
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
+
 **Tyrannical** - *Bosses have 40% more health. Bosses and their minions inflict up to 15% increased damage.*
 
 Tyrannical weeks are Blizz’s way of telling you to take a week off, a cancerous affix that makes keys unfun to play at a high level, turning boss fights into 3-4 min slogs.
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/ability_toughness.jpg)
 
 **Fortified** - *Non-boss enemies have 20% more health and inflict up to 30% increased damage.*
 
@@ -136,19 +108,27 @@ Fort is your push week, as bosses die insanely fast and trash being more dangero
 
 ### Weekly affixes
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofshadowprotection.jpg)
+
 **Spiteful** - *Fiends rise from the corpses of non-boss enemies and pursue random players.*
 
 Spiteful isn’t quite as bad for Ferals as it is for other melees, as we can abuse Balance Affinity to stay away from the ghosts and they also trigger resets from Pred. That said, make sure you get yourself a good WA or Plater import that highlights when one is on you so you can deal with it. They take something like 8% of their health every second, so ~12s to die off without any damage.
 
 You can knock them back with Typhoon and Root them with a PS proc to get it away from you.
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_fire_felflamering_red.jpg)
+
 **Explosive** - *While in combat, enemies periodically summon Explosive Orbs that will detonate if not destroyed.*
 
 Explosive orbs are in a weird place where they have <200 hp, one auto from anyone in the group will kill them, so simply get a WA/nameplate that tracks them and do your part, it doesn’t act as a DPS loss as you can still spam away with AoE.
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/ability_warrior_focusedrage.jpg)
+
 **Raging** - *Non-boss enemies enrage at 30% health remaining, dealing 100% increased damage until defeated.*
 
 So obviously Druid is good for this, and Feral is no different, Soothe the most dangerous mob in the pack and keep soothing things, keep it on CD - your tanks will love you.
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/ability_warrior_battleshout.jpg)
 
 **Bolstering** - *When any non-boss enemy dies, its death cry empowers nearby allies, increasing their maximum health and damage by 20%.*
 
@@ -156,27 +136,57 @@ Not a huge amount  you can do about this, if you want big plays you can Cyclone 
 
 Other than that, just make sure mobs die evenly and focus high hp mobs with prio bites or FF.
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_holy_prayerofspirit.jpg)
+
 **Inspiring** - *Some non-boss enemies have an inspiring presence that strengthens their allies.*
 
 Typhoon/bash is insanely good on this week as the inspiring mobs themselves can still be CC’ed interrupted, and as they only have a ~15yd range where their aura applies, you can control the mob out of the group to allow for normal mob control on the rest.
 
 Also, Inspiring is potentially a FF week, to nuke down those targets.
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_nature_earthquake.jpg)
+
 **Quaking** - *Periodically, all players emit a shockwave, inflicting damage and interrupting nearby allies*
 
 Not much you can do here other than get a WA to track when Quaking is “off cd” and be ready to spread - DO NOT cast Convoke when Quaking is off CD, it is a sure-fire way to trigger Quaking and make yourself upset.
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/ability_ironmaidens_whirlofblood.jpg)
 
 **Bursting** - *When slain, non-boss enemies explode, causing all players to suffer damage over 4 sec. This effect stacks.*
 
 Bursting isn’t a big deal to Feral, as with Survival Instincts and barkskin we can mitigate a huge number of stacks, but you should probably watch out for your party as well. This is another one where you want to get a WA to track when stacks are dropping off and how high they are and be ready to stop DPS (or as much as you can as a DoT spec).
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_deathknight_necroticplague.jpg)
+
 **Necrotic** - *All enemies' melee attacks apply a stacking blight that inflicts damage over time and reduces healing received.*
 
 Necrotic is all about helping your tank. You should always watch out for your tank and use roar/typhoon when they are in danger even if they don’t call for it. It’s good to have chats with your tank before hand if you are in comms to discuss how you want Necro to play out, when they want you to Typhoon etc. Worst case, you can also taunt mobs/bosses to allow for a reset.
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_shaman_lavasurge.jpg)
+
 **Volcanic** - *While in combat, enemies periodically cause gouts of flame to erupt beneath the feet of distant players.*
 
 As a melee, volcanos shouldn’t really be something you have to deal with, stay in melee range of mobs and watch your feet when there are mobs at range.
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/ability_backstab.jpg)
+
+**Grievous** - *Injured players suffer increasing damage over time until healed.*
+
+Regrowth allows the removal of a Grievous stack, so you can use your Predatory Swiftness procs to instantly heal off a stack from yoruself, or a party member. This is a huge gain to survivability and should be done during times when the healer is struggling or you have spare GCDs from pooling
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_shadow_bloodboil.jpg)
+
+**Sanguine** - *When slain, non-boss enemies leave behind a lingering pool of ichor that heals their allies and damages players.*
+
+Typhoon is king on Sanguine weeks, the pools stick around for ~20s so it isn't the end of the world if a mob dies in a bad spot, but you should be looking to Typhoon mobs on CD to push them into a better position
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_nature_earthquake.jpg)
+
+**Storming** - *While in combat, enemies periodically summon damaging whirlwinds.*
+
+Storming is a pain, but again something that Feral can deal with a bit better than other melee's due to our high base speed and long claws from Balance Affinity, it's just one of those affixes you play through and deal with.
+
+---
 
 ## Dungeon tips
 Fair warning, all of the “Meld BS” is potentially fixable by Blizz, so don’t blame us if you do it and get 1-shot :)
@@ -201,11 +211,15 @@ Although this is often left to tanks, knowing a solid route and the count that s
 - **Spires of Ascension**: 87.37% before going up for Devos
 - **The Necrotic Wake**: 68.2% before going up
 
+---
+
 ### De Other Side
 
-![Image](https://lh4.googleusercontent.com/wXgKG5MtkD3TKpR7kGS_z0_1lOR8PqZg0w9qdsAgouxK1Ffr88BxOWR0dRUHIntGZAwnHPtX02M1X_f2ECnpHopFt-5znUMTsfbcAvIUEC7pqsghlBIEqpR5SIadsauWfVumEnn4)
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/949066.png)
 
 **General advice**
+
+- You can stun the prides with the Night Fae urns
 
 In the mecha area …
 
@@ -230,9 +244,11 @@ In the Arden area …
 
 - none found so far ...
 
+---
+
 ### Halls of Atonement
 
-![Image](https://lh6.googleusercontent.com/MnxACM_hMDWBRbMud0ZduS7aTiIU52ZlJWBX3PW0erwXMpzY9PaQAt1-iIAax7Z2Q4W24_vHtoWA-ULiiIMkHMrTbbnaTfy1Z2M5C_qXZAOOFPvmwcYqKD235p5iFtab6Ab1eDGd)
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/957519.png)
 
 **General advice**
 
@@ -251,9 +267,11 @@ In the Arden area …
 
 - NEVER meld during trash before the last boss, the Tormented Soul will bug and can’t be targeted and damaged anymore, so the only way for them to die will be to the Dark communion cast from Inquisitor Sigar. Big time waste.
 
-### Mists of Tirna Scithe
+---
 
-![Image](https://lh6.googleusercontent.com/BJwysa2UeQnrNQmbutBJKlfyvPlG9SvTdRklYcj6mYwzAM8ZAd-0qiPpliXIqi3MqiuJc9cErC6VAqu2ZniCLCcKlwc4sSENUzYFEJs1nhu9aYQWB6K6lE0a5yxd1_h17tpcTk02)
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/949065.png?maxWidth=2400)
+
+### Mists of Tirna Scithe
 
 **General advice**
 
@@ -273,9 +291,11 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 - none found so far ...
 
-### Plaguefall
+---
 
-![Image](https://lh5.googleusercontent.com/WFZXqylyN9kpuYqyuo944Q_RKJ5aB17hvkOh-vT6vYi6gQ7pcRJjfcc0hHuL5PVuwCJIlyTheK-l_Hzpy1NOOkLv-hbAQ7YYPIpJNbNfk798N3kzyQMVsUOa7rwdUqhV_ed0vmYl)
+![Image](https://wow.zamimg.com/uploads/guide/header/10330.jpg?1606286413&maxWidth=1630)
+
+### Plaguefall
 
 **General advice**
 
@@ -297,9 +317,11 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 - none found so far ...
 
-### Sanguine Depths
+---
 
-![Image](https://lh6.googleusercontent.com/w9HPQ9Yrl_8VE8C95gPijF6fdc_Qcm-OAyiAs0i0W11Z02aChPD3OHvnOL7TiL0QUeco-YTcCXeUlG6at5wG3YTJEn2u4-WtIlLbEeuj669gvUFY4fhBWstddeehgMREO9vOUHf1)
+![Image](https://wow.zamimg.com/uploads/guide/seo/10335.jpg?1606286315)
+
+### Sanguine Depths
 
 **General advice**
 
@@ -321,9 +343,11 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 - On 2nd boss, you can meld during Castigate (targeted red circle on you) once the channelling has started, and it’ll cancel and not re-cast, you can also LoS the ability in the cells
 - On the last boss, you can meld just right before he charges you so you avoid the bleed (same mechanic as the leap from Mechagon K.U.-J.0. boss)
 
-### Spires of Ascension
+---
 
-![Image](https://lh5.googleusercontent.com/nGvL3W1cu1mt7q5DG8YPvxkND7ZajWnj3OhyB6gIEUUen_PsyuLvqY2Ad_XqmvC6XXGchmhnlcwen8DrwJr_faJHxxdTKzaFDwfwRApamqlesNnB8p2E3uEyM_EGHyPpZtIDaN5p)
+![Image](https://wow.zamimg.com/uploads/blog/images/19394-shadowlands-alpha-build-34821-loading-screens-and-icons.png)
+
+### Spires of Ascension
 
 **General advice**
 
@@ -346,9 +370,11 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 - The 3 mobs before the last boss, the debuff drops at end of combat. So you can actually use Meld to drop the debuff at high stacks if you need to mid-combat
 
-### The Necrotic Wake
+---
 
-![Image](https://lh4.googleusercontent.com/_1W2arVa6EsQcVoQ0MlYFBv5QYzz_OMg4Ggz6-oeG_CVCxu_BqMAOv5PW3Bm_Wtgg581fGxRYwcQ64-2hsyMFU7Y2fL6lKy0HdB4745ZwYX784jOudl_QAO9mHDkYUaf12OgdwcZ)
+![Image](https://wow.zamimg.com/uploads/blog/images/19331-shadowlands-alpha-build-34714-necrotic-wake-loading-screen-icons-maps.png)
+
+### The Necrotic Wake
 
 **General advice**
 - Trow Cleaver damages the first target it finds so you can hit mobs with it doing some nice damage
@@ -362,9 +388,12 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 - You can meld any Morbid Fixation during trash before 3rd boss and also during the boss if the hook failed to cancel it
 - You can Immune the death exile cast of the last boss in NW with basic immunities like Divine Shield or Ice Block but also with a warlock gateway (and Priest Leap of Faith). Make sure that the projectile of the cast is about to hit you before you take the gateway. Bear in mind that you will die when the debuff runs out but maybe it helps you to squeeze out that extra dps. This can also be Melded (needs verifying, Fore: verified, but incredibly tight timing) 
-## Theater of Pain
 
-![Image](https://lh3.googleusercontent.com/zNtdHg4GDRAQbfkSn-5RA7wAWLsrO2BSDKztr_aElrlk150Z74cvxgDOQ84lqAkBXey0hl6qajhkdrkBu5GjFPc-MZvwgxwauqc1HBl5PhKSBJhmmd_ScMw7OkaWTifDm1nSA16H)
+---
+
+![Image](https://wow.zamimg.com/uploads/blog/images/22104-datamined-shadowlands-mythic-dungeon-hotfixes-12-21-theater-of-pain-plaguefall-n.jpg)
+
+### Theater of Pain
 
 **General advice**
 
