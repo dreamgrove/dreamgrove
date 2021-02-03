@@ -7,7 +7,7 @@ patch: "9.0.2"
 description: "The Most commonly asked questions, Shadowlands Guardian Edition."
 ---
 
-Shadowlands has finally arrived! Nartually there are many questions being asked 
+Shadowlands has finally arrived! Naturally there are many questions being asked 
 # Covenants
 
 **What covenant should I choose?** 
