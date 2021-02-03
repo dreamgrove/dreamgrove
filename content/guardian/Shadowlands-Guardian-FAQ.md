@@ -23,7 +23,7 @@ Shadowlands has finally arrived! Naturally there are many questions being asked
 * Kyrian gives you an ability that can give you either strong defensive capabilities/utility or some offensive potential,and, unlike Night Fae you can control which one you get. It can have a few downside (relying on other people, the {{< spell 327022 "dps tether" >}} acting as a 15% {{< spell 190456 "Ignore Pain" >}} and thus can end up wasting a bit of the damage). But unlike necrolord its dps is constant and does not drop off either in ST or AOE. Furthermore Pelagos is still a strong soulbind. 
 Important to note that if you can avoid it you should never use the solo bond of the ability as it is inferior to any other benefits.
 
-* Venthyr gives you {{< spell 323546 "Ravenous Frenzy" >}}, which if paired with {{< spell 102558 "Incarn" >}} probably gives you one of the strongest 3 minute burst in the game, has virtually no downside (you have the gcd+2sec before getting stunned while being idle and bears are gcd locked).Venthyr also has access to strong soulbind for ST, where it will struggle a bit more than other covenant.
+* Venthyr gives you {{< spell 323546 "Ravenous Frenzy" >}}, which if paired with {{< spell 102558 "Incarn" >}} probably gives you one of the strongest 3 minute burst in the game, has virtually no downside (you have the GCD+2sec before getting stunned while being idle and bears are GCD locked). Venthyr also has access to strong soulbind for ST, where it will struggle a bit more than other covenant.
 
 TLDR; Pick the one you prefer it is rather very close and is unlikely to make or break what you are doing 
 
@@ -52,7 +52,7 @@ Depending on the target you did bond yourself to, you gain different active spel
 *What do you gain in exchange?*
 
 **Bonded to a tank**:
-You gain also {{< spell 327037 "Kindred Protection" >}}, so 40% of the damage you wi ll take will be transferred to your co-tank - except the damage that got transferred from him at the same time. Mind that this only shifts damage and should only be used if one of you is dying to a certain mechanic otherwise.
+You gain also {{< spell 327037 "Kindred Protection" >}}, so 40% of the damage you will take will be transferred to your co-tank - except the damage that got transferred from him at the same time. Mind that this only shifts damage and should only be used if one of you is dying to a certain mechanic otherwise.
 
 **Bonded to a healer**: 
 {{< spell 327071 "Kindred Focus" >}}, for the next 10s you receive 30% of the healing dealt by your bonded parter. 
@@ -119,7 +119,7 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 
 ## Threat, Damage, and You
 
-***I am having threat issues, what do i do??***
+***I am having threat issues, what do I do??***
 
 **The short answer:** Press thrash and swipe more
 
@@ -127,18 +127,18 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 So for your opener, you want to use {{< spell 77758 "Thrash" >}} then 3 {{< spell 213764 "Swipes" >}} then {{< spell 77758 "Thrash" >}} again, rince and repeat, once you have built up threat, you can spread {{< spell 8921 "Moonfire" >}} to the mobs instead of {{< spell 213764 "Swipe" >}} for more damage and ***IF*** you have an issue on one mob don’t hesitate to use {{< spell 8921 "Moonfire" >}}/{{< spell 33917 "mangle" >}} on it to get some quick threat.
 Another good tip is to wait that all the trash is in range of {{< spell 77758 "Thrash" >}} before pressing it, as it's our best aoe ability and the only uncapped tool we have so you do not want to waste a use early.
 
-**Important to note:** - opening with {{< spell 6795 "Taunt" >}} on single target is highly advised, and {{< spell 102558 "Incarn" >}}/{{< spell 106951 "Zerk" >}} will reduce {{< spell 6795 "Taunt" >}} cd to the gcd.
+**Important to note:** - opening with {{< spell 6795 "Taunt" >}} on single target is highly advised, and {{< spell 102558 "Incarn" >}}/{{< spell 106951 "Zerk" >}} will reduce {{< spell 6795 "Taunt" >}} CD to the GCD.
 -the cap on {{< spell 213764 "Swipe" >}} is proximity based, so if you have more than five mobs around you can wiggle around to hit different targets with each {{< spell 213764 "Swipe" >}}.
 
 **I keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?**
 
 Simply put catweaving and owlweaving is when you switch forms, when out of harms way, to push out a little bit of extra damage when survivability is no longer an issue. 
 
-* **Catweaving:** Switch to {{< spell 768 "cat form" >}} when {{< spell 77758 "Thrash" >}}/{{< spell 33917 "Mangle" >}} is on cd and you have no rage to spend, apply {{< spell 1822 "Rake" >}}, deplete all your energy with {{< spell 5221 "Shred" >}}, and if at 4 or 5 combo points apply {{< spell 1079 "rip" >}}, switch back to {{< spell 5487 "bear" >}}, rince and repeat. This rotation is mostly concerning single target.
+* **Catweaving:** Switch to {{< spell 768 "cat form" >}} when {{< spell 77758 "Thrash" >}}/{{< spell 33917 "Mangle" >}} is on CD and you have no rage to spend, apply {{< spell 1822 "Rake" >}}, deplete all your energy with {{< spell 5221 "Shred" >}}, and if at 4 or 5 combo points apply {{< spell 1079 "rip" >}}, switch back to {{< spell 5487 "bear" >}}, rinse and repeat. This rotation is mostly concerning single target.
 
-* **Owlweaving:** Cast {{< spell 319454 "Heart of the Wild" >}}, cast {{< spell 8921 "Moonfire" >}}/{{< spell 93402 "Sunfire" >}} on target cast two {{< spell 5176 "Wrath" >}} cast {{< spell 78674 "Starsurge" >}}, proceed to follow {{< spell 79577 "Eclipse" >}} rotation for the duration of {{< spell 319454 "Heart of the Wild" >}}, when out of it, if you have {{< spell 33917 "mangle" >}}/{{< spell 77758 "Thrash" >}} in cd, if you have no rage to spend, and if you're going to use {{< spell 213764 "Swipe" >}}, switch to {{< spell 24858 "boomy" >}} and cast {{< spell 93402 "Sunfire" >}} on the target, switch back to {{< spell 5487 "bear" >}}. When in aoe, if you are outside of melee rage you can switch into {{< spell 24858 "boomy" >}} to put {{< spell 93402 "Sunfire" >}} on mobs, it is quite solid damage.
+* **Owlweaving:** Cast {{< spell 319454 "Heart of the Wild" >}}, cast {{< spell 8921 "Moonfire" >}}/{{< spell 93402 "Sunfire" >}} on target cast two {{< spell 5176 "Wrath" >}} cast {{< spell 78674 "Starsurge" >}}, proceed to follow {{< spell 79577 "Eclipse" >}} rotation for the duration of {{< spell 319454 "Heart of the Wild" >}}, when out of it, if you have {{< spell 33917 "mangle" >}}/{{< spell 77758 "Thrash" >}} in CD, if you have no rage to spend, and if you're going to use {{< spell 213764 "Swipe" >}}, switch to {{< spell 24858 "boomy" >}} and cast {{< spell 93402 "Sunfire" >}} on the target, switch back to {{< spell 5487 "bear" >}}. When in aoe, if you are outside of melee range you can switch into {{< spell 24858 "boomy" >}} to put {{< spell 93402 "Sunfire" >}} on mobs, it is quite solid damage.
 
-PSA: **YOU DO NOT** blow a cd to switch form to do damage, that is a meme thing to do in non relevant content, do not do it when progging in raids or pushing in m+.
+PSA: **YOU DO NOT** blow a CD to switch form to do damage, that is a meme thing to do in non relevant content, do not do it when progging in raids or pushing in m+.
 
 ## Simulations
 
@@ -179,11 +179,11 @@ The current Basic set up is using Balance affinity and {{< spell 319454 "Heart o
 
 ***EARTHWARDEN Vs. SURVIVAL OF THE FITTEST***
 
-If you have crafted {{< spell 339063 "The Natural Order's Will" >}} (NOW), you have probably wondered if it is worth using {{< spell 203965 "SotF" >}} over {{< spell 203974 "EW" >}} all the time. The first thing you need to understand is that the choice *is not* legendary dependent, while it is true that {{< spell 339063 "The Natural Order's Will" >}} (NOW) render {{< spell 203965 "SotF" >}} more attractive, some situations warrant the use of {{< spell 203965 "SotF" >}} while not using it, or the use of {{< spell 203974 "EW" >}} while using {{< spell 339063 "NOW" >}}.
+If you have crafted {{< spell 339063 "The Natural Order's Will" >}} (NOW), you have probably wondered if it is worth using {{< spell 203965 "SotF" >}} over {{< spell 203974 "EW" >}} all the time. The first thing you need to understand is that the choice *is not* legendary dependent, while it is true that {{< spell 339063 "The Natural Order's Will" >}} (NOW) renders {{< spell 203965 "SotF" >}} more attractive, some situations warrant the use of {{< spell 203965 "SotF" >}} while not using it, or the use of {{< spell 203974 "EW" >}} while using {{< spell 339063 "NOW" >}}.
 
 ***What does this mean?*** 
 - Essentially, you need to look at your damage breakdown, if you are in an encounter where you take a lot of melee damage (think Hungering destroyer or Mist of Tirna Scythe dungeon) {{< spell 203974 "EW" >}} will be significantly more attractive than {{< spell 203965 "SotF" >}} since it will allow you to mitigate the majority of your damage taken (ie melees) while still having access to {{< spell 22812 "bark" >}} on top.
 - On the other extreme, if you are taking more magic damage (such as on inerva in the raid), or physical damage not mitigated by {{< spell 203974 "EW" >}} (think mutilate from the abomination in Necrotic Wake) {{< spell 203965 "SotF" >}} will be more attractive.
-In short, look at your damage breakdown, if melee are the bigger damage intake, {{< spell 203974 "Earthwarden" >}} is better, if it is not it is possible that {{< spell 203965 "SotF" >}} is better. **AND THOSE THINGS MUST BE TAKEN INTO CONSIDERATION REGARDLESS OF YOU USING {{< spell 339063 "NOW" >}} OR NOT**
+In short, look at your damage breakdown, if melee is the bigger damage intake, {{< spell 203974 "Earthwarden" >}} is better, if it is not it is possible that {{< spell 203965 "SotF" >}} is better. **AND THOSE THINGS MUST BE TAKEN INTO CONSIDERATION REGARDLESS OF YOU USING {{< spell 339063 "NOW" >}}**
 
 As for the conduit {{< spell 340529 "TaB" >}}, it is our opinion that people tend to overestimate it, you absolutely do not need to use it if you use {{< spell 339063 "NOW" >}}, it’s a 9 to 6 sec reduction if used with {{< spell 203965 "SotF" >}}, which translate to maybe one more use in an entire fight in the raid, and in m+ you have period where {{< spell 22812 "bark" >}} will cool off, due to less damage intake/moving about. So for this, if {{< spell 340529 "TaB" >}} allows you more {{< spell 22812 "bark" >}} usage/mitigating something that would not be possible otherwise, consider it, otherwise it is not a *must always use* adapt your conduits to your situation.
