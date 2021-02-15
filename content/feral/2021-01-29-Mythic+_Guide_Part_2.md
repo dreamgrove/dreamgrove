@@ -26,9 +26,9 @@ This section has been provided with BuffMe’s input (although he blames Shmoo) 
 ### General play
 Generally speaking, depending on your talents, you can follow the below priority per target count.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/804749398852239400/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/806825667374219274/unknown.png)
 
-In terms of maximising what you do pack to pack, when you first open on a pack the main things to keep in mind aree as follows …
+In terms of maximising what you do pack to pack, when you first open on a pack the main things to keep in mind are as follows …
 
 - have combo points ready from the last pack (where possible)
 - have one/two Bloodtalons stack ready from last pack (where possible)
@@ -58,7 +58,7 @@ For more info on Convoke, check out the [Beta Convoke Test Data](https://docs.go
 ### In Berserk
 The Feral rotation changes a little in Berserk, as Combo Points gain value due to the refund and the Stealth-modified spells also gain value, it's worth being aware of how  to use Berserk in different situations:
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/804750128128589905/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/806122266801995777/unknown.png)
 
 ### Boomkin in M+?
 Yup, this is a thing that exists, it’s feelycrafty more than factually mathed and simmed, but my (Fore’s) go-to is the below. The idea is to fish for Starfall, so make sure the pack will last long enough to get the full use of the Starfall AoE, and know that it has a 90% chance to roll on 4+ targets.
@@ -67,7 +67,7 @@ Yup, this is a thing that exists, it’s feelycrafty more than factually mathed 
 - 6-8 targets = HotW Boomkin convoke (or Feral convoke if no HotW)
 - 9+ targets = Boomie convoke (even without HotW)
 
-Sunfire - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. 
+**Sunfire** - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. 
 
 ---
 
@@ -79,7 +79,7 @@ Sunfire - So Sunfire is potentially strong in M+, and you can weave it in when l
 
 **Prideful** - *Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
 
-Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob is alive.
+Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
 
 You’ve basically got two choices when it comes to prides …
 
@@ -94,9 +94,11 @@ This basically comes down to…
 
 In my M+ groups, we let the healer make the call, in pugs I'd probably make the call based on if the pride is at too many stacks at 50% hp left or if I want to pad ...
 
+It's also worth adding, that you can outright skip the Pride if you move far enough away from it when it's spawning and use an invis pot, which might be needed for the bleeding edge keys. This is mostly an MDI strat though so it's not too useful in a normal setting.
+
 ![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
 
-**Tyrannical** - *Bosses have 40% more health. Bosses and their minions inflict up to 15% increased damage.*
+**Tyrannical** - *Bosses have ~~40~~ 30% more health (recently nerfed). Bosses and their minions inflict up to 15% increased damage.*
 
 Tyrannical weeks are Blizz’s way of telling you to take a week off, a cancerous affix that makes keys unfun to play at a high level, turning boss fights into 3-4 min slogs.
 
@@ -262,6 +264,7 @@ In the Arden area …
 **Feral specific advice**
 
 - Boomie convoke on the mini-boss before last boss to get a Starfall proc is huge, even without HotW
+- On 2nd boss, make sure that the adds have a long bleed on them before they turn to stone so when they get shattered by the Stone Shattering Leap you get a predator reset.
 
 **Meld and other BS**
 
@@ -328,6 +331,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 - You can skip Insatiable Brute before the first boss room without needing to invisible pot or shroud, all you need is to wait for him to be far from passage and go
 - The smash can actually be out-ranged, It's something like 80 yards and stops balls from spawning. Quite easily done with Dash but not 100% sure how useful it is to be that far away for so long
 - The first boss Juggernaut rush can be parried (good luck)
+- You can LOS the Dread Bindings from Grand Overseer (2nd boss)
 - On the bridge before the gauntlet, for the last pack of the three hard trash...you can pull the two on the left without the third on the right if tank damage is an issue
 - During gauntlet, if you use Shining Radiance (Shield) at start of the pull you will have it ready for Gloom Squall cast
 - On the last boss, the 2nd person dashed to by wicked rush can dodge the bleed if they are moving
@@ -377,7 +381,13 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 ### The Necrotic Wake
 
 **General advice**
-- Trow Cleaver damages the first target it finds so you can hit mobs with it doing some nice damage
+- Throw Cleaver damages the first target it finds so you can hit mobs with it doing some nice damage
+- Make sure to use all weapons you can as they do a lot of damage (except the shield, it's pretty meh) ...
+
+  - **Discharged Anima** - Unleash the stored anima, inflicting Arcane damage to nearby enemies and interrupting their spellcasting every 1 sec for 8 sec.
+  - **Bloody Javelin** - Throws a Kyrian javelin at the target, inflicting Physical damage to all enemies it passes through and additional Physical damage every 2 sec for 16 sec. Enemies hit take 20% increased damage for 16 sec.
+  - **Forgotten Forgehammer** - Hurls a mighty Kyrian hammer at the target, inflicting Physical damage and stunning the target for 8 sec.
+  - **Discarded Shield** - Activate to reduce damage taken by 50% for all allies within 8 yds for 6 sec.
 
 **Feral specific advice**
 
