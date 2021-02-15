@@ -14,7 +14,7 @@ patch: "9.0"
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
 
 ### Authors
-https://raider.io/characters/eu/hyjal/Maystine 
+https://raider.io/characters/eu/hyjal/Maystine  
 https://raider.io/characters/eu/kilrogg/Foresight 
 
 ### Contents
@@ -74,7 +74,9 @@ You can switch the 15 and 50 talent row depending on your group comp. If I play 
 
 **Row 25** - I always go Wild Charge in 99% of keys, because I prefer to have Dash and Wild Charge than just a super fast sprint. I use Renewal during Grievous or high keys to help during the Pride mob.
 
-**Row 30** - Balance Affinity is a must have for me in m+ as it allows you to better hit every mobs when they are spread for whatever reason. The extra range also gives you the ability to keep hitting some mobs/boss even when there is an aoe under them. And at last, you can switch to moonkin form to Sunfire which is a decent dps boost (don’t always do this with Apex) and Convoke in a really big aoe pack.## Row 35
+**Row 30** - Balance Affinity is a must have for me in m+ as it allows you to better hit every mobs when they are spread for whatever reason. The extra range also gives you the ability to keep hitting some mobs/boss even when there is an aoe under them. And at last, you can switch to moonkin form to Sunfire which is a decent dps boost (don’t always do this with Apex) and Convoke in a really big aoe pack.
+
+**Row 35**
 Mighty Bash and Entangling Roots are both good, It’s going to mainly depend on your group needs for the key. Heart of the Wild only if your group doesn't really need anything from the other two but most of the time you will run Mighty Bash baseline.
 
 **Row 40** - I almost always go Soul of the Forest. Savage Roar is better in some dungeons when you know what and how your tank is pulling as it requires a lot of momentum to have the best use of it.
@@ -117,7 +119,9 @@ Circle is the higher sustained damage overall of the two, but this is general da
 
 ## Fore’s recommendation
 
-I’d always say Circle for M+, as if you need the prio’ damage you can run Feral Frenzy over BT for reliable burn. You can run Apex if your other two DPS partners are big AoE pumpers for more ST damage coupled with SbT. Also I'm personally not a fan of ST procs in an AoE rotation, but it comes down to what you chose to max out originally, if you chose Apex, then my advice is to keep going, you don’t really need both at 235 and both are very competitive in M+.
+I’d always say Circle for M+, Circle is strong throughput that provides the highest DPS gain in keys out of all the legendary choices, the only place it's out DPSed is on 2-target cleave. Circle means that you get more out of your Rakes, Rips and PWs.
+
+If you don't want to run Circle or want to run one of your current legendaries, then i'd recommend Apex if your other two DPS partners are big AoE pumpers for more ST damage, potentially coupled with SbT. If ash is a limiting factor for you, then go with what you chose first, e.g. if you chose Apex, then keep going, you don’t really need both Circle and Apex at 235 as although Circle is better, Apex and Cat-Eye can both work fine as well.
 
 ## Maystines recommendation
 
@@ -125,8 +129,7 @@ I think the choice depends on your group composition, whether you need more dama
 
 ## Honourable mentions
 
-![Image](https://lh6.googleusercontent.com/2N9dMghwgWVOOK5tdzThnvdx6Lq_79khUTcilS6KNnZxr_-1GtgaMiS2-JZp2U61z9tm8ouzhtsNWOI9kgafIZmI9iOffVkqvgFs_nJspEx2Ago1cq8xZizleUo2fUje0fXz3Zxw)
-![Image](https://lh6.googleusercontent.com/htxlpdG_5mLe5qLXwtr8Uvx-l1FulSwXjPhI27USFT8hrjusicBokFeKjbFOcRtFoWtEcWtkZ3I-L6ukXsgJAlddY7Ml_J7VirVoAUE-qd5OT_EjAF92vKET4WLcRPMrSE7xA8cX)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/809082829916078080/unknown.png)
 
 **Cat-Eye** - If ash was unlimited, I would have made and recommended Cat-Eye to everyone for early M+, as it stands now it is a good all rounder, but not as good as the above two. A safe craft for those that enjoy the playstyle
 
@@ -144,11 +147,9 @@ Feral conduits are pretty strong for M+ as they provide a lot of burst damage an
 
 ### Potency Conduits
 
-
 **Conflux of Elements** is a potency conduit that works perfectly with the current M+ meta. For most Ferals this will likely be simming highest in ST regardless, but in M+ it has the added benefit of being another multiplier to add to the pile, giving you …
 
 ![Image](https://lh6.googleusercontent.com/jHiZg48AtcxqePemB8-p5CsJ8N1K8FoXNkKX1aS_c_80N8NhLO5Qfng6GG9418f8FFKtEf3TfXAUAMgInAQbc330tjLoockBouY5OJKhK3jprrlM9IPwbwRAsRoKKbh5aM2eow5p)
-
 
 Lust + Pride + (bullshit dungeon multiplier) + Conflux + Trinkets/Potions = very large convoke
 
@@ -158,16 +159,13 @@ For example, a +15 DoS Hakkar fight:
 
 ![Image](https://lh3.googleusercontent.com/b3YUnrCoygzL7oKKKdp4OL-n3n_sw9uqzh98RiSJ_tdylN_uT6of0DZRRcA57Wt7TkggwZibG38PGaU1Qks0mo_VDzv51mW1OU9tXUEez0LnIbWXoUNDwTdFOecKLrnYP_Yyr9k5)
 
-
 **Carnivorous Instinct** works very well with Predator in M+, providing a ~4.3% damage bonus while Tiger’s Fury is up, which is a lot of the dungeon.
 
 ![Image](https://lh3.googleusercontent.com/MUAa8ngAqXh4re1v5xQQq9xk07kQgn4TUZkmRr9g40COvCquDba68gHgE6aeeBMQ-q4X0FkZNor-rCaiTpWyDyWxXvb3kbP1tYwWf5Mn19-18pcx749SnLdiCVEL7fjBPDBMHpsx)
 
-
 **Taste for Blood** partners well with Apex and Sabertooth for high Tyrannical weeks, where the added Single Target damage can make or break boss fights.
 
 ![Image](https://lh3.googleusercontent.com/hzQmwFjjgbRU02lyfr_GnMHFexy6Lnb87X9soX2LKNb3ZAieysfmOSiB7cxvipO-0h-5tkpxDJd9JEXFf4wUFiPyr1TefdC04jGuB-OxxZmPPHDMR4l4H4vhP5mowrs8TlovxCUq)
-
 
 ### Utility Conduits
 
@@ -200,7 +198,7 @@ Lust + Pride + (dungeon multiplier) + Conflux + Trinkets/Potions + Mastery = ver
 
 This also comes with two defensive conduits and a DPS Soulbind in Burrs.
 
-![Image](https://lh5.googleusercontent.com/vmtow18w1KgtXLp6eDxJFjPHq5FrKoThOybIc-YKhjDMnDK1IcNDa6l_wOSGZvUXsRyok0CeyOaKGDIsat8tAHAJxtVKZ9vJToVRKbLweWxMVIu8MRxU5rXkw4K614Xr9qlVobtN)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/809083443387564093/unknown.png)
 
 ### Defensive build
 
@@ -216,11 +214,11 @@ This Soulbind paired Well-Honed instincts + Innate Resolve is a very tanky M+ se
 
 ### Offensive build
 
-https://shadowlands.wowhead.com/soulbind-calc/night-fae/korayn/druid/ApZqAQU1ywYRBTXGBiIVMkkGJTI_Bg 
+https://shadowlands.wowhead.com/soulbind-calc/night-fae/korayn/druid/ApZqAQU1ywYRBTLhBiIVMkkGJTI_Bg
 
 Korayn is the highest (potentially joint highest depending on gear) simming soulbind for M+. If you can abuse the 25% crit on first hit to line up large convokes, it’s another damage buff to add to the convoke pile.
 
-You can also swap out Conflux with Carnivorous Instincts for more sustained damage.
+You can also swap out Carnivorous Instincts with Conflux for more sustained damage.
 
 You’ve got a few plays here to extend the crit for as long as you can. No.1 you can position yourself to hit all bar 1 mob in a pack, then when the 5s pass and the buff drops, hit the other mob for a new 5s of 25% crit. No.2 you can also extend the 25% crit by changing your opener to tab-rake based instead of AoE, but i’m not 100% sure if this opener is better than the typical quick PW opener.
 
@@ -228,7 +226,7 @@ The Wild Hunt soulbind is also solid for fights like Mueh’zala where his hp st
 
 Fore: this will be my go-to build once unlocked, as it comes with big conflux multipliers as well as two defensive conduits for safety, potentially switching to Podtender build on high scarrier keys (until a N’Zoth tank trinket appears again)
 
-![Image](https://lh6.googleusercontent.com/D5GQq_DhMzoG8GhDMsTBYwvF-pEwT5Vivxc9ZGh3BzcbTTBOZ2PxfyoU2BYJxWrZRfDY1DfFJVu6Q4OWkq00jpjvwBZ8LPkrjwMfGBqZFsfoeVwOy_GPTM4V7qbPXArL59KhDUEP)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/809085224641232926/unknown.png)
 
 ## Simming with “Dungeon Slice” for Mythic Plus
 
