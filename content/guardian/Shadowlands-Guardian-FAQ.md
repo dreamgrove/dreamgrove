@@ -107,7 +107,7 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
 ***What are you building??***
 
-For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It'll be awhile before you'll need {{< spell 339063 "NOW" >}}. 
+For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It will be awhile before you will need {{< spell 339063 "NOW" >}} and currently we still have not reached that point. For example, as of writing this, the top guardian uses {{< spell 339056 "UFR" >}} in 7 out of the 8 dungeons.
 
 For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060 "Luffa" >}} for damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
 
