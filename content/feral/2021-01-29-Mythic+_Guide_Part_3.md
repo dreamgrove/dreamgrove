@@ -238,7 +238,7 @@ Fore: *I don’t really use many macro’s specifically for M+, but obviously We
 /use [spec:1,talent:3/1][spec:3/4,talent:3/2]Maim;[spec:1/2,talent:3/2][spec:4,talent:3/3]Incapacitating Roar;[spec:1/2/3,talent:3/3]Ursol's Vortex;[spec:2/3/4,talent:3/1]Typhoon
 
 - *ZenTracker (ZT) - Interrupt and Cooldown Tracker (the brain) <https://wago.io/r14U746B7>*
-- *ZT Front-End Party Icons (the UI part) <https://wago.io/M3N3WBg0D*
+- *ZT Front-End Party Icons (the UI part) <https://wago.io/M3N3WBg0D>*
 - *Someone in the group to have an auto-marker <https://wago.io/1ctv3b91K/13>*
 - *Prideful incoming tracker <https://wago.io/PridefulAffixTracker/4>*
 - *A generic dungeon ability warning WA, like this one - <https://wago.io/SL-Dungeons>*
