@@ -1,7 +1,7 @@
 ---
 date: '2021-02-15'
 authors: ["Foresight","Maystine"]
-published: false
+published: true
 title: "Feral Mythic+ Deep Dive Part 3"
 series: ["M+ Deep Dive"]
 series_title: "Part 3"
@@ -17,12 +17,15 @@ In this section we will cover the following ...
 - What would you like to see changed to M+ Feral
 - Q&A
 - Final words ...
+
 ### Talent changes per key and why
 Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of the time, as the rest of our talents are pretty hard-locked. 
 
 Personally I (Fore) just run Pred in every key and if I need more ST, I just switch soulbinds as per the next section. Honestly I don’t have much to say here as our spec’ is very cookie cutter, you can swap to FF if you want the extra pride/target damage, but right now BT is out scaling FF reasonably hard. 
 
-You can swap to SbT if you (hate yourself and) want more ST damage at the expense of AoE, though personally I don’t feel the gain outweighs the cost. If you’re really looking at what you can fiddle with, you *can* change to Renewal on high keys to deal with Prides and give yourself another healing CD, but it’s pretty minor optimisation - SR is also surprisingly good for a bit of a change of pace, but it relies on sustained AoE, so don’t run it with burst specs that’re going to wipe out mobs too quickly.
+You can swap to SbT if you want more ST damage at the expense of AoE, though personally I don’t feel the gain outweighs the cost. If you are pushing with a known group, and are pushing the highest of keys, then changing to be more or less ST focused for particular pulls or issues i definitely a consideration, for example going SbT to ensure you can kill Prides without too many CDs being used.
+
+If you’re really looking at what you can fiddle with, you *can* change to Renewal on high keys to deal with Prides and give yourself another healing CD, but it’s pretty minor optimisation - SR is also surprisingly good for a bit of a change of pace, but it relies on sustained AoE, so don’t run it with burst specs that’re going to wipe out mobs too quickly.
 
 It’s a bit of a sad state really, Blizz removed the old-school talent trees because they were too “cookie cutter”, but we may as well not have talents at this point as there is basically no choice there.
 
@@ -122,7 +125,7 @@ So ToP may *seem* like a ST key, but it’s got a lot of places to trigger Koray
 
 - Challengers has Xira you can proc it on when you stun her
 - Gorechomp has the small adds periodically
-- Xav has the banners
+- Xav has the banners (i'm actually not 100% these proc Korayn atm)
 - Mordreetha has the adds that you need to interrupt and kill
 
 ---
@@ -148,7 +151,7 @@ Also a lot of the trash spawns other trash that you can proc First Strike on, so
 ### What would you like to see changed to M+ Feral
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/810517034206101505/unknown.png) 
 
-Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, moreso even than what we have now, it needs to be reaaally good.
+Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, even more than what we have right now, it needs to be reaaally good.
 
 I think if Feral ever does get something bursty for AoE, it can be one of the top specs for MDI.
 I’d also like to see PW baseline and add a new talent instead in that row.
@@ -165,7 +168,7 @@ I’d like to see a Feral modernisation akin to the one that Shadow Priests get 
 - **More abilities baseline to allow for less maths rows and more utility rows**. MoC vs BT vs FF isn’t interesting, it’s a numbers exercise, whereas Tiger’s Dash vs Wild Charge vs Renewal is
 - **AoE row to provide more AoE options based on situation**, e.g. Burst, Cleave, Funnell and/or Sustained AoE - for example they could’ve made PW baseline, then replaced it in the tree with Apex, providing a Funnel AoE option
 - **BrS back to a Legion style** BrS where pressing it in AoE mattered
-- **Berserk should interact with Swipe** some way, for example while in Berserk they could lift the 2cp limit on Swipe to allow it to feel better in AoE, the current Berserk AoE rotation isn’t intuitive and can confuse a lot of new players
+- **Berserk should interact with Swipe** in some way, for example while in Berserk they could lift the 2cp limit on Swipe to allow it to feel better in AoE, the current Berserk AoE rotation isn’t intuitive and can confuse a lot of new players
 - **SbT back to an execute**
 - For a bit of fun, I’d love if **Feral had Shroud as it’s Druid-specific utility**, aka not give it to the other Druid specs - Ashamane’s Shroud (ty Trem & Kitch) and it behaved the exact same way as Rogues Shroud
 - **AoE stun** (Ashamane’s leg sweep)
@@ -190,6 +193,8 @@ Fore: *I loved running N’Zoth trinket in 8.3 high keys, as the 1min defensive 
 **How do I work out what I am doing wrong?**  
 
 Maystine: *Record your gameplay and try to see your mistakes (CD management,...) and for raiding you have a lot of logs to analyse and to compare yourself.*
+
+Fore: *Recording your gameplay is the big one, the amount of times I get sent video's and see that berserk sits off CD for 4-5 mins at a time is scary*
 
 ---
 
@@ -301,13 +306,15 @@ Fore: *I wouldn’t say there’s any particularly anti-melee dungeons, but ther
 
 Fore: *I asked the man himself, sooo…*  
 
-BuffMe: *With Rake you wanna just clip it if it's stronger, with rip it's more complicated - If you have no SbT you wanna only refresh in pandemic, never clip, with SbT you ideally never want to be in the position where you have a non optimal rip on the target*
+BuffMe: *Rake: Clip below ~60% in general. For BT proc generation (if you use rake to specifically proc BT) 2 additional options...*
+- *Clip instantly if better multiplier or refresh in pandemic if worse multiplier.*
+- *Pragmatic option: Clip if multiplier is better or wait for pandemic if it's worse.*
 
-*I'm not super sure on when it's worth it to clip Rip with SbT, at first thought it might actually be the case that you want to either clip early or don't clip at all, but I'd guess that it doesn't make a huge difference since rip damage is not that high. So I'd say don't clip rip at all - no guarantee though*
+*Rip is the opposite: Never clip. If you have no SbT you wanna only refresh in pandemic, bite is way too powerful. With SbT you ideally never want to be in the position where you have a non optimal rip on the target, timing TF cooldowns with Rip refreshes is very important. In the case of having a non TF Rip up for whatever reason: don't clip and deal with being bad.*
 
 ---
 
-**When all soulbinds are fully unlocked do you feel one will be more useful in high keys? Is Niya’s poison more alluring in M+ because of the constant need for a melee interrupt? Will Koran be a good option if you can use first strike efficiently? Will the minor dps loss of Dreamweaver still be offset by Podtender’s cheat death like ability?**  
+**When all soulbinds are fully unlocked do you feel one will be more useful in high keys? Is Niya’s poison more alluring in M+ because of the constant need for a melee interrupt? Will Koran be a good option if you can use first strike efficiently? Will the minor dps loss of Dreamweaver still be offset by Podtender’s cheat death like ability?**
 
 Fore: *Oh wow did this really take that long to write that we’ve had soulbinds fully unlocked for like, 2-3 weeks now, my bad …*
 
@@ -342,8 +349,6 @@ Fore: *I know it sucks, and pugging can be soul destroying, but honestly this is
 Fore: *I asked BuffMe again …*
 
 BuffMe: *65 approximately - It's 35+35+40 - 3x15*
-
-Fore: *... quick maths*
 
 ---
 
@@ -390,7 +395,11 @@ This has taken more time than either of us expected when we decided to do this, 
 M+ is always evolving, so good chance this will all be redundant in a tier or so’s time lol, always happy to chat about M+ strats, builds, ideas, meme pulls and to help Hippo relive his MDI dreams one day.
 
 Any questions or comments, hit me up on Discord in the normal place.
+
 ### Maystine
+I hope this guide will help you to learn some stuff for your m+ journey, because it requires a lot of knowledge if you want to push really high keys and not only from your class, but also each mob.
+
+You can ask me anything on discord, I will always try to answer the best I can. And soon after the last MDI cup I will finally be able to stream some feral content!
 
 ---
 
