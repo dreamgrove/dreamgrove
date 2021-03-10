@@ -5,7 +5,7 @@
 {{ $sourceFile := print "talents-" $patch }}
 {{ $class := "11" }}
 {{ $dataPath := (index $.Site.Data $sourceFile) }}
-{{ $dataFile := cond (eq $dataPath nil) (index $.Site.Data "talents-8.0") $dataPath }}
+{{ $dataFile := cond (eq $dataPath nil) (index $.Site.Data "talents-9.0") $dataPath }}
 {{ $data := index $dataFile $class }}
 {{ $selectArray := split (.Get "select" | default "0000000") "" }}
 {{ $recommendRows := split (.Get "recommend" | default "000,000,000,000,000,000,000") ","}}
