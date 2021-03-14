@@ -1,4 +1,4 @@
-name: Update JSON (Cat)
+name: Update JSON PTR (Cat)
 
 on:
   workflow_dispatch:
@@ -8,8 +8,8 @@ defaults:
     working-directory: static/sims/cat
 
 jobs:
-  update_json:
-    name: Update JSON
+  update_json_ptr:
+    name: Update JSON PTR
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,15 +20,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: one target
-        run: python generate_combo.py -t 1 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 1 ${{ secrets.RAIDBOTSAPI }}
       - name: two targets
-        run: python generate_combo.py -t 2 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 2 ${{ secrets.RAIDBOTSAPI }}
       - name: three targets
-        run: python generate_combo.py -t 3 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 3 ${{ secrets.RAIDBOTSAPI }}
       - name: four targets
-        run: python generate_combo.py -t 4 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 4 ${{ secrets.RAIDBOTSAPI }}
       - name: five targets
-        run: python generate_combo.py -t 5 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 5 ${{ secrets.RAIDBOTSAPI }}
       - name: commit
         run: |
           git config user.name dreamgrove
@@ -38,7 +38,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Cat"
+            git commit -m "update JSON PTR Cat"
             git push
           fi
       - uses: actions/upload-artifact@v2
@@ -48,9 +48,9 @@ jobs:
           path: |
             *.json
 
-  update_json2:
-    name: Update JSON 2
-    needs: [ update_json ]
+  update_json_ptr2:
+    name: Update JSON PTR 2
+    needs: [ update_json_ptr ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -71,7 +71,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Cat"
+            git commit -m "update JSON PTR Cat"
             git push
           fi
       - uses: actions/upload-artifact@v2

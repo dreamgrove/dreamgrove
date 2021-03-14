@@ -67,26 +67,26 @@ $(function() {
     }
 
     var jobmap = {
-        'combo_h_1.json': 0,
-        'combo_h_2.json': 0,
-        'combo_h_3.json': 0,
-        'combo_h_4.json': 0,
-        'combo_h_5.json': 0,
-        'combo_h_1m.json': 1,
-        'combo_h_s.json': 1,
-        'combo_h_d.json': 1,
-        'combo_1.json': 2,
-        'combo_2.json': 2,
-        'combo_3.json': 2,
-        'combo_4.json': 2,
-        'combo_5.json': 2,
-        'combo_1m.json': 3,
-        'combo_s.json': 3,
-        'combo_d.json': 3
+        'combo_1.json': 0,
+        'combo_2.json': 0,
+        'combo_3.json': 0,
+        'combo_4.json': 0,
+        'combo_5.json': 0,
+        'combo_1m.json': 1,
+        'combo_s.json': 1,
+        'combo_d.json': 1,
+        'combo_ptr_1.json': 0,
+        'combo_ptr_2.json': 0,
+        'combo_ptr_3.json': 0,
+        'combo_ptr_4.json': 0,
+        'combo_ptr_5.json': 0,
+        'combo_ptr_1m.json': 1,
+        'combo_ptr_s.json': 1,
+        'combo_ptr_d.json': 1
     }
 
-    function isHeroic() {
-        return $("#fightstyle").val().includes("combo_h");
+    function isPtr() {
+        return $("#fightstyle").val().includes("combo_ptr");
     }
 
     function toCap(s) { return s.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase()))); }
@@ -138,10 +138,10 @@ $(function() {
                     let $tar = $(e.target);
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
-                        let prof = isHeroic() ? "sandcat_h.txt" : "sandcat.txt";
+                        let prof = isPtr() ? "sandcat_ptr.txt" : "sandcat.txt";
                         $.get(prof, (d) => {
                             let r = getRecord(filters, pivotData);
-                            let bonus = isHeroic() ? "1522" : "1532";
+                            let bonus = isPtr() ? "1532" : "1532";
                             let buf = [];
 
                             buf.push(d);
@@ -194,11 +194,12 @@ $(function() {
 
             (async () => {
                 let file = $("#fightstyle").val();
-                const runs = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/update_json_cat.yml/runs');
+                const action = isPTR() ? "update_json_cat_ptr.yml" : "update_json_cat.yml"
+                const runs = await fetch("https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/" + action + "/runs");
                 const r_json = await runs.json();
                 const this_run = r_json["workflow_runs"][0];
 
-                if (this_run["status"] === "in_progress") {
+                if (this_run !== undefined && this_run["status"] === "in_progress") {
                     const jobs = await fetch(this_run["jobs_url"]);
                     const j_json = await jobs.json();
                     let this_job = j_json["jobs"][jobmap[file]];
