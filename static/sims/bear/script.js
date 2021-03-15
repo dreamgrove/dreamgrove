@@ -66,8 +66,27 @@ $(function() {
         'draven': ""
     }
 
-    function isHeroic() {
-        return $("#fightstyle").val().includes("combo_h");
+    var jobmap = {
+        'combo_1.json': 0,
+        'combo_2.json': 0,
+        'combo_3.json': 0,
+        'combo_4.json': 0,
+        'combo_5.json': 0,
+        'combo_1m.json': 1,
+        'combo_s.json': 1,
+        'combo_d.json': 1,
+        'combo_ptr_1.json': 0,
+        'combo_ptr_2.json': 0,
+        'combo_ptr_3.json': 0,
+        'combo_ptr_4.json': 0,
+        'combo_ptr_5.json': 0,
+        'combo_ptr_1m.json': 1,
+        'combo_ptr_s.json': 1,
+        'combo_ptr_d.json': 1
+    }
+
+    function isPtr() {
+        return $("#fightstyle").val().includes("combo_ptr");
     }
 
     function toCap(s) { return s.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase()))); }
@@ -119,10 +138,10 @@ $(function() {
                     let $tar = $(e.target);
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
-                        let prof = isHeroic() ? "sandbear_h.txt" : "sandbear.txt";
+                        let prof = isPtr() ? "sandbear_ptr.txt" : "sandbear.txt";
                         $.get(prof, (d) => {
                             let r = getRecord(filters, pivotData);
-                            let bonus = isHeroic() ? "1522" : "1532";
+                            let bonus = isPtr() ? "1532" : "1532";
                             let buf = [];
 
                             buf.push(d);
@@ -174,14 +193,23 @@ $(function() {
             $("#loading").hide();
 
             (async () => {
-                const runs = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/update_json_bear.yml/runs');
+                let file = $("#fightstyle").val();
+                const action = isPtr() ? "update_json_bear_ptr.yml" : "update_json_bear.yml";
+                const runs = await fetch("https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/" + action + "/runs");
                 const r_json = await runs.json();
-                if (r_json["workflow_runs"][0]["status"] === "in_progress") {
-                    $("#update").html("<span id=\"inprogress\"><b>Currently Running Sims...</b></span>");
-                    return;
+                const this_run = r_json["workflow_runs"][0];
+
+                if (this_run !== undefined && this_run["status"] === "in_progress") {
+                    const jobs = await fetch(this_run["jobs_url"]);
+                    const j_json = await jobs.json();
+                    let this_job = j_json["jobs"][jobmap[file]];
+
+                    if (this_job !== undefined && this_job["status"] === "in_progress") {
+                        $("#update").html("<span id=\"inprogress\"><b>Currently Running Sims...</b></span>");
+                        return;
+                    }
                 }
 
-                let file = $("#fightstyle").val();
                 const commit = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/commits?path=/static/sims/bear/' + file);
                 const d_json = await commit.json();
                 let date = new Date(d_json[0]['commit']['committer']['date']);

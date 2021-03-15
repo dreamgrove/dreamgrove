@@ -1,4 +1,4 @@
-name: Update JSON (Bear)
+name: Update JSON PTR (Bear)
 
 on:
   workflow_dispatch:
@@ -8,8 +8,8 @@ defaults:
     working-directory: static/sims/bear
 
 jobs:
-  update_json:
-    name: Update JSON
+  update_json_ptr:
+    name: Update JSON PTR
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,15 +20,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: one target
-        run: python generate_combo.py -t 1 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 1 ${{ secrets.RAIDBOTSAPI }}
       - name: two targets
-        run: python generate_combo.py -t 2 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 2 ${{ secrets.RAIDBOTSAPI }}
       - name: three targets
-        run: python generate_combo.py -t 3 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 3 ${{ secrets.RAIDBOTSAPI }}
       - name: four targets
-        run: python generate_combo.py -t 4 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 4 ${{ secrets.RAIDBOTSAPI }}
       - name: five targets
-        run: python generate_combo.py -t 5 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo_ptr.py -t 5 ${{ secrets.RAIDBOTSAPI }}
       #- name: dungeon
       #  run: python generate_combo_h.py -d -m ${{ secrets.RAIDBOTSAPI }}
       - name: commit
@@ -40,7 +40,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear"
+            git commit -m "update JSON PTR Bear"
             git push
           fi
       - uses: actions/upload-artifact@v2

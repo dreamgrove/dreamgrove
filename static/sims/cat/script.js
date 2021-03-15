@@ -194,7 +194,7 @@ $(function() {
 
             (async () => {
                 let file = $("#fightstyle").val();
-                const action = isPtr() ? "update_json_cat_ptr.yml" : "update_json_cat.yml"
+                const action = isPtr() ? "update_json_cat_ptr.yml" : "update_json_cat.yml";
                 const runs = await fetch("https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/" + action + "/runs");
                 const r_json = await runs.json();
                 const this_run = r_json["workflow_runs"][0];
