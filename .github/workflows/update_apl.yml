@@ -6,6 +6,10 @@ on:
       - 'static/sims/bear/guardian.txt'
       - 'static/sims/tree/restoration.txt'
 
+defaults:
+  run:
+    working-directory: static/sims
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -19,11 +23,11 @@ jobs:
         with:
           repository: simulationcraft/simc
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          path: './simc'
+          path: './static/sims/simc'
       - name: generate APL
         run: |
-          python static/sims/generate_apl.py --spec=bear "./simc"
-          python static/sims/generate_apl.py --spec=tree "./simc"
+          python generate_apl.py --spec=bear "./simc"
+          python generate_apl.py --spec=tree "./simc"
       - name: commit APL
         run: |
           git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
