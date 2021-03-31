@@ -10,7 +10,6 @@ actions.precombat+=/heart_of_the_Wild,if=talent.heart_of_the_wild.enabled&(druid
 actions.precombat+=/wrath,if=druid.owlweave_bear&!covenant.night_fae
 actions.precombat+=/starfire,if=druid.owlweave_bear&covenant.night_fae
 
-# Executed every time the actor is available.
 actions=auto_attack,if=!buff.prowl.up
 actions+=/use_items,if=!buff.prowl.up
 actions+=/potion,if=(((talent.heart_of_the_wild.enabled&buff.heart_of_the_wild.up)&(druid.catweave_bear|druid.owlweave_bear)&!buff.prowl.up)|((buff.berserk_bear.up|buff.incarnation_guardian_of_ursoc.up)&(!druid.catweave_bear&!druid.owlweave_bear)))
