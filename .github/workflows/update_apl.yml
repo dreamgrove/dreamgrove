@@ -26,8 +26,8 @@ jobs:
           path: './simc'
       - name: generate APL
         run: |
-          python generate_apl.py --spec=bear "./simc"
-          python generate_apl.py --spec=tree "./simc"
+          python generate_apl.py --spec=bear "~/simc"
+          python generate_apl.py --spec=tree "~/simc"
       - name: commit APL
         run: |
           git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
