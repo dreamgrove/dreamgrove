@@ -15,9 +15,11 @@ parser.add_argument('-d', '--dungeon', default=False, action='store_true')
 args = parser.parse_args()
 targets = str(max(1, args.targets))
 
-profile = dungeon = ""
+profile = apl = dungeon = ""
 with open('sandbear_ptr.txt', 'r') as fp:
     profile = fp.read()
+with open('guardian.txt', 'r') as fp:
+    apl = fp.read()
 with open('dungeon.txt', 'r') as fp:
     dungeon = fp.read()
 
@@ -151,7 +153,7 @@ for leg, leg_str in legendaries.items():
 
         sets_str = '\n'.join(sets_list)
 
-        simc = '\n'.join([profile, leg_str, cov_str, name_str, target_str, sets_str])
+        simc = '\n'.join([profile, apl, leg_str, cov_str, name_str, target_str, sets_str])
 
         while True:
             time.sleep(2)
