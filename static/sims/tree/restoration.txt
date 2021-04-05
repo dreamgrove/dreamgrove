@@ -18,6 +18,7 @@ actions+=/kindred_spirits,if=(buff.heart_of_the_wild.up|cooldown.heart_of_the_wi
 actions+=/sunfire,target_if=refreshable
 actions+=/moonfire,target_if=refreshable
 actions+=/wrath
+actions+=/moonfire
 
 actions.cat=heart_of_the_wild,if=cooldown.convoke_the_spirits.remains<30|!covenant.night_fae
 actions.cat+=/rake,if=buff.shadowmeld.up|buff.prowl.up
