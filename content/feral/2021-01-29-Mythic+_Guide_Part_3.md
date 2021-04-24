@@ -21,13 +21,41 @@ In this section we will cover the following ...
 ### Talent changes per key and why
 Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of the time, as the rest of our talents are pretty hard-locked. 
 
-Personally I (Fore) just run Pred in every key and if I need more ST, I just switch soulbinds as per the next section. Honestly I don’t have much to say here as our spec’ is very cookie cutter, you can swap to FF if you want the extra pride/target damage, but right now BT is out scaling FF reasonably hard. 
+So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. so ...
 
-You can swap to SbT if you want more ST damage at the expense of AoE, though personally I don’t feel the gain outweighs the cost. If you are pushing with a known group, and are pushing the highest of keys, then changing to be more or less ST focused for particular pulls or issues i definitely a consideration, for example going SbT to ensure you can kill Prides without too many CDs being used.
+#### Apex Build
+More Single Target and Priority focused, you want to run this build in ...
 
-If you’re really looking at what you can fiddle with, you *can* change to Renewal on high keys to deal with Prides and give yourself another healing CD, but it’s pretty minor optimisation - SR is also surprisingly good for a bit of a change of pace, but it relies on sustained AoE, so don’t run it with burst specs that’re going to wipe out mobs too quickly.
+- Theater of Pain
+- Spires of Ascension
+- Mists of Tirna Scithe
 
-It’s a bit of a sad state really, Blizz removed the old-school talent trees because they were too “cookie cutter”, but we may as well not have talents at this point as there is basically no choice there.
+![image](https://cdn.discordapp.com/attachments/337894455589994517/835467203230171136/unknown.png)
+
+**Circle Build**  
+More general AoE focused, you want to run this build in ...
+
+- De Other Side
+- Halls of Atonement
+- Plaguefall 
+- Sanguine Depths
+- Necrotic Wake
+
+SotF focused
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835468432107110400/unknown.png)
+
+For a changeup and bit of fun ...
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835541390074183760/unknown.png)
+
+**Frenzy Build** - 
+Meme fun in Mists and *potentially* SoA
+
+- Spires of Ascension
+- Mists of Tirna Scithe
+
+So in Mists you basically only want this for the 1st boss. Because there is an Inn outside the key, you can actually do some extra fun stuff here where you run the below build up until the first boss, then during the death RP you hearth out (making sure to have set your hearth outside before the key), change your gear/build at the Inn, then walk back in. Hopefully another Night Fae in your group has activated the checkpoint or you have a long walk to get back.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835475259104034836/unknown.png)
 
 --- 
 
@@ -39,69 +67,78 @@ Feral soulbind changes come down to ST vs AoE and the key you’re about to do o
 This is a recap of the Soulbind/Conduit explanation in Part.1, if you want a reminder of that head to …
 <https://www.dreamgrove.gg/feral/2021-01-14-mythic+_guide_part_1/> 
 
-**ST focused**  
+**Niya**  
 <https://shadowlands.wowhead.com/soulbind-calc/night-fae/niya/druid/ApbqEgU1xgYVMuEGIRUySQY> 
 
-- Niya as your bind for the mastery buff during convoke
-- Poison is borderline worthless in M+ (or any content), giving you around ~50k extra damage over an entire key. You’re purely taking it for the extra conduit
-- Conflux to go even harder on Convoke ST burst
-- You could also swap in Taste for Blood instead of Carnivorous Instinct for even more ST
+- Niya as your bind for the mastery buff during convoke.
+- Poison is borderline worthless in M+ (or any content), giving you around ~50k extra damage over an entire key. You’re purely taking it for the extra Conduit.
+- Conflux to go even harder on Convoke ST burst.
+- Your 2nd conduit is dictated by your legendary choice, CI for the most part and TfB for Apex.
 
 ![Image](https://media.discordapp.net/attachments/337894455589994517/813074553999327262/unknown.png?width=910&height=633) 
 
-**AoE focused**  
+**Korayn**  
 <https://shadowlands.wowhead.com/soulbind-calc/night-fae/korayn/druid/ApZqAQU1ywYRBTLhBiIVMkkGJTI_Bg> 
 
-- Korayn as your bind for the Crit proc and Damage multiplier
-- Carnivorous Instinct for AoE damage
-- You could also swap in Conflux if you want AoE soulbind but a ST conduit
+- Korayn as your bind for the Crit proc and Damage multiplier.
+- Carnivorous Instinct for AoE damage.
+- You could also swap in Conflux if you want AoE soulbind but a bit more burst around Convoke.
 
 ![Image](https://media.discordapp.net/attachments/337894455589994517/813074764499255356/unknown.png?width=907&height=633) 
 
 ### Where do you need to think about it?
-The obvious place you need to think about conduits and soulbinds is Tyrannical vs Fortified and the uptime possibility of Korayns 25% crit. Tyr requires more ST to deal with bosses, like Hakkar in DoS, Ingra in Mists or basically all of the bosses in SD. If a boss is the biggest crux to you completing your key in time, then you should strongly consider switching to more ST focused builds.
+The main difference between going Korayn vs Niya is around burst needed and how easily you can abuse Korayn. So for example Hakkar *needs* to die fast, so you go Niya. Whereas the Gauntlet is SD has a consistent flow of mobs to proc' First Strike, so you go Korayn.
 
-There are some keys where you can abuse Korayns binds even on Tyr weeks, like Mueh’zala in DoS as he stays above 75% hp for the entire first phase or bosses that have add phases where you can re-trigger the crit % buff, such as Echelon in HoA or basically every boss in Plaguefall. The gauntlet in SD has a constant stream of Gargons that you can use to trigger the 25% crit, so, my current thought process key to key is …
+There are some keys where you can abuse Korayns binds to really boost damage, like Mueh’zala in DoS as he stays above 75% hp for the entire first phase or bosses that have add phases where you can re-trigger the crit % buff, such as Echelon in HoA or basically every boss in Plaguefall.
 
----
+As of writing (Apr 2021) I run Niya in basically all keys, as Pride + Niya mastery is a very strong combination, that said, you can switch between them reasonably safely.
 
-### **De Other Side** - Korayn or Niya
-
-![Image](https://media.discordapp.net/attachments/337894455589994517/814418987059511326/unknown.png) 
-
-I lean Korayn in DoS because the last boss has a huge 75%+ hp uptime, and the key is generally a lot of AoE, especially in Arden. You can proc First Strike reliably on Hakkar due to the add spawns (not when they come back to life though). That said, Niya can also be strong because of the ST burn it provides on Hakkar if you want that boss dead asap, and also totems to convoke them down, so either or works here.
+**Don’t take the above as a gospel list**, as it does somewhat vary based on your comp as well - the takeaway from this, is that soulbinds are reasonably easy to switch up key to key, so put some thought into it at the start of each run to make sure you’re targeting your damage in a helpful way for the group.
 
 ---
 
-### **Halls of Atonement** - Korayn
+### **De Other Side** - Niya
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814419066717470720/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835551089231265842/unknown.png) 
 
-- Big AoE key with mobs that spawn other mobs, it’s worth letting your group know when before you start that the “Depraved Collector” you’ll deal with, and let 1 add be spawned before you interrupt it to proc’ Korayn again.
+I lean Niya in DoS mainly because of Hakkar, as that boss is tedious to deal with any week. You can also get a lot of value in Arden through the mastery buff in AoE increasing the Rip damage from all your uncapped PWs.
+
+---
+
+### **Halls of Atonement** - Niya or Korayn
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835551026337022002/unknown.png) 
+
+Niya is the same reason as always - burst.
+
+The reason for Korayn are ...
+- Big AoE key with mobs that spawn other mobs, it’s worth letting your group know when before you start that the “Depraved Collector” you’ll deal with, and let 1 add be spawned before you interrupt it to proc Korayn again.
 - Make sure to hit the adds on the 2nd and 3rd boss before they hit you to re-trigger it, this is particularly hard with the 3rd boss as it pulses AoE almost immediately, so be ready.
 - HoA is also basically 30-50% uptime on Korayn in the mini-boss room before the last boss.
 
 ---
 
-### **Mists of Tirna Scithe** - Korayn or Niya
+### **Mists of Tirna Scithe** - Niya
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814419215896543253/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550531191046164/unknown.png) 
 
-The reason you can run either here is that although this is *mostly* a Korayn key, the big crux of a high Tyr key is the first boss, and Niya provides a bigger burst ST with convoke, so if you know you need to 1-phase this boss and don’t think you will without the extras burst, then run Niya. Otherwise Korayn is triggerable on both the 2nd and final boss for large crit uptime with about ~15%+ on both bosses
+The reason you run Niya here is basically for the first boss, as 1-phasing it saves so much time in the key and the burst with Niya is incredibly valuable. That said, if you did want to run Korayn both the 2nd and 3rd boss have ways to reliably proc First Strike.
 
 ---
 
-### **Plaguefall** - Korayn
+### **Plaguefall** - Korayn or Niya
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814421041329864704/unknown.png)  
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550586798997534/unknown.png)  
 
-Every boss has something that can trigger Korayn reliable and regularly, and as a large trash key with lots of mobs at varying health and a few that summon new mobs, it’s a good uptime key.
+Niya is the same reason as always - burst. (This is going to get repetitive as a reason, but it's true)
+
+Every boss has something that can trigger Korayn reliable and regularly, and as a large trash key with lots of mobs at varying health and a few that summon new mobs, it’s a good uptime key. Same deal as always with Niya though, big burst with Convoke + Pride makes Niya as valuable as always.
 
 ---
 
 ### **Sanguine Depths** - Korayn (some consideration for Niya)
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814419765380644904/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550675865042944/unknown.png) 
 
 SD has the highest Korayn uptime of any key due to the gauntlet having a constant stream of Gargons, i’ve seen upwards of 40-60% here which is nuts. The reason you need to give some consideration to Niya however is the same as Mists, in that the 1st boss is the big crux of this key on Tyr weeks where you won’t get any use out of Korayn really, so if you need big burn to overcome this boss, Niya is the way, else go Korayn.
 
@@ -111,68 +148,60 @@ SD has the highest Korayn uptime of any key due to the gauntlet having a constan
 
 ### **Spires of Ascension** - Niya
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814419854081785866/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550751404064798/unknown.png) 
 
 Spires is simply a very ST key, there’s no real uptime abuses to be had and 3-4 mini bosses to kill depending on your route. Also the 2nd and 3rd boss are big ST burn bosses, particularly the 3rd with it’s weakness phase for more damage and nuts hp pool - Niya works well in Spires.
 
 ---
 
-### **Theater of Pain** - Korayn or Niya
+### **Theater of Pain** - Niya
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814420055017652264/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550868777467984/unknown.png) 
 
-So ToP may *seem* like a ST key, but it’s got a lot of places to trigger Korayn, every boss except for the caster wing has adds spawn in the boss fight that can be abused. The only real consideration to Niya in ToP is how much of a crux the military wing will be with the mini-bosses and how much of them you will convoke.
-
-- Challengers has Xira you can proc it on when you stun her
-- Gorechomp has the small adds periodically
-- Xav has the banners (i'm actually not 100% these proc Korayn atm)
-- Mordreetha has the adds that you need to interrupt and kill
+ToP has a lot of 2 or 3 target cleave and ST throughout, so Apex/SbT with Niya is a safe bet.
 
 ---
 
-### **Necrotic Wake** - Korayn (some consideration for Niya)
+### **Necrotic Wake** - Korayn or Niya (Korayn is for the weps)
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/814420000651345941/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550955583569970/unknown.png) 
 
-The bosses that matter all have ways to trigger Korayn either throughout, or at the point that matters…
+Korayn can give you a boost to crit for weapons, which can be big. Also bosses that matter all have ways to trigger Korayn either throughout, or at the point that matters…
 
-- Blightbone has the worms that spawn throughout
-- Amarth has the skeletons that spawn and need to be burned down, nothing like having 25% crit to help with the burn
-- Stitchflesh you can pre-setup all your burn then as soon as he comes down, Rip, Rake and convoke, to get a good chunk of 25% crit uptime during convoke while also have DoT’s rolling
+- Blightbone has the worms that spawn throughout.
+- Amarth has the skeletons that spawn and need to be burned down, nothing like having 25% crit to help with the burn.
+- Stitchflesh you can pre-setup all your burn then as soon as he comes down, Rip, Rake and Convoke, to get a good chunk of 25% Crit uptime during Convoke while also have DoT’s rolling.
 
 Also a lot of the trash spawns other trash that you can proc First Strike on, so lots of value in this key.  Niya has some consideration as always if you need more ST burn for bosses like Blight or Stitch to kill them asap.
 
----
-
-**Don’t take the above as a gospel list**, as it does somewhat vary based on your comp as well - the takeaway from this, is that soulbinds are reasonably easy to switch up key to key, so put some thought into it at the start of each run to make sure you’re targeting your damage in a helpful way for the group.
+Niya is for the 3rd and 4th bosses basically, same deal, big burst with mastery.
 
 --- 
 
 ### What would you like to see changed to M+ Feral
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/810517034206101505/unknown.png) 
 
-Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, even more than what we have right now, it needs to be reaaally good.
+Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more Rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, even more than what we have right now, it needs to be reaaally good.
 
-I think if Feral ever does get something bursty for AoE, it can be one of the top specs for MDI.
-I’d also like to see PW baseline and add a new talent instead in that row.
+I think if Feral ever does get something bursty for AoE, it can be one of the top specs for MDI. I’d also like to see PW baseline and add a new talent instead in that row.
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/810516923146043422/unknown.png) 
 
-For me, Feral is in a spot where in M+ it is middle of the pack, and as always it’s more a community perception issue that Feral has had for a long time than an actual throughput/utility issue, as well as (and this is a general issue not just Feral) it is overshadowed by other specs’. Realistically if a spec can do even 1% more than you, it’ll see play over your spec’, it’s the way meta and competitive games work, and unfortunately, this has a habit of trickling down to the general playerbase where spec’ really doesn’t matter for 90-95% of content.  
+For me, Feral is in a spot where in M+ it is middle of the pack, and as always it’s more a community perception issue that Feral has had for a long time than an actual throughput/utility issue, as well as (and this is a general issue not just Feral) it is overshadowed by other specs’. Realistically if a spec can do even 1% more than you, it’ll see play over your spec, it’s the way meta and competitive games work, and unfortunately, this has a habit of trickling down to the general playerbase where spec really doesn’t matter for 90-95% of content.  
 
-When it comes to changes, you need to be careful to not just have knee jerk reactions to the state of the meta at that particular time, like Treants & Innervate I see shouted about a lot right now, but throughout BfA Treants was a meme talent that no tank wanted. I’m all for getting these spells, but I don’t think people should see it as a viability silver bullet. Realistically, it comes down to homogenisation vs niche, does every spec bring the same things in different flavours or does each spec’ have a niche and a spot to fill? Realistically, i’d prefer the “bring the player not the class” mentality so I’m in favour of homogenisation over niche as Blizz have proven they have zero interest in designing fights to favour all specs individual niches. 
+When it comes to changes, you need to be careful to not just have knee-jerk reactions to the state of the meta at that particular time, like Treants & Innervate I see shouted about a lot right now, but throughout BfA Treants was a meme talent that no tank wanted. I’m all for getting these spells, but I don’t think people should see it as a viability silver bullet. Realistically, it comes down to homogenisation vs niche, does every spec bring the same things in different flavours or does each spec have a niche and a spot to fill? Realistically, i’d prefer the “bring the player not the class” mentality so I’m in favour of homogenisation over niche as Blizz have proven they have zero interest in designing fights to favour all specs individual niches. 
 
 I’d like to see a Feral modernisation akin to the one that Shadow Priests get every tier or two, things like …
 
-- **New and interesting interactions between talents and spells**, make BrS leave Rakes on targets hit or merge BrS and Thrash, i’m not a game designer so don’t quote me but there’s so much they could do (this should be done for all specs as well, once they're finished with the 4th or 5th priest rework, obviously)
-- **More abilities baseline to allow for less maths rows and more utility rows**. MoC vs BT vs FF isn’t interesting, it’s a numbers exercise, whereas Tiger’s Dash vs Wild Charge vs Renewal is
-- **AoE row to provide more AoE options based on situation**, e.g. Burst, Cleave, Funnell and/or Sustained AoE - for example they could’ve made PW baseline, then replaced it in the tree with Apex, providing a Funnel AoE option
-- **BrS back to a Legion style** BrS where pressing it in AoE mattered
-- **Berserk should interact with Swipe** in some way, for example while in Berserk they could lift the 2cp limit on Swipe to allow it to feel better in AoE, the current Berserk AoE rotation isn’t intuitive and can confuse a lot of new players
-- **SbT back to an execute**
-- For a bit of fun, I’d love if **Feral had Shroud as it’s Druid-specific utility**, aka not give it to the other Druid specs - Ashamane’s Shroud (ty Trem & Kitch) and it behaved the exact same way as Rogues Shroud
-- **AoE stun** (Ashamane’s leg sweep)
-- **Fix Feral Frenzy’s** weapon damage and base mastery scaling ….. (come on)
+- **New and interesting interactions between talents and spells**, make BrS leave Rakes on targets hit or merge BrS and Thrash, I’m not a game designer so don’t quote me but there’s so much they could do (this should be done for all specs as well, once they're finished with the 4th or 5th priest rework, obviously).
+- **More abilities baseline to allow for less maths rows and more utility rows**. MoC vs BT vs FF isn’t interesting, it’s a numbers exercise, whereas Tiger’s Dash vs Wild Charge vs Renewal is.
+- **AoE row to provide more AoE options based on situation**, e.g. Burst, Cleave, Funnell and/or Sustained AoE - for example they could’ve made PW baseline, then replaced it in the tree with Apex, providing a Funnel AoE option.
+- **BrS back to a Legion style** BrS where pressing it in AoE mattered.
+- **Berserk should interact with Swipe** in some way, for example while in Berserk they could lift the 2cp limit on Swipe to allow it to feel better in AoE, the current Berserk AoE rotation isn’t intuitive and can confuse a lot of new players.
+- **SbT back to an execute**.
+- For a bit of fun, I’d love if **Feral had Shroud as it’s Druid-specific utility**, aka not give it to the other Druid specs - Ashamane’s Shroud (ty Trem & Kitch) and it behaved the exact same way as Rogues Shroud.
+- **AoE stun** (Ashamane’s leg sweep).
+- **Fix Feral Frenzy’s** weapon damage and base mastery scaling ….. (come on).
 
 As a complete side, I’d have preferred they left incarn as it was, and made Berserk work like BotE or Jungle Fury somehow, as a much more interesting button to press - there’s something about large crit windows that I love as Feral.
 
@@ -186,7 +215,7 @@ Also, target caps are dumb and should be removed across the board, worst decisio
 
 Maystine: *Unless you are pushing the highest keys and can’t survive a mechanic you don’t need to.*
 
-Fore: *I loved running N’Zoth trinket in 8.3 high keys, as the 1min defensive it provided was nuts at a 2-3% DPS loss, so it’s worth thinking about at a high enough level to justify something like Scale or the Cheat-Death trinket, which are both a ~2% DPS loss, but I wouldn’t consider it until then - and i’m talking where things start to hard 1-shot, **which is a point we haven’t really reached yet***
+Fore: *I loved running N’Zoth trinket in 8.3 high keys, as the 1min defensive it provided was nuts at a 2-3% DPS loss, so it’s worth thinking about at a high enough level to justify something like Scale or the Cheat-Death trinket, which are both a ~2% DPS loss, but I wouldn’t consider it until then - and I’m talking where things start to hard 1-shot, **which is a point we haven’t really reached yet***
 
 ---
 
@@ -194,23 +223,23 @@ Fore: *I loved running N’Zoth trinket in 8.3 high keys, as the 1min defensive 
 
 Maystine: *Record your gameplay and try to see your mistakes (CD management,...) and for raiding you have a lot of logs to analyse and to compare yourself.*
 
-Fore: *Recording your gameplay is the big one, the amount of times I get sent video's and see that berserk sits off CD for 4-5 mins at a time is scary*
+Fore: *Recording your gameplay is the big one, the amount of times I get sent videos and see that berserk sits off CD for 4-5 mins at a time is scary*
 
 ---
 
 **In a world where all the covenants we're equally balanced, what would be the "best" for m+ and by what merits? Is Convoke just that strong? Would the Empowered Bond DPS do enough frequent burst? Does the burst from venthyr or the sustain from necrolords have their place?**  
 
-Fore: *It would still be Night Fae i’m afraid, as they’re all designed right now …*
+Fore: *It would still be Night Fae I’m afraid, as they’re all designed right now …*
 - *The Night Fae ability is very well suited for M+ and provides a large ST burst on a 2min CD. It’s also dynamic/versatile in that you can use it as a Resto-voke for big group offheal or Boomie-voke for big AoE.*
-- *Necro is too volatile for M+, and too ST focused, if it had some sort of burst AoE component it’d be really strong*
-- *Venth is simply too long a CD to be best for M+, 3min CDs mean you have to hard pull around them, 2mins is the sweet spot*
-- *Kyr hurts my soul as an ability, if it was balanced equally to Night Fae in terms of DPS, then strong 2nd contender and versatile if you want to play around switching who it’s on*
+- *Necro is too volatile for M+, and too ST focused, if it had some sort of burst AoE component it’d be really strong.*
+- *Venth is simply too long a CD to be best for M+, 3min CDs mean you have to hard pull around them, 2mins is the sweet spot.*
+- *Kyr hurts my soul as an ability, if it was balanced equally to Night Fae in terms of DPS, then strong 2nd contender and versatile if you want to play around switching who it’s on.*
 
 ---
 
 **What trinkets for mythic+ and when to run them?**  
 
-Fore: *Quantum is flat out broken in M+ as you can basically guarantee it’ll proc’ stats every use, this is hard-locked and just use it with Berserk every time. Personally I take a passive trinket as my 2nd, so Phial or (when I get it) the 233 vers trinket will likely be strong as well, roughly speaking you can go by this…*
+Fore: *Quantum is flat out broken in M+ as you can basically guarantee it’ll proc’ stats every use, this is hard-locked and just use it with Berserk every time. Personally I take a passive trinket as my 2nd, so Phial or (when I get it) the 233 Vers trinket will likely be strong as well, roughly speaking you can go by this…*
 
 ![Image](https://media.discordapp.net/attachments/337894455589994517/794586019839475722/unknown.png?width=1050&height=485) 
 
@@ -218,7 +247,7 @@ Fore: *Quantum is flat out broken in M+ as you can basically guarantee it’ll p
 
 **WeakAuras? Macros?**  
 
-Fore: *I don’t really use many macro’s specifically for M+, but obviously Weak Auras are huge, I'd recommend ...*
+Fore: *I don’t really use many macros specifically for M+, but obviously WeakAuras are huge, I'd recommend ...*
 
 *Nice interrupt macro that if you’re out of cat form you can spam to interrupt, and if you’re incat form it’ll just interrupt.*
 
@@ -237,13 +266,13 @@ Fore: *I don’t really use many macro’s specifically for M+, but obviously We
 #showtooltip  
 /use [spec:1,talent:3/1][spec:3/4,talent:3/2]Maim;[spec:1/2,talent:3/2][spec:4,talent:3/3]Incapacitating Roar;[spec:1/2/3,talent:3/3]Ursol's Vortex;[spec:2/3/4,talent:3/1]Typhoon
 
-- *ZenTracker (ZT) - Interrupt and Cooldown Tracker (the brain) <https://wago.io/r14U746B7>*
-- *ZT Front-End Party Icons (the UI part) <https://wago.io/M3N3WBg0D>*
-- *Someone in the group to have an auto-marker <https://wago.io/1ctv3b91K/13>*
-- *Prideful incoming tracker <https://wago.io/PridefulAffixTracker/4>*
-- *A generic dungeon ability warning WA, like this one - <https://wago.io/SL-Dungeons>*
-- *A “Time to kill” WA can be useful to help with cooldown timings - https://wago.io/hYW3MVbnf/1>*
-- *The one I use doesn’t seem to be on Wago anymore, but a good group interrupt tracker*
+- *ZenTracker (ZT) - Interrupt and Cooldown Tracker (the brain) <https://wago.io/r14U746B7>*.
+- *ZT Front-End Party Icons (the UI part) <https://wago.io/M3N3WBg0D>*.
+- *Someone in the group to have an auto-marker <https://wago.io/1ctv3b91K/13>*.
+- *Prideful incoming tracker <https://wago.io/PridefulAffixTracker/4>*.
+- *A generic dungeon ability warning WA, like this one - <https://wago.io/SL-Dungeons>*.
+- *A “Time to kill” WA can be useful to help with cooldown timings - https://wago.io/hYW3MVbnf/1>*.
+- *The one I use doesn’t seem to be on Wago anymore, but a good group interrupt tracker*.
 
 *Also, you should set Plater up well so that you can see the casts and the target, so you know if someone is about to get every cast to the face and you need to act quick, or things like if a poly is about to go through on a Druid so you can ignore it and let it go through.*
 
@@ -262,15 +291,7 @@ Fore: *I went through this in more detail in part.2 in the Cooldowns section, bu
 
 **Why would I play feral when I could play any other good spec**  
 
-Fore: *Honestly, at the end of the day, play what you want to play - Feral (and all specs) will be as good as you can play it, your skill with the spec' will be a deciding factor much much before the spec itself is.*
-
----
-
-**Are there certain dungeons where you should bring SbT or is that just comp dependent? Like if you’re running with a Fire Mage**  
-
-Maystine: *From my experience, when running with a fire mage and windwalker monk, SbT was better for overall speed of the dungeon. They were just melting trash and I was doing way more ST than them without losing too much aoe.*
-
-Fore: *From my point of view, if you’re doing keys with other DPS where every single pack is dying too quick for you to reliably get DoTs out and do DPS, you’re not doing keys high enough for your groups level. That said, if you save 5% time in killing a boss with ST talents and don’t lose any time on DPS in AoE, then that is obviously a gain overall, I just don’t think that is the reality - I’ just switch between Niya and Korayn depending on if I want more ST vs AoE.*
+Fore: *Honestly, at the end of the day, play what you want to play - Feral (and all specs) will be as good as you can play it, your skill with the spec will be a deciding factor much much before the spec itself is.*
 
 ---
 
@@ -382,7 +403,7 @@ Fore: *Double potency is just better than Burrs in M+, so I’d go with that - c
 
 Maystine: *We all know the purple one from mage tower is the best*
 
-Fore: *Haha easy, i’ve got a tier list floating around somewhere…*
+Fore: *Haha easy, I’ve got a tier list floating around somewhere…*
 
 ![Image](https://media.discordapp.net/attachments/121880917579923458/784085100491964486/unknown.png?width=1050&height=623) 
 
