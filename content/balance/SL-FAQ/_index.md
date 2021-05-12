@@ -9,8 +9,6 @@ Summary
 ===
 Welcome to the Balance Druid FAQ! This is an intermediate level guide that goes in depth about any questions possible.
 
-This guide is up to date as of Shadowlands patch **9.1**.
-
 Authors
 ===
 Jundarer, Chicken
@@ -18,40 +16,40 @@ Jundarer, Chicken
 Table of Contents
 ===
 * link to all questions later
-[1. News](/main/#news)
+[1. News](main/#news)
 
 [2. Rotation:](main/#rotation)
-<br>[#Openers](balance/SL-FAQ/main/#openers)
-<br>[What is my AoE priority?](balance/SL-FAQ/main/#aoe)
-<br>[What is my Single Target rotation?](balance/SL-FAQ/main/#st)
-<br>[What is my filler priority inside CA?](balance/SL-FAQ/main/#filler)
-<br>[How do I use instant Starfire procs from Owlkin Frenzy?](balance/SL-FAQ/main/#owlkin-frenzy)
-<br>[Do our dots snapshot?](balance/SL-FAQ/main/#snapshot)
-<br>[How to play NF double on-use:](balance/SL-FAQ/main/#double-on-use)
+<br>[Openers](main/#openers)
+<br>[What is my AoE priority?](main/#aoe)
+<br>[What is my Single Target rotation?](main/#st)
+<br>[What is my filler priority inside CA?](main/#filler)
+<br>[How do I use instant Starfire procs from Owlkin Frenzy?](main/#owlkin-frenzy)
+<br>[Do our dots snapshot?](main/#snapshot)
+<br>[How to play NF double on-use:](main/#double-on-use)
 
-[3. Flexible Setups:](balance/SL-FAQ/main/#setup)
-<br>[What is Balance Druids stat priority?](balance/SL-FAQ/main/#stats)
-<br>[What Trinkets should I use?](balance/SL-FAQ/main/#trinkets)
-<br>[What Talents should I run?](balance/SL-FAQ/#talents)
-<br>[T50 row choices and playstyle (9.1)](balance/SL-FAQ/main/#t50)
-<br>[What Conduits should I pick?](balance/SL-FAQ/main/#conduits)
-<br>[What Soulbinds should I pick as Night Fae?](balance/SL-FAQ/main/#soulbinds)
-<br>[What potions should I use?](balance/SL-FAQ/main/#potions)
+[3. Flexible Setups:](main/#setup)
+<br>[What is Balance Druids stat priority?](main/#stats)
+<br>[What Trinkets should I use?](main/#trinkets)
+<br>[What Talents should I run?](main/#talents)
+<br>[T50 row choices and playstyle (9.1)](main/#t50)
+<br>[What Conduits should I pick?](main/#conduits)
+<br>[What Soulbinds should I pick as Night Fae?](main/#soulbinds)
+<br>[What potions should I use?](main/#potions)
 
 
-[4.Meaningful Choices:](balance/SL-FAQ/main/#meaningfulchoice)
-<br>[What Legendaries should I craft?](balance/SL-FAQ/main/#legendaries)
-<br>[What slot do I craft legendaries in?](balance/SL-FAQ/main/#legendaries-slot)
-<br>[What Covenant should I pick?](balance/SL-FAQ/main/#covenant)
+[4.Meaningful Choices:](main/#meaningfulchoice)
+<br>[What Legendaries should I craft?](main/#legendaries)
+<br>[What slot do I craft legendaries in?](main/#legendaries-slot)
+<br>[What Covenant should I pick?](main/#covenant)
 
-[5. Covenant specific tips:](balance/SL-FAQ/main/#covenants)
-<br>[Night Fae:](balance/SL-FAQ/main/#nightfae)
-<br>[Venthyr:](balance/SL-FAQ/main/#venthyr)
-<br>[Kyrian:](balance/SL-FAQ/main/#kyrian)
+[5. Covenant specific tips:](main/#covenants)
+<br>[Night Fae:](balance/main/#nightfae)
+<br>[Venthyr:](main/#venthyr)
+<br>[Kyrian:](main/#kyrian)
 
-[6. Miscellaneous:](balance/SL-FAQ/main/#Miscellaneous)
-<br>[Useful CA + Convoke + Trinket macro:](balance/SL-FAQ/main/#swifty-macro)
-<br>[How does Inscrutable Quantum Device work?](balance/SL-FAQ/main/#iqd)
-<br>[What is Astral damage?](balance/SL-FAQ/main/#astral-damage)
+[6. Miscellaneous:](main/#Miscellaneous)
+<br>[Useful CA + Convoke + Trinket macro:](main/#swifty-macro)
+<br>[How does Inscrutable Quantum Device work?](main/#iqd)
+<br>[What is Astral damage?](main/#astral-damage)
 
 
