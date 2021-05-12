@@ -15,7 +15,6 @@ Jundarer, Chicken
 
 Table of Contents
 ===
-* link to all questions later
 [1. News](main/#news)
 
 [2. Rotation:](main/#rotation)
