@@ -3,6 +3,7 @@ date: 2021-05-12
 authors: ['Jundarer', 'Chicken']
 published: true
 showOnFrontpage: false
+showSectionToC: true
 patch: "9.1"
 title: "Balance Druid FAQ"
 ---
