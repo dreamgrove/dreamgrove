@@ -18,10 +18,10 @@ Jundarer, Chicken
 Table of Contents
 ===
 * link to all questions later
-[1. News](SL-FAQ/main/#news)
+[1. News](/main/#news)
 
-[2. Rotation:](balance/SL-FAQ/main/#rotation)
-<br>[Openers](balance/SL-FAQ/main/#openers)
+[2. Rotation:](main/#rotation)
+<br>[#Openers](balance/SL-FAQ/main/#openers)
 <br>[What is my AoE priority?](balance/SL-FAQ/main/#aoe)
 <br>[What is my Single Target rotation?](balance/SL-FAQ/main/#st)
 <br>[What is my filler priority inside CA?](balance/SL-FAQ/main/#filler)
