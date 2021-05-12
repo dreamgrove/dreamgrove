@@ -4,10 +4,8 @@ authors: ['Jundarer', 'Chicken']
 published: true
 showOnFrontpage: false
 patch: "9.1"
-title: "Main"
+title: "Balance Druid FAQ"
 ---
-
-# Balance Druid FAQ
 
 <div id="news">
 
