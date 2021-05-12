@@ -48,7 +48,7 @@ Table of Contents
 
 [6. Miscellaneous:](main/#Miscellaneous)
 <br>[Useful CA + Convoke + Trinket macro:](main/#swifty-macro)
-<br>[How does Inscrutable Quantum Device work?](main/#iqd)
+<br>[How does IQD work?](main/#iqd)
 <br>[What is Astral damage?](main/#astral-damage)
 
 
