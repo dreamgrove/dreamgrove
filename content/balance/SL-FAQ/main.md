@@ -4,7 +4,16 @@ authors: ['Jundarer', 'Chicken']
 published: true
 showOnFrontpage: false
 patch: "9.1"
-title: "Balance Druid FAQ"
+title: "[1. News](main/#news)
+
+[2. Rotation:](main/#rotation)
+<br>[Openers](main/#openers)
+<br>[What is my AoE priority?](main/#aoe)
+<br>[What is my Single Target rotation?](main/#st)
+<br>[What is my filler priority inside CA?](main/#filler)
+<br>[How do I use instant Starfire procs from Owlkin Frenzy?](main/#owlkin-frenzy)
+<br>[Do our dots snapshot?](main/#snapshot)
+<br>[How to play NF double on-use:](main/#double-on-use)"
 ---
 
 <div id="news">
