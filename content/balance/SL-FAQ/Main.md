@@ -17,7 +17,7 @@ title: "Balance Druid FAQ"
 
 **{{< spell 274281 "Moons" >}} recharge time reduced from 25 seconds to 20 seconds and 33% dmg buff to NEW and HALF moon:**
 
-Weak buff that does make it good enough for single target and Moons still suck in AoE. This does NOT buff full moon.
+Weak buff that makes it good enough for single target but they still scale badly in AoE. This does NOT buff full moon.
 
 **{{< spell 343647 "Solstice" >}} increased Shooting Stars chance reduced from 300% to 250%:**
 
@@ -26,10 +26,9 @@ Major nerf that makes this talent only usable on spread AoE.
 The {{< spell 274281 "Moons" >}} buffs and {{< spell 343647 "Solstice" >}} nerfs will mean that each talent in the row will be used in a different scenario: 
 {{< spell 343647 "Solstice" >}} = Spread AoE; Fury of Elune = Stacked AoE; {{< spell 274281 "Moons" >}} = Single Target
 
-**{{< spell 202354 "Stellar Drift" >}} reworked to no longer increase duration but damage by 50% instead of 15% and adds a 15 second CD to Starfall:**
+**{{< spell 202354 "Stellar Drift" >}} reworked to no longer increase duration but damage by 50% instead of 15% and adds a 12 second CD to Starfall:**
 
-This change will not make it to live as it is a dps loss in 99% of situations to take this talent now. You would always take Twin Moons for AoE.
-
+For sustained AoE this is no longer a loss but not a gain either. Since there appear to be a number of burst AoE fights in the raid this talent will see use in its current state but for sustained AoE (like higher M+) it will be unlikely taken unless the movement component is of very high value. 
 
 **{{< spell 339942 "BoAT" >}} crit chance per stack reduced to 3% but now starts at 8 stacks (24%) reduced over 8 seconds instead of 5:**
 
@@ -51,12 +50,12 @@ Night Fae: Haste,
 Venthyr: Crit,
 Necrolord: Versatility
 
-Extremely strong effect when paired with someone who benefits a lot from crit or stats in general (who may that be). Has the potential to make Kyrian viable in a simp meta.
+Extremely strong effect when paired with someone who benefits a lot from mastery or stats in general (who may that be). Has the potential to make Kyrian viable in a simp meta but does not fix the glaring problems Kyrian has as a whole.
 
 **Night Fae:**  
 **{{< spell 354118 "Celestial Spirits" >}}: Halves the cooldown and spells cast by Convoke (to 1min CD and 8 spells cast) and increases the chance of a Full Moon:**
 
-We have no information on how exactly it decides on the spells and how high the Full Moon chance is so it is impossible to say how strong it will be.
+This legendary has received NO tuning so this will not be the final iteration. As it stands it gives 16 Niya mastery stacks and uses a deck of cards system which makes Convoke always cast 1 Full Moon in 2 Convoke casts. It also slightly more than halves the Starsurges and Wrath casts. Due to the mastery stacks it's a very strong contender but again this may not be intentional so before doing anything more detailed we will be waiting until it receives some tuning.
 
 **Necrolord:  
 ~~Wrathful~~ ~~Locust~~{{< spell 354123 "Unbridled Swarm" >}}: Adaptive Swarm has a 60% chance to split into 2 Swarms when it expires on a target:**
