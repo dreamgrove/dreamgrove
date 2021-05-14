@@ -2,6 +2,7 @@
 title: Shadowlands Balance FAQ
 hideSummaries: true
 hideSpecs: true
+showSectionToC: true
 description: "Welcome to the Balance Druid FAQ! This is an intermediate level guide that goes in depth about any questions possible."
 ---
 
