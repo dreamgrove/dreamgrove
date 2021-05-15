@@ -16,7 +16,7 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 <main class="main">
-  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series .Params.showtoc) }} with-sidebar{{ end }}">
+  <article class="article main-wrapper{{ if (or .Parent.Params.showsectiontoc .Params.series .Params.showtoc .Params.sidebarContents) }} with-sidebar{{ end }}">
     {{ if .Parent.Params.showsectiontoc }}
       <section class="section-overview toc">
         {{ partial "section-toc.html" . }}
@@ -35,6 +35,11 @@
     {{ partial "breadcrumb.html" . }}
     {{ partial "post-header.html" . }}
     {{ partial "post-content.html" . }}
+    {{ if .Params.sidebarContents }}
+      <section class="section-overview toc">
+        {{ partial "post-sidebar.html" . }}
+      </section>
+    {{ end }}
     {{ partial "post-footer.html" . }}
   </article>
 </main>
