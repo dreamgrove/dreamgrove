@@ -32,14 +32,14 @@
         {{ partial "series-toc.html" . }}
       </section>
     {{ end }}
+    {{ partial "breadcrumb.html" . }}
+    {{ partial "post-header.html" . }}
+    {{ partial "post-content.html" . }}
     {{ if .Params.sidebarContents }}
       <section class="section-overview toc">
         {{ partial "post-sidebar.html" . }}
       </section>
     {{ end }}
-    {{ partial "breadcrumb.html" . }}
-    {{ partial "post-header.html" . }}
-    {{ partial "post-content.html" . }}
     {{ partial "post-footer.html" . }}
   </article>
 </main>
