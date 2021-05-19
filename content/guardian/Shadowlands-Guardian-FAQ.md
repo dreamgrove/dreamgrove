@@ -4,15 +4,36 @@ date: '2020-12-07'
 authors: ['Thyme']
 published: true
 patch: "9.0.2"
-description: "The Most commonly asked questions, Shadowlands Guardian Edition."
+sidebarTitle: "Quicklinks"
+sidebarContents:  |
+  [1. Covenants](#Covenants)
+  
+  [2. Gearing](#gearing)
+  <br>[Stats](#stats)
+  <br>[Legendaries](#legendaries)
+  <br>[What legendary do I want to build and on which piece?](#what legendary do I want to build and on which piece?)
+  <br>[What are you building??](#what are you building??)
+  
+  [3. Threat, Damage, and You](#threat, Damage, and You)
+  <br>[I am having threat issues, what do I do??](#i am having threat issues, what do I do??)
+  <br>[I keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?](#i keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?)
+  
+  [4. Simulations](#simulations)
+  <br>[How Do I Sim?](#how Do I Sim?)
+  
+  [5. Talents](#talents)
+  <br>[EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden vs. survival of the fittest)
 ---
 
-Shadowlands has finally arrived! Naturally there are many questions being asked 
-# Covenants
+<div id="Covenants">
+ 
+# [1. Covenants:](#covenants)
+ 
+</div>
+ 
+## What covenant should I choose?
 
-**What covenant should I choose?** 
-
-***IT IS IMPORTANT TO STATE THAT EVERY COVENANT WORKS WELL, AND THAT YOU CAN PICK THE ONE YOU PREFER AND NOT GIMP YOURSELF***
+***It is important to state that every covenant works well, and can pick one you prefer without hindering yourself.***
 
 * Every covenant is within 5 to 7% of each other depending on the situation (ST/cleave/AOE) (Please refer to the [sims](https://www.dreamgrove.gg/sims/bear/) for more information)
 
@@ -62,16 +83,29 @@ For the next 10s you collect 20% of the damage they deal in a pool {{< spell 327
 You use this pool to strengthen your damage, your healing and your absorb by 15% for up to 20s after activating this ability (until you used up the pool).
 The "absorb" part means that hits against you during that time get reduced by 15% (similar to how "{{< spell 190456 "Ignore Pain" >}}" from warriors works).
 
-# Gearing
+<div id="gearing">
+ 
+# [1. Gearing:](#gearing)
+ 
+</div>
 
-### Stats
+<div id="stats">
+
+### [Stats](#stats)
+ 
+</div>
 
 Generally speaking, Versatility/{{< spell 155783 "Mastery" >}} is a good defensive setup but rarely does one need to go full defensive so alternatively going Vers/Haste is a good middle ground.
 
 Offensively secondary stats can change from player to player so the best bet is to refer to personal sims through [Raidbots.](https://www.raidbots.com/simbot/stats)
 
 For more information please visit the [Wowhead](https://www.wowhead.com/guardian-druid-stat-priority-guide) and [Icyveins](https://www.icy-veins.com/wow/guardian-druid-pve-tank-stat-priority) guides, both written by Pumps. 
-### Legendaries 
+
+<div id="legendaries">
+
+### [Legendaries](#legendaries)
+
+</div>
 
 Ignoring what your alternative items are for each slot, here is a rule of thumb for legendary crafting slot selection:
 
@@ -81,7 +115,11 @@ Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wr
 
 This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.
 
-**What legendary do I want to build and on which piece?** 
+<div id="what legendary do I want to build and on which piece?">
+ 
+### [What legendary do I want to build and on which piece?:](#what legendary do I want to build and on which piece?)
+ 
+</div>
 
 We have a multitude of strong legendary choices, each strong in its own place:
 
@@ -104,6 +142,11 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
   * {{< spell 339056 "Ursoc’s Fury Remembered" >}} (UFR) - Consistent absorb, more {{< spell 77758 "Thrash" >}} damage, falls off the higher you push in keys. Most players will not reach the threshhold where it'll be weaker than {{< spell 339063 "NOW" >}}. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
 
+<div id="What are you building??">
+   
+[What are you building??](#what are you building??)
+   
+</div>
 
 ***What are you building??***
 
