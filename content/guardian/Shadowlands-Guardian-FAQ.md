@@ -7,6 +7,7 @@ patch: "9.0.2"
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. Covenants](#covenants)
+  <br>[What covenant should i choose](#covenant-choice)
   <br>[Nightfae](#nightfae)
   <br>[How to Kyrian tether](#kyrian-tether)
   [2. Gearing](#gearing)
@@ -32,7 +33,11 @@ sidebarContents:  |
  
 </div>
  
-## What covenant should I choose?
+<div id="covenant-choice">
+  
+## [What covenant should I choose?](#covenant-choice)
+  
+  </div>
 
 ***It is important to state that every covenant works well, and can pick one you prefer without hindering yourself.***
 
