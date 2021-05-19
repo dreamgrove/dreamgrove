@@ -6,28 +6,29 @@ published: true
 patch: "9.0.2"
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
-  [1. Covenants](#Covenants)
-  
+  [1. Covenants](#covenants)
+  <br>[Nightfae](#nightfae)
+  <br>[How to Kyrian tether](#kyrian-tether)
   [2. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Legendaries](#legendaries)
-  <br>[What legendary do I want to build and on which piece?](#what legendary do I want to build and on which piece?)
-  <br>[What are you building??](#what are you building??)
+  <br>[What legendary do I want to build and on which piece?](#legendary-choice)
+  <br>[What are you building??](#building)
   
-  [3. Threat, Damage, and You](#threat, Damage, and You)
-  <br>[I am having threat issues, what do I do??](#i am having threat issues, what do I do??)
-  <br>[I keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?](#i keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?)
+  [3. Threat, Damage, and You](#threat-Damage)
+  <br>[I am having threat issues, what do I do??](#threat-issues)
+  <br>[Catweaving and Owlweaving 101](#catweaving-owlweaving)
   
   [4. Simulations](#simulations)
-  <br>[How Do I Sim?](#how Do I Sim?)
+  <br>[How Do I Sim?](#how-sim)
   
   [5. Talents](#talents)
-  <br>[EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden vs. survival of the fittest)
+  <br>[EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden-survival-fittest)
 ---
 
-<div id="Covenants">
+<div id="covenants">
  
-# [1. Covenants:](#covenants)
+# [1. Covenants](#covenants)
  
 </div>
  
@@ -48,8 +49,12 @@ Important to note that if you can avoid it you should never use the solo bond of
 
 TLDR; Pick the one you prefer it is rather very close and is unlikely to make or break what you are doing 
 
-### Nightfae
+<div id="night-fae">
 
+### [Nightfae](#nightfae)
+
+  </div>
+  
 **Dreamweaver** vs. **Niya**:
 The downside to **Dreamweaver's** Podtender, When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer. That being said, in a well organized group it is a non issue so that's particularly why you would see it in top keys. 
 
@@ -57,9 +62,11 @@ The downside to **Dreamweaver's** Podtender, When the cheat death is activated, 
 
 **Niya** tends to sim higher for some but we understand that is not a priority for a select amount of people, {{< spell 322721 "Grove Invigoration" >}} gives a good amount of stats and health. 
 
+<div id="kyrian-tether">
 
-### How To Kyrian Tether
+### [How to Kyrian tether](#kyrian-tether)
 
+  </div>
 
 First off, your base spell {{< spell 326434 "Kindred Spirits" >}} (2,5s cast time, only usable in caster form)
 
@@ -85,7 +92,7 @@ The "absorb" part means that hits against you during that time get reduced by 15
 
 <div id="gearing">
  
-# [1. Gearing:](#gearing)
+# [2. Gearing](#gearing)
  
 </div>
 
@@ -115,9 +122,9 @@ Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wr
 
 This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.
 
-<div id="what legendary do I want to build and on which piece?">
+<div id="legendary-choice">
  
-### [What legendary do I want to build and on which piece?:](#what legendary do I want to build and on which piece?)
+### [What legendary do I want to build and on which piece?](#legendary-choice)
  
 </div>
 
@@ -142,13 +149,12 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
   * {{< spell 339056 "Ursoc’s Fury Remembered" >}} (UFR) - Consistent absorb, more {{< spell 77758 "Thrash" >}} damage, falls off the higher you push in keys. Most players will not reach the threshhold where it'll be weaker than {{< spell 339063 "NOW" >}}. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
 
-<div id="What are you building??">
+<div id="building">
    
-[What are you building??](#what are you building??)
+### [What are you building??](#building)
    
 </div>
 
-***What are you building??***
 
 For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It will be awhile before you will need {{< spell 339063 "NOW" >}} and currently we still have not reached that point. For example, as of writing this, the top guardian uses {{< spell 339056 "UFR" >}} in 7 out of the 8 dungeons.
 
@@ -159,8 +165,9 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 *For a more thorough explanation and a recommendation on which piece you should build your legendary, check the [wowhead-section about legendaries.](https://www.wowhead.com/guides/guardian-druid-best-legendaries-shadowlands)*
 
 
-
-## Threat, Damage, and You
+<div id="threat-damage">
+  
+## [3. Threat, Damage, and You!](#threat-damage)
 
 ***I am having threat issues, what do I do??***
 
@@ -173,7 +180,11 @@ Another good tip is to wait that all the trash is in range of {{< spell 77758 "T
 **Important to note:** - opening with {{< spell 6795 "Taunt" >}} on single target is highly advised, and {{< spell 102558 "Incarn" >}}/{{< spell 106951 "Zerk" >}} will reduce {{< spell 6795 "Taunt" >}} CD to the GCD.
 -the cap on {{< spell 213764 "Swipe" >}} is proximity based, so if you have more than five mobs around you can wiggle around to hit different targets with each {{< spell 213764 "Swipe" >}}.
 
-**I keep hearing about Catweaving and Owlweaving, what is it and how do I properly maintain the rotation?**
+<div id="catweaving-owlweaving">
+  
+### [Catweaving and Owlweaving 101](#catweaving-owlweaving)
+ 
+  </div>
 
 Simply put catweaving and owlweaving is when you switch forms, when out of harms way, to push out a little bit of extra damage when survivability is no longer an issue. 
 
@@ -183,12 +194,19 @@ Simply put catweaving and owlweaving is when you switch forms, when out of harms
 
 PSA: **YOU DO NOT** blow a CD to switch form to do damage, that is a meme thing to do in non relevant content, do not do it when progging in raids or pushing in m+.
 
-## Simulations
+<div id="simulations">
+  
+### [Simulations](#simulations)
+ 
+  </div>
 
 [Shadowlands Bear Sims.](https://www.dreamgrove.gg/sims)
 
-
-### HOW DO I SIM??
+<div id="how-sim">
+         
+### [How do I sim?](#how-sim)
+         
+  </div>         
 
 **FIRST**: Understand that simming is only for dps, any website or person telling you they can sim survivability is either lying or being massively reductive, or both.
 
@@ -218,9 +236,17 @@ To sim Catweaving, one needs to add druid.catweave_bear=1 into the **Custom APL*
 
 The current Basic set up is using Balance affinity and {{< spell 319454 "Heart of the Wild" >}} as talents (ergo sims will always use {{< spell 24858 "boomkin" >}} {{< spell 323764 "Convoke" >}}, and always shift in {{< spell 24858 "boomkin" >}} form for {{< spell 340059 "Lycara" >}})
 
-# Talents
+<div id="talents">  
+  
+# [5. Talents](#talents)
+  
+  </div>
 
-***EARTHWARDEN Vs. SURVIVAL OF THE FITTEST***
+<div id="earthwarden-survival-fittest">
+  
+### [EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden-survival-fittest)
+  
+  </div>
 
 If you have crafted {{< spell 339063 "The Natural Order's Will" >}} (NOW), you have probably wondered if it is worth using {{< spell 203965 "SotF" >}} over {{< spell 203974 "EW" >}} all the time. The first thing you need to understand is that the choice *is not* legendary dependent, while it is true that {{< spell 339063 "The Natural Order's Will" >}} (NOW) renders {{< spell 203965 "SotF" >}} more attractive, some situations warrant the use of {{< spell 203965 "SotF" >}} while not using it, or the use of {{< spell 203974 "EW" >}} while using {{< spell 339063 "NOW" >}}.
 
