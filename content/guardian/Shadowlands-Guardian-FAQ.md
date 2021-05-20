@@ -10,6 +10,7 @@ sidebarContents:  |
   <br>[What covenant should i choose](#covenant-choice)
   <br>[Night Fae](#night-fae)
   <br>[How to Kyrian tether](#kyrian-tether)
+  
   [2. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Legendaries](#legendaries)
@@ -71,7 +72,7 @@ The downside to **Dreamweaver's** Podtender, When the cheat death is activated, 
 
 ### [How to Kyrian tether](#kyrian-tether)
 
-  </div>
+</div>
 
 First off, your base spell {{< spell 326434 "Kindred Spirits" >}} (2,5s cast time, only usable in caster form)
 
