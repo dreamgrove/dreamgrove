@@ -8,15 +8,16 @@ sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. Covenants](#covenants)
   <br>[What covenant should i choose](#covenant-choice)
-  <br>[Nightfae](#nightfae)
+  <br>[Night Fae](#night-fae)
   <br>[How to Kyrian tether](#kyrian-tether)
+  
   [2. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Legendaries](#legendaries)
   <br>[What legendary do I want to build and on which piece?](#legendary-choice)
   <br>[What are you building??](#building)
   
-  [3. Threat, Damage, and You](#threat-Damage)
+  [3. Threat, Damage, and You](#threat-damage)
   <br>[I am having threat issues, what do I do??](#threat-issues)
   <br>[Catweaving and Owlweaving 101](#catweaving-owlweaving)
   
@@ -56,7 +57,7 @@ TLDR; Pick the one you prefer it is rather very close and is unlikely to make or
 
 <div id="night-fae">
 
-### [Nightfae](#nightfae)
+### [Night Fae](#night-fae)
 
   </div>
   
@@ -71,7 +72,7 @@ The downside to **Dreamweaver's** Podtender, When the cheat death is activated, 
 
 ### [How to Kyrian tether](#kyrian-tether)
 
-  </div>
+</div>
 
 First off, your base spell {{< spell 326434 "Kindred Spirits" >}} (2,5s cast time, only usable in caster form)
 
@@ -172,10 +173,14 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 
 <div id="threat-damage">
   
-## [3. Threat, Damage, and You!](#threat-damage)
+## [3. Threat, Damage, and You](#threat-damage)
 
-***I am having threat issues, what do I do??***
+<div id="threat-issues">
+  
+### [I am having threat issues, what do I do??](#threat-issues)
 
+  </div>
+  
 **The short answer:** Press thrash and swipe more
 
 **The long answer:** Above 3 targets anything outside of {{< spell 77758 "Thrash" >}}/{{< spell 213764 "Swipe" >}} is a loss of aoe threat, ie your priority 99% of the time is to spam {{< spell 77758 "Thrash" >}}/{{< spell 213764 "Swipe" >}} on your opener. 
