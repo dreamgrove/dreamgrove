@@ -8,8 +8,8 @@ title: Venthyr Compendium
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [Disclaimers](#disclaimers)
-  [Single target](#single-target)
-  [AoE](#aoe)
+  <br>[Single target](#single-target)
+  <br>[AoE](#aoe)
 ---
 
 <div id="disclaimers">
