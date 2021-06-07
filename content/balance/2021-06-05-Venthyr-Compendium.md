@@ -1,14 +1,15 @@
 ---
 date: '2021-06-05'
 authors: ["Jundarer"]
-published: false
+published: true
+showOnFrontpage: false
 patch: "9.1"
 title: Venthyr Compendium
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [Disclaimers](#disclaimers)
-  [Single target](#single-target)
-  [AoE](#aoe)
+  <br>[Single target](#single-target)
+  <br>[AoE](#aoe)
 ---
 
 <div id="disclaimers">
@@ -17,10 +18,10 @@ sidebarContents:  |
   
 </div>
 
-This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simple made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to switch to Venthyr.
-As we are still in the PTR-cycle it is very possible the next PTR patch will make Venthyr far worse or another Covenant far better.
+This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simply made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to switch to Venthyr.
+As we are still in the PTR-cycle it is very possible that the next PTR patch will either make Venthyr far worse, or make another Covenant far better.
 
-All information in this guide was tested and verfied using simulations and the (current) APL can be found here as long Venthyr is only relevant for PTR: https://github.com/balance-simc/Balance-SimC/blob/master/balance_ptr.txt.
+All information in this guide was tested and verfied using simulations and the (current) APL can be found here as long as Venthyr is only relevant for PTR: https://github.com/balance-simc/Balance-SimC/blob/master/balance_ptr.txt.
 
 Everything in this guides assumes you are playing with the new Venthyr legendary Sinful Hysteria as this is the reason that Venthyr has gotten any attention at all.
 
@@ -33,9 +34,9 @@ Going from Night Fae Balance Druid to Venthyr Druid is a big gameplay change on 
 
 </div>
 
-Due to no longer using Balance of All Things there is no longer and as compelling reason to Starsurge at the beginning of an Eclipse and you can often save Astral Power for movement without any relevant dps loss. Starsurge Empowerment exists but it is a very weak effect.
+Due to no longer using Balance of All Things there is no longer as compelling of a reason to Starsurge at the beginning of an Eclipse and thus, you can often save Astral Power for movement without any relevant dps loss. Starsurge Empowerment exists, but it is a very weak effect.
 
-On single target about 65% of your damage will be during CA/Inc+Ravenous Frenzy meaning it is extremely important to be able to cast during that time and that the target will live the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
+On single target about 65% of your damage will be during CA/Inc+Ravenous Frenzy meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
 
 Single target priority list OUTSIDE cooldowns:
  
