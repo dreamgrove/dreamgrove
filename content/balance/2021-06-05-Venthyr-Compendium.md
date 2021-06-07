@@ -1,7 +1,8 @@
 ---
 date: '2021-06-05'
 authors: ["Jundarer"]
-published: false
+published: true
+showOnFrontpage: false
 patch: "9.1"
 title: Venthyr Compendium
 sidebarTitle: "Quicklinks"
