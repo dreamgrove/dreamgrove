@@ -19,7 +19,7 @@ sidebarContents:  |
 </div>
 
 This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simply made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to switch to Venthyr.
-As we are still in the PTR-cycle it is very possible that the next PTR patch will either make Venthyr far worse, or make another Covenant far better.
+As we are still in the PTR-cycle it is very possible that the next PTR patch will either make Venthyr far worse or make another Covenant far better.
 
 All information in this guide was tested and verfied using simulations and the (current) APL can be found here as long as Venthyr is only relevant for PTR: https://github.com/balance-simc/Balance-SimC/blob/master/balance_ptr.txt.
 
@@ -34,7 +34,7 @@ Going from Night Fae Balance Druid to Venthyr Druid is a big gameplay change on 
 
 </div>
 
-Due to no longer using Balance of All Things there is no longer as compelling of a reason to Starsurge at the beginning of an Eclipse and thus, you can often save Astral Power for movement without any relevant dps loss. Starsurge Empowerment exists, but it is a very weak effect.
+Due to no longer using Balance of All Things there is no longer as compelling of a reason to Starsurge at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. Starsurge Empowerment exists but it is a very weak effect.
 
 On single target about 65% of your damage will be during CA/Inc+Ravenous Frenzy meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
 
