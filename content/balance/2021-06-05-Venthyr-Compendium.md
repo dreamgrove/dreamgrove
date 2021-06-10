@@ -10,6 +10,7 @@ sidebarContents:  |
   [Disclaimers](#disclaimers)
   <br>[Single target](#single-target)
   <br>[AoE](#aoe)
+  <br>[MinMax](#minmax)
 ---
 
 <div id="disclaimers">
@@ -40,27 +41,29 @@ Due to no longer using Balance of All Things there is no longer as compelling of
 
 On single target about 65% of your damage will be during CA/Inc+Ravenous Frenzy meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
 
-Single target priority list OUTSIDE cooldowns:
- 
+**Single target priority list OUTSIDE cooldowns:** 
 - Keep up Moonfire, Sunfire and Stellar Flare and refresh within pandemic
 - Enter the next Eclipse, preferring Solar Eclipse
 - Cast Fury of Elune if it will be up again for your next usage in CA/Inc
 - Cast Starsurge when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary. Don't spend if you need to move soon.
 - Cast Wrath in Solar Eclipse
 - Cast Starfire in Lunar Eclipse
-- Spam dots if have nothing to cast while you are moving
+- Cast dots if have nothing to cast while you are moving
 
-Single target priority list INSIDE cooldowns:
+**Single target priority list BEFORE cooldowns:**
+- Make sure to have 90+ Astral Power before using cooldowns.
+- Make sure Fury of Elune will be up at the end.
 
+**Single target priority list INSIDE cooldowns:**
 Before the 5s Sinful Hysteria buff:
 - Use your trinket so that it will be for the rest of your cooldowns. (For example at 13s remaining for IQD or 17s in Bloodlust)
 - Use pot at 17s Ravenous Frenzy remaining
 - Cast Fury of Elune if Ravenous Frenzy has 4 or less seconds remaining
 - Cast Starsurge to prevent capping Astral Power
-- Keep up Moonfire, Sunfire and Stellar Flare (there should be no more than 1 refresh during your cooldowns)
+- Keep up Moonfire, Sunfire and Stellar Flare
 - Cast Wrath to fill
 
-During the 5s Sinful Hysteria buff:
+**During the 5s Sinful Hysteria buff:**
 - Cast Starsurge to spend all your Astral Power
 - Cast Wrath to fill
 
@@ -107,3 +110,18 @@ DURING Ravenous Frenzy:
 - Refresh Moonfire on up to 4 (8 with Twin Moons) targets
 - https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
 - If the filler is Wrath or up to 5 targets use Starsurge to prevent overcapping
+
+
+<div id="minmax">
+
+# [MinMax:](#minmax)
+
+The following are super minor things you can do but are ultimately very insignificant:
+- Dotting outside Eclipse without losing dot uptime on single target is a ~0.4% gain when not using Solstice.
+- At 150%+ haste using Starfire is minorly better than Wrath on single target. This will only happen with Power Infusion or very high haste.
+- With Stellar Drift it is dps neutral to Starfall during Ravenous Frenzy as long as you enter Sinful Hysteria with 90+ AsP.
+- Without Incarnation and a low enough Precise Alignment it is a minor gain to use Ravenous Frenzy before Celestial Alignment so that CA will be up throughout Frenzy+Hysteria. The exact timing depends on your Precise Alignment rank but it should be no more than 2 globals after the Frenzy cast.
+- If the fight time allows it wait for Euphoria/Fatal Flaw before using cooldowns. This is relevant for 5-6 min kill times.
+- If the fight allows it wait for pot to be up again. This is relevant for 6min fights.
+
+</div>
