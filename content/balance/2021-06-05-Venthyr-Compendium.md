@@ -11,6 +11,7 @@ sidebarContents:  |
   <br>[Single target](#single-target)
   <br>[AoE](#aoe)
   <br>[MinMax](#minmax)
+  <br>[Gear](#gear)
 ---
 
 <div id="disclaimers">
@@ -115,6 +116,8 @@ DURING Ravenous Frenzy:
 <div id="minmax">
 
 # [MinMax:](#minmax)
+  
+</div>
 
 The following are super minor things you can do but are ultimately very insignificant:
 - Dotting outside Eclipse without losing dot uptime on single target is a ~0.4% gain when not using Solstice.
@@ -124,4 +127,22 @@ The following are super minor things you can do but are ultimately very insignif
 - If the fight time allows it wait for Euphoria/Fatal Flaw before using cooldowns. This is relevant for 5-6 min kill times.
 - If the fight allows it wait for pot to be up again. This is relevant for 6min fights.
 
+<div id="gear">
+
+# [Gear:](#gear)
+  
 </div>
+
+**Simming:**
+
+Once everything is on live you will be able to sim as normal and that will, as always, give you the best results. It is to note that for Venthyr sims adjusting the fight duration can have a relevant impact on how strong some items maybe so it can be beneficial to adjust the sim duration to fight the fight you are simming for. Keep in mind that there will be a 20% fight length variance in sims meaning that a 5min sim is actually a 4-6min sim.
+
+**Trinkets:**
+
+Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinkets are Empyreal Ordnance (yes, without double on-use), Inscrutable Quantum Device and Instructor's Divine Bell (yes, it's still broken even at low ilvl). IQD and Bell can be combined for a minor dps increase in the sub 0.5% area, although if that is better with your ilvl trinket you will have to sim. The raid on-use trinkets are all bad because we are a 3min class.
+
+As a passive trinket you have a plethora of options. For single target your best options are the new trinkets Titanic Ocular Gland (2nd boss raid), Forbidden Necromantic Tome (last boss raid), Tome of Monstrous Constructions (1st boss raid), Infinitely Divisble Ooze, Unbound Changeling, Soul Cage Fragment (World Boss) and a bunch of others. For AoE/M+ the damage proc trinkets fall off meaning you won't want the Tome or Oooze but the other trinkets stay as good. As always just sim what trinkets are best from the ones you have.
+
+**Ideal stats:**
+
+Ideal stats are something that are not realistic to achieve and should thus not be a goal of any kind, this section is purely for interest. Independent of that with Venthyr Balance Druid mastery and haste are far, far more valuable than crit and vers as your sims will show. In fact when you could choose any kind of stats you wouldn't want any crit or vers but again this is not realistic.
