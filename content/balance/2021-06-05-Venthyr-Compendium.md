@@ -121,7 +121,7 @@ The following are super minor things you can do but are ultimately very insignif
 - At 150%+ haste using Starfire is minorly better than Wrath on single target. This will only happen with Power Infusion or very high haste.
 - With Stellar Drift it is dps neutral to Starfall during Ravenous Frenzy as long as you enter Sinful Hysteria with 90+ AsP.
 - Without Incarnation and a low enough Precise Alignment it is a minor gain to use Ravenous Frenzy before Celestial Alignment so that CA will be up throughout Frenzy+Hysteria. The exact timing depends on your Precise Alignment rank but it should be no more than 2 globals after the Frenzy cast.
-- If the fight time allows it wait for Euphoria/Fatal Flaw before using cooldowns. This is relevant for 5-6 min kill times. Use Incarn on 37 stacks of Thrill Seeker in order to get the Fatal Flaw buff in the last 10 sec of Hysteria.
+- If the fight time allows it wait for Euphoria/Fatal Flaw before using cooldowns. This is relevant for 5-6 min kill times. Use Incarn on 36 stacks of Thrill Seeker in order to get the Fatal Flaw buff inside the Hysteria window.
 - If the fight allows it wait for pot to be up again. This is relevant for 6min fights.
 
 </div>
