@@ -38,35 +38,35 @@ Going from Night Fae Balance Druid to Venthyr Druid is a big gameplay change on 
 
 </div>
 
-Due to no longer using Balance of All Things there is no longer as compelling of a reason to Starsurge at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. Starsurge Empowerment exists but it is a very weak effect.
+Due to no longer using Balance of All Things there is no longer as compelling of a reason to {{< spell 78674 "Starsurge" >}}at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. {{< spell 78674 "Starsurge" >}}Empowerment exists but it is a very weak effect.
 
-On single target about 65% of your damage will be during CA/Inc+Ravenous Frenzy meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
+On single target about 65% of your damage will be during CA/Inc+{{< spell 323546 "Ravenous Frenzy" >}} meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
 
 **Single target priority list OUTSIDE cooldowns:** 
-- Keep up Moonfire, Sunfire and Stellar Flare and refresh within pandemic
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic
 - Enter the next Eclipse, preferring Solar Eclipse
-- Cast Fury of Elune if it will be up again for your next usage in CA/Inc
-- Cast Starsurge when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary. Don't spend if you need to move soon.
-- Cast Wrath in Solar Eclipse
-- Cast Starfire in Lunar Eclipse
+- Cast {{< spell 211545 "Fury of Elune" >}} if it will be up again for your next usage in CA/Inc
+- Cast {{< spell 78674 "Starsurge" >}} when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary. Don't spend if you need to move soon.
+- Cast{{< spell 190984 "Wrath" >}} in Solar Eclipse
+- Cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse
 - Cast dots if have nothing to cast while you are moving
 
 **Single target priority list BEFORE cooldowns:**
 - Make sure to have 90+ Astral Power before using cooldowns.
-- Make sure Fury of Elune will be up at the end.
+- Make sure {{< spell 211545 "Fury of Elune" >}} will be up at the end.
 
 **Single target priority list INSIDE cooldowns:**
-Before the 5s Sinful Hysteria buff:
+Before the 5s extension buff:
 - Use your trinket so that it will be for the rest of your cooldowns. (For example at 13s remaining for IQD or 17s in Bloodlust)
-- Use pot at 17s Ravenous Frenzy remaining
-- Cast Fury of Elune if Ravenous Frenzy has 4 or less seconds remaining
-- Cast Starsurge to prevent capping Astral Power
-- Keep up Moonfire, Sunfire and Stellar Flare
-- Cast Wrath to fill
+- Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining
+- Cast {{< spell 211545 "Fury of Elune" >}} if {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
+- Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}
+- Cast {{< spell 190984 "Wrath" >}} to fill
 
-**During the 5s Sinful Hysteria buff:**
-- Cast Starsurge to spend all your Astral Power
-- Cast Wrath to fill
+**During the 5s Ravenous Frenzy extension buff:**
+- Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
+- Cast {{< spell 190984 "Wrath" >}} to fill
 
 
 
@@ -79,38 +79,38 @@ Before the 5s Sinful Hysteria buff:
 2+ target priority OUTSIDE cooldowns:
 
 **Any situation:**
-- Keep up Sunfire as long as your targets will live for another ~10 seconds (the amount of time is reduced per target hit).
-- Keep up Starfall at all times or use on cooldown with Stellar Drift.
+- Keep up {{< spell 93402 "Sunfire" >}} as long as your targets will live for another ~10 seconds (the amount of time is reduced per target hit).
+- Keep up {{< spell 191034 "Starfall" >}} at all times or use on cooldown with{{< spell 202354 "Stellar Drift" >}} .
 - Enter Solar Eclipse if that is your next Eclipse.
-- Before Lunar Eclipse cast Moonfire if:
+- Before Lunar Eclipse cast {{< spell 8921 "Moonfire" >}} if:
    - All targets can be hit by {{< spell 194153 "Starfire" >}}.
-   - There are 5 or less targets (10 or less with Twin Moons).
+   - There are 5 or less targets (10 or less with {{< spell 281847 "Twin Moons" >}}).
    - All targets will live through the entire Lunar Eclipse.
-   - You will not lose Starfall uptime.
+   - You will not lose {{< spell 191034 "Starfall" >}} uptime.
 - Enter Lunar Eclipse if you can.
 
 **During Solar Eclipse:**
-  - Use Starsurge to prevent overcapping.
-  - Keep up Moonfire on up to 10 targets (20 with Twin Moons) if they will live through the next Eclipse and you won't lose Starfall uptime.
-  - Starfire when 5 targets can be hit by it, increased by 1 target for every 20% mastery you have.
+  - Use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
+  - Keep up {{< spell 8921 "Moonfire" >}} on up to 10 targets (20 with {{< spell 281847 "Twin Moons" >}}) if they will live through the next Eclipse and you won't lose {{< spell 191034 "Starfall" >}} uptime.
+  - {{< spell 194153 "Starfire" >}} when 5 targets can be hit by it, increased by 1 target for every 20% mastery you have.
   - Cast {{< spell 190984 "Wrath" >}}.
 
 **During Lunar Eclipse:**
   - Use {{< spell 78674 "Starsurge" >}} to prevent overcapping AsP until 6 targets at which point you should overcap.
-  - Refresh Moonfire if you are at 4 (8 with Twin Moons) targets or below if the targets will live through the next Eclipse.
-  - Cast Starfire
+  - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
+  - Cast {{< spell 194153 "Starfire" >}}
 
 BEFORE cooldowns:
 
-- If the pack will last more than 35s put Moonfire on up to 8 targets (16 with Twin Moons). This happens very rarely but is a gain in case it happens.
-- Refresh Sunfire so you only have to refresh it once during Cooldowns.
+- If the pack will last more than 35s put {{< spell 8921 "Moonfire" >}} on up to 8 targets (16 with {{< spell 281847 "Twin Moons" >}}). This happens very rarely but is a gain in case it happens.
+- Refresh {{< spell 93402 "Sunfire" >}} so you only have to refresh it once during Cooldowns.
 
-DURING Ravenous Frenzy:
-- Refresh Sunfire during pandemic
-- Keep Starfall up at all times or on cooldown with Stellar Drift. Try to time the last Starfall with Drift so that it will be up during the last 8s of your cooldowns.
-- Refresh Moonfire on up to 4 (8 with Twin Moons) targets
+DURING {{< spell 323546 "Ravenous Frenzy" >}}:
+- Refresh {{< spell 93402 "Sunfire" >}} during pandemic
+- Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}. Try to time the last {{< spell 191034 "Starfall" >}} with Drift so that it will be up during the last 8s of your cooldowns.
+- Refresh {{< spell 8921 "Moonfire" >}} on up to 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets
 - https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
-- If the filler is Wrath or up to 5 targets use Starsurge to prevent overcapping
+- If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping
 
 
 <div id="minmax">
@@ -121,10 +121,10 @@ DURING Ravenous Frenzy:
 
 The following are super minor things you can do but are ultimately very insignificant:
 - Dotting outside Eclipse without losing dot uptime on single target is a ~0.4% gain when not using Solstice.
-- At 150%+ haste using Starfire is minorly better than Wrath on single target. This will only happen with Power Infusion or very high haste.
-- With Stellar Drift it is dps neutral to Starfall during Ravenous Frenzy as long as you enter Sinful Hysteria with 90+ AsP.
-- Without Incarnation and a low enough Precise Alignment it is a minor gain to use Ravenous Frenzy before Celestial Alignment so that CA will be up throughout Frenzy+Hysteria. The exact timing depends on your Precise Alignment rank but it should be no more than 2 globals after the Frenzy cast.
-- If the fight time allows it wait for Euphoria/Fatal Flaw before using cooldowns. This is relevant for 5-6 min kill times.
+- At 150%+ haste using {{< spell 194153 "Starfire" >}} is minorly better than{{< spell 190984 "Wrath" >}} on single target. This will only happen with Power Infusion or very high haste.
+- With {{< spell 202354 "Stellar Drift" >}} it is dps neutral to {{< spell 191034 "Starfall" >}} during {{< spell 323546 "Ravenous Frenzy" >}} as long as you enter Sinful Hysteria with 90+ AsP.
+- Without Incarnation and a low enough {{< spell 340706 "Precise Alignment" >}} it is a minor gain to use {{< spell 323546 "Ravenous Frenzy" >}}  before Celestial Alignment so that CA will be up throughout Frenzy+Hysteria. The exact timing depends on your {{< spell 340706 "Precise Alignment" >}} rank but it should be no more than 2 globals after the Frenzy cast.
+- If the fight time allows it wait for Euphoria/Fatal Flaw(Nadija Soulbinds) before using cooldowns. This is relevant for 5-6 min kill times.
 - If the fight allows it wait for pot to be up again. This is relevant for 6min fights.
 
 <div id="gear">
@@ -139,9 +139,9 @@ Once everything is on live you will be able to sim as normal and that will, as a
 
 **Trinkets:**
 
-Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinkets are Empyreal Ordnance (yes, without double on-use), Inscrutable Quantum Device and Instructor's Divine Bell (yes, it's still broken even at low ilvl). IQD and Bell can be combined for a minor dps increase in the sub 0.5% area, although if that is better with your ilvl trinket you will have to sim. The raid on-use trinkets are all bad because we are a 3min class.
+Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinkets are {{< item 179350 "Inscrutable Quantum Device" >}}, {{< item 180117 "Empyreal Ordnance" >}} (yes, without double on-use) and {{< item 184842 "Instructor's Divine Bell" >}} (yes, it's still broken even at low ilvl). IQD and Bell can be combined for a minor dps increase in the sub 0.5% area, although if that is better with your ilvl trinket you will have to sim. The raid on-use trinkets are all bad because we are a 3min class.
 
-As a passive trinket you have a plethora of options. For single target your best options are the new trinkets Titanic Ocular Gland (2nd boss raid), Forbidden Necromantic Tome (last boss raid), Tome of Monstrous Constructions (1st boss raid), Infinitely Divisble Ooze, Unbound Changeling, Soul Cage Fragment (World Boss) and a bunch of others. For AoE/M+ the damage proc trinkets fall off meaning you won't want the Tome or Oooze but the other trinkets stay as good. As always just sim what trinkets are best from the ones you have.
+As a passive trinket you have a plethora of options. For single target your best options are the new trinkets {{< item 186423 "Titanic Ocular Gland" >}} (2nd boss raid), {{< item 186421 "Forbidden Necromantic Tome" >}} (last boss raid), {{< item 186422 "Tome of Monstrous Constructions" >}} (1st boss raid), {{< item 178769 "Infinitely Divisble Ooze" >}}, {{< item 178708 "Unbound Changeling" >}}, {{< item 187447 "Soul Cage Fragment" >}} (World Boss) and a bunch of others. For AoE/M+ the damage proc trinkets fall off meaning you won't want the Tome or Oooze but the other trinkets stay as good. As always just sim what trinkets are best from the ones you have.
 
 **Ideal stats:**
 
