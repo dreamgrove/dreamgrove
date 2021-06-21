@@ -20,8 +20,6 @@ sidebarContents:  |
   
 </div>
 
-**The legendary Venthyr depends on is currently bugged to not work with the Endless Thirst conduit, meaning the extra 5 seconds are not gaining the crit chance.** It is assumed that bug is fixed for the purpose of this guide. You will not match the expected dps on ptr though.
-
 This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simply made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to switch to Venthyr.
 As we are still in the PTR-cycle it is very possible that the next PTR patch will either make Venthyr far worse or make another Covenant far better.
 
