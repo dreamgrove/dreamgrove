@@ -96,19 +96,19 @@ Before the 5s extension buff:
 **During Lunar Eclipse:**
   - Use {{< spell 78674 "Starsurge" >}} to prevent overcapping AsP until 6 targets at which point you should overcap.
   - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
-  - Cast {{< spell 194153 "Starfire" >}}
+  - Cast {{< spell 194153 "Starfire" >}}.
 
-BEFORE cooldowns:
+**BEFORE cooldowns:**
 
 - If the pack will last more than 35s put {{< spell 8921 "Moonfire" >}} on up to 8 targets (16 with {{< spell 281847 "Twin Moons" >}}). This happens very rarely but is a gain in case it happens.
 - Refresh {{< spell 93402 "Sunfire" >}} so you only have to refresh it once during Cooldowns.
 
-DURING {{< spell 323546 "Ravenous Frenzy" >}}:
-- Refresh {{< spell 93402 "Sunfire" >}} during pandemic
+**DURING {{< spell 323546 "Ravenous Frenzy" >}}:**
+- Refresh {{< spell 93402 "Sunfire" >}} during pandemic.
 - Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}. Try to time the last {{< spell 191034 "Starfall" >}} with Drift so that it will be up during the last 8s of your cooldowns.
-- Refresh {{< spell 8921 "Moonfire" >}} on up to 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets
+- Refresh {{< spell 8921 "Moonfire" >}} on up to 6 (12 with {{< spell 281847 "Twin Moons" >}}) targets when they will live for another ~20 seconds.
 - https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
-- If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping
+- If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
 
 
 <div id="minmax">
