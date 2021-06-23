@@ -3,7 +3,7 @@ title: Guardian 9.0.2 Frequently Asked Questions
 date: '2020-12-07'
 authors: ['Thyme']
 published: true
-patch: "9.0.2"
+patch: "9.1"
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. Covenants](#covenants)
@@ -25,7 +25,8 @@ sidebarContents:  |
   <br>[How Do I Sim?](#how-sim)
   
   [5. Talents](#talents)
-  <br>[EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden-survival-fittest)
+  <br>[Earthwarden Vs. Survival of the Fittest](#earthwarden-survival-fittest)
+  [X. Useful Links](#useful-links) /*Keep as last*/
 ---
 
 <div id="covenants">
@@ -120,6 +121,7 @@ For more information please visit the [Wowhead](https://www.wowhead.com/guardian
 
 </div>
 
+In 9.1  
 Ignoring what your alternative items are for each slot, here is a rule of thumb for legendary crafting slot selection:
 
 Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wrist > Cloak
@@ -254,7 +256,7 @@ The current Basic set up is using Balance affinity and {{< spell 319454 "Heart o
 
 <div id="earthwarden-survival-fittest">
   
-### [EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden-survival-fittest)
+### [Earthwardem Vs. Survival of the Fittest](#earthwarden-survival-fittest)
   
   </div>
 
@@ -266,3 +268,21 @@ If you have crafted {{< spell 339063 "The Natural Order's Will" >}} (NOW), you h
 In short, look at your damage breakdown, if melee is the bigger damage intake, {{< spell 203974 "Earthwarden" >}} is better, if it is not it is possible that {{< spell 203965 "SotF" >}} is better. **AND THOSE THINGS MUST BE TAKEN INTO CONSIDERATION REGARDLESS OF YOU USING {{< spell 339063 "NOW" >}}**
 
 As for the conduit {{< spell 340529 "TaB" >}}, it is our opinion that people tend to overestimate it, you absolutely do not need to use it if you use {{< spell 339063 "NOW" >}}, it’s a 9 to 6 sec reduction if used with {{< spell 203965 "SotF" >}}, which translate to maybe one more use in an entire fight in the raid, and in m+ you have period where {{< spell 22812 "bark" >}} will cool off, due to less damage intake/moving about. So for this, if {{< spell 340529 "TaB" >}} allows you more {{< spell 22812 "bark" >}} usage/mitigating something that would not be possible otherwise, consider it, otherwise it is not a *must always use* adapt your conduits to your situation.
+
+  
+  
+  <div id="useful-links">
+    
+  # [X. Useful Links](#useful-links)
+     
+  </div>
+  
+[Premade Damage sims](https://dreamgrove.gg/sims)
+  
+["9.1 Raider Survival Guide"](https://docs.google.com/document/d/1EaRECr0JhvNfNs8WvpyLhM9SiY3iIZWQJAD9NC7cSRA/mobilebasic)
+  
+[Tanknotes](https://www.tanknotes.com/Mythic-Plus/)
+  
+[Boomyvoking Safe Spaces](http://bit.ly/GuardianDungeonOwlvoke)
+
+[Catha's Scuffed M+ Guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing)
