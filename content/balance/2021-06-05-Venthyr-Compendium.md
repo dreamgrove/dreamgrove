@@ -66,7 +66,7 @@ Before the 5s extension buff:
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
 - Cast {{< spell 190984 "Wrath" >}} to fill
 
-
+With {{< spell 202354 "Stellar Drift" >}} it is only a 1% dps loss to use Starfall on CD including during Frenzy so if there is any movement at all use Starfall when you happen to be doing single target with it talented. DO NOT just use {{< spell 202354 "Stellar Drift" >}} for a pure single target fight as it is still a ~4% dps loss doing this compared to {{< spell 202347 "Stellar Flare " >}}.
 
 <div id="aoe">
 
