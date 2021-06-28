@@ -120,7 +120,7 @@ With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Fore
 The following are super minor things you can do but are ultimately very insignificant:
 - Dotting outside Eclipse without losing dot uptime on single target is a ~0.4% gain when not using Solstice.
 - At 150%+ haste using {{< spell 194153 "Starfire" >}} is minorly better than{{< spell 190984 "Wrath" >}} on single target. This will only happen with Power Infusion or very high haste.
-- With {{< spell 202354 "Stellar Drift" >}} it is dps neutral to {{< spell 191034 "Starfall" >}} during {{< spell 323546 "Ravenous Frenzy" >}} as long as you enter Sinful Hysteria with 90+ AsP.
+- With {{< spell 202354 "Stellar Drift" >}} it is only a very minor loss (1-2%) to {{< spell 191034 "Starfall" >}} during {{< spell 323546 "Ravenous Frenzy" >}} as long as you enter Sinful Hysteria with 90+ AsP.
 - Without Incarnation and a low enough {{< spell 340706 "Precise Alignment" >}} it is a minor gain to use {{< spell 323546 "Ravenous Frenzy" >}}  before Celestial Alignment so that CA will be up throughout Frenzy+Hysteria. The exact timing depends on your {{< spell 340706 "Precise Alignment" >}} rank but it should be no more than 2 globals after the Frenzy cast.
 - If the fight time allows it wait for Euphoria/Fatal Flaw(Nadija Soulbinds) before using cooldowns. This is relevant for 5-6 min kill times.
 - If the fight allows it wait for pot to be up again. This is relevant for 6min fights.
