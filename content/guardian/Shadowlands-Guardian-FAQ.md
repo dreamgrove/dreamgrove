@@ -14,7 +14,7 @@ sidebarContents:  |
   [2. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Legendaries](#legendaries)
-  <br>[What legendary do I want to build and on which piece?](#legendary-choice)
+  <br>[What legendary do I want to build?](#legendary-choice)
   <br>[What are you building??](#building)
   
   [3. Threat, Damage, and You](#threat-damage)
