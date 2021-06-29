@@ -1,7 +1,7 @@
 ---
 title: Guardian 9.0.2 Frequently Asked Questions
 date: '2020-12-07'
-authors: ['Thyme']
+authors: ['Thyme and Catha']
 published: true
 patch: "9.1"
 sidebarTitle: "Quicklinks"
@@ -41,7 +41,13 @@ sidebarContents:  |
   
   </div>
 
+### Disclaimer: There have not been any significant changes regarding balance, what was good in 9.0 will remain good in 9.1.
+
 ***It is important to state that every covenant works well, and can pick one you prefer without hindering yourself.***
+
+***If you are raiding***: It is very likely that NF will stay on top as burst damage is always valuable in raids, so if you were NF and wondering if you had to swap do not worry about it. As always the other covenants also work but will perform slightly worse.
+
+***If you are running M+***: With Tormented. Venthyr is likely to strong in M+, not only do you get access to the best dungeon bonuses, but you also get a kit that synergizes very well with the way we believe the affix will be played. (I.e. sneak to get all the powers, do massive pulls with them). With that said, NF will still be very good, with it's very solid soulbinds and burst damage. Kyrian has also gained a very strong soulbind with Mikanikos in 9.1 and is a solid contender. Necrolord will likely perform slightly worse than the others, but is still an option if you need the dungeon bonuses.
 
 * Every covenant is within 5 to 7% of each other depending on the situation (ST/cleave/AOE) (Please refer to the [sims](https://www.dreamgrove.gg/sims/bear/) for more information)
 
@@ -121,18 +127,48 @@ For more information please visit the [Wowhead](https://www.wowhead.com/guardian
 
 </div>
 
-In 9.1  
-Ignoring what your alternative items are for each slot, here is a rule of thumb for legendary crafting slot selection:
+{{< spell 354123 "Unbridled Swarm" >}}: Trash and will never be used, as it’s basically random on whether it’s a dps gain or just net neutral.
 
-Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wrist > Cloak
+{{< spell 354115 "{{< spell 339056 "UFR" >}}" >}}: Gives 5% of a stat depending on what covenant your bonded partner is and 5% stats when you activate the bond again. It is okay at best, but rather unlikely to outperform our current legendaries.
+
+{{< spell 354109 "Sinful Hysteria" >}}: Very solid damage-wise, but suffers from the same problem as {{< spell 339060 "Luffa" >}} in keys, i.e. {{< spell 339056 "UFR" >}} exists.
+
+{{< spell 323764 "Convoke the Spirits" >}}: Somehow makes Bearvoke even more unreliable. But is carried by getting you 16 stacks of {{< spell 339056 "Grove invigoration" >}} from Niya every minute, so might be taken for damage just for that. But again, it is not {{< spell 339056 "UFR" >}} so you are not likely to use it in keys.
+
+### In 9.0 you would consider the armor slot stat allocations for determining which slot you craft your legendaries in, however 9.1 with the domination sockets that changes quite a bit, we suggest changing your current legendaris to the following:
+
+{{< spell 339063 "Nature's Order Will" >}}: Remake on Bracers
+
+{{< spell 338658 "Draught of Deep Focus" >}}: Remake on Neck
+
+{{< spell 339060 "Luffa's" >}}: Remake on Cloak
+
+{{< spell 338657 "Circle of Life and Death" >}}: Remake on Ring
+
+{{< spell 339062 "Legacy of the Sleeper" >}}: Remake/Keep on Belt
+
+*{{< spell 339056 "UFR" >}} does not originally take up a Shard of Domination slot*. **However**, *we do suggest remaking on Cloak when you get the opportunity for M Kel'thuzad Legs*.
+
+~~Ignoring what your alternative items are for each slot, here is a rule of thumb for legendary crafting slot selection:
+
+~~Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wrist > Cloak
 
 
+~~This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.
 
-This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.
+The new rule of thumb is 
+
+Non-Domination slots:
+
+Legs > Ring = Amulet > Belt  > Wrist > Cloak
+
+Domination slots:
+
+Chest >= Head > Shoulders > Boots > Gloves
 
 <div id="legendary-choice">
  
-### [What legendary do I want to build and on which piece?](#legendary-choice)
+### [What legendary do I want to build?](#legendary-choice)
  
 </div>
 
@@ -157,6 +193,8 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
   * {{< spell 339056 "Ursoc’s Fury Remembered" >}} (UFR) - Consistent absorb, more {{< spell 77758 "Thrash" >}} damage, falls off the higher you push in keys. Most players will not reach the threshhold where it'll be weaker than {{< spell 339063 "NOW" >}}. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
 
+
+  * {{< spell 339062 "Legacy of the Sleeper" >}} (LotS) - The go to for PVP, that includes arenas and R/BGS, because of it's strong CC immunity. 
 <div id="building">
    
 ### [What are you building??](#building)
@@ -277,11 +315,11 @@ As for the conduit {{< spell 340529 "TaB" >}}, it is our opinion that people ten
      
   </div>
   
-[Premade Damage sims](https://dreamgrove.gg/sims)
+[Premade Damage sims](https://www.dreamgrove.gg/sims/bear/)
   
 ["9.1 Raider Survival Guide"](https://docs.google.com/document/d/1EaRECr0JhvNfNs8WvpyLhM9SiY3iIZWQJAD9NC7cSRA/mobilebasic)
   
-[Tanknotes](https://www.tanknotes.com/Mythic-Plus/)
+[Tanknotes](https://tanknotes.com/)
   
 [Boomyvoking Safe Spaces](http://bit.ly/GuardianDungeonOwlvoke)
 
