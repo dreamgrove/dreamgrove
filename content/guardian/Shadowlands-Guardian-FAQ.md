@@ -130,13 +130,13 @@ For more information please visit the [Wowhead](https://www.wowhead.com/guardian
 
 {{< spell 354123 "Unbridled Swarm" >}}: Trash and will never be used, as it’s basically random on whether it’s a dps gain or just net neutral.
 
-{{< spell 339056 "UFR" >}}" >}}: Gives 5% of a stat depending on what covenant your bonded partner is and 5% stats when you activate the bond again. It is okay at best, but rather unlikely to outperform our current legendaries.
+{{< spell 339056 "UFR" >}}: Gives 5% of a stat depending on what covenant your bonded partner is and 5% stats when you activate the bond again. It is okay at best, but rather unlikely to outperform our current legendaries.
 
 {{< spell 354109 "Sinful Hysteria" >}}: Very solid damage-wise, but suffers from the same problem as {{< spell 339060 "Luffa" >}} in keys, i.e. {{< spell 339056 "UFR" >}} exists.
 
 {{< spell 323764 "Convoke the Spirits" >}}: Somehow makes Bearvoke even more unreliable. But is carried by getting you 16 stacks of {{< spell 339056 "Grove invigoration" >}} from Niya every minute, so might be taken for damage just for that. But again, it is not {{< spell 339056 "UFR" >}} so you are not likely to use it in keys.
 
-### In 9.0 you would consider the armor slot stat allocations for determining which slot you craft your legendaries in, however 9.1 with the domination sockets that changes quite a bit, we suggest changing your current legendaries to the following:
+### In 9.0 legendary slot preference was based on stat allocation. However, in 9.1 with Domination Socket Slots, we suggest changing the following to new slots:
 
 {{< spell 339063 "Nature's Order Will" >}}: Remake on Bracers
 
@@ -325,3 +325,5 @@ As for the conduit {{< spell 340529 "TaB" >}}, it is our opinion that people ten
 [Boomyvoking Safe Spaces](http://bit.ly/GuardianDungeonOwlvoke)
 
 [Catha's Scuffed M+ Guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing)
+ 
+[Wowhead Guardian guide](https://www.wowhead.com/guardian-druid-guide)
