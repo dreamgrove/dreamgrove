@@ -14,10 +14,10 @@ sidebarContents:  |
   <br>[Stats](#stats)
   <br>[Legendaries](#legendaries)
   <br>[What legendary do I want to build?](#legendary-choice)
-  <br>[What are you building??](#building)
+  <br>[What are you building?](#building)
   
   [3. Threat, Damage, and You](#threat-damage)
-  <br>[I am having threat issues, what do I do??](#threat-issues)
+  <br>[I am having threat issues, what do I do?](#threat-issues)
   <br>[Catweaving and Owlweaving 101](#catweaving-owlweaving)
   
   [4. Simulations](#simulations)
@@ -185,14 +185,14 @@ We have a multitude of strong legendary choices, each strong in its own place:
   * {{< spell 339062 "Legacy of the Sleeper" >}} (LotS) - The go to for PVP, that includes arenas and R/BGs, because of it's strong CC immunity. 
 <div id="building">
    
-### [What are you building??](#building)
+### [What are you building?](#building)
    
 </div>
 
 
-For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It will be awhile before you will need {{< spell 339063 "NOW" >}} and currently we still have not reached that point. For example, as of writing this, the top guardian uses {{< spell 339056 "UFR" >}} in 7 out of the 8 dungeons.
+For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It will be awhile before you will need {{< spell 339063 "NOW" >}} and currently we still have not reached that point.
 
-For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060 "Luffa" >}} for damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
+For Raid, most are aiming for {{< spell 338658 "Draught" >}} for single target damage or {{< spell 339060 "Luffa" >}} for AoE damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
 
 **This does not mean you have to create something else while waiting for those two. Waiting to craft is perfectly fine.**
 
@@ -205,7 +205,7 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 
 <div id="threat-issues">
   
-### [I am having threat issues, what do I do??](#threat-issues)
+### [I am having threat issues, what do I do?](#threat-issues)
 
   </div>
   
