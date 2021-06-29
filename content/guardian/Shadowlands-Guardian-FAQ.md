@@ -8,7 +8,6 @@ sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. Covenants](#covenants)
   <br>[What covenant should i choose](#covenant-choice)
-  <br>[Night Fae](#night-fae)
   <br>[How to Kyrian tether](#kyrian-tether)
   
   [2. Gearing](#gearing)
@@ -46,9 +45,9 @@ sidebarContents:  |
 
 ***It is important to state that every covenant works well, and can pick one you prefer without hindering yourself.***
 
-***If you are raiding***: It is very likely that NF will stay on top as burst damage is always valuable in raids, so if you were NF and wondering if you had to swap do not worry about it. As always the other covenants also work but will perform slightly worse.
+***If you are raiding:*** It is very likely that NF will stay on top as burst damage is always valuable in raids, so if you were NF and wondering if you had to swap do not worry about it. As always the other covenants also work but will perform slightly worse.
 
-***If you are running M+***: With Tormented. Venthyr is likely to be strong in M+, not only do you get access to the best dungeon bonuses, but you also get a kit that synergizes very well with the way we believe the affix will be played. (I.e. sneak to get all the powers, do massive pulls with them). With that said, NF will still be very good, with it's very solid soulbinds and burst damage. Kyrian has also gained a very strong soulbind with Mikanikos in 9.1 and is a solid contender. Necrolord will likely perform slightly worse than the others, but is still an option if you need the dungeon bonuses.
+***If you are running M+:*** With Tormented. Venthyr is likely to be strong in M+, not only do you get access to the best dungeon bonuses, but you also get a kit that synergizes very well with the way we believe the affix will be played. (I.e. sneak to get all the powers, do massive pulls with them). With that said, NF will still be very good, with it's very solid soulbinds and burst damage. Kyrian has also gained a very strong soulbind with Mikanikos in 9.1 and is a solid contender. Necrolord will likely perform slightly worse than the others, but is still an option if you need the dungeon bonuses.
 
 * Every covenant is within 5 to 7% of each other depending on the situation (ST/cleave/AOE) (Please refer to the [sims](https://www.dreamgrove.gg/sims/bear/) for more information)
 
@@ -63,18 +62,6 @@ Important to note that if you can avoid it you should never use the solo bond of
 
 TLDR; Pick the one you prefer it is rather very close and is unlikely to make or break what you are doing 
 
-<div id="night-fae">
-
-### [Night Fae](#night-fae)
-
-  </div>
-  
-**Dreamweaver** vs. **Niya**:
-The downside to **Dreamweaver's** Podtender, When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer. That being said, in a well organized group it is a non issue so that's particularly why you would see it in top keys. 
-
-*This may be less relevant in raids, but is a big red flag for m+.*
-
-**Niya** tends to sim higher for some but we understand that is not a priority for a select amount of people, {{< spell 322721 "Grove Invigoration" >}} gives a good amount of stats and health. 
 
 <div id="kyrian-tether">
 
