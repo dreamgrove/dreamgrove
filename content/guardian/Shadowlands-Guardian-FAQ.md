@@ -1,31 +1,32 @@
 ---
-title: Guardian 9.0.2 Frequently Asked Questions
+title: Guardian 9.1 Frequently Asked Questions
 date: '2020-12-07'
-authors: ['Thyme']
+authors: ['Thyme and Catha']
 published: true
-patch: "9.0.2"
+patch: "9.1"
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. Covenants](#covenants)
   <br>[What covenant should i choose](#covenant-choice)
-  <br>[Night Fae](#night-fae)
   <br>[How to Kyrian tether](#kyrian-tether)
   
   [2. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Legendaries](#legendaries)
-  <br>[What legendary do I want to build and on which piece?](#legendary-choice)
-  <br>[What are you building??](#building)
+  <br>[What legendary do I want to build?](#legendary-choice)
+  <br>[What are you building?](#building)
   
   [3. Threat, Damage, and You](#threat-damage)
-  <br>[I am having threat issues, what do I do??](#threat-issues)
+  <br>[I am having threat issues, what do I do?](#threat-issues)
   <br>[Catweaving and Owlweaving 101](#catweaving-owlweaving)
   
   [4. Simulations](#simulations)
   <br>[How Do I Sim?](#how-sim)
   
   [5. Talents](#talents)
-  <br>[EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden-survival-fittest)
+  <br>[Earthwarden Vs. Survival of the Fittest](#earthwarden-survival-fittest)
+  
+  [6. Useful Links](#useful-links)
 ---
 
 <div id="covenants">
@@ -40,13 +41,19 @@ sidebarContents:  |
   
   </div>
 
+### Disclaimer: There have not been any significant changes regarding balance, what was good in 9.0 will remain good in 9.1.
+
 ***It is important to state that every covenant works well, and can pick one you prefer without hindering yourself.***
+
+***If you are raiding:*** It is very likely that NF will stay on top as burst damage is always valuable in raids, so if you were NF and wondering if you had to swap do not worry about it. As always the other covenants also work but will perform slightly worse.
+
+***If you are running M+:*** With Tormented. Venthyr is likely to be strong in M+, not only do you get access to the best dungeon bonuses, but you also get a kit that synergizes very well with the way we believe the affix will be played. (I.e. sneak to get all the powers, do massive pulls with them). With that said, NF will still be very good, with it's very solid soulbinds and burst damage. Kyrian has also gained a very strong soulbind with Mikanikos in 9.1 and is a solid contender. Necrolord will likely perform slightly worse than the others, but is still an option if you need the dungeon bonuses.
 
 * Every covenant is within 5 to 7% of each other depending on the situation (ST/cleave/AOE) (Please refer to the [sims](https://www.dreamgrove.gg/sims/bear/) for more information)
 
-* Night Fae is likely the ideal choice if you are going to Offspec as it is the best for resto and very good for feral, it also offers another burst damage/survivability cooldown, that said in {{< spell 5487 "bear form" >}}, {{< spell 323764 "Convoke" >}} can feel random at times and you cannot control if you get more damage/survivability. You can also use it in other form for more damage or another healing cooldown 
+* Night Fae is likely the ideal choice if you are going to Offspec as it is the best for resto and very good for feral, it also offers another burst damage/survivability cooldown, that said in {{< spell 5487 "bear form" >}}, {{< spell 323764 "Convoke" >}} can feel random at times and you cannot control if you get more damage/survivability. You can also use it in other forms for more damage or another healing cooldown 
 
-* Necrolord offers one of the best priority damage out of the covenant we have access to, some self healing capabilities if you cast {{< spell 325727 "Adaptive Swarm" >}} on yourself. But will drop off as the target count increases. That is in part mitigated with the soulbind they have access to.
+* Necrolord offers some of the best priority damage out of the covenants we have access to, some self-healing capabilities if you cast {{< spell 325727 "Adaptive Swarm" >}} on yourself. But will drop off as the target count increases. That is in part mitigated with the soulbind they have access to.
 
 * Kyrian gives you an ability that can give you either strong defensive capabilities/utility or some offensive potential,and, unlike Night Fae you can control which one you get. It can have a few downside (relying on other people, the {{< spell 327022 "dps tether" >}} acting as a 15% {{< spell 190456 "Ignore Pain" >}} and thus can end up wasting a bit of the damage). But unlike necrolord its dps is constant and does not drop off either in ST or AOE. Furthermore Pelagos is still a strong soulbind. 
 Important to note that if you can avoid it you should never use the solo bond of the ability as it is inferior to any other benefits.
@@ -55,18 +62,6 @@ Important to note that if you can avoid it you should never use the solo bond of
 
 TLDR; Pick the one you prefer it is rather very close and is unlikely to make or break what you are doing 
 
-<div id="night-fae">
-
-### [Night Fae](#night-fae)
-
-  </div>
-  
-**Dreamweaver** vs. **Niya**:
-The downside to **Dreamweaver's** Podtender, When the cheat death is activated, all threat is reset thus redirecting every mob you previously had to your group. Whilst in the pod you are unable to be battle resurrected making you watch your group suffer. That being said, in a well organized group it is a non issue so that's particularly why you would see it in top keys. 
-
-*This may be less relevant in raids, but is a big red flag for m+.*
-
-**Niya** tends to sim higher for some but we understand that is not a priority for a select amount of people, {{< spell 322721 "Grove Invigoration" >}} gives a good amount of stats and health. 
 
 <div id="kyrian-tether">
 
@@ -120,17 +115,48 @@ For more information please visit the [Wowhead](https://www.wowhead.com/guardian
 
 </div>
 
-Ignoring what your alternative items are for each slot, here is a rule of thumb for legendary crafting slot selection:
+{{< spell 354123 "Unbridled Swarm" >}}: Trash and will never be used, as it’s basically random on whether it’s a dps gain or just net neutral.
 
-Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wrist > Cloak
+{{< spell 339056 "UFR" >}}: Gives 5% of a stat depending on what covenant your bonded partner is and 5% stats when you activate the bond again. It is okay at best, but rather unlikely to outperform our current legendaries.
+
+{{< spell 354109 "Sinful Hysteria" >}}: Very solid damage-wise, but suffers from the same problem as {{< spell 339060 "Luffa" >}} in keys, i.e. {{< spell 339056 "UFR" >}} exists.
+
+{{< spell 323764 "Convoke the Spirits" >}}: Somehow makes Bearvoke even more unreliable. But is carried by getting you 16 stacks of {{< spell 339056 "Grove invigoration" >}} from Niya every minute, so might be taken for damage just for that. But again, it is not {{< spell 339056 "UFR" >}} so you are not likely to use it in keys.
+
+### In 9.0 legendary slot preference was based on stat allocation. However, in 9.1 with Domination Socket Slots, we suggest changing the following to new slots:
+
+{{< spell 339063 "Nature's Order Will" >}}: Remake on Bracers
+
+{{< spell 338658 "Draught of Deep Focus" >}}: Remake on Neck
+
+{{< spell 339060 "Luffa-Infused Embrace" >}}: Remake on Cloak
+
+{{< spell 338657 "Circle of Life and Death" >}}: Remake on Ring
+
+{{< spell 339062 "Legacy of the Sleeper" >}}: Remake/Keep on Belt
+
+*{{< spell 339056 "Ursoc's Fury Remembered" >}} does not originally take up a Shard of Domination slot*. **However**, *we do suggest remaking on Cloak when you get the opportunity for M Kel'thuzad Legs*.
+
+~~Ignoring what your alternative items are for each slot, here is a rule of thumb for legendary crafting slot selection:~~
+
+~~Chest >= Legs >= Head > Ring = Amulet > Shoulders >= Boots >= Belt = Gloves > Wrist > Cloak~~
 
 
+~~This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.~~
 
-This is generally going to be the most bang for your buck out of the extra ilvl, with some variance on the relative value of jewelry depending on what you are optimizing for.
+The new rule of thumb is 
+
+Non-Domination slots:
+
+Legs > Ring = Amulet > Belt  > Wrist > Cloak
+
+Domination slots:
+
+Chest >= Head > Shoulders > Boots > Gloves
 
 <div id="legendary-choice">
  
-### [What legendary do I want to build and on which piece?](#legendary-choice)
+### [What legendary do I want to build?](#legendary-choice)
  
 </div>
 
@@ -155,16 +181,18 @@ We have a multitude of strong legendary choices, each strong in its own place:
 
   * {{< spell 339056 "Ursoc’s Fury Remembered" >}} (UFR) - Consistent absorb, more {{< spell 77758 "Thrash" >}} damage, falls off the higher you push in keys. Most players will not reach the threshhold where it'll be weaker than {{< spell 339063 "NOW" >}}. (Drops from Torghast, Coldheart Interstitia, Layer 3+)
 
+
+  * {{< spell 339062 "Legacy of the Sleeper" >}} (LotS) - The go to for PVP, that includes arenas and R/BGs, because of it's strong CC immunity. 
 <div id="building">
    
-### [What are you building??](#building)
+### [What are you building?](#building)
    
 </div>
 
 
-For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It will be awhile before you will need {{< spell 339063 "NOW" >}} and currently we still have not reached that point. For example, as of writing this, the top guardian uses {{< spell 339056 "UFR" >}} in 7 out of the 8 dungeons.
+For m+, most people are aiming for {{< spell 339056 "UFR" >}} first. It will be awhile before you will need {{< spell 339063 "NOW" >}} and currently we still have not reached that point.
 
-For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060 "Luffa" >}} for damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
+For Raid, most are aiming for {{< spell 338658 "Draught" >}} for single target damage or {{< spell 339060 "Luffa" >}} for AoE damage. {{< spell 339063 "NOW" >}} is generally seen as overkill for raid.
 
 **This does not mean you have to create something else while waiting for those two. Waiting to craft is perfectly fine.**
 
@@ -177,7 +205,7 @@ For Raid, most are aiming for {{< spell 338658 "Draught" >}} or {{< spell 339060
 
 <div id="threat-issues">
   
-### [I am having threat issues, what do I do??](#threat-issues)
+### [I am having threat issues, what do I do?](#threat-issues)
 
   </div>
   
@@ -254,7 +282,7 @@ The current Basic set up is using Balance affinity and {{< spell 319454 "Heart o
 
 <div id="earthwarden-survival-fittest">
   
-### [EARTHWARDEN Vs. SURVIVAL OF THE FITTEST](#earthwarden-survival-fittest)
+### [Earthwardem Vs. Survival of the Fittest](#earthwarden-survival-fittest)
   
   </div>
 
@@ -266,3 +294,23 @@ If you have crafted {{< spell 339063 "The Natural Order's Will" >}} (NOW), you h
 In short, look at your damage breakdown, if melee is the bigger damage intake, {{< spell 203974 "Earthwarden" >}} is better, if it is not it is possible that {{< spell 203965 "SotF" >}} is better. **AND THOSE THINGS MUST BE TAKEN INTO CONSIDERATION REGARDLESS OF YOU USING {{< spell 339063 "NOW" >}}**
 
 As for the conduit {{< spell 340529 "TaB" >}}, it is our opinion that people tend to overestimate it, you absolutely do not need to use it if you use {{< spell 339063 "NOW" >}}, it’s a 9 to 6 sec reduction if used with {{< spell 203965 "SotF" >}}, which translate to maybe one more use in an entire fight in the raid, and in m+ you have period where {{< spell 22812 "bark" >}} will cool off, due to less damage intake/moving about. So for this, if {{< spell 340529 "TaB" >}} allows you more {{< spell 22812 "bark" >}} usage/mitigating something that would not be possible otherwise, consider it, otherwise it is not a *must always use* adapt your conduits to your situation.
+
+  
+  
+  <div id="useful-links">
+    
+  # [6. Useful Links](#useful-links)
+     
+  </div>
+  
+[Premade Damage sims](https://www.dreamgrove.gg/sims/bear/)
+  
+[9.1 Raider Survival Guide](https://docs.google.com/document/d/1EaRECr0JhvNfNs8WvpyLhM9SiY3iIZWQJAD9NC7cSRA/mobilebasic)
+  
+[Tanknotes](https://tanknotes.com/)
+  
+[Boomyvoking Safe Spaces](http://bit.ly/GuardianDungeonOwlvoke)
+
+[Catha's Scuffed M+ Guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing)
+ 
+[Wowhead Guardian guide](https://www.wowhead.com/guardian-druid-guide)
