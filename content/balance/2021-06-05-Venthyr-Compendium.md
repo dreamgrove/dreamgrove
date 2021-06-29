@@ -66,7 +66,7 @@ Before the 5s extension buff:
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
 - Cast {{< spell 190984 "Wrath" >}} to fill
 
-
+With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Forest" >}} it is only a 1% dps loss to use Starfall on CD including during Frenzy so if there is any movement at all use Starfall when you happen to be doing single target with it talented. With {{< spell 102560 "Incarnation" >}} instead you should be using Starsurges during Frenzy as it is a much bigger loss (1% loss still applies for outside Frenzy). DO NOT just use {{< spell 202354 "Stellar Drift" >}} for a pure single target fight as it is still a ~4% dps loss doing this compared to {{< spell 202347 "Stellar Flare " >}}.
 
 <div id="aoe">
 
@@ -96,19 +96,19 @@ Before the 5s extension buff:
 **During Lunar Eclipse:**
   - Use {{< spell 78674 "Starsurge" >}} to prevent overcapping AsP until 6 targets at which point you should overcap.
   - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
-  - Cast {{< spell 194153 "Starfire" >}}
+  - Cast {{< spell 194153 "Starfire" >}}.
 
-BEFORE cooldowns:
+**BEFORE cooldowns:**
 
 - If the pack will last more than 35s put {{< spell 8921 "Moonfire" >}} on up to 8 targets (16 with {{< spell 281847 "Twin Moons" >}}). This happens very rarely but is a gain in case it happens.
 - Refresh {{< spell 93402 "Sunfire" >}} so you only have to refresh it once during Cooldowns.
 
-DURING {{< spell 323546 "Ravenous Frenzy" >}}:
-- Refresh {{< spell 93402 "Sunfire" >}} during pandemic
+**DURING {{< spell 323546 "Ravenous Frenzy" >}}:**
+- Refresh {{< spell 93402 "Sunfire" >}} during pandemic.
 - Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}. Try to time the last {{< spell 191034 "Starfall" >}} with Drift so that it will be up during the last 8s of your cooldowns.
-- Refresh {{< spell 8921 "Moonfire" >}} on up to 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets
+- Refresh {{< spell 8921 "Moonfire" >}} on up to 6 (12 with {{< spell 281847 "Twin Moons" >}}) targets when they will live for another ~20 seconds.
 - https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
-- If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping
+- If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
 
 
 <div id="minmax">
@@ -120,7 +120,7 @@ DURING {{< spell 323546 "Ravenous Frenzy" >}}:
 The following are super minor things you can do but are ultimately very insignificant:
 - Dotting outside Eclipse without losing dot uptime on single target is a ~0.4% gain when not using Solstice.
 - At 150%+ haste using {{< spell 194153 "Starfire" >}} is minorly better than{{< spell 190984 "Wrath" >}} on single target. This will only happen with Power Infusion or very high haste.
-- With {{< spell 202354 "Stellar Drift" >}} it is dps neutral to {{< spell 191034 "Starfall" >}} during {{< spell 323546 "Ravenous Frenzy" >}} as long as you enter Sinful Hysteria with 90+ AsP.
+- With {{< spell 202354 "Stellar Drift" >}} it is only a very minor loss (1-2%) to {{< spell 191034 "Starfall" >}} during {{< spell 323546 "Ravenous Frenzy" >}} as long as you enter Sinful Hysteria with 90+ AsP.
 - Without Incarnation and a low enough {{< spell 340706 "Precise Alignment" >}} it is a minor gain to use {{< spell 323546 "Ravenous Frenzy" >}}  before Celestial Alignment so that CA will be up throughout Frenzy+Hysteria. The exact timing depends on your {{< spell 340706 "Precise Alignment" >}} rank but it should be no more than 2 globals after the Frenzy cast.
 - If the fight time allows it wait for Euphoria/Fatal Flaw(Nadija Soulbinds) before using cooldowns. This is relevant for 5-6 min kill times.
 - If the fight allows it wait for pot to be up again. This is relevant for 6min fights.
