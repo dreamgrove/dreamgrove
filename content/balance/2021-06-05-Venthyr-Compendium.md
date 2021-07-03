@@ -105,7 +105,7 @@ With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Fore
 
 **DURING {{< spell 323546 "Ravenous Frenzy" >}}:**
 - Refresh {{< spell 93402 "Sunfire" >}} during pandemic.
-- Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}. Try to time the last {{< spell 191034 "Starfall" >}} with Drift so that it will be up during the last 8s of your cooldowns.
+- Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}.
 - Refresh {{< spell 8921 "Moonfire" >}} on up to 6 (12 with {{< spell 281847 "Twin Moons" >}}) targets when they will live for another ~20 seconds.
 - https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
 - If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
