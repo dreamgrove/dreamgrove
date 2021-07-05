@@ -40,30 +40,54 @@ $(function() {
         'apex': "<a href=https://shadowlands.wowhead.com/spell=339139>Apex</a>",
         'frenzy': "<a href=https://shadowlands.wowhead.com/spell=340053>Frenzy</a>",
         'cateye': "<a href=https://shadowlands.wowhead.com/spell=339144>Cat-Eye</a>",
-    }
+        'venthyr': "<a href=https://ptr.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
+        'necrolord': "<a href=https://ptr.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
+        'kyrian': "<a href=https://ptr.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
+        'night_fae': "<https://ptr.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
+        'covenant': "<a href=https://www.wowhead.com/guides/covenant-specific-legendaries-in-shadowlands-9-1>Covenant</a>",
+}
 
     var legendaries = {
-        'draught':"chest=,id=172314,gems=16crit,enchant=eternal_skirmish,bonus_id=7086/6716/7193/6648/6647/",
-        'circle':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7085/6716/7193/6648/6647/",
-        'symmetry':"hands=,id=172316,bonus_id=6716/7090/6647/6648/",
-        'apex':"waist=,id=172320,gems=16crit,bonus_id=6716/7091/6647/6648/",
-        'frenzy':"waist=,id=172320,gems=16crit,bonus_id=6716/7109/6647/6648/",
-        'cateye':"finger2=,id=178926,gems=16crit,enchant=tenet_of_critical_strike,bonus_id=7089/6717/7194/6647/6648/"
+        'draught': "neck=,id=178927,gem_id=173127,bonus_id=7086/6647/6648/6758/",
+        'circle': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7085/6758/6647/6648/6935",
+        'apex': "waist=,id=172320,gem_id=173127,bonus_id=7091/6647/6648/6758/",
+        'frenzy': "wrist=,id=172321,enchant_id=6222,gem_id=173127,bonus_id=7109/7194/6647/6648/6758/",
+        'cateye': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7089/6758/6647/6648/6935/",
+        'symmetry': "neck=,id=178927,gem_id=173127,bonus_id=7090/6647/6648/6758/",
+        'night_fae': "legs=,id=172318,bonus_id=7571/6758/6647/6648/",
+        'venthyr': "waist=,id=172320,gem_id=173127,bonus_id=7474/6758/6647/6648/",
+        'necrolord': "wrist=,id=172321,enchant_id=6222,gem_id=173127,bonus_id=7472/6758/6647/6648/",
+        'kyrian': "neck=,id=178927,gem_id=173127,bonus_id=7477/6758/6647/6648/"
     }
 
     var soulbinds = {
-        'pelagos': "combat_meditation",
+        'pelagos': "combat_meditation/better_together",
         'kleia': "",
-        'mikanikos': "brons_call_to_action",
+        'mikanikos': "brons_call_to_action/soulglow_spectrometer",
         'marileth': "",
         'emeni': "lead_by_example",
-        'heirmir': "forgeborne_reveries",
+        'heirmir': "forgeborne_reveries/carvers_eye",
         'niya': "grove_invigoration",
         'dreamweaver': "field_of_blossoms",
         'korayn': "wild_hunt_tactics",
         'nadjia': "thrill_seeker",
         'theotar': "soothing_shade",
         'draven': ""
+    }
+
+    var soulbinds_m = {
+        'pelagos': "combat_meditation/better_together/newfound_resolve",
+        'kleia': "spear_of_the_archon/light_the_path",
+        'mikanikos': "brons_call_to_action/soulglow_spectrometer/effusive_anima_accelerator",
+        'marileth': "kevins_oozeling",
+        'emeni': "lead_by_example/pustule_eruption",
+        'heirmir': "forgeborne_reveries/carvers_eye/mnemonic_equipment",
+        'niya': "grove_invigoration/bonded_hearts",
+        'dreamweaver': "field_of_blossoms/dream_delver",
+        'korayn': "wild_hunt_tactics/wild_hunt_strategem",
+        'nadjia': "thrill_seeker/fatal_flaw",
+        'theotar': "soothing_shade/party_favors",
+        'draven': "battlefield_presence"
     }
 
     var jobmap = {
@@ -88,9 +112,20 @@ $(function() {
     function isPtr() {
         return $("#fightstyle").val().includes("combo_ptr");
     }
+    function isH() {
+        return $("#fightstyle").val().includes("combo_h");
+    }
 
     function toCap(s) { return s.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase()))); }
     function stripHTML(s) { return s.replace(/<[^>]*>?/gm, ''); }
+    function getLegendary(leg, cov) {
+        if (leg == "covenant") { return stripHTML(whLinks[cov]); }
+        return stripHTML(whLinks[leg]);
+    }
+    function getLegendaryString(leg, cov) {
+        if (leg == "covenant") { return legendaries[cov]; }
+        return legendaries[leg];
+    }
 
     function getRecord(filters, pivotData) {
         let buf = [];
@@ -128,7 +163,8 @@ $(function() {
                         str += "<tr><td class=\"tip-right\">Talents:</td><td>" + r.Talents + "</td></tr>";
                         str += "<tr><td class=\"tip-right\">Conduit1:</td><td>" + r.Conduit1 + "</td></tr>";
                         str += "<tr><td class=\"tip-right\">Conduit2:</td><td>" + r.Conduit2 + "</td></tr>";
-                        str += "<tr><td class=\"tip-right\">Legendary:</td><td>" + stripHTML(r.Legendary) + "</td></tr>";
+                        str += "<tr><td class=\"tip-right\">Conduit3:</td><td>" + r.Conduit3 + "</td></tr>";
+                        str += "<tr><td class=\"tip-right\">Legendary:</td><td>" + getLegendary(r.leg, r.cov) + "</td></tr>";
                         str += "<tr class=\"tip-dps\"><td class=\"tip-right\">DPS:</td><td>" + r.dps.toFixed(2) + "</td></tr>";
                         str += "</table>"
                         $(".ui-tooltip-content").html(str);
@@ -138,22 +174,26 @@ $(function() {
                     let $tar = $(e.target);
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
-                        let prof = isPtr() ? "sandcat_ptr.txt" : "sandcat.txt";
+                        let r = getRecord(filters, pivotData);
+                        let prof = isPtr() ? "sandcat_ptr.txt" : isH() ? "sandcat_h.txt" : "sandcat.txt";
                         $.get(prof, (d) => {
-                            let r = getRecord(filters, pivotData);
-                            let bonus = isPtr() ? "1532" : "1532";
+                            let bonus = isH() ? "1546" : "1559";
                             let buf = [];
 
                             buf.push(d);
                             buf.push("covenant=" + r.cov);
                             buf.push("talents=" + r.tal);
-                            buf.push(legendaries[r.leg] + bonus);
+                            buf.push(getLegendaryString(r.leg, r.cov) + leg_bonus);
 
                             let cond = [];
-                            if (soulbinds[r.soul] !== "") { cond.push(soulbinds[r.soul]) };
+                            if (soulbinds[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
                             if (r.cond1 !== "none") { cond.push(r.cond1); }
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
+                            if (r.cond3 !== "none") { cond.push(r.cond3); }
                             buf.push("soulbind=" + cond.join("/"));
+                            buf.push("report_details=1");
+                            buf.push("buff_uptime_timeline=1");
+                            buf.push("buff_stack_uptime_timeline=1");
 
                             el.value = buf.join("\n");
                             document.body.appendChild(el);
@@ -226,6 +266,10 @@ $(function() {
             'Soulbind':  r => { return toCap(r.soul); },
             'Conduit1':  r => { return toCap(r.cond1.replaceAll('_', ' ')); },
             'Conduit2':  r => { return toCap(r.cond2.replaceAll('_', ' ')); },
+            'Conduit3': r => {
+                if (r.cond3) { return toCap(r.cond3.replaceAll('_', ' ')); }
+                else { return 0; }
+            },
             'Talents':   r => {
                 let str = [];
                 str.push(getT15(r));

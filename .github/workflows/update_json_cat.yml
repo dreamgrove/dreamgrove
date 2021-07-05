@@ -20,15 +20,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: one target
-        run: python generate_combo.py -t 1 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -t 1 -r mythic ${{ secrets.RAIDBOTSAPI }}
       - name: two targets
-        run: python generate_combo.py -t 2 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -t 2 -r mythic  ${{ secrets.RAIDBOTSAPI }}
       - name: three targets
-        run: python generate_combo.py -t 3 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -t 3 -r mythic  ${{ secrets.RAIDBOTSAPI }}
       - name: four targets
-        run: python generate_combo.py -t 4 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -t 4 -r mythic  ${{ secrets.RAIDBOTSAPI }}
       - name: five targets
-        run: python generate_combo.py -t 5 ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -t 5 -r mythic  ${{ secrets.RAIDBOTSAPI }}
       - name: commit
         run: |
           git config user.name dreamgrove
@@ -48,8 +48,8 @@ jobs:
           path: |
             *.json
 
-  update_json2:
-    name: Update JSON 2
+  update_json_dungeon:
+    name: Update JSON Dungeon
     needs: [ update_json ]
     runs-on: ubuntu-latest
     steps:
@@ -61,7 +61,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: dungeon
-        run: python generate_combo.py -d ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -d -r mythic ${{ secrets.RAIDBOTSAPI }}
       - name: commit
         run: |
           git config user.name dreamgrove
@@ -71,7 +71,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Cat"
+            git commit -m "update JSON Cat Dungeon"
             git push
           fi
       - uses: actions/upload-artifact@v2

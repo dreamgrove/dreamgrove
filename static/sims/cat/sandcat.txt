@@ -5,21 +5,21 @@ spec=feral
 
 talents=0000000
 
-head=sadists_sinister_mask,id=182980,gems=16crit,ilevel=233
-neck=nobles_birthstone_pendant,id=183039,gems=16crit,ilevel=226
-shoulder=wicked_flankers_gorget,id=183029,ilevel=233
-back=crest_of_the_legionnaire_general,id=183032,ilevel=233
-chest=corset_of_the_deft_duelist,id=182989,ilevel=226,enchant=eternal_stats
-wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16crit
-hands=gloves_of_phantom_shadows,id=183026,ilevel=226
-waist=spellwoven_tourniquet,id=182995,ilevel=226,gems=16crit
-legs=chiropteran_leggings,id=182993,ilevel=226
-feet=enchanted_toetappers,id=183030,ilevel=226,enchant=eternal_agility
-finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,enchant=tenet_of_critical_strike,gems=16crit
-finger2=ritualist's_treasured_ring,id=183037,ilevel=226,enchant=tenet_of_critical_strike,gems=16crit
-trinket1=dreadfire_vessel,id=184030,ilevel=233,enchant=shadowcore_oil
-trinket2=stone_legion_heraldry,id=184027,ilevel=233
-main_hand=rod_of_the_stone_sentinels,id=182393,ilevel=233,enchant=celestial_guidance
+head=,id=186330,ilevel=252,gem_id=173127/187312
+neck=,id=186379,ilevel=259,gem_id=173127
+shoulder=,id=186336,ilevel=259,gem_id=187315
+back=,id=186289,ilevel=252,enchant_id=6203
+chest=,id=186334,ilevel=259,enchant_id=6230,gem_id=187318
+wrist=,id=186362,ilevel=252,enchant_id=6222,gem_id=173127
+hands=,id=186295,ilevel=252,enchant_id=6205,gem_id=187319
+waist=,id=186332,ilevel=259,gem_id=173127
+legs=,id=186359,ilevel=259
+feet=,id=186337,ilevel=252,enchant_id=6211,gem_id=187320
+finger1=,id=186377,ilevel=259,enchant_id=6164,gem_id=173127
+finger2=,id=186376,ilevel=252,enchant_id=6164,gem_id=173127
+trinket1=,id=186423,ilevel=252
+trinket2=,id=186429,ilevel=252
+main_hand=,id=186404,ilevel=252,enchant_id=6228
 
 chart_show_relative_difference=1
 report_details=0
