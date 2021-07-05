@@ -134,8 +134,8 @@ $(function() {
 
     var defaultOptions = {
         renderers: rend,
-        hiddenFromDragDrop: ["dps", "cov", "soul", "cond1", "cond2", "leg", "tal"],
-        hiddenFromAggregators: ["cov", "soul", "cond1", "cond2", "leg", "tal"],
+        hiddenFromDragDrop: ["dps", "cov", "soul", "cond1", "cond2", "cond3", "leg", "tal"],
+        hiddenFromAggregators: ["cov", "soul", "cond1", "cond2", "cond3", "leg", "tal"],
         aggregators: {
             "DPS": function() { return $.pivotUtilities.aggregatorTemplates.max()(["dps"]) }
         },
