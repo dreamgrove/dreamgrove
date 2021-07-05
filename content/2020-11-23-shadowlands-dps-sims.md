@@ -3,7 +3,7 @@ date: '2020-11-23'
 authors: ["Gastank"]
 published: true
 title: "Shadowlands DPS Sims"
-patch: "9.02"
+patch: "9.1"
 ---
 
 Shadowlands sims are here!
@@ -12,7 +12,7 @@ As with all generalized charts, these are for informational purposes only and DO
 
 <center>
 <div class="spec-selector" style="width: 33%;">
-<a class="spec balance" href="https://balance-simc.github.io/Balance-SimC/">Balance</a>
+<a class="spec balance" href="https://balance-simc.github.io/Balance-SimC/">Balance (Updated for 9.1!)</a>
 <a class="spec feral" href="/sims/cat">Feral</a>
 <a class="spec guardian" href="/sims/bear">Guardian</a>
 </div>
