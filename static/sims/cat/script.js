@@ -92,13 +92,11 @@ $(function() {
 
     var jobmap = {
         'combo_1.json': 0,
-        'combo_2.json': 0,
-        'combo_3.json': 0,
-        'combo_4.json': 0,
-        'combo_5.json': 0,
-        'combo_1m.json': 1,
-        'combo_s.json': 1,
-        'combo_d.json': 1,
+        'combo_2.json': 1,
+        'combo_3.json': 2,
+        'combo_4.json': 3,
+        'combo_5.json': 4,
+        'combo_d.json': 5,
         'combo_ptr_1.json': 0,
         'combo_ptr_2.json': 0,
         'combo_ptr_3.json': 0,
@@ -242,11 +240,20 @@ $(function() {
                 if (this_run !== undefined && this_run["status"] === "in_progress") {
                     const jobs = await fetch(this_run["jobs_url"]);
                     const j_json = await jobs.json();
-                    let this_job = j_json["jobs"][jobmap[file]];
+                    let n_job = jobmap[file];
+                    let this_job = j_json["jobs"][n_job];
 
                     if (this_job !== undefined && this_job["status"] === "in_progress") {
                         $("#update").html("<span id=\"inprogress\"><b>Currently Running Sims...</b></span>");
                         return;
+                    }
+
+                    for (let i = 0; i < n_job; i++) {
+                        let i_job = j_json["jobs"][i];
+                        if (i_job !== undefined && i_job["status"] === "in_progress") {
+                            $("#update").html("<span id=\"inprogress\"><b>In Queue for Sims...</b></span>");
+                            return;
+                        }
                     }
                 }
 
