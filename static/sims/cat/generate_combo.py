@@ -49,7 +49,7 @@ talents = [
 
 legendaries = {
     'draught': "neck=,id=178927,gem_id=173127,bonus_id=7086/6647/6648/6758/",
-    'circle': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7085/6758/6647/6648/6935",
+    'circle': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7085/6758/6647/6648/6935/",
     'apex': "waist=,id=172320,gem_id=173127,bonus_id=7091/6647/6648/6758/",
     'frenzy': "wrist=,id=172321,enchant_id=6222,gem_id=173127,bonus_id=7109/7194/6647/6648/6758/",
     'cateye': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7089/6758/6647/6648/6935/",

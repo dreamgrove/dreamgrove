@@ -175,7 +175,7 @@ $(function() {
                         let r = getRecord(filters, pivotData);
                         let prof = isPtr() ? "sandcat_ptr.txt" : isH() ? "sandcat_h.txt" : "sandcat.txt";
                         $.get(prof, (d) => {
-                            let bonus = isH() ? "1546" : "1559";
+                            let leg_bonus = isPtr() ? "1546" : isH() ? "1546": "1559";
                             let buf = [];
 
                             buf.push(d);
