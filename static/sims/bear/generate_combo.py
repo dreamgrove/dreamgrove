@@ -211,7 +211,7 @@ for leg, leg_str in legendaries.items():
                     for t40, talent40 in enumerate(talents[1], 1):
                         for t45, talent45 in enumerate(talents[2], 1):
                             for t50, talent50 in enumerate(talents[3], 1):
-                                talent = str(t15) + '023' if is_PTR() else '013' + str(t40) + str(t45) + str(t50)
+                                talent = str(t15) + ('023' if is_PTR() else '013') + str(t40) + str(t45) + str(t50)
                                 talent_str = 'talents=' + talent
 
                                 profile_name = '\"' + '-'.join([cond1, cond2, cond3, talent]) +'\"'
