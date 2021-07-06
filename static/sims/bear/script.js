@@ -34,30 +34,37 @@ $(function() {
     function getT50(r) { return talentCode['50'][r.tal.charAt(6)]; }
 
     var whLinks = {
-        'lycaras': "<a href=https://shadowlands.wowhead.com/spell=340059>Lycaras</a>",
-        'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
         'UFR': "<a href=https://shadowlands.wowhead.com/spell=339056>UfR</a>",
-        'luffa': "<a href=https://shadowlands.wowhead.com/spell=339060>Luffa</a>",
-        'legacy': "<a href=https://shadowlands.wowhead.com/spell=339062>Legacy</a>",
         'DoDF': "<a href=https://shadowlands.wowhead.com/spell=338658>DoDF</a>",
-    }
+        'luffa': "<a href=https://shadowlands.wowhead.com/spell=339060>Luffa</a>",
+        'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
+        'legacy': "<a href=https://shadowlands.wowhead.com/spell=339062>Legacy</a>",
+        'night_fae': "<https://ptr.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
+        'venthyr': "<a href=https://ptr.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
+        'necrolord': "<a href=https://ptr.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
+        'kyrian': "<a href=https://ptr.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
+        'covenant': "<a href=https://www.wowhead.com/guides/covenant-specific-legendaries-in-shadowlands-9-1>Covenant</a>",
+}
 
     var legendaries = {
-        'lycaras': "waist=,id=172320,gems=16vers,bonus_id=7110/6716/7194/6649/6650/",
-        'circle': "finger1=,id=178926,gems=16vers,enchant=tenet_of_versatility,bonus_id=7085/6716/7193/6649/6650/",
-        'UFR': "legs=,id=172318,bonus_id=6716/7094/6649/6650",
-        'luffa': "chest=,id=172314,enchant=eternal_stats,bonus_id=7092/6716/6649/6650/",
-        'legacy': "feet=,id=172315,enchant=eternal_agility,bonus_id=7095/6716/6649/6650/",
-        'DoDF': "chest=,id=172314,enchant=eternal_stats,bonus_id=7086/6716/6649/6650/"
+        'UFR': 'legs=,id=172318,bonus_id=6716/7094/6649/6650/',
+        'DoDF': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7086/6647/6650/6758/',
+        'luffa': 'back=Grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
+        'circle': 'finger1=shaodwghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
+        'legacy': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7095/6647/6650/6758/',
+        'night_fae': 'legs=umbrahide_leggings,id=172318,bonus_id=7571/6647/6650/6758/',
+        'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
+        'necrolord': 'wrist=umbrahide_armguards,id=172321,gem_id=173129,bonus_id=7472/6647/6650/6758/',
+        'kyrian': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7477/6647/6650/6758/'
     }
 
     var soulbinds = {
-        'pelagos': "combat_meditation",
+        'pelagos': "combat_meditation/better_together",
         'kleia': "",
-        'mikanikos': "brons_call_to_action",
+        'mikanikos': "brons_call_to_action/soulglow_spectrometer",
         'marileth': "",
         'emeni': "lead_by_example",
-        'heirmir': "forgeborne_reveries",
+        'heirmir': "forgeborne_reveries/carvers_eye",
         'niya': "grove_invigoration",
         'dreamweaver': "field_of_blossoms",
         'korayn': "wild_hunt_tactics",
@@ -66,15 +73,28 @@ $(function() {
         'draven': ""
     }
 
+    var soulbinds_m = {
+        'pelagos': "combat_meditation/better_together/newfound_resolve",
+        'kleia': "spear_of_the_archon/light_the_path",
+        'mikanikos': "brons_call_to_action/soulglow_spectrometer/effusive_anima_accelerator",
+        'marileth': "kevins_oozeling",
+        'emeni': "lead_by_example/pustule_eruption",
+        'heirmir': "forgeborne_reveries/carvers_eye/mnemonic_equipment",
+        'niya': "grove_invigoration/bonded_hearts",
+        'dreamweaver': "field_of_blossoms/dream_delver",
+        'korayn': "wild_hunt_tactics/wild_hunt_strategem",
+        'nadjia': "thrill_seeker/fatal_flaw",
+        'theotar': "soothing_shade/party_favors",
+        'draven': "battlefield_presence"
+    }
+
     var jobmap = {
         'combo_1.json': 0,
-        'combo_2.json': 0,
-        'combo_3.json': 0,
-        'combo_4.json': 0,
-        'combo_5.json': 0,
-        'combo_1m.json': 1,
-        'combo_s.json': 1,
-        'combo_d.json': 1,
+        'combo_2.json': 1,
+        'combo_3.json': 2,
+        'combo_4.json': 3,
+        'combo_5.json': 4,
+        'combo_d.json': 5,
         'combo_ptr_1.json': 0,
         'combo_ptr_2.json': 0,
         'combo_ptr_3.json': 0,
@@ -88,9 +108,20 @@ $(function() {
     function isPtr() {
         return $("#fightstyle").val().includes("combo_ptr");
     }
+    function isH() {
+        return $("#fightstyle").val().includes("combo_h");
+    }
 
     function toCap(s) { return s.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase()))); }
     function stripHTML(s) { return s.replace(/<[^>]*>?/gm, ''); }
+    function getLegendary(leg, cov) {
+        if (leg == "covenant") { return stripHTML(whLinks[cov]); }
+        return stripHTML(whLinks[leg]);
+    }
+    function getLegendaryString(leg, cov) {
+        if (leg == "covenant") { return legendaries[cov]; }
+        return legendaries[leg];
+    }
 
     function getRecord(filters, pivotData) {
         let buf = [];
@@ -101,8 +132,8 @@ $(function() {
 
     var defaultOptions = {
         renderers: rend,
-        hiddenFromDragDrop: ["dps", "cov", "soul", "cond1", "cond2", "leg", "tal"],
-        hiddenFromAggregators: ["cov", "soul", "cond1", "cond2", "leg", "tal"],
+        hiddenFromDragDrop: ["dps", "cov", "soul", "cond1", "cond2", "cond3", "leg", "tal"],
+        hiddenFromAggregators: ["cov", "soul", "cond1", "cond2", "cond3", "leg", "tal"],
         aggregators: {
             "DPS": function() { return $.pivotUtilities.aggregatorTemplates.max()(["dps"]) }
         },
@@ -128,7 +159,8 @@ $(function() {
                         str += "<tr><td class=\"tip-right\">Talents:</td><td>" + r.Talents + "</td></tr>";
                         str += "<tr><td class=\"tip-right\">Conduit1:</td><td>" + r.Conduit1 + "</td></tr>";
                         str += "<tr><td class=\"tip-right\">Conduit2:</td><td>" + r.Conduit2 + "</td></tr>";
-                        str += "<tr><td class=\"tip-right\">Legendary:</td><td>" + stripHTML(r.Legendary) + "</td></tr>";
+                        str += "<tr><td class=\"tip-right\">Conduit3:</td><td>" + r.Conduit3 + "</td></tr>";
+                        str += "<tr><td class=\"tip-right\">Legendary:</td><td>" + getLegendary(r.leg, r.cov) + "</td></tr>";
                         str += "<tr class=\"tip-dps\"><td class=\"tip-right\">DPS:</td><td>" + r.dps.toFixed(2) + "</td></tr>";
                         str += "</table>"
                         $(".ui-tooltip-content").html(str);
@@ -138,22 +170,26 @@ $(function() {
                     let $tar = $(e.target);
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
-                        let prof = isPtr() ? "sandbear_ptr.txt" : "sandbear.txt";
+                        let r = getRecord(filters, pivotData);
+                        let prof = isPtr() ? "sandbear_ptr.txt" : isH() ? "sandbear_h.txt" : "sandbear.txt";
                         $.get(prof, (d) => {
-                            let r = getRecord(filters, pivotData);
-                            let bonus = isPtr() ? "1532" : "1532";
+                            let leg_bonus = isPtr() ? "1546" : isH() ? "1546": "1559";
                             let buf = [];
 
                             buf.push(d);
                             buf.push("covenant=" + r.cov);
                             buf.push("talents=" + r.tal);
-                            buf.push(legendaries[r.leg] + bonus);
+                            buf.push(getLegendaryString(r.leg, r.cov) + leg_bonus);
 
                             let cond = [];
-                            if (soulbinds[r.soul] !== "") { cond.push(soulbinds[r.soul]) };
+                            if (soulbinds[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
                             if (r.cond1 !== "none") { cond.push(r.cond1); }
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
+                            if (r.cond3 !== "none") { cond.push(r.cond3); }
                             buf.push("soulbind=" + cond.join("/"));
+                            buf.push("report_details=1");
+                            buf.push("buff_uptime_timeline=1");
+                            buf.push("buff_stack_uptime_timeline=1");
 
                             el.value = buf.join("\n");
                             document.body.appendChild(el);
@@ -202,11 +238,20 @@ $(function() {
                 if (this_run !== undefined && this_run["status"] === "in_progress") {
                     const jobs = await fetch(this_run["jobs_url"]);
                     const j_json = await jobs.json();
-                    let this_job = j_json["jobs"][jobmap[file]];
+                    let n_job = jobmap[file];
+                    let this_job = j_json["jobs"][n_job];
 
                     if (this_job !== undefined && this_job["status"] === "in_progress") {
                         $("#update").html("<span id=\"inprogress\"><b>Currently Running Sims...</b></span>");
                         return;
+                    }
+
+                    for (let i = 0; i < n_job; i++) {
+                        let i_job = j_json["jobs"][i];
+                        if (i_job !== undefined && i_job["status"] === "in_progress") {
+                            $("#update").html("<span id=\"inprogress\"><b>In Queue for Sims...</b></span>");
+                            return;
+                        }
                     }
                 }
 
@@ -226,6 +271,10 @@ $(function() {
             'Soulbind':  r => { return toCap(r.soul); },
             'Conduit1':  r => { return toCap(r.cond1.replaceAll('_', ' ')); },
             'Conduit2':  r => { return toCap(r.cond2.replaceAll('_', ' ')); },
+            'Conduit3': r => {
+                if (r.cond3) { return toCap(r.cond3.replaceAll('_', ' ')); }
+                else { return 0; }
+            },
             'Talents':   r => {
                 let str = [];
                 str.push(getT15(r));
@@ -315,7 +364,7 @@ $(function() {
     });
 });
 (async () => {
-    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/sims/bear/');
+    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/sims/cat/');
     const c_json = await content.json();
     let htmlString = '<ul>';
     for (let file of c_json) {

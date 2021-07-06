@@ -13,7 +13,7 @@ chest="witherheart_studded_breastplate,id=186334,ilevel=259,gem_id=187318,enchan
 wrist="bindings_of_the_subjugated,id=186362,ilevel=252,gem_id=173127,enchant_id=6222"
 hands="loyal_kvaldirs_handwraps,id=186295,ilevel=252,gem_id=187315,enchant_id=6205"
 waist="windrunners_baldric,id=186332,ilevel=259,gem_id=173127"
-legs="scoundrels_harrowed_leggings,id=186331,ilevel=259"
+legs="elite_aranakk_breeches,id=186331,ilevel=259"
 feet="trenchant_warmonger_treads,id=186337,ilevel=252,gem_id=187312,enchant_id=6211"
 finger1="tarnished_insignia_of_quelthalas,id=186377,ilevel=259,gem_id=173127,enchant_id=6164"
 finger2="oscillating_ouroboros,id=186376,ilevel=252,gem_id=173127,enchant_id=6164"

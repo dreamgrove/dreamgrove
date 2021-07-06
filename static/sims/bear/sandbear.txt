@@ -5,21 +5,21 @@ spec=guardian
 
 talents=0000000
 
-head=sadists_sinister_mask,id=182980,ilevel=233,gems=16vers
-neck=charm_of_eternal_winter,id=183040,ilevel=226,gems=16vers
-shoulders=wicked_flankers_gorget,id=183029,ilevel=233
-back=crest_of_the_legionnaire_general,id=183032,ilevel=233
-chest=miasmalacquered_jerkin,id=183009,ilevel=226,enchant=eternal_stats
-wrists=precisely_calibrated_chronometer,id=183019,ilevel=226,gems=16vers
-hands=bleakwing_assassins_grips,id=183007,ilevel=226
-waist=heedless_pugilists_harness,id=183005,ilevel=226,gems=16vers
-legs=volatile_shadestitch_legguards,id=183024,ilevel=226
-feet=enchanted_toetappers,id=183030,ilevel=226,enchant=eternal_agility
-finger1=most_regal_signet_of_sire_denathrius,id=183036,ilevel=233,gems=16vers,enchant=tenet_of_versatility
-finger2=hyperlight_band,id=183038,ilevel=226,gems=16vers,enchant=tenet_of_versatility
-trinket1=dreadfire_vessel,id=184030,ilevel=233,enchant=shadowcore_oil
-trinket2=stone_legion_heraldry,id=184027,ilevel=233
-main_hand=rod_of_the_stone_sentinels,id=182393,ilevel=233,enchant=celestial_guidance
+head=cowl_of_haunting_precognition,id=186330,ilevel=252,gem_id=187312/173129,enchant=60runspeed
+neck=interplanar_keystone,id=186379,ilevel=259,gem_id=173129
+shoulders=spaulders_of_the_crooked_confidant,id=186336,ilevel=259,gem_id=187313
+back=selfreplicating_tissue,id=186374,ilevel=252,enchant_id=6203
+chest=witherheart_studded_breastplate,id=186334,ilevel=259,gem_id=187314,enchant_id=6230
+wrists=clasps_of_the_unfortunate_troubadour,id=186297,ilevel=252,gem_id=173129,enchant_id=6222
+hands=loyal_kvaldirs_handwraps,id=186295,ilevel=252,gem_id=187315,enchant_id=6205
+waist=windrunners_baldric,id=186332,ilevel=259,gem_id=173129
+legs=elite_aranakk_breeches,id=186331,ilevel=259
+feet=unstable_energizer_boots,id=186363,ilevel=252,gem_id=187318,enchant_id=6211
+finger1=tarnished_insignia_of_quelthalas,id=186377,ilevel=259,gem_id=173129,enchant_id=6164
+finger2=oscillating_ouroboros,id=186376,ilevel=252,gem_id=173129,enchant_id=6164
+trinket1=phial_of_putrefaction,id=178771,ilevel=252
+trinket2=relic_of_the_frozen_wastes,id=186437,ilevel=259
+main_hand=jotungeirr_destinys_call,id=186404,ilevel=252,enchant_id=6228
 
 chart_show_relative_difference=1
 report_details=0
