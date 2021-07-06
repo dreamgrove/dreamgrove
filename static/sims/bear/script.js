@@ -96,13 +96,11 @@ $(function() {
         'combo_5.json': 4,
         'combo_d.json': 5,
         'combo_ptr_1.json': 0,
-        'combo_ptr_2.json': 0,
-        'combo_ptr_3.json': 0,
-        'combo_ptr_4.json': 0,
-        'combo_ptr_5.json': 0,
-        'combo_ptr_1m.json': 1,
-        'combo_ptr_s.json': 1,
-        'combo_ptr_d.json': 1
+        'combo_ptr_2.json': 1,
+        'combo_ptr_3.json': 2,
+        'combo_ptr_4.json': 3,
+        'combo_ptr_5.json': 4,
+        'combo_ptr_d.json': 5
     }
 
     function isPtr() {
