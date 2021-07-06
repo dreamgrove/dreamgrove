@@ -25,9 +25,9 @@ def is_M():
 
 # PTR is used for catweave atm
 def is_PTR():
-    return args.raid == 'PTR'
+    return args.raid == 'ptr'
 
-profile = dungeon = ""
+profile = ""
 
 if is_PTR():
     profile_txt = 'sandbear_ptr.txt'
@@ -38,8 +38,6 @@ else:
 
 with open(profile_txt, 'r') as fp:
     profile = fp.read()
-with open('dungeon.txt', 'r') as fp:
-    dungeon = fp.read()
 
 talents = [
     ['BRA', 'BF ', 'FUR'],
@@ -158,7 +156,7 @@ covenants = {
 }
 
 if args.dungeon:
-    target_str = dungeon
+    target_str = 'fight_style=DungeonSlice'
 else:
     target_str = 'desired_targets=' + targets
 

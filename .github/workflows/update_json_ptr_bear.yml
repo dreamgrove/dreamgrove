@@ -1,4 +1,4 @@
-name: Update JSON PTR (Bear)
+name: Update JSON (Bear Catweave)
 
 on:
   workflow_dispatch:
@@ -8,8 +8,8 @@ defaults:
     working-directory: static/sims/bear
 
 jobs:
-  update_json_ptr:
-    name: Update JSON PTR
+  update_json:
+    name: Update JSON 1T
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,17 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: one target
-        run: python generate_combo_ptr.py -t 1 ${{ secrets.RAIDBOTSAPI }}
-      - name: two targets
-        run: python generate_combo_ptr.py -t 2 ${{ secrets.RAIDBOTSAPI }}
-      - name: three targets
-        run: python generate_combo_ptr.py -t 3 ${{ secrets.RAIDBOTSAPI }}
-      - name: four targets
-        run: python generate_combo_ptr.py -t 4 ${{ secrets.RAIDBOTSAPI }}
-      - name: five targets
-        run: python generate_combo_ptr.py -t 5 ${{ secrets.RAIDBOTSAPI }}
-      #- name: dungeon
-      #  run: python generate_combo_h.py -d -m ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py -t 1 -r ptr ${{ secrets.RAIDBOTSAPI }}
       - name: commit
         run: |
           git config user.name dreamgrove
@@ -40,7 +30,172 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON PTR Bear"
+            git commit -m "update JSON Bear Catweave 1T"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_2:
+    needs: [ update_json ]
+    name: Update JSON 2T
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: one target
+        run: python generate_combo.py -t 2 -r ptr ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Bear Catweave 2T"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_3:
+    needs: [ update_json_2 ]
+    name: Update JSON 3T
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: one target
+        run: python generate_combo.py -t 3 -r ptr ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Bear Catweave 3T"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_4:
+    needs: [ update_json_3 ]
+    name: Update JSON 4T
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: one target
+        run: python generate_combo.py -t 4 -r ptr ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Bear Catweave 4T"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_5:
+    needs: [ update_json_4 ]
+    name: Update JSON 5T
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: one target
+        run: python generate_combo.py -t 5 -r ptr ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Bear Catweave 5T"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_d:
+    needs: [ update_json_5 ]
+    name: Update JSON 5T
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: one target
+        run: python generate_combo.py -d -r ptr ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Bear Catweave Dungeon
             git push
           fi
       - uses: actions/upload-artifact@v2

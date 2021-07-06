@@ -39,10 +39,10 @@ $(function() {
         'luffa': "<a href=https://shadowlands.wowhead.com/spell=339060>Luffa</a>",
         'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
         'legacy': "<a href=https://shadowlands.wowhead.com/spell=339062>Legacy</a>",
-        'night_fae': "<https://ptr.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
-        'venthyr': "<a href=https://ptr.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
-        'necrolord': "<a href=https://ptr.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
-        'kyrian': "<a href=https://ptr.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
+        'night_fae': "<https://shadowlands.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
+        'venthyr': "<a href=https://shadowlands.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
+        'necrolord': "<a href=https://shadowlands.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
+        'kyrian': "<a href=https://shadowlands.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
         'covenant': "<a href=https://www.wowhead.com/guides/covenant-specific-legendaries-in-shadowlands-9-1>Covenant</a>",
 }
 
@@ -171,7 +171,7 @@ $(function() {
                         let r = getRecord(filters, pivotData);
                         let prof = isPtr() ? "sandbear_ptr.txt" : isH() ? "sandbear_h.txt" : "sandbear.txt";
                         $.get(prof, (d) => {
-                            let leg_bonus = isPtr() ? "1546" : isH() ? "1546": "1559";
+                            let leg_bonus = isPtr() ? "1559" : isH() ? "1546": "1559";
                             let buf = [];
 
                             buf.push(d);
