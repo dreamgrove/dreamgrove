@@ -95,6 +95,7 @@ $(function() {
         'combo_4.json': 3,
         'combo_5.json': 4,
         'combo_d.json': 5,
+        'combo_c.json': 6,
         'combo_ptr_1.json': 0,
         'combo_ptr_2.json': 1,
         'combo_ptr_3.json': 2,

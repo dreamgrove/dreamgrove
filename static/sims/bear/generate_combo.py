@@ -13,6 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('apikey', type=str, help='raidbots apikey')
 parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
 parser.add_argument('-d', '--dungeon', default=False, action='store_true')
+parser.add_argument('-c', '--catweave', default=False, action='store_true')
 parser.add_argument('-r', '--raid', type=str, nargs='?', default='mythic', const='mythic', choices=['mythic', 'heroic', 'ptr'])
 args = parser.parse_args()
 targets = str(max(1, args.targets))
@@ -23,21 +24,27 @@ def is_H():
 def is_M():
     return args.raid == 'mythic'
 
-# PTR is used for catweave atm
 def is_PTR():
     return args.raid == 'ptr'
 
-profile = ""
+profile_base = ven_profile = apl = ""
 
 if is_PTR():
     profile_txt = 'sandbear_ptr.txt'
+    ven_profile_txt = 'sandbear_ptr_ven.txt'
 elif is_H():
     profile_txt = 'sandbear_h.txt'
+    ven_profile_txt = 'sandbear_h_ven.txt'
 else:
-    profile_txt = 'sandbear.txt'
+    profile_txt = 'sandbear_base.txt'
+    ven_profile_txt = 'sandbear_ven.txt'
 
 with open(profile_txt, 'r') as fp:
-    profile = fp.read()
+    profile_base = fp.read()
+with open(ven_profile_txt, 'r') as fp:
+    profile_ven = fp.read()
+with open('guardian.txt', 'r') as fp:
+    apl = fp.read()
 
 talents = [
     ['BRA', 'BF ', 'FUR'],
@@ -177,6 +184,13 @@ for leg, leg_str in legendaries.items():
 
         cov_str = 'covenant=' + cov
 
+        profile = profile_base
+        if cov == 'venthyr':
+            profile = profile_ven
+
+        if args.catweave:
+            profile += '\ndruid.catweave_bear=1'
+
         for soul, traits in soulbinds.items():
             sets_list = []
             name_str = 'name=' + '-'.join([cov, leg, soul])
@@ -209,7 +223,7 @@ for leg, leg_str in legendaries.items():
                     for t40, talent40 in enumerate(talents[1], 1):
                         for t45, talent45 in enumerate(talents[2], 1):
                             for t50, talent50 in enumerate(talents[3], 1):
-                                talent = str(t15) + ('023' if is_PTR() else '013') + str(t40) + str(t45) + str(t50)
+                                talent = str(t15) + ('023' if args.catweave else '013') + str(t40) + str(t45) + str(t50)
                                 talent_str = 'talents=' + talent
 
                                 profile_name = '\"' + '-'.join([cond1, cond2, cond3, talent]) +'\"'
@@ -218,7 +232,7 @@ for leg, leg_str in legendaries.items():
 
             sets_str = '\n'.join(sets_list)
 
-            simc = '\n'.join([profile, leg_str, cov_str, name_str, target_str, sets_str])
+            simc = '\n'.join([profile, apl, leg_str, cov_str, name_str, target_str, sets_str])
 
             payload = {'type': 'advanced', 'apiKey': args.apikey, 'simcVersion': 'nightly','smartStages': stages, 'advancedInput': simc}
 
