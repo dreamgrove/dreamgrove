@@ -362,7 +362,7 @@ $(function() {
     });
 });
 (async () => {
-    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/sims/cat/');
+    const content = await fetch('https://api.github.com/repos/dreamgrove/dreamgrove/contents/static/sims/bear/');
     const c_json = await content.json();
     let htmlString = '<ul>';
     for (let file of c_json) {
