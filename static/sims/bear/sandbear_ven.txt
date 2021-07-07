@@ -12,7 +12,7 @@ back=selfreplicating_tissue,id=186374,ilevel=252,enchant_id=6203
 chest=witherheart_studded_breastplate,id=186334,bonus_id=4800/4786/1498,gem_id=187314,enchant_id=6230
 wrists=fatethreaded_bindings,id=186335,bonus_id=4800/4786/1498,gem_id=173129,enchant_id=6222
 hands=hangmans_knotbinders,id=186333,bonus_id=4800/4786/1498,gem_id=187315,enchant_id=6205
-waist=umbrahide_waistguard,id=172320,bonus_id=7474/6647/6650/6758/1559,gem_id=173129
+waist=windrunners_baldric,id=186332,ilevel=259,gem_id=173129
 legs=elite_aranakk_breeches,id=186331,ilevel=259
 feet=unstable_energizer_boots,id=186363,ilevel=252,gem_id=187318,enchant_id=6211
 finger1=tarnished_insignia_of_quelthalas,id=186377,ilevel=259,gem_id=173129,enchant_id=6164
