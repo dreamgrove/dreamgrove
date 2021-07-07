@@ -170,7 +170,7 @@ $(function() {
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
                         let r = getRecord(filters, pivotData);
-                        let prof = isPtr() ? "sandbear_ptr.txt" : isH() ? "sandbear_h.txt" : "sandbear.txt";
+                        let prof = r.cov == "venthyr" ? "sandbear_ven.txt" : "sandbear_base.txt"
                         $.get(prof, (d) => {
                             let leg_bonus = isPtr() ? "1559" : isH() ? "1546": "1559";
                             let buf = [];
