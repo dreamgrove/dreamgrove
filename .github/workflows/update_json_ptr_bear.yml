@@ -195,7 +195,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave Dungeon
+            git commit -m "update JSON Bear Catweave Dungeon"
             git push
           fi
       - uses: actions/upload-artifact@v2
