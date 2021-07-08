@@ -19,8 +19,8 @@ TBD
 
 ## Soulbinds:
 [Venthyr Theotar](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW75YCFTUgACU1ygASBTWHACUy4gAiBTJJABUyPwA)
-[Venthyr Nadjia](https://ptr.wowhead.com/soulbind-calc/venthyr/nadjia-the-mistblade/druid/AwCWr5YDBTUgABU1ywAlNcoAEgUy4gAlNYcAIRUySQA)
-[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
+<br>[Venthyr Nadjia](https://ptr.wowhead.com/soulbind-calc/venthyr/nadjia-the-mistblade/druid/AwCWr5YDBTUgABU1ywAlNcoAEgUy4gAlNYcAIRUySQA)
+<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
 
 ## Talents:
 
