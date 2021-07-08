@@ -179,7 +179,7 @@ $(function() {
                             buf.push("covenant=" + r.cov);
                             buf.push("talents=" + r.tal);
                             buf.push(getLegendaryString(r.leg, r.cov) + leg_bonus);
-                            if ($("#fightstyle").val().includes("combo_c")) { buf.push("druid.catweave=1") }
+                            if ($("#fightstyle").val().includes("combo_c")) { buf.push("druid.catweave_bear=1") }
 
                             let cond = [];
                             if (soulbinds[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
