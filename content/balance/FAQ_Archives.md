@@ -7,9 +7,6 @@ sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. About](#about)
  [2. Information Dump](#info-dump)
-  <br>[
-  
- 
 ---
 
 
