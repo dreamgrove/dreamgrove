@@ -1,3 +1,4 @@
+---
 date: '2021-06-25'
 authors: ["ChickenWingz, Jundarer"]
 published: false
@@ -7,9 +8,6 @@ sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. About](#about)
  [2. Information Dump](#info-dump)
-  <br>[
-  
- 
 ---
 
 
