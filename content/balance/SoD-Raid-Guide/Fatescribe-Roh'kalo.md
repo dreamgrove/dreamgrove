@@ -11,7 +11,7 @@ patch: "9.1"
 
 ## Notes For the Boss:
 - This is one of the bosses where you should focus on doing the mechanics more than doing damage if you are able to control the runes. 
-- A Single Target boss with multiple adds in the intermission. Stellar Drift and Fury of Elune are highly recommended here. Line your 2nd and 4th Fury of Elune with the 2nd add splits in the intermissions. You would rather wait with it and only use two usages instead of three every Incarn cycle, especially if Venthyr.
+- A Single Target boss with multiple adds in the intermission. Stellar Drift and Fury of Elune are highly recommended here. Line your 2nd and 4th Fury of Elune with the 2nd add splits in the intermissions. It's preferred to hold FoE for when you need it (using only 2 FoE instead of 3 every Incarn cycle), especially if Venthyr.
 - Use Door of Shadows for orb drops. Try to make space for others if needed. If you are blocked off by someone else you can use 2 Doors and hop behind them if you do it fast enough.
 - Wild charge and Stampeding roar aggressively if beams spawn on you and/or your group.
 
