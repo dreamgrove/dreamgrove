@@ -19,7 +19,7 @@ TBD
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW75YCFTUgACU1ygASBTWHACUy4gAiBTJJABUyPwA)
-[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
+<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
 
 ## Talents:
 
