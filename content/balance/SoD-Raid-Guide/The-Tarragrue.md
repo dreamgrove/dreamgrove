@@ -10,16 +10,21 @@ patch: "9.1"
 
 
 ## Notes For the Boss:
-test1
+- This fight is not really relevant and very easy to deal with. Pick up powers that look cool and have fun with it. If nothing fun is available, pick damaging ones or mastery/haste stat sticks.
+- Door of Shadows is usable whenever you get unlucky with the safe spot spawns and use wild charge aggressively.
 
 ## Mythic only notes:
-test2
+TBD
 
 ## Soulbinds:
-test3
+[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW75YCFTUgACU1ygASBTWHACUy4gAiBTJJABUyPwA)
+[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
 
 ## Talents:
-{{< talents spec="balance" src="live" recommend="321,113,223,333,232,331,231" >}}
+
+You can run a full ST setup changing between FoE and Moons depending on covenant. Feral Affinity is playable as there is not much damage taken and there are some big movement spikes in the fight.
+
+{{< talents spec="balance" src="live" recommend="311,113,333,223,113,113,133" >}}
 
 
 
