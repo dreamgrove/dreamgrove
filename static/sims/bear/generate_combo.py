@@ -298,6 +298,8 @@ elif is_PTR():
 
 if args.dungeon:
     json_name += 'd'
+elif args.catweave:
+    json_name += 'c'
 else:
     json_name += targets
 
