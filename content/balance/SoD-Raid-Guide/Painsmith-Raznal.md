@@ -11,7 +11,7 @@ patch: "9.1"
 
 ## Notes For the Boss:
 - **Currently there were no adds spawning in the intermission which means the fight was completely single target at least in heroic. (There were adds in beta)**
-- You can use Door of Shadows/Soulshape in order to skip the Skiped Balls. This is very useful if you are chained.
+- You can use Door of Shadows/Soulshape in order to skip the Spiked Balls. This is very useful if you are chained.
 - You can Wild Charge off the platform and back onto it in order to dodge the Spiked Balls. Disclaimer: I am not to blame if this backfires and you die because of this, it is very hard to pull off every time and should only be used if necessary.
 - Front of the Pack is a really solid conduit choice for the intermission.
 
