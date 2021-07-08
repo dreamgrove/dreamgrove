@@ -58,7 +58,7 @@ sidebarContents:  |
 * Kyrian gives you an ability that can give you either strong defensive capabilities/utility or some offensive potential,and, unlike Night Fae you can control which one you get. It can have a few downside (relying on other people, the {{< spell 327022 "dps tether" >}} acting as a 15% {{< spell 190456 "Ignore Pain" >}} and thus can end up wasting a bit of the damage). But unlike necrolord its dps is constant and does not drop off either in ST or AOE. Furthermore Pelagos is still a strong soulbind. 
 Important to note that if you can avoid it you should never use the solo bond of the ability as it is inferior to any other benefits.
 
-* Venthyr gives you {{< spell 323546 "Ravenous Frenzy" >}}, which if paired with {{< spell 102558 "Incarn" >}} probably gives you one of the strongest 3 minute burst in the game, has virtually no downside (you have the GCD+2sec before getting stunned while being idle and bears are GCD locked). Venthyr also has access to strong soulbind for ST, where it will struggle a bit more than other covenant.
+* Venthyr gives you {{< spell 323546 "Ravenous Frenzy" >}}, which if paired with {{< spell 102558 "Incarn" >}}, it is one of the strongest 3 minute burst in the game, and has virtually no downside (you have the GCD + 2sec before getting stunned while being idle and bears are GCD locked). Venthyr also has access to strong soulbinds for ST, where it will likely struggle more with other covenants.
 
 TLDR; Pick the one you prefer it is rather very close and is unlikely to make or break what you are doing 
 
@@ -125,7 +125,7 @@ For more information please visit the [Wowhead](https://www.wowhead.com/guardian
 
 ### In 9.0 legendary slot preference was based on stat allocation. However, in 9.1 with Domination Socket Slots, we suggest changing the following to new slots:
 
-{{< spell 339063 "Nature's Order Will" >}}: Remake on Bracers
+{{< spell 339063 "Natural Order's Will" >}}: Remake on Bracers
 
 {{< spell 338658 "Draught of Deep Focus" >}}: Remake on Neck
 
@@ -282,7 +282,7 @@ The current Basic set up is using Balance affinity and {{< spell 319454 "Heart o
 
 <div id="earthwarden-survival-fittest">
   
-### [Earthwardem Vs. Survival of the Fittest](#earthwarden-survival-fittest)
+### [Earthwarden Vs. Survival of the Fittest](#earthwarden-survival-fittest)
   
   </div>
 
