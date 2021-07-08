@@ -25,5 +25,5 @@ TBD
 
 You can run either Moons or Foe as Night Fae, but i would recommend Moons as Foe can bug on the chains sometimes and its not really worth the effort trying to line up some wonky 2 target cleave for a bit more damage.
 
-{{< talents spec="balance" src="live" recommend="311,113,333,223,113,312,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,133,223,113,312,133" >}}
 
