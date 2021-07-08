@@ -22,7 +22,8 @@ TBD
 
 ## Talents:
 
-You can run a full ST setup changing between FoE and Moons depending on covenant. Feral Affinity is playable as there is not much damage taken and there are some big movement spikes in the fight.
+- You can run a full ST setup changing between FoE and Moons depending on covenant. 
+- Feral Affinity is playable as there is not much damage taken and there are some big movement spikes in the fight.
 
 {{< talents spec="balance" src="live" recommend="311,113,333,223,113,113,133" >}}
 
