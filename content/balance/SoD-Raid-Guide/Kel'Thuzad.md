@@ -22,7 +22,7 @@ WIP
 
 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,321,131" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,213,321,131" >}}
 
 
 
