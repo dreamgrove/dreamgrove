@@ -25,5 +25,5 @@ TBD
 
 You can run a full ST setup changing between FoE and Moons depending on covenant. I personally did not see the point in Stellar Drift as you could always Wild Charge one of the knockbacks and if Night Fae Soulshape the other, so positioning (at least on HC) was irrelevant.
 
-{{< talents spec="balance" src="live" recommend="311,113,333,223,113,113,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,133,223,113,312,132" >}}
 
