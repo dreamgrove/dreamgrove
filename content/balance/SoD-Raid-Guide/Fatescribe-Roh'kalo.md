@@ -28,7 +28,7 @@ TBD
 - Tiger's Dash might prove incredibly useful for orb drops far from raid and for traveling far if runes spawn on the other side of the room.
 
 
-{{< talents spec="balance" src="live" recommend="311,213,132,223,113,113,133" >}}
+{{< talents spec="balance" src="live" recommend="311,213,132,223,311,113,132" >}}
 
 
 
