@@ -79,7 +79,7 @@ With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Fore
 **Any situation:**
 - Keep up {{< spell 93402 "Sunfire" >}} as long as your targets will live for another ~10 seconds (the amount of time is reduced per target hit).
 - Keep up {{< spell 191034 "Starfall" >}} at all times or use on cooldown with{{< spell 202354 "Stellar Drift" >}} .
-- Enter Solar Eclipse if that is your next Eclipse.
+- Enter Solar Eclipse if you can't enter Lunar Eclipse.
 - Before Lunar Eclipse cast {{< spell 8921 "Moonfire" >}} if:
    - All targets can be hit by {{< spell 194153 "Starfire" >}}.
    - There are 5 or less targets (10 or less with {{< spell 281847 "Twin Moons" >}}).
