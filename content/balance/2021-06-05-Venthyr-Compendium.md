@@ -21,9 +21,8 @@ sidebarContents:  |
 </div>
 
 This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simply made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to switch to Venthyr.
-As we are still in the PTR-cycle it is very possible that the next PTR patch will either make Venthyr far worse or make another Covenant far better.
 
-All information in this guide was tested and verfied using simulations and the (current) APL can be found here as long as Venthyr is only relevant for PTR: https://github.com/balance-simc/Balance-SimC/blob/master/balance_ptr.txt.
+All information in this guide was tested and verfied using simulations found here: https://balance-simc.github.io/Balance-SimC/
 
 Everything in this guides assumes you are playing with the new Venthyr legendary Sinful Hysteria as this is the reason that Venthyr has gotten any attention at all.
 
