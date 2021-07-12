@@ -16,6 +16,7 @@ patch: "9.1"
 - Prioritise Starfall over everything else.
 - Sunfire the small adds if they are stacked no matter how fast they die.
 - Place yourself around the middle of the room if possible in order to cleave the whole room with Starfall.
+- CD Usage: Pull / another cd inside a main phase / p3 with lust
 
 ## Mythic only notes:
 TBD
