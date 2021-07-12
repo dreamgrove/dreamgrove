@@ -173,16 +173,15 @@ else:
     stages = [1.0, 0.3, 0.1]
 
 buffer = []
-for leg, leg_str in legendaries.items():
-    # split for covenant legis
-    if leg == 'covenant':
-        leg_str = leg_str[cov]
+for cov, soulbinds in covenants.items():
+    cov_str = 'covenant=' + cov
 
-    leg_str += legendaries_suffix()
+    for leg, leg_str in legendaries.items():
+        # split for covenant legis
+        if leg == 'covenant':
+            leg_str = leg_str[cov]
 
-    for cov, soulbinds in covenants.items():
-
-        cov_str = 'covenant=' + cov
+        leg_str += legendaries_suffix()
 
         profile = profile_base
         if cov == 'venthyr':
