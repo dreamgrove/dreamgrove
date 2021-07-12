@@ -10,16 +10,23 @@ patch: "9.1"
 
 
 ## Notes For the Boss:
-WIP
+- Barkskin the pillar breaks.
+- Look out for fulldotting adds that are not near the boss.
+- Look out for Solar Beams on adds far from group.
+- Prioritise Starfall over everything else.
+- Sunfire the small adds if they are stacked no matter how fast they die.
+- Place yourself around the middle of the room if possible in order to cleave the whole room with Starfall.
 
 ## Mythic only notes:
 TBD
 
 ## Soulbinds:
 WIP
+theotar
+<br>korayn
 
 ## Talents:
-
+- I would personally recommend Stellar Drift for HEROIC, as the adds die way too fast for Twin Moons to get any value.
 
 
 {{< talents spec="balance" src="live" recommend="311,113,132,223,213,321,131" >}}
