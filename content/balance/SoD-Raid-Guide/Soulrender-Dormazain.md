@@ -10,9 +10,10 @@ patch: "9.1"
 
 
 ## Notes For the Boss:
-- You can use Wild Charge and Soulshape/Door of Shadows for dance and for chain breaks.
+- You can use Wild Charge and redots/starsurge for dance and Soulshape/Door of Shadows for chain breaks. 
+- Disclaimer: If you try to door of shadows in dance phase it has a very high chance to knock you back and thus cancel your cast and kill you if you do not do it instantly.
 - Use Barkskin on chain breaks.
-- Full dot the adds if they do not die too quickly.
+- Fully dot the adds if they do not die too quickly, if they do then only sunfire them.
 
 ## Mythic only notes:
 TBD
@@ -26,4 +27,4 @@ TBD
 This Fight is another ST spec with some Stellar Drift sprinkled in, being really good for the add phases and dance.
 FoE can also be taken as Night Fae for the adds. You can hold your fist CDs for a bit to line it up with the adds. (Convoke after they are full dotted)
 
-{{< talents spec="balance" src="live" recommend="311,113,333,223,113,113,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,113,313,133" >}}
