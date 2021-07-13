@@ -54,6 +54,7 @@ On single target about 65% of your damage will be during CA/Inc+{{< spell 323546
 
 **Single target priority list INSIDE cooldowns:**
 Before the 5s extension buff:
+- Use Berserking at the start without Bloodlust or at 6s remaining without Bloodlust.
 - Use your trinket so that it will be for the rest of your cooldowns. (For example at 13s remaining for IQD or 17s in Bloodlust)
 - Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining
 - Cast {{< spell 211545 "Fury of Elune" >}} if {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
@@ -64,6 +65,7 @@ Before the 5s extension buff:
 **During the 5s Ravenous Frenzy extension buff:**
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
 - Cast {{< spell 190984 "Wrath" >}} to fill
+You can use this WeakAura https://wago.io/KnnYdtGRN to show the exact timings of abilities.
 
 With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Forest" >}} it is only a 1% dps loss to use Starfall on CD including during Frenzy so if there is any movement at all use Starfall when you happen to be doing single target with it talented. With {{< spell 102560 "Incarnation" >}} instead you should be using Starsurges during Frenzy as it is a much bigger loss (1% loss still applies for outside Frenzy). DO NOT just use {{< spell 202354 "Stellar Drift" >}} for a pure single target fight as it is still a ~4% dps loss doing this compared to {{< spell 202347 "Stellar Flare " >}}.
 
