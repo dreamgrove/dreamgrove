@@ -60,12 +60,13 @@ Before the 5s extension buff:
 - Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
 - Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 190984 "Wrath" >}} to fill
+- Cast {{< spell 190984 "Wrath" >}} to fill until 150% at which point you should fill with {{< spell 194153 "Starfire" >}}.
 
 **During the 5s Ravenous Frenzy extension buff:**
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
 - Cast {{< spell 190984 "Wrath" >}} to fill
-You can use this WeakAura https://wago.io/KnnYdtGRN to show the exact timings of abilities.
+- 
+You can use the [Venthyr timings WeakAura](https://wago.io/KnnYdtGRN) to show the exact timings of abilities.
 
 With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Forest" >}} it is only a 1% dps loss to use Starfall on CD including during Frenzy so if there is any movement at all use Starfall when you happen to be doing single target with it talented. With {{< spell 102560 "Incarnation" >}} instead you should be using Starsurges during Frenzy as it is a much bigger loss (1% loss still applies for outside Frenzy). DO NOT just use {{< spell 202354 "Stellar Drift" >}} for a pure single target fight as it is still a ~4% dps loss doing this compared to {{< spell 202347 "Stellar Flare " >}}.
 
@@ -108,7 +109,7 @@ With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Fore
 - Refresh {{< spell 93402 "Sunfire" >}} during pandemic.
 - Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}.
 - Refresh {{< spell 8921 "Moonfire" >}} on up to 6 (12 with {{< spell 281847 "Twin Moons" >}}) targets when they will live for another ~20 seconds.
-- https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
+- Use the [FrenyzFiller Weakaura](https://wago.io/mYVIsyQN8) to see which filler should be cast. The recommendations this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
 - If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
 
 
