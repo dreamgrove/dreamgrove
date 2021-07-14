@@ -54,10 +54,10 @@ On single target about 65% of your damage will be during CA/Inc+{{< spell 323546
 
 **Single target priority list INSIDE cooldowns:**
 Before the 5s extension buff:
-- Use Berserking at the start without Bloodlust or at 6s remaining without Bloodlust.
+- Use Berserking at the start of Frenzy without Bloodlust or at 6s of the initial buff remaining with Bloodlust.
 - Use your trinket so that it will be for the rest of your cooldowns. (For example at 13s remaining for IQD or 17s in Bloodlust)
 - Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining
-- Cast {{< spell 211545 "Fury of Elune" >}} if {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
+- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
 - Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 190984 "Wrath" >}} to fill
