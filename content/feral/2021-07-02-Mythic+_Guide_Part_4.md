@@ -47,7 +47,7 @@ Unfortunately Frenzyband has now been changed to no longer double-dip damage on 
 
 What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
 
-Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists.
+Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists, with Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
 
 ### What is new ...
 
@@ -60,9 +60,22 @@ Frenzyband is likely still good in the +damage taken scenarios for the burst, bu
 Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
 
 **Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
-Unfortunately (depending on how you look at it) this new legendary is a bit underwhelming, it turns Convoke, an arguably fun and big button to press, into a bit of a noodley button. From testing it seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 30-40% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty weak currently.
+With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
 
-The *one* potential saving grace of this legendary is the insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, which is about 50%, but that gain is not enough to knock the other M+ legendaries off of their top spots for the Night Faes out there.
+From testing Celestial, the results look as follows ...
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
+
+It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
+
+To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
+
+My advice for where to try out this legendary is ...
+
+- Spires of Ascension
+- Theater of Pain
+- De Other Side
+- Mists of Tirna Scithe
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
 
