@@ -35,7 +35,7 @@ Going from Night Fae Balance Druid to Venthyr Druid is a big gameplay change on 
 
 </div>
 
-Due to no longer using Balance of All Things there is no longer as compelling of a reason to {{< spell 78674 "Starsurge" >}}at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. {{< spell 78674 "Starsurge" >}}Empowerment exists but it is a very weak effect.
+Due to no longer using Balance of All Things there is no longer as compelling of a reason to {{< spell 78674 "Starsurge" >}} at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. {{< spell 78674 "Starsurge" >}} Empowerment exists but it is a very weak effect.
 
 On single target about 65% of your damage will be during CA/Inc+{{< spell 323546 "Ravenous Frenzy" >}} meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
 
@@ -65,7 +65,7 @@ Before the 5s extension buff:
 **During the 5s Ravenous Frenzy extension buff:**
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
 - Cast {{< spell 190984 "Wrath" >}} to fill
-- 
+
 You can use the [Venthyr timings WeakAura](https://wago.io/KnnYdtGRN) to show the exact timings of abilities.
 
 With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Forest" >}} it is only a 1% dps loss to use Starfall on CD including during Frenzy so if there is any movement at all use Starfall when you happen to be doing single target with it talented. With {{< spell 102560 "Incarnation" >}} instead you should be using Starsurges during Frenzy as it is a much bigger loss (1% loss still applies for outside Frenzy). DO NOT just use {{< spell 202354 "Stellar Drift" >}} for a pure single target fight as it is still a ~4% dps loss doing this compared to {{< spell 202347 "Stellar Flare " >}}.
