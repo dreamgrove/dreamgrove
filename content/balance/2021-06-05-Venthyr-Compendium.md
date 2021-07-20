@@ -121,7 +121,7 @@ This is a list of timings of ability/item usages during Ravenous Frenzy. All of 
 {{< item 179350 "Inscrutable Quantum Device" >}}:
 |                                   Condition                                  | Buff remaining |
 |:----------------------------------------------------------------------------:|:--------------:|
-| {{< item 184842 "Instructor's Divine Bell" >}} equipped and no Bloodlust     |       19s      |
+| {{< item 184842 "Instructor's Divine Bell" >}} equipped and no Bloodlust     |       20s      |
 | {{< item 184842 "Instructor's Divine Bell" >}} equipped and Bloodlust active |       17s      |
 |                               Bloodlust active                               |       15s      |
 |                         None of the above conditions                         |       12s      |
