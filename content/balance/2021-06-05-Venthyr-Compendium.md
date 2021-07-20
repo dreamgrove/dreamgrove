@@ -141,14 +141,7 @@ This is a list of timings of ability/item usages during Ravenous Frenzy. All of 
 |                                   Condition                                  | Buff remaining |
 |:----------------------------------------------------------------------------:|:--------------:|
 | Bloodlust active                                                             |       6s       |
-| Any other situation                                                          |   instantly    |
-  
-{{< spell 307096 "Potion of Spectral Intellect" >}}:      
-|                                   Condition                                  | Buff remaining |
-|:----------------------------------------------------------------------------:|:--------------:|
-| Bloodlust active                                                             |       15s      |
-| Any other situation                                                          |       17s      |
-  
+| Any other situation                                                          |   instantly    |  
   
 {{< spell 307096 "Potion of Spectral Intellect" >}}:      
 |                                   Condition                                  | Buff remaining |
