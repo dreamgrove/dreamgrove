@@ -10,6 +10,7 @@ sidebarContents:  |
   [Disclaimers](#disclaimers)
   <br>[Single target](#single-target)
   <br>[AoE](#aoe)
+  <br>[Timings](#timings)
   <br>[MinMax](#minmax)
   <br>[Gear](#gear)
 ---
@@ -112,6 +113,56 @@ With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Fore
 - Use the [FrenyzFiller Weakaura](https://wago.io/mYVIsyQN8) to see which filler should be cast. The recommendations this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
 - If the filler is {{< spell 190984 "Wrath" >}} or up to 5 targets use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
 
+<div id="timings">
+
+# [Timings:](#timings)
+This is a list of timings of ability/item usages during Ravenous Frenzy. All of these are included in the [Venthyr timings WeakAura](https://wago.io/KnnYdtGRN). The seconds listed here are how much time the Ravenous Frenzy buff without the extension should have left.
+  
+{{< item 179350 "Inscrutable Quantum Device" >}}:
+|                                   Condition                                  | Buff remaining |
+|:----------------------------------------------------------------------------:|:--------------:|
+| {{< item 184842 "Instructor's Divine Bell" >}} equipped and no Bloodlust     |       19s      |
+| {{< item 184842 "Instructor's Divine Bell" >}} equipped and Bloodlust active |       17s      |
+|                               Bloodlust active                               |       15s      |
+|                         None of the above conditions                         |       12s      |
+  
+{{< item 184842 "Instructor's Divine Bell" >}}:
+|                                   Condition                                  | Buff remaining |
+|:----------------------------------------------------------------------------:|:--------------:|
+| {{< item 179350 "Inscrutable Quantum Device" >}} equipped                    |right after IQD |
+| Any other situation                                                          |        4s      |
+
+{{< spell 211545 "Fury of Elune" >}}:
+|                                   Condition                                  | Buff remaining |
+|:----------------------------------------------------------------------------:|:--------------:|
+| Any situation                                                                |       4s       |
+
+{{< spell 26297 "Berserking" >}}:    
+|                                   Condition                                  | Buff remaining |
+|:----------------------------------------------------------------------------:|:--------------:|
+| Bloodlust active                                                             |       6s       |
+| Any other situation                                                          |   instantly    |
+  
+{{< spell 307096 "Potion of Spectral Intellect" >}}:      
+|                                   Condition                                  | Buff remaining |
+|:----------------------------------------------------------------------------:|:--------------:|
+| Bloodlust active                                                             |       15s      |
+| Any other situation                                                          |       17s      |
+  
+  
+{{< spell 307096 "Potion of Spectral Intellect" >}}:      
+|                                   Condition                                  | Buff remaining |
+|:----------------------------------------------------------------------------:|:--------------:|
+| Bloodlust active                                                             |       15s      |
+| Any other situation                                                          |       17s      |
+  
+{{< spell 194223 "Celestial Alignment" >}} (when using SotF in Dungeons):   
+At 10s + your {{< spell 340706 "Precise Alignment" >}} time value remaining. For example with a heroic {{< spell 340706 "Precise Alignment" >}} which adds 8.5s at 18.5s. 
+  
+{{< item 180117 "Empyreal Ordnance" >}}: 
+This heavily depends on distance to target. At 30m it would be 3s before using Ravenous Frenzy.
+
+</div>
 
 <div id="minmax">
 
