@@ -22,9 +22,8 @@ patch: "9.1"
 TBD
 
 ## Soulbinds:
-WIP
-theotar
-<br>korayn
+[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
+<br>[Korayn](https://ptr.wowhead.com/soulbind-calc/night-fae/korayn/druid/AwCWar4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
 
 ## Talents:
 - I would personally recommend Stellar Drift for HEROIC, as the adds die way too fast for Twin Moons to get any value.
