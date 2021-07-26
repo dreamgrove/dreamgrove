@@ -33,15 +33,15 @@ P3:
 TBD
 
 ## Soulbinds:
-[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW75YCFTUgACU1ygASBTWHACUy4gAiBTJJABUyPwA)
-<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
+[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
+<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
 
 ## Talents:
 - FoE if you are Venthyr, New Moon if you are Night Fae
 - Stellar Drift is almost mandatory for p1, p2 and some small p3 movements depending where you are placed on the platform and puddle positioning on last 2 platforms.
 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,113,113,311,132" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,113,113,311,133" >}}
 
 
 
