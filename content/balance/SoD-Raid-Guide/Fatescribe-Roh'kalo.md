@@ -20,8 +20,8 @@ patch: "9.1"
 TBD
 
 ## Soulbinds:
-[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW75YCFTUgACU1ygASBTWHACUy4gAiBTJJABUyPwA)
-<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid)
+[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-b74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
+<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
 
 ## Talents:
 - Restoration Affinity might prove to be slightly better than Guardian, because of the rejuv/swiftmend on yourself (and your partner) if you have to do runes on the other side of the room and the runes are moving faster than you are able to cast regrowth.
