@@ -1,6 +1,6 @@
 ---
 title: "The Nine"
-date: 2021-07-08
+date: 2021-07-26
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
