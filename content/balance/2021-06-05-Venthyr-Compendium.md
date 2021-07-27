@@ -56,7 +56,7 @@ On single target about 65% of your damage will be during CA/Inc+{{< spell 323546
 **Single target priority list INSIDE cooldowns:**
 Before the 5s extension buff:
 - Use Berserking at the start of Frenzy without Bloodlust or at 6s of the initial buff remaining with Bloodlust.
-- Use your trinket so that it will be for the rest of your cooldowns. (For example at 13s remaining for IQD or 17s in Bloodlust)
+- Use your trinket so that it will be for the rest of your cooldowns. Never ever use off gcd items/spells between casts, always use them during a gcd. (For exact timings see [Timings sections](#timings)).
 - Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining
 - Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
 - Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
@@ -163,7 +163,7 @@ This heavily depends on distance to target. At 30m it would be 3s before using R
   
 </div>
 
-The following are super minor things you can do to gain a small amount of extra damage once you are comfortable with the rotation:
+The following are minor things you can do to gain a small amount of extra damage once you are comfortable with the rotation:
 - Dotting outside Eclipse without losing dot uptime on single target is a ~0.4% gain when not using Solstice.
 - At 150%+ haste using {{< spell 194153 "Starfire" >}} is minorly better than{{< spell 190984 "Wrath" >}} on single target. This will only happen with Power Infusion or very high base haste.
 - When {{< spell 323546 "Ravenous Frenzy" >}} has less than your current fillers cast time left you should already start dumping Astral Power to get another 1-2 stacks. This is about a 0.6% gain.
