@@ -50,7 +50,7 @@ On single target about 65% of your damage will be during CA/Inc+{{< spell 323546
 - Cast dots if have nothing to cast while you are moving
 
 **Single target priority list BEFORE cooldowns:**
-- Make sure to have 90+ Astral Power before using cooldowns.
+- Make sure to have 90+ Astral Power before using cooldowns. The only exception is when Bloodlust would run out before Inc expires at which point you Inc+Frenzy sooner. This happens with Bloodlust on pull.
 - Make sure {{< spell 211545 "Fury of Elune" >}} will be up at the end.
 
 **Single target priority list INSIDE cooldowns:**
