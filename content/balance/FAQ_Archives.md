@@ -1,21 +1,15 @@
+---
 date: '2021-06-25'
 authors: ["ChickenWingz, Jundarer"]
 published: false
 patch: "9.1"
 title: FAQ_Archives
-sidebarTitle: "Quicklinks"
-sidebarContents:  |
-  [1. About](#about)
- [2. Information Dump](#info-dump)
-  <br>[
-  
- 
 ---
 
 
 <div id="about">
 
-# [1. About:](#about)
+# 1. About:
 
 </div>
 
@@ -23,7 +17,7 @@ This will act as some sort of archives for non meta builds or information that w
 
 
 
-# [2. Information Dump](#info-dump)
+# 2. Information Dump
 
 ## Boat Openers
 
