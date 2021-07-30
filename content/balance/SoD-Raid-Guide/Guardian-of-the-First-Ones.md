@@ -15,7 +15,7 @@ patch: "9.1"
 
 ## Mythic only notes:
 - Barkskin right before the third Purge Protocol so that you extend it into the pillar pulses.
-- Use your cds as soon as possible if you are able to get stats in your 2nd cds because the healer mana will drop very fast on this fight, if it is impossible to get stats, then pool up to 13 stacks of chaos bane and 90ap before popping the second set of cds.
+- Use your cds as soon as possible if you are able to get stats in your 2nd cds because the healer mana will drop very fast on this fight, if it is impossible to get stats, then pool up to 11-12 stacks of Chaos Bane and 90ap before popping the second set of cds.
 - Use Roar right before the lazer inside pillar pulses so that your raid can dodge it easier and then go out of the pillar break easier. It should also extend into the next circles.
 - Whenever you get a circle on you be sure to Bear Form it and HotW if you are on the 2nd or 3rd pillar. This is making Ursine Vigor a really strong conduit choice as a 2nd slotter behind Well Honed Instincs.
 - You can use Wild Charge to go to the pillar with the circles and Door of Shadows back inside the group for healing throughput.Try to avoid dooring outside of the group because you mostly want to be visual about your positioning towards the pillar so you do not surprise someone by dooring on top of them and making both of you make a decision in the last second of the explosion.
