@@ -129,7 +129,7 @@ This is a list of timings of ability/item usages during Ravenous Frenzy. All of 
 {{< item 184842 "Instructor's Divine Bell" >}}:
 |                                   Condition                                  | Buff remaining |
 |:----------------------------------------------------------------------------:|:--------------:|
-| {{< item 179350 "Inscrutable Quantum Device" >}} equipped                    |right after IQD |
+| {{< item 179350 "Inscrutable Quantum Device" >}} equipped                    | after IQD ICD  |
 | Any other situation                                                          |        4s      |
 
 {{< spell 211545 "Fury of Elune" >}}:
