@@ -1,6 +1,6 @@
 ---
 title: "The Eye of the Jailer"
-date: 2021-07-26
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -27,5 +27,5 @@ patch: "9.1"
 
 You can run either Moons or Foe as Night Fae, but i would recommend Moons as Foe can bug on the chains sometimes and its not really worth the effort trying to line up some wonky 2 target cleave for a bit more damage that is pretty irrelevant as the add gets passively cleaved down.
 
-{{< talents spec="balance" src="live" recommend="311,113,133,223,113,312,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,133,223,113,132,133" >}}
 
