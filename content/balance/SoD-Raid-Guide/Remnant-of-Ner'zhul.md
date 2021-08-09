@@ -1,6 +1,6 @@
 ---
 title: "Remnant of Ner'zhul"
-date: 2021-07-26
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -26,7 +26,7 @@ patch: "9.1"
 
 ## Talents:
 - You can run a full ST setup changing between FoE and Moons depending on covenant. 
-- SD is very strong here as you can help take down orbs faster and orb control is the most important part of the fight.
+- SD is very strong here as you can help take down orbs faster and orb control is the most important part of the fight. Although after the nerfs to orb hp STFL is also playable on hc and normal if the orbs die too fast or the boss generally dies too fast.
 
-{{< talents spec="balance" src="live" recommend="311,113,132,113,113,312,132" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,113,113,132,132" >}}
 
