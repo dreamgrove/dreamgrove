@@ -1,6 +1,6 @@
 ---
 title: "Sylvanas Windrunner"
-date: 2021-07-08
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
