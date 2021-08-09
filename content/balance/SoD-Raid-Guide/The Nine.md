@@ -1,6 +1,6 @@
 ---
 title: "The Nine"
-date: 2021-07-26
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -25,4 +25,4 @@ patch: "9.1"
 - Stellar Drift is the default go to, but if p1 and movement are not a problem opting into Stellar Flare for the p2 boss damage is not a bad idea.
 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,312,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,113,132,133" >}}

@@ -1,6 +1,6 @@
 ---
 title: "Guardian of the First Ones"
-date: 2021-07-26
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false

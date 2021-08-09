@@ -1,6 +1,6 @@
 ---
 title: "Soulrender Dormazain"
-date: 2021-07-26
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -31,4 +31,4 @@ patch: "9.1"
 - SD is especially potent on adds because of the debuff circles and offers a lot of mobility for no downtime inside dance.
 - I would recommend FoE even as Night Fae because of the debuff circles on the adds.
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,311,132" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,113,131,132" >}}

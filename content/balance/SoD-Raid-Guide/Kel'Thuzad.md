@@ -1,6 +1,6 @@
 ---
 title: "Kel'Thuzad"
-date: 2021-07-08
+date: 2021-08-09
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -29,7 +29,7 @@ TBD
 - I would personally recommend Stellar Drift for HEROIC, as the adds die way too fast for Twin Moons to get any value.
 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,213,321,131" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,213,131,133" >}}
 
 
 
