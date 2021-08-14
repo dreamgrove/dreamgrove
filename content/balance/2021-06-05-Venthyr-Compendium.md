@@ -135,7 +135,7 @@ This is a list of timings of ability/item usages during Ravenous Frenzy. All of 
 {{< spell 211545 "Fury of Elune" >}}:
 |                                   Condition                                  | Buff remaining |
 |:----------------------------------------------------------------------------:|:--------------:|
-| Any situation                                                                |       4s       |
+| Any situation                                                                |3s or with Bell |
 
 {{< spell 26297 "Berserking" >}}:    
 |                                   Condition                                  | Buff remaining |
