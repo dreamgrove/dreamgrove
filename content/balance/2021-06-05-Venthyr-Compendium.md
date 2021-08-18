@@ -61,7 +61,7 @@ Before the 5s extension buff:
 - Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
 - Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 190984 "Wrath" >}} to fill until 150% at which point you should fill with {{< spell 194153 "Starfire" >}}.
+- Cast {{< spell 190984 "Wrath" >}} to fill until 150% haste at which point you should fill with {{< spell 194153 "Starfire" >}}.
 
 **During the 5s Ravenous Frenzy extension buff:**
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
