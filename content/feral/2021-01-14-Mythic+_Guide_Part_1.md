@@ -24,7 +24,7 @@ patch: "9.0"
 
 ## Part 1 - Basics and pre-key set up
 ### Contents
-- [Other Reading](#Other)
+- [Other reading](#Other)
 - [Talents](#Talents)
 - [Legendaries](#Legendaries)
 - [Conduits & Soulbinds](#Conduits_&_Soulbinds)
