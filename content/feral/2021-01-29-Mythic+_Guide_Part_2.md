@@ -18,7 +18,20 @@ In this section we will cover the following ...
 - [Affixes](#Affixes)
 - [9.0 seasonal affix - Prideful](#Prideful)
 - [9.1 seasonal affix - Tormented](#Tormented)
+  <br> - [Soggodon the Breaker](#Soggodon)
+  <br> - [Incinerator Arkolath](#Arkolath)
+  <br> - [Oros Coldheart](#Oros)
+  <br> - [Executioner Varruth](#Varruth)
 - [Dungeon specific tips](#Dungeon_specific_tips)
+  <br> - [General Dungeon advice](#General)
+  <br> - [De Other Side](#DoS)
+  <br> - [Mists of Tirna Scithe](#Mists)
+  <br> - [Halls of Atonement](#HoA)
+  <br> - [Sanguine Depths](#SD)
+  <br> - [Plaguefall](#PF)
+  <br> - [Theater of Pain](#ToP)
+  <br> - [Spires of Ascension](#SoA)
+  <br> - [The Necrotic Wake](#NW)
 
 ---
 
@@ -28,7 +41,6 @@ In this section we will cover the following ...
   
 </div>
 
-##  Rotational Plays
 This section has been provided with BuffMe’s input (although he blames Shmoo) on the #Feral discord, so any errors please blame him - it is also somewhat volatile so any questions always check in with the Discord.
 
 ### General play
@@ -211,14 +223,6 @@ Storming is a pain, but again something that Feral can deal with a bit better th
 
 </div>
 
-<div id="affix">
-  
-## [The new seasonal affix and recommended anima powers](#affix)
-  
-</div>
-
-**Tormented**
-
 I'm going to copy/paste a lot of this from Catha's well written Bear guide, feel free to check that out fully below, though I will be trying to correct some of his rambling grammar
 
 https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing
@@ -339,7 +343,7 @@ Necrotic Wounding is good if a key has a lot of healing that you'd like to stop,
   
 ![Image](https://wow.zamimg.com/images/wow/icons/large/spell_animarevendreth_buff.jpg)
   
-**Prideful** - *Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
+*Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
 
 Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
 
@@ -362,7 +366,12 @@ It's also worth adding, that you can outright skip the Pride if you move far eno
 
 -----
 
-## Dungeon tips
+<div id="Dungeon_specific_tips">
+
+## [Dungeon specific tips](#Dungeon_specific_tips)
+
+</div>
+
 Fair warning, all of the “Meld BS” is potentially fixable by Blizz, so don’t blame us if you do it and get 1-shot :)
 
 We’ve also collected the below tips from a few sources, please let us know if they get fixed or do not work.
@@ -370,7 +379,11 @@ We’ve also collected the below tips from a few sources, please let us know if 
 ![Image](https://lh6.googleusercontent.com/iJxxJonGZIPtoRpT5AF_q-gQkC7-9IzgUAe-oRcfwmz38Z8OLrLF6dpGDhCDkOY8H0LRw6fYHLW9bnRTd_n9XXclzqNTedZBtxkFV5Kq3hX4jHConQiVNswK39euHmu97P2A7e4h 
 )
 
-### General Dungeon advice
+<div id="General">
+  
+### [General Dungeon advice](#General)
+  
+</div>
 
 **Knowing your count**
 
@@ -387,7 +400,11 @@ Although this is often left to tanks, knowing a solid route and the count that s
 
 -----
 
-### De Other Side
+<div id="DoS">
+  
+### [De Other Side](#DoS)
+  
+</div>
 
 ![Image](https://wow.zamimg.com/uploads/screenshots/normal/949066.png)
 
@@ -423,33 +440,13 @@ In the Arden area …
 
 ---
 
-### Halls of Atonement
-
-![Image](https://wow.zamimg.com/uploads/screenshots/normal/957519.png)
-
-**General advice**
-
-- You can stop the first 2 mobs from running up before the dungeon starts by having everyone in the group standing completely still after the key is put in. The mobs' movement is triggered when the first member of the group moves their character. This can help the tank group mobs faster if you plan for a big pull right out the gate.
-- You can CC Deprayed Houndmasters (patrols) and dogs will also stop, making skipping these packs easier.
-- 2nd boss, Echelon, the Stone Shattering Leap (his jump) can be dodged if you wait for its animation to start then run away from it (Gotta be fast) - this trick is almost mandatory to learn as on high keys Tyr it can 1-shot you.
-- On the mini-boss before the last boss, you want to focus the ghosts on the pews, as these heal the mini-boss when he casts on them and they turn into the other mobs, save time and focus them.
-- On the final boss, Lord Chamberlain, you can double soak the beams after doors of shadows by moving slightly into the boss's hitbox. Fair warning, this hurts and needs SI+Bark
-- Also the statues will be thrown in the way they’re facing, so keep an eye on it as he channels up to throw them.
-
-**Feral specific advice**
-
-- Boomie convoke on the mini-boss before last boss to get a Starfall proc is huge, even without HotW.
-- On 2nd boss, make sure that the adds have a long bleed on them before they turn to stone so when they get shattered by the Stone Shattering Leap you get a predator reset.
-
-**Meld and other BS**
-
-- NEVER meld during trash before the last boss, the Tormented Soul will bug and can’t be targeted and damaged anymore, so the only way for them to die will be to the Dark communion cast from Inquisitor Sigar. Big time waste.
-
----
-
 ![Image](https://wow.zamimg.com/uploads/screenshots/normal/949065.png?maxWidth=2400)
 
-### Mists of Tirna Scithe
+<div id="Mists">
+  
+### [Mists of Tirna Scithe](#Mists)
+  
+</div>
 
 **General advice**
 
@@ -474,35 +471,41 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/guide/header/10330.jpg?1606286413&maxWidth=1630)
+<div id="HoA">
+  
+### [Halls of Atonement](#HoA)
+  
+</div>
 
-### Plaguefall
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/957519.png)
 
 **General advice**
 
-- Slime Tentacle: Crushing Embrace can be stopped with CC. This is especially important to note on the way to the 2nd boss because the constant plagueborer explosions can hit the person who is being held.
-- If you kill the mini-boss at the top of the stairs at the right time, you can get the the mobs with the barrels to follow you down the stairs to use them on a pack before the 3rd boss, on Fort high keys they 1-shot the entire pack.
-- On the 2nd boss, you can easily Typhoon + Entangling roots the purple slime. This makes the boss fight way faster as you can ignore the damage reduction aura it has and leave it CC’ed.
-- On the spiders before the 3rd boss, it's actually beneficiel to let the webbing go through, as it does no damage only a root, *but* stops the spiders casting the stealth spiders - meaning an easier time for everyone.
-- On the 3rd boss, the Assassins can be broken out of their stealth with some skills you may not think to use. Tar Trap, Piercing Howl, Door of Shadows disorient, Incapacitating Roar, Starfall, Ursol’s Vortex, Warrior Shout, Flare, Blizzard and so on - for example Dash + Typhoon or Swipe is really good for quickly finding them all.
-- On the trash before the last boss, you can walk past the first pack and kill the 2nd and 3rd "wave" of adds without having to deal with the caster mobs ability making this room easier to deal with (potentially not worth though, just pull it all).
-- On the last boss, only tanks need to soak mob ability, no need to get yourself damaged in a healing heavy fight.
-- Have different DPS pop CDs in different phases to push her into the transition phase, therefore limiting the number of Rains in every phase. E.g. Pride+CD’s P1, Hero P2, CD’s P3.
+- You can stop the first 2 mobs from running up before the dungeon starts by having everyone in the group standing completely still after the key is put in. The mobs' movement is triggered when the first member of the group moves their character. This can help the tank group mobs faster if you plan for a big pull right out the gate.
+- You can CC Deprayed Houndmasters (patrols) and dogs will also stop, making skipping these packs easier.
+- 2nd boss, Echelon, the Stone Shattering Leap (his jump) can be dodged if you wait for its animation to start then run away from it (Gotta be fast) - this trick is almost mandatory to learn as on high keys Tyr it can 1-shot you.
+- On the mini-boss before the last boss, you want to focus the ghosts on the pews, as these heal the mini-boss when he casts on them and they turn into the other mobs, save time and focus them.
+- On the final boss, Lord Chamberlain, you can double soak the beams after doors of shadows by moving slightly into the boss's hitbox. Fair warning, this hurts and needs SI+Bark
+- Also the statues will be thrown in the way they’re facing, so keep an eye on it as he channels up to throw them.
 
 **Feral specific advice**
 
-- Unstable Canister and Rigged Plagueborer explosion deal damage to both players and mobs so typhoon mobs into the barrels and typhoon the mobs carrying them into ideal places, then root them.
-- On first boss you can use your instant Entangling roots on the big slime.
+- Boomie convoke on the mini-boss before last boss to get a Starfall proc is huge, even without HotW.
+- On 2nd boss, make sure that the adds have a long bleed on them before they turn to stone so when they get shattered by the Stone Shattering Leap you get a predator reset.
 
 **Meld and other BS**
 
-- none found so far ...
+- NEVER meld during trash before the last boss, the Tormented Soul will bug and can’t be targeted and damaged anymore, so the only way for them to die will be to the Dark communion cast from Inquisitor Sigar. Big time waste.
 
 ---
 
 ![Image](https://wow.zamimg.com/uploads/guide/seo/10335.jpg?1606286315)
 
-### Sanguine Depths
+<div id="SD">
+  
+### [Sanguine Depths](#SD)
+  
+</div>
 
 **General advice**
 
@@ -527,9 +530,72 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
+![Image](https://wow.zamimg.com/uploads/guide/header/10330.jpg?1606286413&maxWidth=1630)
+
+<div id="PF">
+  
+### [Plaguefall](#PF)
+  
+</div>
+
+**General advice**
+
+- Slime Tentacle: Crushing Embrace can be stopped with CC. This is especially important to note on the way to the 2nd boss because the constant plagueborer explosions can hit the person who is being held.
+- If you kill the mini-boss at the top of the stairs at the right time, you can get the the mobs with the barrels to follow you down the stairs to use them on a pack before the 3rd boss, on Fort high keys they 1-shot the entire pack.
+- On the 2nd boss, you can easily Typhoon + Entangling roots the purple slime. This makes the boss fight way faster as you can ignore the damage reduction aura it has and leave it CC’ed.
+- On the spiders before the 3rd boss, it's actually beneficiel to let the webbing go through, as it does no damage only a root, *but* stops the spiders casting the stealth spiders - meaning an easier time for everyone.
+- On the 3rd boss, the Assassins can be broken out of their stealth with some skills you may not think to use. Tar Trap, Piercing Howl, Door of Shadows disorient, Incapacitating Roar, Starfall, Ursol’s Vortex, Warrior Shout, Flare, Blizzard and so on - for example Dash + Typhoon or Swipe is really good for quickly finding them all.
+- On the trash before the last boss, you can walk past the first pack and kill the 2nd and 3rd "wave" of adds without having to deal with the caster mobs ability making this room easier to deal with (potentially not worth though, just pull it all).
+- On the last boss, only tanks need to soak mob ability, no need to get yourself damaged in a healing heavy fight.
+- Have different DPS pop CDs in different phases to push her into the transition phase, therefore limiting the number of Rains in every phase. E.g. Pride+CD’s P1, Hero P2, CD’s P3.
+
+**Feral specific advice**
+
+- Unstable Canister and Rigged Plagueborer explosion deal damage to both players and mobs so typhoon mobs into the barrels and typhoon the mobs carrying them into ideal places, then root them.
+- On first boss you can use your instant Entangling roots on the big slime.
+
+**Meld and other BS**
+
+- none found so far ...
+
+---
+
+![Image](https://wow.zamimg.com/uploads/blog/images/22104-datamined-shadowlands-mythic-dungeon-hotfixes-12-21-theater-of-pain-plaguefall-n.jpg)
+
+<div id="ToP">
+  
+## [Theater of Pain](#ToP)
+  
+</div>
+
+**General advice**
+
+- On the Shackled Soul trash (Kul'tharok area), pulling the first half into the starting room and the second half into the end room can save on a lot of group damage by avoiding the possibility of getting hit by swirls.
+- Using the portals up to Kul'tharok fully heals you, so don't waste time waiting to be topped if you have a Nasty dot or have half hp.
+- The Nefarious Darkspeakers (the ones who cast the black tornado knockback) target a random player for their tornado. You can help decrease the chances it goes on your ranged DPS/Healer (e.g. less mobile) by having the tank and melee DPS on one side while the ranged stand on the other.
+- After Kul’Tharok jumping to the main platform is faster than taking the portal and doable without move speed.
+- On the hook boss, Tenderizing Smash only pulls you if you are outside of its range. Stay relatively close to the boss until the circle appears and then move to make it less disruptive.
+
+**Feral specific advice**
+
+- The trash before first boss, the Raging Tantrum can be stopped by Soothing.
+- On the first boss, the Raging (and Fixate) can also be stopped by Soothing.
+- On Gorechop, make sure to have bleeds on both adds to allow some Tiger’s Fury reset if playing Predator talent.
+
+**Meld and other BS**
+
+- During Kul'tharok, you can meld the Draw Soul ability to spawn your soul instantly. Be careful with this though, as it despawns the hands when they "grab" you, so if someone else is in the same hands as you, it'd mean their soul won't be grabbed.
+
+
+---
+
 ![Image](https://wow.zamimg.com/uploads/blog/images/19394-shadowlands-alpha-build-34821-loading-screens-and-icons.png)
 
-### Spires of Ascension
+<div id="SoA">
+  
+### [Spires of Ascension](#SoA)
+  
+</div>
 
 **General advice**
 
@@ -556,7 +622,11 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ![Image](https://wow.zamimg.com/uploads/blog/images/19331-shadowlands-alpha-build-34714-necrotic-wake-loading-screen-icons-maps.png)
 
-### The Necrotic Wake
+<div id="NW">
+  
+### [The Necrotic Wake](#NW)
+  
+</div>
 
 **General advice**
 - Throw Cleaver damages the first target it finds so you can hit mobs with it doing some nice damage.
@@ -576,30 +646,6 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 - You can meld any Morbid Fixation during trash before 3rd boss and also during the boss if the hook failed to cancel it.
 - ~~You can Immune the death exile cast of the last boss in NW with basic immunities like Divine Shield or Ice Block but also with a warlock gateway (and Priest Leap of Faith). Make sure that the projectile of the cast is about to hit you before you take the gateway. Bear in mind that you will die when the debuff runs out but maybe it helps you to squeeze out that extra dps. This can also be Melded (needs verifying, Fore: verified, but incredibly tight timing)~~ Mostly fixed and the crit buff it gives is now 100%.
-
----
-
-![Image](https://wow.zamimg.com/uploads/blog/images/22104-datamined-shadowlands-mythic-dungeon-hotfixes-12-21-theater-of-pain-plaguefall-n.jpg)
-
-### Theater of Pain
-
-**General advice**
-
-- On the Shackled Soul trash (Kul'tharok area), pulling the first half into the starting room and the second half into the end room can save on a lot of group damage by avoiding the possibility of getting hit by swirls.
-- Using the portals up to Kul'tharok fully heals you, so don't waste time waiting to be topped if you have a Nasty dot or have half hp.
-- The Nefarious Darkspeakers (the ones who cast the black tornado knockback) target a random player for their tornado. You can help decrease the chances it goes on your ranged DPS/Healer (e.g. less mobile) by having the tank and melee DPS on one side while the ranged stand on the other.
-- After Kul’Tharok jumping to the main platform is faster than taking the portal and doable without move speed.
-- On the hook boss, Tenderizing Smash only pulls you if you are outside of its range. Stay relatively close to the boss until the circle appears and then move to make it less disruptive.
-
-**Feral specific advice**
-
-- The trash before first boss, the Raging Tantrum can be stopped by Soothing.
-- On the first boss, the Raging (and Fixate) can also be stopped by Soothing.
-- On Gorechop, make sure to have bleeds on both adds to allow some Tiger’s Fury reset if playing Predator talent.
-
-**Meld and other BS**
-
-- During Kul'tharok, you can meld the Draw Soul ability to spawn your soul instantly. Be careful with this though, as it despawns the hands when they "grab" you, so if someone else is in the same hands as you, it'd mean their soul won't be grabbed.
 
 ---
     
