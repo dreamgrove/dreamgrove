@@ -129,13 +129,15 @@ The Feral rotation changes a little in Berserk, as Combo Points gain value due t
 
 **Tyrannical** - *Bosses have ~~40~~ 30% more health (recently nerfed). Bosses and their minions inflict up to 15% increased damage.*
 
-Tyrannical weeks are Blizz’s way of telling you to take a week off, a cancerous affix that makes keys unfun to play at a high level, turning boss fights into 3-4 min slogs.
+Tyrannical weeks are Blizz’s way of telling you to take a week off, a cancerous affix that makes keys unfun to play at a high level, turning boss fights into 3-4 min slogs. That said, as of 9.1 Blizz has been giving very easy affix combinations with Tyr as a way to encourage people to run it.
 
 ![Image](https://wow.zamimg.com/images/wow/icons/large/ability_toughness.jpg)
 
 **Fortified** - *Non-boss enemies have 20% more health and inflict up to 30% increased damage.*
 
 Fort is your push week, as bosses die insanely fast and trash being more dangerous is something you can more easily play around. Look for ideal push weeks and get that io.
+
+-----
 
 ### Weekly affixes
 
@@ -223,7 +225,7 @@ Storming is a pain, but again something that Feral can deal with a bit better th
 
 </div>
 
-I'm going to copy/paste a lot of this from Catha's well written Bear guide, feel free to check that out fully below, though I will be trying to correct some of his rambling grammar
+I'm going to copy/paste a lot of this from Catha's well written Bear guide, feel free to check that out fully below, though I will be trying to correct some of his rambling grammar.
 
 https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing
 
@@ -236,13 +238,15 @@ Each of these Lieutenants has True Sight, does not give count and does not reset
 As of writing, the Lieutenants powers are locked in as follows and all the latest hotfix information can be found here:
 https://www.wowhead.com/news/patch-9-1-hotfixes-for-the-tormented-mythic-affix-reworked-and-retuned-anima-323174
 
-![Image](https://cdn.discordapp.com/attachments/327879699810353152/860536050907349042/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880396248950112306/unknown.png)
 
 <div id="Soggodon">
   
 ### [Soggodon the Breaker](#Soggodon)
   
 </div>
+
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395459364024340/unknown.png)
 
 #### What the Lieutenant does
 Inflicts an aura increasing the physical damage you take by 50%. 
@@ -251,16 +255,15 @@ Will do heavy physical damage the entire time to the tank either via Crush, an a
 
 Roughly every 30 seconds he'll grip everyone in melee and start casting Massive Smash for 8 seconds. Everyone will be rooted, and must get out before the end of the cast or they will die. You have two choices here, either everyone in your group has an ability to get out of root (so you can Shift Forms, Shaman can Ghost Wolf, DH can Vengeful Retreat, Pally can Freedom, etc) so they get out on their own, or they cannot in which case you MUST kill the add that roots them in place, in order for them to get out.
 
-As a note, I also want to apologise to my guildy Pasta who I left for dead every single time this was cast, it sucks to be a Priest this tier.
+As a note, I also want to apologise to my guildy Pasta who I left for dead every single time this was cast on Beta, it sucks to be a Priest this tier.
 	
 #### What power to take
-The only power here really worth considering is 
 
 - {{< spell 357524 "The Stone Ward" >}}
 - {{< spell 356828 "Dripping Fang" >}}
 - {{< spell 356827 "Tiny Dancing Shoes" >}}
 
-Stone Ward is the only real sensible choice, increasing your HP is a no-brainer, Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one.
+Stone Ward is the go-to choice, increasing your HP is a no-brainer, Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one that is only relevant for handling Spites (I do recommend it on Spite week).
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678316966084648/unknown.png)
 
@@ -269,7 +272,9 @@ Stone Ward is the only real sensible choice, increasing your HP is a no-brainer,
 ### [Incinerator Arkolath](#Arkolath)
   
 </div>
-	
+
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395234343796796/unknown.png)
+
 #### What the Lieutenant does
 His aura inflicts fire damage to everyone in combat with him. He also casts a debuff named Melt Soul on a random player that increases fire damage taken by 100%. So he basically is Pride 2.0. His other abilities are Scorching Blast, where he casts a circle of fire at the position of a player, there can only be 3 of those active at any given time, so don't worry too much about running out of space. And Inferno, a cast that you can (and should) interrupt that does fire damage to everyone in the party.	
 
@@ -279,7 +284,7 @@ His aura inflicts fire damage to everyone in combat with him. He also casts a de
 - {{< spell 357848 "Signet of Bolstering" >}} 
 - {{< spell 357864 "Raging Battle-Axe" >}} 
 
-This is another interesting Lieutenant for me, Champion's Brand is the "safe" choice, but Bolstering can be good in keys that have a lot of adds that will die at varying times (like DoS arden wing), and raging Battle-Axe has good uses in places with mobs that have a lot of HP for you to execute on, like in ToP military wing. 
+This is another interesting Lieutenant for me, Champion's Brand is the "safe" choice, but Bolstering can be good in keys that have a lot of adds that will die at varying times (like DoS arden wing or SD gauntlet), and raging Battle-Axe has good uses in places with mobs that have a lot of HP for you to execute on, like in ToP military wing. I've seen this average out to ~4.5% damage on a Tyr boss for example.
 
 I like this one as it's the only real selection that makes you stop and think about how you can use it in the key, more of them should've been like this.
 
@@ -291,18 +296,23 @@ I like this one as it's the only real selection that makes you stop and think ab
   
 </div>
 
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395324412289094/unknown.png)
+
 #### What the Lieutenant does
 His aura slows you down by 50%. Due to this and his power selection it's a very likely candidate to be skipped in any dungeon where the final boss does not require heavy movement. He'll cast a debuff named Biting Cold on a player, do not stand near them as that does damage in an AoE around them. Periodically casts Forst Lance in front of him, dodge it or take massive damage and get knocked away. He'll cast Cold Snap, an ability that spawns ice orbs around him, just move away from them to avoid taking damage	
 
 #### What power to take
 
 - {{< spell 357834 "Handbook of Uncivil Etiquette" >}}
-- {{< spell 357815 "Satchel of the Hunt" >}}
+- {{< spell 357814 "Regenerative Fungus" >}}
 - {{< spell 357825 "Vial of Desperation" >}}
 
-Satchel of the Hunt could be fun in a key where there isn't a huge amount of interrupts to do, or the 10% increased damage from interrupting can't be utilised that much, but the Handbook is the only DPS increase so likely the go to choice. Don't take Vial.
+All of these picks have value.
 
-Note: Sorry for the picture, this was taken on beta and "Imperfect Panacea" has been changed to "Satchel if the Hunt".
+- Handbook of Uncivil Etiquette has value if the key has decent interrupts  for you to take advantage of, think keys like Mists last boss, or HoA/SD where the trash has a ton of casts. Remember that this effect isn't 10% damage globally, it's just 10% damage on the target you interrupted. 
+- Regenerative Fungus is a good default pick, as the HPS from it is reasonable substantial
+- Vial of Desperation is good for keys where you want an extra passive "oh shit" effect, though with the insane defensive kit Feral has, I've never really made much use of it
+
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678406257836042/unknown.png)
 
@@ -311,6 +321,8 @@ Note: Sorry for the picture, this was taken on beta and "Imperfect Panacea" has 
 ### [Executioner Varruth](#Varruth)
   
 </div>
+
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395389092638760/unknown.png)
 
 #### What the Lieutenant does
 His Aura is a -50% to healing done.
@@ -327,9 +339,11 @@ Finally he'll also periodically charge a random player and inflict a bleed on th
 - {{< spell 357575 "Champion's Brand" >}}
 - {{< spell 357609 "Dagger of Necrotic Wounding" >}}
 
-For Varruth, Volcanic Plumage is likely a locked in choice, the AoE knockup it does when it procs is very good for just shutting down packs from casting, especially if everyone in the group has it.
+All three picks have value here as well ...
 
-Necrotic Wounding is good if a key has a lot of healing that you'd like to stop, though I can't think of a huge amount of keys that do currently, and Champion's Brand is just a flat 8% crit, which is solid damage wise if the AoE knockup/silence isn't needed in the key.
+- Volcanic Plumage is a very strong choice, the AoE knockup it does when it procs is very good for just shutting down packs from casting, especially if everyone in the group has it.
+- Champion's Brand is a flat 210 stats, which equates to about ~4% single target gain and larger AoE gain - stats are good
+- Dagger of Necrotic Wounding is very strong ST pick, it gives roughly 7-9% ST DPS gain which can be very good on high Tyr keys where you need the extra boss damage
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678274727870504/unknown.png)
 
@@ -344,6 +358,8 @@ Necrotic Wounding is good if a key has a lot of healing that you'd like to stop,
 ![Image](https://wow.zamimg.com/images/wow/icons/large/spell_animarevendreth_buff.jpg)
   
 *Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
+
+With 9.0 over, this is no longer an affix that appears in the game, but leaving this here for historic reasons.
 
 Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
 
@@ -391,12 +407,12 @@ Although this is often left to tanks, knowing a solid route and the count that s
 
 **Some count % that might be useful:**
 
-- **De Other Side**: 23.6% before entering Hakkar wing if you want Pride on boss; Manastorms wing (all mobs) is exactly 20% so if you had pride for Hakkar you will have it for Manastorms
-- **Halls of Atonement**: 79.5% before entering the 3rd boss room, so if you had Pride for the 2nd boss you're good.
+- **De Other Side**: 23.6% before entering Hakkar wing if you want 100% before killing Hakkar, this drops to ~16% if you skip the first pack by hugging the left wall (easily done). Manastorms wing (all mobs) is exactly 20%.
+- **Halls of Atonement**: 79.5% before entering the 3rd boss room
 - **Plaguefall**: 84.5% or 81.5% before jumping down (depends if you wanna kills some slimes at the right door).
 - **Sanguine Depths**: 68.96% before jumping down after the second boss.
 - **Spires of Ascension**: 87.37% before going up for Devos.
-- **The Necrotic Wake**: 68.2% before going up.
+- **The Necrotic Wake**: 68.2% before going up into the Stichworks area
 
 -----
 
@@ -410,14 +426,15 @@ Although this is often left to tanks, knowing a solid route and the count that s
 
 **General advice**
 
-- You can stun the Prides with the Night Fae urns.
+You can stun the seasonal mobs, such as Prides and Tormented mini-bosses with the Night Fae urns. I also recommend a good Rage mob stun WA like ...
+https://wago.io/uuBcwkkL9/1
 
 In the mecha area …
 
 - An engineer can stop the three rivers of blobs by using the button that's to the left-hand side after you enter the room.
 - You can pull all Lubricator and LoS their Lubricate cast (ranged can out range 30y+) and only kick the Self-Cleaning Cycle (first cast usually around 50-60% hp).
 - This is a mechanic of the fight and not really a “trick”, but it’s surprising how few people know it - You can stun Manastorms with Echo Finger Laser X-treme (Z ability) and Shadowfury (purple circle around 1 person) to stop them from casting.
-- Manastorms (Millificent's): If you position the camera directly above her head and turn nameplates off briefly, you Spam click right near the boss and you can disarm the bombs instantly.
+- Manastorms (Millificent's): If you position close to the boss and Spam click right near the boss and you can disarm the bombs instantly.
 
 In the Hakkar area …
 
@@ -450,7 +467,7 @@ In the Arden area …
 
 **General advice**
 
-- ~~You can pull the pack to the right through the window after the 1st boss. This makes two pulls into one if you need to go right or want the count.~~ So this has *kind of* been fixed, you can now WC in Boomie from the top of the hill and Flap, then as you're getting close to the first puzzle you can moonfire the mobs over the wall, tricky to pull off though.
+- ~~You can pull the pack to the right through the window after the 1st boss. This makes two pulls into one if you need to go right or want the count.~~ So this has *kind of* been fixed, you can now WC in Boomie from the top of the hill and Flap, then as you're getting close to the first puzzle you can moonfire the mobs over the wall, tricky to pull off though. This can also be done with pets by sending them through the wall of fog to pull mobs.
 - In the maze, the "Stalker" mobs have a 1.5s cast that will target someone and put a nasty DoT on them - be ready to Bash it as the cast is going off.
 - 2nd boss, you can mark the boss that passes and see the next doors she takes as well, they will always be the correct way, this lets you see two doors for free. - you can also set the boss to focus to see it on your map without having to target.
 - The toad miniboss's Tongue Lashing (tank-targeted) can be outranged (12 yards). The tank just needs to run away a short distance when he starts casting it.
@@ -467,7 +484,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 **Meld and other BS**
 
-- None found so far ...
+- Once you kill the main pack in the room, and if for example you have Spites or have pulled other packs through the wall, you can meld and walk through the fog-door to force it to open. As long as the main pack that was in the room is dead, you can trigger the fog to vanish.
 
 ---
 
@@ -483,7 +500,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 - You can stop the first 2 mobs from running up before the dungeon starts by having everyone in the group standing completely still after the key is put in. The mobs' movement is triggered when the first member of the group moves their character. This can help the tank group mobs faster if you plan for a big pull right out the gate.
 - You can CC Deprayed Houndmasters (patrols) and dogs will also stop, making skipping these packs easier.
-- 2nd boss, Echelon, the Stone Shattering Leap (his jump) can be dodged if you wait for its animation to start then run away from it (Gotta be fast) - this trick is almost mandatory to learn as on high keys Tyr it can 1-shot you.
+- 2nd boss, Echelon, the Stone Shattering Leap (his jump) can be dodged if you wait for its animation to start then run away from it (Gotta be fast) - this trick is almost mandatory to learn as on high keys Tyr it can 1-shot you. Dash or Nightfae blink is more than enough to do this properly.
 - On the mini-boss before the last boss, you want to focus the ghosts on the pews, as these heal the mini-boss when he casts on them and they turn into the other mobs, save time and focus them.
 - On the final boss, Lord Chamberlain, you can double soak the beams after doors of shadows by moving slightly into the boss's hitbox. Fair warning, this hurts and needs SI+Bark
 - Also the statues will be thrown in the way they’re facing, so keep an eye on it as he channels up to throw them.
@@ -495,7 +512,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 **Meld and other BS**
 
-- NEVER meld during trash before the last boss, the Tormented Soul will bug and can’t be targeted and damaged anymore, so the only way for them to die will be to the Dark communion cast from Inquisitor Sigar. Big time waste.
+- NEVER meld during trash before the last boss, the Tormented Soul will bug and can’t be targeted and damaged anymore, so the only way for them to die will be to the Dark Communion cast from Inquisitor Sigar. Big time waste.
 
 ---
 
@@ -512,7 +529,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 - You can skip Insatiable Brute before the first boss room without needing to invisible pot or shroud, all you need is to wait for him to be far from passage then go.
 - The smash can actually be out-ranged, It's something like 80 yards and stops balls from spawning. Quite easily done with Dash but not 100% sure how useful it is to be that far away for so long.
 - The first boss Juggernaut rush can be parried (good luck).
-- You can LOS the Dread Bindings from Grand Overseer (2nd boss) by running into the small rooms around the corridor.
+- You can Line of Sight (LoS) the Dread Bindings from Grand Overseer (2nd boss) by running into the small rooms around the corridor.
 - On the bridge before the gauntlet, for the last pack of the three hard trash...you can pull the two on the left without the third on the right if tank damage is an issue.
 - During gauntlet, if you use Shining Radiance (Shield) at start of the pull you will have it ready for Gloom Squall cast.
 - On the last boss, the 2nd person dashed to by wicked rush can dodge the bleed if they are moving.
@@ -525,7 +542,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 **Meld and other BS**
 
 - On 1st boss, if you meld the charge it’ll go on someone else, which is useful if you want to try and get it on an immunity class.
-- On 2nd boss, you can meld during Castigate (targeted red circle on you) once the channelling has started, and it’ll cancel and not re-cast, you can also LoS the ability in the cells.
+- On 2nd boss, you can meld during Castigate (targeted red circle on you) once the channelling has started NOT while he casts it, and it’ll cancel and not re-cast, you can also LoS the ability in the cells.
 - On the last boss, you can meld just right before he charges you so you avoid the bleed (same mechanic as the leap from Mechagon K.U.-J.0. boss).
 
 ---
@@ -540,19 +557,20 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 **General advice**
 
-- Slime Tentacle: Crushing Embrace can be stopped with CC. This is especially important to note on the way to the 2nd boss because the constant plagueborer explosions can hit the person who is being held.
-- If you kill the mini-boss at the top of the stairs at the right time, you can get the the mobs with the barrels to follow you down the stairs to use them on a pack before the 3rd boss, on Fort high keys they 1-shot the entire pack.
+- Slime Tentacle: Crushing Embrace can be stopped with CC. This is especially important to note on the way to the 2nd boss because the constant plagueborer explosions can hit the person who is being held. You can also shift out of Cat which will cause the CC to break as well (it counts as a root).
+- If you kill the mini-boss at the top of the stairs at the right time, you can get the the mobs with the barrels to follow you down the stairs to use them on a pack before the 3rd boss, on Fort high keys they basically 1-shot the entire pack.
 - On the 2nd boss, you can easily Typhoon + Entangling roots the purple slime. This makes the boss fight way faster as you can ignore the damage reduction aura it has and leave it CC’ed.
 - On the spiders before the 3rd boss, it's actually beneficiel to let the webbing go through, as it does no damage only a root, *but* stops the spiders casting the stealth spiders - meaning an easier time for everyone.
 - On the 3rd boss, the Assassins can be broken out of their stealth with some skills you may not think to use. Tar Trap, Piercing Howl, Door of Shadows disorient, Incapacitating Roar, Starfall, Ursol’s Vortex, Warrior Shout, Flare, Blizzard and so on - for example Dash + Typhoon or Swipe is really good for quickly finding them all.
 - On the trash before the last boss, you can walk past the first pack and kill the 2nd and 3rd "wave" of adds without having to deal with the caster mobs ability making this room easier to deal with (potentially not worth though, just pull it all).
 - On the last boss, only tanks need to soak mob ability, no need to get yourself damaged in a healing heavy fight.
-- Have different DPS pop CDs in different phases to push her into the transition phase, therefore limiting the number of Rains in every phase. E.g. Pride+CD’s P1, Hero P2, CD’s P3.
+- Have different DPS pop CDs in different phases to push her into the transition phase, therefore limiting the number of Rains in every phase. E.g. CD’s P1, Hero P2, CD’s P3.
 
 **Feral specific advice**
 
 - Unstable Canister and Rigged Plagueborer explosion deal damage to both players and mobs so typhoon mobs into the barrels and typhoon the mobs carrying them into ideal places, then root them.
 - On first boss you can use your instant Entangling roots on the big slime.
+- If you stand on the small island to the right of where the boss is, and fight there, you can Mass Root every pack of the small slimes and effectively turn this boss into a target dummy
 
 **Meld and other BS**
 
@@ -571,7 +589,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 **General advice**
 
 - On the Shackled Soul trash (Kul'tharok area), pulling the first half into the starting room and the second half into the end room can save on a lot of group damage by avoiding the possibility of getting hit by swirls.
-- Using the portals up to Kul'tharok fully heals you, so don't waste time waiting to be topped if you have a Nasty dot or have half hp.
+- Using the portals on the platforms fully heals you, so don't waste time waiting to be topped if you have a Nasty dot or have half hp.
 - The Nefarious Darkspeakers (the ones who cast the black tornado knockback) target a random player for their tornado. You can help decrease the chances it goes on your ranged DPS/Healer (e.g. less mobile) by having the tank and melee DPS on one side while the ranged stand on the other.
 - After Kul’Tharok jumping to the main platform is faster than taking the portal and doable without move speed.
 - On the hook boss, Tenderizing Smash only pulls you if you are outside of its range. Stay relatively close to the boss until the circle appears and then move to make it less disruptive.
@@ -616,7 +634,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 **Meld and other BS**
 
-- The 3 mobs before the last boss, the debuff drops at end of combat. So you can actually use Meld to drop the debuff at high stacks if you need to mid-combat.
+- The 3 mobs before the last boss, the debuff drops at end of combat. So you can actually use Meld to drop the debuff at high stacks if you need to mid-combat. I tend to meld on the 3rd add when it's at ~50% hp to reset the damage I'm taking.
 
 ---
 
@@ -639,7 +657,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 **Feral specific advice**
 
-- If the skeletons on 2nd boss live to long, you can Cyclone them on and they will not explode and wipe the group.
+- If the skeletons on 2nd boss live to long, you can Cyclone them or stun them just as the explosion is going off, then they will not explode and wipe the group.
 - On the last boss, if everyone is out of range you can shift form to break the root.
 
 **Meld and other BS**
