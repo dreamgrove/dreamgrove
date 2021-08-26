@@ -261,7 +261,7 @@ Fore: *Haha easy, I’ve got a tier list floating around somewhere…*
 
 ---
 
-<div id="QA">
+<div id="Final_Words">
 	
 ## [Final words](#Final_Words)
 	
