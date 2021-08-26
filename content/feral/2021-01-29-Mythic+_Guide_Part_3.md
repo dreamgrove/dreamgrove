@@ -89,8 +89,8 @@ The new raid comes with a new Shard system, which is a pseudo set-bonus system. 
 The set bonuses do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
 
 - Shard of Dyz (Unholy DPS)
+- Shard of Zed (Unholy Defensive)
 - Shard of Bek (Blood DPS)
-- Shard of Jas (Blood Defensive)
 - Shard of Cor (Frost DPS)
 - Shard of Kyr (Frost Defensive)
 
@@ -135,12 +135,7 @@ It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Fe
 
 To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
 
-My advice for where to try out this legendary is ...
-
-- Spires of Ascension
-- Theater of Pain
-- De Other Side
-- Mists of Tirna Scithe
+A 1 minute CD is incredibly strong. A lot of Ferals (including myself) have been hard-locking this legendary in all content, the only real competitor now is Circle in larger AoE keys.
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
 
