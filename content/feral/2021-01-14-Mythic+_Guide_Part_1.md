@@ -130,11 +130,11 @@ Convoke on a 1min ST does also come with some utility advantages, such as a 1 mi
 
 ### {{< spell 339139 "Apex Predator's Craving" >}}
 
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/879733482992066631/unknown.png)
+
 **Craft it on** 
 - Shoulder or Waist normally, either is fine
 - Waist in 9.1 (due to domination sockets)
-
-![Image](https://cdn.discordapp.com/attachments/879667478916120596/879733482992066631/unknown.png)
 
 Apex is used for funneling damage and to abuse the current strength of bites. The strength of Apex is that it allows you to pump procs into targets that you want to prioritise down. This changes your gameplay a little in that you will be weaving in bite procs whenever they proc, as soon as they proc ideally, to not munch new procs. The swings with Apex can also be huge, with enough Rips out or enough luck, you can power bites into targets to really spike damage, which can be big to prioritise a mob down on weeks like inspiring. 
 
