@@ -13,12 +13,20 @@ patch: "9.0"
 ## Part 2 - Getting the most inside the key
 
 In this section we will cover the following ...
-
-- Rotational Plays
-- Affixes
-- Dungeon specific tips
+- [Rotational Plays](#Plays)
+- [Cooldown usage](#Cooldowns)
+- [Affixes](#Affixes)
+- [9.0 seasonal affix - Prideful](#Prideful)
+- [9.1 seasonal affix - Tormented](#Tormented)
+- [Dungeon specific tips](#Dungeon_specific_tips)
 
 ---
+
+<div id="Plays">
+  
+## [Rotational Plays](#Plays)
+  
+</div>
 
 ##  Rotational Plays
 This section has been provided with BuffMe’s input (although he blames Shmoo) on the #Feral discord, so any errors please blame him - it is also somewhat volatile so any questions always check in with the Discord.
@@ -31,9 +39,9 @@ Generally speaking, depending on your talents, you can follow the below priority
 In terms of maximising what you do pack to pack, when you first open on a pack the main things to keep in mind are as follows …
 
 - have combo points ready from the last pack (where possible)
-- have one/two Bloodtalons stack(s) ready from last pack (where possible)
-- have TF up from the last pack *and* off CD (where possible)
-- get Primal Wrath rolling as quick as possible
+- have one/two {{< spell 319439 "Bloodtalons" >}} stack(s) ready from last pack (where possible)
+- have {{< spell 5217 "Tiger's Fury" >}} up from the last pack *and* off CD (where possible)
+- get {{< spell 285381 "Primal Wrath" >}} (PW) rolling as quick as possible
 - stop applying DoTs when the mobs are about to die (this goes for PW spam and Rake)
 
 This means that if you come from the last pack with no CPs, it is optimal to Stealth, Rake opener, Thrash and then Primal Wrath instantly with the 2 or 3 combo points you get, then carry on with the rest of your rotation.
@@ -50,23 +58,43 @@ I hear a lot of talk about *"My Bite does ~15k damage, why is a ~3k PW hit bette
 - DPE = Damage Per Execute ... aka how much damage you do per button press
 - DPR = Damage Per Resource ... aka how much damage you get out of the energy you spend
 
-If you go by DPR, then Bite is better up until 9 targets:
+If you go by DPE, then Bite is better up until 9 targets:
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/835479307039277056/unknown.png)
 
-But, if you go by DPE, then PW spam takes over at the ~4 target range. 
+But, if you go by DPR, then PW spam takes over at the ~4 target range. 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/835479386740097064/unknown.png)
 
 Note that this is dependant on **YOUR** talent, stats and gear, so you should always check for yourself
 
 https://docs.google.com/spreadsheets/d/1W1sjoMJJCzVFVnk0L5yDBg30UX2Msio2vF69uLMxlsg/edit?usp=sharing
 
+### Boomkin in M+?
+Yup, this is a thing that exists, it’s feelycrafty more than factually mathed and simmed, but my (Fore’s) go-to is the below. The idea is to fish for {{< spell 191034 "Starfall" >}}, so make sure the pack will last long enough to get the full use of the Starfall AoE. It's worth knowing that it has a 90% chance to roll on 4+ targets, and is basically worthless when it doesn't proc Starfall
+
+- 1-12 targets = Feral convoke
+- 13+ targets = Consider Boomie convoke (even without HotW)
+
+That said, I do think people undervalue Feral Convoke in AoE, i've gone up to 25k+ with a Feralvoke so feel free to mess around with it and see what works for you.
+
+**{{< spell 93402 "Sunfire" >}}** - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. Optimal play in M+ does make use of Sunfire, but don't feel you have to.
+
+-----
+
+<div id="Cooldowns">
+  
+## [Cooldown usage](#Cooldowns)
+  
+</div>
+
 ### Cooldown usage
-Generally, more CD usage in M+ is better than optimal CD usage, so you should be looking and planning ahead to squeeze in CD uses, talk to your team, particularly your tank, ask questions like "how long between know and boss X", to get an idea of when and how you can tweak routes to get more CD uses in play.
+Generally, more CD usage in M+ is better than optimal CD usage, so you should be looking and planning ahead to squeeze in CD uses, talk to your team, particularly your tank, ask questions like "how long between now and boss X", to get an idea of when and how you can tweak routes to get more CD uses in play.
+
+With {{< spell 354118 "Celestial Spirits" >}} this is even more true, as 1 minute CDs are incredibly useful in that they are up every 1 minute (top tier advice here) - use it on CD.
 
 Currently we have two very strong CDs in M+ that can be used for both ST and AoE as well as working well together.
 
-- **Berserk** - Berserk has undergone some changes since SL that make it pretty big on sustained AoE, it's no huge AoE burst like some specs have out there but it's still very solid all rounder.
-- **Convoke** - Convoke is huge, it's a 4s channelled nuke that switches up based on what form you are in. Feral convoke also casts the Lunar Inspiration version of Moonfire, which means it's AoE potential in Feral form is bigger than some would give it credit for.
+- **{{< spell 50334 "Berserk" >}}** - Berserk has undergone some changes since SL that make it pretty big on sustained AoE, it's no huge AoE burst like some specs have out there but it's still very solid all rounder.
+- **{{< spell 323764 "Convoke the Spirits" >}}** - Convoke is huge, it's a 4s channelled nuke that switches up based on what form you are in. Feral convoke also casts the Lunar Inspiration version of Moonfire, which means it's AoE potential in Feral form is bigger than some would give it credit for.
 
 *That said* there are times and routes where CD usage matters, for example if your group is planning around a Pride burst window to burn down a group or a boss, or a particularly nasty pull that needs to be burned down to be efficient (e.g. SoA double pack mid-way through between 1st and 2nd boss with spear), then you need to hold CDs. Talk to your group and coordinate these types of pulls to make sure you have yours ready.
 
@@ -77,45 +105,15 @@ The Feral rotation changes a little in Berserk, as Combo Points gain value due t
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/806122266801995777/unknown.png)
 
-### Boomkin in M+?
-Yup, this is a thing that exists, it’s feelycrafty more than factually mathed and simmed, but my (Fore’s) go-to is the below. The idea is to fish for Starfall, so make sure the pack will last long enough to get the full use of the Starfall AoE, and know that it has a 90% chance to roll on 4+ targets.
+-----
 
-- 1-5 targets = Feral convoke
-- 6-11 targets = HotW Boomkin convoke (or Feral convoke if no HotW)
-- 12+ targets = Boomie convoke (even without HotW)
-
-That said, I do think people undervalue Feral Convoke in AoE, i've gone up to 25k+ with a Feralvoke so feel free to mess around with it and see what works for you.
-
-**Sunfire** - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. 
-
----
-
-## Affixes
+<div id="Affixes">
+  
+## [Affixes](#Affixes)
+  
+</div>
 
 ### Seasonal and affixes on all keys
-
-![Image](https://wow.zamimg.com/images/wow/icons/large/spell_animarevendreth_buff.jpg)
-
-**Prideful** - *Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
-
-Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
-
-You’ve got two choices when it comes to prides …
-
-- use CDs *on* the Pride to speed up the kill and ease the healers throughput
-- use CDs *after* the pride to get the most out of the 100% damage boost
-
-This basically comes down to…
-
-- does your healer have the CDs/mana to manage the pride
-- do you have a boss or pack you want to nuke that you need the pride to handle
-- will killing the pride take more time without CDs than you would save by using them during the buff window
-
-In my M+ groups, we let the healer make the call, in pugs I'd probably make the call based on if the pride is at too many stacks at 50% hp left or if I want to pad ...
-
-It's also worth adding, that you can outright skip the Pride if you move far enough away from it when it's spawning and use an invis pot, which might be needed for the bleeding edge keys. This is mostly an MDI strat though so it's not too useful in a normal setting.
-
-![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
 
 **Tyrannical** - *Bosses have ~~40~~ 30% more health (recently nerfed). Bosses and their minions inflict up to 15% increased damage.*
 
@@ -207,7 +205,162 @@ Typhoon is king on Sanguine weeks, the pools stick around for ~20s so it isn't t
 
 Storming is a pain, but again something that Feral can deal with a bit better than other melee due to our high base speed and long claws from Balance Affinity, it's just one of those affixes you play through and deal with.
 
----
+<div id="Tormented">
+
+## [9.0 seasonal affix - Tormented](#Tormented)
+
+</div>
+
+<div id="affix">
+  
+## [The new seasonal affix and recommended anima powers](#affix)
+  
+</div>
+
+**Tormented**
+
+I'm going to copy/paste a lot of this from Catha's well written Bear guide, feel free to check that out fully below, though I will be trying to correct some of his rambling grammar
+
+https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing
+
+Also, it is likely that the powers dropped by the Lieutenants will see buffs and nerfs throughout the tier, and it is also likely I won't update this regularly, so please check in with the Ferals in Dreamgrove for any questions or an up to date recommendations. 
+
+At different points during the dungeon you can find one of four new Lieutenants. Killing one of these Lieutenant awards you with a choice of three anima powers. You can only choose ONE amongst those three. These powers are fixed per Lieutenants. Which means that you always get the same powers from the same Lieutenant as long as your role (read DPS/Tanks/Healers) remains the same. 
+
+Each of these Lieutenants has True Sight, does not give count and does not reset hp when you fail to kill them. The Lieutenants also have no social aggro so you can safely pull them through packs of mobs, without any danger of aggroing something with them.
+
+As of writing, the Lieutenants powers are locked in as follows and all the latest hotfix information can be found here:
+https://www.wowhead.com/news/patch-9-1-hotfixes-for-the-tormented-mythic-affix-reworked-and-retuned-anima-323174
+
+![Image](https://cdn.discordapp.com/attachments/327879699810353152/860536050907349042/unknown.png)
+
+<div id="Soggodon">
+  
+### [Soggodon the Breaker](#Soggodon)
+  
+</div>
+
+#### What the Lieutenant does
+Inflicts an aura increasing the physical damage you take by 50%. 
+
+Will do heavy physical damage the entire time to the tank either via Crush, an ability with a short cast time dealing big damage, or via Seismic Wave, an AoE ability inflicting physical damage to everyone within 60 yards. Do note that you CANNOT kite Soggodon, and if you try, he'll just grip you back in and cast Crush on you. 
+
+Roughly every 30 seconds he'll grip everyone in melee and start casting Massive Smash for 8 seconds. Everyone will be rooted, and must get out before the end of the cast or they will die. You have two choices here, either everyone in your group has an ability to get out of root (so you can Shift Forms, Shaman can Ghost Wolf, DH can Vengeful Retreat, Pally can Freedom, etc) so they get out on their own, or they cannot in which case you MUST kill the add that roots them in place, in order for them to get out.
+
+As a note, I also want to apologise to my guildy Pasta who I left for dead every single time this was cast, it sucks to be a Priest this tier.
+	
+#### What power to take
+The only power here really worth considering is 
+
+- {{< spell 357524 "The Stone Ward" >}}
+- {{< spell 356828 "Dripping Fang" >}}
+- {{< spell 356827 "Tiny Dancing Shoes" >}}
+
+Stone Ward is the only real sensible choice, increasing your HP is a no-brainer, Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678316966084648/unknown.png)
+
+<div id="Arkolath">
+  
+### [Incinerator Arkolath](#Arkolath)
+  
+</div>
+	
+#### What the Lieutenant does
+His aura inflicts fire damage to everyone in combat with him. He also casts a debuff named Melt Soul on a random player that increases fire damage taken by 100%. So he basically is Pride 2.0. His other abilities are Scorching Blast, where he casts a circle of fire at the position of a player, there can only be 3 of those active at any given time, so don't worry too much about running out of space. And Inferno, a cast that you can (and should) interrupt that does fire damage to everyone in the party.	
+
+#### What power to take
+
+- {{< spell 357575 "Champion's Brand" >}} 
+- {{< spell 357848 "Signet of Bolstering" >}} 
+- {{< spell 357864 "Raging Battle-Axe" >}} 
+
+This is another interesting Lieutenant for me, Champion's Brand is the "safe" choice, but Bolstering can be good in keys that have a lot of adds that will die at varying times (like DoS arden wing), and raging Battle-Axe has good uses in places with mobs that have a lot of HP for you to execute on, like in ToP military wing. 
+
+I like this one as it's the only real selection that makes you stop and think about how you can use it in the key, more of them should've been like this.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678365137272842/unknown.png)
+
+<div id="Oros">
+  
+### [Oros Coldheart](#Oros)
+  
+</div>
+
+#### What the Lieutenant does
+His aura slows you down by 50%. Due to this and his power selection it's a very likely candidate to be skipped in any dungeon where the final boss does not require heavy movement. He'll cast a debuff named Biting Cold on a player, do not stand near them as that does damage in an AoE around them. Periodically casts Forst Lance in front of him, dodge it or take massive damage and get knocked away. He'll cast Cold Snap, an ability that spawns ice orbs around him, just move away from them to avoid taking damage	
+
+#### What power to take
+
+- {{< spell 357834 "Handbook of Uncivil Etiquette" >}}
+- {{< spell 357815 "Satchel of the Hunt" >}}
+- {{< spell 357825 "Vial of Desperation" >}}
+
+Satchel of the Hunt could be fun in a key where there isn't a huge amount of interrupts to do, or the 10% increased damage from interrupting can't be utilised that much, but the Handbook is the only DPS increase so likely the go to choice. Don't take Vial.
+
+Note: Sorry for the picture, this was taken on beta and "Imperfect Panacea" has been changed to "Satchel if the Hunt".
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678406257836042/unknown.png)
+
+<div id="Varruth">
+  
+### [Executioner Varruth](#Varruth)
+  
+</div>
+
+#### What the Lieutenant does
+His Aura is a -50% to healing done.
+
+Pulling it with other mobs is not recommended because of the aura, though if your group feels up to it, you can drag a few mobs in. Periodically he'll cast Wave of Terror, which to avoid you must be near another player, otherwise you'll be feared for 5 seconds. 
+
+He'll also inflicts a heavy bleed on the tank via Sever
+
+Finally he'll also periodically charge a random player and inflict a bleed on them and anyone standing near them via Carnage. As such avoid standing near other players unless Varruth is casting Wave of Terror, then it's just a bad situation and be prepared for it with Barkskin or Survival instincts.
+
+#### What power to take
+
+- {{< spell 357706 "Volcanic Plumage" >}}
+- {{< spell 357575 "Champion's Brand" >}}
+- {{< spell 357609 "Dagger of Necrotic Wounding" >}}
+
+For Varruth, Volcanic Plumage is likely a locked in choice, the AoE knockup it does when it procs is very good for just shutting down packs from casting, especially if everyone in the group has it.
+
+Necrotic Wounding is good if a key has a lot of healing that you'd like to stop, though I can't think of a huge amount of keys that do currently, and Champion's Brand is just a flat 8% crit, which is solid damage wise if the AoE knockup/silence isn't needed in the key.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678274727870504/unknown.png)
+
+-----
+
+<div id="Prideful">
+
+## [9.0 seasonal affix - Prideful](#Prideful)
+
+</div>
+  
+![Image](https://wow.zamimg.com/images/wow/icons/large/spell_animarevendreth_buff.jpg)
+  
+**Prideful** - *Players overflow with pride as they defeat non-boss enemies, eventually forming a Manifestation of Pride. Defeating this Manifestation greatly empowers players.*
+
+Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
+
+You’ve got two choices when it comes to prides …
+
+- use CDs *on* the Pride to speed up the kill and ease the healers throughput
+- use CDs *after* the pride to get the most out of the 100% damage boost
+
+This basically comes down to…
+
+- does your healer have the CDs/mana to manage the pride
+- do you have a boss or pack you want to nuke that you need the pride to handle
+- will killing the pride take more time without CDs than you would save by using them during the buff window
+
+In my M+ groups, we let the healer make the call, in pugs I'd probably make the call based on if the pride is at too many stacks at 50% hp left or if I want to pad ...
+
+It's also worth adding, that you can outright skip the Pride if you move far enough away from it when it's spawning and use an invis pot, which might be needed for the bleeding edge keys. This is mostly an MDI strat though so it's not too useful in a normal setting.
+
+![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
+
+-----
 
 ## Dungeon tips
 Fair warning, all of the “Meld BS” is potentially fixable by Blizz, so don’t blame us if you do it and get 1-shot :)
@@ -232,7 +385,7 @@ Although this is often left to tanks, knowing a solid route and the count that s
 - **Spires of Ascension**: 87.37% before going up for Devos.
 - **The Necrotic Wake**: 68.2% before going up.
 
----
+-----
 
 ### De Other Side
 
