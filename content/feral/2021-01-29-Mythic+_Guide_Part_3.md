@@ -56,6 +56,48 @@ Frenzyband is likely still good in the +damage taken scenarios for the burst, bu
 
 ### What is new ...
 
+<div id="legendaries">
+  
+### [Covenant legendaries](#legendaries)
+  
+</div>
+
+Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
+
+**Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
+With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
+
+From testing Celestial, the results look as follows ...
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
+
+It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
+
+To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
+
+A 1 minute CD is incredibly strong. A lot of Ferals (including myself) have been hard-locking this legendary in all content, the only real competitor now is Circle in larger AoE keys.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
+
+**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
+The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
+
+The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
+
+**Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
+Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
+
+**Venthyr** - {{< spell 354109 "Sinful hysteria" >}}
+This legendary does provide a large damage boost on a 3-minute Cooldown, but unlike the Boomies, we can't quite make as much use out of it with our 3 min CD not being as powerful - it is likely that for the incredibly rare Venthyr Ferals out there, Apex and Circle are still stronger choices.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503101361487912/unknown.png)
+
+-----
+
 <div id="Conduits">
   
 ### [New Conduits](#Conduits)
@@ -116,48 +158,6 @@ Simply lock in the DPS gain Shards, then compare the Defensive vs Utility Shards
 - {{< spell 355748 "Shard of Tel" >}} - (Defensive) *Your crits cause a nearby ally to gain a very small absorb.*
 - {{< spell 355743 "Shard of Kyr" >}} - (Utility) *Gain 880 absorb every sec up to 4400.*
 - {{< spell 355741 "Shard of Cor" >}} - (DPS) *Whenever you damage an enemy you haven't attacked yet, gain 3% damage for 20 sec.* 	
-
------
-
-<div id="legendaries">
-  
-### [Covenant legendaries](#legendaries)
-  
-</div>
-
-Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
-
-**Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
-With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
-
-From testing Celestial, the results look as follows ...
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
-
-It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
-
-To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
-
-A 1 minute CD is incredibly strong. A lot of Ferals (including myself) have been hard-locking this legendary in all content, the only real competitor now is Circle in larger AoE keys.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
-
-**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
-The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
-
-The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
-
-**Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
-Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
-
-**Venthyr** - {{< spell 354109 "Sinful hysteria" >}}
-This legendary does provide a large damage boost on a 3-minute Cooldown, but unlike the Boomies, we can't quite make as much use out of it with our 3 min CD not being as powerful - it is likely that for the incredibly rare Venthyr Ferals out there, Apex and Circle are still stronger choices.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503101361487912/unknown.png)
 
 -----
 
