@@ -12,7 +12,8 @@ patch: "9.1"
 # Feral Druid Mythic Plus - Deep Dive 
 
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
-# Part 4 - Final thoughts and Q&A
+
+## Part 4 - Final thoughts and Q&A
 In this section we will cover the following ...
 - [What would you like to see changed to M+ Feral](#Changes)
 - [Questions & Answers](#QA)
