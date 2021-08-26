@@ -44,9 +44,9 @@ In terms of maximising what you do pack to pack, when you first open on a pack t
 
 - have combo points ready from the last pack (where possible)
 - have one/two {{< spell 319439 "Bloodtalons" >}} stack(s) ready from last pack (where possible)
-- have {{< spell 5217 "Tiger's Fury" >}} up from the last pack *and* off CD (where possible)
+- have {{< spell 5217 "Tiger's Fury" >}} up from the last pack *and* off CD (where possible and only when running Tiger's Fury)
 - get {{< spell 285381 "Primal Wrath" >}} (PW) rolling as quick as possible
-- stop applying DoTs when the mobs are about to die (this goes for PW spam and Rake)
+- stop applying DoTs when the mobs are about to die (this goes for PW spam at low mob counts and Rake)
 
 This means that if you come from the last pack with no CPs, it is optimal to Stealth, Rake opener, Thrash and then Primal Wrath instantly with the 2 or 3 combo points you get, then carry on with the rest of your rotation.
 
@@ -78,9 +78,11 @@ Yup, this is a thing that exists, it’s feelycrafty more than factually mathed 
 - 1-12 targets = Feral convoke
 - 13+ targets = Consider Boomie convoke (even without HotW)
 
-That said, I do think people undervalue Feral Convoke in AoE, i've gone up to 25k+ with a Feralvoke so feel free to mess around with it and see what works for you.
+That said, I do think people undervalue Feral Convoke in AoE, the Bites, Rakes and Moonfires can be powerful on AoE and provide Combo Points for more PWs which you won't get when Boomievoking- I've gone up to 25k+ with a Feralvoke so feel free to mess around with it and see what works for you.
 
 **{{< spell 93402 "Sunfire" >}}** - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. Optimal play in M+ does make use of Sunfire, but don't feel you have to.
+
+One thing to be aware of if you are Sunfire weaving is to be aware of when Predator is about to proc Tiger's Fury, as you don't want multiple free TFs to proc when you're in Boomieform, as it's effectively wasted energy.
 
 -----
 
@@ -100,12 +102,19 @@ Currently we have two very strong CDs in M+ that can be used for both ST and AoE
 - **{{< spell 50334 "Berserk" >}}** - Berserk has undergone some changes since SL that make it pretty big on sustained AoE, it's no huge AoE burst like some specs have out there but it's still very solid all rounder.
 - **{{< spell 323764 "Convoke the Spirits" >}}** - Convoke is huge, it's a 4s channelled nuke that switches up based on what form you are in. Feral convoke also casts the Lunar Inspiration version of Moonfire, which means it's AoE potential in Feral form is bigger than some would give it credit for.
 
-*That said* there are times and routes where CD usage matters, for example if your group is planning around a Pride burst window to burn down a group or a boss, or a particularly nasty pull that needs to be burned down to be efficient (e.g. SoA double pack mid-way through between 1st and 2nd boss with spear), then you need to hold CDs. Talk to your group and coordinate these types of pulls to make sure you have yours ready.
+*That said* there are times and routes where CD usage matters, for example if your group is planning around a burst window to burn down a pack or a boss, or a particularly nasty pull that needs to be burned down to be efficient (e.g. SoA double pack mid-way through between 1st and 2nd boss with spear), then you need to hold CDs. Talk to your group and coordinate these types of pulls to make sure you have yours ready.
+
+Also, it can be worth having an addon like OmniCD to track your teams CDs, so you don't all blow CDs on the same pack, which can lower the individual value of each members CDs.
 
 For more info on Convoke, check out the [Beta Convoke Test Data](https://docs.google.com/spreadsheets/d/e/2PACX-1vTwxWnGzNZw7CxBzN4XaoeW43Y0y2xjRnqEtpP76tTQ9GdB815wnhCA4Zm2ekofWZtkpWcuKqNcU3nv/pubhtml#)
 
 ### In Berserk
-The Feral rotation changes a little in Berserk, as Combo Points gain value due to the refund and the Stealth-modified spells also gain value, it's worth being aware of how  to use Berserk in different situations:
+The Feral rotation changes a little in Berserk ...
+
+- Combo Points gain value due to finishers refunding 2 combo points on every use
+- Stealth-modified spells also gain value, as {{< spell 1822 "Rake" >}} and {{< spell 5221 "Shred" >}} have additional benefits for the duration of Berserk
+
+It's worth being aware of how  to use Berserk in different situations:
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/806122266801995777/unknown.png)
 
@@ -121,7 +130,7 @@ The Feral rotation changes a little in Berserk, as Combo Points gain value due t
 
 ![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
 
-**Tyrannical** - *Bosses have ~~40~~ 30% more health (recently nerfed). Bosses and their minions inflict up to 15% increased damage.*
+**Tyrannical** - *Bosses have 30% more health. Bosses and their minions inflict up to 15% increased damage.*
 
 Tyrannical weeks are Blizz’s way of telling you to take a week off, a cancerous affix that makes keys unfun to play at a high level, turning boss fights into 3-4 min slogs. That said, as of 9.1 Blizz has been giving very easy affix combinations with Tyr as a way to encourage people to run it.
 
@@ -141,13 +150,15 @@ Fort is your push week, as bosses die insanely fast and trash being more dangero
 
 Spiteful isn’t quite as bad for Ferals as it is for other melees, as we can abuse Balance Affinity to stay away from the ghosts and they also trigger resets from Pred. That said, make sure you get yourself a good WA or Plater import that highlights when one is on you so you can deal with it. They take something like 8% of their health every second, so ~12s to die off without any damage.
 
-You can knock them back with Typhoon and Root them with a PS proc to get it away from you.
+You can knock them back with Typhoon and Root them with a PS proc to get it away from you. You can also Bash/Maim them safely with Balance Affinity as a last resort to give you more time to position.
 
 ![Image](https://wow.zamimg.com/images/wow/icons/large/spell_fire_felflamering_red.jpg)
 
 **Explosive** - *While in combat, enemies periodically summon Explosive Orbs that will detonate if not destroyed.*
 
 Explosive orbs are in a weird place where they have <200 hp, one auto from anyone in the group will kill them, so simply get a WA/nameplate that tracks them and do your part, it doesn’t act as a DPS loss as you can still spam away with AoE.
+
+Energy specs are the best specs to deal with Explosives due to our 1 second locked Auto-attakc timer, which means you can kill an explosive every second.
 
 ![Image](https://wow.zamimg.com/images/wow/icons/large/ability_warrior_focusedrage.jpg)
 
@@ -215,15 +226,13 @@ Storming is a pain, but again something that Feral can deal with a bit better th
 
 <div id="Tormented">
 
-## [9.0 seasonal affix - Tormented](#Tormented)
+## [9.1 seasonal affix - Tormented](#Tormented)
 
 </div>
 
 I'm going to copy/paste a lot of this from Catha's well written Bear guide, feel free to check that out fully below, though I will be trying to correct some of his rambling grammar.
 
 https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing
-
-Also, it is likely that the powers dropped by the Lieutenants will see buffs and nerfs throughout the tier, and it is also likely I won't update this regularly, so please check in with the Ferals in Dreamgrove for any questions or an up to date recommendations. 
 
 At different points during the dungeon you can find one of four new Lieutenants. Killing one of these Lieutenant awards you with a choice of three anima powers. You can only choose ONE amongst those three. These powers are fixed per Lieutenants. Which means that you always get the same powers from the same Lieutenant as long as your role (read DPS/Tanks/Healers) remains the same. 
 
@@ -257,7 +266,7 @@ As a note, I also want to apologise to my guildy Pasta who I left for dead every
 - {{< spell 356828 "Dripping Fang" >}}
 - {{< spell 356827 "Tiny Dancing Shoes" >}}
 
-Stone Ward is the go-to choice, increasing your HP is a no-brainer, Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one that is only relevant for handling Spites (I do recommend it on Spite week).
+Stone Ward is the go-to choice, increasing your HP is a no-brainer. Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one that is only relevant for handling Spites (I do recommend it on Spite week).
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678316966084648/unknown.png)
 
@@ -278,7 +287,7 @@ His aura inflicts fire damage to everyone in combat with him. He also casts a de
 - {{< spell 357848 "Signet of Bolstering" >}} 
 - {{< spell 357864 "Raging Battle-Axe" >}} 
 
-This is another interesting Lieutenant for me, Champion's Brand is the "safe" choice, but Bolstering can be good in keys that have a lot of adds that will die at varying times (like DoS arden wing or SD gauntlet), and raging Battle-Axe has good uses in places with mobs that have a lot of HP for you to execute on, like in ToP military wing. I've seen this average out to ~4.5% damage on a Tyr boss for example.
+This is another interesting Lieutenant for me, Champion's Brand is the "safe" choice, but Bolstering can be good in keys that have a lot of adds that will die at varying times (like DoS arden wing or SD gauntlet) as well as during Spiteful and Explosive weeks as killing those "mobs" provides a stack of bolstering.Raging Battle-Axe has good uses in places with mobs that have a lot of HP for you to execute on, like in ToP military wing. I've seen this average out to ~4.5% damage on a Tyr boss for example.
 
 I like this one as it's the only real selection that makes you stop and think about how you can use it in the key, more of them should've been like this.
 
@@ -293,7 +302,7 @@ I like this one as it's the only real selection that makes you stop and think ab
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395324412289094/unknown.png)
 
 #### What the Lieutenant does
-His aura slows you down by 50%. Due to this and his power selection it's a very likely candidate to be skipped in any dungeon where the final boss does not require heavy movement. He'll cast a debuff named Biting Cold on a player, do not stand near them as that does damage in an AoE around them. Periodically casts Forst Lance in front of him, dodge it or take massive damage and get knocked away. He'll cast Cold Snap, an ability that spawns ice orbs around him, just move away from them to avoid taking damage	
+His aura slows you down by 50%. Due to this and his power selection it's a very likely candidate to be skipped in any dungeon where the final boss does not require heavy movement. He'll cast a debuff named Biting Cold on a player, do not stand near them as that does damage in an AoE around them. Periodically casts Frost Lance in front of him, dodge it or take massive damage and get knocked away. He'll cast Cold Snap, an ability that spawns ice orbs around him, just move away from them to avoid taking damage	
 
 #### What power to take
 
@@ -355,7 +364,7 @@ All three picks have value here as well ...
 
 With 9.0 over, this is no longer an affix that appears in the game, but leaving this here for historic reasons.
 
-Prideful is this season's permanent affix on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
+Prideful was the Season 1 of Shadowland's keystone affix present on all 10+ keys. It boosts your damage by 30% for 1 minute when killed, and while alive does a pulsing AoE that ticks up in damage the longer the mob lives for.
 
 You’ve got two choices when it comes to prides …
 
