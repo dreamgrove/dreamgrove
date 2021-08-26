@@ -457,13 +457,13 @@ In the Arden area …
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/screenshots/normal/949065.png?maxWidth=2400)
-
 <div id="Mists">
   
 ### [Mists of Tirna Scithe](#Mists)
   
 </div>
+
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/949065.png?maxWidth=2400)
 
 **General advice**
 
@@ -516,13 +516,13 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/guide/seo/10335.jpg?1606286315)
-
 <div id="SD">
   
 ### [Sanguine Depths](#SD)
   
 </div>
+
+![Image](https://wow.zamimg.com/uploads/guide/seo/10335.jpg?1606286315)
 
 **General advice**
 
@@ -547,13 +547,13 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/guide/header/10330.jpg?1606286413&maxWidth=1630)
-
 <div id="PF">
   
 ### [Plaguefall](#PF)
   
 </div>
+
+![Image](https://wow.zamimg.com/uploads/guide/header/10330.jpg?1606286413&maxWidth=1630)
 
 **General advice**
 
@@ -578,13 +578,13 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/blog/images/22104-datamined-shadowlands-mythic-dungeon-hotfixes-12-21-theater-of-pain-plaguefall-n.jpg)
-
 <div id="ToP">
   
 ## [Theater of Pain](#ToP)
   
 </div>
+
+![Image](https://wow.zamimg.com/uploads/blog/images/22104-datamined-shadowlands-mythic-dungeon-hotfixes-12-21-theater-of-pain-plaguefall-n.jpg)
 
 **General advice**
 
@@ -607,13 +607,13 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/blog/images/19394-shadowlands-alpha-build-34821-loading-screens-and-icons.png)
-
 <div id="SoA">
   
 ### [Spires of Ascension](#SoA)
   
 </div>
+
+![Image](https://wow.zamimg.com/uploads/blog/images/19394-shadowlands-alpha-build-34821-loading-screens-and-icons.png)
 
 **General advice**
 
@@ -638,13 +638,13 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 ---
 
-![Image](https://wow.zamimg.com/uploads/blog/images/19331-shadowlands-alpha-build-34714-necrotic-wake-loading-screen-icons-maps.png)
-
 <div id="NW">
   
 ### [The Necrotic Wake](#NW)
   
 </div>
+
+![Image](https://wow.zamimg.com/uploads/blog/images/19331-shadowlands-alpha-build-34714-necrotic-wake-loading-screen-icons-maps.png)
 
 **General advice**
 - Throw Cleaver damages the first target it finds so you can hit mobs with it doing some nice damage.
