@@ -537,6 +537,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 **To be Continued in Part 4...**
 
 - What would you like to see changed to M+ Feral
-- Feral QnA
+- Questions & Answers
+- Final words
 
 ---
