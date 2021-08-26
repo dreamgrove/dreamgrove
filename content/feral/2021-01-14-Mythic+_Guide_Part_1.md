@@ -38,7 +38,7 @@ patch: "9.0"
   
 </div>
 
-**For more info on all things talents, utility, gear, and more, check out the below two guides for an excellent write ups on all things Feral.**
+**For more info on all things talents, utility, gear, and more, check out the below guides for an excellent write ups on all things Feral.**
 
 > Guilty’s WoWhead guide on M+  
 > https://www.wowhead.com/guides/feral-druid-basic-mythic-plus-keystone-dungeons 
