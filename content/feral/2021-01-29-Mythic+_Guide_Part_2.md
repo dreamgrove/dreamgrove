@@ -8,6 +8,8 @@ series_title: "Part 2"
 patch: "9.0"
 ---
 
+# Feral Druid Mythic Plus - Deep Dive 
+
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
 
 ## Part 2 - Getting the most inside the key
