@@ -287,10 +287,10 @@ The below tree will be your end goal if you're min/maxing for M+ and raid somewh
 **To be Continued in Part 2...**
 
 - Rotational Plays
+- Cooldown usage
 - Affixes
+- 9.0 seasonal affix - Prideful
+- 9.1 seasonal affix - Tormented
 - Dungeon specific tips
-- Talent changes per key and why
-- Soulbind/Conduit changes per key and why
 
-
-
+-----
