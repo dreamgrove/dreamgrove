@@ -218,6 +218,8 @@ More Single Target and Priority focused, consider this build in ...
 - Spires of Ascension
 - Mists of Tirna Scithe
 
+(You can also run Celest in every key quite happily)
+
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
 **Circle Build**  
@@ -229,7 +231,7 @@ More general AoE focused, consider this build in ...
 - Sanguine Depths
 - Necrotic Wake
 
-SotF focused
+SotF focused  
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/879741959432994816/unknown.png)
 
 For a changeup and bit of fun ...
