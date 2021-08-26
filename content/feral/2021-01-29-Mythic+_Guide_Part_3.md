@@ -211,17 +211,17 @@ Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of
 
 So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. so ...
 
-#### Apex Build
-More Single Target and Priority focused, you want to run this build in ...
+#### The Apex & Celest Builds 
+More Single Target and Priority focused, consider this build in ...
 
 - Theater of Pain
 - Spires of Ascension
 - Mists of Tirna Scithe
 
-![image](https://cdn.discordapp.com/attachments/337894455589994517/835467203230171136/unknown.png)
+![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
 **Circle Build**  
-More general AoE focused, you want to run this build in ...
+More general AoE focused, consider this build in ...
 
 - De Other Side
 - Halls of Atonement
@@ -230,10 +230,10 @@ More general AoE focused, you want to run this build in ...
 - Necrotic Wake
 
 SotF focused
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835468432107110400/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/879741959432994816/unknown.png)
 
 For a changeup and bit of fun ...
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835541390074183760/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880425661540470826/unknown.png)
 
 **Frenzy Build** - 
 Meme fun in Mists and *potentially* SoA
@@ -243,7 +243,7 @@ Meme fun in Mists and *potentially* SoA
 
 So in Mists you basically only want this for the 1st boss. Because there is an Inn outside the key, you can actually do some extra fun stuff here where you run the below build up until the first boss, then during the death RP you hearth out (making sure to have set your hearth outside before the key), change your gear/build at the Inn, then walk back in. Hopefully another Night Fae in your group has activated the checkpoint or you have a long walk to get back.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835475259104034836/unknown.png)
+![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
 -----
 
