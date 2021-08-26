@@ -28,11 +28,17 @@ In this section we will cover the following ...
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/810517034206101505/unknown.png) 
 
+- https://raider.io/characters/eu/hyjal/Maystine
+- https://www.twitch.tv/maystine
+
 Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more Rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, even more than what we have right now, it needs to be reaaally good.
 
 I think if Feral ever does get something bursty for AoE, it can be one of the top specs for MDI. I’d also like to see PW baseline and add a new talent instead in that row.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/810516923146043422/unknown.png) 
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/810516923146043422/unknown.png)
+
+- https://raider.io/characters/eu/kilrogg/Foresight
+- https://www.twitch.tv/foresight123
 
 For me, Feral is in a spot where in M+ it is middle of the pack, and as always it’s more a community perception issue that Feral has had for a long time than an actual throughput/utility issue, as well as (and this is a general issue not just Feral) it is overshadowed by other specs’. Realistically if a spec can do even 1% more than you, it’ll see play over your spec, it’s the way meta and competitive games work, and unfortunately, this has a habit of trickling down to the general playerbase where spec really doesn’t matter for 90-95% of content.  
 
