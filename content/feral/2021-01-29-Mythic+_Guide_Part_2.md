@@ -127,6 +127,8 @@ The Feral rotation changes a little in Berserk, as Combo Points gain value due t
 
 ### Seasonal and affixes on all keys
 
+![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
+
 **Tyrannical** - *Bosses have ~~40~~ 30% more health (recently nerfed). Bosses and their minions inflict up to 15% increased damage.*
 
 Tyrannical weeks are Blizz’s way of telling you to take a week off, a cancerous affix that makes keys unfun to play at a high level, turning boss fights into 3-4 min slogs. That said, as of 9.1 Blizz has been giving very easy affix combinations with Tyr as a way to encourage people to run it.
@@ -377,8 +379,6 @@ This basically comes down to…
 In my M+ groups, we let the healer make the call, in pugs I'd probably make the call based on if the pride is at too many stacks at 50% hp left or if I want to pad ...
 
 It's also worth adding, that you can outright skip the Pride if you move far enough away from it when it's spawning and use an invis pot, which might be needed for the bleeding edge keys. This is mostly an MDI strat though so it's not too useful in a normal setting.
-
-![Image](https://wow.zamimg.com/images/wow/icons/large/achievement_boss_archaedas.jpg)
 
 -----
 
