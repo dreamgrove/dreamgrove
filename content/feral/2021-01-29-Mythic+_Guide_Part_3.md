@@ -217,7 +217,8 @@ This is the standard "go-to" build, which provides more Single Target and Priori
 - Theater of Pain
 - Spires of Ascension
 - Mists of Tirna Scithe
-- You can also run Celest in every key quite happily
+
+You can also run Celest in every key quite happily and run it with Predator if you want more AoE, It's an incredibly versatile legendary.
 
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
