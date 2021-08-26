@@ -18,11 +18,9 @@ In this section we will cover the following ...
 
 --- 
 
-### 
-
 <div id="Changes">
 	
-- [What would you like to see changed to M+ Feral](#Changes)
+## [What would you like to see changed to M+ Feral](#Changes)
 	
 </div>
 
