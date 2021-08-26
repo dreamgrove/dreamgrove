@@ -13,7 +13,7 @@ patch: "9.1"
 # Part 4 - Final thoughts and Q&A
 In this section we will cover the following ...
 - [What would you like to see changed to M+ Feral](#Changes)
-- [Questions & Answer](#QA)
+- [Questions & Answers](#QA)
 - [Final words](#Final_Words)
 
 --- 
