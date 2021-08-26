@@ -46,7 +46,7 @@ patch: "9.0"
 > Wordup’s IcyVeins guide on M+  
 > https://www.icy-veins.com/wow/feral-druid-pve-dps-mythic-plus-tips 
 
-> Maymay's Method Feral guide for 9.1
+> Maymay's Method Feral guide for 9.1  
 > https://www.method.gg/guides/feral-druid/playstyle-and-rotation
 
 -----
