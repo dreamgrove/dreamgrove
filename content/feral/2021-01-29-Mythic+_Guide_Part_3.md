@@ -9,7 +9,7 @@ patch: "9.0"
 ---
 
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
-## Part 3 - Min-maxing 
+## Part 3 - Whats new in 9.1 and Min-maxing 
 In this section we will cover the following ...
 - [What has changed for Feral with 9.1](#changes)
   <br> - [Covenant legendaries](#legendaries)
