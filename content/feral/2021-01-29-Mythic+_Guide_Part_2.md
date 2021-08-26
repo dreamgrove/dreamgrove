@@ -385,8 +385,9 @@ It's also worth adding, that you can outright skip the Pride if you move far eno
     
 **To be Continued in Part 3...**
 
-- Talent changes per key and why
-- Soulbind/Conduit changes per key and why
-- Feral Q&A
+- What has changed for Feral with 9.1
+- Simming with “Dungeon Slice” for Mythic Plus
+- Build changes per key and why
+- Dungeon specific tips
 
 ---
