@@ -90,7 +90,7 @@ This choice is subjective and there's no "right" answer, play which you feel is 
 
 Unfortunately {{< spell 210663 "Scent of Blood" >}} has never been chosen as a talent ever by anyone seriously in M+, and {{< spell 202028 "Brutal Slash" >}} is a shell of it's former Legion self and should only really be taken in ST.
 
-**Row 50** - Originally a lot of early sims with low gear had {{< spell 274837 "Feral Frenzy" >}} equal to or above {{< spell 319439 "Bloodtalons" >}}BT, but as time has passed and gear has grown this is no longer the case, BT is simply too good. Also since leaving BfA where builders were much stronger than they are today, {{< spell 236068 "Moment of Clarity" >}} is basically dead, as right now builders do not do enough to justify choosing it.
+**Row 50** - Originally a lot of early sims with low gear had {{< spell 274837 "Feral Frenzy" >}} equal to or above {{< spell 319439 "Bloodtalons" >}}, but as time has passed and gear has grown this is no longer the case, BT is simply too good. Also since leaving BfA where builders were much stronger than they are today, {{< spell 236068 "Moment of Clarity" >}} is basically dead, as right now builders do not do enough to justify choosing it.
 
 -----
 
@@ -118,7 +118,7 @@ https://www.dreamgrove.gg/sims/cat/
 **Craft it on** 
 - Legs
 
-Celest is the king of 9.1. A 1 minute burst ST CD as strong as Convoke makes it very hard to justify running anything else, especially with how powerful Single Target is in this tier. The Tormented mini-bosses dying fast is important, so guaranteeing you have a convoke for every one is big, as well as being able to fit in 2-3 convokes per boss fight also means as a Feral you're likely to be 2-3k ST DPS above your next rival.
+Celest is the king of 9.1. A 1 minute burst ST CD as strong as {{< spell 323764 "Convoke the Spirits" >}} makes it very hard to justify running anything else, especially with how powerful Single Target is in this tier. The Tormented mini-bosses dying fast is important, so guaranteeing you have a convoke for every one is big, as well as being able to fit in 2-3 convokes per boss fight also means as a Feral you're likely to be 2-3k ST DPS above your next rival.
 
 Focusing on ST with a {{< spell 202031 "Sabertooth" >}}/Celect build also means that your two other teammates can run more AoE focused builds, allowing for specs to play to their niches more.
 
