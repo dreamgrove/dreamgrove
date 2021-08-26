@@ -11,12 +11,12 @@ patch: "9.0"
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
 ## Part 3 - Min-maxing 
 In this section we will cover the following ...
-- [Simming with “Dungeon Slice” for Mythic Plus](#Sims)
-- [Build changes per key and why](#Builds)
 - [What has changed for Feral with 9.1](#changes)
   <br> - [Covenant legendaries](#legendaries)
   <br> - [New Conduits](#Conduits)
   <br> - [Sanctum of Domination Shards](#Shards)
+- [Simming with “Dungeon Slice” for Mythic Plus](#Sims)
+- [Build changes per key and why](#Builds)
 - [Dungeon specific tips](#Dungeon_specific_tips)
   <br> - [General Dungeon advice](#General)
   <br> - [De Other Side](#DoS)
@@ -27,6 +27,139 @@ In this section we will cover the following ...
   <br> - [Theater of Pain](#ToP)
   <br> - [Spires of Ascension](#SoA)
   <br> - [The Necrotic Wake](#NW)
+
+-----
+
+<div id="changes">
+  
+## [What has changed for Feral with 9.1](#changes)
+  
+</div>
+
+### What has changed ...
+Basically nothing, no joke Feral is in almost the exact same place as it was in 9.0 from a M+ point of view. 
+
+One thing that may go in our favour is with the meta shift away from fixed percentage breakpoints, you might see more chain pulling, which is what Feral loves, long sustained AoE pulls instead of burst AoE pulls.
+
+**Apex fix**
+Also Apex has been "fixed" to now correctly return 25 energy regardless of combo points you use the free bite at, whereas before it returned energy based on the combo points used (5 energy at 1cp, 15 at 3, etc). This makes Apex much smoother and act as an energy refund funnel in AoE - Apex now feels much nicer to use in M+.
+
+**Frenzyband "fix"**
+Unfortunately Frenzyband has now been changed to no longer double-dip damage on damage boost effects, such as the first boss of Mists. 
+
+What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
+
+Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists, with Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
+
+### What is new ...
+
+<div id="Conduits">
+  
+### [New Conduits](#Conduits)
+  
+</div>
+
+Conduits now have an "empowered" system, which will unlock passively as you rank up your renown. All this does is make one of the Conduit input slots gold, which will add two ranks to the conduit - so bumping 252 (the 9.1 max) up to 278 ilevel. This means that you want your most impactful Conduits to be at the bottom (top on screen?) of the tree so they're empowered first.
+
+Other than this, there are now two new conduits, which are both looking extremely underwhelming.
+
+**Adaptive Armor Fragment**
+
+![image](https://cdn.discordapp.com/attachments/337894455589994517/860501050486161438/unknown.png)
+
+At ilvl 226, this averages to ~25 more agility, which as our other Conduits are pretty strong, this won't really see a place.
+
+
+**Condensed Anima Sphere**
+
+![image](https://cdn.discordapp.com/attachments/337894455589994517/860501111760093184/unknown.png)
+
+Apparently the tooltip for this is bugged and at max rank it's supposed to be ~3.5% or so, still not worth it though vs Ferals other very strong defensive Conduit choices.
+
+-----
+
+<div id="Shards">
+  
+### [Sanctum of Domination Shards](#Shards)
+  
+</div>
+
+The new raid comes with a new Shard system, which is a pseudo set-bonus system. How this works is that there are three shard families, which have three effects in each, a defensive, offensive and utility shard. If you equip all three from a family (so the defensive, utility and offensive of Unholy for example) you will get an additional effect.
+
+The set bonuses do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
+
+- Shard of Dyz (Unholy DPS)
+- Shard of Bek (Blood DPS)
+- Shard of Jas (Blood Defensive)
+- Shard of Cor (Frost DPS)
+- Shard of Kyr (Frost Defensive)
+
+Simply lock in the DPS gain Shards, then compare the Defensive vs Utility Shards to see how you want to finish out your build.
+
+#### Unholy shards
+
+- {{< spell 355766 "Shard of Zed" >}} - (Defensive) *When you heal yourself with an ability, you have a chance to gain an aura that drain Hp from enemies.*
+- {{< spell 355757 "Shard of Oth" >}} - (Utility) *Increase your speed by 26.*
+- {{< spell 355755 "Shard of Dyz" >}} - (DPS) *Increase your damage by 0.33%. Stacks up 4 times.* 	
+
+#### Blood Shards
+
+- {{< spell 355731 "Shard of Jas" >}} - (Defensive) *Increase healing received by 1% and max hp by 400.*
+- {{< spell 355739 "Shard of Rev" >}} - (Utility) *Increase leech by 26.*
+- {{< spell 355721 "Shard of Bek" >}} - (DPS) *When you have 50% more hp than your target, deal 2% more damage.* 	
+
+#### Frost Shards
+
+- {{< spell 355748 "Shard of Tel" >}} - (Defensive) *Your crits cause a nearby ally to gain a very small absorb.*
+- {{< spell 355743 "Shard of Kyr" >}} - (Utility) *Gain 880 absorb every sec up to 4400.*
+- {{< spell 355741 "Shard of Cor" >}} - (DPS) *Whenever you damage an enemy you haven't attacked yet, gain 3% damage for 20 sec.* 	
+
+-----
+
+<div id="legendaries">
+  
+### [Covenant legendaries](#legendaries)
+  
+</div>
+
+Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
+
+**Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
+With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
+
+From testing Celestial, the results look as follows ...
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
+
+It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
+
+To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
+
+My advice for where to try out this legendary is ...
+
+- Spires of Ascension
+- Theater of Pain
+- De Other Side
+- Mists of Tirna Scithe
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
+
+**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
+The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
+
+The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
+
+**Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
+Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
+
+**Venthyr** - {{< spell 354109 "Sinful hysteria" >}}
+This legendary does provide a large damage boost on a 3-minute Cooldown, but unlike the Boomies, we can't quite make as much use out of it with our 3 min CD not being as powerful - it is likely that for the incredibly rare Venthyr Ferals out there, Apex and Circle are still stronger choices.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503101361487912/unknown.png)
 
 -----
 
@@ -113,139 +246,6 @@ Meme fun in Mists and *potentially* SoA
 So in Mists you basically only want this for the 1st boss. Because there is an Inn outside the key, you can actually do some extra fun stuff here where you run the below build up until the first boss, then during the death RP you hearth out (making sure to have set your hearth outside before the key), change your gear/build at the Inn, then walk back in. Hopefully another Night Fae in your group has activated the checkpoint or you have a long walk to get back.
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/835475259104034836/unknown.png)
-
------
-
-<div id="changes">
-  
-## [What has changed for Feral with 9.1](#changes)
-  
-</div>
-
-### What has changed ...
-Basically nothing, no joke Feral is in almost the exact same place as it was in 9.0 from a M+ point of view. 
-
-One thing that may go in our favour is with the meta shift away from fixed percentage breakpoints, you might see more chain pulling, which is what Feral loves, long sustained AoE pulls instead of burst AoE pulls.
-
-**Apex fix**
-Also Apex has been "fixed" to now correctly return 25 energy regardless of combo points you use the free bite at, whereas before it returned energy based on the combo points used (5 energy at 1cp, 15 at 3, etc). This makes Apex much smoother and act as an energy refund funnel in AoE - Apex now feels much nicer to use in M+.
-
-**Frenzyband "fix"**
-Unfortunately Frenzyband has now been changed to no longer double-dip damage on damage boost effects, such as the first boss of Mists. 
-
-What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
-
-Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists, with Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
-
-### What is new ...
-
-<div id="legendaries">
-  
-### [Covenant legendaries](#legendaries)
-  
-</div>
-
-Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
-
-**Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
-With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
-
-From testing Celestial, the results look as follows ...
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
-
-It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
-
-To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
-
-My advice for where to try out this legendary is ...
-
-- Spires of Ascension
-- Theater of Pain
-- De Other Side
-- Mists of Tirna Scithe
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
-
-**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
-The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
-
-The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
-
-**Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
-Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
-
-**Venthyr** - {{< spell 354109 "Sinful hysteria" >}}
-This legendary does provide a large damage boost on a 3-minute Cooldown, but unlike the Boomies, we can't quite make as much use out of it with our 3 min CD not being as powerful - it is likely that for the incredibly rare Venthyr Ferals out there, Apex and Circle are still stronger choices.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503101361487912/unknown.png)
-
------
-
-<div id="Conduits">
-  
-### [New Conduits](#Conduits)
-  
-</div>
-
-Conduits now have an "empowered" system, which will unlock passively as you rank up your renown. All this does is make one of the Conduit input slots gold, which will add two ranks to the conduit - so bumping 252 (the 9.1 max) up to 278 ilevel. This means that you want your most impactful Conduits to be at the bottom (top on screen?) of the tree so they're empowered first.
-
-Other than this, there are now two new conduits, which are both looking extremely underwhelming.
-
-**Adaptive Armor Fragment**
-
-![image](https://cdn.discordapp.com/attachments/337894455589994517/860501050486161438/unknown.png)
-
-At ilvl 226, this averages to ~25 more agility, which as our other Conduits are pretty strong, this won't really see a place.
-
-
-**Condensed Anima Sphere**
-
-![image](https://cdn.discordapp.com/attachments/337894455589994517/860501111760093184/unknown.png)
-
-Apparently the tooltip for this is bugged and at max rank it's supposed to be ~3.5% or so, still not worth it though vs Ferals other very strong defensive Conduit choices.
-
------
-
-<div id="Shards">
-  
-### [Sanctum of Domination Shards](#Shards)
-  
-</div>
-
-The new raid comes with a new Shard system, which is a pseudo set-bonus system. How this works is that there are three shard families, which have three effects in each, a defensive, offensive and utility shard. If you equip all three from a family (so the defensive, utility and offensive of Unholy for example) you will get an additional effect.
-
-The set bonuses do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
-
-- Shard of Dyz (Unholy DPS)
-- Shard of Bek (Blood DPS)
-- Shard of Jas (Blood Defensive)
-- Shard of Cor (Frost DPS)
-- Shard of Kyr (Frost Defensive)
-
-Simply lock in the DPS gain Shards, then compare the Defensive vs Utility Shards to see how you want to finish out your build.
-
-#### Unholy shards
-
-- {{< spell 355766 "Shard of Zed" >}} - (Defensive) *When you heal yourself with an ability, you have a chance to gain an aura that drain Hp from enemies.*
-- {{< spell 355757 "Shard of Oth" >}} - (Utility) *Increase your speed by 26.*
-- {{< spell 355755 "Shard of Dyz" >}} - (DPS) *Increase your damage by 0.33%. Stacks up 4 times.* 	
-
-#### Blood Shards
-
-- {{< spell 355731 "Shard of Jas" >}} - (Defensive) *Increase healing received by 1% and max hp by 400.*
-- {{< spell 355739 "Shard of Rev" >}} - (Utility) *Increase leech by 26.*
-- {{< spell 355721 "Shard of Bek" >}} - (DPS) *When you have 50% more hp than your target, deal 2% more damage.* 	
-
-#### Frost Shards
-
-- {{< spell 355748 "Shard of Tel" >}} - (Defensive) *Your crits cause a nearby ally to gain a very small absorb.*
-- {{< spell 355743 "Shard of Kyr" >}} - (Utility) *Gain 880 absorb every sec up to 4400.*
-- {{< spell 355741 "Shard of Cor" >}} - (DPS) *Whenever you damage an enemy you haven't attacked yet, gain 3% damage for 20 sec.* 	
 
 -----
 
