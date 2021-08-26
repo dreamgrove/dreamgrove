@@ -211,18 +211,17 @@ Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of
 
 So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. so ...
 
-#### The Apex & Celest Builds 
-More Single Target and Priority focused, consider this build in ...
+### The Apex & Celest Builds 
+This is the standard "go-to" build, which provides more Single Target and Priority damage, consider this build in ...
 
 - Theater of Pain
 - Spires of Ascension
 - Mists of Tirna Scithe
-
-(You can also run Celest in every key quite happily)
+- You can also run Celest in every key quite happily
 
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
-#### **Circle Build**  
+### **Circle Build**  
 More general AoE focused, consider this build in ...
 
 - De Other Side
@@ -237,7 +236,7 @@ SotF focused
 For a changeup and bit of fun ...
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880425661540470826/unknown.png)
 
-#### **Frenzy Build** - 
+### **Frenzy Build** 
 Meme fun in Mists and *potentially* SoA
 
 - Spires of Ascension
