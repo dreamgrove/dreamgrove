@@ -16,13 +16,12 @@ In this section we will cover the following ...
 - [Rotational Plays](#Plays)
 - [Cooldown usage](#Cooldowns)
 - [Affixes](#Affixes)
-- [9.0 seasonal affix - Prideful](#Prideful)
 - [9.1 seasonal affix - Tormented](#Tormented)
   <br> - [Soggodon the Breaker](#Soggodon)
   <br> - [Incinerator Arkolath](#Arkolath)
   <br> - [Oros Coldheart](#Oros)
   <br> - [Executioner Varruth](#Varruth)
-
+- [9.0 seasonal affix - Prideful](#Prideful)
 
 ---
 
