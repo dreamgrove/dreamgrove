@@ -222,7 +222,7 @@ More Single Target and Priority focused, consider this build in ...
 
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
-**Circle Build**  
+#### **Circle Build**  
 More general AoE focused, consider this build in ...
 
 - De Other Side
@@ -237,7 +237,7 @@ SotF focused
 For a changeup and bit of fun ...
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880425661540470826/unknown.png)
 
-**Frenzy Build** - 
+#### **Frenzy Build** - 
 Meme fun in Mists and *potentially* SoA
 
 - Spires of Ascension
