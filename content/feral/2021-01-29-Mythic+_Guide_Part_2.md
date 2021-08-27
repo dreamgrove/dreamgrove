@@ -158,7 +158,7 @@ You can knock them back with Typhoon and Root them with a PS proc to get it away
 
 Explosive orbs are in a weird place where they have <200 hp, one auto from anyone in the group will kill them, so simply get a WA/nameplate that tracks them and do your part, it doesn’t act as a DPS loss as you can still spam away with AoE.
 
-Energy specs are the best specs to deal with Explosives due to our 1 second locked Auto-attakc timer, which means you can kill an explosive every second.
+Energy specs are the best specs to deal with Explosives due to our 1 second locked Auto-attack timer, which means you can kill an explosive every second.
 
 ![Image](https://wow.zamimg.com/images/wow/icons/large/ability_warrior_focusedrage.jpg)
 
@@ -223,6 +223,8 @@ Typhoon is king on Sanguine weeks, the pools stick around for ~20s so it isn't t
 **Storming** - *While in combat, enemies periodically summon damaging whirlwinds.*
 
 Storming is a pain, but again something that Feral can deal with a bit better than other melee due to our high base speed and long claws from Balance Affinity, it's just one of those affixes you play through and deal with.
+
+-----
 
 <div id="Tormented">
 
@@ -317,7 +319,7 @@ All of these picks have value.
 - Vial of Desperation is good for keys where you want an extra passive "oh shit" effect, though with the insane defensive kit Feral has, I've never really made much use of it
 
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678406257836042/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880765742839103538/unknown.png)
 
 <div id="Varruth">
   
