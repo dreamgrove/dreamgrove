@@ -44,15 +44,13 @@ Basically nothing, no joke Feral is in almost the exact same place as it was in 
 
 One thing that may go in our favour is with the meta shift away from fixed percentage breakpoints, you might see more chain pulling, which is what Feral loves, long sustained AoE pulls instead of burst AoE pulls.
 
-**Apex fix**
-Also Apex has been "fixed" to now correctly return 25 energy regardless of combo points you use the free bite at, whereas before it returned energy based on the combo points used (5 energy at 1cp, 15 at 3, etc). This makes Apex much smoother and act as an energy refund funnel in AoE - Apex now feels much nicer to use in M+.
+**{{< spell 339139 "Apex Predator's Craving" >}} fixed** to now correctly return 25 energy regardless of combo points you use the free bite at, whereas before it returned energy based on the combo points used (5 energy at 1cp, 15 at 3, etc). This makes Apex much smoother and act as an energy refund funnel in AoE - Apex now feels much nicer to use in M+.
 
-**Frenzyband "fix"**
-Unfortunately Frenzyband has now been changed to no longer double-dip damage on damage boost effects, such as the first boss of Mists. 
+**{{< spell 340053 "Frenzyband" >}} "fixed"** to no longer double-dip damage on damage boost effects, such as the first boss of Mists. 
 
 What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
 
-Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists, with Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
+Frenzyband's high burst means it is still good in scenarios where mobs have temporary increased damage taken, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists. With Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
 
 ### What is new ...
 
@@ -64,6 +62,8 @@ Frenzyband is likely still good in the +damage taken scenarios for the burst, bu
 
 Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
 
+Zynth and Hanna have kindly provided some info on Necro to further expand on that underused covenant.
+
 **Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
 With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
 
@@ -71,23 +71,32 @@ From testing Celestial, the results look as follows ...
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
 
-It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
+With Celestial it seems like the chance to proc {{< spell 274837 "Feral Frenzy" >}} (which is Feral's special ability spell) increases to about 50% per convoke. There is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
 
-To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
+To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with Niya's  {{< spell 352503 "Bonded Hearts" >}} unlocking at 55 renown, this gets even stronger
 
-A 1 minute CD is incredibly strong. A lot of Ferals (including myself) have been hard-locking this legendary in all content, the only real competitor now is Circle in larger AoE keys.
+A 1 minute CD is incredibly strong as a low CD means you will almost always have the CD up for key moments, from boss pulls, hero timings, burst AoE on packs etc - 1 minute CDs are king. This means that a lot of Ferals (including myself) have been hard-locking this legendary in all content, the only real competitor now is Circle in larger AoE keys.
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
 
-**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
-The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
+**Necrolol** - {{< spell 354123 "Locust Swarm" >}} The Necrolol legendary is not in a good place unfortunately for them. This legendary is extremely inconsistent and greatly dependent on constant pulls with little downtime.
 
-The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
+Occasionally a pull will start with Swarms being carried over from the previous and within a few seconds all targets will be swarmed, but this is rare. It is more likely that Swarms will dissipate en route to the next pack. Without Swarms carrying over, it takes 25 seconds for the legendary's effect to kick in (12s enemy Swarm + jump travel time + 12s friendly swarm + jump travel time) assuming it does actually split.
+
+An empowered 252 {{< spell 341447 "Evolved Swarm" >}} conduit causes {{< spell 325727 "Adaptive Swarm" >}} an afflicted target to take 37% more DoT damage from the Feral's dots plus the small amount of damage Swarm itself deals. The effective uptime however on a single target, let alone all targets, is quite low. Circle by comparison grants what is effectively 33% more damage from all maintanable dots that have 100% uptime (which are Rake, Rip, Moonfire and Thrash).
+
+The current iteration of the Locust Swarm legendary requires changes to Adapative Swarm at a baseline level for it to be of use, notably if Swarms could bounce between friendly players.
+
+Until then Locus Swarm remains mostly useless in Mythic+, and Necrolord as a whole remains as a lesser choice compared to Night Fae.
+
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880770013160685568/unknown.png)
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
 
 **Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
-Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
+Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong. This legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
+
+The legendary provides 5-7% extra DPS to your partner in raw stats alone in some early sims.
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
 
@@ -106,13 +115,15 @@ This legendary does provide a large damage boost on a 3-minute Cooldown, but unl
 
 Conduits now have an "empowered" system, which will unlock passively as you rank up your renown. All this does is make one of the Conduit input slots gold, which will add two ranks to the conduit - so bumping 252 (the 9.1 max) up to 278 ilevel. This means that you want your most impactful Conduits to be at the bottom (top on screen?) of the tree so they're empowered first.
 
+Empowering simply means +2 ilevel ranks to the conduit, so a 252 is increased to a 278, 226 to 252, etc
+
 Other than this, there are now two new conduits, which are both looking extremely underwhelming.
 
 **Adaptive Armor Fragment**
 
 ![image](https://cdn.discordapp.com/attachments/337894455589994517/860501050486161438/unknown.png)
 
-At ilvl 226, this averages to ~25 more agility, which as our other Conduits are pretty strong, this won't really see a place.
+At ilvl 226 this conduit averages to ~25 more agility. Our other Conduits are pretty strong, so this won't see any use.
 
 
 **Condensed Anima Sphere**
@@ -129,9 +140,7 @@ Apparently the tooltip for this is bugged and at max rank it's supposed to be ~3
   
 </div>
 
-The new raid comes with a new Shard system, which is a pseudo set-bonus system. How this works is that there are three shard families, which have three effects in each, a defensive, offensive and utility shard. If you equip all three from a family (so the defensive, utility and offensive of Unholy for example) you will get an additional effect.
-
-The set bonuses do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
+The new raid comes with a new Shard system, which is a pseudo set-bonus system. How this works is that there are three shard families, which have three effects in each, a defensive, offensive and utility shard. If you equip all three from a family (so the defensive, utility and offensive of Unholy for example) you will get an additional effect while in the Maw, Korthia, Torghast or the Sanctum of Domination Raid. The set bonuses however do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
 
 - Shard of Dyz (Unholy DPS)
 - Shard of Zed (Unholy Defensive)
@@ -159,6 +168,9 @@ Simply lock in the DPS gain Shards, then compare the Defensive vs Utility Shards
 - {{< spell 355743 "Shard of Kyr" >}} - (Utility) *Gain 880 absorb every sec up to 4400.*
 - {{< spell 355741 "Shard of Cor" >}} - (DPS) *Whenever you damage an enemy you haven't attacked yet, gain 3% damage for 20 sec.* 	
 
+Shards can be upgraded from Rank 1 to Rank 5. For more information on how check out the below from icy Veins  
+https://www.icy-veins.com/wow/shards-of-domination-guide-for-shadowlands-patch-9-1
+
 -----
 
 <div id="Sims">
@@ -171,7 +183,9 @@ Dungeon Slice is a good metric to use for M+ for Feral, please stop putting toge
 
 Dungeon Slice is to M+ what Patchwork sims are to Raiding, at the end of the day when was the last time you sat there and a boss was 5 minutes of pure ST? It’s the same with DS.
 
-What makes Dungeon Slice work for Feral specifically vs some other specs that do use weird patch setups, is that during Dungeon Slice sims, mobs die, which means we get Predator resets included in the sim, there are also moments of no combat, where the sim will re-stealth for stealth-Rake openers. The exact inner workings of a Dungeon Slice sim are as follows ...
+What makes Dungeon Slice work for Feral specifically vs some other specs that do use weird patch setups is that during Dungeon Slice sims, mobs die, which means we get Predator resets included in the sim. There are also moments of no combat where the sim will re-stealth for stealth-Rake openers. Also, a lot of time and effort has been put in to specifically make the APL function with Feral in Dungeon Slice. So TLDR is that it can be trusted.
+
+The exact inner workings of a Dungeon Slice sim are as follows ...
 
     ST Boss for just over 2 minutes (lust will be used for this boss)
     4 - 6 mobs for 11 - 19 seconds
@@ -195,7 +209,7 @@ The sim profile was changed recently and does now include 7 mob packs, the chang
     6% of it’s time on 6 targets
     6% of it’s time on 7 targets
 
-Which as you can see is a little bit more Single Target leaning than a typical key (though it reasonably matchs SoA and ToP), so keep this in the back of your mind when preparing for the key you're about to do.
+As you can see is a little bit more Single Target leaning than a typical key (though it reasonably matchs SoA and ToP), so keep this in the back of your mind when preparing for the key you're about to do.
 
 So in summary, don't be afraid to use Dungeon Slice - it is as valuable for M+ as Patch sims are to raiding.
 
@@ -209,7 +223,7 @@ So in summary, don't be afraid to use Dungeon Slice - it is as valuable for M+ a
 
 Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of the time, as the rest of our talents are pretty hard-locked. 
 
-So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. so ...
+So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. 
 
 ### The Apex & Celest Builds 
 This is the standard "go-to" build, which provides more Single Target and Priority damage, consider this build in ...
@@ -218,7 +232,7 @@ This is the standard "go-to" build, which provides more Single Target and Priori
 - Spires of Ascension
 - Mists of Tirna Scithe
 
-You can also run Celest in every key quite happily and run it with Predator if you want more AoE, It's an incredibly versatile legendary.
+You can also run Celest in every key quite happily and run it with Predator if you want more AoE, it's an incredibly versatile legendary.
 
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
@@ -491,7 +505,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
   + going behind pillars and jumping down
   + jumping up the stairs border and if someone can't do it use a two-seat mount to help them.
 - Forsworn Usurper: use the pillar to LoS them so they group and don't pull extra stuff.
-- On the 3rd boss, save big CDs for during the damage buff, e.g. convoke+berserk.
+- On the 3rd boss, save big CDs for during the damage buff, e.g. Convoke + Berserk.
 - On the last boss, if your party is stacked and your backs are against a wall, the boss charge won't go miles away from you and it will increase your melee dps by a bit.
 - ~~If two DPS jump off during each orb collection phase, and be whirlwinded back up, in the sky above the boss is two circle spears, which can be thrown at the boss once the main spear has struck her. This does 100k+ damage that scales with Tyrn~~ Removed.
 
@@ -524,7 +538,7 @@ Also on the last boss, the Acid Expulsion tracks how you avoid them and will mov
 
 **Feral specific advice**
 
-- If the skeletons on 2nd boss live to long, you can Cyclone them or stun them just as the explosion is going off, then they will not explode and wipe the group.
+- If the skeletons on 2nd boss lives to long, you can Cyclone them or stun them just as the explosion is going off, then they will not explode and wipe the group.
 - On the last boss, if everyone is out of range you can shift form to break the root.
 
 **Meld and other BS**
