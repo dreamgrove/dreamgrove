@@ -8,32 +8,222 @@ series_title: "Part 3"
 patch: "9.0"
 ---
 
+# Feral Druid Mythic Plus - Deep Dive 
+
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
-## Part 3 - Min-maxing 
+
+## Part 3 - Whats new in 9.1 and Min-maxing 
 In this section we will cover the following ...
+- [What has changed for Feral with 9.1](#changes)
+  <br> - [Covenant legendaries](#legendaries)
+  <br> - [New Conduits](#Conduits)
+  <br> - [Sanctum of Domination Shards](#Shards)
+- [Simming with “Dungeon Slice” for Mythic Plus](#Sims)
+- [Build changes per key and why](#Builds)
+- [Dungeon specific tips](#Dungeon_specific_tips)
+  <br> - [General Dungeon advice](#General)
+  <br> - [De Other Side](#DoS)
+  <br> - [Mists of Tirna Scithe](#Mists)
+  <br> - [Halls of Atonement](#HoA)
+  <br> - [Sanguine Depths](#SD)
+  <br> - [Plaguefall](#PF)
+  <br> - [Theater of Pain](#ToP)
+  <br> - [Spires of Ascension](#SoA)
+  <br> - [The Necrotic Wake](#NW)
 
-- Talent changes per key and why
-- Soulbind/Conduit changes per key and why
-- What would you like to see changed to M+ Feral
-- Q&A
-- Final words ...
+-----
 
-### Talent changes per key and why
+<div id="changes">
+  
+## [What has changed for Feral with 9.1](#changes)
+  
+</div>
+
+### What has changed ...
+Basically nothing, no joke Feral is in almost the exact same place as it was in 9.0 from a M+ point of view. 
+
+One thing that may go in our favour is with the meta shift away from fixed percentage breakpoints, you might see more chain pulling, which is what Feral loves, long sustained AoE pulls instead of burst AoE pulls.
+
+**Apex fix**
+Also Apex has been "fixed" to now correctly return 25 energy regardless of combo points you use the free bite at, whereas before it returned energy based on the combo points used (5 energy at 1cp, 15 at 3, etc). This makes Apex much smoother and act as an energy refund funnel in AoE - Apex now feels much nicer to use in M+.
+
+**Frenzyband "fix"**
+Unfortunately Frenzyband has now been changed to no longer double-dip damage on damage boost effects, such as the first boss of Mists. 
+
+What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
+
+Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists, with Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
+
+### What is new ...
+
+<div id="legendaries">
+  
+### [Covenant legendaries](#legendaries)
+  
+</div>
+
+Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
+
+**Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
+With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
+
+From testing Celestial, the results look as follows ...
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
+
+It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
+
+To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
+
+A 1 minute CD is incredibly strong. A lot of Ferals (including myself) have been hard-locking this legendary in all content, the only real competitor now is Circle in larger AoE keys.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
+
+**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
+The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
+
+The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
+
+**Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
+Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
+
+**Venthyr** - {{< spell 354109 "Sinful hysteria" >}}
+This legendary does provide a large damage boost on a 3-minute Cooldown, but unlike the Boomies, we can't quite make as much use out of it with our 3 min CD not being as powerful - it is likely that for the incredibly rare Venthyr Ferals out there, Apex and Circle are still stronger choices.
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503101361487912/unknown.png)
+
+-----
+
+<div id="Conduits">
+  
+### [New Conduits](#Conduits)
+  
+</div>
+
+Conduits now have an "empowered" system, which will unlock passively as you rank up your renown. All this does is make one of the Conduit input slots gold, which will add two ranks to the conduit - so bumping 252 (the 9.1 max) up to 278 ilevel. This means that you want your most impactful Conduits to be at the bottom (top on screen?) of the tree so they're empowered first.
+
+Other than this, there are now two new conduits, which are both looking extremely underwhelming.
+
+**Adaptive Armor Fragment**
+
+![image](https://cdn.discordapp.com/attachments/337894455589994517/860501050486161438/unknown.png)
+
+At ilvl 226, this averages to ~25 more agility, which as our other Conduits are pretty strong, this won't really see a place.
+
+
+**Condensed Anima Sphere**
+
+![image](https://cdn.discordapp.com/attachments/337894455589994517/860501111760093184/unknown.png)
+
+Apparently the tooltip for this is bugged and at max rank it's supposed to be ~3.5% or so, still not worth it though vs Ferals other very strong defensive Conduit choices.
+
+-----
+
+<div id="Shards">
+  
+### [Sanctum of Domination Shards](#Shards)
+  
+</div>
+
+The new raid comes with a new Shard system, which is a pseudo set-bonus system. How this works is that there are three shard families, which have three effects in each, a defensive, offensive and utility shard. If you equip all three from a family (so the defensive, utility and offensive of Unholy for example) you will get an additional effect.
+
+The set bonuses do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
+
+- Shard of Dyz (Unholy DPS)
+- Shard of Zed (Unholy Defensive)
+- Shard of Bek (Blood DPS)
+- Shard of Cor (Frost DPS)
+- Shard of Kyr (Frost Defensive)
+
+Simply lock in the DPS gain Shards, then compare the Defensive vs Utility Shards to see how you want to finish out your build.
+
+#### Unholy shards
+
+- {{< spell 355766 "Shard of Zed" >}} - (Defensive) *When you heal yourself with an ability, you have a chance to gain an aura that drain Hp from enemies.*
+- {{< spell 355757 "Shard of Oth" >}} - (Utility) *Increase your speed by 26.*
+- {{< spell 355755 "Shard of Dyz" >}} - (DPS) *Increase your damage by 0.33%. Stacks up 4 times.* 	
+
+#### Blood Shards
+
+- {{< spell 355731 "Shard of Jas" >}} - (Defensive) *Increase healing received by 1% and max hp by 400.*
+- {{< spell 355739 "Shard of Rev" >}} - (Utility) *Increase leech by 26.*
+- {{< spell 355721 "Shard of Bek" >}} - (DPS) *When you have 50% more hp than your target, deal 2% more damage.* 	
+
+#### Frost Shards
+
+- {{< spell 355748 "Shard of Tel" >}} - (Defensive) *Your crits cause a nearby ally to gain a very small absorb.*
+- {{< spell 355743 "Shard of Kyr" >}} - (Utility) *Gain 880 absorb every sec up to 4400.*
+- {{< spell 355741 "Shard of Cor" >}} - (DPS) *Whenever you damage an enemy you haven't attacked yet, gain 3% damage for 20 sec.* 	
+
+-----
+
+<div id="Sims">
+  
+## [Simming with “Dungeon Slice” for Mythic Plus](#Sims)
+  
+</div>
+
+Dungeon Slice is a good metric to use for M+ for Feral, please stop putting together weird 6 boss patchwork fights for 45s to justify your gear/talent choices. Using this type of quick sim to explore certain situations or pulls can be fine to plan around specific things, but for 95% of scenarios Dungeon Slice is the go-to.
+
+Dungeon Slice is to M+ what Patchwork sims are to Raiding, at the end of the day when was the last time you sat there and a boss was 5 minutes of pure ST? It’s the same with DS.
+
+What makes Dungeon Slice work for Feral specifically vs some other specs that do use weird patch setups, is that during Dungeon Slice sims, mobs die, which means we get Predator resets included in the sim, there are also moments of no combat, where the sim will re-stealth for stealth-Rake openers. The exact inner workings of a Dungeon Slice sim are as follows ...
+
+    ST Boss for just over 2 minutes (lust will be used for this boss)
+    4 - 6 mobs for 11 - 19 seconds
+    1 - 3 mobs for 26 - 34 seconds
+    4 - 6 mobs for 11 - 19seconds
+    1 - 3 mobs for 26 - 34 seconds
+    Continue alternating between large and small packs until the end of the sim
+    There will be variable gaps of time between trash packs
+
+So as you can see, it does somewhat mimic a “normal” M+ key, enough to be a good starting point for pre-key decisions such as talents, gear, etc. 
+
+![Image](https://lh5.googleusercontent.com/PZnkwAB4r0yRGrRTPXcAtiIkYhf0bGWHq2LO2U7CdpF4AZe3HUU8cvkxa3d8Rvs-ysaHY9FOGptnq1K9OUYoRF0R1VBXfydJ8dlo6yiZ2j8x6LIn9WphiAMfwTwSvzein6hartGW)
+
+The sim profile was changed recently and does now include 7 mob packs, the changes were as follows, which simple means that the Dungeon Slice sim spends …
+
+    54% of its time on 1 target
+    16% of its time on 2 targets
+    9% of its time on 3 targets
+    3% of it’s time on 4 targets
+    6% of it’s time on 5 targets
+    6% of it’s time on 6 targets
+    6% of it’s time on 7 targets
+
+Which as you can see is a little bit more Single Target leaning than a typical key (though it reasonably matchs SoA and ToP), so keep this in the back of your mind when preparing for the key you're about to do.
+
+So in summary, don't be afraid to use Dungeon Slice - it is as valuable for M+ as Patch sims are to raiding.
+
+-----
+
+<div id="Builds">
+  
+## [Build changes per key and why](#Builds)
+
+</div>
+
 Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of the time, as the rest of our talents are pretty hard-locked. 
 
 So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. so ...
 
-#### Apex Build
-More Single Target and Priority focused, you want to run this build in ...
+### The Apex & Celest Builds 
+This is the standard "go-to" build, which provides more Single Target and Priority damage, consider this build in ...
 
 - Theater of Pain
 - Spires of Ascension
 - Mists of Tirna Scithe
 
-![image](https://cdn.discordapp.com/attachments/337894455589994517/835467203230171136/unknown.png)
+You can also run Celest in every key quite happily and run it with Predator if you want more AoE, It's an incredibly versatile legendary.
 
-**Circle Build**  
-More general AoE focused, you want to run this build in ...
+![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
+
+### **Circle Build**  
+More general AoE focused, consider this build in ...
 
 - De Other Side
 - Halls of Atonement
@@ -41,13 +231,13 @@ More general AoE focused, you want to run this build in ...
 - Sanguine Depths
 - Necrotic Wake
 
-SotF focused
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835468432107110400/unknown.png)
+SotF focused  
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/879741959432994816/unknown.png)
 
 For a changeup and bit of fun ...
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835541390074183760/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/879667478916120596/880425661540470826/unknown.png)
 
-**Frenzy Build** - 
+### **Frenzy Build** 
 Meme fun in Mists and *potentially* SoA
 
 - Spires of Ascension
@@ -55,376 +245,299 @@ Meme fun in Mists and *potentially* SoA
 
 So in Mists you basically only want this for the 1st boss. Because there is an Inn outside the key, you can actually do some extra fun stuff here where you run the below build up until the first boss, then during the death RP you hearth out (making sure to have set your hearth outside before the key), change your gear/build at the Inn, then walk back in. Hopefully another Night Fae in your group has activated the checkpoint or you have a long walk to get back.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835475259104034836/unknown.png)
+![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
---- 
+-----
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/810513472344293386/thinking-cat-douglas-sacha.png) 
-### Soulbind/Conduit changes per key and why
-### What are the choices?
-Feral soulbind changes come down to ST vs AoE and the key you’re about to do or group you’re running with. The two “cookie cutter” builds are as follows as well as some reasoning for choosing them.
+<div id="Dungeon_specific_tips">
 
-This is a recap of the Soulbind/Conduit explanation in Part.1, if you want a reminder of that head to …
-<https://www.dreamgrove.gg/feral/2021-01-14-mythic+_guide_part_1/> 
+## [Dungeon specific tips](#Dungeon_specific_tips)
 
-**Niya**  
-<https://shadowlands.wowhead.com/soulbind-calc/night-fae/niya/druid/ApbqEgU1xgYVMuEGIRUySQY> 
+</div>
 
-- Niya as your bind for the mastery buff during convoke.
-- Poison is borderline worthless in M+ (or any content), giving you around ~50k extra damage over an entire key. You’re purely taking it for the extra Conduit.
-- Conflux to go even harder on Convoke ST burst.
-- Your 2nd conduit is dictated by your legendary choice, CI for the most part and TfB for Apex.
+Fair warning, all of the “Meld BS” is potentially fixable by Blizz, so don’t blame us if you do it and get 1-shot :)
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/813074553999327262/unknown.png?width=910&height=633) 
+We’ve also collected the below tips from a few sources, please let us know if they get fixed or do not work.
 
-**Korayn**  
-<https://shadowlands.wowhead.com/soulbind-calc/night-fae/korayn/druid/ApZqAQU1ywYRBTLhBiIVMkkGJTI_Bg> 
+![Image](https://lh6.googleusercontent.com/iJxxJonGZIPtoRpT5AF_q-gQkC7-9IzgUAe-oRcfwmz38Z8OLrLF6dpGDhCDkOY8H0LRw6fYHLW9bnRTd_n9XXclzqNTedZBtxkFV5Kq3hX4jHConQiVNswK39euHmu97P2A7e4h 
+)
 
-- Korayn as your bind for the Crit proc and Damage multiplier.
-- Carnivorous Instinct for AoE damage.
-- You could also swap in Conflux if you want AoE soulbind but a bit more burst around Convoke.
+<div id="General">
+  
+### [General Dungeon advice](#General)
+  
+</div>
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/813074764499255356/unknown.png?width=907&height=633) 
+**Knowing your count**
 
-### Where do you need to think about it?
-The main difference between going Korayn vs Niya is around burst needed and how easily you can abuse Korayn. So for example Hakkar *needs* to die fast, so you go Niya. Whereas the Gauntlet is SD has a consistent flow of mobs to proc' First Strike, so you go Korayn.
+Although this is often left to tanks, knowing a solid route and the count that some mobs give, to be able to help edit your groups route on the fly with extra pulls or to deal with ninja pulls can be a huge gain. I'd recommend downloading something like Mythic Dungeon Tools and playing around with routes.
 
-There are some keys where you can abuse Korayns binds to really boost damage, like Mueh’zala in DoS as he stays above 75% hp for the entire first phase or bosses that have add phases where you can re-trigger the crit % buff, such as Echelon in HoA or basically every boss in Plaguefall.
+**Some count % that might be useful:**
 
-As of writing (Apr 2021) I run Niya in basically all keys, as Pride + Niya mastery is a very strong combination, that said, you can switch between them reasonably safely.
+- **De Other Side**: 23.6% before entering Hakkar wing if you want 100% before killing Hakkar, this drops to ~16% if you skip the first pack by hugging the left wall (easily done). Manastorms wing (all mobs) is exactly 20%.
+- **Halls of Atonement**: 79.5% before entering the 3rd boss room
+- **Plaguefall**: 84.5% or 81.5% before jumping down (depends if you wanna kills some slimes at the right door).
+- **Sanguine Depths**: 68.96% before jumping down after the second boss.
+- **Spires of Ascension**: 87.37% before going up for Devos.
+- **The Necrotic Wake**: 68.2% before going up into the Stichworks area
 
-**Don’t take the above as a gospel list**, as it does somewhat vary based on your comp as well - the takeaway from this, is that soulbinds are reasonably easy to switch up key to key, so put some thought into it at the start of each run to make sure you’re targeting your damage in a helpful way for the group.
+-----
 
----
+<div id="DoS">
+  
+### [De Other Side](#DoS)
+  
+</div>
 
-### **De Other Side** - Niya
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/949066.png)
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835551089231265842/unknown.png) 
+**General advice**
 
-I lean Niya in DoS mainly because of Hakkar, as that boss is tedious to deal with any week. You can also get a lot of value in Arden through the mastery buff in AoE increasing the Rip damage from all your uncapped PWs.
+You can stun the seasonal mobs, such as Prides and Tormented mini-bosses with the Night Fae urns. I also recommend a good Rage mob stun WA like ...
+https://wago.io/uuBcwkkL9/1
 
----
+In the mecha area …
 
-### **Halls of Atonement** - Niya or Korayn
+- An engineer can stop the three rivers of blobs by using the button that's to the left-hand side after you enter the room.
+- You can pull all Lubricator and LoS their Lubricate cast (ranged can out range 30y+) and only kick the Self-Cleaning Cycle (first cast usually around 50-60% hp).
+- This is a mechanic of the fight and not really a “trick”, but it’s surprising how few people know it - You can stun Manastorms with Echo Finger Laser X-treme (Z ability) and Shadowfury (purple circle around 1 person) to stop them from casting.
+- Manastorms (Millificent's): If you position close to the boss and Spam click right near the boss and you can disarm the bombs instantly.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835551026337022002/unknown.png) 
+In the Hakkar area …
 
-Niya is the same reason as always - burst.
+- Hakkar shield can be reduced by defensives such as Survival Instincts and Barkskin, since its shield is damage taken by players or mobs.
 
-The reason for Korayn are ...
-- Big AoE key with mobs that spawn other mobs, it’s worth letting your group know when before you start that the “Depraved Collector” you’ll deal with, and let 1 add be spawned before you interrupt it to proc Korayn again.
-- Make sure to hit the adds on the 2nd and 3rd boss before they hit you to re-trigger it, this is particularly hard with the 3rd boss as it pulses AoE almost immediately, so be ready.
-- HoA is also basically 30-50% uptime on Korayn in the mini-boss room before the last boss.
+Wowhead recently did a very good write-up on Hakkar, who is arguably one of the worst designed bosses in this expansion, well worth a read:
+https://www.wowhead.com/news/mythic-dungeon-boss-breakdown-the-difficulty-of-hakkar-in-de-other-side-321605
 
----
+In the Arden area …
 
-### **Mists of Tirna Scithe** - Niya
+- Dealer Xy'exa Arcane Lighting jumps to the nearest person, so if you have high stacks get away from someone with it so it jumps to someone else.
+- ~~You can skip the channeling RP if you kill the boss on the green orb to fly back and spam click the orb when it spawns, you can trigger the flight before the RP, saving a few seconds on the timer.~~ Fixed, don't do this, you now get stunned and drop down where you were if you do it.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550531191046164/unknown.png) 
+**Feral specific advice**
+- On the Hakkar wing, if a Hex is cast on you it does not need to be interrupted, as you cannot be polymorphed in cat - save those interrupts! 
 
-The reason you run Niya here is basically for the first boss, as 1-phasing it saves so much time in the key and the burst with Niya is incredibly valuable. That said, if you did want to run Korayn both the 2nd and 3rd boss have ways to reliably proc First Strike.
+**Meld and other BS**
 
----
-
-### **Plaguefall** - Korayn or Niya
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550586798997534/unknown.png)  
-
-Niya is the same reason as always - burst. (This is going to get repetitive as a reason, but it's true)
-
-Every boss has something that can trigger Korayn reliable and regularly, and as a large trash key with lots of mobs at varying health and a few that summon new mobs, it’s a good uptime key. Same deal as always with Niya though, big burst with Convoke + Pride makes Niya as valuable as always.
+- None found so far ...
 
 ---
 
-### **Sanguine Depths** - Korayn (some consideration for Niya)
+<div id="Mists">
+  
+### [Mists of Tirna Scithe](#Mists)
+  
+</div>
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550675865042944/unknown.png) 
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/949065.png?maxWidth=2400)
 
-SD has the highest Korayn uptime of any key due to the gauntlet having a constant stream of Gargons, i’ve seen upwards of 40-60% here which is nuts. The reason you need to give some consideration to Niya however is the same as Mists, in that the 1st boss is the big crux of this key on Tyr weeks where you won’t get any use out of Korayn really, so if you need big burn to overcome this boss, Niya is the way, else go Korayn.
+**General advice**
 
-![Image](https://media.discordapp.net/attachments/337894455589994517/813063192355668009/unknown.png) 
+- ~~You can pull the pack to the right through the window after the 1st boss. This makes two pulls into one if you need to go right or want the count.~~ So this has *kind of* been fixed, you can now WC in Boomie from the top of the hill and Flap, then as you're getting close to the first puzzle you can moonfire the mobs over the wall, tricky to pull off though. This can also be done with pets by sending them through the wall of fog to pull mobs.
+- In the maze, the "Stalker" mobs have a 1.5s cast that will target someone and put a nasty DoT on them - be ready to Bash it as the cast is going off.
+- 2nd boss, you can mark the boss that passes and see the next doors she takes as well, they will always be the correct way, this lets you see two doors for free. - you can also set the boss to focus to see it on your map without having to target.
+- The toad miniboss's Tongue Lashing (tank-targeted) can be outranged (12 yards). The tank just needs to run away a short distance when he starts casting it.
+- On the last boss, if your healer is comfortable healing the damage while dodging the large swirls, it is best to NOT interrupt Consumption even when you can, because while doing that mechanic, the boss can't do any of her other mechanics (spawning the acid, spawning the adds, linking players), making the fight much simpler.
 
----
+For the maze, get a good WA or Addon that shares the data with the party, to make this much faster - I recommend:
+https://www.curseforge.com/wow/addons/maze-helper-mists-of-tirna-scithe
 
-### **Spires of Ascension** - Niya
+Also on the last boss, the Acid Expulsion tracks how you avoid them and will move in that way the next time they spawn. For example, if I move to the right 20 yards to dodge the circle, the next time the circles spawn, one will remain stationary, and one will move 20 yards to the right. If I dodge the 2nd spawn by moving 5 yards forward, then the next time they spawn, one will remain stationary, one will move 20 yards to the right, and one will move 5 yards forward. In order to prevent these acid puddles from being all over the boss arena, players should minimize their movement when dodging (e.g. you should dodge just enough to not be standing in the circles that just spawned and no further). This tracking is also affected by movement speed increases, so if you use sprint to dodge the mechanic, for example, the circle will move faster the next time it spawns.
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550751404064798/unknown.png) 
+**Feral specific advice**
 
-Spires is simply a very ST key, there’s no real uptime abuses to be had and 3-4 mini bosses to kill depending on your route. Also the 2nd and 3rd boss are big ST burn bosses, particularly the 3rd with it’s weakness phase for more damage and nuts hp pool - Niya works well in Spires.
+- 2nd boss, on Mistcaller you can use your instant Entangling Roots on the Illusionary Vulpin to help your team.
 
----
+**Meld and other BS**
 
-### **Theater of Pain** - Niya
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550868777467984/unknown.png) 
-
-ToP has a lot of 2 or 3 target cleave and ST throughout, so Apex/SbT with Niya is a safe bet.
-
----
-
-### **Necrotic Wake** - Korayn or Niya (Korayn is for the weps)
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/835550955583569970/unknown.png) 
-
-Korayn can give you a boost to crit for weapons, which can be big. Also bosses that matter all have ways to trigger Korayn either throughout, or at the point that matters…
-
-- Blightbone has the worms that spawn throughout.
-- Amarth has the skeletons that spawn and need to be burned down, nothing like having 25% crit to help with the burn.
-- Stitchflesh you can pre-setup all your burn then as soon as he comes down, Rip, Rake and Convoke, to get a good chunk of 25% Crit uptime during Convoke while also have DoT’s rolling.
-
-Also a lot of the trash spawns other trash that you can proc First Strike on, so lots of value in this key.  Niya has some consideration as always if you need more ST burn for bosses like Blight or Stitch to kill them asap.
-
-Niya is for the 3rd and 4th bosses basically, same deal, big burst with mastery.
-
---- 
-
-### What would you like to see changed to M+ Feral
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/810517034206101505/unknown.png) 
-
-Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more Rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, even more than what we have right now, it needs to be reaaally good.
-
-I think if Feral ever does get something bursty for AoE, it can be one of the top specs for MDI. I’d also like to see PW baseline and add a new talent instead in that row.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/810516923146043422/unknown.png) 
-
-For me, Feral is in a spot where in M+ it is middle of the pack, and as always it’s more a community perception issue that Feral has had for a long time than an actual throughput/utility issue, as well as (and this is a general issue not just Feral) it is overshadowed by other specs’. Realistically if a spec can do even 1% more than you, it’ll see play over your spec, it’s the way meta and competitive games work, and unfortunately, this has a habit of trickling down to the general playerbase where spec really doesn’t matter for 90-95% of content.  
-
-When it comes to changes, you need to be careful to not just have knee-jerk reactions to the state of the meta at that particular time, like Treants & Innervate I see shouted about a lot right now, but throughout BfA Treants was a meme talent that no tank wanted. I’m all for getting these spells, but I don’t think people should see it as a viability silver bullet. Realistically, it comes down to homogenisation vs niche, does every spec bring the same things in different flavours or does each spec have a niche and a spot to fill? Realistically, i’d prefer the “bring the player not the class” mentality so I’m in favour of homogenisation over niche as Blizz have proven they have zero interest in designing fights to favour all specs individual niches. 
-
-I’d like to see a Feral modernisation akin to the one that Shadow Priests get every tier or two, things like …
-
-- **New and interesting interactions between talents and spells**, make BrS leave Rakes on targets hit or merge BrS and Thrash, I’m not a game designer so don’t quote me but there’s so much they could do (this should be done for all specs as well, once they're finished with the 4th or 5th priest rework, obviously).
-- **More abilities baseline to allow for less maths rows and more utility rows**. MoC vs BT vs FF isn’t interesting, it’s a numbers exercise, whereas Tiger’s Dash vs Wild Charge vs Renewal is.
-- **AoE row to provide more AoE options based on situation**, e.g. Burst, Cleave, Funnell and/or Sustained AoE - for example they could’ve made PW baseline, then replaced it in the tree with Apex, providing a Funnel AoE option.
-- **BrS back to a Legion style** BrS where pressing it in AoE mattered.
-- **Berserk should interact with Swipe** in some way, for example while in Berserk they could lift the 2cp limit on Swipe to allow it to feel better in AoE, the current Berserk AoE rotation isn’t intuitive and can confuse a lot of new players.
-- **SbT back to an execute**.
-- For a bit of fun, I’d love if **Feral had Shroud as it’s Druid-specific utility**, aka not give it to the other Druid specs - Ashamane’s Shroud (ty Trem & Kitch) and it behaved the exact same way as Rogues Shroud.
-- **AoE stun** (Ashamane’s leg sweep).
-- **Fix Feral Frenzy’s** weapon damage and base mastery scaling ….. (come on).
-
-As a complete side, I’d have preferred they left incarn as it was, and made Berserk work like BotE or Jungle Fury somehow, as a much more interesting button to press - there’s something about large crit windows that I love as Feral.
-
-Also, target caps are dumb and should be removed across the board, worst decision since the GCD fiasco. At *most* they should still hit all mobs but have the damage spread across all in range, such a bizarre change. 
-
---- 
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/810512602471202826/book-cat-glasses-wallpaper-11556235166hnqpbtpww2.png) 
-### Q&A
-**Are there any reasons in M+ to play defensively? Eg. Resto Affinity or a damage absorption trinket.**  
-
-Maystine: *Unless you are pushing the highest keys and can’t survive a mechanic you don’t need to.*
-
-Fore: *I loved running N’Zoth trinket in 8.3 high keys, as the 1min defensive it provided was nuts at a 2-3% DPS loss, so it’s worth thinking about at a high enough level to justify something like Scale or the Cheat-Death trinket, which are both a ~2% DPS loss, but I wouldn’t consider it until then - and I’m talking where things start to hard 1-shot, **which is a point we haven’t really reached yet***
+- Once you kill the main pack in the room, and if for example you have Spites or have pulled other packs through the wall, you can meld and walk through the fog-door to force it to open. As long as the main pack that was in the room is dead, you can trigger the fog to vanish.
 
 ---
 
-**How do I work out what I am doing wrong?**  
+<div id="HoA">
+  
+### [Halls of Atonement](#HoA)
+  
+</div>
 
-Maystine: *Record your gameplay and try to see your mistakes (CD management,...) and for raiding you have a lot of logs to analyse and to compare yourself.*
+![Image](https://wow.zamimg.com/uploads/screenshots/normal/957519.png)
 
-Fore: *Recording your gameplay is the big one, the amount of times I get sent videos and see that berserk sits off CD for 4-5 mins at a time is scary*
+**General advice**
 
----
+- You can stop the first 2 mobs from running up before the dungeon starts by having everyone in the group standing completely still after the key is put in. The mobs' movement is triggered when the first member of the group moves their character. This can help the tank group mobs faster if you plan for a big pull right out the gate.
+- You can CC Deprayed Houndmasters (patrols) and dogs will also stop, making skipping these packs easier.
+- 2nd boss, Echelon, the Stone Shattering Leap (his jump) can be dodged if you wait for its animation to start then run away from it (Gotta be fast) - this trick is almost mandatory to learn as on high keys Tyr it can 1-shot you. Dash or Nightfae blink is more than enough to do this properly.
+- On the mini-boss before the last boss, you want to focus the ghosts on the pews, as these heal the mini-boss when he casts on them and they turn into the other mobs, save time and focus them.
+- On the final boss, Lord Chamberlain, you can double soak the beams after doors of shadows by moving slightly into the boss's hitbox. Fair warning, this hurts and needs SI+Bark
+- Also the statues will be thrown in the way they’re facing, so keep an eye on it as he channels up to throw them.
 
-**In a world where all the covenants we're equally balanced, what would be the "best" for m+ and by what merits? Is Convoke just that strong? Would the Empowered Bond DPS do enough frequent burst? Does the burst from venthyr or the sustain from necrolords have their place?**  
+**Feral specific advice**
 
-Fore: *It would still be Night Fae I’m afraid, as they’re all designed right now …*
-- *The Night Fae ability is very well suited for M+ and provides a large ST burst on a 2min CD. It’s also dynamic/versatile in that you can use it as a Resto-voke for big group offheal or Boomie-voke for big AoE.*
-- *Necro is too volatile for M+, and too ST focused, if it had some sort of burst AoE component it’d be really strong.*
-- *Venth is simply too long a CD to be best for M+, 3min CDs mean you have to hard pull around them, 2mins is the sweet spot.*
-- *Kyr hurts my soul as an ability, if it was balanced equally to Night Fae in terms of DPS, then strong 2nd contender and versatile if you want to play around switching who it’s on.*
+- Boomie convoke on the mini-boss before last boss to get a Starfall proc is huge, even without HotW.
+- On 2nd boss, make sure that the adds have a long bleed on them before they turn to stone so when they get shattered by the Stone Shattering Leap you get a predator reset.
 
----
+**Meld and other BS**
 
-**What trinkets for mythic+ and when to run them?**  
-
-Fore: *Quantum is flat out broken in M+ as you can basically guarantee it’ll proc’ stats every use, this is hard-locked and just use it with Berserk every time. Personally I take a passive trinket as my 2nd, so Phial or (when I get it) the 233 Vers trinket will likely be strong as well, roughly speaking you can go by this…*
-
-![Image](https://media.discordapp.net/attachments/337894455589994517/794586019839475722/unknown.png?width=1050&height=485) 
-
----
-
-**WeakAuras? Macros?**  
-
-Fore: *I don’t really use many macros specifically for M+, but obviously WeakAuras are huge, I'd recommend ...*
-
-*Nice interrupt macro that if you’re out of cat form you can spam to interrupt, and if you’re incat form it’ll just interrupt.*
-
-#showtooltip Skull Bash  
-/use [noform:1/2]Cat Form  
-/use Skull Bash  
-
-*This is my lazy stun macro lol, that will prio’ using Bash, then fall back to Maim on the same key, not really sure if this is optimal …*
-
-#showtooltip  
-/castsequence [talent:4/1]reset=50 Mighty Bash, Maim, Maim, Maim  
-/use Maim  
-
-*This macro covers all affinity spells in all specs, nice to have*
-
-#showtooltip  
-/use [spec:1,talent:3/1][spec:3/4,talent:3/2]Maim;[spec:1/2,talent:3/2][spec:4,talent:3/3]Incapacitating Roar;[spec:1/2/3,talent:3/3]Ursol's Vortex;[spec:2/3/4,talent:3/1]Typhoon
-
-- *ZenTracker (ZT) - Interrupt and Cooldown Tracker (the brain) <https://wago.io/r14U746B7>*.
-- *ZT Front-End Party Icons (the UI part) <https://wago.io/M3N3WBg0D>*.
-- *Someone in the group to have an auto-marker <https://wago.io/1ctv3b91K/13>*.
-- *Prideful incoming tracker <https://wago.io/PridefulAffixTracker/4>*.
-- *A generic dungeon ability warning WA, like this one - <https://wago.io/SL-Dungeons>*.
-- *A “Time to kill” WA can be useful to help with cooldown timings - https://wago.io/hYW3MVbnf/1>*.
-- *The one I use doesn’t seem to be on Wago anymore, but a good group interrupt tracker*.
-
-*Also, you should set Plater up well so that you can see the casts and the target, so you know if someone is about to get every cast to the face and you need to act quick, or things like if a poly is about to go through on a Druid so you can ignore it and let it go through.*
-
-*There’s also some affix specific stuff out there that shows things like the CD on quaking to help know when to be ready for it so it doesn’t interrupt convoke.*
+- NEVER meld during trash before the last boss, the Tormented Soul will bug and can’t be targeted and damaged anymore, so the only way for them to die will be to the Dark Communion cast from Inquisitor Sigar. Big time waste.
 
 ---
 
-**How do you best optimize Convoke and Zerk CDs in M+ when routing through trash? Using HoA as an example, I've been trying to use both off CD, convoke for groups and Zerk for priority targets like shard but it doesn't feel quite right.**  
+<div id="SD">
+  
+### [Sanguine Depths](#SD)
+  
+</div>
 
-Fore: *I went through this in more detail in part.2 in the Cooldowns section, but the summary is…*
+![Image](https://wow.zamimg.com/uploads/guide/seo/10335.jpg?1606286315)
 
-- *use as close to on cooldown as possible*
-- *talk to your team to know when important points are coming up that might needs CDs held for*
+**General advice**
 
----
+- You can skip Insatiable Brute before the first boss room without needing to invisible pot or shroud, all you need is to wait for him to be far from passage then go.
+- The smash can actually be out-ranged, It's something like 80 yards and stops balls from spawning. Quite easily done with Dash but not 100% sure how useful it is to be that far away for so long.
+- The first boss Juggernaut rush can be parried (good luck).
+- You can Line of Sight (LoS) the Dread Bindings from Grand Overseer (2nd boss) by running into the small rooms around the corridor.
+- On the bridge before the gauntlet, for the last pack of the three hard trash...you can pull the two on the left without the third on the right if tank damage is an issue.
+- During gauntlet, if you use Shining Radiance (Shield) at start of the pull you will have it ready for Gloom Squall cast.
+- On the last boss, the 2nd person dashed to by wicked rush can dodge the bleed if they are moving.
 
-**Why would I play feral when I could play any other good spec**  
+**Feral specific advice**
 
-Fore: *Honestly, at the end of the day, play what you want to play - Feral (and all specs) will be as good as you can play it, your skill with the spec will be a deciding factor much much before the spec itself is.*
+- You can Shapeshift the Dread Bindings from Grand Overseer so that you don’t need to leave melee range.
+- Barkskin plus Survival Instincts is a 60% DR, which more often than not (coupled with Bear) will allow you to solo soak a charge on 1st boss.
 
----
+**Meld and other BS**
 
-**Get rid of spiteful**  
-
-Maystine: *B-but... my predator reset? :(*
-
----
-
-**Anti melee dungeons?**  
-
-Fore: *I wouldn’t say there’s any particularly anti-melee dungeons, but there are definitely anti-melee pulls or mobs, for example …*
-
-- *HoA the Darkblades (my least favourite mob in M+ btw) do a frontal that can 1-shot on high Fort, because tanks love to kite atm you need to be really careful of this one*
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/813855274754113576/unknown.png) 
-
-- *DoS the Deathwalkers do the annoying spinning ability that can 1-shot on high enough keys, as well as the Headless Clients that spin and get launched in the direction that they’re hit*
-
-![Image](https://media.discordapp.net/attachments/337894455589994517/813863384961253426/unknown.png) 
-
-- *SD the Regal Mistdancers have a frontal that can be awkward to avoid with the traps and small corridors at the start of the key*
-
-![Image](https://media.discordapp.net/attachments/337894455589994517/813855581072916550/unknown.png) 
-
-- *NW the Stitched Vanguards have a very hard hitting melee attack (Bone Claw) that will hit the closest target, so if your tank is kiting, be aware of where it’s stood*
-
-![Image](https://media.discordapp.net/attachments/337894455589994517/813855058801328205/unknown.png) 
+- On 1st boss, if you meld the charge it’ll go on someone else, which is useful if you want to try and get it on an immunity class.
+- On 2nd boss, you can meld during Castigate (targeted red circle on you) once the channelling has started NOT while he casts it, and it’ll cancel and not re-cast, you can also LoS the ability in the cells.
+- On the last boss, you can meld just right before he charges you so you avoid the bleed (same mechanic as the leap from Mechagon K.U.-J.0. boss).
 
 ---
 
-**If you have a rip on the boss which is weaker than a rip you could apply now but the rip still has 10+ sec time, do you still apply the stronger rip or do you just bite and let the weaker rip last in the boss and only refresh rip in pandemic? And if you refresh the rip before pandemic, how much stronger should the rip be? Thanks in advance**  
+<div id="PF">
+  
+### [Plaguefall](#PF)
+  
+</div>
 
-Fore: *I asked the man himself, sooo…*  
+![Image](https://wow.zamimg.com/uploads/guide/header/10330.jpg?1606286413&maxWidth=1630)
 
-BuffMe: *Rake: Clip below ~60% in general. For BT proc generation (if you use rake to specifically proc BT) 2 additional options...*
-- *Clip instantly if better multiplier or refresh in pandemic if worse multiplier.*
-- *Pragmatic option: Clip if multiplier is better or wait for pandemic if it's worse.*
+**General advice**
 
-*Rip is the opposite: Never clip. If you have no SbT you wanna only refresh in pandemic, bite is way too powerful. With SbT you ideally never want to be in the position where you have a non optimal rip on the target, timing TF cooldowns with Rip refreshes is very important. In the case of having a non TF Rip up for whatever reason: don't clip and deal with being bad.*
+- Slime Tentacle: Crushing Embrace can be stopped with CC. This is especially important to note on the way to the 2nd boss because the constant plagueborer explosions can hit the person who is being held. You can also shift out of Cat which will cause the CC to break as well (it counts as a root).
+- If you kill the mini-boss at the top of the stairs at the right time, you can get the the mobs with the barrels to follow you down the stairs to use them on a pack before the 3rd boss, on Fort high keys they basically 1-shot the entire pack.
+- On the 2nd boss, you can easily Typhoon + Entangling roots the purple slime. This makes the boss fight way faster as you can ignore the damage reduction aura it has and leave it CC’ed.
+- On the spiders before the 3rd boss, it's actually beneficiel to let the webbing go through, as it does no damage only a root, *but* stops the spiders casting the stealth spiders - meaning an easier time for everyone.
+- On the 3rd boss, the Assassins can be broken out of their stealth with some skills you may not think to use. Tar Trap, Piercing Howl, Door of Shadows disorient, Incapacitating Roar, Starfall, Ursol’s Vortex, Warrior Shout, Flare, Blizzard and so on - for example Dash + Typhoon or Swipe is really good for quickly finding them all.
+- On the trash before the last boss, you can walk past the first pack and kill the 2nd and 3rd "wave" of adds without having to deal with the caster mobs ability making this room easier to deal with (potentially not worth though, just pull it all).
+- On the last boss, only tanks need to soak mob ability, no need to get yourself damaged in a healing heavy fight.
+- Have different DPS pop CDs in different phases to push her into the transition phase, therefore limiting the number of Rains in every phase. E.g. CD’s P1, Hero P2, CD’s P3.
 
----
+**Feral specific advice**
 
-**When all soulbinds are fully unlocked do you feel one will be more useful in high keys? Is Niya’s poison more alluring in M+ because of the constant need for a melee interrupt? Will Koran be a good option if you can use first strike efficiently? Will the minor dps loss of Dreamweaver still be offset by Podtender’s cheat death like ability?**
+- Unstable Canister and Rigged Plagueborer explosion deal damage to both players and mobs so typhoon mobs into the barrels and typhoon the mobs carrying them into ideal places, then root them.
+- On first boss you can use your instant Entangling roots on the big slime.
+- If you stand on the small island to the right of where the boss is, and fight there, you can Mass Root every pack of the small slimes and effectively turn this boss into a target dummy
 
-Fore: *Oh wow did this really take that long to write that we’ve had soulbinds fully unlocked for like, 2-3 weeks now, my bad …*
+**Meld and other BS**
 
----
-
-**Do you also agree that everyone who uses square combo points should have their account blocked?**  
-
-Maystine: *Yes*
-
-Fore: 
-
-![Image](https://static-cdn.jtvnw.net/jtv_user_pictures/4b4bd859-4c88-44ea-a15e-41a60a5c7cdd-profile_image-300x300.png) 
-
----
-
-**Is the sudden ambush conduit worth taking**  
-
-Fore: *Unfortunately not, possible as a Necro but as a Night Fae the TF or Conflux conduit are just better*
+- none found so far ...
 
 ---
 
-**How do I get in the group to begin with when pugging as a feral druid?**  
+<div id="ToP">
+  
+## [Theater of Pain](#ToP)
+  
+</div>
 
-Maystine: *Best option when playing a non-meta class, make your own group!*
+![Image](https://wow.zamimg.com/uploads/blog/images/22104-datamined-shadowlands-mythic-dungeon-hotfixes-12-21-theater-of-pain-plaguefall-n.jpg)
 
-Fore: *I know it sucks, and pugging can be soul destroying, but honestly this isn’t a Feral specific problem. The io meta is in full force and the only way to get invited to groups as most specs, is to have a high io. So my advice is to work up the ladder and grind it out, get that io, and it’ll be easier.*
+**General advice**
 
----
+- On the Shackled Soul trash (Kul'tharok area), pulling the first half into the starting room and the second half into the end room can save on a lot of group damage by avoiding the possibility of getting hit by swirls.
+- Using the portals on the platforms fully heals you, so don't waste time waiting to be topped if you have a Nasty dot or have half hp.
+- The Nefarious Darkspeakers (the ones who cast the black tornado knockback) target a random player for their tornado. You can help decrease the chances it goes on your ranged DPS/Healer (e.g. less mobile) by having the tank and melee DPS on one side while the ranged stand on the other.
+- After Kul’Tharok jumping to the main platform is faster than taking the portal and doable without move speed.
+- On the hook boss, Tenderizing Smash only pulls you if you are outside of its range. Stay relatively close to the boss until the circle appears and then move to make it less disruptive.
 
-**How much energy should you pool to set up BT?**  
+**Feral specific advice**
 
-Fore: *I asked BuffMe again …*
+- The trash before first boss, the Raging Tantrum can be stopped by Soothing.
+- On the first boss, the Raging (and Fixate) can also be stopped by Soothing.
+- On Gorechop, make sure to have bleeds on both adds to allow some Tiger’s Fury reset if playing Predator talent.
 
-BuffMe: *65 approximately - It's 35+35+40 - 3x15*
+**Meld and other BS**
 
----
+- During Kul'tharok, you can meld the Draw Soul ability to spawn your soul instantly. Be careful with this though, as it despawns the hands when they "grab" you, so if someone else is in the same hands as you, it'd mean their soul won't be grabbed.
 
-**Do you believe the spec will get buffs/nerfs? If so, to which abilities and why? I.e: Night Fae/SbT nerf, Necrolord/LI/SR buffs?**  
-
-Fore: *I’m actually terrified in between tiers of convoke nerfs, as I do believe that Feral would be worse off if any of the other covs were better than Night Fae, they just don’t really “fit” with the M+ meta as well as convoke does. For example if Convoke went down to 12 spells it’s be a different game.*
-
-*In terms of the other stuff, i’d love to see AS get a real AoE change, maybe make it an aura from the target or something, a slightly longer CD but burstier playstyle would also be much better for M+, outside of that I guess we might see number tunings, but I can’t see any 8.1 reworks on the cards until the next expansion, but i’d be happy to be proven wrong.*
-
----
-
-**FF vs BT with Circle?**  
-
-Fore: *Aaaaah… I really wish FF was better than BT, but it’s just not unfortunately, maybe when the bug is fixed and it correctly scales with weapon damage and base mastery, but for now honestly, it should be BT every key*
-
----
-
-**Should I learn to play Guardian instead of Feral for m+ to get into groups easier?**  
-
-Maystine: *But then you won’t be playing feral, if you want to do m+ as feral and are struggling to get into group, you can always make your own.*
 
 ---
 
-**Hello! I wanna say ty for all the information and also wanna ask about Niya, should I run Burrs or just 2 potency conduits in general?**
+<div id="SoA">
+  
+### [Spires of Ascension](#SoA)
+  
+</div>
 
-Fore: *Double potency is just better than Burrs in M+, so I’d go with that - check out part.1 for the Soulbind run through.*
+![Image](https://wow.zamimg.com/uploads/blog/images/19394-shadowlands-alpha-build-34821-loading-screens-and-icons.png)
+
+**General advice**
+
+- Forsworn Mender will buffs themselves with a weapon that can be dispelled and picked up by a member of your party to increase damage.
+- If you can break the shield on Recharge Anima (Forsworn Goliath) before the mob reaches 50 anima, Rebellious Fist won't be cast until after the next Recharge Anima.
+- You can skip the first 3 packs in the 3rd boss platform by…
+  + walking near the edge
+  + going behind pillars and jumping down
+  + jumping up the stairs border and if someone can't do it use a two-seat mount to help them.
+- Forsworn Usurper: use the pillar to LoS them so they group and don't pull extra stuff.
+- On the 3rd boss, save big CDs for during the damage buff, e.g. convoke+berserk.
+- On the last boss, if your party is stacked and your backs are against a wall, the boss charge won't go miles away from you and it will increase your melee dps by a bit.
+- ~~If two DPS jump off during each orb collection phase, and be whirlwinded back up, in the sky above the boss is two circle spears, which can be thrown at the boss once the main spear has struck her. This does 100k+ damage that scales with Tyrn~~ Removed.
+
+**Feral specific advice**
+
+- You can use your instant Entangling Roots at the end of the Swift Slice cast from the Kyrian Dark-Praetor so that they don’t go out of melee (very tight timing on this).
+
+**Meld and other BS**
+
+- The 3 mobs before the last boss, the debuff drops at end of combat. So you can actually use Meld to drop the debuff at high stacks if you need to mid-combat. I tend to meld on the 3rd add when it's at ~50% hp to reset the damage I'm taking.
 
 ---
 
-**Best cat form?**
+<div id="NW">
+  
+### [The Necrotic Wake](#NW)
+  
+</div>
 
-Maystine: *We all know the purple one from mage tower is the best*
+![Image](https://wow.zamimg.com/uploads/blog/images/19331-shadowlands-alpha-build-34714-necrotic-wake-loading-screen-icons-maps.png)
 
-Fore: *Haha easy, I’ve got a tier list floating around somewhere…*
+**General advice**
+- Throw Cleaver damages the first target it finds so you can hit mobs with it doing some nice damage.
+- Make sure to use all weapons you can as they do a lot of damage (except the shield, it's pretty meh) ...
 
-![Image](https://media.discordapp.net/attachments/121880917579923458/784085100491964486/unknown.png?width=1050&height=623) 
+  - **Discharged Anima** - Unleash the stored anima, inflicting Arcane damage to nearby enemies and interrupting their spellcasting every 1 sec for 8 sec.
+  - **Bloody Javelin** - Throws a Kyrian javelin at the target, inflicting Physical damage to all enemies it passes through and additional Physical damage every 2 sec for 16 sec. Enemies hit take 20% increased damage for 16 sec.
+  - **Forgotten Forgehammer** - Hurls a mighty Kyrian hammer at the target, inflicting Physical damage and stunning the target for 8 sec.
+  - **Discarded Shield** - Activate to reduce damage taken by 50% for all allies within 8 yds for 6 sec.
+
+**Feral specific advice**
+
+- If the skeletons on 2nd boss live to long, you can Cyclone them or stun them just as the explosion is going off, then they will not explode and wipe the group.
+- On the last boss, if everyone is out of range you can shift form to break the root.
+
+**Meld and other BS**
+
+- You can meld any Morbid Fixation during trash before 3rd boss and also during the boss if the hook failed to cancel it.
+- ~~You can Immune the death exile cast of the last boss in NW with basic immunities like Divine Shield or Ice Block but also with a warlock gateway (and Priest Leap of Faith). Make sure that the projectile of the cast is about to hit you before you take the gateway. Bear in mind that you will die when the debuff runs out but maybe it helps you to squeeze out that extra dps. This can also be Melded (needs verifying, Fore: verified, but incredibly tight timing)~~ Mostly fixed and the crit buff it gives is now 100%.
+
+-----
+
+**To be Continued in Part 4...**
+
+- What would you like to see changed to M+ Feral
+- Questions & Answers
+- Final words
 
 ---
-
-## Final words …
-### Fore
-This has taken more time than either of us expected when we decided to do this, so I really hope at least a few people learned some stuff or it opened up some ideas or plays you might not have thought of. 
-
-M+ is always evolving, so good chance this will all be redundant in a tier or so’s time lol, always happy to chat about M+ strats, builds, ideas, meme pulls and to help Hippo relive his MDI dreams one day.
-
-Any questions or comments, hit me up on Discord in the normal place.
-
-### Maystine
-I hope this guide will help you to learn some stuff for your m+ journey, because it requires a lot of knowledge if you want to push really high keys and not only from your class, but also each mob.
-
-You can ask me anything on discord, I will always try to answer the best I can. And soon after the last MDI cup I will finally be able to stream some feral content!
-
----
-
-## Deep Dive Part.4 
-We’ll likely be back once the new M+ dungeons are released or anything substantial changes in the M+ world, until then, any q’s or thoughts hit us up in #Feral
-
-![Image](https://media.mmo-champion.com/images/news/2021/february/BCSU010.jpg) 

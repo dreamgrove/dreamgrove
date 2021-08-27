@@ -9,292 +9,283 @@ patch: "9.1"
   
 ---
 
+# Feral Druid Mythic Plus - Deep Dive 
+
 ![Image](https://cdn.discordapp.com/attachments/740562855316946985/799315733611413524/unknown.png)
-# Part 4 - 9.1 and all the new stuff
+
+## Part 4 - Final thoughts and Q&A
 In this section we will cover the following ...
+- [What would you like to see changed to M+ Feral](#Changes)
+- [Questions & Answers](#QA)
+- [Final words](#Final_Words)
 
-  [What has changed for Feral with 9.1](#changes)
-  <br>[- Covenant legendaries](#legendaries)
-  <br>[- New Conduits](#Conduits)
-  <br>[- Sanctum of Domination Shards](#Shards)
-  
-  [Recommended cookie-cutter build](#build)
-  
-  [The new seasonal affix Tormented](#affix)
-  <br>[- Soggodon the Breaker](#Soggodon)
-  <br>[- Incinerator Arkolath](#Arkolath)
-  <br>[- Oros Coldheart](#Oros)
-  <br>[- Executioner Varruth](#Varruth)
+--- 
 
------
-
-<div id="changes">
-  
-## [What has changed for Feral with 9.1](#changes)
-  
-</div>
-
-### What has changed ...
-Basically nothing, no joke Feral is in almost the exact same place as it was in 9.0 from a M+ point of view. 
-
-One thing that may go in our favour is with the meta shift away from fixed percentage breakpoints, you might see more chain pulling, which is what Feral loves, long sustained AoE pulls instead of burst AoE pulls.
-
-**Apex fix**
-Also Apex has been "fixed" to now correctly return 25 energy regardless of combo points you use the free bite at, whereas before it returned energy based on the combo points used (5 energy at 1cp, 15 at 3, etc). This makes Apex much smoother and act as an energy refund funnel in AoE - Apex now feels much nicer to use in M+.
-
-**Frenzyband "fix"**
-Unfortunately Frenzyband has now been changed to no longer double-dip damage on damage boost effects, such as the first boss of Mists. 
-
-What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
-
-Frenzyband is likely still good in the +damage taken scenarios for the burst, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists, with Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
-
-### What is new ...
-
-<div id="legendaries">
-  
-### [Covenant legendaries](#legendaries)
-  
-</div>
-
-Although on the PTR swapping covenants was allowed easily, unlocking all three soulbinds was not, so a lot of the below is subjective and based on sims and theorycraft not actual gameplay testing, so outside of the Night Fae legendary, take the rest with a pinch of salt.
-
-**Night Fae** - {{< spell 354118 "Celestial Spirits" >}}
-With the recent buff to make Celestial Spirits a 3s cast of 12 spells, this is likely to be a better all rounder than Circle or Apex, and arguably replacing Apex's niche in M+ content.
-
-From testing Celestial, the results look as follows ...
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/864972153509773312/unknown.png)
-
-It seems like the chance to get {{< spell 274837 "Feral Frenzy" >}} (which is Ferals special ability spell) to about 50% per convoke, there is some debate as to the actual inner workings of how minivoke works with the special ability of each spec so I won't go into it here, but safe to say this legendary is pretty solid and even a fine first craft as an "all rounder".
-
-To add to the spells you get out of your 1 min CD convoke, you also get insane uptime of 16 stacks of {{< spell 322721 "Grove Invigoration" >}}, and with the Niya unlock at 55 renown, this gets even stronger {{< spell 352503 "Bonded Hearts" >}}.
-
-My advice for where to try out this legendary is ...
-
-- Spires of Ascension
-- Theater of Pain
-- De Other Side
-- Mists of Tirna Scithe
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860502953932095488/unknown.png)
-
-**Necrolol** - {{< spell 354123 "Locust Swarm" >}}
-The Necrolol legendary is not in a good place unfortunately, this legendary is pretty laughable in any sort of AoE and has left the Necros in a not-so-great spot AoE wise ... still.
-
-The Swarm lego provides a percent boost to the damage taken by the mob that it is on, and with the legendary this is a 60% chance to split, so the DoT could be on 2 or 3 targets if you're lucky. Compared to Circle which is 25% DoT damage gain to *all* targets, and doesn't have any RNG bouncing involved. 
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503002039975956/unknown.png)
-
-**Kyrian** - {{< spell 354115 "Kindred Affinity" >}}
-Kindred Affinity has some potential, as Kyrian is looking equal to if not better than Night Fae for M+ in 9.1, with the Mika power {{< spell 352188 "Effusive Anima Accelerator" >}} being very strong, this legendary might be able to compete with the existing choices of Apex and Circle as it empowers yourself and a party member for potential big burst combos on a very high uptime due to Mika's power of lowering the Kyr CD.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503049322889296/unknown.png)
-
-**Venthyr** - {{< spell 354109 "Sinful hysteria" >}}
-This legendary does provide a large damage boost on a 3-minute Cooldown, but unlike the Boomies, we can't quite make as much use out of it with our 3 min CD not being as powerful - it is likely that for the incredibly rare Venthyr Ferals out there, Apex and Circle are still stronger choices.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860503101361487912/unknown.png)
-
------
-
-<div id="Conduits">
-  
-### [New Conduits](#Conduits)
-  
-</div>
-
-Conduits now have an "empowered" system, which will unlock passively as you rank up your renown. All this does is make one of the Conduit input slots gold, which will add two ranks to the conduit - so bumping 252 (the 9.1 max) up to 278 ilevel. This means that you want your most impactful Conduits to be at the bottom (top on screen?) of the tree so they're empowered first.
-
-Other than this, there are now two new conduits, which are both looking extremely underwhelming.
-
-**Adaptive Armor Fragment**
-
-![image](https://cdn.discordapp.com/attachments/337894455589994517/860501050486161438/unknown.png)
-
-At ilvl 226, this averages to ~25 more agility, which as our other Conduits are pretty strong, this won't really see a place.
-
-
-**Condensed Anima Sphere**
-
-![image](https://cdn.discordapp.com/attachments/337894455589994517/860501111760093184/unknown.png)
-
-Apparently the tooltip for this is bugged and at max rank it's supposed to be ~3.5% or so, still not worth it though vs Ferals other very strong defensive Conduit choices.
-
------
-
-<div id="Shards">
-  
-### [Sanctum of Domination Shards](#Shards)
-  
-</div>
-
-The new raid comes with a new Shard system, which is a pseudo set-bonus system. How this works is that there are three shard families, which have three effects in each, a defensive, offensive and utility shard. If you equip all three from a family (so the defensive, utility and offensive of Unholy for example) you will get an additional effect.
-
-The set bonuses do not work in M+, so you don't need to worry about having 3 of one shard family, which means you can be a bit more creative with your build. For example the below is likely looking strongest ...
-
-- Shard of Dyz (Unholy DPS)
-- Shard of Bek (Blood DPS)
-- Shard of Jas (Blood Defensive)
-- Shard of Cor (Frost DPS)
-- Shard of Kyr (Frost Defensive)
-
-Simply lock in the DPS gain Shards, then compare the Defensive vs Utility Shards to see how you want to finish out your build.
-
-#### Unholy shards
-
-- {{< spell 355766 "Shard of Zed" >}} - (Defensive) *When you heal yourself with an ability, you have a chance to gain an aura that drain Hp from enemies.*
-- {{< spell 355757 "Shard of Oth" >}} - (Utility) *Increase your speed by 26.*
-- {{< spell 355755 "Shard of Dyz" >}} - (DPS) *Increase your damage by 0.33%. Stacks up 4 times.* 	
-
-#### Blood Shards
-
-- {{< spell 355731 "Shard of Jas" >}} - (Defensive) *Increase healing received by 1% and max hp by 400.*
-- {{< spell 355739 "Shard of Rev" >}} - (Utility) *Increase leech by 26.*
-- {{< spell 355721 "Shard of Bek" >}} - (DPS) *When you have 50% more hp than your target, deal 2% more damage.* 	
-
-#### Frost Shards
-
-- {{< spell 355748 "Shard of Tel" >}} - (Defensive) *Your crits cause a nearby ally to gain a very small absorb.*
-- {{< spell 355743 "Shard of Kyr" >}} - (Utility) *Gain 880 absorb every sec up to 4400.*
-- {{< spell 355741 "Shard of Cor" >}} - (DPS) *Whenever you damage an enemy you haven't attacked yet, gain 3% damage for 20 sec.* 	
-
-<div id="build">
-  
-## [Recommended cookie-cutter build](#build)
-  
-</div>
-
-Niya seems to get stronger and stronger as this expansion goes on, and Korayn seems to get weaker unfortunately. 
-
-The below tree will be your end goal if you're min/maxing for M+ and raid somewhat equally, putting the conduits in in this order means that ...
-
-- {{< spell 341446 "Conflux of Elements" >}} (Convoke) will be empowered first, as it's a reasonable gain in ST and does boost AoE damage slightly as well during the cast
-- {{< spell 340682 "Taste for Blood" >}} (TfB) will be in the final slot, as it's a good conduit for ST, but doesn't do much in AoE, so doesn't necessarily need to be empowered ASAP.
-- {{< spell 340705 "Carnivorous Instinct" >}} (CI) in the slot before {{< spell 320660 "Poison" >}}, as if you switch to {{< spell 320659 "Burrs" >}}, it will be for ST, where you would still want TfB and Convoke, as CI is the AoE conduit of choice
-
-Note that if you raid Mythic at a decent level, it is likely that prioritising TfB in the first slot over Convoke is better due to the ST gain.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/860527075761061898/unknown.png)
-
------
-
-<div id="affix">
-  
-## [The new seasonal affix and recommended anima powers](#affix)
-  
-</div>
-
-**Tormented**
-
-I'm going to copy/paste a lot of this from Catha's well written Bear guide, feel free to check that out fully below, though I will be trying to correct some of his rambling grammar
-
-https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing
-
-Also, it is likely that the powers dropped by the Lieutenants will see buffs and nerfs throughout the tier, and it is also likely I won't update this regularly, so please check in with the Ferals in Dreamgrove for any questions or an up to date recommendations. 
-
-At different points during the dungeon you can find one of four new Lieutenants. Killing one of these Lieutenant awards you with a choice of three anima powers. You can only choose ONE amongst those three. These powers are fixed per Lieutenants. Which means that you always get the same powers from the same Lieutenant as long as your role (read DPS/Tanks/Healers) remains the same. 
-
-Each of these Lieutenants has True Sight, does not give count and does not reset hp when you fail to kill them. The Lieutenants also have no social aggro so you can safely pull them through packs of mobs, without any danger of aggroing something with them.
-
-As of writing, the Lieutenants powers are locked in as follows and all the latest hotfix information can be found here:
-https://www.wowhead.com/news/patch-9-1-hotfixes-for-the-tormented-mythic-affix-reworked-and-retuned-anima-323174
-
-![Image](https://cdn.discordapp.com/attachments/327879699810353152/860536050907349042/unknown.png)
-
-<div id="Soggodon">
-  
-### [Soggodon the Breaker](#Soggodon)
-  
-</div>
-
-#### What the Lieutenant does
-Inflicts an aura increasing the physical damage you take by 50%. 
-
-Will do heavy physical damage the entire time to the tank either via Crush, an ability with a short cast time dealing big damage, or via Seismic Wave, an AoE ability inflicting physical damage to everyone within 60 yards. Do note that you CANNOT kite Soggodon, and if you try, he'll just grip you back in and cast Crush on you. 
-
-Roughly every 30 seconds he'll grip everyone in melee and start casting Massive Smash for 8 seconds. Everyone will be rooted, and must get out before the end of the cast or they will die. You have two choices here, either everyone in your group has an ability to get out of root (so you can Shift Forms, Shaman can Ghost Wolf, DH can Vengeful Retreat, Pally can Freedom, etc) so they get out on their own, or they cannot in which case you MUST kill the add that roots them in place, in order for them to get out.
-
-As a note, I also want to apologise to my guildy Pasta who I left for dead every single time this was cast, it sucks to be a Priest this tier.
+<div id="Changes">
 	
-#### What power to take
-The only power here really worth considering is 
-
-- {{< spell 357524 "The Stone Ward" >}}
-- {{< spell 356828 "Dripping Fang" >}}
-- {{< spell 356827 "Tiny Dancing Shoes" >}}
-
-Stone Ward is the only real sensible choice, increasing your HP is a no-brainer, Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678316966084648/unknown.png)
-
-<div id="Arkolath">
-  
-### [Incinerator Arkolath](#Arkolath)
-  
-</div>
+## [What would you like to see changed to M+ Feral](#Changes)
 	
-#### What the Lieutenant does
-His aura inflicts fire damage to everyone in combat with him. He also casts a debuff named Melt Soul on a random player that increases fire damage taken by 100%. So he basically is Pride 2.0. His other abilities are Scorching Blast, where he casts a circle of fire at the position of a player, there can only be 3 of those active at any given time, so don't worry too much about running out of space. And Inferno, a cast that you can (and should) interrupt that does fire damage to everyone in the party.	
-
-#### What power to take
-
-- {{< spell 357575 "Champion's Brand" >}} 
-- {{< spell 357848 "Signet of Bolstering" >}} 
-- {{< spell 357864 "Raging Battle-Axe" >}} 
-
-This is another interesting Lieutenant for me, Champion's Brand is the "safe" choice, but Bolstering can be good in keys that have a lot of adds that will die at varying times (like DoS arden wing), and raging Battle-Axe has good uses in places with mobs that have a lot of HP for you to execute on, like in ToP military wing. 
-
-I like this one as it's the only real selection that makes you stop and think about how you can use it in the key, more of them should've been like this.
-
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678365137272842/unknown.png)
-
-<div id="Oros">
-  
-### [Oros Coldheart](#Oros)
-  
 </div>
 
-#### What the Lieutenant does
-His aura slows you down by 50%. Due to this and his power selection it's a very likely candidate to be skipped in any dungeon where the final boss does not require heavy movement. He'll cast a debuff named Biting Cold on a player, do not stand near them as that does damage in an AoE around them. Periodically casts Forst Lance in front of him, dodge it or take massive damage and get knocked away. He'll cast Cold Snap, an ability that spawns ice orbs around him, just move away from them to avoid taking damage	
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/810517034206101505/unknown.png) 
 
-#### What power to take
+- https://raider.io/characters/eu/hyjal/Maystine
+- https://www.twitch.tv/maystine
 
-- {{< spell 357834 "Handbook of Uncivil Etiquette" >}}
-- {{< spell 357815 "Satchel of the Hunt" >}}
-- {{< spell 357825 "Vial of Desperation" >}}
+Talking from a specifically MDI perspective, the spec needs to have an AoE burst somehow, or just way more Rip damage if you want a spec to be good for MDI particularly, it needs short bursty CD for AoE and ST, that or really good consistent damage, even more than what we have right now, it needs to be reaaally good.
 
-Satchel of the Hunt could be fun in a key where there isn't a huge amount of interrupts to do, or the 10% increased damage from interrupting can't be utilised that much, but the Handbook is the only DPS increase so likely the go to choice. Don't take Vial.
+I think if Feral ever does get something bursty for AoE, it can be one of the top specs for MDI. I’d also like to see PW baseline and add a new talent instead in that row.
 
-Note: Sorry for the picture, this was taken on beta and "Imperfect Panacea" has been changed to "Satchel if the Hunt".
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/810516923146043422/unknown.png)
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678406257836042/unknown.png)
+- https://raider.io/characters/eu/kilrogg/Foresight
+- https://www.twitch.tv/foresight123
 
-<div id="Varruth">
-  
-### [Executioner Varruth](#Varruth)
-  
+For me, Feral is in a spot where in M+ it is middle of the pack, and as always it’s more a community perception issue that Feral has had for a long time than an actual throughput/utility issue, as well as (and this is a general issue not just Feral) it is overshadowed by other specs’. Realistically if a spec can do even 1% more than you, it’ll see play over your spec, it’s the way meta and competitive games work, and unfortunately, this has a habit of trickling down to the general playerbase where spec really doesn’t matter for 90-95% of content.  
+
+When it comes to changes, you need to be careful to not just have knee-jerk reactions to the state of the meta at that particular time, like Treants & Innervate I see shouted about a lot right now, but throughout BfA Treants was a meme talent that no tank wanted. I’m all for getting these spells, but I don’t think people should see it as a viability silver bullet. Realistically, it comes down to homogenisation vs niche, does every spec bring the same things in different flavours or does each spec have a niche and a spot to fill? Realistically, i’d prefer the “bring the player not the class” mentality so I’m in favour of homogenisation over niche as Blizz have proven they have zero interest in designing fights to favour all specs individual niches. 
+
+I’d like to see a Feral modernisation akin to the one that Shadow Priests get every tier or two, things like …
+
+- **New and interesting interactions between talents and spells**, make BrS leave Rakes on targets hit or merge BrS and Thrash, I’m not a game designer so don’t quote me but there’s so much they could do (this should be done for all specs as well, once they're finished with the 4th or 5th priest rework, obviously).
+- **More abilities baseline to allow for less maths rows and more utility rows**. MoC vs BT vs FF isn’t interesting, it’s a numbers exercise, whereas Tiger’s Dash vs Wild Charge vs Renewal is.
+- **AoE row to provide more AoE options based on situation**, e.g. Burst, Cleave, Funnell and/or Sustained AoE - for example they could’ve made PW baseline, then replaced it in the tree with Apex, providing a Funnel AoE option.
+- **BrS back to a Legion style** BrS where pressing it in AoE mattered.
+- **Berserk should interact with Swipe** in some way, for example while in Berserk they could lift the 2cp limit on Swipe to allow it to feel better in AoE, the current Berserk AoE rotation isn’t intuitive and can confuse a lot of new players.
+- **SbT back to an execute**.
+- For a bit of fun, I’d love if **Feral had Shroud as it’s Druid-specific utility**, aka not give it to the other Druid specs - Ashamane’s Shroud (ty Trem & Kitch) and it behaved the exact same way as Rogues Shroud.
+- **AoE stun** (Ashamane’s leg sweep).
+- **Fix Feral Frenzy’s** weapon damage and base mastery scaling ….. (come on).
+
+As a complete side, I’d have preferred they left incarn as it was, and made Berserk work like BotE or Jungle Fury somehow, as a much more interesting button to press - there’s something about large crit windows that I love as Feral.
+
+Also, target caps are dumb and should be removed across the board, worst decision since the GCD fiasco. At *most* they should still hit all mobs but have the damage spread across all in range, such a bizarre change. 
+
+--- 
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/810512602471202826/book-cat-glasses-wallpaper-11556235166hnqpbtpww2.png) 
+
+<div id="QA">
+	
+## [Questions & Answers](#QA)
+	
 </div>
 
-#### What the Lieutenant does
-His Aura is a -50% to healing done.
 
-Pulling it with other mobs is not recommended because of the aura, though if your group feels up to it, you can drag a few mobs in. Periodically he'll cast Wave of Terror, which to avoid you must be near another player, otherwise you'll be feared for 5 seconds. 
+**Are there any reasons in M+ to play defensively? Eg. Resto Affinity or a damage absorption trinket.**  
 
-He'll also inflicts a heavy bleed on the tank via Sever
+Maystine: *Unless you are pushing the highest keys and can’t survive a mechanic you don’t need to.*
 
-Finally he'll also periodically charge a random player and inflict a bleed on them and anyone standing near them via Carnage. As such avoid standing near other players unless Varruth is casting Wave of Terror, then it's just a bad situation and be prepared for it with Barkskin or Survival instincts.
+Fore: *I loved running N’Zoth trinket in 8.3 high keys, as the 1min defensive it provided was nuts at a 2-3% DPS loss, so it’s worth thinking about at a high enough level to justify something like Scale or the Cheat-Death trinket, which are both a ~2% DPS loss, but I wouldn’t consider it until then - and I’m talking where things start to hard 1-shot, **which is a point we haven’t really reached yet***
 
-#### What power to take
+---
 
-- {{< spell 357706 "Volcanic Plumage" >}}
-- {{< spell 357575 "Champion's Brand" >}}
-- {{< spell 357609 "Dagger of Necrotic Wounding" >}}
+**How do I work out what I am doing wrong?**  
 
-For Varruth, Volcanic Plumage is likely a locked in choice, the AoE knockup it does when it procs is very good for just shutting down packs from casting, especially if everyone in the group has it.
+Maystine: *Record your gameplay and try to see your mistakes (CD management,...) and for raiding you have a lot of logs to analyse and to compare yourself.*
 
-Necrotic Wounding is good if a key has a lot of healing that you'd like to stop, though I can't think of a huge amount of keys that do currently, and Champion's Brand is just a flat 8% crit, which is solid damage wise if the AoE knockup/silence isn't needed in the key.
+Fore: *Recording your gameplay is the big one, the amount of times I get sent videos and see that berserk sits off CD for 4-5 mins at a time is scary*
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678274727870504/unknown.png)
+---
+
+**In a world where all the covenants we're equally balanced, what would be the "best" for m+ and by what merits? Is Convoke just that strong? Would the Empowered Bond DPS do enough frequent burst? Does the burst from venthyr or the sustain from necrolords have their place?**  
+
+Fore: *It would still be Night Fae I’m afraid, as they’re all designed right now …*
+- *The Night Fae ability is very well suited for M+ and provides a large ST burst on a 2min CD. It’s also dynamic/versatile in that you can use it as a Resto-voke for big group offheal or Boomie-voke for big AoE.*
+- *Necro is too volatile for M+, and too ST focused, if it had some sort of burst AoE component it’d be really strong.*
+- *Venth is simply too long a CD to be best for M+, 3min CDs mean you have to hard pull around them, 2mins is the sweet spot.*
+- *Kyr hurts my soul as an ability, if it was balanced equally to Night Fae in terms of DPS, then strong 2nd contender and versatile if you want to play around switching who it’s on.*
+
+---
+
+**What trinkets for mythic+ and when to run them?**  
+
+Fore: *Quantum is flat out broken in M+ as you can basically guarantee it’ll proc’ stats every use, this is hard-locked and just use it with Berserk every time. Personally I take a passive trinket as my 2nd, so Phial or (when I get it) the 233 Vers trinket will likely be strong as well, roughly speaking you can go by this…*
+
+![Image](https://media.discordapp.net/attachments/337894455589994517/794586019839475722/unknown.png?width=1050&height=485) 
+
+---
+
+**WeakAuras? Macros?**  
+
+Fore: *I don’t really use many macros specifically for M+, but obviously WeakAuras are huge, I'd recommend ...*
+
+*Nice interrupt macro that if you’re out of cat form you can spam to interrupt, and if you’re incat form it’ll just interrupt.*
+
+#showtooltip Skull Bash  
+/use [noform:1/2]Cat Form  
+/use Skull Bash  
+
+*This is my lazy stun macro lol, that will prio’ using Bash, then fall back to Maim on the same key, not really sure if this is optimal …*
+
+#showtooltip  
+/castsequence [talent:4/1]reset=50 Mighty Bash, Maim, Maim, Maim  
+/use Maim  
+
+*This macro covers all affinity spells in all specs, nice to have*
+
+#showtooltip  
+/use [spec:1,talent:3/1][spec:3/4,talent:3/2]Maim;[spec:1/2,talent:3/2][spec:4,talent:3/3]Incapacitating Roar;[spec:1/2/3,talent:3/3]Ursol's Vortex;[spec:2/3/4,talent:3/1]Typhoon
+
+- *ZenTracker (ZT) - Interrupt and Cooldown Tracker (the brain) <https://wago.io/r14U746B7>*.
+- *ZT Front-End Party Icons (the UI part) <https://wago.io/M3N3WBg0D>*.
+- *Someone in the group to have an auto-marker <https://wago.io/1ctv3b91K/13>*.
+- *Prideful incoming tracker <https://wago.io/PridefulAffixTracker/4>*.
+- *A generic dungeon ability warning WA, like this one - <https://wago.io/SL-Dungeons>*.
+- *A “Time to kill” WA can be useful to help with cooldown timings - https://wago.io/hYW3MVbnf/1>*.
+- *The one I use doesn’t seem to be on Wago anymore, but a good group interrupt tracker*.
+
+*Also, you should set Plater up well so that you can see the casts and the target, so you know if someone is about to get every cast to the face and you need to act quick, or things like if a poly is about to go through on a Druid so you can ignore it and let it go through.*
+
+*There’s also some affix specific stuff out there that shows things like the CD on quaking to help know when to be ready for it so it doesn’t interrupt convoke.*
+
+---
+
+**How do you best optimize Convoke and Zerk CDs in M+ when routing through trash? Using HoA as an example, I've been trying to use both off CD, convoke for groups and Zerk for priority targets like shard but it doesn't feel quite right.**  
+
+Fore: *I went through this in more detail in part.2 in the Cooldowns section, but the summary is…*
+
+- *use as close to on cooldown as possible*
+- *talk to your team to know when important points are coming up that might needs CDs held for*
+
+---
+
+**Why would I play feral when I could play any other good spec**  
+
+Fore: *Honestly, at the end of the day, play what you want to play - Feral (and all specs) will be as good as you can play it, your skill with the spec will be a deciding factor much much before the spec itself is.*
+
+---
+
+**Get rid of spiteful**  
+
+Maystine: *B-but... my predator reset? :(*
+
+---
+
+**Anti melee dungeons?**  
+
+Fore: *I wouldn’t say there’s any particularly anti-melee dungeons, but there are definitely anti-melee pulls or mobs, for example …*
+
+- *HoA the Darkblades (my least favourite mob in M+ btw) do a frontal that can 1-shot on high Fort, because tanks love to kite atm you need to be really careful of this one*
+
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/813855274754113576/unknown.png) 
+
+- *DoS the Deathwalkers do the annoying spinning ability that can 1-shot on high enough keys, as well as the Headless Clients that spin and get launched in the direction that they’re hit*
+
+![Image](https://media.discordapp.net/attachments/337894455589994517/813863384961253426/unknown.png) 
+
+- *SD the Regal Mistdancers have a frontal that can be awkward to avoid with the traps and small corridors at the start of the key*
+
+![Image](https://media.discordapp.net/attachments/337894455589994517/813855581072916550/unknown.png) 
+
+- *NW the Stitched Vanguards have a very hard hitting melee attack (Bone Claw) that will hit the closest target, so if your tank is kiting, be aware of where it’s stood*
+
+![Image](https://media.discordapp.net/attachments/337894455589994517/813855058801328205/unknown.png) 
+
+---
+
+**If you have a rip on the boss which is weaker than a rip you could apply now but the rip still has 10+ sec time, do you still apply the stronger rip or do you just bite and let the weaker rip last in the boss and only refresh rip in pandemic? And if you refresh the rip before pandemic, how much stronger should the rip be? Thanks in advance**  
+
+Fore: *I asked the man himself, sooo…*  
+
+BuffMe: *Rake: Clip below ~60% in general. For BT proc generation (if you use rake to specifically proc BT) 2 additional options...*
+- *Clip instantly if better multiplier or refresh in pandemic if worse multiplier.*
+- *Pragmatic option: Clip if multiplier is better or wait for pandemic if it's worse.*
+
+*Rip is the opposite: Never clip. If you have no SbT you wanna only refresh in pandemic, bite is way too powerful. With SbT you ideally never want to be in the position where you have a non optimal rip on the target, timing TF cooldowns with Rip refreshes is very important. In the case of having a non TF Rip up for whatever reason: don't clip and deal with being bad.*
+
+---
+
+**When all soulbinds are fully unlocked do you feel one will be more useful in high keys? Is Niya’s poison more alluring in M+ because of the constant need for a melee interrupt? Will Koran be a good option if you can use first strike efficiently? Will the minor dps loss of Dreamweaver still be offset by Podtender’s cheat death like ability?**
+
+Fore: *Oh wow did this really take that long to write that we’ve had soulbinds fully unlocked for like, 2-3 weeks now, my bad …*
+
+---
+
+**Do you also agree that everyone who uses square combo points should have their account blocked?**  
+
+Maystine: *Yes*
+
+Fore: 
+
+![Image](https://static-cdn.jtvnw.net/jtv_user_pictures/4b4bd859-4c88-44ea-a15e-41a60a5c7cdd-profile_image-300x300.png) 
+
+---
+
+**Is the sudden ambush conduit worth taking**  
+
+Fore: *Unfortunately not, possible as a Necro but as a Night Fae the TF or Conflux conduit are just better*
+
+---
+
+**How do I get in the group to begin with when pugging as a feral druid?**  
+
+Maystine: *Best option when playing a non-meta class, make your own group!*
+
+Fore: *I know it sucks, and pugging can be soul destroying, but honestly this isn’t a Feral specific problem. The io meta is in full force and the only way to get invited to groups as most specs, is to have a high io. So my advice is to work up the ladder and grind it out, get that io, and it’ll be easier.*
+
+---
+
+**How much energy should you pool to set up BT?**  
+
+Fore: *I asked BuffMe again …*
+
+BuffMe: *65 approximately - It's 35+35+40 - 3x15*
+
+---
+
+**Do you believe the spec will get buffs/nerfs? If so, to which abilities and why? I.e: Night Fae/SbT nerf, Necrolord/LI/SR buffs?**  
+
+Fore: *I’m actually terrified in between tiers of convoke nerfs, as I do believe that Feral would be worse off if any of the other covs were better than Night Fae, they just don’t really “fit” with the M+ meta as well as convoke does. For example if Convoke went down to 12 spells it’s be a different game.*
+
+*In terms of the other stuff, i’d love to see AS get a real AoE change, maybe make it an aura from the target or something, a slightly longer CD but burstier playstyle would also be much better for M+, outside of that I guess we might see number tunings, but I can’t see any 8.1 reworks on the cards until the next expansion, but i’d be happy to be proven wrong.*
+
+---
+
+**FF vs BT with Circle?**  
+
+Fore: *Aaaaah… I really wish FF was better than BT, but it’s just not unfortunately, maybe when the bug is fixed and it correctly scales with weapon damage and base mastery, but for now honestly, it should be BT every key*
+
+---
+
+**Should I learn to play Guardian instead of Feral for m+ to get into groups easier?**  
+
+Maystine: *But then you won’t be playing feral, if you want to do m+ as feral and are struggling to get into group, you can always make your own.*
+
+---
+
+**Hello! I wanna say ty for all the information and also wanna ask about Niya, should I run Burrs or just 2 potency conduits in general?**
+
+Fore: *Double potency is just better than Burrs in M+, so I’d go with that - check out part.1 for the Soulbind run through.*
+
+---
+
+**Best cat form?**
+
+Maystine: *We all know the purple one from mage tower is the best*
+
+Fore: *Haha easy, I’ve got a tier list floating around somewhere…*
+
+![Image](https://media.discordapp.net/attachments/121880917579923458/784085100491964486/unknown.png?width=1050&height=623) 
+
+---
+
+<div id="Final_Words">
+	
+## [Final words](#Final_Words)
+	
+</div>
+
+### Fore
+This has taken more time than either of us expected when we decided to do this, so I really hope at least a few people learned some stuff or it opened up some ideas or plays you might not have thought of. 
+
+M+ is always evolving, so good chance this will all be redundant in a tier or so’s time lol, always happy to chat about M+ strats, builds, ideas, meme pulls and to help Hippo relive his MDI dreams one day.
+
+Any questions or comments, hit me up on Discord in the normal place.
+
+### Maystine
+I hope this guide will help you to learn some stuff for your m+ journey, because it requires a lot of knowledge if you want to push really high keys and not only from your class, but also each mob.
+
+You can ask me anything on discord, I will always try to answer the best I can. And soon after the last MDI cup I will finally be able to stream some feral content!
 
 -----
