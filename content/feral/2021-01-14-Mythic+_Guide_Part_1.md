@@ -120,7 +120,7 @@ https://www.dreamgrove.gg/sims/cat/
 
 Celest is the king of 9.1. A 1 minute burst ST CD as strong as {{< spell 323764 "Convoke the Spirits" >}} makes it very hard to justify running anything else, especially with how powerful Single Target is in this tier. The Tormented mini-bosses dying fast is important, so guaranteeing you have a convoke for every one is big, as well as being able to fit in 2-3 convokes per boss fight also means as a Feral you're likely to be 2-3k ST DPS above your next rival.
 
-Focusing on ST with a {{< spell 202031 "Sabertooth" >}}/Celect build also means that your two other teammates can run more AoE focused builds, allowing for specs to play to their niches more.
+Focusing on ST with a {{< spell 202031 "Sabertooth" >}}/Celest build also means that your two other teammates can run more AoE focused builds, allowing for specs to play to their niches more.
 
 Convoke on a 1min ST does also come with some utility advantages, such as a 1 min strong AoE heal, an AoE CD in Boomie convoking (though I'm always unsure how valuable this is).
 
