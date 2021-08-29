@@ -73,7 +73,7 @@ actions.catweave+=/convoke_the_spirits,if=druid.catweave_bear
 actions.catweave+=/ferocious_bite,if=combo_points>=4&energy>50
 actions.catweave+=/adaptive_swarm,if=(!dot.adaptive_swarm_damage.ticking&!action.adaptive_swarm_damage.in_flight&(!dot.adaptive_swarm_heal.ticking|dot.adaptive_swarm_heal.remains>3)|dot.adaptive_swarm_damage.stack<3&dot.adaptive_swarm_damage.remains<5&dot.adaptive_swarm_damage.ticking)
 actions.catweave+=/fleshcraft,if=soulbind.pustule_eruption.enabled&energy<35|soulbind.volatile_solvent.enabled,interrupt_immediate=1,interrupt_global=1,interrupt_if=soulbind.volatile_solvent&energy<35
-actions.catweave+=/swipe,if=dot.rake.pmultiplier<1.5&!runeforge.draught_of_deep_focus
+actions.catweave+=/swipe,if=!runeforge.draught_of_deep_focus&!covenant.venthyr|(!runeforge.draught_of_deep_focus&!buff.heart_of_the_wild.up)
 actions.catweave+=/rake
 
 actions.cconvoke=cat_form
