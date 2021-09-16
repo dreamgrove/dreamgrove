@@ -1,10 +1,9 @@
-name: Update APL
+name: Update APL Bear
 
 on:
   push:
     paths:
       - 'static/sims/bear/guardian.txt'
-      - 'static/sims/tree/restoration.txt'
 
 defaults:
   run:
@@ -27,7 +26,6 @@ jobs:
       - name: generate APL
         run: |
           python generate_apl.py --spec=bear "./simc"
-          python generate_apl.py --spec=tree "./simc"
       - name: commit APL
         run: |
           git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
