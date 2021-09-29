@@ -41,13 +41,13 @@ Due to no longer using Balance of All Things there is no longer as compelling of
 On single target about 65% of your damage will be during CA/Inc+{{< spell 323546 "Ravenous Frenzy" >}} meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
 
 **Single target priority list OUTSIDE cooldowns:** 
-- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic
-- Enter the next Eclipse, preferring Solar Eclipse
-- Cast {{< spell 211545 "Fury of Elune" >}} if it will be up again for your next usage in CA/Inc
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic(30% of base duration).
+- Enter the next Eclipse, preferring Solar Eclipse.
+- Cast {{< spell 211545 "Fury of Elune" >}} if it will be up again for your next usage in CA/Inc.
 - Cast {{< spell 78674 "Starsurge" >}} when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary. Don't spend if you need to move soon.
-- Cast{{< spell 190984 "Wrath" >}} in Solar Eclipse
-- Cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse
-- Cast dots if have nothing to cast while you are moving
+- Cast{{< spell 190984 "Wrath" >}} in Solar Eclipse.
+- Cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse.
+- Cast dots if have nothing to cast while you are moving.
 
 **Single target priority list BEFORE cooldowns:**
 - Make sure to have 90+ Astral Power before using cooldowns. The only exception is when Bloodlust would run out before Inc expires at which point you Inc+Frenzy sooner. This happens with Bloodlust on pull.
@@ -57,15 +57,15 @@ On single target about 65% of your damage will be during CA/Inc+{{< spell 323546
 Before the 5s extension buff:
 - Use Berserking at the start of Frenzy without Bloodlust or at 6s of the initial buff remaining with Bloodlust.
 - Use your trinket so that it will be for the rest of your cooldowns. Never ever use off gcd items/spells between casts, always use them during a gcd. (For exact timings see [Timings sections](#timings)).
-- Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining
-- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
-- Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
-- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}
+- Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining.
+- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining.
+- Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power.
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}.
 - Cast {{< spell 190984 "Wrath" >}} to fill until 150% haste at which point you should fill with {{< spell 194153 "Starfire" >}}.
 
 **During the 5s Ravenous Frenzy extension buff:**
-- Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power
-- Cast {{< spell 190984 "Wrath" >}} to fill
+- Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power.
+- Cast {{< spell 190984 "Wrath" >}} to fill.
 
 You can use the [Venthyr timings WeakAura](https://wago.io/KnnYdtGRN) to show the exact timings of abilities.
 
@@ -107,7 +107,7 @@ With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Fore
 - Refresh {{< spell 93402 "Sunfire" >}} so you only have to refresh it once during Cooldowns.
 
 **DURING {{< spell 323546 "Ravenous Frenzy" >}}:**
-- Refresh {{< spell 93402 "Sunfire" >}} during pandemic.
+- Refresh {{< spell 93402 "Sunfire" >}} during pandemic(30% of base duration).
 - Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}.
 - Refresh {{< spell 8921 "Moonfire" >}} on up to 6 (12 with {{< spell 281847 "Twin Moons" >}}) targets when they will live for another ~20 seconds.
 - Use the [FrenyzFiller Weakaura](https://wago.io/mYVIsyQN8) to see which filler should be cast. The recommendations this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
