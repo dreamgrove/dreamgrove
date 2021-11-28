@@ -11,7 +11,8 @@ report_url = 'https://www.raidbots.com/simbot/report/'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('apikey', type=str, help='raidbots apikey')
-parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
+parser.add_argument('-t', '--targets', type=int, nargs='?',
+                    default=1, const=1, help='set desired sim targets')
 parser.add_argument('-d', '--dungeon', default=False, action='store_true')
 parser.add_argument('-c', '--catweave', default=False, action='store_true')
 parser.add_argument('-r', '--raid', type=str, nargs='?', default='mythic', const='mythic', choices=['mythic', 'heroic', 'ptr'])
@@ -28,10 +29,12 @@ def is_PTR():
     return args.raid == 'ptr'
 
 profile_base = ven_profile = apl = ""
+apl_txt = 'guardian.txt'
 
 if is_PTR():
     profile_txt = 'sandbear_ptr.txt'
-    ven_profile_txt = 'sandbear_ptr_ven.txt'
+    ven_profile_txt = 'sandbear_ptr.txt'
+    apl_txt = 'guardian_ptr.txt'
 elif is_H():
     profile_txt = 'sandbear_h.txt'
     ven_profile_txt = 'sandbear_h_ven.txt'
@@ -43,7 +46,7 @@ with open(profile_txt, 'r') as fp:
     profile_base = fp.read()
 with open(ven_profile_txt, 'r') as fp:
     profile_ven = fp.read()
-with open('guardian.txt', 'r') as fp:
+with open(apl_txt, 'r') as fp:
     apl = fp.read()
 
 talents = [
@@ -59,6 +62,7 @@ legendaries = {
     'luffa': 'back=grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
     'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
     'legacy': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7095/6647/6650/6758/',
+    'lycaras':'waist=,id=172320,gems=16mastery,bonus_id=6716/7110/6649/6648/',
     'covenant': {
         'night_fae': 'legs=umbrahide_leggings,id=172318,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
@@ -111,7 +115,7 @@ covenants = {
     },
     'necrolord': {
         'marileth': {
-            'base': '',
+            'base': 'volatile_solvent',
             'add': 'kevins_oozeling',
             'trait': ['plagueys_preemptive_strike']
         },
@@ -179,9 +183,14 @@ for cov, soulbinds in covenants.items():
     for leg, leg_str in legendaries.items():
         # split for covenant legis
         if leg == 'covenant':
+            if is_PTR():
+                continue
+
             leg_str = leg_str[cov]
 
         leg_str += legendaries_suffix()
+        if is_PTR():
+            leg_str += '\n' + legendaries['covenant'][cov] + legendaries_suffix()
 
         profile = profile_base
         if cov == 'venthyr':
@@ -225,7 +234,7 @@ for cov, soulbinds in covenants.items():
                                 talent = str(t15) + ('023' if args.catweave else '013') + str(t40) + str(t45) + str(t50)
                                 talent_str = 'talents=' + talent
 
-                                profile_name = '\"' + '-'.join([cond1, cond2, cond3, talent]) +'\"'
+                                profile_name = '\"' + '-'.join([cond1, cond2, cond3, talent]) + '\"'
                                 sets_list.append('profileset.' + profile_name + '=' + talent_str)
                                 sets_list.append('profileset.' + profile_name + '+=' + soulbind_str)
 
@@ -260,6 +269,8 @@ for cov, soulbinds in covenants.items():
                 print('Unknown status code. Return code {}'.format(post.status_code))
                 continue
 
+            counter = 0
+
             while True:
                 time.sleep(3)
                 try:
@@ -269,9 +280,13 @@ for cov, soulbinds in covenants.items():
                     continue
 
                 if 'message' in status and status['message'] == 'No job found':
-                    sys.exit("The sim got lost :(")
+                    counter += 1
+                    if counter >= 3:
+                        sys.exit("The sim got lost :( {}".format(simID))
+                    continue
 
                 if status['job']['state'] == 'complete':
+                    time.sleep(3)
                     data = requests.get(sim_url + '/data.json')
                     results = data.json()
                     if 'error'in results:

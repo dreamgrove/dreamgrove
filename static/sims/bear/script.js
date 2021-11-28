@@ -39,10 +39,11 @@ $(function() {
         'luffa': "<a href=https://shadowlands.wowhead.com/spell=339060>Luffa</a>",
         'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
         'legacy': "<a href=https://shadowlands.wowhead.com/spell=339062>Legacy</a>",
-        'night_fae': "<https://shadowlands.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
+        'lycaras': "<a href=https://shadowlands.wowhead.com/spell=340059>Lycaras</a>",
         'venthyr': "<a href=https://shadowlands.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
         'necrolord': "<a href=https://shadowlands.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
         'kyrian': "<a href=https://shadowlands.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
+        'night_fae': "<https://shadowlands.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
         'covenant': "<a href=https://www.wowhead.com/guides/covenant-specific-legendaries-in-shadowlands-9-1>Covenant</a>",
 }
 
@@ -52,6 +53,7 @@ $(function() {
         'luffa': 'back=Grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
         'circle': 'finger1=shaodwghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
         'legacy': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7095/6647/6650/6758/',
+        'lycaras':"waist=,id=172320,gems=16mastery,bonus_id=6716/7110/6649/6648/",
         'night_fae': 'legs=umbrahide_leggings,id=172318,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
         'necrolord': 'wrist=umbrahide_armguards,id=172321,gem_id=173129,bonus_id=7472/6647/6650/6758/',
@@ -77,7 +79,7 @@ $(function() {
         'pelagos': "combat_meditation/better_together/newfound_resolve",
         'kleia': "spear_of_the_archon/light_the_path",
         'mikanikos': "brons_call_to_action/soulglow_spectrometer/effusive_anima_accelerator",
-        'marileth': "kevins_oozeling",
+        'marileth': "volatile_solvent/kevins_oozeling",
         'emeni': "lead_by_example/pustule_eruption",
         'heirmir': "forgeborne_reveries/carvers_eye/mnemonic_equipment",
         'niya': "grove_invigoration/bonded_hearts",
@@ -101,7 +103,8 @@ $(function() {
         'combo_ptr_3.json': 2,
         'combo_ptr_4.json': 3,
         'combo_ptr_5.json': 4,
-        'combo_ptr_d.json': 5
+        'combo_ptr_d.json': 5,
+        'combo_ptr_c.json': 6
     }
 
     function isPtr() {
@@ -170,16 +173,27 @@ $(function() {
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
                         let r = getRecord(filters, pivotData);
-                        let prof = r.cov == "venthyr" ? "sandbear_ven.txt" : "sandbear_base.txt"
+                        let prof = "";
+                        if (isPtr()) {
+                            prof = "sandbear_ptr.txt";
+                        } else {
+                            prof = r.cov == "venthyr" ? "sandbear_ven.txt" : "sandbear_base.txt";
+                        }
+                        let apl = isPtr() ? "guardian_ptr.txt" : "guardian.txt";
                         $.get(prof, (d) => {
-                            let leg_bonus = isPtr() ? "1559" : isH() ? "1546": "1559";
+                            let leg_bonus = isH() ? "1546": "1559";
                             let buf = [];
 
                             buf.push(d);
                             buf.push("covenant=" + r.cov);
                             buf.push("talents=" + r.tal);
                             buf.push(getLegendaryString(r.leg, r.cov) + leg_bonus);
-                            if ($("#fightstyle").val().includes("combo_c")) { buf.push("druid.catweave_bear=1") }
+                            if (isPtr()) {
+                                buf.push(getLegendaryString("covenant", r.cov) + leg_bonus);
+                            }
+                            if ($("#fightstyle").val().includes("combo_c") || $("#fightstyle").val().includes("combo_ptr_c")) {
+                                buf.push("druid.catweave_bear=1")
+                            }
 
                             let cond = [];
                             if (soulbinds[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
@@ -191,17 +205,19 @@ $(function() {
                             buf.push("buff_uptime_timeline=1");
                             buf.push("buff_stack_uptime_timeline=1");
 
-                            el.value = buf.join("\n");
-                            document.body.appendChild(el);
-                            el.select();
-                            document.execCommand('copy');
-                            document.body.removeChild(el);
-
                             let pos = $(e.target).offset();
                             $("#copied").css({
                                 top: pos.top,
                                 left: pos.left - $("#copied").width() - 18
                             }).show().delay(1000).fadeOut();
+                            $.get(apl, (e) => {
+                                buf.push(e);
+                                el.value = buf.join("\n");
+                                document.body.appendChild(el);
+                                el.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(el);
+                            });
                         });
                     }
                 }
