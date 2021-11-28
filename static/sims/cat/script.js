@@ -79,7 +79,7 @@ $(function() {
         'pelagos': "combat_meditation/better_together/newfound_resolve",
         'kleia': "spear_of_the_archon/light_the_path",
         'mikanikos': "brons_call_to_action/soulglow_spectrometer/effusive_anima_accelerator",
-        'marileth': "kevins_oozeling",
+        'marileth': "volatile_solvent/kevins_oozeling",
         'emeni': "lead_by_example/pustule_eruption",
         'heirmir': "forgeborne_reveries/carvers_eye/mnemonic_equipment",
         'niya': "grove_invigoration/bonded_hearts",
@@ -175,13 +175,16 @@ $(function() {
                         let r = getRecord(filters, pivotData);
                         let prof = isPtr() ? "sandcat_ptr.txt" : isH() ? "sandcat_h.txt" : "sandcat.txt";
                         $.get(prof, (d) => {
-                            let leg_bonus = isPtr() ? "1546" : isH() ? "1546": "1559";
+                            let leg_bonus = isH() ? "1546": "1559";
                             let buf = [];
 
                             buf.push(d);
                             buf.push("covenant=" + r.cov);
                             buf.push("talents=" + r.tal);
                             buf.push(getLegendaryString(r.leg, r.cov) + leg_bonus);
+                            if (isPtr()) {
+                                buf.push(getLegendaryString("covenant", r.cov) + leg_bonus);
+                            }
 
                             let cond = [];
                             if (soulbinds[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
@@ -193,17 +196,27 @@ $(function() {
                             buf.push("buff_uptime_timeline=1");
                             buf.push("buff_stack_uptime_timeline=1");
 
-                            el.value = buf.join("\n");
-                            document.body.appendChild(el);
-                            el.select();
-                            document.execCommand('copy');
-                            document.body.removeChild(el);
-
                             let pos = $(e.target).offset();
                             $("#copied").css({
                                 top: pos.top,
                                 left: pos.left - $("#copied").width() - 18
                             }).show().delay(1000).fadeOut();
+                            if (isPtr()) {
+                                $.get("feral_ptr.txt", (e) => {
+                                    buf.push(e);
+                                    el.value = buf.join("\n");
+                                    document.body.appendChild(el);
+                                    el.select();
+                                    document.execCommand('copy');
+                                    document.body.removeChild(el);
+                                });
+                            } else {
+                                el.value = buf.join("\n");
+                                document.body.appendChild(el);
+                                el.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(el);
+                            }
                         });
                     }
                 }
