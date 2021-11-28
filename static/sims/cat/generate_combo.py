@@ -24,12 +24,14 @@ def is_M():
     return args.raid == 'mythic'
 
 def is_PTR():
-    return args.raid == 'PTR'
+    return args.raid == 'ptr'
 
-profile = dungeon = ""
+profile = apl = dungeon = ""
 
 if is_PTR():
     profile_txt = 'sandcat_ptr.txt'
+    with open('feral_ptr.txt', 'r') as fp:
+        apl = fp.read()
 elif is_H():
     profile_txt = 'sandcat_h.txt'
 else:
@@ -108,7 +110,7 @@ covenants = {
     },
     'necrolord': {
         'marileth': {
-            'base': '',
+            'base': 'volatile_solvent',
             'add': 'kevins_oozeling',
             'trait': ['plagueys_preemptive_strike']
         },
@@ -176,9 +178,14 @@ for cov, soulbinds in covenants.items():
     for leg, leg_str in legendaries.items():
         # split for covenant legis
         if leg == 'covenant':
+            if is_PTR():
+                continue
+
             leg_str = leg_str[cov]
 
         leg_str += legendaries_suffix()
+        if is_PTR():
+            leg_str += '\n' + legendaries['covenant'][cov] + legendaries_suffix()
 
         for soul, traits in soulbinds.items():
             sets_list = []
@@ -215,7 +222,7 @@ for cov, soulbinds in covenants.items():
                                 talent = str(t15) + '013' + str(t40) + str(t45) + str(t50)
                                 talent_str = 'talents=' + talent
 
-                                profile_name = '\"' + '-'.join([cond1, cond2, cond3, talent]) +'\"'
+                                profile_name = '\"' + '-'.join([cond1, cond2, cond3, talent]) + '\"'
                                 sets_list.append('profileset.' + profile_name + '=' + talent_str)
                                 sets_list.append('profileset.' + profile_name + '+=' + soulbind_str)
 
@@ -250,6 +257,8 @@ for cov, soulbinds in covenants.items():
                 print('Unknown status code. Return code {}'.format(post.status_code))
                 continue
 
+            counter = 0
+
             while True:
                 time.sleep(3)
                 try:
@@ -259,9 +268,13 @@ for cov, soulbinds in covenants.items():
                     continue
 
                 if 'message' in status and status['message'] == 'No job found':
-                    sys.exit("The sim got lost :(")
+                    counter += 1
+                    if counter >= 3:
+                        sys.exit("The sim got lost :( {}".format(simID))
+                    continue
 
                 if status['job']['state'] == 'complete':
+                    time.sleep(3)
                     data = requests.get(sim_url + '/data.json')
                     results = data.json()
                     if 'error'in results:
