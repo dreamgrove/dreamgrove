@@ -23,8 +23,8 @@ trinket1="titanic_ocular_gland,id=186423,ilevel=252"
 trinket2="phial_of_putrefaction,id=178771,ilevel=252"
 main_hand="jotungeirr_destinys_call,id=186404,ilevel=252,enchant_id=6228"
 
-set_bonus.tier28_2pc=1
-set_bonus.tier28_4pc=1
+set_bonus=tier28_2pc=1
+set_bonus=tier28_4pc=1
 
 chart_show_relative_difference=1
 report_details=0
