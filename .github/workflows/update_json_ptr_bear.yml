@@ -1,4 +1,4 @@
-name: Update JSON (Bear Catweave)
+name: Update JSON PTR (Bear)
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave 1T"
+            git commit -m "update JSON Bear PTR 1T"
             git push
           fi
       - uses: actions/upload-artifact@v2
@@ -63,7 +63,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave 2T"
+            git commit -m "update JSON Bear PTR 2T"
             git push
           fi
       - uses: actions/upload-artifact@v2
@@ -96,7 +96,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave 3T"
+            git commit -m "update JSON Bear PTR 3T"
             git push
           fi
       - uses: actions/upload-artifact@v2
@@ -129,7 +129,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave 4T"
+            git commit -m "update JSON Bear PTR 4T"
             git push
           fi
       - uses: actions/upload-artifact@v2
@@ -162,7 +162,7 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave 5T"
+            git commit -m "update JSON Bear PTR 5T"
             git push
           fi
       - uses: actions/upload-artifact@v2
@@ -195,7 +195,40 @@ jobs:
           else
             git pull --rebase --autostash
             git add .
-            git commit -m "update JSON Bear Catweave Dungeon"
+            git commit -m "update JSON Bear PTR Dungeon"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_c:
+    needs: [ update_json_d ]
+    name: Update JSON Catweave
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: dungeon
+        run: python generate_combo.py -c -r ptr ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Bear PTR Catweave"
             git push
           fi
       - uses: actions/upload-artifact@v2
