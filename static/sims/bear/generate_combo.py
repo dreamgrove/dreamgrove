@@ -61,13 +61,13 @@ legendaries = {
     'DoDF': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7086/6647/6650/6758/',
     'luffa': 'back=grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
     'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
-    'legacy': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7095/6647/6650/6758/',
-    'lycaras':'waist=,id=172320,gems=16mastery,bonus_id=6716/7110/6649/6648/',
+    'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
+    #'lycaras':'waist=,id=172320,gems=16mastery,bonus_id=6716/7110/6649/6648/',
     'covenant': {
-        'night_fae': 'legs=umbrahide_leggings,id=172318,bonus_id=7571/6647/6650/6758/',
+        'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
-        'necrolord': 'wrist=umbrahide_armguards,id=172321,gem_id=173129,bonus_id=7472/6647/6650/6758/',
-        'kyrian': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7477/6647/6650/6758/'
+        'necrolord': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7472/6647/6650/6758/',
+        'kyrian': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7477/6647/6650/6758/'
     }
 }
 

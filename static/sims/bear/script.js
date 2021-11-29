@@ -52,12 +52,12 @@ $(function() {
         'DoDF': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7086/6647/6650/6758/',
         'luffa': 'back=Grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
         'circle': 'finger1=shaodwghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
-        'legacy': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7095/6647/6650/6758/',
+        'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
         'lycaras':"waist=,id=172320,gems=16mastery,bonus_id=6716/7110/6649/6648/",
-        'night_fae': 'legs=umbrahide_leggings,id=172318,bonus_id=7571/6647/6650/6758/',
+        'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
-        'necrolord': 'wrist=umbrahide_armguards,id=172321,gem_id=173129,bonus_id=7472/6647/6650/6758/',
-        'kyrian': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7477/6647/6650/6758/'
+        'necrolord': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7472/6647/6650/6758/',
+        'kyrian': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7477/6647/6650/6758/'
     }
 
     var soulbinds = {
@@ -246,7 +246,7 @@ $(function() {
 
             (async () => {
                 let file = $("#fightstyle").val();
-                const action = isPtr() ? "update_json_bear_ptr.yml" : "update_json_bear.yml";
+                const action = isPtr() ? "update_json_ptr_bear.yml" : "update_json_bear.yml";
                 const runs = await fetch("https://api.github.com/repos/dreamgrove/dreamgrove/actions/workflows/" + action + "/runs");
                 const r_json = await runs.json();
                 const this_run = r_json["workflow_runs"][0];
