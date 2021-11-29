@@ -53,7 +53,7 @@ $(function() {
         'luffa': 'back=Grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
         'circle': 'finger1=shaodwghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
         'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
-        'lycaras':"waist=,id=172320,gems=16mastery,bonus_id=6716/7110/6649/6648/",
+        'lycaras': 'feet=umbrahide_treads,id=172315,bonus_id=7110/6647/6650/',
         'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
         'necrolord': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7472/6647/6650/6758/',
