@@ -203,7 +203,7 @@ for cov, soulbinds in covenants.items():
             sets_list = []
             name_str = 'name=' + '-'.join([cov, leg, soul])
 
-            soulbind_master = []
+            soulbind_master = ['tough_as_bark:11']
             if traits['base']:
                 soulbind_master.append(traits['base'])
             if not is_H() and traits['add']:
