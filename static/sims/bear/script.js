@@ -51,7 +51,7 @@ $(function() {
         'UFR': 'legs=,id=172318,bonus_id=6716/7094/6649/6650/',
         'DoDF': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7086/6647/6650/6758/',
         'luffa': 'back=Grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
-        'circle': 'finger1=shaodwghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
+        'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
         'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
         'lycaras': 'feet=umbrahide_treads,id=172315,bonus_id=7110/6647/6650/',
         'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
