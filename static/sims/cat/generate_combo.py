@@ -14,6 +14,7 @@ parser.add_argument('apikey', type=str, help='raidbots apikey')
 parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
 parser.add_argument('-d', '--dungeon', default=False, action='store_true')
 parser.add_argument('-r', '--raid', type=str, nargs='?', default='mythic', const='mythic', choices=['mythic', 'heroic', 'ptr'])
+parser.add_argument('--hoa', default=False, action='store_true')
 args = parser.parse_args()
 targets = str(max(1, args.targets))
 
@@ -39,8 +40,13 @@ else:
 
 with open(profile_txt, 'r') as fp:
     profile = fp.read()
-with open('dungeon.txt', 'r') as fp:
-    dungeon = fp.read()
+
+if args.hoa:
+    with open('hoa.txt', 'r') as fp:
+        dungeon = fp.read()
+else:
+    with open('dungeon.txt', 'r') as fp:
+        dungeon = fp.read()
 
 talents = [
     ['PRED', 'SBT ', 'LI  '],
@@ -161,15 +167,15 @@ covenants = {
     }
 }
 
-if args.dungeon:
+if args.dungeon or args.hoa:
     target_str = dungeon
 else:
     target_str = 'desired_targets=' + targets
 
-if args.dungeon:
-    stages = [1.2, 0.5, 0.2]
-else:
-    stages = [1.0, 0.3, 0.1]
+#if args.dungeon or args.hoa:
+    #stages = [1.2, 0.5, 0.2]
+#else:
+stages = [1.0, 0.3, 0.1]
 
 buffer = []
 for cov, soulbinds in covenants.items():
@@ -300,6 +306,8 @@ elif is_PTR():
 
 if args.dungeon:
     json_name += 'd'
+elif args.hoa:
+    json_name += 'hoa'
 else:
     json_name += targets
 

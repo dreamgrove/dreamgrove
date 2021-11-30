@@ -11,11 +11,11 @@ report_url = 'https://www.raidbots.com/simbot/report/'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('apikey', type=str, help='raidbots apikey')
-parser.add_argument('-t', '--targets', type=int, nargs='?',
-                    default=1, const=1, help='set desired sim targets')
+parser.add_argument('-t', '--targets', type=int, nargs='?', default=1, const=1, help='set desired sim targets')
 parser.add_argument('-d', '--dungeon', default=False, action='store_true')
 parser.add_argument('-c', '--catweave', default=False, action='store_true')
 parser.add_argument('-r', '--raid', type=str, nargs='?', default='mythic', const='mythic', choices=['mythic', 'heroic', 'ptr'])
+parser.add_argument('--hoa', default=False, action='store_true')
 args = parser.parse_args()
 targets = str(max(1, args.targets))
 
@@ -28,7 +28,7 @@ def is_M():
 def is_PTR():
     return args.raid == 'ptr'
 
-profile_base = ven_profile = apl = ""
+profile_base = ven_profile = apl = dungeon = ""
 apl_txt = 'guardian.txt'
 
 if is_PTR():
@@ -48,6 +48,10 @@ with open(ven_profile_txt, 'r') as fp:
     profile_ven = fp.read()
 with open(apl_txt, 'r') as fp:
     apl = fp.read()
+
+if args.hoa:
+    with open('hoa.txt', 'r') as fp:
+        dungeon = fp.read()
 
 talents = [
     ['BRA', 'BF ', 'FUR'],
@@ -168,13 +172,15 @@ covenants = {
 
 if args.dungeon:
     target_str = 'fight_style=DungeonSlice'
+elif args.hoa:
+    target_str = dungeon
 else:
     target_str = 'desired_targets=' + targets
 
-if args.dungeon:
-    stages = [1.2, 0.5, 0.2]
-else:
-    stages = [1.0, 0.3, 0.1]
+#if args.dungeon or args.hoa:
+    #stages = [1.2, 0.5, 0.2]
+#else:
+stages = [1.0, 0.3, 0.1]
 
 buffer = []
 for cov, soulbinds in covenants.items():
@@ -312,6 +318,8 @@ elif is_PTR():
 
 if args.dungeon:
     json_name += 'd'
+elif args.hoa:
+    json_name += 'hoa'
 elif args.catweave:
     json_name += 'c'
 else:

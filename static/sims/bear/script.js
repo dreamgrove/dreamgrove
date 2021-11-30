@@ -103,8 +103,9 @@ $(function() {
         'combo_ptr_3.json': 2,
         'combo_ptr_4.json': 3,
         'combo_ptr_5.json': 4,
-        'combo_ptr_d.json': 5,
-        'combo_ptr_c.json': 6
+        'combo_ptr_c.json': 5,
+        'combo_ptr_d.json': 6,
+        'combo_ptr_hoa.json': 7
     }
 
     function isPtr() {
