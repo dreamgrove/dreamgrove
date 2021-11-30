@@ -196,6 +196,7 @@ $(function() {
                             }
 
                             let cond = [];
+                            cond.push("tough_as_bark:11/born_of_the_wilds:11");
                             if (soulbinds_m[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
                             if (r.cond1 !== "none") { cond.push(r.cond1); }
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
