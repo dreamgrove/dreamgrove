@@ -123,6 +123,9 @@ $(function() {
         if (leg == "covenant") { return legendaries[cov]; }
         return legendaries[leg];
     }
+    function getFightStyle() {
+        return $("#fightstyle").val().split('.').shift().split('_').pop()
+    }
 
     function getRecord(filters, pivotData) {
         let buf = [];
@@ -191,6 +194,7 @@ $(function() {
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
                             if (r.cond3 !== "none") { cond.push(r.cond3); }
                             buf.push("soulbind=" + cond.join("/"));
+                            buf.push(fightStyleTxt);
                             buf.push("report_details=1");
                             buf.push("buff_uptime_timeline=1");
                             buf.push("buff_stack_uptime_timeline=1");
@@ -273,6 +277,20 @@ $(function() {
                 const d_json = await commit.json();
                 let date = new Date(d_json[0]['commit']['committer']['date']);
                 $("#update").html(date.toLocaleString());
+
+                let fs = getFightStyle();
+                fightStyleTxt = "";
+                if (fs === 'd') {
+                    const f = await fetch('dungeon.txt');
+                    fightStyleTxt = await f.text();
+                } else if (fs === 'hoa') {
+                    const f = await fetch('hoa.txt');
+                    fightStyleTxt = await f.text();
+                } else if (!isNaN(fs)) {
+                    fightStyleTxt = "desired_targets=" + fs;
+                } else {
+                    console.log("Invalid JSON Name");
+                }
             })()
         },
         derivedAttributes: {
