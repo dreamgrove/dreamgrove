@@ -194,7 +194,6 @@ $(function() {
                             if (r.cond2 !== "none") { cond.push(r.cond2); }
                             if (r.cond3 !== "none") { cond.push(r.cond3); }
                             buf.push("soulbind=" + cond.join("/"));
-                            buf.push(fightStyleTxt);
                             buf.push("report_details=1");
                             buf.push("buff_uptime_timeline=1");
                             buf.push("buff_stack_uptime_timeline=1");
@@ -207,6 +206,7 @@ $(function() {
                             if (isPtr()) {
                                 $.get("feral_ptr.txt", (e) => {
                                     buf.push(e);
+                                    buf.push(fightStyleTxt);
                                     el.value = buf.join("\n");
                                     document.body.appendChild(el);
                                     el.select();
@@ -214,6 +214,7 @@ $(function() {
                                     document.body.removeChild(el);
                                 });
                             } else {
+                                buf.push(fightStyleTxt);
                                 el.value = buf.join("\n");
                                 document.body.appendChild(el);
                                 el.select();
