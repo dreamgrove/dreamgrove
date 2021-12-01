@@ -273,7 +273,7 @@ for cov, soulbinds in covenants.items():
                 except:
                     continue
 
-                if 'message' in status and status['message'] == 'No job found':
+                if ('message' in status and status['message'] == 'No job found') or ('job' not in status):
                     counter += 1
                     if counter >= 3:
                         sys.exit("The sim got lost :( {}".format(simID))
