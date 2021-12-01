@@ -172,10 +172,10 @@ if args.dungeon or args.hoa:
 else:
     target_str = 'desired_targets=' + targets
 
-#if args.dungeon or args.hoa:
-    #stages = [1.2, 0.5, 0.2]
-#else:
-stages = [1.0, 0.3, 0.1]
+if args.dungeon or args.hoa:
+    stages = [1.2, 0.5, 0.2]
+else:
+    stages = [1.0, 0.3, 0.1]
 
 buffer = []
 for cov, soulbinds in covenants.items():
