@@ -34,16 +34,17 @@ $(function() {
     function getT50(r) { return talentCode['50'][r.tal.charAt(6)]; }
 
     var whLinks = {
-        'UFR': "<a href=https://shadowlands.wowhead.com/spell=339056>UfR</a>",
-        'DoDF': "<a href=https://shadowlands.wowhead.com/spell=338658>DoDF</a>",
-        'luffa': "<a href=https://shadowlands.wowhead.com/spell=339060>Luffa</a>",
-        'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
-        'legacy': "<a href=https://shadowlands.wowhead.com/spell=339062>Legacy</a>",
-        'lycaras': "<a href=https://shadowlands.wowhead.com/spell=340059>Lycaras</a>",
-        'venthyr': "<a href=https://shadowlands.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
-        'necrolord': "<a href=https://shadowlands.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
-        'kyrian': "<a href=https://shadowlands.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
-        'night_fae': "<https://shadowlands.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
+        'UFR': "<a href=https://www.wowhead.com/spell=339056>UFR</a>",
+        'DoDF': "<a href=https://www.wowhead.com/spell=338658>DoDF</a>",
+        'luffa': "<a href=https://www.wowhead.com/spell=339060>Luffa</a>",
+        'circle': "<a href=https://www.wowhead.com/spell=338657>Circle</a>",
+        'legacy': "<a href=https://www.wowhead.com/spell=339062>Legacy</a>",
+        'lycaras': "<a href=https://www.wowhead.com/spell=340059>Lycaras</a>",
+        'oath': "<a href=https://www.wowhead.com/spell=338608>Oath</a>",
+        'venthyr': "<a href=https://www.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
+        'necrolord': "<a href=https://www.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
+        'kyrian': "<a href=https://www.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
+        'night_fae': "<https://www.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
         'covenant': "<a href=https://www.wowhead.com/guides/covenant-specific-legendaries-in-shadowlands-9-1>Covenant</a>",
 }
 
@@ -54,6 +55,7 @@ $(function() {
         'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
         'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
         'lycaras': 'feet=umbrahide_treads,id=172315,bonus_id=7110/6647/6650/',
+        'oath': 'wrist=,id=172321,gem_id=173129,bonus_id=7084/7451/6647/6650/6935/',
         'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
         'necrolord': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7472/6647/6650/6758/',

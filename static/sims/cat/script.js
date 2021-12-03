@@ -34,16 +34,16 @@ $(function() {
     function getT50(r) { return talentCode['50'][r.tal.charAt(6)]; }
 
     var whLinks = {
-        'circle': "<a href=https://shadowlands.wowhead.com/spell=338657>Circle</a>",
-        'draught': "<a href=https://shadowlands.wowhead.com/spell=338658>Draught</a>",
-        'symmetry': "<a href=https://shadowlands.wowhead.com/spell=339141>Symmetry</a>",
-        'apex': "<a href=https://shadowlands.wowhead.com/spell=339139>Apex</a>",
-        'frenzy': "<a href=https://shadowlands.wowhead.com/spell=340053>Frenzy</a>",
-        'cateye': "<a href=https://shadowlands.wowhead.com/spell=339144>Cat-Eye</a>",
-        'venthyr': "<a href=https://ptr.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
-        'necrolord': "<a href=https://ptr.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
-        'kyrian': "<a href=https://ptr.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
-        'night_fae': "<https://ptr.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
+        'circle': "<a href=https://www.wowhead.com/spell=338657>Circle</a>",
+        'draught': "<a href=https://www.wowhead.com/spell=338658>Draught</a>",
+        'symmetry': "<a href=https://www.wowhead.com/spell=339141>Symmetry</a>",
+        'apex': "<a href=https://www.wowhead.com/spell=339139>Apex</a>",
+        'frenzy': "<a href=https://www.wowhead.com/spell=340053>Frenzy</a>",
+        'cateye': "<a href=https://www.wowhead.com/spell=339144>Cat-Eye</a>",
+        'venthyr': "<a href=https://www.wowhead.com/spell=354109/sinful-hysteria>Hysteria</a>",
+        'necrolord': "<a href=https://www.wowhead.com/spell=354123/unbridled-swarm>Swarm</a>",
+        'kyrian': "<a href=https://www.wowhead.com/spell=354115/kindred-affinity>Affinity</a>",
+        'night_fae': "<https://www.wowhead.com/spell=354118/celestial-spirits>Celestial</a>",
         'covenant': "<a href=https://www.wowhead.com/guides/covenant-specific-legendaries-in-shadowlands-9-1>Covenant</a>",
 }
 

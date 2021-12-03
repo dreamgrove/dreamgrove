@@ -67,6 +67,7 @@ legendaries = {
     'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
     'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
     'lycaras': 'feet=umbrahide_treads,id=172315,bonus_id=7110/6647/6650/',
+    'oath': 'wrist=,id=172321,gem_id=173129,bonus_id=7084/7451/6647/6650/6935/',
     'covenant': {
         'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
         'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
