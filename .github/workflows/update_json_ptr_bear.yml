@@ -240,7 +240,7 @@ jobs:
 
   update_json_hoa:
     needs: [ update_json_d ]
-    name: Update JSON Dungeon
+    name: Update JSON HoA Route
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -251,7 +251,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
       - name: dungeon
-        run: python generate_combo.py -hoa -r ptr ${{ secrets.RAIDBOTSAPI }}
+        run: python generate_combo.py --hoa -r ptr ${{ secrets.RAIDBOTSAPI }}
       - name: commit
         run: |
           git config user.name dreamgrove
