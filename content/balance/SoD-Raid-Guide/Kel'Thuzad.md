@@ -1,6 +1,6 @@
 ---
 title: "Kel'Thuzad"
-date: 2021-08-09
+date: 2021-12-12
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -19,15 +19,16 @@ patch: "9.1"
 - CD Usage: Pull / another cd inside a main phase / p3 with lust
 
 ## Mythic only notes:
-TBD
+- CDs should always be talked with your raid and especailly if 2+ venthir moonkins are being sent down they should be alternated.
+- Barkskin whenever the big spike group is about to explode. 
+- Be very careful when you starfall. Good rule of thumb is to not use it whenever spikes are up unless you realise what is happening around you, when spikes are supposed to get popped and how healthy the raid is.
+- If you are inside in intermission always use starfall for the winds.
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
-<br>[Korayn](https://ptr.wowhead.com/soulbind-calc/night-fae/korayn/druid/AwCWar4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
+<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQglMjwI)
 
 ## Talents:
-- I would personally recommend Stellar Drift for HEROIC, as the adds die way too fast for Twin Moons to get any value.
-
 
 {{< talents spec="balance" src="live" recommend="311,113,132,223,213,131,133" >}}
 
