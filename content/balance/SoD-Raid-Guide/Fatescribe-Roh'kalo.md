@@ -1,6 +1,6 @@
 ---
 title: "Fatescribe Roh'kalo"
-date: 2021-07-08
+date: 2021-12-12
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -17,18 +17,18 @@ patch: "9.1"
 
 
 ## Mythic only notes:
-TBD
+- Cds especially on progress should be used on boss in P1/P2/P3. 
+- Use Barkskin on every mechanic. 
+- If you make a mistake and soak a beam from runes or an add cast in intermission forfeit doing damage and try to repair your mistake immediately by healing yourself even if you are close to full hp. You will tick down very fast and pressure the healers even more. 
+- Just play mechanics :)
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-b74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
 <br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
 
 ## Talents:
-- Restoration Affinity might prove to be slightly better than Guardian, because of the rejuv/swiftmend on yourself (and your partner) if you have to do runes on the other side of the room and the runes are moving faster than you are able to cast regrowth.
-- Tiger's Dash might prove incredibly useful for orb drops far from raid and for traveling far if runes spawn on the other side of the room.
 
-
-{{< talents spec="balance" src="ptr" recommend="311,213,132,223,113,131,132" >}}
+{{< talents spec="balance" src="ptr" recommend="311,213,133,223,113,131,132" >}}
 
 
 
