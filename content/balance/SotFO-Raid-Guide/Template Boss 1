@@ -1,5 +1,5 @@
 ---
-title: "Template Boss 1"
+title: "Vigilant Guardian"
 date: 2021-12-12
 authors: ['Chicken']
 published: false
@@ -23,4 +23,4 @@ patch: "9.2"
 
 - 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,113,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,113,131,132" >}}
