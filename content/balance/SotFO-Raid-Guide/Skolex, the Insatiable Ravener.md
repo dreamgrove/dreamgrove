@@ -2,7 +2,7 @@
 title: "Skolex, the Insatiable Ravener"
 date: 2021-12-12
 authors: ['Chicken']
-published: false
+published: true
 showOnFrontpage: false
 weight: 2
 patch: "9.2"
