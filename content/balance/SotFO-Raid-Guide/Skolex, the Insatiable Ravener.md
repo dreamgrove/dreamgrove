@@ -1,6 +1,6 @@
 ---
 title: "Skolex, the Insatiable Ravener"
-date: 2021-1-11
+date: 2022-1-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -25,5 +25,5 @@ patch: "9.2"
 ## Talents:
 
 - If NF and 2lego is available you can freely run SD and use starfall whenever you have to move for stack or conals.
-
+- Guardian Affinity should be better than resto because of the bursty dmg patterns.
 {{< talents spec="balance" src="live" recommend="311,113,132,223,113,123,133" >}}
