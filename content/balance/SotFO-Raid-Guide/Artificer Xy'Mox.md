@@ -1,8 +1,8 @@
 ---
 title: "Artificer Xy'Mox"
-date: 2021-12-12
+date: 2022-1-11
 authors: ['Chicken']
-published: false
+published: true
 showOnFrontpage: false
 weight: 3
 patch: "9.2"
