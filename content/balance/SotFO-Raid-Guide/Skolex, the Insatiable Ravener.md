@@ -1,6 +1,6 @@
 ---
 title: "Skolex, the Insatiable Ravener"
-date: 2021-12-12
+date: 2021-1-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
