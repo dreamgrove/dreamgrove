@@ -2,7 +2,7 @@
 title: "Prototype Pantheon"
 date: 2021-12-12
 authors: ['Chicken']
-published: false
+published: true
 showOnFrontpage: false
 weight: 5
 patch: "9.2"
@@ -10,7 +10,8 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- 
+- Covenants: Venthyr or Kyrian. For Kyrian bond go for nf survival > nf fire > nf enha.
+- All 4 cardinal adds are starfall cleavable at the start if you stand in the middle, then sidestep and hit 3. You always focus these as a moonkin.
 
 ## Mythic only notes:
 - 
@@ -21,6 +22,5 @@ patch: "9.2"
 
 ## Talents:
 
-- 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,133,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,223,113,131,131" >}}
