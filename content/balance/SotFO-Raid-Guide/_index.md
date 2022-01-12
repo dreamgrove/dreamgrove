@@ -12,10 +12,10 @@ Summary
 Welcome to the Sepulcher of the First Ones Balance Druid encounter guide.
 
 **DISCLAIMER:** This is a WORK IN PROGRESS guide and will be constantly updated as I, Chicken, experience the fights. You should NOT copy the guide, instead make an opinion for yourself and try to elevate your level of play by combining some niche fight specific mechanics mentioned in the guide with your own.
-<br>Current guide progression: PTR/12M 
+<br>Current guide progression: PTR/11M 
 
 
-You can ask me any questions on discord ChickenWingz#7777 or if you are shy just ask in the Dreamgrove Balance channel.
+You can ask me any questions on discord Chickenxd#7777 or if you are shy just ask in the Dreamgrove Balance channel.
 
 Authors
 ===
