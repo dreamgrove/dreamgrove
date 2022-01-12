@@ -1,6 +1,6 @@
 ---
 title: "Skolex, the Insatiable Ravener"
-date: 2022-1-11
+date: 2022-1-12
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -15,7 +15,7 @@ patch: "9.2"
 - As NF try to not brick by standing too far away. Remember that convoke range is based on the middle of the boss' hitbox. Also try to not kill your melee by standing too close to the boss (for melee convoke) and baiting a puddle where they want to move.
 
 ## Mythic only notes:
-- 
+- Mythic does not change that much compared to hc for us, it just gets more claustrophobic.
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
