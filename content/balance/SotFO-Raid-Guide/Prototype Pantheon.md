@@ -1,6 +1,6 @@
 ---
 title: "Prototype Pantheon"
-date: 2021-12-12
+date: 2021-1-12
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
