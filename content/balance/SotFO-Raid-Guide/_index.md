@@ -5,6 +5,7 @@ hideSummaries: true
 hideSpecs: true
 showSectionToC: true
 description: "Welcome to the Sepulcher of the First Ones Balance Druid encounter guide."
+noPagination: true
 ---
 
 Summary
