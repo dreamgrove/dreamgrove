@@ -1,6 +1,6 @@
 ---
 title: "Vigilant Guardian"
-date: 2021-12-12
+date: 2022-1-17
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -21,7 +21,5 @@ patch: "9.2"
 <br>[Kyrian](https://ptr.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKCBMFNYIIFTLkCCUy4ggiFTJJCDV2AAg)
 
 ## Talents:
-
-- 
 
 {{< talents spec="balance" src="live" recommend="331,113,132,223,113,231,131" >}}
