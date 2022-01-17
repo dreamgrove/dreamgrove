@@ -27,4 +27,4 @@ patch: "9.2"
 - SD for all covenants and maybe FoE for Kyr and NF aswell.
 - You could maybe run bash if you feel like you really need stuns in the intermission.
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,131,132" >}}
+{{< talents spec="balance" src="live" recommend="321,113,132,223,113,131,132" >}}
