@@ -11,7 +11,7 @@ Summary
 ===
 Welcome to the Sepulcher of the First Ones Balance Druid encounter guide.
 
-**DISCLAIMER:** This is a WORK IN PROGRESS guide and will be constantly updated as I, Chicken, experience the fights. You should NOT copy the guide, instead make an opinion for yourself and try to elevate your level of play by combining some niche fight specific mechanics mentioned in the guide with your own.
+**DISCLAIMER:** This is a WORK IN PROGRESS guide and will be constantly updated as I, Chicken, experience the fights. This guide tells you how to abuse your spec on a fight and NOT how to actually play the mechanics of the fight.
 <br>Current guide progression: PTR/11M 
 
 
