@@ -25,8 +25,6 @@ main_hand=jotungeirr_destinys_call,id=186404,ilevel=252,enchant_id=6228
 set_bonus=tier28_2pc=1
 set_bonus=tier28_4pc=1
 
-druid.kindred_affinity_covenant=necrolord
-
 chart_show_relative_difference=1
 report_details=0
 max_time=300
