@@ -1,6 +1,6 @@
 ---
 title: "Anduin Wrynn"
-date: 2022-1-17
+date: 2022-1-22
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,10 +10,11 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- coming soon
+- Looks like an insane venthyr fight until 2lego and maybe even after. 
 
 ## Mythic only notes:
-- 
+- Venthyr and SD in general are insane in intermission.
+- Mass root is usable on adds in lower realm if needed.
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
@@ -22,4 +23,4 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,132,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,133,113,132,133" >}}
