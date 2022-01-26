@@ -1,6 +1,6 @@
 ---
 title: "Halondrus the Reclaimer"
-date: 2022-1-25
+date: 2022-1-26
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,6 +10,7 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
+- **They completely reworked the boss. This information is most likely not up to date.**
 - On PTR HC the boss felt like you would want to go for NF with how little hp the pillars had plus the fact that the boss had a huge dr depending on how many pillars were up. *also read mythic*
 - You can always starfall for movement it is not much of a loss. If you are playing sd pulsar remember that you proc pulsar with starfall.
 
