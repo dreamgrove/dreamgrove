@@ -15,9 +15,10 @@ patch: "9.2"
 - As Venthyr take double door.
 - Always try to move into the circles whenever they come out and premove into (or close to) the first one. 
 - Try to save a starfall for add spawns and ap in general to burst it down asap.
+- You can also jump wild charge through two overlapping circles at the same time and only take one dot. (PTR)
 
 ## Mythic only notes:
-- 
+- More circles and more adds not really much else going on.
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
