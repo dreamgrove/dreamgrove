@@ -1,6 +1,6 @@
 ---
 title: "Anduin Wrynn"
-date: 2022-1-22
+date: 2022-1-26
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -15,6 +15,7 @@ patch: "9.2"
 ## Mythic only notes:
 - Venthyr and SD in general are insane in intermission.
 - Mass root is usable on adds in lower realm if needed.
+- You have 2.5 eclipse cycles until the first inside phase. You might want to prepop cds a bit if on 2lego if the adds are dying too fast (We gripped all 5 together and they died in 10sec.)
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
@@ -23,4 +24,4 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="311,113,132,133,113,132,133" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,133,113,132,132" >}}
