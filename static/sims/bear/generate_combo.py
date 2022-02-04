@@ -28,6 +28,16 @@ def is_M():
 def is_PTR():
     return args.raid == 'ptr'
 
+def getJSON(url):
+    while(True):
+        try:
+            get = requests.get(url)
+            status = get.json()
+        except:
+            time.sleep(3)
+            continue
+        return status
+
 profile_base = ven_profile = apl = dungeon = ""
 apl_txt = 'guardian.txt'
 
@@ -280,11 +290,7 @@ for cov, soulbinds in covenants.items():
 
             while True:
                 time.sleep(3)
-                try:
-                    get = requests.get(get_url + simID)
-                    status = get.json()
-                except:
-                    continue
+                status = getJSON(get_url + simID)
 
                 if ('message' in status and status['message'] == 'No job found') or ('job' not in status):
                     counter += 1
@@ -293,14 +299,11 @@ for cov, soulbinds in covenants.items():
                     continue
 
                 if status['job']['state'] == 'complete':
-                    time.sleep(3)
-                    data = requests.get(sim_url + '/data.json')
-                    results = data.json()
+                    results = getJSON(sim_url + '/data.json')
                     if 'error'in results:
                         sys.exit('Sim failed with error {}'.format(results['error']['type']))
                     if 'hasFullJson' in results['simbot'] and results['simbot']['hasFullJson']:
-                        data = requests.get(sim_url + '/data.full.json')
-                        results = data.json()
+                        results = getJSON(sim_url + '/data.full.json')
                     break
 
             cov_key, leg_key, soul_key = results['sim']['players'][0]['name'].split('-')
