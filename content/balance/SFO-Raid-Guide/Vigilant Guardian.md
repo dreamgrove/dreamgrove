@@ -10,7 +10,8 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Pad aoe fiesta have fun and top the meters. If you group does not possess a spear that is.
+- Covenant: Venthyr most likely.
+- Pad aoe fiesta have fun and top the meters. 
 
 ## Mythic only notes:
 - 
@@ -22,4 +23,4 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="331,113,132,223,113,231,131" >}}
+{{< talents spec="balance" src="live" recommend="331,113,133,223,133,331,231" >}}
