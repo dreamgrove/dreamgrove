@@ -237,10 +237,10 @@ The venthyr only version can be found [here](/balance/2021-06-05-Venthyr-Compend
 
 **Single target priority list OUTSIDE cooldowns:** 
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic(30% of base duration).
-- Enter the next Eclipse, preferring Solar Eclipse.
+- Enter the next Eclipse, preferring Solar Eclipse. With {{< spell 338668 "Primordial Arcanic Pulsar" >}} and {{< spell 364423 "Celestial Pillar" >}} you want to enter Lunar Eclipse before entering a {{< spell 338668 "Primordial Arcanic Pulsar" >}} window. 
 - Cast {{< spell 211545 "Fury of Elune" >}} if it will be up again for your next usage in CA/Inc.
 - (NF) Cast {{< spell 274281 "Moons" >}} if you are in Lunar Eclipse or you are overcapping charges inside solar eclipse. If possible save charges for CA/INC.
-- Cast {{< spell 78674 "Starsurge" >}} when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary. Don't spend if you need to move soon.
+- Cast {{< spell 78674 "Starsurge" >}} when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary especially if you used moons or a foe. Don't spend if you need to move soon.
 - Cast {{< spell 190984 "Wrath" >}} in Solar Eclipse.
 - Cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse.
 - Cast dots if have nothing to cast while you are moving.
@@ -269,6 +269,8 @@ Before the 5s extension buff:
 
 **Notes:** 
 - Due to no longer using Balance of All Things there is no longer as compelling of a reason to {{< spell 78674 "Starsurge" >}} at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. {{< spell 78674 "Starsurge" >}} Empowerment exists but it is a very weak effect.
+
+- While using {{< spell 338668 "Primordial Arcanic Pulsar" >}} make sure to activate the proc while using a Starfall and not a Starsurge, as the starfall will use the Incarnation bonus damage and the Starsurge will not. This is the case even without Stellar Drift.
 
 - (V) With {{< spell 202354 "Stellar Drift" >}} AND {{< spell 114107 "Soul of the Forest" >}} it is only a 1% dps loss to use Starfall on CD including during Frenzy so if there is any movement at all use Starfall when you happen to be attacking a single target with it talented. With {{< spell 102560 "Incarnation" >}} talented you should avoid using Starfalls during Frenzy as it is a much bigger loss but with {{< spell 202354 "Stellar Drift" >}} Starfall should still be used to avoid downtime. Do not just use {{< spell 202354 "Stellar Drift" >}} for a pure single target fight as it is still a ~4% dps loss doing this compared to {{< spell 202347 "Stellar Flare " >}} unless there is no way of getting a good Frenzy window without it.
 
