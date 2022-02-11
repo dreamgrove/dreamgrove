@@ -1,6 +1,6 @@
 ---
 title: "Dausegne, the Fallen Oracle"
-date: 2021-1-12
+date: 2021-2-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,7 +10,7 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Covenants: NF and Venthyr look like the winners here because of Door and Soulshape, as you will want to skip as many circles as you can to reduce the raid damage.
+- Covenants: Both NF and Venthyr look like the winners here because of Door and Soulshape, as you will want to skip as many circles as you can to reduce the raid damage. You will probably need more st dmg than cleave in this fight and Ven is not that abusable. Until 2lego you probably play NF and after swap to Venthyr.
 - Barkskin either the circles or the soaks, dont think much about it.
 - As Venthyr take double door.
 - Always try to move into the circles whenever they come out and premove into (or close to) the first one. 
@@ -18,7 +18,7 @@ patch: "9.2"
 - You can also jump wild charge through two overlapping circles at the same time and only take one dot. (PTR)
 
 ## Mythic only notes:
-- More circles and more adds not really much else going on.
+- More circles and more adds not really much else going on. Raises Venthyr stonks by a tiny bit.
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
@@ -27,6 +27,5 @@ patch: "9.2"
 
 ## Talents:
 
-- 
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,131,132" >}}
+{{< talents spec="balance" src="live" recommend="321,113,132,223,113,131,132" >}}
