@@ -1,6 +1,6 @@
 ---
 title: "Lihuvim, Principal Architect"
-date: 2021-1-14
+date: 2021-2-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,8 +10,8 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Both NF and Kyrian looked very strong. Venthyr was not as good imo because of the dmg pattern. At least with our start it was not that great, if you were cleaving 2+ adds post intermission and had to do it fast then venthyr will rise in value.
-- NF if you need to demolish adds in intermission, Kyrian if you need more sustained dmg on boss.
+- Covenant: NF looked stronger than Venthyr for our strat. Venthyr was not as good imo because of the dmg pattern. At least with our start it was not that great, if you were cleaving 2+ adds post intermission and had to do it fast then venthyr will rise in value.
+- NF if you need to demolish adds in intermission, Venthyr if you need more AoE in general after intermissions.
 - Barkskin every intermission.
 
 
