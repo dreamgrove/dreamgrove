@@ -23,4 +23,4 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,231,131" >}}
+{{< talents spec="balance" src="live" recommend="331,113,133,113,123,231,231" >}}
