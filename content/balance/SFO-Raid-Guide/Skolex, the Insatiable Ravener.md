@@ -1,6 +1,6 @@
 ---
 title: "Skolex, the Insatiable Ravener"
-date: 2022-1-12
+date: 2022-2-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,9 +10,9 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Covenants: All of them look playable but none look abusable. Kyrian if not overtuned might get lower value because of how melee unfriendly the boss is. 
-- Barkskin whenever you are soaking. Each phase should be around 1.5min each soak being around 30s. This can be tracked with his mana bar. (sets come at the same time as the tank mechanic). If you are soaking 2nd you might be able to also skin the group borrow as that also does a significant ammount of damage.
-- As NF try to not brick by standing too far away. Remember that convoke range is based on the middle of the boss' hitbox. Also try to not kill your melee by standing too close to the boss (for melee convoke) and baiting a puddle where they want to move.
+- Covenant: Both NF and Venthyr look playable but neither are abusable. NF will most likely pull ahead with only 1 legendary.
+- Barkskin whenever you are soaking. Each phase should be around 1.5min each soak being around 30s. This can be tracked with his mana bar (sets come at the same time as the tank mechanic). If you are soaking 2nd you might be able to also skin the group borrow as that also does a significant ammount of damage.
+- As NF try to not brick your convoke by standing too far away from the boss. Remember that convoke range is based on the middle of the boss' hitbox. Also try to not kill your melee by standing too close to the boss (for melee convoke) and baiting a puddle where they want to move.
 
 ## Mythic only notes:
 - Mythic does not change that much compared to hc for us, it just gets more claustrophobic.
