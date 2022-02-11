@@ -1,6 +1,6 @@
 ---
 title: "Rygelon"
-date: 2022-1-12
+date: 2022-2-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -22,4 +22,4 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="311,113,132,223,113,131,133" >}}
+{{< talents spec="balance" src="live" recommend="111,113,133,113,111,111,111" >}}
