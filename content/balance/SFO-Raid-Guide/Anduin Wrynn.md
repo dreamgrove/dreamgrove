@@ -1,6 +1,6 @@
 ---
 title: "Anduin Wrynn"
-date: 2022-1-26
+date: 2022-2-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,7 +10,7 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Looks like an insane venthyr fight until 2lego and maybe even after. 
+- Covenant: Venthyr is insanely strong here, I dont think there is a choice here. 
 
 ## Mythic only notes:
 - Venthyr and SD in general are insane in intermission.
@@ -24,4 +24,4 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="311,113,132,133,113,132,132" >}}
+{{< talents spec="balance" src="live" recommend="321,113,133,123,113,131,132" >}}
