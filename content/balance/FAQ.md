@@ -30,7 +30,6 @@ sidebarContents:  |
   <br>[What Legendaries should I craft?](#legendaries)
   <br>[What slot do I craft legendaries in?](#legendaries-slot)
   <br>[What Covenant should I pick?](#covenant)
-  <br>[What Domination Sockets should I use?](#domination-sockets)
   
   [5. Covenant specific tips](#covenants)
   <br>[Night Fae](#nightfae)
@@ -46,8 +45,6 @@ sidebarContents:  |
   <br>[Why am I doing low damage?](#low-dmg)
   <br>[M+ Talents](#M+Talents)
   <br>[M+ Soulbinds](#M+Soulbinds)
-  <br>[M+ Domination Sockets](#M+Sockets)
-  <br>[M+ Anima Powers](#M+Anima)
   <br>[How to Improve in M+](#M+Improve)
   
    [8. Utility](#Utility)
@@ -55,6 +52,10 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+  
+ + 2022-02-16:
+<br>Updated: Legendaries, Covenants, Venthyr section
+<br>Removed: Dom Sockets, a lot of 9.1.5 stuff, M+ dom sockets, M+ old affix
 
  + 2022-02-07:
 <br>Updated: Conduits, Talents, Covenants
@@ -399,7 +400,7 @@ The choice between {{< spell 281847 "Twin Moons" >}} and Drift depends on how lo
 
 <div id="t50">
  
-## [T50 row choices and playstyle (9.1)](#t50)
+## [T50 row choices and playstyle](#t50)
 
 <div>
  
@@ -438,14 +439,13 @@ The choice between {{< spell 281847 "Twin Moons" >}} and Drift depends on how lo
 - {{< spell 341446 "Conflux of the Elements" >}}: 100% of the time this should be your first go to potency slot as Night Fae.
 - {{< spell 341378 "Deep Allegiance" >}}: 90% of the time this should be your first go to potency slot as Kyrian as it enables 45sec bond.
 - {{< spell 340708 "Fury of the Skies" >}}: Default go to as a secondary slot.
-- {{< spell 340706 "Precise Alignment" >}}: For Venthyr this is an exceptionally good conduit because of the Sinful Hysteria legendary and should always be used in tandem with it (in 9.1.5). For Pulsar in general this is the 3rd strongest conduit. Without Pulsar it has the same value as Umbral.
-- {{< spell 340719 "Umbral Intensity" >}}: Situational usage, but gets outshone by Fury and Precise. On par with Stellar Inspiration for 4th slot. (in 9.2)
-- {{< spell 340720 "Stellar Inspiration" >}}: On par or even a bit better than Umbral on sustained AoE. (in 9.2)
+- {{< spell 340706 "Precise Alignment" >}}: For Pulsar in general this is the 3rd strongest conduit. Without Pulsar it has the same value as Umbral.
+- {{< spell 340719 "Umbral Intensity" >}}: Situational usage, but gets outshone by Fury and Precise. On par with Stellar Inspiration for 4th slot with Tier Set.
+- {{< spell 340720 "Stellar Inspiration" >}}: On par or even a bit better than Umbral on sustained AoE with Tier set, otherwise pretty underwhelming.
 
 Notes: 
   - This should be used as a priority list, going from top to bottom.
-  - {{< spell 340706 "Precise Alignment" >}} is a must have as Venthyr in 9.1.5.
-
+  
 
 **Endurance:**
 - {{< spell 340553 "Well-Honed Instincts" >}}: A must have. One of the most overtuned endurance conduits in the game raid wise.
@@ -504,21 +504,25 @@ Notes: Default Instincts and fill in the rest as needed.
 
 </div>
 
+**Single Legendary:**
+  
+  
 **Night Fae:**
 
-{{< spell 338668 "Pulsar" >}} with Mastery + Haste/Vers
+{{< spell 338668 "Pulsar" >}} with Mastery + Haste
 
 **Venthyr:**
 
-{{< spell 355315 "Sinful Hysteria" >}} with Mastery + Haste
+{{< spell 355315 "Sinful Hysteria" >}} with Mastery + Haste with no Tier Set
+<br>{{< spell 338668 "Pulsar" >}} with Mastery + Haste with Tier Set (2 or above)
 
 **Kyrian:**
 
 {{< spell 354115 "Kindred Affinity" >}} with Mastery + Haste
  
-**9.2 Double Legendary:**  
+**Double Legendary:**  
   
- {{< spell 338668 "Pulsar" >}} + Covenant Legendary with Mastery + Haste.
+ {{< spell 338668 "Pulsar" >}} + {{< item 190465 "Unity" >}} with Mastery + Haste.
   
 <div id="legendaries-slot">
 
@@ -530,14 +534,14 @@ Notes: Default Instincts and fill in the rest as needed.
 
 Craft this legendary on Ring because of Tier Set.
 
-**{{ item 190465 "Unity" >}} slot:** 
+**{{< item 190465 "Unity" >}} slot:** 
   
 There are three options when it comes to crafting this legendary. Those being budget, endgame and progression.
   + Budget: Free Waist from Campaign
 <br>With the budget version you can technically only get the free version from week 5 of the campaign, although this is very much not recommended power wise.
-  + Endgame: Legs Haste+Mastery 
+  + Endgame: Legs Haste + Mastery 
 <br>This is the conservative option and what will ultimately be the "BIS" option at the very end of the tier if you are mythic raiding and have all the mythic raid pieces available to you. This is because Legs and Head are not available at higher ilvl and the Legs have horrid stats on them.
-  + Progression: Topgear Haste+Mastery
+  + Progression: Topgear Haste + Mastery
 <br>A pure progression centered choice is a whole other beast. Assuming you have infinite gold, this choice will be an on the spot decision and will highly depend on the gear you have. There are some things to keep in mind though: Having Mastery+Haste Missives on it is a given as you will be able to flex your other gear pieces more depending on what you get dropped. Your other gear in general has a big influence what slot you want to craft it on. Week 5 (when Unity unlocks) you will have some slots on low ilvl, which you will most likely want to replace. A good rule of thumb is to get as much int as possible (ilvl) while trying to replace the bad stats. TLDR: Use Topgear on Raidbots. 
   
 <div id="covenant">
@@ -545,44 +549,23 @@ There are three options when it comes to crafting this legendary. Those being bu
 ## [What Covenant should I pick?](#covenant)
 
 </div>
-  
-**Venthyr:**
-9.1.5: Currently with the legendary {{< item 355315 "Sinful Hysteria" >}} it outperforms Night Fae in both Single target and AOE and should be your default pick when mainly playing Balance Druid.
-  
-<br>9.2: In 9.2 Venthyr will still be the best covenant if the NF utility or damage profile is not needed. It is worth noting that the difference between NF and Venthyr is now much closer due to the Hysteria nerf and the new tier set.
+
+In 9.2 Venthyr will still be the best covenant if the NF utility or damage profile is not needed. It is worth noting that the difference between NF and Venthyr is now much closer due to the Hysteria nerf and the new tier set.
 
 **Night Fae:**
-
-9.1.5: Night Fae Balance druid is still a viable spec and should be your default pick when playing multiple Druid specs or when you just prefer the aesthetics or gameplay.
   
-<br>9.2: With the new tier set, Night Fae will be much closer to Venthyr ST dps wise and should be picked depending on encounter.
+With the new tier set, Night Fae will be much closer to Venthyr ST dps wise and should be picked depending on encounter.
 
 
 **Kyrian:**
 
-9.1.5: Can be competitive with the Kyrian legendary due the legendary's absurd power but is a fair amount behind when not including it.
-  
-<br>9.2: With the nerf to the Kyrian legendary, this covenant is now on par with venthyr on raid dps. Because of how clunky the actual bond is and how fast you can lose value on it you should always try to use the other two viable covenants.
+With the nerf to the Kyrian legendary, this covenant is now on par with venthyr on raid dps. Because of how clunky the actual bond is and how fast you can lose value on it you should always try to use the other two viable covenants.
 
 **Necrolord:**
 
-9.1.5: Not currently competitive.
-  
-<br>9.2: Still not competitive.
+Still not competitive, might be viable in 10.0.
  
-**Notes:**
-For more 9.2 information refer to [the news](#news).
 
-<div id="domination-sockets">
-
-## [What Domination Sockets should I use?](#domination-sockets)
-
-</div>
-
-With the current iteration of Domination Sockets you should use the Chaos Bane (Unholy) set. After you get the set which includes the Dyz gem, you should look to get the Bek, Cor and Kyr gems which are all situationally extremely strong. In add fights prefer the Cor gem, in single target fights prefer the Bek gem (other than Sylvanas) and in all fights that require more sustain or you need a 5th socket if either Bek or Cor are not giving any significant value, use Kyr.
-  
-
-  
 <div id="covenants">
 
 # [5. Covenant specific tips:](#covenants)
@@ -648,9 +631,9 @@ Once everything is on live you will be able to sim as normal and that will, as a
 
 **Trinkets:**
 
-Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinkets are {{< item 179350 "Inscrutable Quantum Device" >}}, {{< item 180117 "Empyreal Ordnance" >}} (yes, without double on-use) and {{< item 184842 "Instructor's Divine Bell" >}} (yes, it's still broken even at low ilvl). IQD and Bell can be combined for a minor dps increase in the sub 0.5% area, although if that is better with your ilvl trinket you will have to sim. The raid on-use trinkets are all bad because we are a 3min class unless you cannot have your stats be mastery>haste for IQD.
+Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinket is {{< item 179350 "Inscrutable Quantum Device" >}}. The raid trinkets for SFO are still TBD
 
-As a passive trinket you have a plethora of options. For single target your best options are the new trinkets {{< item 186423 "Titanic Ocular Gland" >}} (2nd boss raid), {{< item 186421 "Forbidden Necromantic Tome" >}} (last boss raid), {{< item 186422 "Tome of Monstrous Constructions" >}} (1st boss raid), {{< item 178769 "Infinitely Divisble Ooze" >}}, {{< item 178708 "Unbound Changeling" >}}, {{< item 187447 "Soul Cage Fragment" >}} (World Boss) and a bunch of others. For AoE/M+ the damage proc trinkets fall off meaning you won't want the Tome or Oooze but the other trinkets stay as good. As always just sim what trinkets are best from the ones you have.
+As a passive trinket you have a plethora of options. For single target your best options are: {{< item 186423 "Titanic Ocular Gland" >}} (2nd boss raid), {{< item 186421 "Forbidden Necromantic Tome" >}}, {{< item 178769 "Infinitely Divisble Ooze" >}}, {{< item 178708 "Unbound Changeling" >}} and a bunch of others. For AoE/M+ the damage proc trinkets fall off meaning you won't want the Tome or Oooze but the other trinkets stay as good. As always just sim what trinkets are best from the ones you have.
 
 **Ideal stats:**
 
@@ -673,7 +656,7 @@ When you use {{< spell 326434 "Kindred Spirits" >}} both people get an empty poo
 - Who do I bond Kindred Spirits with and when do I use it?
 
 With {{< spell 354115 "Kindred Affinity" >}} you prefer to bond with a Night Fae because of the haste. Kyrian sadly gives very poor value and should be avoided.
-An experimental sheet for Kindred Affinity in 9.2 with tier sets and 2 legendaries and more information can be found [here](https://docs.google.com/spreadsheets/d/1baQypWt2RjCYvtRQ7T5fPXqK18FeZON9XtR-LRvSGXo/edit?usp=sharing).
+An sheet for Kindred Affinity with tier sets and 2 legendaries and more information can be found [here](https://docs.google.com/spreadsheets/d/1baQypWt2RjCYvtRQ7T5fPXqK18FeZON9XtR-LRvSGXo/edit?usp=sharing).
 
 
 <div id="Miscellaneous">
@@ -805,36 +788,6 @@ Some conditionals for doing high damage as a balance druids are:
 <br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74BFTUgCBIFNYcIJTLiCCMFMkkIFXYACDUyMQg)
 <br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
  
-<div id="M+Sockets">
- 
-## [M+ Domination Sockets](#M+Sockets)
-
-<div>
- 
-Cor>Dyz=Bek=Kyr>Rev=Jas
- 
- 
- 
-<div id="M+Anima">
- 
-## [M+ Anima Powers](#M+Anima)
-
-<div>
-
-Soggodon the Breaker 	
-<br> -	Stone Ward
-
-Incinerator Arkolath 	
-<br> -  Champion’s Brand
-<br> -  Bolstering (only in explosive week)
- 
-Oros Coldheart 		
-<br> -	Regenerative Fungus
- 
-Executioner Varruth
-<br> - Volcanic Plumage (for pack control if needed as a triple pick for stability)
-<br> - Dagger of Necrotic Wounding (tyran/low pack density dung)
-<br> - Champion’s Brand (rest) 
  
 <div id="M+Improve">
  
