@@ -526,22 +526,20 @@ Notes: Default Instincts and fill in the rest as needed.
 
 </div>
 
-**{{< spell 354109 "Sinful Hysteria" >}} slot:**
-
-Craft this on Belt because of the Domination Sockets.
-
 **{{< spell 338668 "Pulsar" >}} slot:**
 
-Craft this on Ring because of the Domination Sockets.
+Craft this legendary on Ring because of Tier Set.
 
-**{{< spell 338657 "Circle" >}} slot:**
-
-Ring because of the Domination Sockets.
-
-**{{< spell 339942 "BoAT" >}} slot:**
-
-You should craft the legendary on Legs because of the Domination Sockets.
-
+**{{ item 190465 "Unity" >}} slot:** 
+  
+There are three options when it comes to crafting this legendary. Those being budget, endgame and progression.
+  + Budget: Free Waist from Campaign
+<br>With the budget version you can technically only get the free version from week 5 of the campaign, although this is very much not recommended power wise.
+  + Endgame: Legs Haste+Mastery 
+<br>This is the conservative option and what will ultimately be the "BIS" option at the very end of the tier if you are mythic raiding and have all the mythic raid pieces available to you. This is because Legs and Head are not available at higher ilvl and the Legs have horrid stats on them.
+  + Progression: Topgear Haste+Mastery
+<br>A pure progression centered choice is a whole other beast. Assuming you have infinite gold, this choice will be an on the spot decision and will highly depend on the gear you have. There are some things to keep in mind though: Having Mastery+Haste Missives on it is a given as you will be able to flex your other gear pieces more depending on what you get dropped. Your other gear in general has a big influence what slot you want to craft it on. Week 5 (when Unity unlocks) you will have some slots on low ilvl, which you will most likely want to replace. A good rule of thumb is to get as much int as possible (ilvl) while trying to replace the bad stats. TLDR: Use Topgear on Raidbots. 
+  
 <div id="covenant">
 
 ## [What Covenant should I pick?](#covenant)
