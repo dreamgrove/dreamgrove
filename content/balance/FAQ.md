@@ -53,6 +53,9 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
   
+ + 2022-02-17:
+<br>Updated: CS Ratio
+  
  + 2022-02-16:
 <br>Updated: Legendaries, Covenants, Venthyr section
 <br>Removed: Dom Sockets, a lot of 9.1.5 stuff, M+ dom sockets, M+ old affix
@@ -594,7 +597,7 @@ The chance of getting a Full Moon during Convoke the Spirits is based on a "Stac
 
 **How does the covenant legendary affect Convoke?**
 
-Currently it reduces the spells cast by 1/4 and casts 2.4 Wraths, 2.2 Starsurges, 0.9 Starfalls and 0.425 Full Moons on average when every target is dotted. This is about half the Wrath and Starsurge casts than without the legendary. Addtionally the legendary reduces the amount of cards in the deck for Full Moon from 5 to 2 but gives the Full Moon card only a 85% chance to proc the Full Moon.
+Currently it reduces the spells cast by 1/4 and casts 3.3 Wraths, 2.8 Starsurges, 1 Starfall and 0.5 Full Moons on average when every target is dotted and starfall is not up (rounded up). This is about half the Wrath and Starsurge casts than without the legendary. Addtionally the legendary reduces the amount of cards in the deck for Full Moon from 5 to 2.
 
 <div id="venthyr">
 
