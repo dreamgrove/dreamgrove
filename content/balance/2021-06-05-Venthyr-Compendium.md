@@ -1,9 +1,9 @@
 ---
-date: '2021-06-05'
-authors: ["Jundarer"]
+date: '2022-02-17'
+authors: ["Jundarer, Chicken"]
 published: true
 showOnFrontpage: false
-patch: "9.1"
+patch: "9.2"
 title: Venthyr Compendium
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -21,13 +21,13 @@ sidebarContents:  |
   
 </div>
 
-This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simply made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to switch to Venthyr.
+This guide is not telling you to pick Venthyr or that Venthyr is always the superior pick. It is simply made to show everything about how to maximize your potential as a Venthyr Balance Druid if you do decide to play Venthyr.
 
 All information in this guide was tested and verfied using simulations found here: https://balance-simc.github.io/Balance-SimC/
 
-Everything in this guides assumes you are playing with the new Venthyr legendary Sinful Hysteria as this is the reason that Venthyr has gotten any attention at all.
+Everything in this guides assumes you are playing with Sinful Hysteria.
 
-Going from Night Fae Balance Druid to Venthyr Druid is a big gameplay change on single target and will take some getting used to so don't expect your first runs to be succesful.
+
 </div>
 
 <div id="single-target">
@@ -38,27 +38,27 @@ Going from Night Fae Balance Druid to Venthyr Druid is a big gameplay change on 
 
 Due to no longer using Balance of All Things there is no longer as compelling of a reason to {{< spell 78674 "Starsurge" >}} at the beginning of an Eclipse and thus you can often save Astral Power for movement without any relevant dps loss. {{< spell 78674 "Starsurge" >}} Empowerment exists but it is a very weak effect.
 
-On single target about 65% of your damage will be during CA/Inc+{{< spell 323546 "Ravenous Frenzy" >}} meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns. Since the legendary only does anything during our cooldowns you will do about 20% less damage outside cooldowns than you did with NF-BoAT Balance Druid.
+On single target about 65% of your damage will be during CA/Inc+{{< spell 323546 "Ravenous Frenzy" >}} meaning it is extremely important to be able to cast during that time and that the target will live for the entire duration of your cooldowns.
 
 **Single target priority list OUTSIDE cooldowns:** 
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic(30% of base duration).
-- Enter the next Eclipse, preferring Solar Eclipse.
+- Enter the next Eclipse, preferring Solar Eclipse. With {{< spell 338668 "Primordial Arcanic Pulsar" >}} and {{< spell 364423 "Celestial Pillar" >}} you want to enter Lunar Eclipse before entering a {{< spell 338668 "Primordial Arcanic Pulsar" >}} window. 
 - Cast {{< spell 211545 "Fury of Elune" >}} if it will be up again for your next usage in CA/Inc.
-- Cast {{< spell 78674 "Starsurge" >}} when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary. Don't spend if you need to move soon.
-- Cast{{< spell 190984 "Wrath" >}} in Solar Eclipse.
+- Cast {{< spell 78674 "Starsurge" >}} when you would overcap Astral Power before entering the next Eclipse. This usually equates to spending 3 Starsurges at the start like you did with BoAT but can vary especially if you used moons or a foe. Don't spend if you need to move soon.
+- Cast {{< spell 190984 "Wrath" >}} in Solar Eclipse.
 - Cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse.
 - Cast dots if have nothing to cast while you are moving.
 
 **Single target priority list BEFORE cooldowns:**
-- Make sure to have 90+ Astral Power before using cooldowns. The only exception is when Bloodlust would run out before Inc expires at which point you Inc+Frenzy sooner. This happens with Bloodlust on pull.
+- Make sure to have 90+ Astral Power before using cooldowns. If possible try proccing your {{< spell 364423 "Celestial Pillar" >}} before your CDs so that you get more AP generation and the pillar scales with both eclipses.
 - Make sure {{< spell 211545 "Fury of Elune" >}} will be up at the end.
 
 **Single target priority list INSIDE cooldowns:**
-Before the 5s extension buff:
-- Use Berserking at the start of Frenzy without Bloodlust or at 6s of the initial buff remaining with Bloodlust.
+Before the 3s extension buff:
+- Use Berserking at the start of Frenzy without Bloodlust or at 8s of the initial buff remaining with Bloodlust.
 - Use your trinket so that it will be for the rest of your cooldowns. Never ever use off gcd items/spells between casts, always use them during a gcd. (For exact timings see [Timings sections](#timings)).
-- Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining.
-- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining.
+- Use pot at 19s {{< spell 323546 "Ravenous Frenzy" >}} remaining.
+- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 6 or less seconds remaining.
 - Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power.
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}.
 - Cast {{< spell 190984 "Wrath" >}} to fill until 150% haste at which point you should fill with {{< spell 194153 "Starfire" >}}.
