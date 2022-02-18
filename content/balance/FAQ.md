@@ -1,5 +1,5 @@
 ---
-date: '2022-02-07'
+date: '2022-02-18'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -128,11 +128,6 @@ Simulationcraft has been updated for PTR changes and the APL has also received u
 
 For the sake of PTR testing and due to the fact that the baseline legendary won't be available for very early progress this is how the covenants match up: https://www.raidbots.com/simbot/report/fBk7jyHc9qsYV8gn5Q8Dyc All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
 
-### Known bugs:
-
-These bugs are known and will be fixed in a later ptr cycle.
-
-- Lunar Eclipse -> Pulsar procs FoE instead of a Celestial Pillar causing you to lose the AsP gain from a manually cast FoE since they do not stack.
   
 <div id="rotation">
 
@@ -180,7 +175,7 @@ Start casting from max range at ~2 sec with {{< spell 364423 "Celestial Pillar" 
 
 - Keep up {{< spell 93402 "Sunfire" >}} as long as your targets will live for another ~10 seconds (the amount of time is reduced per target hit).
 
-- Keep up {{< spell 191034 "Starfall" >}} at all times or use on cooldown with{{< spell 202354 "Stellar Drift" >}} .
+- Keep up {{< spell 191034 "Starfall" >}} at all times or use on cooldown with {{< spell 202354 "Stellar Drift" >}} .
 
 **Outside any Eclipse:**
 
@@ -195,7 +190,7 @@ Start casting from max range at ~2 sec with {{< spell 364423 "Celestial Pillar" 
 
 **Lunar Eclipse and both Eclipses (CA/Inc):**
 
-- Use {{< spell 78674 "Starsurge" >}} to stop yourself from overcapping AsP until 6 targets at which point you should overcap.
+- Use {{< spell 78674 "Starsurge" >}} to stop yourself from overcapping AsP. Without Tier Set and Pulsar until 6 targets, at which point you should overcap.
 
 - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
 
@@ -217,7 +212,7 @@ Start casting from max range at ~2 sec with {{< spell 364423 "Celestial Pillar" 
 - (V) Refresh {{< spell 93402 "Sunfire" >}} so you only have to refresh it once during Cooldowns.
 
 **(V) DURING {{< spell 323546 "Ravenous Frenzy" >}}:**
-- Refresh {{< spell 93402 "Sunfire" >}} during pandemic(30% of base duration).
+- Refresh {{< spell 93402 "Sunfire" >}} during pandemic (30% of base duration).
 - Keep {{< spell 191034 "Starfall" >}} up at all times or on cooldown with {{< spell 202354 "Stellar Drift" >}}. Try to time the last {{< spell 191034 "Starfall" >}} with Drift so that it will be up during the last 8s of your cooldowns.
 - Refresh {{< spell 8921 "Moonfire" >}} on up to 6 (12 with {{< spell 281847 "Twin Moons" >}}) targets when they will live for another ~20 seconds.
 - https://wago.io/mYVIsyQN8 for filler. The recommendation this WeakAura gives is not correct when your targets will die before your cooldowns end or the targets are spread.
@@ -240,7 +235,7 @@ The venthyr only version can be found [here](/balance/2021-06-05-Venthyr-Compend
 
 
 **Single target priority list OUTSIDE cooldowns:** 
-- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic(30% of base duration).
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration).
 - Enter the next Eclipse, preferring Solar Eclipse. With {{< spell 338668 "Primordial Arcanic Pulsar" >}} and {{< spell 364423 "Celestial Pillar" >}} you want to enter Lunar Eclipse before entering a {{< spell 338668 "Primordial Arcanic Pulsar" >}} window. 
 - Cast {{< spell 211545 "Fury of Elune" >}} if it will be up again for your next usage in CA/Inc.
 - (NF) Cast {{< spell 274281 "Moons" >}} if you are in Lunar Eclipse or you are overcapping charges inside solar eclipse. If possible save charges for CA/INC.
@@ -254,16 +249,16 @@ The venthyr only version can be found [here](/balance/2021-06-05-Venthyr-Compend
 - Make sure {{< spell 211545 "Fury of Elune" >}} will be up in the last 4 sec of your {{< spell 323546 "Ravenous Frenzy" >}}.
 
 **(V) Single target priority list INSIDE cooldowns:**
-Before the 5s extension buff:
+Before the 3s extension buff:
 - Use Berserking at the start of Frenzy without Bloodlust or at 6s of the initial buff remaining with Bloodlust.
 - Use your trinket so that it will be for the rest of your cooldowns. Never ever use off gcd items/spells between casts, always use them during a gcd. For exact timings see [Timings sections](/balance/2021-06-05-Venthyr-Compendium/#timings).
-- Use pot at 17s {{< spell 323546 "Ravenous Frenzy" >}} remaining
-- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 4 or less seconds remaining
-- Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power
-- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}
+- Use pot at 19s {{< spell 323546 "Ravenous Frenzy" >}} remaining.
+- Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 6 or less seconds remaining.
+- Cast {{< spell 78674 "Starsurge" >}} to prevent capping Astral Power.
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}}.
 - Cast {{< spell 190984 "Wrath" >}} to fill until 150% haste at which point you should fill with {{< spell 194153 "Starfire" >}}.
 
-**(V) During the 5s Ravenous Frenzy extension buff:**
+**(V) During the 3s Sinful Hysteria window:**
 - Cast {{< spell 78674 "Starsurge" >}} to spend all your Astral Power.
 - Cast {{< spell 190984 "Wrath" >}} to fill.
 
@@ -335,34 +330,12 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 **DISCLAIMER: All of the trinkets in the following are examples. Your personal best trinkets depend on more factors such as ilvl meaning the best option is always to sim using either Top Gear, Droptimizer or Gear Compare.**
 
-**There are 3 setups for trinket combinations:**
-1. Double on-use (irrelevant in 9.2)
-2. One on-use + one equip
-3. Double equip
 
+**Usable trinkets:**
 
-**Double on-use:**
-This combination can prove to be the strongest from all the other trinket combinations IF you are playing **Venthyr with the {{< item 355315 "Sinful Hysteria" >}} legendary**. The only problem is that it requires specific trinkets and can be more difficult to use. You want to line up the last 5 sec from the IQD buff during Bloodlust AND Bell with the first 3 starsurges inside the Sinful Hysteria extension window.
-
-
-Usable Trinkets:
-- Slot 1: {{< item 179350 "Inscrutable Quantum Device" >}}
-- Slot 2: {{< item 184842 "Instructor's Divine Bell" >}}
-
-
-**2. One on-use, one equip:**
-This combination should be used whenever double on-use is not a viable choice. A good example would be in M+ where Bell loses value due to it not scaling into AoE as well.
-
-Usable trinkets:
 - Slot 1 (Equip): {{< item 186421 "Forbidden Necromantic Tome" >}}, {{< item 178708 "Unbound Changeling" >}}, {{< item 186423 "Titanic Ocular Gland" >}} and others.
 - Slot 2 (On-use): {{< item 179350 "Inscrutable Quantum Device" >}}, {{< item 180117 "Empyreal Ordnance" >}} and others. 
 
-
-**3. Double Equip:**
-Double equip items should never be played unless it can't be avoided (if for example you simply don't have any good on-use items) due to our CA/Inc being so much of our damage with any Covenant.
-
-Usable trinkets:
-- Slot 1+2 (Equip): {{< item 186423 "Titanic Ocular Gland" >}}, {{< item 186421 "Forbidden Necromantic Tome" >}}, {{< item 178708 "Unbound Changeling" >}}, {{< item 178386 "Insignia of Alacrity" >}} and others.
 
 **Notable trinkets:**
 {{< item 179350 "Inscrutable Quantum Device" >}}: This trinket has the potential to be the best on-use trinket by a large margin if the conditions found in [#11](#iqd) are met. These ultimately mean that the trinket is extremely good in M+ and whenever you can gurantee that later trinket usages are either in Bloodlust or when healers still have enough mana. You can adjust the value in sims using the IQD Stat Proc Chance option which will set the chance the trinket gives stats outside Bloodlust.
