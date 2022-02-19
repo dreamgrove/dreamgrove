@@ -1,5 +1,5 @@
 ---
-date: '2022-02-18'
+date: '2022-02-19'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -52,6 +52,8 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+ + 2022-02-19:
+<br>Updated: rotation prios, trinkets
   
  + 2022-02-17:
 <br>Updated: CS Ratio
@@ -333,20 +335,19 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 **Usable trinkets:**
 
-- Slot 1 (Equip): {{< item 186421 "Forbidden Necromantic Tome" >}}, {{< item 178708 "Unbound Changeling" >}}, {{< item 186423 "Titanic Ocular Gland" >}} and others.
+- Slot 1 (Equip): {{< item 178708 "Unbound Changeling" >}}, {{< item 188270 "Elegy of the Elements" >}}, {{< item 185818 "So'leah's Secret Technique" >}} and others.
 - Slot 2 (On-use): {{< item 179350 "Inscrutable Quantum Device" >}}, {{< item 180117 "Empyreal Ordnance" >}} and others. 
 
 
 **Notable trinkets:**
+
+{{< item 188270 "Elegy of the Elements" >}}: The best equip trinket if you have 2 or more party members of the same covenant.
+
+{{< item 185818 "So'leah's Secret Technique" >}}: The second best equip trinket if you include the stats gained by the partner. Falls behind Elegy and Changeling if you do not include the stats gained by the pertner.
+
 {{< item 179350 "Inscrutable Quantum Device" >}}: This trinket has the potential to be the best on-use trinket by a large margin if the conditions found in [#11](#iqd) are met. These ultimately mean that the trinket is extremely good in M+ and whenever you can gurantee that later trinket usages are either in Bloodlust or when healers still have enough mana. You can adjust the value in sims using the IQD Stat Proc Chance option which will set the chance the trinket gives stats outside Bloodlust.
 
-{{< item 184842 "Instructor's Divine Bell" >}}: Unlike the Quantum Device, the bell is a very consistent trinket that gives us a lot of mastery inside our burst windows. You can farm it by switching between a maxed Covenant and a Covenant without any progress in the mission table which will infinitely reset missions until you get the bell.
-
-{{< item 180117 "Empyreal Ordnance" >}}: A pretty unique trinket that is split into two parts: a dot and a buff. After the dot finishes, the buff part of the trinket comes back to the caster. Due to this trinket putting other on use trinkets on a 40 sec cd, it should only be used with an equip trinket. If IQD is not usable or the ilvl discrepancy between these two trinkets is too big, then this trinket might be the best choice as Venthyr.
-
-{{< item 186421 "Forbidden Necromantic Tome" >}}: An overall solid trinket that can be obtained at higher ilvl than other trinkets.
-
-{{< item 186423 "Titanic Ocular Gland" >}}: A very good trinket if you are able above 50% health most of the encounter (which should essentially be all of them).
+{{< item 186423 "Titanic Ocular Gland" >}}: Still a good trinket for early progression or until you will inevitably replace it depending on ilvl. It is highly recommended to sim it on raidbots.
 
 {{< item 178708 "Unbound Changeling" >}}: This trinket gains most of its value from the fact that it is convertable into a stat proc of your choice by eating the corresponding food. Once a day it has a chance to proc 3 secondary stats which further increases its value. Mastery proc can be used a default but sim to find which secondary it should proc.
 
