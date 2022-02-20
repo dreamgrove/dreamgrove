@@ -423,9 +423,9 @@ The choice between {{< spell 281847 "Twin Moons" >}} and Drift depends on how lo
 - {{< spell 341446 "Conflux of the Elements" >}}: 100% of the time this should be your first go to potency slot as Night Fae.
 - {{< spell 341378 "Deep Allegiance" >}}: 90% of the time this should be your first go to potency slot as Kyrian as it enables 45sec bond.
 - {{< spell 340708 "Fury of the Skies" >}}: Default go to as a secondary slot.
-- {{< spell 340706 "Precise Alignment" >}}: For Pulsar in general this is the 3rd strongest conduit. Without Pulsar it has the same value as Umbral.
-- {{< spell 340719 "Umbral Intensity" >}}: Situational usage, but gets outshone by Fury and Precise. On par with Stellar Inspiration for 4th slot with Tier Set.
-- {{< spell 340720 "Stellar Inspiration" >}}: On par or even a bit better than Umbral on sustained AoE with Tier set, otherwise pretty underwhelming.
+- {{< spell 340706 "Precise Alignment" >}}: In general this is the 3rd strongest conduit that can sometimes be replaced if more concentrated burst is important.
+- {{< spell 340719 "Umbral Intensity" >}}: Situational usage for higher burst AoE.
+- {{< spell 340720 "Stellar Inspiration" >}}: Situational usage for sustained AoE.
 
 Notes:
   - This should be used as a priority list, going from top to bottom.
