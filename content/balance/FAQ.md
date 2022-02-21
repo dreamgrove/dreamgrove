@@ -37,7 +37,7 @@ sidebarContents:  |
   <br>[Kyrian](#kyrian)
  
   [6. Miscellaneous](#Miscellaneous)
-  <br>[Useful CA + Convoke + Trinket macro](#swifty-macro)
+  <br>[Useful CA + Trinket macro](#swifty-macro)
   <br>[How does IQD work?](#iqd)
   <br>[What is Astral damage?](#astral-damage)
  
