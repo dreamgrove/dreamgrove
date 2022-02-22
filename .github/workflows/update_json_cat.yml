@@ -172,7 +172,7 @@ jobs:
           path: |
             *.json
 
-  update_json_dungeon:
+  update_json_d:
     name: Update JSON Dungeon
     needs: [ update_json_5 ]
     runs-on: ubuntu-latest
@@ -196,6 +196,39 @@ jobs:
             git pull --rebase --autostash
             git add .
             git commit -m "update JSON Cat Dungeon"
+            git push
+          fi
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: update_json
+          path: |
+            *.json
+
+  update_json_hoa:
+    name: Update JSON HoA Route
+    needs: [ update_json_d ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: dungeon
+        run: python generate_combo.py --hoa -r mythic ${{ secrets.RAIDBOTSAPI }}
+      - name: commit
+        run: |
+          git config user.name dreamgrove
+          git config user.email dreamgrove@github.com
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no updates to JSON"
+          else
+            git pull --rebase --autostash
+            git add .
+            git commit -m "update JSON Cat HoA Route"
             git push
           fi
       - uses: actions/upload-artifact@v2
