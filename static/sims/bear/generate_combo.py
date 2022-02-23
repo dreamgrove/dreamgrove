@@ -38,24 +38,19 @@ def getJSON(url):
             continue
         return status
 
-profile_base = ven_profile = apl = dungeon = ""
+profile_base = apl = dungeon = ""
 apl_txt = 'guardian.txt'
 
 if is_PTR():
     profile_txt = 'sandbear_ptr.txt'
-    ven_profile_txt = 'sandbear_ptr.txt'
     apl_txt = 'guardian_ptr.txt'
 elif is_H():
     profile_txt = 'sandbear_h.txt'
-    ven_profile_txt = 'sandbear_h_ven.txt'
 else:
-    profile_txt = 'sandbear_base.txt'
-    ven_profile_txt = 'sandbear_ven.txt'
+    profile_txt = 'sandbear.txt'
 
 with open(profile_txt, 'r') as fp:
     profile_base = fp.read()
-with open(ven_profile_txt, 'r') as fp:
-    profile_ven = fp.read()
 with open(apl_txt, 'r') as fp:
     apl = fp.read()
 
@@ -88,9 +83,9 @@ legendaries = {
 
 def legendaries_suffix():
     if is_H():
-        return '1546'
+        return '1588'
     else:
-        return '1559'
+        return '1588'
 
 conduits = [
     'savage_combatant:',
@@ -210,8 +205,6 @@ for cov, soulbinds in covenants.items():
             leg_str += '\n' + legendaries['covenant'][cov] + legendaries_suffix()
 
         profile = profile_base
-        if cov == 'venthyr':
-            profile = profile_ven
 
         if args.catweave:
             profile += '\ndruid.catweave_bear=1'
