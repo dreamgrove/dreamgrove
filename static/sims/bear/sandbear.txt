@@ -14,6 +14,7 @@ wrists=risen_monstrosity_cuffs,id=178741,bonus_id=3536/4786/1592,gem_id=173129
 hands=handwraps_of_the_fixed_stars,id=188853,bonus_id=4800/4786/1498
 waist=runecarvers_twisted_ward,id=189856,bonus_id=4800/4786/1524,gem_id=173129
 legs=leggings_of_the_fixed_stars,id=188848,bonus_id=4800/4786/1498
+feet=moccasins_of_dreadful_absolution,id=189798,bonus_id=4800/4786/1524,enchant_id=6211
 feet=umbrahide_treads,id=172315,bonus_id=6716/7095/6647/6650/1588,enchant_id=6211
 finger1=loquacious_keepers_peridot,id=189802,bonus_id=4800/4786/1524,gem_id=173129,enchant=tenet_of_critical_strike
 finger2=rygelons_heraldric_ring,id=189854,bonus_id=4800/4786/1524,gem_id=173129,enchant=tenet_of_critical_strike

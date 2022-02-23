@@ -49,17 +49,13 @@ $(function() {
 }
 
     var legendaries = {
-        'UFR': 'legs=,id=172318,bonus_id=6716/7094/6649/6650/',
+        'UFR': 'back=grimveiled_cape,id=173242,enchant=soul_vitality,bonus_id=6716/7094/6647/6650/',
         'DoDF': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7086/6647/6650/6758/',
-        'luffa': 'back=Grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
-        'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
-        'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
-        'lycaras': 'feet=umbrahide_treads,id=172315,bonus_id=7110/6647/6650/',
+        'luffa': 'back=grimveiled_cape,id=173242,enchant=soul_vitality,bonus_id=7092/6647/6650/6758/',
+        'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant=tenet_of_critical_strike,bonus_id=7085/6647/6650/6758/',
+        'legacy': 'feet=umbrahide_treads,id=172315,enchant_id=6211,bonus_id=7095/6647/6650/',
+        'lycaras': 'feet=umbrahide_treads,id=172315,enchant_id=6211,bonus_id=7110/6647/6650/',
         'oath': 'wrist=,id=172321,gem_id=173129,bonus_id=7084/7451/6647/6650/6935/',
-        'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
-        'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
-        'necrolord': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7472/6647/6650/6758/',
-        'kyrian': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7477/6647/6650/6758/'
     }
 
     var soulbinds = {
@@ -180,12 +176,7 @@ $(function() {
                     if ($tar.hasClass("pvtVal")) {
                         const el = document.createElement('textarea');
                         let r = getRecord(filters, pivotData);
-                        let prof = "";
-                        if (isPtr()) {
-                            prof = "sandbear_ptr.txt";
-                        } else {
-                            prof = "sandbear.txt";
-                        }
+                        let prof = isPtr() ? "sandbear_ptr.txt" : "sandbear.txt";
                         let apl = isPtr() ? "guardian_ptr.txt" : "guardian.txt";
                         $.get(prof, (d) => {
                             let leg_bonus = isH() ? "1546": "1588";
@@ -195,9 +186,6 @@ $(function() {
                             buf.push("covenant=" + r.cov);
                             buf.push("talents=" + r.tal);
                             buf.push(getLegendaryString(r.leg, r.cov) + leg_bonus);
-                            if (isPtr()) {
-                                buf.push(getLegendaryString("covenant", r.cov) + leg_bonus);
-                            }
 
                             let cond = [];
                             cond.push("tough_as_bark:13/born_of_the_wilds:13");

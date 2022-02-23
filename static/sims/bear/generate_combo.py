@@ -66,19 +66,13 @@ talents = [
 ]
 
 legendaries = {
-    'UFR': 'legs=,id=172318,bonus_id=6716/7094/6649/6650/',
+    'UFR': 'back=grimveiled_cape,id=173242,enchant=soul_vitality,bonus_id=6716/7094/6647/6650/',
     'DoDF': 'neck=shadowghast_necklace,id=178927,gem_id=173129,bonus_id=7086/6647/6650/6758/',
-    'luffa': 'back=grimveiled_cape,id=173242,bonus_id=7092/6647/6650/6758/',
-    'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant_id=6164,bonus_id=7085/6647/6650/6758/',
-    'legacy': 'feet=umbrahide_treads,id=172315,bonus_id=7095/6647/6650/',
-    'lycaras': 'feet=umbrahide_treads,id=172315,bonus_id=7110/6647/6650/',
-    'oath': 'wrist=,id=172321,gem_id=173129,bonus_id=7084/7451/6647/6650/6935/',
-    'covenant': {
-        'night_fae': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7571/6647/6650/6758/',
-        'venthyr': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7474/6647/6650/6758/',
-        'necrolord': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7472/6647/6650/6758/',
-        'kyrian': 'waist=umbrahide_waistguard,id=172320,gem_id=173129,bonus_id=7477/6647/6650/6758/'
-    }
+    'luffa': 'back=grimveiled_cape,id=173242,enchant=soul_vitality,bonus_id=7092/6647/6650/6758/',
+    'circle': 'finger1=shadowghast_ring,id=178926,gem_id=173129,enchant=tenet_of_critical_strike,bonus_id=7085/6647/6650/6758/',
+    'legacy': 'feet=umbrahide_treads,id=172315,enchant_id=6211,bonus_id=7095/6647/6650/',
+    'lycaras': 'feet=umbrahide_treads,id=172315,enchant_id=6211,bonus_id=7110/6647/6650/',
+    'oath': 'wrist=,id=172321,gem_id=173129,bonus_id=7084/7451/6647/6650/6935/'
 }
 
 def legendaries_suffix():
@@ -193,16 +187,7 @@ for cov, soulbinds in covenants.items():
     cov_str = 'covenant=' + cov
 
     for leg, leg_str in legendaries.items():
-        # split for covenant legis
-        if leg == 'covenant':
-            if is_PTR():
-                continue
-
-            leg_str = leg_str[cov]
-
         leg_str += legendaries_suffix()
-        if is_PTR():
-            leg_str += '\n' + legendaries['covenant'][cov] + legendaries_suffix()
 
         profile = profile_base
 
