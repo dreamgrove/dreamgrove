@@ -98,8 +98,9 @@ $(function() {
         'combo_3.json': 2,
         'combo_4.json': 3,
         'combo_5.json': 4,
-        'combo_d.json': 5,
-        'combo_c.json': 6,
+        'combo_c.json': 5,
+        'combo_d.json': 6,
+        'combo_hoa.json': 7,
         'combo_ptr_1.json': 0,
         'combo_ptr_2.json': 1,
         'combo_ptr_3.json': 2,
@@ -183,11 +184,11 @@ $(function() {
                         if (isPtr()) {
                             prof = "sandbear_ptr.txt";
                         } else {
-                            prof = r.cov == "venthyr" ? "sandbear_ven.txt" : "sandbear_base.txt";
+                            prof = "sandbear.txt";
                         }
                         let apl = isPtr() ? "guardian_ptr.txt" : "guardian.txt";
                         $.get(prof, (d) => {
-                            let leg_bonus = isH() ? "1546": "1559";
+                            let leg_bonus = isH() ? "1546": "1588";
                             let buf = [];
 
                             buf.push(d);
@@ -199,7 +200,7 @@ $(function() {
                             }
 
                             let cond = [];
-                            cond.push("tough_as_bark:11/born_of_the_wilds:11");
+                            cond.push("tough_as_bark:13/born_of_the_wilds:13");
                             if (soulbinds_m[r.soul] !== "") { isH() ? cond.push(soulbinds[r.soul]) : cond.push(soulbinds_m[r.soul]) };
                             if (r.cond1 !== "none") { cond.push(r.cond1); }
                             if (r.cond2 !== "none") { cond.push(r.cond2); }

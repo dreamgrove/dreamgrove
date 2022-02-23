@@ -84,7 +84,7 @@ def legendaries_suffix():
     if is_H():
         return '1546'
     else:
-        return '1559'
+        return '1588'
 
 conduits = [
     'carnivorous_instinct:',
@@ -104,7 +104,7 @@ def conduit_suffix():
     if is_H():
         return '9'
     else:
-        return '11'
+        return '13'
 
 covenants = {
     'kyrian': {

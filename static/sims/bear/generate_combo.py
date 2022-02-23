@@ -103,7 +103,7 @@ def conduit_suffix():
     if is_H():
         return '9'
     else:
-        return '11'
+        return '13'
 
 covenants = {
     'kyrian': {
@@ -213,7 +213,7 @@ for cov, soulbinds in covenants.items():
             sets_list = []
             name_str = 'name=' + '-'.join([cov, leg, soul])
 
-            soulbind_master = ['tough_as_bark:11/born_of_the_wilds:11']
+            soulbind_master = ['tough_as_bark:13/born_of_the_wilds:13']
             if traits['base']:
                 soulbind_master.append(traits['base'])
             if not is_H() and traits['add']:

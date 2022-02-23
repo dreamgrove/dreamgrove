@@ -97,6 +97,7 @@ $(function() {
         'combo_4.json': 3,
         'combo_5.json': 4,
         'combo_d.json': 5,
+        'combo_hoa.json': 6,
         'combo_ptr_1.json': 0,
         'combo_ptr_2.json': 1,
         'combo_ptr_3.json': 2,
@@ -177,7 +178,7 @@ $(function() {
                         let r = getRecord(filters, pivotData);
                         let prof = isPtr() ? "sandcat_ptr.txt" : isH() ? "sandcat_h.txt" : "sandcat.txt";
                         $.get(prof, (d) => {
-                            let leg_bonus = isH() ? "1546": "1559";
+                            let leg_bonus = isH() ? "1546": "1588";
                             let buf = [];
 
                             buf.push(d);
