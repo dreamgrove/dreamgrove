@@ -52,6 +52,9 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+ + 2022-02-22:
+<br>Updated: News -remove PTR wording
+  
  + 2022-02-19:
 <br>Updated: rotation prios, trinkets
  
@@ -94,41 +97,41 @@ sidebarContents:  |
 
 
 
-## 9.2 PTR Changes
+## 9.2 Changes
 
-9.2 PTR is here and brings some additions to every spec. Everyone is getting their covenant legendary equipable for free, which means all covenant abilities are enhanced baseline. It is to note that this does not mean more choices since you can still only choose one legendary freely.\
-On top of this the first iteration of every set bonus has been revealed, ours being the following:
+9.2 is here and brings some additions to every spec. Everyone is getting their covenant legendary equipable for free, which means all covenant abilities are enhanced baseline. It is to note that this does not mean more choices since you can still only choose one legendary freely.\
+On top of this tier sets return, ours being the following:
 
 **2-Set -  {{< spell 364423 "Celestial Pillar" >}}:**\
 Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 25% effectiveness that follows your current target for 8 sec.\
-*Notes:* This gives 40 AP. If multiple Celestial Pillars proc at the same time (lunar>inc>pulsar), then the duration of the first pillar will be extended (24sec). The self casted FoE is a different entity and does not affect this.
+*Notes:* This gives 40 AP. If multiple Celestial Pillars proc in short sequence (Lunar Eclipse>Inc>Pulsar proc), the duration of the buff will be extended (in this case to a total of 24sec). The self casted FoE is independent and does not affect this.
 
 **4-Set -  {{< spell 363497 "Umbral Infusion" >}}:**\
 While inside any Eclipse, the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} is reduced by 20%.\
 *Notes:* This stacks multiplicatively with {{< spell 339949 "Timeworn Dreambinder" >}} and does not reduce progress per Astral Power spend for
-{{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30ap and 50ap respectively towards Pulsar).
+{{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).
 
 
 We have also received class changes:
 
 **{{< item 355315 "Sinful Hysteria" >}} :** Now extends Ravenous Frenzy by 0.1s per cast down from 0.2s and lingers 3s down from 5s.
-*Notes:* This is roughly a 10% total dps nerf to Venthyr in most situations.
+*Notes:* This is roughly a 10% total dps nerf to Venthyr in most situations, higher in burst.
 
 **{{< item 364815 "Kindred Affinity" >}} :**  Now 6%/12% self (from 8%/16% self) and 3%/6% partner (from 8%/16% partner) for NF, NL and VE bonds. Kyrian bond is now 210/420 self (from 150/300 self) and 105/210 partner (from 150/300 partner).
-*Notes:* Kyrian got nerfed and it is on par with venthyr in RAID dps in an optimal scenario. In a progress scenario you will most likely not touch it because of how much it loses in an actual encounter. Venthyr and Night Fae will most likely be swapped around depending on encounter (more information below).
+*Notes:* Kyrian got nerfed and is on par with Venthyr in raid dps in an optimal scenario. In a progress scenario you will most likely not touch it because of how the bond is extremely annoying to use and you lose the mobility of Venthyr/NF.
 
 ### Analysis:
 
-With how the sets currently work, they will heavily favour one legendary,
+With how our set works, it will heavily favour
 {{< spell 338668 "Primordial Arcanic Pulsar" >}}, since both set bonuses heavily synergize with it.\
 The 2-Set Celestial Pillar procs its Fury of Elune every time Pulsar is procced which in turn resets your Eclipse and allows for even more Lunar Eclipses.\
 The 4-Set Umbral Infusion may reduce the Astral Power you have to spend on Starsurge and Starfall but Pulsar still gets the original cost. A 24 cost Starsurge, for example, would still progress your Pulsar buff by 30.
 
 Looking at covenants, assuming 2 Legendaries and 4 Tier Piece, Venthyr, Night Fae and Kyrian are all very close to each other. Since Venthyr and Night Fae both have superior signature abilities (Door of Shadows and Soulshape) and generally better soulbinds, you will be switching between them depending on the encounter. Kyrian can still be played without losing much damage but is not recommended. Some preliminary information about what covenant to pick for specific bosses are in the raid guide.
 
-Simulationcraft has been updated for PTR changes and the APL has also received updates meaning you can sim the legendary changes and set bonuses using Raidbots. Additionally, our sim site will be kept updated whenever more changes come and can as always be found here: https://balance-simc.github.io/Balance-SimC/. You can run the sims yourself by double-clicking on any combination on that site and pasting the result into an Advanced sim on Raidbots. The most recent version of the PTR APL can be found here: https://github.com/balance-simc/Balance-SimC/blob/master/balance_ptr.txt. Feel free to look at the sims and sample sequences and in case anything looks out of line or wrong don't hesitate to tell us.
+Simulationcraft has been updated for the changes and the APL has also received updates. Additionally, our sim site will be kept updated whenever more changes come and can as always be found here: https://balance-simc.github.io/Balance-SimC/. You can run the sims yourself by double-clicking on any combination on that site and pasting the result into an Advanced sim on Raidbots. The most recent version of the APL can be found here: https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt. Feel free to look at the sims and sample sequences and in case anything looks out of line or wrong don't hesitate to tell us.
 
-For the sake of PTR testing and due to the fact that the baseline legendary won't be available for very early progress this is how the covenants match up: https://www.raidbots.com/simbot/report/jH2Wp9csYZz6kedGQ7iiYQ All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
+Since the sim site currently is set up to only show how everything matches up with the covenant legendary, this is how they match up before we get it: https://www.raidbots.com/simbot/report/jH2Wp9csYZz6kedGQ7iiYQ All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
 
  
 <div id="rotation">
