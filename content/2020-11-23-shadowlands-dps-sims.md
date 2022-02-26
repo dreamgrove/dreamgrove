@@ -1,5 +1,5 @@
 ---
-date: '2021-12-06'
+date: '2022-02-26'
 authors: ["Gastank"]
 published: true
 title: "Shadowlands DPS Sims"
@@ -12,9 +12,9 @@ As with all generalized charts, these are for informational purposes only and DO
 
 <center>
 <div class="spec-selector" style="width: 50%;">
-<a class="spec balance" href="https://balance-simc.github.io/Balance-SimC/">Balance (9.2 PTR)</a>
+<a class="spec balance" href="https://balance-simc.github.io/Balance-SimC/">Balance (9.2)</a>
 <a class="spec feral" href="/sims/cat">Feral (9.2 PTR)</a>
-  <a class="spec guardian" href="/sims/bear">Guardian (9.2 PTR)</a>
+<a class="spec guardian" href="/sims/bear">Guardian (9.2)</a>
 </div>
 </center>
 
