@@ -760,7 +760,7 @@ Some conditionals for doing high damage as a balance druids are:
 <div>
 
 <br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74BFTUgCBIFNYcIJTLiCCMFMkkIFXYACDUyMQg)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4TBTXGChUy5AolMuIK)
  
  
 <div id="M+Improve">
