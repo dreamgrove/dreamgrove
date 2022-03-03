@@ -52,6 +52,9 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+ + 2022-03-03:
+<br>Updated: Soulbind links
+  
  + 2022-02-22:
 <br>Updated: News -remove PTR wording
   
@@ -458,14 +461,14 @@ Notes: Default Instincts and fill in the rest as needed.
 </div>
 
 **Night Fae:**
-- Nearly all situations: [Niya](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4TBTXGChUy5AolMuIK)
-- For sustained AoE when you can stand in the small Blossom field: [Dreamweaver](https://www.wowhead.com/soulbind-calc/night-fae/dreamweaver/druid/AwaZZpYTBTXGChUy5AolMu8K)
+- Nearly all situations: [Niya](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwaW6pYBBTXKChMFNcYKFTLiCiUy5AoiFTJJCjUyPAo)
+- For sustained AoE when you can stand in the small Blossom field: [Dreamweaver](https://www.wowhead.com/soulbind-calc/night-fae/dreamweaver/druid/AwaZZr4BJTXKChMFNcYKFTLiCiUy5AoiBTJJCiUyPAo)
 
 **Venthyr:**
-- Always use [Theotar](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW75YCFTUgACU1ygASBTWHACUy4gAiBTJJABUyPwA) with Wasteland Propriety.
+- Always use [Theotar](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo) with Wasteland Propriety.
  
 **Kyrian:**
-- By default [Mikanikos](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwCW5ZYTBTWCCBUy5AglMuII).
+- By default [Mikanikos](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKChMFNYIKFTLiCiUy5AoiFTJJCjUyPAo).
 
 <div id="potions">
 
@@ -759,8 +762,8 @@ Some conditionals for doing high damage as a balance druids are:
 
 <div>
 
-<br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74BFTUgCBIFNYcIJTLiCCMFMkkIFXYACDUyMQg)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4TBTXGChUy5AolMuIK)
+<br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwaW6pYBBTUgChMFNcYKFTLiCiUy5AoiFTJJCjUyPAo)
  
  
 <div id="M+Improve">
