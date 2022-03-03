@@ -565,12 +565,12 @@ Still not competitive, might be viable in 10.0.
 
 </div>
 
-**Should I delay Convoke for it to line up with CA?**
+**Should I delay Convoke for it to line up with Inc/CA?**
 
 *Before having the Unity legendary:*
-Yes you should always delay {{< spell 323764 "Convoke" >}} UNLESS you can cast a Convoke without losing a {{< spell 194223 "CA" >}}+Convoke (both at the same time) cast. This will for example happen in 5 minute fights where you would cast Convoke+CA on pull, Convoke alone after 2 minutes and then Convoke+CA at 4 minutes. 
+With Pulsar you should use {{< spell 323764 "Convoke" >}} on cooldown with a Pulsar proc UNLESS you can delay a Convoke without losing a Convoke cast. This will for example happen in 3:30 minute fights where you would cast Convoke+CA on pull and then CA+Convoke at 3 minutes. The same goes for Inc/CA where you would only delay it if you wouldn't lose a cast. In a similar example on a 5 minute fight you would CA+Convoke on pull, Convoke with the first Pulsar proc after 2 minutes and CA+Convoke whenever Convoke is ready again. On a 7 minute fight you would CA+Convoke on pull, Convoke with the first Pulsar proc after 2 minutes, CA at 3 minutes, Convoke with the first Pulsar proc after 4 minutes and then CA+Convoke whenever the 4th Convoke becomes ready.
 
-For M+ the same logic applies when you for example know you won't be using your CA for another 2min due to saving it for a boss you can use a solo Convoke. This should be minimized though as every desynced Convoke is a damage loss.
+For M+ the same logic applies although the exact timings can vary more since not every pack lasts long enough for a CA.
 
 *With the Unity legendary:*
 Always use Convoke inside CA/Inc and try to slightly delay/push forward your Pulsar windows to line up with Convoke.
