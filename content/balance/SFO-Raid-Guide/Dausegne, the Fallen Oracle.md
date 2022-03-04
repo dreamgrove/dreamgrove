@@ -1,7 +1,7 @@
 ---
 title: "Dausegne, the Fallen Oracle"
 date: 2021-2-11
-authors: ['Chicken']
+authors: ['Chicken, Jundarer']
 published: true
 showOnFrontpage: false
 weight: 4
@@ -10,22 +10,22 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Covenants: Both NF and Venthyr look like the winners here because of Door and Soulshape, as you will want to skip as many circles as you can to reduce the raid damage. You will probably need more st dmg than cleave in this fight and Ven is not that abusable. Until 2lego you probably play NF and after swap to Venthyr.
+- Covenants: Both NF and Venthyr work to skip the circles but Door makes it a bit easier and has a lower cooldown. Either covenant works and there won't be any relevant differences between them.
+
 - Barkskin either the circles or the soaks, dont think much about it.
 - As Venthyr take double door.
 - Always try to move into the circles whenever they come out and premove into (or close to) the first one. 
-- Try to save a starfall for add spawns and ap in general to burst it down asap.
-- You can also jump wild charge through two overlapping circles at the same time and only take one dot. (PTR)
+- Pool AsP for add spawns to Starfall and burst them down as soon as possible.
 
 ## Mythic only notes:
-- More circles and more adds not really much else going on. Raises Venthyr stonks by a tiny bit.
+- More circles and more adds not really much else going on. Raises Venthyr value by a tiny bit.
 
 ## Soulbinds:
-[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
-<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
-<br>[Kyrian](https://ptr.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKCBMFNYIIFTLkCCUy4ggiFTJJCDV2AAg)
+[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
+<br>[Kyrian](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKChMFNYIKFTLiCiUy5AoiFTJJCjUyPAo)
 
 ## Talents:
 
 
-{{< talents spec="balance" src="live" recommend="321,113,132,223,113,131,132" >}}
+{{< talents spec="balance" src="live" recommend="321,113,132,223,113,132,233" >}}
