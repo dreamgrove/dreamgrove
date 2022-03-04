@@ -10,9 +10,9 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- **They completely reworked the boss. This information is most likely not up to date.**
-- Covenant: On PTR HC the boss felt like you would want to go for NF with how little hp the pillars had plus the fact that the boss had a huge dr depending on how many pillars were up. *also read mythic*
-- You can always starfall for movement it is not much of a loss. If you are playing sd pulsar remember that you proc pulsar with starfall.
+- Covenant: Venthyr has better P3 damage which will make it the superior Covenant if you lack damage there. Otherwise both covenants perform fairly similarly and neither has a clear edge.
+- If you can get your raid to delay the Bloodlust in P3 a bit you can use everything on cooldown and get 3 uses. Otherwise save CDs for P3.
+- In the intermissions really try to maximise your time spend casting by positioning yourself well and using Starfall whenever you need it.
 
 ## Mythic only notes:
 - On PTR Mythic the pillars had more hp. They lasted around 15sec for us. You could also chain 2 pillars one after the other making venthyr the go to. The boss also did not have the dr from before which means that you can aoe down the boss at the same time as the pillars, reinforcing venthyr.
