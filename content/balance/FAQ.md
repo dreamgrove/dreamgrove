@@ -134,7 +134,7 @@ Looking at covenants, assuming 2 Legendaries and 4 Tier Piece, Venthyr, Night Fa
 
 Simulationcraft has been updated for the changes and the APL has also received updates. Additionally, our sim site will be kept updated whenever more changes come and can as always be found here: https://balance-simc.github.io/Balance-SimC/. You can run the sims yourself by double-clicking on any combination on that site and pasting the result into an Advanced sim on Raidbots. The most recent version of the APL can be found here: https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt. Feel free to look at the sims and sample sequences and in case anything looks out of line or wrong don't hesitate to tell us.
 
-Since the sim site currently is set up to only show how everything matches up with the covenant legendary, this is how they match up before we get it: https://www.raidbots.com/simbot/report/jH2Wp9csYZz6kedGQ7iiYQ All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
+Since the sim site currently is set up to only show how everything matches up with the covenant legendary, this is how they match up before we get it: https://www.raidbots.com/simbot/report/g98hhBrJnCJ7kvbXsBjaMV All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
 
  
 <div id="rotation">
