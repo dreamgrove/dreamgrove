@@ -210,7 +210,7 @@ for cov, soulbinds in covenants.items():
             soulbind_master = []
             if traits['base']:
                 soulbind_master.append(traits['base'])
-            if not is_H() and traits['add']:
+            if traits['add']:
                 soulbind_master.append(traits['add'])
 
             conduits_master = conduits.copy()
