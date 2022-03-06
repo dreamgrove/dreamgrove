@@ -70,17 +70,11 @@ talents = [
 
 legendaries = {
     'draught': "neck=,id=178927,gem_id=173127,bonus_id=7086/6647/6648/6758/",
-    'circle': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7085/6758/6647/6648/6935/",
-    'apex': "shoulder=,id=172319,bonus_id=7091/6647/6648/",
+    'circle': "finger1=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7085/6758/6647/6648/6935/",
+    'apex': "waist=,id=172320,gem_id=173127,bonus_id=7091/6647/6648/6935/6758/",
     'frenzy': "wrist=,id=172321,enchant_id=6222,gem_id=173127,bonus_id=7109/7194/6647/6648/6758/",
-    'cateye': "finger2=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7089/6758/6647/6648/6935/",
-    'symmetry': "neck=,id=178927,gem_id=173127,bonus_id=7090/6647/6648/6758/",
-    'covenant': {
-        'night_fae': "waist=,id=172320,gem_id=173127,bonus_id=7571/6758/6647/6648/",
-        'venthyr': "waist=,id=172320,gem_id=173127,bonus_id=7474/6758/6647/6648/",
-        'necrolord': "waist=,id=172320,gem_id=173127,bonus_id=7472/6758/6647/6648/",
-        'kyrian': "waist=,id=172320,gem_id=173127,bonus_id=7477/6758/6647/6648/"
-    }
+    'cateye': "finger1=,id=178926,enchant_id=6164,gem_id=173127,bonus_id=7089/6758/6647/6648/6935/",
+    'symmetry': "neck=,id=178927,gem_id=173127,bonus_id=7090/6647/6648/6758/"
 }
 
 def legendaries_suffix():
@@ -195,16 +189,7 @@ for cov, soulbinds in covenants.items():
     cov_str = 'covenant=' + cov
 
     for leg, leg_str in legendaries.items():
-        # split for covenant legis
-        if leg == 'covenant':
-            if is_PTR():
-                continue
-
-            leg_str = leg_str[cov]
-
         leg_str += legendaries_suffix()
-        if is_PTR():
-            leg_str += '\n' + legendaries['covenant'][cov] + legendaries_suffix()
 
         for soul, traits in soulbinds.items():
             sets_list = []
