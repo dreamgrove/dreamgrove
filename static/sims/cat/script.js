@@ -211,7 +211,7 @@ $(function() {
                                 el.value = buf.join("\n");
                                 document.body.appendChild(el);
                                 el.select();
-                                document.body.execCommand('copy');
+                                document.execCommand('copy');
                                 document.body.removeChild(el);
                             });
                         });
