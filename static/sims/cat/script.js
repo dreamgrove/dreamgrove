@@ -177,6 +177,7 @@ $(function() {
                         const el = document.createElement('textarea');
                         let r = getRecord(filters, pivotData);
                         let prof = isPtr() ? "sandcat_ptr.txt" : isH() ? "sandcat_h.txt" : "sandcat.txt";
+                        let apl = isPtr() ? "feral_ptr.txt" : "feral.txt";
                         $.get(prof, (d) => {
                             let leg_bonus = isH() ? "1546": "1588";
                             let buf = [];
@@ -204,24 +205,15 @@ $(function() {
                                 top: pos.top,
                                 left: pos.left - $("#copied").width() - 18
                             }).show().delay(1000).fadeOut();
-                            if (isPtr()) {
-                                $.get("feral_ptr.txt", (e) => {
-                                    buf.push(e);
-                                    buf.push(fightStyleTxt);
-                                    el.value = buf.join("\n");
-                                    document.body.appendChild(el);
-                                    el.select();
-                                    document.execCommand('copy');
-                                    document.body.removeChild(el);
-                                });
-                            } else {
+                            $.get(apl, (e) => {
+                                buf.push(e);
                                 buf.push(fightStyleTxt);
                                 el.value = buf.join("\n");
                                 document.body.appendChild(el);
                                 el.select();
-                                document.execCommand('copy');
+                                document.body.execCommand('copy');
                                 document.body.removeChild(el);
-                            }
+                            });
                         });
                     }
                 }

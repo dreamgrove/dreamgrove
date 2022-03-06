@@ -38,11 +38,11 @@ def getJSON(url):
         return status
 
 profile = apl = dungeon = ""
+apl_txt = 'feral.txt'
 
 if is_PTR():
     profile_txt = 'sandcat_ptr.txt'
-    with open('feral_ptr.txt', 'r') as fp:
-        apl = fp.read()
+    apl_txt = 'feral_ptr.txt'
 elif is_H():
     profile_txt = 'sandcat_h.txt'
 else:
@@ -50,6 +50,9 @@ else:
 
 with open(profile_txt, 'r') as fp:
     profile = fp.read()
+with open(apl_txt, 'r') as fp:
+    apl = fp.read()
+
 
 if args.hoa:
     with open('hoa.txt', 'r') as fp:
@@ -244,7 +247,7 @@ for cov, soulbinds in covenants.items():
 
             sets_str = '\n'.join(sets_list)
 
-            simc = '\n'.join([profile, leg_str, cov_str, name_str, target_str, sets_str])
+            simc = '\n'.join([profile, apl, leg_str, cov_str, name_str, target_str, sets_str])
 
             payload = {'type': 'advanced', 'apiKey': args.apikey, 'simcVersion': 'nightly','smartStages': stages, 'advancedInput': simc}
 
