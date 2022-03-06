@@ -3,11 +3,6 @@ actions.precombat+=/food
 actions.precombat+=/augmentation
 # Snapshot raid buffed stats before combat begins and pre-potting is done.
 actions.precombat+=/snapshot_stats
-actions.precombat+=/flask
-actions.precombat+=/food
-actions.precombat+=/augmentation
-# Snapshot raid buffed stats before combat begins and pre-potting is done.
-actions.precombat+=/snapshot_stats
 actions.precombat+=/variable,name=4cp_bite,value=0
 # Shred = 0, Non-snapshot Rake = 1, Snapshot Rake = 2, LI = 3, Swipe = 4
 actions.precombat+=/variable,name=filler,value=1
@@ -23,7 +18,6 @@ actions.precombat+=/fleshcraft,if=(soulbind.pustule_eruption|soulbind.volatile_s
 actions.precombat+=/cat_form
 actions.precombat+=/prowl
 
-# Executed every time the actor is available.
 actions=call_action_list,name=owlweave,if=druid.owlweave_cat
 # Prowl whenever possible
 actions+=/prowl
