@@ -195,7 +195,7 @@ for cov, soulbinds in covenants.items():
             sets_list = []
             name_str = 'name=' + '-'.join([cov, leg, soul])
 
-            soulbind_master = []
+            soulbind_master = ['born_of_the_wilds:13']
             if traits['base']:
                 soulbind_master.append(traits['base'])
             if traits['add']:
