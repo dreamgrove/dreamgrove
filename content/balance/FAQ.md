@@ -1,5 +1,5 @@
 ---
-date: '2022-02-19'
+date: '2022-03-08'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -52,6 +52,9 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+ + 2022-03-08:
+<br>Updated: first sigil in ven+trinkets, news
+  
  + 2022-03-03:
 <br>Updated: Soulbind links
   
@@ -106,11 +109,11 @@ sidebarContents:  |
 On top of this tier sets return, ours being the following:
 
 **2-Set -  {{< spell 364423 "Celestial Pillar" >}}:**\
-Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 25% effectiveness that follows your current target for 8 sec.\
+Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 20% effectiveness that follows your current target for 8 sec.\
 *Notes:* This gives 40 AP. If multiple Celestial Pillars proc in short sequence (Lunar Eclipse>Inc>Pulsar proc), the duration of the buff will be extended (in this case to a total of 24sec). The self casted FoE is independent and does not affect this.
 
 **4-Set -  {{< spell 363497 "Umbral Infusion" >}}:**\
-While inside any Eclipse, the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} is reduced by 20%.\
+While inside any Eclipse, the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} is reduced by 15%.\
 *Notes:* This stacks multiplicatively with {{< spell 339949 "Timeworn Dreambinder" >}} and does not reduce progress per Astral Power spend for
 {{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).
 
@@ -121,7 +124,7 @@ We have also received class changes:
 *Notes:* This is roughly a 10% total dps nerf to Venthyr in most situations, higher in burst.
 
 **{{< item 364815 "Kindred Affinity" >}} :**  Now 6%/12% self (from 8%/16% self) and 3%/6% partner (from 8%/16% partner) for NF, NL and VE bonds. Kyrian bond is now 210/420 self (from 150/300 self) and 105/210 partner (from 150/300 partner).
-*Notes:* Kyrian got nerfed and is on par with Venthyr in raid dps in an optimal scenario. In a progress scenario you will most likely not touch it because of how the bond is extremely annoying to use and you lose the mobility of Venthyr/NF.
+*Notes:* Kyrian got nerfed and is a bit weaker than Venthyr in raid dps in an optimal scenario. In a progress scenario you will most likely not touch it because of how the bond is extremely annoying to use and you lose the mobility of Venthyr/NF.
 
 ### Analysis:
 
@@ -134,7 +137,7 @@ Looking at covenants, assuming 2 Legendaries and 4 Tier Piece, Venthyr, Night Fa
 
 Simulationcraft has been updated for the changes and the APL has also received updates. Additionally, our sim site will be kept updated whenever more changes come and can as always be found here: https://balance-simc.github.io/Balance-SimC/. You can run the sims yourself by double-clicking on any combination on that site and pasting the result into an Advanced sim on Raidbots. The most recent version of the APL can be found here: https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt. Feel free to look at the sims and sample sequences and in case anything looks out of line or wrong don't hesitate to tell us.
 
-Since the sim site currently is set up to only show how everything matches up with the covenant legendary, this is how they match up before we get it: https://www.raidbots.com/simbot/report/g98hhBrJnCJ7kvbXsBjaMV All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
+Since the sim site currently is set up to only show how everything matches up with the covenant legendary, this is how they match up before we get it: https://www.raidbots.com/simbot/report/s9ASzvBswzEsXVuVaw6imE All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
 
  
 <div id="rotation">
@@ -359,6 +362,8 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 {{< item 185818 "So'leah's Secret Technique" >}}: The second best equip trinket if you include the stats gained by the partner. Falls behind Elegy and Changeling if you do not include the stats gained by the partner.
 
 {{< item 179350 "Inscrutable Quantum Device" >}}: This trinket has the potential to be the best on-use trinket by a large margin if the conditions found in [#11](#iqd) are met. These ultimately mean that the trinket is extremely good in M+ and whenever you can guarantee that later trinket usages are either in Bloodlust or when healers still have enough mana. You can adjust the value in sims using the IQD Stat Proc Chance option which will set the chance the trinket gives stats outside Bloodlust.
+
+{{< item 188271 "The First Sigil" >}}: Together with {{< item 179350 "IQD" >}} and only with {{< spell 355315 "Sinful Hysteria" >}} equipped, this becomes your best trinket. Otherwise it should not be used.
 
 {{< item 186423 "Titanic Ocular Gland" >}}: Still a good trinket for early progression or until you will inevitably replace it depending on ilvl. It is highly recommended to sim it on raidbots.
 
@@ -619,7 +624,7 @@ Once everything is on live you will be able to sim as normal and that will, as a
 
 **Trinkets:**
 
-Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinket is {{< item 179350 "Inscrutable Quantum Device" >}}. The raid trinkets for SFO are still TBD.
+Generally you will want an on-use trinket and the strongest passive trinket you can find. The strongest on-use trinket is {{< item 179350 "Inscrutable Quantum Device" >}}. If you have {{< spell 355315 "Sinful Hysteria" >}} equipped, {{< item 179350 "Inscrutable Quantum Device" >}} and {{< item 188271 "The First Sigil" >}} are also a good option. If playing with this combination of trinkets use {{< item 179350 "IQD" >}} together with Inc and RF, then use {{< item 188271 "Sigil" >}} as soon as it is available.
 
 **Ideal stats:**
 
