@@ -1,9 +1,9 @@
 ---
 date: '2022-02-17'
 authors: ["Jundarer, Chicken"]
-published: true
+published: false
 showOnFrontpage: false
-patch: "9.2"
+patch: "9.1.5"
 title: Venthyr Compendium
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -15,8 +15,12 @@ sidebarContents:  |
   <br>[Gear](#gear)
 ---
 
+
+# This guide is outdated, use the FAQ found at https://www.dreamgrove.gg/balance/faq
+
 <div id="disclaimers">
 
+  
 # [Disclaimers:](#disclaimers)
   
 </div>
