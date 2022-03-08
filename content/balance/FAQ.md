@@ -357,7 +357,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 **Notable trinkets:**
 
-{{< item 188270 "Elegy of the Elements" >}}: The best equip trinket if you have 2 or more party members of the same covenant.
+{{< item 188270 "Elegy of the Eternals" >}}: The best equip trinket if you have 2 or more party members of the same covenant.
 
 {{< item 185818 "So'leah's Secret Technique" >}}: The second best equip trinket if you include the stats gained by the partner. Falls behind Elegy and Changeling if you do not include the stats gained by the partner.
 
