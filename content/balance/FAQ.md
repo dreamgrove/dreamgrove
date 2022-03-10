@@ -201,7 +201,7 @@ Start casting from max range at ~2 sec with {{< spell 364423 "Celestial Pillar" 
 
 **Lunar Eclipse and both Eclipses (CA/Inc):**
 
-- Use {{< spell 78674 "Starsurge" >}} to stop yourself from overcapping AsP. *Without* Pulsar until 6 targets, at which point you should overcap.
+- Use {{< spell 78674 "Starsurge" >}} to stop yourself from overcapping AsP. *Without* Pulsar until 6 targets, at which point you should overcap. The exception when using Pulsar is when you are fighting 6+ targets and CA/Inc will last throughout the rest of the fight or big pull.
 
 - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
 
