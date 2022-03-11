@@ -1,6 +1,6 @@
 ---
 title: "Lords of Dread"
-date: 2022-2-11
+date: 2022-3-11
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,7 +10,9 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- NOT PTR TESTABLE more info on the boss when live servers hit and I have killed the boss on hc.
+- Covenant: Venthyr is a bit better than NF, but both are playable nonetheless.
+- Barkskin if any mechanic touches you and on the raidwides.
+- Starfall on cd :)
 
 ## Mythic only notes:
 - 
@@ -18,8 +20,11 @@ patch: "9.2"
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy4ggjBTJJCBV2AAg1Mj8I)
 <br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
-<br>[Kyrian](https://ptr.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKCBMFNYIIFTLkCCUy4ggiFTJJCDV2AAg)
+
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="111,113,133,113,111,111,111" >}}
+{{< talents spec="balance" src="live" recommend="331,113,133,113,113,131,132" >}}
+
+Row1: WoE is more dps on 2tar but harder to play with, if you are not comfortable with it you do not have to play it by any means.
+
