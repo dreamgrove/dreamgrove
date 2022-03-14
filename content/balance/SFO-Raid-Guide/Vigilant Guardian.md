@@ -21,15 +21,15 @@ patch: "9.2"
 
 ## Soulbinds:
 [Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW5b4TBTLkChUy4golNYcKIwUySQoVMjEKNTI_Cg)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
-<br>[Kyrian](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKChMFNYIKFTLiCiUy5AoiFTJJCjUyPAo)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4CBTXKCiU1IAoTBTXGChUy4golMuQKIhUySQo1Mj8K)
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="331,113,133,223,313,231,132" >}}
+{{< talents spec="balance" src="live" recommend="331,113,133,223,313,231,232" >}}
 
 Row1: If you are feeling like you want a bit of spice to your aoe you can run WoE, if not pick NB
 Row3: Here you can run Resto Aff for the vortex, if not Guardian Aff is more overall DR and helps you survive the spiky dmg patterns and maybe a oneshot mechanic or two if you are lucky.
 Row5: If you feel like more aoe is needed, pick sotf, if not then default to inc.
 Row6: As much as I would like to say tm is good here, the movement from SD is very good here as you need to instantly dodge some mecahnics and you can not afford to finish most casts as everything oneshots. TM might become a valid choice on farm.
+Row7: Arguably the only fight you could play sol on, even though it is still probably not the go to. If your adds are permanently spread and you are playing NF, it might be the correct choice but that is still a bit of a stretch, otherwise pick FoE. If you are somehow lacking ST, pick NM as NF.
 
