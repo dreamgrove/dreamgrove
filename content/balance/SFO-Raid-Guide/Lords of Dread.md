@@ -24,7 +24,7 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="331,113,133,113,113,131,132" >}}
+{{< talents spec="balance" src="live" recommend="331,113,133,113,313,131,132" >}}
 
 Row1: WoE is more dps on 2tar but harder to play with, if you are not comfortable with it you do not have to play it by any means.
 
