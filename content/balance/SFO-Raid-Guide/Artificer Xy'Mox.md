@@ -1,6 +1,6 @@
 ---
 title: "Artificer Xy'Mox"
-date: 2022-1-11
+date: 2022-3-14
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -10,22 +10,25 @@ patch: "9.2"
 
 
 ## Notes For the Boss:
-- Covenants: If you are required to do more damage in the intermissions Venthyr is a clear winner. Otherwise both perform Venthyr and NF perform similarly. If a skip is needed you default to Venthyr.
-
-- Barkskin on cd on the spread circlces, there is nothing particularly threatening.
+- Covenants: If you are required to do more damage in the intermissions Venthyr is a clear winner. Otherwise both perform Venthyr and NF perform similarly.
+- Barkskin on cd on the spread circlces and in intermission in case u get fixated by the beams. There is nothing particularly threatening.
 
 
 ## Mythic only notes:
-- Venthyr looks very strong here for the portal phases ALTHOUGH if you use RF on the first add phase you will not have it for the 2nd one and you will be forced to pop the 2nd one on boss to be able to get 3 usages in the fight (ON PTR). I used RF Inc when the first portals spawned and i had exactly 10sec to burst down the adds on the other platform. This allowed me to get a full duration Starfall and use FoE at 8sec after they got stacked and we basically 3manned the first one with 2 Boomie 1 WW without lust. 
+- Covenants: Venthyr or NF, this is mostly a personal preference or a "whatever sims higher" scenario. 
+- On mythic your role is a ST bot. Full focus boss and do damage. 
+- If you are even slightly out of position make sure to use Door or Soulshape on the rings. 
+- CDs: Pull / on CD somewhere in P2 around 65% boss hp (this will line with rings most likely), this can be delayed but keep in mind that the boss phases at 50% / Lust
 
 ## Soulbinds:
-[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
-<br>[Kyrian](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKChMFNYIKFTLiCiUy5AoiFTJJCjUyPAo)
+[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIhUySQo1Mj8K)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6pYCBTXKChUyQQoTBTXGChUy5AolMuIKIhUySQo1Mj8K)
+
 
 ## Talents:
 
 - SD for all covenants and maybe FoE for Kyr and NF aswell.
-- You could run Might Bash if you feel like you really need stuns in the intermission.
+- You could run Might Bash if you feel like you really need stuns in the intermission, but this should be covered by aoe stuns.
+- If you feel really confident in your movement, StFl can also be picked as a bit of a boost in boss damage.
 
-{{< talents spec="balance" src="live" recommend="321,113,132,213,113,131,232" >}}
+{{< talents spec="balance" src="live" recommend="311,113,132,213,113,132,133" >}}
