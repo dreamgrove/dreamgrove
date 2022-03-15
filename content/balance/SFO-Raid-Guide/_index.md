@@ -16,7 +16,7 @@ Welcome to the Sepulcher of the First Ones Balance Druid encounter guide.
 
 <br>This guide tells you how to abuse your spec on a fight and NOT how to actually play the mechanics of the fight.
 
-<br>Current guide progression: PTR/11M 
+<br>Current guide progression: 5/11M 
 
 
 You can ask me any questions on discord Chickenxd#7777 or if you are shy just ask in the Dreamgrove Balance channel.
