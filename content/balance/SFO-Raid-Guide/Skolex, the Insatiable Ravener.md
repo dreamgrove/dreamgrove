@@ -17,7 +17,7 @@ patch: "9.2"
 ## Mythic only notes:
 - Covenants: NF but Venthyr is also playable without that much of a loss, but I would recommend against it as this is a hard enrage fight. This is the worst possible timer for venthyr. (6:05 kill or be killed)
 - Try to optimise your movement as much as possible and think at least 15sec ahead what your movement pattern will be. How you move will highly depend on your raid.
-- Barkskin the soaks and borrows on cd if possible.
+- Barkskin the soaks and burrows on cd if possible.
 
 
 
@@ -28,6 +28,7 @@ patch: "9.2"
 
 ## Talents:
 
+{{< talents spec="balance" src="live" recommend="311,113,132,113,113,123,123" >}}
+
 - If you have troubles with movement, talent Stellar Drift and use Starfall whenever you need it, although I do not recommend it as you need every single bit of damage possible.
 - Guardian Affinity will have increased value because of the bursty dmg pattern and because you will not be casting any healing spells unless that means you die.
-{{< talents spec="balance" src="live" recommend="311,113,132,113,113,123,123" >}}
