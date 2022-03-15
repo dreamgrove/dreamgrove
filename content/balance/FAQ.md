@@ -126,10 +126,10 @@ Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42
 DPS gains from Tier Set:
 
 | Build | [1 Legendary](https://www.raidbots.com/simbot/report/68MzULAESeeTuiHcgSfgjf) | [2 Legendaries](https://www.raidbots.com/simbot/report/kPaHfB71kmzGLc8JUDZsea) |
-| :-----------: |:---------------:| :---------------:|
+| :-----------  |:---------------:| :---------------:|
 | NF 2pc        | 12,5%        | 11,7%         |
 | Venthyr 2pc   | 12,4%        | 12,7%         |
-| NF 2pc        | 7,8%         |    7,8%       |
+| NF 4pc        | 7,8%         |    7,8%       |
 | Venthyr 4pc   | 8%           |    7,9%       |
 
 
