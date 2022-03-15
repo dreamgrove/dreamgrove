@@ -52,6 +52,10 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+ 
+  + 2022-03-15:
+<br>Updated: news
+  
  + 2022-03-08:
 <br>Updated: first sigil in ven+trinkets, news
   
@@ -115,7 +119,18 @@ Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 20% eff
 **4-Set -  {{< spell 363497 "Umbral Infusion" >}}:**\
 While inside any Eclipse, the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} is reduced by 15%.\
 *Notes:* This stacks multiplicatively with {{< spell 339949 "Timeworn Dreambinder" >}} and does not reduce progress per Astral Power spend for
-{{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).
+{{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).\
+Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42,5. This however does not mean that the ap cost gets rounded up or down. The decimals get kept and you will get the AP the next time you cast a spender.\ 
+Example: If you currently have 70AP and you cast a Starsurge your remaining AP will be 44,5, but the game will show 44. If you were to cast another Starsurge your AP would be set to 19.
+
+DPS gains from Tier Set:\ 
+
+| Build | [1 Legendary](https://www.raidbots.com/simbot/report/68MzULAESeeTuiHcgSfgjf) | [2 Legendaries](https://www.raidbots.com/simbot/report/kPaHfB71kmzGLc8JUDZsea) |
+| :-----------: |:------------:| :------------:|
+| NF 2pc        | 12,5%        | 11,7%         |
+| Venthyr 2pc   | 12,4%        | 12,7%         |
+| NF 2pc        | 7,8%         |    7,8%       |
+| Venthyr 4pc   | 8%           |    7,9%       |
 
 
 We have also received class changes:
@@ -131,7 +146,7 @@ We have also received class changes:
 With how our set works, it will heavily favour
 {{< spell 338668 "Primordial Arcanic Pulsar" >}}, since both set bonuses heavily synergize with it.\
 The 2-Set Celestial Pillar procs its Fury of Elune every time Pulsar is procced which in turn resets your Eclipse and allows for even more Lunar Eclipses.\
-The 4-Set Umbral Infusion may reduce the Astral Power you have to spend on Starsurge and Starfall but Pulsar still gets the original cost. A 24 cost Starsurge, for example, would still progress your Pulsar buff by 30.
+The 4-Set Umbral Infusion may reduce the Astral Power you have to spend on Starsurge and Starfall but Pulsar still gets the original cost. A 25,5 cost Starsurge, for example, would still progress your Pulsar buff by 30.
 
 Looking at covenants, assuming 2 Legendaries and 4 Tier Piece, Venthyr, Night Fae and Kyrian are all very close to each other. Since Venthyr and Night Fae both have superior signature abilities (Door of Shadows and Soulshape) and generally better soulbinds, you will be switching between them depending on the encounter. Kyrian can still be played without losing much damage but is not recommended. Some preliminary information about what covenant to pick for specific bosses are in the raid guide.
 
