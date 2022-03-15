@@ -24,7 +24,7 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="331,113,133,113,313,131,132" >}}
+{{< talents spec="balance" src="live" recommend="311,113,133,113,313,131,132" >}}
 
-Row1: WoE is more dps on 2tar but harder to play with, if you are not comfortable with it you do not have to play it by any means.
+Row5: SotF is around 20 more dps on 2t and 400 more dps on 3t. Make sure to sim yourself and keep in mind that this is a 2.5target fight with a 3rd add sometimes appearing if your dk decides to be useful and grip it.
 
