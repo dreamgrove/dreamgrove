@@ -120,13 +120,13 @@ Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 20% eff
 While inside any Eclipse, the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} is reduced by 15%.\
 *Notes:* This stacks multiplicatively with {{< spell 339949 "Timeworn Dreambinder" >}} and does not reduce progress per Astral Power spend for
 {{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).\
-Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42,5. This however does not mean that the ap cost gets rounded up or down. The decimals get kept and you will get the AP the next time you cast a spender.\ 
-Example: If you currently have 70AP and you cast a Starsurge your remaining AP will be 44,5, but the game will show 44. If you were to cast another Starsurge your AP would be set to 19.
+Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42,5. This however does not mean that the ap cost gets rounded up or down. The decimals get kept and you will get the AP the next time you cast a spender.
+<br>Example: If you currently have 70AP and you cast a Starsurge your remaining AP will be 44,5, but the game will show 44. If you were to cast another Starsurge your AP would be set to 19.
 
-DPS gains from Tier Set:\ 
+DPS gains from Tier Set:
 
 | Build | [1 Legendary](https://www.raidbots.com/simbot/report/68MzULAESeeTuiHcgSfgjf) | [2 Legendaries](https://www.raidbots.com/simbot/report/kPaHfB71kmzGLc8JUDZsea) |
-| :-----------: |:------------:| :------------:|
+| :-----------: |:---------------:| :---------------:|
 | NF 2pc        | 12,5%        | 11,7%         |
 | Venthyr 2pc   | 12,4%        | 12,7%         |
 | NF 2pc        | 7,8%         |    7,8%       |
