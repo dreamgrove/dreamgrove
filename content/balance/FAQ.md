@@ -485,7 +485,7 @@ Notes: Default Instincts and fill in the rest as needed.
 - For sustained AoE when you can stand in the small Blossom field: [Dreamweaver](https://www.wowhead.com/soulbind-calc/night-fae/dreamweaver/druid/AwaZZr4BJTXKChMFNcYKFTLiCiUy5AoiBTJJCiUyPAo)
 
 **Venthyr:**
-- Always use [Theotar](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo) with Wasteland Propriety.
+- Always use [Theotar](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIwV2AAoVMkkKNTI_Cg).
  
 **Kyrian:**
 - By default [Mikanikos](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKChMFNYIKFTLiCiUy5AoiFTJJCjUyPAo).
