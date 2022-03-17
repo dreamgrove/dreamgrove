@@ -661,8 +661,8 @@ When you use {{< spell 326434 "Kindred Spirits" >}} both people get an empty poo
 
 - Who do I bond Kindred Spirits with and when do I use it?
 
-With {{< spell 354115 "Kindred Affinity" >}} you prefer to bond with a Night Fae because of the haste. Kyrian sadly gives very poor value and should be avoided.
-An sheet for Kindred Affinity with tier sets and 2 legendaries and more information can be found [here](https://docs.google.com/spreadsheets/d/1baQypWt2RjCYvtRQ7T5fPXqK18FeZON9XtR-LRvSGXo/edit?usp=sharing).
+With {{< spell 354115 "Kindred Affinity" >}} you prefer to bond with a Night Fae because of the haste buff being multiplicative unlike the other buffs.
+A sheet for Kindred Affinity with tier sets and 2 legendaries and more information can be found [here](https://docs.google.com/spreadsheets/d/1baQypWt2RjCYvtRQ7T5fPXqK18FeZON9XtR-LRvSGXo/edit?usp=sharing).
 
 
 <div id="Miscellaneous">
