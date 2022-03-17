@@ -19,8 +19,8 @@ patch: "9.2"
 - Nobody killed this yet :)
 
 ## Soulbinds:
-[Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWb74CBTUgCBU1yggSBTWHCCUy5AojBTJJCBV2AAg1Mj8I)
-<br>[Night Fae](https://ptr.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW5b4CBTXKCCU1IAgTBTXGCBUy5AglMuIIIhUySQgldgAI)
+[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIhUySQo1Mj8K)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6pYCBTXKChUyQQoTBTXGChUy5AolMuIKIhUySQo1Mj8K)
 
 
 ## Talents:
