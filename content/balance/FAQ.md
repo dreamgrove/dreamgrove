@@ -1,5 +1,5 @@
 ---
-date: '2022-03-08'
+date: '2022-03-18'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -53,6 +53,9 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
  
+    + 2022-03-18:
+<br>Updated: Theotar Soulbind
+  
   + 2022-03-15:
 <br>Updated: news
   
