@@ -173,13 +173,13 @@ Since the sim site currently is set up to only show how everything matches up wi
 Venthyr - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}(combat starts half-way through the cast), dots, with NO Bloodlust: Starfire until 90+ AsP, {{< spell 102560 "Incarnation" >}}, {{< spell 323546 "Ravenous Frenzy" >}}, Wrath until max AsP if not there already, {{< spell 78674 "Starsurge" >}} 1x
 
 
-Night Fae - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}, dots, New Moon, {{< spell 194223 "CA" >}}, {{< spell 78674 "Starsurge" >}} 2x, {{< spell 323764 "Convoke" >}}, Starsurge until you have no more AsP, Half Moon, Starsurge, Full Moon
+Night Fae - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}(combat starts half-way through the cast), dots, New Moon, {{< spell 194223 "CA" >}}, {{< spell 78674 "Starsurge" >}} 2x, {{< spell 323764 "Convoke" >}}, Starsurge until you have no more AsP, Half Moon, Starsurge, Full Moon
  
 
-Kyrian - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}, dots, New Moon, {{< spell 194223 "CA" >}}, Empower Bond, {{< spell 78674 "Starsurge" >}} 2x, Half Moon, Starsurge, Full Moon
+Kyrian - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}(combat starts half-way through the cast), dots, New Moon, {{< spell 194223 "CA" >}}, Empower Bond, {{< spell 78674 "Starsurge" >}} 2x, Half Moon, Starsurge, Full Moon
  
  
-In raid with 2-Set -  {{< spell 364423 "Celestial Pillar" >}} and {{< spell 202430 "Nature's Balance" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, dots, New Moon(when talented), Wrath, {{< spell 194223 "CA" >}}, continue with the openers above.
+In raid with 2-Set -  {{< spell 364423 "Celestial Pillar" >}} and {{< spell 202430 "Nature's Balance" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath(combat starts half-way through the cast), dots, New Moon(when talented), Wrath, {{< spell 194223 "CA" >}}, continue with the openers above.
  
  
 Notes:
