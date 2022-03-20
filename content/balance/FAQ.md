@@ -170,25 +170,47 @@ Since the sim site currently is set up to only show how everything matches up wi
 
 </div>
 
-Venthyr - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}(combat starts half-way through the cast), dots, with NO Bloodlust: Starfire until 90+ AsP, {{< spell 102560 "Incarnation" >}}, {{< spell 323546 "Ravenous Frenzy" >}}, Wrath until max AsP if not there already, {{< spell 78674 "Starsurge" >}} 1x
+**Before the pull with set**
+- Start casting at max range ~2 sec before the pull timer
+- Wrath
+- Wrath (boss is pulled during the cast, and your eclipse counter will reset so you have 1 count at the end of this cast)
 
+**Before the pull without set**
+- Start casting at max range ~3.5-4 sec before the pull timer
+- Wrath
+- Wrath (you will enter lunar eclipse)
+- Starfire (boss is pulled during the cast)
 
-Night Fae - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}(combat starts half-way through the cast), dots, New Moon, {{< spell 194223 "CA" >}}, {{< spell 78674 "Starsurge" >}} 2x, {{< spell 323764 "Convoke" >}}, Starsurge until you have no more AsP, Half Moon, Starsurge, Full Moon
- 
+**After the boss is pulled**
+- Dots
+- New Moon (if talented)
+- With set ONLY: Wrath (you will enter lunar eclipse and proc {{< spell 364423 "Celestial Pillar" >}})
+- Venthyr with NO Bloodlust ONLY: Starfire until 90+ AsP
+- {{< spell 102560 "Incarnation" >}}
 
-Kyrian - with {{< spell 202430 "Nature's Balance(NB)" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath, {{< spell 194153 "Starfire" >}}(combat starts half-way through the cast), dots, New Moon, {{< spell 194223 "CA" >}}, Empower Bond, {{< spell 78674 "Starsurge" >}} 2x, Half Moon, Starsurge, Full Moon
- 
- 
-In raid with 2-Set -  {{< spell 364423 "Celestial Pillar" >}} and {{< spell 202430 "Nature's Balance" >}}:<br/> {{< spell 190984 "Wrath" >}}, Wrath(combat starts half-way through the cast), dots, New Moon(when talented), Wrath, {{< spell 194223 "CA" >}}, continue with the openers above.
- 
+**After {{< spell 102560 "Incarnation" >}} for Venthyr**
+- {{< spell 323546 "Ravenous Frenzy" >}}
+- Wrath until max AsP if not there already
+- Starsurge
+
+**After {{< spell 102560 "Incarnation" >}} for Night Fae**
+- Starsurge x2
+- {{< spell 323764 "Convoke" >}}
+- Starsurge until you have no more AsP
+- Half Moon
+- Starsurge
+- Full Moon
+
+**After {{< spell 102560 "Incarnation" >}} for Kyrian**
+- {{< spell 326446 "Empower Bond" >}}
+- Starsurge x2
+- Half Moon
+- Starsurge
+- Full Moon
  
 Notes:
 
 In raid with {{< spell 202430 "Nature's Balance" >}} any Astral Power above 50 will be reset to 50 when raid combat starts.
-
-Start casting from max range at ~3.5-4 sec without {{< spell 364423 "Celestial Pillar" >}}.
-Start casting from max range at ~2 sec with {{< spell 364423 "Celestial Pillar" >}}.
-
 
 <div id="aoe">
  
