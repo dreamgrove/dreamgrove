@@ -38,6 +38,7 @@ sidebarContents:  |
  
   [6. Miscellaneous](#Miscellaneous)
   <br>[Useful CA + Trinket macro](#swifty-macro)
+  <br>[Tier Set TLDR](#Set-TLDR)
   <br>[How does IQD work?](#iqd)
   <br>[What is Astral damage?](#astral-damage)
  
@@ -52,6 +53,9 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+  
+    + 2022-03-21:
+<br>Added: 4pc+pulsar TLDR
  
     + 2022-03-18:
 <br>Updated: Theotar Soulbind
@@ -725,7 +729,23 @@ A sheet for Kindred Affinity with tier sets and 2 legendaries and more informati
 
 You can and should remove/add other commands to this macro depending on situation. For example the potion line, or the "stopmacro [noform:4]" line.
 
+  
+<div id="Set-TLDR">
+ 
+## [Tier Set TLDR](#Set-TLDR)
 
+</div>
+  
+**How to optimise {{< spell 364423 "Celestial Pillar" >}} and {{< spell 338668 "Pulsar" >}} usage:**
+
+- Always proc Pulsar with Starfall if you are not in Incarnation already and have Stellar Drift talented or 4 Set active.
+- Always try to get the {{< spell 364423 "Celestial Pillar" >}} effect before proccing {{< spell 338668 "Pulsar" >}}. This means that you should if possible go into Lunar Eclipse before a Pulsar window.
+- Have as much AP as possible before going into a Pulsar window.
+- If you have below 210ap transition into a solar eclipse.
+- Dump all AP inside Incarnation windows.
+
+  
+  
 <div id="iqd">
  
 ## [How does Inscrutable Quantum Device work?](#iqd)
@@ -799,7 +819,7 @@ Some conditionals for doing high damage as a balance druids are:
 ## [M+ Talents](#M+Talents)
 
 <div>
-{{< talents spec="balance" src="live" recommend="223,213,123,333,311,331,131" >}}
+{{< talents spec="balance" src="live" recommend="213,213,123,333,311,331,131" >}}
  
 <div id="M+Soulbinds">
  
@@ -807,8 +827,8 @@ Some conditionals for doing high damage as a balance druids are:
 
 <div>
 
-<br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/Awa-774CBTXKChUyQQoSBTWHCiUy4goiFTJJCjUyPAo)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwaW6pYBBTUgChMFNcYKFTLiCiUy5AoiFTJJCjUyPAo)
+<br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIhUySQo1MjEK)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4DBTXKChUyQQolNSAKEwU1xgoVMuQKJTLiCiIVMkkKNTIxCg)
  
  
 <div id="M+Improve">
