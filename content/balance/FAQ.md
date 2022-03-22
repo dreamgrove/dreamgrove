@@ -124,10 +124,10 @@ Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 20% eff
 *Notes:* This gives 40 AP. If multiple Celestial Pillars proc in short sequence (Lunar Eclipse>Inc>Pulsar proc), the duration of the buff will be extended (in this case to a total of 24sec). The self casted FoE is independent and does not affect this.
 
 **4-Set -  {{< spell 363497 "Umbral Infusion" >}}:**\
-While inside any Eclipse, the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} is reduced by 15%.\
+While inside any Eclipse, the costs of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} are reduced by 15%.\
 *Notes:* This stacks multiplicatively with {{< spell 339949 "Timeworn Dreambinder" >}} and does not reduce progress per Astral Power spend for
 {{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).\
-Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42,5. This however does not mean that the ap cost gets rounded up or down. The decimals get kept and you will get the AP the next time you cast a spender.
+Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42,5. The costs don't get rounded which may lead to situations where you think you have enough AsP but you are missing 0,5 AsP to actually cast this.
 <br>Example: If you currently have 70AP and you cast a Starsurge your remaining AP will be 44,5, but the game will show 44. If you were to cast another Starsurge your AP would be set to 19.
 
 DPS gains from Tier Set:
@@ -158,9 +158,6 @@ The 4-Set Umbral Infusion may reduce the Astral Power you have to spend on Stars
 Looking at covenants, assuming 2 Legendaries and 4 Tier Piece, Venthyr, Night Fae and Kyrian are all very close to each other. Since Venthyr and Night Fae both have superior signature abilities (Door of Shadows and Soulshape) and generally better soulbinds, you will be switching between them depending on the encounter. Kyrian can still be played without losing much damage but is not recommended. Some preliminary information about what covenant to pick for specific bosses are in the raid guide.
 
 Simulationcraft has been updated for the changes and the APL has also received updates. Additionally, our sim site will be kept updated whenever more changes come and can as always be found here: https://balance-simc.github.io/Balance-SimC/. You can run the sims yourself by double-clicking on any combination on that site and pasting the result into an Advanced sim on Raidbots. The most recent version of the APL can be found here: https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt. Feel free to look at the sims and sample sequences and in case anything looks out of line or wrong don't hesitate to tell us.
-
-Since the sim site currently is set up to only show how everything matches up with the covenant legendary, this is how they match up before we get it: https://www.raidbots.com/simbot/report/s9ASzvBswzEsXVuVaw6imE All Covenants will use Pulsar once you get 2 set and before that Venthyr uses Sinful Hysteria instead.
-
  
 <div id="rotation">
 
