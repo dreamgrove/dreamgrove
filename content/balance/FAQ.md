@@ -1,5 +1,5 @@
 ---
-date: '2022-03-18'
+date: '2022-03-23'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -54,10 +54,13 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
   
-    + 2022-03-21:
+  + 2022-03-22:
+  <br>Updated: Opener revamp
+  
+  + 2022-03-21:
 <br>Added: 4pc+pulsar TLDR
  
-    + 2022-03-18:
+  + 2022-03-18:
 <br>Updated: Theotar Soulbind
   
   + 2022-03-15:
