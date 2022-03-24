@@ -124,7 +124,7 @@ On top of this tier sets return, ours being the following:
 
 **2-Set -  {{< spell 364423 "Celestial Pillar" >}}:**\
 Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 20% effectiveness that follows your current target for 8 sec.\
-*Notes:* This gives 40 AP. If multiple Celestial Pillars proc in short sequence (Lunar Eclipse>Inc>Pulsar proc), the duration of the buff will be extended (in this case to a total of 24sec). The self casted FoE is independent and does not affect this.
+*Notes:* This gives 40 AP. If multiple Celestial Pillars proc in short sequence (Lunar Eclipse>Inc>Pulsar proc), multiple Pillars will spawn and do their damage at the same time, but the duration of the AP generating buff will be extended (in this case to a total of 24sec). The self casted FoE is independent and does not affect this.
 
 **4-Set -  {{< spell 363497 "Umbral Infusion" >}}:**\
 While inside any Eclipse, the costs of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} are reduced by 15%.\
