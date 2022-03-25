@@ -855,14 +855,14 @@ If you want to push to the next level you can improve a lot by recording your ga
 <div>
  
 With the introduction of Tier Sets, the dps balancing has become a bit weird. In this case Guardian Druid (yes the tank spec) does a lot of damage on large trash packs. On top of doing a lot of damage, while inside Incarn windows you are immune to almost everything in the game. If played around properly, you arrive at something that we called Bear Tech. This involves the Moonkin player in the party (you) respeccing to Guardian and playing as that spec for part of the keystone. This also means that you will have a 2nd tank in the party. Your purpose is enabling MDI level pulls on higher (and obviously lower) level keystones by doing a lot of raw damage and not dying to the sheer amount of damage that another tank would not be able to sustain for that long.
-Because you are there for damage, use Legacy of the Sleeper and Unity on Venthyr with [these talents](https://www.wowhead.com/talent-calc/druid/guardian/mytz/2) and stack as much agi, haste and vers as you can to scale your tier set. Trinkets are pretty flexible, but I would personally recommend funny trinket1 (The First Sigil) and funny trinket 2 (Cache of Acquired Treasures), even when killing Urh relics. As for Soulbinds I would personally recommend going for [Nadjia](https://www.wowhead.com/soulbind-calc/venthyr/nadjia-the-mistblade/druid/AwCWqr4CBTXKChUyQQoSBTWHCiUySAojFTJ9CiUyMQo1MkkK), as you will be playing Theotar for Balance.
+<br>Because you are there for damage, use Legacy of the Sleeper and Unity on Venthyr with [these talents](https://www.wowhead.com/talent-calc/druid/guardian/mytz/2) and stack as much agi, haste and vers as you can to scale your tier set. Trinkets are pretty flexible, but I would personally recommend funny trinket1 (The First Sigil) and funny trinket 2 (Cache of Acquired Treasures), even when killing Urh relics. As for Soulbinds I would personally recommend going for [Nadjia](https://www.wowhead.com/soulbind-calc/venthyr/nadjia-the-mistblade/druid/AwCWqr4CBTXKChUyQQoSBTWHCiUySAojFTJ9CiUyMQo1MkkK), as you will be playing Theotar for Balance.
 
-As for the Moonkin part of the keystone, you should try to spec into Incarn if there is not much more trash left, as your purpose will be killing Bosses. If you want to respec at the end of necropolis in NW for example, spec into NB aswell.
+<br>As for the Moonkin part of the keystone, you should try to spec into Incarn if there is not much more trash left, as your purpose will be killing Bosses. If you want to respec at the end of necropolis in NW for example, spec into NB aswell.
 
 ### TLDR on how to play this:
 
-If your Ravenous Frenzy and Incarnation are up > pull 5 packs of mobs and proceed to spam Thrash and Ironfur. 
-If Ravenous Frenzy and/or Incarnation are not up > pull 1-2 packs of mobs, taunt 1-2 mobs from your offtank if he is in danger and use /castsequence Thrash, Swipe, Swipe, Swipe.
++ If your Ravenous Frenzy and Incarnation are up > pull 5 packs of mobs and proceed to spam Thrash and Ironfur. 
++ If Ravenous Frenzy and/or Incarnation are not up > pull 1-2 packs of mobs, taunt 1-2 mobs from your offtank if he is in danger and use /castsequence Thrash, Swipe, Swipe, Swipe.
 
 ### When to respec: 
 
@@ -882,13 +882,12 @@ Note: Get +20 portals, they are very good for this :)
 
 ### DISCLAIMER:
   
-Keep in mind that this is aimed at 2 tank compositions so you do not need as many defensive layers, as you can use stuff like SI on cooldown without any impact. This also means that you WILL have to use stuff like SI when you are entering a pack, as you want to stack the mobs as much as possible before using RF and Incarn, so just like with balance pre pool rage from the pack before and enter your big pull with at least one Ironfur stack, Stampeding Roar and Survival Instincts if needed.
-I would recommend that you read [this guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing) made by Catha (an actual guardian player).
-You NEED 4piece for this to be a thing.
-If you have bad gear for bear or you have no idea how to play the spec, it might be better to ignore all of this and just play moonkin.
-Do not play this in a pug if you do not at least inform your group about what you will do. 
++ Keep in mind that this is aimed at 2 tank compositions so you do not need as many defensive layers, as you can use stuff like SI on cooldown without any impact. This also means that you WILL have to use stuff like SI when you are entering a pack, as you want to stack the mobs as much as possible before using RF and Incarn, so just like with balance pre pool rage from the pack before and enter your big pull with at least one Ironfur stack, Stampeding Roar and Survival Instincts if needed.
++ I would recommend that you read [this guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing) made by Catha (an actual guardian player).
++ You NEED 4piece for this to be a thing.
++ If you have bad gear for bear or you have no idea how to play the spec, it might be better to ignore all of this and just play moonkin.
++ Do not play this in a pug if you do not at least inform your group about what you will do. 
 
-I am not responsible for you depleting your keys with this. Enjoy :)
  
 <div id="Utility">
 
