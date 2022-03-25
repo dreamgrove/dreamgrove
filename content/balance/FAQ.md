@@ -1,5 +1,5 @@
 ---
-date: '2022-03-23'
+date: '2022-03-25'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -47,12 +47,17 @@ sidebarContents:  |
   <br>[M+ Talents](#M+Talents)
   <br>[M+ Soulbinds](#M+Soulbinds)
   <br>[How to Improve in M+](#M+Improve)
+  <br>[Bear Tech](#Bear-Tech)
  
    [8. Utility](#Utility)
 ---
 
 <details>
 <summary>Changelog</summary>
+  
+  + 2022-03-25:
+  <br>Updated: M+ section
+  <br>Added: Bear Tech
   
   + 2022-03-22:
   <br>Updated: Opener revamp
@@ -782,8 +787,6 @@ When this trinket is used, it triggers the effect with the first condition that 
 Astral damage is Arcane and Nature damage at the same time meaning that these spells benefit from effects that buff either spell school and double dip whenever effects that buff both are active. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell classes.
  
  
-<div id="M+">
-
 # [7. Mythic+:](#M+)
 
 </div>
@@ -819,7 +822,7 @@ Some conditionals for doing high damage as a balance druids are:
 ## [M+ Talents](#M+Talents)
 
 <div>
-{{< talents spec="balance" src="live" recommend="213,213,123,333,311,331,131" >}}
+{{< talents spec="balance" src="live" recommend="213,213,123,333,312,331,131" >}}
  
 <div id="M+Soulbinds">
  
@@ -827,8 +830,8 @@ Some conditionals for doing high damage as a balance druids are:
 
 <div>
 
-<br>[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIhUySQo1MjEK)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4DBTXKChUyQQolNSAKEwU1xgoVMuQKJTLiCiIVMkkKNTIxCg)
+[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW774CBTUgChU1ygoSBTWHCiUy5AojBTI_ABUySQo1MjEK)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4DBTUgChUyQQolNcoKEwU1xgoVMuQKJTLiCiIVMkkKNTI8Cg)
  
  
 <div id="M+Improve">
@@ -845,12 +848,47 @@ If you want to push to the next level you can improve a lot by recording your ga
 - Pooling AsP as a pack is dying in order to be above 50AsP before the next group of mobs to be able to maintain {{< spell 191034 "Starfall" >}} from the start.
  
  
- ## [M+ Covenants by Luddeus](#M+covenants)
+<div id="Bear-Tech">
  
-If trash dies too fast, Moonkin just doesn't do any damage. This is more of a Moonkin issue than a Venthyr vs Night Fae issue. Yes, the problem is a tad more exacerbated from Venthyr since they don't do much damage out of CDs. You're not going to be doing decent damage on trash as a boomkin if things die fast, and besides, it doesn't matter. Things dying fast is good, it means the key is getting timed and that's all that matters. Overall dps is a horrible metric to look at by itself.
- 
-Venthyr will do better than Night Fae in more relevant keys where trash stays alive. A key in which Venthyr does worse than Night Fae, in general, is a key where it doesn’t really matter what covenant you are since you're gonna be timing the key anyways. This doesn't just depend on one single metric. It's a combination of key level, the dungeon, how much the tank pulls, your group's gear/dmg, etc. There isn't any set goal where you can say "Oh, Venthyr is better above X level", or "Oh, Venthyr is only good when the group is pulling around my CDs". These statements are all incorrect by themselves, and should not be parroted.
+## [Bear Tech](#Bear-Tech)
 
+<div>
+ 
+With the introduction of Tier Sets, the dps balancing has become a bit weird. In this case Guardian Druid (yes the tank spec) does a lot of damage on large trash packs. On top of doing a lot of damage, while inside Incarn windows you are immune to almost everything in the game. If played around properly, you arrive at something that we called Bear Tech. This involves the Moonkin player in the party (you) respeccing to Guardian and playing as that spec for part of the keystone. This also means that you will have a 2nd tank in the party. Your purpose is enabling MDI level pulls on higher (and obviously lower) level keystones by doing a lot of raw damage and not dying to the sheer amount of damage that another tank would not be able to sustain for that long.
+Because you are there for damage, use Legacy of the Sleeper and Unity on Venthyr with [these talents](https://www.wowhead.com/talent-calc/druid/guardian/mytz/2) and stack as much agi, haste and vers as you can to scale your tier set. Trinkets are pretty flexible, but I would personally recommend funny trinket1 (The First Sigil) and funny trinket 2 (Cache of Acquired Treasures), even when killing Urh relics. As for Soulbinds I would personally recommend going for [Nadjia](https://www.wowhead.com/soulbind-calc/venthyr/nadjia-the-mistblade/druid/AwCWqr4CBTXKChUyQQoSBTWHCiUySAojFTJ9CiUyMQo1MkkK), as you will be playing Theotar for Balance.
+
+As for the Moonkin part of the keystone, you should try to spec into Incarn if there is not much more trash left, as your purpose will be killing Bosses. If you want to respec at the end of necropolis in NW for example, spec into NB aswell.
+
+### TLDR on how to play this:
+
+If your Ravenous Frenzy and Incarnation are up > pull 5 packs of mobs and proceed to spam Thrash and Ironfur. 
+If Ravenous Frenzy and/or Incarnation are not up > pull 1-2 packs of mobs, taunt 1-2 mobs from your offtank if he is in danger and use /castsequence Thrash, Swipe, Swipe, Swipe.
+
+### When to respec: 
+
+Note: Get +20 portals, they are very good for this :)
+
++ PF: Either after slimes before 1st boss or do not play at all.
++ ToP: You can pull 1st and 2nd pack into 1st boss, do 1 big pack after boss then respec if cds are up after boss.
++ Lower: Before 1st boss, finish the trash in the whole room before pulling boss
++ Upper: Pack before 1st boss (you need to either die, use +20 portal or 
++ HoA: 5-6 pack into 1st left shard > stall 2min, pick an urh relic up then do right wing > go left wing downstairs and pull whole downstairs area with rf when off cd > if you have rf for boss you can pull the pack in front with 2 gargoyles and thrash it down, if rf is not up for boss go respec before it 
++ SD: Either 1st pull or whole dungeon (if fort only). Whole dungeon tech makes 3rd boss almost irrelevant and you can pull whole room into it, 1st boss also pretty irrelevant as you only have to heal 3 people and you can tank swap after every headbutt. If you do whole dungeon tech then spec Theotar.
++ MoTS: Pull 3pack after you open the first gate, then respec while grp if pulling pack before mushrooms.
++ DoS: 1st pack only, or ardenweald first and pull very big one time then go respec. 
++ NW: Either until 1st boss (prekey + 1 more cd rotation) or until end of necropolis (I would recommend the latter). If you are doing until the end of necropolis it is very beneficial to have a +20 portal or have a hearthstone nearby.
++ SoA: 1st pull.
+
+
+### DISCLAIMER:
+  
+Keep in mind that this is aimed at 2 tank compositions so you do not need as many defensive layers, as you can use stuff like SI on cooldown without any impact. This also means that you WILL have to use stuff like SI when you are entering a pack, as you want to stack the mobs as much as possible before using RF and Incarn, so just like with balance pre pool rage from the pack before and enter your big pull with at least one Ironfur stack, Stampeding Roar and Survival Instincts if needed.
+I would recommend that you read [this guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing) made by Catha (an actual guardian player).
+You NEED 4piece for this to be a thing.
+If you have bad gear for bear or you have no idea how to play the spec, it might be better to ignore all of this and just play moonkin.
+Do not play this in a pug if you do not at least inform your group about what you will do. 
+
+I am not responsible for you depleting your keys with this. Enjoy :)
  
 <div id="Utility">
 
