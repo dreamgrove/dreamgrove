@@ -108,10 +108,10 @@ $(function() {
     }
 
     function isPtr() {
-        return $("#fightstyle").val().includes("combo_ptr");
+        return $("#fightstyle").val().includes("combo_ptr_");
     }
     function isH() {
-        return $("#fightstyle").val().includes("combo_h");
+        return $("#fightstyle").val().includes("combo_h_");
     }
 
     function toCap(s) { return s.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase()))); }
