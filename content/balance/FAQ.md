@@ -406,17 +406,17 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 **Notable trinkets:**
 
-{{< item 188270 "Elegy of the Eternals" >}}: The best equip trinket if you have 2 or more party members of the same covenant.
+{{< item 178708 "Unbound Changeling" >}}: This trinket gains most of its value from the fact that it is convertible into a stat proc of your choice by eating the corresponding food. Sim what stat is best for you but it will almost always be mastery. Once a day it has a chance to proc 3 secondary stats which further increases its value. Mastery proc can be used a default but sim to find which secondary it should proc.
 
-{{< item 185818 "So'leah's Secret Technique" >}}: The second best equip trinket if you include the stats gained by the partner. Falls behind Elegy and Changeling if you do not include the stats gained by the partner.
+{{< item 188270 "Elegy of the Eternals" >}}: This trinket gains increased value the more members of your covenant you have in your party. Will usually sim lower than Changeling but can become better if looted at higher ilvl and simming close enough.
+
+{{< item 185818 "So'leah's Secret Technique" >}}: The third best equip trinket if you include the stats gained by the partner. Only becomes better than Elegy if there is no one of the same covenant in your party.
 
 {{< item 179350 "Inscrutable Quantum Device" >}}: This trinket has the potential to be the best on-use trinket by a large margin if the conditions found in [#11](#iqd) are met. These ultimately mean that the trinket is extremely good in M+ and whenever you can guarantee that later trinket usages are either in Bloodlust or when healers still have enough mana. You can adjust the value in sims using the IQD Stat Proc Chance option which will set the chance the trinket gives stats outside Bloodlust.
 
-{{< item 188271 "The First Sigil" >}}: Together with {{< item 179350 "IQD" >}} and only with {{< spell 355315 "Sinful Hysteria" >}} equipped, this becomes your best trinket. Otherwise it should not be used.
+{{< item 188271 "The First Sigil" >}}: Together with {{< item 179350 "IQD" >}} and only with {{< spell 355315 "Sinful Hysteria" >}} equipped, this becomes your best trinket.
 
 {{< item 186423 "Titanic Ocular Gland" >}}: Still a good trinket for early progression or until you will inevitably replace it depending on ilvl. It is highly recommended to sim it on raidbots.
-
-{{< item 178708 "Unbound Changeling" >}}: This trinket gains most of its value from the fact that it is convertible into a stat proc of your choice by eating the corresponding food. Once a day it has a chance to proc 3 secondary stats which further increases its value. Mastery proc can be used a default but sim to find which secondary it should proc.
 
 {{< item 178809 "Soulletting Ruby" >}}: Although this trinket gives crit it gives a very high amount of it, making it a decent option for Night Fae if you don't have access to another on-use trinket. When using it, mind that it has a short delay before getting the buff depending on distance to the target.
 
