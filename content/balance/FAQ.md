@@ -514,11 +514,11 @@ Notes: Default Instincts and fill in the rest as needed.
 </div>
 
 **Night Fae:**
-- Nearly all situations: [Niya](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwaW6pYBBTXKChMFNcYKFTLiCiUy5AoiFTJJCjUyPAo)
-- For sustained AoE when you can stand in the small Blossom field: [Dreamweaver](https://www.wowhead.com/soulbind-calc/night-fae/dreamweaver/druid/AwaZZr4BJTXKChMFNcYKFTLiCiUy5AoiBTJJCiUyPAo)
+- Nearly all situations: [Niya](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwaW6pYBBTXKChMFNcYKFTLiCiUy5AoiFTJJCjV2AAo)
+- For sustained AoE when you can stand in the small Blossom field: [Dreamweaver](https://www.wowhead.com/soulbind-calc/night-fae/dreamweaver/druid/AwaZZr4BJTXKChMFNcYKFTLiCiUy5AoiBTJJCiV2AAo)
 
 **Venthyr:**
-- Always use [Theotar](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIwV2AAoVMkkKNTI_Cg). You can choose between Token of Appreciation (with Precise Alignment, Fury of the Skies is played by default as 2nd potency slot) and Wasteland Propriety. Wasteland Propriety is on average 350dps from the allies that recieve your 3% versatility buff. Sim both of them and decide for yourself. On average Token of Appreciation gives you around 350hps for your allies. If you only want to think about dps, Wasteland Propriety will be better in most casses for raid dps and Token will be better for personal dps (obviously this depends heavily on your character's gear so sim yourself).
+- Always use [Theotar](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwaW5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIwV2AAoVMkkKNTI8Cg). You can choose between Token of Appreciation (with Precise Alignment, Fury of the Skies is played by default as 2nd potency slot) and Wasteland Propriety. Wasteland Propriety is on average 350dps from the allies that recieve your 3% versatility buff. Sim both of them and decide for yourself. On average Token of Appreciation gives you around 350hps for your allies. If you only want to think about dps, Wasteland Propriety will be better in most casses for raid dps and Token will be better for personal dps (obviously this depends heavily on your character's gear so sim yourself).
  
 **Kyrian:**
 - By default [Mikanikos](https://www.wowhead.com/soulbind-calc/kyrian/forgelite-prime-mikanikos/druid/AwaW5ZYBBTXKChMFNYIKFTLiCiUy5AoiFTJJCjUyPAo).
