@@ -21,8 +21,8 @@ patch: "9.2"
 - CDs: Pull / on CD somewhere in P2 around 65% boss hp (this will line with rings most likely), this can be delayed but keep in mind that the boss phases at 50% / Lust
 
 ## Soulbinds:
-[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIhUySQo1Mj8K)
-<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6pYCBTXKChUyQQoTBTXGChUy5AolMuIKIhUySQo1Mj8K)
+[Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwC-5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIhUySQo1dgAK)
+<br>[Night Fae](https://www.wowhead.com/soulbind-calc/night-fae/niya/druid/AwCW6r4DBTXKChUyQQolNSAKEwU1xgoVMuQKJTLiCiIVMkkKNXYACg)
 
 
 ## Talents:
