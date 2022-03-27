@@ -1,5 +1,5 @@
 ---
-date: '2022-03-25'
+date: '2022-03-27'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -54,6 +54,9 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+  
+  + 2022-03-27:
+  <br>Updated: Trinkets, Dreamwalk in bear tech
   
   + 2022-03-25:
   <br>Updated: M+ section
@@ -414,11 +417,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 {{< item 179350 "Inscrutable Quantum Device" >}}: This trinket has the potential to be the best on-use trinket by a large margin if the conditions found in [#11](#iqd) are met. These ultimately mean that the trinket is extremely good in M+ and whenever you can guarantee that later trinket usages are either in Bloodlust or when healers still have enough mana. You can adjust the value in sims using the IQD Stat Proc Chance option which will set the chance the trinket gives stats outside Bloodlust.
 
-{{< item 188271 "The First Sigil" >}}: Together with {{< item 179350 "IQD" >}} and only with {{< spell 355315 "Sinful Hysteria" >}} equipped, this becomes your best trinket.
-
-{{< item 186423 "Titanic Ocular Gland" >}}: Still a good trinket for early progression or until you will inevitably replace it depending on ilvl. It is highly recommended to sim it on raidbots.
-
-{{< item 178809 "Soulletting Ruby" >}}: Although this trinket gives crit it gives a very high amount of it, making it a decent option for Night Fae if you don't have access to another on-use trinket. When using it, mind that it has a short delay before getting the buff depending on distance to the target.
+{{< item 188271 "The First Sigil" >}}: Together with {{< item 179350 "IQD" >}} and only with {{< spell 355315 "Sinful Hysteria" >}} equipped, this becomes your best trinket. It is important to note that Antumbra slightly lowers this trinket's value so make sure to always sim it.
 
 
 <div id="talents">
@@ -866,7 +865,7 @@ With the introduction of Tier Sets, the dps balancing has become a bit weird. In
 
 ### When to respec: 
 
-Note: Get +20 portals, they are very good for this :)
+Note: <br>Get +20 portals, they are very good for this :). If you do not have Portals, Dreamwalking twice will put you outside the dungeon you were in. Dreamwalk is an 8 second cast unaffected by haste that puts you through two loading screens. You can ignore one of them by queueing up the second one after the first one, which will net you a couple of more seconds depending how fast your loading screens are.
 
 + PF: Either after slimes before 1st boss or do not play at all.
 + ToP: You can pull 1st and 2nd pack into 1st boss, do 1 big pack after boss then respec if cds are up after boss.
