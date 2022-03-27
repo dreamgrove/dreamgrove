@@ -744,9 +744,9 @@ You can and should remove/add other commands to this macro depending on situatio
 
 - Always proc Pulsar with Starfall if you are not in Incarnation already and have Stellar Drift talented or 4 Set active.
 - Always try to get the {{< spell 364423 "Celestial Pillar" >}} effect before proccing {{< spell 338668 "Pulsar" >}}. This means that you should if possible go into Lunar Eclipse before a Pulsar window.
-- Have as much AP as possible before going into a Pulsar window.
-- If you have below 210ap transition into a solar eclipse.
-- Dump all AP inside Incarnation windows.
+- Have as much AsP as possible before going into a Pulsar window without overcapping.
+- If you have below 210 AsP transition into a Solar Eclipse.
+- Dump all AsP inside Incarnation windows.
 
   
   
