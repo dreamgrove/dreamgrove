@@ -821,7 +821,7 @@ Some conditionals for doing high damage as a balance druids are:
 ## [M+ Talents](#M+Talents)
 
 <div>
-{{< talents spec="balance" src="live" recommend="213,213,123,333,312,331,131" >}}
+{{< talents spec="balance" src="live" recommend="223,213,123,333,312,331,131" >}}
  
 <div id="M+Soulbinds">
  
