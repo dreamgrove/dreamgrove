@@ -650,7 +650,7 @@ Currently it reduces the spells cast by 1/4 and casts 3.3 Wraths, 2.8 Starsurges
 
 <div id="minmax">
 
-# [MinMax:](#minmax)
+### [MinMax:](#minmax)
  
 </div>
 
@@ -665,7 +665,7 @@ The following are super minor things you can do to gain a small amount of extra 
 
 <div id="gear">
 
-# [Gear:](#gear)
+### [Gear:](#gear)
  
 </div>
 
