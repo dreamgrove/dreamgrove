@@ -1,5 +1,5 @@
 ---
-date: '2022-03-27'
+date: '2022-03-31'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2"
@@ -47,14 +47,15 @@ sidebarContents:  |
   <br>[M+ Talents](#M+Talents)
   <br>[M+ Soulbinds](#M+Soulbinds)
   <br>[How to Improve in M+](#M+Improve)
-  <br>[Bear Tech](#Bear-Tech)
  
    [8. Utility](#Utility)
 ---
 
 <details>
 <summary>Changelog</summary>
-  
+  + 2022-03-31:
+  <br>Removed: Bear Tech
+
   + 2022-03-27:
   <br>Updated: Trinkets, Dreamwalk in bear tech
   
@@ -849,47 +850,6 @@ If you want to push to the next level you can improve a lot by recording your ga
 - Utilizing {{< spell 29166 "Innervate" >}} preemptively in order for your group to be able to chain more packs and not have to wait for mana.
 - Pooling AsP as a pack is dying in order to be above 50AsP before the next group of mobs to be able to maintain {{< spell 191034 "Starfall" >}} from the start.
  
- 
-<div id="Bear-Tech">
- 
-## [Bear Tech](#Bear-Tech)
-
-<div>
- 
-With the introduction of Tier Sets, the dps balancing has become a bit weird. In this case Guardian Druid (yes the tank spec) does a lot of damage on large trash packs. On top of doing a lot of damage, while inside Incarn windows you are immune to almost everything in the game. If played around properly, you arrive at something that we called Bear Tech. This involves the Moonkin player in the party (you) respeccing to Guardian and playing as that spec for part of the keystone. This also means that you will have a 2nd tank in the party. Your purpose is enabling MDI level pulls on higher (and obviously lower) level keystones by doing a lot of raw damage and not dying to the sheer amount of damage that another tank would not be able to sustain for that long.
-<br>Because you are there for damage, use Legacy of the Sleeper and Unity on Venthyr with [these talents](https://www.wowhead.com/talent-calc/druid/guardian/mytz/2) and stack as much agi, haste and vers as you can to scale your tier set. Trinkets are pretty flexible, but I would personally recommend funny trinket1 (The First Sigil) and funny trinket 2 (Cache of Acquired Treasures), even when killing Urh relics. As for Soulbinds I would personally recommend going for [Nadjia](https://www.wowhead.com/soulbind-calc/venthyr/nadjia-the-mistblade/druid/AwCWqr4CBTXKChUyQQoSBTWHCiUySAojFTJ9CiUyMQo1MkkK), as you will be playing Theotar for Balance.
-
-<br>As for the Moonkin part of the keystone, you should try to spec into Incarn if there is not much more trash left, as your purpose will be killing Bosses. If you want to respec at the end of necropolis in NW for example, spec into NB aswell.
-
-### TLDR on how to play this:
-
-+ If your Ravenous Frenzy and Incarnation are up > pull 5 packs of mobs and proceed to spam Thrash and Ironfur. 
-+ If Ravenous Frenzy and/or Incarnation are not up > pull 1-2 packs of mobs, taunt 1-2 mobs from your offtank if he is in danger and use /castsequence Thrash, Swipe, Swipe, Swipe.
-
-### When to respec: 
-
-Note: <br>Get +20 portals, they are very good for this :). If you do not have Portals, Dreamwalking twice will put you outside the dungeon you were in. Dreamwalk is an 8 second cast unaffected by haste that puts you through two loading screens. You can ignore one of them by queueing up the second one after the first one, which will net you a couple of more seconds depending how fast your loading screens are.
-
-+ PF: Either after slimes before 1st boss or do not play at all.
-+ ToP: You can pull 1st and 2nd pack into 1st boss, do 1 big pack after boss then respec if cds are up after boss.
-+ Lower: Before 1st boss, finish the trash in the whole room before pulling boss
-+ Upper: Pack before 1st boss (you need to either die, use +20 portal or 
-+ HoA: 5-6 pack into 1st left shard > stall 2min, pick an urh relic up then do right wing > go left wing downstairs and pull whole downstairs area with rf when off cd > if you have rf for boss you can pull the pack in front with 2 gargoyles and thrash it down, if rf is not up for boss go respec before it 
-+ SD: Either 1st pull or whole dungeon (if fort only). Whole dungeon tech makes 3rd boss almost irrelevant and you can pull whole room into it, 1st boss also pretty irrelevant as you only have to heal 3 people and you can tank swap after every headbutt. If you do whole dungeon tech then spec Theotar.
-+ MoTS: Pull 3pack after you open the first gate, then respec while grp if pulling pack before mushrooms.
-+ DoS: 1st pack only, or ardenweald first and pull very big one time then go respec. 
-+ NW: Either until 1st boss (prekey + 1 more cd rotation) or until end of necropolis (I would recommend the latter). If you are doing until the end of necropolis it is very beneficial to have a +20 portal or have a hearthstone nearby.
-+ SoA: 1st pull.
-
-
-### DISCLAIMER:
-  
-+ Keep in mind that this is aimed at 2 tank compositions so you do not need as many defensive layers, as you can use stuff like SI on cooldown without any impact. This also means that you WILL have to use stuff like SI when you are entering a pack, as you want to stack the mobs as much as possible before using RF and Incarn, so just like with balance pre pool rage from the pack before and enter your big pull with at least one Ironfur stack, Stampeding Roar and Survival Instincts if needed.
-+ I would recommend that you read [this guide](https://docs.google.com/spreadsheets/d/1lqot6so0xiohnUjR5Qcs2zFYl9c0x7Ce8z9Lhg1rKSY/edit?usp=sharing) made by Catha (an actual guardian player).
-+ You NEED 4piece for this to be a thing.
-+ If you have bad gear for bear or you have no idea how to play the spec, it might be better to ignore all of this and just play moonkin.
-+ Do not play this in a pug if you do not at least inform your group about what you will do. 
-
  
 <div id="Utility">
 
