@@ -592,7 +592,10 @@ There are three options when it comes to crafting this legendary. Those being bu
 
 </div>
 
+**Venthyr:**
+
 In 9.2 Venthyr will still be the best covenant if the NF utility or damage profile is not needed. It is worth noting that the difference between NF and Venthyr is now much closer due to the Hysteria nerf and the new tier set.
+
 
 **Night Fae:**
  
