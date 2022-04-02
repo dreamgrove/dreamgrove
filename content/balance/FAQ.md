@@ -258,6 +258,8 @@ In raid with {{< spell 202430 "Nature's Balance" >}} any Astral Power above 50 w
 
 - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
 
+- Cast Wrath during CA/Inc if you are not using {{< spell 114107 "Soul of the Forest" >}}, Starfire will only hit 2 targets and the fight will last at least ~60s longer.
+
 - Cast {{< spell 194153 "Starfire" >}}.
 
 **Solar Eclipse:**
