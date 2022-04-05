@@ -1,6 +1,6 @@
 ---
 title: "Halondrus the Reclaimer"
-date: 2022-3-13
+date: 2022-4-5
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -16,6 +16,13 @@ patch: "9.2"
 - Barkskin on cd and if you have it up on Reclaim casts.
 
 ## Mythic only notes:
+Covenants: 
+Prog cds: pull/p3 in lust (only p3 dmg matters, but if you somehow do not have enough damage for the push you want you can do p1/p2/p3 on cd)
+Barkskin: 2 usages every phase, use on random missiles then on reclaim. Just feel out whenever you have to skin misslies (usually if u do 2 orbs or have bomb in missile)
+Bear Form: If you have bomb on you (or want to soak more than one orb) and missiles will hit > pre bear form the missile impact. Take Ursine Vigor if venthyr. 
+If you will 100% get hit by a missile aftershock for whatever reason you can survive it with Ursine Vigor from around 60% hp. Hotw if available and hp pot before to make sure you do not die to this.
+Obviously use Stellar Drifts in intermissions.
+If you carry a bomb in intermissions, try to not stack with other bombs. Play in front of the group if you can, max range from boss. Make sure to swap bomb pickup before knockbacks and use them to your advantage. 
 
 
 ## Soulbinds:
