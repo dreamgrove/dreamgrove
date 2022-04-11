@@ -64,6 +64,9 @@ a.tooltip {
 
 .article-content pre {
   overflow-x: auto; 
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px 15px;
 }
 
 .article-spec {
