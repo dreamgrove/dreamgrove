@@ -18,7 +18,7 @@ sidebarContents:  |
   [5. Competent](#competent)
  
   [6. Proficient](#proficient)
-  ---
+---
 
 <div id="Introduction">
 
