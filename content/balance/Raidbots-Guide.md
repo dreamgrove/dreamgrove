@@ -88,7 +88,7 @@ Droptimizer should be used whenever you are trying to find what dungeon to farm 
 
 <div id="options">
 
-# [4. Options:](#options)
+# [4. Options](#options)
 
 </div>
 
@@ -104,7 +104,7 @@ Disable IQD Execute:Disabled (box ticked)
 
 <div id="competent">
 
-# [5. Competent:](#competent)
+# [5. Competent](#competent)
 
 </div>
 
@@ -217,7 +217,7 @@ The easiest way for you to sim an item that you want is to open Droptimizer, put
 
 <div id="proficient">
 
-# [6. Proficient:](#proficient)
+# [6. Proficient](#proficient)
 
 </div>
 
