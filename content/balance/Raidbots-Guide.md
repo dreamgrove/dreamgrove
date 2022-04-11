@@ -6,19 +6,19 @@ patch: "9.2"
 title: Balance Druid Raidbots Guide
 showOnFrontpage: false
 sidebarTitle: "Quicklinks"
-sidebarContents:  |
- [1. Introduction](#introduction)
- 
-  [2. Setup](#setup)
-
- [3. Novice](#novice)
-
-[4. Options](#options)
-
- [5. Competent](#competent)
-
- [6. Proficient](#proficient)
----
+sidebarContents:  |
+  [1. Introduction](#introduction)
+ 
+  [2. Setup](#setup)
+ 
+  [3. Novice](#novice)
+ 
+  [4. Options](#options)
+ 
+  [5. Competent](#competent)
+ 
+  [6. Proficient](#proficient)
+  ---
 
 <div id="Introduction">
 
