@@ -53,6 +53,7 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
+
   + 2022-03-31:
   <br>Removed: Bear Tech
 
