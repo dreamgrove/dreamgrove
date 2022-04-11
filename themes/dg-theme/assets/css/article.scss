@@ -62,6 +62,10 @@ a.tooltip {
   margin-top: 0;
 }
 
+.article-content pre {
+  overflow-x: auto; 
+}
+
 .article-spec {
   margin-bottom: 0;
   display: inline-block;
