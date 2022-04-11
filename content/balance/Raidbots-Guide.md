@@ -34,7 +34,7 @@ Welcome to the Balance Druid Raidbots Guide. 
 
 ###The visual version of the guide made by Tettles can be found here: *soontm
 
-<div id="Introduction">
+<div id="setup">
 
 # [2. Setup:](#setup)
 
@@ -52,30 +52,41 @@ The raidbots website is a frontend for the original Simulationcraft application.
 
 Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT recommended. 
 
-<div id="Introduction">
+<div id="novice">
 
 # [3. Novice:](#novice)
 
 </div>
 
+<div id="quicksim">
 
-##Quicksim
+## [Quicksim](#quicksim)
 
+</div>
+  
 Quicksim can be used if you want to take a quick look at how much the number on your sim is (pretty useless in most scenarios), looking at the html report (in advanced section), or for looking at the sample sequence. The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the FAQ](/balance/FAQ).
 
-##Topgear
+<div id="topgear">
 
+## [Topgear](#topgear)
+
+</div>
+  
 Topgear is the main tool you should be using in raidbots. It will show you what the best items in your bags are, what to pick from your weekly vault and how to gem and enchant your gear. You simply click on what items/talents/soulbinds/gems/enchants you want to sim and it will show you what to equip. If you are using a free raidbots account and do not have enough iterations at your disposal, simply open more tabs and do multiple sims at the same time. For venthyr especially if you are doing gem sims and you ran out of space, removing crit and/or versatility gems might not impact the sim at all depending on your stats, as you usually do not need almost at all of those stats from gems. Night Fae might be different though especially if you have a low crit and vers sim from Venthyr and are trying to gear for Night Fae. 
 
 
-##Droptimzer
+<div id="droptimizer">
 
+## [Droptimzer](#Droptimizer)
+
+</div>
+  
 Droptimizer should be used whenever you are trying to find what dungeon to farm in order to upgrade your gear or just as a quick list of what items you need from raid. It is important to note that you need an offhand/one hand weapon in order for Droptimizer to sim one hand weapons/offhands respectively. It is very important to note here that some items might show as downgrades/upgrades that would usually not be seen as such due to IQD. See the [Balance FAQ](/balance/FAQ/#IQD) section.
 
 
-<div id="Introduction">
+<div id="options">
 
-#  [4. Options:](#options)
+# [4. Options:](#options)
 
 </div>
 
@@ -89,18 +100,25 @@ Unbound Changeling Proc: Mastery
 IQD Stat Proc Chance: 100% usually, change to however you want (0% on a 5min sim uses it once, 100% uses it twice, bloodlust cube is always used)
 Disable IQD Execute:Disabled (box ticked)
 
-<div id="Introduction">
+<div id="competent">
 
-#  [5. Competent:](#competent)
+# [5. Competent:](#competent)
 
 </div>
 
-##IQD
+<div id="iqd">
+
+## [IQD](#iqd)
+  
+</div>
 
 Probably one of the biggest traps in simming this expansion has been this fun trinket. Due to its very fun tooltip it has been very fun to point out every time that IQD was the sussy impostor all along whenever someone asked me why this 50ilvl increase in an item was a downgrade. Simming with this trinket can be a bit tricky, as some upgrades might show as downgrades and some downgrades might show as upgrades. You have to pay attention to how an item changes your stats. As Venthyr you will want your IQD to always proc mastery inside a bloodlust window and haste/mastery outside of it. What this means is that if an item puts your haste rating above mastery, it will 95% of the times be a downgrade. This is not the end of the story though. If we could fix our stats even more after equipping that item through tools like gems enchants or jewelry (rings, necks) or even other pieces of gear that would otherwise be a downgrade without the aforementioned item.
 
-##String editing
+<div id="string-deiting">
 
+## [String editing](#string-editing)
+
+</div>
 
 From this point onward it is highly recommended that you read the simulationcraft wiki documentation that can be found here: https://github.com/simulationcraft/simc/wiki
 
@@ -195,15 +213,19 @@ The base ilvl (226) along with the name and what stats the item has is being ass
 The slot in which the item is being put in is determined by the front word. In our case "back=". If we wanted to work with a ring, we would use "finger1=" or "finger2=" depending on which slot you want the ring to be in.
 The easiest way for you to sim an item that you want is to open Droptimizer, put your character in, and scroll down to whatever item you want click on it. This will redirect you to a wowhead page with the item. Through the Links option you can select "simulationcraft import string" and then paste it below your other item strings. If you wanted to sim another back in topgear with this method, you would have to put a "#" before the item string, otherwise your last back string would overwrite your first one instead of making it a selectable option.  
 
-<div id="Introduction">
+<div id="proficient">
 
-#  [6. Proficient:](#proficient)
+# [6. Proficient:](#proficient)
 
 </div>
 
 There are two ways of simming externals / Theotar Tea values / raidevents (basically anything you would want to sim). Either through Expert mode or through Advanced. Expert mode can be found below the main options whenever you want to sim something and advanced is just its separate section. They can achieve the exact same thing, but depending on what exactly you want to do, one option might be more time consuming than the other. 
 
-##Advanced
+<div id="advanced">
+
+## [Advanced](advanced)
+  
+</div>
 
 The advanced option can be used for any sim if you know how to use it. Unlike the other options, advanced does not have the dropdown menus for the expansion options. You have to manually input them, otherwise the default will be automatically chosen. All of the expansion options can be found [here](https://github.com/simulationcraft/simc/wiki/ExpansionOptions). The ones that you will need as a balance druid are the following: 
 
@@ -226,15 +248,21 @@ fixed_time="1"
 
 One of the unique functions in advanced is copy.  This allows you to sim multiple sets of gear, different APLs or different sim options side by side. Simply do a line of copy=*Name* and whatever was above this copy line will be copied below. To change this, simply add anything you want to replace and it will automatically be replaced. As an example if you have two cloaks inside a sim, only the bottom one will be simmed. This applies to basically anything. 
 
+<div id="expert">
 
-##Expert
+## [Expert](#expert)
+  
+</div>
 
 Expert mode allows you to easily change something like Theotar Tea or add an external to any of your sims, including topgear. To use this, simply navigate to the bottom of your option menu, and tick the box with expert mode, then put whatever you want in the footer. For example "shadowlands.party_favor_type=primary" in order to sim with intellect theotar tea.
 
+<div id="expert">
+  
+## [Useful Settings](#useful-settings)
 
-##Useful Settings
+</div>
 
-###For all externals use [this link](https://github.com/simulationcraft/simc/wiki/BuffsAndDebuffs#external-buffs) and the string below as template.
+### For all externals use [this link](https://github.com/simulationcraft/simc/wiki/BuffsAndDebuffs#external-buffs) and the string below as template.
 
 ```
 copy="power_infusion210"
@@ -246,7 +274,7 @@ Use the copy line if you want to see the difference between no external and with
 replace power_infusion with the external that you want like in the wiki link.
 
 
-###For simming all Theotar Teas in advanced. The default is a combination of all four.
+### For simming all Theotar Teas in advanced. The default is a combination of all four.
 
 ```
 copy=int
@@ -262,7 +290,7 @@ copy=vers
 shadowlands.party_favor_type=versatility
 ```
 
-###For simming all Soleah stats in advanced. 
+### For simming all Soleah stats in advanced. 
 
 ```
 copy=mast
