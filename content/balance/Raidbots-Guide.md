@@ -217,7 +217,7 @@ The easiest way for you to sim an item that you want is to open Droptimizer, put
 
 <div id="proficient">
 
-# [6. Proficient](#proficient)
+# [6. Proficient](#proficient)
 
 </div>
 
