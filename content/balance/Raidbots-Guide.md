@@ -20,7 +20,7 @@ sidebarContents:  |
   [6. Proficient](#proficient)
 ---
 
-<div id="Introduction">
+<div id="introduction">
 
 # [1. Introduction:](#introduction)
 
@@ -88,7 +88,7 @@ Droptimizer should be used whenever you are trying to find what dungeon to farm 
 
 <div id="options">
 
-# [4. Options](#options)
+# [4. Options](#options)
 
 </div>
 
@@ -104,7 +104,7 @@ Disable IQD Execute:Disabled (box ticked)
 
 <div id="competent">
 
-# [5. Competent](#competent)
+# [5. Competent](#competent)
 
 </div>
 
