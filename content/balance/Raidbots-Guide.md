@@ -1,7 +1,7 @@
 ---
 date: '2022-04-11'
 authors: ["Chicken"]
-published: false
+published: true
 patch: "9.2"
 title: Balance Druid Raidbots Guide
 showOnFrontpage: false
@@ -18,8 +18,6 @@ sidebarContents:  |
  [5. Competent](#competent)
 
  [6. Proficient](#proficient)
- 
-
 ---
 
 <div id="Introduction">
