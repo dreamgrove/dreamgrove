@@ -32,7 +32,7 @@ Welcome to the Balance Druid Raidbots Guide. 
 <br>This guide will be split in multiple sections, but it is highly recommended that you read it top to bottom and do not skip directly to a section even if you do have a basic understanding of how this works, as it is relatively hard to properly categorize the skill level necessary to use some of these tools. 
 <br>Without further ado, let us dive into this wonderful experience that are simulations.
 
-###The visual version of the guide made by Tettles can be found here: *soontm
+### The visual version of the guide made by Tettles can be found here: *soontm
 
 <div id="setup">
 
@@ -41,14 +41,14 @@ Welcome to the Balance Druid Raidbots Guide. 
 </div>
 
 Before beginning to properly sim on raidbots we will need the addon "Simulationcraft". This can be downloaded from the following link:
-After you downloaded the addon, you can go into the game and type the following into your chat:
+<br>After you downloaded the addon, you can go into the game and type the following into your chat:
 
 ```
 /simc 
 ```
 
 This will give you a "simc string" that contains a snapshot of your character that can be used in raidbots. The string can later be modified, but for now we will be using the base one in order to simulate our character on the following site: https://www.raidbots.com/simbot
-The raidbots website is a frontend for the original Simulationcraft application. It is way easier to use than the application and thus this guide will only cover raidbots and not the simc application.
+<br>The raidbots website is a frontend for the original Simulationcraft application. It is way easier to use than the application and thus this guide will only cover raidbots and not the simc application.
 
 Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT recommended. 
 
@@ -64,7 +64,8 @@ Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT re
 
 </div>
   
-Quicksim can be used if you want to take a quick look at how much the number on your sim is (pretty useless in most scenarios), looking at the html report (in advanced section), or for looking at the sample sequence. The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the FAQ](/balance/FAQ).
+Quicksim can be used if you want to take a quick look at how much the number on your sim is (pretty useless in most scenarios), looking at the html report (in advanced section), or for looking at the sample sequence. 
+<br>The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the FAQ](/balance/FAQ).
 
 <div id="topgear">
 
@@ -72,7 +73,8 @@ Quicksim can be used if you want to take a quick look at how much the number on 
 
 </div>
   
-Topgear is the main tool you should be using in raidbots. It will show you what the best items in your bags are, what to pick from your weekly vault and how to gem and enchant your gear. You simply click on what items/talents/soulbinds/gems/enchants you want to sim and it will show you what to equip. If you are using a free raidbots account and do not have enough iterations at your disposal, simply open more tabs and do multiple sims at the same time. For venthyr especially if you are doing gem sims and you ran out of space, removing crit and/or versatility gems might not impact the sim at all depending on your stats, as you usually do not need almost at all of those stats from gems. Night Fae might be different though especially if you have a low crit and vers sim from Venthyr and are trying to gear for Night Fae. 
+Topgear is the main tool you should be using in raidbots. It will show you what the best items in your bags are, what to pick from your weekly vault and how to gem and enchant your gear. You simply click on what items/talents/soulbinds/gems/enchants you want to sim and it will show you what to equip. If you are using a free raidbots account and do not have enough iterations at your disposal, simply open more tabs and do multiple sims at the same time. 
+<br>For venthyr especially if you are doing gem sims and you ran out of space, removing crit and/or versatility gems might not impact the sim at all depending on your stats, as you usually do not need almost at all of those stats from gems. Night Fae might be different though especially if you have a low crit and vers sim from Venthyr and are trying to gear for Night Fae. 
 
 
 <div id="droptimizer">
