@@ -20,7 +20,7 @@ sidebarContents:  |
   [6. Proficient](#proficient)
 ---
 
-<div id="Introduction">
+<div id="introduction">
 
 # [1. Introduction:](#introduction)
 
