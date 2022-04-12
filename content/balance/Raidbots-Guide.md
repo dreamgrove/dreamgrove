@@ -64,7 +64,7 @@ Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT re
 
 </div>
   
-Quicksim can be used if you want to take a quick look at how much the number on your sim is (pretty useless in most scenarios), looking at the html report (in advanced section), or for looking at the sample sequence. 
+Quicksim can be used if you want to take a quick look at how much the dps number on your sim is (pretty useless in most scenarios), looking at the html report (in proficient section), quickly getting a string for advanced, or for looking at the sample sequence. 
 <br>The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the FAQ](/balance/FAQ).
 
 <div id="topgear">
@@ -83,7 +83,7 @@ Topgear is the main tool you should be using in raidbots. It will show you what 
 
 </div>
   
-Droptimizer should be used whenever you are trying to find what dungeon to farm in order to upgrade your gear or just as a quick list of what items you need from raid. It is important to note that you need an offhand/one hand weapon in order for Droptimizer to sim one hand weapons/offhands respectively. It is very important to note here that some items might show as downgrades/upgrades that would usually not be seen as such due to IQD. See the [Balance FAQ](/balance/FAQ/#IQD) section.
+Droptimizer should be used whenever you are trying to find what dungeon to farm in order to upgrade your gear or just as a quick list of what items you need from raid. It is important to note that you need an offhand/one hand weapon in order for Droptimizer to sim one hand weapons/offhands respectively. It is very important to note here that some items might show as downgrades/upgrades that would usually not be seen as such due to IQD. See the [IQD](#IQD) section.
 
 
 <div id="options">
@@ -114,9 +114,10 @@ Disable IQD Execute:Disabled (box ticked)
   
 </div>
 
-Probably one of the biggest traps in simming this expansion has been this fun trinket. Due to its very fun tooltip it has been very fun to point out every time that IQD was the sussy impostor all along whenever someone asked me why this 50ilvl increase in an item was a downgrade. Simming with this trinket can be a bit tricky, as some upgrades might show as downgrades and some downgrades might show as upgrades. You have to pay attention to how an item changes your stats. As Venthyr you will want your IQD to always proc mastery inside a bloodlust window and haste/mastery outside of it. What this means is that if an item puts your haste rating above mastery, it will 95% of the times be a downgrade. This is not the end of the story though. If we could fix our stats even more after equipping that item through tools like gems enchants or jewelry (rings, necks) or even other pieces of gear that would otherwise be a downgrade without the aforementioned item.
+Probably one of the biggest traps in simming this expansion has been this fun trinket. Due to its very fun tooltip it has been very fun to point out every time that IQD was the sussy impostor all along whenever someone asked me why this 50ilvl increase in an item was a downgrade. Simming with this trinket can be a bit tricky, as some upgrades might show as downgrades and some downgrades might show as upgrades. You have to pay attention to how an item changes your stats. As Venthyr you will want your IQD to always proc mastery inside a bloodlust window and haste/mastery outside of it. What this means is that if an item puts your haste rating above mastery, it will 95% of the times be a downgrade. This is not the end of the story though. If we could fix our stats even more after equipping that item through tools like gems enchants or jewelry (rings, necks) or even other pieces of gear that would otherwise be a downgrade without the aforementioned item. 
+<br>Keep in mind that your stat RATING matters and not the percent. In order to see your stat rating on your character sheet on the default UI you have to hover over the percent. 
 
-<div id="string-deiting">
+<div id="string-editing">
 
 ## [String editing](#string-editing)
 
@@ -167,9 +168,10 @@ talents="1323322"
 spec="balance"
 ```
 
-In this part of the string we can see some unimportant details like the name of the character, the character's realm, or where the string was created. The others are important though. The race function allows us to edit what race the character is simming as. The talents row allows us to quickly edit what the talents are and we are even allowed to change the level or the spec of the character. The only useful options here are the talents and the race. 
-The talent string is made out of 7 numbers from 1 to 3. The location of the number corresponds to the row (t15, t30, t45, etc) and the number itself corresponds to the column (NB, WoE, FoN)  in the talent tree. Some examples can be found here:  [1112233](https://www.wowhead.com/talent-calc/druid/balance/mI6c) [3331122](https://www.wowhead.com/talent-calc/druid/balance/m-BM) [2223311](https://www.wowhead.com/talent-calc/druid/balance/mJtz)
-The race string can be edited to any race you want. Any commands that are longer than one word can be combined through an underscore (_). Take Night Elf as an example. The command would be written as "race=night_elf".
+In this part of the string we can see some unimportant details like the name of the character, the character's realm, or where the string was created. The others are important though. 
+<br>The race function allows us to edit what race the character is simming as. The talents row allows us to quickly edit what the talents are and we are even allowed to change the level or the spec of the character. The only useful options here are the talents and the race. 
+<br>The talent string is made out of 7 numbers from 1 to 3. The location of the number corresponds to the row (t15, t30, t45, etc) and the number itself corresponds to the column (NB, WoE, FoN)  in the talent tree. Some examples can be found here:  [1112233](https://www.wowhead.com/talent-calc/druid/balance/mI6c) [3331122](https://www.wowhead.com/talent-calc/druid/balance/m-BM) [2223311](https://www.wowhead.com/talent-calc/druid/balance/mJtz)
+<br>The race string can be edited to any race you want. Any commands that are longer than one word can be combined through an underscore (_). Take Night Elf as an example. The command would be written as "race=night_elf".
 
 ```
 covenant="venthyr"
@@ -181,8 +183,8 @@ soulbind="theotar_the_mad_duke:9,336239/258:11:1/336147/280:11:1/336247/271:11:1
 
 This clump dictates your covenant, your soulbinds and your conduits. The covenant part is very similar to races, simply swap "venthyr" with another covenant f.e. covenant=night_fae. 
 
-The soulbind part is a bit more interesting. First it notes the name of the soulbind, then it notes the first trait of the soulbind, which in our case is Soothing Shade (theotar_the_mad_duke:9,336239). In this case the "theotar_the_mad_duke" part is irrelevant, but some letter has to replace it, as the ":9" part is dictating the soulbind (theotar). The number after theotar (336239) is for Soothing Shade. You can also replace the spellids with the actual names. For example "soulbind=theotar_the_mad_duke:9,soothing_shade".
-258:11:1 refers to a conduit, more specifically Born Anew. The "258" number refers to the conduit id which gives it its effect. The ":11:1" part gives it its ilvl, more specifically it gives the conduit rank 11 and empowers it by 2 ranks. Each conduit rank is 13 ilvls and thus a rank13 conduit is 278ilvl.
+<br>The soulbind part is a bit more interesting. First it notes the name of the soulbind, then it notes the first trait of the soulbind, which in our case is Soothing Shade (theotar_the_mad_duke:9,336239). In this case the "theotar_the_mad_duke" part is irrelevant, but some letter has to replace it, as the ":9" part is dictating the soulbind (theotar). The number after theotar (336239) is for Soothing Shade. You can also replace the spellids with the actual names. For example "soulbind=theotar_the_mad_duke:9,soothing_shade".
+<br>258:11:1 refers to a conduit, more specifically Born Anew. The "258" number refers to the conduit id which gives it its effect. The ":11:1" part gives it its ilvl, more specifically it gives the conduit rank 11 and empowers it by 2 ranks. Each conduit rank is 13 ilvls and thus a rank13 conduit is 278ilvl.
 
 
 ```
@@ -211,9 +213,9 @@ back=",id=189815,bonus_id=7187/8132/8138/6652/1524/6646,enchant_id=6203,context=
 ```
 
 Let's take this back as an example. This is a 278 ilvl Lurking Predator's Camouflage with a 20stam 30avoidance enchant. 
-The base ilvl (226) along with the name and what stats the item has is being assigned by the id (id=189815). The other stuff like ilvl scaling, quality of the item, and other bonuses are being assigned by the bonus id. enchant and gems can be assigned by enchant_id or gem_id. 
-The slot in which the item is being put in is determined by the front word. In our case "back=". If we wanted to work with a ring, we would use "finger1=" or "finger2=" depending on which slot you want the ring to be in.
-The easiest way for you to sim an item that you want is to open Droptimizer, put your character in, and scroll down to whatever item you want click on it. This will redirect you to a wowhead page with the item. Through the Links option you can select "simulationcraft import string" and then paste it below your other item strings. If you wanted to sim another back in topgear with this method, you would have to put a "#" before the item string, otherwise your last back string would overwrite your first one instead of making it a selectable option.  
+<br>The base ilvl (226) along with the name and what stats the item has is being assigned by the id (id=189815). The other stuff like ilvl scaling, quality of the item, and other bonuses are being assigned by the bonus id. enchant and gems can be assigned by enchant_id or gem_id. 
+<br>The slot in which the item is being put in is determined by the front word. In our case "back=". If we wanted to work with a ring, we would use "finger1=" or "finger2=" depending on which slot you want the ring to be in.
+<br>The easiest way for you to sim an item that you want is to open Droptimizer, put your character in, and scroll down to whatever item you want click on it. This will redirect you to a wowhead page with the item. Through the Links option you can select "simulationcraft import string" and then paste it below your other item strings. If you wanted to sim another back in topgear with this method, you would have to put a "#" before the item string, otherwise your last back string would overwrite your first one instead of making it a selectable option.  
 
 <div id="proficient">
 
@@ -271,9 +273,9 @@ copy="power_infusion210"
 external_buffs.power_infusion="10/210"
 ```
 
-Replace 10/210 with the timers that you want to sim with for the specific external.
-Use the copy line if you want to see the difference between no external and with external in advanced. 
-replace power_infusion with the external that you want like in the wiki link.
+<br>Replace 10/210 with the timers that you want to sim with for the specific external.
+<br>Use the copy line if you want to see the difference between no external and with external in advanced. 
+<br>replace power_infusion with the external that you want like in the wiki link.
 
 
 ### For simming all Theotar Teas in advanced. The default is a combination of all four.
