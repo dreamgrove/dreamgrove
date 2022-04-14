@@ -15,7 +15,8 @@ patch: "9.2"
 - Starfall on cd :)
 
 ## Mythic only notes:
-- 
+- idk man just dont play this fight as balance go any other spec or get benched.
+- will update whenever i will play this fight as boomie (never)
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWZb4CBTUgChU1ygoTBTWHChUy5AolMuIKIwUySQoVMj8KNXYACg)
