@@ -1,7 +1,7 @@
 ---
-date: '2022-04-11'
+date: '2022-04-15'
 authors: ["Chicken"]
-published: true
+published: false
 patch: "9.2"
 title: Balance Druid Raidbots Guide
 showOnFrontpage: false
