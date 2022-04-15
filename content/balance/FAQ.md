@@ -1,7 +1,7 @@
 ---
 date: '2022-03-31'
 authors: ["Chicken, Jundarer"]
-published: false
+published: true
 patch: "9.2"
 title: Patch 9.2 FAQ
 sidebarTitle: "Quicklinks"
