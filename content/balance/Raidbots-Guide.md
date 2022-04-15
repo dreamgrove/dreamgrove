@@ -114,7 +114,8 @@ Disable IQD Execute:Disabled (box ticked)
   
 </div>
 
-Probably one of the biggest traps in simming this expansion has been this fun trinket. Due to its very fun tooltip it has been very fun to point out every time that IQD was the sussy impostor all along whenever someone asked me why this 50ilvl increase in an item was a downgrade. Simming with this trinket can be a bit tricky, as some upgrades might show as downgrades and some downgrades might show as upgrades. You have to pay attention to how an item changes your stats. As Venthyr you will want your IQD to always proc mastery inside a bloodlust window and haste/mastery outside of it. What this means is that if an item puts your haste rating above mastery, it will 95% of the times be a downgrade. This is not the end of the story though. If we could fix our stats even more after equipping that item through tools like gems enchants or jewelry (rings, necks) or even other pieces of gear that would otherwise be a downgrade without the aforementioned item. 
+Probably one of the biggest traps in simming this expansion has been this fun trinket. Due to its very fun tooltip it has been very fun to point out every time that IQD was the sussy impostor all along whenever someone asked me why this 50ilvl increase in an item was a downgrade. Simming with this trinket can be a bit tricky, as some upgrades might show as downgrades and some downgrades might show as upgrades. You have to pay attention to how an item changes your stats. 
+<br>As Balance you will want your IQD to always proc mastery inside a bloodlust window and haste/mastery outside of it. What this means is that if an item puts your haste rating above mastery, it will 95% of the times be a downgrade. This is not the end of the story though. If we could fix our stats even more after equipping that item through tools like gems enchants or jewelry (rings, necks) or even other pieces of gear that would otherwise be a downgrade without the aforementioned item. 
 <br>Keep in mind that your stat RATING matters and not the percent. In order to see your stat rating on your character sheet on the default UI you have to hover over the percent. 
 
 <div id="string-editing">
@@ -310,7 +311,7 @@ copy=haste
 shadowlands.soleahs_secret_technique_type=haste
 ```
 
-###For simming all Unbound Changeling stats in advanced. 
+### For simming all Unbound Changeling stats in advanced. 
 
 ```
 copy=mast
