@@ -27,13 +27,14 @@ patch: "9.2"
 
 ## P1 
 -  Open Wrath Wrath Dot Dot Wrath Surge Starfire 3x, cds (kind of feelycraft how long u hold but this worked for me)
-- Do not JUMP into a whole with bomb, WALK into it. Early progression always bear this, later on you can cancel the knockup with disengage on your way up, but be very careful with this. You can watch my kill video for how I do it. There is a bug where you get stuck to the wall and your camera gets stuck to the wall. In that situation just dont move and bear form, if you jumped at the correct time you should be fine.
+- Do not JUMP into a whole with bomb, WALK into it. Early progression always bear this. There is a bug where you get stuck to the wall and your camera gets stuck to the wall. In that situation just dont move and bear form, if you jumped at the correct time you should be fine.
 
 ## P2
 - Try to pre position yourself around where you will have to soak and always look at the BW timers for what mechanic will come next
 - Always try to bait the knock correctly (close to azeroth if possible). 
 - Stellar Drift is your best friend.
 - Remember to use Sigil+Pot on cd at 5min
+- Starfall and focus the mcs whenever they come out. The faster they get out the easier the phase becomes.
 
 ## P3
 - 1st soaks you might have to bear form 1-2 ticks, you are not allowed to skin this, you need it for the next soaks, just pay attention to your hp bar.
