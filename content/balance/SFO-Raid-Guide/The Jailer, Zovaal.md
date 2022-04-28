@@ -25,37 +25,34 @@ patch: "9.2"
 - Barkskins start with on cd, then change timings as needed. Torments and soaks are usually the big hitters so keep that in mind. At start alternate Bear Form and Baskskin for those, your dmg will not matter at the start just play it safe.
 - I would highly recommend that you study vods for this fight and how other people move. This is the most scripted fight in wow history you can know how to play the whole fight before you stop foot in the boss room.
 
-# P1 
+## P1 
 -  Open Wrath Wrath Dot Dot Wrath Surge Starfire 3x, cds (kind of feelycraft how long u hold but this worked for me)
 - Do not JUMP into a whole with bomb, WALK into it. Early progression always bear this, later on you can cancel the knockup with disengage on your way up, but be very careful with this. You can watch my kill video for how I do it. There is a bug where you get stuck to the wall and your camera gets stuck to the wall. In that situation just dont move and bear form, if you jumped at the correct time you should be fine.
 
-# P2
+## P2
 - Try to pre position yourself around where you will have to soak and always look at the BW timers for what mechanic will come next
 - Always try to bait the knock correctly (close to azeroth if possible). 
 - Stellar Drift is your best friend.
 - Remember to use Sigil+Pot on cd at 5min
 
-
-# P3
-
+## P3
 - 1st soaks you might have to bear form 1-2 ticks, you are not allowed to skin this, you need it for the next soaks, just pay attention to your hp bar.
 - After gate you want to proc lunar if available (you want to be 1 wrath off procing if possible, if not then ignore this), inc rf wrath then starsurge and position yourself for torments. If its your first times on it forget about the cds and do them after you placed yourself for torments. 
 - After torments popped, starfall and WC through them if possible. Barkskin after if you didnt get them, before if you did. Starfall again after knock.
 
-# P4 
+## P4 
 - Just game, barkskin conals, if no barkskin bear them. Keep heart if you jump down in hole as 2. (this will happen at some point trust)
 - If you can make it out of torments try not to door it to keep it for the next one. If you want to door it, you have to bait knockback first, then door either while knock is casting or after it. Remember that you can go around azeroth if its the first torment as troll as that might sound.
 
+## Random Vods for research purposes:
 
-#Random Vods for research purposes:
+<br>[Noir - Club Camel](https://www.youtube.com/watch?v=GZcohaJndKs)
+<br>[Bald - Club Camel](https://www.youtube.com/watch?v=hz75RQZT3hI)
+<br>[Krona - FSY](https://www.youtube.com/watch?v=4hZvYkFuz-4)
+<br>[Chompey - Ethical](https://www.youtube.com/watch?v=Ogly7SiZM1Q)
+<br>[Me - Honolulu](https://www.twitch.tv/videos/1468718462) *volume warning do not use sound
 
-[Noir - Club Camel](https://www.youtube.com/watch?v=GZcohaJndKs)
-[Bald - Club Camel](https://www.youtube.com/watch?v=hz75RQZT3hI)
-[Krona - FSY](https://www.youtube.com/watch?v=4hZvYkFuz-4)
-[Chompey - Ethical](https://www.youtube.com/watch?v=Ogly7SiZM1Q)
-[Me - Honolulu](https://www.twitch.tv/videos/1468718462) *volume warning do not use sound
-
-[Clips of what to NOT do](https://docs.google.com/document/d/1VbEmcuvJG2RZZr1Jz9hN1WJdloSKqmrnDHmwEvcqNsM/edit?usp=sharing)
+<br>[Clips of what to NOT do](https://docs.google.com/document/d/1VbEmcuvJG2RZZr1Jz9hN1WJdloSKqmrnDHmwEvcqNsM/edit?usp=sharing)
 
 ## Soulbinds:
 [Venthyr](https://www.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCW5b4CBTXKChUyQQoTBTWHChUy5AolMuIKIwV2AAoVMkkKNTIxCg)
