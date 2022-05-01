@@ -18,11 +18,8 @@ In this section we will cover the following ...
 - [Rotational Plays](#Plays)
 - [Cooldown usage](#Cooldowns)
 - [Affixes](#Affixes)
+- [9.2 seasonal affix - Encrypted](#Encrypted)
 - [9.1 seasonal affix - Tormented](#Tormented)
-  <br> - [Soggodon the Breaker](#Soggodon)
-  <br> - [Incinerator Arkolath](#Arkolath)
-  <br> - [Oros Coldheart](#Oros)
-  <br> - [Executioner Varruth](#Varruth)
 - [9.0 seasonal affix - Prideful](#Prideful)
 
 ---
@@ -44,7 +41,7 @@ In terms of maximising what you do pack to pack, when you first open on a pack t
 
 - have combo points ready from the last pack (where possible)
 - have one/two {{< spell 319439 "Bloodtalons" >}} stack(s) ready from last pack (where possible)
-- have {{< spell 5217 "Tiger's Fury" >}} up from the last pack *and* off CD (where possible and only when running Tiger's Fury)
+- have {{< spell 5217 "Tiger's Fury" >}} up from the last pack *and* off CD (where possible and only when running {{< spell 202021 "Predator" >}})
 - get {{< spell 285381 "Primal Wrath" >}} (PW) rolling as quick as possible
 - stop applying DoTs when the mobs are about to die (this goes for PW spam at low mob counts and Rake)
 
@@ -78,11 +75,11 @@ Yup, this is a thing that exists, it’s feelycrafty more than factually mathed 
 - 1-12 targets = Feral convoke
 - 13+ targets = Consider Boomie convoke (even without HotW)
 
-That said, I do think people undervalue Feral Convoke in AoE, the Bites, Rakes and Moonfires can be powerful on AoE and provide Combo Points for more PWs which you won't get when Boomievoking- I've gone up to 25k+ with a Feralvoke so feel free to mess around with it and see what works for you.
+That said, I do think people undervalue Feral Convoke in AoE, the Bites, Rakes and Moonfires can be powerful on AoE and provide Combo Points for more PWs which you won't get when Boomievoking - Also in 9.2 with Sickle damage from our 4 piece, you want to make sure you convoke as soon as possible after Berserk to boost up the damage, as it scales with Mastery
 
 **{{< spell 93402 "Sunfire" >}}** - So Sunfire is potentially strong in M+, and you can weave it in when low on energy, the biggest problem though is that you are not in cat form and so are locked out of some of your utility and mob control that is arguably more important in a key. Optimal play in M+ does make use of Sunfire, but don't feel you have to.
 
-One thing to be aware of if you are Sunfire weaving is to be aware of when Predator is about to proc Tiger's Fury, as you don't want multiple free TFs to proc when you're in Boomieform, as it's effectively wasted energy.
+One thing to be aware of if you are Sunfire weaving and running Predator, is to pay attention to mob hp to see what is about to proc Tiger's Fury, as you don't want multiple free TFs to proc when you're in Boomieform, as it's effectively wasted energy.
 
 -----
 
@@ -102,6 +99,13 @@ Currently we have two very strong CDs in M+ that can be used for both ST and AoE
 - **{{< spell 50334 "Berserk" >}}** - Berserk has undergone some changes since SL that make it pretty big on sustained AoE, it's no huge AoE burst like some specs have out there but it's still very solid all rounder.
 - **{{< spell 323764 "Convoke the Spirits" >}}** - Convoke is huge, it's a 4s channelled nuke that switches up based on what form you are in. Feral convoke also casts the Lunar Inspiration version of Moonfire, which means it's AoE potential in Feral form is bigger than some would give it credit for.
 
+With our tier in 9.2 being ...
+
+- **{{< spell 364416 "Heart of the Lion" >}}**  (2-Set) Each combo point spent reduces the cooldown of Incarnation: King of the Jungle or Berserk by 0.5 sec.
+- **{{< spell 363498 "Sickle of the Lion" >}}**  (4-Set) When Berserk ends you lacerate all nearby enemies, dealing (320% of Attack power) Bleed damage over 10 sec.
+
+This means that our {{< spell 50334 "Berserk" >}} CD drops to around 1:30-2:00 in M+, meaning you want to use Berserk on CD as much as possible, else you're effectively wasting the 2p bonus, if it's not on CD then it's CD can't be reduced. The 4p effectively turns Berserk into an AoE focused ability, so if a boss is on 10% hp and you're about to pull a big pack (think 3rd boss in HoA) then it is worth holding Berserk.
+
 *That said* there are times and routes where CD usage matters, for example if your group is planning around a burst window to burn down a pack or a boss, or a particularly nasty pull that needs to be burned down to be efficient (e.g. SoA double pack mid-way through between 1st and 2nd boss with spear), then you need to hold CDs. Talk to your group and coordinate these types of pulls to make sure you have yours ready.
 
 Also, it can be worth having an addon like OmniCD to track your teams CDs, so you don't all blow CDs on the same pack, which can lower the individual value of each members CDs.
@@ -115,8 +119,9 @@ The Feral rotation changes a little in Berserk ...
 - Stealth-modified spells also gain value, as {{< spell 1822 "Rake" >}} and {{< spell 5221 "Shred" >}} have additional benefits for the duration of Berserk
 
 It's worth being aware of how  to use Berserk in different situations:
+*Note:* on 4+ targets, although I've listed the options, Swipe spam is by far the simplest and what i would recommend, they are all very close and the point is more to show that you can do whatever you need to proc BT and likely won't lose much)
 
-![Image](https://cdn.discordapp.com/attachments/337894455589994517/806122266801995777/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/970277661576417341/unknown.png)
 
 -----
 
@@ -226,6 +231,49 @@ Storming is a pain, but again something that Feral can deal with a bit better th
 
 -----
 
+<div id="Encrypted">
+
+## [9.2 seasonal affix - Tormented](#Encrypted)
+
+</div>
+
+![Image](https://wow.zamimg.com/uploads/blog/images/26353.jpg?maxHeight=675&maxWidth=1200)
+
+### Urh Dismantler
+Spawns from defeating the Urh Relic.
+- {{< spell 366297 "Deconstruct" >}} - Tankbuster, increases all damage taken by 25% for 5 seconds. Cast on highest threat target.
+- {{< spell 366288 "Force Slam" >}} - An aoe circle around the automaton to move out of, stuns for 1.5 seconds on hit.
+
+Buff on kill = {{< spell 368239 "Decrypted Urh Cypher" >}} 
+*Grants 200% cooldown reduction on all abilities, restores 10% health and mana every second. Lasts 10 seconds.*
+
+This is the go-to one to kill in any key, it is easier to deal with and gives 20s CDR to all abilities, which for us, means more Convokes and more Berserks, and more Sickle damage from those Berserks - make sure it does.
+
+### Wo Drifter
+Spawns from defeating the Wo Relic.
+- {{< spell 366566 "Burst" >}} - Interruptable 3 second cast that does aoe cosmic damage.
+
+Buff on kill = {{< spell 368241 "Decrypted Wo Cypher" >}} 
+*Grants 150% increased movement speed, 15% damage reduction, and out of combat stealth. Lasts 1 minute.*
+
+This one is killed for certain skips, so make sure to ask at the start of the key if there will be any Wo skips in the run for you to be aware of.
+
+### Vy Interceptor
+Spawns from defeating the Vy Relic.
+- {{< spell 366406 "Shoot" >}} - Shoots a random player in range.
+- {{< spell 366409 "Fusion Beam" >}} - Teleports a short distance and fires a dodgable beam at a player.
+
+Buff on kill = {{< spell 368240 "Decrypted Vy Cypher" >}} 
+*Grants 15% haste and summons an orb of energy that has a chance to proc damage on hit for DPS, or proc a heal for healers. Lasts 45 seconds.*
+
+Vy is awful to deal with as a mob and gives basically no specs a gain over Urh, so do your best to not kill this one.
+
+I'd recommend a Weak Aura like this one to ensure you are killing the correct Relic
+https://wago.io/l1gJSd0yB/5
+
+
+-----
+
 <div id="Tormented">
 
 ## [9.1 seasonal affix - Tormented](#Tormented)
@@ -245,11 +293,8 @@ https://www.wowhead.com/news/patch-9-1-hotfixes-for-the-tormented-mythic-affix-r
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880396248950112306/unknown.png)
 
-<div id="Soggodon">
-  
-### [Soggodon the Breaker](#Soggodon)
-  
-</div>
+ 
+### Soggodon the Breaker
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395459364024340/unknown.png)
 
@@ -271,12 +316,8 @@ As a note, I also want to apologise to my guildy Pasta who I left for dead every
 Stone Ward is the go-to choice, increasing your HP is a no-brainer. Leech is good, but healing yourself when you've taken damage is worse than not taking the damage in the first place, and Dancing Shoes is a weird one that is only relevant for handling Spites (I do recommend it on Spite week).
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678316966084648/unknown.png)
-
-<div id="Arkolath">
   
-### [Incinerator Arkolath](#Arkolath)
-  
-</div>
+### Incinerator Arkolath
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395234343796796/unknown.png)
 
@@ -295,11 +336,7 @@ I like this one as it's the only real selection that makes you stop and think ab
 
 ![Image](https://cdn.discordapp.com/attachments/337894455589994517/858678365137272842/unknown.png)
 
-<div id="Oros">
-  
-### [Oros Coldheart](#Oros)
-  
-</div>
+### Oros Coldheart
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395324412289094/unknown.png)
 
@@ -321,11 +358,7 @@ All of these picks have value.
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880765742839103538/unknown.png)
 
-<div id="Varruth">
-  
-### [Executioner Varruth](#Varruth)
-  
-</div>
+### Executioner Varruth
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/880395389092638760/unknown.png)
 
