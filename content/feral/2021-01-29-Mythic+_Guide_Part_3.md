@@ -14,7 +14,8 @@ patch: "9.0"
 
 ## Part 3 - Whats new in 9.1 and Min-maxing 
 In this section we will cover the following ...
-- [What has changed for Feral with 9.1](#changes)
+- [What has changed for Feral with 9.1/9.2](#changes)
+  <br> - [Tier](#Tier)
   <br> - [Covenant legendaries](#legendaries)
   <br> - [New Conduits](#Conduits)
   <br> - [Sanctum of Domination Shards](#Shards)
@@ -35,7 +36,7 @@ In this section we will cover the following ...
 
 <div id="changes">
   
-## [What has changed for Feral with 9.1](#changes)
+## [What has changed for Feral with 9.1/9.2](#changes)
   
 </div>
 
@@ -50,9 +51,43 @@ One thing that may go in our favour is with the meta shift away from fixed perce
 
 What happened before was say a boss had a +100% damage taken effect, the Shreds would hit for +100% damage which would ignite into the Frenzyband bleed. This bleed would then also do +100% more damage - this has now been changed so that it no longer double dips and only one of the +100% effects would be taken into account.
 
-Frenzyband's high burst means it is still good in scenarios where mobs have temporary increased damage taken, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists. With Apex and Celestial existing, I don't feel Frenzyband has a home anymore.
+Frenzyband's high burst means it is still good in scenarios where mobs have temporary increased damage taken, but nowhere near as broken as before where we were seeing 50k+ burst on the first boss of Mists.
 
 ### What is new ...
+
+<div id="Tier">
+  
+### [Tier](#Tier)
+  
+</div>
+
+For Feral Druids in 9.2, our tier set bonus revolves around reducing the CD of Berserk and empowering the cast of berserk with a Damage over Time proc.
+
+- {{< spell 364416 "Heart of the Lion (2-Set)" >}} Each combo point spent reduces the cooldown of Incarnation: King of the Jungle or Berserk by 0.5 sec.
+- {{< spell 363498 "Sickle of the Lion (4-Set)s" >}} Entering Berserk causes you to strike all nearby enemies, dealing (320.2% of Attack power) Bleed damage over 10 sec. Deals reduced damage beyond 8 targets.
+
+The Single Target gains for our individual set boost are as follows ...
+![Image](https://cdn.discordapp.com/attachments/327879699810353152/955604603007799397/unknown.png)
+
+- Expect about a 1:30 to 2:00 min CD on Berserk
+- In M+ sims (under the above assumptions) we're seeing ~1:20 CD on berserk, but real life usage is every 1:45-2:00 mins
+
+The current best play is still to hold Berserk for up to 32s to pair with your next Convoke, if Berserk comes off CD with Convoke at 33s+ CD, you send Berserk and don't hold. In M+, you send CDs on CD, holding CDs is bad with Uhr existing.
+
+The interactions with Sickle are as follows ...
+- 2p does work with convoke bites
+- 2p does work with apex bites
+- 4p is currently a 400% ap DoT over 10s 
+- 4p is a capped at 8 then lowers per mob AoE DoT
+- 4p is dynamically buffed by TF
+- 4p seems to have a 8 yard range
+- 4p isn't buffed by boomy affinity
+- 4p can crit 
+- 4p is impacted by haste dynamically 
+- 4p is impacted by mastery dynamically 
+- 4p is impacted by versatility dynamically
+- 4p is buffed by Adaptive Swarm
+- 4p is buffed by Savage Roar
 
 <div id="legendaries">
   
@@ -225,39 +260,15 @@ Feral talent changes are pretty restricted, it comes down to Pred vs SbT most of
 
 So when I wrote this part originally there wasn't much choice or variation recommended, this has since changed and now there are a few different builds that are recommended in different keys, or playstyles. I went into the detail of what these builds offer in Part.1 so check that out for the reasoning. 
 
-### The Apex & Celest Builds 
-This is the standard "go-to" build, which provides more Single Target and Priority damage, consider this build in ...
-
-- Theater of Pain
-- Spires of Ascension
-- Mists of Tirna Scithe
-
-You can also run Celest in every key quite happily and run it with Predator if you want more AoE, it's an incredibly versatile legendary.
+### The Apex with Unity build
+This is the standard "go-to" build, which provides more Single Target and Priority damage, consider this build in any key, especially pugs - Apex is currently a very safe "go to" pairing with Unity
 
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
-### **Circle Build**  
-More general AoE focused, consider this build in ...
+### **Frenzy with Unity Build** 
+The Frenzy build is mostly for much larger AoE pulls and Single Target gains, *but* is generally considered slightly worse than Apex in unplanned content. If you run with a regular team and can really make use of the large AoE Frenzyband plus Sickle can deliver regularly, then go for it. 
 
-- De Other Side
-- Halls of Atonement
-- Plaguefall 
-- Sanguine Depths
-- Necrotic Wake
-
-SotF focused  
-![Image](https://cdn.discordapp.com/attachments/879667478916120596/879741959432994816/unknown.png)
-
-For a changeup and bit of fun ...
-![Image](https://cdn.discordapp.com/attachments/879667478916120596/880425661540470826/unknown.png)
-
-### **Frenzy Build** 
-Meme fun in Mists and *potentially* SoA
-
-- Spires of Ascension
-- Mists of Tirna Scithe
-
-So in Mists you basically only want this for the 1st boss. Because there is an Inn outside the key, you can actually do some extra fun stuff here where you run the below build up until the first boss, then during the death RP you hearth out (making sure to have set your hearth outside before the key), change your gear/build at the Inn, then walk back in. Hopefully another Night Fae in your group has activated the checkpoint or you have a long walk to get back.
+As of writing, there is no definitive answer as to which is better, Apex vs Frenzyband.
 
 ![image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
@@ -294,6 +305,7 @@ Although this is often left to tanks, knowing a solid route and the count that s
 - **Sanguine Depths**: 68.96% before jumping down after the second boss.
 - **Spires of Ascension**: 87.37% before going up for Devos.
 - **The Necrotic Wake**: 68.2% before going up into the Stichworks area
+- **Tazavesh: Streets of Wonder**: There is 15.8% trash in the Mailroom
 
 -----
 
