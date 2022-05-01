@@ -61,17 +61,15 @@ For a full talent write-up, check out Wordups IcyVeins guide which goes into det
 https://www.icy-veins.com/wow/feral-druid-pve-dps-spec-builds-talents  
 
 ### M+ Talent Breakdown
-Feral in keys is pretty cookie-cutter, you only really change out {{< spell 202031 "Sabertooth" >}} or {{< spell 202021 "Predator" >}} depending on whether you want to focus more into Single Target (ST) or Area of Effect (AoE). There are some niche builds you can mess around with which i'll get into later in the guide, but the below is what I'd recommend most Ferals to run for 95% of M+ content.
+Feral in keys is pretty cookie-cutter, you only really change out the utility choices in a given key, such as whether you run {{< spell 108238 "Renewal" >}}, {{< spell 132302 "Wild Charge" >}} or {{< spell 252216 "Tiger's Dash" >}}. There are some niche builds you can mess around with which i'll get into later in the guide, but the below is what I'd recommend most Ferals to run for 95% of M+ content.
 
-![Image](https://cdn.discordapp.com/attachments/879667478916120596/879667493629743104/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/970258991324233789/unknown.png)
 
 So, what are the things you should be thinking about when you go into a key ...
 
-**Row 15** - {{< spell 202021 "Predator" >}} vs {{< spell 202031 "Sabertooth" >}} comes purely down to AoE vs ST, if you need more AoE, you run {{< spell 202021 "Predator" >}}, if you need more ST, you run {{< spell 202031 "Sabertooth" >}}. There are other considerations like {{< spell 202031 "Sabertooth" >}} synergises well with certain legendaries but it really does come down to that. 
+**Row 15** - {{< spell 202021 "Predator" >}} vs {{< spell 202031 "Sabertooth" >}} comes purely down to AoE vs ST, if you need more AoE, you run {{< spell 202021 "Predator" >}}, if you need more ST, you run {{< spell 202031 "Sabertooth" >}}. There are other considerations like {{< spell 202031 "Sabertooth" >}} synergises well with certain legendaries but it really does come down to that. In 9.2 with Unity and 1 minute convoke, {{< spell 202031 "Sabertooth" >}} is basically locked in
 
 It's worth being aware that even in large AoE leaning keys, Feral has historically ran {{< spell 202031 "Sabertooth" >}} anyways to make use of the ST power that we bring to a key. for all of 8.0 through 8.2 {{< spell 202031 "Sabertooth" >}} was the go-to choice, only really switching to {{< spell 202021 "Predator" >}} in 8.3, which continued into 9.0 with those running {{< spell 338657 "Circle" >}} for an AoE focused build. In 9.1 with Celest taking off and it's strong synergy with {{< spell 202031 "Sabertooth" >}}, most people have moved back to this talent.
-
-This choice is subjective and there's no "right" answer, play which you feel is right for the situation you're about to be in.
 
 **Row 25** - This row you can take anything, I prefer {{< spell 102401 "Wild Charge" >}} purely because I value quick burst movement in M+ over the defensive of {{< spell 108238 "Renewal" >}} or the speed from {{< spell 252216 "Tiger Dash" >}}. {{< spell 108238 "Renewal" >}} can be strong in keys with bursty damage as a self-sustain option or to help out on Grievous weeks, but this is a personal choice as Feral is already a very tanky spec.
 
@@ -84,13 +82,13 @@ This choice is subjective and there's no "right" answer, play which you feel is 
 
 **Row 40** - {{< spell 158476 "Soul of the Forest" >}} is the default choice here, it is both the strongest and simplest, it also enables 25 energy bites during {{< spell 106951 "Berserk" >}} which you don't do with {{< spell 52610 "Savage Roar" >}}, and there is some places where 25e Bites are really nice to pump damage hard and fast, like Mists 1st boss burn and SoA 3rd boss burn. 
 
-{{< spell 52610 "Savage Roar" >}} isn't too far behind so if you want something different and to mess around with, try it out.
+{{< spell 52610 "Savage Roar" >}} isn't too far behind so if you want something different and to mess around with, try it out - it does boost up 4p {{< spell 363498 "Sickle of the Lion" >}} damage.
 
 **Row 45** - Row 45 is hard locked to {{< spell 285381 "Primal Wrath" >}}, as a disgustingly strong spell, lock it in in M+ and abuse it. 
 
 Unfortunately {{< spell 210663 "Scent of Blood" >}} has never been chosen as a talent ever by anyone seriously in M+, and {{< spell 202028 "Brutal Slash" >}} is a shell of it's former Legion self and should only really be taken in ST.
 
-**Row 50** - Originally a lot of early sims with low gear had {{< spell 274837 "Feral Frenzy" >}} equal to or above {{< spell 319439 "Bloodtalons" >}}, but as time has passed and gear has grown this is no longer the case, BT is simply too good. Also since leaving BfA where builders were much stronger than they are today, {{< spell 236068 "Moment of Clarity" >}} is basically dead, as right now builders do not do enough to justify choosing it.
+**Row 50** - Originally a lot of early sims with low gear had {{< spell 274837 "Feral Frenzy" >}} equal to or above {{< spell 319439 "Bloodtalons" >}}, but as time has passed and gear has grown this is no longer the case, BT is simply too good. Also since leaving BfA where builders were much stronger than they are today, {{< spell 236068 "Moment of Clarity" >}} is basically dead, as right now builders do not do enough to justify choosing it - some are currently (9.2) messing around with MoC with Frenzyband, but there is still no definitive answer whether this beats out BT or not (as of writing).
 
 -----
 
@@ -104,25 +102,29 @@ Unfortunately {{< spell 210663 "Scent of Blood" >}} has never been chosen as a t
 
 The below shows a wide combination of sims with mythic raiding gear (close to best in slot) and how it impacts the DPS in Dungeon Slice sims.
 
-Snapshotted on the 24th of Aug, so worth checking the below link as changes in SimC can cause changes in output.
+Snapshotted on the 1st of May 2022, so worth checking the below link as changes in SimC can cause changes in output.
 
 Dreamgrove Mythic Dungeon (Dungeon Slice) all combinations sim:
+- first picture is Dungeon Slice
+- second picture is the "HoA" route  
+
 https://www.dreamgrove.gg/sims/cat/
 
-![Image](https://cdn.discordapp.com/attachments/879667478916120596/879731597849554964/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/970269382322319400/unknown.png)
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/970269437804556338/unknown.png)
 
 ### {{< spell 354118 "Celestial Spirits" >}}
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/879733391975678012/unknown.png)
 
 **Craft it on** 
-- Legs
+- Helm or Boots
 
-Celest is the king of 9.1. A 1 minute burst ST CD as strong as {{< spell 323764 "Convoke the Spirits" >}} makes it very hard to justify running anything else, especially with how powerful Single Target is in this tier. The Tormented mini-bosses dying fast is important, so guaranteeing you have a convoke for every one is big, as well as being able to fit in 2-3 convokes per boss fight also means as a Feral you're likely to be 2-3k ST DPS above your next rival.
+Celest was the king of 9.1, and has now in 9.2 moved on to be our "Unity" slot legendary as our covenant ability. A 1 minute burst ST CD as strong as {{< spell 323764 "Convoke the Spirits" >}} makes it very hard to justify running any other Covenant, especially with it's synergy with our tier 2p {{< spell 364416 "Heart of the Lion" >}}.
 
-Focusing on ST with a {{< spell 202031 "Sabertooth" >}}/Celest build also means that your two other teammates can run more AoE focused builds, allowing for specs to play to their niches more.
+Celests interactions with our 2p do force us down the {{< spell 202031 "Sabertooth" >}} route, as with this legendary you get 2-4 bites per convoke, which amped up with {{< spell 202031 "Sabertooth" >}}  do a lot of damage. 
 
-Convoke on a 1min ST does also come with some utility advantages, such as a 1 min strong AoE heal, an AoE CD in Boomie convoking (though I'm always unsure how valuable this is).
+Convoke on a 1min CD does also come with some utility advantages, such as a 1 min strong AoE heal, an AoE CD in Boomie convoking (though I'm always unsure how valuable this is).
 
 #### Go-to build with Celest
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
@@ -134,11 +136,11 @@ Convoke on a 1min ST does also come with some utility advantages, such as a 1 mi
 
 **Craft it on** 
 - Shoulder or Waist normally, either is fine
-- Waist in 9.1 (due to domination sockets)
+- Waist in 9.2 (due to shoulders being a tier slot)
 
 Apex is used for funneling damage and to abuse the current strength of bites. The strength of Apex is that it allows you to pump procs into targets that you want to prioritise down. This changes your gameplay a little in that you will be weaving in bite procs whenever they proc, as soon as they proc ideally, to not munch new procs. The swings with Apex can also be huge, with enough Rips out or enough luck, you can power bites into targets to really spike damage, which can be big to prioritise a mob down on weeks like inspiring. 
 
-Apex is best in 2/3 target cleave, so you want to consider it in keys where you know you aren't going to get much AoE and there'll be a lot of small packs or bosses with 2 targets. For example Spires and Theater - Mists is also a contendor due to the 2nd boss being so bad for DoT damage and the first boss having two targets to fish for procs off of.
+Apex is best in 2/3 target cleave, so you want to consider it in keys where you know you aren't going to get much AoE and there'll be a lot of small packs or bosses with 2 targets. For example Spires and Theater - Mists is also a contendor due to the 2nd boss being so bad for DoT damage and the first boss having two targets to fish for procs off of, but Frenzyband here is also good because of the burst on the 1st boss, so it depends on your comp.
 
 Also if your group is very AoE heavy, you can run Apex to be the "janitor" of the key and think of yourself as lowering the HP of the highest mob in the pack to make sure packs die more evenly.
 
@@ -147,8 +149,34 @@ If you run Apex, you really need to play into it, so I'd recommend the below to 
 #### Go-to build with Apex
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/879738407985754232/unknown.png)
 
-**One thing to note**, Apex is *NOT* a "do more ST" legendary, Circle and Apex do similar damage on ST, you can easily take {{< spell 202031 "Sabertooth" >}} with Circle and do equal ST as Apex, so don't make the Apex vs Circle decision based solely on that, it's about prio and 2/3t cleave not ST vs AoE.
 
+### {{< spell 340053 "Frenzyband" >}}
+
+**Craft it on** 
+- Waist or Wrist
+
+Either is fine, I tend to recommend Waist purely to make gearing easier as you can swap between Apex and Frenzy in the same slot)
+
+Frenzyband is a new legendary for us in M+. with tier 2p {{< spell 364416 "Heart of the Lion" >}} meaning more {{< spell 106951 "Berserk" >}} casts due to a lower CD (about every 1:30-2:00 instead of 3:00), this is simply more {{< spell 340053 "Frenzyband" >}} damage.
+
+There is a choice here to be made, you can either run {{< spell 319439 "Bloodtalons (BT)" >}} or {{< spell 236068 "Moment of Clarity (MoC)" >}}. BT is a safe pic and will do you well during the entire key, MoC will make you do more damage during your Berserk window due to it's interaction with Frenzyband, and is arguably a simpler to play talent.
+
+Frenzyband is also our Single Target legendary of choice, so if you run it with BT, in theory you'll have higher boss damage *if* you're going to get an extra use out of Berserk on that boss pull, if not BT will be the higher choice. Frenzyband is very reliant on good CD usage and a reasonably clean run, if your CD usage is bad then this is the same as just not equipping a legendary as the CD reduction on Berserk is basically unnoticeable (~20s) - it's a fun legendary to play, but you do need to be aware of how to play it.
+
+Pre-nerf, Frenzyband did some fun things that i'll leave in here for history, **but unfortunately this is no longer the case**, how it used to work was ...
+
+*Frenzyband takes your builder damage and turns it into a DoT, so on multiplier bosses this double dips, as your builders do x% more damage, which turns into a DoT, which then does x% more damage. This can lead to some silly things like the below, where I did 8k overall and ~46k DPS on the first boss in Mists.*
+
+![Image](https://cdn.discordapp.com/attachments/121880917579923458/831800842553262090/unknown.png)
+
+https://clips.twitch.tv/BoldGorgeousLardJebaited-zfLH6t9xAAssSKbQ
+
+Now however, the DoT itself no longer double dips, so using the above line ...
+
+*Frenzyband takes your builder damage and turns it into a DoT, so on multiplier bosses this double dips, as your builders do x% more damage, which turns into a DoT, ~~which then does x% more damage~~. This can lead to some silly things like the below, where I did 8k overall and ~46k DPS on the first boss in Mists.*
+
+#### Go-to build with Frenzyband
+![Image](https://cdn.discordapp.com/attachments/337894455589994517/970272510153211934/unknown.png)
 
 ### {{< spell 338657 "Circle" >}} (JW)
 
@@ -156,9 +184,9 @@ If you run Apex, you really need to play into it, so I'd recommend the below to 
 
 **Craft it on** 
 - Helm
-- Ring in 9.1 (due to domination sockets)
+- Ring in 9.2 (due to shoulders being a tier slot)
 
-Circle is the highest sustained AoE damage choice of all legendaries, but this is general damage across all mobs, so the trade off vs Apex is this adds no targeted damage in mob groups. 
+Circle used to be the highest sustained AoE damage choice of all legendaries, unfortunately with the changes from 9.0 through 9.1 to 9.2, Circle has fallen massively out of favour, mostly because of Unity and {{< spell 202031 "Sabertooth's" >}} interaction with a 1 minute {{< spell 323764 "Convoke the Spirits" >}}. There is no huge place for Circle outside of a Necro build currently.
 
 As Circle is more of an AoE choice, you take it with {{< spell 202021 "Predator" >}} lean into the energy gain and AoE power that TF gives. You can run {{< spell 202031 "Sabertooth" >}} with Circle to focus on ST a bit more, but I find there is negative synergy with Circle lowering DoT duration, which leads to more Rip/PWs and less bites, so you don't get as much power out of your bites as you do with Apex.
 
@@ -182,22 +210,6 @@ As Circle is more of an AoE choice, you take it with {{< spell 202021 "Predator"
 - Neck in 9.1 (due to domination sockets)
 
 ![Image](https://cdn.discordapp.com/attachments/879667478916120596/879737120795820082/unknown.png)
-
-**{{< spell 340053 "Frenzyband" >}}** - So, is Frenzyband a meme, the short answer is *yes*, it definitely is. The long answer though is that it *is* playable, especially in Spires and Mists that have a multiplier boss to abuse. Frenzyband is very reliant on good CD usage and a reasonably clean run, if your CD usage is bad then this is the same as just not equipping a legendary as the CD reduction on Berserk is basically unnoticeable (~20s) - it's a fun legendary to play, but you do need to be aware of how to play it.
-
-Pre-nerf, Frenzyband did some fun things that i'll leave in here for history, but unfortunately this is no longer the case, how it used to work was ...
-
-*Frenzyband takes your builder damage and turns it into a DoT, so on multiplier bosses this double dips, as your builders do x% more damage, which turns into a DoT, which then does x% more damage. This can lead to some silly things like the below, where I did 8k overall and ~46k DPS on the first boss in Mists.*
-
-![Image](https://cdn.discordapp.com/attachments/121880917579923458/831800842553262090/unknown.png)
-
-https://clips.twitch.tv/BoldGorgeousLardJebaited-zfLH6t9xAAssSKbQ
-
-Now however, the DoT itself no longer double dips, so using the above line ...
-
-*Frenzyband takes your builder damage and turns it into a DoT, so on multiplier bosses this double dips, as your builders do x% more damage, which turns into a DoT, ~~which then does x% more damage~~. This can lead to some silly things like the below, where I did 8k overall and ~46k DPS on the first boss in Mists.*
-
-Frenzyband is still strong for short burst, but it's not nearly as good as it once was in keys like Mists and SoA.
 
 -----
 
