@@ -47,7 +47,7 @@ patch: "9.2"
 
 ## Random Vods for research purposes:
 
-<br>[Noir - Club Camel](https://www.youtube.com/watch?v=GZcohaJndKs)
+<br>[Nolr - Club Camel](https://www.youtube.com/watch?v=GZcohaJndKs)
 <br>[Bald - Club Camel](https://www.youtube.com/watch?v=hz75RQZT3hI)
 <br>[Krona - FSY](https://www.youtube.com/watch?v=4hZvYkFuz-4)
 <br>[Chompey - Ethical](https://www.youtube.com/watch?v=Ogly7SiZM1Q)
