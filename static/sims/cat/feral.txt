@@ -4,7 +4,7 @@ actions.precombat+=/augmentation
 # Snapshot raid buffed stats before combat begins and pre-potting is done.
 actions.precombat+=/snapshot_stats
 actions.precombat+=/variable,name=4cp_bite,value=0
-# Shred = 0, Non-snapshot Rake = 1, Snapshot Rake = 2, LI = 3, Swipe = 4
+# Defines what ability to use as a filler. Shred = 0, Non-snapshot Rake = 1, Snapshot Rake = 2, LI = 3, Swipe = 4
 actions.precombat+=/variable,name=filler,value=1
 actions.precombat+=/variable,name=rip_ticks,value=7
 # The variable is set to 0 with no stat on use trinkets, 1 when the first one is on use, 2 if the second is and 3 if both are
@@ -91,6 +91,7 @@ actions.filler=rake,target_if=max:druid.rake.ticks_gained_on_refresh,if=variable
 actions.filler+=/rake,if=variable.filler=2
 actions.filler+=/lunar_inspiration,if=variable.filler=3
 actions.filler+=/swipe,if=variable.filler=4
+actions.filler+=/swipe_cat,if=spell_targets.swipe_cat=1&!buff.clearcasting.up
 actions.filler+=/shred,if=buff.sudden_ambush.down
 
 actions.finisher=pool_resource,for_next=1
@@ -117,7 +118,7 @@ actions.setup+=/call_action_list,name=finisher,if=combo_points>3&(buff.bloodtalo
 
 # Rake needs roughly 50% of its length at a minimum to surpass shreds dpe
 actions.stealth=pool_resource,for_next=1
-actions.stealth=swipe_cat,if=buff.bs_inc.up&spell_targets.swipe_cat>3&runeforge.frenzyband
+actions.stealth+=/swipe_cat,if=buff.bs_inc.up&spell_targets.swipe_cat>3&runeforge.frenzyband
 actions.stealth+=/rake,target_if=max:druid.rake.ticks_gained_on_refresh,if=(dot.rake.pmultiplier<1.5|refreshable)&druid.rake.ticks_gained_on_refresh>2|(persistent_multiplier>dot.rake.pmultiplier&buff.bs_inc.up&spell_targets.thrash_cat<3&covenant.necrolord)|buff.bs_inc.remains<1
 actions.stealth+=/lunar_inspiration,if=spell_targets.thrash_cat<3&refreshable&druid.lunar_inspiration.ticks_gained_on_refresh>5&(combo_points=4|dot.lunar_inspiration.remains<5|!dot.lunar_inspiration.ticking)
 # Brutal Slash is better than stealth Shred at 3 targets
