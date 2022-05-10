@@ -1,5 +1,5 @@
 ---
-date: '2019-04-15'
+date: '2022-05-10'
 authors: ["Chicken"]
 published: true
 patch: "9.2"
@@ -32,7 +32,7 @@ Welcome to the Balance Druid Raidbots Guide. 
 <br>This guide will be split in multiple sections, but it is highly recommended that you read it top to bottom and do not skip directly to a section even if you do have a basic understanding of how this works, as it is relatively hard to properly categorize the skill level necessary to use some of these tools. 
 <br>Without further ado, let us dive into this wonderful experience that are simulations.
 
-### The visual version of the guide made by Tettles can be found here: *soontm
+### The visual version of the guide made by Tettles can be found here: https://youtu.be/a35xysEzS6c
 
 <div id="setup">
 
