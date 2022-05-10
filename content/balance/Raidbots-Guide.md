@@ -315,16 +315,16 @@ shadowlands.soleahs_secret_technique_type=haste
 
 ```
 copy=mast
-shadowlands.soleahs_secret_technique_type=mastery
+shadowlands.unbound_changeling_stat_type=mastery
 
 copy=all
-shadowlands.soleahs_secret_technique_type=all
+shadowlands.unbound_changeling_stat_type=all
 
 copy=crit
-shadowlands.soleahs_secret_technique_type=crit
+shadowlands.unbound_changeling_stat_type=crit
 
 copy=haste
-shadowlands.soleahs_secret_technique_type=haste
+shadowlands.unbound_changeling_stat_type=haste
 ```
 
 
