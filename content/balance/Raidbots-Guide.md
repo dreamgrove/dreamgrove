@@ -282,49 +282,37 @@ external_buffs.power_infusion="10/210"
 ### For simming all Theotar Teas in advanced. The default is a combination of all four.
 
 ```
-copy=int
-shadowlands.party_favor_type=primary
+profileset."primary"+="shadowlands.party_favor_type=primary
 
-copy=haste
-shadowlands.party_favor_type=haste
+profileset."haste"+="shadowlands.party_favor_type=haste
 
-copy=crit
-shadowlands.party_favor_type=crit
+profileset."crit"+="shadowlands.party_favor_type=crit
 
-copy=vers
-shadowlands.party_favor_type=versatility
+profileset."versatility"+="shadowlands.party_favor_type=versatility
 ```
 
 ### For simming all Soleah stats in advanced. 
 
 ```
-copy=mast
-shadowlands.soleahs_secret_technique_type=mastery
+profileset."mastery"+="shadowlands.soleahs_secret_technique_type=mastery"
 
-copy=vers
-shadowlands.soleahs_secret_technique_type=versatility
+profileset."versatility"+="shadowlands.soleahs_secret_technique_type=versatility"
 
-copy=crit
-shadowlands.soleahs_secret_technique_type=crit
+profileset."crit"+="shadowlands.soleahs_secret_technique_type=crit"
 
-copy=haste
-shadowlands.soleahs_secret_technique_type=haste
+profileset."haste"+="shadowlands.soleahs_secret_technique_type=haste"
 ```
 
 ### For simming all Unbound Changeling stats in advanced. 
 
 ```
-copy=mast
-shadowlands.unbound_changeling_stat_type=mastery
+profileset."all"+="shadowlands.unbound_changeling_stat_type=all"
 
-copy=all
-shadowlands.unbound_changeling_stat_type=all
+profileset."haste"+="shadowlands.unbound_changeling_stat_type=haste"
 
-copy=crit
-shadowlands.unbound_changeling_stat_type=crit
+profileset."crit"+="shadowlands.unbound_changeling_stat_type=crit"
 
-copy=haste
-shadowlands.unbound_changeling_stat_type=haste
+profileset."mastery"+="shadowlands.unbound_changeling_stat_type=mastery"
 ```
 
 
