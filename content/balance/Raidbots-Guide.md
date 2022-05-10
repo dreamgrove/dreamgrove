@@ -92,15 +92,15 @@ Droptimizer should be used whenever you are trying to find what dungeon to farm 
 
 </div>
 
-Fight style: Patchwerk (always, Dungeon Slice is not optimized for Balance)
-Number of Bosses: How many you want, usually 1
-Fight Length: How much you want, usually 5
-SimC Version: Nightly
-Weapon Oil: Default
-So'leah's Secret Technique Stat: Mastery
-Unbound Changeling Proc: Mastery
-IQD Stat Proc Chance: 100% usually, change to however you want (0% on a 5min sim uses it once, 100% uses it twice, bloodlust cube is always used)
-Disable IQD Execute:Disabled (box ticked)
+<br>Fight style: Patchwerk (always, Dungeon Slice is not optimized for Balance)
+<br>Number of Bosses: How many you want, usually 1
+<br>Fight Length: How much you want, usually 5
+<br>SimC Version: Nightly
+<br>Weapon Oil: Default
+<br>So'leah's Secret Technique Stat: Mastery
+<br>Unbound Changeling Proc: Mastery
+<br>IQD Stat Proc Chance: 100% usually, change to however you want (0% on a 5min sim uses it once, 100% uses it twice, bloodlust cube is always used)
+<br>Disable IQD Execute: Disabled (box ticked)
 
 <div id="competent">
 
