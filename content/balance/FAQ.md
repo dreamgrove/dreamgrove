@@ -1,9 +1,9 @@
 ---
-date: '2022-03-31'
+date: '2022-06-14'
 authors: ["Chicken, Jundarer"]
 published: true
-patch: "9.2"
-title: Patch 9.2 FAQ
+patch: "9.2.5"
+title: Patch 9.2.5 FAQ
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. News](#news)
@@ -54,6 +54,9 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
 
+  + 2022-06-14:
+  <br>Updated: Dates, patch number, random names 
+  
   + 2022-03-31:
   <br>Removed: Bear Tech
 
@@ -454,11 +457,11 @@ The choice between {{< spell 281847 "Twin Moons" >}} and Drift depends on how lo
 
 **The currently most viable playstyles are:**
 
-   - Venthyr Hysteria (+Pulsar)
-   - NF Pulsar
-   - Kyrian Kindred Affinity (+Pulsar)
+   - Venthyr Pulsar (+Unity)
+   - NF Pulsar (+Unity)
+   - Kyrian Pulsar (+Unity)
 
-**Venthyr Hysteria:**
+**Venthyr Pulsar:**
 
 - {{< spell 343647 "Solstice" >}} is playable in spread aoe but requires 3+ targets of permanent uptime which can be very very hard to find. 
 
@@ -466,7 +469,7 @@ The choice between {{< spell 281847 "Twin Moons" >}} and Drift depends on how lo
 
 - {{< spell 274281 "Moons" >}} should never get picked with this build as they are inferior to FoE in every scenario.
 
-**Night Fae Pulsar + Kyrian KA:**
+**NF + Kyrian Pulsar:**
 
 - {{< spell 343647 "Solstice" >}} is a better choice for this build when compared to Venthyr because of the fact that FoE is not as strong, meaning that you will have more opportunities to pick this talent depending on the raid fight. Currently there is no situation where it is better but it can still be picked without a major loss.
 
