@@ -1,6 +1,6 @@
 ---
 title: "Lords of Dread"
-date: 2022-3-11
+date: 2022-6-24
 authors: ['Chicken']
 published: true
 showOnFrontpage: false
@@ -15,8 +15,9 @@ patch: "9.2"
 - Starfall on cd :)
 
 ## Mythic only notes:
-- idk man just dont play this fight as balance go any other spec or get benched.
-- will update whenever i will play this fight as boomie (never)
+- Literally hc version but now you have to actually bait sleep puddles
+- CDs: 47sec / 5:44 if only 2cds OR 47 / 3:50 / 7:44 if 3cds (depends how fast u reduce boss hp bar to 0)
+- Dont die????
 
 ## Soulbinds:
 [Venthyr](https://ptr.wowhead.com/soulbind-calc/venthyr/theotar-the-mad-duke/druid/AwCWZb4CBTUgChU1ygoTBTWHChUy5AolMuIKIwUySQoVMj8KNXYACg)
@@ -25,7 +26,7 @@ patch: "9.2"
 
 ## Talents:
 
-{{< talents spec="balance" src="live" recommend="311,113,133,113,313,131,132" >}}
+{{< talents spec="balance" src="live" recommend="311,113,133,113,113,133,132" >}}
 
-Row5: SotF is around 20 more dps on 2t and 400 more dps on 3t. Make sure to sim yourself and keep in mind that this is a 2.5target fight with a 3rd add sometimes appearing if your dk decides to be useful and grip it.
+Row6: Play StFl if you are gigachad
 
