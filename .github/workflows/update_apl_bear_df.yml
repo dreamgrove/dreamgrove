@@ -3,7 +3,7 @@ name: Update APL Bear
 on:
   push:
     paths:
-      - 'static/sims/bear/guardian.txt'
+      - 'static/sims/bear/guardian_df.txt'
 
 defaults:
   run:
@@ -23,9 +23,10 @@ jobs:
           repository: simulationcraft/simc
           token: ${{ secrets.API_TOKEN_GITHUB }}
           path: './static/sims/simc'
+          ref: dragonflight
       - name: generate APL
         run: |
-          python generate_apl.py --spec=bear "./simc"
+          python generate_apl.py --spec=bear --df "./simc"
       - name: commit APL
         run: |
           git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg

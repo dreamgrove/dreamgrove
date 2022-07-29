@@ -3,19 +3,23 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--spec', choices=['owl', 'cat', 'bear', 'tree'])
+parser.add_argument('--df')
 parser.add_argument('simcpath', type=str, help='path to SimC root (include \\simc)')
 args = parser.parse_args()
 
 spec_map = {
-    'owl': ['owl', 'balance.txt', 'balance_apl.inc'],
-    'cat': ['cat', 'feral.txt', 'feral_apl.inc'],
-    'bear': ['bear', 'guardian.txt', 'guardian_apl.inc'],
-    'tree': ['tree', 'restoration.txt', 'restoration_druid_apl.inc']
+    'owl': ['owl', 'balance.txt', 'balance_df.txt', 'balance_apl.inc'],
+    'cat': ['cat', 'feral.txt', 'feral_df.txt', 'feral_apl.inc'],
+    'bear': ['bear', 'guardian.txt', 'guardian_df.txt', 'guardian_apl.inc'],
+    'tree': ['tree', 'restoration.txt', 'restoration_df.txt', 'restoration_druid_apl.inc']
 }
 
 spec_data = spec_map.get(args.spec)
-txt_file = os.path.join(spec_data[0], spec_data[1])
-inc_file = spec_data[2]
+if args.df:
+    txt_file = os.path.join(spec_data[0], spec_data[2])
+else:
+    txt_file = os.path.join(spec_data[0], spec_data[1])
+inc_file = spec_data[3]
 
 apl_lists = {}
 
