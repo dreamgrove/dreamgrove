@@ -53,14 +53,14 @@ actions.bear+=/moonfire,if=buff.galactic_guardian.up&active_enemies<3
 actions.bear+=/thrash_bear,target_if=refreshable|dot.thrash_bear.stack<3|(dot.thrash_bear.stack<4&runeforge.luffainfused_embrace.equipped)|active_enemies>=4|buff.berserk_bear.up&buff.berserk_bear.remains<=gcd+0.5
 actions.bear+=/fleshcraft,if=soulbind.pustule_eruption.enabled&((cooldown.thrash_bear.remains>0&cooldown.mangle.remains>0)&(dot.moonfire.remains>=3)&(buff.incarnation_guardian_of_ursoc.down&buff.berserk_bear.down&buff.galactic_guardian.down))|soulbind.volatile_solvent.enabled,interrupt_immediate=1,interrupt_global=1,interrupt_if=soulbind.volatile_solvent&(cooldown.thrash_bear.remains>0&cooldown.mangle.remains>0)
 actions.bear+=/swipe,if=buff.incarnation_guardian_of_ursoc.down&buff.berserk_bear.down&active_enemies>=4
-actions.bear+=/maul,if=(buff.incarnation.up)&active_enemies<3&(buff.tooth_and_claw.stack>=2)|(buff.tooth_and_claw.up&buff.tooth_and_claw.remains<1.5)|(buff.berserk_bear.up|buff.incarnation.up)&(buff.savage_combatant.stack>=3)&active_enemies<3|!conduit.savage_combatant.enabled&(buff.berserk_bear.up|buff.incarnation.up)&active_enemies<3
+actions.bear+=/maul,if=(buff.incarnation.up)&active_enemies<3&(buff.tooth_and_claw.stack>=2)|(buff.tooth_and_claw.up&buff.tooth_and_claw.remains<1.5)&active_enemies<3|(buff.berserk_bear.up|buff.incarnation.up)&(buff.savage_combatant.stack>=3)&active_enemies<3|!conduit.savage_combatant.enabled&(buff.berserk_bear.up|buff.incarnation.up)&active_enemies<3|(buff.savage_combatant.stack>=3)&active_enemies<3|!conduit.savage_combatant.enabled&active_enemies<3
 actions.bear+=/mangle,if=buff.incarnation.up&active_enemies<=3
 actions.bear+=/thrash_bear,if=active_enemies>1
-actions.bear+=/mangle,if=((rage<90)&active_enemies<3)|((rage<85)&active_enemies<3&talent.soul_of_the_forest.enabled)
+actions.bear+=/mangle
 actions.bear+=/pulverize,target_if=dot.thrash_bear.stack>2
 actions.bear+=/thrash_bear
 actions.bear+=/swipe_bear
-actions.bear+=/ironfur,if=!buff.ironfur.up
+actions.bear+=/ironfur,if=rage>=60&buff.ironfur.stack<2&conduit.savage_combatant.enabled&active_enemies<3|!conduit.savage_combatant.enabled&rage>=42&buff.ironfur.down&active_enemies<3|active_enemies>=3&rage>80&buff.ironfur.stack<7
 
 actions.catweave=heart_of_the_wild,if=talent.heart_of_the_wild.enabled&!buff.heart_of_the_wild.up&!buff.cat_form.up
 actions.catweave+=/cat_form,if=!buff.cat_form.up
