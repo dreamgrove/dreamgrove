@@ -1,5 +1,5 @@
 ---
-date: '2022-06-14'
+date: '2022-08-16'
 authors: ["Chicken, Jundarer"]
 published: true
 patch: "9.2.5"
@@ -54,6 +54,9 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
 
+  + 2022-08-16:
+  <br>Updated: Dates, news, trinkets
+  
   + 2022-06-14:
   <br>Updated: Dates, patch number, random names 
   
@@ -130,50 +133,45 @@ sidebarContents:  |
 
 
 
-## 9.2 Changes
+## Season 4 Balance Druid and You:
 
-9.2 is here and brings some additions to every spec. Everyone is getting their covenant legendary equipable for free, which means all covenant abilities are enhanced baseline. It is to note that this does not mean more choices since you can still only choose one legendary freely.\
-On top of this tier sets return, ours being the following:
+**What items should I look out for?**
+Biggest item is always a weapon, the best one being Antumbra. After that you should look for good trinkets which are: 
+{{< item 186428 "Shadowed Orb of Torment" >}}, {{< item 184028 "Cabalist's Hymnal" >}}, {{< item 137541 "Moonlit Prism" >}}, {{< item 188271 "The First Sigil" >}}, {{< item 186423 "Titanic Ocular Gland" >}}, {{< item 110001 "Tovra's Lightning Repository" >}}, {{< item 185818 "So'leah's Secret Technique" >}} and {{< item 142165 "Deteriorated Construct Core" >}} for AoE/M+.
+On other pieces you always want the highest ilvl items which will drop from the last bosses in each raid.
+In general sim yourself since whatever you loot early on will likely be an upgrade.
 
-**2-Set -  {{< spell 364423 "Celestial Pillar" >}}:**\
-Entering Lunar Eclipse creates a {{< spell 211545 "Fury of Elune" >}} at 20% effectiveness that follows your current target for 8 sec.\
-*Notes:* This gives 40 AP. If multiple Celestial Pillars proc in short sequence (Lunar Eclipse>Inc>Pulsar proc), multiple Pillars will spawn and do their damage at the same time, but the duration of the AP generating buff will be extended (in this case to a total of 24sec). The self casted FoE is independent and does not affect this.
+**Should I farm any dungeon?**
+As is the case in every new season start, farming dungeons just for ilvl can give a large dps boost before you get better mythic items.
+Grimrail Depot and Gambit are good options until you have a passive trinket.
+Run Droptimizer to see what dungeon currently has the best gear for you.
 
-**4-Set -  {{< spell 363497 "Umbral Infusion" >}}:**\
-While inside any Eclipse, the costs of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} are reduced by 15%.\
-*Notes:* This stacks multiplicatively with {{< spell 339949 "Timeworn Dreambinder" >}} and does not reduce progress per Astral Power spend for
-{{< spell 338668 "Primordial Arcanic Pulsar" >}} (still gives 30AsP and 50AsP respectively towards Pulsar).\
-Starsurge gets its cost reduced to 25,5 and Starfall gets its cost reduced to 42,5. The costs don't get rounded which may lead to situations where you think you have enough AsP but you are missing 0,5 AsP to actually cast this.
-<br>Example: If you currently have 70AP and you cast a Starsurge your remaining AP will be 44,5, but the game will show 44. If you were to cast another Starsurge your AP would be set to 19.
+**What should I spend my Coins on?**
+1. Antumbra.
+2. This depends on how quick bosses die. If they consistently die sub 3 minutes Sigil, otherwise Shadowed Orb of Torment.
+3. Sim what slot is your biggest upgrade.
+Of course if you have anything comparable already sim what your biggest upgrade is.
 
-DPS gains from Tier Set:
+**What slot will Unity and Pulsar go on?**
+Due to legendaries not getting higher ilvl Unity will end up on Wrists and Pulsar will stay on Ring with max ilvl gear. Before that just stick with what you have.
 
-| Build | [1 Legendary](https://www.raidbots.com/simbot/report/68MzULAESeeTuiHcgSfgjf) | [2 Legendaries](https://www.raidbots.com/simbot/report/kPaHfB71kmzGLc8JUDZsea) |
-| :-----------  |:---------------:| :---------------:|
-| NF 2pc        | 12,5%        | 11,7%         |
-| Venthyr 2pc   | 12,4%        | 12,7%         |
-| NF 4pc        | 7,8%         |    7,8%       |
-| Venthyr 4pc   | 8%           |    7,9%       |
+**What covenant are we playing?**
+Venthyr will do more damage on most bosses due to the temporary damage boost and likely short kill times.
+There are exceptions where Venthyr won't work well due to timings like Denathrius. 
+
+**IQD dead?**
+Yes, once you get a replacement and outside sub 1 minute fights.
+
+**Are Mechagon rings worth it?**
+No, they are at best a 0.5% upgrade over other options for NF and never for Venthyr.
+
+**What stat are we getting from shrouded affix?**
+Haste.
+
+**Is Scars good now?**
+Equal at best, so no because of the drawbacks. 
 
 
-We have also received class changes:
-
-**{{< item 355315 "Sinful Hysteria" >}} :** Now extends Ravenous Frenzy by 0.1s per cast down from 0.2s and lingers 3s down from 5s.
-*Notes:* This is roughly a 10% total dps nerf to Venthyr in most situations, higher in burst.
-
-**{{< item 364815 "Kindred Affinity" >}} :**  Now 6%/12% self (from 8%/16% self) and 3%/6% partner (from 8%/16% partner) for NF, NL and VE bonds. Kyrian bond is now 210/420 self (from 150/300 self) and 105/210 partner (from 150/300 partner).
-*Notes:* Kyrian got nerfed and is a bit weaker than Venthyr in raid dps in an optimal scenario. In a progress scenario you will most likely not touch it because of how the bond is extremely annoying to use and you lose the mobility of Venthyr/NF.
-
-### Analysis:
-
-With how our set works, it will heavily favour
-{{< spell 338668 "Primordial Arcanic Pulsar" >}}, since both set bonuses heavily synergize with it.\
-The 2-Set Celestial Pillar procs its Fury of Elune every time Pulsar is procced which in turn resets your Eclipse and allows for even more Lunar Eclipses.\
-The 4-Set Umbral Infusion may reduce the Astral Power you have to spend on Starsurge and Starfall but Pulsar still gets the original cost. A 25,5 cost Starsurge, for example, would still progress your Pulsar buff by 30.
-
-Looking at covenants, assuming 2 Legendaries and 4 Tier Piece, Venthyr, Night Fae and Kyrian are all very close to each other. Since Venthyr and Night Fae both have superior signature abilities (Door of Shadows and Soulshape) and generally better soulbinds, you will be switching between them depending on the encounter. Kyrian can still be played without losing much damage but is not recommended. Some preliminary information about what covenant to pick for specific bosses are in the raid guide.
-
-Simulationcraft has been updated for the changes and the APL has also received updates. Additionally, our sim site will be kept updated whenever more changes come and can as always be found here: https://balance-simc.github.io/Balance-SimC/. You can run the sims yourself by double-clicking on any combination on that site and pasting the result into an Advanced sim on Raidbots. The most recent version of the APL can be found here: https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt. Feel free to look at the sims and sample sequences and in case anything looks out of line or wrong don't hesitate to tell us.
  
 <div id="rotation">
 
@@ -410,21 +408,36 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 **Usable trinkets:**
 
-- Slot 1 (Equip): {{< item 178708 "Unbound Changeling" >}}, {{< item 188270 "Elegy of the Eternals" >}}, {{< item 185818 "So'leah's Secret Technique" >}} and others.
-- Slot 2 (On-use): {{< item 179350 "Inscrutable Quantum Device" >}}, {{< item 180117 "Empyreal Ordnance" >}} and others.
+- Slot 1 (Equip): {{< item 186423 "Titanic Ocular Gland" >}}, {{< item 184028 "Cabalist's Hymnal" >}}, {{< item 185818 "So'leah's Secret Technique" >}} and others.
+- Slot 2 (On-use): {{< item 137541 "Moonlit Prism" >}}, {{< item 186428 "Shadowed Orb of Torment" >}} and others.
 
 
 **Notable trinkets:**
 
-{{< item 178708 "Unbound Changeling" >}}: This trinket gains most of its value from the fact that it is convertible into a stat proc of your choice by eating the corresponding food. Sim what stat is best for you but it will almost always be mastery. Once a day it has a chance to proc 3 secondary stats which further increases its value. Mastery proc can be used a default but sim to find which secondary it should proc.
+{{< item 137541 "Moonlit Prism" >}} Tied as best on use trinket with {{< item 186428 "Shadowed Orb of Torment" >}} depending on setup
 
-{{< item 188270 "Elegy of the Eternals" >}}: This trinket gains increased value the more members of your covenant you have in your party. Will usually sim lower than Changeling but can become better if looted at higher ilvl and simming close enough.
+<br>{{< item 186428 "Shadowed Orb of Torment" >}} Tied as best on use trinket with {{< item 137541 "Moonlit Prism" >}} depending on setup
 
-{{< item 185818 "So'leah's Secret Technique" >}}: The third best equip trinket if you include the stats gained by the partner. Only becomes better than Elegy if there is no one of the same covenant in your party.
+<br>{{< item 188271 "The First Sigil" >}} Good on use alternative to Orb/MLP, if the fight duration is lower than 3minutes. 
 
-{{< item 179350 "Inscrutable Quantum Device" >}}: This trinket has the potential to be the best on-use trinket by a large margin if the conditions found in [#11](#iqd) are met. These ultimately mean that the trinket is extremely good in M+ and whenever you can guarantee that later trinket usages are either in Bloodlust or when healers still have enough mana. You can adjust the value in sims using the IQD Stat Proc Chance option which will set the chance the trinket gives stats outside Bloodlust.
+<br>{{< item 188270 "Elegy of the Eternals" >}} Mediocre to good equip trinket if you do not have better alternatives. 
 
-{{< item 188271 "The First Sigil" >}}: Together with {{< item 179350 "IQD" >}} and only with {{< spell 355315 "Sinful Hysteria" >}} equipped, this becomes your best trinket. It is important to note that Antumbra slightly lowers this trinket's value so make sure to always sim it.
+<br>{{< item 185818 "So'leah's Secret Technique" >}} Good farmable trinket for early season.
+
+<br>{{< item 184028 "Cabalist's Hymnal" >}} Potentially the best equip trinket depending on how many people you have in your group.
+
+<br>{{< item 186423 "Titanic Ocular Gland" >}} Good passive option.
+
+<br>{{< item 186422 "Tome of Monstrous Constructions" >}} Good passive trinket for pure ST. (pretty bad overall trinket)
+
+<br>{{< item 188253 "Scars of do NOT Play This" >}} The best trinket if you want to die on every fight.
+
+<br>{{< item 110001 "Tovra's Lightning Repository" >}} Good farmable trinket for early season.
+
+<br>{{< item 142165 "Deteriorated Construct Core" >}} The best heavy aoe passive trinket. (use this in m+)
+
+
+
 
 
 <div id="talents">
