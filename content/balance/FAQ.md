@@ -408,8 +408,8 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 **Usable trinkets:**
 
-- Slot 1 (Equip): {{< item 178708 "Unbound Changeling" >}}, {{< item 188270 "Elegy of the Eternals" >}}, {{< item 185818 "So'leah's Secret Technique" >}} and others.
-- Slot 2 (On-use): {{< item 179350 "Inscrutable Quantum Device" >}}, {{< item 180117 "Empyreal Ordnance" >}} and others.
+- Slot 1 (Equip): {{< item 186423 "Titanic Ocular Gland" >}}, {{< item 184028 "Cabalist's Hymnal" >}}, {{< item 185818 "So'leah's Secret Technique" >}} and others.
+- Slot 2 (On-use): {{< item 137541 "Moonlit Prism" >}}, {{< item 186428 "Shadowed Orb of Torment" >}} and others.
 
 
 **Notable trinkets:**
