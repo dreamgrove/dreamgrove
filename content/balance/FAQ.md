@@ -2,8 +2,8 @@
 date: '2022-08-16'
 authors: ["Chicken, Jundarer"]
 published: true
-patch: "9.2.5"
-title: Patch 9.2.5 FAQ
+patch: "9.2.7"
+title: Patch 9.2.7 FAQ
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. News](#news)
