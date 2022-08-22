@@ -327,7 +327,7 @@ In raid with {{< spell 202430 "Nature's Balance" >}} any Astral Power above 50 w
 
 **(V) Single target priority list INSIDE cooldowns:**
 Before the 3s extension buff:
-- Use Berserking at the start of Frenzy without Bloodlust or at 9s of the initial buff remaining with Bloodlust.
+- Use {{< spell 26297 "Berserking" >}} at the start of Frenzy unless you are getting PI. If you get PI use at at 9s of the initial buff remaining with Bloodlust.
 - Use your trinket so that it will be for the rest of your cooldowns. Never ever use off gcd items/spells between casts, always use them during a gcd. Use the Venthyr timings to see the exact timings.
 - Use pot at 19s {{< spell 323546 "Ravenous Frenzy" >}} remaining.
 - Cast {{< spell 211545 "Fury of Elune" >}} if the initial {{< spell 323546 "Ravenous Frenzy" >}} has 5s remaining.
