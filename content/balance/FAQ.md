@@ -256,7 +256,7 @@ In raid with {{< spell 202430 "Nature's Balance" >}} any Astral Power above 50 w
 
 **Lunar Eclipse and both Eclipses (CA/Inc):**
 
-- Use {{< spell 78674 "Starsurge" >}} to stop yourself from overcapping AsP. *Without* Pulsar you should overcap when Starfire will hit 6 or more targets. *With* Pulsar you should only overcap when Starfire will hit 6 or more targets and CA/Inc will last throughout the rest of the fight or big pull.
+- Use {{< spell 78674 "Starsurge" >}} to stop yourself from overcapping AsP. *Without* Pulsar you should overcap when Starfire will hit 6 or more targets. *With* Pulsar you should only overcap when Starfire will hit 6 or more targets and CA/Inc or Lunar Eclipse will last throughout the rest of the fight or big pull. 
 
 - Refresh {{< spell 8921 "Moonfire" >}} if you are at 4 (8 with {{< spell 281847 "Twin Moons" >}}) targets or below if the targets will live through the next Eclipse.
 
