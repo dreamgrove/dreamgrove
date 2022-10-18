@@ -302,7 +302,7 @@ sidebarContents:  |
 
 
 
-
+</details>
 <summary> without T29 4PC </summary>
 
   <details>
