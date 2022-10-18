@@ -83,441 +83,262 @@ sidebarContents:  |
 
 <details>
 <summary> with T29 4PC </summary>
-
   <details>
   <summary> with Nature's Balance </summary>
-  
     <details> 
     <summary> with Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
-
     <summary> without Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
     </details>
-
   </details>
-
-
-
-
-
-
   <details>
   <summary> without Nature's Balance </summary>
-
     <details> 
     <summary> with Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
-
     <summary> without Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
     </details>
-
   </details>
-  
 </details>
-
-
-
-
-
-
-</details>
+<details>
 <summary> without T29 4PC </summary>
-
   <details>
   <summary> with Nature's Balance </summary>
-  
     <details> 
     <summary> with Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
-
     <summary> without Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
     </details>
-
   </details>
-
-
-
-
-
-
   <details>
   <summary> without Nature's Balance </summary>
-
     <details> 
     <summary> with Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
-
     <summary> without Rattle the Stars </summary>
-
       <details>
       <summary> with Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       <summary> without Balance of all Things </summary>
-
         <details>
         <summary> with Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         <summary> without Sundered Firmament </summary>
-
           <details>
           <summary> with Astral Communion </summary>
-
           <summary> without Astral Communion </summary>
           </details>
-
         </details>
-
       </details>
-
     </details>
-
-  </details>
-  
+  </details> 
 </details>
-
 
 
 
