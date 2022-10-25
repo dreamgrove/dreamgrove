@@ -1,5 +1,4 @@
 actions.precombat=flask
-actions.precombat=flask
 actions.precombat+=/food
 actions.precombat+=/augmentation
 actions.precombat+=/snapshot_stats
