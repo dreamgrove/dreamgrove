@@ -4,7 +4,7 @@ actions.precombat+=/augmentation
 actions.precombat+=/snapshot_stats
 actions.precombat+=/cat_form,if=(druid.catweave_bear=1)&(cooldown.pause_action.remains|time>30)
 actions.precombat+=/moonkin_form,if=(!druid.catweave_bear=1)&(cooldown.pause_action.remains|time>30)
-actions.precombat+=/heart_of_the_Wild,if=talent.heart_of_the_wild.enabled
+actions.precombat+=/heart_of_the_wild,if=talent.heart_of_the_wild.enabled
 actions.precombat+=/prowl,if=(druid.catweave_bear=1)&(cooldown.pause_action.remains|time>30)
 actions.precombat+=/bear_form,if=(!buff.prowl.up)actions.precombat+=/fleshcraft,if=soulbind.pustule_eruption.enabled|soulbind.volatile_solvent.enabled,interrupt_immediate=1,interrupt_global=1,interrupt_if=soulbind.volatile_solvent
 
