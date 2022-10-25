@@ -3,7 +3,7 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--spec', choices=['owl', 'cat', 'bear', 'tree'])
-parser.add_argument('--df')
+parser.add_argument('--df', default=False, action='store_true')
 parser.add_argument('simcpath', type=str, help='path to SimC root (include \\simc)')
 args = parser.parse_args()
 
