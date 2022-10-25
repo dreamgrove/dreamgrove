@@ -22,11 +22,10 @@ jobs:
         with:
           repository: simulationcraft/simc
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          path: './static/sims/simc'
+          path: './simc'
           ref: dragonflight
       - name: generate APL
-        run: |
-          python generate_apl.py --spec=bear --df "./simc"
+        run: python generate_apl.py --spec=bear --df "./simc"
       - name: commit APL
         run: |
           git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
