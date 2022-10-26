@@ -63,6 +63,7 @@ actions.bear+=/thrash_bear
 actions.bear+=/moonfire,if=active_enemies<2
 actions.bear+=/swipe_bear
 
+# if you read this know that Kitch is a dummy
 actions.catweave=heart_of_the_wild,if=talent.heart_of_the_wild.enabled&!buff.heart_of_the_wild.up&!buff.cat_form.up
 actions.catweave+=/cat_form,if=!buff.cat_form.up
 actions.catweave+=/rake,if=buff.prowl.up
@@ -90,4 +91,4 @@ actions.oconvoke=heart_of_the_wild,if=talent.heart_of_the_wild.enabled&!buff.hea
 actions.oconvoke+=/moonkin_form,if=!buff.moonkin_form.up
 actions.oconvoke+=/convoke_the_spirits
 
-#if you read this know that Kitch is a dummy
+
