@@ -23,7 +23,7 @@ sidebarContents:  |
   [5. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Embellishments](#embellishments)
-  <br>[Tier Sets](#tier-set)
+  <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
   <br>[Gearing Advice](#gearing-advice)
   
@@ -202,7 +202,7 @@ DRUID TREE DEVIATIONS:
 
 <div id="potions">
 
-## [Potions?](#Potions)
+## [Potions](#Potions)
 
 </div>
 
@@ -212,7 +212,7 @@ DRUID TREE DEVIATIONS:
 
 <div id="food">
 
-## [Food?](#food)
+## [Food](#food)
 
 </div>
 
@@ -222,7 +222,7 @@ DRUID TREE DEVIATIONS:
 
 <div id="phials">
 
-## [Phials?](#Phials)
+## [Phials](#Phials)
 
 </div>
 
