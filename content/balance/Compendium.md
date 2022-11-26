@@ -23,7 +23,7 @@ sidebarContents:  |
   [5. Gearing](#gearing)
   <br>[Stats](#stats)
   <br>[Embellishments](#embellishments)
-  <br>[Tier Sets](#tier-sets)
+  <br>[Tier Sets](#tier-set)
   <br>[Trinkets](#trinkets)
   <br>[Gearing Advice](#gearing-advice)
   
@@ -287,7 +287,7 @@ The best embellishments raw damage wise, at full uptime are [Elemental Lariat](h
 
 <div id="tier-set">
 
-## [Tier Set?](#tier-set)
+## [Tier Set](#tier-set)
 
 2PC: 2% DPS ST, 2.5% AoE 
 <br>4PC: 12% DPS ST, 12.5% AoE
@@ -404,9 +404,9 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 
 
 
-<div id="Utility">
+<div id="utility">
 
-# [7. Utility:](#Utility)
+# [7. Utility](#utility)
 
 </div>
  
