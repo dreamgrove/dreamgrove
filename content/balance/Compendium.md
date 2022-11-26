@@ -154,7 +154,7 @@ While levelling take talents in the following order: Typhoon > Vortex > Matted F
 Balance Tree pathing: Balance of all Things1 > Balance of all Things2 > Astral Communion > Radiant Moonlight > Sundered Firmament
 <br>Pick Force of Nature up if you are leveling alone
 
-[Lvl69](https://www.wowhead.com/beta/talent-calc/druid/balance/DAOFERQQciQhUUUxBBFNVYBQUGZVVEGQUCRA)
+[Lvl 69](https://www.wowhead.com/beta/talent-calc/druid/balance/DAOFERQQciQhUUUxBBFNVYBQUGZVVEGQUCRA)
 
 **DRAGONFLIGHT TALENTS:**
 
@@ -189,8 +189,8 @@ DRUID TREE DEVIATIONS:
 - If you have to pick utility, or want any other point than the build above, start by cutting the resto parts of the tree like in [this example](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQEFAUQcCQhQUUxRQQBBAA). 
 - From this point onwards, you can pick either Feline Swiftness, another point in WHI, 1-minute roar, typhoon and so on. 
 - If you want more points, to cut the least defensive from your build you would have to cut Renewal if only one point was needed, if two points are needed, cut Incap roar and WHI and if you want more than that swap spec. 
-- If you need Decurse inside of an m+ dungeon, use [this build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA):
-- If you for some reason still want typhoon, then use [this build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA):
+- If you need Decurse inside of an m+ dungeon, use [this build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA).
+- If you for some reason still want typhoon, then use [this build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA).
 
 
 
@@ -232,21 +232,21 @@ DRUID TREE DEVIATIONS:
 
 Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on Single Target:
 
-[Phial of Static Empowerment](https://www.wowhead.com/beta/item=191338/phial-of-static-empowerment)
-<br>[Phial of Charged Isolation](https://www.wowhead.com/beta/item=191332/phial-of-charged-isolation)
-<br>[Iced Phial of Corrupting Rage](https://www.wowhead.com/beta/item=191329/iced-phial-of-corrupting-rage)
-<br>[Phial of Elemental Chaos](https://www.wowhead.com/beta/item=191359/phial-of-elemental-chaos)
-<br>[Phial of Glacial Fury](https://www.wowhead.com/beta/item=191335/phial-of-glacial-fury)
+- [Phial of Static Empowerment](https://www.wowhead.com/beta/item=191338/phial-of-static-empowerment)
+- [Phial of Charged Isolation](https://www.wowhead.com/beta/item=191332/phial-of-charged-isolation)
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/beta/item=191329/iced-phial-of-corrupting-rage)
+- [Phial of Elemental Chaos](https://www.wowhead.com/beta/item=191359/phial-of-elemental-chaos)
+- [Phial of Glacial Fury](https://www.wowhead.com/beta/item=191335/phial-of-glacial-fury)
 
 **AoE**:
 
 Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on AoE:
 
-[Phial of Static Empowerment](https://www.wowhead.com/beta/item=191338/phial-of-static-empowerment)
-<br>[Phial of Charged Isolation](https://www.wowhead.com/beta/item=191332/phial-of-charged-isolation)
-<br>[Phial of Glacial Fury](https://www.wowhead.com/beta/item=191335/phial-of-glacial-fury)
-<br>[Iced Phial of Corrupting Rage](https://www.wowhead.com/beta/item=191329/iced-phial-of-corrupting-rage)
-<br>[Phial of Elemental Chaos](https://www.wowhead.com/beta/item=191359/phial-of-elemental-chaos)
+- [Phial of Static Empowerment](https://www.wowhead.com/beta/item=191338/phial-of-static-empowerment)
+- [Phial of Charged Isolation](https://www.wowhead.com/beta/item=191332/phial-of-charged-isolation)
+- [Phial of Glacial Fury](https://www.wowhead.com/beta/item=191335/phial-of-glacial-fury)
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/beta/item=191329/iced-phial-of-corrupting-rage)
+- [Phial of Elemental Chaos](https://www.wowhead.com/beta/item=191359/phial-of-elemental-chaos)
 
 <div id="gearing">
 
