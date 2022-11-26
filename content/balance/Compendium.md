@@ -54,8 +54,6 @@ sidebarContents:  |
 </div>
 
 
-## Prepatch and Leveling TLDR:
-
 
 <div id="rotation">
 
