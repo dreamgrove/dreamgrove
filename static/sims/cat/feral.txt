@@ -84,7 +84,7 @@ actions+=/adaptive_swarm,target_if=((!dot.adaptive_swarm_damage.ticking|dot.adap
 actions+=/feral_frenzy,if=combo_points<2
 actions+=/run_action_list,name=aoe,if=spell_targets.swipe_cat>2&talent.primal_wrath.enabled
 actions+=/ferocious_bite,if=buff.apex_predators_craving.up
-actions+=/call_action_list,name=bloodtalons,if=variable.need_bt
+actions+=/call_action_list,name=bloodtalons,if=variable.need_bt&!buff.bs_inc.up
 actions+=/call_action_list,name=finisher,if=combo_points=5
 actions+=/call_action_list,name=berserk_builders,if=combo_points<5&buff.bs_inc.up
 actions+=/call_action_list,name=builder,if=combo_points<5
