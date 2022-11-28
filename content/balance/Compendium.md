@@ -75,7 +75,7 @@ sidebarContents:  |
 - Use {{< spell 194223 "Celestial Alignment" >}}, or {{< spell 102560 "Incarnation" >}} if talented.
 - Use Warrior of Elune if available
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse
-- Use Convoke the Spirits if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away, while not being talented into Elune's Guidance.
+- Use Convoke the Spirits if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
 - Use Astral Communion if you will not overcap on AP 
 - Use Force of Nature if you will not overcap on AP
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP
