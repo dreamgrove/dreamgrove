@@ -32,8 +32,10 @@ sidebarContents:  |
   <br>[What is Astral damage?](#astral-damage)
   <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
+  
+  [7. Balance Refugee Guide](#refugee)
  
-  [7. Utility](#utility)
+  [8. Utility](#utility)
  
 ---
 
@@ -401,10 +403,48 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 ```
 
 
+<div id="refugee">
 
+# [7. Balance Refugee Guide](#refugee)
+
+</div>
+
+If you want to play DPS in dungeons, and you can not reroll off balance druid for raid, farm your gear in feral!
+
+
+## What to do before you respec:
+
+Get an agility weapon, equip Scars (still very solid for current content) if you don't have any new expansion agility trinkets, Stat sticks are good.
+<br>For M+ use [these talents](https://www.wowhead.com/talent-calc/druid/feral/DAQEQFQTAkQhVEExhUQBBOUVQRFRVFVYRVBQCEE)
+  
+  
+## How do you play feral?
+
+
+**AoE:**
+
+- use Apex's Predator procs
+- Use Tiger's Fury if you need either Energy or the damage buff
+- Primal Wrath at 4 or 5 CP like Starfall
+- Rake all mobs like you would with Moonfire
+- Thrash the pack like Sunfire
+- Swipe the pack like Starfire
+
+
+**ST:**
+
+- Use Tiger's Fury if you need Energy or the Damage Buff (use prepull because the damage buff stays on dots)
+- use RIP at 5 CP if RIP is not on the target
+- use Ferocious Bite if you are at 5 CP and you have RIP on the target or you got an Apex proc
+- Use Rake like you would with Moonfire (stealthed rake does more damage)
+- Use Thrash if you do not have it up and you have a clearcasting proc (low prio)
+- use Shred as filler 
+
+  
+  
 <div id="utility">
 
-# [7. Utility](#utility)
+# [8. Utility](#utility)
 
 </div>
  
