@@ -423,9 +423,10 @@ Get an agility weapon, equip Scars (still very solid for current content) if you
 
 **AoE:**
 
-- use Apex's Predator procs
-- Use Tiger's Fury if you need either Energy or the damage buff
+- use [Apex's Predator](https://www.wowhead.com/spell=252752/apex-predator) procs
+- Use Tiger's Fury if you need either Energy or the damage buff !remember that [this talent](https://www.wowhead.com/spell=202021/predator) exists
 - Primal Wrath at 4 or 5 CP like Starfall
+- Use Feral Frenzy on CD as a builder
 - Rake all mobs like you would with Moonfire
 - Thrash the pack like Sunfire
 - Swipe the pack like Starfire
@@ -436,6 +437,7 @@ Get an agility weapon, equip Scars (still very solid for current content) if you
 - Use Tiger's Fury if you need Energy or the Damage Buff (use prepull because the damage buff stays on dots)
 - use RIP at 5 CP if RIP is not on the target
 - use Ferocious Bite if you are at 5 CP and you have RIP on the target or you got an Apex proc
+- Use Feral Frenzy on CD as a builder
 - Use Rake like you would with Moonfire (stealthed rake does more damage)
 - Use Thrash if you do not have it up and you have a clearcasting proc (low prio)
 - use Shred as filler 
