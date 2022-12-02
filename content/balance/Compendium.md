@@ -3,7 +3,7 @@ date: '2022-11-26'
 authors: ["Chicken, Jundarer"]
 published: yes
 patch: "10.0"
-title: Balance druid 10.0 compendium
+title: Balance Druid 10.0 Compendium
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. News](#news)
@@ -71,26 +71,26 @@ sidebarContents:  |
 
 **Single Target priority list:**
 
-- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration).
-- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you have T29 4PC equipped, and {{< spell 194223 "Celestial Alignment" >}}, or {{< spell 102560 "Incarnation" >}} is off Cooldown.
-- Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos proc
+- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
+- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse. This also applies to before cooldowns if you have T29 4PC equipped.
+- Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
 - Use {{< spell 194223 "Celestial Alignment" >}}, or {{< spell 102560 "Incarnation" >}} if talented.
-- Use Warrior of Elune if available
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse
-- Use Convoke the Spirits if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
-- Use Astral Communion if you will not overcap on AP 
-- Use Force of Nature if you will not overcap on AP
-- Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP
-- Use {{< spell 191034 "Starfall" >}} if you have a Starweaver's Warp proc
+- Use Warrior of Elune if available.
+- Use Convoke the Spirits when below 40 AP if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
+- Use Astral Communion if you will not overcap on AP.
+- Use Force of Nature if you will not overcap on AP.
+- Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
+- Use {{< spell 191034 "Starfall" >}} if you have a Starweaver's Warp proc.
 - Use {{< spell 78674 "Starsurge" >}} if Starlord has less than 3 stacks and if talented you can optimally refresh your Rattle the Stars buff.
-- Use New-, Half- and Full Moon if you will not overcap on AP
+- Use New-, Half- and Full Moon if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions are true: 
-    - you will overcap AP with the next cast
-    - you have a starweaver's weft proc
-    - if your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds
-    - if Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP
-- Use Wild Mushrooms if you are inside an eclipse, you will not overcap Astral Power, and you are above 2.5 charges.
-- Use {{< spell 194153 "Starfire" >}} if you are inside a lunar eclipse
+    - If you would overcap AP with the next cast
+    - If you have a Starweaver's Weft proc
+    - If your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds
+    - If Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP
+- Use Wild Mushroom on cooldown.
+- Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
+- Use {{< spell 194153 "Starfire" >}}. You should always be in Lunar Eclipse outside cooldowns.
 
 
 
@@ -102,26 +102,26 @@ sidebarContents:  |
 
 **AoE priority list:**
 
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 8 or more seconds reduced by 1 for each target hit and you will not overcap on AP
-- Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 8 or more seconds reduced by 1 for each target hit and you will not overcap on AP
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 8 or more seconds and you will not overcap on AP.
+- Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 8 or more seconds and you will not overcap on AP.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you have T29 4PC equipped, and {{< spell 194223 "Celestial Alignment" >}}, or {{< spell 102560 "Incarnation" >}} is off Cooldown.
-- Use Celestial Alignment
-- Use Astral Communion if you will not overcap on AP 
-- Use Warrior of Elune if available
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse
-- Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP
-- Use New Moon or Half Moon if you will overcap on charges and you will not overcap on AP
-- Use Wild Mushrooms if you will not overcap on AP. If you are using Fungal Growth make sure to not use it if the debuff is up already and Waning Twilight is missing.
+- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use Astral Communion if you will not overcap on AP.
+- Use Warrior of Elune if available.
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse.
+- Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP.
+- Use New Moon or Half Moon if you will overcap on charges and you will not overcap on AP.
+- Use Wild Mushrooms if you will not overcap on AP. If you are using Fungal Growth and Waning Twilight make sure to not use it if the debuff is up already.
 - Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks and you will not overcap on AP.
-- Use Stellar Flare if the target will live for 8 or more seconds and you will not overcap on AP
+- Use Stellar Flare if the target will live for 8 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
-    - you will overcap AP
+    - You would overcap AP otherwise
     - {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will last for less than 12 seconds and the target will live for 4 or more seconds
-    - you have a Starweaver's Warp proc
+    - You have a Starweaver's Warp proc
     - Starlord is below 3 stacks
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
-- Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc
-- Use {{< spell 194153 "Starfire" >}}
+- Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
+- Use {{< spell 194153 "Starfire" >}}.
 
 
 
@@ -132,7 +132,7 @@ sidebarContents:  |
 </div>
 
 
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} , your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 2 or more targets.
+Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 2 or more targets.
 
 
 
@@ -147,51 +147,50 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} , your fillers wi
 **LEVELING TALENTS:**
 
 
-[Lvl 60](https://www.wowhead.com/beta/talent-calc/druid/balance/DAOFERQQciQhQEQwBBAMVYBQUGYVVEEQCRA)
+[Lvl 60](https://www.wowhead.com/talent-calc/druid/balance/DAOFERQQciQhQEQwBBAMVYBQUGYVVEEQCRA)
 
-While levelling take talents in the following order: Typhoon > Vortex > Matted Fur > Mighty Bash
+While leveling take talents in the following order: Typhoon > Vortex > Matted Fur > Mighty Bash
 
 Balance Tree pathing: Balance of all Things1 > Balance of all Things2 > Astral Communion > Radiant Moonlight > Sundered Firmament
 <br>Pick Force of Nature up if you are leveling alone
 
-[Lvl 69](https://www.wowhead.com/beta/talent-calc/druid/balance/DAOFERQQciQhUUUxBBFNVYBQUGZVVEGQUCRA)
+[Lvl 69](https://www.wowhead.com/talent-calc/druid/balance/DAOFERQQciQhUUUxBBFNVYBQUGZVVEGQUCRA)
 
 **DRAGONFLIGHT TALENTS:**
 
 
 
-[Single Target](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVQ)
+[Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVQ)
 
 
-[Single Target with Add Waves](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYRQUGYVVVCUQCUA) - (most raid boss fights)
+[Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYRQUGYVVVCUQCUA) - (most raid boss fights)
 
 
-[aoe 2t council sustained](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUA) - 5 minute Patchwerk
+[aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUA) - 5 minute Patchwerk
 
 
-[aoe 3t council sustained](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
+[aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
 
 
 
 
-[aoe 4t+ council sustained](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
+[aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
 
 
-[M+ build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUA)
+[M+ build](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUA)
 
 
 
 
 DRUID TREE DEVIATIONS:
 
-- ALWAYS hit Nature’s Vigil in raid and M+ unless the content is a joke.
-- IF you are pure ST and do not need any other utility, you can hit Nature Recovery and Thick Hide, while getting everything else other than Astral Influence, use [this talent tree](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBBAA).
-- If you have to pick utility, or want any other point than the build above, start by cutting the resto parts of the tree like in [this example](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQEFAUQcCQhQUUxRQQBBAA). 
-- From this point onwards, you can pick either Feline Swiftness, another point in WHI, 1-minute roar, typhoon and so on. 
-- If you want more points, to cut the least defensive from your build you would have to cut Renewal if only one point was needed, if two points are needed, cut Incap roar and WHI and if you want more than that swap spec. 
-- If you need Decurse inside of an m+ dungeon, use [this build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA).
-- If you for some reason still want typhoon, then use [this build](https://www.wowhead.com/beta/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA).
-
+- ALWAYS take Nature’s Vigil in raid and M+ unless the content is a joke.
+- If you are pure ST and do not need any other utility, you can take Nature Recovery and Thick Hide while getting everything else other than Astral Influence with [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBBAA).
+- If you have to pick utility, or want any other point than the build above, start by cutting the resto parts of the tree like in [this example](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxRQQBBAA). 
+- From this point onwards, you can pick either Feline Swiftness, another point in WHI, 1-minute roar, Typhoon and so on. 
+- If you want more points cut Renewal and then WHI. If you want more points elsewhere swap spec.
+- If you need Decurse inside of an M+ dungeon, use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA).
+- If you still want Typhoon, then use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA).
 
 
 
@@ -209,7 +208,7 @@ DRUID TREE DEVIATIONS:
 </div>
 
 
-[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation.
+[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
 
 
 <div id="food">
@@ -230,23 +229,17 @@ DRUID TREE DEVIATIONS:
 
 **ST**
 
-Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on Single Target:
+Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Phial of Static Empowerment](https://www.wowhead.com/beta/item=191338/phial-of-static-empowerment)
-- [Phial of Charged Isolation](https://www.wowhead.com/beta/item=191332/phial-of-charged-isolation)
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/beta/item=191329/iced-phial-of-corrupting-rage)
-- [Phial of Elemental Chaos](https://www.wowhead.com/beta/item=191359/phial-of-elemental-chaos)
-- [Phial of Glacial Fury](https://www.wowhead.com/beta/item=191335/phial-of-glacial-fury)
+- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment)
+- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation)
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage), has ~80% of the value of Static/Isolation Phials at max value.
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has ~55% of the value of Static/Isolation Phials at max value. This means if you can't get more than 55% uptime on those you should use this Phial.
+- [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), do not use this on single target.
 
 **AoE**:
 
-Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on AoE:
-
-- [Phial of Static Empowerment](https://www.wowhead.com/beta/item=191338/phial-of-static-empowerment)
-- [Phial of Charged Isolation](https://www.wowhead.com/beta/item=191332/phial-of-charged-isolation)
-- [Phial of Glacial Fury](https://www.wowhead.com/beta/item=191335/phial-of-glacial-fury)
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/beta/item=191329/iced-phial-of-corrupting-rage)
-- [Phial of Elemental Chaos](https://www.wowhead.com/beta/item=191359/phial-of-elemental-chaos)
+The priority is the same as it is on ST with the exception of Glacial Fury which gains a large amount of value when you frequently hit new targets. This means that you should always use Glacial Fury in M+ and any raid encounters with frequent add spawns that need to die.
 
 <div id="gearing">
 
@@ -274,15 +267,14 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 **ST:**
 The best embellishments raw damage wise at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings). 
 <br>A close contender is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at full uptime, which should in my opinion not be considered on pure ST.
-<br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) and [Thriving Thorns](https://www.wowhead.com/spell=379396/thriving-thorns) are the next two best options, so I would recommend one of these two.
+<br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) should be considered instead of Bronzed Grip Wrappings since swapping Embellishments at least early on is not an option easily.
 
 **AOE:**
-The best embellishments raw damage wise, at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining). 
-<br>A close contender is [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor), so I would recommend just sticking with this and [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) for anything AOE, unless you are reclearing an easy fight.
-<br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor)
+The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at max value. 
+<br>A close contender is [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) so it is recommend to stick with this and [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) for nearly all situations.
 
 **TLDR:** 
-[Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) (always use) > [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings) (ST) = [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) (AoE) > [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) (controlled environment)
+[Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) (always use) > [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings) (ST) = [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) (AoE) > [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) (better in a scenario where you barely take damage)
 
 
 <div id="tier-set">
@@ -305,7 +297,7 @@ How to use the 4PC procs can be found in the [Rotation](#rotation) section. ({{<
 
 </div>
 
-Obviously, just like before please use the Topgear or Droptimizer options in Raidbots in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for.
+Obviously, just like before please use the Top Gear or Droptimizer options in Raidbots in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for.
 
 On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.com/item=193677/furious-ragefeather?bonus=7974&class=11&ilvl=415&spec=102) and one of the following trinkets:
 
@@ -332,21 +324,21 @@ On **AoE** you will want to use [Whispering Incarnate Icon](https://www.wowhead.
 
 </div>
 
-In general try to hit Ilvl > Mastery gear. If it has mastery it is most likely good, it does NOT need haste or anything else. For stuff that does not have mastery just sim in between dungeons.
+In general try to hit ilvl > mastery gear. If it has mastery it is most likely good, it does NOT need haste or anything else. For stuff that does not have mastery just sim in between dungeons.
 
 **Dungeons to Spam:**
 
-Nokund Offensive - In general insane loot, really good trinket, a lot of mastery gear. If you are pugging keys and are able to target, try to soft spam this dungeon.
+Nokhud Offensive - In general insane loot, really good trinket, a lot of mastery gear. If you are pugging keys and are able to target try to run this dungeon.
 <br>Halls of Valor - This dungeon is really heavy on mastery gear and the trinkets are also pretty good. Do not reroll this dungeon.
-<br>Algeth'Ar Academy - Good for weapon hunting, it has a low drop pool so you can get it relatively fast
+<br>Algeth'Ar Academy - Good for weapon hunting, it has a low drop pool so you can get it relatively fast.
 <br>Court of Stars - Although the loot pool is diluted, Signet of Melandrus is around 400 agility for Feral if you will at all play that. Infernal Writ is also a really solid trinket. 
-<br>Temple of the Jade Serpent - Although the loot pool is diluted, there are some decent pieces and a really good mainhand. Do not go out of your way to spam this, but do not reroll this either.
+<br>Temple of the Jade Serpent - Although the loot pool is diluted, there are some decent pieces and a really good main hand. Do not go out of your way to spam this, but do not reroll this either.
 
 **Dungeons to Reroll:**
 
-<br>Shadowmoon Burial Grounds - Unless the Loot table gets purged a lot on live, try to reroll this dungeon, as you can not target most of the loot and mainstat jewelry is worse than normal one.
-<br>Ruby Life Pools - Good for weapon if you do not have one yet, otherwise skip unless someone in your group needs this or you need score
-<br>Azure Vault - Mostly garbage loot, skip unless someone in your group needs this or you need score
+<br>Shadowmoon Burial Grounds - Unless the loot table gets purged a lot on live try to reroll this dungeon as you can not target most of the loot and mainstat jewelry is worse than normal ones.
+<br>Ruby Life Pools - Good for weapon if you do not have one yet, otherwise skip unless someone in your group needs this or you need score.
+<br>Azure Vault - Mostly garbage loot, skip unless someone in your group needs this or you need score.
 
 
 
@@ -374,7 +366,7 @@ No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93
 
 </div>
 
-When Lunar Eclipse is active use {{< spell 157228 "Owlkin Frenzy" >}} procs as soon as possible. When ONLY Solar Eclipse is active, use it when fighting 3+ targets or when you need to move. Otherwise let it expire.
+When Lunar Eclipse is active use {{< spell 157228 "Owlkin Frenzy" >}} procs as soon as possible. When ONLY Solar Eclipse(should currently never be the case) is active, use it when fighting 3+ targets or when you need to move. Otherwise let it expire.
 
 
 
@@ -386,7 +378,7 @@ When Lunar Eclipse is active use {{< spell 157228 "Owlkin Frenzy" >}} procs as s
 
 </div>
 
-Astral damage is Arcane and Nature damage at the same time meaning that these spells benefit from effects that buff either spell school and double dip whenever effects that buff both are active. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell classes.
+Astral damage is Arcane and Nature damage at the same time meaning that these spells benefit from effects that buff either spell school and get increased by both type of boosts multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell classes.
 
 
 <div id="macros">
@@ -409,7 +401,7 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 
 </div>
 
-If you want to play DPS in dungeons, and you can not reroll off balance druid for raid, farm your gear in feral!
+If you want to play DPS in dungeons, and you can not reroll off balance druid for raid, farm your gear in Feral!
 
 
 ## What to do before you respec:
