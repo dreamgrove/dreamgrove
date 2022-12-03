@@ -10,6 +10,7 @@ actions.precombat+=/moonkin_form,if=talent.moonkin_form.enabled&!talent.rake.ena
 
 # Executed every time the actor is available.
 actions=berserking
+actions+=/run_action_list,name=healing,if=!buff.prowl.up&!buff.shadowmeld.up&druid.time_spend_healing,line_cd=15
 actions+=/use_items,if=!buff.prowl.up&!buff.shadowmeld.up
 actions+=/potion,if=!buff.prowl.up&!buff.shadowmeld.up
 actions+=/run_action_list,name=cat,if=talent.rake.enabled
@@ -57,3 +58,5 @@ actions.cat+=/shred,if=energy>60&combo_points<5
 
 actions.owl=moonkin_form,if=!buff.moonkin_form.up
 actions.owl+=/convoke_the_spirits
+
+actions.healing=strict_sequence,name=heal:rejuvenation:rejuvenation:rejuvenation:rejuvenation
