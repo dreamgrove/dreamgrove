@@ -6,7 +6,7 @@ actions.precombat+=/cat_form
 actions.precombat+=/prowl
 
 actions.clearcasting=thrash_cat,if=refreshable
-actions.clearcasting+=/swipe_cat,if=spell_targets.swipe_cat>2
+actions.clearcasting+=/swipe_cat,if=spell_targets.swipe_cat>1
 actions.clearcasting+=/brutal_slash,if=spell_targets.brutal_slash>5&talent.moment_of_clarity.enabled
 actions.clearcasting+=/shred
 
@@ -23,13 +23,14 @@ actions.aoe+=/brutal_slash
 # A normal rake is 5 ticks, but since we always have some haste.
 # This means that a full rake (5.5+ ticks) is stronger up to 10ish targets
 actions.aoe+=/pool_resource,for_next=1
-actions.aoe+=/rake,target_if=max:((dot.rake.ticks_gained_on_refresh.pmult*(1+talent.doubleclawed_rake.enabled))-(spell_targets.swipe_cat*0.216+3.32))
+actions.aoe+=/rake,target_if=max:dot.rake.ticks_gained_on_refresh.pmult,if=((dot.rake.ticks_gained_on_refresh.pmult*(1+talent.doubleclawed_rake.enabled))>(spell_targets.swipe_cat*0.216+3.32))
 # Full Lis beat Swipe up til around 3-ish targets depending on haste
 actions.aoe+=/lunar_inspiration,target_if=max:((ticks_gained_on_refresh+1)-(spell_targets.swipe_cat*2.492))
 actions.aoe+=/swipe_cat
 # If we have BrS and nothing better to cast, check if Thrash DD beats Shred
 actions.aoe+=/shred,if=action.shred.damage>action.thrash_cat.damage
 actions.aoe+=/thrash_cat
+
 
 actions.builder=run_action_list,name=clearcasting,if=buff.clearcasting.react
 actions.builder+=/rake,target_if=max:ticks_gained_on_refresh,if=refreshable|(buff.sudden_ambush.up&persistent_multiplier>dot.rake.pmultiplier&dot.rake.duration>6)
@@ -67,8 +68,8 @@ actions.bloodtalons=rake,target_if=max:druid.rake.ticks_gained_on_refresh,if=(re
 actions.bloodtalons+=/lunar_inspiration,if=refreshable&buff.bt_moonfire.down
 actions.bloodtalons+=/brutal_slash,if=buff.bt_brutal_slash.down
 actions.bloodtalons+=/thrash_cat,target_if=refreshable&buff.bt_thrash.down
+actions.bloodtalons+=/swipe_cat,if=spell_targets.swipe_cat>1&buff.bt_swipe.down
 actions.bloodtalons+=/shred,if=buff.bt_shred.down
-actions.bloodtalons+=/swipe_cat,if=buff.bt_swipe.down
 actions.bloodtalons+=/swipe_cat,if=buff.bt_swipe.down
 actions.bloodtalons+=/thrash_cat,if=buff.bt_thrash.down
 actions.bloodtalons+=/rake,if=buff.bt_rake.down&combo_points>4
@@ -82,7 +83,7 @@ actions+=/auto_attack,if=!buff.prowl.up&!buff.shadowmeld.up
 actions+=/call_action_list,name=cooldown
 actions+=/adaptive_swarm,target_if=((!dot.adaptive_swarm_damage.ticking|dot.adaptive_swarm_damage.remains<2)&(dot.adaptive_swarm_damage.stack<3|!dot.adaptive_swarm_heal.stack>1)&!action.adaptive_swarm_heal.in_flight&!action.adaptive_swarm_damage.in_flight&!action.adaptive_swarm.in_flight)&target.time_to_die>5|active_enemies>2&!dot.adaptive_swarm_damage.ticking&energy<35&target.time_to_die>5
 actions+=/feral_frenzy,if=combo_points<2
-actions+=/run_action_list,name=aoe,if=spell_targets.swipe_cat>2&talent.primal_wrath.enabled
+actions+=/run_action_list,name=aoe,if=spell_targets.swipe_cat>1&talent.primal_wrath.enabled
 actions+=/ferocious_bite,if=buff.apex_predators_craving.up
 actions+=/call_action_list,name=bloodtalons,if=variable.need_bt&!buff.bs_inc.up
 actions+=/call_action_list,name=finisher,if=combo_points=5
