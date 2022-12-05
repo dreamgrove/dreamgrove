@@ -84,10 +84,10 @@ sidebarContents:  |
 - Use {{< spell 78674 "Starsurge" >}} if Starlord has less than 3 stacks and if talented you can optimally refresh your Rattle the Stars buff.
 - Use New-, Half- and Full Moon if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions are true: 
-    - If you would overcap AP with the next cast
-    - If you have a Starweaver's Weft proc
-    - If your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds
-    - If Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP
+    - You would overcap AP with the next cast.
+    - You have a Starweaver's Weft proc.
+    - Your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds.
+    - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
 - Use {{< spell 194153 "Starfire" >}}. You should always be in Lunar Eclipse outside cooldowns.
@@ -115,10 +115,10 @@ sidebarContents:  |
 - Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks and you will not overcap on AP.
 - Use Stellar Flare if the target will live for 8 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
-    - You would overcap AP otherwise
-    - {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will last for less than 12 seconds and the target will live for 4 or more seconds
-    - You have a Starweaver's Warp proc
-    - Starlord is below 3 stacks
+    - You would overcap AP otherwise.
+    - {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will last for less than 12 seconds and the target will live for 4 or more seconds.
+    - You have a Starweaver's Warp proc.
+    - Starlord is below 3 stacks.
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
 - Use {{< spell 194153 "Starfire" >}}.
@@ -240,6 +240,21 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 **AoE**:
 
 The priority is the same as it is on ST with the exception of Glacial Fury which gains a large amount of value when you frequently hit new targets. This means that you should always use Glacial Fury in M+ and any raid encounters with frequent add spawns that need to die.
+
+
+<div id="enchants">
+
+## [Enchants](#enchants)
+
+</div>
+
+
+Ring - Devotion of Mastery or whatever sims best
+Weapon - Sophic Devotion
+Chest - Waking Stats
+Legs - Frozen Spellthread
+Boots - Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam)
+
 
 <div id="gearing">
 
