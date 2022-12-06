@@ -233,6 +233,7 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 - [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation)
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage), has ~80% of the value of Static/Isolation Phials at max value.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has ~55% of the value of Static/Isolation Phials at max value. This means if you can't get more than 55% uptime on those you should use this Phial.
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), same as the Elemental one, only that vers is more often better during progress than the random stats. Should be the default phial in most situations.
 - [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), do not use this on single target.
 
 **AoE**:
