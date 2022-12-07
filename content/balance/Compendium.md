@@ -32,10 +32,8 @@ sidebarContents:  |
   <br>[What is Astral damage?](#astral-damage)
   <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
-  
-  [7. Balance Refugee Guide](#refugee)
  
-  [8. Utility](#utility)
+  [7. Utility](#utility)
  
 ---
 
@@ -235,6 +233,7 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 - [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation)
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage), has ~80% of the value of Static/Isolation Phials at max value.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has ~55% of the value of Static/Isolation Phials at max value. This means if you can't get more than 55% uptime on those you should use this Phial.
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), same as the Elemental one, only that vers is more often better during progress than the random stats. Should be the default phial in most situations.
 - [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), do not use this on single target.
 
 **AoE**:
@@ -394,51 +393,10 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 /cast [@cursor] Celestial Alignment
 ```
 
-
-<div id="refugee">
-
-# [7. Balance Refugee Guide](#refugee)
-
-</div>
-
-If you want to play DPS in dungeons, and you can not reroll off balance druid for raid, farm your gear in Feral!
-
-
-## What to do before you respec:
-
-Get an agility weapon, equip Scars (still very solid for current content) if you don't have any new expansion agility trinkets, Stat sticks are good.
-<br>For M+ use [these talents](https://www.wowhead.com/talent-calc/druid/feral/DAQEQFQTAkQhVEExhUQBBOUVQRFRVFVYRVBQCEE)
-  
-  
-## How do you play feral?
-
-
-**AoE:**
-
-- use [Apex's Predator](https://www.wowhead.com/spell=252752/apex-predator) procs
-- Use Tiger's Fury if you need either Energy or the damage buff !remember that [this talent](https://www.wowhead.com/spell=202021/predator) exists
-- Primal Wrath at 4 or 5 CP like Starfall
-- Use Feral Frenzy on CD as a builder
-- Rake all mobs like you would with Moonfire
-- Thrash the pack like Sunfire
-- Swipe the pack like Starfire
-
-
-**ST:**
-
-- Use Tiger's Fury if you need Energy or the Damage Buff (use prepull because the damage buff stays on dots)
-- use RIP at 5 CP if RIP is not on the target
-- use Ferocious Bite if you are at 5 CP and you have RIP on the target or you got an Apex proc
-- Use Feral Frenzy on CD as a builder
-- Use Rake like you would with Moonfire (stealthed rake does more damage)
-- Use Thrash if you do not have it up and you have a clearcasting proc (low prio)
-- use Shred as filler 
-
-  
   
 <div id="utility">
 
-# [8. Utility](#utility)
+# [7. Utility](#utility)
 
 </div>
  
