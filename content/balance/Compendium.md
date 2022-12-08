@@ -141,41 +141,28 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 </div>
 
-
-**LEVELING TALENTS:**
-
-
-[Lvl 60](https://www.wowhead.com/talent-calc/druid/balance/DAOFERQQciQhQEQwBBAMVYBQUGYVVEEQCRA)
-
-While leveling take talents in the following order: Typhoon > Vortex > Matted Fur > Mighty Bash
-
-Balance Tree pathing: Balance of all Things1 > Balance of all Things2 > Astral Communion > Radiant Moonlight > Sundered Firmament
-<br>Pick Force of Nature up if you are leveling alone
-
-[Lvl 69](https://www.wowhead.com/talent-calc/druid/balance/DAOFERQQciQhUUUxBBFNVYBQUGZVVEGQUCRA)
-
 **DRAGONFLIGHT TALENTS:**
 
 
 
-[Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVQ)
+[Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVA)
 
 
-[Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYRQUGYVVVCUQCUA) - (most raid boss fights)
+[Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYVQUGYVVUGQQCUQ) - (most raid boss fights)
 
 
-[aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUA) - 5 minute Patchwerk
+[aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUQ) - 5 minute Patchwerk
 
 
-[aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
+[aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUQ) - 5 minute Patchwerk
 
 
 
 
-[aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
+[aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUQ) - 5 minute Patchwerk
 
 
-[M+ build](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUA)
+[M+ build](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUQ)
 
 
 
