@@ -75,6 +75,7 @@ actions.bloodtalons+=/thrash_cat,if=buff.bt_thrash.down
 actions.bloodtalons+=/rake,if=buff.bt_rake.down&combo_points>4
 
 actions=prowl
+actions+=/invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|fight_remains<cooldown.bs_inc.remains
 actions+=/variable,name=need_bt,value=talent.bloodtalons.enabled&buff.bloodtalons.down
 actions+=/tigers_fury
 actions+=/rake,if=buff.prowl.up|buff.shadowmeld.up
