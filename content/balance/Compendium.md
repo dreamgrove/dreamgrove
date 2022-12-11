@@ -145,24 +145,24 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 
 
-[Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVA)
+[Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVQ)
 
 
-[Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYVQUGYVVUGQQCUQ) - (most raid boss fights)
+[Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYRQUGYVVVCUQCUA) - (most raid boss fights)
 
 
-[aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUQ) - 5 minute Patchwerk
+[aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUA) - 5 minute Patchwerk
 
 
-[aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUQ) - 5 minute Patchwerk
+[aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
 
 
 
 
-[aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUQ) - 5 minute Patchwerk
+[aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
 
 
-[M+ build](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUQ)
+[M+ build](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUA)
 
 
 
