@@ -36,7 +36,8 @@ sidebarContents:  |
   [7. Utility](#utility)
  
 ---
-
+<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script src="https://wow.zamimg.com/js/tooltips.js"></script>
 
 <details>
 <summary>Changelog</summary>
