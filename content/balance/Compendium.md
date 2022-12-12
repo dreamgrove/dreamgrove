@@ -266,8 +266,6 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 </div>
 
-**There is currently a bug with [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings) where it only procs healing for balance, unless this gets fixed, never use it.**
-
 **ST:**
 The best embellishments raw damage wise at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings). 
 <br>A close contender is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at full uptime, which should in my opinion not be considered on pure ST.
@@ -282,10 +280,10 @@ The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=37
 
 **What to craft:**
 Before you make your decision on what to craft you should clear as much of the raid as possible. All crafted pieces should be crafted with mastery/haste.
-<br>Your first craft should be [Elemental Lariat]([https://www.wowhead.com/spell=375323/elemental-lariat](https://www.wowhead.com/item=193001/elemental-lariat?bonus=8960:8782:8793&ilvl=418&spec=102)), it performs really well in all situations, after that you can choose to craft either of the following depending on your gear:
+<br>Your first craft should be [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat?bonus=8960:8782:8793&ilvl=418&spec=102), it performs really well in all situations, after that you can choose to craft either of the following depending on your gear:
 <br>[Signet of Titanic Insight](https://www.wowhead.com/item=192999/signet-of-titanic-insight) Ring crafted by jewelcrafting
 <br>[Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade) 1H dagger crafted by blacksmithing
-<br>[Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps?bonus=8960&class=11&ilvl=418&spec=102) Boots crafted by Leatherworking
+<br>[Life-Bound Boots](https://www.wowhead.com/item=193398/life-bound-boots) Boots crafted by Leatherworking
 
 
 
