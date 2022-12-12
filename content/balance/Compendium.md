@@ -82,10 +82,10 @@ sidebarContents:  |
 - Use {{< spell 78674 "Starsurge" >}} if Starlord has less than 3 stacks and if talented you can optimally refresh your Rattle the Stars buff.
 - Use New-, Half- and Full Moon if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions are true: 
-    - If you would overcap AP with the next cast
-    - If you have a Starweaver's Weft proc
-    - If your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds
-    - If Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP
+    - You would overcap AP with the next cast.
+    - You have a Starweaver's Weft proc.
+    - Your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds.
+    - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
 - Use {{< spell 194153 "Starfire" >}}. You should always be in Lunar Eclipse outside cooldowns.
@@ -113,10 +113,10 @@ sidebarContents:  |
 - Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks and you will not overcap on AP.
 - Use Stellar Flare if the target will live for 8 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
-    - You would overcap AP otherwise
-    - {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will last for less than 12 seconds and the target will live for 4 or more seconds
-    - You have a Starweaver's Warp proc
-    - Starlord is below 3 stacks
+    - You would overcap AP otherwise.
+    - {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will last for less than 12 seconds and the target will live for 4 or more seconds.
+    - You have a Starweaver's Warp proc.
+    - Starlord is below 3 stacks.
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
 - Use {{< spell 194153 "Starfire" >}}.
@@ -227,6 +227,22 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 
 The priority is the same as it is on ST with the exception of Glacial Fury which gains a large amount of value when you frequently hit new targets. This means that you should always use Glacial Fury in M+ and any raid encounters with frequent add spawns that need to die.
 
+<div id="enchants">
+
+## [Enchants](#enchants)
+
+</div>
+
+
+Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc, use in all situations
+<br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
+<br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance?crafting-quality=6) Avoidance
+<br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
+<br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
+<br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
+<br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
+
+
 <div id="gearing">
 
 # [5.Gearing:](#gearing)
@@ -261,6 +277,14 @@ The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=37
 
 **TLDR:** 
 [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) (always use) > [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings) (ST) = [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) (AoE) > [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) (better in a scenario where you barely take damage)
+
+**What to craft:**
+Before you make your decision on what to craft you should clear as much of the raid as possible. All crafted pieces should be crafted with mastery/haste.
+<br>Your first craft should be [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat?bonus=8960:8782:8793&ilvl=418&spec=102), it performs really well in all situations, after that you can choose to craft either of the following depending on your gear:
+<br>[Signet of Titanic Insight](https://www.wowhead.com/item=192999/signet-of-titanic-insight) Ring crafted by jewelcrafting
+<br>[Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade) 1H dagger crafted by blacksmithing
+<br>[Life-Bound Boots](https://www.wowhead.com/item=193398/life-bound-boots) Boots crafted by Leatherworking
+
 
 
 <div id="tier-set">
