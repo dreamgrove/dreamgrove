@@ -22,6 +22,7 @@ sidebarContents:  |
  
   [5. Gearing](#gearing)
   <br>[Stats](#stats)
+  <br>[Enchants](#enchants)
   <br>[Embellishments](#embellishments)
   <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
@@ -228,20 +229,6 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 
 The priority is the same as it is on ST with the exception of Glacial Fury which gains a large amount of value when you frequently hit new targets. This means that you should always use Glacial Fury in M+ and any raid encounters with frequent add spawns that need to die.
 
-<div id="enchants">
-
-## [Enchants](#enchants)
-
-</div>
-
-
-Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc, use in all situations
-<br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
-<br>Cloak - [Writ of Avoidance](https://www.wowhead.com/item=200034/enchant-cloak-writ-of-avoidance?crafting-quality=6) Avoidance
-<br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
-<br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
-<br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
-<br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
 
 
 <div id="gearing">
@@ -259,7 +246,20 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
 
+<div id="enchants">
 
+## [Enchants](#enchants)
+
+</div>
+
+
+Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc, use in all situations
+<br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
+<br>Cloak - [Writ of Avoidance](https://www.wowhead.com/item=200034/enchant-cloak-writ-of-avoidance?crafting-quality=6) Avoidance
+<br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
+<br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
+<br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
+<br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
 
 <div id="embellishments">
 
