@@ -295,6 +295,7 @@ Before you make your decision on what to craft you should clear as much of the r
 
 2PC: 2% DPS ST, 2.5% AoE 
 <br>4PC: 12% DPS ST, 12.5% AoE
+<br>2+4PC: 14% DPS ST, 15% AoE
 <br>TLDR: Loot or bench
 
 How to use the 4PC procs can be found in the [Rotation](#rotation) section. ({{< spell 78674 "Starsurge" >}} ST, {{< spell 191034 "Starfall" >}} AoE)
