@@ -148,17 +148,17 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 
 [Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVQ)
+[Single Target with heavy movement](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCFQ)
 
 
 [Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYRQUGYVVVCUQCUA) - (most raid boss fights)
+Note: If Starfall isn't used often and there's heavy movement, Starweaver is a viable alternative as well.
 
 
 [aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUA) - 5 minute Patchwerk
 
 
 [aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
-
-
 
 
 [aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
