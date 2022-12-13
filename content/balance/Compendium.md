@@ -237,7 +237,7 @@ The priority is the same as it is on ST with the exception of Glacial Fury which
 
 Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc, use in all situations
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
-<br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance?crafting-quality=6) Avoidance
+<br>Cloak - [Writ of Avoidance](https://www.wowhead.com/item=200034/enchant-cloak-writ-of-avoidance?crafting-quality=6) Avoidance
 <br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
 <br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
 <br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
@@ -284,7 +284,7 @@ Before you make your decision on what to craft you should clear as much of the r
 <br>Your first craft should be [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat?bonus=8960:8782:8793&ilvl=418&spec=102), it performs really well in all situations, after that you can choose to craft either of the following depending on your gear:
 <br>[Signet of Titanic Insight](https://www.wowhead.com/item=192999/signet-of-titanic-insight) Ring crafted by jewelcrafting
 <br>[Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade) 1H dagger crafted by blacksmithing
-<br>[Life-Bound Boots](https://www.wowhead.com/item=193398/life-bound-boots) Boots crafted by Leatherworking
+<br>[Life-Bound Boots](https://www.wowhead.com/item=193398/life-bound-boots) Boots crafted by leatherworking
 
 
 
