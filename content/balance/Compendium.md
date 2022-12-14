@@ -269,9 +269,9 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 </div>
 
 **ST:**
-The best embellishments raw damage wise at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings). 
-<br>A close contender is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at full uptime, which should in my opinion not be considered on pure ST.
-<br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) should be considered instead of Bronzed Grip Wrappings since swapping Embellishments at least early on is not an option easily.
+The best embellishments raw damage wise at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots). 
+<br>Another option is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at full uptime, which should can be considered when you are sure you will rarely fall below 90%.
+<br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) should usually be taken instead of Slimy Expulsion Boots since swapping Embellishments, at least early on, is not an option easily.
 
 **AOE:**
 The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at max value. 
