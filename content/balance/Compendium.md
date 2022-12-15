@@ -147,24 +147,21 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 
 
-[Single Target](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCVQ)
-[Single Target with heavy movement](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBFNUYRQUGZVFRGUQCFQ)
+[Single Target:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJNAC?bgcolor=000000): BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJNAC
 
 
-[Single Target with Add Waves](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxlQQBBNUYRQUGYVVVCUQCUA) - (most raid boss fights)
-Note: If Starfall isn't used often and there's heavy movement, Starweaver is a viable alternative as well.
+[Single Target with heavy movement:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpEJEJFAC?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpEJEJFAC
+
+[Terros:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC?bgcolor=000000): BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSIJSBaJSSSolgI5AJ0SKJJERDgA
+
+[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000): BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA
+
+[Dathea / Raszageth? / Eranog / Kurog(H):](www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkSEERDgA?bgcolor=000000): BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkSEERDgA
+
+[Brood / Council / Sennarth:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA
 
 
-[aoe 2t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYVQUGYVVEWQQCUA) - 5 minute Patchwerk
-
-
-[aoe 3t council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
-
-
-[aoe 4t+ council sustained](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCYBQUUxVQQBBNUYZQUGYVVEGQQCUA) - 5 minute Patchwerk
-
-
-[M+ build](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhUUUxVQQBBNUYlUUGYVVECQQCUA)
+[M+ build:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBISSItkWESQDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBISSItkWESQDgA
 
 
 
