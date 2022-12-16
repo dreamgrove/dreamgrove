@@ -147,16 +147,16 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 
 
-[Single Target:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJNAC?bgcolor=000000): BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJNAC
+[Single Target:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpEJEJNAC?bgcolor=000000): BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpEJEJNAC
 
 
-[Single Target with heavy movement:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpEJEJFAC?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpEJEJFAC
+[Single Target with heavy movement:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC
 
 [Terros:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSIJSBaJSSSolgI5AJ0SKJJERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSIJSBaJSSSolgI5AJ0SKJJERDgA
 
 [Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA
 
-[Dathea / Raszageth? / Eranog / Kurog(H):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkSEERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkSEERDgA
+[Dathea / Raszageth? / Eranog / Kurog(H):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA
 
 [Brood / Council / Sennarth:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA
 
