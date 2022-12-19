@@ -63,5 +63,3 @@ actions.cat+=/shred,if=energy>60&combo_points<5
 
 actions.owl=moonkin_form,if=!buff.moonkin_form.up
 actions.owl+=/convoke_the_spirits
-
-actions.healing=strict_sequence,name=heal:natures_vigil:regrowth:regrowth:regrowth
