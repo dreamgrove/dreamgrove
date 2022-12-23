@@ -267,15 +267,15 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 **ST:**
 The best embellishments raw damage wise at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots). 
-<br>Another option is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at full uptime, which should can be considered when you are sure you will rarely fall below 90%.
 <br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) should usually be taken instead of Slimy Expulsion Boots since swapping Embellishments, at least early on, is not an option easily.
+<br>Another option is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at very high uptime, which should can be considered when you are sure you will rarely fall below 90%. In raid this is never the case and the same goes for most dungeons.
 
 **AOE:**
-The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at max value. 
-<br>A close contender is [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) so it is recommend to stick with this and [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) for nearly all situations.
+The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) in nearly all situations. 
+<br>As for single target [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) is an option if it gets very high uptime but this is essentially never the case.
 
 **TLDR:** 
-[Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) (always use) > [Bronzed Grip Wrappings](https://www.wowhead.com/spell=396442/bronzed-grip-wrappings) (ST) = [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) (AoE) > [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) (better in a scenario where you barely take damage)
+[Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) (always use) > [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) (ST) = [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) (AoE)
 
 **What to craft:**
 Before you make your decision on what to craft you should clear as much of the raid as possible. All crafted pieces should be crafted with mastery/haste.
