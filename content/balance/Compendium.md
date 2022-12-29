@@ -153,18 +153,22 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 [Single Target with heavy movement:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC
 
-[Terros:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSIJSBaJSSSolgI5AJ0SKJJERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQSiIIJESSIJSBaJSSSolgI5AJ0SKJJERDgA
+[Terros:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA
 
-[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA
+[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkSSIOQOQItkWkQQBgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkSSIOQOQItkWkQQBgA
 
 [Dathea / Raszageth? / Eranog / Kurog(H):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA
 
-[Brood / Council / Sennarth:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkkgISIESSikIFol4AJJRKSISOQItkWkQQDgA
+[Brood / Council / Sennarth:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEikDESLpFJE0AIA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEikDESLpFJE0AIA
 
 
-[M+ build:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC
+[M+ Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC
 
 
+[M+ no Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC
+- Orbital Strike is playable in Academy/Nokhud/Halls
+- For Tyrannical weeks you can play Goldrinn over 2 points in AK
+- For high density dungeons in Fortified weeks you can also go for 2 points in BoaT and EG
 
 
 DRUID TREE DEVIATIONS:
@@ -173,7 +177,7 @@ DRUID TREE DEVIATIONS:
 - If you are pure ST and do not need any other utility, you can take Nature Recovery and Thick Hide while getting everything else other than Astral Influence with [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBBAA).
 - If you have to pick utility, or want any other point than the build above, start by cutting the resto parts of the tree like in [this example](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxRQQBBAA). 
 - From this point onwards, you can pick either Feline Swiftness, another point in WHI, 1-minute roar, Typhoon and so on. 
-- If you want more points cut Renewal and then WHI. If you want more points elsewhere swap spec.
+- If you want more points cut Renewal and then WHI.
 - If you need Decurse inside of an M+ dungeon, use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA).
 - If you still want Typhoon, then use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA).
 
