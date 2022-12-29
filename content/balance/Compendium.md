@@ -121,7 +121,7 @@ sidebarContents:  |
     - Starlord is below 3 stacks.
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
-- Use {{< spell 194153 "Wrath" >}} if Starfire will hit 3 or less targets.
+- Use {{< spell 194153 "Wrath" >}} if Starfire will hit 3 or less targets during CA/Inc.
 - Use {{< spell 194153 "Starfire" >}}.
 
 
