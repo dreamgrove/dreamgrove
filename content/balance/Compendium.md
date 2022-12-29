@@ -112,7 +112,7 @@ sidebarContents:  |
 - Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP.
 - Use New Moon or Half Moon if you will overcap on charges and you will not overcap on AP.
 - Use Wild Mushrooms if you will not overcap on AP. If you are using Fungal Growth and Waning Twilight make sure to not use it if the debuff is up already.
-- Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks and you will not overcap on AP.
+- Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks or an Umbral Embrace proc and you will not overcap on AP.
 - Use Stellar Flare if the target will live for 8 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You would overcap AP otherwise.
@@ -121,6 +121,7 @@ sidebarContents:  |
     - Starlord is below 3 stacks.
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
+- Use {{< spell 194153 "Wrath" >}} if Starfire will hit 3 or less targets.
 - Use {{< spell 194153 "Starfire" >}}.
 
 
