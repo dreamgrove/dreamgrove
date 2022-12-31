@@ -1,6 +1,6 @@
 ---
 date: '2022-11-26'
-authors: ["Chicken, Jundarer"]
+authors: ["Chicken, Jundarer, Dsune"]
 published: yes
 patch: "10.0"
 title: Balance Druid 10.0 Compendium
@@ -123,7 +123,7 @@ sidebarContents:  |
     - Starlord is below 3 stacks.
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
-- Use {{< spell 194153 "Wrath" >}} if Starfire will hit 3 or less targets during CA/Inc.
+- Use {{< spell 194153 "Wrath" >}} if Starfire will hit 3 or less targets during CA/Inc and you are using Rattle the Stars.
 - Use {{< spell 194153 "Starfire" >}}.
 
 
@@ -157,7 +157,9 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 [Terros:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA
 
-[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkSSIOQOQItkWkQQBgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkSSIOQOQItkWkQQBgA
+[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEiDkDkItkWkQQBgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEiDkDkItkWkQQBgA
+
+[Dathea(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkicAikDkItkWEERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkicAikDkItkWEERDgA
 
 [Dathea / Raszageth? / Eranog / Kurog(H):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA
 
@@ -167,11 +169,13 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 [M+ Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC
 
 
-[M+ no Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC
-- Orbital Strike is playable in Academy/Nokhud/Halls
-- For Tyrannical weeks you can play Goldrinn over 2 points in AK
-- For high density dungeons in Fortified weeks you can also go for 2 points in BoaT and EG
+[M+ Tyrannical:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC
 
+[M+ Fortified:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA
+
+- Orbital Strike is playable in Academy/Nokhud/Halls.
+- For Tyrannical weeks if you want more ST and do not need 2 points in AK you can remove that for Goldrinn.
+- For Lower keys (below 15-17) you can remove EG and 1 point in AK for Denizens and Friend of the Fae.
 
 DRUID TREE DEVIATIONS:
 
