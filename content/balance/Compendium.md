@@ -73,6 +73,7 @@ sidebarContents:  |
 
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse. This also applies to before cooldowns if you have T29 4PC equipped.
+- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and is not in {{< spell 194223 "CA" >}}, or {{< spell 102560 "Inc" >}}.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
 - Use {{< spell 194223 "Celestial Alignment" >}}, or {{< spell 102560 "Incarnation" >}} if talented.
 - Use Warrior of Elune if available.
@@ -90,7 +91,8 @@ sidebarContents:  |
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
-- Use {{< spell 194153 "Starfire" >}}. You should always be in Lunar Eclipse outside cooldowns.
+- Use {{< spell 194153 "Starfire" >}}. Use Starfire if you have an Umbral Embrace proc and you are in Lunar Eclipse.
+- Use {{< spell 190984 "Wrath" >}}. Use Wrath, you should always be in Lunar Eclipse outside cooldowns but casting Wrath is still a DPS increase.
 
 
 
@@ -225,11 +227,11 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage), has ~80% of the value of Static/Isolation Phials at max value.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has ~55% of the value of Static/Isolation Phials at max value. This means if you can't get more than 55% uptime on those you should use this Phial.
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), same as the Elemental one, only that vers is more often better during progress than the random stats. Should be the default phial in most situations.
-- [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), do not use this on single target.
+- [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), after nerfs this Phial should never be used.
 
 **AoE**:
 
-The priority is the same as it is on ST with the exception of Glacial Fury which gains a large amount of value when you frequently hit new targets. This means that you should always use Glacial Fury in M+ and any raid encounters with frequent add spawns that need to die.
+The priority is the same as it is on ST.
 
 
 <div id="gearing">
@@ -318,9 +320,13 @@ On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.
 
 [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
 <br>[Spiteful Storm](https://www.wowhead.com/item=194309/spiteful-storm?bonus=7979&class=11&ilvl=424&spec=102) - Raszageth (Raid)
+<br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid)*
 <br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal COuncil (Raid)
 <br>[Eye of Skovald](https://www.wowhead.com/item=133641/eye-of-skovald?bonus=1795&ilvl=415&spec=102) - Halls of Valor
 <br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
+
+<br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
+
 
 On **AoE** you will want to use [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) and one of the following trinkets:
 
