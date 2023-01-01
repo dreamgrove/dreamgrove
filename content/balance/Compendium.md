@@ -169,13 +169,13 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 [M+ Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC
 
 
-[M+ Tyrannical:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSIOQOQi0SaRQENAC
+[M+ Tyrannical:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQi0SaRQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQi0SaRQQDgA
 
 [M+ Fortified:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA
 
 - Orbital Strike is playable in Academy/Nokhud/Halls.
 - For Tyrannical weeks if you want more ST and do not need 2 points in AK you can remove that for Goldrinn.
-- For Lower keys (below 15-17) you can remove EG and 1 point in AK for Denizens and Friend of the Fae.
+- For Lower keys (below 15-17) you can remove 1 point in AK for Denizens or 2nd UE.
 
 DRUID TREE DEVIATIONS:
 
