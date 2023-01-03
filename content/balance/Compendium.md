@@ -87,7 +87,6 @@ sidebarContents:  |
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions are true: 
     - You would overcap AP with the next cast.
     - You have a Starweaver's Weft proc.
-    - Your {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will end in the next 5 seconds.
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
