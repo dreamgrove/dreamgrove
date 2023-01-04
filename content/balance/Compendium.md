@@ -91,7 +91,7 @@ sidebarContents:  |
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
 - Use {{< spell 194153 "Starfire" >}} if you have an Umbral Embrace proc and you are in Lunar Eclipse.
-- Use {{< spell 190984 "Wrath" >}} ,you should always be in Lunar Eclipse outside cooldowns but casting Wrath is still a DPS increase.
+- Use {{< spell 190984 "Wrath" >}}. You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
 
 
 
