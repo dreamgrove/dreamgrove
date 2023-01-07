@@ -19,6 +19,7 @@ sidebarContents:  |
   <br>[Potions](#potions)
   <br>[Food](#food)
   <br>[Phials](#phials)
+  <br>[Runes](#runes)
  
   [5. Gearing](#gearing)
   <br>[Stats](#stats)
@@ -73,9 +74,9 @@ sidebarContents:  |
 
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse. This also applies to before cooldowns if you have T29 4PC equipped.
-- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and is not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if talented.
+- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
 - Use Warrior of Elune if available.
 - Use Convoke the Spirits when below 40 AP if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
 - Use Astral Communion if you will not overcap on AP.
@@ -91,7 +92,7 @@ sidebarContents:  |
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
 - Use {{< spell 194153 "Starfire" >}} if you have an Umbral Embrace proc and you are in Lunar Eclipse.
-- Use {{< spell 190984 "Wrath" >}}. You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
+- Use {{< spell 190984 "Wrath" >}} You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
 
 
 
@@ -237,6 +238,15 @@ Pure damage wise with 100% uptime on all of the Phials and not counting in the d
 The priority is the same as it is on ST.
 
 
+<div id="runes">
+
+## [Runes](#Runes)
+
+</div>
+
+[Howling Rune](https://www.wowhead.com/item=194820/howling-rune) Use in all situations.
+
+
 <div id="gearing">
 
 # [5.Gearing:](#gearing)
@@ -261,7 +271,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc, use in all situations
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
-<br>Cloak - [Writ of Avoidance](https://www.wowhead.com/item=200034/enchant-cloak-writ-of-avoidance?crafting-quality=6) Avoidance
+<br>Cloak - [Graceful Avoidance](https://www.wowhead.com/spell=389403/graceful-avoidance) Avoidance + Reduced falldamage  
 <br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
 <br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
 <br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
