@@ -135,7 +135,7 @@ sidebarContents:  |
 </div>
 
 
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 2 or more targets.
+Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 4 or more targets.
 
 
 
