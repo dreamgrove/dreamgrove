@@ -91,9 +91,8 @@ sidebarContents:  |
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use Wild Mushroom on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
-- Use {{< spell 194153 "Starfire" >}} if you have an Umbral Embrace proc and you are in Lunar Eclipse.
+- Use {{< spell 194153 "Starfire" >}} if you have an Umbral Embrace proc or are at 2+ 2pc stacks and you are in Lunar Eclipse. Either Embrace or 2pc can be ignored for the same gain (~0.5% dps).
 - Use {{< spell 190984 "Wrath" >}} You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
-
 
 
 <div id="aoe">
