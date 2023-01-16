@@ -2,6 +2,7 @@ actions.precombat=flask
 actions.precombat+=/food
 actions.precombat+=/augmentation
 actions.precombat+=/snapshot_stats
+actions.precombat+=/use_item,name=algethar_puzzle_box
 actions.precombat+=/cat_form
 actions.precombat+=/prowl
 
