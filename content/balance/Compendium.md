@@ -56,6 +56,41 @@ sidebarContents:  |
 
 </div>
 
+## 10.0.5 Updates
+
+### Summary of the changes
+
+10.0.5 is around the corner and brings a number of updates to our class and spec tree (you can check the update out [here](https://www.wowhead.com/ptr/talent-calc/druid/balance) or on PTR). The class tree changes have no major impact but we can get Remove Corruption, Cyclone or Hibernate easier and a 5s CDR on Typhoon in the form of a new talent, Incessant Tempest. Forestwalk (the Regrowth buffing talent) will unlikely see play as we currently use Bear Form->Frenzied to survive and is generally pretty underwhelming for its positioning in the tree. The changes to the Balance tree and spec have a much larger impact:
+
+- Circle has been reworked into Cosmic Rapidity which has the same effect except our dots no longer last shorter. This means far less redotting in all scenarios.
+- Solar Beam now always has to be picked, meaning it is more or less baseline. No more excuses why you didn't kick.
+- Lunar Eclipse now increases the AoE damage of Starfire instead of its crit chance. The implication of this is a very large stacked AoE buff but also more reliance on being able to cast Starfire which is often not a given. This also heavily increases the value of all our filler talents in stacked AoE scenarios.
+- A lot of talent position shuffling which forces us into different build paths.
+
+Playstyle wise these changes are positive as the short dot duration has been one of the biggest complaints about the spec, similarly to Solar Beam costing DPS. <br>
+In terms of tuning, the Lunar Eclipse changes shift our damage profile in AoE scenarios by pushing far more damage into Starfire. While this is currently "just" a large buff, it will inevitably be nerfed in some form and leave us more reliant on hard casting Starfire for better or worse.
+
+
+### New talent builds
+
+The following builds are what currently sims highest for the given scenarios but may not be perfect yet. Take with a grain of salt.
+Pure Single Target aka Terros:<br>
+https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBkkIFRRTGVBCAQMVUFQSFSoZkFQCFQ
+With the new tree we can skip Starfall if there is a fight such as Terros which allows it. The result of this is picking Force of Nature and Starweaver not working anymore which results in this build.
+
+Sustained 4 targets aka Council:<br>
+https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCEQMVQUWaFSgZgBQBR
+This is the result of the previously mentioned Lunar Eclipse change. In this build we take all our filler Talents to allow Starfire to shine, even skipping Mushrooms. Compared to the previously optimal build for Council, this build is a ~14% dps increase meaning we will gap everyone else by a large margin on that boss. Unfortunately this build gives up more or less all our single target dps so the uses of it are very limited. It remains to be seen if it will find play in more scenarios.
+
+Possible dungeon build and mixed target boss fights:<br>
+https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSoZkFQCQQ
+This build basically maximizes the talents that are either must pick in ST/AoE or buff both. Starweaver in M+ is also looking to be a viable pick outside of very heavy AoE dungeons as it is better on both bosses and packs that have mobs with a larger hp pool. Wild Mushroom is still our best burst AoE talent so it will still be taken for bosses where it is required(for example Dathea) or for lower M+ dungeons. Additionally Mushrooms are a movement global we are sorely lacking so they will still see play in a lot of dungeons and bosses. A build with them would look like this: https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSpVkRQCQQ
+Nonetheless they have lost a lot of relative value as they replace a Starfire cast.
+
+### Other minor rotational changes
+- We now Starfire during CA/Inc on 2+ targets instead of 4+.
+- Stellar Flare is no longer worth casting on 11 targets minus 1 per point in Astral Smolder or Umbral Intensity. This means that with both Astral Smolder and Umbral Intensity at 2/2 we stop using Stellar Flare on 7 targets. Additionally it now requires the target to live 8s+1 per target Starfire can hit.
+- Not a change but worth noting: Nothing changes about us entering Lunar Eclipse and filling with Wrath outside 2+ 2pc stacks or Umbral Embrace on ST.
 
 
 <div id="rotation">
