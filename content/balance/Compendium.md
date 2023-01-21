@@ -68,7 +68,7 @@ sidebarContents:  |
 - A lot of talent position shuffling which forces us into different build paths.
 
 Playstyle wise these changes are positive as the short dot duration has been one of the biggest complaints about the spec, similarly to Solar Beam costing DPS. <br>
-In terms of tuning, the Lunar Eclipse changes shift our damage profile in AoE scenarios by pushing far more damage into Starfire. While this is currently "just" a large buff, it will inevitably be nerfed in some form and leave us more reliant on hard casting Starfire for better or worse.
+In terms of tuning, the Lunar Eclipse changes shift our damage profile in AoE scenarios by pushing far more damage into Starfire. ~~While this is currently "just" a large buff, it will inevitably be nerfed in some form and leave us more reliant on hard casting Starfire for better or worse.~~ It has been nerfed :)
 
 
 ### New talent builds
