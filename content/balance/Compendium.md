@@ -80,7 +80,7 @@ With the new tree we can skip Starfall if there is a fight such as Terros which 
 
 Sustained 4 targets aka Council:<br>
 https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCEQMVQUWaFSgZgBQBR
-This is the result of the previously mentioned Lunar Eclipse change. In this build we take all our filler Talents to allow Starfire to shine, even skipping Mushrooms. Compared to the previously optimal build for Council, this build is a ~14% dps increase meaning we will gap everyone else by a large margin on that boss. Unfortunately this build gives up more or less all our single target dps so the uses of it are very limited. It remains to be seen if it will find play in more scenarios.
+This is the result of the previously mentioned Lunar Eclipse change. In this build we take all our filler Talents to allow Starfire to shine, even skipping Mushrooms. Compared to the previously optimal build for Council, this build is a ~~14%~~6% dps increase meaning we will gap everyone else by a ~~large~~ fairly large margin on that boss. Unfortunately this build gives up more or less all our single target dps so the uses of it are very limited. It remains to be seen if it will find play in more scenarios.
 
 Possible dungeon build and mixed target boss fights:<br>
 https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSoZkFQCQQ
