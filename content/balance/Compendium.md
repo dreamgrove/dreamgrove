@@ -12,6 +12,7 @@ sidebarContents:  |
   <br>[What is my Single Target rotation?](#st)
   <br>[What is my AoE priority?](#aoe)
   <br>[What is my filler priority inside CA?](#filler)
+  <br>[Why do we proc pulsar with starfall?](#pulsar)
  
   [3. Talents](#talents)
  
@@ -157,7 +158,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
     - Starlord is below 3 stacks.
 - Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
-- Use {{< spell 194153 "Wrath" >}} if Starfire will hit 3 or less targets during CA/Inc and you are using Rattle the Stars.
+- Use {{< spell 194153 "Wrath" >}} if Starfire will only hit one target during CA/Inc.
 - Use {{< spell 194153 "Starfire" >}}.
 
 
@@ -169,11 +170,17 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 </div>
 
 
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 4 or more targets.
+Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 2 or more targets.
 
 
+<div id="pulsar">
 
+## [Why do we proc pulsar with starfall?](#pulsar)
 
+The reason we proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} in single target situations with Starfall (if CA/INC is not already active) is due to the buffs gained upon entering CA such as {{< spell 394050 "BoAT" >}} and {{< spell 194223 "Celestial Alignment" >}}.
+  
+The damage dealt by Starfall updates dynamically during its duration and can benefit from those buffs (with the exception of the initial tick). Starsurge on the other hand is executed before these buffs apply and will not benefit from them.
+  
 <div id="talents">
 
 # [3.Talents:](#talents)
