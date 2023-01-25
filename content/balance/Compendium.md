@@ -81,11 +81,11 @@ With the new tree we can skip Starfall if there is a fight such as Terros which 
 
 Sustained 4 targets aka Council:<br>
 https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCEQMVQUWaFSgZgBQBR
-This is the result of the previously mentioned Lunar Eclipse change. In this build we take all our filler Talents to allow Starfire to shine, even skipping Mushrooms. Compared to the previously optimal build for Council, this build is a ~~14%~~6% dps increase meaning we will gap everyone else by a ~~large~~ fairly large margin on that boss. Unfortunately this build gives up more or less all our single target dps so the uses of it are very limited. It remains to be seen if it will find play in more scenarios.
+This is the result of the previously mentioned Lunar Eclipse change. In this build we take all our filler Talents to allow Starfire to shine, even skipping Mushrooms. Compared to the previously optimal build for Council, this build is a ~~14%~~ 6% dps increase meaning we will gap everyone else by a ~~large~~ fairly large margin on that boss. Unfortunately this build gives up more or less all our single target dps so the uses of it are very limited. It remains to be seen if it will find play in more scenarios.
 
 Possible dungeon build and mixed target boss fights:<br>
 https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSoZkFQCQQ
-This build basically maximizes the talents that are either must pick in ST/AoE or buff both. Starweaver in M+ is also looking to be a viable pick outside of very heavy AoE dungeons as it is better on both bosses and packs that have mobs with a larger hp pool. Wild Mushroom is still our best burst AoE talent so it will still be taken for bosses where it is required(for example Dathea) or for lower M+ dungeons. Additionally Mushrooms are a movement global we are sorely lacking so they will still see play in a lot of dungeons and bosses. A build with them would look like this: https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSpVkRQCQQ
+This build basically maximizes the talents that are either must pick in ST/AoE or buff both. Starweaver in M+ is also looking to be a viable pick outside of very heavy AoE dungeons as it is better on both bosses and packs that have mobs with a larger hp pool. Wild Mushroom is still our best burst AoE talent so it will still be taken for bosses where it is required(for example Dathea), for lower M+ dungeons and whenever the average pull is too big to consistently flare. Additionally Mushrooms are a movement global we are sorely lacking so they will still see play in a lot of dungeons and bosses. A build with them would look like this: https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSpVkRQCQQ
 Nonetheless they have lost a lot of relative value as they replace a Starfire cast.
 
 ### Other minor rotational changes
@@ -139,24 +139,24 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 
 **AoE priority list:**
 
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 8 or more seconds and you will not overcap on AP.
-- Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 8 or more seconds and you will not overcap on AP.
-- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you have T29 4PC equipped, and {{< spell 194223 "Celestial Alignment" >}}, or {{< spell 102560 "Incarnation" >}} is off Cooldown.
-- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use Astral Communion if you will not overcap on AP.
-- Use Warrior of Elune if available.
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds, you will not overcap on AP and will hit all targets with it. Otherwise wait with this until they are gathered.
+- Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse.
-- Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP.
-- Use New Moon or Half Moon if you will overcap on charges and you will not overcap on AP.
+- Use {{< spell 191034 "Starfall" >}} T29 4PC equipped, have the free spender buff and you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}.
+- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use Warrior of Elune if available.
 - Use Wild Mushrooms if you will not overcap on AP. If you are using Fungal Growth and Waning Twilight make sure to not use it if the debuff is up already.
+- Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP.
+- Use Full Moon if you will overcap on charges and you will not overcap on AP.
+- Use Stellar Flare if the target will live for at least 8s+1s per target that Starfire can hit and you will not overcap on AP.
 - Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks or an Umbral Embrace proc and you will not overcap on AP.
-- Use Stellar Flare if the target will live for 8 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You would overcap AP otherwise.
-    - {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} will last for less than 12 seconds and the target will live for 4 or more seconds.
     - You have a Starweaver's Warp proc.
     - Starlord is below 3 stacks.
-- Use Convoke the Spirits if you have less than 50 AP. Preferably be inside of a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window.
+- Use Astral Communion if you will not overcap on AP.
+- Use Convoke the Spirits if Starfire would only hit 2 targets, otherwise only use Convoke for movement in AoE.
+- Use New Moon and Half Moon if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
 - Use {{< spell 194153 "Wrath" >}} if Starfire will only hit one target during CA/Inc.
 - Use {{< spell 194153 "Starfire" >}}.
@@ -189,44 +189,11 @@ The damage dealt by Starfall updates dynamically during its duration and can ben
 
 **DRAGONFLIGHT TALENTS:**
 
-
-
-[Single Target:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpkkQENAC?bgcolor=000000): BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpkkQENAC
-
-
-[Single Target with heavy movement:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC
-
-[Terros:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA
-
-[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEiDkDkItkWkQQBgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEiDkDkItkWkQQBgA
-
-[Dathea(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkicAikDkItkWEERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkicAikDkItkWEERDgA
-
-[Dathea / Raszageth? / Eranog / Kurog(H):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA
-
-[Brood / Council / Sennarth:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEikDESLpFJE0AIA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEikDESLpFJE0AIA
-
-
-[M+ Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC
-
-
-[M+ Tyrannical:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQi0SaRQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQi0SaRQQDgA
-
-[M+ Fortified:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA
-
-- Orbital Strike is playable in Academy/Nokhud/Halls.
-- For Tyrannical weeks if you want more ST and do not need 2 points in AK you can remove that for Goldrinn.
-- For Lower keys (below 15-17) you can remove 1 point in AK for Denizens or 2nd UE.
+TBD
 
 DRUID TREE DEVIATIONS:
 
 - ALWAYS take Nature’s Vigil in raid and M+ unless the content is a joke.
-- If you are pure ST and do not need any other utility, you can take Nature Recovery and Thick Hide while getting everything else other than Astral Influence with [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBBAA).
-- If you have to pick utility, or want any other point than the build above, start by cutting the resto parts of the tree like in [this example](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxRQQBBAA). 
-- From this point onwards, you can pick either Feline Swiftness, another point in WHI, 1-minute roar, Typhoon and so on. 
-- If you want more points cut Renewal and then WHI.
-- If you need Decurse inside of an M+ dungeon, use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA).
-- If you still want Typhoon, then use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA).
 
 
 
