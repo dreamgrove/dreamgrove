@@ -1,5 +1,5 @@
 ---
-date: '2022-11-26'
+date: '2023-1-25'
 authors: ["Chicken, Jundarer, Dsune"]
 published: yes
 patch: "10.0"
@@ -189,8 +189,22 @@ The damage dealt by Starfall updates dynamically during its duration and can ben
 
 **DRAGONFLIGHT TALENTS:**
 
-TBD
-
+[Erranog](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSoZkFQCQA)
+<br>[Council](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBBBgkIFRRTGFBCAQMVQUWaFSgZgBQBQ)
+<br>[Terros sweaty build](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVUFQSFSoZkFQCFU)
+<br>[Terros chill build](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQVQSFSoZkFQCRQ)
+<br>[Sennarth no pad](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSoZkFQCQA)
+<br>[Sennarth with pad](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCQA)
+<br>[Dathea](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
+<br>[Kurog](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSoZkFQCQA)
+<br>[Broodkeeper ethical build](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
+<br>[Broodkeeper pad build](https://www.wowhead.com/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAQLVUUWaFSgZgBBU)
+<br>[Raszageth](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
+  
+<br>[M+ Build 1 Rattle}(https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
+<br>[M+ Build 2 Weaver](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUVSFSoZkBQCQA)
+<br>[M+ Build 3 Fort AA](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBBBgkIFRRTGFBCAQMVUUWaFSgVgBQCUA)
+  
 DRUID TREE DEVIATIONS:
 
 - ALWAYS take Nature’s Vigil in raid and M+ unless the content is a joke.
