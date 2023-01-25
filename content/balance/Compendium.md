@@ -181,44 +181,11 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 **DRAGONFLIGHT TALENTS:**
 
-
-
-[Single Target:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpkkQENAC?bgcolor=000000): BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpkkQENAC
-
-
-[Single Target with heavy movement:](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAkIIikkQIJhkINol4AJJhWCikDkQLpFJEJFAC
-
-[Terros:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSolgI5AJ0SKJJERDgA
-
-[Kurog(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEiDkDkItkWkQQBgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEiDkDkItkWkQQBgA
-
-[Dathea(M):](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkicAikDkItkWEERDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkicAikDkItkWEERDgA
-
-[Dathea / Raszageth? / Eranog / Kurog(H):](https://www.raidbots.com/simbot/render/talents/BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA?bgcolor=000000) BYGAYhlYdy9RJ6ROrphOEi69vCAAAAAAAAAAAAAAAAAAAoAQiICSChkkIJSBaJSSSkSCikDkItkWEERDgA
-
-[Brood / Council / Sennarth:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEikDESLpFJE0AIA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQiICSChkESiUgWSSSSkiEikDESLpFJE0AIA
-
-
-[M+ Beam:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKyBIOQSItkWkIBNAC
-
-
-[M+ Tyrannical:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQi0SaRQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQi0SaRQQDgA
-
-[M+ Fortified:](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA?bgcolor=000000) BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAQSiIIJESSikIFol4AJJRKSISOQItkWkQQDgA
-
-- Orbital Strike is playable in Academy/Nokhud/Halls.
-- For Tyrannical weeks if you want more ST and do not need 2 points in AK you can remove that for Goldrinn.
-- For Lower keys (below 15-17) you can remove 1 point in AK for Denizens or 2nd UE.
+TBD
 
 DRUID TREE DEVIATIONS:
 
 - ALWAYS take Nature’s Vigil in raid and M+ unless the content is a joke.
-- If you are pure ST and do not need any other utility, you can take Nature Recovery and Thick Hide while getting everything else other than Astral Influence with [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCYBQUExRQQBBAA).
-- If you have to pick utility, or want any other point than the build above, start by cutting the resto parts of the tree like in [this example](https://www.wowhead.com/talent-calc/druid/balance/DAQEFAUQcCQhQUUxRQQBBAA). 
-- From this point onwards, you can pick either Feline Swiftness, another point in WHI, 1-minute roar, Typhoon and so on. 
-- If you want more points cut Renewal and then WHI.
-- If you need Decurse inside of an M+ dungeon, use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFFQVQcCQhQUUxQQQBBNUYlUUGYVVECQQCUA).
-- If you still want Typhoon, then use [this build](https://www.wowhead.com/talent-calc/druid/balance/DAQFEQRQcCQhUUUxRQQBBNUYlUUGYVVECQQCUA).
 
 
 
