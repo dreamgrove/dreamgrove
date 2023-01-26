@@ -40,8 +40,6 @@ sidebarContents:  |
   [7. Utility](#utility)
  
 ---
-<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
-<script src="https://wow.zamimg.com/js/tooltips.js"></script>
 
 <details>
 <summary>Changelog</summary>
@@ -524,3 +522,7 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 {{< spell 37846 "Force of Nature" >}} - Taunts everything in a radius near the initial placement of the trees. 60s CD. The trees will start targeting whatever your target was upon placing them.
 
 {{< spell 78675 "Solar Beam" >}} - ST interrupt on main target with 5s lockout that places an AoE silence ring on the ground that lasts 8s. The silence ring does not work on some mobs but the actual interrupt does, be careful with this.
+
+
+<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script src="https://wow.zamimg.com/js/tooltips.js"></script>
