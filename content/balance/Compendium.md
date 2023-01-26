@@ -1,7 +1,7 @@
 ---
 date: '2022-10-25'
 authors: ["Chicken, Jundarer, Dsune"]
-published: yes
+published: true
 patch: "10.0"
 title: Balance Druid 10.0 Compendium
 showOnFrontpage: true
