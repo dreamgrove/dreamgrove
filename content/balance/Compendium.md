@@ -4,6 +4,7 @@ authors: ["Chicken, Jundarer, Dsune"]
 published: yes
 patch: "10.0"
 title: Balance Druid 10.0 Compendium
+showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [1. News](#news)
