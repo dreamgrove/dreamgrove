@@ -355,23 +355,23 @@ On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.
 
 [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
 <br>[Spiteful Storm](https://www.wowhead.com/item=194309/spiteful-storm?bonus=7979&class=11&ilvl=424&spec=102) - Raszageth (Raid)
-<br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid)*
+<br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid), Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
 <br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal COuncil (Raid)
 <br>[Eye of Skovald](https://www.wowhead.com/item=133641/eye-of-skovald?bonus=1795&ilvl=415&spec=102) - Halls of Valor
 <br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
-
-<br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
-
-
+<br>[Windscar Whetstone](https://www.wowhead.com/item=137486/windscar-whetstone?bonus=6652:8811:8812:6808:4786:3294&ilvl=415&spec=102) - Court of Stars, good on-use ST trinket, mind that the damage it does is shared amongst enemies hit.
+  
 On **AoE** you will want to use [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) and one of the following trinkets:
 
 [Alacritous Alchemist Stone](https://www.wowhead.com/item=191492/alacritous-alchemist-stone?ilvl=418&spec=102) - Alchemy / AH
 <br>[Infernal Writ](https://www.wowhead.com/item=137485/infernal-writ?bonus=1795&class=11&ilvl=415&spec=102) - Court of Stars
 <br>[Furious Ragefeather](https://www.wowhead.com/item=193677/furious-ragefeather?bonus=7974&class=11&ilvl=415&spec=102) - Nokund Offensive 
-<br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal Council (Raid)
 <br>[Idol of the Earth Warder](https://www.wowhead.com/item=193006/idol-of-the-earth-warder?class=11&ilvl=418&spec=102) - Jewelcrafting / AH !! This trinket is only good if you have a lot of sockets in your gear !!
 <br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
-
+<br>[Voidmender's Shadowgem](https://www.wowhead.com/item=110007/voidmenders-shadowgem?bonus=6652:8811:8812:6808:4786:3300&class=11&ilvl=415&spec=102) - Shadowmoon Burial Grounds
+<br>[Ruby Whelp Shell](https://www.wowhead.com/item=193757/ruby-whelp-shell?bonus=6652:8783:8784:7936:7937:6808:4786:1637&class=11&ilvl=415&spec=102) - Ruby Life Pools, can be used if no other good alternative, you would want to train the haste proc.
+<br>[Emerald Coach's Whistle](https://www.wowhead.com/item=193718/emerald-coachs-whistle?bonus=6652:8783:8784:7936:7937:6808:4786:1637&class=11&ilvl=415&spec=102) - Algethar Academy, mastery buff that procs both for you and the person you link with, likely the best dps increase for your group since both players benefit from the buff(requires resto lootspec to drop, procs from all of our spells).
+<br>[Iceblood Deathsnare](https://www.wowhead.com/item=194304/iceblood-deathsnare?bonus=6652:8783:8784:7936:7937:4800:4786:1498&class=11&ilvl=415&spec=102) Sennarth(Raid), good on sustained AoE
 
 
 <div id="gearing-advice">
