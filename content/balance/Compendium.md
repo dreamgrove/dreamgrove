@@ -353,7 +353,7 @@ Obviously, just like before please use the Top Gear or Droptimizer options in Ra
 
 On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.com/item=193677/furious-ragefeather?bonus=7974&class=11&ilvl=415&spec=102) and one of the following trinkets:
 
-<br>[Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
+[Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
 <br>[Spiteful Storm](https://www.wowhead.com/item=194309/spiteful-storm?bonus=7979&class=11&ilvl=424&spec=102) - Raszageth (Raid)
 <br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid), Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
 <br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal COuncil (Raid)
