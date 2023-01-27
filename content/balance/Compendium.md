@@ -150,15 +150,16 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 - Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP.
 - Use Full Moon if you will overcap on charges and you will not overcap on AP.
 - Use Stellar Flare if the target will live for at least 8s+1s per target that Starfire can hit and you will not overcap on AP.
-- Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks or an Umbral Embrace proc and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You would overcap AP otherwise.
     - You have a Starweaver's Warp proc.
     - Starlord is below 3 stacks.
+- Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc and starfire will hit less than 3 targets.
+- Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks or an Umbral Embrace proc and you will not overcap on AP.
 - Use Astral Communion if you will not overcap on AP.
 - Use Convoke the Spirits if Starfire would only hit 2 targets, otherwise only use Convoke for movement in AoE.
 - Use New Moon and Half Moon if you will not overcap on AP.
-- Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
+- Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc and starfire will hit less than 17 targets.
 - Use {{< spell 194153 "Wrath" >}} if Starfire will only hit one target during CA/Inc.
 - Use {{< spell 194153 "Starfire" >}}.
 
