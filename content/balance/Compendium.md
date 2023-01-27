@@ -132,7 +132,6 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 - Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc or are at 2+ 2pc stacks and you are in Lunar Eclipse. Either Embrace or 2pc can be ignored for the same gain (~0.5% dps).
 - Use {{< spell 190984 "Wrath" >}} You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
 
-{{< spell 202771 "Full Moon" >}}
 <div id="aoe">
 
 ## [What is my AoE rotation?](#aoe)
