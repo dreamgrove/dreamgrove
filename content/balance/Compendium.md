@@ -1,9 +1,9 @@
 ---
-date: '2023-01-26'
+date: '2023-01-27'
 authors: ["Chicken, Jundarer, Dsune"]
 published: true
-patch: "10.0"
-title: Balance Druid 10.0 Compendium
+patch: "10.0.5"
+title: Balance Druid 10.0.5 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -46,8 +46,9 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
   
-  + 2022-11-26:
-  <br>Added: The document
+  + 2023-01-27:
+  <br>Changed prio for Starweaver surge proc in AoE
+  <br>
   
  
 </details>
