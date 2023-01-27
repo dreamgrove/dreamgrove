@@ -40,8 +40,6 @@ sidebarContents:  |
   [7. Utility](#utility)
  
 ---
-<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
-<script src="https://wow.zamimg.com/js/tooltips.js"></script>
 
 <details>
 <summary>Changelog</summary>
@@ -114,7 +112,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse. This also applies to before cooldowns if you have T29 4PC equipped.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if talented.
-- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
+- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
 - Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
@@ -522,3 +520,7 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 {{< spell 37846 "Force of Nature" >}} - Taunts everything in a radius near the initial placement of the trees. 60s CD. The trees will start targeting whatever your target was upon placing them.
 
 {{< spell 78675 "Solar Beam" >}} - ST interrupt on main target with 5s lockout that places an AoE silence ring on the ground that lasts 8s. The silence ring does not work on some mobs but the actual interrupt does, be careful with this.
+
+
+<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script src="https://wow.zamimg.com/js/tooltips.js"></script>
