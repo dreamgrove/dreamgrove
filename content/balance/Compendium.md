@@ -1,9 +1,9 @@
 ---
-date: '2023-01-26'
+date: '2023-01-27'
 authors: ["Chicken, Jundarer, Dsune"]
 published: true
-patch: "10.0"
-title: Balance Druid 10.0 Compendium
+patch: "10.0.5"
+title: Balance Druid 10.0.5 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -44,8 +44,9 @@ sidebarContents:  |
 <details>
 <summary>Changelog</summary>
   
-  + 2022-11-26:
-  <br>Added: The document
+  + 2023-01-27:
+  <br>Changed prio for Starweaver surge proc in AoE
+  <br>
   
  
 </details>
@@ -112,23 +113,22 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 - Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if talented.
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
-- Use Warrior of Elune if available.
-- Use Convoke the Spirits when below 40 AP if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
-- Use Astral Communion if you will not overcap on AP.
-- Use Force of Nature if you will not overcap on AP.
+- Use {{< spell 202425 "Warrior of Elune" >}} if available.
+- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
+- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
+- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
-- Use {{< spell 191034 "Starfall" >}} if you have a Starweaver's Warp proc.
-- Use {{< spell 78674 "Starsurge" >}} if Starlord has less than 3 stacks and if talented you can optimally refresh your Rattle the Stars buff.
-- Use New-, Half- and Full Moon if you will not overcap on AP.
+- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.
+- Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks and if talented you can optimally refresh your {{< spell 393954 "Rattle the Stars" >}} buff.
+- Use {{< spell 274281 "New-" >}}, {{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions are true: 
     - You would overcap AP with the next cast.
-    - You have a Starweaver's Weft proc.
+    - You have a {{< spell 393944 "Starweaver's Weft" >}} proc.
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
-- Use Wild Mushroom on cooldown.
-- Use {{< spell 190984 "Wrath" >}} if you are in CA/Inc.
-- Use {{< spell 194153 "Starfire" >}} if you have an Umbral Embrace proc or are at 2+ 2pc stacks and you are in Lunar Eclipse. Either Embrace or 2pc can be ignored for the same gain (~0.5% dps).
+- Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
+- Use {{< spell 190984 "Wrath" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc or are at 2+ 2pc stacks and you are in Lunar Eclipse. Either Embrace or 2pc can be ignored for the same gain (~0.5% dps).
 - Use {{< spell 190984 "Wrath" >}} You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
-
 
 <div id="aoe">
 
@@ -138,28 +138,26 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 
 **AoE priority list:**
 
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds, you will not overcap on AP and will hit all targets with it. Otherwise wait with this until they are gathered.
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds, you will not overcap on AP and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse.
-- Use {{< spell 191034 "Starfall" >}} T29 4PC equipped, have the free spender buff and you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}.
+- Use {{< spell 191034 "Starfall" >}} T29 4PC equipped, have the free spender buff and you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} or you would overcap AP otherwise.
 - Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use Warrior of Elune if available.
-- Use Wild Mushrooms if you will not overcap on AP. If you are using Fungal Growth and Waning Twilight make sure to not use it if the debuff is up already.
-- Use {{< spell 211545 "Fury of Elune" >}} or Full Moon if you will not overcap on AP.
-- Use Full Moon if you will overcap on charges and you will not overcap on AP.
-- Use Stellar Flare if the target will live for at least 8s+1s per target that Starfire can hit and you will not overcap on AP.
-- Use {{< spell 194153 "Starfire" >}} if you have 3x T29 2piece stacks or an Umbral Embrace proc and you will not overcap on AP.
+- Use {{< spell 202425 "Warrior of Elune" >}} if available.
+- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If you are using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}} make sure to not use it if the debuff is up already.
+- Use {{< spell 211545 "Fury of Elune" >}} or {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
+- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
-    - You would overcap AP otherwise.
-    - You have a Starweaver's Warp proc.
-    - Starlord is below 3 stacks.
-- Use Astral Communion if you will not overcap on AP.
-- Use Convoke the Spirits if Starfire would only hit 2 targets, otherwise only use Convoke for movement in AoE.
-- Use New Moon and Half Moon if you will not overcap on AP.
-- Use {{< spell 78674 "Starsurge" >}} if you have a Starweaver's Weft proc.
-- Use {{< spell 194153 "Wrath" >}} if Starfire will only hit one target during CA/Inc.
+    - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
+    - {{< spell 202345 "Starlord" >}} is below 3 stacks.
+- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 3 targets.
+- Use {{< spell 194153 "Starfire" >}} if you have 2x T29 2piece stacks or an {{< spell 393760 "Umbral Embrace" >}} proc and you will not overcap on AP.
+- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
+- Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.
+- Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
+- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
+- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will only hit one target during {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - Use {{< spell 194153 "Starfire" >}}.
-
 
 
 <div id="filler">
