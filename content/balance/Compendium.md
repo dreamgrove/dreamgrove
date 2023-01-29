@@ -43,10 +43,11 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
-  
-  + 2023-01-27:
+  + 2023-01-29:
+  <br>Added info about entering solar eclipse with 2/2 UI
+  <br>+ 2023-01-27:
   <br>Changed prio for Starweaver surge proc in AoE
-  <br>
+
   
  
 </details>
@@ -92,6 +93,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 - We now Starfire during CA/Inc on 2+ targets instead of 4+.
 - Stellar Flare is no longer worth casting on 11 targets minus 1 per point in Astral Smolder or Umbral Intensity. This means that with both Astral Smolder and Umbral Intensity at 2/2 we stop using Stellar Flare on 7 targets. Additionally it now requires the target to live 8s+1 per target Starfire can hit.
 - Not a change but worth noting: Nothing changes about us entering Lunar Eclipse and filling with Wrath outside 2+ 2pc stacks or Umbral Embrace on ST.
+- With 2/2 Umbral Intensity it is now a 0.3% dps increase to enter Solar Eclipse instead of Lunar Eclipse on Single Target as can be seen in this sim: https://mimiron.raidbots.com/simbot/report/8hmWaT2KRKCje49cfbn6W1
 
 
 <div id="rotation">
