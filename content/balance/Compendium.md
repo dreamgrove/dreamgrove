@@ -7,23 +7,23 @@ title: Balance Druid 10.0.5 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
-  [1. News](#news)
+  **[1. News](#news)**
  
-  [2. Rotation](#rotation)
+  **[2. Rotation](#rotation)**
   <br>[What is my Single Target rotation?](#st)
   <br>[What is my AoE priority?](#aoe)
   <br>[What is my filler priority inside CA?](#filler)
   <br>[Why do we proc pulsar with starfall?](#pulsar)
  
-  [3. Talents](#talents)
+  **[3. Talents](#talents)**
  
-  [4.Consumables](#consumables)
+  **[4.Consumables](#consumables)**
   <br>[Potions](#potions)
   <br>[Food](#food)
   <br>[Phials](#phials)
   <br>[Runes](#runes)
  
-  [5. Gearing](#gearing)
+  **[5. Gearing](#gearing)**
   <br>[Stats](#stats)
   <br>[Enchants](#enchants)
   <br>[Embellishments](#embellishments)
@@ -31,13 +31,13 @@ sidebarContents:  |
   <br>[Trinkets](#trinkets)
   <br>[Gearing Advice](#gearing-advice)
   
-  [6. Miscellaneous](#misc)
+  **[6. Miscellaneous](#misc)**
   <br>[Do our dots snapshot?](#snapshot)
   <br>[What is Astral damage?](#astral-damage)
   <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
  
-  [7. Utility](#utility)
+  **[7. Utility](#utility)**
  
 ---
 
