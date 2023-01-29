@@ -7,7 +7,7 @@ title: Balance Druid 10.0.5 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
-  [1. News](#news)
+  ####[1. News](#news)
  
   [2. Rotation](#rotation)
   <br>[What is my Single Target rotation?](#st)
