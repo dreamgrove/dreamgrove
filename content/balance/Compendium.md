@@ -201,8 +201,8 @@ The damage dealt by Starfall updates dynamically during its duration and can ben
 <br>[Raszageth](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
   
 <br>[M+ Build 1 Rattle](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
-<br>[M+ Build 2 Weaver](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUVSFSoZkBQCQA)
-<br>[M+ Build 3 Fort AA](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBBBgkIFRRTGFBCAQMVUUWaFSgVgBQCUA)
+<br>[M+ Build 2 Weaver](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUWFSoZkBQCQA)
+<br>[M+ Build 3 Fort AA](https://www.wowhead.com/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAQMVQUUaFShZgRQBQ)
   
 DRUID TREE DEVIATIONS:
 
