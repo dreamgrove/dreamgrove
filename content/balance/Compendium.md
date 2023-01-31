@@ -43,10 +43,12 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
-  + 2023-01-29:
-  <br>Added info about entering solar eclipse with 2/2 UI
-  <br>+ 2023-01-27:
+   2023-01-27:
   <br>Changed prio for Starweaver surge proc in AoE
+  <br>2023-01-29:
+  <br>Added info about entering solar eclipse with 2/2 UI
+  <br>2023-01-31:
+  <br>Added AoE condition to starfall to prevent overcapping AP before entering eclipse
 
   
  
