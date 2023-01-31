@@ -142,6 +142,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds, you will not overcap on AP and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
+- Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse.
 - Use {{< spell 191034 "Starfall" >}} T29 4PC equipped, have the free spender buff and you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} or you would overcap AP otherwise.
 - Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
