@@ -48,7 +48,7 @@ sidebarContents:  |
   <br>2023-01-29:
   <br>Added info about entering solar eclipse with 2/2 UI
   <br>2023-01-31:
-  <br>Added AoE condition to starfall to prevent overcapping AP before entering eclipse
+  <br>Added AoE condition - Starfall to prevent overcapping AP before entering eclipse
 
   
  
