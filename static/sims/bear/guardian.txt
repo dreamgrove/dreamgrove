@@ -4,7 +4,7 @@ actions.precombat+=/food
 actions.precombat+=/augmentation
 actions.precombat+=/snapshot_stats
 actions.precombat+=/variable,name=If_build,value=1,value_else=0,if=!talent.vulnerable_flesh.enabled&!talent.tooth_and_claw.enabled&talent.thorns_of_iron.enabled&talent.layered_mane.enabled&talent.reinforced_fur.enabled
-actions.precombat+=/variable,name=Maul_build,value=1,value_else=0,if=!talent.thorns_of_iron.enabled&!talent.layered_mane.enabled&!talent.reinforced_fur.enabled
+actions.precombat+=/variable,name=Maul_build,value=1,value_else=0,if=!talent.layered_mane.enabled&!talent.reinforced_fur.enabled
 actions.precombat+=/cat_form,if=druid.catweave_bear=1&(cooldown.pause_action.remains|time>30)
 actions.precombat+=/moonkin_form,if=(!druid.catweave_bear=1)&(cooldown.pause_action.remains|time>30)
 actions.precombat+=/heart_of_the_Wild,if=talent.heart_of_the_wild.enabled
