@@ -156,7 +156,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
     - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 3 targets.
-- Use {{< spell 194153 "Starfire" >}} if you have 2x T29 2piece stacks or an {{< spell 393760 "Umbral Embrace" >}} proc and you will not overcap on AP.
+- Use {{< spell 194153 "Starfire" >}} if you have 2+ T29 2piece stacks or an {{< spell 393760 "Umbral Embrace" >}} proc and you will not overcap on AP.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.
 - Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
