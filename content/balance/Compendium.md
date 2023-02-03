@@ -149,7 +149,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
 - Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If you are using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}} make sure to not use it if the debuff is up already.
 - Use {{< spell 211545 "Fury of Elune" >}} or {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
-- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP.
+- Use {{< spell 202347 "Stellar Flare" >}} if the target(s) will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
