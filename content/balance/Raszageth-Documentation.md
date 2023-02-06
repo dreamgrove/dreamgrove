@@ -8,8 +8,8 @@ title: Raszageth Balance Druid Documentation
 ---
 
 **Talents:**
-<br>[V1 Rattle](https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAQMVQUUSFSpVkRQCUQ)
-<br>[V2 Weaver](https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAQMVQUUSFSpVkRQCQQ)
+<br>[V1 Rattle](https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAAMVQUUSFSpVkRQCUQ)
+<br>[V2 Weaver](https://www.wowhead.com/ptr/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAAMVQUUSFSpVkRQCQQ)
 
 
 ## **Phase 1**
