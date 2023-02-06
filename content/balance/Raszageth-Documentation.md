@@ -57,7 +57,7 @@ You need to have 560+ Pulsar for the start of the first intermission. You should
 - During Winds.
 
 
-## Intermission1:**
+## **Intermission1:**
 <br>You should have the following prepared before doing into I1:
 <br>Potion, 1 Wrath into Lunar Eclipse, 15-25 Shooting Stars, 560 AP with Pulsar, Barkskin, Renewal, Incarnation, Force of Nature, and 3 mushrooms.
 
