@@ -180,7 +180,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 ## [Why do we proc pulsar with starfall?](#pulsar)
 
-The reason we proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} in single target situations with Starfall (if CA/INC is not already active) is due to the buffs gained upon entering CA such as {{< spell 394050 "BoAT" >}} and {{< spell 194223 "Celestial Alignment" >}}.
+The reason we proc {{< spell 393961 "Pulsar" >}} in single target situations with Starfall (if CA/INC is not already active) is due to the buffs gained upon entering CA such as {{< spell 394050 "BoAT" >}} and {{< spell 194223 "Celestial Alignment" >}}.
   
 The damage dealt by Starfall updates dynamically during its duration and can benefit from those buffs (with the exception of the initial tick). Starsurge on the other hand is executed before these buffs apply and will not benefit from them.
   
