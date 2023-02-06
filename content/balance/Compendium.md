@@ -82,16 +82,16 @@ In terms of tuning, the Lunar Eclipse changes shift our damage profile in AoE sc
 
 The following builds are what currently sims highest for the given scenarios but may not be perfect yet. Take with a grain of salt.
 Pure Single Target aka Terros:<br>
-https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBkkIFRRTGVBCAQMVUFQSFSoZkFQCFQ
+https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBkkIFRRTGVBCAQMVUFQSFSoZkFQCFU
 With the new tree we can skip Starfall if there is a fight such as Terros which allows it. The result of this is picking Force of Nature and Starweaver not working anymore which results in this build.
 
 Sustained 4 targets aka Council:<br>
-https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCEQMVQUWaFSgZgBQBR
+https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCEQMVQUWaFSgZgBQBQ
 This is the result of the previously mentioned Lunar Eclipse change. In this build we take all our filler Talents to allow Starfire to shine, even skipping Mushrooms. Compared to the previously optimal build for Council, this build is a ~~14%~~ 6% dps increase meaning we will gap everyone else by a ~~large~~ fairly large margin on that boss. Unfortunately this build gives up more or less all our single target dps so the uses of it are very limited. It remains to be seen if it will find play in more scenarios.
 
 Possible dungeon build and mixed target boss fights:<br>
-https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSoZkFQCQQ
-This build basically maximizes the talents that are either must pick in ST/AoE or buff both. Starweaver in M+ is also looking to be a viable pick outside of very heavy AoE dungeons as it is better on both bosses and packs that have mobs with a larger hp pool. Wild Mushroom is still our best burst AoE talent so it will still be taken for bosses where it is required(for example Dathea), for lower M+ dungeons and whenever the average pull is too big to consistently flare. Additionally Mushrooms are a movement global we are sorely lacking so they will still see play in a lot of dungeons and bosses. A build with them would look like this: https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSpVkRQCUQ
+https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSoZkFQCQA
+This build basically maximizes the talents that are either must pick in ST/AoE or buff both. Starweaver in M+ is also looking to be a viable pick outside of very heavy AoE dungeons as it is better on both bosses and packs that have mobs with a larger hp pool. Wild Mushroom is still our best burst AoE talent so it will still be taken for bosses where it is required(for example Dathea), for lower M+ dungeons and whenever the average pull is too big to consistently flare. Additionally Mushrooms are a movement global we are sorely lacking so they will still see play in a lot of dungeons and bosses. A build with them would look like this: https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCFQMVQUUSFSpVkRQCUA
 Nonetheless they have lost a lot of relative value as they replace a Starfire cast.
 
 ### Other minor rotational changes
