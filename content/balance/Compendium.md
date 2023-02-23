@@ -116,6 +116,7 @@ Nonetheless they have lost a lot of relative value as they replace a Starfire ca
 
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse. This also applies to before cooldowns if you have T29 4PC equipped.
+- Use {{< spell 191034 "Starfall" >}} if you have a Touch the Cosmos(T29 4PC) proc and you will cast Celestial Alignment/Incarnation immediately afterwards.
 - Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if talented.
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
@@ -187,6 +188,8 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 The reason we proc {{< spell 393961 "Pulsar" >}} in single target situations with Starfall (if CA/INC is not already active) is due to the buffs gained upon entering CA such as {{< spell 394050 "BoAT" >}} and {{< spell 194223 "Celestial Alignment" >}}.
   
 The damage dealt by Starfall updates dynamically during its duration and can benefit from those buffs (with the exception of the initial tick). Starsurge on the other hand is executed before these buffs apply and will not benefit from them.
+ 
+This also applies to consuming your T29 4PC with starfall if you will cast CA/INC immediately afterwards.
   
  
  <div id="mushroom">
