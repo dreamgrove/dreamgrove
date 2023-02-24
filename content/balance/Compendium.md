@@ -233,7 +233,7 @@ Another Rattle or Weaver actually doesn't matter dungeon.
 Mushrooms are the epitome of padding in this dungeon. All their damage will be on imps and wyrms which should not have a problem dying. The problem is that the other option is taking Denizens which can pull any patrolling trash or spawning Enforcers so take them at your own risk and always position somewhere that won't have any mobs you don't wanna pull.
   
 <br>[Shadowmoon Burial Grounds any week](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRXFVBCEQMVQUUSFSpVkRQCQA)<br>
-Weaver has a slight edge due to a lot of dungeon being bosses or 2 target pulls but Weaver is also fine.
+Weaver has a slight edge due to a lot of dungeon being bosses or 2 target pulls but Rattle is also fine.
   
 <br>[Temple of the Jade Serpent Fortified](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSpVkRQCQA)
 <br>[Temple of the Jade Serpent Tyrannical](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSoZkFQCQA)<br>
