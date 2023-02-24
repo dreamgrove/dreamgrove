@@ -215,8 +215,8 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 
 </div>
 
-**DRAGONFLIGHT TALENTS:**
 
+## Raid Talents
 [Erranog](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSoZkFQCQA)
 <br>[Council](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBBBgkIFRRTGFBCAQMVQUWaFSgZgBQBQ)
 <br>[Terros sweaty build](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVUFQSFSoZkFQCFU)
@@ -229,14 +229,47 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 <br>[Broodkeeper pad build](https://www.wowhead.com/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAQLVUUWaFSgZgBBU)
 <br>[Raszageth](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
   
-<br>[M+ Build 1 Rattle](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
-<br>[M+ Build 2 Weaver](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUWFSoZkBQCQA)
-<br>[M+ Build 3 Fort Algeth'ar Academy](https://www.wowhead.com/talent-calc/druid/balance/DAQFBEBBBgkIFRRTGVBCAQMVQUUaFShZgRQBQ)
+## Dungeon Talents
+The following are dungeon talent builds that will always serve you well.
   
-DRUID TREE DEVIATIONS:
-
-- ALWAYS take Nature’s Vigil in raid and M+ unless the content is a joke.
-
+<br>[Ruby Life Pools all weeks](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRbFFBCEQMVQUUSFSpVkRQCQA)<br>
+Weaver is especially good in this dungeon because all packs except the very first one have some kind of priority target.
+  
+<br>[The Nokhud Offensive Tyrannical/Bolstering](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRbFFBCEQMVQUUSFSpVkRQCQA)
+<br>[The Nokhud Offensive Fortified](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRXFVBCEQMVQUUSFSpVkRQCUA)<br>
+Weaver is a fine pick in Fortified weeks as well due to there often being a target you can throw the Starsurges on in most packs.
+  
+<br>[The Azure Vault Tyrannical/Bolstering](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRXFVBCEQMVQUUSFSpVkRQCQA)
+<br>[The Azure Vault Fortified](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRXFVBCEQMVQUUSFSpVkRQCUA)<br>
+Same as Nokhud, Weaver is also fine in Fortified weeks.
+  
+<br>[Algeth'ar Academy Goldrinn](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSpVkRQCUA)
+<br>[Algeth'ar Academy Umbral Intensity](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUaFShZgRQBQ)<br>
+Academy is the one dungeon where Weaver will usually be significantly worse due to the sheer size of many pulls that also don't have a singular focus target(outside Wyrms). The Umbral Intensity build sacrifices about 8% single target damage for ~4% AoE damage.
+  
+<br>[Halls of Valor Tyrannical](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRbFFBCEQMVQUUSFSpVkRQCQA)
+<br>[Halls of Valor Fortified](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRXFVBCEQMVQUUSFSpVkRQCUA)<br>
+Another Rattle or Weaver actually doesn't matter dungeon.
+  
+<br>[Court of Stars Imp pad any week](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBkkIFRRbFFBCEQMVQUUSFSpVkRQCQA)
+<br>[Court of Stars surely Denizen won't pull any week(this is bait)](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBkkIFRRbFFBCEQMVQUUSFSoZkFQCQA)<br>
+Mushrooms are the epitome of padding in this dungeon. All their damage will be on imps and wyrms which should not have a problem dying. The problem is that the other option is taking Denizens which can pull any patrolling trash or spawning Enforcers so take them at your own risk and always position somewhere that won't have any mobs you don't wanna pull.
+  
+<br>[Shadowmoon Burial Grounds any week](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRXFVBCEQMVQUUSFSpVkRQCQA)<br>
+Weaver has a slight edge due to a lot of dungeon being bosses or 2 target pulls but Weaver is also fine.
+  
+<br>[Temple of the Jade Serpent Fortified](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSpVkRQCQA)
+<br>[Temple of the Jade Serpent Tyrannical](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSpVkFQCQA)<br>
+Nearly every pack in the dungeon has a target with high HP which heavily increases the value of both Weaver and Denizens. While Mushrooms aren't only pad in this dungeon, they mostly are. A full Mushrooms build will net you a fair amount more overall damage as it will in Court of Stars but little of that damage actually makes the dungeon quicker. Nonetheless Mushrooms will be a lot of your damage on the adds during the last boss fight, especially if your group has trouble killing them quickly.
+  
+### Dungeon Druid Tree Considerations
+  
+- Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
+- Remove Corruption should always be taken in Algeth'ar Academy (Tree boss) and Temple of the Jade Serpent (later mobs curse), as we lose nothing relevant by taking it.
+- Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
+- Hibernate has a singular real use in Court of Stars, as you can use it to stop the bat cast on the last mob before the last boss. There are some niche other "uses" like stopping the stomp from the Bulls in Halls of Valor.
+- For lower keys you can put 2 points into Feline Swiftness like this: https://www.wowhead.com/talent-calc/druid/balance/DAQEFERBBikIFBQTFVBBBMVQUUSFSoZkFQCQA This skips Ursine Vigor and Typhoon. 
+- All other talents in the druid tree are more or less set.
 
 
 <div id="consumables">
