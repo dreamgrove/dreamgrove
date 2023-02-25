@@ -237,7 +237,7 @@ Weaver has a slight edge due to a lot of dungeon being bosses or 2 target pulls 
   
 <br>[Temple of the Jade Serpent Fortified](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSpVkRQCQA)
 <br>[Temple of the Jade Serpent Tyrannical](https://www.wowhead.com/talent-calc/druid/balance/DAQFBUBFBgkIFRQXFFBBBMVQUUSFSoZkFQCQA)<br>
-Nearly every pack in the dungeon has a target with high HP which heavily increases the value of both Weaver and Denizens. While Mushrooms aren't only pad in this dungeon, they mostly are. A full Mushrooms build will net you a fair amount more overall damage as it will in Court of Stars but little of that damage actually makes the dungeon quicker. Nonetheless Mushrooms will be a lot of your damage on the adds during the last boss fight, especially if your group has trouble killing them quickly.
+Nearly every pack in the dungeon has a target with high HP which increases the value of both Weaver and Denizens. While Mushrooms aren't only pad in this dungeon, most of their damage will be. A full Mushrooms build will net you a fair amount more overall damage as it will in Court of Stars but little of that damage actually makes the dungeon quicker. Nonetheless Mushrooms will be a lot of your damage on the adds during the last boss fight, especially if your group has trouble killing them quickly.
   
 ### Dungeon Druid Tree Considerations
   
