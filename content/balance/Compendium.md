@@ -207,7 +207,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 <br>[Raszageth](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRTGVBCAQMVQUUSFSpVkRQCUA)
   
 ## Dungeon Talents
-The following are dungeon talent builds that will always serve you well.
+The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
 <br>[Ruby Life Pools all weeks](https://www.wowhead.com/talent-calc/druid/balance/DAQEBEBBBgkYFRRbFFBCEQMVQUUSFSpVkRQCQA)<br>
 Weaver is especially good in this dungeon because all packs except the very first one have some kind of priority target.
