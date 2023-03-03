@@ -129,7 +129,7 @@ In terms of tuning, the Lunar Eclipse changes shift our damage profile in AoE sc
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse.
-- Use {{< spell 202347 "Stellar Flare" >}} if you are about to use cooldowns, the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP which is usually around 3-5 depending on how much AP you started with.
+- Use {{< spell 202347 "Stellar Flare" >}} if you are about to use cooldowns, the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving which is usually around 2-4 depending on how much AP you started with.
 - Use {{< spell 191034 "Starfall" >}} if you have T29 4PC equipped, have the free spender buff and you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}.
 - Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
