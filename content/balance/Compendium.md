@@ -223,7 +223,7 @@ Same as Nokhud, Weaver is also fine in Fortified weeks.
   
 <br>[Algeth'ar Academy Goldrinn](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKARSiISSCQSIJHIFol4AJJRKJh4AJh0SKRIoBQAA?bgcolor=000000)
 <br>[Algeth'ar Academy Umbral Intensity](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKARSiISSCQSIJHIFol4AJJRKSISSk0SKRIAABAA?bgcolor=000000)<br>
-Academy is the one dungeon where Weaver will usually be significantly worse due to the sheer size of many pulls that also don't have a singular focus target(outside Wyrms). The Umbral Intensity build sacrifices about 8% single target damage for ~4% AoE damage.
+Academy is the one dungeon where Weaver will usually be worse due to the sheer size of many pulls that also don't have a singular focus target(outside Wyrms). If your pulls aren't that big and/or you don't have trouble with adds on the tree boss Weaver is still fine here. The Umbral Intensity build sacrifices about 8% single target damage for ~4% AoE damage so it's really only recommended on fortified weeks with consistently big pulls.
   
 <br>[Halls of Valor Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAkkIJIJAJhkkUgWiDkkEpkEiDkESLpEhgCAhGA?bgcolor=000000)
 <br>[Halls of Valor Fortified](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAkkIJIJAJhkkUgWiDkkEpkEiDkESLpEhgGAhGA?bgcolor=000000)<br>
