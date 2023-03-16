@@ -44,14 +44,17 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
-   2023-01-27:
-  <br>Changed prio for Starweaver surge proc in AoE
-  <br>2023-01-29:
-  <br>Added info about entering solar eclipse with 2/2 UI
-  <br>2023-01-31:
-  <br>Added AoE condition - Starfall to prevent overcapping AP before entering eclipse
-  <br>2023-02-05:
-  <br>Added explanation for how to use mushrooms
+2023-03-15:
+<br>10.1 Update
+<br>2023-02-05:
+<br>Added explanation for how to use mushrooms
+<br>2023-01-31:
+<br>Added AoE condition - Starfall to prevent overcapping AP before entering eclipse
+<br>2023-01-29:
+<br>Added info about entering solar eclipse with 2/2 UI
+<br>2023-01-27:
+<br>Changed prio for Starweaver surge proc in AoE
+
 
   
  
@@ -76,7 +79,7 @@ Looking to be a 3.5-5% dps increase in most situations and adds some QoL through
 
 Adds 60% Shooting Stars damage and 30% Astral Power on average. This roughly makes us have the same AP gen from ShS as we have currently since we lose Stellar Flare Shooting Stars. Also looks to be a 3.5-5% dps incrase.
 
-The changes result in a large single target buff of about 10% compared to live, including the changes to the tier set. How it affects our AoE damage is TBD.
+The changes result in a large single target buff of about 10% compared to live, including the changes to our current tier set. How it affects our AoE damage is TBD.
 
 ### Analyzing the changes
 
