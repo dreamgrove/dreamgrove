@@ -105,7 +105,7 @@ Another buff to make up for losing our current 4pc.
 
 >Astral Smolder deals damage over 8 seconds (up from 4) and its damage is increased to 40/80% of spell damage done (up from 20/40%).
 
-As mentioned previously this synergizes with Wild Surges and more or less fully replaces both Stellar Flare and Fungal Growth as our ways of keeping up Waning Twilight. With current tuning a must pick in every situation.
+As mentioned previously this synergizes with Wild Surges and more or less fully replaces both Stellar Flare and Fungal Growth as our ways of keeping up Waning Twilight. With current tuning a must-pick in every situation.
 
 >Cosmic Rapidity increases the rate at which Moonfire, Sunfire, and Stellar Flare deal damage by 20% (down from 25%).
 
@@ -117,16 +117,17 @@ Expected nerf since we would be wearing the set until the end of times otherwise
 
 >Soul of the Forest now increases Starfire’s damage and AP generation during Eclipse by 30% for each target hit beyond the first, up to 90%. (Was 150% bonus to Starfire’s AOE damage)
 
-This more than halves the damage Starfire does currently which indirectly nerfs all talents that buff Starfire's damage(Astral Smolder, Umbral Intensity and Umbral Embrace). To make up for that Starfire no longer makes you have more or less no AP gen in AoE and will have us need to cast just 2 Starfires on average until we can cast another Starfall.
+This more than halves the damage Starfire does currently which indirectly nerfs all talents that buff Starfire's damage(Astral Smolder, Umbral Intensity and Umbral Embrace). To make up for that, Starfire no longer generate depressing amounts of AP in AoE and will have us need to cast just 2 Starfires on average until we can cast another Starfall.
 
 >Power of Goldrinn damage increased by 75%.
 >Denizen of the Dream: Faerie Dragon damage increased by 20%.
 
-Both of these are welcome single target buffs which is what Balance Druid is by far the worst at currently. Both of these talents will be required to do relevant single target in most situations.
+Both of these are welcome single target buffs which is what Balance Druid is by far the worst at currently. Both of these talents will be required to do relevant single target damage.
 
 >Friend of the Fae now increases Arcane and Nature damage by 8% for 20 seconds (was 4% for 30 seconds).
 
 This capstone was never used again after the last changes but since it becomes a ~5% dps boost with this buff, it will see play in nearly every situation. It also has to be noted that with 10.0.7 Denizen of the Dream is getting a 100% proc rate increase which is included in the calculation.
+
 >Elune’s Guidance now reduces the cost of Starsurge by 8 and Starfall by 10 during Incarnation: Chosen of Elune (was reduces the cost of Starsurge by 5 and Starfall by 8).
 
 Relatively minor buff compared to the other capstones so this will unlikely see play. Comes out at a 3-5% dps increase depending on situation and talent setup.
@@ -137,18 +138,18 @@ While it may look tame on the surface, the real power of this talent is that it 
 
 ### New builds
 
-As discussed in the previous section we now have a lot of talents that were previously ignored and are now far above any previous talents. Since most of those talents are good in both single target and AoE we are currently looking to be using the same spec tree for most situations which looks like this:
+As discussed in the previous section we now have a lot of talents that were previously ignored and are now strong enough to be picked in all situations. Due to this we are currently looking to be using the same spec tree for most situations which looks like this:
 [AoE Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSkEkEgkEJRKQLRSSSUSCJHIEaJlIERDgCNAA?bgcolor=000000)
 When we don't need Starfall we can talent it away to gain Nature's Balance and Warrior of Elune which is slightly outperforming Treants:
 [ST Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSkEkEgkEJRKQLRSkElENJHIEaJlkQENAK0AA?bgcolor=000000)
 
-Wild Mushrooms+Fungal Growth are hard to argue for since you have to give up a very large amount of sustained damage for the burst they give. Nonetheless if all an encounter requires is AoE burst damage they still exist and would be used but the chances of that happening are low.
+Wild Mushrooms+Fungal Growth are hard to argue for since you have to give up a very large amount of sustained damage for the burst they give. Nonetheless if all an encounter requires is AoE burst damage, they still exist and would be used but the chances of that happening are low.
 
-Rattle the Stars is getting an indirect buff because our spender casts are now more spread out than before which naturally benefits Rattle uptime. Starweaver and Rattle are now more or less on par to up to 4 targets so it will more or less depend on preference for most encounters what is played.
+Rattle the Stars is getting an indirect buff because our spender casts are now more spread out than before which naturally benefits Rattle uptime. Starweaver is still stronger on 2 targets and whenever you want to do efficient priority damage.
 
 A side of effect of no longer using Stellar Flare, Wild Mushrooms and the less of the current 4pc means that the spec becomes far easier to play for better or worse. AoE is simply putting up dots and then spamming Starfire until you can press Starfall.
 
-Umbral Embrace is simply not strong enough compared to another point in Astral Smolder but the dps difference between those picks are more or less irrelevant. Another result of this is that Sundered Firmament has fallen out of favor since you would need to waste another point in the middle tree and it's not longer better than our capstones. 
+Umbral Embrace is simply not strong enough compared to another point in Astral Smolder but the dps difference between those picks is more or less irrelevant. Another result of this is that Sundered Firmament has fallen out of favor since you would need to waste another point in the middle tree and it's not longer better than our capstones. 
 Umbral Intensity is a dead talent with the Starfire damage nerfs and Lunar Shrapnel, Astral Communion, Light of the Sun and Stellar Innervation stay dead.
 
 ### Will we go into Solar Eclipse on single target?
