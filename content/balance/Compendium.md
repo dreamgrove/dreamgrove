@@ -274,7 +274,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 ## Raid Talents
 [Eranog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Council](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRRCRSiolUiQAACAA?bgcolor=000000)
-<br>[Terros sweaty build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkECSSkEpAtEJRCtEFxBSSol0SCR0AIAA?bgcolor=000000)
+<br>[Terros sweaty build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRCtEFxBSSol0SCR0AIAA?bgcolor=000000)
 <br>[Terros chill build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUiQcgkEaJlkQEFACAA?bgcolor=000000)
 <br>[Sennarth no pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Sennarth with pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBFACAA?bgcolor=000000)
