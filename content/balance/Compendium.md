@@ -278,7 +278,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 <br>[Terros chill build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUiQcgkEaJlkQEFACAA?bgcolor=000000)
 <br>[Sennarth no pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Sennarth with pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBFACAA?bgcolor=000000)
-<br>[Dathea 1 platform] (https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkQJJEHIJhWSJCRUAIAA?bgcolor=000000)
+<br>[Dathea 1 platform](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkQJJEHIJhWSJCRUAIAA?bgcolor=000000)
 <br>[Dathea 2 platforms](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkIlkQcgkQaJlIEUAIAA?bgcolor=000000)
 <br>[Kurog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Broodkeeper ethical build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBFACAA?bgcolor=000000)
