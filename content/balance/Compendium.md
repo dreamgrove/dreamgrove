@@ -274,14 +274,13 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 ## Raid Talents
 [Eranog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Council](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRRCRSiolUiQAACAA?bgcolor=000000)
-<br>[Terros sweaty build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRCtEFxBSSol0SCR0AIAA?bgcolor=000000)
+<br>[Terros sweaty build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRClEFxBSSol0SCR0AIAA?bgcolor=000000)
 <br>[Terros chill build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUiQcgkEaJlkQEFACAA?bgcolor=000000)
 <br>[Sennarth no pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Sennarth with pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBFACAA?bgcolor=000000)
 <br>[Dathea 1 platform](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkQJJEHIJhWSJCRUAIAA?bgcolor=000000)
 <br>[Dathea 2 platforms](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkIlkQcgkQaJlIEUAIAA?bgcolor=000000)
 <br>[Kurog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
-<br>[Broodkeeper ethical build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBFACAA?bgcolor=000000)
 <br>[Broodkeeper pad build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBNACAA?bgcolor=000000)
 <br>[Raszageth](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJhgkEJRKQLRSSiUSCxBSCplUiQQDgQBA?bgcolor=000000)
  
