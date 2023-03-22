@@ -282,7 +282,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 <br>[Dathea 2 platforms](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkIlkQcgkQaJlIEUAIAA?bgcolor=000000)
 <br>[Kurog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000)
 <br>[Broodkeeper ethical build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBFACAA?bgcolor=000000)
-<br>[Broodkeeper pad build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJhgkEJRKQLRSSiUSCxBSCplUiQQDgQBA?bgcolor=000000)
+<br>[Broodkeeper pad build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBNACAA?bgcolor=000000)
 <br>[Raszageth](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJhgkEJRKQLRSSiUSCxBSCplUiQQDgQBA?bgcolor=000000)
  
 ## Dungeon Talents
