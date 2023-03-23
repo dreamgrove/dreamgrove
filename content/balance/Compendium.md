@@ -44,7 +44,9 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
-2023-03-15:
+2023-03-22
+<br>Talents updated
+<br>2023-03-15:
 <br>10.1 Update
 <br>2023-02-05:
 <br>Added explanation for how to use mushrooms
