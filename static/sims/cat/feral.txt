@@ -89,7 +89,7 @@ actions.cooldown=incarnation
 actions.cooldown+=/berserk,if=(!variable.lastZerk)|(fight_remains<23)|(variable.lastZerk&!variable.lastConvoke)
 actions.cooldown+=/berserk,if=(variable.lastConvoke&cooldown.convoke_the_spirits.remains<10)
 actions.cooldown+=/use_item,name=algethar_puzzle_box,if=fight_remains<25|(!variable.align_3minutes)
-actions.cooldown+=/use_item,name=algethar_puzzle_box,if=(!variable.lastZerk&cooldown.bs_inc.remains<3)|(buff.bs_inc.up&energy.deficit>25)
+actions.cooldown+=/use_item,name=algethar_puzzle_box,if=cooldown.bs_inc.remains<3&(!variable.lastZerk|!variable.lastConvoke|(variable.lastConvoke&cooldown.convoke_the_spirits.remains<13))
 actions.cooldown+=/berserking,if=!variable.align_3minutes|buff.bs_inc.up
 actions.cooldown+=/potion,if=buff.bs_inc.up|fight_remains<32|(fight_remains<cooldown.bs_inc.remains&variable.lastConvoke&cooldown.convoke_the_spirits.remains<10)
 actions.cooldown+=/convoke_the_spirits,if=fight_remains<5|(dot.rip.duration>5&buff.tigers_fury.up&(combo_points<2|(buff.bs_inc.up&combo_points=2))&(!variable.lastConvoke|!variable.lastZerk|buff.bs_inc.up))
@@ -103,5 +103,3 @@ actions.finisher+=/rip,target_if=refreshable
 actions.finisher+=/pool_resource,for_next=1,if=!action.tigers_fury.ready
 actions.finisher+=/ferocious_bite,max_energy=1,if=!buff.bs_inc.up|(buff.bs_inc.up&!talent.soul_of_the_forest.enabled)
 actions.finisher+=/ferocious_bite,if=(buff.bs_inc.up&talent.soul_of_the_forest.enabled)
-
-actions.owlweaving=sunfire,line_cd=4*gcd
