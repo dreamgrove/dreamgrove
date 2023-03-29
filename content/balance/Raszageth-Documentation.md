@@ -59,7 +59,7 @@ You need to have 560+ Pulsar for the start of the first intermission. You should
 
 ## **Intermission1:**
 <br>You should have the following prepared before doing into I1:
-<br>Potion, 1 Wrath into Lunar Eclipse, 15-25 Shooting Stars, 560 AP with Pulsar, Barkskin, Renewal, Incarnation, Fury of Elune, and 3 mushrooms.
+<br>Healing Potion, 1 Wrath into Lunar Eclipse, 15-25 Shooting Stars, 560 AP with Pulsar, Barkskin, Renewal, Incarnation, Fury of Elune, and 3 mushrooms.
 
 <br>Your rotation before getting knocked down should be: 
 <br>Momentum Redistributor Boots, Moonfire on the right add, Moonfire on the middle add, LAND, Wrath, Starfall 3 times (4 times if shooting stars are above 25), Sunfire, Mushroom, Starfall (2 times if Orbit Breaker), Fury of Elune, Moonfire twice, Starfall, Incarnation, Mushroom, Moonfire, Starfall, and then continue with what feels right until the next add. At the end of the second add or the start of the third add, you need to use your Pulsar. This depends on the breath rotation you get. Do not use your second Fury of Elune in this phase, as it will not be available for your Pulsar during the first shield.
