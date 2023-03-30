@@ -289,31 +289,31 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
-<br>[Ruby Life Pools all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)<br>
+<br>[Ruby Life Pools all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
 Weaver is especially good in this dungeon because all packs except the very first one have some kind of priority target.
   
-<br>[The Nokhud Offensive all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)<br>
-Most packs have a prio target that you can throw Surges into from Weaver.
+<br>[The Nokhud Offensive all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
+Most packs have a prio target that you can throw Surges into from Weaver, but Rattle is also fine.
   
-<br>[The Azure Vault all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)<br>
+<br>[The Azure Vault all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
 Rattle is also fine in Fortified weeks.
   
-<br>[Algeth'ar Academy Fortified](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJBIJkkDkC0ScgkkIlkQcgkQaJlIE0AIAA?bgcolor=000000)
-<br>[Algeth'ar Academy Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJBIJkkDkC0ScgkkQJJEHIJhWSJCRUAIAA?bgcolor=000000)<br>
+<br>[Algeth'ar Academy Fortified](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJASSkkDkC0ScgkkIlkQcgkQaJlIEUAIAA?bgcolor=000000)
+<br>[Algeth'ar Academy Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJASSkkDkC0ScgkkIlkQcgkQaJlIE0AIAA?bgcolor=000000)<br>
 Academy is the one dungeon where Weaver will usually be worse due to the sheer size of many pulls that also don't have a singular focus target(outside Wyrms). If your pulls aren't that big and/or you don't have trouble with adds on the tree boss Weaver is still better here.
   
-<br>[Halls of Valor Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)
+<br>[Halls of Valor Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)
 <br>[Halls of Valor Fortified](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBFACNAA?bgcolor=000000)<br>
 Another Rattle or Weaver actually doesn't matter dungeon.
   
-<br>[Court of Stars Imp pad any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)
-<br>[Court of Stars surely Denizen won't pull](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)<br>
+<br>[Court of Stars Imp pad any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)
+<br>[Court of Stars surely Denizen won't pull](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCRSSolUiQQDgQDA?bgcolor=000000)<br>
 Mushrooms are the epitome of padding in this dungeon. All their damage will be on imps and wyrms which should not have a problem dying. The problem is that the other option is taking Denizens which can pull any patrolling trash or spawning Enforcers so take them at your own risk and always position somewhere that won't have any mobs you don't wanna pull.
   
-<br>[Shadowmoon Burial Grounds any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)<br>
+<br>[Shadowmoon Burial Grounds any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
 Weaver has a slight edge due to a lot of dungeon being bosses or 2 target pulls but Rattle is also fine.
   
-<br>[Temple of the Jade Serpent any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCxBSSolUiQEFACNAA?bgcolor=000000)<br>
+<br>[Temple of the Jade Serpent any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJASSkkDkC0ScgkkIlkQcgkQaJlIE0AIAA?bgcolor=000000)<br>
 Nearly every pack in the dungeon has a target with high HP which increases the value of both Weaver and Denizens. While Mushrooms aren't only pad in this dungeon, most of their damage will be. A full Mushrooms build will net you a fair amount more overall damage as it will in Court of Stars but little of that damage actually makes the dungeon quicker.
   
 ### Dungeon Druid Tree Considerations
