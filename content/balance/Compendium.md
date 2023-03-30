@@ -143,7 +143,7 @@ While it may look tame on the surface, the real power of this talent is that it 
 As discussed in the previous section we now have a lot of talents that were previously ignored and are now strong enough to be picked in all situations. Due to this we are currently looking to be using the same spec tree for most situations which looks like this:
 [AoE Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSkEkEgkEJRKQLRSSSUSCJHIEaJlIERDgCNAA?bgcolor=000000)
 When we don't need Starfall we can talent it away to gain Nature's Balance and Warrior of Elune which is slightly outperforming Treants:
-[ST Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSkEkEgkEJRKQLRSkElENJHIEaJlkQENAK0AA?bgcolor=000000)
+[ST Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIRSUS0kcgQolUSCRUAoAAA?bgcolor=000000)
 
 Wild Mushrooms+Fungal Growth are hard to argue for since you have to give up a very large amount of sustained damage for the burst they give. Nonetheless if all an encounter requires is AoE burst damage, they still exist and would be used but the chances of that happening are low.
 
