@@ -2,8 +2,8 @@
 date: '2023-01-27'
 authors: ["Chicken, Jundarer, Dsune"]
 published: true
-patch: "10.0.5"
-title: Balance Druid 10.0.5 Compendium
+patch: "10.0.7"
+title: Balance Druid 10.0.7 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
