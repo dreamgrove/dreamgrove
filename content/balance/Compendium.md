@@ -471,7 +471,7 @@ On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.
 [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
 <br>[Spiteful Storm](https://www.wowhead.com/item=194309/spiteful-storm?bonus=7979&class=11&ilvl=424&spec=102) - Raszageth (Raid)
 <br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid), Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
-<br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal COuncil (Raid)
+<br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal Council (Raid)
 <br>[Eye of Skovald](https://www.wowhead.com/item=133641/eye-of-skovald?bonus=1795&ilvl=415&spec=102) - Halls of Valor
 <br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
 <br>[Windscar Whetstone](https://www.wowhead.com/item=137486/windscar-whetstone?bonus=6652:8811:8812:6808:4786:3294&ilvl=415&spec=102) - Court of Stars, good on-use ST trinket, mind that the damage it does is shared amongst enemies hit.
