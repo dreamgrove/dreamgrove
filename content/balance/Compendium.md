@@ -192,7 +192,7 @@ Yes, with Soul of the Forest talented, which will always be the case, going into
 - Use {{< spell 190984 "Wrath" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc and you are in only Lunar Eclipse. You can do this via:
     - Catch an Umbral Embrace proc naturally without cancelling any spells currently being cast and/or
-    - Cast Starfire when you have two more stacks of the T29 2PC buff
+    - Cast Starfire when you have two or more stacks of the T29 2PC buff
     - You can do both or either for the same gain (0.25%-0.5%)
 - Use {{< spell 190984 "Wrath" >}} You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
 
