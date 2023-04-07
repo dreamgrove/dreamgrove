@@ -141,7 +141,7 @@ While it may look tame on the surface, the real power of this talent is that it 
 ### New builds
 
 As discussed in the previous section we now have a lot of talents that were previously ignored and are now strong enough to be picked in all situations. Due to this we are currently looking to be using the same spec tree for most situations which looks like this:
-[AoE Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQENAKAA?bgcolor=000000)
+[AoE Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
 
 A 2 target build would look something like this:
 [2T Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkkAaJlIRQBgCAA?bgcolor=000000)
