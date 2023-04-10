@@ -259,7 +259,7 @@ This also applies to consuming your T29 4PC with starfall if you will cast CA/IN
  
 {{< spell 88747 "Wild Mushroom" >}} deals damage in an explosion and then applies a DOT  called {{< spell 392999 "Fungal Growth" >}}(if talented). This DOT lasts for 8 seconds and deals 70% of the explosions damage over the course of its duration. {{< spell 88747 "Wild Mushroom" >}} has 3 charges, so if all 3 charges are used in quick succession and each apply a dot dealing 1000 damage, the total damage dealt by the DOT would be 3000 (1000 damage x 3 charges), and the duration of the DOT would be refreshed to 8 seconds.
 
-This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You dont lose/gain any damage by staggering them or pressing them all at once.
+This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You dont lose/gain any Fungal Growth damage by staggering them or pressing them all at once.
 
 On single target, it's best to use all 3 charges at once paired with any available buffs such as potion, trinkets, CA. {{< spell 88747 "Wild Mushroom" >}} is also an instant GCD, so it can be used for movement as needed.
 
