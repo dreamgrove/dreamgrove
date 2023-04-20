@@ -181,7 +181,7 @@ Yes, with Soul of the Forest talented, which will always be the case, going into
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if talented.
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
-- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window, or if your next {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} window is 30 or more seconds away.
+- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} window, or if your next {{< spell 194223 "CA" >}} window is 30 or more seconds away.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
