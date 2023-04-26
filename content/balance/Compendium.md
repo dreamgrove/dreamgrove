@@ -73,13 +73,13 @@ sidebarContents:  |
 ### Summary of the changes
 
 10.1 is on the PTR and we are once again receiving major changes and a new tier set. You can read the Blizzard post on the changes here: https://us.forums.blizzard.com/en/wow/t/feedback-druids-in-embers-of-neltharion/1541376 Additionally our tier set is the following: 
->(2) Set Bonus: Sunfire radius increased by 3 yds. Sunfire, Moonfire and Shooting Stars damage increased by 18%.
+>(2) Set Bonus: Sunfire radius increased by 3 yds. Sunfire, Moonfire and Shooting Stars damage increased by 20%.
 
-Looking to be a 3.5-5% dps increase in most situations and adds some QoL through the increased Sunfire radius.
+Looking to be a 4-5.5% dps increase in most situations and adds some QoL through the increased Sunfire radius.
 
->(4) Set Bonus: Shooting Stars has a 20% chance to instead call down a Crashing Star, dealing (72% of Spell power) Astral damage to the target and generating 5 Astral Power.
+>(4) Set Bonus: Shooting Stars has a 20% chance to instead call down a Crashing Star, dealing (76.5% of Spell power) Astral damage to the target and generating 5 Astral Power.
 
-Adds 60% Shooting Stars damage and 30% Astral Power on average. This roughly makes us have the same AP gen from ShS as we have currently since we lose Stellar Flare Shooting Stars. Also looks to be a 3.5-5% dps incrase.
+Adds 60% Shooting Stars damage and 30% Astral Power on average. This roughly makes us have the same AP gen from ShS as we have currently since we lose Stellar Flare Shooting Stars. Also looks to be a 4-5% dps incrase.
 
 The changes result in a large single target buff of about 10% compared to live, including the changes to our current tier set. How it affects our AoE damage is TBD.
 
