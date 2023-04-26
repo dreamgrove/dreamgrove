@@ -161,7 +161,23 @@ Umbral Intensity is a dead talent with the Starfire damage nerfs and Lunar Shrap
 ### Will we go into Solar Eclipse on single target?
 Yes, with Soul of the Forest talented, which will always be the case, going into Solar Eclipse is a 1% dps gain again. Without Soul of the Forest it would still be a 1% dps loss.
 <div id="rotation">
-
+ 
+### Collection of sims:
+Trinkets:\
+[Heroic 1T](https://mimiron.raidbots.com/simbot/report/eENXhBeZwmQcsrxzLjfK3v)\
+[Heroic 6T](https://mimiron.raidbots.com/simbot/report/3qKrX6ATffwy2Bbd9ywPxJ)\
+[Mythic 1T](https://mimiron.raidbots.com/simbot/report/t9MSegDHbLjYafU6CoA4dH)\
+[Mythic 6T](https://mimiron.raidbots.com/simbot/report/rCB8hpHj2KPp4FdJaneBTL)\
+[Mythic 1T 1min](https://mimiron.raidbots.com/simbot/report/o6pATDFVURQXpSGM7MnH1J)
+ 
+Embellishments:\
+[1T](https://mimiron.raidbots.com/simbot/report/rKaBhSwNYZu8Xe4vmks9gi)\
+[6T](https://mimiron.raidbots.com/simbot/report/84ZUu1fFfoDqAKzRDfkchp)
+ 
+Racials:\
+[1T](https://mimiron.raidbots.com/simbot/report/pRa3ardSDqCAwdeZcS38uY)\
+[6T](https://mimiron.raidbots.com/simbot/report/45bokQv8seUK9b2yeGDCvD)
+ 
 # [2.Rotation:](#rotation)
 
 </div>
