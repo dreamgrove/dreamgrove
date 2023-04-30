@@ -173,10 +173,11 @@ Trinkets:\
 Embellishments:\
 [1T](https://mimiron.raidbots.com/simbot/report/rKaBhSwNYZu8Xe4vmks9gi)\
 [6T](https://mimiron.raidbots.com/simbot/report/84ZUu1fFfoDqAKzRDfkchp)\
-For now it's looking like we are to craft Slimy Expulsion Boots and Toxified embellishment added to a crafted leather piece.
-Slimy performs better on AoE than Toxic Thorn Footwraps and is within margin of error on ST.
+For now it's looking like we are to craft [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) and [Toxified](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) embellishment added to a crafted leather piece.\
+[Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) performs better on AoE than [Toxic Thorn Footwraps](https://www.wowhead.com/ptr/item=193452/toxic-thorn-footwraps) and is within margin of error on ST.\
+[Toxified](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) increases the effect of Slimy and Thorns by 100% meaning that this embellishment does nothing unless you already have the boots equipped.\
 There is no rush to crafting anything, if you have sparks it is wise to hold on to them until release in case of any late tuning.
- 
+
  
 Racials:\
 [1T](https://mimiron.raidbots.com/simbot/report/pRa3ardSDqCAwdeZcS38uY)\
