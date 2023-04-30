@@ -172,7 +172,11 @@ Trinkets:\
  
 Embellishments:\
 [1T](https://mimiron.raidbots.com/simbot/report/rKaBhSwNYZu8Xe4vmks9gi)\
-[6T](https://mimiron.raidbots.com/simbot/report/84ZUu1fFfoDqAKzRDfkchp)
+[6T](https://mimiron.raidbots.com/simbot/report/84ZUu1fFfoDqAKzRDfkchp)\
+For now it's looking like we are to craft Slimy Expulsion Boots and Toxified embellishment added to a crafted leather piece.
+Slimy performs better on AoE than Toxic Thorn Footwraps and is within margin of error on ST.
+There is no rush to crafting anything, if you have sparks it is wise to hold on to them until release in case of any late tuning.
+ 
  
 Racials:\
 [1T](https://mimiron.raidbots.com/simbot/report/pRa3ardSDqCAwdeZcS38uY)\
