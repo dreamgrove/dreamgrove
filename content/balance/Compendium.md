@@ -105,7 +105,6 @@ You can precast from max range ~4 seconds before a boss is pulled.
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc and you are in only Lunar Eclipse.
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
 <div id="aoe">
