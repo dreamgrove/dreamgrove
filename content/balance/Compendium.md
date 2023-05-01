@@ -64,6 +64,7 @@ sidebarContents:  |
 In the above link you will find a summary of the changes in Patch 10.1 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
 
 <div id="rotation">
+ 
 # [2.Rotation:](#rotation)
 
 </div>
