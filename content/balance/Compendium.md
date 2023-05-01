@@ -16,6 +16,7 @@ sidebarContents:  |
   <br>[What is my filler priority inside CA?](#filler)
   <br>[How do we use Wild Mushrooms and how do they work?](#mushroom)
   <br>[How do we use Warrior of Elune](#woe)
+  <br>[Which Eclipse do we enter](eclipse)
  
   **[3. Talents](#talents)**
  
@@ -177,8 +178,20 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
 - To enter Solar Eclipse
 - You have 1 charge left and you are in {{< spell 102560 "Incarnation" >}}.
 - As a movement GCD in {{< spell 102560 "Incarnation" >}}.
+
+
+<div id="eclipse">
+
+## [Which Eclipse do we enter?](#eclipse)
  
-  
+ </div>
+ 
+ In single target with {{< spell 202425 "Warrior of Elune" >}} talented we will enter Solar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
+ In single target without {{< spell 202425 "Warrior of Elune" >}} talented we will enter Lunar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
+ On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
+ On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
+
+
 <div id="talents">
 
 # [3.Talents:](#talents)
