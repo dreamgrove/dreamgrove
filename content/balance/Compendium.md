@@ -177,7 +177,7 @@ Racials:\
 
 </div>
 
-div id="precast">
+<div id="precast">
 
 ## [Precasting](#precast)
 
@@ -188,7 +188,7 @@ div id="precast">
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
 
-<br>You can precast ~4 seconds from max range before a boss is pulled.
+You can precast ~4 seconds from max range before a boss is pulled.
 
 <div id="st">
 
