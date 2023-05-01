@@ -326,8 +326,9 @@ Week 0 = Patch week
 
 
 For Embellishments you will have two options. Either [Slimy Expulsion Boots](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots) or [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards). The Shoulders are better for sustained ST and AoE scenarios. The boots are better for the times where adds are present, as the shoulders will lose a lot of value from the wasted applications. The debuff on the shoulders has to stack up to 5 times, otherwise it is useless.
-<br>In general if you are a raider and do not care about m+ we recommend crafting shoulders, as most of the raid is close to full single target. If you do not care about raid, then craft boots. It is important to mention that the shoulders also damage you for around 900 damage per second in most scenarios, which might or might not matter in some situations.
 
+<br>In general if you are a raider and do not care about m+ we recommend crafting shoulders, as most of the raid is close to full single target. If you do not care about raid, then craft boots. It is important to mention that the shoulders also damage you for around 900 damage per second in most scenarios, which might or might not matter in some situations.
+<br>This will be combined with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) which increases the effect of the boots/shoulders by 100%. Do note that it can only be added to a crafted leather piece.
 
 ### [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots)
 
@@ -486,8 +487,8 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 
 </div>
 
-[Embells 1T](https://www.dreamgrove.gg/balance/sims/embell_sims_1T_10.1.html)
-<br>[Embells 4T](https://www.dreamgrove.gg/balance/sims/embell_sims_4T_10.1.html)
+[Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.1.html)
+<br>[Embells 4T](https://www.dreamgrove.gg/balance/sims/embells_4T_10.1.html)
 <br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
 <br>[Phials 4T](https://www.dreamgrove.gg/balance/sims/phial_4T_10.1.html)
 <br>[Runes](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
