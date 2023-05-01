@@ -424,16 +424,13 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 
 Week 0 = Patch week
-Week 1 = Raid week
-Week 2 = Second raid week
-Sparks will be available in the following weeks: Week 0, Week 2, Week 4,...
+<br>Week 1 = Raid week
+<br>Week 2 = Second raid week
+<br>Sparks will be available in the following weeks: Week 0, Week 2, Week 4...
 
-
-Use crests to upgrade 5 items in Week 1 and 2 up to ilvl 441. Refer to this [guide](https://i.imgur.com/4lxTN6Z.png).
-<br>Upgrade crests in the following order: Weapon > Chest = Legs = Head > Shoulders = Gloves = Waist > Rings > Cloak = Wrist > Neck.
-<br>Keep in mind that this order will heavily change depending on what you obtain from mythic+ and raid. Also, avoid upgrading tier slots until you have your 4-piece.
-
-
+- Use crests to upgrade 5 items in Week 1 and 2 up to ilvl 441. Refer to this [guide](https://i.imgur.com/4lxTN6Z.png).
+- Upgrade crests in the following order: Weapon > Chest = Legs = Head > Shoulders = Gloves = Waist > Rings > Cloak = Wrist > Neck.
+- Keep in mind that this order will heavily change depending on what you obtain from mythic+ and raid. Also, avoid upgrading tier slots until you have your 4-piece.
 
 
 <div id="embellishments">
@@ -447,10 +444,10 @@ Use crests to upgrade 5 items in Week 1 and 2 up to ilvl 441. Refer to this [gui
 
 **If you have one 10.7 Spark but no sockets for it, follow these steps:**
 
-Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
-<br>During Week 0, obtain your first Spark and craft Slimy Expulsion Boots if you haven't already.
-<br>In Week 1, you won't receive any Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
-<br>During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
+- Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
+- During Week 0, obtain your first Spark and craft Slimy Expulsion Boots if you haven't already.
+- In Week 1, you won't receive any Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+- During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
 
 
 
@@ -458,11 +455,11 @@ Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl. These will upgr
 
 **If you have one 10.7 Spark and one socket for it, follow these steps:**
 
-Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
-<br>During Week 0, obtain your first Shadowflame Spark and craft Slimy Expulsion Boots if you haven't already.
-<br>In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
-<br>During Week 2, use your second Shadowflame Spark to craft a 447 ilvl Primal Molten Spellblade. With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
-<br>Keep your 421 Wrists until Week 4 of the raid.
+- Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
+- During Week 0, obtain your first Shadowflame Spark and craft Slimy Expulsion Boots if you haven't already.
+- In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+- During Week 2, use your second Shadowflame Spark to craft a 447 ilvl Primal Molten Spellblade. With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
+- Keep your 421 Wrists until Week 4 of the raid.
 
 If you loot a Mythic weapon or vault a weapon before you craft your second Shadowflame Spark, use the first method (belt your second spark).
 <br>If you loot socketed Wrists from M+ before you craft your second Shadowflame Spark, use the first method (belt your second spark).
