@@ -509,6 +509,8 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 <br>[WoE usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
 <br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
 <br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
+<br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/racials_1T_10.1.html)
+<br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/racials_6T_10.1.html)
 <br>[Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
