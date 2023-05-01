@@ -2,8 +2,8 @@
 date: '2023-01-27'
 authors: ["Chicken, Jundarer, Dsune"]
 published: true
-patch: "10.0.7"
-title: Balance Druid 10.0.7 Compendium
+patch: "10.1.0"
+title: Balance Druid 10.1.0 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -43,18 +43,8 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
-2023-03-22
-<br>Talents updated
-<br>2023-03-15:
-<br>10.1 Update
-<br>2023-02-05:
-<br>Added explanation for how to use mushrooms
-<br>2023-01-31:
-<br>Added AoE condition - Starfall to prevent overcapping AP before entering eclipse
-<br>2023-01-29:
-<br>Added info about entering solar eclipse with 2/2 UI
-<br>2023-01-27:
-<br>Changed prio for Starweaver surge proc in AoE
+2023-05-01
+<br>10.1 update
 
 
   
