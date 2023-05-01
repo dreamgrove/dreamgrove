@@ -1,8 +1,8 @@
 ---
 date: '2023-02-06'
 authors: ["Chicken"]
-published: true
-showOnFrontpage: true
+published: false
+showOnFrontpage: false
 patch: "10.0.5"
 title: Raszageth Balance Druid Documentation
 ---
