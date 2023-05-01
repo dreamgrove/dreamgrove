@@ -15,6 +15,7 @@ sidebarContents:  |
   <br>[What is my AoE priority?](#aoe)
   <br>[What is my filler priority inside CA?](#filler)
   <br>[How do we use Wild Mushrooms and how do they work?](#mushroom)
+  <br>[How do we use Warrior of Elune](#woe)
  
   **[3. Talents](#talents)**
  
@@ -265,6 +266,8 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 ## [How do we use Wild Mushrooms and how do they work?](#mushroom)
  
+</div>
+
 {{< spell 88747 "Wild Mushroom" >}} deals damage in an explosion and then applies a DOT  called {{< spell 392999 "Fungal Growth" >}}(if talented). This DOT lasts for 8 seconds and deals 70% of the explosions damage over the course of its duration. {{< spell 88747 "Wild Mushroom" >}} has 3 charges, so if all 3 charges are used in quick succession and each apply a dot dealing 1000 damage, the total damage dealt by the DOT would be 3000 (1000 damage x 3 charges), and the duration of the DOT would be refreshed to 8 seconds.
 
 This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You dont lose/gain any Fungal Growth damage by staggering them or pressing them all at once.
@@ -275,8 +278,19 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 
 In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twilight" >}} up on all mobs before you've managed to apply {{< spell 202347 "Stellar Flare" >}}.
  
+
+<div id="woe">
+
+## [How do we use Warrior of Elune?](#woe)
  
-  
+ </div>
+ 
+Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges has been consumed.
+<br>Use the charges if any of the following conditions are true:
+- You are in {{< spell 102560 "Incarnation" >}} and it has more than 20s remaining.
+- You have 1 charge left and you are in {{< spell 102560 "Incarnation" >}}.
+- As a movement GCD in {{< spell 102560 "Incarnation" >}}.
+ 
   
 <div id="talents">
 
