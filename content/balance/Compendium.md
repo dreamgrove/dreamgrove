@@ -488,14 +488,14 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 </div>
 
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embell_sims_1T_10.1.html)
-[Embells 4T](https://www.dreamgrove.gg/balance/sims/embell_sims_4T_10.1.html)
-[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
-[Phials 4T](https://www.dreamgrove.gg/balance/sims/phial_4T_10.1.html)
-[Runes](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
-[Pulsar proccing](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
-[WoE usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
-[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
-[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
+<br>[Embells 4T](https://www.dreamgrove.gg/balance/sims/embell_sims_4T_10.1.html)
+<br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
+<br>[Phials 4T](https://www.dreamgrove.gg/balance/sims/phial_4T_10.1.html)
+<br>[Runes](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
+<br>[Pulsar proccing](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
+<br>[WoE usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
+<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
+<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
