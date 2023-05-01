@@ -494,7 +494,7 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 /cast [@cursor] Celestial Alignment
 ```
 
-<div id="misc">
+<div id="sims">
 
 # [7. Sims:](#sims)
 
