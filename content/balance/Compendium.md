@@ -16,7 +16,7 @@ sidebarContents:  |
   <br>[What is my filler priority inside CA?](#filler)
   <br>[How do we use Wild Mushrooms and how do they work?](#mushroom)
   <br>[How do we use Warrior of Elune](#woe)
-  <br>[Which Eclipse do we enter](eclipse)
+  <br>[Which Eclipse do we enter](#eclipse)
  
   **[3. Talents](#talents)**
  
