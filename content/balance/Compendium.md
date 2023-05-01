@@ -439,30 +439,46 @@ Week 0 = Patch week
 </div>
 
 
+For Embellishments you will have two options. Either Slimy Expulsion Boots or Spore Colony Shoulderpads. The Shoulders are better for sustained ST and AoE scenarios. The boots are better for the times where adds are present, as the shoulders will lose a lot of value from the wasted applications. The debuff on the shoulders has to stack up to 5 times, otherwise it is useless. In general if you are a raider and do not care about m+ we recommend crafting shoulders, as most of the raid is close to full single target. If you do not care about raid, then craft boots. It is important to mention that the shoulders also damage you for around 900 damage per second in most scenarios, which might or might not matter in some situations.
 
 
-**If you have one 10.7 Spark but no sockets for it, follow these steps:**
+### Slimy Expulsion Boots:
+
+**If you have one Spark of Ingenuity but no sockets for it, follow these steps:**
 
 - Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
 - During Week 0, obtain your first Spark and craft Slimy Expulsion Boots if you haven't already.
-- In Week 1, you won't receive any Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+- In Week 1, you won't receive any Sparks, but you should upgrade (recraft) your Slimy Expulsion Boots to 447 ilvl.
 - During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
 
-
-
-
-
-**If you have one 10.7 Spark and one socket for it, follow these steps:**
+**If you have one Spark of Ingenuity and one socket for it, follow these steps:**
 
 - Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
 - During Week 0, obtain your first Shadowflame Spark and craft Slimy Expulsion Boots if you haven't already.
-- In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+- In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade (recraft) your Slimy Expulsion Boots to 447 ilvl.
 - During Week 2, use your second Shadowflame Spark to craft a 447 ilvl Primal Molten Spellblade. With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
 - Keep your 421 Wrists until Week 4 of the raid.
 
 If you loot a Mythic weapon or vault a weapon before you craft your second Shadowflame Spark, use the first method (belt your second spark).
 <br>If you loot socketed Wrists from M+ before you craft your second Shadowflame Spark, use the first method (belt your second spark).
 
+### Spore Colony Shoulderpads:
+
+**If you have one Spark of Ingenuity but no sockets for it, follow these steps:**
+
+- Craft Life-bound Boots with Toxified Armor Patch at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
+- During Week 0, obtain your first Shadowflame Spark and craft Spore Colony Shoulderpads.
+- In Week 1, you won't receive any Sparks, but you should upgrade (recraft) your Spore Colony Shoulderpads to 447 ilvl.
+- During Week 2, use your second Shadowflame Spark to upgrade (recraft) your Life-bound Boots to 447 ilvl with Toxified Armor Patch.
+
+**If you have one Spark of Ingenuity and one socket for it, follow these steps:**
+
+- Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
+- During Week 0, obtain your first Shadowflame Spark and craft Spore Colony Shoulderpads.
+- In Week 1, you won't receive any Sparks, but you should upgrade (recraft) your Spore Colony Shoulderpads to 447 ilvl.
+- During Week 2, use your second Shadowflame Spark to craft Life-bound Boots at 447 ilvl with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
+
+**During Week 0 you can wait with crafting your first Shadowflame Spark item if you so desire.**
 
 
 <div id="tier-set">
