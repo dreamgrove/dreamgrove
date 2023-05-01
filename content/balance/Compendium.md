@@ -193,10 +193,11 @@ Racials:\
 </div>
 
 **Single Target priority list:**
-Precasting:
+<br>**Precasting:**
 - Cast {{< spell 190984 "Wrath" >}} twice
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
+<br>
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you didn't talent into {{< spell 202425 "Warrior of Elune" >}}.
 - Use {{< spell 194153 "Starfire" >}} to get into Solar Eclipse if you did talent into {{< spell 202425 "Warrior of Elune" >}}.
@@ -286,11 +287,11 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 
 ## Talents for different target counts
 When we don't need Starfall we can talent it away to gain Nature's Balance and Warrior of Elune which is slightly outperforming Treants:
-[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
-[Two targets](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
-[M+ Talents Weaver](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
-[M+ Talents Rattle](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
-[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkEFJkcgk4AaJlIRAAKAA?bgcolor=000000)
+<br>[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
+<br>[Two targets](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
+<br>[M+ Talents Weaver](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
+<br>[M+ Talents Rattle](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
+<br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkEFJkcgk4AaJlIRAAKAA?bgcolor=000000)
 
 ## Raid Talents
 TBD
@@ -306,7 +307,7 @@ TBD
 - Remove Corruption should be taken in Afflicted weeks and in every dungeon except Vortex Pinnacle, as we lose nothing relevant by taking it.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - Hibernate can be used for Incorporeal affix.
-- For lower keys you can put 2 points into Feline Swiftness like [this](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHAAAAAAAAAA?bgcolor=000000) This skips Ursine Vigor and Typhoon.
+- For lower keys you can put 2 points into Feline Swiftness like [this](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHAAAAAAAAAA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
 - All other talents in the druid tree are more or less set.
 
 
@@ -431,13 +432,13 @@ Before you make your decision on what to craft you should clear as much of the r
 
 ## [Tier Set](#tier-set)
 
-2PC T29: 2.6% DPS ST, 3.5% AoE 
-<br>2PC+4PC T29: 4% DPS ST, 5.5% AoE
+T29 2PC: 2.6% DPS ST, 3.5% AoE 
+<br>T29 2PC+4PC: 4% DPS ST, 5.5% AoE
 <br>
 <br>2PC+2PC: 6.7% DPS ST, 9.1% AoE
 <br>
-<br>2PC T30: 4% DPS ST, 5.6% AoE
-<br>2PC+4PC T30: 10.1% DPS ST, 11.6% AoE
+<br>T30 2PC: 4% DPS ST, 5.6% AoE
+<br>T30 2PC+4PC: 10.1% DPS ST, 11.6% AoE
  
 <br> This means that you won't break T29 4PC until you can equip 2PC+2PC or you looted a high itemlevel piece in two/three tierslots. (depending on how many of the T29 tierpieces you have)
 
@@ -458,22 +459,15 @@ On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.
 [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
 <br>[Spiteful Storm](https://www.wowhead.com/item=194309/spiteful-storm?bonus=7979&class=11&ilvl=424&spec=102) - Raszageth (Raid)
 <br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid), Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
-<br>[Conjured Chillglobe](https://www.wowhead.com/item=194300/conjured-chillglobe?bonus=7935&class=11&ilvl=415&spec=102) - The Primal Council (Raid)
-<br>[Eye of Skovald](https://www.wowhead.com/item=133641/eye-of-skovald?bonus=1795&ilvl=415&spec=102) - Halls of Valor
-<br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
-<br>[Windscar Whetstone](https://www.wowhead.com/item=137486/windscar-whetstone?bonus=6652:8811:8812:6808:4786:3294&ilvl=415&spec=102) - Court of Stars, good on-use ST trinket, mind that the damage it does is shared amongst enemies hit.
   
 On **AoE** you will want to use [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) and one of the following trinkets:
 
 [Alacritous Alchemist Stone](https://www.wowhead.com/item=191492/alacritous-alchemist-stone?ilvl=418&spec=102) - Alchemy / AH
-<br>[Infernal Writ](https://www.wowhead.com/item=137485/infernal-writ?bonus=1795&class=11&ilvl=415&spec=102) - Court of Stars
 <br>[Furious Ragefeather](https://www.wowhead.com/item=193677/furious-ragefeather?bonus=7974&class=11&ilvl=415&spec=102) - Nokund Offensive 
 <br>[Idol of the Earth Warder](https://www.wowhead.com/item=193006/idol-of-the-earth-warder?class=11&ilvl=418&spec=102) - Jewelcrafting / AH !! This trinket is only good if you have a lot of sockets in your gear !!
 <br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
 <br>[Voidmender's Shadowgem](https://www.wowhead.com/item=110007/voidmenders-shadowgem?bonus=6652:8811:8812:6808:4786:3300&class=11&ilvl=415&spec=102) - Shadowmoon Burial Grounds
-<br>[Ruby Whelp Shell](https://www.wowhead.com/item=193757/ruby-whelp-shell?bonus=6652:8783:8784:7936:7937:6808:4786:1637&class=11&ilvl=415&spec=102) - Ruby Life Pools, can be used if no other good alternative, you would want to train the haste proc.
-<br>[Emerald Coach's Whistle](https://www.wowhead.com/item=193718/emerald-coachs-whistle?bonus=6652:8783:8784:7936:7937:6808:4786:1637&class=11&ilvl=415&spec=102) - Algethar Academy, mastery buff that procs both for you and the person you link with, likely the best dps increase for your group since both players benefit from the buff(requires resto lootspec to drop, procs from all of our spells).
-<br>[Iceblood Deathsnare](https://www.wowhead.com/item=194304/iceblood-deathsnare?bonus=6652:8783:8784:7936:7937:4800:4786:1498&class=11&ilvl=415&spec=102) Sennarth(Raid), good on sustained AoE
+
 
 
 <div id="gearing-advice">
@@ -486,17 +480,11 @@ In general try to hit ilvl > mastery gear. If it has mastery it is most likely g
 
 **Dungeons to Spam:**
 
-Nokhud Offensive - In general insane loot, really good trinket, a lot of mastery gear. If you are pugging keys and are able to target try to run this dungeon.
-<br>Halls of Valor - This dungeon is really heavy on mastery gear and the trinkets are also pretty good. Do not reroll this dungeon.
-<br>Algeth'Ar Academy - Good for weapon hunting, it has a low drop pool so you can get it relatively fast.
-<br>Court of Stars - Although the loot pool is diluted, Signet of Melandrus is around 400 agility for Feral if you will at all play that. Infernal Writ is also a really solid trinket. 
-<br>Temple of the Jade Serpent - Although the loot pool is diluted, there are some decent pieces and a really good main hand. Do not go out of your way to spam this, but do not reroll this either.
+TBD
 
 **Dungeons to Reroll:**
 
-<br>Shadowmoon Burial Grounds - Unless the loot table gets purged a lot on live try to reroll this dungeon as you can not target most of the loot and mainstat jewelry is worse than normal ones.
-<br>Ruby Life Pools - Good for weapon if you do not have one yet, otherwise skip unless someone in your group needs this or you need score.
-<br>Azure Vault - Mostly garbage loot, skip unless someone in your group needs this or you need score.
+TBD
 
 
 
