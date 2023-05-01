@@ -187,9 +187,9 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
  </div>
  
  In single target with {{< spell 202425 "Warrior of Elune" >}} talented we will enter Solar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
- In single target without {{< spell 202425 "Warrior of Elune" >}} talented we will enter Lunar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
- On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
- On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
+ <br>In single target without {{< spell 202425 "Warrior of Elune" >}} talented we will enter Lunar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
+ <br>On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
+ <br>On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
 
 <div id="talents">
