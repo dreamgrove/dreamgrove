@@ -285,9 +285,9 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
  
  </div>
  
-Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges has been consumed.
+Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges have been consumed.
 <br>Use the charges if any of the following conditions are true:
-- You are in {{< spell 102560 "Incarnation" >}} and it has more than 20s remaining.
+- To enter Solar Eclipse
 - You have 1 charge left and you are in {{< spell 102560 "Incarnation" >}}.
 - As a movement GCD in {{< spell 102560 "Incarnation" >}}.
  
