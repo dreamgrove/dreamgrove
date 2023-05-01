@@ -331,7 +331,7 @@ For Embellishments you will have two options. Either [Slimy Expulsion Boots](htt
 
 ### [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots)
 
-**If you have one Spark of Ingenuity but no sockets for it, follow these steps:**
+**If you have one [Spark of Ingenuity](https://www.wowhead.com/ptr/item=190453/spark-of-ingenuity) but no sockets for it, follow these steps:**
 
 - Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
 - During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) and craft [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots) if you haven't already.
@@ -358,7 +358,7 @@ If you loot a Mythic weapon or vault a weapon before you craft your second [Spar
 - In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Spore Colony Shoulderpads to 447 ilvl.
 - During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) to upgrade (recraft) your Life-bound Boots to 447 ilvl with Toxified Armor Patch.
 
-**If you have one Spark of Ingenuity and one socket for it, follow these steps:**
+**If you have one [Spark of Ingenuity](https://www.wowhead.com/ptr/item=190453/spark-of-ingenuity) and one socket for it, follow these steps:**
 
 - Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
 - During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) and craft [Spore Colony Shoulderpads:](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards).
