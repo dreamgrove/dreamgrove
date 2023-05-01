@@ -488,7 +488,7 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 </div>
 
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.1.html)
-<br>[Embells 4T](https://www.dreamgrove.gg/balance/sims/embells_4T_10.1.html)
+<br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.1.html)
 <br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
 <br>[Phials 4T](https://www.dreamgrove.gg/balance/sims/phial_4T_10.1.html)
 <br>[Runes](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
