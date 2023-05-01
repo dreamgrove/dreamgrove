@@ -32,7 +32,6 @@ sidebarContents:  |
   <br>[Embellishments](#embellishments)
   <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
-  <br>[Gearing Advice](#gearing-advice)
   
   **[6. Miscellaneous](#misc)**
   <br>[Do our dots snapshot?](#snapshot)
@@ -490,39 +489,39 @@ T29 2PC: 2.6% DPS ST, 3.5% AoE
 
 </div>
 
-Obviously, just like before please use the Top Gear or Droptimizer options in Raidbots in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for.
+Obviously, just like before please use the Top Gear or Droptimizer options in Raidbots in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
 
-On Single Target you will want to use [Furious Ragefeather](https://www.wowhead.com/item=193677/furious-ragefeather?bonus=7974&class=11&ilvl=415&spec=102) and one of the following trinkets:
+r1-9 = Raid boss number 1-9
+HTD = Healer Tank DPS
+d = Dungeon
 
-[Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) - The Primal Council (Raid)
-<br>[Spiteful Storm](https://www.wowhead.com/item=194309/spiteful-storm?bonus=7979&class=11&ilvl=424&spec=102) - Raszageth (Raid)
-<br>[Desperate Invoker's Codex](https://www.wowhead.com/item=194310/desperate-invokers-codex?bonus=7935) - Raszageth (Raid), Inflicts a great amount of damage to yourself and should not be considered in a progression environment.
-  
-On **AoE** you will want to use [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=7935&class=11&ilvl=421&spec=102) and one of the following trinkets:
+### ST
 
-[Alacritous Alchemist Stone](https://www.wowhead.com/item=191492/alacritous-alchemist-stone?ilvl=418&spec=102) - Alchemy / AH
-<br>[Furious Ragefeather](https://www.wowhead.com/item=193677/furious-ragefeather?bonus=7974&class=11&ilvl=415&spec=102) - Nokund Offensive 
-<br>[Idol of the Earth Warder](https://www.wowhead.com/item=193006/idol-of-the-earth-warder?class=11&ilvl=418&spec=102) - Jewelcrafting / AH !! This trinket is only good if you have a lot of sockets in your gear !!
-<br>[Darkmoon Deck: Inferno](https://www.wowhead.com/item=198086/darkmoon-deck-inferno?class=11&ilvl=418&spec=102) - Inscription / AH
-<br>[Voidmender's Shadowgem](https://www.wowhead.com/item=110007/voidmenders-shadowgem?bonus=6652:8811:8812:6808:4786:3300&class=11&ilvl=415&spec=102) - Shadowmoon Burial Grounds
+- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (r8)
+- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (r7)
+- [Ominous Chromatic Essence(https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (r3) - (mastery, 4 other)
+- [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (r2) - mostly st
+- [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale)(r1)
+- [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (d) - +burst
+- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
+- [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (d) - pure st
+- [Irideus Fragment](https://www.wowhead.com/ptr/item=193743/irideus-fragment) (d) - +burst
+- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (r3) - (mastery, 0 other)
+- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) (d)
 
+### AoE
 
+- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (r8)
+- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (r7)
+- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (r3) - (mastery, 4 other)
+- [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (d) - +burst
+- [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale) (r1)
+- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (r3) - (mastery, 0 other)
+- [Irideus Fragment](https://www.wowhead.com/ptr/item=193743/irideus-fragment) (d) - +burst
+- [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (r2) - mostly st
+- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
+- [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (d) - pure st
 
-<div id="gearing-advice">
-
-## [Gearing Advice](#gearing-advice)
-
-</div>
-
-In general try to hit ilvl > mastery gear. If it has mastery it is most likely good, it does NOT need haste or anything else. For stuff that does not have mastery just sim in between dungeons.
-
-**Dungeons to Spam:**
-
-TBD
-
-**Dungeons to Reroll:**
-
-TBD
 
 
 
