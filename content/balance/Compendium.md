@@ -10,6 +10,7 @@ sidebarContents:  |
   **[1. News](#news)**
  
   **[2. Rotation](#rotation)**
+  <br>[Precasting](#precast)
   <br>[What is my Single Target rotation?](#st)
   <br>[What is my AoE priority?](#aoe)
   <br>[What is my filler priority inside CA?](#filler)
@@ -176,6 +177,19 @@ Racials:\
 
 </div>
 
+div id="precast">
+
+## [Precasting](#precast)
+
+</div>
+
+**Precasting:**
+- Cast {{< spell 190984 "Wrath" >}} twice
+- Cast {{< spell 202347 "Stellar Flare" >}}
+- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
+
+<br>You can precast ~4 seconds from max range before a boss is pulled.
+
 <div id="st">
 
 ## [What is my Single Target rotation?](#st)
@@ -183,11 +197,6 @@ Racials:\
 </div>
 
 **Single Target priority list:**
-<br>**Precasting:**
-- Cast {{< spell 190984 "Wrath" >}} twice
-- Cast {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
-<br>
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you didn't talent into {{< spell 202425 "Warrior of Elune" >}}.
 - Use {{< spell 194153 "Starfire" >}} to get into Solar Eclipse if you did talent into {{< spell 202425 "Warrior of Elune" >}}.
