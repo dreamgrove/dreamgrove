@@ -188,7 +188,7 @@ Racials:\
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
 
-You can precast ~4 seconds from max range before a boss is pulled.
+You can precast from max range ~4 seconds before a boss is pulled.
 
 <div id="st">
 
