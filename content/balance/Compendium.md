@@ -28,6 +28,7 @@ sidebarContents:  |
   **[5. Gearing](#gearing)**
   <br>[Stats](#stats)
   <br>[Enchants](#enchants)
+  <br>[Crest Upgrades](#crests)
   <br>[Embellishments](#embellishments)
   <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
@@ -414,30 +415,57 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 
 
+<div id="crests">
+
+## [Crests](#crests)
+
+</div>
+
+
+
+Week 0 = Patch week
+Week 1 = Raid week
+Week 2 = Second raid week
+Sparks will be available in the following weeks: Week 0, Week 2, Week 4,...
+
+
+Use crests to upgrade 5 items in Week 1 and 2 up to ilvl 441. Refer to this [guide](https://i.imgur.com/4lxTN6Z.png).
+Upgrade crests in the following order: Weapon > Chest = Legs = Head > Shoulders = Gloves = Waist > Rings > Cloak = Wrist > Neck.
+Keep in mind that this order will heavily change depending on what you obtain from mythic+ and raid. Also, avoid upgrading tier slots until you have your 4-piece.
+
+
+
+
 <div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
 </div>
 
-**ST:**
-The best embellishments raw damage wise at full uptime are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots). 
-<br>[Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) should usually be taken instead of Slimy Expulsion Boots since swapping Embellishments, at least early on, is not an option easily.
-<br>Another option is [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) at very high uptime, which should can be considered when you are sure you will rarely fall below 90%. In raid this is never the case and the same goes for most dungeons.
 
-**AOE:**
-The best embellishments  are [Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) and [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) in nearly all situations. 
-<br>As for single target [Blue Silken Lining](https://www.wowhead.com/spell=387335/blue-silken-lining) is an option if it gets very high uptime but this is essentially never the case.
 
-**TLDR:** 
-[Elemental Lariat](https://www.wowhead.com/spell=375323/elemental-lariat) (always use) > [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) (ST) = [Potion Absorption Inhibitor](https://www.wowhead.com/spell=371700/potion-absorption-inhibitor) (AoE)
 
-**What to craft:**
-Before you make your decision on what to craft you should clear as much of the raid as possible. All crafted pieces should be crafted with mastery/haste.
-<br>Your first craft should be [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat?bonus=8960:8782:8793&ilvl=418&spec=102), it performs really well in all situations, after that you can choose to craft either of the following depending on your gear:
-<br>[Signet of Titanic Insight](https://www.wowhead.com/item=192999/signet-of-titanic-insight) Ring crafted by jewelcrafting
-<br>[Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade) 1H dagger crafted by blacksmithing
-<br>[Life-Bound Boots](https://www.wowhead.com/item=193398/life-bound-boots) Boots crafted by leatherworking
+**If you have one 10.7 Spark but no sockets for it, follow these steps:**
+
+Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
+During Week 0, obtain your first Spark and craft Slimy Expulsion Boots if you haven't already.
+In Week 1, you won't receive any Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
+
+
+
+
+
+**If you have one 10.7 Spark and one socket for it, follow these steps:**
+
+Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
+During Week 0, obtain your first Shadowflame Spark and craft Slimy Expulsion Boots if you haven't already.
+In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+During Week 2, use your second Shadowflame Spark to craft a 447 ilvl Primal Molten Spellblade. With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
+Keep your 421 Wrists until Week 4 of the raid.
+
+If you loot a Mythic weapon or vault a weapon before you craft your second Shadowflame Spark, use the first method (belt your second spark).
+If you loot socketed Wrists from M+ before you craft your second Shadowflame Spark, use the first method (belt your second spark).
 
 
 
