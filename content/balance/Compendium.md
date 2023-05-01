@@ -439,7 +439,8 @@ Week 0 = Patch week
 </div>
 
 
-For Embellishments you will have two options. Either Slimy Expulsion Boots or Spore Colony Shoulderpads. The Shoulders are better for sustained ST and AoE scenarios. The boots are better for the times where adds are present, as the shoulders will lose a lot of value from the wasted applications. The debuff on the shoulders has to stack up to 5 times, otherwise it is useless. In general if you are a raider and do not care about m+ we recommend crafting shoulders, as most of the raid is close to full single target. If you do not care about raid, then craft boots. It is important to mention that the shoulders also damage you for around 900 damage per second in most scenarios, which might or might not matter in some situations.
+For Embellishments you will have two options. Either Slimy Expulsion Boots or Spore Colony Shoulderpads. The Shoulders are better for sustained ST and AoE scenarios. The boots are better for the times where adds are present, as the shoulders will lose a lot of value from the wasted applications. The debuff on the shoulders has to stack up to 5 times, otherwise it is useless.
+<br>In general if you are a raider and do not care about m+ we recommend crafting shoulders, as most of the raid is close to full single target. If you do not care about raid, then craft boots. It is important to mention that the shoulders also damage you for around 900 damage per second in most scenarios, which might or might not matter in some situations.
 
 
 ### Slimy Expulsion Boots:
@@ -508,14 +509,14 @@ T29 2PC: 2.6% DPS ST, 3.5% AoE
 Obviously, just like before please use the Top Gear or Droptimizer options in Raidbots in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
 
 r1-9 = Raid boss number 1-9
-HTD = Healer Tank DPS
-d = Dungeon
+<br>HTD = Healer Tank DPS
+<br>d = Dungeon
 
 ### ST
 
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (r8)
 - [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (r7)
-- [Ominous Chromatic Essence(https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (r3) - (mastery, 4 other)
+- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (r3) - (mastery, 4 other)
 - [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (r2) - mostly st
 - [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale)(r1)
 - [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (d) - +burst
