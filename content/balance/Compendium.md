@@ -194,15 +194,19 @@ Racials:\
 </div>
 
 **Single Target priority list:**
+Precasting:
+- Cast {{< spell 190984 "Wrath" >}} twice
+- Cast {{< spell 202347 "Stellar Flare" >}}
+- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
+
 
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
-- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse. This also applies to before cooldowns if you have T29 4PC equipped.
-- Use {{< spell 191034 "Starfall" >}} if you have a Touch the Cosmos(T29 4PC) proc and you will cast Celestial Alignment/Incarnation immediately afterwards.
-- Use {{< spell 78674 "Starsurge" >}} if you have a Touch the Cosmos(T29 4PC) proc.
+- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you didn't talent into {{< spell 202425 "Warrior of Elune" >}}.
+- Use {{< spell 194153 "Starfire" >}} to get into Solar Eclipse if you did talent into {{< spell 202425 "Warrior of Elune" >}}.
+- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if talented.
-- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}} and you are not in {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}}.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
-- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} window, or if your next {{< spell 194223 "CA" >}} window is 30 or more seconds away.
+- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} window, or if your next {{< spell 194223 "CA" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
@@ -215,11 +219,8 @@ Racials:\
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
 - Use {{< spell 190984 "Wrath" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc and you are in only Lunar Eclipse. You can do this via:
-    - Catch an Umbral Embrace proc naturally without cancelling any spells currently being cast and/or
-    - Cast Starfire when you have two or more stacks of the T29 2PC buff
-    - You can do both or either for the same gain (0.25%-0.5%)
-- Use {{< spell 190984 "Wrath" >}} You should always be in Lunar Eclipse but casting Wrath is still a DPS increase.
+- Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc and you are in only Lunar Eclipse.
+- Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
 <div id="aoe">
 
@@ -260,7 +261,7 @@ Racials:\
 </div>
 
 
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 2 or more targets.
+Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 3 or more targets.
 
 
 <div id="pulsar">
