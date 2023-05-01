@@ -40,7 +40,7 @@ sidebarContents:  |
   <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
  
-  **[7. Utility](#utility)**
+
  
 ---
 
@@ -430,8 +430,8 @@ Sparks will be available in the following weeks: Week 0, Week 2, Week 4,...
 
 
 Use crests to upgrade 5 items in Week 1 and 2 up to ilvl 441. Refer to this [guide](https://i.imgur.com/4lxTN6Z.png).
-Upgrade crests in the following order: Weapon > Chest = Legs = Head > Shoulders = Gloves = Waist > Rings > Cloak = Wrist > Neck.
-Keep in mind that this order will heavily change depending on what you obtain from mythic+ and raid. Also, avoid upgrading tier slots until you have your 4-piece.
+<br>Upgrade crests in the following order: Weapon > Chest = Legs = Head > Shoulders = Gloves = Waist > Rings > Cloak = Wrist > Neck.
+<br>Keep in mind that this order will heavily change depending on what you obtain from mythic+ and raid. Also, avoid upgrading tier slots until you have your 4-piece.
 
 
 
@@ -448,9 +448,9 @@ Keep in mind that this order will heavily change depending on what you obtain fr
 **If you have one 10.7 Spark but no sockets for it, follow these steps:**
 
 Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
-During Week 0, obtain your first Spark and craft Slimy Expulsion Boots if you haven't already.
-In Week 1, you won't receive any Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
-During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
+<br>During Week 0, obtain your first Spark and craft Slimy Expulsion Boots if you haven't already.
+<br>In Week 1, you won't receive any Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+<br>During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard with Toxified Armor Patch. Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
 
 
 
@@ -459,13 +459,13 @@ During Week 2, use your second Spark to craft a 447 ilvl Life-bound Waistguard w
 **If you have one 10.7 Spark and one socket for it, follow these steps:**
 
 Craft Life-bound Bindings with Toxified Armor Patch at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
-During Week 0, obtain your first Shadowflame Spark and craft Slimy Expulsion Boots if you haven't already.
-In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
-During Week 2, use your second Shadowflame Spark to craft a 447 ilvl Primal Molten Spellblade. With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
-Keep your 421 Wrists until Week 4 of the raid.
+<br>During Week 0, obtain your first Shadowflame Spark and craft Slimy Expulsion Boots if you haven't already.
+<br>In Week 1, you won't receive any Shadowflame Sparks, but you should upgrade your Slimy Expulsion Boots to 447 ilvl.
+<br>During Week 2, use your second Shadowflame Spark to craft a 447 ilvl Primal Molten Spellblade. With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
+<br>Keep your 421 Wrists until Week 4 of the raid.
 
 If you loot a Mythic weapon or vault a weapon before you craft your second Shadowflame Spark, use the first method (belt your second spark).
-If you loot socketed Wrists from M+ before you craft your second Shadowflame Spark, use the first method (belt your second spark).
+<br>If you loot socketed Wrists from M+ before you craft your second Shadowflame Spark, use the first method (belt your second spark).
 
 
 
@@ -581,80 +581,6 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 /cast [@cursor] Celestial Alignment
 ```
 
-  
-<div id="utility">
-
-# [7. Utility](#utility)
-
-</div>
  
- 
-## Balance Druid Utility:
-
-{{< spell 29166 "Innervate" >}} - The targeted healer has no mana costs for 10sec - use on yulon monk > disc > everything else (also works with Resto Aff HotW)
-
-{{< spell 22812 "Barkskin" >}} - 20% DR on 60sec CD (reduced by {{< spell 265144 "Symbol of Hope" >}}), usable while stunned, frozen, incapacitated, feared or asleep. Also prevents your casts from being pushed back.
-
-{{< spell 61391 "Typhoon" >}} - AoE Knockback on 30s CD, can be used for purely displacing, interrupting or in tandem with Ursol's Vortex (read below). Keep in mind that knockbacks also have DR.
-
-{{< spell 33786 "Cyclone" >}} - Stasis/Banish on enemy for 6sec, 25y. Can be used if an add needs to not die (bolstering)
-
-{{< spell 2908 "Soothe" >}} - Enrage dispell on an enemy, 10s CD (CD incurs even if nothing is dispelled)
-
-{{< spell 2782 "Remove Corruption" >}} - Curse and Poison dispell on a friendly Target, 8s CD (CD does not incur if nothing is dispelled)
-
-{{< spell 339 "Entangling Roots" >}} - 30sec root, 40y range - can affect only one target (independent of mass entanglement)
-
-{{< spell 2637 "Hibernate" >}} - 40sec Sleep/Incapacitate on enemy Beasts and Dragonkins, 35y (can also be used to interrupt casts)
-
-{{< spell 106898 "Stampeding Roar" >}} - Raid wide movement speed increase (60%) for 8 sec. Force shifts into Bear form if not in either Bear Form or Cat Form. Has an unhasted 1.5s gcd due to not being forgotten to be put on a certain whitelist by Blizzard.
-
-{{< spell 1850 "Dash" >}} - Self 60% movement speed increase while in Cat Form 10s duration. (force shifts into cat form)
-
-{{< spell 99 "Incapacitating Roar" >}} - 3 sec AoE Incapacitate, 30s CD - mainly used to interrupt unkickable casts or channels
-
-{{< spell 102793 "Ursol's Vortex" >}} - AoE 50% Slow + grips mobs inside it if they try to leave (once), 60s CD - mainly used for tank kiting, can be used in tandem with Typhoon to create a budget gorefiend's grasp
-
-{{< spell 22570 "Maim" >}} - Stun based on how many CPs you have (1sec per CP) - not used in 99.999% of cases
-
-{{< spell 5211 "Mighty Bash" >}} - Melee range 4s stun usable in any form, 60s CD
-
-{{< spell 102359 "Mass Entanglement" >}} - 30s Root that hits everything around your target (you can have both entangling roots and mass entangle at the same time), 30s CD
-
-{{< spell 108291 "Heart of the Wild" >}} - Grants a specific buff depending on your affinity
-  + {{< spell 108293 "Guardian" >}} - 20% stam, 2 frenzied regens, ironfur stackable - buff only while in bear form (45% stam, 220% armor total + frenzied). Extremely strong defensive cooldown.
-  + {{< spell 108294 "Restoration" >}} - healing increased by 30% mana cost reduction by 50% - can use Innervate on yourself.
-  + {{< spell 108292 "Feral" >}} - never use this
-
-{{< spell 8936 "Regrowth" >}} - direct heal + hot, castable in Moonkin Form
-
-{{< spell 774 "Rejuvenation" >}} - hot (instant) 12s dur, force shifts into Human Form
-
-{{< spell 48438 "Wild Growth" >}} - Smart heal that hits 5 targets within 30y of your current target (ramps down, ~35k healing per cast), force shifts into Human Form
-
-{{< spell 18562 "Swiftmend" >}} - Big heal that consumes a HoT and force shifts into Human Form. This means it can only be used on targets that have a Regrowth, Rejuvenation or Wild Growth HoT.
-
-{{< spell 22842 "Frenzied Regeneration" >}} - 24% max HP heal over time. If you leave Bear form the effect disappears.
-
-{{< spell 3025 "Cat Form" >}} - Stance, 30% movement speed, going into or out of cat form removes slows and roots.
-
-{{< spell 783 "Travel Form" >}} - Stance, 40% movement speed while in combat, 100% movement speed while out of combat, going into or out of travel form removes slows and roots. Keep note which fights/areas you can use this on as it’s a flat better version of Cat Form outside Dash.
-
-{{< spell 5487 "Bear Form" >}} - Stance, 25% stamina 220% armor, stamina can be used to tank mechanics since you will be losing a smaller % of hp inside it leaving you with higher hp when you go out of it. Going into or out of bear form removes slows and roots.
-
-{{< spell 164862 "Flap" >}} - Slow fall effect that has to be channeled. Keeps horizontal velocity, costs 1 GCD. Can be used after Wild Charge to extend the jump and travel more distance.
-
-{{< spell 102401 "Wild Charge" >}} - 15s CD, off GCD
-  + Moonkin - Disengage / bound backwards away from your current location - can be extended by jumping before and/or using Flap after it.
-  + Human - Fly to an ally's position - can be used on a separate keybind with a cancelform mouseover wild charge macro.
-  + Cat - Leaps behind an enemy target and slows it.
-  + Bear - Charges to your target and briefly roots it.
-  + Travel - leap forward (longer than moonkin form)
-
-{{< spell 37846 "Force of Nature" >}} - Taunts everything in a radius near the initial placement of the trees. 60s CD. The trees will start targeting whatever your target was upon placing them.
-
-{{< spell 78675 "Solar Beam" >}} - ST interrupt on main target with 5s lockout that places an AoE silence ring on the ground that lasts 8s. The silence ring does not work on some mobs but the actual interrupt does, be careful with this.
-
-
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
