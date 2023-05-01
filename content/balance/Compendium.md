@@ -13,7 +13,6 @@ sidebarContents:  |
   <br>[What is my Single Target rotation?](#st)
   <br>[What is my AoE priority?](#aoe)
   <br>[What is my filler priority inside CA?](#filler)
-  <br>[Why do we proc pulsar with starfall?](#pulsar)
   <br>[How do we use Wild Mushrooms and how do they work?](#mushroom)
  
   **[3. Talents](#talents)**
@@ -198,8 +197,6 @@ Precasting:
 - Cast {{< spell 190984 "Wrath" >}} twice
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
-
-
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you didn't talent into {{< spell 202425 "Warrior of Elune" >}}.
 - Use {{< spell 194153 "Starfire" >}} to get into Solar Eclipse if you did talent into {{< spell 202425 "Warrior of Elune" >}}.
@@ -263,17 +260,6 @@ Precasting:
 
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 3 or more targets.
 
-
-<div id="pulsar">
-
-## [Why do we proc pulsar with starfall?](#pulsar)
-
-The reason we proc {{< spell 393961 "Pulsar" >}} in single target situations with Starfall (if CA/INC is not already active) is due to the buffs gained upon entering CA such as {{< spell 394050 "BoAT" >}} and {{< spell 194223 "Celestial Alignment" >}}.
-  
-The damage dealt by Starfall updates dynamically during its duration and can benefit from those buffs (with the exception of the initial tick). Starsurge on the other hand is executed before these buffs apply and will not benefit from them.
- 
-This also applies to consuming your T29 4PC with starfall if you will cast CA/INC immediately afterwards.
-  
  
  <div id="mushroom">
 
@@ -298,57 +284,29 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 
 </div>
 
+## Talents for different target counts
+When we don't need Starfall we can talent it away to gain Nature's Balance and Warrior of Elune which is slightly outperforming Treants:
+[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
+[Two targets](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
+[M+ Talents Weaver](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
+[M+ Talents Rattle](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
+[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkEFJkcgk4AaJlIRAAKAA?bgcolor=000000)
 
 ## Raid Talents
-[Eranog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCRSSolUiQQDgAAA?bgcolor=000000)
-<br>[Council](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRRCRSiolUiQAACAA?bgcolor=000000)
-<br>[Terros sweaty build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRCtEFRSSol0SCBFACAA?bgcolor=000000)
-<br>[Terros chill build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUiQkkEaJlkQQDgAAA?bgcolor=000000)
-<br>[Sennarth no pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCRSSolUiQQDgAAA?bgcolor=000000)
-<br>[Sennarth with pad](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBNACAA?bgcolor=000000)
-<br>[Dathea 1 platform](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkQJCRSSolUSCBNACAA?bgcolor=000000)
-<br>[Dathea 2+ platforms](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4A0ScgkkIlkQcgkQaJlIE0AIAA?bgcolor=000000)
-<br>[Kurog](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCRSSolUiQQDgAAA?bgcolor=000000)
-<br>[Broodkeeper](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJSJJEHIJkWSJCBNACAA?bgcolor=000000)
-<br>[Raszageth](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJhgkEJRKQLRSSiUSCxBSCplUiQQDgQBA?bgcolor=000000)
+TBD
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
-<br>[Ruby Life Pools all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
-Weaver is especially good in this dungeon because all packs except the very first one have some kind of priority target.
-  
-<br>[The Nokhud Offensive all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
-Most packs have a prio target that you can throw Surges into from Weaver, but Rattle is also fine.
-  
-<br>[The Azure Vault all weeks](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
-Rattle is also fine in Fortified weeks.
-  
-<br>[Algeth'ar Academy Fortified](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJASSkkDkC0ScgkkIlkQcgkQaJlIEUAIAA?bgcolor=000000)
-<br>[Algeth'ar Academy Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJASSkkDkC0ScgkkIlkQcgkQaJlIE0AIAA?bgcolor=000000)<br>
-Academy is the one dungeon where Weaver will usually be worse due to the sheer size of many pulls that also don't have a singular focus target(outside Wyrms). If your pulls aren't that big and/or you don't have trouble with adds on the tree boss Weaver is still better here.
-  
-<br>[Halls of Valor Tyrannical](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)
-<br>[Halls of Valor Fortified](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBFACNAA?bgcolor=000000)<br>
-Another Rattle or Weaver actually doesn't matter dungeon.
-  
-<br>[Court of Stars Imp pad any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)
-<br>[Court of Stars surely Denizen won't pull](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJUSCRSSolUiQQDgQDA?bgcolor=000000)<br>
-Mushrooms are the epitome of padding in this dungeon. All their damage will be on imps and wyrms which should not have a problem dying. The problem is that the other option is taking Denizens which can pull any patrolling trash or spawning Enforcers so take them at your own risk and always position somewhere that won't have any mobs you don't wanna pull.
-  
-<br>[Shadowmoon Burial Grounds any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSSEkEgkEJ5ApAtEHIJJSJJEHIJkWSJCBNACNAA?bgcolor=000000)<br>
-Weaver has a slight edge due to a lot of dungeon being bosses or 2 target pulls but Rattle is also fine.
-  
-<br>[Temple of the Jade Serpent any week](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJASSkkDkC0ScgkkIlkQcgkQaJlIE0AIAA?bgcolor=000000)<br>
-Nearly every pack in the dungeon has a target with high HP which increases the value of both Weaver and Denizens. While Mushrooms aren't only pad in this dungeon, most of their damage will be. A full Mushrooms build will net you a fair amount more overall damage as it will in Court of Stars but little of that damage actually makes the dungeon quicker.
+TBD
   
 ### Dungeon Druid Tree Considerations
   
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
-- Remove Corruption should always be taken in Algeth'ar Academy (Tree boss) and Temple of the Jade Serpent (later mobs curse), as we lose nothing relevant by taking it.
+- Remove Corruption should be taken in Afflicted weeks and in every dungeon except Vortex Pinnacle, as we lose nothing relevant by taking it.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
-- Hibernate has a singular real use in Court of Stars, as you can use it to stop the bat cast on the last mob before the last boss. There are some niche other "uses" like stopping the stomp from the Bulls in Halls of Valor.
-- For lower keys you can put 2 points into Feline Swiftness like this: https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJUSCxBSSolUiQEFACAA?bgcolor=000000 This skips Ursine Vigor and Typhoon.
+- Hibernate can be used for Incorporeal affix.
+- For lower keys you can put 2 points into Feline Swiftness like [this](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHAAAAAAAAAA?bgcolor=000000) This skips Ursine Vigor and Typhoon.
 - All other talents in the druid tree are more or less set.
 
 
@@ -389,10 +347,10 @@ Nearly every pack in the dungeon has a target with high HP which increases the v
 
 Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment)
-- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation)
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage), has ~80% of the value of Static/Isolation Phials at max value.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has ~55% of the value of Static/Isolation Phials at max value. This means if you can't get more than 55% uptime on those you should use this Phial.
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage)
+- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
+- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has the same value as Corrupting Rage at 60% uptime. This means if you can't get more than 60% uptime you should use this Phial.
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), same as the Elemental one, only that vers is more often better during progress than the random stats. Should be the default phial in most situations.
 - [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), after nerfs this Phial should never be used.
 
@@ -473,12 +431,15 @@ Before you make your decision on what to craft you should clear as much of the r
 
 ## [Tier Set](#tier-set)
 
-2PC: 2% DPS ST, 2.5% AoE 
-<br>4PC: 12% DPS ST, 12.5% AoE
-<br>2+4PC: 14% DPS ST, 15% AoE
-<br>TLDR: Loot or bench
-
-How to use the 4PC procs can be found in the [Rotation](#rotation) section. ({{< spell 78674 "Starsurge" >}} ST, {{< spell 191034 "Starfall" >}} AoE)
+2PC T29: 2.6% DPS ST, 3.5% AoE 
+<br>2PC+4PC T29: 4% DPS ST, 5.5% AoE
+<br>
+<br>2PC+2PC: 6.7% DPS ST, 9.1% AoE
+<br>
+<br>2PC T30: 4% DPS ST, 5.6% AoE
+<br>2PC+4PC T30: 10.1% DPS ST, 11.6% AoE
+ 
+<br> This means that you won't break T29 4PC until you can equip 2PC+2PC or you looted a high itemlevel piece in two/three tierslots. (depending on how many of the T29 tierpieces you have)
 
 </div>
 
