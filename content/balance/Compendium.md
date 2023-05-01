@@ -361,11 +361,11 @@ TBD
 
 Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage)
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage) Should be the default phial in most situations unless you are very pressured on hp or do not need to push damage yet.
 - [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has the same value as Corrupting Rage at 60% uptime. This means if you can't get more than 60% uptime you should use this Phial.
-- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), same as the Elemental one, only that vers is more often better during progress than the random stats. Should be the default phial in most situations.
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has the same value as Corrupting Rage at 60% uptime. 
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility), same as the Elemental one, only that vers is more often better during progress than the random stats.
 - [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury), after nerfs this Phial should never be used.
 
 **AoE**:
@@ -404,7 +404,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 </div>
 
 
-Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc, use in all situations
+Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) or [Wafting Devotion](https://www.wowhead.com/beta/item=200058/enchant-weapon-wafting-devotion) sim between these two, it depends how much haste you have.
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
 <br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) Avoidance + Reduced fall damage
 <br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
