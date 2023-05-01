@@ -60,7 +60,7 @@ sidebarContents:  |
 </div>
 
 ## [10.1 News](https://www.dreamgrove.gg/balance/compendium_news/)
-In the above link you will find a summary of the changes in Patch 10.1 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effet on gameplay.
+In the above link you will find a summary of the changes in Patch 10.1 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
 
 # [2.Rotation:](#rotation)
 
