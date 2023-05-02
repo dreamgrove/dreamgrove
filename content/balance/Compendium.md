@@ -192,8 +192,13 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
  <br>In single target without {{< spell 202425 "Warrior of Elune" >}} talented we will enter Lunar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
  <br>On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
  <br>On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
-
-
+ 
+ <br>There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, AP generated, damage of your fillers and some minor uptime differences.
+ <br>It's also affected by the amount of haste you have but entering Solar is always best or on par.
+ <br>[Here](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html) is a sim for comparison.
+ <br>[Sim with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
+ 
+ 
 <div id="talents">
 
 # [3.Talents:](#talents)
