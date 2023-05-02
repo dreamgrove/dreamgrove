@@ -193,9 +193,10 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
  <br>On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
  <br>On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  
- <br>There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, AP generated, damage of your fillers and some minor uptime differences.
+ There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, AP generated, damage of your fillers and some minor uptime differences.
  <br>It's also affected by the amount of haste you have but entering Solar is always best or on par.
- <br>[Here](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html) is a sim for comparison.
+ <br>Below are two sims for comparison.
+ <br>[Solar vs Lunar if WoE is on CD](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
  <br>[Sim with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
  
  
@@ -518,6 +519,8 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 <br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
 <br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/racials_1T_10.1.html)
 <br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/racials_6T_10.1.html)
+<br>[Solar vs Lunar with WoE](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
+<br>[Solar vs Lunar with WoE with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
 <br>[Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
