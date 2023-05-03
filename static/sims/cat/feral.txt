@@ -32,7 +32,7 @@ actions.variables=variable,name=need_bt,value=talent.bloodtalons.enabled&buff.bl
 actions.variables+=/variable,name=align_3minutes,value=spell_targets.swipe_cat=1&!fight_style.dungeonslice
 actions.variables+=/variable,name=lastConvoke,value=fight_remains>cooldown.convoke_the_spirits.remains+3&((talent.ashamanes_guidance.enabled&fight_remains<(cooldown.convoke_the_spirits.remains+60))|(!talent.ashamanes_guidance.enabled&fight_remains<(cooldown.convoke_the_spirits.remains+120)))
 actions.variables+=/variable,name=lastZerk,value=fight_remains>(30+(cooldown.bs_inc.remains%1.6))&((talent.berserk_heart_of_the_lion.enabled&fight_remains<(90+(cooldown.bs_inc.remains%1.6)))|(!talent.berserk_heart_of_the_lion.enabled&fight_remains<(180+cooldown.bs_inc.remains)))
-actions.variables+=/variable,name=zerk_biteweave,value=0
+actions.variables+=/variable,name=zerk_biteweave,op=reset
 
 actions.clearcasting=thrash_cat,if=refreshable&!talent.thrashing_claws.enabled
 actions.clearcasting+=/swipe_cat,if=spell_targets.swipe_cat>1
