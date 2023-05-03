@@ -447,7 +447,7 @@ R1-9 = Raid boss number 1-9
 - [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
 - [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (D) - pure st
 
-
+s
 
 
 <div id="misc">
