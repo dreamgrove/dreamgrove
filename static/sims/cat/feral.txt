@@ -80,7 +80,7 @@ actions.bloodtalons+=/moonfire_cat,target_if=max:target.time_to_die,if=buff.bt_m
 actions.bloodtalons+=/shred,target_if=max:target.time_to_die,if=action.shred.damage>action.thrash_cat.damage&buff.bt_shred.down
 actions.bloodtalons+=/thrash_cat,if=buff.bt_thrash.down
 
-actions.berserk=ferocious_bite,target_if=max:target.time_to_die,if=combo_points=5&dot.rip.remains>8&variable.zerk_biteweave
+actions.berserk=ferocious_bite,target_if=max:target.time_to_die,if=combo_points=5&dot.rip.remains>8&variable.zerk_biteweave&spell_targets.swipe_cat>1
 actions.berserk+=/call_action_list,name=finisher,if=combo_points=5
 # its currently a gain to just contiuously try to proc bt in aoe
 actions.berserk+=/call_action_list,name=bloodtalons,if=combo_points<5&spell_targets.swipe_cat>1
