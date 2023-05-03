@@ -345,11 +345,12 @@ Week 0 = Patch week
 
 </div>
 
+**The [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DONT craft them.**
+<br>Initially the debuff on the target could keep stacking while the dot was active, that is no longer the case.
 
-For Embellishments you will have two options. Either [Slimy Expulsion Boots](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots) or [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards). The Shoulders are better for sustained ST and AoE scenarios. The boots are better for the times where adds are present, as the shoulders will lose a lot of value from the wasted applications. The debuff on the shoulders has to stack up to 5 times, otherwise it is useless.
-
-<br>In general if you are a raider and do not care about m+ we recommend crafting shoulders, as most of the raid is close to full single target. If you do not care about raid, then craft boots. It is important to mention that the shoulders also damage you for around 900 damage per second in most scenarios, which might or might not matter in some situations.
-<br>This will be combined with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) which increases the effect of the boots/shoulders by 100%. Do note that it can only be added to a crafted leather piece.
+For Embellishments we craft [Slimy Expulsion Boots](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%.
+<br>Do note that it can only be added to a crafted leather piece.
+<br>**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) item.**
 
 ### [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots)
 
@@ -370,24 +371,6 @@ For Embellishments you will have two options. Either [Slimy Expulsion Boots](htt
 
 If you loot a Mythic weapon or vault a weapon before you craft your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
 <br>If you loot socketed Wrists from M+ before you craft your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
-
-### [Spore Colony Shoulderpads:](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards)
-
-**If you have one [Spark of Ingenuity](https://www.wowhead.com/ptr/item=190453/spark-of-ingenuity) but no sockets for it, follow these steps:**
-
-- Craft [Life-bound Boots](https://www.wowhead.com/item=193398/life-bound-boots?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
-- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) and craft Spore Colony Shoulderpads.
-- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Spore Colony Shoulderpads to 447 ilvl.
-- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) to upgrade (recraft) your Life-bound Boots to 447 ilvl with Toxified Armor Patch.
-
-**If you have one [Spark of Ingenuity](https://www.wowhead.com/ptr/item=190453/spark-of-ingenuity) and one socket for it, follow these steps:**
-
-- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
-- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) and craft [Spore Colony Shoulderpads:](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards).
-- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your [Spore Colony Shoulderpads:](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) to 447 ilvl.
-- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) to craft [Life-bound Boots](https://www.wowhead.com/item=193398/life-bound-boots?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) at 447 ilvl with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch). Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
-
-**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) item if you so desire.**
 
 
 <div id="tier-set">
