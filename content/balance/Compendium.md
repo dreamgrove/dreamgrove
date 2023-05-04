@@ -121,7 +121,8 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse.
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets. 
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if {{< spell 194153 "Starfire" >}} will hit 3+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving which is usually around 2-4 depending on how much AP you started with.
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
