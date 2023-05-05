@@ -194,7 +194,7 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
  <br>On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
  <br>On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  
- There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, AP generated, damage of your fillers and some minor uptime differences.
+ There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, how often we proc Pulsar, AP generated, damage of your fillers and some minor uptime differences.
  <br>It's also affected by the amount of haste you have but entering Solar is always best or on par.
  <br>Below are two sims for comparison.
  <br>[Solar vs Lunar if WoE is on CD](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
@@ -269,7 +269,7 @@ TBD
 
 Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage) Should be the default phial in most situations unless you are very pressured on hp or do not need to push damage yet.
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage) This Phial would be our default if the tooltip was accurate, currently it procs at 100% instead of 400% as the tooltip says. Unless that is fixed you won't play it in any relevant raid content.
 - [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has the same value as Corrupting Rage at 60% uptime. 
