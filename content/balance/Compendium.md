@@ -191,7 +191,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
  </div>
  
  On 1-2 targets we enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
- <br>On 3 targets we enter Lunar eclipse and cast {{< spell 190984 "Wrath" >}}.
+ <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 190984 "Wrath" >}}.
  <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  
  
