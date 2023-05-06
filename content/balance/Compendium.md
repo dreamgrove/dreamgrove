@@ -488,16 +488,24 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.1.html)
 <br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.1.html)
 <br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
-<br>[Phials 4T](https://www.dreamgrove.gg/balance/sims/phial_4T_10.1.html)
-<br>[Runes](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
-<br>[Pulsar proccing](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
-<br>[WoE usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
-<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
-<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
+<br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phial_6T_10.1.html)
+<br>[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
+<br>[Runes 6T](https://www.dreamgrove.gg/balance/sims/runes_6T_10.1.html)
 <br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/racials_1T_10.1.html)
 <br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/racials_6T_10.1.html)
-<br>[Solar vs Lunar with WoE](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
-<br>[Solar vs Lunar with WoE with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
+<br>[Pulsar proc Starfall vs Starsurge](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
+<br>[WoE Usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
+
+<br>[Which Eclipse to enter 1T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_1T_rattle_10.1.html)
+<br>[Which Eclipse to enter 1T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_1T_weaver_10.1.html)
+<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
+<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
+<br>[Which Eclipse to enter 3T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_3T_rattle_10.1.html)
+<br>[Which Eclipse to enter 3T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_3T_weaver_10.1.html)
+<br>[Which Eclipse to enter 4T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_4T_rattle_10.1.html)
+<br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_4T_weaver_10.1.html)
+
+
 <br>[Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
