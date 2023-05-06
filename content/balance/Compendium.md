@@ -94,10 +94,10 @@ You can precast from max range ~4 seconds before a boss is pulled.
     - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
     - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
-- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 102560 "Inc" >}} already.
+- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
-- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
+- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
@@ -123,8 +123,8 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets. 
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if {{< spell 194153 "Starfire" >}} will hit 4+ targets.
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving which is usually around 2-4 depending on how much AP you started with.
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
@@ -219,7 +219,7 @@ TBD
 ### Dungeon Druid Tree Considerations
   
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
-- Remove Corruption should be taken in Afflicted weeks and in every dungeon except Vortex Pinnacle, as we lose nothing relevant by taking it.
+- Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - Hibernate can be used for Incorporeal affix.
 - For lower keys you can put 2 points into Feline Swiftness like [this](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHAAAAAAAAAA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
@@ -391,7 +391,7 @@ T29 2PC: 2.8% DPS ST, 2.7% AoE
 
 </div>
 
-Obviously, just like before please use the Top Gear or Droptimizer options in [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
 
 R1-9 = Raid boss number 1-9
 <br>HTD = Healer Tank DPS
