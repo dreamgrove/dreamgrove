@@ -25,7 +25,7 @@ Patch notes can be found here https://us.forums.blizzard.com/en/wow/t/class-tuni
 
 All of these changes are fine, on Single Target we will always enter Solar Eclipse because of it, it does have a side-effect on AoE.
 <br>On 2 targets we will continue to enter Solar eclipse and wrath
-<br>On 3 target we will enter Lunar eclipse instead but still wrath
+<br>On 3 target we will enter Lunar eclipse instead, cast starfire inside lunar eclipse and wrath inside CA/Inc
 <br>On 4+ targets we will enter Lunar eclipse and Starfire 
 
 >Damage dealt by Faerie Dragons summoned by Denizen of the Dream increased by 25%.
