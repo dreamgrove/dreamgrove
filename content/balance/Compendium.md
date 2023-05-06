@@ -177,7 +177,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
  
  </div>
  
-Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges have been consumed.
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges have been consumed.
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
 - You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
@@ -450,7 +450,8 @@ No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93
 
 </div>
 
-When Lunar Eclipse is active use {{< spell 157228 "Owlkin Frenzy" >}} procs as soon as possible. When ONLY Solar Eclipse(should currently never be the case) is active, use it when fighting 3+ targets or when you need to move. Otherwise let it expire.
+Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lunar Eclipse or inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if starfire will hit 3 or more targets.
+<br>Keep in mind that {{< spell 202425 "Warrior of Elune" >}} charges are consumed before {{< spell 157228 "Owlkin Frenzy" >}} procs.
 
 
 
