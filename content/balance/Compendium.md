@@ -123,7 +123,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 3 targets. 
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets. 
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if {{< spell 194153 "Starfire" >}} will hit 4+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving which is usually around 2-4 depending on how much AP you started with.
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
@@ -140,8 +140,9 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
+- Use {{< spell 194153 "Starfire" >}} if you are in Lunar Eclipse or {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and starfire will hit 4 or more targets.
 - Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
-- Use {{< spell 194153 "Starfire" >}}.
+
 
 
 <div id="filler">
@@ -149,7 +150,6 @@ You can precast from max range ~4 seconds before a boss is pulled.
 ## [What is my filler priority inside CA/Inc?](#filler)
 
 </div>
-
 
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
 
@@ -180,7 +180,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges have been consumed.
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
-- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or in Lunar Eclipse.
+- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
 
 
