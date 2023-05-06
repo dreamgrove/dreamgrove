@@ -17,11 +17,10 @@ showOnFrontpage: false
 Patch notes can be found here https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-%E2%80%93-may-9/1582712/1
 
 
->Developers’ notes: In some single target scenarios it’s still looking optimal to cast Wrath in Lunar Eclipse. That doesn’t meet our goal for how Balance should play, so we’re reducing Wrath’s effectiveness outside Solar Eclipse and increasing its effectiveness inside Solar Eclipse to correct this. We’re also <br>>boosting Balance’s single target damage a small amount.
-<br>>Wrath Astral Power generation reduced to 8 (was 10).
-<br>>Wrath damage decreased by 5%.
-<br>>Solar Eclipse now increases Wrath damage by 40% (was 20%).
-<br>>Soul of the Forest now increases Wrath’s Astral Power generation while in Solar Eclipse by 60% (was 30%).
+>Wrath Astral Power generation reduced to 8 (was 10).
+<br>Wrath damage decreased by 5%.
+<br>Solar Eclipse now increases Wrath damage by 40% (was 20%).
+<br>Soul of the Forest now increases Wrath’s Astral Power generation while in Solar Eclipse by 60% (was 30%).
 
 All of these changes are fine, on Single Target we will always enter Solar Eclipse because of it, it does have a side-effect on AoE.
 <br>On 2 targets we will continue to enter Solar eclipse and wrath
