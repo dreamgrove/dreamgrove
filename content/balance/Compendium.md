@@ -502,14 +502,14 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 [Pulsar proc Starfall vs Starsurge](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
 <br>[WoE Usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
 
-[Which Eclipse to enter 1T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_1T_rattle_10.1.html)
-<br>[Which Eclipse to enter 1T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_1T_weaver_10.1.html)
-<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
-<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
-<br>[Which Eclipse to enter 3T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_3T_rattle_10.1.html)
-<br>[Which Eclipse to enter 3T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_3T_weaver_10.1.html)
-<br>[Which Eclipse to enter 4T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_4T_rattle_10.1.html)
-<br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_4T_weaver_10.1.html)
+[Which Eclipse to enter 1T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_1T_10.1.html)
+<br>[Which Eclipse to enter 1T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_1T_10.1.html)
+<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_2T_10.1.html)
+<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_2T_10.1.html)
+<br>[Which Eclipse to enter 3T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_3T_10.1.html)
+<br>[Which Eclipse to enter 3T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_3T_10.1.html)
+<br>[Which Eclipse to enter 4T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_4T_10.1.html)
+<br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_4T_10.1.html)
 
 
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
