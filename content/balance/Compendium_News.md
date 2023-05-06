@@ -22,16 +22,17 @@ Patch notes can be found here https://us.forums.blizzard.com/en/wow/t/class-tuni
 <br>>Wrath damage decreased by 5%.
 <br>>Solar Eclipse now increases Wrath damage by 40% (was 20%).
 <br>>Soul of the Forest now increases Wrath’s Astral Power generation while in Solar Eclipse by 60% (was 30%).
-<br>All of these changes are fine, on Single Target we will always enter Solar Eclipse because of it, it does have a side-effect on AoE.
+
+All of these changes are fine, on Single Target we will always enter Solar Eclipse because of it, it does have a side-effect on AoE.
 <br>On 2 targets we will continue to enter Solar eclipse and wrath
 <br>On 3 target we will enter Lunar eclipse instead but still wrath
 <br>On 4+ targets we will enter Lunar eclipse and Starfire 
 
 >Damage dealt by Faerie Dragons summoned by Denizen of the Dream increased by 25%.
 <br>>Friend of the Fae now increases your Arcane and Nature spell damage by 10% (was 8%).
-<br>Minor DPS increase to ST and AoE
 
-These buffs equate to a ~3.5% buff. 
+Minor DPS increase to ST and AoE.
+These buffs equate to a ~3.5% DPS increase on single target.
 
 Trinkets were also changed:
 <br>https://www.wowhead.com/news/igneous-flowstone-trinket-nerfed-by-at-least-50-332785?webhook
