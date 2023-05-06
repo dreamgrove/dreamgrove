@@ -12,6 +12,34 @@ showOnFrontpage: false
 # [News:](#news)
 
 </div>
+### Summary of changes 2023-05-06
+
+Patch notes can be found here https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-%E2%80%93-may-9/1582712/1
+
+
+>Developers’ notes: In some single target scenarios it’s still looking optimal to cast Wrath in Lunar Eclipse. That doesn’t meet our goal for how Balance should play, so we’re reducing Wrath’s effectiveness outside Solar Eclipse and increasing its effectiveness inside Solar Eclipse to correct this. We’re also <br>>boosting Balance’s single target damage a small amount.
+<br>>Wrath Astral Power generation reduced to 8 (was 10).
+<br>>Wrath damage decreased by 5%.
+<br>>Solar Eclipse now increases Wrath damage by 40% (was 20%).
+<br>>Soul of the Forest now increases Wrath’s Astral Power generation while in Solar Eclipse by 60% (was 30%).
+<br>All of these changes are fine, on Single Target we will always enter Solar Eclipse because of it, it does have a side-effect on AoE.
+<br>On 2 targets we will continue to enter Solar eclipse and wrath
+<br>On 3 target we will enter Lunar eclipse instead but still wrath
+<br>On 4+ targets we will enter Lunar eclipse and Starfire 
+
+>Damage dealt by Faerie Dragons summoned by Denizen of the Dream increased by 25%.
+<br>>Friend of the Fae now increases your Arcane and Nature spell damage by 10% (was 8%).
+<br>Minor DPS increase to ST and AoE
+
+These buffs equate to a ~3.5% buff. 
+
+Trinkets were also changed:
+<br>https://www.wowhead.com/news/igneous-flowstone-trinket-nerfed-by-at-least-50-332785?webhook
+<br>https://www.wowhead.com/news/aberrus-raid-trinket-tuning-hotfixes-neltharions-class-trinkets-and-hasted-rppm-332795?webhook
+<br>Igneous Flowstone was looking to be our best trinket but is now on the lower end of the trinkets we should aim for.
+<br>Our class trinket Neltharion's Call to Suffering got its haste scaling removed, still our best trinket but only with a small margin.
+<br>Screaming Black Dragonscale also got its haste scaling removed, still a good contender but is behind Spoils of Neltharus, Vessel of Searing Shadow and Ominous Chromatic Essence
+
 
 ## 10.1 Updates
 
@@ -104,27 +132,8 @@ Umbral Embrace is simply not strong enough compared to another point in Astral S
 Umbral Intensity is a dead talent with the Starfire damage nerfs and Lunar Shrapnel, Astral Communion, Light of the Sun and Stellar Innervation stay dead.
 
 ### Will we go into Solar Eclipse on single target?
-Yes, with Soul of the Forest talented, which will always be the case, going into Solar Eclipse is a 1% dps gain again. Without Soul of the Forest it would still be a 1% dps loss.
-<div id="rotation">
- 
-### Collection of sims:
-Trinkets:\
-[Heroic 1T](https://mimiron.raidbots.com/simbot/report/eENXhBeZwmQcsrxzLjfK3v)\
-[Heroic 6T](https://mimiron.raidbots.com/simbot/report/3qKrX6ATffwy2Bbd9ywPxJ)\
-[Mythic 1T](https://mimiron.raidbots.com/simbot/report/t9MSegDHbLjYafU6CoA4dH)\
-[Mythic 6T](https://mimiron.raidbots.com/simbot/report/rCB8hpHj2KPp4FdJaneBTL)\
-[Mythic 1T 1min](https://mimiron.raidbots.com/simbot/report/o6pATDFVURQXpSGM7MnH1J)
- 
-Embellishments:\
-[1T](https://mimiron.raidbots.com/simbot/report/rKaBhSwNYZu8Xe4vmks9gi)\
-[6T](https://mimiron.raidbots.com/simbot/report/84ZUu1fFfoDqAKzRDfkchp)\
-For now it's looking like we are to craft [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) and [Toxified](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) embellishment added to a crafted leather piece.\
-[Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) performs better on AoE than [Toxic Thorn Footwraps](https://www.wowhead.com/ptr/item=193452/toxic-thorn-footwraps) and is within margin of error on ST.\
-[Toxified](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) increases the effect of Slimy and Thorns by 100% meaning that this embellishment does nothing unless you already have the boots equipped.\
-There is no rush to crafting anything, if you have sparks it is wise to hold on to them until release in case of any late tuning.
+Yes we will always go into Solar Eclipse on Single Target
+
 
  
-Racials:\
-[1T](https://mimiron.raidbots.com/simbot/report/pRa3ardSDqCAwdeZcS38uY)\
-[6T](https://mimiron.raidbots.com/simbot/report/45bokQv8seUK9b2yeGDCvD)
 
