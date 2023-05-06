@@ -143,7 +143,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
 - Use {{< spell 194153 "Starfire" >}} if you are in Lunar Eclipse or {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
-- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
+- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will hit 3 or less targets and you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 
 
 
@@ -193,7 +193,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
  </div>
  
  On 1-2 targets we enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
- <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 190984 "Wrath" >}}.
+ <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse and {{< spell 190984 "Wrath" >}} when we are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
  <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  
  
