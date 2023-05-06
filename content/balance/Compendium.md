@@ -90,12 +90,14 @@ You can precast from max range ~4 seconds before a boss is pulled.
 
 **Single Target priority list:**
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
-- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you didn't talent into {{< spell 202425 "Warrior of Elune" >}}.
-- Use {{< spell 194153 "Starfire" >}} to get into Solar Eclipse if you did talent into {{< spell 202425 "Warrior of Elune" >}}.
-- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 102560 "Inc" >}} already.
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are true:
+    - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
+    - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
+- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
-- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} window, or if your next {{< spell 194223 "CA" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
+- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
@@ -107,7 +109,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
     - You have a {{< spell 393944 "Starweaver's Weft" >}} proc.
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
-- Use {{< spell 190984 "Wrath" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194153 "Starfire" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 202425 "Warrior of Elune" >}} has 1 charge left.
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
 <div id="aoe">
@@ -121,8 +123,8 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets. 
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if {{< spell 194153 "Starfire" >}} will hit 3+ targets.
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving which is usually around 2-4 depending on how much AP you started with.
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
@@ -131,7 +133,6 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
-- Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc and you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
@@ -139,8 +140,9 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
-- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will only hit 2 targets.
-- Use {{< spell 194153 "Starfire" >}}.
+- Use {{< spell 194153 "Starfire" >}} if you are in Lunar Eclipse or {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
+- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
+
 
 
 <div id="filler">
@@ -149,8 +151,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 
 </div>
 
-
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 3 or more targets.
+Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
 
  
  <div id="mushroom">
@@ -176,11 +177,11 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
  
  </div>
  
-Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges have been consumed.
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, it makes your next 3 {{< spell 194153 "Starfires" >}} instant and the 45s cooldown starts when all 3 charges have been consumed.
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
-- You have 1 charge left and you are in {{< spell 102560 "Incarnation" >}}.
-- As a movement GCD in {{< spell 102560 "Incarnation" >}}.
+- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
 
 
 <div id="eclipse">
@@ -189,16 +190,9 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
  
  </div>
  
- In single target with {{< spell 202425 "Warrior of Elune" >}} talented we will enter Solar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
- <br>In single target without {{< spell 202425 "Warrior of Elune" >}} talented we will enter Lunar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
- <br>On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
- <br>On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
- 
- There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, how often we proc Pulsar, AP generated, damage of your fillers and some minor uptime differences.
- <br>It's also affected by the amount of haste you have but entering Solar is always best or on par.
- <br>Below are two sims for comparison.
- <br>[Solar vs Lunar if WoE is on CD](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
- <br>[Sim with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
+ On 1-2 targets we enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
+ <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 190984 "Wrath" >}}.
+ <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  
  
 <div id="talents">
@@ -225,7 +219,7 @@ TBD
 ### Dungeon Druid Tree Considerations
   
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
-- Remove Corruption should be taken in Afflicted weeks and in every dungeon except Vortex Pinnacle, as we lose nothing relevant by taking it.
+- Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - Hibernate can be used for Incorporeal affix.
 - For lower keys you can put 2 points into Feline Swiftness like [this](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHAAAAAAAAAA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
@@ -287,7 +281,7 @@ The priority is the same as it is on ST.
 
 </div>
 
-[Howling Rune](https://www.wowhead.com/item=194820/howling-rune) Use in all situations.
+Generally you will want to use [Howling Rune](https://www.wowhead.com/item=194820/howling-rune), sim your character for the most accurate answer.
 
 
 <div id="gearing">
@@ -329,7 +323,6 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 </div>
 
 
-
 Week 0 = Patch week
 <br>Week 1 = Raid week
 <br>Week 2 = Second raid week
@@ -346,11 +339,11 @@ Week 0 = Patch week
 
 </div>
 
-**The [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DONT craft them.**
+**The [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DO NOT craft them.**
 <br>Initially the debuff on the target could keep stacking while the dot was active, that is no longer the case.
 
 For Embellishments we craft [Slimy Expulsion Boots](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%.
-<br>Do note that it can only be added to a crafted leather piece.
+<br>Do note that Toxified can only be added to a crafted leather piece.
 <br>**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) item.**
 
 ### [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots)
@@ -378,13 +371,13 @@ If you loot a Mythic weapon or vault a weapon before you craft your second [Spar
 
 ## [Tier Set](#tier-set)
 
-T29 2PC: 2.6% DPS ST, 3.5% AoE 
-<br>T29 2PC+4PC: 4% DPS ST, 5.5% AoE
+T29 2PC: 2.8% DPS ST, 2.7% AoE 
+<br>T29 2PC+4PC: 5.1% DPS ST, 4.9% AoE
 <br>
-<br>2PC+2PC: 6.7% DPS ST, 9.1% AoE
+<br>2PC+2PC: 6.6% DPS ST, 8.2% AoE
 <br>
-<br>T30 2PC: 4% DPS ST, 5.6% AoE
-<br>T30 2PC+4PC: 10.1% DPS ST, 11.6% AoE
+<br>T30 2PC: 3.8% DPS ST, 5.5% AoE
+<br>T30 2PC+4PC: 9.4% DPS ST, 11.3% AoE
  
 <br> This means that you won't break T29 4PC until you can equip 2PC+2PC or you looted a high itemlevel piece in two/three tierslots. (depending on how many of the T29 tierpieces you have)
 
@@ -398,7 +391,7 @@ T29 2PC: 2.6% DPS ST, 3.5% AoE
 
 </div>
 
-Obviously, just like before please use the Top Gear or Droptimizer options in [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
 
 R1-9 = Raid boss number 1-9
 <br>HTD = Healer Tank DPS
@@ -407,11 +400,11 @@ R1-9 = Raid boss number 1-9
 ### ST
 
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (R8)
-- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (R7)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
+- [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (D) - +burst
 - [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (R2) - mostly st
 - [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale)(R1)
-- [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (D) - +burst
+- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (R7)
 - [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
 - [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (D) - pure st
 - [Irideus Fragment](https://www.wowhead.com/ptr/item=193743/irideus-fragment) (D) - +burst
@@ -421,14 +414,14 @@ R1-9 = Raid boss number 1-9
 ### AoE
 
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (R8)
-- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (R7)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
 - [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (D) - +burst
 - [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale) (R1)
+- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
+- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (R7)
 - [Irideus Fragment](https://www.wowhead.com/ptr/item=193743/irideus-fragment) (D) - +burst
 - [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (R2) - mostly st
-- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
 - [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (D) - pure st
 
 
@@ -458,7 +451,8 @@ No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93
 
 </div>
 
-When Lunar Eclipse is active use {{< spell 157228 "Owlkin Frenzy" >}} procs as soon as possible. When ONLY Solar Eclipse(should currently never be the case) is active, use it when fighting 3+ targets or when you need to move. Otherwise let it expire.
+Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lunar Eclipse or inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if starfire will hit 3 or more targets.
+<br>Keep in mind that {{< spell 202425 "Warrior of Elune" >}} charges are consumed before {{< spell 157228 "Owlkin Frenzy" >}} procs.
 
 
 
@@ -495,16 +489,27 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.1.html)
 <br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.1.html)
 <br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
-<br>[Phials 4T](https://www.dreamgrove.gg/balance/sims/phial_4T_10.1.html)
-<br>[Runes](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
-<br>[Pulsar proccing](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
-<br>[WoE usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
-<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
-<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
+<br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phial_6T_10.1.html)
+<br>[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
+<br>[Runes 6T](https://www.dreamgrove.gg/balance/sims/runes_6T_10.1.html)
 <br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/racials_1T_10.1.html)
 <br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/racials_6T_10.1.html)
-<br>[Solar vs Lunar with WoE](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
-<br>[Solar vs Lunar with WoE with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
+<br>[Tierset 1T](https://www.dreamgrove.gg/balance/sims/tierset_1T_10.1.html)
+<br>[Tierset 6T](https://www.dreamgrove.gg/balance/sims/tierset_6T_10.1.html)
+
+<br>[Pulsar proc Starfall vs Starsurge](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
+<br>[WoE Usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
+
+<br>[Which Eclipse to enter 1T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_1T_rattle_10.1.html)
+<br>[Which Eclipse to enter 1T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_1T_weaver_10.1.html)
+<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_2T_rattle_10.1.html)
+<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_2T_weaver_10.1.html)
+<br>[Which Eclipse to enter 3T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_3T_rattle_10.1.html)
+<br>[Which Eclipse to enter 3T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_3T_weaver_10.1.html)
+<br>[Which Eclipse to enter 4T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_4T_rattle_10.1.html)
+<br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_4T_weaver_10.1.html)
+
+
 <br>[Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
