@@ -133,7 +133,6 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
-- Use {{< spell 194153 "Starfire" >}} if you have an {{< spell 393760 "Umbral Embrace" >}} proc and you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
