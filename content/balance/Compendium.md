@@ -90,12 +90,14 @@ You can precast from max range ~4 seconds before a boss is pulled.
 
 **Single Target priority list:**
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
-- Use {{< spell 190984 "Wrath" >}} to get into Lunar Eclipse if you didn't talent into {{< spell 202425 "Warrior of Elune" >}}.
-- Use {{< spell 194153 "Starfire" >}} to get into Solar Eclipse if you did talent into {{< spell 202425 "Warrior of Elune" >}}.
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are true:
+    - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
+    - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
-- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside a {{< spell 194223 "CA" >}} window, or if your next {{< spell 194223 "CA" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
+- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
@@ -107,7 +109,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
     - You have a {{< spell 393944 "Starweaver's Weft" >}} proc.
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
-- Use {{< spell 190984 "Wrath" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194153 "Starfire" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 202425 "Warrior of Elune" >}} has 1 charge left.
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
 <div id="aoe">
@@ -121,8 +123,8 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets. 
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if {{< spell 194153 "Starfire" >}} will hit 3+ targets.
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 3 targets. 
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if {{< spell 194153 "Starfire" >}} will hit 4+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This basically means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving which is usually around 2-4 depending on how much AP you started with.
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 202425 "Warrior of Elune" >}} if available.
@@ -139,7 +141,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
-- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will only hit 2 targets.
+- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
 - Use {{< spell 194153 "Starfire" >}}.
 
 
@@ -150,7 +152,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 </div>
 
 
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on Single Target and {{< spell 194153 "Starfire" >}} on 3 or more targets.
+Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
 
  
  <div id="mushroom">
@@ -179,8 +181,8 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant and the 45s cooldown starts when all 3 charges have been consumed.
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
-- You have 1 charge left and you are in {{< spell 102560 "Incarnation" >}}.
-- As a movement GCD in {{< spell 102560 "Incarnation" >}}.
+- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or in Lunar Eclipse.
+- As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
 
 
 <div id="eclipse">
@@ -189,16 +191,8 @@ Warrior of Elune is an off-gcd ability, it makes your next 3 starfires instant a
  
  </div>
  
- In single target with {{< spell 202425 "Warrior of Elune" >}} talented we will enter Solar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
- <br>In single target without {{< spell 202425 "Warrior of Elune" >}} talented we will enter Lunar Eclipse all the time and cast {{< spell 190984 "Wrath" >}}.
- <br>On two targets we will enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
- <br>On any other target count we will enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
- 
- There's not a great explanation to why we enter Solar Eclipse even if {{< spell 202425 "Warrior of Elune" >}} is on cooldown, it comes down to timings, how often we proc Pulsar, AP generated, damage of your fillers and some minor uptime differences.
- <br>It's also affected by the amount of haste you have but entering Solar is always best or on par.
- <br>Below are two sims for comparison.
- <br>[Solar vs Lunar if WoE is on CD](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe.html)
- <br>[Sim with less haste](https://www.dreamgrove.gg/balance/sims/solar_vs_lunar_woe_3k_haste.html)
+ 1-3 targets we enter Solar Eclipse and cast {{< spell 190984 "Wrath" >}}.
+ <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  
  
 <div id="talents">
@@ -287,7 +281,7 @@ The priority is the same as it is on ST.
 
 </div>
 
-[Howling Rune](https://www.wowhead.com/item=194820/howling-rune) Use in all situations.
+Generally you will want to use [Howling Rune](https://www.wowhead.com/item=194820/howling-rune), sim your character for the most accurate answer.
 
 
 <div id="gearing">
@@ -329,7 +323,6 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 </div>
 
 
-
 Week 0 = Patch week
 <br>Week 1 = Raid week
 <br>Week 2 = Second raid week
@@ -346,11 +339,11 @@ Week 0 = Patch week
 
 </div>
 
-**The [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DONT craft them.**
+**The [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DO NOT craft them.**
 <br>Initially the debuff on the target could keep stacking while the dot was active, that is no longer the case.
 
 For Embellishments we craft [Slimy Expulsion Boots](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%.
-<br>Do note that it can only be added to a crafted leather piece.
+<br>Do note that Toxified can only be added to a crafted leather piece.
 <br>**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) item.**
 
 ### [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots)
