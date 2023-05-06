@@ -32,6 +32,7 @@ All of these changes are fine, on Single Target we will always enter Solar Eclip
 <br>>Friend of the Fae now increases your Arcane and Nature spell damage by 10% (was 8%).
 
 Minor DPS increase to ST and AoE.
+
 These buffs equate to a ~3.5% DPS increase on single target.
 
 Trinkets were also changed:
