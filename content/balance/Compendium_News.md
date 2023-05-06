@@ -12,6 +12,7 @@ showOnFrontpage: false
 # [News:](#news)
 
 </div>
+
 ### Summary of changes 2023-05-06
 
 Patch notes can be found here https://us.forums.blizzard.com/en/wow/t/class-tuning-incoming-%E2%80%93-may-9/1582712/1
