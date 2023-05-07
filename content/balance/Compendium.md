@@ -515,7 +515,7 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 <br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_4T_10.1.html)
 
 
-[Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
+[Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
