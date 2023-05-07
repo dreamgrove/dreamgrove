@@ -13,10 +13,10 @@ sidebarContents:  |
   <br>[Precasting](#precast)
   <br>[What is my Single Target rotation?](#st)
   <br>[What is my AoE priority?](#aoe)
-  <br>[What is my filler priority inside CA?](#filler)
-  <br>[How do we use Wild Mushrooms and how do they work?](#mushroom)
-  <br>[How do we use Warrior of Elune](#woe)
   <br>[Which Eclipse do we enter](#eclipse)
+  <br>[What is my filler priority inside CA?](#filler)
+  <br>[How do we use Warrior of Elune](#woe)
+  <br>[How do we use Wild Mushrooms and how do they work?](#mushroom)
  
   **[3. Talents](#talents)**
  
@@ -142,9 +142,23 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
-- Use {{< spell 194153 "Starfire" >}} if you are in Lunar Eclipse or {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
-- Use {{< spell 194153 "Wrath" >}} if {{< spell 194153 "Starfire" >}} will hit 3 or less targets and you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194153 "Starfire" >}} if any of the below conditions are true:
+   - You are in Lunar Eclipse
+   - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
+- Use {{< spell 194153 "Wrath" >}} if any of the below conditions are true:
+   - You are in Solar Eclipse
+   - {{< spell 194153 "Starfire" >}} will hit 3 or less targets and you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 
+
+<div id="eclipse">
+
+## [Which Eclipse do we enter?](#eclipse)
+ 
+ </div>
+ 
+ On 1-2 targets we enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
+ <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse and {{< spell 190984 "Wrath" >}} when we are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+ <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
 
 <div id="filler">
@@ -154,6 +168,19 @@ You can precast from max range ~4 seconds before a boss is pulled.
 </div>
 
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
+
+
+<div id="woe">
+
+## [How do we use Warrior of Elune?](#woe)
+ 
+ </div>
+ 
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, it makes your next 3 {{< spell 194153 "Starfires" >}} instant and the 45s cooldown starts when all 3 charges have been consumed.
+<br>Use the charges if any of the following conditions are true:
+- To enter Solar Eclipse
+- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
 
  
  <div id="mushroom">
@@ -171,32 +198,8 @@ On single target, it's best to use all 3 charges at once paired with any availab
 In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
 
 In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twilight" >}} up on all mobs before you've managed to apply {{< spell 202347 "Stellar Flare" >}}.
- 
-
-<div id="woe">
-
-## [How do we use Warrior of Elune?](#woe)
- 
- </div>
- 
-{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, it makes your next 3 {{< spell 194153 "Starfires" >}} instant and the 45s cooldown starts when all 3 charges have been consumed.
-<br>Use the charges if any of the following conditions are true:
-- To enter Solar Eclipse
-- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
 
 
-<div id="eclipse">
-
-## [Which Eclipse do we enter?](#eclipse)
- 
- </div>
- 
- On 1-2 targets we enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
- <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse and {{< spell 190984 "Wrath" >}} when we are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
- <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
- 
- 
 <div id="talents">
 
 # [3.Talents:](#talents)
