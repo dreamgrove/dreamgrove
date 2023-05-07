@@ -467,3 +467,67 @@
 # 
 # Crackling Codex of the Isles 447 - Professions - Epic - Inscription
 # off_hand=,id=194879,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
+
+
+### Sockets bonus ID
+#
+# 3x socket
+# 8782
+#
+# 2x socket
+# 8781
+#
+# 1x socket
+# 8780
+
+
+### Embellishments
+#
+# Unique Equipped Embellished
+# 8960
+#
+# Potion Absorption Inhibitor
+# 8175
+#
+# Armor Spikes
+# 8188
+#
+# Fang Adornments
+# 8796
+#
+# Toxified
+# 8797
+#
+# Magazine of Healing Darts
+# 8913
+#
+# Blue Silken Lining
+# 8932
+#
+# Bronzed Grip Wrappings
+# 8937
+#
+# Shadowflame
+# 9379
+
+
+### Crafted stats
+#
+# Crit/Haste
+# 8790
+#
+# Crit/Mastery
+# 8791
+#
+# Haste/Vers 
+# 8792
+#
+# Haste/Mastery
+# 8793
+#
+# Vers/Mastery
+# 8794
+#
+# Vers/Crit
+# 8795
+
