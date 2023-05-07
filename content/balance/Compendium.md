@@ -147,7 +147,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
 - Use {{< spell 194153 "Wrath" >}} if any of the below conditions are true:
    - You are in Solar Eclipse
-   - {{< spell 194153 "Starfire" >}} will hit 3 or less targets and you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+   - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
 
 
 <div id="eclipse">
@@ -157,7 +157,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
  </div>
  
  On 1-2 targets we enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
- <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}} in Lunar Eclipse and {{< spell 190984 "Wrath" >}} when we are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+ <br>On 3 targets we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  <br>On any other target count we enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
 
@@ -168,7 +168,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 </div>
 
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
-
+ 
 
 <div id="woe">
 
