@@ -152,7 +152,7 @@ You can precast from max range ~4 seconds before a boss is pulled.
 
 <div id="eclipse">
 
-## [Which Eclipse to Enter?](#eclipse)
+## [Which Eclipse to Enter](#eclipse)
  
  </div>
  
