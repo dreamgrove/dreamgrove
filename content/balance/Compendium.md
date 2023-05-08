@@ -13,8 +13,8 @@ sidebarContents:  |
   <br>[Precasting](#precast)
   <br>[Single Target priority](#st)
   <br>[AoE priority](#aoe)
-  <br>[Which Eclipse to Enter](#eclipse)
   <br>[Filler Priority Inside CA/Inc](#filler)
+  <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
   <br>[How to Use Warrior of Elune](#woe)
   <br>[How to use Wild Mushrooms and how they work](#mushroom)
  
@@ -84,6 +84,10 @@ In the above link you will find a summary of the changes in Patch 10.1 including
 
 You can precast from max range ~4 seconds before a boss is pulled.
 
+**What is a priority list?**
+
+When reading the priority lists provided below, you should not be thinking about these as steps to follow in a specific order. At any given point in combat, you should essentially cast the first thing in the list that you are able to cast. As such, you will note that there are some spells included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that spell IF you happened to take it for whatever reason. The presence of a spell in a priority list does not mean that you should be talenting into or using that spell, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
+
 <div id="st">
 
 ## [Single Target priority](#st)
@@ -95,10 +99,10 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are met:
     - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
     - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
+- Use {{< spell 202425 "Warrior of Elune" >}} if available. Note: This does not always mean you should immediately use the instant starfire casts. Refer to the section on <br>[WoE usage](#woe) for more details.
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-- Use {{< spell 202425 "Warrior of Elune" >}} if available.
 - Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
@@ -125,11 +129,11 @@ You can precast from max range ~4 seconds before a boss is pulled.
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
+- Use {{< spell 202425 "Warrior of Elune" >}} if available. Note: This does not always mean you should immediately use the instant starfire casts. Refer to the section on <br>[WoE usage](#woe) for more details.
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-- Use {{< spell 202425 "Warrior of Elune" >}} if available.
 - Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}}, avoid using it if the debuff is already up.
 - Use {{< spell 211545 "Fury of Elune" >}} or {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
@@ -149,18 +153,6 @@ You can precast from max range ~4 seconds before a boss is pulled.
    - You are in Solar Eclipse.
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
 
-
-<div id="eclipse">
-
-## [Which Eclipse to Enter](#eclipse)
- 
- </div>
- 
- On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
- <br>On 3 targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
- <br>On any other target count, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
-
-
 <div id="filler">
 
 ## [Filler Priority Inside CA/Inc](#filler)
@@ -170,17 +162,32 @@ You can precast from max range ~4 seconds before a boss is pulled.
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
  
 
+<div id="eclipse">
+
+## [Eclipses and Fillers Outside CA/Inc](#eclipse)
+ 
+ </div>
+ 
+ If you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}, you should ensure that you are in an eclipse. This is because when your current eclipse gets overridden by {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}, this counts as "ending an eclipse", and so you will receive the haste buff from Nature's Grace.
+ 
+ As of the weekly reset on the first week of Season 2, we are no longer casting wrath in Lunar Eclipse. As such, the choice of eclipse and the choice of filler are now both dependent on the same target counts outside of CA/Inc.
+ 
+ - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
+ - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
+
+
 <div id="woe">
 
 ## [How to Use Warrior of Elune](#woe)
  
  </div>
  
-{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant. The 45s cooldown starts once all 3 charges have been consumed.
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant. There is no time limit for using these instant casts, so the 45s cooldown only starts once all 3 charges have been consumed.
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
-- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
+
+Often times, the way this will work out in an encounter is that you will use {{< spell 202425 "Warrior of Elune" >}} during or before {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}. Once {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has expired, you will then use two of the instant {{< spell 194153 "Starfires" >}} to enter Solar Eclipse, leaving you with 1 charge. This charge will then often be used after Solar Eclipse ends, allowing you to enter your next Solar Eclipse using one instant {{< spell 194153 "Starfire" >}} and one hard-casted {{< spell 194153 "Starfire" >}}. Once {{< spell 202425 "Warrior of Elune" >}} comes back off cooldown, you can then either use it to enter Solar Eclipse or as a movement GCD during {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 
  
  <div id="mushroom">
@@ -212,6 +219,18 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 <br>[M+ Talents Weaver](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
 <br>[M+ Talents Rattle](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
 <br>[Sustained AoE](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkEFJkcgk4AaJlIRAAKAA?bgcolor=000000)
+
+## Deciding between Weaver or Rattle
+
+When choosing between these two talents (and in turn, the talent builds provided above), here's a quick breakdown on the situation that benefits each choice:
+
+- Single Target: Take Rattle
+- Two Targets: Take Weaver
+- Three Targets: You can take either rattle or weaver here. Weaver, however, is the better choice if you are needing to focus one of the three targets. Rattle makes more sense if you are hitting all three targets evenly.
+- Four Targets or More: Take Rattle
+
+One caveat to this, however, is that even when there are more than 4 targets, you might find yourself needing prioritized damage on a more important enemy (especially in M+), so if this will often be the case, it is recommended to take Weaver instead. More about this will be found in the section below on Dungeon Talents.
+
 
 ## Raid Talents
 TBD
@@ -475,6 +494,12 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 <div id="macros">
 
 ## [Macros](#macros)
+
+</div>
+
+**Starlord Cancel macro:**
+
+We do not recommend the use of any macros for cancelling your Starlord aura. It cannot be stressed enough that any potential gain from doing so correctly is incredibly minimal and insignificant, but doing so incorrectly will negatively affect your DPS. You are welcome to use such a macro if you so choose, but it is not something that one should be thinking about even for the purposes of min-maxing.
 
 </div>
 
