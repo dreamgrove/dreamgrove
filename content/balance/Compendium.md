@@ -497,16 +497,21 @@ Astral damage is Arcane and Nature damage at the same time meaning that these sp
 
 </div>
 
-**Starlord Cancel macro:**
-
-We do not recommend the use of any macros for cancelling your Starlord aura. It cannot be stressed enough that any potential gain from doing so correctly is incredibly minimal and insignificant, but doing so incorrectly will negatively affect your DPS. You are welcome to use such a macro if you so choose, but it is not something that one should be thinking about even for the purposes of min-maxing.
-
-</div>
-
 **Orbital Strike macro:**
 
 ```
 #showtooltip
+/cast [@cursor] Celestial Alignment
+```
+</div>
+
+**Trinket macro:**
+
+If you are using an on-use trinket that should go along with your cooldowns, use the following macro (/13 for top trinket slot, and /14 for bottom trinket slot) 
+```
+#showtooltip
+/use 13
+/use 14
 /cast [@cursor] Celestial Alignment
 ```
 
