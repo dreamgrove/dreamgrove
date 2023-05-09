@@ -13,6 +13,7 @@ sidebarContents:  |
   <br>[Precasting](#precast)
   <br>[Single Target priority](#st)
   <br>[AoE priority](#aoe)
+  <br>[Starfall vs Starsurge](#spender)
   <br>[Filler Priority Inside CA/Inc](#filler)
   <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
   <br>[How to Use Warrior of Elune](#woe)
@@ -160,6 +161,17 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 194153 "Wrath" >}} if any of the below conditions are true:
    - You are in Solar Eclipse.
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
+
+<div id="spender">
+       
+## [Starfall versus Starsurge](#spender)
+ 
+To clear up any confusion, it should be noted that in general you should use, as your spender:
+ 
+ - Starsurge when there is a single target/
+ - Starfall when there are 2 or more targets.
+ 
+You should still follow the priorities listed [above](#st) in the case of Starweaver procs.
 
 <div id="filler">
 
@@ -556,7 +568,7 @@ In essence, you should really only use this macro if it allows you to consistent
 
 ### **Cancelling Starlord**
 
-For the past few expansions, cancelling your Starlord aura has been something that has been deemed too insignificant to matter even for most min-maxing purposes. However, cancelling the Starlord aura at the proper time is now representing a minor but significant gain, which can be seen in the [sims](#sims). Essentially, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two stacks, and you are about to use {{< spell 78674 "Starsurge" >}} to prevent overcappling. To be more specific, you can reference the [priority list](#st) above which indicates the point at which you cancel {{< spell 78674 "Starsurge" >}}.
+For the past few expansions, cancelling your Starlord aura has been something that has been deemed too insignificant to matter even for most min-maxing purposes. However, cancelling the Starlord aura at the proper time is now representing a minor but significant gain, which can be seen in the [sims](#sims). Essentially, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use {{< spell 78674 "Starsurge" >}} to prevent overcappling. To be more specific, you can reference the [priority list](#st) above which indicates the point at which you cancel {{< spell 78674 "Starsurge" >}}.
 
 ```
 #showtooltip
