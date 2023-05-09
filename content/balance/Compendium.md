@@ -39,7 +39,7 @@ sidebarContents:  |
   <br>[What is Astral damage?](#astral-damage)
   <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
-  <br<[Cancelaura Macros](#cancel)
+  <br>[Cancelaura Macros](#cancel)
   
   **[7. Sims](#sims)**
  
