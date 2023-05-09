@@ -168,10 +168,10 @@ When reading the priority lists provided below, you should not be thinking about
  
 To clear up any confusion, it should be noted that in general you should use, as your spender:
  
- - Starsurge when there is a single target/
+ - Starsurge when there is a single target.
  - Starfall when there are 2 or more targets.
  
-You should still follow the priorities listed [above](#st) in the case of Starweaver procs.
+ The only time that you would use starfall in single target situations is if you can proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} by using a {{< spell 393942 "Starweaver's Warp" >}} proc.
 
 <div id="filler">
 
@@ -202,7 +202,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
  </div>
  
-{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant. There is no time limit for using these instant casts, so the 45s cooldown only starts once all 3 charges have been consumed. Currently, it is optimal (by approximately 2%) to cancel the aura after usint 2 stacks to move into Solar Eclipse, as described in [this section](#cancel), but if you are uncomfortable with cancelling the aura, you can still use the rest of this section to plan out your usage of {{< spell 202425 "Warrior of Elune" >}}.
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant. There is no time limit for using these instant casts, so the 45s cooldown only starts once all 3 charges have been consumed. Currently, it is optimal (by approximately 0.2%) to cancel the aura after usint 2 stacks to move into Solar Eclipse, as described in [this section](#cancel), but if you are uncomfortable with cancelling the aura, you can still use the rest of this section to plan out your usage of {{< spell 202425 "Warrior of Elune" >}}.
 
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
@@ -485,7 +485,7 @@ R1-9 = Raid boss number 1-9
 
 </div>
 
-No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, {{< spell 202347 "Stellar Flare " >}}) does NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
+No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, {{< spell 202347 "Stellar Flare " >}}) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
 
 
 
@@ -554,7 +554,7 @@ This is likely the easiest macro to plan and use. As seen in the section on [usi
 
 ### **Cancelling Pulsar**
 
-While not as easy to think about as cancelling WoE, cancelling pulsar at an appropriate time has the potential represent much more of a gain, as this has the benfit of lining up {{< spell 211545 "Fury of Elune" >}} for all future pulsar windows. This gain can be anywhere from 1-2% comapred to not cancelling pulsar, and only requires the pulsar aura to be cancelled exactly once during the opener. However, the number of stacks at which you cancel the aura depends completely on your haste, and will likely have to be determined on a per-boss basis due to different timings of bloodlust, your opener, and other potential factors. It should also be noted that this only works well if you are consistently doing the same thing throughout the fight, so if there is anything during combat that forces you to experience downtime, your {{< spell 211545 "Fury of Elune" >}} windows would desync with pulsar again and the cancellation was not useful. 
+While not as easy to think about as cancelling WoE, cancelling pulsar at an appropriate time has the potential represent much more of a gain, as this has the benfit of lining up {{< spell 211545 "Fury of Elune" >}} for all future pulsar windows. This gain can be anywhere from 1-2% compared to not cancelling pulsar, and only requires the pulsar aura to be cancelled exactly once during the opener. However, the number of stacks at which you cancel the aura depends completely on your haste, and will likely have to be determined on a per-boss basis due to different timings of bloodlust, your opener, and other potential factors. It should also be noted that this only works well if you are consistently doing the same thing throughout the fight, so if there is anything during combat that forces you to experience downtime, your {{< spell 211545 "Fury of Elune" >}} windows would desync with pulsar again and the cancellation was not useful. 
 
 In essence, you should really only use this macro if it allows you to consistently sync {{< spell 211545 "Fury of Elune" >}} windows with pulsar throughout a raid fight. The point at which you should cancel the aura is as follows, assuming that you are opening up at the start of a fight with bloodlust active (otherwise, you will have to find timings for that specific boss that may or may not work)
 
