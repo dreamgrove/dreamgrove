@@ -109,12 +109,13 @@ actions.clearcasting+=/shred
 
 actions.cooldown=use_item,name=algethar_puzzle_box,if=fight_remains<35|(!variable.align_3minutes)
 actions.cooldown+=/use_item,name=algethar_puzzle_box,if=variable.align_3minutes&(cooldown.bs_inc.remains<3&(!variable.lastZerk|!variable.lastConvoke|(variable.lastConvoke&cooldown.convoke_the_spirits.remains<13)))
-actions.cooldown+=/incarnation
-actions.cooldown+=/berserk,if=(!variable.lastZerk)|(fight_remains<23)|(variable.lastZerk&!variable.lastConvoke)
-actions.cooldown+=/berserk,if=(variable.lastConvoke&cooldown.convoke_the_spirits.remains<10)
+# next two lines check if the current pull is long enough to justify cd usage. If its the last pull, itll always use cds.
+actions.cooldown+=/incarnation,target_if=max:target.time_to_die,if=(target.time_to_die<fight_remains&target.time_to_die>25)
+actions.cooldown+=/berserk,target_if=max:target.time_to_die,if=(target.time_to_die<fight_remains&target.time_to_die>18)&((!variable.lastZerk)|(fight_remains<23)|(variable.lastZerk&!variable.lastConvoke)|(variable.lastConvoke&cooldown.convoke_the_spirits.remains<10))
 actions.cooldown+=/berserking,if=!variable.align_3minutes|buff.bs_inc.up
 actions.cooldown+=/potion,if=buff.bs_inc.up|fight_remains<32|(fight_remains<cooldown.bs_inc.remains&variable.lastConvoke&cooldown.convoke_the_spirits.remains<10)
-actions.cooldown+=/convoke_the_spirits,if=fight_remains<5|(dot.rip.remains>5&buff.tigers_fury.up&(combo_points<2|(buff.bs_inc.up&combo_points=2))&(!variable.lastConvoke|!variable.lastZerk|buff.bs_inc.up))
+# checks to make sure you can actually fit convoke into the pull.
+actions.cooldown+=/convoke_the_spirits,target_if=max:target.time_to_die,if=(target.time_to_die<fight_remains&target.time_to_die>5)&(fight_remains<5|(dot.rip.remains>5&buff.tigers_fury.up&(combo_points<2|(buff.bs_inc.up&combo_points=2))&(!variable.lastConvoke|!variable.lastZerk|buff.bs_inc.up)))
 actions.cooldown+=/use_item,name=manic_grieftorch,target_if=max:target.time_to_die,if=energy.deficit>40
 actions.cooldown+=/use_items
 
