@@ -360,32 +360,32 @@ Week 0 = Patch week
 
 </div>
 
-**The [Spore Colony Shoulderpads](https://www.wowhead.com/ptr/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DO NOT craft them.**
+**The [Spore Colony Shoulderpads](https://www.wowhead.com/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DO NOT craft them.**
 <br>Initially the debuff on the target could keep stacking while the dot was active, that is no longer the case.
 
-For Embellishments we craft [Slimy Expulsion Boots](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%.
+For Embellishments we craft [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on them is exactly the same with difference that Toxic Thorn Footwraps can also proc healing when actively healing. There are some effects like [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) and Frenzied Regeneration that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier. Since the boots are within 0.3% dps in most cases it is recommended to craft the [Slimy Expulsion Boots](https://www.wowhead.com/item=193451/slimy-expulsion-boots) unless you are only doing content where your maximum HP doesn't matter or you only wish to maximize DPS.
 <br>Do note that Toxified can only be added to a crafted leather piece.
-<br>**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) item.**
+<br>**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) item.**
 
-### [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots)
+### [Slimy Expulsion Boots:](https://www.wowhead.com/item=193451/slimy-expulsion-boots) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps)
 
-**If you have one [Spark of Ingenuity](https://www.wowhead.com/ptr/item=190453/spark-of-ingenuity) but no sockets for it, follow these steps:**
+**If you have one [Spark of Ingenuity](https://www.wowhead.com/item=190453/spark-of-ingenuity) but no sockets for it, follow these steps:**
 
-- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
-- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) and craft [Slimy Expulsion Boots:](https://www.wowhead.com/ptr/item=193451/slimy-expulsion-boots) if you haven't already.
-- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Slimy Expulsion Boots to 447 ilvl.
-- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) to craft a 447 ilvl [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch). Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
+- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
+- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) and craft [Slimy Expulsion Boots:](https://www.wowhead.com/item=193451/slimy-expulsion-boots) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) if you haven't already.
+- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Slimy Expulsion or Toxic Thorn Boots to 447 ilvl.
+- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) to craft a 447 ilvl [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch). Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
 
-**If you have one [Spark of Ingenuity](https://www.wowhead.com/ptr/item=190453/spark-of-ingenuity) and one socket for it, follow these steps:**
+**If you have one [Spark of Ingenuity](https://www.wowhead.com/item=190453/spark-of-ingenuity) and one socket for it, follow these steps:**
 
-- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/ptr/item=193552/toxified-armor-patch) at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
-- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) and craft Slimy Expulsion Boots if you haven't already.
-- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Slimy Expulsion Boots to 447 ilvl.
-- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame) to craft a 447 ilvl [Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102). With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
+- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
+- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) and craft Slimy Expulsion or Toxic Thorn Boots if you haven't already.
+- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Slimy Expulsion or Toxic Thorn Boots to 447 ilvl.
+- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) to craft a 447 ilvl [Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102). With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
 - Keep your 421 Wrists until Week 4 of the raid.
 
-If you loot a Mythic weapon or vault a weapon before you craft your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
-<br>If you loot socketed Wrists from M+ before you craft your second [Spark of Shadowflame](https://www.wowhead.com/ptr/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
+If you loot a Mythic weapon or vault a weapon before you craft your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
+<br>If you loot socketed Wrists from M+ before you craft your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
 
 
 <div id="tier-set">
@@ -420,30 +420,30 @@ R1-9 = Raid boss number 1-9
 
 ### ST
 
-- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (R8)
-- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
-- [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (D) - +burst
-- [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (R2) - mostly st
-- [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale)(R1)
-- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (R7)
-- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
-- [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (D) - pure st
-- [Irideus Fragment](https://www.wowhead.com/ptr/item=193743/irideus-fragment) (D) - +burst
-- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
-- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) (DPS)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
+- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - mostly st
+- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)(R1)
+- [Igneous Flowstone](https://www.wowhead.com/item=203996/igneous-flowstone) (R7)
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) - (HTD)
+- [Idol of Pure Decay](https://www.wowhead.com/item=193660/idol-of-pure-decay) (D) - pure st
+- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) (DPS)
 
 ### AoE
 
-- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr/item=204211/neltharions-call-to-suffering) (R8)
-- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
-- [Spoils of Neltharus](https://www.wowhead.com/ptr/item=193773/spoils-of-neltharus) (D) - +burst
-- [Screaming Black Dragonscale](https://www.wowhead.com/ptr/item=202612/screaming-black-dragonscale) (R1)
-- [Whispering Incarnate Icon](https://www.wowhead.com/ptr/item=194301/whispering-incarnate-icon) - (HTD)
-- [Ominous Chromatic Essence](https://www.wowhead.com/ptr/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
-- [Igneous Flowstone](https://www.wowhead.com/ptr/item=203996/igneous-flowstone) (R7)
-- [Irideus Fragment](https://www.wowhead.com/ptr/item=193743/irideus-fragment) (D) - +burst
-- [Vessel of Searing Shadow](https://www.wowhead.com/ptr/item=202615/vessel-of-searing-shadow) (R2) - mostly st
-- [Idol of Pure Decay](https://www.wowhead.com/ptr/item=193660/idol-of-pure-decay) (D) - pure st
+- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
+- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale) (R1)
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) - (HTD)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
+- [Igneous Flowstone](https://www.wowhead.com/item=203996/igneous-flowstone) (R7)
+- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
+- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - mostly st
+- [Idol of Pure Decay](https://www.wowhead.com/item=193660/idol-of-pure-decay) (D) - pure st
 
 
 
