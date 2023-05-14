@@ -195,7 +195,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
-- You have 1 charge left and you arte in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
  
  <div id="mushroom">
