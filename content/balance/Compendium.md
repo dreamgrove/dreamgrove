@@ -284,7 +284,7 @@ TBD
 
 Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage) This Phial would be our default if the tooltip was accurate, currently it procs at 100% instead of 400% as the tooltip says. Unless that is fixed you won't play it in any relevant raid content.
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage) Default phial, only swap if damage intake is too high during a fight
 - [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation), has ~55% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos), has the same value as Corrupting Rage at 60% uptime. 
