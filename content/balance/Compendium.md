@@ -87,7 +87,7 @@ In the above link you will find a summary of the changes in Patch 10.1 including
 **Precasting:**
 - Cast {{< spell 190984 "Wrath" >}} twice
 - Cast {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented
+- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented. If you have to stand close enough so that Starfire will finish casting long after the boss is pulled, cast another {{< spell 190984 "Wrath" >}} instead.
 
 You can precast from max range ~4 seconds before a boss is pulled.
 
