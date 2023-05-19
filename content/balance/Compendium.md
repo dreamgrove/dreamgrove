@@ -132,7 +132,7 @@ When reading the priority lists provided below, you should not be thinking about
 
 </div>
 
-**AoE priority list:**
+**AoE priority list(2+ targets):**
 
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
