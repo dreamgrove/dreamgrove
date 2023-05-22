@@ -113,7 +113,7 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
-- Use {{< spell 211545 "Fury of Elune" >}} if you will not overcap on AP.
+- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
 - Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks and if talented you can optimally refresh the {{< spell 393954 "Rattle the Stars" >}} buff.
 - Use {{< spell 274281 "New-" >}}, {{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
@@ -143,7 +143,8 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP
 - Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}}, avoid using it if the debuff is already up.
-- Use {{< spell 211545 "Fury of Elune" >}} or {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
+- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
+- Use {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
     - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
