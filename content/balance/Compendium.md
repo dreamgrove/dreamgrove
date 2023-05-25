@@ -47,18 +47,7 @@ sidebarContents:  |
 
 <details>
 <summary>Changelog</summary>
- 2023-05-09
-<br>Updated prio in favour of less confusing wording
-<br>Updated section for eclipses and fillers outside of CA/Inc to account for changes from 10.1
-<br>Updated section on rattle vs weaver
-<br>Added a section regarding cancelaura macros
- 
- 2023-05-07
-<br>Updated prio and sims for tuning
-<br>2023-05-01
-<br>10.1 update
-
-
+https://github.com/dreamgrove/dreamgrove/commits/master/content/balance/Compendium.md
   
  
 </details>
