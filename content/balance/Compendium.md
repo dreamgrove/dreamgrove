@@ -215,13 +215,21 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 
 
 ## Raid Talents
-TBD
+[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
+[Two target cleave(Amalgation with cleave, Experiments mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
+[Sustained AoE(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQENAKAA?bgcolor=000000)
+[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJRTyBChWSJCR0AoAAA?bgcolor=000000)
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
-TBD
-  
+[Cookie cutter Rattle every dungeon build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJJRkkEgkQSkC0ScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
+[Same build with Weaver for some dungeons](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJBIJRSkC0ScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
+The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact sims show that the overall dps difference between them is within ~0.5% in basically every dungeon.
+
+[Cookie cutter with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJBIJRSkC0ScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
+[Cookie cutter without Dispel for Vortex Pinacle](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSkEkEgkEJ5ApBtEHIJJRJJkcgQolUiQENAK0AA?bgcolor=000000)
+
 ### Dungeon Druid Tree Considerations
   
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
