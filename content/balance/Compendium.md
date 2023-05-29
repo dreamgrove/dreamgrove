@@ -39,6 +39,7 @@ sidebarContents:  |
   <br>[What is Astral damage?](#astral-damage)
   <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
+  <br>[Useful WeakAura(s)](#wa)
   <br>[Cancelaura Macros](#cancel)
   
   **[7. Sims](#sims)**
@@ -510,7 +511,7 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 
 <div id="wa">
  
-## [Useful WeakAuras](#wa)
+## [Useful WeakAura(s)](#wa)
  
 </div>
 
