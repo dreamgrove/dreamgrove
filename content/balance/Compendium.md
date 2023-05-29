@@ -507,6 +507,17 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 /use 14
 /cast [@cursor] Celestial Alignment
 ```
+
+<div id="wa">
+ 
+## [Useful WeakAuras](#wa)
+ 
+</div>
+
+### **Casts until you can cast Starfire**
+[Starfire Alerter](https://wago.io/rrtAyRQjF)
+See the description of the WA for more details. This is not a required WA but will make it easier to not get into situations where you are wasting a Starfire cast inside Solar Eclipse.
+
 <div id="cancel">
  
 ## [Cancelaura Macros](#cancel)
