@@ -220,6 +220,9 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 [Sustained AoE(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQENAKAA?bgcolor=000000)
 [Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJRTyBChWSJCR0AoAAA?bgcolor=000000)
 
+[Echo of Neltharion mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJ5Ap4A0ScgkkElENJHIEaJlIERDgCAA?bgcolor=000000)
+You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
+
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
