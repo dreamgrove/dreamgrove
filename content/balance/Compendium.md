@@ -217,10 +217,10 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 
 ## Raid Talents
 [Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
-<br>[Two target cleave(Amalgation with cleave, Experiments mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
+<br>[Two target cleave(Amalgation with cleave, Experiments Mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
 <br>[Sustained AoE(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQENAKAA?bgcolor=000000)
 <br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJRTyBChWSJCR0AoAAA?bgcolor=000000)
-<br>[Echo of Neltharion mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJ5Ap4A0ScgkkElENJHIEaJlIERDgCAA?bgcolor=000000)
+<br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJ5Ap4A0ScgkkElENJHIEaJlIERDgCAA?bgcolor=000000)
 You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
 
 ## Dungeon Talents
