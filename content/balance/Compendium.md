@@ -573,9 +573,9 @@ For the past few expansions, cancelling your Starlord aura has been something th
 <br>[Which Eclipse to enter 4T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_4T_10.1.html)
 <br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_4T_10.1.html)
  
-[Cancelling Pulsar in the opener](https://www.raidbots.com/simbot/report/pQaAhzWonKqqudDkM5SnDG)
+[Cancelling Pulsar in the opener](https://www.dreamgrove.gg/balance/sims/cancel_pulsar_1T_10.1.html)
 
-[Cancelling Starlord](https://www.raidbots.com/simbot/report/8YQA83o238v5ZdjpUAqKFC)
+[Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancel_starlord_1T_10.1.html)
 
 [Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
  
