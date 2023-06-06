@@ -29,7 +29,6 @@ sidebarContents:  |
   **[5. Gearing](#gearing)**
   <br>[Stats](#stats)
   <br>[Enchants](#enchants)
-  <br>[Crest Upgrades](#crests)
   <br>[Embellishments](#embellishments)
   <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
@@ -332,57 +331,20 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 <br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
 
 
-
-<div id="crests">
-
-## [Crests](#crests)
-
-</div>
-
-
-Week 0 = Patch week
-<br>Week 1 = Raid week
-<br>Week 2 = Second raid week
-<br>Sparks will be available in the following weeks: Week 0, Week 2, Week 4...
-
-- Use crests to upgrade 5 items in Week 1 and 2 up to ilvl 441. Refer to this [guide](https://i.imgur.com/4lxTN6Z.png).
-- Upgrade crests in the following order: Weapon > Chest = Legs = Head > Shoulders = Gloves = Waist > Rings > Cloak = Wrist > Neck.
-- Keep in mind that this order will heavily change depending on what you obtain from mythic+ and raid. Also, avoid upgrading tier slots until you have your 4-piece.
-
-
 <div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
 </div>
 
-**The [Spore Colony Shoulderpads](https://www.wowhead.com/item=204706/spore-colony-shoulderguards) was changed after they were first implemented in Simc, DO NOT craft them.**
-<br>Initially the debuff on the target could keep stacking while the dot was active, that is no longer the case.
-
-For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on them is exactly the same with difference that Toxic Thorn Footwraps can also proc healing when actively healing. There are some effects like [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) and Frenzied Regeneration that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier but nonetheless they are the biggest dps upgrade by a fair margin.
+For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on Toxic Thorn Footwraps can also proc a heal when actively healing. There are some effects like [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) and Frenzied Regeneration that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier but nonetheless they are the biggest dps upgrade by a fair margin.
 <br>Do note that Toxified can only be added to a crafted leather piece.
-<br>**During Week 0 you can wait with crafting your first [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) item.**
 
-### [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps)
+**Crafting order**
 
-**If you have one [Spark of Ingenuity](https://www.wowhead.com/item=190453/spark-of-ingenuity) but no sockets for it, follow these steps:**
-
-- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) at 418 ilvl. These will upgrade to 421 ilvl when Week 0 begins.
-- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) and craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) if you haven't already.
-- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Toxic Thorn Boots to 447 ilvl.
-- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) to craft a 447 ilvl [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch). Here you will want to replace your Wrists with 441 crested Wrists from m+ or raid.
-
-**If you have one [Spark of Ingenuity](https://www.wowhead.com/item=190453/spark-of-ingenuity) and one socket for it, follow these steps:**
-
-- Craft [Life-bound Bindings](https://www.wowhead.com/item=193419/life-bound-bindings?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=418&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) at 418 ilvl and socket this piece. They will upgrade to 421 ilvl when Week 0 begins.
-- During Week 0, obtain your first [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) and craft Toxic Thorn Boots if you haven't already.
-- In Week 1, you won't receive any [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), but you should upgrade (recraft) your Toxic Thorn Boots to 447 ilvl.
-- During Week 2, use your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame) to craft a 447 ilvl [Primal Molten Spellblade](https://www.wowhead.com/item=190506/primal-molten-spellblade?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102). With this, you'll want to Crest a M+ Offhand up to 441 ilvl.
-- Keep your 421 Wrists until Week 4 of the raid.
-
-If you loot a Mythic weapon or vault a weapon before you craft your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
-<br>If you loot socketed Wrists from M+ before you craft your second [Spark of Shadowflame](https://www.wowhead.com/item=204440/spark-of-shadowflame), use the first method (belt your second spark).
-
+- [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps)
+- [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) or [Life-bound Trousers](https://www.wowhead.com/item=193408/life-bound-trousers?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch)
+- Sim yourself on [Raidbots](https://www.raidbots.com/simbot/droptimizer) 
 
 <div id="tier-set">
 
