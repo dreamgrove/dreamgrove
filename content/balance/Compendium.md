@@ -381,7 +381,7 @@ R1-9 = Raid boss number 1-9
 - [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
 - [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - mostly st
+- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - high uptime on haste
 - [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)(R1)
 - [Igneous Flowstone](https://www.wowhead.com/item=203996/igneous-flowstone) (R7)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) - (HTD)
@@ -394,13 +394,13 @@ R1-9 = Raid boss number 1-9
 
 - [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
 - [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
+- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - high uptime on haste
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
 - [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale) (R1)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) - (HTD)
 - [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
 - [Igneous Flowstone](https://www.wowhead.com/item=203996/igneous-flowstone) (R7)
 - [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - mostly st
 - [Idol of Pure Decay](https://www.wowhead.com/item=193660/idol-of-pure-decay) (D) - pure st
 
 
