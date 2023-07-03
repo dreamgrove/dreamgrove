@@ -266,7 +266,7 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 </div>
 
 
-[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak) in every situation, but [Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley) is a cheaper close contender. 
+[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak), or [Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs) giving the same buff with a cheaper individual price.
 
 
 <div id="phials">
