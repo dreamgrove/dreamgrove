@@ -26,17 +26,13 @@ Patch notes can be found here https://worldofwarcraft.blizzard.com/en-us/news/23
 <br>As most people are raiding at night this will just be a 2% Versatility increase, you will never not take this talent.
 <br>Anything about instances always being "day" is a not accurate, it's just dependent on the server-time.
 
->Increase in All Spell Damage
->All spell damage dealt by Balance Druids was increased by 5%.
-
 >Lunar Shrapnel Redesign
 >The Lunar Shrapnel ability was redesigned. Starfall now deals 20% increased damage and is a 1 point talent.
 
 <br>Will probably not see much play outside of consistent AoE fights and big pull dungeons
 
->Changes to Waning Twilight
-
-<br>Waning Twilight's damage and healing were increased to 10%, up from 8%.
+>Modifications to Wild Surges
+>The Wild Surges bonus to Wrath and Starfire critical strike chance was reduced to 12% from 15%.
 
 >Astral Smolder Duration Reduction
 >The Astral Smolder duration was reduced from 8 seconds to 6 seconds.
@@ -66,12 +62,13 @@ Patch notes can be found here https://worldofwarcraft.blizzard.com/en-us/news/23
 
 <br>Probably won't see much play as there are better talents to choose from and it doesn't enable any interesting pathing in the talent tree
 
->Modifications to Wild Surges
->The Wild Surges bonus to Wrath and Starfire critical strike chance was reduced to 12% from 15%.
-
 >Nature's Grace Change
 >Nature's Grace now only triggers after an Eclipse ends, not when extending an Eclipse with Celestial Alignment. This change brings a new dynamic to the utilization of Eclipse during combat.
 
 <br>Doesn't really help with anything, makes you not want to extend incarn with pulsar if possible
  
+>Increase in All Spell Damage
+>All spell damage dealt by Balance Druids was increased by 5%.
 
+>Changes to Waning Twilight
+<br>Waning Twilight's damage and healing were increased to 10%, up from 8%.
