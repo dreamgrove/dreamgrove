@@ -350,15 +350,8 @@ For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item
 
 ## [Tier Set](#tier-set)
 
-T29 2PC: 2.8% DPS ST, 2.7% AoE 
-<br>T29 2PC+4PC: 5.1% DPS ST, 4.9% AoE
-<br>
-<br>2PC+2PC: 6.6% DPS ST, 8.2% AoE
-<br>
-<br>T30 2PC: 3.8% DPS ST, 5.5% AoE
+T30 2PC: 3.8% DPS ST, 5.5% AoE
 <br>T30 2PC+4PC: 9.4% DPS ST, 11.3% AoE
- 
-<br> This means that you won't break T29 4PC until you can equip 2PC+2PC or you looted a high itemlevel piece in two/three tierslots. (depending on how many of the T29 tierpieces you have)
 
 </div>
 
