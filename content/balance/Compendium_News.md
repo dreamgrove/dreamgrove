@@ -31,32 +31,39 @@ Patch notes can be found here https://worldofwarcraft.blizzard.com/en-us/news/23
 
 >Lunar Shrapnel Redesign
 >The Lunar Shrapnel ability was redesigned. Starfall now deals 20% increased damage and is a 1 point talent.
+
 <br>Will probably not see much play outside of consistent AoE fights and big pull dungeons
 
 >Changes to Waning Twilight
-<br>>Waning Twilight's damage and healing were increased to 10%, up from 8%.
+
+<br>Waning Twilight's damage and healing were increased to 10%, up from 8%.
 
 >Astral Smolder Duration Reduction
 >The Astral Smolder duration was reduced from 8 seconds to 6 seconds.
+
 <br>Stellar flare is basically neutral to Astral smolder but the max dps of Astral Smolder is higher, meaning there is no real reason to talent out of it.
 
 >Increase in New Moon, Half Moon, and Full Moon Damage
 >New Moon damage increased by 100%.
 >Half Moon damage increased by 45%.
 >Full Moon damage increased by 15%.
+
 <br>Moons will now be a contender for Single target, ~1% ahead of Fury of Elune
 
 >Fury of Elune Changes
 >Radiant Moonlights Fury of Elune cooldown reduction is now 15 seconds (was 20 seconds).
 >The damage caused by Fury of Elune was reduced by 10%.
+
 <br>Will still be used for any multi-target scenario over Moons
 
 >Changes to Warrior of Elune
 >Warrior of Elune now starts its cooldown as soon as it's activated, but the bonuses to your next 3 Starfires must be used within 25 seconds.
+
 <br>Makes you have to think a bit when you use it so that you actually utilize all charges
 
 >Umbral Intensity Adjustments
 >Umbral Intensity now increases damage dealt by Wrath by 20% per point (was 10%) and the damage Starfire deals to nearby targets increased by 15% per point (was 10%).
+
 <br>Probably won't see much play as there are better talents to choose from and it doesn't enable any interesting pathing in the talent tree
 
 >Modifications to Wild Surges
@@ -64,6 +71,7 @@ Patch notes can be found here https://worldofwarcraft.blizzard.com/en-us/news/23
 
 >Nature's Grace Change
 >Nature's Grace now only triggers after an Eclipse ends, not when extending an Eclipse with Celestial Alignment. This change brings a new dynamic to the utilization of Eclipse during combat.
+
 <br>Doesn't really help with anything, makes you not want to extend incarn with pulsar if possible
  
 
