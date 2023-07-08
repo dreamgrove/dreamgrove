@@ -16,10 +16,10 @@ showOnFrontpage: false
 ### Summary of changes 2023-07-11
 
 Patch notes can be found here:
-https://worldofwarcraft.blizzard.com/en-us/news/23968772/dragonflight-fractures-in-time-content-update-notes
+<br>https://worldofwarcraft.blizzard.com/en-us/news/23968772/dragonflight-fractures-in-time-content-update-notes
 
 A forum post from Jundarer can be found here which goes a bit more in depth:
-https://us.forums.blizzard.com/en/wow/t/feedback-balance-druid/1618445
+<br>https://us.forums.blizzard.com/en/wow/t/feedback-balance-druid/1618445
 
 
 10.1.5 Changes
