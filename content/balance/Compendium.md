@@ -2,8 +2,8 @@
 date: '2023-05-09'
 authors: ["Chicken, Jundarer, Dsune"]
 published: true
-patch: "10.1"
-title: Balance Druid 10.1 Compendium
+patch: "10.1.5"
+title: Balance Druid 10.1.5 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -53,8 +53,8 @@ sidebarContents:  |
 
 </div>
 
-## [10.1 News](https://www.dreamgrove.gg/balance/compendium_news/)
-In the above link you will find a summary of the changes in Patch 10.1 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
+## [10.1.5 News](https://www.dreamgrove.gg/balance/compendium_news/)
+In the above link you will find a summary of the changes in Patch 10.1.5 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
 
 <div id="rotation">
  
