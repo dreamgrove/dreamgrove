@@ -44,16 +44,16 @@ A forum post from Jundarer can be found here which goes a bit more in depth:
 
 
 >Increase in New Moon, Half Moon, and Full Moon Damage
-<br>>New Moon damage increased by 100%.
-<br>>Half Moon damage increased by 45%.
-<br>>Full Moon damage increased by 15%.
+<br>New Moon damage increased by 100%.
+<br>Half Moon damage increased by 45%.
+<br>Full Moon damage increased by 15%.
 
 <br>Moons will now be a contender for Single target, ~1% ahead of Fury of Elune
 
 
 >Fury of Elune Changes
-<br>>Radiant Moonlights Fury of Elune cooldown reduction is now 15 seconds (was 20 seconds).
-<br>>The damage caused by Fury of Elune was reduced by 10%.
+<br>Radiant Moonlights Fury of Elune cooldown reduction is now 15 seconds (was 20 seconds).
+<br>The damage caused by Fury of Elune was reduced by 10%.
 
 <br>Will still be used for any multi-target scenario over Moons
 
