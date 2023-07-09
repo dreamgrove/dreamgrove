@@ -32,7 +32,7 @@ A forum post from Jundarer can be found here which goes a bit more in depth:
 
 >Lunar Shrapnel was redesigned. Starfall now deals 20% increased damage and is a 1 point talent.
 
-<br>Will probably not see much play outside of consistent AoE fights and big pull dungeons
+<br>Will probably not see much play outside of sustained AoE fights and big pull dungeons
 
 
 >Wild Surges bonus to Wrath and Starfire critical strike chance was reduced to 12% from 15%.
