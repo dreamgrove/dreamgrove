@@ -76,3 +76,12 @@ A forum post from Jundarer can be found here which goes a bit more in depth:
 
 >Changes to Waning Twilight
 <br>Waning Twilight's damage and healing were increased to 10%, up from 8%.
+
+
+### Talents
+
+[Single target](https://mimiron.raidbots.com/simbot/report/hNnybH2BqynU7RiS2vqvMW)
+
+[Mythic+](https://mimiron.raidbots.com/simbot/report/3Ae8HSEDxreJ7VbeEUj7NX)
+
+[Sustained AoE](https://mimiron.raidbots.com/simbot/report/6bpW9mmGdG3aNPQR8D3vJy)
