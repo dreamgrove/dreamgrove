@@ -483,7 +483,7 @@ See the description of the WA for more details. This is not a required WA but wi
 
 ### **Cancelling Pulsar**
 
-It is a fairly relevant gain to cancel Pulsar **ONCE** in the opener as to line up FoE for all future Pulsar windows. The value of when to cancel fully depends on your haste and whether you are bloodlusting. It will likely have to be determined on a per boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you desync again it would be for nothing. 
+It can be a minor gain to cancel Pulsar **ONCE** in the opener in order to not proc pulsar in your first incarn. The value of when to cancel fully depends on your haste and whether you are bloodlusting. It will likely have to be determined on a per boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you not proc pulsar in incarn naturally it would be for nothing. 
 You can add these copies below your character in the advanced section of raidbots to check what is optimal for your character in a 0 downtime scenario by using [this link](https://gist.github.com/Jundarer/715ff085d9905c6da52e37d9ad49c8ed).
  
 
