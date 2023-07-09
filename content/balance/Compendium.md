@@ -299,7 +299,7 @@ The priority is the same as it is on ST.
 
 </div>
 
-Generally you will want to use [Howling Rune](https://www.wowhead.com/item=194820/howling-rune), sim your character for the most accurate answer.
+Generally you will want to use either [Howling Rune](https://www.wowhead.com/item=194820/howling-rune) or [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune), sim your character for the most accurate answer.
 
 
 <div id="gearing">
