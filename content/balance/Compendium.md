@@ -233,7 +233,7 @@ The following are dungeon talent builds that will always serve you well but mind
 The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact sims show that the overall dps difference between them is within ~0.5% in basically every dungeon.
 
 <br>[Cookie cutter with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
-
+<br>[If you really need both hibernate and decurse](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 ### Dungeon Druid Tree Considerations
   
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
