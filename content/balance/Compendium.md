@@ -2,8 +2,8 @@
 date: '2023-05-09'
 authors: ["Chicken, Jundarer, Dsune"]
 published: true
-patch: "10.1"
-title: Balance Druid 10.1 Compendium
+patch: "10.1.5"
+title: Balance Druid 10.1.5 Compendium
 showOnFrontpage: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -53,8 +53,8 @@ sidebarContents:  |
 
 </div>
 
-## [10.1 News](https://www.dreamgrove.gg/balance/compendium_news/)
-In the above link you will find a summary of the changes in Patch 10.1 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
+## [10.1.5 News](https://www.dreamgrove.gg/balance/compendium_news/)
+In the above link you will find a summary of the changes in Patch 10.1.5 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
 
 <div id="rotation">
  
@@ -100,7 +100,11 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
 - Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks and if talented you can optimally refresh the {{< spell 393954 "Rattle the Stars" >}} buff.
-- Use {{< spell 274281 "New-" >}}, {{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
+- Use {{< spell 274281 "New-" >}} if you will not overcap on AP.
+- Use {{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
+  - You will not overcap on AP.
+  - You can finish the cast before your current eclipse ends.
+  - You are in CA/Inc or you're about to cap on charges and pulsar has 520 or less stacks and the cooldown of CA/Inc is longer than 10 seconds. 
 - Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met: 
     - You would overcap AP with the next cast.
@@ -176,7 +180,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
  </div>
  
-{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant. The 45s cooldown starts once all 3 charges have been consumed. 
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
 
 <br>Use the charges if any of the following conditions are true:
 - To enter Solar Eclipse
@@ -350,15 +354,8 @@ For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item
 
 ## [Tier Set](#tier-set)
 
-T29 2PC: 2.8% DPS ST, 2.7% AoE 
-<br>T29 2PC+4PC: 5.1% DPS ST, 4.9% AoE
-<br>
-<br>2PC+2PC: 6.6% DPS ST, 8.2% AoE
-<br>
-<br>T30 2PC: 3.8% DPS ST, 5.5% AoE
+T30 2PC: 3.8% DPS ST, 5.5% AoE
 <br>T30 2PC+4PC: 9.4% DPS ST, 11.3% AoE
- 
-<br> This means that you won't break T29 4PC until you can equip 2PC+2PC or you looted a high itemlevel piece in two/three tierslots. (depending on how many of the T29 tierpieces you have)
 
 </div>
 
