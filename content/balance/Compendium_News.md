@@ -55,7 +55,7 @@ A forum post from Jundarer can be found here which goes a bit more in depth:
 <br>Radiant Moonlights Fury of Elune cooldown reduction is now 15 seconds (was 20 seconds).
 <br>The damage caused by Fury of Elune was reduced by 10%.
 
-<br>Will still be used for any multi-target scenario over Moons
+<br>Will still be used for any multi-target scenario over Moons, this also means that cancelling pulsar will not be as benificial since Fury of Elune doesn't line up regardless.
 
 
 >Warrior of Elune now starts its cooldown as soon as it's activated, but the bonuses to your next 3 Starfires must be used within 25 seconds.
