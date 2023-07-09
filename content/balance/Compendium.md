@@ -123,8 +123,9 @@ When reading the priority lists provided below, you should not be thinking about
 
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
+- Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 202425 "Warrior of Elune" >}} if available. Note: This does not always mean you should immediately use the instant starfire casts. Refer to the section on [WoE usage](#woe) for more details.
+- Use {{< spell 202425 "Warrior of Elune" >}} if available.
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP
@@ -345,7 +346,7 @@ For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item
 
 - [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps)
 - [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) or [Life-bound Trousers](https://www.wowhead.com/item=193408/life-bound-trousers?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch)
-- Sim yourself on [Raidbots](https://www.raidbots.com/simbot/droptimizer) 
+- Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer) 
 
 <div id="tier-set">
 
