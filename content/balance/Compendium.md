@@ -374,6 +374,7 @@ R1-9 = Raid boss number 1-9
 ### ST
 
 - [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
 - [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
 - [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - high uptime on haste
@@ -388,6 +389,7 @@ R1-9 = Raid boss number 1-9
 ### AoE
 
 - [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
 - [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
 - [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - high uptime on haste
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
