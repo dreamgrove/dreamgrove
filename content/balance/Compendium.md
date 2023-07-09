@@ -90,7 +90,7 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are met:
     - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
     - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
-- Use {{< spell 202425 "Warrior of Elune" >}} if available. Note: This does not always mean you should immediately use the instant starfire casts. Refer to the section on [WoE usage](#woe) for more details.
+- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse is about to end and you will enter Solar Eclipse next.
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
@@ -111,7 +111,6 @@ When reading the priority lists provided below, you should not be thinking about
     - You have a {{< spell 393944 "Starweaver's Weft" >}} proc.
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
 - Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
-- Use {{< spell 194153 "Starfire" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 202425 "Warrior of Elune" >}} has 1 charge left.
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
 <div id="aoe">
@@ -129,18 +128,22 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP
-- Use {{< spell 194223 "CA" >}} or {{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
+- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}}, avoid using it if the debuff is already up.
 - Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
-- Use {{< spell 202771 "Full Moon" >}} if you will not overcap on AP.
-- Use {{< spell 191034 "Starfall" >}} if one of the following conditions are true:
+- Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
     - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
+- Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
+  - You will not overcap on AP.
+  - You can finish the cast before your current eclipse ends.
+  - You are in CA/Inc or you're about to cap on charges and pulsar has 520 or less stacks and the cooldown of CA/Inc is longer than 10 seconds. 
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
 - Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.
-- Use {{< spell 274281 "New Moon" >}} and {{< spell 202768 "Half Moon" >}} if you will not overcap on AP.
+- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.
+- Use {{< spell 202768 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
 - Use {{< spell 194153 "Starfire" >}} if any of the below conditions are true:
@@ -165,10 +168,8 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 ## [Eclipses and Fillers Outside CA/Inc](#eclipse)
  
  </div>
- 
- If you are about to use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}, you should ensure that you are in an eclipse. This is because when your current eclipse gets overridden by {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}}, this counts as "ending an eclipse", and so you will receive the haste buff from Nature's Grace.
- 
- As of the weekly reset on the first week of Season 2, we are no longer casting wrath in Lunar Eclipse. As such, the choice of eclipse and the choice of filler are now both dependent on the same target counts outside of CA/Inc.
+
+ With the change to [Nature's Grace](https://www.wowhead.com/spell=393958/natures-grace) there is no longer any benefit to first enter eclipse before you use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} but rather if possible try to time it with exiting an eclipse.
  
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
@@ -182,10 +183,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
 {{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
 
-<br>Use the charges if any of the following conditions are true:
-- To enter Solar Eclipse
-- You have 1 charge left and you are in either {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- As a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} or Lunar Eclipse.
+<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse.
  
  <div id="mushroom">
 
@@ -201,8 +199,6 @@ On single target, it's best to use all 3 charges at once paired with any availab
 
 In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
 
-In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twilight" >}} up on all mobs before you've managed to apply {{< spell 202347 "Stellar Flare" >}}.
-
 
 <div id="talents">
 
@@ -211,7 +207,7 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 </div>
 
 ## Talents for different target counts
-[Single target](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
+[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSikokoJ5AhQLplEioBQhGAB?bgcolor=000000)
 <br>[Two targets](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
 <br>[M+ Talents Weaver](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
 <br>[M+ Talents Rattle](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
@@ -219,12 +215,14 @@ In Mythic+, it's best to stagger the charges to get {{< spell 393956 "Waning Twi
 
 
 ## Raid Talents
-[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax, Mythic Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIRSUS0kcgQolUSCR0AoAAA?bgcolor=000000)
+[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SaJhIaAUAAB?bgcolor=000000)
 <br>[Two target cleave(Experiments Mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
-<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn, Amalgation with cleave)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQENAKAA?bgcolor=000000)
+<br>[Amalgamation with cleave](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkokEiDECtkWkIiGAFAA?bgcolor=000000)
+<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 <br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJRTyBChWSJCR0AoAAA?bgcolor=000000)
 <br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJ5Ap4A0ScgkkElENJHIEaJlIERDgCAA?bgcolor=000000)
-You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
+<br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
+<br>[Mythic Sarkareth](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaiDECtkSSiIaAUAAB?bgcolor=000000)
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
