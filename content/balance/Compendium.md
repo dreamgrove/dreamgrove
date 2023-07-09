@@ -208,31 +208,30 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 
 ## Talents for different target counts
 [Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSikokoJ5AhQLplEioBQhGAB?bgcolor=000000)
-<br>[Two targets](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
-<br>[M+ Talents Weaver](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBEJkkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
-<br>[M+ Talents Rattle](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
-<br>[Sustained AoE](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSEBJRCSSkEp4AUScgkkEFJkcgk4AaJlIRAAKAA?bgcolor=000000)
+<br>[Two targets](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SaRIiCAFAQA?bgcolor=000000)
+<br>[M+ Talents Weaver](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIKAUoBQA?bgcolor=000000)
+<br>[M+ Talents Rattle](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIaAUoBQA?bgcolor=000000)
+<br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiiEiDkIRLRESCAUoBQA?bgcolor=000000)
 
 
 ## Raid Talents
-[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SaJhIaAUAAB?bgcolor=000000)
-<br>[Two target cleave(Experiments Mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJJkcgQolUiQEFAKAA?bgcolor=000000)
+[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
+<br>[Two target cleave(Experiments Mythic)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
 <br>[Amalgamation with cleave](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkokEiDECtkWkIiGAFAA?bgcolor=000000)
 <br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
-<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHIJJRJRTyBChWSJCR0AoAAA?bgcolor=000000)
-<br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJ5Ap4A0ScgkkElENJHIEaJlIERDgCAA?bgcolor=000000)
+<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
+<br>[Echo of Neltharion Mythic](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
 <br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
-<br>[Mythic Sarkareth](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaiDECtkSSiIaAUAAB?bgcolor=000000)
+<br>[Mythic Sarkareth](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
-[Cookie cutter Rattle every dungeon build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJJRkkEgkQSkC0ScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
-<br>[Same build with Weaver for some dungeons](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJBIJRSkC0ScgkkElkQyBChWSJCRUAoAAA?bgcolor=000000)
+[Cookie cutter Rattle every dungeon build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
+<br>[Same build with Weaver for some dungeons](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiCAFAQA?bgcolor=000000)
 The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact sims show that the overall dps difference between them is within ~0.5% in basically every dungeon.
 
-<br>[Cookie cutter with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgIJREJJBIJRSkC0ScgkkElkQyBChWSJCR0AoAAA?bgcolor=000000)
-<br>[Cookie cutter without Dispel for Vortex Pinacle](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASSkEkEgkEJ5ApBtEHIJJRJJkcgQolUiQENAK0AA?bgcolor=000000)
+<br>[Cookie cutter with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 
 ### Dungeon Druid Tree Considerations
   
@@ -240,7 +239,7 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 - Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - Hibernate can be used for Incorporeal affix.
-- For lower keys you can put 2 points into Feline Swiftness like [this](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFASERQSkgkEJRKCtEHAAAAAAAAAA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
+- For lower keys you can put 1 point into Feline Swiftness like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDAAAAAAAAAQA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
 - All other talents in the druid tree are more or less set.
 
 
