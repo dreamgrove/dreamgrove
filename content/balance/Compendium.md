@@ -209,7 +209,6 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 
 ## Talents for different target counts
 [Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
-<br>[Two targets](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SaRIiCAFAQA?bgcolor=000000)
 <br>[M+ Talents Weaver](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIKAUoBQA?bgcolor=000000)
 <br>[M+ Talents Rattle](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIaAUoBQA?bgcolor=000000)
 <br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiiEiDkIRLRESCAUoBQA?bgcolor=000000)
