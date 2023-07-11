@@ -54,7 +54,7 @@ sidebarContents:  |
 </div>
 
 ## [10.1.5 News](https://www.dreamgrove.gg/balance/compendium_news/)
-In the above link you will find a summary of the changes in Patch 10.1.5 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
+In the above link, you will find a summary of the changes in Patch 10.1.5 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
 
 <div id="rotation">
  
@@ -73,11 +73,11 @@ In the above link you will find a summary of the changes in Patch 10.1.5 includi
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented. If you have to stand close enough so that Starfire will finish casting long after the boss is pulled, cast another {{< spell 190984 "Wrath" >}} instead.
 
-You can precast from max range ~4 seconds before a boss is pulled.
+You can precast from max range about 4 seconds before a boss is pulled.
 
 **What is a priority list?**
 
-When reading the priority lists provided below, you should not be thinking about these as steps to follow in a specific order. At any given point in combat, you should essentially cast the first thing in the list that you are able to cast. As such, you will note that there are some spells included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that spell IF you happened to take it for whatever reason. The presence of a spell in a priority list does not mean that you should be talenting into or using that spell, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
+When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast. As such, you will note that there are some spells included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that spell IF you happened to take it for whatever reason. The presence of a spell in a priority list does not mean that you should be talenting into or using that spell, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
 
 <div id="st">
 
@@ -104,7 +104,7 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and pulsar has 520 or less stacks and the cooldown of CA/Inc is longer than 10 seconds. 
+  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. 
 - Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met: 
     - You would overcap AP with the next cast.
@@ -121,7 +121,7 @@ When reading the priority lists provided below, you should not be thinking about
 
 **AoE priority list(2+ targets):**
 
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise wait with this until they are gathered.
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
@@ -138,7 +138,7 @@ When reading the priority lists provided below, you should not be thinking about
 - Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and pulsar has 520 or less stacks and the cooldown of CA/Inc is longer than 10 seconds. 
+  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. 
 - Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.
 - Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
@@ -194,9 +194,9 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 {{< spell 88747 "Wild Mushroom" >}} deals damage in an explosion and then applies a DOT  called {{< spell 392999 "Fungal Growth" >}}(if talented). This DOT lasts for 8 seconds and deals 70% of the explosions damage over the course of its duration. {{< spell 88747 "Wild Mushroom" >}} has 3 charges, so if all 3 charges are used in quick succession and each apply a dot dealing 1000 damage, the total damage dealt by the DOT would be 3000 (1000 damage x 3 charges), and the duration of the DOT would be refreshed to 8 seconds.
 
-This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You dont lose/gain any Fungal Growth damage by staggering them or pressing them all at once.
+This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You don't lose/gain any Fungal Growth damage by staggering them or pressing them all at once.
 
-On single target, it's best to use all 3 charges at once paired with any available buffs such as potion, trinkets, CA. {{< spell 88747 "Wild Mushroom" >}} is also an instant GCD, so it can be used for movement as needed.
+On single target, it's best to use all 3 charges at once paired with any available buffs such as potion, trinkets and Inc. {{< spell 88747 "Wild Mushroom" >}} is also an instant GCD, so it can be used for movement as needed.
 
 In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
 
@@ -221,7 +221,7 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 <br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 <br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
 <br>[Echo of Neltharion Mythic](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
-<br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
+<br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP can be useful to survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
 <br>[Mythic Sarkareth](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
 <br>From a progression perspective it is better to single target down the big add, if your guild is having trouble killing the adds you could swap Warrior of Elune to Starfall instead.
 
@@ -230,7 +230,7 @@ The following are dungeon talent builds that will always serve you well but mind
   
 [Cookie cutter Rattle every dungeon build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 <br>[Same build with Weaver for some dungeons](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiCAFAQA?bgcolor=000000)
-The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact sims show that the overall dps difference between them is within ~0.5% in basically every dungeon.
+The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single-target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact, sims show that the overall dps difference between them is within ~0.5% in basically every dungeon.
 
 <br>[Cookie cutter with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 <br>[If you really need both hibernate and decurse](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
@@ -239,8 +239,8 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
 - Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
-- Hibernate can be used for Incorporeal affix.
-- For lower keys you can put 1 point into Feline Swiftness like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDAAAAAAAAAQA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
+- Hibernate can be used for the Incorporeal affix.
+- For lower keys, you can put 1 point into Feline Swiftness like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDAAAAAAAAAQA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
 - All other talents in the druid tree are more or less set.
 
 
@@ -279,7 +279,7 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 
 **ST**
 
-Pure damage wise with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
+Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
 - [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment): Has ~92% of the value of Corrupting Rage Phial at 100% uptime.
@@ -299,7 +299,7 @@ The priority is the same as it is on ST.
 
 </div>
 
-Generally you will want to use either [Howling Rune](https://www.wowhead.com/item=194820/howling-rune) or [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune), sim your character for the most accurate answer.
+Generally, you will want to use either [Howling Rune](https://www.wowhead.com/item=194820/howling-rune) or [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune), sim your character for the most accurate answer.
 
 
 <div id="gearing">
@@ -339,7 +339,7 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 </div>
 
-For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on Toxic Thorn Footwraps can also proc a heal when actively healing. There are some effects like [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) and [Frenzied Regeneration](https://www.wowhead.com/spell=22842/frenzied-regeneration) that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier but nonetheless they are the biggest dps upgrade by a fair margin.
+For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on Toxic Thorn Footwraps can also proc a heal when actively healing. There are some effects like [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) and [Frenzied Regeneration](https://www.wowhead.com/spell=22842/frenzied-regeneration) that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier but nonetheless, they are the biggest dps upgrade by a fair margin.
 <br>Do note that Toxified can only be added to a crafted leather piece.
 
 **Crafting order**
@@ -485,8 +485,8 @@ See the description of the WA for more details. This is not a required WA but wi
 
 ### **Cancelling Pulsar**
 
-It can be a minor gain to cancel Pulsar **ONCE** in the opener in order to not proc pulsar in your first incarn. The value of when to cancel fully depends on your haste and whether you are bloodlusting. It will likely have to be determined on a per boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you not proc pulsar in incarn naturally it would be for nothing. 
-You can add these copies below your character in the advanced section of raidbots to check what is optimal for your character in a 0 downtime scenario by using [this link](https://gist.github.com/Jundarer/715ff085d9905c6da52e37d9ad49c8ed).
+It can be a minor gain to cancel Pulsar **ONCE** in the opener in order to not proc pulsar in your first Incarnation. The value of when to cancel fully depends on your haste and whether you are Bloodlusting. It will likely have to be determined on a per-boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you not proc pulsar in Incarnation naturally it would be for nothing. 
+You can add these copies below your character in the advanced section of Raidbots to check what is optimal for your character in a 0 downtime scenario by using [this link](https://gist.github.com/Jundarer/715ff085d9905c6da52e37d9ad49c8ed).
  
 
 ```
