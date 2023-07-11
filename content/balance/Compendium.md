@@ -223,6 +223,7 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 <br>[Echo of Neltharion Mythic](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
 <br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP is required to more safely survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
 <br>[Mythic Sarkareth](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
+<br>From a progression perspective it is better to single target down the big add, if your guild is having trouble killing the adds you could swap Warrior of Elune to Starfall instead.
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
