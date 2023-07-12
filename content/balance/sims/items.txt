@@ -1,4 +1,5 @@
 ### Gear from Bags
+# trinket1=mirror_of_fractured_tomorrows,id=207581,bonus_id=6652/8783/8784/9414/9415/1492/9334
 #
 # Violent Gravemask
 # head=,id=202602,bonus_id=8780/4800/1498,
