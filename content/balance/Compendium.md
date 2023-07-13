@@ -207,39 +207,40 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 </div>
 
 ## Talents for different target counts
-[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
-<br>[M+ Talents Weaver](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIKAUoBQA?bgcolor=000000)
-<br>[M+ Talents Rattle](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIaAUoBQA?bgcolor=000000)
-<br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiiEiDkIRLRESCAUoBQA?bgcolor=000000)
+[Single target](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
+<br>[M+ Talents Weaver](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIKAUoBQA?bgcolor=000000)
+<br>[M+ Talents Rattle](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiSSI5AhQLpEhIaAUoBQA?bgcolor=000000)
+<br>[Sustained AoE](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkAkkIJSBaJSSSiiEiDkIRLRESCAUoBQA?bgcolor=000000)
 
 
 ## Raid Talents
-[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
-<br>[Two target cleave(Experiments Mythic)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
-<br>[Amalgamation with cleave](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkoEhkDECtkWSIiGAFAA?bgcolor=000000)
-<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
-<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
-<br>[Echo of Neltharion Mythic](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
+[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
+<br>[Two target cleave(Experiments Mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
+<br>[Amalgamation with cleave](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkoEhkDECtkWSIiGAFAA?bgcolor=000000)
+<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
+<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
+<br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
 <br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP can be useful to survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
-<br>[Mythic Sarkareth](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
+<br>[Mythic Sarkareth](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
 <br>From a progression perspective it is better to single target down the big add, if your guild is having trouble killing the adds you could swap Warrior of Elune to Starfall instead.
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
   
-[Cookie cutter Rattle every dungeon build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
-<br>[Same build with Weaver for some dungeons](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiCAFAQA?bgcolor=000000)
+[Cookie cutter Rattle every dungeon build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
+<br>[Same build with Weaver for some dungeons](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SKRIiCAFAQA?bgcolor=000000)
 The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single-target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact, sims show that the overall dps difference between them is within ~0.5% in basically every dungeon.
 
-<br>[Cookie cutter with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
-<br>[If you really need both hibernate and decurse](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
+<br>[Cookie cutter with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
+<br>[If you really need both hibernate and decurse](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
+<br>[Lunar Shrapnel build for more AoE](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkDokESOQI0SKRIJaAUAAB?bgcolor=000000)
 ### Dungeon Druid Tree Considerations
   
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
 - Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - Hibernate can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into Feline Swiftness like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDAAAAAAAAAQA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
+- For lower keys, you can put 1 point into Feline Swiftness like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDAAAAAAAAAQA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
 - All other talents in the druid tree are more or less set.
 
 
