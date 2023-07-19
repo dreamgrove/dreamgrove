@@ -19,7 +19,7 @@ Patch notes can be found here:
 <br>https://worldofwarcraft.blizzard.com/en-us/news/23968772/dragonflight-fractures-in-time-content-update-notes
 
 A forum post from Jundarer can be found here which goes a bit more in depth:
-<br>https://us.forums.blizzard.com/en/wow/t/feedback-balance-druid/1618445
+<br>https://us.forums.blizzard.com/en/wow/t/balance-druid-feedback/1635643
 
 
 10.1.5 Changes
