@@ -120,7 +120,7 @@ When reading the priority lists below, you should not think about these as steps
 
 **AoE priority list(2+ targets):**
 
-**Special Note: when NOT using the talent {{< spell 327541 "Aetherial Kindling" >}}, use Starsurge as a filler on 2 targets still.**
+**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
