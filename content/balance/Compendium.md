@@ -45,6 +45,13 @@ sidebarContents:  |
  
 ---
 
+<div style="background-color: #f0f0f0; padding: 10px; text-align: center;">
+  <a href="URL1" style="margin: 0 15px; text-decoration: none; color: #333;">Home</a> |
+  <a href="URL2" style="margin: 0 15px; text-decoration: none; color: #333;">About</a> |
+  <a href="URL3" style="margin: 0 15px; text-decoration: none; color: #333;">Contact</a>
+</div>
+
+
 [Changelog](https://github.com/dreamgrove/dreamgrove/commits/master/content/balance/Compendium.md)
 
 <div id="news">
