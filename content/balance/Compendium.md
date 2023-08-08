@@ -5,6 +5,13 @@ published: true
 patch: "10.1.5"
 title: Balance Druid 10.1.5 Compendium
 showOnFrontpage: true
+<div style="background-color: #f0f0f0; padding: 10px; text-align: center;">
+  <a href="URL1" style="margin: 0 15px; text-decoration: none; color: #333;">Home</a> |
+  <a href="URL2" style="margin: 0 15px; text-decoration: none; color: #333;">About</a> |
+  <a href="URL3" style="margin: 0 15px; text-decoration: none; color: #333;">Contact</a>
+</div>
+
+
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   **[1. News](#news)**
@@ -42,6 +49,9 @@ sidebarContents:  |
   <br>[Cancelaura Macros](#cancel)
   
   **[7. Sims](#sims)**
+
+
+
  
 ---
 
