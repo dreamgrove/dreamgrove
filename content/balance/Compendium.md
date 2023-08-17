@@ -215,8 +215,9 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 
 ## Raid Talents
 [Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
-<br>[Two target cleave(Experiments Mythic)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAAB?bgcolor=000000)
+<br>[Two target cleave(Experiments Mythic)](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SaJhIaAUAAB?bgcolor=000000)
 <br>[Amalgamation with cleave](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkoEhkDECtkWSIiGAFAA?bgcolor=000000)
+<br>[Amalgamation with Flare](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkoEhkDECtkWSIiGANAA?bgcolor=000000)
 <br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAQA?bgcolor=000000)
 <br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
 <br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAAB?bgcolor=000000)
