@@ -9,7 +9,6 @@ actions.precombat+=/cat_form,if=!buff.cat_form.up
 actions.precombat+=/heart_of_the_wild
 actions.precombat+=/use_item,name=algethar_puzzle_box
 actions.precombat+=/prowl,if=!buff.prowl.up
-actions.precombat+=/use_item,name=beacon_to_the_beyond,if=!(trinket.1.is.dragonfire_bomb_dispenser|trinket.2.is.dragonfire_bomb_dispenser)
 
 # Executed every time the actor is available.
 actions=prowl,if=(buff.bs_inc.down|!in_combat)&!buff.prowl.up
@@ -130,7 +129,6 @@ actions.cooldown+=/potion,if=buff.bs_inc.up|fight_remains<32|(!variable.lastZerk
 actions.cooldown+=/convoke_the_spirits,target_if=max:target.time_to_die,if=((target.time_to_die<fight_remains&target.time_to_die>5-talent.ashamanes_guidance.enabled)|target.time_to_die=fight_remains)&(fight_remains<5|(dot.rip.remains>5&buff.tigers_fury.up&(combo_points<2|(buff.bs_inc.up&combo_points<=3))))&(!variable.lastConvoke|buff.potion.up|(time+fight_remains+10)%%300>time%%300)&(talent.dire_fixation.enabled&debuff.dire_fixation.up|!talent.dire_fixation.enabled|spell_targets.swipe_cat>1)
 actions.cooldown+=/use_item,name=manic_grieftorch,target_if=max:target.time_to_die,if=energy.deficit>40
 actions.cooldown+=/use_items
-actions.cooldown+=/use_item,name=beacon_to_the_beyond
 
 actions.finisher=primal_wrath,if=((dot.primal_wrath.refreshable&!talent.circle_of_life_and_death.enabled)|dot.primal_wrath.remains<6|(talent.tear_open_wounds.enabled|(spell_targets.swipe_cat>4&!talent.rampant_ferocity.enabled)))&spell_targets.primal_wrath>1&talent.primal_wrath.enabled
 actions.finisher+=/rip,target_if=refreshable&(!talent.primal_wrath.enabled|spell_targets.swipe_cat=1)
