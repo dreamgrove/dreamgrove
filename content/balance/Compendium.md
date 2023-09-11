@@ -53,10 +53,29 @@ sidebarContents:  |
 
 </div>
 
+## 10.2 News
+Tier Set
+2p: When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 40% and increasing their damage by 60%.
+
+Looks to be a ~3% increase from having no tier
+If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast
+
+4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 3%, up to 15%
+
+Looks to be a ~12% DPS from having no tier
+Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 3% per spender used in that eclipse up to a total of 30% increased.
+
+In Incarn this will be maximum of 30% increased Arcane and 30% increased Nature damage, meaning any Astral school spell will deal damage = x*1.3*1.3
+
+The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage
+
+Total DPS from set: ~15%
+
+Preliminary sims (no APL changes and current ilvl ~448): https://mimiron.raidbots.com/simbot/report/aMJNMyoVXSSvMSET22bRYR
+
+
 ## 10.1.7 News
 Nothing changed
-## [10.1.5 News](https://www.dreamgrove.gg/balance/compendium_news/)
-In the above link, you will find a summary of the changes in Patch 10.1.5 including new talents, fixes, and balance changes that have been implemented in the latest patch along with some thoughts about the effect on gameplay.
 
 <div id="rotation">
  
