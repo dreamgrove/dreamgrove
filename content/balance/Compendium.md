@@ -54,13 +54,13 @@ sidebarContents:  |
 </div>
 
 ## 10.2 News
-Tier Set
-2p: When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 40% and increasing their damage by 60%.
+### Tier Set
+> 2p: When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 40% and increasing their damage by 60%.
 
 Looks to be a ~3% increase from having no tier
 If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast
 
-4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 3%, up to 15%
+> 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 3%, up to 15%
 
 Looks to be a ~12% DPS from having no tier
 Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 3% per spender used in that eclipse up to a total of 30% increased.
