@@ -71,7 +71,7 @@ The stacks reset when using Incarn however you keep the stacks of your current e
 
 Total DPS from set: ~15.5%
 
-Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/6cCq6BU8Uc9bx5WWVGXXxx
+Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/jcS3JMimC7ktLBefNQJCtb
 
 
 ## 10.1.7 News
