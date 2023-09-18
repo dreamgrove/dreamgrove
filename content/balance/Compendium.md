@@ -69,9 +69,9 @@ In Incarn this will be maximum of 30% increased Arcane and 30% increased Nature 
 
 The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage
 
-Total DPS from set: ~15.5%
+Total DPS from set: ~16%
 
-Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/jcS3JMimC7ktLBefNQJCtb
+Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/myQZ7fToLuqXK5mdPmGxXr
 
 
 ## 10.1.7 News
