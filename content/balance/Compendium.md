@@ -1,6 +1,6 @@
 ---
 date: '2023-05-09'
-authors: ["Chicken, Jundarer, Dsune"]
+authors: ["Chicken, Jundarer, Dsune (Oi)"]
 published: true
 patch: "10.1.7"
 title: Balance Druid 10.1.7 Compendium
