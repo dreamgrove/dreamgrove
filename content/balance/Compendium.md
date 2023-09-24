@@ -73,9 +73,20 @@ Total DPS from set: ~16%
 
 Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/myQZ7fToLuqXK5mdPmGxXr
 
+### List of changes
 
-## 10.1.7 News
-Nothing changed
+- Damage of all abilities increased by 2%.
+- Nature’s Grace now grants 10% Haste (was 15%).
+- Power of Goldrinn damage increased by 20%. Moved to where Starlord was located in Fractures in Time.
+- Starlord has moved to where Power of Goldrinn was located in Fractures in Time.
+- Rattle the Stars has been redesigned – It is no longer a buff that stacks when you cast Starsurge or Starfall and is now a passive bonus that always reduces the cost of Starsurge and Starfall by 10% and increases their damage by 12%.
+- ~~Orbital Strike has been redesigned – Call down a bombardment of celestial energy over the target area, blasting all enemies for Astral damage and applying Stellar Flare to them for 16 seconds. Generates 30 Astral Power. Orbital Strike still hits enemies in a 40 yard line and has a 90 second cooldown. Now a choice node with Wild Mushroom.~~ Reverted due to PvP
+- Fungal Growth has been removed. Wild Mushrooms now includes the effects of Fungal Growth.
+- Wild Mushrooms’ damage has been reduced by 20% and the Fungal Growth damage over time has been reduced to 60% of Wild Mushroom damage (was 70%). Fungal Growth’s damage over time now deals damage over 10 seconds (was 8 seconds).
+- Astral Invocation(Mastery) gives 2/3rds of its value at all times and the remaining value through Moonfire and Sunfire like now.
+- The talent positions of Aetherial Kindling and Lunar Shrapnel were swapped.
+
+Feedback post for 10.1.5 and 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-druids/1666448/311
 
 <div id="rotation">
  
