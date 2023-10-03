@@ -10,6 +10,7 @@ sidebarContents:  |
   **[1. News](#news)**
  
   **[2. Rotation](#rotation)**
+  <br>[Pre-Combat](#precombat)
   <br>[Single Target priority](#st)
   <br>[AoE priority](#aoe)
  
@@ -59,15 +60,19 @@ sidebarContents:  |
 
 </div>
 
-<div id="precast">
-
-## [Precast](#precast)
-
-</div>
-
 **What is a priority list?**
 
 When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast. As such, you will note that there are some abilities included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that ability IF you happened to take it for whatever reason. The presence of an ability in a priority list does not mean that you should be talenting into or using that ability, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
+
+<div id="precombat">
+
+## [Pre-combat](#precombat)
+
+</div>
+
+**Pre-Combat:**
+- Use {{< spell 319454 "Heart of the Wild" >}}
+- Use {{< spell 102547 "Prowl" >}}
 
 <div id="st">
 
@@ -76,7 +81,12 @@ When reading the priority lists below, you should not think about these as steps
 </div>
 
 **Single Target priority list:**
-- Keep up {{< spell 1822 "Rake" >}}
+- Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met:
+    - You've talented {{< spell 391528  "Convoke the Spirits" >}}. (Using it on CD keeps {{< spell 5217 "TF" >}} and {{< spell 391528  "Convoke" >}} aligned.)
+    - {{< spell 5217 "Tiger's Fury" >}} is not up.
+    - You are more than 65 energy from the cap.
+
+- Use {{< spell 1822 "Rake" >}}
 - Use {{< spell 1079 "Rip" >}} if one of the following conditions are met:
     - something
     - something else
