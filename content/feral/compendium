@@ -1,0 +1,359 @@
+---
+date: '2023-10-03'
+authors: ["Dsune (Oi)"]
+published: false
+patch: "10.1.7"
+title: Feral Druid 10.1.7 Compendium
+showOnFrontpage: false
+sidebarTitle: "Quicklinks"
+sidebarContents:  |
+  **[1. News](#news)**
+ 
+  **[2. Rotation](#rotation)**
+  <br>[Single Target priority](#st)
+  <br>[AoE priority](#aoe)
+ 
+  **[3. Talents](#talents)**
+ 
+  **[4.Consumables](#consumables)**
+  <br>[Potions](#potions)
+  <br>[Food](#food)
+  <br>[Phials](#phials)
+  <br>[Runes](#runes)
+ 
+  **[5. Gearing](#gearing)**
+  <br>[Stats](#stats)
+  <br>[Enchants](#enchants)
+  <br>[Embellishments](#embellishments)
+  <br>[Tier Set](#tier-set)
+  <br>[Trinkets](#trinkets)
+  
+  **[6. Miscellaneous](#misc)**
+  <br>[Do our dots snapshot?](#snapshot)
+  <br>[Macros](#macros)
+  <br>[Useful WeakAura(s)](#wa)
+  
+  **[7. Sims](#sims)**
+ 
+---
+
+[Changelog](https://github.com/dreamgrove/dreamgrove/commits/master/content/feral/compendium.md)
+
+<div id="news">
+
+# [1. News:](#news)
+
+</div>
+
+## 10.2 News
+### Tier Set
+> 2p: 
+
+> 4p: 
+
+### List of changes
+
+<div id="rotation">
+ 
+# [2.Rotation:](#rotation)
+
+</div>
+
+<div id="precast">
+
+## [Precast](#precast)
+
+</div>
+
+**What is a priority list?**
+
+When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast. As such, you will note that there are some abilities included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that ability IF you happened to take it for whatever reason. The presence of an ability in a priority list does not mean that you should be talenting into or using that ability, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
+
+<div id="st">
+
+## [Single Target priority](#st)
+
+</div>
+
+**Single Target priority list:**
+- Keep up {{< spell 1822 "Rake" >}}
+- Use {{< spell 1079 "Rip" >}} if one of the following conditions are met:
+    - something
+    - something else
+- Use {{< spell 22568 "Ferocious Bite" >}} if:
+  - something
+  - something else
+- Use {{< spell 5221 "Shred" >}}
+- Use {{< spell 155625 "Moonfire" >}}
+- Use {{< spell 274838 "Feral Frenzy" >}}
+- Use {{< spell 391889 "Adaptive Swarm" >}}
+- Use {{< spell 106830 "Thrash" >}}
+- Use {{< spell 5217 "Tiger's Fury" >}}
+- Use {{< spell 102543 "Incarnation" >}}
+- Use {{< spell 102547 "Prowl" >}}
+- Use {{< spell 58984 "Shadowmeld" >}}
+- Use {{< spell 202028 "Brutal Slash" >}}
+
+
+<div id="aoe">
+
+## [AoE priority](#aoe)
+
+</div>
+
+**AoE priority list(2+ targets):**
+
+- Use {{< spell 285381 "Primal Wrath" >}}
+
+
+<div id="talents">
+
+# [3.Talents:](#talents)
+
+</div>
+
+## Talents for different target counts
+[Single target](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[M+ Talents Cookie Cutter](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Sustained AoE](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+
+
+## Raid Talents
+[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Two target cleave(Experiments Mythic)](https://www.raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Amalgamation](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[Mythic Sarkareth](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>From a progression perspective it is better to single target down the big add, if your guild is having trouble killing the adds you could swap <input here>
+
+## Dungeon Talents
+The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Mind that while all these builds use Moons, FoE will result in about the same dps. FoE will often not align with Pulsar which can make it annoying to play with.
+  
+[Cookie cutter every dungeon build](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+
+<br>[Cookie cutter with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+<br>[More AoE](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+### Dungeon Druid Tree Considerations
+
+- Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
+- Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
+- Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
+- Hibernate can be used for the Incorporeal affix.
+- All other talents in the druid tree are more or less set.
+
+
+<div id="consumables">
+
+# [4.Consumables:](#consumables)
+
+</div>
+
+
+<div id="potions">
+
+## [Potions](#Potions)
+
+</div>
+
+
+[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
+
+
+<div id="food">
+
+## [Food](#food)
+
+</div>
+
+
+[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak), or [Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs) giving the same buff with a cheaper individual price.
+
+
+<div id="phials">
+
+## [Phials](#Phials)
+
+</div>
+
+**ST**
+
+Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
+
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
+- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment): Has ~92% of the value of Corrupting Rage Phial at 100% uptime.
+- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation): Has ~90% of the value of Corrupting Rage Phial at 100% uptime.
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Has the same value as Corrupting Rage at 60% uptime. 
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Same as the Elemental one, only that vers is more often better during progress than the random stats because of the DR it provides.
+- [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury): This Phial should never be used.
+
+**AoE**:
+
+The priority is the same as it is on ST.
+
+
+<div id="runes">
+
+## [Runes](#Runes)
+
+</div>
+
+Generally, you will want to use either [Buzzing Rune](https://www.wowhead.com/item=194823/buzzing-rune) or [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune), sim your character for the most accurate answer.
+
+
+<div id="gearing">
+
+# [5.Gearing:](#gearing)
+
+</div>
+
+
+<div id="stats">
+ 
+## [Stat Priority:](#stats)
+
+</div>
+
+Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
+
+<div id="enchants">
+
+## [Enchants](#enchants)
+
+</div>
+
+
+Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Main stat proc
+<br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Agility
+<br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) Avoidance + Reduced fall damage
+<br>Legs - [Fierce Armor Kit](https://www.wowhead.com/item=193565/fierce-armor-kit) Agility + Stamina
+<br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
+<br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
+<br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
+
+
+<div id="embellishments">
+
+## [Embellishments](#embellishments)
+
+</div>
+
+For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on Toxic Thorn Footwraps can also proc a heal when actively healing. There are some effects like [Frenzied Regeneration](https://www.wowhead.com/spell=22842/frenzied-regeneration) that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier but nonetheless, they are the biggest dps upgrade by a fair margin.
+<br>Do note that Toxified can only be added to a crafted leather piece.
+
+**Crafting order**
+
+- [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps)
+- [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) or [Life-bound Trousers](https://www.wowhead.com/item=193408/life-bound-trousers?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch)
+- Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer) 
+
+<div id="tier-set">
+
+## [Tier Set](#tier-set)
+
+T31 2PC: 
+<br>T31 2PC+4PC: 
+
+</div>
+
+
+
+<div id="trinkets">
+
+## [Trinkets](#trinkets)
+
+</div>
+
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
+
+R1-9 = Raid boss number 1-9
+<br>HTD = Healer Tank DPS
+<br>D = Dungeon
+
+### ST
+
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
+- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)(R1)
+- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
+  
+### AoE
+
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
+- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale) (R1)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
+- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
+
+
+<div id="misc">
+
+# [6. Miscellaneous:](#misc)
+
+</div>
+
+
+<div id="snapshot">
+
+## [Do our dots snapshot?](#snapshot)
+
+</div>
+
+
+<div id="macros">
+
+## [Macros](#macros)
+
+</div>
+
+**some macro:**
+
+```
+#showtooltip
+/cast something
+```
+</div>
+
+**Trinket macro:**
+
+If you are using an on-use trinket/weapon that should go along with your cooldowns, use the following macro: (/13 for top trinket slot, /14 for bottom trinket slot and /16 for weapon.)
+```
+#showtooltip
+/use 13
+/use 14
+/use 16
+/cast Berserk
+```
+
+<div id="wa">
+ 
+## [Useful WeakAura(s)](#wa)
+ 
+</div>
+
+### **Snapshotting Tracking**
+[Feral Bleed Power](https://wago.io/qYnbZzlmP)
+See the description of the WA for more details. This is not a required WA but will make it easier to track the power of your next bleed compared to the currently active one.
+
+<div id="cancel">
+ 
+<div id="sims">
+
+# [7. Sims:](#sims)
+
+</div>
+
+[Link1](https://www.dreamgrove.gg/feral/sims/embells_1T_10.1.html)
+<br>[Link2](https://www.dreamgrove.gg/feral/sims/embells_6T_10.1.html)
+
+[Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/feral/sims/items.txt)
+ 
+<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script src="https://wow.zamimg.com/js/tooltips.js"></script>
