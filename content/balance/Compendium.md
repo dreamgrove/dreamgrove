@@ -60,12 +60,12 @@ sidebarContents:  |
 Looks to be a ~5.4% increase from having no tier
 If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast
 
-> 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 3%, up to 15%
+> 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%
 
 Looks to be a ~13.5% DPS increase from having no tier
 Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 2% per spender used in that eclipse up to a total of 25% increased.
 
-In Incarn this will be maximum of 25% increased Arcane and 30% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
+In Incarn this will be maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
 
 The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage
 
