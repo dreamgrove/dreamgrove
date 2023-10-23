@@ -1,6 +1,6 @@
 ---
-date: '2023-10-03'
-authors: ["Dsune (Oi)"]
+date: '2023-10-23'
+authors: ["Dsune (Oi), Crazymeow"]
 published: false
 patch: "10.1.7"
 title: Feral Druid 10.1.7 Compendium
@@ -48,11 +48,32 @@ sidebarContents:  |
 
 ## 10.2 News
 ### Tier Set
-> 2p: 
+> 2p:  Feral Frenzy grants Smoldering Frenzy, increasing all damage you deal by 20% for 8 seconds.
 
-> 4p: 
+> 4p: Feral Frenzy’s cooldown is reduced by 15 seconds. During Smoldering Frenzy, enemies burn for 10% of damage you deal as Fire over 10 seconds.
 
 ### List of changes
+
+**Apex Predator's Craving**
+Rip ticks have a 7.2% (was 4%) chance in single target to make next bite free. This chance now gets reduced as ripped targets increases. This comes out to be a gain below 4 targets, and a loss at 4+ targets.
+
+**Ashamane's Guidance (Incarnation) is reworked**
+During incarnation and for 30 seconds afterwards, Rip and Rake cause affected enemies to take 3% increased damage from your abilities. This stacks, coming out to a little over 6% damage taken debuff. This is just strictly worse than Carnivorous Instinct and will never be played at its current tuning.
+
+**Cat's Curiosity is Removed**
+**Saber Jaws has been added to replace Cat's Curiosity:**
+Rank 1: When you spend extra Energy on Ferocious Bite, the extra damage is increased by 40%.
+Rank 2: When you spend extra Energy on Ferocious Bite, the extra damage is increased by 80%.
+
+Since this only buffs the extra damage portion of bite, at max energy the total damage of Ferocious Bite is increased by 20/40%. This does NOT work on free bites from Convoke or Apex.
+
+**Relentless Predator**
+Instead of reducing the cost of Ferocious Bite by 20%, this now reduces its cost by 10%. This effectively kills the talent in all situations. I am expecting this node to be replaced in a future patch.
+
+**Rampant Ferocity**
+This got buffed by 10%. Nothing changes about when you select this talent, as the aformentioned Apex nerf at larger target counts hurt the effectiveness of Rampant Ferocity.
+
+**Innervate** is now castable in Cat Form. Rejoice.
 
 <div id="rotation">
  
@@ -84,59 +105,94 @@ When reading the priority lists below, you should not think about these as steps
 
 **Single Target priority list:**
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met:
-    - You've talented {{< spell 391528  "Convoke the Spirits" >}}. (Using it on CD keeps {{< spell 5217 "TF" >}} and {{< spell 391528  "Convoke" >}} aligned.)
+    - You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "TF" >}} and {{< spell 391528  "Convoke" >}} aligned.)
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
+    - You have 10.2 2 piece set bonus equipped, and {{> spell 274838 "Feral Frenzy" >}} is ready to be used.
 - Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:
-    - You're more than one builder away from procing {{< spell 319439 "Bloodtalons" >}}.
     - There isn't a swarm heading to an enemy target.
     - Adaptive swarm is either not up or it is about to expire with 1 or 2 stacks.
-- With {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:
-    - You're more than one builder away from procing {{< spell 319439 "Bloodtalons" >}}.
 - With {{< spell 391951 "Unbridled Swarm" >}} talented, the conditions change based on the amount of Swarms you have out:
     - If you have 3 swarms with at least 2 stacks out then you will target allies with priority 1 stack > 0 stack > 2 stacks.
     - If you have 2 or fewer swarms of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
 - Use {{< spell 102543 "Incarnation" >}} if it's ready.
-- Use {{< spell 106951 "Berserk" >}} if it's ready or if it's your last berserk of the fight, line it up with {{< spell 391528  "Convoke" >}}.
+- Use {{< spell 106951 "Berserk" >}} if it's ready. If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have Ashes of the Embersoul, Witherbark's Branch, or will be buffed by an Augmentation Evoker every 2 minutes.
+    - If it's your last berserk of the fight, line it up with {{< spell 391528  "Convoke" >}} where possible.
+- Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:
+    - {{< spell 1079 "Rip" >}} will not fall off during {{< spell 391528  "Convoke" >}}'s channel.
+    - {{< spell 5217 "Tiger's Fury" >}} is up.
+    - {{< spell 422751 "Smoldering Frenzy" >}} is up or you do not have 10.2 4 piece set bonus equipped.
+    - You have 0 or 1 combo points OR {{< spell 422751 "Smoldering Frenzy" >}} would fall off before {{< spell 391528  "Convoke" >}} ends.
 - Use {{< spell 274838 "Feral Frenzy" >}} if all of the following conditions are met:
     - {{< spell 417710 "Dire Fixation" >}} (if talented) is applied to the target.
-    - You have less than 2 combo points and are not in {{< spell 102543 "Inc" >}}/{{< spell 106951 "Zerk" >}}, or under 3 combo points during {{< spell 102543 "Inc" >}}/{{< spell 106951 "Zerk" >}}.
-- Use {{< spell 22568 "Ferocious Bite" >}} if all of the following conditions are met:
-    - {{< spell 391881 "Apex Predator's Craving" >}}
-    - {{< spell 202031 "Sabertooth" >}} is not up
+    - You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
+- Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.
+### If you are in Berserk see [here](#Berserk) as your priorities from this point on change a bit.
+- If you have {{< spell 411344 "Predator Revealed" >}} active from 10.1 4 piece set bonus, 4 combo points and are at least 40 energy away from cap, wait until you passively gain your 5th combo point.
+- Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
+    - You have at least 4 combo points
+    - {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
+        - You have 10.2 2 or 4 piece set bonus equipped
+        - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
+        - Your next gcd will be Feral Frenzy
+    - {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
+    - {{< spell 5217 "Tiger's Fury" >}} is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
+    - {{< spell 319439 "Bloodtalons" >}} (if talented) is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
+- Use {{< spell 22568 "Ferocious Bite" >}} when all of these conditions are met:
+    - You have at least 4 combo points
+    - You have at least 50 energy OR you have Relentless Predator talented and at least 45 energy. If you have the combo points, you should wait until you reach these energy thresholds.
+### Below this point, skip any spells you've already casted towards {{< spell 319439 "Bloodtalons" >}}, if you have 0 or 1 stacks of {{< spell 319439 "Bloodtalons" >}} remaining.
+- Use {{< spell 16864 "Clearcasting" >}} procs on {{< spell 106830 "Thrash" >}} if all of these conditions are met:
+    - {{< spell 106830 "Thrash" >}} is in Pandemic.
+    - Thrashing Claws is not talented.
+    - Dire Fixation (if talented) is already applied to your target.
+- Use {{< spell 5221 "Shred" >}} if Dire Fixation (if talented) is not on your target or you have a {{< spell 16864 "Clearcasting" >}} proc.
+- Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.
+- Use {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} if all of these conditions are met:
+    - You do not have a {{< spell 384667 "Sudden Ambush" >}} proc
+    - {{< spell 1822 "Rake" >}} is in pandemic OR you would be upgrading {{< spell 1822 "Rake" >}}'s snapshot value.
+- Use {{< spell 1822 "Rake" >}} if any of these conditions are met:
+    - {{< spell 1822 "Rake" >}} is in pandemic and tiger's fury is either up, or won't be before Rake falls off.
+    - You are in stealth
+    - You have a {{< spell 384667 "Sudden Ambush" >}} proc and you would be upgrading {{< spell 1822 "Rake" >}}'s snapshot value.
+- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it is in pandemic.
+- Use {{< spell 106830 "Thrash" >}} if it is in pandemic and you do not have Thrashing Claws talented.
+- Use {{< spell 202028 "Brutal Slash" >}}.
+- Use {{< spell 106785 "Swipe" >}} if you have Wild Slashes talented, and Dire Fixation (if talented) is on your target.
+- Use {{< spell 5221 "Shred" >}}.
+- Clip Lunar Inspiration {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
+- Use {{< spell 106785 "Swipe" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
+- Use {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}} and it will not downgrade {{< spell 1822 "Rake" >}}'s snapshot value.
+- Clip {{< spell 106830 "Thrash" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
 
 
+<div id="berserk">
 
-actions+=/ferocious_bite,if=
-buff.apex_predators_craving.up
-&
-(spell_targets.swipe_cat=1|!talent.primal_wrath.enabled|!buff.sabertooth.up)
-&
-!(variable.need_bt&active_bt_triggers=2)
+# [Berserk/Incarnation rotation](#Berserk)
 
-
-- Use {{< spell 1822 "Rake" >}}
-- Use {{< spell 1079 "Rip" >}}
-- Use {{< spell 22568 "Ferocious Bite" >}}
+</div>
+**Berserk ST priority**
+- Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
+    - You have 5 combo points
+    - {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
+        - You have 10.2 2 or 4 piece set bonus equipped
+        - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
+        - Your next gcd will be Feral Frenzy
+    - {{< spell 1079 "Rip" >}} has more than 2 seconds remaining, and you have {{< spell 422751 "Smoldering Frenzy" >}} up.
+- Use {{< spell 22568 "Ferocious Bite" >}} with 5 combo points
+- Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} if it won't disrupt {{< spell 319439 "Bloodtalons" >}} and any of these conditions are true:
+    - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
+    - You don't have {{< spell 384667 "Sudden Ambush" >}} AND a stealth {{< spell 1822 "Rake" >}} would be upgrading its snapshot
+- Use {{< spell 1822 "Rake" >}} if it won't disrupt {{< spell 319439 "Bloodtalons" >}} and any of these conditions are true:
+    - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
+    - You have a {{< spell 384667 "Sudden Ambush" >}} proc AND a stealth {{< spell 1822 "Rake" >}} would be upgrading its snapshot
+- Use {{< spell 5221 "Shred" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}.
+- Use {{< spell 202028 "Brutal Slash" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}.
+- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}. This is true even if it means clipping moonfire early.
+- Use {{< spell 106830 "Thrash" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}, unless you have thrashing claws talented.
+- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it is not applied or is in pandemic range.
+- Use {{< spell 202028 "Brutal Slash" >}} if you have 2 or 3 charges
 - Use {{< spell 5221 "Shred" >}}
-- Use {{< spell 155625 "Moonfire" >}}
-- Use {{< spell 274838 "Feral Frenzy" >}}
-- Use {{< spell 391889 "Adaptive Swarm" >}}
-- Use {{< spell 106830 "Thrash" >}}
-- Use {{< spell 5217 "Tiger's Fury" >}}
-- Use {{< spell 102543 "Incarnation" >}}
-- Use {{< spell 102547 "Prowl" >}}
-- Use {{< spell 58984 "Shadowmeld" >}}
-- Use {{< spell 202028 "Brutal Slash" >}}
-- Use {{< spell 390772 "Pouncing Strikes >}}
-- Use {{< spell 391951 "Unbridled Swarm" >}}
-{{< spell 202031 "Sabertooth" >}}
-{{< spell 384667 "Sudden Ambush" >}}
-
-
-
-- Use 
-{{< spell 123 "" >}}
 
 <div id="aoe">
 
@@ -145,8 +201,54 @@ buff.apex_predators_craving.up
 </div>
 
 **AoE priority list(2+ targets):**
-
-- Use {{< spell 285381 "Primal Wrath" >}}
+**Special Note: Try to use single-target spells on higher priority/higher healthed mobs, or mobs that have Dire Fixation on them.**
+- Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met:
+    - You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "TF" >}} and {{< spell 391528  "Convoke" >}} aligned.)
+    - {{< spell 5217 "Tiger's Fury" >}} is not up.
+    - You are more than 65 energy from the cap.
+    - You have 10.2 2 piece set bonus equipped, and {{> spell 274838 "Feral Frenzy" >}} is ready to be used.
+- Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:
+    - There isn't a swarm heading to an enemy target.
+    - Adaptive swarm is not up on a target.
+- With {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} as often as you can with this priority:
+    - An enemy target has 2 stacks of {{< spell 391889 "Adaptive Swarm" >}}.
+    - An enemy target has 1 stack of {{< spell 391889 "Adaptive Swarm" >}}.
+    - An enemy target does not have {{< spell 391889 "Adaptive Swarm" >}}.
+- Use {{< spell 102543 "Incarnation" >}}
+- Use {{< spell 106951 "Berserk" >}}
+- Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:
+    - Your {{< spell 1079 "Rip" >}}'s will not fall off during {{< spell 391528  "Convoke" >}}'s channel.
+    - {{< spell 5217 "Tiger's Fury" >}} is up.
+    - {{< spell 422751 "Smoldering Frenzy" >}} is up or you do not have 10.2 4 piece set bonus equipped.
+    - You have 0 or 1 combo points OR {{< spell 422751 "Smoldering Frenzy" >}} would fall off before {{< spell 391528  "Convoke" >}} ends.
+- Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc and you either don't have {{< spell 285381 "Primal Wrath" >}} talented or {{< spell 202031 "Sabertooth" >}} up.
+- Use {{< spell 285381 "Primal Wrath" >}} if you have 5 combo points, or at least 4 combo points and not in Berserk/Incarn and any of these conditions are met:
+    - {{< spell 1079 "Rip" >}}'s from {{< spell 285381 "Primal Wrath" >}} are in pandemic
+    - You have Tear Open Wounds talented
+    - You do not have Rampant Ferocity talented, and there are at least 5 targets in range
+- Use {{< spell 22568 "Ferocious Bite" >}} if you have 5 combo points, or at least 4 combo points and not in Berserk/Incarn.
+### Below this point, skip any spells you've already casted towards {{< spell 319439 "Bloodtalons" >}} during Berserk/Incarn or if you have 0 or 1 stacks of {{< spell 319439 "Bloodtalons" >}} remaining.
+- Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.
+- Use {{< spell 106830 "Thrash" >}} if in pandemic range, thrashing claws is not talented and any of these conditions:
+    - You have a {{< spell 16864 "Clearcasting" >}} proc
+    - You are facing at least 10 enemies
+    - You are facing at least 5 enemies and do not have Double-Clawed Rake talented
+- Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} is either not applied or in pandemic range
+- Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} does not have a {{< spell 390772 "Pouncing Strikes >}} snapshot
+- Use {{< spell 1822 "Rake" >}} on a target with either of these conditions met:
+    - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
+    - You have {{< spell 384667 "Sudden Ambush" >}} up and can upgrade the snapshot value of a {{< spell 1822 "Rake" >}}
+- Use {{< spell 106830 "Thrash" >}} if in pandemic range and Thrashing Claws is not talented.
+- Use {{< spell 202028 "Brutal Slash" >}}
+- Use {{< spell 106785 "Swipe" >}} if there are 5 or more targets
+- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on a target without {{< spell 155625 "Moonfire" >}} or if {{< spell 155625 "Moonfire" >}} is in pandemic range and there are less than 5 targets.
+- Use {{< spell 106785 "Swipe" >}}.
+- Use {{< spell 5221 "Shred" >}} if {{< spell 384667 "Sudden Ambush" >}} is not up and either Dire Fixation is talented or there are fewer than 4 targets.
+- Use {{< spell 106830 "Thrash" >}}.
+- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if there is a target without {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
+- Use {{< spell 5221 "Shred" >}} if you still need {{< spell 319439 "Bloodtalons" >}}
+- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on the target with the lowest duration if you still need {{< spell 319439 "Bloodtalons" >}}.
+- Use {{< spell 1822 "Rake" >}} ideally on a target where the new snapshot is at least the same strength as the applied {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
 
 
 <div id="talents">
@@ -226,10 +328,10 @@ The following are dungeon talent builds that will always serve you well but mind
 Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
-- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment): Has ~92% of the value of Corrupting Rage Phial at 100% uptime.
-- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation): Has ~90% of the value of Corrupting Rage Phial at 100% uptime.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Has the same value as Corrupting Rage at 60% uptime. 
-- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Same as the Elemental one, only that vers is more often better during progress than the random stats because of the DR it provides.
+- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment):
+- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation):
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos):
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility):
 - [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury): This Phial should never be used.
 
 **AoE**:
@@ -309,31 +411,27 @@ T31 2PC:
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
-
-R1-9 = Raid boss number 1-9
-<br>HTD = Healer Tank DPS
-<br>D = Dungeon
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
 
 ### ST
 
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
-- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
-- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)(R1)
-- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus)
+- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)
+- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) 
   
 ### AoE
 
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
-- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
-- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale) (R1)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
-- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) 
+- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence)
+- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment)
 
 
 <div id="misc">
