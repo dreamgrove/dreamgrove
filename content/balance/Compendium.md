@@ -15,7 +15,7 @@ sidebarContents:  |
   <br>[AoE priority](#aoe)
   <br>[Filler Priority Inside CA/Inc](#filler)
   <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
-  <br>[Proccing Pulsar with Nature's Graace](#ng)
+  <br>[Proccing Pulsar with Nature's Grace](#ng)
   <br>[How to Use Warrior of Elune](#woe)
   <br>[How to use Wild Mushrooms and how they work](#mushroom)
   <br>[How to Prestack Pulsar and use it on pull](#prestack)
