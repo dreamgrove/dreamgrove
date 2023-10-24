@@ -215,7 +215,8 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 </div>
 
-{{< spell 393961 "Pulsar" >}} can be procced with Nature's Grace to take advantage of the haste buff it applies. To achieve this, wait until your current Eclipse ends and proc Pulsar by casting an unbuffed Starsurge/Starfall. It is still a minor gain even if you need to overcap Astral Power for a total of 3 seconds and/or drop {{< spell 393954 "Rattle the Stars" >}}. 
+{{< spell 393961 "Pulsar" >}} can be procced with {{< spell 393958 "Nature's Grace" >}} to take advantage of the haste buff it applies. To achieve this, wait until your current Eclipse ends and proc {{< spell 393961 "Pulsar" >}} by casting an unbuffed {{< spell 78674 "Starsurge" >}}/{{< spell 191034 "Starfall" >}}. It is still a minor gain even if you need to overcap Astral Power for a total of 3 seconds and/or drop {{< spell 393954 "Rattle the Stars" >}}. 
+
 
 <div id="woe">
 
@@ -225,9 +226,9 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
 {{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
 
-<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse. Using a Warrior of Elune Starfire in single target during CA is NOT a damage increase if you do not need to move. 
+<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse. Using a Warrior of Elune Starfire in single target during CA/Inc is NOT a damage increase if you do not need to move. 
 
-If Warrior of Elune is falling off during CA and you still have a charge to spend, you can starfire at 2+ targets.
+If Warrior of Elune is falling off during CA/Inc and you still have a charge to spend, you can starfire at 2+ targets.
 
 Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
 
@@ -253,11 +254,12 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 
 {{< spell 393961 "Pulsar" >}} can be pre-stacked before pulling a boss by spending Astral Power on trash as the buff does not reset when an encounter starts. **This only represents a minor gain of ~1%.**
 
-There are two optimal values for pre-stacking pulsar. If there's no specific requirement to use your Incarn during a certain phase of the fight, you should pre-stack it to 560. Begin the encounter with the standard opener; however, instead of using Incarn, proc your pulsar and use your trinket and potion. Use Incarn immediately after this pulsar falls off to benefit from Nature's Grace.
+There are two optimal values for pre-stacking pulsar. If there's no specific requirement to use your {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} during a certain phase of the fight, you should pre-stack it to 560. Begin the encounter with the standard opener; however, instead of using CA/Inc, proc your pulsar and use your trinket and potion. Use CA/Inc immediately after this pulsar falls off to benefit from {{< spell 393958 "Nature's Grace" >}}.
 
-On the other hand, if your cooldown timings necessitate using Incarn at the start of the fight, it's more beneficial to pre-stack pulsar to 400. By doing so, you'd follow the regular rotation, use Incarn on pull, and the pulsar would then proc in time to reapply buffs like Solstice/BoAT.
+On the other hand, if your cooldown timings necessitate using CA/Inc at the start of the fight, it's more beneficial to pre-stack pulsar to 400. By doing so, you'd follow the regular rotation, use CA/Inc on pull, and the pulsar would then proc in time to reapply buffs like {{< spell 343647 "Solstice" >}}/{{< spell 394048 "BoAT" >}}.
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
+
 
 <div id="talents">
 
@@ -499,7 +501,7 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 
 </div>
 
-Astral damage is Arcane and Nature damage at the same time meaning that these spells benefit from effects that buff either spell school and get increased by both type of boosts multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell classes.
+Astral damage is both Arcane and Nature damage meaning that these spells benefit from effects that buff either spell school and get increased by both type of buffs multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
 
 
 <div id="macros">
