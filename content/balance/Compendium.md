@@ -15,8 +15,10 @@ sidebarContents:  |
   <br>[AoE priority](#aoe)
   <br>[Filler Priority Inside CA/Inc](#filler)
   <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
+  <br>[Proccing Pulsar with Nature's Grace](#ng)
   <br>[How to Use Warrior of Elune](#woe)
   <br>[How to use Wild Mushrooms and how they work](#mushroom)
+  <br>[How to Prestack Pulsar and use it on pull](#prestack)
  
   **[3. Talents](#talents)**
  
@@ -194,7 +196,7 @@ When reading the priority lists below, you should not think about these as steps
 </div>
 
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
- 
+
 
 <div id="eclipse">
 
@@ -207,6 +209,14 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
+<div id="ng">
+
+## [Proccing Pulsar with Nature's Grace](#ng)
+
+</div>
+
+{{< spell 393961 "Pulsar" >}} can be procced with {{< spell 393958 "Nature's Grace" >}} to take advantage of the haste buff it applies. To achieve this, wait until your current Eclipse ends and proc {{< spell 393961 "Pulsar" >}} by casting an unbuffed {{< spell 78674 "Starsurge" >}}/{{< spell 191034 "Starfall" >}}. It is still a minor gain even if you need to overcap Astral Power for a total of 3 seconds and/or drop {{< spell 393954 "Rattle the Stars" >}}. 
+
 
 <div id="woe">
 
@@ -216,8 +226,12 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
 {{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
 
-<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse.
- 
+<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse. Using a Warrior of Elune Starfire in single target during CA/Inc is NOT a damage increase if you do not need to move. 
+
+If Warrior of Elune is falling off during CA/Inc and you still have a charge to spend, you can starfire at 2+ targets.
+
+Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
+
  <div id="mushroom">
 
 ## [How to use Wild Mushrooms and how they work](#mushroom)
@@ -231,6 +245,20 @@ This type of DOT is often called "Ignite" based on a Mage spell working this exa
 On single target, it's best to use all 3 charges at once paired with any available buffs such as potion, trinkets and Inc. {{< spell 88747 "Wild Mushroom" >}} is also an instant GCD, so it can be used for movement as needed.
 
 In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
+
+<div id="prestack">
+
+## [How to Prestack Pulsar and use it on pull](#prestack)
+
+</div>
+
+{{< spell 393961 "Pulsar" >}} can be pre-stacked before pulling a boss by spending Astral Power on trash as the buff does not reset when an encounter starts. **This only represents a minor gain of ~1%.**
+
+There are two optimal values for pre-stacking pulsar. If there's no specific requirement to use your {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} during a certain phase of the fight, you should pre-stack it to 560. Begin the encounter with the standard opener; however, instead of using CA/Inc, proc your pulsar and use your trinket and potion. Use CA/Inc immediately after this pulsar falls off to benefit from {{< spell 393958 "Nature's Grace" >}}.
+
+On the other hand, if your cooldown timings necessitate using CA/Inc at the start of the fight, it's more beneficial to pre-stack pulsar to 400. By doing so, you'd follow the regular rotation, use CA/Inc on pull, and the pulsar would then proc in time to reapply buffs like {{< spell 343647 "Solstice" >}}/{{< spell 394048 "BoAT" >}}.
+
+This will mostly be relevant during farm periods when you can one-shot a boss.
 
 
 <div id="talents">
@@ -473,7 +501,7 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 
 </div>
 
-Astral damage is Arcane and Nature damage at the same time meaning that these spells benefit from effects that buff either spell school and get increased by both type of boosts multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell classes.
+Astral damage is both Arcane and Nature damage meaning that these spells benefit from effects that buff either spell school and get increased by both type of buffs multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
 
 
 <div id="macros">
@@ -517,6 +545,8 @@ See the description of the WA for more details. This is not a required WA but wi
 </div>
 
 ### **Cancelling Pulsar**
+
+**As of 10.1.5 this no longer represents a relevant gain with the change to Radiant Moonlight increasing the cooldown of Fury of Elune by 5 seconds.**
 
 It can be a minor gain to cancel Pulsar **ONCE** in the opener in order to not proc pulsar in your first Incarnation. The value of when to cancel fully depends on your haste and whether you are Bloodlusting. It will likely have to be determined on a per-boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you not proc pulsar in Incarnation naturally it would be for nothing.
 You can add these copies below your character in the advanced section of Raidbots to check what is optimal for your character in a 0 downtime scenario by using [this link](https://gist.github.com/Dsune0/09c4dbf51d381a93aa1158fd9a9da8e9).
