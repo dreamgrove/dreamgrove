@@ -194,7 +194,7 @@ When reading the priority lists below, you should not think about these as steps
 </div>
 
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
- 
+
 
 <div id="eclipse">
 
@@ -207,6 +207,13 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
+<div id="ng">
+
+## [Proccing Pulsar with Nature's Grace](#ng)
+
+</div>
+
+Pulsar should be procced with Nature's Grace to take advantage of the haste buff for the first 6 seconds. To achieve this, wait until right after Eclipse ends to proc Pulsar with an unbuffed Starsurge or Starfall (if talented). It is still a gain if you need to overcap Astral Power for up to 3 seconds and/or drop Rattle the Stars. 
 
 <div id="woe">
 
@@ -216,7 +223,9 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
 {{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
 
-<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse.
+<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse. Using a Warrior of Elune Starfire in single target during CA is NOT a damage increase if you do not need to move. 
+
+If Warrior of Elune is falling off during CA and you still have a charge to spend, you can starfire at 2+ targets.
  
  <div id="mushroom">
 
@@ -232,6 +241,15 @@ On single target, it's best to use all 3 charges at once paired with any availab
 
 In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
 
+<div id="prestack">
+
+## [How to Prestack Pulsar and use it on pull](#prestack)
+
+</div>
+
+Pulsar can be stacked to 560+ before pulling a boss by spending Astral Power on trash. **This only represents a minor gain of ~1%.**
+
+If a kill timer allows, you can proc Pulsar on pull (using normal opener) and cast Incarnation with the haste buff from Nature's Grace after it expires. This will only be relevant during farm periods when you can one-shot a boss. 
 
 <div id="talents">
 
@@ -517,6 +535,8 @@ See the description of the WA for more details. This is not a required WA but wi
 </div>
 
 ### **Cancelling Pulsar**
+
+**As of 10.1.5 this no longer represents a relevant gain with the change to Radiant Moonlight increasing the cooldown of Fury of Elune by 5 seconds.**
 
 It can be a minor gain to cancel Pulsar **ONCE** in the opener in order to not proc pulsar in your first Incarnation. The value of when to cancel fully depends on your haste and whether you are Bloodlusting. It will likely have to be determined on a per-boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you not proc pulsar in Incarnation naturally it would be for nothing.
 You can add these copies below your character in the advanced section of Raidbots to check what is optimal for your character in a 0 downtime scenario by using [this link](https://gist.github.com/Dsune0/09c4dbf51d381a93aa1158fd9a9da8e9).
