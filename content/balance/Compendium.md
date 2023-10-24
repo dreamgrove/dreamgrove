@@ -215,7 +215,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 
 </div>
 
-Pulsar should be procced with Nature's Grace to take advantage of the haste buff for the first 6 seconds. To achieve this, wait until right after Eclipse ends to proc Pulsar with an unbuffed Starsurge or Starfall (if talented). It is still a gain if you need to overcap Astral Power for up to 3 seconds and/or drop Rattle the Stars. 
+{{< spell 393961 "Pulsar" >}} can be procced with Nature's Grace to take advantage of the haste buff it applies. To achieve this, wait until your current Eclipse ends and proc Pulsar by casting an unbuffed Starsurge/Starfall. It is still a minor gain even if you need to overcap Astral Power for a total of 3 seconds and/or drop {{< spell 393954 "Rattle the Stars" >}}. 
 
 <div id="woe">
 
@@ -228,7 +228,9 @@ Pulsar should be procced with Nature's Grace to take advantage of the haste buff
 <br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse. Using a Warrior of Elune Starfire in single target during CA is NOT a damage increase if you do not need to move. 
 
 If Warrior of Elune is falling off during CA and you still have a charge to spend, you can starfire at 2+ targets.
- 
+
+Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
+
  <div id="mushroom">
 
 ## [How to use Wild Mushrooms and how they work](#mushroom)
@@ -249,9 +251,13 @@ In AoE scenarios, you can use the charges all at once for a quick burst of damag
 
 </div>
 
-Pulsar can be stacked to 560+ before pulling a boss by spending Astral Power on trash. **This only represents a minor gain of ~1%.**
+{{< spell 393961 "Pulsar" >}} can be pre-stacked before pulling a boss by spending Astral Power on trash as the buff does not reset when an encounter starts. **This only represents a minor gain of ~1%.**
 
-If a kill timer allows, you can proc Pulsar on pull (using normal opener) and cast Incarnation with the haste buff from Nature's Grace after it expires. This will only be relevant during farm periods when you can one-shot a boss. 
+There are two optimal values for pre-stacking pulsar. If there's no specific requirement to use your Incarn during a certain phase of the fight, you should pre-stack it to 560. Begin the encounter with the standard opener; however, instead of using Incarn, proc your pulsar and use your trinket and potion. Use Incarn immediately after this pulsar falls off to benefit from Nature's Grace.
+
+On the other hand, if your cooldown timings necessitate using Incarn at the start of the fight, it's more beneficial to pre-stack pulsar to 400. By doing so, you'd follow the regular rotation, use Incarn on pull, and the pulsar would then proc in time to reapply buffs like Solstice/BoAT.
+
+This will mostly be relevant during farm periods when you can one-shot a boss.
 
 <div id="talents">
 
