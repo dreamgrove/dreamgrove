@@ -120,6 +120,8 @@ When reading the priority lists below, you should not think about these as steps
 </div>
 
 **Single Target priority list:**
+
+**Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are met:
     - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
