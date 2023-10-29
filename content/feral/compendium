@@ -234,7 +234,7 @@ When reading the priority lists below, you should not think about these as steps
     - You are facing at least 10 enemies
     - You are facing at least 5 enemies and do not have Double-Clawed Rake talented
 - Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} is either not applied or in pandemic range
-- Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} does not have a {{< spell 390772 "Pouncing Strikes >}} snapshot
+- Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} does not have a {{< spell 390772 "Pouncing Strikes" >}} snapshot
 - Use {{< spell 1822 "Rake" >}} on a target with either of these conditions met:
     - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
     - You have {{< spell 384667 "Sudden Ambush" >}} up and can upgrade the snapshot value of a {{< spell 1822 "Rake" >}}
