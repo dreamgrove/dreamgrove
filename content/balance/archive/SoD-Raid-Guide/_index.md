@@ -21,6 +21,6 @@ Chicken
 
 See also
 ===
- - [Balance FAQ](/balance/2020-12-08-9.0_FAQ)
+ - [Balance FAQ](/balance/archive/2020-12-08-9.0_FAQ)
  - [Icy Veins Guide](https://www.icy-veins.com/wow/balance-druid-pve-dps-guide)
  - [Wowhead Guide](https://www.wowhead.com/balance-druid-guide)

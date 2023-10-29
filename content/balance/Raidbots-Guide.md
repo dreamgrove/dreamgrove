@@ -65,7 +65,7 @@ Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT re
 </div>
   
 Quicksim can be used if you want to take a quick look at how much the dps number on your sim is (pretty useless in most scenarios), looking at the html report (in proficient section), quickly getting a string for advanced, or for looking at the sample sequence. 
-<br>The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the FAQ](/balance/FAQ).
+<br>The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the Compendium](/balance/compendium).
 
 <div id="topgear">
 

@@ -16,7 +16,7 @@ sidebarContents:  |
 ---
 
 
-# This guide is outdated, use the FAQ found at https://www.dreamgrove.gg/balance/faq
+# This guide is outdated, use the FAQ found at https://www.dreamgrove.gg/balance/archive/faq
 
 <div id="disclaimers">
 

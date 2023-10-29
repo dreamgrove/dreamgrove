@@ -19,6 +19,6 @@ Tettles, Bora, Nick, Goosy
 
 See also
 ===
- - [Balance Guide](/balance/guide)
+ - [Balance Guide](/balance/archive/guide)
  - [Icy Veins Guide](https://www.icy-veins.com/wow/balance-druid-pve-dps-guide)
  - [Wowhead Guide](https://www.wowhead.com/balance-druid-guide)
