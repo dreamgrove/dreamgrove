@@ -4,6 +4,7 @@ authors: ["Gastank"]
 published: true
 title: "Shadowlands DPS Sims"
 patch: "9.2"
+showOnFrontpage: false
 ---
 
 Shadowlands sims are here!
