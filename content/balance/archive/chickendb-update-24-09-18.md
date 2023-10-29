@@ -3,7 +3,6 @@ date: '2018-09-24'
 authors: ["Slippykins", "Iskalla"]
 published: true
 title: "ChickenDB update #1 -- trait stacks, tooltips and feedback"
-showOnFrontpage: true
 description: In this ChickenDB update, we go over the main changes in this update, including all-new tooltips, trait stacking and more!
 patch: "8.0"
 showOnFrontpage: false
