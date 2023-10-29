@@ -5,6 +5,7 @@ published: true
 authors: ['The Dreamgrove']
 showtoc: true
 patch: "8.1"
+showOnFrontpage: false
 description: "An open letter to the community about the state of Druids in patch 8.1."
 ---
 
