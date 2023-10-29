@@ -15,6 +15,8 @@
 {{ define "bodyclass" }}home-body {{ lower .Title }}{{end}}
 
 {{ define "main" }}
+  {{/* Sections should have their articles listed in weight order, but series should be listed in reverse order */}}
+  {{ $pages := .Paginator.Pages }}
   {{ partial "header.html" . }}
   <section class="jumbotron">
     {{ partial "jumbotron-section.html" . }}
@@ -27,22 +29,11 @@
         </section>
       {{ end }}
       <section class="article-list">
-        {{ $showInRecentPages := slice }}
-        {{ range .Paginator.Pages }}
-          {{ $currentPage := . }}
-          {{ with .Params.showInRecent }}
-            {{ if . }}
-              {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
-            {{ end }}
-          {{ else }}
-            {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
-          {{ end }}
-        {{ end }}
-        {{ if eq (len $showInRecentPages) 0 }}
+        {{ if eq (len ($pages)) 0 }}
           <h1 class="empty-list">This section is empty!</h1>
         {{ else }}
           <h1 class="section-header">{{ if .Params.articleListTitle }}{{ .Params.articleListTitle }}{{ else }}Articles in Series{{ end }}</h1>
-          {{ range $showInRecentPages }}
+          {{ range $pages }}
             {{ .Render "summary" }}
           {{ end }}
         {{ end }}
