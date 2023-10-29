@@ -5,6 +5,7 @@ published: false
 showOnFrontpage: false
 patch: "10.0.5"
 title: Raszageth Balance Druid Documentation
+showInRecent: false
 ---
 
 **Talents:**
