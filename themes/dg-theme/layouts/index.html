@@ -14,11 +14,6 @@
         {{ range .Paginator.Pages }}
           {{ .Render "summary" }}
         {{ end }}
-        {{ range .Paginator.Pages }}
-          {{ if or (not (isset .Params "showInRecent")) (.Params.showInRecent) }}
-            {{ .Render "summary" }}
-          {{ end }}
-        {{ end }}
       </section>
       {{ template "_internal/pagination.html" . }}
     </div>
