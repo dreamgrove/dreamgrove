@@ -34,7 +34,9 @@
         {{ else }}
           <h1 class="section-header">{{ if .Params.articleListTitle }}{{ .Params.articleListTitle }}{{ else }}Articles in Series{{ end }}</h1>
           {{ range $pages }}
+            {{ if .Param "showInRecent" }}
               {{ .Render "summary" }}
+            {{ end }}
           {{ end }}
         {{ end }}
       </section>
