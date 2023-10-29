@@ -27,20 +27,38 @@
         </section>
       {{ end }}
       <section class="article-list">
-        {{ if eq (len (.Paginator.Pages)) 0 }}
-          <h1 class="empty-list">This section is empty!</h1>
-        {{ else }}
-          <h1 class="section-header">{{ if .Params.articleListTitle }}{{ .Params.articleListTitle }}{{ else }}Recent Articles{{ end }}</h1>
-          {{ if eq .Params.noPagination true }}
+        {{ $showInRecentPages := slice }}
+        {{ if eq .Params.noPagination true }}
             {{ $section := .Section }}
             {{ range where .Pages "Section" $section }}
-              {{ .Render "summary" }}
+                {{ $currentPage := . }}
+                {{ with .Params.showInRecent }}
+                    {{ if . }}
+                        {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
+                    {{ end }}
+                {{ else }}
+                    {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
+                {{ end }}
             {{ end }}
-          {{ else }}
+        {{ else }}
             {{ range .Paginator.Pages }}
-              {{ .Render "summary" }}
+                {{ $currentPage := . }}
+                {{ with .Params.showInRecent }}
+                    {{ if . }}
+                        {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
+                    {{ end }}
+                {{ else }}
+                    {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
+                {{ end }}
             {{ end }}
-          {{ end }}
+        {{ end }}
+        {{ if eq (len $showInRecentPages) 0 }}
+            <h1 class="empty-list">This section is empty!</h1>
+        {{ else }}
+            <h1 class="section-header">{{ if .Params.articleListTitle }}{{ .Params.articleListTitle }}{{ else }}Recent Articles{{ end }}</h1>
+            {{ range $showInRecentPages }}
+                {{ .Render "summary" }}
+            {{ end }}
         {{ end }}
       </section>
       {{ if eq .Params.noPagination false }}
