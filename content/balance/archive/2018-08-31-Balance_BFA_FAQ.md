@@ -4,6 +4,7 @@ authors: ["Spy"]
 published: true
 title: Balance BFA FAQ
 patch: "8.0"
+showOnFrontpage: false
 ---
 
 

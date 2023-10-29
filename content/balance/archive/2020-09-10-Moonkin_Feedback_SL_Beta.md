@@ -4,6 +4,7 @@ authors: ["Jundarer, Goosy"]
 published: true
 patch: "8.0"
 title: Moonkin Feedback - Shadowlands Beta
+showOnFrontpage: false
 ---
 
 This is an article made to give feedback on Moonkins current state in the Shadowlands Beta. It also serves to educate people on many of the common problems Moonkin suffers from currently in Shadowlands. If you disagree with anything said in this article that is completely ok and you should voice your feedback on the forums or anywhere else regardless. 
