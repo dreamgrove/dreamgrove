@@ -29,9 +29,13 @@
       <section class="article-list">
         {{ $showInRecentPages := slice }}
         {{ range .Paginator.Pages }}
-          {{ $shouldShow := or (isset .Params "showInRecent") (eq .Params.showInRecent true) }}
-          {{ if $shouldShow }}
-            {{ $showInRecentPages = $showInRecentPages | append . }}
+          {{ $currentPage := . }}
+          {{ with .Params.showInRecent }}
+            {{ if . }}
+              {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
+            {{ end }}
+          {{ else }}
+            {{ $showInRecentPages = $showInRecentPages | append $currentPage }}
           {{ end }}
         {{ end }}
         {{ if eq (len $showInRecentPages) 0 }}
