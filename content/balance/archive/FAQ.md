@@ -5,6 +5,7 @@ published: false
 patch: "9.2.7"
 title: Patch 9.2.7 FAQ
 sidebarTitle: "Quicklinks"
+showInRecent: false
 sidebarContents:  |
   [1. News](#news)
  

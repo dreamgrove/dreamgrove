@@ -5,6 +5,7 @@ published: true
 title: "Balance Prepatch Guide"
 slug: "2018-07-16-prepatch-guide"
 patch: "8.0"
+showInRecent: false
 ---
 
 ## Introduction

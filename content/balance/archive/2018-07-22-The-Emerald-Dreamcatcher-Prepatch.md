@@ -4,6 +4,7 @@ authors: ["Tettles","Nick","Bora"]
 published: true
 title: "The Emerald Dreamcatcher Prepatch Guide"
 patch: "7.3.5"
+showInRecent: false
 ---
  
 **The Emerald Dreamcatcher**

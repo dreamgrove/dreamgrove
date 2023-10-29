@@ -5,6 +5,7 @@ published: true
 title: "Moonkin Monthly Recap"
 series: ["Moonkin Monthly"]
 series_title: "Legion Recap"
+showInRecent: false
 ---
 
 

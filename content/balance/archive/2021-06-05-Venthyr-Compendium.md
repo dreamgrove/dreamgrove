@@ -5,6 +5,7 @@ published: false
 showOnFrontpage: false
 patch: "9.1.5"
 title: Venthyr Compendium
+showInRecent: false
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   [Disclaimers](#disclaimers)

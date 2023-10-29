@@ -6,6 +6,7 @@ title: "Moonkin Monthly - BFA Changes"
 series: ["Moonkin Monthly"]
 series_title: "BFA Changes"
 patch: "8.0"
+showInRecent: false
 ---
 
 
