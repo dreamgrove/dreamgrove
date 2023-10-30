@@ -15,7 +15,7 @@
 {{ $hidesummaries := .Scratch.Get "hidesummaries" }}
 {{ $hidespecs := .Scratch.Get "hidespecs" }}
 
-{{ if or .Params.showInRecent eq .Params.showInRecent nil }}
+{{ if eq .Params.showInRecent nil }}
   <article class="article-summary{{ if $hidesummaries }} no-summary{{ end }}">
     <h1 class="article-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
     {{ if not $hidesummaries }}
