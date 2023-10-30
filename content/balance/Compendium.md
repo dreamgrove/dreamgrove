@@ -610,7 +610,7 @@ For the past few expansions, cancelling your Starlord aura has been something th
 {{< checkbox id="AC" label="Astral Communion" >}}
 
 - text here
-{{< toggleTextBlock id="AC" >}}
+{{< cbtext id="AC" >}}
 - random text here
-{{< /toggleTextBlock >}}
+{{< /cbtext >}}
 - and some more text
