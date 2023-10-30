@@ -4,7 +4,7 @@
 <script>
     const checkbox = document.querySelector('[data-id="{{ .Get "id" }}-cb"]');
     checkbox.addEventListener('change', function () {
-        const toggleableText = document.getElementById(this.getAttribute('data-id').replace('-cb', ''));
+        const toggleableText = document.getElementById(this.getAttribute('data-id'));
         if (this.checked) {
             toggleableText.style.display = 'block';
         } else {
