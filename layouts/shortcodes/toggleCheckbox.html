@@ -1,10 +1,10 @@
-<input type="checkbox" id="{{ .Get "id" }}" data-id="{{ .Get "id" }}" checked>
-<label for="{{ .Get "id" }}">{{ .Get "label" }}</label>
+<input type="checkbox" data-id="{{ .Get "id" }}-cb" checked>
+<label for="{{ .Get "id" }}-cb">{{ .Get "label" }}</label>
 
 <script>
-    const checkbox = document.querySelector('[data-id="{{ .Get "id" }}"]');
+    const checkbox = document.querySelector('[data-id="{{ .Get "id" }}-cb"]');
     checkbox.addEventListener('change', function () {
-        const toggleableText = document.getElementById(this.getAttribute('data-id'));
+        const toggleableText = document.getElementById(this.getAttribute('data-id').replace('-cb', ''));
         if (this.checked) {
             toggleableText.style.display = 'block';
         } else {
