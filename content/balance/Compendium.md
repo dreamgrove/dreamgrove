@@ -5,6 +5,7 @@ published: true
 patch: "10.1.7"
 title: Balance Druid 10.1.7 Compendium
 showOnFrontpage: true
+showInRecent: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
   **[1. News](#news)**
