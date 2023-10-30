@@ -1,5 +1,3 @@
-{{ if strings.HasPrefix (strings.TrimSpace .Inner) "-" }}
-    <li id="{{ .Get "id" }}-cb" style="display: none;">{{ strings.TrimPrefix (strings.TrimSpace .Inner) "-" | safeHTML }}</li>
-{{ else }}
-    <div id="{{ .Get "id" }}-cb" style="display: none;">{{ .Inner | safeHTML }}</div>
-{{ end }}
+<div id="{{ .Get "id" }}-cb" style="display: none;">
+    {{ .Page.RenderString .Inner | safeHTML }}
+</div>
