@@ -1,0 +1,14 @@
+<input type="checkbox" id="toggleCheckbox{{ .Ordinal }}" checked>
+<label for="toggleCheckbox{{ .Ordinal }}">Toggle text</label>
+
+<script>
+    const checkbox{{ .Ordinal }} = document.getElementById('toggleCheckbox{{ .Ordinal }}');
+    checkbox{ { .Ordinal } }.addEventListener('change', function () {
+        const toggleableText = document.getElementById('toggleText{{ .Ordinal }}');
+        if (this.checked) {
+            toggleableText.style.display = 'block';
+        } else {
+            toggleableText.style.display = 'none';
+        }
+    });
+</script>
