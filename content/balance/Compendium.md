@@ -122,8 +122,6 @@ When reading the priority lists below, you should not think about these as steps
 
 **Single Target priority list:**
 
-{{< toggleCheckbox id="AC" label="Astral Communion" >}}
-
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are met:
@@ -134,9 +132,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
-{{< toggleTextBlock id="AC" >}}
 - Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
-{{< /toggleTextBlock >}}
 - Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
 - Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
 - Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.
@@ -609,3 +605,10 @@ For the past few expansions, cancelling your Starlord aura has been something th
  
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+
+
+{{< toggleCheckbox id="AC" label="Astral Communion" >}}
+
+{{< toggleTextBlock id="AC" >}}
+- random text here
+{{< /toggleTextBlock >}}
