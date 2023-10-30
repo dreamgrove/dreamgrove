@@ -1,3 +1,21 @@
+{{/*
+implement a checkbox that can show/hide content
+by default the checkbox is unchecked and the content is hidden
+an ID must be set, "-cb" will be appended automatically to the ID to make sure its unique
+label is the visible text
+
+example usage:
+{{< checkbox id="AC" label="Astral Communion">}}
+
+or if the label should be a spell with tooltip:
+{{< checkbox id="uniqueID">}}
+    {{< spell 393961 "Pulsar">}}
+{{< /checkbox>}}
+
+the text for the checkbox is handled in cbtext.html
+
+*/}}
+
 <input type="checkbox" data-id="{{ .Get "id" }}-cb">
 <label for="{{ .Get "id" }}-cb">{{ .Get "label" }}</label>
 

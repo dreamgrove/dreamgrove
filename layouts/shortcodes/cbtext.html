@@ -1,3 +1,15 @@
-<div id="{{ .Get "id" }}-cb" style="display: none;">
-    {{ .Page.RenderString .Inner | safeHTML }}
-</div>
+{{/*
+markdown rendered output that is shown/hidden based on the checkbox with the same ID
+example:
+
+{{< cbtext id="AC">}}
+    - random text here
+{{< /cbtext>}}
+
+*/}}
+
+{{ if strings.HasPrefix (strings.TrimSpace .Inner) "-" }}
+    <li id="{{ .Get "id" }}-cb" style="display: none;">{{ strings.TrimPrefix (strings.TrimSpace .Inner) "-" | safeHTML }}</li>
+{{ else }}
+    <div id="{{ .Get "id" }}-cb" style="display: none;">{{ .Inner | safeHTML }}</div>
+{{ end }}
