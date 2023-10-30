@@ -1,3 +1,9 @@
-<div id="{{ .Get "id" }}-cb" style="display: none;">
-    {{ .Page.RenderString .Inner | safeHTML }}
-</div>
+{{ $content := .Inner | $.Page.RenderString | safeHTML }}
+
+{{ if strings.HasPrefix (strings.TrimSpace $content) "<ul>" }}
+    <ul id="{{ .Get "id" }}-cb" style="display: none;">{{ $content }}</ul>
+{{ else if strings.HasPrefix (strings.TrimSpace $content) "<li>" }}
+    <li id="{{ .Get "id" }}-cb" style="display: none;">{{ $content }}</li>
+{{ else }}
+    <div id="{{ .Get "id" }}-cb" style="display: none;">{{ $content }}</div>
+{{ end }}

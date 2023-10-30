@@ -613,6 +613,6 @@ For the past few expansions, cancelling your Starlord aura has been something th
 {{< cbtext id="AC" >}}
 - random text here
 {{< /cbtext >}}
-- test1
+- test2
 - and some more text
 - and some more text
