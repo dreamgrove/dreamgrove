@@ -608,9 +608,6 @@ For the past few expansions, cancelling your Starlord aura has been something th
 
 
 {{< checkbox id="AC" label="Astral Communion" >}}
-{{< checkbox id="pulsar">}}
-    {{< spell 393961 "Pulsar">}}
-{{< /checkbox>}}
 
 - text here
 {{< cbtext id="AC" >}}
@@ -618,7 +615,4 @@ For the past few expansions, cancelling your Starlord aura has been something th
 {{< /cbtext >}}
 - and some more text
 - and some more text
-{{< cbtext id="pulsar" >}}
-- pulsar text
-{{< /cbtext >}}
 - and some more text
