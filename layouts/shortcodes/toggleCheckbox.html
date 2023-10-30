@@ -1,10 +1,10 @@
-<input type="checkbox" id="toggleCheckbox{{ .Ordinal }}" checked>
-<label for="toggleCheckbox{{ .Ordinal }}">Toggle text</label>
+<input type="checkbox" id="toggleCheckbox{{ .Get " id" }}" data-id="{{ .Get " id" }}" checked>
+<label for="toggleCheckbox{{ .Get " id" }}">{{ .Get "label" }}</label>
 
 <script>
-    const checkbox{{ .Ordinal }} = document.getElementById('toggleCheckbox{{ .Ordinal }}');
-    checkbox{ { .Ordinal } }.addEventListener('change', function () {
-        const toggleableText = document.getElementById('toggleText{{ .Ordinal }}');
+    const checkbox = document.querySelector('[data-id="{{ .Get "id" }}"]');
+    checkbox.addEventListener('change', function () {
+        const toggleableText = document.getElementById('toggleText' + this.getAttribute('data-id'));
         if (this.checked) {
             toggleableText.style.display = 'block';
         } else {
