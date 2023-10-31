@@ -1,9 +1,28 @@
 {{ if eq (.Get "type") "list" }}
-<li id="{{ .Get "id" }}-cb" style="display: none;" class="custom-marker">
-    {{ .Page.RenderString .Inner | safeHTML }}
-</li>
+    <span id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
+        {{ .Inner | safeHTML }}
+    </span>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const liItems = document.querySelectorAll('.cbtext-list-item');
+
+            liItems.forEach(item => {
+                // Check if the parent is a <ul>
+                let parent = item.parentElement;
+                if (parent && parent.tagName.toLowerCase() === 'ul') {
+                    // Move the <li> out of the <ul> and place it just before the <ul>
+                    parent.parentNode.insertBefore(item, parent);
+
+                    // If the <ul> is empty, remove it
+                    if (!parent.hasChildNodes()) {
+                        parent.remove();
+                    }
+                }
+            });
+        });
+    </script>
 {{ else }}
-<div id="{{ .Get "id" }}-cb" style="display: none;">
-    {{ .Page.RenderString .Inner | safeHTML }}
-</div>
+    <div id="{{ .Get "id" }}-cb" style="display: none;">
+        {{ .Inner | safeHTML }}
+    </div>
 {{ end }}
