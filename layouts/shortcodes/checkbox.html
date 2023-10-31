@@ -1,5 +1,12 @@
 <input type="checkbox" data-id="{{ .Get "id" }}-cb">
-<label for="{{ .Get "id" }}-cb">{{ .Inner | safeHTML }}</label>
+<label for="{{ .Get "id" }}-cb">
+    {{ if .Get "spell" }}
+        <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}" onclick="return false;">{{ .Inner | safeHTML }}</a>
+    {{ else }}
+        {{ .Inner | safeHTML }}
+    {{ end }}
+</label>
+
 
 <script>
     const checkbox = document.querySelector('[data-id="{{ .Get "id" }}-cb"]');
