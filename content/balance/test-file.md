@@ -42,13 +42,21 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
     - and some more text
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const liItems = document.querySelectorAll('.cbtext-list-item');
-        liItems.forEach(item => {
-            let innerUl = item.querySelector('ul');
-            if (innerUl) {
-                innerUl.outerHTML = innerUl.innerHTML;
+document.addEventListener('DOMContentLoaded', function() {
+    const liItems = document.querySelectorAll('.cbtext-list-item');
+    liItems.forEach(item => {
+        let innerUl = item.querySelector('ul');
+        if (innerUl) {
+            // Clone child nodes of innerUl and append them to the parent of innerUl
+            let fragment = document.createDocumentFragment();
+            while (innerUl.firstChild) {
+                fragment.appendChild(innerUl.firstChild);
             }
-        });
+            innerUl.parentNode.insertBefore(fragment, innerUl);
+
+            // Remove innerUl
+            innerUl.remove();
+        }
     });
+});
 </script>
