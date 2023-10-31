@@ -20,7 +20,7 @@
 
     function toggleCheckbox(event, checkboxId) {
         event.preventDefault();
-        const checkbox = document.querySelector(`[data-id="${checkboxId}-cb"]`);
+        const checkbox = document.querySelector(`[data-id="${checkboxId}"]`);
         checkbox.checked = !checkbox.checked;
         checkbox.dispatchEvent(new Event('change'));
     }
