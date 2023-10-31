@@ -1,9 +1,9 @@
 <input type="checkbox" data-id="{{ .Get "id" }}-cb">
 <label for="{{ .Get "id" }}-cb" class="non-selectable">
     {{ if .Get "spell" }}
-        <a class="tooltip spell-tooltips" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Inner | safeHTML }}</a>
+        <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Inner | safeHTML }}</a>
     {{ else }}
-        <a class="tooltip spell-tooltips" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Inner | safeHTML }}</a>
+        <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Inner | safeHTML }}</a>
     {{ end }}
 </label>
 
