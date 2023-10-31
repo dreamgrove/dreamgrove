@@ -1,6 +1,6 @@
 {{ if eq (.Get "type") "list" }}
     <li id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
-        {{ .Inner | safeHTML }}
+        {{ .Page.RenderString .Inner | safeHTML }}
     </li>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
