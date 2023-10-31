@@ -1,6 +1,6 @@
 {{ if eq (.Get "type") "list" }}
-<li id="{{ .Get "id" }}-cb" style="display: none;">
-    {{ .Page.RenderString .Inner | safeHTML }}
+<li id="{{ .Get "id" }}-cb" style="display: none;" class="custom-marker">
+    {{ .Inner | safeHTML }}
 </li>
 {{ else }}
 <div id="{{ .Get "id" }}-cb" style="display: none;">
