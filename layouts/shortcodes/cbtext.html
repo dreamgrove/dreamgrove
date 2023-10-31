@@ -1,3 +1,9 @@
-<span id="{{ .Get "id" }}-cb" style="display: none;">
+{{ if eq (.Get "type") "list" }}
+<li id="{{ .Get " id" }}-cb" style="display: none;">
     {{ .Page.RenderString .Inner | safeHTML }}
-</span>
+</li>
+{{ else }}
+<div id="{{ .Get " id" }}-cb" style="display: none;">
+    {{ .Page.RenderString .Inner | safeHTML }}
+</div>
+{{ end }}
