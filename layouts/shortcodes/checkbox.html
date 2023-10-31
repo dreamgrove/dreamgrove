@@ -1,12 +1,11 @@
 <input type="checkbox" data-id="{{ .Get "id" }}-cb">
 <label for="{{ .Get "id" }}-cb">
     {{ if .Get "spell" }}
-        <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}" onclick="return false;">{{ .Get "label" }}</a>
+        <a href="#" class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Get "label" }}</a>
     {{ else }}
         {{ .Inner | safeHTML }}
     {{ end }}
 </label>
-
 
 <script>
     const checkbox = document.querySelector('[data-id="{{ .Get "id" }}-cb"]');
@@ -18,4 +17,11 @@
             toggleText.style.display = 'none';
         }
     });
+
+    function toggleCheckbox(event, checkboxId) {
+        event.preventDefault();
+        const checkbox = document.getElementById(checkboxId);
+        checkbox.checked = !checkbox.checked;
+        checkbox.dispatchEvent(new Event('change'));
+    }
 </script>
