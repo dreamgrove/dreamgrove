@@ -3,7 +3,7 @@
     {{ if .Get "spell" }}
         <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Get "label" }}</a>
     {{ else }}
-        {{ .Get "label" }}
+        {{ .Inner | safeHTML }}
     {{ end }}
 </label>
 
