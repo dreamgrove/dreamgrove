@@ -5,15 +5,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const liItems = document.querySelectorAll('.cbtext-list-item');
-
             liItems.forEach(item => {
-                // Check if the parent is a <ul>
                 let parent = item.parentElement;
                 if (parent && parent.tagName.toLowerCase() === 'ul') {
-                    // Move the <li> out of the <ul> and place it just before the <ul>
-                    //parent.parentNode.insertBefore(item, parent);
-
-                    // If the <ul> is empty, remove it
+                    parent.parentNode.insertBefore(item, parent);
                     if (!parent.hasChildNodes()) {
                         parent.remove();
                     }
