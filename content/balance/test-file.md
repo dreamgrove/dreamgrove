@@ -27,10 +27,8 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 
 
-{{< checkbox id="AC" spell=202425 label="Warrior of Elune" >}}
-{{< /checkbox >}}
-
-{{< checkbox id="CD" label="Starfire" >}}
+{{< checkbox id="AC" spell=202425 label="Warrior of Elune" >}}{{< /checkbox >}}
+{{< checkbox id="CD" label="Starfire" >}}{{< /checkbox >}}
 - text here
 {{< cbtext id="AC" >}}
 - random text here
