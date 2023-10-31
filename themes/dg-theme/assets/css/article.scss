@@ -226,13 +226,3 @@ a.tooltip {
     line-height: 100%;
   }
 }
-
-.custom-marker::marker {
-    content: "\2022";
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0px !important;
-    text-align: start !important;
-    text-align-last: start !important;
-}

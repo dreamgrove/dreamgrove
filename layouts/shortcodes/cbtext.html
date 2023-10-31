@@ -1,7 +1,7 @@
 {{ if eq (.Get "type") "list" }}
-    <span id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
+    <li id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
         {{ .Inner | safeHTML }}
-    </span>
+    </li>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const liItems = document.querySelectorAll('.cbtext-list-item');
