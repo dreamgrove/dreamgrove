@@ -602,17 +602,3 @@ For the past few expansions, cancelling your Starlord aura has been something th
 [Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancel_starlord_1T_10.1.html)
 
 [Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
- 
-<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
-<script src="https://wow.zamimg.com/js/tooltips.js"></script>
-
-
-{{< checkbox id="AC" label="Astral Communion" >}}
-
-- text here
-{{< cbtext id="AC" >}}
-- random text here
-{{< /cbtext >}}
-- test2
-- and some more text
-- and some more text
