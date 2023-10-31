@@ -2,20 +2,6 @@
     <li id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </li>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const liItems = document.querySelectorAll('.cbtext-list-item');
-            liItems.forEach(item => {
-                let parent = item.parentElement;
-                if (parent && parent.tagName.toLowerCase() === 'ul') {
-                    parent.parentNode.insertBefore(item, parent);
-                    if (!parent.hasChildNodes()) {
-                        parent.remove();
-                    }
-                }
-            });
-        });
-    </script>
 {{ else }}
     <div id="{{ .Get "id" }}-cb" style="display: none;">
         {{ .Inner | safeHTML }}
