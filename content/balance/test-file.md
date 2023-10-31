@@ -31,7 +31,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 <br>{{< checkbox id="CD" >}}Starfire{{< /checkbox >}}
 - text here
 {{< cbtext id="AC" type="list" >}}
-- random text here
+random text here
 {{< /cbtext >}}
 - test2
 - and some more text1
