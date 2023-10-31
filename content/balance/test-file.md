@@ -30,7 +30,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 {{< checkbox id="AC" spell=202425 >}}Warrior of Elune{{< /checkbox >}}
 <br>{{< checkbox id="CD" >}}Starfire{{< /checkbox >}}
 - text here
-{{< cbtext id="AC" type="list">}}
+{{< cbtext id="AC" type="list" >}}
 - random text here
 {{< /cbtext >}}
 - test2
