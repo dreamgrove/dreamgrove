@@ -207,7 +207,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
  </div>
 
- With the change to [Nature's Grace](https://www.wowhead.com/spell=393958/natures-grace) there is no longer any benefit to first enter eclipse before you use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} but rather if possible try to time it with exiting an eclipse.
+ With the change to {{< spell 393958 "Nature's Grace" >}} there is no longer any benefit to first enter eclipse before you use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} but rather if possible try to time it with exiting an eclipse.
  
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
