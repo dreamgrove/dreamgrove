@@ -231,8 +231,9 @@ a.tooltip {
 }
 
 @media screen and (max-width: 700px) {
-    input[type="checkbox"] {
-            width: 1.5rem;
-            height: 1.5rem;
+    .non-selectable {
+            width: 2rem;
+            height: 2rem;
+            font-size: 2rem;
     }
 }
