@@ -1,7 +1,7 @@
 {{ if eq (.Get "type") "list" }}
-    <div id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
+    <li id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
-    </div>
+    </li>
 {{ else }}
     <div id="{{ .Get "id" }}-cb" style="display: none;">
         {{ .Inner | safeHTML }}
