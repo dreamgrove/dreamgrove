@@ -45,9 +45,9 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
     document.addEventListener('DOMContentLoaded', function () {
         const liItems = document.querySelectorAll('.cbtext-list-item');
         liItems.forEach(item => {
-            let parent = item.parentElement;
-            if (parent && parent.tagName.toLowerCase() === 'ul') {
-                parent.outerHTML = parent.innerHTML;
+            let innerUl = item.querySelector('ul');
+            if (innerUl) {
+                innerUl.outerHTML = innerUl.innerHTML;
             }
         });
     });
