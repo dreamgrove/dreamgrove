@@ -4,7 +4,7 @@ Determines the rendering method based on the content type.
 
 {{ if eq (.Get "type") "appendListItem" }}
 <!-- Add a list item to an existing list -->
-    <div id="{{ .Get "id" }}{{ $uniqueID }}" class="cbtext-list-item" style="display: none;">
+    <div id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
 {{ else if eq (.Get "type") "addList" }}
@@ -22,8 +22,3 @@ Determines the rendering method based on the content type.
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
 {{ end }}
-<!-- Renders any other content that isn't a list
-        <div id="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Inner | markdownify }}
-    </div>
--->   
