@@ -5,17 +5,17 @@ Determines the rendering method based on the content type.
 {{ if eq (.Get "type") "appendListItem" }}
 <!-- Add a list item to an existing list -->
     <div id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
-        {{ .Page.RenderString .Inner | safeHTML }}
+        {{ .Page.RenderString .Inner | markdownify }}
     </div>
 {{ else if eq (.Get "type") "addList" }}
 <!-- Create a new list or sub-list -->
     <div id="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Page.RenderString .Inner | safeHTML }}
+        {{ .Page.RenderString .Inner | markdownify }}
     </div>
 {{ else if eq (.Get "type") "appendToList" }}
     <!-- Add a list item after a sublist -->
     <div id="{{ .Get "id" }}-cb" class="cbtext-append-to-list" style="display: none;">
-        {{ .Page.RenderString .Inner | safeHTML }}
+        {{ .Page.RenderString .Inner | markdownify }}
     </div>
 {{ else }}
     <div id="{{ .Get "id" }}-cb" style="display: none;">
