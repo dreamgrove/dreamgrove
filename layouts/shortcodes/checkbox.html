@@ -5,6 +5,6 @@
         onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Inner | safeHTML }}</a>
     {{ else }}
     <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');"></a>
-        {{ .Page.RenderString .Inner | safeHTML }}
+        {{ .Inner | safeHTML }}
     {{ end }}
 </label>
