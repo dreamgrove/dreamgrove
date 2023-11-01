@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
         innerUl.remove();
     });
     // Adjust placement for items with the class '.cbtext-append-to-list'.
-    document.querySelectorAll('.cbtext-append-to-list').forEach(appendLi => {
+    const appendListItems = [...document.querySelectorAll('.cbtext-append-to-list')].reverse();
+    appendListItems.forEach(appendLi => {
         // Check if there's an inner <ul> within the list item.
         const innerUl = appendLi.querySelector('ul');
         if (innerUl) {
