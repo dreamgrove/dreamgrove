@@ -322,7 +322,7 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 </div>
 
 
-[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
+{{< item 191383 "Elemental Potion of Ultimate Power" >}} [Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
 
 
 <div id="food">
