@@ -51,7 +51,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 {{< cbtext id="CY" type="appendToList">}}
 - CY
 {{< /cbtext >}}
-{{< cbtext id="CK" type="addList">}}
+{{< cbtext id="CK" type="appendToList">}}
 - CD here
 - or here
 - maybe here
