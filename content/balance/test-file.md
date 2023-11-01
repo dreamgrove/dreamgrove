@@ -27,28 +27,31 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 
 
-{{< checkbox id="AC" >}}[Frenzied Regeneration](https://www.wowhead.com/spell=22842/frenzied-regeneration){{< /checkbox >}}
+{{< checkbox id="AC" spell=202425 >}}Warrior of Elune{{< /checkbox >}}
 <br>{{< checkbox id="CD" spell=194153 >}}Starfire{{< /checkbox >}}
 <br>{{< checkbox id="CX" >}}star{{< /checkbox >}}
-<br>{{< checkbox id="CY" >}}star{{< /checkbox >}}
+<br>{{< checkbox id="CY" >}}star2{{< /checkbox >}}
+
 - text here
-{{< cbtext id="AC" type="list" >}}
+{{< cbtext id="AC" type="appendListItem" >}}
 - AC
 {{< /cbtext >}}
 - test2
 - and some more text1
 - and some more text
-{{< cbtext id="CD" type="sublist">}}
+{{< cbtext id="CD" type="addList">}}
 - CD here
 {{< /cbtext >}}
     - and some more text
     - more text
-{{< cbtext id="CX" type="inlinesublist">}}
+{{< cbtext id="CX" type="appendToList">}}
 - CX
 {{< /cbtext >}}
 {{< cbtext id="CY" type="list">}}
 - CY
 {{< /cbtext >}}
+
+
 
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>

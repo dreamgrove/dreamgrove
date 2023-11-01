@@ -1,16 +1,24 @@
-{{ if eq (.Get "type") "list" }}
+{{/*
+Determines the rendering method based on the content type.
+*/}}
+
+{{ if eq (.Get "type") "appendListItem" }}
+<!-- Add a list item to an existing list -->
     <div id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
-{{ else if eq (.Get "type") "sublist" }}
+{{ else if eq (.Get "type") "addList" }}
+<!-- Create a new list or sub-list -->
     <div id="{{ .Get "id" }}-cb" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
-{{ else if eq (.Get "type") "inlinesublist" }}
-    <div id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
+{{ else if eq (.Get "type") "appendToList" }}
+    <!-- Add a list item after a sublist -->
+    <div id="{{ .Get "id" }}-cb" class="cbtext-append-to-list" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
 {{ else }}
+<!-- Renders any other content that isn't a list -->
     <div id="{{ .Get "id" }}-cb" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>

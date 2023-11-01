@@ -40,4 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove the now-empty inner <ul>.
         innerUl.remove();
     });
+    // Adjust placement for items with the class '.cbtext-append-to-list'
+    // move these items to be direct children of the main list
+    document.querySelectorAll('.cbtext-append-to-list').forEach(appendLi => {
+        const parentList = appendLi.closest('ul');  // find the immediate parent list
+        if (parentList) {
+            // Insert the list item right after the parent list.
+            parentList.after(appendLi);
+        }
+    });
 });
