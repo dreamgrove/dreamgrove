@@ -7,7 +7,7 @@
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
 {{ else if eq (.Get "type") "inlinesublist" }}
-    <div id="{{ .Get " id" }}-cb" class="cbtext-list-item" style="display: none;">
+    <div id="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
         {{ .Page.RenderString .Inner | safeHTML }}
     </div>
 {{ else }}
