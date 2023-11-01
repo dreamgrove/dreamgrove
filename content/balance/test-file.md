@@ -50,5 +50,5 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - CY
 {{< /cbtext >}}
 
-<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
