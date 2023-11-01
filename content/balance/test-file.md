@@ -27,35 +27,35 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 
 
-{{< checkbox id="AC" spell=202425 >}}Warrior of Elune{{< /checkbox >}}
-<br>{{< checkbox id="CD" spell=194153 >}}Starfire{{< /checkbox >}}
-<br>{{< checkbox id="CX" >}}star{{< /checkbox >}}
-<br>{{< checkbox id="CZ" >}}star4{{< /checkbox >}}
-<br>{{< checkbox id="CK" >}}star3{{< /checkbox >}}
-<br>{{< checkbox id="CV" >}}star4{{< /checkbox >}}
+{{< checkbox id="CA" spell=202425 >}}Warrior of Elune{{< /checkbox >}}
+<br>{{< checkbox id="CB" spell=194153 >}}Starfire{{< /checkbox >}}
+<br>{{< checkbox id="CC" >}}star{{< /checkbox >}}
+<br>{{< checkbox id="CD" >}}star4{{< /checkbox >}}
+<br>{{< checkbox id="CE" >}}star3{{< /checkbox >}}
+<br>{{< checkbox id="CF" >}}star4{{< /checkbox >}}
 
 - text here
-{{< cbtext id="AC" type="appendListItem" >}}
-- AC
+{{< cbtext id="CA" type="appendListItem" >}}
+- CA
 {{< /cbtext >}}
 - test2
 - and some more text1
 - and some more text
-{{< cbtext id="CD" type="addList">}}
-- CD here
+{{< cbtext id="CB" type="addList">}}
+- CB
 {{< /cbtext >}}
     - and some more text
     - more text
-{{< cbtext id="CZ" type="appendListItem">}}
-- CX
+{{< cbtext id="CC" type="appendListItem">}}
+- CC
 {{< /cbtext >}}
-{{< cbtext id="CX" type="appendToList">}}
-- CY
+{{< cbtext id="CD" type="appendToList">}}
+- CD
 {{< /cbtext >}}
-{{< cbtext id="CK" type="appendToList">}}
-- CD here
-- or here
-- maybe here
+{{< cbtext id="CE" type="appendToList">}}
+- CE 
+- CE 
+- CE 
 {{< /cbtext >}}
 
 

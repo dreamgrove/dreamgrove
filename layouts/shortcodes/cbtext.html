@@ -19,10 +19,11 @@ Determines the rendering method based on the content type.
     </div>
 {{ else }}
     <div id="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Inner | markdownify }}
+        {{ .Page.RenderString .Inner | safeHTML }}
     </div>
 {{ end }}
 <!-- Renders any other content that isn't a list
-    <div id="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Page.RenderString .Inner | safeHTML }}
-    </div>-->   
+        <div id="{{ .Get "id" }}-cb" style="display: none;">
+        {{ .Inner | markdownify }}
+    </div>
+-->   
