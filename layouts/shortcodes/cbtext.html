@@ -19,6 +19,6 @@ Determines the rendering method based on the content type.
     </div>
 {{ else }}
     <div id="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Page.RenderString .Inner | safeHTML }}
+        {{ .Page.RenderString .Inner | markdownify }}
     </div>
 {{ end }}
