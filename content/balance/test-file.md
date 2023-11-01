@@ -57,7 +57,9 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - CE 
 - CE 
 {{< /cbtext >}}
-
+{{% cbtext id="CF" %}}
+- CF
+{{% cbtext %}}
 
 
 
