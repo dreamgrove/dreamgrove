@@ -57,9 +57,6 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - or here
 - maybe here
 {{< /cbtext >}}
-{{% cbtext id="CV" %}}
-- CV
-{{% /cbtext %}}
 
 
 
