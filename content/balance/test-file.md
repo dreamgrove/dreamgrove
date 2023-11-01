@@ -28,7 +28,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 
 
 {{< checkbox id="AC" >}}[Frenzied Regeneration](https://www.wowhead.com/spell=22842/frenzied-regeneration){{< /checkbox >}}
-<br>{{< checkbox id="CD" >}}Starfire{{< /checkbox >}}
+<br>{{< checkbox id="CD" spell=194153 >}}Starfire{{< /checkbox >}}
 <br>{{< checkbox id="CX" >}}star{{< /checkbox >}}
 <br>{{< checkbox id="CY" >}}star{{< /checkbox >}}
 - text here
