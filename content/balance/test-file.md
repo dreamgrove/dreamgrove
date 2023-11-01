@@ -30,7 +30,6 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 {{< checkbox id="AC" spell=202425 >}}Warrior of Elune{{< /checkbox >}}
 <br>{{< checkbox id="CD" spell=194153 >}}Starfire{{< /checkbox >}}
 <br>{{< checkbox id="CX" >}}star{{< /checkbox >}}
-<br>{{< checkbox id="CY" >}}star2{{< /checkbox >}}
 <br>{{< checkbox id="CK" >}}star3{{< /checkbox >}}
 
 - text here
@@ -48,7 +47,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 {{< cbtext id="CX" type="appendListItem">}}
 - CX
 {{< /cbtext >}}
-{{< cbtext id="CY" type="appendToList">}}
+{{< cbtext id="CX" type="appendToList">}}
 - CY
 {{< /cbtext >}}
 {{< cbtext id="CK" type="appendToList">}}
