@@ -42,6 +42,6 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 {{< /cbtext >}}
     - and some more text
     - more text
-{{< cbtext id="CX" type="sublist">}}
+{{< cbtext id="CX" type="inlinesublist">}}
 - random text here
 {{< /cbtext >}}
