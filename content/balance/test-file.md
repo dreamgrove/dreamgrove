@@ -29,6 +29,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 
 {{< checkbox id="AC" spell=202425 >}}Warrior of Elune{{< /checkbox >}}
 <br>{{< checkbox id="CD" >}}Starfire{{< /checkbox >}}
+<br>{{< checkbox id="CX" >}}star{{< /checkbox >}}
 - text here
 {{< cbtext id="AC" type="list" >}}
 - random text here
@@ -40,23 +41,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - random text here
 {{< /cbtext >}}
     - and some more text
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const liItems = document.querySelectorAll('.cbtext-list-item');
-    liItems.forEach(item => {
-        let innerUl = item.querySelector('ul');
-        if (innerUl) {
-            // Clone child nodes of innerUl and append them to the parent of innerUl
-            let fragment = document.createDocumentFragment();
-            while (innerUl.firstChild) {
-                fragment.appendChild(innerUl.firstChild);
-            }
-            innerUl.parentNode.insertBefore(fragment, innerUl);
-
-            // Remove innerUl
-            innerUl.remove();
-        }
-    });
-});
-</script>
+    - more text
+{{< cbtext id="CX" type="sublist">}}
+- random text here
+{{< /cbtext >}}
