@@ -31,6 +31,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 <br>{{< checkbox id="CD" spell=194153 >}}Starfire{{< /checkbox >}}
 <br>{{< checkbox id="CX" >}}star{{< /checkbox >}}
 <br>{{< checkbox id="CK" >}}star3{{< /checkbox >}}
+<br>{{< checkbox id="CV" >}}star4{{< /checkbox >}}
 
 - text here
 {{< cbtext id="AC" type="appendListItem" >}}
@@ -55,6 +56,12 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - or here
 - maybe here
 {{< /cbtext >}}
+{{% cbtext id="CV" %}}
+- CV
+{{% /cbtext %}}
+
+
+
 
 
 
