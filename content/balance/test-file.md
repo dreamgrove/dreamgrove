@@ -22,10 +22,10 @@ showInRecent: false
 Looks to be a ~5.1% increase from having no tier
 If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast
 
-
+{{< cbtext id="CH" >}}
 - Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse is about to end and you will enter Solar Eclipse next.
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
-
+{{< /cbtext >}}
 
 {{< checkbox id="CA" spell=202425 >}}CA{{< /checkbox >}}
 <br>{{< checkbox id="CB" spell=194153 >}}CB{{< /checkbox >}}
@@ -33,6 +33,10 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 <br>{{< checkbox id="CD" >}}CD{{< /checkbox >}}
 <br>{{< checkbox id="CE" >}}CE{{< /checkbox >}}
 <br>{{< checkbox id="CF" >}}CF{{< /checkbox >}}
+<br>{{< checkbox id="CG" >}}CG{{< /checkbox >}}
+<br>{{< checkbox id="CH" >}}CH{{< /checkbox >}}
+
+
 
 - text here
 {{< cbtext id="CA" type="appendListItem" >}}
@@ -49,7 +53,7 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 {{< cbtext id="CC" type="appendListItem">}}
 - CC
 {{< /cbtext >}}
-{{< cbtext id="CD" type="appendToList">}}
+{{< cbtext id="CC" type="appendToList">}}
 - CD
 {{< /cbtext >}}
 {{< cbtext id="CE" type="appendToList">}}
@@ -57,9 +61,11 @@ If the buff is up when entering combat your first wrath/starfire will be affecte
 - CE 
 - CE 
 {{< /cbtext >}}
-{{< cbtext id="CF" >}}
+{{< cbtext id="CF" type="appendListItem">}}
 - CF
 {{< /cbtext >}}
+
+{{< cbtext id="CG"  >}}here's some new text {{< /cbtext >}}
 
 
 

@@ -122,31 +122,42 @@ When reading the priority lists below, you should not think about these as steps
 
 **Single Target priority list:**
 
+{{< checkbox id="Stellar Flare" spell=202347 >}}Stellar Flare{{< /checkbox >}}
+<br>{{< checkbox id="Warrior of Elune" spell=202425 checked=true radio="Warrior of Elune" >}}Warrior of Elune{{< /checkbox >}}
+<br>{{< checkbox id="Starweaver" spell=393940 >}}Starweaver{{< /checkbox >}}
+<br>{{< checkbox id="Convoke the Spirits" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}
+<br>{{< checkbox id="Astral Communion" spell=400636 >}}Astral Communion{{< /checkbox >}}
+<br>{{< checkbox id="Force of Nature" spell=205636 radio="Warrior of Elune" >}}Force of Nature{{< /checkbox >}}
+<br>{{< checkbox id="Fury of Elune" spell=202770 radio="New Moon">}}Fury of Elune{{< /checkbox >}}
+<br>{{< checkbox id="New Moon" spell=274281 checked=true radio="New Moon">}}New Moon{{< /checkbox >}}
+<br>{{< checkbox id="Wild Mushroom" spell=88747 >}}Wild Mushroom{{< /checkbox >}}
+
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
-- Keep up {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}} and {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) inside Eclipse and if they would expire otherwise outside Eclipse.
+- Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration).
+{{<cbtext id="Stellar Flare" type="appendListItem">}}- Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) if you if you will not overcap on AP.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are met:
     - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
     - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
-- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse is about to end and you will enter Solar Eclipse next.
+{{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse is about to end and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
-- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
+{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.{{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.
-- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
-- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
-- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
-- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.
+{{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.{{</cbtext>}}
+{{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
+{{<cbtext id="Force of Nature" type="appendListItem">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
+{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
+{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks and if talented you can optimally refresh the {{< spell 393954 "Rattle the Stars" >}} buff.
-- Use {{< spell 274281 "New -" >}}{{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
-  - You will not overcap on AP.
+{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New -" >}}{{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
+{{<cbtext id="New Moon" type="addList">}}  - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. 
+  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
 - Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met: 
     - You would overcap AP with the next cast.
-    - You have a {{< spell 393944 "Starweaver's Weft" >}} proc.
+    {{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
-- Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.
+{{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
 <div id="aoe">
@@ -157,33 +168,43 @@ When reading the priority lists below, you should not think about these as steps
 
 **AoE priority list(2+ targets):**
 
+{{< checkbox id="Stellar Flare-AoE" spell=202347 >}}Stellar Flare{{< /checkbox >}}
+<br>{{< checkbox id="Warrior of Elune-AoE" spell=202425 radio="Force of Nature" >}}Warrior of Elune{{< /checkbox >}}
+<br>{{< checkbox id="Starweaver-AoE" spell=393940 >}}Starweaver{{< /checkbox >}}
+<br>{{< checkbox id="Convoke the Spirits-AoE" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}
+<br>{{< checkbox id="Astral Communion-AoE" spell=400636 >}}Astral Communion{{< /checkbox >}}
+<br>{{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}
+<br>{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}
+<br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
+<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 >}}Wild Mushroom{{< /checkbox >}}
+
 **Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
 - Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 202425 "Warrior of Elune" >}} if available.
+{{<cbtext id="Warrior of Elune-AoE" type="appendListItem">}}- Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
-- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP
+{{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP{{</cbtext>}}
 - Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}}, avoid using it if the debuff is already up.
-- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.
+{{<cbtext id="Wild Mushroom-AoE" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}}, avoid using it if the debuff is already up.{{</cbtext>}}
+{{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
-    - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
+{{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
-- Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. 
-- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.
-- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
-- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.
-- Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.
-- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.
-- Use {{< spell 202768 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.
-- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.
-- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.
+{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
+    - You will not overcap on AP.
+    - You can finish the cast before your current eclipse ends.
+    - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
+{{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.{{</cbtext>}}
+{{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
+{{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
+{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
+{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202768 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.{{</cbtext>}}
+{{<cbtext id="Force of Nature-AoE" type="appendToList">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
+{{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} if any of the below conditions are true:
    - You are in Lunar Eclipse.
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
@@ -322,7 +343,8 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 </div>
 
 
-[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
+[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power)
+<br> Use this for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
 
 
 <div id="food">
@@ -332,7 +354,8 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 </div>
 
 
-[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak), or [Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs) giving the same buff with a cheaper individual price.
+[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Mainstat buff
+<br>[Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
 
 
 <div id="phials">
@@ -341,7 +364,7 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 
 </div>
 
-**ST**
+**ST & AoE**
 
 Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
@@ -349,12 +372,8 @@ Damage wise, with 100% uptime on all of the Phials and not counting in the downs
 - [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment): Has ~92% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation): Has ~90% of the value of Corrupting Rage Phial at 100% uptime.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Has the same value as Corrupting Rage at 60% uptime. 
-- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Same as the Elemental one, only that vers is more often better during progress than the random stats because of the DR it provides.
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Equal to Elemental Chaos, vers is more often better during progress than the random stats because of the DR it provides.
 - [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury): This Phial should never be used.
-
-**AoE**:
-
-The priority is the same as it is on ST.
 
 
 <div id="runes">
@@ -362,9 +381,11 @@ The priority is the same as it is on ST.
 ## [Runes](#Runes)
 
 </div>
+Generally as follows, sim your character for the most accurate answer.
 
-Generally, you will want to use either [Howling Rune](https://www.wowhead.com/item=194820/howling-rune) or [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune), sim your character for the most accurate answer.
-
+[Howling Rune](https://www.wowhead.com/item=194820/howling-rune)
+<br>[Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune)
+<br>[Buzzing Rune](https://www.wowhead.com/item=194823/buzzing-rune)
 
 <div id="gearing">
 
@@ -388,12 +409,13 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 </div>
 
 
-Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) or [Wafting Devotion](https://www.wowhead.com/beta/item=200058/enchant-weapon-wafting-devotion) sim between these two, it depends how much haste you have.
+Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6)/[Wafting Devotion](https://www.wowhead.com/beta/item=200058/enchant-weapon-wafting-devotion)
+<br>sim between these two, it'll depend on how much haste you have.
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
 <br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) Avoidance + Reduced fall damage
 <br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
 <br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
-<br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) Stamina
+<br>Boots - [Watchers Loam](https://www.wowhead.com/item=200020/enchant-boots-watchers-loam) Stamina
 <br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
 
 

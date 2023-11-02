@@ -1,10 +1,17 @@
-<input type="checkbox" data-id="{{ .Get "id" }}-cb">
-<label for="{{ .Get "id" }}-cb" class="non-selectable">
-    {{ if .Get "spell" }}
-    <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ .Get "spell" }}"
-        onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">{{ .Inner | safeHTML }}</a>
+{{ $id := .Get "id" }}
+{{ $spell := .Get "spell" }}
+{{ $radio := .Get "radio" }}
+{{ $checked := isset .Params "checked" }}
+
+<input type="checkbox" data-id="{{ $id }}-cb" {{ if $checked }}checked{{ end }} {{ if $radio }}data-radio="{{ $radio }}-cb" {{ end }}>
+<label for="{{ $id }}-cb" class="non-selectable">
+    {{ if $spell }}
+        <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ $spell }}"
+            onclick="toggleCheckbox(event, '{{ $id }}-cb');">{{ .Inner | safeHTML }}
+        </a>
     {{ else }}
-    <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');"></a>
-        {{ .Inner | safeHTML }}
+        <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">
+            {{ .Inner | safeHTML }}
+        </a>
     {{ end }}
 </label>
