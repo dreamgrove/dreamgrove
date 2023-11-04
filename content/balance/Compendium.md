@@ -477,7 +477,6 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 - [Lady Waycrest's Music Box](https://www.wowhead.com/ptr-2/item=159631/lady-waycrests-music-box?bonus=4795&class=11&ilvl=489&spec=102)
 - [Corrupted Starlight](https://www.wowhead.com/ptr-2/item=137301/corrupted-starlight?bonus=4795&ilvl=489&spec=102)
 - [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4800:4786:1527&ilvl=496&spec=102)
-- [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
 - [Time-Thief's Gambit](https://www.wowhead.com/ptr-2/item=207579/time-thiefs-gambit?bonus=4795&class=11&ilvl=489&spec=102)
 - [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=102)
 - [Caged Horror](https://www.wowhead.com/ptr-2/item=136716/caged-horror?bonus=4795&ilvl=489&spec=102)
@@ -497,7 +496,6 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 - [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
 - [Lady Waycrest's Music Box](https://www.wowhead.com/ptr-2/item=159631/lady-waycrests-music-box?bonus=4795&class=11&ilvl=489&spec=102)
 - [Corrupted Starlight](https://www.wowhead.com/ptr-2/item=137301/corrupted-starlight?bonus=4795&ilvl=489&spec=102)
-- [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
 - [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=102)
 - [Caged Horror](https://www.wowhead.com/ptr-2/item=136716/caged-horror?bonus=4795&ilvl=489&spec=102)
 
