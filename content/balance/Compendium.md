@@ -96,7 +96,7 @@ Each part is independent and multiplies with each other.
 
 Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-druids/1666448/311
 
-<div id="rotation">
+<br><div id="rotation">
  
 # [2.Rotation:](#rotation)
 
@@ -119,7 +119,7 @@ You can precast from max range about 4 seconds before a boss is pulled.
 
 When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast if the conditions apply.
 
-<div id="st">
+<br><div id="st">
 
 ## [Single Target priority](#st)
 
@@ -330,7 +330,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 - All other talents in the druid tree are more or less set.
 
 
-<div id="consumables">
+<br><div id="consumables">
 
 # [4.Consumables:](#consumables)
 
@@ -390,7 +390,7 @@ Generally as follows, sim your character for the most accurate answer.
 <br>[Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune)
 <br>[Buzzing Rune](https://www.wowhead.com/item=194823/buzzing-rune)
 
-<div id="gearing">
+<br><div id="gearing">
 
 # [5.Gearing:](#gearing)
 
