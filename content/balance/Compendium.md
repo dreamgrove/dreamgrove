@@ -565,7 +565,7 @@ See the description of the WA for more details. This is not a required WA but wi
 
 ### **Cancelling Starlord**
 
-For the past few expansions, cancelling your Starlord aura has been something that has been deemed too insignificant to matter even for most min-maxing purposes. However, cancelling the Starlord aura at the proper time is now representing a minor but significant gain, which can be seen in the [sims section](#sims). Essentially, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
+For the past few expansions, cancelling your Starlord aura has been something that has been deemed too insignificant to matter even for most min-maxing purposes. However, cancelling the Starlord aura at the proper time is now representing a minor gain, which can be seen in the [sims section](#sims). Essentially, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
 
 ```
 #showtooltip
@@ -590,9 +590,10 @@ For the past few expansions, cancelling your Starlord aura has been something th
 <br>[Tierset 6T](https://www.dreamgrove.gg/balance/sims/tier_6T_10.2.html)
 
 [Prestacking Pulsar](https://www.dreamgrove.gg/balance/sims/prestack_pulsar_10.1.html)
+<br>[Proc Pulsar before Incarn on pull](https://www.dreamgrove.gg/balance/sims/proc_pulsar_1T_10.2.html)
 
-[Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_1T_10.2.html)
-[Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_6T_10.2.html)
+[Cancelling Starlord 1T](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_1T_10.2.html)
+<br>[Cancelling Starlord 6T](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_6T_10.2.html)
 
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
 
