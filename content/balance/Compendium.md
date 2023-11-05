@@ -74,6 +74,15 @@ Total DPS from set: ~13.7%
 
 Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/n2Jwn8za948QojyAqpWCKu
 
+### Mastery Update
+Mastery is now composed of 4 separate parts:
+- A passive effect that always applies to Arcane & Astral spells
+- A passive effect that always applies to Nature & Astral spells
+- A dynamic effect that applies to Arcane & Astral spells on targets debuffed by Moonfire
+- A dynamic effect that applies to Nature & Astral spells on targets debuffed by Sunfire
+
+Each part is independent and multiplies with each other.
+
 ### List of changes
 
 - Damage of all abilities increased by 2%.
@@ -511,7 +520,9 @@ No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93
 
 </div>
 
-Astral damage is both Arcane and Nature damage meaning that these spells benefit from effects that buff either spell school and get increased by both type of buffs multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
+Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also applies to Astral spells, and effects that buff Arcane spells likewise also applies to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipse, Astral spells get 1.15 * 1.15 = 2.25x multiplier, while Nature & Arcane spells get 1.15x.
+
+Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
 
 
 <br><div id="macros">
