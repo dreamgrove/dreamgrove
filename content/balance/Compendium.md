@@ -18,7 +18,6 @@ sidebarContents:  |
   <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
   <br>[Extending CA/Inc](#extend)
   <br>[How to Use Warrior of Elune](#woe)
-  <br>[How to use Wild Mushrooms and how they work](#mushroom)
   <br>[How to Prestack Pulsar and use it on pull](#prestack)
   <br>[How to use Owlkin Frenzy procs](#owlkin-frenzy)
  
@@ -119,7 +118,7 @@ When reading the priority lists below, you should not think about these as steps
 
 </div>
 
-**Single Target priority list:**
+**Select which talents you have talented to filter the priority list:**
 
 {{< checkbox id="Stellar Flare" spell=202347 >}}Stellar Flare{{< /checkbox >}}
 <br>{{< checkbox id="Warrior of Elune" spell=202425 checked=true radio="Warrior of Elune" >}}Warrior of Elune{{< /checkbox >}}
@@ -162,13 +161,14 @@ When reading the priority lists below, you should not think about these as steps
 {{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
-<div id="aoe">
+<br><div id="aoe">
 
 ## [AoE priority](#aoe)
 
 </div>
 
-**AoE priority list(2+ targets):**
+**Select which talents you have talented to filter the priority list:**
+
 
 {{< checkbox id="Stellar Flare-AoE" spell=202347 >}}Stellar Flare{{< /checkbox >}}
 <br>{{< checkbox id="Warrior of Elune-AoE" spell=202425 radio="Force of Nature" >}}Warrior of Elune{{< /checkbox >}}
@@ -180,7 +180,8 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
 <br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=true >}}Wild Mushroom{{< /checkbox >}}
 
-**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
+<br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
+<br>**AoE priority list(2+ targets):**
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the targets will live for 6 or more seconds and you will not overcap on AP.
 {{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:{{</cbtext>}}
@@ -226,7 +227,7 @@ When reading the priority lists below, you should not think about these as steps
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
 
 
-<div id="filler">
+<br><div id="filler">
 
 ## [Filler Priority Inside CA/Inc](#filler)
 
@@ -235,7 +236,7 @@ When reading the priority lists below, you should not think about these as steps
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
 
 
-<div id="eclipse">
+<br><div id="eclipse">
 
 ## [Eclipses and Fillers Outside CA/Inc](#eclipse)
  
@@ -246,7 +247,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
-<div id="ng">
+<br><div id="ng">
 
 ## [Extending CA/INC](#extend)
 
@@ -255,7 +256,7 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
 With the introduction of our {{< spell 422863 "4-piece" >}}, extending an eclipse is worth more than trying to min-max {{< spell 393958 "Nature's Grace" >}}, if possible you should always try to proc a pulsar inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 
 
-<div id="woe">
+<br><div id="woe">
 
 ## [How to Use Warrior of Elune](#woe)
  
@@ -271,21 +272,8 @@ If Warrior of Elune is falling off during CA/Inc and you still have a charge to 
 
 Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
 
- <div id="mushroom">
 
-## [How to use Wild Mushrooms and how they work](#mushroom)
- 
-</div>
-
-{{< spell 88747 "Wild Mushroom" >}} deals damage in an explosion and then applies a DOT  called {{< spell 392999 "Fungal Growth" >}}(if talented). This DOT lasts for 8 seconds and deals 70% of the explosions damage over the course of its duration. {{< spell 88747 "Wild Mushroom" >}} has 3 charges, so if all 3 charges are used in quick succession and each apply a dot dealing 1000 damage, the total damage dealt by the DOT would be 3000 (1000 damage x 3 charges), and the duration of the DOT would be refreshed to 8 seconds.
-
-This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You don't lose/gain any Fungal Growth damage by staggering them or pressing them all at once.
-
-On single target, it's best to use all 3 charges at once paired with any available buffs such as potion, trinkets and Inc. {{< spell 88747 "Wild Mushroom" >}} is also an instant GCD, so it can be used for movement as needed.
-
-In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
-
-<div id="prestack">
+<br><div id="prestack">
 
 ## [How to Prestack Pulsar and use it on pull](#prestack)
 
@@ -299,7 +287,7 @@ On the other hand, if your cooldown timings necessitate using CA/Inc at the star
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
 
-<div id="owlkin-frenzy">
+<br><div id="owlkin-frenzy">
 
 ## [How to use Owlkin Frenzy procs](#owlkin-frenzy)
 
@@ -309,7 +297,7 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 <br>Keep in mind that {{< spell 202425 "Warrior of Elune" >}} charges are consumed before {{< spell 157228 "Owlkin Frenzy" >}} procs.
 
 
-<div id="talents">
+<br><div id="talents">
 
 # [3.Talents:](#talents)
 
@@ -317,7 +305,7 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 
 ## Talents for different target counts
 [Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000)
-<br>[M+ Talents Cookie Cutter]()
+<br>[M+ Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
 <br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSSJJEJHgoJlIRCNAKAQA?bgcolor=000000)
 
 
@@ -365,7 +353,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 <br> Use this for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
 
 
-<div id="food">
+<br><div id="food">
 
 ## [Food](#food)
 
@@ -381,7 +369,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 <br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides more total stats and can be worth over Intellect.
 
 
-<div id="phials">
+<br><div id="phials">
 
 ## [Phials](#Phials)
 
@@ -395,7 +383,7 @@ Damage wise, with 100% uptime on all of the Phials and not counting in the downs
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): : Generally similar dps throughput as Tepid Versatility, but less defensive benefits. 
 
-<div id="runes">
+<br><div id="runes">
 
 ## [Runes](#Runes)
 
@@ -421,7 +409,7 @@ Generally as follows, sim your character for the most accurate answer.
 
 Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
 
-<div id="enchants">
+<br><div id="enchants">
 
 ## [Enchants](#enchants)
 
@@ -438,7 +426,7 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 <br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) You should always sim your own character to determine what enchant to use in this slot.
 
 
-<div id="embellishments">
+<br><div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
@@ -455,7 +443,7 @@ For Embellishments craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/i
 - Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
 
 
-<div id="trinkets">
+<br><div id="trinkets">
 
 ## [Trinkets](#trinkets)
 
@@ -501,7 +489,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 
 
-<div id="misc">
+<br><div id="misc">
 
 # [6. Miscellaneous:](#misc)
 
@@ -517,7 +505,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, {{< spell 202347 "Stellar Flare " >}}) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
 
 
-<div id="astral-damage">
+<br><div id="astral-damage">
  
 ## [What is Astral damage?](#astral-damage)
 
@@ -526,7 +514,7 @@ No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93
 Astral damage is both Arcane and Nature damage meaning that these spells benefit from effects that buff either spell school and get increased by both type of buffs multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
 
 
-<div id="macros">
+<br><div id="macros">
 
 ## [Macros](#macros)
 
@@ -550,7 +538,7 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 /cast [@cursor] Celestial Alignment
 ```
 
-<div id="wa">
+<br><div id="wa">
  
 ## [Useful WeakAura(s)](#wa)
  
@@ -567,7 +555,7 @@ The following links lead to various balance druid weakaura packs. These contain 
 [Starfire Alerter](https://wago.io/rrtAyRQjF)
 See the description of the WA for more details. This is not a required WA but will make it easier to not get into situations where you are wasting a Starfire cast inside Solar Eclipse.
 
-<div id="cancel">
+<br><div id="cancel">
  
 ## [Cancelaura Macros](#cancel)
  
@@ -586,7 +574,7 @@ For the past few expansions, cancelling your Starlord aura has been something th
 /cancelaura Starlord
 ```
 
-<div id="sims">
+<br><div id="sims">
 
 # [7. Sims:](#sims)
 
@@ -621,6 +609,7 @@ For the past few expansions, cancelling your Starlord aura has been something th
 
 [Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
 
+
+</div>
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
-</div>
