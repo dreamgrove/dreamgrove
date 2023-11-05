@@ -1,534 +1,483 @@
-### Gear from Bags
-# trinket1=mirror_of_fractured_tomorrows,id=207581,bonus_id=6652/8783/8784/9414/9415/1492/9334
-#
-# Violent Gravemask
-# head=,id=202602,bonus_id=8780/4800/1498,
-#
-# Steelgazer Hide Hood
-# head=,id=134152,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Vision of Foreshadowed Ends
-# head=,id=193800,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Bough of the Autumn Blaze
-# head=,id=202515,bonus_id=8780/7187,ilevel=447,
-#
-# Kagni's Scorching Talisman
-# neck=,id=202618,bonus_id=8782/4800/1498,
-#
-# Magmorax's Fourth Collar
-# neck=,id=204397,bonus_id=8782/4800/1498,
-#
-# Chain of the Underking
-# neck=,id=134495,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Understone Gorget
-# neck=,id=134491,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Tuskarr Bone Necklace
-# neck=,id=193666,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Choker of Stolen Thunder
-# neck=,id=206180,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Ionized Choker
-# neck=,id=206181,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Red Sky Pendant
-# neck=,id=206182,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Bromach's Disentombed Locket
-# neck=,id=193809,bonus_id=8782/7359/6646,ilevel=447,
-#
-# Neldris's Sinewy Scapula
-# shoulder=,id=202575,bonus_id=4800/1498,
-#
-# Steelgazer Hide Mantle
-# shoulder=,id=134154,bonus_id=7359/6646,ilevel=447,
-#
-# Mantle of Bestilled Winds
-# shoulder=,id=133237,bonus_id=7359/6646,ilevel=447,
-#
-# Ancient Hornswog Spaulders
-# shoulder=,id=193725,bonus_id=7359/6646,ilevel=447,
-#
-# Shoulders of Animated Stone
-# shoulder=,id=193807,bonus_id=7359/6646,ilevel=447,
-#
-# Mantle of Sunless Kindling
-# shoulder=,id=204415,bonus_id=7187,ilevel=447,
-#
-# Mantle of the Autumn Blaze
-# shoulder=,id=202513,bonus_id=7187,ilevel=447,
-#
-# Drape of the Dracthyr Trials
-# back=,id=204467,bonus_id=4800/1498,
-#
-# Etchings of the Captive Revenant
-# back=,id=202573,bonus_id=4800/1498,
-#
-# Voice of the Silent Star
-# back=,id=204465,bonus_id=4800/1498,
-#
-# Putrid Carapace
-# back=,id=134408,bonus_id=7359/6646,ilevel=447,
-#
-# Parrotfeather Cloak
-# back=,id=155884,bonus_id=7359/6646,ilevel=447,
-#
-# Mammoth-Trainer's Drape
-# back=,id=193787,bonus_id=7359/6646,ilevel=447,
-#
-# Billowing Cape
-# back=,id=133245,bonus_id=7359/6646,ilevel=447,
-#
-# Billowing Skydrape
-# back=,id=133362,bonus_id=7359/6646,ilevel=447,
-#
-# Shadow of Perfect Bliss
-# back=,id=133247,bonus_id=7359/6646,ilevel=447,
-#
-# Sporecaller's Shroud
-# back=,id=159292,bonus_id=7359/6646,ilevel=447,
-#
-# Warlord's Volcanic Vest
-# chest=,id=202586,bonus_id=4800/1498,
-#
-# Vest of Rupturing Diamonds
-# chest=,id=137336,bonus_id=7359/6646,ilevel=447,
-#
-# Dragonkiln Chestguard
-# chest=,id=193776,bonus_id=7359/6646,ilevel=447,
-#
-# Gore-Splattered Vest
-# chest=,id=206198,bonus_id=7359/6646,ilevel=447,
-#
-# Ashen Zaralek Cuirass
-# chest=,id=204418,bonus_id=7187,ilevel=447,
-#
-# Chestroots of the Autumn Blaze
-# chest=,id=202518,bonus_id=7187,ilevel=447,
-#
-# Bloodstench Skinguards
-# wrist=,id=202594,bonus_id=8780/4800/1498,
-#
-# Cuffs of the Savage Serpent
-# wrist=,id=204394,bonus_id=8780/4800/1498,
-#
-# Wristbands of Rousing Violence
-# wrist=,id=134458,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Sea Dog's Cuffs
-# wrist=,id=158305,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Ferocious Hyena Hidebinders
-# wrist=,id=193793,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Blood Elder's Bindings
-# wrist=,id=159324,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Cavernous Foliage Wristbands
-# wrist=,id=204419,bonus_id=8780/7187,ilevel=447,
-#
-# Bands of the Autumn Blaze
-# wrist=,id=202511,bonus_id=8780/7187,ilevel=447,
-#
-# Oathbreaker's Obsessive Gauntlets
-# hands=,id=202587,bonus_id=4800/1498,
-#
-# Gravelworn Handguards
-# hands=,id=134443,bonus_id=7359/6646,ilevel=447,
-#
-# Sharkhide Grips
-# hands=,id=155889,bonus_id=7359/6646,ilevel=447,
-#
-# Blightweaver's Clutches
-# hands=,id=193661,bonus_id=7359/6646,ilevel=447,
-#
-# Gloves of Haze
-# hands=,id=133244,bonus_id=7359/6646,ilevel=447,
-#
-# Underrot Grotto Tenders
-# hands=,id=159344,bonus_id=7359/6646,ilevel=447,
-#
-# Handguards of the Autumn Blaze
-# hands=,id=202516,bonus_id=7187,ilevel=447,
-#
-# Elder's Volcanic Binding
-# waist=,id=202655,bonus_id=8780/4800/1498,
-#
-# Oblivion's Immortal Coil
-# waist=,id=204399,bonus_id=8780/4800/1498,
-#
-# Sinister Ashfall Cord
-# waist=,id=134455,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Watcher's Clasp of Purpose
-# waist=,id=193744,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Bloodfeaster Belt
-# waist=,id=159325,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Troggskin Waistband
-# waist=,id=193668,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Garland of the Autumn Blaze
-# waist=,id=202512,bonus_id=8780/7187,ilevel=447,
-#
-# Tassets of Blistering Twilight
-# legs=,id=202596,bonus_id=4800/1498,
-#
-# Charskin Legguards
-# legs=,id=137353,bonus_id=7359/6646,ilevel=447,
-#
-# Silver-Trimmed Breeches
-# legs=,id=159297,bonus_id=7359/6646,ilevel=447,
-#
-# Lavabearer Legwraps
-# legs=,id=193781,bonus_id=7359/6646,ilevel=447,
-#
-# Pustule Bearer's Pants
-# legs=,id=159338,bonus_id=7359/6646,ilevel=447,
-#
-# Annora's Punctured Leggings
-# legs=,id=193811,bonus_id=7359/6646,ilevel=447,
-#
-# Pants of the Autumn Blaze
-# legs=,id=202514,bonus_id=7187,ilevel=447,
-#
-# Failed Applicant's Footpads
-# feet=,id=204391,bonus_id=4800/1498,
-#
-# Flamebound Huntsman's Footpads
-# feet=,id=202574,bonus_id=4800/1498,
-#
-# Rivermane Sandals
-# feet=,id=139105,bonus_id=7359/6646,ilevel=447,
-#
-# Kragg's Rigging Scalers
-# feet=,id=155862,bonus_id=7359/6646,ilevel=447,
-#
-# Ancient Rotwalkers
-# feet=,id=193654,bonus_id=7359/6646,ilevel=447,
-#
-# Treads of Restored Order
-# feet=,id=193739,bonus_id=7359/6646,ilevel=447,
-#
-# Treads of the Swift
-# feet=,id=193817,bonus_id=7359/6646,ilevel=447,
-#
-# Flamebound Huntsman's Footpads
-# feet=,id=202574,bonus_id=7187,ilevel=447,
-#
-# Hooves of the Autumn Blaze
-# feet=,id=202517,bonus_id=7187,ilevel=447,
-#
-# Erethos, the Empty Promise
-# main_hand=,id=202565,bonus_id=4800/1498,
-#
-# Bloodfire Extraction Conduit
-# main_hand=,id=204319,bonus_id=4800/1498,
-#
-# Lavaflow Control Rod
-# main_hand=,id=202570,bonus_id=4800/1498,
-#
-# Zskarn's Autopsy Scalpel
-# main_hand=,id=202555,bonus_id=4800/1498,
-#
-# Searing Tusk Shard
-# main_hand=,id=193790,bonus_id=7359/6646,ilevel=447,
-#
-# Ancestral Stoneshaper
-# main_hand=,id=193674,bonus_id=7359/6646,ilevel=447,
-#
-# Decatriarch's Bone Pestle
-# main_hand=,id=193665,bonus_id=7359/6646,ilevel=447,
-#
-# Biting Wind
-# main_hand=,id=133233,bonus_id=7359/6646,ilevel=447,
-#
-# Leaxa's Thought-Piercer
-# main_hand=,id=159652,bonus_id=7359/6646,ilevel=447,
-#
-# Infinite Dragonspire
-# main_hand=,id=193803,bonus_id=7359/6646,ilevel=447,
-#
-# Echo's Maddening Volume
-# off_hand=,id=204324,bonus_id=4800/1498,
-#
-# Thadrion's Erratic Arcanotrode
-# off_hand=,id=204318,bonus_id=4800/1498,
-#
-# Irontorch Igniter
-# off_hand=,id=193783,bonus_id=7359/6646,ilevel=447,
-#
-# Rod of Perfect Order
-# off_hand=,id=193745,bonus_id=7359/6646,ilevel=447,
-#
-# Entropic Convergence Loop
-# finger1=,id=202572,bonus_id=8780/4800/1498,
-#
-# Onyx Impostor's Birthright
-# finger1=,id=204398,bonus_id=8780/4800/1498,
-#
-# Tormentor's Siphoning Signet
-# finger1=,id=204466,bonus_id=8780/4800/1498,
-#
-# Band of the Wyrm Matron
-# finger1=,id=134524,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Loop of Vitriolic Intent
-# finger1=,id=134530,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Seal of Questionable Loyalties
-# finger1=,id=158314,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Scalebane Signet
-# finger1=,id=193768,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Bloodied Wedding Ring
-# finger1=,id=193671,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Ring of Frozen Rain
-# finger1=,id=206185,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Skyshard Ring
-# finger1=,id=206184,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Circle of Ascended Frost
-# finger1=,id=193731,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Loop of Pulsing Veins
-# finger1=,id=159463,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Eternal Sentry's Ring
-# finger1=,id=193804,bonus_id=8780/7359/6646,ilevel=447,
-#
-# Beacon to the Beyond
-# trinket1=,id=203963,bonus_id=4800/1498,
-#
-# Igneous Flowstone
-# trinket1=,id=203996,bonus_id=4800/1498,
-#
-# Neltharion's Call to Suffering
-# trinket1=,id=204211,bonus_id=4800/1498,
-#
-# Ominous Chromatic Essence
-# trinket1=,id=203729,bonus_id=4800/1498,
-#
-# Screaming Black Dragonscale
-# trinket1=,id=202612,bonus_id=4800/1498,
-#
-# Vessel of Searing Shadow
-# trinket1=,id=202615,bonus_id=4800/1498,
-#
-# Naraxas' Spiked Tongue
-# trinket1=,id=137349,bonus_id=7359/6646,ilevel=447,
-#
-# Erupting Spear Fragment
-# trinket1=,id=193769,bonus_id=7359/6646,ilevel=447,
-#
-# Spoils of Neltharus
-# trinket1=,id=193773,bonus_id=7359/6646,ilevel=447,
-#
-# Idol of Pure Decay
-# trinket1=,id=193660,bonus_id=7359/6646,ilevel=447,
-#
-# Irideus Fragment
-# trinket1=,id=193743,bonus_id=7359/6646,ilevel=447,
-#
-# Rotcrusted Voodoo Doll
-# trinket1=,id=159624,bonus_id=7359/6646,ilevel=447,
-#
-# Time-Breaching Talon
-# trinket1=,id=193791,bonus_id=7359/6646,ilevel=447,
-#
-# Life-Bound Cap 447 - Professions - Epic - Leatherworking
-# head=,id=193400,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Infurious Spirit's Hood 447 - Professions - Epic - Leatherworking
-# head=,id=193456,bonus_id=8809/8960/8840/8836/8902/1537
-# 
-# Flaring Cowl 447 - Professions - Epic - Leatherworking
-# head=,id=193494,bonus_id=8960/8840/8836/8902/1537
-# 
-# Peripheral Vision Projectors 447 - Professions - Epic - Engineering
-# head=,id=198324,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Elemental Lariat 447 - Professions - Epic - Jewelcrafting
-# neck=,id=193001,bonus_id=8960/8840/8836/8902/8783/8784/8780/1537,crafted_stats=49/36
-# 
-# Choker of Shielding 447 - Professions - Epic - Jewelcrafting
-# neck=,id=193002,bonus_id=8960/8840/8836/8902/8783/8784/8780/1537,crafted_stats=49/36
-# 
-# Torc of Passed Time 447 - Professions - Epic - Jewelcrafting
-# neck=,id=201759,bonus_id=8840/8836/8902/8783/8784/8780/1537,crafted_stats=49/36
-# 
-# Life-Bound Shoulderpads 447 - Professions - Epic - Leatherworking
-# shoulder=,id=193406,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Spore Colony Shoulderguards 447 - Professions - Epic - Leatherworking
-# shoulder=,id=204706,bonus_id=8960/8840/8836/8902/1537
-# 
-# Life-Bound Chestpiece 447 - Professions - Epic - Leatherworking
-# chest=,id=193399,enchant_id=6625,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Allied Heartwarming Fur Coat 447 - Professions - Epic - Leatherworking
-# chest=,id=193453,enchant_id=6625,bonus_id=8960/8840/8836/8902/1537
-# 
-# Life-Bound Belt 447 - Professions - Epic - Leatherworking
-# waist=,id=193407,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# String of Spiritual Knick-Knacks 447 - Professions - Epic - Leatherworking
-# waist=,id=193457,bonus_id=8960/8840/8836/8902/1537
-# 
-# Life-Bound Trousers 447 - Professions - Epic - Leatherworking
-# legs=,id=193408,enchant_id=6541,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Life-Bound Boots 447 - Professions - Epic - Leatherworking
-# feet=,id=193398,enchant_id=6613,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Slimy Expulsion Boots 447 - Professions - Epic - Leatherworking
-# feet=,id=193451,enchant_id=6613,bonus_id=8960/8840/8836/8902/1537
-# 
-# Toxic Thorn Footwraps 447 - Professions - Epic - Leatherworking
-# feet=,id=193452,enchant_id=6613,bonus_id=8960/8840/8836/8902/1537
-# 
-# Infurious Footwraps of Indemnity 447 - Professions - Epic - Leatherworking
-# feet=,id=193455,enchant_id=6613,bonus_id=8809/8960/8840/8836/8902/1537
-# 
-# Life-Bound Bindings 447 - Professions - Epic - Leatherworking
-# wrist=,id=193419,enchant_id=6580,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Old Spirit's Wristwraps 447 - Professions - Epic - Leatherworking
-# wrist=,id=193454,enchant_id=6580,bonus_id=8960/8840/8836/8902/1537
-# 
-# Needlessly Complex Wristguards 447 - Professions - Epic - Engineering
-# wrist=,id=198327,enchant_id=6580,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Life-Bound Gloves 447 - Professions - Epic - Leatherworking
-# hands=,id=193418,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Snowball Makers 447 - Professions - Epic - Leatherworking
-# hands=,id=193458,bonus_id=8960/8840/8836/8902/1537
-# 
-# Signet of Titanic Insight 447 - Professions - Epic - Jewelcrafting
-# finger2=,id=192999,enchant_id=6556,bonus_id=8840/8836/8902/8783/8784/8780/1537,crafted_stats=49/36
-# 
-# Ring-Bound Hourglass 447 - Professions - Epic - Jewelcrafting
-# finger2=,id=193000,enchant_id=6556,bonus_id=8840/8836/8902/8783/8784/8780/1537,crafted_stats=49/36
-# 
-# Sustaining Alchemist Stone 447 - Professions - Epic - Alchemy
-# trinket1=,id=191491,bonus_id=8840/8836/8902/1537
-# 
-# Alacritous Alchemist Stone 447 - Professions - Epic - Alchemy
-# trinket1=,id=191492,bonus_id=8840/8836/8902/1537
-# 
-# Idol of the Life-Binder 447 - Professions - Epic - Jewelcrafting
-# trinket1=,id=193003,bonus_id=8840/8836/8902/1537
-# 
-# Idol of the Spell-Weaver 447 - Professions - Epic - Jewelcrafting
-# trinket1=,id=193004,bonus_id=8840/8836/8902/1537
-# 
-# Idol of the Dreamer 447 - Professions - Epic - Jewelcrafting
-# trinket1=,id=193005,bonus_id=8840/8836/8902/1537
-# 
-# Idol of the Earth-Warder 447 - Professions - Epic - Jewelcrafting
-# trinket1=,id=193006,bonus_id=8840/8836/8902/1537
-# 
-# Darkmoon Deck Box: Inferno 447 - Professions - Epic - Inscription
-# trinket1=,id=194872,bonus_id=8840/8836/8902/1537
-# 
-# Darkmoon Deck Box: Rime 447 - Professions - Epic - Inscription
-# trinket2=,id=198477,bonus_id=8840/8836/8902/1537
-# 
-# Darkmoon Deck Box: Dance 447 - Professions - Epic - Inscription
-# trinket2=,id=198478,bonus_id=8840/8836/8902/1537
-# 
-# Darkmoon Deck Box: Watcher 447 - Professions - Epic - Inscription
-# trinket2=,id=198481,bonus_id=8840/8836/8902/1537
-# 
-# Primal Molten Spellblade 447 - Professions - Epic - Blacksmithing
-# main_hand=,id=190506,enchant_id=6643,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Vibrant Wildercloth Shawl 447 - Professions - Epic - Tailoring
-# back=,id=193511,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Undulating Sporecloak 447 - Professions - Epic - Tailoring
-# back=,id=205025,bonus_id=8960/8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Weathered Explorer's Stave 447 - Professions - Epic - Inscription
-# main_hand=,id=194894,enchant_id=6643,bonus_id=8960/8840/8836/8902/1537
-# 
-# Illuminating Pillar of the Isles 447 - Professions - Epic - Inscription
-# main_hand=,id=194898,enchant_id=6643,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Witherrot Tome 447 - Professions - Epic - Leatherworking
-# off_hand=,id=193496,bonus_id=8960/8840/8836/8902/1537,crafted_stats=49/36
-# 
-# Crackling Codex of the Isles 447 - Professions - Epic - Inscription
-# off_hand=,id=194879,bonus_id=8840/8836/8902/1537,crafted_stats=49/36
+### Dungeons & Raids
+
+# Hood of Perpetual Conflict
+# head=,id=207936,bonus_id=4795,ilevel=489
+
+# Soulstarve Hood
+# head=,id=134440,bonus_id=4795,ilevel=489
+
+# Blackwater Helm
+# head=,id=109979,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Casque
+# head=,id=207254,bonus_id=4795,ilevel=489
+
+# Old One Eye's Cowl
+# head=,id=133358,bonus_id=4795,ilevel=489
+
+# Silent Tormentor's Hood
+# head=,id=207133,bonus_id=4795,ilevel=489
+
+# Chain of the Green Flight
+# neck=,id=137311,bonus_id=4795,ilevel=489
+
+# Raven Filigree Pendant
+# neck=,id=134499,bonus_id=4795,ilevel=489
+
+# Eye of the Rising Flame
+# neck=,id=207163,bonus_id=4795,ilevel=489
+
+# Ouroboreal Necklet
+# neck=,id=210214,bonus_id=4795,ilevel=489
+
+# Amulet of Eonar's Chosen
+# neck=,id=208445,bonus_id=4795,ilevel=489
+
+# Caridean Epaulets
+# shoulder=,id=133186,bonus_id=4795,ilevel=489
+
+# Strigine Epaulets
+# shoulder=,id=207127,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Wisdom
+# shoulder=,id=207252,bonus_id=4795,ilevel=489
+
+# Titanic Shouldersparks
+# shoulder=,id=207873,bonus_id=4795,ilevel=489
+
+# Leafmender Mantle
+# shoulder=,id=109937,bonus_id=4795,ilevel=489
+
+# Strigine Epaulets
+# shoulder=,id=207127,bonus_id=4795,ilevel=489
+
+# Raal's Bib
+# back=,id=159294,bonus_id=4795,ilevel=489
+
+# Drape of the Loyal Vassal
+# back=,id=158375,bonus_id=4795,ilevel=489
+
+# Mantle of Blazing Sacrifice
+# back=,id=207161,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Featherdrape
+# back=,id=207249,bonus_id=4795,ilevel=489
+
+# Inflammable Drapeleaf
+# back=,id=207160,bonus_id=4795,ilevel=489
+
+# Inflammable Drapeleaf
+# back=,id=207160,bonus_id=4795,ilevel=489
+
+# Shadowfeather Shawl
+# back=,id=136977,bonus_id=4795,ilevel=489
+
+# Cloak of Fading Echoes
+# back=,id=134405,bonus_id=4795,ilevel=489
+
+# Crystalbinder Chestguard
+# chest=,id=109886,bonus_id=4795,ilevel=489
+
+# Ahnzon's Corroded Carapace
+# chest=,id=207836,bonus_id=4795,ilevel=489
+
+# Spymaster's Wrap
+# chest=,id=211404,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Robe
+# chest=,id=207257,bonus_id=4795,ilevel=489
+
+# Robes of the Ashen Grove
+# chest=,id=207129,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Wristwraps
+# wrist=,id=207250,bonus_id=4795,ilevel=489
+
+# Primordial Serpent's Bindings
+# wrist=,id=207128,bonus_id=4795,ilevel=489
+
+# Verdant Sanctuary Bands
+# wrist=,id=210206,bonus_id=4795,ilevel=489
+
+# Chronomancer's Stasis Shackles
+# wrist=,id=207939,bonus_id=4795,ilevel=489
+
+# Bracers of Dreadful Maladies
+# wrist=,id=159340,bonus_id=4795,ilevel=489
+
+# Thermal Bindings
+# wrist=,id=134461,bonus_id=4795,ilevel=489
+
+# Venerated Raptorhide Bindings
+# wrist=,id=160214,bonus_id=4795,ilevel=489
+
+# Grasps of Awakened Fury
+# hands=,id=208438,bonus_id=4795,ilevel=489
+
+# Fading Chronogrips
+# hands=,id=207903,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Talons
+# hands=,id=207255,bonus_id=4795,ilevel=489
+
+# Gloves of Vile Defiance
+# hands=,id=137320,bonus_id=4795,ilevel=489
+
+# Flamewaker's Grips
+# hands=,id=207130,bonus_id=4795,ilevel=489
+
+# Gauntlets of Burning Focus
+# hands=,id=109848,bonus_id=4795,ilevel=489
+
+# Raven's Veil Gloves
+# hands=,id=139242,bonus_id=4795,ilevel=489
+
+# Belt of Gleaming Determination
+# waist=,id=158306,bonus_id=4795,ilevel=489
+
+# Belt of the Eternal Struggle
+# waist=,id=207874,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Sagacious Sash
+# waist=,id=207251,bonus_id=4795,ilevel=489
+
+# Eternal Sentinel's Cord
+# waist=,id=207135,bonus_id=4795,ilevel=489
+
+# Eternal Sentinel's Cord
+# waist=,id=207135,bonus_id=4795,ilevel=489
+
+# Hound-Jowl Waistband
+# waist=,id=159341,bonus_id=4795,ilevel=489
+
+# Bloody Dragonhide Belt
+# waist=,id=207131,bonus_id=4795,ilevel=489
+
+# Salty Shell-Studded Girdle
+# waist=,id=133368,bonus_id=4795,ilevel=489
+
+# Blight Toadskin Leggings
+# legs=,id=159345,bonus_id=4795,ilevel=489
+
+# Shambling Berserker's Leggings
+# legs=,id=155869,bonus_id=4795,ilevel=489
+
+# Frenzied Incarnate Legwraps
+# legs=,id=207132,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Leggings
+# legs=,id=207253,bonus_id=4795,ilevel=489
+
+# Legguards of Endless Horrors
+# legs=,id=134451,bonus_id=4795,ilevel=489
+
+# Galakrond's Voracious Hide
+# legs=,id=207820,bonus_id=4795,ilevel=489
+
+# Benevolent Embersage's Lined Boots
+# feet=,id=207256,bonus_id=4795,ilevel=489
+
+# Decapod Slippers
+# feet=,id=133190,bonus_id=4795,ilevel=489
+
+# Vigorous Sandstompers
+# feet=,id=207838,bonus_id=4795,ilevel=489
+
+# Grove Darkener's Treads
+# feet=,id=134429,bonus_id=4795,ilevel=489
+
+# Tasseted Emberwalkers
+# feet=,id=207134,bonus_id=4795,ilevel=489
+
+# Twisted Blossom Stompers
+# feet=,id=207126,bonus_id=4795,ilevel=489
+
+# Moss-Covered Wingtip Shoes
+# feet=,id=159347,bonus_id=4795,ilevel=489
+
+# Cerith Spire Staff
+# main_hand=,id=133184,bonus_id=4795,ilevel=489
+
+# Jagged Iris Sica
+# main_hand=,id=159133,bonus_id=4795,ilevel=489
+
+# Conflux Caller's Baton
+# main_hand=,id=207999,bonus_id=4795,ilevel=489
+
+# Dreambinder, Loom of the Great Cycle
+# main_hand=,id=208616,bonus_id=4795,ilevel=489
+
+# Eternal Kindler's Greatstaff
+# main_hand=,id=207795,bonus_id=4795,ilevel=489
+
+# The Infinite Hand
+# main_hand=,id=208391,bonus_id=4795,ilevel=489
+
+# Vakash, the Shadowed Inferno
+# main_hand=,id=207788,bonus_id=4795,ilevel=489
+
+# Hoof of Yalnu
+# main_hand=,id=119181,bonus_id=4795,ilevel=489
+
+# Iridal, the Earth's Master
+# main_hand=,id=208321,bonus_id=4795,ilevel=489
+
+# Sickle of the White Stag
+# main_hand=,id=207782,bonus_id=4795,ilevel=489
+
+# Morchie's Distorted Spellblade
+# main_hand=,id=207997,bonus_id=4795,ilevel=489
+
+# Staff of Incandescent Torment
+# main_hand=,id=207794,bonus_id=4795,ilevel=489
+
+# Sol's Magestaff
+# main_hand=,id=119174,bonus_id=4795,ilevel=489
+
+# Interloper's Mossy Skull
+# off_hand=,id=119176,bonus_id=4795,ilevel=489
+
+# Trickster's Captivating Chime
+# off_hand=,id=207796,bonus_id=4795,ilevel=489
+
+# Solena's Watchful Collection
+# off_hand=,id=159669,bonus_id=4795,ilevel=489
+
+# Ancestor's Necromantic Focus
+# off_hand=,id=207983,bonus_id=4795,ilevel=489
+
+# Bioluminescent Lamp
+# off_hand=,id=133200,bonus_id=4795,ilevel=489
+
+# Aureus Vessel
+# off_hand=,id=158322,bonus_id=4795,ilevel=489
+
+# Arch-Druid's Tainted Seal
+# ring1=,id=134487,bonus_id=4795,ilevel=489
+
+# Band of Callous Dominance
+# ring1=,id=134528,bonus_id=4795,ilevel=489
+
+# Band of Burning Thorns
+# ring1=,id=207159,bonus_id=4795,ilevel=489
+
+# Ring of Contempt
+# ring1=,id=134490,bonus_id=4795,ilevel=489
+
+# Lord Waycrest's Signet
+# ring1=,id=158362,bonus_id=4795,ilevel=489
+
+# Signet of the Last Elder
+# ring1=,id=207162,bonus_id=4795,ilevel=489
+
+# Band of Twisted Bark
+# ring1=,id=134531,bonus_id=4795,ilevel=489
+
+# Thornwoven Band
+# ring1=,id=162548,bonus_id=4795,ilevel=489
+
+# Seal of the Regal Loa
+# ring1=,id=159458,bonus_id=4795,ilevel=489
+
+# Mirror of Fractured Tomorrows
+# trinket1=,id=207581,bonus_id=4795,ilevel=489
+
+# Ashes of the Embersoul
+# trinket1=,id=207167,bonus_id=4795,ilevel=489
+
+# Corrupted Starlight
+# trinket1=,id=137301,bonus_id=4795,ilevel=489
+
+# Lady Waycrest's Music Box
+# trinket1=,id=159631,bonus_id=4795,ilevel=489
+
+# Vessel of Skittering Shadows
+# trinket1=,id=159610,bonus_id=4795,ilevel=489
+
+# Caged Horror
+# trinket1=,id=136716,bonus_id=4795,ilevel=489
+
+# Balefire Branch
+# trinket1=,id=159630,bonus_id=4795,ilevel=489
+
+# Nymue's Unraveling Spindle
+# trinket1=,id=208615,bonus_id=4795,ilevel=489
+
+# Sea Star
+# trinket1=,id=133201,bonus_id=4795,ilevel=489
+
+# Pip's Emerald Friendship Badge
+# trinket1=,id=207168,bonus_id=4795,ilevel=489
+
+# Augury of the Primal Flame
+# trinket1=,id=208614,bonus_id=4795,ilevel=489
+
+# Coagulated Genesaur Blood
+# trinket1=,id=110004,bonus_id=4795,ilevel=489
+
+# Belor'relos, the Suncaller
+# trinket1=,id=207172,bonus_id=4795,ilevel=489
+
+# Oakheart's Gnarled Root
+# trinket1=,id=137306,bonus_id=4795,ilevel=489
+
+# Time-Thief's Gambit
+# trinket1=,id=207579,bonus_id=4795,ilevel=489
 
 
-### Sockets bonus ID
-#
-# 3x socket
-# 8782
-#
-# 2x socket
-# 8781
-#
-# 1x socket
-# 8780
+### Crafted
+
+# Life-Bound Cap 486 - Professions - Epic - Leatherworking
+# head=,id=193400,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Infurious Spirit's Hood 486 - Professions - Epic - Leatherworking
+# head=,id=193456,bonus_id=8836/1576,ilevel=486
+# 
+# Flaring Cowl 486 - Professions - Epic - Leatherworking
+# head=,id=193494,bonus_id=8836/1576,ilevel=486
+# 
+# Peripheral Vision Projectors 486 - Professions - Epic - Engineering
+# head=,id=198324,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Elemental Lariat 486 - Professions - Epic - Jewelcrafting
+# neck=,id=193001,bonus_id=8836/8782/1576,gem_id=192958/192958/192958,crafted_stats=49/36,ilevel=486
+# 
+# Choker of Shielding 486 - Professions - Epic - Jewelcrafting
+# neck=,id=193002,bonus_id=8836/8782/1576,gem_id=192958/192958/192958,crafted_stats=49/36,ilevel=486
+# 
+# Torc of Passed Time 486 - Professions - Epic - Jewelcrafting
+# neck=,id=201759,bonus_id=8836/8782/1576,gem_id=192958/192958/192958,crafted_stats=49/36,ilevel=486
+# 
+# Life-Bound Shoulderpads 486 - Professions - Epic - Leatherworking
+# shoulder=,id=193406,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Spore Colony Shoulderguards 486 - Professions - Epic - Leatherworking
+# shoulder=,id=204706,bonus_id=8836/1576,ilevel=486
+# 
+# Life-Bound Chestpiece 486 - Professions - Epic - Leatherworking
+# chest=,id=193399,enchant_id=6625,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Allied Heartwarming Fur Coat 486 - Professions - Epic - Leatherworking
+# chest=,id=193453,enchant_id=6625,bonus_id=8836/1576,ilevel=486
+# 
+# Life-Bound Belt 486 - Professions - Epic - Leatherworking
+# waist=,id=193407,enchant_id=6904,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# String of Spiritual Knick-Knacks 486 - Professions - Epic - Leatherworking
+# waist=,id=193457,enchant_id=6904,bonus_id=8836/1576,ilevel=486
+# 
+# Life-Bound Trousers 486 - Professions - Epic - Leatherworking
+# legs=,id=193408,enchant_id=6541,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Life-Bound Boots 486 - Professions - Epic - Leatherworking
+# feet=,id=193398,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Slimy Expulsion Boots 486 - Professions - Epic - Leatherworking
+# feet=,id=193451,bonus_id=8836/1576,ilevel=486
+# 
+# Toxic Thorn Footwraps 486 - Professions - Epic - Leatherworking
+# feet=,id=193452,bonus_id=8836/1576,ilevel=486
+# 
+# Infurious Footwraps of Indemnity 486 - Professions - Epic - Leatherworking
+# feet=,id=193455,bonus_id=8836/1576,ilevel=486
+# 
+# Life-Bound Bindings 486 - Professions - Epic - Leatherworking
+# wrist=,id=193419,enchant_id=6574,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Old Spirit's Wristwraps 486 - Professions - Epic - Leatherworking
+# wrist=,id=193454,enchant_id=6574,bonus_id=8836/1576,ilevel=486
+# 
+# Needlessly Complex Wristguards 486 - Professions - Epic - Engineering
+# wrist=,id=198327,enchant_id=6574,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Life-Bound Gloves 486 - Professions - Epic - Leatherworking
+# hands=,id=193418,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Snowball Makers 486 - Professions - Epic - Leatherworking
+# hands=,id=193458,bonus_id=8836/1576,ilevel=486
+# 
+# Signet of Titanic Insight 486 - Professions - Epic - Jewelcrafting
+# finger2=,id=192999,enchant_id=6562,bonus_id=8836/8780/1576,gem_id=192958,crafted_stats=49/36,ilevel=486
+# 
+# Ring-Bound Hourglass 486 - Professions - Epic - Jewelcrafting
+# finger2=,id=193000,enchant_id=6562,bonus_id=8836/8780/1576,gem_id=192958,crafted_stats=49/36,ilevel=486
+# 
+# Sustaining Alchemist Stone 486 - Professions - Epic - Alchemy
+# trinket2=,id=191491,bonus_id=8836/1576,ilevel=486
+# 
+# Alacritous Alchemist Stone 486 - Professions - Epic - Alchemy
+# trinket2=,id=191492,bonus_id=8836/1576,ilevel=486
+# 
+# Idol of the Life-Binder 486 - Professions - Epic - Jewelcrafting
+# trinket2=,id=193003,bonus_id=8836/1576,ilevel=486
+# 
+# Idol of the Spell-Weaver 486 - Professions - Epic - Jewelcrafting
+# trinket2=,id=193004,bonus_id=8836/1576,ilevel=486
+# 
+# Idol of the Dreamer 486 - Professions - Epic - Jewelcrafting
+# trinket2=,id=193005,bonus_id=8836/1576,ilevel=486
+# 
+# Idol of the Earth-Warder 486 - Professions - Epic - Jewelcrafting
+# trinket2=,id=193006,bonus_id=8836/1576,ilevel=486
+# 
+# Darkmoon Deck Box: Inferno 486 - Professions - Epic - Inscription
+# trinket2=,id=194872,bonus_id=8836/1576,ilevel=486
+# 
+# Darkmoon Deck Box: Rime 486 - Professions - Epic - Inscription
+# trinket2=,id=198477,bonus_id=8836/1576,ilevel=486
+# 
+# Darkmoon Deck Box: Dance 486 - Professions - Epic - Inscription
+# trinket2=,id=198478,bonus_id=8836/1576,ilevel=486
+# 
+# Darkmoon Deck Box: Watcher 486 - Professions - Epic - Inscription
+# trinket2=,id=198481,bonus_id=8836/1576,ilevel=486
+# 
+# Primal Molten Spellblade 486 - Professions - Epic - Blacksmithing
+# main_hand=,id=190506,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Vibrant Wildercloth Shawl 486 - Professions - Epic - Tailoring
+# back=,id=193511,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Undulating Sporecloak 486 - Professions - Epic - Tailoring
+# back=,id=205025,bonus_id=8836/1576,ilevel=486
+# 
+# Obsidian Seared Invoker 486 - Professions - Epic - Blacksmithing
+# main_hand=,id=190517,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Weathered Explorer's Stave 486 - Professions - Epic - Inscription
+# main_hand=,id=194894,bonus_id=8836/1576,ilevel=486
+# 
+# Illuminating Pillar of the Isles 486 - Professions - Epic - Inscription
+# main_hand=,id=194898,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Witherrot Tome 486 - Professions - Epic - Leatherworking
+# off_hand=,id=193496,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
+# 
+# Crackling Codex of the Isles 486 - Professions - Epic - Inscription
+# off_hand=,id=194879,bonus_id=8836/1576,crafted_stats=49/36,ilevel=486
 
 
-### Embellishments
-#
-# Unique Equipped Embellished
-# 8960
-#
-# Potion Absorption Inhibitor
-# 8175
-#
-# Armor Spikes
-# 8188
-#
-# Fang Adornments
-# 8796
-#
-# Toxified
-# 8797
-#
-# Magazine of Healing Darts
-# 8913
-#
-# Blue Silken Lining
-# 8932
-#
-# Bronzed Grip Wrappings
-# 8937
-#
-# Shadowflame
-# 9379
+### Bonus IDs Embel+sockets
+#8782 - 3x socket
+#8781 - 2x socket
+#8780 - 1x socket
 
+### Unique Equipped Embellished
+#8960
 
 ### Crafted stats
-#
-# Crit/Haste
-# 8790
-#
-# Crit/Mastery
-# 8791
-#
-# Haste/Vers 
-# 8792
-#
-# Haste/Mastery
-# 8793
-#
-# Vers/Mastery
-# 8794
-#
-# Vers/Crit
-# 8795
+# 8790 - Crit/Haste
+# 8791 - Crit/Mastery
+# 8792 - Haste/Vers 
+# 8793 - Haste/Mastery
+# 8794 - Vers/Mastery
+# 8795 - Vers/Crit
 
+### Embells
+# 8175 - Potion Absorption Inhibitor
+# 8188 - Armor Spikes
+# 8796 - Fang Adornments
+# 8797 - Toxified
+# 8913 - Magazine of Healing Darts
+# 8932 - Blue Silken Lining
+# 8937 - Bronzed Grip Wrappings

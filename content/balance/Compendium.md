@@ -14,11 +14,9 @@ sidebarContents:  |
   <br>[Precasting](#precast)
   <br>[Single Target priority](#st)
   <br>[AoE priority](#aoe)
-  <br>[Filler Priority Inside CA/Inc](#filler)
-  <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
-  <br>[Extending CA/Inc](#extend)
+  <br>[Eclipses and Fillers](#fillers)
   <br>[How to Use Warrior of Elune](#woe)
-  <br>[How to Prestack Pulsar and use it on pull](#prestack)
+  <br>[Prestacking Pulsar](#prestack)
   <br>[How to use Owlkin Frenzy procs](#owlkin-frenzy)
  
   **[3. Talents](#talents)**
@@ -236,34 +234,18 @@ When reading the priority lists below, you should not think about these as steps
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
 
 
-<br><div id="filler">
-
-## [Filler Priority Inside CA/Inc](#filler)
-
-</div>
-
-Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
-
-
 <br><div id="eclipse">
 
-## [Eclipses and Fillers Outside CA/Inc](#eclipse)
+## [Eclipses and Fillers](#fillers)
  
  </div>
 
- With the change to {{< spell 393958 "Nature's Grace" >}} there is no longer any benefit to first enter eclipse before you use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} but rather you should spend your stacks of {{< spell 424248 "Dreamstate" >}} before using the ability.
+ Before using {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} you should make sure to spend your stacks of {{< spell 424248 "Dreamstate" >}}.
  
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
-
-<br><div id="ng">
-
-## [Extending CA/INC](#extend)
-
-</div>
-
-With the introduction of our {{< spell 422863 "4-piece" >}}, extending an eclipse is worth more than trying to min-max {{< spell 393958 "Nature's Grace" >}}, if possible you should always try to proc a pulsar inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-
+ - On 1-3 targets inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 190984 "Wrath" >}}
+ - On 4 or more targets inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 194153 "Starfire" >}}.
 
 <br><div id="woe">
 
@@ -284,15 +266,19 @@ Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up
 
 <br><div id="prestack">
 
-## [How to Prestack Pulsar and use it on pull](#prestack)
+## [Prestacking Pulsar](#prestack)
 
 </div>
 
-{{< spell 393961 "Pulsar" >}} can be pre-stacked before pulling a boss by spending Astral Power on trash as the buff does not reset when an encounter starts. **This only represents a minor gain of ~1%.**
+{{< spell 393961 "Pulsar" >}} can be pre-stacked before pulling a boss by spending Astral Power on trash as the buff does not reset when an encounter starts. **This represents a gain of ~1%.**
 
-There are two optimal values for pre-stacking pulsar. If there's no specific requirement to use your {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} during a certain phase of the fight, you should pre-stack it to 560. Begin the encounter with the standard opener; however, instead of using CA/Inc, proc your pulsar and use your trinket and potion. Use CA/Inc immediately after this pulsar falls off to benefit from {{< spell 393958 "Nature's Grace" >}}.
+The optimal value for pre-stacking pulsar is somewhere between **240-360** pulsar, the variation comes from the amount of {{< spell 383197 "Orbit Breaker" >}} stacks you have as that will vary the amount of Astral Power you gain.
 
-On the other hand, if your cooldown timings necessitate using CA/Inc at the start of the fight, it's more beneficial to pre-stack pulsar to 400. By doing so, you'd follow the regular rotation, use CA/Inc on pull, and the pulsar would then proc in time to reapply buffs like {{< spell 343647 "Solstice" >}}/{{< spell 394048 "BoAT" >}}.
+The goal for stacking it to these values is to refresh buffs like {{< spell 394048 "BoAT" >}} and {{< spell 343647 "Solstice" >}} after they've dropped off.
+
+The other value to keep in mind is **560** {{< spell 393961 "Pulsar" >}}, it's a bit worse than 240-360 but still represents a gain.
+
+With this value you would begin the encounter with the standard opener; however, instead of using CA/Inc, proc your pulsar and use your trinket and potion. When pulsar drops off, spend your {{< spell 424248 "Dreamstate" >}} stacks and then use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
 
@@ -371,11 +357,12 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 [Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Intellect buff
 <br>[Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
-
-<br>You can also use secondary food as they provide more total stats, sim your character to see what is best for you.
-
 <br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides more total stats and can be worth over Intellect.
 <br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides more total stats and can be worth over Intellect.
+
+<br>The secondary food can be better as you aquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
+
+
 
 
 <br><div id="phials">
@@ -590,37 +577,25 @@ For the past few expansions, cancelling your Starlord aura has been something th
 # [7. Sims:](#sims)
 
 </div>
-<div style="display: none;">
-[Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.1.html)
-<br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.1.html)
-<br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
-<br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phial_6T_10.1.html)
-<br>[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.1.html)
-<br>[Runes 6T](https://www.dreamgrove.gg/balance/sims/runes_6T_10.1.html)
-<br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/racials_1T_10.1.html)
-<br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/racials_6T_10.1.html)
-<br>[Tierset 1T](https://www.dreamgrove.gg/balance/sims/tierset_1T_10.1.html)
-<br>[Tierset 6T](https://www.dreamgrove.gg/balance/sims/tierset_6T_10.1.html)
 
-[Pulsar proc Starfall vs Starsurge](https://www.dreamgrove.gg/balance/sims/pulsar_proc_10.1.html)
-<br>[WoE Usage](https://www.dreamgrove.gg/balance/sims/woe_usage_10.1.html)
+[Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.2.html)
+<br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.2.html)
+<br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.2.html)
+<br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phial_6T_10.2.html)
+<br>[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.2.html)
+<br>[Runes 6T](https://www.dreamgrove.gg/balance/sims/runes_6T_10.2.html)
+<br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/racials_1T_10.2.html)
+<br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/racials_6T_10.2.html)
+<br>[Tierset 1T](https://www.dreamgrove.gg/balance/sims/tier_1T_10.2.html)
+<br>[Tierset 6T](https://www.dreamgrove.gg/balance/sims/tier_6T_10.2.html)
 
-[Which Eclipse to enter 1T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_1T_10.1.html)
-<br>[Which Eclipse to enter 1T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_1T_10.1.html)
-<br>[Which Eclipse to enter 2T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_2T_10.1.html)
-<br>[Which Eclipse to enter 2T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_2T_10.1.html)
-<br>[Which Eclipse to enter 3T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_3T_10.1.html)
-<br>[Which Eclipse to enter 3T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_3T_10.1.html)
-<br>[Which Eclipse to enter 4T Rattle](https://www.dreamgrove.gg/balance/sims/eclipse_rattle_4T_10.1.html)
-<br>[Which Eclipse to enter 4T Weaver](https://www.dreamgrove.gg/balance/sims/eclipse_weaver_4T_10.1.html)
- 
-[Cancelling Pulsar in the opener](https://www.dreamgrove.gg/balance/sims/cancel_pulsar_1T_10.1.html)
+[Prestacking Pulsar](https://www.dreamgrove.gg/balance/sims/prestack_pulsar_10.1.html)
 
-[Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancel_starlord_1T_10.1.html)
+[Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_1T_10.2.html)
+[Cancelling Starlord](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_6T_10.2.html)
 
-[Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
+[Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
 
 
-</div>
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
