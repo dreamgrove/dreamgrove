@@ -2,8 +2,8 @@
 date: '2023-05-09'
 authors: ["Chicken, Jundarer, Dsune (Oi)"]
 published: true
-patch: "10.1.7"
-title: Balance Druid 10.1.7 Compendium
+patch: "10.2"
+title: Balance Druid 10.2 Compendium
 showOnFrontpage: true
 showInRecent: true
 sidebarTitle: "Quicklinks"
@@ -16,10 +16,10 @@ sidebarContents:  |
   <br>[AoE priority](#aoe)
   <br>[Filler Priority Inside CA/Inc](#filler)
   <br>[Eclipses and Fillers Outside CA/Inc](#eclipse)
-  <br>[Proccing Pulsar with Nature's Grace](#ng)
+  <br>[Extending CA/Inc](#extend)
   <br>[How to Use Warrior of Elune](#woe)
-  <br>[How to use Wild Mushrooms and how they work](#mushroom)
   <br>[How to Prestack Pulsar and use it on pull](#prestack)
+  <br>[How to use Owlkin Frenzy procs](#owlkin-frenzy)
  
   **[3. Talents](#talents)**
  
@@ -33,13 +33,11 @@ sidebarContents:  |
   <br>[Stats](#stats)
   <br>[Enchants](#enchants)
   <br>[Embellishments](#embellishments)
-  <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
   
   **[6. Miscellaneous](#misc)**
   <br>[Do our dots snapshot?](#snapshot)
   <br>[What is Astral damage?](#astral-damage)
-  <br>[How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
   <br>[Macros](#macros)
   <br>[Useful WeakAura(s)](#wa)
   <br>[Cancelaura Macros](#cancel)
@@ -60,17 +58,17 @@ sidebarContents:  |
 ### Tier Set
 > 2p: When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 40% and increasing their damage by 100%.
 
-Looks to be a ~5.1% increase from having no tier
-If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast
+Looks to be a ~5.1% increase from having no tier.
+<br>If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast.
 
-> 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%
+> 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
 
-Looks to be a ~7.9% DPS increase from having no tier
-Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 2% per spender used in that eclipse up to a total of 25% increased.
+Looks to be a ~7.9% DPS increase from having no tier.
+<br>Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 2% per spender used in that eclipse up to a total of 25% increased.
 
 In Incarn this will be maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
 
-The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage
+The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage.
 
 Total DPS from set: ~13.7%
 
@@ -89,7 +87,7 @@ Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report
 - Astral Invocation(Mastery) gives 2/3rds of its value at all times and the remaining value through Moonfire and Sunfire like now.
 - The talent positions of Aetherial Kindling and Lunar Shrapnel were swapped.
 
-Feedback post for 10.1.5 and 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-druids/1666448/311
+Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-druids/1666448/311
 
 <div id="rotation">
  
@@ -112,7 +110,7 @@ You can precast from max range about 4 seconds before a boss is pulled.
 
 **What is a priority list?**
 
-When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast. As such, you will note that there are some spells included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that spell IF you happened to take it for whatever reason. The presence of a spell in a priority list does not mean that you should be talenting into or using that spell, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
+When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast if the conditions apply.
 
 <div id="st">
 
@@ -120,7 +118,7 @@ When reading the priority lists below, you should not think about these as steps
 
 </div>
 
-**Single Target priority list:**
+**Select which talents you have talented to filter the priority list:**
 
 {{< checkbox id="Stellar Flare" spell=202347 >}}Stellar Flare{{< /checkbox >}}
 <br>{{< checkbox id="Warrior of Elune" spell=202425 checked=true radio="Warrior of Elune" >}}Warrior of Elune{{< /checkbox >}}
@@ -135,38 +133,42 @@ When reading the priority lists below, you should not think about these as steps
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration).
 {{<cbtext id="Stellar Flare" type="appendListItem">}}- Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) if you if you will not overcap on AP.{{</cbtext>}}
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions are met:
-    - You have 520 Astral Power or more towards {{< spell 393961 "Pulsar" >}}.
-    - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} has less than 5 seconds remaining.
-{{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse is about to end and you will enter Solar Eclipse next.{{</cbtext>}}
-- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
-{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Primordial Arcanic Pulsar" >}}, you have a {{< spell 393942 "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.{{</cbtext>}}
+{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Pulsar" >}}, you have a {{< spell 393942  "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.{{</cbtext>}}
+{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 78674 "Starsurge" >}} if you have 560 Astral Power or more towards {{< spell 393961 "Pulsar" >}}, you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.{{</cbtext>}}
+- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-{{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP if you are inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, or if your next <br>{{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is 30 or more seconds away and your Eclipse will last for more than 4 seconds.{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you have 520 or more stacks of {{< spell 393961 "Pulsar" >}} and the cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is more than 5 seconds and you do not have T31 2P equipped.
+{{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
+- Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Force of Nature" type="appendListItem">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
-{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
+    {{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
+{{<cbtext id="Wild Mushroom" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if {{< spell 393956 "Waning Twilight" >}} is not up.{{</cbtext>}}
+- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
 {{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
-- Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks and if talented you can optimally refresh the {{< spell 393954 "Rattle the Stars" >}} buff.
-{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New -" >}}{{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
+- Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}
+{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="New Moon" type="addList">}}  - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
+- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met: 
     - You would overcap AP with the next cast.
     {{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
     - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
-{{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}} on cooldown.{{</cbtext>}}
+{{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
-<div id="aoe">
+<br><div id="aoe">
 
 ## [AoE priority](#aoe)
 
 </div>
 
-**AoE priority list(2+ targets):**
+**Select which talents you have talented to filter the priority list:**
+
 
 {{< checkbox id="Stellar Flare-AoE" spell=202347 >}}Stellar Flare{{< /checkbox >}}
 <br>{{< checkbox id="Warrior of Elune-AoE" spell=202425 radio="Force of Nature" >}}Warrior of Elune{{< /checkbox >}}
@@ -176,20 +178,29 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}
 <br>{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
-<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 >}}Wild Mushroom{{< /checkbox >}}
+<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=true >}}Wild Mushroom{{< /checkbox >}}
 
-**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
+<br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
+<br>**AoE priority list(2+ targets):**
 - Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
-- Use {{< spell 8921 "Moonfire" >}} if the target(s) will live for 6 or more seconds and you will not overcap on AP.
-- Use your macro to cancel Starlord as referenced [here](#cancel). This is not necessary if you do not want to use a cancelaura macro, but does represent a minor gain.
+- Use {{< spell 8921 "Moonfire" >}} if the targets will live for 6 or more seconds and you will not overcap on AP.
+{{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:{{</cbtext>}}
+{{<cbtext id="Stellar Flare-AoE" type="addList">}}- The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
+- You will not overcap on AP.
+- You're about to use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}
+- Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
+{{</cbtext>}}
+- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
+- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Warrior of Elune-AoE" type="appendListItem">}}- Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
-{{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. This means that you should apply some Flares before using cooldowns until you would cap AP or have to start moving, usually around 2-4 depending on starting AP{{</cbtext>}}
-- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-{{<cbtext id="Wild Mushroom-AoE" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP. If using {{< spell 392999 "Fungal Growth" >}} and {{< spell 393956 "Waning Twilight" >}}, avoid using it if the debuff is already up.{{</cbtext>}}
+{{<cbtext id="Wild Mushroom-AoE" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP and {{< spell 393956 "Waning Twilight" >}} is not up on your targets.{{</cbtext>}}
 {{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
+- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
@@ -198,7 +209,10 @@ When reading the priority lists below, you should not think about these as steps
     - You can finish the cast before your current eclipse ends.
     - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.{{</cbtext>}}
-{{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if the target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit and you will not overcap on AP. Don't use this above 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
+{{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:
+    - The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
+    - You will not overcap on AP.
+    - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
 {{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
@@ -213,7 +227,7 @@ When reading the priority lists below, you should not think about these as steps
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
 
 
-<div id="filler">
+<br><div id="filler">
 
 ## [Filler Priority Inside CA/Inc](#filler)
 
@@ -222,27 +236,27 @@ When reading the priority lists below, you should not think about these as steps
 Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will be {{< spell 190984 "Wrath" >}} on 3 targets or less and {{< spell 194153 "Starfire" >}} on 4 or more targets.
 
 
-<div id="eclipse">
+<br><div id="eclipse">
 
 ## [Eclipses and Fillers Outside CA/Inc](#eclipse)
  
  </div>
 
- With the change to {{< spell 393958 "Nature's Grace" >}} there is no longer any benefit to first enter eclipse before you use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} but rather if possible try to time it with exiting an eclipse.
+ With the change to {{< spell 393958 "Nature's Grace" >}} there is no longer any benefit to first enter eclipse before you use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} but rather you should spend your stacks of {{< spell 424248 "Dreamstate" >}} before using the ability.
  
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
 
-<div id="ng">
+<br><div id="ng">
 
-## [Proccing Pulsar with Nature's Grace](#ng)
+## [Extending CA/INC](#extend)
 
 </div>
 
-{{< spell 393961 "Pulsar" >}} can be procced with {{< spell 393958 "Nature's Grace" >}} to take advantage of the haste buff it applies. To achieve this, wait until your current Eclipse ends and proc {{< spell 393961 "Pulsar" >}} by casting an unbuffed {{< spell 78674 "Starsurge" >}}/{{< spell 191034 "Starfall" >}}. It is still a minor gain even if you need to overcap Astral Power for a total of 3 seconds and/or drop {{< spell 393954 "Rattle the Stars" >}}. 
+With the introduction of our {{< spell 422863 "4-piece" >}}, extending an eclipse is worth more than trying to min-max {{< spell 393958 "Nature's Grace" >}}, if possible you should always try to proc a pulsar inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
 
 
-<div id="woe">
+<br><div id="woe">
 
 ## [How to Use Warrior of Elune](#woe)
  
@@ -250,27 +264,16 @@ Inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} your fillers will
  
 {{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
 
-<br>Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/Lunar Eclipse. Using a Warrior of Elune Starfire in single target during CA/Inc is NOT a damage increase if you do not need to move. 
+{{< spell 202425 "Warrior of Elune" >}} can be used 7 seconds before an eclipse ends, this way you will have just enough time to spend your third charge before the buff runs out and the CD will start earlier which can net you more uses throughout the fight.
+
+Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during CA/Inc is NOT a damage increase if you do not need to move. 
 
 If Warrior of Elune is falling off during CA/Inc and you still have a charge to spend, you can starfire at 2+ targets.
 
 Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
 
- <div id="mushroom">
 
-## [How to use Wild Mushrooms and how they work](#mushroom)
- 
-</div>
-
-{{< spell 88747 "Wild Mushroom" >}} deals damage in an explosion and then applies a DOT  called {{< spell 392999 "Fungal Growth" >}}(if talented). This DOT lasts for 8 seconds and deals 70% of the explosions damage over the course of its duration. {{< spell 88747 "Wild Mushroom" >}} has 3 charges, so if all 3 charges are used in quick succession and each apply a dot dealing 1000 damage, the total damage dealt by the DOT would be 3000 (1000 damage x 3 charges), and the duration of the DOT would be refreshed to 8 seconds.
-
-This type of DOT is often called "Ignite" based on a Mage spell working this exact way. You don't lose/gain any Fungal Growth damage by staggering them or pressing them all at once.
-
-On single target, it's best to use all 3 charges at once paired with any available buffs such as potion, trinkets and Inc. {{< spell 88747 "Wild Mushroom" >}} is also an instant GCD, so it can be used for movement as needed.
-
-In AoE scenarios, you can use the charges all at once for a quick burst of damage or stagger them to get {{< spell 393956 "Waning Twilight" >}} up.
-
-<div id="prestack">
+<br><div id="prestack">
 
 ## [How to Prestack Pulsar and use it on pull](#prestack)
 
@@ -284,48 +287,51 @@ On the other hand, if your cooldown timings necessitate using CA/Inc at the star
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
 
+<br><div id="owlkin-frenzy">
 
-<div id="talents">
+## [How to use Owlkin Frenzy procs](#owlkin-frenzy)
+
+</div>
+
+Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lunar Eclipse or inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if starfire will hit 3 or more targets.
+<br>Keep in mind that {{< spell 202425 "Warrior of Elune" >}} charges are consumed before {{< spell 157228 "Owlkin Frenzy" >}} procs.
+
+
+<br><div id="talents">
 
 # [3.Talents:](#talents)
 
 </div>
 
 ## Talents for different target counts
-[Single target](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
-<br>[M+ Talents Cookie Cutter](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SaRIiGAFAIA?bgcolor=000000)
-<br>[Sustained AoE](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkIBJhkIFHgWiDkkkoIh4AJS0SEhkAAFAIA?bgcolor=000000)
+[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000)
+<br>[M+ Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSSJJEJHgoJlIRCNAKAQA?bgcolor=000000)
 
 
 ## Raid Talents
-[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkIJKJaSOQI0SaJhIaAUAAA?bgcolor=000000)
-<br>[Two target cleave(Experiments Mythic)](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SaJhIaAUAgA?bgcolor=000000)
-<br>[Amalgamation with cleave](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkoEhkDECtkWSIiGAFAA?bgcolor=000000)
-<br>[Amalgamation with Flare](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFhWiDkkkoEhkDECtkWSIiGANAA?bgcolor=000000)
-<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokESOQI0SKRIiGAFAIA?bgcolor=000000)
-<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkokoJ5AhQLpEhIaAUAgA?bgcolor=000000)
-<br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikcgUgWiDkkkokoJ5AhQLpEhIaAUAgA?bgcolor=000000)
-<br>You can also use 2/2 Ursing Vigor when you don't need the Stampeding Roar CDR. The extra HP can be useful to survive bomb overlaps. Warrior of Elune can also be used for movement when you get a bomb.
-<br>[Mythic Sarkareth](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJKJaSOQI0SKJhIaAUAgA?bgcolor=000000)
-<br>From a progression perspective it is better to single target down the big add, if your guild is having trouble killing the adds you could swap Nature's Balance to Starfall instead.
+### TBD
 
 ## Dungeon Talents
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Mind that while all these builds use Moons, FoE will result in about the same dps. FoE will often not align with Pulsar which can make it annoying to play with.
-  
-[Cookie cutter Rattle every dungeon build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SaRIiGAFAIA?bgcolor=000000)
-<br>[Same build with Weaver for some dungeons](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkokESOQI0SaRIiCAFAIA?bgcolor=000000)
-The difference between Rattle and Weaver for overall damage is generally very low. Rattle is better for both sustained single-target damage and sustained AoE damage. Weaver is better when you have a lot of packs where you want to focus a specific mob which happens relatively often. A prime example of this is Vortex Pinnacle but there are situations like that in nearly every dungeon. What the truly better talent is depends on your group comp(how much focus damage already exists) and route but neither will make or break your damage. In fact, sims show that the overall dps difference between them is within ~1% in most dungeons.
 
-<br>[Cookie cutter with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikIFolIJJJKJhkDECtkWEioBQBAC?bgcolor=000000)
-<br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkokESOQI0SaRIiGAFAIA?bgcolor=000000)
-<br>[Lunar Shrapnel build for more AoE](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkDokESOQI0SaRIJaAUAgA?bgcolor=000000)
-### Dungeon Druid Tree Considerations
+The below picture showcases which talents are "mandatory" and which talents you can opt-in to:
+
+{{< figure src="/balance/talent-tree-mythic+.png" >}}
+
+
+[Single target focused build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJHIgWSLSkQDgCAE?bgcolor=000000)
+<br>[Balanced build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[AoE focused build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJ5AlkQkQkWSLSkENAKAQA?bgcolor=000000)
+
+<br>[Class tree with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[If you really need both Hibernate and Remove Corruption](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
 
 - Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
-- Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
+- Remove Corruption should be taken in Afflicted weeks.
 - Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - Hibernate can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into Feline Swiftness like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDAAAAAAAAAIA?bgcolor=000000). This skips Ursine Vigor and Typhoon.
+- For lower keys, you can put 1 point into Feline Swiftness like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000). This skips Ursine Vigor and Typhoon.
 - All other talents in the druid tree are more or less set.
 
 
@@ -347,18 +353,23 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 <br> Use this for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
 
 
-<div id="food">
+<br><div id="food">
 
 ## [Food](#food)
 
 </div>
 
 
-[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Mainstat buff
+[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Intellect buff
 <br>[Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
 
+<br>You can also use secondary food as they provide more total stats, sim your character to see what is best for you.
 
-<div id="phials">
+<br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides more total stats and can be worth over Intellect.
+<br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides more total stats and can be worth over Intellect.
+
+
+<br><div id="phials">
 
 ## [Phials](#Phials)
 
@@ -369,14 +380,10 @@ The difference between Rattle and Weaver for overall damage is generally very lo
 Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
-- [Phial of Static Empowerment](https://www.wowhead.com/item=191338/phial-of-static-empowerment): Has ~92% of the value of Corrupting Rage Phial at 100% uptime.
-- [Phial of Charged Isolation](https://www.wowhead.com/item=191332/phial-of-charged-isolation): Has ~90% of the value of Corrupting Rage Phial at 100% uptime.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Has the same value as Corrupting Rage at 60% uptime. 
-- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Equal to Elemental Chaos, vers is more often better during progress than the random stats because of the DR it provides.
-- [Phial of Glacial Fury](https://www.wowhead.com/item=191335/phial-of-glacial-fury): This Phial should never be used.
+- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): : Generally similar dps throughput as Tepid Versatility, but less defensive benefits. 
 
-
-<div id="runes">
+<br><div id="runes">
 
 ## [Runes](#Runes)
 
@@ -402,7 +409,7 @@ Generally as follows, sim your character for the most accurate answer.
 
 Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
 
-<div id="enchants">
+<br><div id="enchants">
 
 ## [Enchants](#enchants)
 
@@ -410,86 +417,79 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 
 Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6)/[Wafting Devotion](https://www.wowhead.com/beta/item=200058/enchant-weapon-wafting-devotion)
-<br>sim between these two, it'll depend on how much haste you have.
+<br>Sim between these two options to determine which one is best for your character.
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
 <br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) Avoidance + Reduced fall damage
 <br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
 <br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
 <br>Boots - [Watchers Loam](https://www.wowhead.com/item=200020/enchant-boots-watchers-loam) Stamina
-<br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) Mastery is our best stat but you should always sim your own character to determine what enchant to use in this slot.
+<br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) You should always sim your own character to determine what enchant to use in this slot.
 
 
-<div id="embellishments">
+<br><div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
 </div>
 
-For Embellishments we craft [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps), this will be combined with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch) which increases the effect of the boots by 100%. The proc effect on Toxic Thorn Footwraps can also proc a heal when actively healing. There are some effects like [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) and {{< spell 22842 "Frenzied Regeneration" >}} that proc the heal as well which slightly reduces its value. Another consideration is that the [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) reduce your maximum HP by about 4.4k which will make you slightly squishier but nonetheless, they are the biggest dps upgrade by a fair margin.
-<br>Do note that Toxified can only be added to a crafted leather piece.
+For Embellishments craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak) paired with either [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps).
+<br>This comes down to which slot is your worst as they do about the same damage.
+<br>Later on it might be worth crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it's much better for AoE scenarios while still being competetive in Single Target.
 
 **Crafting order**
 
-- [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps)
-- [Life-bound Belt](https://www.wowhead.com/item=193407/life-bound-belt?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) or [Life-bound Trousers](https://www.wowhead.com/item=193408/life-bound-trousers?bonus=8840:8836:8902:1537&class=11&crafted-stats=49:36&crafting-quality=8&ilvl=447&spec=102) with [Toxified Armor Patch](https://www.wowhead.com/item=193552/toxified-armor-patch)
-- Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer) 
-
-<div id="tier-set">
-
-## [Tier Set](#tier-set)
-
-T30 2PC: 3.8% DPS ST, 5.5% AoE
-<br>T30 2PC+4PC: 9.4% DPS ST, 11.3% AoE
-
-</div>
+- [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak). This is our highest damage throughput option, and also comes with a fantastic defensive component on a low-budget item slot. Don't think too hard and just craft this first, its truly a no-brainer.
+- Sim yourself to see which leather armor slot best pairs with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps). Generally bracers would be a good slot for Shadowflame since the max itemlevel is 486 and bracers has a low stat budget.
+- Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
 
 
-
-<div id="trinkets">
+<br><div id="trinkets">
 
 ## [Trinkets](#trinkets)
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to farm/use, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list below assumes 441 ilvl on all of the trinkets, as you can upgrade everything with crests.
-
-R1-9 = Raid boss number 1-9
-<br>HTD = Healer Tank DPS
-<br>D = Dungeon
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
 
 ### ST
 
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
-- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - high uptime on haste
-- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale)(R1)
-- [Igneous Flowstone](https://www.wowhead.com/item=203996/igneous-flowstone) (R7)
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) - (HTD)
-- [Idol of Pure Decay](https://www.wowhead.com/item=193660/idol-of-pure-decay) (D) - pure st
-- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) (DPS)
+- [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
+- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
+- [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
+- [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
+- [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
+- [Belor'relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller?bonus=4795&class=11&ilvl=489&spec=102) - Requires you to be in melee to do damage
+- [Vessel of Skittering Shadows](https://www.wowhead.com/ptr-2/item=159610/vessel-of-skittering-shadows?bonus=4795&class=11&ilvl=489&spec=102)
+- [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
+- [Lady Waycrest's Music Box](https://www.wowhead.com/ptr-2/item=159631/lady-waycrests-music-box?bonus=4795&class=11&ilvl=489&spec=102)
+- [Corrupted Starlight](https://www.wowhead.com/ptr-2/item=137301/corrupted-starlight?bonus=4795&ilvl=489&spec=102)
+- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4800:4786:1527&ilvl=496&spec=102)
+- [Time-Thief's Gambit](https://www.wowhead.com/ptr-2/item=207579/time-thiefs-gambit?bonus=4795&class=11&ilvl=489&spec=102)
+- [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=102)
+- [Caged Horror](https://www.wowhead.com/ptr-2/item=136716/caged-horror?bonus=4795&ilvl=489&spec=102)
 
 ### AoE
 
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=6652:8783:8784:9414:9415:1492:9334&class=11&ilvl=441&spec=102) (D)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering) (R8)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 4 other)
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) (R2) - high uptime on haste
-- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus) (D) - +burst
-- [Screaming Black Dragonscale](https://www.wowhead.com/item=202612/screaming-black-dragonscale) (R1)
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon) - (HTD)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence) (R3) - (mastery, 0 other)
-- [Igneous Flowstone](https://www.wowhead.com/item=203996/igneous-flowstone) (R7)
-- [Irideus Fragment](https://www.wowhead.com/item=193743/irideus-fragment) (D) - +burst
-- [Idol of Pure Decay](https://www.wowhead.com/item=193660/idol-of-pure-decay) (D) - pure st
+- [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
+- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
+- [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
+- [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
+- [Time-Thief's Gambit](https://www.wowhead.com/ptr-2/item=207579/time-thiefs-gambit?bonus=4795&class=11&ilvl=489&spec=102)
+- [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
+- [Belor'relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller?bonus=4795&class=11&ilvl=489&spec=102) - Requires you to be in melee to do damage
+- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4800:4786:1527&ilvl=496&spec=102)
+- [Vessel of Skittering Shadows](https://www.wowhead.com/ptr-2/item=159610/vessel-of-skittering-shadows?bonus=4795&class=11&ilvl=489&spec=102)
+- [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
+- [Lady Waycrest's Music Box](https://www.wowhead.com/ptr-2/item=159631/lady-waycrests-music-box?bonus=4795&class=11&ilvl=489&spec=102)
+- [Corrupted Starlight](https://www.wowhead.com/ptr-2/item=137301/corrupted-starlight?bonus=4795&ilvl=489&spec=102)
+- [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=102)
+- [Caged Horror](https://www.wowhead.com/ptr-2/item=136716/caged-horror?bonus=4795&ilvl=489&spec=102)
 
 
 
-
-<div id="misc">
+<br><div id="misc">
 
 # [6. Miscellaneous:](#misc)
 
@@ -505,22 +505,7 @@ R1-9 = Raid boss number 1-9
 No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, {{< spell 202347 "Stellar Flare " >}}) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
 
 
-
-
-<div id="owlkin-frenzy">
-
-## [How do I use Owlkin Frenzy procs?](#owlkin-frenzy)
-
-</div>
-
-Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lunar Eclipse or inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if starfire will hit 3 or more targets.
-<br>Keep in mind that {{< spell 202425 "Warrior of Elune" >}} charges are consumed before {{< spell 157228 "Owlkin Frenzy" >}} procs.
-
-
-
-
-
-<div id="astral-damage">
+<br><div id="astral-damage">
  
 ## [What is Astral damage?](#astral-damage)
 
@@ -529,7 +514,7 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 Astral damage is both Arcane and Nature damage meaning that these spells benefit from effects that buff either spell school and get increased by both type of buffs multiplicatively. Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
 
 
-<div id="macros">
+<br><div id="macros">
 
 ## [Macros](#macros)
 
@@ -553,17 +538,24 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 /cast [@cursor] Celestial Alignment
 ```
 
-<div id="wa">
+<br><div id="wa">
  
 ## [Useful WeakAura(s)](#wa)
  
 </div>
 
+### **Balance Weakaura Packs**
+The following links lead to various balance druid weakaura packs. These contain everything that's recommended to track to play at a high level. None of these are particular better or more useful than others, and which one you should use is up to your personal preference.
+
+- [Shrom's Ultimate AP Bar](https://wago.io/GzpP7i8ic)
+- [Genesis DF Balance Druid](https://wago.io/1HX3XwarK)
+- [Oi Balance pack](https://wago.io/OiBalance)
+
 ### **Casts until you can cast Starfire**
 [Starfire Alerter](https://wago.io/rrtAyRQjF)
 See the description of the WA for more details. This is not a required WA but will make it easier to not get into situations where you are wasting a Starfire cast inside Solar Eclipse.
 
-<div id="cancel">
+<br><div id="cancel">
  
 ## [Cancelaura Macros](#cancel)
  
@@ -571,15 +563,7 @@ See the description of the WA for more details. This is not a required WA but wi
 
 ### **Cancelling Pulsar**
 
-**As of 10.1.5 this no longer represents a relevant gain with the change to Radiant Moonlight increasing the cooldown of Fury of Elune by 5 seconds.**
-
-It can be a minor gain to cancel Pulsar **ONCE** in the opener in order to not proc pulsar in your first Incarnation. The value of when to cancel fully depends on your haste and whether you are Bloodlusting. It will likely have to be determined on a per-boss basis as well due to different timings and boss mechanics. Additionally it only really works if you are consistently doing the same thing. If forced downtime makes you not proc pulsar in Incarnation naturally it would be for nothing.
-You can add these copies below your character in the advanced section of Raidbots to check what is optimal for your character in a 0 downtime scenario by using [this link](https://gist.github.com/Dsune0/09c4dbf51d381a93aa1158fd9a9da8e9).
-
-```
-#showtooltip
-/cancelaura Primordial Arcanic Pulsar
-```
+**As of 10.1.5 and forward this no longer represents a relevant gain with the change to Radiant Moonlight increasing the cooldown of Fury of Elune by 5 seconds.**
 
 ### **Cancelling Starlord**
 
@@ -590,12 +574,12 @@ For the past few expansions, cancelling your Starlord aura has been something th
 /cancelaura Starlord
 ```
 
-<div id="sims">
+<br><div id="sims">
 
 # [7. Sims:](#sims)
 
 </div>
-
+<div style="display: none;">
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.1.html)
 <br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.1.html)
 <br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.1.html)
@@ -625,5 +609,7 @@ For the past few expansions, cancelling your Starlord aura has been something th
 
 [Item strings/Bonus IDs for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
 
+
+</div>
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
