@@ -61,16 +61,16 @@ Looks to be a ~5.1% increase from having no tier.
 
 > 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
 
-Looks to be a ~7.9% DPS increase from having no tier.
+Looks to be a ~9.1% DPS increase from having no tier.
 <br>Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 2% per spender used in that eclipse up to a total of 25% increased.
 
 In Incarn this will be maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
 
 The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage.
 
-Total DPS from set: ~13.7%
+Total DPS from set: ~14.9%
 
-Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/n2Jwn8za948QojyAqpWCKu
+Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/1uANMpAkXv1grXNeTSN5e8
 
 ### Mastery Update
 Mastery is now composed of 4 separate parts:
