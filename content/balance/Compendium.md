@@ -589,7 +589,7 @@ For the past few expansions, cancelling your Starlord aura has been something th
 <br>[Tierset 1T](https://www.dreamgrove.gg/balance/sims/tier_1T_10.2.html)
 <br>[Tierset 6T](https://www.dreamgrove.gg/balance/sims/tier_6T_10.2.html)
 
-[Prestacking Pulsar](https://www.dreamgrove.gg/balance/sims/prestack_pulsar_10.1.html)
+[Prestacking Pulsar](https://www.dreamgrove.gg/balance/sims/prestack_pulsar_1T_10.2.html)
 <br>[Proc Pulsar before Incarn on pull](https://www.dreamgrove.gg/balance/sims/proc_pulsar_1T_10.2.html)
 
 [Cancelling Starlord 1T](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_1T_10.2.html)
