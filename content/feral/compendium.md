@@ -1,4 +1,4 @@
-![image](https://github.com/cheesey-oce/dreamgrove/assets/150125251/8be500a0-1b4c-4a98-9e74-8e0103bd8672)---
+---
 date: '2023-11-03'
 authors: ["Crazymeow"]
 published: false
