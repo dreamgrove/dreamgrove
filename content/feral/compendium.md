@@ -583,9 +583,43 @@ If you are using an on-use trinket/weapon that should go along with your cooldow
 /use 16
 /cast Berserk
 ```
+
+**Entangling Roots macro:**
+
+Casts Entangling Roots on a target you mouseover, otherwise casts on current target if no mouseover.
+```
+#showtooltip Entangling Roots
+/cast [@mouseover, exists] Entangling Roots
+/cast [@target, exists] Entangling Roots
+```
+
+**Focus Skull Bash:**
+
+Casts Skull Bash at your focus target. Remember to bind focus target in WoW keybind settings.
+```
+#showtooltip skull bash
+/cast [@focus] skull bash
+```
+
+**Adaptive Swarm macro:**
+
+Casts Swarm on your current target, or a friendly if you mouseover them. This can be applied to numerous abilities you cast on allies (Dispel, Rejuv/Regrowth, Innervate etc to save on keybinds), as seen in the Rebirth macro further below. 
+```
+#showtooltip
+/cast [@mouseover, help] [] Adaptive Swarm; [@target, harm] Adaptive Swarm 
+```
+
+**Rebirth/Other Macro:**
+
+Casts Rebirth when you mouseover a friendly, or otherwise Mark of the Wild. Customise these macros how you please. 
+```
+#showtooltip
+/cast [@mouseover, help] Rebirth; Mark of the Wild
+```
+
 <br>
 <div id="wa">
-
+ 
 ## [Useful WeakAura(s)](#wa)
  
 </div>
@@ -615,6 +649,12 @@ See the description of the WA for more details. This will assist you with using 
 
 [Bloodtalons Tracker from Fore's pack](https://wago.io/cQkL9nrAw)
 This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, showing the 4 second timer for each spell you cast towards it.
+
+[Bloodtalons Tracker from Cheesey's pack](https://wago.io/zinn-QaFI)
+This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, showing the 4 second timer for each spell you cast towards it.
+
+[Focus Skull Bash macro]([https://wago.io/cQkL9nrAw](https://wago.io/mOvsNkzJ7))
+Helps emphasise focus kicks when your Skull Bash is off CD.
 
 </div>
 
