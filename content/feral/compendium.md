@@ -46,7 +46,7 @@ sidebarContents:  |
 
 </div>
 
-## 10.2 News
+## 10.2 News my amazing changes
 ### Tier Set
 > 2p: {{< spell 274838 "Feral Frenzy" >}} grants {{< spell 422751 "Smoldering Frenzy" >}}, increasing all damage you deal by 20% for 8 seconds.
 
