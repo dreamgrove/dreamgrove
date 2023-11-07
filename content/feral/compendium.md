@@ -1,4 +1,4 @@
----
+![image](https://github.com/cheesey-oce/dreamgrove/assets/150125251/8be500a0-1b4c-4a98-9e74-8e0103bd8672)---
 date: '2023-11-03'
 authors: ["Crazymeow"]
 published: false
@@ -269,7 +269,7 @@ When reading the priority lists below, you should not think about these as steps
 
 ## Raid Talents
 ### T30 4pc 10.2 Talent Builds (Aberrus tier-set)
-<br>For first week or two of season while still wearing T30.
+For the first week or two of the season while still wearing T30.
 
 [T30 Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
 <br>[T30 Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVFAZREVFVaRRAQCBU)
@@ -278,8 +278,8 @@ When reading the priority lists below, you should not think about these as steps
 <br>[T30 Sustained Cleave/AoE](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQZCFRUExhUQBBOVRURRQVFVYRVBQCFE)
 
 ### 2pc+2pc Talent Builds
-<br>Plays the same builds as T30, except you can swap a point in {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 391889 "Adaptive Swarm" >}} for the burst and cleave builds for a small gain if you want.
-<br>As mentioned earlier, you should sim your character to see if it’s worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
+- Plays the same builds as T30, except you can swap a point in {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 391889 "Adaptive Swarm" >}} for the burst and cleave builds for a small gain if you want.
+- As mentioned earlier, you should sim your character to see if it’s worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
 
 ### T31 4pc Talent Builds (Amirdrassil tier-set)
 
@@ -310,13 +310,10 @@ Final gate options:
 
 ### Class Tree Talents for Raid.
 
-*Coming soon with specific boss builds. 
-<br> For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
+- *Coming soon with specific boss builds. 
+- <br> For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
 
 ## Dungeon Talents 
-
-{{< figure src="/feral/classtreem+.png" >}}
-
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
 <br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
 <br>[Max Ethical Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRRUVFVIVVBQCFU)
@@ -325,10 +322,12 @@ Final gate options:
 <br>[Beekeeping](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYJCFVUExRQQBBOVRURRQVFVIUVRQCFQ)
 <br>[Funnel Option](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRERVQVFVYRVBQCFU)
 
-The builds listed here simply some of the standard builds, and can be customised significantly. Various options and the logic on when you might take are outlined in the section below.
-<br>Note: all dungeon builds are assuming you have the new tier tier, however these options are similarly viable with the old tier set for the season launch.
+- The builds listed here simply some of the standard builds, and can be customised significantly. Various options and the logic on when you might take are outlined in the section below.
+- Note: all dungeon builds are assuming you have the new tier tier, however these options are similarly viable with the old tier set for the season launch.
 
 ### M+ Talent Customisation
+
+{{< figure src="/feral/classtreem+.png" >}}
 
 Note: for Feral, the talents in the first two gates have similar power-levels, and you can freely distribute extra points how you please here, up until you have spent 20 points. The final gate has stronger nodes and you should always spend the maximum points possible here (10).
 
