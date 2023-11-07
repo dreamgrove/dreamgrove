@@ -359,13 +359,13 @@ Options for the final gate:
 
 The druid tree offers a fair degree of customisation as Feral in M+, with a range of utility and defensive options. What is selected (yellow) is mandatory, with blue nodes being your options based on affixes or personal preference. 
 
-- Remove Corruption for Afflicted weeks. Additionally, the following dungeons have poison and curse dispels: Atal'Dazar, Darkheart Thicket, Throne of the Tides, and Waycrest Manor.
-- Hibernate for Incorporeal weeks.
-- Nature's Vigil is still very strong in AoE, and will often keep you alive or minimise the need to Regrowth on big pulls, increasing your DPS. Over the dungeon it usually does more personal healing to you than any other talent, while also healing your group mates. Macro to Berserk/Incarn. 
-- Protector of the Pack is a strong self-healing node for Feral, and gains even more value if you can occasionally utilise it to heal your group as well.
-- Nurturing Instinct should only be considered if Beekeeping for small DPS and HPS gains.
-- Feline Swiftness is commonly dropped in high-end for more defensives and utility, as Catform gives 30% speed baseline which is more than enough for dungeon mechanics. If uncomfortable, try only dropping 1 point at first to retain 8%.
-- Ursine Vigor is more of a high-key talent to survive one-shots.
+- {{< spell 2782  "Remove Corruption" >}} for Afflicted weeks. Additionally, the following dungeons have poison and curse dispels: Atal'Dazar, Darkheart Thicket, Throne of the Tides, and Waycrest Manor.
+- {{< spell 2637  "Hibernate" >}} for Incorporeal weeks.
+- {{< spell 391528  "Nature's Vigil" >}} is still very strong in AoE, and will often keep you alive or minimise the need to Regrowth on big pulls, increasing your DPS. Over the dungeon it usually does more personal healing to you than any other talent, while also healing your group mates. Macro to Berserk/Incarn. 
+- {{< spell 378986  "Protector of the Pack" >}} is a strong self-healing node for Feral, and gains even more value if you can occasionally utilise it to heal your group as well.
+- {{< spell 33873  "Nurturing Instinct" >}} should only be considered if Beekeeping for small DPS and HPS gains.
+- {{< spell 131768  "Feline Swiftness" >}} is commonly dropped in high-end for more defensives and utility, as Catform gives 30% speed baseline which is more than enough for dungeon mechanics. If uncomfortable, try only dropping 1 point at first to retain 8%.
+- {{< spell 377842  "Ursine Vigor" >}} is more of a high-key talent to survive one-shots.
 
 
 
