@@ -295,8 +295,9 @@ For the first week or two of the season while still wearing old tier set.
 <br>[One-minute Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBNVFAVRUVFVoVRECBU)
 <br>[Raid ST-AoE hybrid](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVRAVRUVFVIVVBQCFU)
 <br>[Raid Cleave](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
-
-*Specific boss talents coming soon, let your mind cook with these foundations. 
+<br>[Alternative L/R Single Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
+- *Specific boss talents coming soon, let your mind cook with these foundations.
+- Note: generally best to play 'Standard Convoke' for single-target, assuming you have an on-use trinket like Witherbark's. They sim equally, however Convoke offers more burst, and pulls ahead with Augmentation buffing you. Kill timers can also play a factor; if you are unsure, stick to Convoke. If you do play L/R, Infected Wounds can optionally be swapped for Lunar Inspiration with T31 as well.
 
 <div id="raidcustomisation">
  
