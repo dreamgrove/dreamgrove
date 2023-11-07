@@ -426,6 +426,11 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 ## [Embellishments](#embellishments)
 
+With the recent changes to Sporecloak this section will be rewritten accordingly.
+For the Sporecloak nerf see:
+https://www.wowhead.com/blue-tracker/topic/us/guardians-of-the-dream-ptr-development-notes-1666552#21857028
+
+<div style="display: none">
 </div>
 
 For Embellishments craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak) paired with either [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps).
@@ -437,7 +442,7 @@ For Embellishments craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/i
 - [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak). This is our highest damage throughput option, and also comes with a fantastic defensive component on a low-budget item slot. Don't think too hard and just craft this first, its truly a no-brainer.
 - Sim yourself to see which leather armor slot best pairs with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps). Generally bracers would be a good slot for Shadowflame since the max itemlevel is 486 and bracers has a low stat budget.
 - Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
-
+</div>
 
 <br><div id="trinkets">
 
