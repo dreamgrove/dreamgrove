@@ -666,7 +666,7 @@ This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, sh
 [Bloodtalons Tracker from Cheesey's pack](https://wago.io/zinn-QaFI)
 Additional BT tracker.
 
-[Focus Skull Bash macro]([https://wago.io/cQkL9nrAw](https://wago.io/mOvsNkzJ7))
+[Focus Skull Bash macro](https://wago.io/mOvsNkzJ7)
 Helps emphasise focus kicks when your Skull Bash is off CD.
 
 </div>
