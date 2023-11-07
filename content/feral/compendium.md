@@ -276,11 +276,10 @@ When reading the priority lists below, you should not think about these as steps
 <div id="raidtalents">
  
 ## [Raid Talents](#raidtalents)
-
 </div>
 
 ### T30 4pc 10.2 Talent Builds (Aberrus tier-set)
-For the first week or two of the season while still wearing T30.
+For the first week or two of the season while still wearing old tier set.
 
 [T30 Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
 <br>[T30 Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVFAZREVFVaRRAQCBU)
@@ -315,8 +314,7 @@ In the first two gates, you can freely swap between {{< spell 231063 "Merciless 
 - {{< spell 285381 "Primal Wrath" >}} if there are regular adds that need to die, or adds that can provide funnel opportunities with {{< spell 391881 "Apex" >}}.
 - Note: {{< spell 391785 "Tear Open Wounds" >}} and {{< spell 391700 "Double-Clawed Rake" >}} are additional options particularly for sustained AoE/cleave (Council), or if your raid is struggling with certain adds. 
 
-Final gate options:
-<br> Swap between {{< spell 390902 "Carnivorous Instincts" >}}, {{< spell 400320 "Circle of Life and Death" >}}, {{< spell 421432 "Saber Jaws" >}}, {{< spell 391347 "Rip & Tear" >}}, 1 minute {{< spell 391548  "Convoke the Spirits" >}}, and {{< spell 391889 "Swarm" >}}, as needed.
+Final gate options: swap between {{< spell 390902 "Carnivorous Instincts" >}}, {{< spell 400320 "Circle of Life and Death" >}}, {{< spell 421432 "Saber Jaws" >}}, {{< spell 391347 "Rip & Tear" >}}, 1 minute {{< spell 391548  "Convoke the Spirits" >}}, and {{< spell 391889 "Swarm" >}}, as needed.
 - {{< spell 400320 "Circle" >}}: generally worth grabbing if taking {{< spell 285381 "Primal Wrath" >}} with {{< spell 391881 "Apex" >}}, or if there's a lot of multi-dot potential.
 - {{< spell 390902 "Carnivorous Instincts" >}}: strong burst, with good single-target and AoE. Predator resets and high Tiger's Fury uptime add value here.
 - {{< spell 421432 "Saber Jaws" >}}: strong single-target pathing option to {{< spell 391881 "Apex" >}}. 
@@ -339,7 +337,7 @@ Final gate options:
 
 </div>
 
-The builds listed here are only a small sample, and can be customised significantly. Various options and the logic on when you might swap certain talents are outlined in the section below.
+The builds listed here are only a sample, and can be customised significantly. Various options and the logic on when you might swap certain talents are outlined in the section below.
 
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
 <br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
@@ -348,8 +346,6 @@ The builds listed here are only a small sample, and can be customised significan
 <br>[Incarn](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFE)
 <br>[Beekeeping](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYJCFVUExRQQBBOVRURRQVFVIUVRQCFQ)
 <br>[Funnel Option](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRERVQVFVYRVBQCFU)
-
-The builds listed here are only a sample, and can be customised significantly. Various options and the logic on when you might swap certain talents are outlined in the section below.
 
 <div id="m+">
  
@@ -362,7 +358,7 @@ The builds listed here are only a sample, and can be customised significantly. V
 Note: for Feral, the talents in the first two gates have similar power-levels, and you can freely distribute extra points how you please here, up until you have spent 20 points. The final gate has stronger nodes and you should always spend the maximum points possible here (10).
 
 Options for the first two gates:
-- {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: this comes down to pull size, DCR particularly excels in low and medium (pug) size pulls and is generally the better choice, however RF can pull ahead with large pulls e.g. in a dungeon with dense trash or with an organised group doing consistent triple~ pulls.
+- {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: this comes down to pull size; DCR particularly excels in low and medium (pug) size pulls and is generally the better choice, however RF can pull ahead with large pulls e.g. in a dungeon with dense trash or with an organised group doing consistent triple~ pulls.
 - {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you want more single target, TFB is a great option e.g. for Tyrannical weeks, while also providing some funnel value on trash.
 - {{< spell 391785 "Tear Open Wounds" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: if your goal is purely to funnel, you can change to RF and spend your finishers on Bite while only using {{< spell 285381 "Primal Wrath" >}} only to maintain Rip in AoE. This is somewhat more advanced with more consideration for energy and combo points, and requires you to break ‘primal wrath spam' muscle memory.
 - {{< spell 48484 "Infected Wounds" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you are not running Double-clawed Rake, Taste for Blood is a great option that offers a prominent single target gain over Infected Wounds this patch as a result of the {{< spell 391881 "Apex" >}} changes. Even moreso if running {{< spell 391528  "Convoke the Spirits" >}}.
