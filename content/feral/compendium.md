@@ -1,6 +1,6 @@
 ---
 date: '2023-11-03'
-authors: ["Crazymeow"]
+authors: ["Crazymeow, Cheesey"]
 published: false
 patch: "10.2"
 title: Feral Druid 10.2 Compendium
