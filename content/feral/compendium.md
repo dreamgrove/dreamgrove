@@ -21,7 +21,7 @@ sidebarContents:  |
   <br>[Raid Class Tree](#raidclasstree)
   <br>[Dungeon Talents](#dungeontalents)
   <br>[M+ Talent Customisation](#m+)
-  <br>[M+ Class Tree](m+classtree)
+  <br>[M+ Class Tree](#m+classtree)
  
   **[4.Consumables](#consumables)**
   <br>[Potions](#potions)
