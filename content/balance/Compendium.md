@@ -586,8 +586,8 @@ For the past few expansions, cancelling your Starlord aura has been something th
 
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.2.html)
 <br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.2.html)
-<br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phial_1T_10.2.html)
-<br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phial_6T_10.2.html)
+<br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phials_1T_10.2.html)
+<br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phials_6T_10.2.html)
 <br>[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.2.html)
 <br>[Runes 6T](https://www.dreamgrove.gg/balance/sims/runes_6T_10.2.html)
 <br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/races_1T_10.2.html)
