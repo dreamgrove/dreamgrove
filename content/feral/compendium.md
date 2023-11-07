@@ -267,37 +267,101 @@ When reading the priority lists below, you should not think about these as steps
 
 </div>
 
-## Talents for different target counts
-[Single target](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[M+ Talents Cookie Cutter](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Sustained AoE](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-
-
 ## Raid Talents
-[Pure single target(Kazzara, Amalgation no cleave, Rashok, Magmorax)](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Two target cleave(Experiments Mythic)](https://www.raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Amalgamation](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Sustained AoE with ST(Assault of the Zaqali, Zskarn)](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Single target with burst AoE(Echo of Neltharion, Sarkareth)](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Echo of Neltharion Mythic](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[Mythic Sarkareth](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>From a progression perspective it is better to single target down the big add, if your guild is having trouble killing the adds you could swap <input here>
+### T30 4pc 10.2 Talent Builds (Aberrus tier-set)
+<br>For first week or two of season while still wearing T30.
 
-## Dungeon Talents
-The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Mind that while all these builds use Moons, FoE will result in about the same dps. FoE will often not align with Pulsar which can make it annoying to play with.
-  
-[Cookie cutter every dungeon build](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
+[T30 Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
+<br>[T30 Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVFAZREVFVaRRAQCBU)
+- Drop a point in {{< spell 383352 "Tireless Energy" >}} or {{< spell 48484 "Infected Wounds" >}} if you need {{< spell 285381 "Primal Wrath" >}} in either of these builds for fights with adds.
+- Note: it is preferable if you can farm an on-use stat trinket for the burst build. 
+<br>[T30 Sustained Cleave/AoE](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQZCFRUExhUQBBOVRURRQVFVYRVBQCFE)
 
-<br>[Cookie cutter with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-<br>[More AoE](https://raidbots.com/simbot/render/talents/?bgcolor=000000)
-### Dungeon Druid Tree Considerations
+### 2pc+2pc Talent Builds
+<br>Plays the same builds as T30, except you can swap a point in {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 391889 "Adaptive Swarm" >}} for the burst and cleave builds for a small gain if you want.
+<br>As mentioned earlier, you should sim your character to see if it’s worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
 
-- Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
-- Remove Corruption should be taken in Afflicted weeks and can be taken in every dungeon except Vortex Pinnacle if your group is lacking decurse/poison dispel.
-- Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
-- Hibernate can be used for the Incorporeal affix.
-- All other talents in the druid tree are more or less set.
+### T31 4pc Talent Builds (Amirdrassil tier-set)
+
+[T31 Standard Convoke Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFVKVRAQCFQ)
+<br>[One-minute Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBNVFAVRUVFVoVRECBU)
+<br>[Raid ST-AoE hybrid](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVRAVRUVFVIVVBQCFU)
+<br>[Raid Cleave](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
+
+*Specific boss talents coming soon, let your mind cook with these foundations. 
+
+### T31 Raid Talent Customisation
+
+In the first two gates, you can freely swap between {{< spell 231063 "Merciless Claws" >}}, {{< spell 383352 "Tireless Energy" >}}, {{< spell 48484 "Infected Wounds" >}}, and {{< spell 285381 "Primal Wrath" >}}, based on what you need.
+- {{< spell 231063 "Merciless Claws" >}} is the strongest burst option of these nodes, and only slightly behind in sustained single-target and cleave.
+- {{< spell 48484 "Infected Wounds" >}} for stronger sustained single-target, or if multi-dotting with Rake.
+- {{< spell 383352 "Tireless Energy" >}} for strong single-target and solid in cleave and AoE, but weaker for burst. You should also adjust points if you are overcapping energy via {{< spell 391881 "Apex" >}} procs or downtime due to mechanics. 
+- {{< spell 285381 "Primal Wrath" >}} if there are regular adds that need to die, or adds that can provide funnel opportunities with {{< spell 391881 "Apex" >}}.
+- Note: {{< spell 391785 "Tear Open Wounds" >}} and {{< spell 391700 "Double-Clawed Rake" >}} are additional options particularly for sustained AoE/cleave (Council), or if your raid is struggling with certain adds. 
+
+Final gate options:
+<br> Swap between {{< spell 390902 "Carnivorous Instincts" >}}, {{< spell 400320 "Circle of Life and Death" >}}, {{< spell 421432 "Saber Jaws" >}}, {{< spell 391347 "Rip & Tear" >}}, 1 Minute {{< spell 391548  "Convoke the Spirits" >}}, and {{< spell 391889 "Swarm" >}}, as needed.
+- {{< spell 400320 "Circle" >}}: generally worth grabbing if taking {{< spell 285381 "Primal Wrath" >}} with {{< spell 391881 "Apex" >}}, or if there's a lot of multi-dot potential.
+- {{< spell 390902 "Carnivorous Instincts" >}}: strong burst, with good single-target and AoE. Predator resets and high Tiger's Fury uptime add value here.
+- {{< spell 421432 "Saber Jaws" >}}: strong single-target pathing option to {{< spell 391881 "Apex" >}}. 
+- {{< spell 391347 "Rip & Tear" >}}: cleave and AoE pathing option to {{< spell 391881 "Apex" >}}, not too far behind on single-target vs Saber Jaws with Convoke as it lets you spend another point elsewhere.
+- 1 minute {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or just a gambling addict. Kill times will play a significant factor and whether your raids kill time aligns better with the cooldown of 2 minute Convoke (even e.g. 4.31) vs 1 minute Convoke (odd e.g. 5.31).
+- {{< spell 391889 "Swarm" >}}: incredibly strong single-target synergy with tier-set, can drop at times for heavy AoE.
+
+### Class Tree Talents for Raid.
+
+*Coming soon with specific boss builds. 
+<br> For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
+
+## Dungeon Talents 
+
+pic goes here
+
+[Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
+<br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
+<br>[Max Ethical Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRRUVFVIVVBQCFU)
+<br>[MDI Pad](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRVEVFVYRVBQCFU)
+<br>[Incarn](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFE)
+<br>[Beekeeping](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYJCFVUExRQQBBOVRURRQVFVIUVRQCFQ)
+<br>[Funnel Option](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRERVQVFVYRVBQCFU)
+
+The builds listed here simply some of the standard builds, and can be customised significantly. Various options and the logic on when you might take are outlined in the section below.
+<br>Note: all dungeon builds are assuming you have the new tier tier, however these options are similarly viable with the old tier set for the season launch.
+
+### M+ Talent Customisation
+
+Note: for Feral, the talents in the first two gates have similar power-levels, and you can freely distribute extra points how you please here, up until you have spent 20 points. The final gate has stronger nodes and you should always spend the maximum points possible here (10).
+
+Options for the first two gates:
+- {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: this comes down to pull size, DCR particularly excels in low and medium (pug) size pulls and is generally the better choice, however RF can pull ahead with large pulls e.g. in a dungeon with dense trash or with an organised group doing consistent triple~ pulls.
+- {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you want more single target, TFB is a great option e.g. for Tyrannical weeks, while also providing some funnel value on trash.
+- {{< spell 391785 "Tear Open Wounds" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: if your goal is purely to funnel, you can change to RF and spend your finishers on Bite while only using {{< spell 285381 "Primal Wrath" >}} only to maintain Rip in AoE. This is somewhat more advanced with more consideration for energy and combo points, and requires you to break ‘primal wrath spam' muscle memory.
+- {{< spell 48484 "Infected Wounds" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you are not running Double-clawed Rake, Taste for Blood is a great option that offers a prominent single target gain over Infected Wounds this patch as a result of the {{< spell 391881 "Apex" >}} changes. Even moreso if running {{< spell 391528  "Convoke the Spirits" >}}.
+
+Options for the final gate:
+- {{< spell 319439 "Bloodtalons" >}} vs {{< spell 391972 "Lion's Strength" >}}: in 10.2, BT gains a lot of quality of life when changing to the new tier-set, in addition to the {{< spell 391881 "Apex" >}} change with procs slowing down slightly in AoE. This combined with the 10.1 change of 3 charges makes BT feel smooth to play in season 3 M+. However, Lion's Strength is still a competitive option and only a small DPS loss while allowing you to focus on other things. If you are fairly new to Feral, you should start with Lion's Strength and swap to Bloodtalons when you have learnt everything else.
+- {{< spell 391528  "Convoke the Spirits" >}} vs {{< spell 102543 "Incarnation" >}}: both talents are equally viable and will depend on your talents, gear, dungeon, and own preference. Convoke is very strong with Witherbark’s Branch or similar on-use trinkets, and similarly should be played if dropping Rake talents such as Infected Wounds (as Incarn wants Rake talents), while Incarn can pull ahead with larger pulls. These two options are interchangeable though and there is no all-round ‘best.’ 
+- 1 min {{< spell 391548  "Convoke the Spirits" >}}: generally worse than 2m, however is a competitive option if running {{< spell 391709 "Rampant Ferocity" >}}. Drop Carnivorous Instincts/Swarm for it.
+- {{< spell 390902 "Carnivorous Instincts" >}} vs {{< spell 391889 "Swarm" >}}: CI is your ‘safe’ all-round good pick, however Swarm is a very strong single-target option and should be considered for Tyrannical.
+- {{< spell 391951 "Unbridled Swarm" >}}: for a talent that undersims, this is simming competitively with the more standard builds. In other words: this is looking to be very, very good this patch. Take in medium pull size dungeons.
+- Honourable mention: {{< spell 391978 "Veinripper" >}} can be a good funnel option if playing a {{< spell 391709 "Rampant Ferocity" >}}-focused build and focusing on ethical prio-damage.
+
+### Class Tree Talents for Dungeons
+
+pic goes here
+
+The druid tree offers a fair degree of customisation as Feral in M+, with a range of utility and defensive options. What is selected (yellow) is mandatory, with blue nodes being your options based on affixes or personal preference. 
+
+- Remove Corruption for Afflicted weeks. Additionally, the following dungeons have poison and curse dispels: Atal'Dazar, Darkheart Thicket, Throne of the Tides, and Waycrest Manor.
+- Hibernate for Incorporeal weeks.
+- Nature's Vigil is still very strong in AoE, and will often keep you alive or minimise the need to Regrowth on big pulls, increasing your DPS. Over the dungeon it usually does more personal healing to you than any other talent, while also healing your group mates. Macro to Berserk/Incarn. 
+- Protector of the Pack is a strong self-healing node for Feral, and gains even more value if you can occasionally utilise it to heal your group as well.
+- Nurturing Instinct should only be considered if Beekeeping for small DPS and HPS gains.
+- Feline Swiftness is commonly dropped in high-end for more defensives and utility, as Catform gives 30% speed baseline which is more than enough for dungeon mechanics. If uncomfortable, try only dropping 1 point at first to retain 8%.
+- Ursine Vigor is more of a high-key talent to survive one-shots.
+
+
+
 
 
 <div id="consumables">
