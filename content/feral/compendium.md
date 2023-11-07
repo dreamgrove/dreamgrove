@@ -315,7 +315,7 @@ Final gate options:
 
 ## Dungeon Talents 
 
-{{< figure src="/feral/classtreem+" >}}
+{{< figure src="/feral/classtreem+.png" >}}
 
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
 <br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
