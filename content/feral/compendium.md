@@ -273,7 +273,7 @@ When reading the priority lists below, you should not think about these as steps
 
 </div>
 
-<div id="Raid Talents">
+<div id="raidtalents">
  
 ## [Raid Talents](#raidtalents)
 
@@ -302,7 +302,7 @@ For the first week or two of the season while still wearing T30.
 
 *Specific boss talents coming soon, let your mind cook with these foundations. 
 
-<div id="Raid Talent Customisation">
+<div id="raidcustomisation">
  
 ### [T31 Raid Talent Customisation](#raidcustomisation)
 
@@ -324,7 +324,7 @@ Final gate options:
 - 1m {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or just a gambling addict. Kill times will play a significant factor and whether your raids kill time aligns better with the cooldown of 2 minute Convoke (even e.g. 4.31) vs 1 minute Convoke (odd e.g. 5.31).
 - {{< spell 391889 "Swarm" >}}: incredibly strong single-target synergy with tier-set, can drop at times for heavy AoE.
 
-<div id="Raid Class Tree">
+<div id="raidclasstree">
  
 ### [Class Tree Talents for Raid](#raidclasstree)
 
@@ -333,7 +333,7 @@ Final gate options:
 - *Coming soon with specific boss builds. 
 - For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
 
-<div id="Dungeon Talents">
+<div id="dungeontalents">
  
 ## [Dungeon Talents](#dungeontalents) 
 
@@ -351,7 +351,7 @@ The builds listed here are only a small sample, and can be customised significan
 
 The builds listed here are only a sample, and can be customised significantly. Various options and the logic on when you might swap certain talents are outlined in the section below.
 
-<div id="M+ Talent Customisation">
+<div id="m+">
  
 ### [M+ Talent Customisation](#m+)
 
@@ -375,9 +375,9 @@ Options for the final gate:
 - {{< spell 391951 "Unbridled Swarm" >}}: for a talent that undersims, this is simming competitively with the more standard builds. In other words: this is looking to be very, very good this patch. Take in medium pull size dungeons.
 - Honourable mention: {{< spell 391978 "Veinripper" >}} can be a good funnel option if playing a {{< spell 391709 "Rampant Ferocity" >}}-focused build and focusing on ethical prio-damage.
 
-<div id="M+ Class Tree">
+<div id="m+classtree">
  
-### [M+ Class Tree](m+classtree)
+### [M+ Class Tree](#m+classtree)
 
 </div>
 
