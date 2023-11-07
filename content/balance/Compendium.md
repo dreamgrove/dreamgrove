@@ -58,7 +58,8 @@ sidebarContents:  |
 > 2p: When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 40% and increasing their damage by 100%.
 
 Looks to be a ~5.1% increase from having no tier.
-<br>If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast.
+<br>If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your {{< spell 424248 "Dreamstate" >}} stacks will then reset back to 2 when you finish your cast.
+<br>Using {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation" >}} will also grant you {{< spell 424248 "Dreamstate" >}}, however proccing {{< spell 393961 "pulsar" >}} will not.
 
 > 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
 
