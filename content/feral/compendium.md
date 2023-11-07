@@ -20,7 +20,7 @@ sidebarContents:  |
   <br>[Raid Talent Customisation](#raidcustomisation)
   <br>[Raid Class Tree](#raidclasstree)
   <br>[Dungeon Talents](#dungeontalents)
-  <br>[M+ Customisation](#m+)
+  <br>[M+ Talent Customisation](#m+)
   <br>[M+ Class Tree](m+classtree)
  
   **[4.Consumables](#consumables)**
@@ -273,6 +273,7 @@ When reading the priority lists below, you should not think about these as steps
 
 </div>
 
+<div id="Raid Talents">
 ## [Raid Talents](#raidtalents)
 ### T30 4pc 10.2 Talent Builds (Aberrus tier-set)
 For the first week or two of the season while still wearing T30.
@@ -296,6 +297,7 @@ For the first week or two of the season while still wearing T30.
 
 *Specific boss talents coming soon, let your mind cook with these foundations. 
 
+<div id="Raid Talent Customisation">
 ### [T31 Raid Talent Customisation](#raidcustomisation)
 
 In the first two gates, you can freely swap between {{< spell 231063 "Merciless Claws" >}}, {{< spell 383352 "Tireless Energy" >}}, {{< spell 48484 "Infected Wounds" >}}, and {{< spell 285381 "Primal Wrath" >}}, based on what you need.
@@ -314,11 +316,13 @@ Final gate options:
 - 1 minute {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or just a gambling addict. Kill times will play a significant factor and whether your raids kill time aligns better with the cooldown of 2 minute Convoke (even e.g. 4.31) vs 1 minute Convoke (odd e.g. 5.31).
 - {{< spell 391889 "Swarm" >}}: incredibly strong single-target synergy with tier-set, can drop at times for heavy AoE.
 
+<div id="Raid Class Tree">
 ### [Class Tree Talents for Raid](#raidclasstree)
 
 - *Coming soon with specific boss builds. 
 - For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
 
+<div id="Dungeon Talents">
 ## [Dungeon Talents](#dungeontalents) 
 
 The builds listed here are only a small sample, and can be customised significantly. Various options and the logic on when you might swap certain talents are outlined in the section below.
@@ -333,6 +337,7 @@ The builds listed here are only a small sample, and can be customised significan
 
 The builds listed here are only a small sample, and can be customised significantly. Various options and the logic on when you might swap certain talents are outlined in the section below.
 
+<div id="M+ Talent Customisation">
 ### [M+ Talent Customisation](#m+)
 
 {{< figure src="/feral/classtreem+.png" >}}
@@ -353,7 +358,8 @@ Options for the final gate:
 - {{< spell 391951 "Unbridled Swarm" >}}: for a talent that undersims, this is simming competitively with the more standard builds. In other words: this is looking to be very, very good this patch. Take in medium pull size dungeons.
 - Honourable mention: {{< spell 391978 "Veinripper" >}} can be a good funnel option if playing a {{< spell 391709 "Rampant Ferocity" >}}-focused build and focusing on ethical prio-damage.
 
-### [Class Tree Talents for Dungeons](m+classtree)
+<div id="M+ Class Tree">
+### [M+ Class Tree](m+classtree)
 
 {{< figure src="/feral/druidtreem+.png" >}}
 
