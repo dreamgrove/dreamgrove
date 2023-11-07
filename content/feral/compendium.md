@@ -3,6 +3,7 @@ date: '2023-11-07'
 authors: ["Crazymeow, Cheesey"]
 published: true
 patch: "10.2"
+description: Everything you need to know about Feral Druid
 title: Feral Druid 10.2 Compendium
 showOnFrontpage: false
 sidebarTitle: "Quicklinks"
