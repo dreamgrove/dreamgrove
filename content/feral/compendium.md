@@ -286,12 +286,9 @@ For the first week or two of the season while still wearing old tier set.
 <br>[T30 Sustained Cleave/AoE](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQZCFRUExhUQBBOVRURRQVFVYRVBQCFE)
 - Drop a point in {{< spell 383352 "Tireless Energy" >}} or {{< spell 48484 "Infected Wounds" >}} if you need {{< spell 285381 "Primal Wrath" >}} in either of these builds for fights with adds.
 - Note: it is preferable if you can farm an on-use stat trinket for the burst build. 
-
-
 ### 2pc+2pc Talent Builds
 - Plays the same builds as T30, except you can swap a point in {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 391889 "Adaptive Swarm" >}} for the burst and cleave builds for a small gain if you want.
 - As mentioned earlier, you should sim your character to see if it’s worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
-
 ### T31 4pc Talent Builds (Amirdrassil tier-set)
 
 [T31 Standard Convoke Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFVKVRAQCFQ)
