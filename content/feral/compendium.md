@@ -323,7 +323,7 @@ Final gate options: swap between {{< spell 390902 "Carnivorous Instincts" >}}, {
 - {{< spell 390902 "Carnivorous Instincts" >}}: strong burst, with good single-target and AoE. Predator resets and high Tiger's Fury uptime add value here.
 - {{< spell 421432 "Saber Jaws" >}}: strong single-target pathing option to {{< spell 391881 "Apex" >}}. 
 - {{< spell 391347 "Rip & Tear" >}}: cleave and AoE pathing option to {{< spell 391881 "Apex" >}}, not too far behind on single-target vs Saber Jaws with Convoke as it lets you spend another point elsewhere.
-- 1m {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or just a gambling addict. Kill times will play a significant factor and whether your raids kill time aligns better with the cooldown of 2 minute Convoke (even e.g. 4.31) vs 1 minute Convoke (odd e.g. 5.31).
+- 1m {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or are just a gambling addict. Your Kill times will also play a significant factor. For instance, if your raids kill time aligns better with the cooldown of 1 minute Convoke (odd e.g. 5:31) compared to 2 minute Convoke (even e.g. 4:31).
 - {{< spell 391889 "Swarm" >}}: incredibly strong single-target synergy with tier-set, can drop at times for heavy AoE.
 
 <div id="raidclasstree">
