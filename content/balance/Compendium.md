@@ -5,6 +5,7 @@ published: true
 patch: "10.2"
 title: Balance Druid 10.2 Compendium
 showOnFrontpage: true
+description: "Everything you need to know about Balance Druid"
 showInRecent: true
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
