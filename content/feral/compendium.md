@@ -143,7 +143,7 @@ The way this section is written is very formulaic and has the same structure as 
     - You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.
 
-**If you are in Berserk see [here](#Berserk) as your priorities from this point on change a bit.**
+**If you are in Berserk see [here](#berserk) as your priorities from this point on change a bit.**
 
 - If you have {{< spell 411344 "Predator Revealed" >}} active from 10.1 4 piece set bonus, 4 combo points and are at least 40 energy away from cap, wait until you passively gain your 5th combo point.
 - Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
@@ -241,6 +241,7 @@ The way this section is written is very formulaic and has the same structure as 
     - {{< spell 5217 "Tiger's Fury" >}} is up.
     - {{< spell 422751 "Smoldering Frenzy" >}} is up or you do not have 10.2 4 piece set bonus equipped.
     - You have 0 or 1 combo points OR {{< spell 422751 "Smoldering Frenzy" >}} would fall off before {{< spell 391528  "Convoke" >}} ends.
+- Use {{< spell 274838 "Feral Frenzy" >}} if you have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc and you either don't have {{< spell 285381 "Primal Wrath" >}} talented or {{< spell 202031 "Sabertooth" >}} up.
 - Use {{< spell 285381 "Primal Wrath" >}} if you have 5 combo points, or at least 4 combo points and not in {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}} and any of these conditions are met:
     - {{< spell 1079 "Rips" >}} from {{< spell 285381 "Primal Wrath" >}} are in pandemic
@@ -322,7 +323,7 @@ Final gate options: swap between {{< spell 390902 "Carnivorous Instincts" >}}, {
 - {{< spell 390902 "Carnivorous Instincts" >}}: strong burst, with good single-target and AoE. Predator resets and high Tiger's Fury uptime add value here.
 - {{< spell 421432 "Saber Jaws" >}}: strong single-target pathing option to {{< spell 391881 "Apex" >}}. 
 - {{< spell 391347 "Rip & Tear" >}}: cleave and AoE pathing option to {{< spell 391881 "Apex" >}}, not too far behind on single-target vs Saber Jaws with Convoke as it lets you spend another point elsewhere.
-- 1m {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or just a gambling addict. Kill times will play a significant factor and whether your raids kill time aligns better with the cooldown of 2 minute Convoke (even e.g. 4.31) vs 1 minute Convoke (odd e.g. 5.31).
+- 1m {{< spell 391548  "Convoke the Spirits" >}}: if you need more frequent burst, or are just a gambling addict. Your Kill times will also play a significant factor. For instance, if your raids kill time aligns better with the cooldown of 1 minute Convoke (odd e.g. 5:31) compared to 2 minute Convoke (even e.g. 4:31).
 - {{< spell 391889 "Swarm" >}}: incredibly strong single-target synergy with tier-set, can drop at times for heavy AoE.
 
 <div id="raidclasstree">
@@ -485,7 +486,7 @@ For Embellishments we craft 2x [Shadowflame-Tempered Armor Patch](https://www.wo
 - Sim yourself to see which leather armor slot best pairs with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch). If you refuse to sim, put it on cloak or bracers, whichever is lower item level for you.
 - Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
 
-I would recommend holding your 1st craft for as long as possible. It's not unusual for blizzard to tune as late as during the first couple days of raid release. Of course, I can't stop you if you decide to craft early, but due note that you may craft suboptimally if you do so. Would be a shame if snowball makers suddenly got a 100% buff.
+I would recommend holding your 1st craft for as long as possible. It's not unusual for blizzard to tune as late as during the first couple days of raid release. Of course, I can't stop you if you decide to craft early, but do note that you may craft suboptimally if you do so. Would be a shame if snowball makers suddenly got a 100% buff.
 
 <br><div id="trinkets">
 
@@ -665,7 +666,7 @@ This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, sh
 [Bloodtalons Tracker from Cheesey's pack](https://wago.io/zinn-QaFI)
 Additional BT tracker.
 
-[Focus Skull Bash macro]([https://wago.io/cQkL9nrAw](https://wago.io/mOvsNkzJ7))
+[Focus Skull Bash macro](https://wago.io/mOvsNkzJ7)
 Helps emphasise focus kicks when your Skull Bash is off CD.
 
 </div>
