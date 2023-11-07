@@ -429,9 +429,10 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 With the recent changes to Sporecloak this section will be rewritten accordingly.
 For the Sporecloak nerf see:
 https://www.wowhead.com/blue-tracker/topic/us/guardians-of-the-dream-ptr-development-notes-1666552#21857028
-
-<div style="display: none">
 </div>
+
+<div style="display: none;">
+
 
 For Embellishments craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak) paired with either [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps).
 <br>This comes down to which slot is your worst as they do about the same damage.
