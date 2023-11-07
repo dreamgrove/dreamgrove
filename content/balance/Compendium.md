@@ -318,7 +318,7 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 ### TBD
 
 ## Dungeon Talents
-The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Mind that while all these builds use Moons, FoE will result in about the same dps. FoE will often not align with Pulsar which can make it annoying to play with.
+The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Mind that while all these builds use {{< spell 274281 "New Moon" >}}, {{< spell 211545 "Fury of Elune" >}} will result in about the same dps. {{< spell 211545 "FoE" >}} will often not align with {{< spell 393961 "Pulsar" >}} which can make it annoying to play with.
 
 The below picture showcases which talents are "mandatory" and which talents you can opt-in to:
 
@@ -332,11 +332,11 @@ The below picture showcases which talents are "mandatory" and which talents you 
 <br>[Class tree with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
 <br>[If you really need both Hibernate and Remove Corruption](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
 
-- Ursine Vigor, Well-Honed Instincts and Improved Stampeding Roar are the major competing talents. Ursine Vigor should be taken if you need it to survive certain abilities. Well-Honed Instincts is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. Improved Stampeding Roar is extremely useful in indoor dungeons and in spiteful weeks.
-- Remove Corruption should be taken in Afflicted weeks.
-- Cyclone has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
-- Hibernate can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into Feline Swiftness like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000). This skips Ursine Vigor and Typhoon.
+- {{<spell 377842 "Ursine Vigor">}}, {{<spell 377847 "Well-Honed Instincts">}} and {{<spell 288826 "Improved Stampeding Roar">}} are the major competing talents. {{<spell 377842 "Ursine Vigor">}} should be taken if you need it to survive certain abilities. {{<spell 377847 "Well-Honed Instincts">}} is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. {{<spell 288826 "Improved Stampeding Roar">}} is extremely useful in indoor dungeons and in spiteful weeks.
+- {{<spell 2782 "Remove Corruption">}} should be taken in Afflicted weeks.
+- {{<spell 33786 "Cyclone">}} has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
+- {{<spell 2637 "Hibernate">}} can be used for the Incorporeal affix.
+- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}.
 - All other talents in the druid tree are more or less set.
 
 
