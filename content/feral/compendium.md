@@ -311,7 +311,7 @@ Final gate options:
 ### Class Tree Talents for Raid.
 
 - *Coming soon with specific boss builds. 
-- <br> For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
+- For now: remember to take {{< spell 29166 "Innervate" >}}!! You can cast in Cat Form now, and your healers will need it as the Rashok healer trinket has been nerfed.
 
 ## Dungeon Talents 
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
