@@ -315,7 +315,7 @@ Final gate options:
 
 ## Dungeon Talents 
 
-pic goes here
+{{< figure src="/feral/classtreem+" >}}
 
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
 <br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
@@ -348,7 +348,7 @@ Options for the final gate:
 
 ### Class Tree Talents for Dungeons
 
-pic goes here
+{{< figure src="/feral/druidtreem+.png" >}}
 
 The druid tree offers a fair degree of customisation as Feral in M+, with a range of utility and defensive options. What is selected (yellow) is mandatory, with blue nodes being your options based on affixes or personal preference. 
 
