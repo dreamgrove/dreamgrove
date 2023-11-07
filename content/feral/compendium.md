@@ -651,7 +651,7 @@ See the description of the WA for more details. This will assist you with using 
 This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, showing the 4 second timer for each spell you cast towards it.
 
 [Bloodtalons Tracker from Cheesey's pack](https://wago.io/zinn-QaFI)
-This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, showing the 4 second timer for each spell you cast towards it.
+Additional BT tracker.
 
 [Focus Skull Bash macro]([https://wago.io/cQkL9nrAw](https://wago.io/mOvsNkzJ7))
 Helps emphasise focus kicks when your Skull Bash is off CD.
