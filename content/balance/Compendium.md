@@ -267,11 +267,11 @@ When reading the priority lists below, you should not think about these as steps
 
 {{< spell 202425 "Warrior of Elune" >}} can be used 7 seconds before an eclipse ends, this way you will have just enough time to spend your third charge before the buff runs out and the CD will start earlier which can net you more uses throughout the fight.
 
-Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during CA/Inc is NOT a damage increase if you do not need to move. 
+Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is NOT a damage increase if you do not need to move. 
 
-If Warrior of Elune is falling off during CA/Inc and you still have a charge to spend, you can starfire at 2+ targets.
+If Warrior of Elune is falling off during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} and you still have a charge to spend, you can {{< spell 194153 "Starfire" >}} at 2+ targets.
 
-Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
+Warrior of Elune can also be used during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}} when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
 
 
 <br><div id="prestack">
@@ -288,7 +288,7 @@ The goal for stacking it to these values is to refresh buffs like {{< spell 3940
 
 The other value to keep in mind is **560** {{< spell 393961 "Pulsar" >}}, it's a bit worse than 240-360 but still represents a gain.
 
-With this value you would begin the encounter with the standard opener; however, instead of using CA/Inc, proc your pulsar and use your trinket and potion. When pulsar drops off, spend your {{< spell 424248 "Dreamstate" >}} stacks and then use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
+With this value you would begin the encounter with the standard opener; however, instead of using {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, proc your pulsar and use your trinket and potion. When pulsar drops off, spend your {{< spell 424248 "Dreamstate" >}} stacks and then use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
 
