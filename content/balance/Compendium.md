@@ -197,9 +197,9 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
 <br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=true >}}Wild Mushroom{{< /checkbox >}}
 
-<br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
+<br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} or {{< spell 393940 "Starweaver" >}}, use Starsurge as a filler on 2 targets still.**
 <br>**AoE priority list(2+ targets):**
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 - number of targets divided by 2 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the targets will live for 6 or more seconds and you will not overcap on AP.
 {{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE" type="addList">}}- The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
@@ -207,31 +207,31 @@ When reading the priority lists below, you should not think about these as steps
 - You're about to use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}
 - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 {{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
+- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
+- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
+- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Warrior of Elune-AoE" type="appendListItem">}}- Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 {{<cbtext id="Wild Mushroom-AoE" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP and {{< spell 393956 "Waning Twilight" >}} is not up on your targets.{{</cbtext>}}
-{{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
+{{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
+- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
     - You will not overcap on AP.
     - You can finish the cast before your current eclipse ends.
-    - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
+    - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:
     - The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
     - You will not overcap on AP.
     - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
 {{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
-{{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if you are fighting less than 3 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202768 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.{{</cbtext>}}
 {{<cbtext id="Force of Nature-AoE" type="appendToList">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
