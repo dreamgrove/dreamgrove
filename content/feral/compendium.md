@@ -84,7 +84,7 @@ This got buffed by 10%. Nothing changes about when you select this talent, as th
 
 **{{< spell 29166 "Innervate" >}}:** is now castable in Cat Form. Rejoice.
 
-<div id="rotation">
+<br><div id="rotation">
  
 # [2.Rotation:](#rotation)
 
@@ -127,7 +127,7 @@ When reading the priority lists below, you should not think about these as steps
     - If you have 2 or fewer {{< spell 391889 "Adaptive Swarms" >}} of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
 - Use {{< spell 102543 "Incarnation" >}} if it's ready.
 - Use {{< spell 106951 "Berserk" >}} if it's ready. 
-    - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
+    - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=103), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
 - Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:
     - Rip will not fall off during Convoke's channel.
     - Tiger's Fury is up.
@@ -138,7 +138,7 @@ When reading the priority lists below, you should not think about these as steps
     - You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.
 
-**If you are in Berserk see [here](#Berserk) as your priorities from this point on change a bit.**
+**If you are in Berserk see [here](#berserk) as your priorities from this point on change a bit.**
 
 - If you have {{< spell 411344 "Predator Revealed" >}} active from 10.1 4 piece set bonus, 4 combo points and are at least 40 energy away from cap, wait until you passively gain your 5th combo point.
 - Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
@@ -209,7 +209,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 202028 "Brutal Slash" >}} if you have 2 or 3 charges
 - Use {{< spell 5221 "Shred" >}}
 
-<div id="aoe">
+<br><div id="aoe">
 
 ## [AoE priority](#aoe)
 
@@ -267,7 +267,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 1822 "Rake" >}} ideally on a target where the new snapshot is at least the same strength as the applied {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
 
 
-<div id="talents">
+<br><div id="talents">
 
 # [3.Talents:](#talents)
 
@@ -389,9 +389,7 @@ The druid tree offers a fair degree of customisation as Feral in M+, with a rang
 
 
 
-
-
-<div id="consumables">
+<br><div id="consumables">
 
 # [4.Consumables:](#consumables)
 
@@ -408,7 +406,7 @@ The druid tree offers a fair degree of customisation as Feral in M+, with a rang
 [Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power) for every situation
 
 
-<div id="food">
+<br><div id="food">
 
 ## [Food](#food)
 
@@ -419,7 +417,7 @@ The druid tree offers a fair degree of customisation as Feral in M+, with a rang
 <br>You can also use secondary food such as [Feisty Fish Sticks](https://www.wowhead.com/item=197782/feisty-fish-sticks) or [Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley) or [Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer) for a small dps gain. Sim your character to see what is best for you.
 
 
-<div id="phials">
+<br><div id="phials">
 
 ## [Phials](#Phials)
 
@@ -431,7 +429,7 @@ Phials:
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Recommended phial if the fight has high damage intake or you are at risk of dying.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Generally similar dps throughput as Tepid Versatility, but less defensive benefits. 
 
-<div id="runes">
+<br><div id="runes">
 
 ## [Runes](#Runes)
 
@@ -439,7 +437,7 @@ Phials:
 
 I apologize for being annoying but, sim your character for the most accurate answer. Generally {{< spell 391528  "Convoke" >}} builds do not want to play [Howling Rune](https://www.wowhead.com/item=194819/howling-rune) if that is any consolation-but even that's not a guarantee. Make sure you select Rune (stat) (Main Hand) else it may not sim properly. ie: Buzzing (Crit) (Main Hand). Crit is the default setting.
 
-<div id="gearing">
+<br><div id="gearing">
 
 # [5.Gearing:](#gearing)
 
@@ -454,7 +452,7 @@ I apologize for being annoying but, sim your character for the most accurate ans
 
 Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
 
-<div id="enchants">
+<br><div id="enchants">
 
 ## [Enchants](#enchants)
 
@@ -469,7 +467,7 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 <br>Ring -  You should always sim your own character to determine what enchant to use in this slot. Depending on your gear, any of the four secondaries can be best for you.
 
 
-<div id="embellishments">
+<br><div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
@@ -484,32 +482,31 @@ For Embellishments we craft [Undulating Sporecloak](https://www.wowhead.com/ptr-
 - Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
 
 
-<div id="trinkets">
+<br><div id="trinkets">
 
 ## [Trinkets](#trinkets)
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. Acquire [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch) asap.
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. Acquire [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) asap.
 ### To use in Raid
 
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch)
-- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand)
-- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol)
-- [Accelerating Sandglass](https://www.wowhead.com/item=207566/accelerating-sandglass)
-- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge)
-- [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab)
+- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103)
+- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103)
+- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
+- [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
+- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
+- [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
   
 ### To use in Dungeons
 
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch)
-- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge)
-- [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab)
-- [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades)
-- [Accelerating Sandglass](https://www.wowhead.com/item=207566/accelerating-sandglass)
-<br><br>
+- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103)
+- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
+- [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
+- [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103)
+- [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
 
-<div id="misc">
+<br><div id="misc">
 
 # [6. Miscellaneous:](#misc)
 
@@ -535,7 +532,7 @@ If you have a Weakaura that tracks snapshot strength, it works as follows:
 
 Generally you try to maintain the strongest bleeds you can as much as possible, and the rotation above reflects this.
 
-<div id="pandemic">
+<br><div id="pandemic">
 
 ## [What does pandemic refer to?](#pandemic)
 
@@ -543,7 +540,7 @@ Generally you try to maintain the strongest bleeds you can as much as possible, 
 
 Pandemic is a mechanic that most damage-over-time spells have. When you cast a damage-over-time spell such as Rake while it's already applied to the target, the dots duration gets extended by the amount of time remaining on the dot. This extension is capped to 30% of the dots duration. For example, lets say you have a dot that has a 10 second duration. If you recast this dot while it has 2 seconds left, its new duration is 12 seconds. If you recast it again while it has 8 seconds left, its new duration is 13 seconds, because 30% of 10 seconds is 3 seconds. Pandemic got its name from an old warlock passive with the same effect, before it became a baseline feature of damage-over-time spells.
 
-<div id="macros">
+<br><div id="macros">
 
 ## [Macros](#macros)
 
@@ -618,8 +615,7 @@ Casts Rebirth when you mouseover a friendly, or otherwise Mark of the Wild. Cust
 /cast [@mouseover, help] Rebirth; Mark of the Wild
 ```
 
-<br>
-<div id="wa">
+<br><div id="wa">
  
 ## [Useful WeakAura(s)](#wa)
  
