@@ -1,7 +1,7 @@
 ---
-date: '2023-11-03'
+date: '2023-11-07'
 authors: ["Crazymeow, Cheesey"]
-published: false
+published: true
 patch: "10.2"
 title: Feral Druid 10.2 Compendium
 showOnFrontpage: false
@@ -60,7 +60,7 @@ sidebarContents:  |
 
 This ends up being roughly a ~13% dps gain over no tier. Due to the item level increase going into next tier, its very possible that you'll want to ditch 10.1 4 piece and go with 2+2. You should sim this when you get to that point though. You'll want to get to 10.2 4 piece asap of course. 
 
-Also, its not the cast of {{< spell 274838 "Feral Frenzy" >}} that grants {{< spell 422751 "Smoldering Frenzy" >}}, it is the direct damage hits. This means when you use {{< spell 274838 "Feral Frenzy" >}}, it refreshes back to 8 seconds 5 times, this results in the buff lasting just under 9s in total. {{< spell 274838 "Feral Frenzy's" >}} casted by {{< spell 391528  "Convoke" >}} also proc this effect.
+Also, its not the cast of {{< spell 274838 "Feral Frenzy" >}} that grants {{< spell 422751 "Smoldering Frenzy" >}}, it is the direct damage hits (aka the 5 ticks that give you combo points). This means when you use {{< spell 274838 "Feral Frenzy" >}}, it refreshes back to 8 seconds 5 times over roughly a second, resulting in the buff lasting just under 9s in total. {{< spell 274838 "Feral Frenzy's" >}} casted by {{< spell 391528  "Convoke" >}} also proc this effect.
 
 ### List of changes
 
@@ -84,7 +84,10 @@ This got buffed by 10%. Nothing changes about when you select this talent, as th
 
 **{{< spell 29166 "Innervate" >}}:** is now castable in Cat Form. Rejoice.
 
-<br><div id="rotation">
+
+
+<br>
+<div id="rotation">
  
 # [2.Rotation:](#rotation)
 
@@ -94,6 +97,7 @@ This got buffed by 10%. Nothing changes about when you select this talent, as th
 
 When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast. As such, you will note that there are some abilities included in the priority lists below that are not chosen as talents in the recommended build. This is not a mistake, but simply indicates the priority of that ability IF you happened to take it for whatever reason. The presence of an ability in a priority list does not mean that you should be talenting into or using that ability, these lines are simply there for completeness. If the length of these lists feels daunting, one might recommend copying them to a separate document and removing lines that do not apply to you, thus making the list a bit more compact.
 
+The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims. If you need a more digestable format, try [WoWhead's guide](https://www.wowhead.com/guide/classes/druid/feral/rotation-cooldowns-pve-dps#single-target) written by Guilty
 <div id="precombat">
 
 ## [Pre-combat](#precombat)
@@ -127,7 +131,7 @@ When reading the priority lists below, you should not think about these as steps
     - If you have 2 or fewer {{< spell 391889 "Adaptive Swarms" >}} of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
 - Use {{< spell 102543 "Incarnation" >}} if it's ready.
 - Use {{< spell 106951 "Berserk" >}} if it's ready. 
-    - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=103), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
+    - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
 - Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:
     - Rip will not fall off during Convoke's channel.
     - Tiger's Fury is up.
@@ -138,7 +142,7 @@ When reading the priority lists below, you should not think about these as steps
     - You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.
 
-**If you are in Berserk see [here](#berserk) as your priorities from this point on change a bit.**
+**If you are in Berserk see [here](#Berserk) as your priorities from this point on change a bit.**
 
 - If you have {{< spell 411344 "Predator Revealed" >}} active from 10.1 4 piece set bonus, 4 combo points and are at least 40 energy away from cap, wait until you passively gain your 5th combo point.
 - Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
@@ -159,8 +163,8 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 16864 "Clearcasting" >}} procs on {{< spell 106830 "Thrash" >}} if all of these conditions are met:
     - {{< spell 106830 "Thrash" >}} is in Pandemic.
     - {{< spell 405300 "Thrashing Claws" >}} is not talented.
-    - Dire Fixation (if talented) is already applied to your target.
-- Use {{< spell 5221 "Shred" >}} if Dire Fixation (if talented) is not on your target or you have a {{< spell 16864 "Clearcasting" >}} proc.
+    - {{< spell 417710 "Dire Fixation" >}} (if talented) is already applied to your target.
+- Use {{< spell 5221 "Shred" >}} if {{< spell 417710 "Dire Fixation" >}} (if talented) is not on your target or you have a {{< spell 16864 "Clearcasting" >}} proc.
 - Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.
 - Use {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} if all of these conditions are met:
     - You do not have a {{< spell 384667 "Sudden Ambush" >}} proc
@@ -172,7 +176,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it is in pandemic.
 - Use {{< spell 106830 "Thrash" >}} if it is in pandemic and you do not have {{< spell 405300 "Thrashing Claws" >}} talented.
 - Use {{< spell 202028 "Brutal Slash" >}}.
-- Use {{< spell 106785 "Swipe" >}} if you have Wild Slashes talented, and Dire Fixation (if talented) is on your target.
+- Use {{< spell 106785 "Swipe" >}} if you have Wild Slashes talented, and {{< spell 417710 "Dire Fixation" >}} (if talented) is on your target.
 - Use {{< spell 5221 "Shred" >}}.
 - Clip Lunar Inspiration {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
 - Use {{< spell 106785 "Swipe" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
@@ -209,14 +213,14 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 202028 "Brutal Slash" >}} if you have 2 or 3 charges
 - Use {{< spell 5221 "Shred" >}}
 
-<br><div id="aoe">
+<div id="aoe">
 
 ## [AoE priority](#aoe)
 
 </div>
 
 **AoE priority list(2+ targets):**
-**Special Note: Try to use single-target spells on higher priority/higher healthed mobs, or mobs that have Dire Fixation on them.**
+**Special Note: Try to use single-target spells on higher priority/higher healthed mobs, or mobs that have {{< spell 417710 "Dire Fixation" >}} on them.**
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met:
     - You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.)
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
@@ -259,7 +263,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 106785 "Swipe" >}} if there are 5 or more targets
 - Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on a target without {{< spell 155625 "Moonfire" >}} or if {{< spell 155625 "Moonfire" >}} is in pandemic range and there are less than 5 targets.
 - Use {{< spell 106785 "Swipe" >}}.
-- Use {{< spell 5221 "Shred" >}} if {{< spell 384667 "Sudden Ambush" >}} is not up and either Dire Fixation is talented or there are fewer than 4 targets.
+- Use {{< spell 5221 "Shred" >}} if {{< spell 384667 "Sudden Ambush" >}} is not up and either {{< spell 417710 "Dire Fixation" >}} is talented or there are fewer than 4 targets.
 - Use {{< spell 106830 "Thrash" >}}.
 - Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if there is a target without {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
 - Use {{< spell 5221 "Shred" >}} if you still need {{< spell 319439 "Bloodtalons" >}}
@@ -288,7 +292,7 @@ For the first week or two of the season while still wearing old tier set.
 - Note: it is preferable if you can farm an on-use stat trinket for the burst build. 
 ### 2pc+2pc Talent Builds
 - Plays the same builds as T30, except you can swap a point in {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 391889 "Adaptive Swarm" >}} for the burst and cleave builds for a small gain if you want.
-- As mentioned earlier, you should sim your character to see if it’s worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
+- As mentioned earlier, you should sim your character to see if it's worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
 ### T31 4pc Talent Builds (Amirdrassil tier-set)
 
 [T31 Standard Convoke Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFVKVRAQCFQ)
@@ -358,14 +362,14 @@ Note: for Feral, the talents in the first two gates have similar power-levels, a
 Options for the first two gates:
 - {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: this comes down to pull size; DCR particularly excels in low and medium (pug) size pulls and is generally the better choice, however RF can pull ahead with large pulls e.g. in a dungeon with dense trash or with an organised group doing consistent triple~ pulls.
 - {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you want more single target, TFB is a great option e.g. for Tyrannical weeks, while also providing some funnel value on trash.
-- {{< spell 391785 "Tear Open Wounds" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: if your goal is purely to funnel, you can change to RF and spend your finishers on Bite while only using {{< spell 285381 "Primal Wrath" >}} only to maintain Rip in AoE. This is somewhat more advanced with more consideration for energy and combo points, and requires you to break ‘primal wrath spam' muscle memory.
+- {{< spell 391785 "Tear Open Wounds" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: if your goal is purely to funnel, you can change to RF and spend your finishers on Bite while only using {{< spell 285381 "Primal Wrath" >}} to maintain Rip in AoE. This is somewhat more advanced with more consideration for energy and combo points, and requires you to break 'primal wrath spam' muscle memory.
 - {{< spell 48484 "Infected Wounds" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you are not running Double-clawed Rake, Taste for Blood is a great option that offers a prominent single target gain over Infected Wounds this patch as a result of the {{< spell 391881 "Apex" >}} changes. Even moreso if running {{< spell 391528  "Convoke the Spirits" >}}.
 
 Options for the final gate:
 - {{< spell 319439 "Bloodtalons" >}} vs {{< spell 391972 "Lion's Strength" >}}: in 10.2, BT gains a lot of quality of life when changing to the new tier-set, in addition to the {{< spell 391881 "Apex" >}} change with procs slowing down slightly in AoE. This combined with the 10.1 change of 3 charges makes BT feel smooth to play in season 3 M+. However, Lion's Strength is still a competitive option and only a small DPS loss while allowing you to focus on other things. If you are fairly new to Feral, you should start with Lion's Strength and swap to Bloodtalons when you have learnt everything else.
-- {{< spell 391528  "Convoke the Spirits" >}} vs {{< spell 102543 "Incarnation" >}}: both talents are equally viable and will depend on your talents, gear, dungeon, and own preference. Convoke is very strong with Witherbark’s Branch or similar on-use trinkets, and similarly should be played if dropping Rake talents such as Infected Wounds (as Incarn wants Rake talents), while Incarn can pull ahead with larger pulls. These two options are interchangeable though and there is no all-round ‘best.’ 
-- 1 min {{< spell 391548  "Convoke the Spirits" >}}: generally worse than 2m, however is a competitive option if running {{< spell 391709 "Rampant Ferocity" >}}. Drop Carnivorous Instincts/Swarm for it.
-- {{< spell 390902 "Carnivorous Instincts" >}} vs {{< spell 391889 "Swarm" >}}: CI is your ‘safe’ all-round good pick, however Swarm is a very strong single-target option and should be considered for Tyrannical.
+- {{< spell 391528  "Convoke the Spirits" >}} vs {{< spell 102543 "Incarnation" >}}: both talents are equally viable and will depend on your talents, gear, dungeon, and own preference. Convoke is very strong with Witherbark's Branch or similar on-use trinkets, and similarly should be played if dropping Rake talents such as Infected Wounds (as Incarn wants Rake talents), while Incarn can pull ahead with larger pulls. These two options are interchangeable though and there is no all-round 'best.' 
+- 1 min {{< spell 391548  "Convoke" >}}: generally worse than 2m, however is a competitive option if running {{< spell 391709 "Rampant Ferocity" >}}. Drop Carnivorous Instincts/Swarm for it.
+- {{< spell 390902 "Carnivorous Instincts" >}} vs {{< spell 391889 "Swarm" >}}: CI is your 'safe' all-round good pick, however Swarm is a very strong single-target option and should be considered for Tyrannical.
 - {{< spell 391951 "Unbridled Swarm" >}}: for a talent that undersims, this is simming competitively with the more standard builds. In other words: this is looking to be very, very good this patch. Take in medium pull size dungeons.
 - Honourable mention: {{< spell 391978 "Veinripper" >}} can be a good funnel option if playing a {{< spell 391709 "Rampant Ferocity" >}}-focused build and focusing on ethical prio-damage.
 
@@ -435,7 +439,7 @@ Phials:
 
 </div>
 
-I apologize for being annoying but, sim your character for the most accurate answer. Generally {{< spell 391528  "Convoke" >}} builds do not want to play [Howling Rune](https://www.wowhead.com/item=194819/howling-rune) if that is any consolation-but even that's not a guarantee. Make sure you select Rune (stat) (Main Hand) else it may not sim properly. ie: Buzzing (Crit) (Main Hand). Crit is the default setting.
+I apologize for being annoying but, sim your character for the most accurate answer. Generally {{< spell 391528  "Convoke" >}} builds do not want to play [Howling Rune](https://www.wowhead.com/item=194819/howling-rune) in single target if that is any consolation-but even that's not a guarantee. Make sure you select Rune (stat) (Main Hand) else it may not sim properly. ie: Buzzing (Crit) (Main Hand). Crit is the default setting.
 
 <br><div id="gearing">
 
@@ -467,20 +471,20 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 <br>Ring -  You should always sim your own character to determine what enchant to use in this slot. Depending on your gear, any of the four secondaries can be best for you.
 
 
-<br><div id="embellishments">
+<div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
 </div>
 
-For Embellishments we craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak) paired with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch). Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) supersedes [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch).
+For Embellishments we craft 2x [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch). Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) will replace one of your [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) slots.
 
 **Crafting order**
 
-- [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak). This is our highest damage throughput option, and also comes with a fantastic defensive component on a low-budget item slot. Don't think too hard and just craft this first, its truly a no-brainer.
-- Sim yourself to see which leather armor slot best pairs with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch). If you refuse to sim, put it on bracers.
+- Sim yourself to see which leather armor slot best pairs with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch). If you refuse to sim, put it on cloak or bracers, whichever is lower item level for you.
 - Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
 
+I would recommend holding your 1st craft for as long as possible. It's not unusual for blizzard to tune as late as during the first couple days of raid release. Of course, I can't stop you if you decide to craft early, but due note that you may craft suboptimally if you do so. Would be a shame if snowball makers suddenly got a 100% buff.
 
 <br><div id="trinkets">
 
@@ -502,11 +506,19 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 - [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
+- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) This is generally slightly better than Pip's if pulls are all around 4-6 targets. 
+- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
 - [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103)
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
+- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This trinkets value varies heavily depending on group and dungeon. In a clean run where there isn't a lot of downtime between pulls, this becomes competitive with the top end trinkets.
 
-<br><div id="misc">
+<br>
+
+**Note: [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) is supposedly being hotfixed-buffed soon as of November 7th. Numbers will be reran for that trinket when we learn more.**
+
+<br>
+<div id="misc">
 
 # [6. Miscellaneous:](#misc)
 
@@ -587,8 +599,7 @@ If you are using an on-use trinket/weapon that should go along with your cooldow
 Casts Entangling Roots on a target you mouseover, otherwise casts on current target if no mouseover.
 ```
 #showtooltip Entangling Roots
-/cast [@mouseover, exists] Entangling Roots
-/cast [@target, exists] Entangling Roots
+/cast [@mouseover, harm, nodead][] Entangling Roots
 ```
 
 **Focus Skull Bash:**
@@ -631,12 +642,15 @@ The following links lead to various feral druid weakaura packs. These contain ev
 - [variant by Cheesey](https://wago.io/H3yjY1gs1)  
 - [by Guiltyas](https://wago.io/OaJQX6khW)
 
-### **Commonly used WeakAuras**
+### **Commonly used WeakAuras and Addons**
 [Feral Bleed Power by Oi](https://wago.io/qYnbZzlmP)
 See the description of the WA for more details. This is not a required WA but will make it easier to track the power of your next bleed compared to the currently active one.
 
 [Feral Snapshots by Enth](https://www.curseforge.com/wow/addons/feralsnapshots)
 An addon alternative. See the description for more details. This can also show snapshot details on your enemy nameplates (default and plater) or personal resource display.
+
+[Rake Plater mods by Sretnuh](https://wago.io/p/Sretnuh)
+Search through these to see what you like, these Plater mods help identify which targets have your rake on them at a glance.
 
 [Apex Predator's Craving by Marvel](https://wago.io/KzSX7dDMM)
 Alerts you when you have an {{< spell 391881 "Apex Predator's Craving" >}} (free bite) proc with a glowing icon and a sound.
