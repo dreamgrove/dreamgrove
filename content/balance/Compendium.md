@@ -55,23 +55,29 @@ sidebarContents:  |
 
 ## 10.2 News
 ### Tier Set
-> 2p: When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 40% and increasing their damage by 100%.
+#### {{< spell 424248 "2-piece" >}}:
+> When Eclipse ends or when you enter combat, enter a {{< spell 424248 "Dreamstate" >}}, reducing the cast time of your next 2 {{< spell 194153 "Starfires" >}} or {{< spell 190984 "Wraths" >}} by 40% and increasing their damage by 100%.
 
-Looks to be a ~5.1% increase from having no tier.
-<br>If the buff is up when entering combat your first wrath/starfire will be affected by the buff and your 2p stacks will then reset back to 2 when you finish your cast.
+~5.1% DPS increase from having no tier.
 
-> 4p: Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
+If the buff is up before you enter combat your first {{< spell 194153 "Starfire" >}} /{{< spell 190984 "Wrath" >}} will be affected by the buff and your {{< spell 424248 "Dreamstate" >}} stacks will then reset back to 2 when you finish your cast.
 
-Looks to be a ~9.1% DPS increase from having no tier.
-<br>Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4p adds 2% per spender used in that eclipse up to a total of 25% increased.
+Using {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} will also grant you {{< spell 424248 "Dreamstate" >}}, however proccing {{< spell 393961 "Pulsar" >}} will not.
 
-In Incarn this will be maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
+#### 4-piece:
+> {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
 
-The stacks reset when using Incarn however you keep the stacks of your current eclipse when proccing pulsar, i.e. you're in solar eclipse with 4 stacks, proc pulsar, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage.
+~9.1% DPS increase from having no tier.
+
+Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4-piece adds 2% per spender used in that eclipse up to a total of 25% increased.
+
+In {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}} this will be maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
+
+The stacks reset when using {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}}, you do however keep the stacks of your current eclipse when proccing {{< spell 393961 "Pulsar" >}}, i.e. you're in solar eclipse with 4 stacks, proc {{< spell 393961 "Pulsar" >}}, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage.
 
 Total DPS from set: ~14.9%
 
-Preliminary sims (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/1uANMpAkXv1grXNeTSN5e8
+Tier sim (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/1uANMpAkXv1grXNeTSN5e8
 
 ### Mastery Update
 Mastery is now composed of 4 separate parts:
@@ -83,17 +89,20 @@ Mastery is now composed of 4 separate parts:
 Each part is independent and multiplies with each other.
 
 ### List of changes
+{{< spell 393958 "Nature's Grace" >}}
+
 
 - Damage of all abilities increased by 2%.
-- Nature’s Grace now grants 10% Haste (was 15%).
-- Power of Goldrinn damage increased by 20%. Moved to where Starlord was located in Fractures in Time.
-- Starlord has moved to where Power of Goldrinn was located in Fractures in Time.
-- Rattle the Stars has been redesigned – It is no longer a buff that stacks when you cast Starsurge or Starfall and is now a passive bonus that always reduces the cost of Starsurge and Starfall by 10% and increases their damage by 12%.
+- {{< spell 393958 "Nature's Grace" >}} now grants 10% Haste (was 15%).
+- {{< spell 394046 "Power of Goldrinn" >}} damage increased by 20%. Moved to where Starlord was located in Fractures in Time.
+- {{< spell 202345 "Starlord" >}} has moved to where {{< spell 394046   "Power of Goldrinn" >}} was located in Fractures in Time.
+- {{< spell 393954 "Rattle the Stars" >}} has been redesigned – It is no longer a buff that stacks when you cast {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} and is now a passive bonus that always reduces the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} by 10% and increases their damage by 12%.
 - ~~Orbital Strike has been redesigned – Call down a bombardment of celestial energy over the target area, blasting all enemies for Astral damage and applying Stellar Flare to them for 16 seconds. Generates 30 Astral Power. Orbital Strike still hits enemies in a 40 yard line and has a 90 second cooldown. Now a choice node with Wild Mushroom.~~ Reverted due to PvP
-- Fungal Growth has been removed. Wild Mushrooms now includes the effects of Fungal Growth.
-- Wild Mushrooms’ damage has been reduced by 20% and the Fungal Growth damage over time has been reduced to 60% of Wild Mushroom damage (was 70%). Fungal Growth’s damage over time now deals damage over 10 seconds (was 8 seconds).
-- Astral Invocation(Mastery) gives 2/3rds of its value at all times and the remaining value through Moonfire and Sunfire like now.
-- The talent positions of Aetherial Kindling and Lunar Shrapnel were swapped.
+- {{< spell 392999 "Fungal Growth" >}} has been removed. Wild Mushrooms now includes the effects of {{< spell 81281 "Fungal Growth" >}}.
+- {{< spell 88747 "Wild Mushroom's" >}} damage has been reduced by 20% and the {{< spell 81281 "Fungal Growth" >}} damage over time has been reduced to 60% of {{< spell 88747 "Wild Mushroom's" >}} damage (was 70%). {{<spell 81281 "Fungal Growth's">}} damage over time now deals damage over 10 seconds (was 8 seconds).
+- {{< spell 393014 "Astral Invocation(Mastery)" >}} gives 2/3rds of its value at all times and the remaining value through {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}} like now.
+- The talent positions of {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 415169 "Lunar Shrapnel" >}} were swapped.
+- {{< spell 202342 "Shooting Stars" >}} damage increased by 15%.
 
 Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-druids/1666448/311
 
@@ -112,7 +121,7 @@ Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-dru
 **Precasting:**
 - Cast {{< spell 190984 "Wrath" >}} twice
 - Cast {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented. If you have to stand close enough so that Starfire will finish casting long after the boss is pulled, cast another {{< spell 190984 "Wrath" >}} instead.
+- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented. If you have to stand close enough so that {{< spell 194153 "Starfire" >}} will finish casting long after the boss is pulled, cast another {{< spell 190984 "Wrath" >}} instead.
 
 You can precast from max range about 4 seconds before a boss is pulled.
 
@@ -140,32 +149,32 @@ When reading the priority lists below, you should not think about these as steps
 
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration).
-{{<cbtext id="Stellar Flare" type="appendListItem">}}- Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) if you if you will not overcap on AP.{{</cbtext>}}
-{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have 550 Astral Power or more towards {{< spell 393961 "Pulsar" >}}, you have a {{< spell 393942  "Starweaver's Warp" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.{{</cbtext>}}
-{{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 78674 "Starsurge" >}} if you have 560 Astral Power or more towards {{< spell 393961 "Pulsar" >}}, you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.{{</cbtext>}}
-- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
+{{<cbtext id="Stellar Flare" type="appendListItem">}}- Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) if you will not overcap on AP.{{</cbtext>}}
+- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
+- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
 - Use {{< spell 194223 "Celestial Alignment" >}} or {{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
-{{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you have 520 or more stacks of {{< spell 393961 "Pulsar" >}} and the cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is more than 5 seconds and you do not have T31 2P equipped.
+{{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:
+    - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
+    - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds. 
 {{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Force of Nature" type="appendListItem">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
-    {{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
+    {{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
 {{<cbtext id="Wild Mushroom" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if {{< spell 393956 "Waning Twilight" >}} is not up.{{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
+- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply.
 {{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
-- Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}
+- Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
 {{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="New Moon" type="addList">}}  - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
+  - You are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} or you're about to cap on charges and {{< spell 393961 "Pulsar" >}} has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
+- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met: 
     - You would overcap AP with the next cast.
     {{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
-    - Solar or Lunar Eclipse will end in the next 4 seconds and you have above 70 AP.
+    - Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
 {{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
@@ -188,9 +197,9 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
 <br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=true >}}Wild Mushroom{{< /checkbox >}}
 
-<br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 393940 "Starweaver" >}}, use Starsurge as a spender on 2 targets still.**
+<br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} or {{< spell 393940 "Starweaver" >}}, use Starsurge as a spender on 2 targets still.**
 <br>**AoE priority list(2+ targets):**
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 - number of targets divided by 2 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the targets will live for 6 or more seconds and you will not overcap on AP.
 {{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE" type="addList">}}- The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
@@ -198,31 +207,31 @@ When reading the priority lists below, you should not think about these as steps
 - You're about to use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}
 - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 {{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
+- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
-- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}.
-- Use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
+- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
+- Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
+- Use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Warrior of Elune-AoE" type="appendListItem">}}- Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 {{<cbtext id="Wild Mushroom-AoE" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP and {{< spell 393956 "Waning Twilight" >}} is not up on your targets.{{</cbtext>}}
-{{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Primordial Arcanic Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Primordial Arcanic Pulsar" >}} stacks.{{</cbtext>}}
-- Use your macro to cancel Starlord as referenced [here](#cancel) if conditions apply.
+{{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
+- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply.
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
     - You will not overcap on AP.
     - You can finish the cast before your current eclipse ends.
-    - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of CA/Inc is longer than 10 seconds. {{</cbtext>}}
+    - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:
     - The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
     - You will not overcap on AP.
     - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
 {{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
-{{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if {{< spell 194153 "Starfire" >}} would only hit 2 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if you are fighting less than 3 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202768 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.{{</cbtext>}}
 {{<cbtext id="Force of Nature-AoE" type="appendToList">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
@@ -258,11 +267,11 @@ When reading the priority lists below, you should not think about these as steps
 
 {{< spell 202425 "Warrior of Elune" >}} can be used 7 seconds before an eclipse ends, this way you will have just enough time to spend your third charge before the buff runs out and the CD will start earlier which can net you more uses throughout the fight.
 
-Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}/{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during CA/Inc is NOT a damage increase if you do not need to move. 
+Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is NOT a damage increase if you do not need to move. 
 
-If Warrior of Elune is falling off during CA/Inc and you still have a charge to spend, you can starfire at 2+ targets.
+If Warrior of Elune is falling off during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} and you still have a charge to spend, you can {{< spell 194153 "Starfire" >}} at 2+ targets.
 
-Warrior of Elune can also be used during CA/Lunar eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
+Warrior of Elune can also be used during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}} when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
 
 
 <br><div id="prestack">
@@ -279,7 +288,7 @@ The goal for stacking it to these values is to refresh buffs like {{< spell 3940
 
 The other value to keep in mind is **560** {{< spell 393961 "Pulsar" >}}, it's a bit worse than 240-360 but still represents a gain.
 
-With this value you would begin the encounter with the standard opener; however, instead of using CA/Inc, proc your pulsar and use your trinket and potion. When pulsar drops off, spend your {{< spell 424248 "Dreamstate" >}} stacks and then use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
+With this value you would begin the encounter with the standard opener; however, instead of using {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, proc your pulsar and use your trinket and potion. When pulsar drops off, spend your {{< spell 424248 "Dreamstate" >}} stacks and then use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
 
