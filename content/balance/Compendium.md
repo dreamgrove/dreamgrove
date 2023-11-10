@@ -45,7 +45,7 @@ sidebarContents:  |
  
 ---
 
-[Changelog](https://github.com/dreamgrove/dreamgrove/commits/master/content/balance/Compendium.md)
+[Changelog](https://github.com/dreamgrove/dreamgrove/commits/master/content/balance)
 
 <div id="news">
 
