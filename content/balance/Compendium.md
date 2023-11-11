@@ -589,7 +589,7 @@ See the description of the WA for more details. This is not a required WA but wi
 
 ### **Cancelling Starlord**
 
-**With baseline changes and new set in 10.2, cancelling your Starlord aura is back to being an insignificant gain [(~0.2%)](#sims).**
+**With baseline changes and new set in 10.2, cancelling your Starlord aura is back to being insignificant [(~0.2%)](#sims).**
 
 If you want to engage in this entirely optional method without incurring a dps loss, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use {{< spell 78674 "Starsurge" >}} to prevent overcapping.
 
