@@ -306,15 +306,21 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 
 <br><div id="talents">
 
-# [3.Talents:](#talents)
+# [3. Talents:](#talents)
 
 </div>
 
-## Talents for different target counts
-[Single target](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000)
-<br>[M+ Talents](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
-<br>[Sustained AoE](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSSJJEJHgoJlIRCNAKAQA?bgcolor=000000)
+<div style="text-align: center;">
 
+## General Builds
+
+### Single Target
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+
+### Mythic+
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+</div>  
 
 ## Raid Talents
 ### TBD
@@ -327,18 +333,18 @@ The below picture showcases which talents are "mandatory" and which talents you 
 {{< figure src="/balance/talent-tree-mythic+.png" >}}
 
 
-[Single target focused build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJHIgWSLSkQDgCAE?bgcolor=000000)
-<br>[Balanced build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
-<br>[AoE focused build](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJ5AlkQkQkWSLSkENAKAQA?bgcolor=000000)
+[Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJHIgWSLSkQDgCAE?bgcolor=000000)
+<br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[AoE focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJ5AlkQkQkWSLSkENAKAQA?bgcolor=000000)
 
-<br>[Class tree with Hibernate for Incorporeal](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
-<br>[If you really need both Hibernate and Remove Corruption](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
 
 - {{<spell 377842 "Ursine Vigor">}}, {{<spell 377847 "Well-Honed Instincts">}} and {{<spell 288826 "Improved Stampeding Roar">}} are the major competing talents. {{<spell 377842 "Ursine Vigor">}} should be taken if you need it to survive certain abilities. {{<spell 377847 "Well-Honed Instincts">}} is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. {{<spell 288826 "Improved Stampeding Roar">}} is extremely useful in indoor dungeons and in spiteful weeks.
 - {{<spell 2782 "Remove Corruption">}} should be taken in Afflicted weeks.
 - {{<spell 33786 "Cyclone">}} has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - {{<spell 2637 "Hibernate">}} can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://mimiron.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}.
+- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}.
 - All other talents in the druid tree are more or less set.
 
 
