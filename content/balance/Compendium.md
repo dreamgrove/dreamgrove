@@ -310,41 +310,44 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 
 </div>
 
+## Raid Talents
 <div style="text-align: center;">
-
-## General Builds
 
 ### Single Target
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+</div>
 
 
-### Mythic+
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+## Mythic+ Talents
+
+<div style="text-align: center;">
+
+### Balanced build
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkDkkUSCJJEaSLCJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>  
 
-## Raid Talents
-### TBD
+The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. {{< spell 274281 "New Moon" >}} and {{< spell 211545 "Fury of Elune" >}} can be used interchangeably.
 
-## Dungeon Talents
-The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Mind that while all these builds use {{< spell 274281 "New Moon" >}}, {{< spell 211545 "Fury of Elune" >}} will result in about the same dps. {{< spell 211545 "FoE" >}} will often not align with {{< spell 393961 "Pulsar" >}} which can make it annoying to play with.
+{{< spell 274281 "New Moon" >}} provides more single target damage and is easier to pair with pulsar.
+<br>{{< spell 211545 "FoE" >}} is both easier to play and does more AoE, it will however often not align with {{< spell 393961 "Pulsar" >}}.
 
 The below picture showcases which talents are "mandatory" and which talents you can opt-in to:
 
 {{< figure src="/balance/talent-tree-mythic+.png" >}}
 
 
-[Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJHIgWSLSkQDgCAE?bgcolor=000000)
-<br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
-<br>[AoE focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJ5AlkQkQkWSLSkENAKAQA?bgcolor=000000)
+[Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkUSCJHIEaSLCJRDgCAE?bgcolor=000000)
+<br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkDkkUSCJJEaSLCJRDgCAE?bgcolor=000000)
+<br>[AoE focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSCRaSJCJRDgCAE?bgcolor=000000)
 
-<br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCQSikcgUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
-<br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000)
+<br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
+<br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 
 - {{<spell 377842 "Ursine Vigor">}}, {{<spell 377847 "Well-Honed Instincts">}} and {{<spell 288826 "Improved Stampeding Roar">}} are the major competing talents. {{<spell 377842 "Ursine Vigor">}} should be taken if you need it to survive certain abilities. {{<spell 377847 "Well-Honed Instincts">}} is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. {{<spell 288826 "Improved Stampeding Roar">}} is extremely useful in indoor dungeons and in spiteful weeks.
 - {{<spell 2782 "Remove Corruption">}} should be taken in Afflicted weeks.
 - {{<spell 33786 "Cyclone">}} has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - {{<spell 2637 "Hibernate">}} can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkkkUSCxBCkWSLSkQDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}.
+- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}.
 - All other talents in the druid tree are more or less set.
 
 
