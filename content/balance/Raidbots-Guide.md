@@ -28,14 +28,18 @@ sidebarContents:  |
 </div>
 
 Welcome to the Balance Druid Raidbots Guide. 
-<br> This guide assumes you have zero experience with sims or programming in any way shape or form, so stuff that might seem very basic will also be found here.
-<br>The information in this documentation is mainly directed towards Balance Druids and not other specs. Please listen to the guide writers that play those specs in what should be followed and what not, as some options that might be accurate for some might not be for others. 
-<br>This guide will be split in multiple sections, but it is highly recommended that you read it top to bottom and do not skip directly to a section even if you do have a basic understanding of how this works, as it is relatively hard to properly categorize the skill level necessary to use some of these tools. 
-<br>Without further ado, let us dive into this wonderful experience that are simulations.
+
+This guide assumes you have zero experience with sims or programming in any way shape or form, so stuff that might seem very basic will also be found here.
+
+The information in this documentation is mainly directed towards Balance Druids and not other specs. Please listen to the guide writers that play those specs in what should be followed and what not, as some options that might be accurate for some might not be for others. 
+
+This guide will be split in multiple sections, but it is highly recommended that you read it top to bottom and do not skip directly to a section even if you do have a basic understanding of how this works, as it is relatively hard to properly categorize the skill level necessary to use some of these tools. 
+
+Without further ado, let us dive into this wonderful experience that are simulations.
 
 ### The visual version of the guide made by Tettles can be found here: https://youtu.be/a35xysEzS6c
 
-<div id="setup">
+<br><div id="setup">
 
 # [2. Setup:](#setup)
 
@@ -48,12 +52,13 @@ Before beginning to properly sim on raidbots we will need the addon "Simulationc
 /simc 
 ```
 
-This will give you a "simc string" that contains a snapshot of your character that can be used in raidbots. The string can later be modified, but for now we will be using the base one in order to simulate our character on [Raidbots](https://www.raidbots.com/simb  ot)
-<br>The raidbots website is a frontend for the original Simulationcraft application. It is way easier to use than the application and thus this guide will only cover raidbots and not the simc application.
+This will give you a "simc string" that contains a snapshot of your character that can be used in raidbots. The string can later be modified, but for now we will be using the base one in order to simulate our character on [Raidbots](https://www.raidbots.com/simbot)
+
+The raidbots website is a frontend for the original Simulationcraft application. It is way easier to use than the application and thus this guide will only cover raidbots and not the simc application.
 
 Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT recommended. 
 
-<div id="novice">
+<br><div id="novice">
 
 # [3. Novice:](#novice)
 
@@ -66,7 +71,10 @@ Any other addons that have to do with sims such as AskMrRobot or Pawn are NOT re
 </div>
   
 Quicksim can be used if you want to take a quick look at how much the dps number on your sim is (pretty useless in most scenarios), looking at the html report (in proficient section), quickly getting a string for advanced, or for looking at the sample sequence. 
-<br>The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one. A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the Compendium](/balance/compendium).
+
+The sample sequence, as the name suggests, gives you a sample of what the robot will cast in that specific iteration of the fight. Sims usually have thousands of iterations and procs might affect what the robot will cast so one iteration will not have the same casts as the next one.
+
+A general understanding of how balance is played can be found through the sample sequence, although this is a harder version of reading [the Compendium](/balance/compendium).
 
 <div id="topgear">
 
@@ -74,8 +82,11 @@ Quicksim can be used if you want to take a quick look at how much the dps number
 
 </div>
   
-Topgear is the main tool you should be using in raidbots. It will show you what the best items in your bags are, what to pick from your weekly vault and how to gem and enchant your gear. You simply click on what items/talents/gems/enchants you want to sim and it will show you what to equip. If you are using a free raidbots account and do not have enough iterations at your disposal, simply open more tabs and do multiple sims at the same time. 
-<br>For gem sims select a few that you think would be worthwhile to sim, selecting all or a lot of gems will just increase the time a sim takes to finish and more often than not produce a lot of results that are withing margin of error of each other.
+Topgear is the main tool you should be using in raidbots. It will show you what the best items in your bags are, what to pick from your weekly vault and how to gem and enchant your gear. You simply click on what items/talents/gems/enchants you want to sim and it will show you what to equip.
+
+If you are using a free raidbots account and do not have enough iterations at your disposal, simply open more tabs and do multiple sims at the same time. 
+
+For gem sims select a few that you think would be worthwhile to sim, selecting all or a lot of gems will just increase the time a sim takes to finish and more often than not produce a lot of results that are withing margin of error of each other.
 
 
 <div id="droptimizer">
@@ -84,22 +95,24 @@ Topgear is the main tool you should be using in raidbots. It will show you what 
 
 </div>
   
-Droptimizer should be used whenever you are trying to find what dungeon to farm in order to upgrade your gear or just as a quick list of what items you need from raid. It is important to note that you need an offhand/one hand weapon in order for Droptimizer to sim one hand weapons/offhands respectively.
+Droptimizer should be used whenever you are trying to find what dungeon to farm in order to upgrade your gear or just as a quick list of what items you need from raid.
+
+It is important to note that you need an offhand/one hand weapon in order for Droptimizer to sim one hand weapons/offhands respectively.
 
 
-<div id="options">
+<br><div id="options">
 
 # [4. Options](#options)
 
 </div>
 
-<br>Fight style: Patchwerk (always, if you want to sim M+ you can create an MDT sim using this [Weakaura](https://wago.io/Yya4XBbl-))
-<br>Number of Bosses: How many you want, usually 1
-<br>Fight Length: How much you want, usually 5
-<br>SimC Version: Nightly
-<br>Raid Buffs: Use the "Optimal raid buffs" setting unless you explicitly don't want/have a buff for what you are trying to sim.
+- Fight style: Patchwerk (For M+ you can use an [MDT sim](https://wago.io/Yya4XBbl-))
+- Number of Bosses: How many you want, usually 1
+- Fight Length: How much you want, usually 5
+- SimC Version: Nightly
+- Raid Buffs: Use the "Optimal raid buffs" setting unless you explicitly don't want/have a buff for what you are trying to sim.
 
-<div id="competent">
+<br><div id="competent">
 
 # [5. Competent](#competent)
 
@@ -165,9 +178,12 @@ spec="balance"
 ```
 
 In this part of the string we can see some unimportant details like the name of the character, the character's realm, or where the string was created. The others are important though. 
-<br>The race function allows us to edit what race the character is simming as. The talents row allows us to quickly edit what the talents are and we are even allowed to change the level or the spec of the character. The only useful options here are the talents and the race. 
-<br>The talent string is made out of generated string, easiest is to use [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear) or [Wowheads Talent Calculator](https://www.wowhead.com/talent-calc/druid/balance)
-<br>The race string can be edited to any race you want. Any commands that are longer than one word can be combined through an underscore (_). Take Night Elf as an example. The command would be written as "race=night_elf".
+
+The race function allows us to edit what race the character is simming as. The talents row allows us to quickly edit what the talents are and we are even allowed to change the level or the spec of the character. The only useful options here are the talents and the race. 
+
+The talent string is made out of generated string, easiest is to use [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear) or [Wowheads Talent Calculator](https://www.wowhead.com/talent-calc/druid/balance)
+
+The race string can be edited to any race you want. Any commands that are longer than one word can be combined through an underscore (_). Take Night Elf as an example. The command would be written as "race=night_elf".
 
 Items strings are a bit more complex so lets dissect the strings even further. 
 
@@ -177,12 +193,18 @@ back=,id=193511,enchant_id=6592,bonus_id=8836/8840/8902/9405/9376/8793/9366,craf
 ```
 
 Let's take this back as an example. This is a crafted 447 ilvl Vibrant Wildercloth Shawl with a [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance?crafting-quality=6) enchant. 
-<br>The base ilvl (382) along with the name and what stats the item has is being assigned by the id (id=193511). The other stuff like ilvl scaling, quality of the item, and other bonuses are being assigned by the bonus id. enchant and gems can be assigned by enchant_id or gem_id.
-<br>The stats of the item can be applied either through "crafted_stats=32/49" or as a bonus ID, "8793" would for example add haste/mastery to the crafted item.
-<br>The slot in which the item is being put in is determined by the front word. In our case "back=". If we wanted to work with a ring, we would use "finger1=" or "finger2=" depending on which slot you want the ring to be in.
-<br>The easiest way for you to sim an item that you want is to open Droptimizer, put your character in, and scroll down to whatever item you want click on it. This will redirect you to a wowhead page with the item. Through the Links option you can select "simulationcraft import string" and then paste it below your other item strings. If you wanted to sim another back in topgear with this method, you would have to put a "#" before the item string, otherwise your last back string would overwrite your first one instead of making it a selectable option.  
 
-<div id="proficient">
+The base ilvl (382) along with the name and what stats the item has is being assigned by the id (id=193511). The other stuff like ilvl scaling, quality of the item, and other bonuses are being assigned by the bonus id. enchant and gems can be assigned by enchant_id or gem_id.
+
+The stats of the item can be applied either through "crafted_stats=32/49" or as a bonus ID, "8793" would for example add haste/mastery to the crafted item.
+
+The slot in which the item is being put in is determined by the front word. In our case "back=". If we wanted to work with a ring, we would use "finger1=" or "finger2=" depending on which slot you want the ring to be in.
+
+The easiest way for you to sim an item that you want is to open Droptimizer, put your character in, and scroll down to whatever item you want click on it. This will redirect you to a wowhead page with the item. Through the Links option you can select "simulationcraft import string" and then paste it below your other item strings.
+
+If you wanted to sim another back in topgear with this method, you would have to put a "#" before the item string, otherwise your last back string would overwrite your first one instead of making it a selectable option.  
+
+<br><div id="proficient">
 
 # [6. Proficient](#proficient)
 
@@ -196,8 +218,8 @@ There are two ways of simming externals / raidevents (basically anything you wou
   
 </div>
 
-The advanced option can be used for any sim if you know how to use it. Unlike the other options, advanced does not have the dropdown menus for the expansion options. You have to manually input them, otherwise the default will be automatically chosen. All of the expansion options can be found [here](https://github.com/simulationcraft/simc/wiki/ExpansionOptions).
-All of the druid options can be found [here](https://github.com/simulationcraft/simc/wiki/Druids)
+The advanced option can be used for any sim if you know how to use it. Unlike the other options, advanced does not have the dropdown menus for the expansion options. You have to manually input them, otherwise the default will be automatically chosen. <br>All of the expansion options can be found [here](https://github.com/simulationcraft/simc/wiki/ExpansionOptions).
+<br>All of the druid options can be found [here](https://github.com/simulationcraft/simc/wiki/Druids).
 
 Here are some of the options specifically for Balance druid which lets you configure settings like how much pulsar/OB stacks you will have on pull. 
 ```
@@ -210,11 +232,12 @@ The normal options are also customisable. If you want a 4:20 combat timer withou
 
 ```
 max_time=260
-vary_combat_length=0.01
-fixed_time="1"
+vary_combat_length=0
 ```
 
-One of the unique functions in advanced is copy.  This allows you to sim multiple sets of gear, different APLs or different sim options side by side. Simply do a line of copy=*Name* and whatever was above this copy line will be copied below. To change this, simply add anything you want to replace and it will automatically be replaced. As an example if you have two cloaks inside a sim, only the bottom one will be simmed. This applies to basically anything. 
+One of the unique functions in advanced is copy.  This allows you to sim multiple sets of gear, different APLs or different sim options side by side. Simply do a line of copy=*Name* and whatever was above this copy line will be copied below.
+
+To change this, simply add anything you want to replace and it will automatically be replaced. As an example if you have two cloaks inside a sim, only the bottom one will be simmed. This applies to basically anything. 
 
 <div id="expert">
 
@@ -222,7 +245,11 @@ One of the unique functions in advanced is copy.  This allows you to sim multipl
   
 </div>
 
-Expert mode allows you to easily change something like [Blue Silken Lining](https://www.wowhead.com/item=193946/blue-silken-lining) uptime or add an external to any of your sims, including topgear. To use this, simply navigate to the bottom of your option menu, and tick the box with expert mode, then put whatever you want in the footer. For example "dragonflight.blue_silken_lining_uptime=0.4" in order to sim it with 40% uptime.
+Expert mode allows you to easily change something like [Blue Silken Lining](https://www.wowhead.com/item=193946/blue-silken-lining) uptime or add an external to any of your sims, including topgear.
+
+To use this, simply navigate to the bottom of your option menu, and tick the box with expert mode, then put whatever you want in the footer.
+
+For example "dragonflight.blue_silken_lining_uptime=0.4" in order to sim it with 40% uptime.
 
 <div id="expert">
   
@@ -237,6 +264,8 @@ copy="power_infusion210"
 external_buffs.power_infusion="10/210"
 ```
 
-<br>Replace 10/210 with the timers that you want to sim with for the specific external.
-<br>Use the copy line if you want to see the difference between no external and with external in advanced. 
-<br>replace power_infusion with the external that you want like in the wiki link.
+Replace 10/210 with the timers that you want to sim with for the specific external.
+
+Use the copy line if you want to see the difference between no external and with external in advanced. 
+
+Replace power_infusion with the external that you want like in the wiki link.
