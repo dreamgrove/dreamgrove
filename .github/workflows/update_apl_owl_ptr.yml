@@ -3,7 +3,7 @@ name: Update APL Owl PTR
 on:
   push:
     paths:
-      - 'static/sims/bear/balance_ptr.txt'
+      - 'static/sims/owl/balance_ptr.txt'
 
 defaults:
   run:

@@ -3,7 +3,7 @@ name: Update APL Owl
 on:
   push:
     paths:
-      - 'static/sims/bear/balance.txt'
+      - 'static/sims/owl/balance.txt'
 
 defaults:
   run:
