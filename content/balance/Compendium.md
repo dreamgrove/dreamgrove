@@ -606,13 +606,17 @@ If you want to engage in this entirely optional method without incurring a dps l
 
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.2.html)
 <br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.2.html)
-<br>[Phials 1T](https://www.dreamgrove.gg/balance/sims/phials_1T_10.2.html)
+
+[Phials 1T](https://www.dreamgrove.gg/balance/sims/phials_1T_10.2.html)
 <br>[Phials 6T](https://www.dreamgrove.gg/balance/sims/phials_6T_10.2.html)
-<br>[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.2.html)
+
+[Runes 1T](https://www.dreamgrove.gg/balance/sims/runes_1T_10.2.html)
 <br>[Runes 6T](https://www.dreamgrove.gg/balance/sims/runes_6T_10.2.html)
-<br>[Racials 1T](https://www.dreamgrove.gg/balance/sims/races_1T_10.2.html)
+
+[Racials 1T](https://www.dreamgrove.gg/balance/sims/races_1T_10.2.html)
 <br>[Racials 6T](https://www.dreamgrove.gg/balance/sims/races_6T_10.2.html)
-<br>[Tierset 1T](https://www.dreamgrove.gg/balance/sims/tier_1T_10.2.html)
+
+[Tierset 1T](https://www.dreamgrove.gg/balance/sims/tier_1T_10.2.html)
 <br>[Tierset 6T](https://www.dreamgrove.gg/balance/sims/tier_6T_10.2.html)
 
 [Prestacking Pulsar](https://www.dreamgrove.gg/balance/sims/prestack_pulsar_1T_10.2.html)
@@ -622,7 +626,9 @@ If you want to engage in this entirely optional method without incurring a dps l
 <br>[Cancelling Starlord 6T](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_6T_10.2.html)
 
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
+<br>[T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
 
+[Current APL](https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt)
 
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
