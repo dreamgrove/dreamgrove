@@ -3,23 +3,24 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--spec', choices=['owl', 'cat', 'bear', 'tree'])
-parser.add_argument('--df', default=False, action='store_true')
+parser.add_argument('--ptr', default=False, action='store_true')
 parser.add_argument('simcpath', type=str, help='path to SimC root (include \\simc)')
 args = parser.parse_args()
 
 spec_map = {
-    'owl': ['owl', 'balance.txt', 'balance_df.txt', 'balance_apl.inc'],
-    'cat': ['cat', 'feral.txt', 'feral_df.txt', 'feral_apl.inc'],
-    'bear': ['bear', 'guardian.txt', 'guardian_df.txt', 'guardian_apl.inc'],
-    'tree': ['tree', 'restoration.txt', 'restoration_df.txt', 'restoration_druid_apl.inc']
+    'owl':  ['owl',  'balance.txt',     'balance_apl.inc',           'balance_ptr.txt',     'balance_apl_ptr.inc'          ],
+    'cat':  ['cat',  'feral.txt',       'feral_apl.inc',             'feral_ptr.txt',       'feral_apl_ptr.inc'            ],
+    'bear': ['bear', 'guardian.txt',    'guardian_apl.inc',          'guardian_ptr.txt',    'guardian_apl_ptr.inc'         ],
+    'tree': ['tree', 'restoration.txt', 'restoration_druid_apl.inc', 'restoration_ptr.txt', 'restoration_druid_apl_ptr.inc'],
 }
 
 spec_data = spec_map.get(args.spec)
-if args.df:
-    txt_file = os.path.join(spec_data[0], spec_data[2])
+if args.ptr:
+    txt_file = os.path.join(spec_data[0], spec_data[3])
+    inc_file = spec_data[4]
 else:
     txt_file = os.path.join(spec_data[0], spec_data[1])
-inc_file = spec_data[3]
+    inc_file = spec_data[2]
 
 apl_lists = {}
 
