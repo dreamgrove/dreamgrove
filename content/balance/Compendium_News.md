@@ -4,7 +4,9 @@ authors: ["Chicken, Jundarer, Dsune"]
 published: true
 patch: "10.1.5"
 title: Balance Druid 10.1.5 News
+description: "News, changes and thoughts about the latest patch"
 showOnFrontpage: false
+showInRecent: false
 ---
 
 <div id="news">
