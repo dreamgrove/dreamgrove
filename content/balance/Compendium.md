@@ -167,7 +167,7 @@ When reading the priority lists below, you should not think about these as steps
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 {{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
-{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
+{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 274283 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="New Moon" type="addList">}}  - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} or you're about to cap on charges and {{< spell 393961 "Pulsar" >}} has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
@@ -223,7 +223,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
     - {{< spell 202345 "Starlord" >}} is below 3 stacks.
-{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202771 "Full Moon" >}} if all of the following conditions is met:
+{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274283 "Full Moon" >}} if all of the following conditions is met:
     - You will not overcap on AP.
     - You can finish the cast before your current eclipse ends.
     - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
@@ -235,7 +235,7 @@ When reading the priority lists below, you should not think about these as steps
 {{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if you are fighting less than 3 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
-{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 202768 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.{{</cbtext>}}
+{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274282 "Half Moon" >}} if you will not overcap on AP and you can finish the cast before your current eclipse ends.{{</cbtext>}}
 {{<cbtext id="Force of Nature-AoE" type="appendToList">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} if any of the below conditions are true:
@@ -314,11 +314,16 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 <div style="text-align: center;">
 
 ### Single Target
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENxBChWSLJRENAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+</div>
+
+You can also play [this build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENJJgWSLJRQDgCAE?bgcolor=000000), at lower itemlevels {{< spell 394065 "Denizen of the Dream" >}} might sim better for your character.
+<br>As you aquire better gear, the build without {{< spell 394065 "Denizen of the Dream" >}} will become better because of a bug affecting their damage not scaling with base mastery.
+
+<div style="text-align: center;">
 
 ### Mixed Targets
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iQS0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
-
 
 </div>
 
@@ -410,11 +415,9 @@ Damage wise, with 100% uptime on all of the Phials and not counting in the downs
 ## [Runes](#Runes)
 
 </div>
-Generally as follows, sim your character for the most accurate answer.
 
-[Howling Rune](https://www.wowhead.com/item=194820/howling-rune)
-<br>[Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune)
-<br>[Buzzing Rune](https://www.wowhead.com/item=194823/buzzing-rune)
+[Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune): Mastery rune<br>
+Use this for every situation.
 
 <br><div id="gearing">
 
