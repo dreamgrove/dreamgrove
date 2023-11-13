@@ -415,11 +415,8 @@ Damage wise, with 100% uptime on all of the Phials and not counting in the downs
 ## [Runes](#Runes)
 
 </div>
-Generally as follows, sim your character for the most accurate answer.
-
-[Howling Rune](https://www.wowhead.com/item=194820/howling-rune)
-<br>[Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune)
-<br>[Buzzing Rune](https://www.wowhead.com/item=194823/buzzing-rune)
+[Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune): Mastery rune<br>
+Use this for every situation.
 
 <br><div id="gearing">
 
