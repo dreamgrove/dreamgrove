@@ -452,24 +452,35 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 ## [Embellishments](#embellishments)
 
-With the recent changes to Sporecloak this section will be rewritten accordingly.
-For the Sporecloak nerf see:
-https://www.wowhead.com/blue-tracker/topic/us/guardians-of-the-dream-ptr-development-notes-1666552#21857028
 </div>
 
-<div style="display: none;">
+If you already have an item with https://www.wowhead.com/item=193555/toxified-armor-patch you should:
+- Craft/Upgrade https://www.wowhead.com/item=193452/toxic-thorn-footwraps with your first spark to 486 itemlevel.
+- Keep your https://www.wowhead.com/item=193555/toxified-armor-patch item equipped as this doubles the effect of your 486 itemlevel https://www.wowhead.com/item=193452/toxic-thorn-footwraps
+- With your next spark you can do one of the following:
+    - Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
+    - Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 486 itemlevel with Aspect Crests.
 
 
-For Embellishments craft [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak) paired with either [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps).
-<br>This comes down to which slot is your worst as they do about the same damage.
-<br>Later on it might be worth crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it's much better for AoE scenarios while still being competetive in Single Target.
+<br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch or don't have the possibility of crafting a Season 2 version of it you should:
+- Craft either https://www.wowhead.com/item=193452/toxic-thorn-footwraps or https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch at 486 itemlevel.
+    - Craft a https://www.wowhead.com/item=193555/toxified-armor-patch item if your first craft was https://www.wowhead.com/item=193452/toxic-thorn-footwraps
+    - Craft a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch if your first craft was a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch item
+        - Craft the item at 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
+        - Craft the item at 486 itemlevel with Aspect Crests.
 
-**Crafting order**
+The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch is negligible and will just come down to your stats.
 
-- [Undulating Sporecloak](https://www.wowhead.com/ptr-2/item=205025/undulating-sporecloak). This is our highest damage throughput option, and also comes with a fantastic defensive component on a low-budget item slot. Don't think too hard and just craft this first, its truly a no-brainer.
-- Sim yourself to see which leather armor slot best pairs with [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps). Generally bracers would be a good slot for Shadowflame since the max itemlevel is 486 and bracers has a low stat budget.
-- Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). Rings are particularly notable early on due to them coming with a socket already applied.
-</div>
+The boots have predefined stats while Shadowflame can be applied to any leather item where you can choose the stats freely. 
+
+What slot and which method you should apply will come down to how much gear you have gotten and in what slots, Sim it. 
+
+Shoulders are a medium budget slot and the stats on our tier shoulders is not great.
+
+The other option would be bracers/belt as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
+
+<br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it's better for AoE scenarios while still being competetive in Single Target, it does however require you to have a lot of gems.
+
 
 <br><div id="trinkets">
 
