@@ -465,7 +465,7 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
     - Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 486 itemlevel with Aspect Crests.
 
 
-<br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch or don't have the possibility of crafting a Season 2 version of it you should:
+<br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch and you don't have the possibility of crafting a Season 2 version of it you should:
 - Craft either https://www.wowhead.com/item=193452/toxic-thorn-footwraps or https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch at 486 itemlevel.
     - Craft a https://www.wowhead.com/item=193555/toxified-armor-patch item if your first craft was https://www.wowhead.com/item=193452/toxic-thorn-footwraps
     - Craft a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch if your first craft was a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch item
