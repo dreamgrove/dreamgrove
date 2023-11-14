@@ -1,2 +1,10 @@
 {{ $id := .Get "id" }}
-<span class="cbtext-placeholder" data-id="{{ $id }}" data-content="{{ .Inner | plainify }}"></span>
+{{ $content := .Inner | markdownify }}
+
+{{ if strings.Contains $content "<li>" }}
+    <ul data-tag="{{ $id }}" class="cbtext-content" style="display: none;">
+        {{ $content }}
+    </ul>
+{{ else }}
+    <span class="cbtext-placeholder" data-id="{{ $id }}" data-content="{{ .Inner | plainify }}"></span>
+{{ end }}
