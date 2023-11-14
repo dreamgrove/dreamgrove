@@ -158,7 +158,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Convoke the Spirits">}}Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
 - {{<cbtext id="T31 2P">}}Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:{{</cbtext>}}
-{{<cbtext id="T31 2P">}}
+- {{<cbtext id="T31 2P">}}
   - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
   - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
 {{</cbtext>}}
@@ -171,7 +171,7 @@ When reading the priority lists below, you should not think about these as steps
 - {{<cbtext id="Starweaver">}}Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
 - {{<cbtext id="New Moon">}}Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:{{</cbtext>}}
-{{<cbtext id="New Moon">}}
+- {{<cbtext id="New Moon">}}
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} or you're about to cap on charges and {{< spell 393961 "Pulsar" >}} has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds.
