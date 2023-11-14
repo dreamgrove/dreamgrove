@@ -465,24 +465,22 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 	- Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 486 itemlevel with Aspect Crests.
 
 
-<br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch and you don't have the possibility of crafting a Season 2 version of it you should:
-- Craft either https://www.wowhead.com/item=193452/toxic-thorn-footwraps or https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch at 486 itemlevel.
-	- Craft a https://www.wowhead.com/item=193555/toxified-armor-patch item if your first craft was https://www.wowhead.com/item=193452/toxic-thorn-footwraps
-	- Craft a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch if your first craft was a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch item
-    	- Craft the item at 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
-    	- Craft the item at 486 itemlevel with Aspect Crests.
+<br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch and you don't have the possibility of crafting a Season 2 version of it you can:
+- Follow the above and craft https://www.wowhead.com/item=193452/toxic-thorn-footwraps first then https://www.wowhead.com/item=193555/toxified-armor-patch after.
+- Craft https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch or https://www.wowhead.com/item=208189/verdant-conduit.
+	- https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch has slightly higher single target damage, but also deals a small amount of self-damage.
+	- https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs much better on aoe.
+	- As these are reagent embellishments, you can craft two copies or mix one of each.
 
-The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch is negligible and the choice will just come down to your stats.
+The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
 
-The boots have predefined stats while Shadowflame can be applied to any leather item where you can choose the stats freely.
+The boots have predefined stats while Shadowflame / Verdant can be applied to any leather item where you can choose the stats freely.
 
 What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
-Shoulders are a medium budget slot and the stats on our tier shoulders are not great.
+Bracers and Belt are often used as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
 
-The other option would be bracers/belt as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
-
-<br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it's better for AoE scenarios while still being competitive in Single Target, it does however require you to have a lot of gems.
+<br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it can be better depending on your sim, but it does require you to have a lot of gems.
 
 
 <br><div id="trinkets">
