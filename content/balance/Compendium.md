@@ -476,9 +476,9 @@ The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footw
 
 The boots have predefined stats while Shadowflame / Verdant can be applied to any leather item where you can choose the stats freely.
 
-What slot and which method you should apply will come down to how much gear you have gotten and in what slots, Sim it.
+What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
-Shoulders are a medium budget slot and the stats on our tier shoulders is not great.
+Shoulders are a medium budget slot and the stats on our tier shoulders are not great.
 
 The other option would be bracers/belt as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
 
