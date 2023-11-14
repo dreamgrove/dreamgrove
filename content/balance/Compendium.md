@@ -357,7 +357,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 - {{<spell 2782 "Remove Corruption">}} should be taken in Afflicted weeks.
 - {{<spell 33786 "Cyclone">}} has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
 - {{<spell 2637 "Hibernate">}} can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}.
+- For lower keys, you can put 1 point into {{<spell 131768 "Feline Swiftness">}} like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000). This skips {{<spell 377842 "Ursine Vigor">}} and {{<spell 132469 "Typhoon">}}. You can also drop any of the other bottom talents you don't need to get a 2nd point in {{<spell 131768 "Feline Swiftness">}} to get around even quicker for farming keys. 
 - All other talents in the druid tree are more or less set.
 
 
@@ -376,7 +376,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 
 [Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power)
-<br> Use this for every situation. Potion of Elemental Power is only 0.4% worse if it turns out to be far cheaper.
+<br> Use this for every situation. Potion of Elemental Power is only minorly worse if you want to save gold.
 
 
 <br><div id="food">
@@ -388,8 +388,8 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 [Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Intellect buff
 <br>[Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
-<br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides more total stats and can be worth over Intellect.
-<br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides more total stats and can be worth over Intellect.
+<br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides haste+mastery which can be more dps than the Intellect food.
+<br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides crit+mastery which can be more dps than the Intellect food.
 
 <br>The secondary food can be better as you acquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
 
@@ -406,7 +406,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
+- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying. Do not use this in progress fights unless you really need the damage.
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
 - [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): : Generally similar dps throughput as Tepid Versatility, but less defensive benefits.
 
@@ -472,13 +472,13 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
     	- Craft the item at 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
     	- Craft the item at 486 itemlevel with Aspect Crests.
 
-The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch is negligible and will just come down to your stats.
+The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch is negligible and the choice will just come down to your stats.
 
 The boots have predefined stats while Shadowflame can be applied to any leather item where you can choose the stats freely.
 
-What slot and which method you should apply will come down to how much gear you have gotten and in what slots, Sim it.
+What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
-Shoulders are a medium budget slot and the stats on our tier shoulders is not great.
+Shoulders are a medium budget slot and the stats on our tier shoulders are not great.
 
 The other option would be bracers/belt as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
 
@@ -496,8 +496,8 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 ### ST
 
 - [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102) - Note that while still good, double on-use loses value and becomes harder to optimally play.
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
 - [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
 - [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
@@ -514,8 +514,8 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 ### AoE
 
 - [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102) - Note that while still good, double on-use loses value and becomes harder to optimally play.
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
 - [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
 - [Time-Thief's Gambit](https://www.wowhead.com/ptr-2/item=207579/time-thiefs-gambit?bonus=4795&class=11&ilvl=489&spec=102)
