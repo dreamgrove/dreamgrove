@@ -1,19 +1,2 @@
-{{ $type := .Get "type" }}
 {{ $id := .Get "id" }}
-
-{{/*
-Determines the rendering method based on the content type.
-*/}}
-{{ if eq $type "inList" }}
-    <!-- Output for use within a list -->
-    <li data-tag="{{ $id }}-cb" style="display: none;">
-        {{ .Inner | markdownify }}
-    </li>
-{{ else }}
-    <!-- Default output -->
-    <span class="custom-checkbox">
-        <div data-tag="{{ $id }}-cb" style="display: none;">
-            {{ .Inner | markdownify }}
-        </div>
-    </span>
-{{ end }}
+<span class="cbtext-placeholder" data-id="{{ $id }}" data-content="{{ .Inner | plainify }}"></span>
