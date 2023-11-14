@@ -89,8 +89,6 @@ Mastery is now composed of 4 separate parts:
 Each part is independent and multiplies with each other.
 
 ### List of changes
-{{< spell 393958 "Nature's Grace" >}}
-
 
 - Damage of all abilities increased by 2%.
 - {{< spell 393958 "Nature's Grace" >}} now grants 10% Haste (was 15%).
@@ -151,15 +149,15 @@ When reading the priority lists below, you should not think about these as steps
 
 
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
-- Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration).
-{{<cbtext id="Stellar Flare" type="appendListItem">}}- Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration) if you will not overcap on AP.{{</cbtext>}}
+- Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration shown in the tooltip).
+{{<cbtext id="Stellar Flare" type="appendListItem">}}- Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="T31 2P" type="appendListItem">}}- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
 - Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}. {{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
-- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:
-	- You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
-	- The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
+{{<cbtext id="T31 2P" type="appendListItem">}}- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:
+{{<cbtext id="T31 2P" type="addList">}}  - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
+  - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
 {{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
@@ -198,12 +196,12 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
 <br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=true >}}Wild Mushroom{{< /checkbox >}}
-<br>{{< checkbox id="Cancelaura" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}
+<br>{{< checkbox id="Cancelaura-AoE" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}
 <br>{{< checkbox id="T31 2P-AoE" spell=424248 >}}T31 2P{{< /checkbox >}}
 
 <br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} or {{< spell 393940 "Starweaver" >}}, use Starsurge as a spender on 2 targets still.**
 <br>**AoE priority list(2+ targets):**
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 - number of targets divided by 2 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
+- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 minus the number of targets divided by 2 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the targets will live for 6 or more seconds and you will not overcap on AP.
 {{<cbtext id="Stellar Flare-AoE" type="appendListItem">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE" type="addList">}}- The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
@@ -211,7 +209,7 @@ When reading the priority lists below, you should not think about these as steps
 - You're about to use {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}}
 - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 {{</cbtext>}}
-{{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
+{{<cbtext id="Cancelaura-AoE" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast.
 {{<cbtext id="T31 2P-AoE" type="appendListItem">}}- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
 - Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
@@ -221,7 +219,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you are fighting 3+ targets.
 {{<cbtext id="Wild Mushroom-AoE" type="appendListItem">}}- Use {{< spell 88747 "Wild Mushroom" >}} if you will not overcap on AP and {{< spell 393956 "Waning Twilight" >}} is not up on your targets.{{</cbtext>}}
 {{<cbtext id="Fury of Elune-AoE" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
-{{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
+{{<cbtext id="Cancelaura-AoE" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 	- {{< spell 202345 "Starlord" >}} is below 3 stacks.
@@ -254,7 +252,7 @@ When reading the priority lists below, you should not think about these as steps
  
  </div>
 
- Before using {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} you should make sure to spend your stacks of {{< spell 424248 "Dreamstate" >}}.
+ Before casting {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} you should make sure to spend your stacks of {{< spell 424248 "Dreamstate" >}}.
  
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
