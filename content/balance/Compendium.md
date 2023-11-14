@@ -179,7 +179,7 @@ When reading the priority lists below, you should not think about these as steps
 - {{<cbtext id="Cancelaura">}}Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met:
   - You would overcap AP with the next cast.
-  - {{<cbtext id="Starweaver">}You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
+  - {{<cbtext id="Starweaver">}}You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
   - Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
 - {{<cbtext id="Wild Mushroom">}}Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
