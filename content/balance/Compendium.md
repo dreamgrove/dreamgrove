@@ -468,9 +468,9 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 <br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch and you don't have the possibility of crafting a Season 2 version of it you can:
 - Follow the above and craft https://www.wowhead.com/item=193452/toxic-thorn-footwraps first then https://www.wowhead.com/item=193555/toxified-armor-patch after.
 - Craft https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch or https://www.wowhead.com/item=208189/verdant-conduit.
-    - https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch has consistent single target damage, but also deals a small amount of self-damage.
-    - https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs better on aoe.
-    - As these are reagent embellishments, you can craft two copies or mix one of each.
+	- https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch has slightly higher single target damage, but also deals a small amount of self-damage.
+	- https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs much better on aoe.
+	- As these are reagent embellishments, you can craft two copies or mix one of each.
 
 The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
 
