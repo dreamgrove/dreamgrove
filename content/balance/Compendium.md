@@ -155,14 +155,14 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}. {{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
-{{<cbtext id="T31 2P" type="appendListItem">}}- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:
+{{<cbtext id="T31 2P" type="appendListItem">}}- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:{{</cbtext>}}
 {{<cbtext id="T31 2P" type="addList">}}  - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
-  - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
+  - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.{{</cbtext>}}
 {{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Force of Nature" type="appendListItem">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
-	{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
+{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 {{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
@@ -172,9 +172,9 @@ When reading the priority lists below, you should not think about these as steps
   - You are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} or you're about to cap on charges and {{< spell 393961 "Pulsar" >}} has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met:
-	- You would overcap AP with the next cast.
-	{{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
-	- Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
+  - You would overcap AP with the next cast.
+  {{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
+  - Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
 {{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
@@ -222,16 +222,16 @@ When reading the priority lists below, you should not think about these as steps
 {{<cbtext id="Cancelaura-AoE" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
-	- {{< spell 202345 "Starlord" >}} is below 3 stacks.
+  - {{< spell 202345 "Starlord" >}} is below 3 stacks.
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:
-	- You will not overcap on AP.
-	- You can finish the cast before your current eclipse ends.
-	- You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
+  - You will not overcap on AP.
+  - You can finish the cast before your current eclipse ends.
+  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions are met:
-	- The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
-	- You will not overcap on AP.
-	- Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
+  - The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
+  - You will not overcap on AP.
+  - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
 {{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if you are fighting less than 3 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
@@ -239,11 +239,11 @@ When reading the priority lists below, you should not think about these as steps
 {{<cbtext id="Force of Nature-AoE" type="appendToList">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and {{< spell 194153 "Starfire" >}} will hit less than 17 targets.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} if any of the below conditions are true:
-   - You are in Lunar Eclipse.
-   - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
+  - You are in Lunar Eclipse.
+  - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
 - Use {{< spell 194153 "Wrath" >}} if any of the below conditions are true:
-   - You are in Solar Eclipse.
-   - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or fewer targets.
+  - You are in Solar Eclipse.
+  - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or fewer targets.
 
 
 <br><div id="fillers">
