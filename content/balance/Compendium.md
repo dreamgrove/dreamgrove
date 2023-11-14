@@ -155,9 +155,9 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}. {{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
-{{<cbtext id="T31 2P" type="appendListItem">}}- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:
+{{<cbtext id="T31 2P" type="appendListItem">}}- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:{{</cbtext>}}
 {{<cbtext id="T31 2P" type="addList">}}  - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
-  - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
+  - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.{{</cbtext>}}
 {{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
