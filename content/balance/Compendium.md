@@ -472,15 +472,13 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 	- https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs much better on aoe.
 	- As these are reagent embellishments, you can craft two copies or mix one of each.
 
-The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
+The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
 
 The boots have predefined stats while Shadowflame / Verdant can be applied to any leather item where you can choose the stats freely.
 
 What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
-Shoulders are a medium budget slot and the stats on our tier shoulders are not great.
-
-The other option would be bracers/belt as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
+Bracers and Belt are often used as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
 
 <br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it can be better depending on your sim, but it does require you to have a lot of gems.
 
