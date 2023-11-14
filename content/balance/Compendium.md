@@ -33,14 +33,14 @@ sidebarContents:  |
   <br>[Enchants](#enchants)
   <br>[Embellishments](#embellishments)
   <br>[Trinkets](#trinkets)
-  
+ 
   **[6. Miscellaneous](#misc)**
   <br>[Do our dots snapshot?](#snapshot)
   <br>[What is Astral damage?](#astral-damage)
   <br>[Macros](#macros)
   <br>[Useful WeakAura(s)](#wa)
   <br>[Cancelaura Macros](#cancel)
-  
+ 
   **[7. Sims](#sims)**
  
 ---
@@ -60,18 +60,18 @@ sidebarContents:  |
 
 ~5.1% DPS increase from having no tier.
 
-If the buff is up before you enter combat your first {{< spell 194153 "Starfire" >}} /{{< spell 190984 "Wrath" >}} will be affected by the buff and your {{< spell 424248 "Dreamstate" >}} stacks will then reset back to 2 when you finish your cast.
+If the buff is up before you enter combat, your first {{< spell 194153 "Starfire" >}} /{{< spell 190984 "Wrath" >}} will be affected by the buff and your {{< spell 424248 "Dreamstate" >}} stacks will then reset back to 2 when you finish your cast.
 
 Using {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} will also grant you {{< spell 424248 "Dreamstate" >}}, however proccing {{< spell 393961 "Pulsar" >}} will not.
 
-#### 4-piece:
+#### {{< spell 422863 "4-piece" >}}:
 > {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
 
 ~9.1% DPS increase from having no tier.
 
 Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4-piece adds 2% per spender used in that eclipse up to a total of 25% increased.
 
-In {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}} this will be maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
+In {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}} this will be a maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
 
 The stacks reset when using {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}}, you do however keep the stacks of your current eclipse when proccing {{< spell 393961 "Pulsar" >}}, i.e. you're in solar eclipse with 4 stacks, proc {{< spell 393961 "Pulsar" >}}, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage.
 
@@ -158,25 +158,25 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 {{<cbtext id="Convoke the Spirits" type="appendListItem">}}- Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:
-    - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
-    - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
+	- You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
+	- The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
 {{<cbtext id="Warrior of Elune" type="appendToList">}}- Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Force of Nature" type="appendListItem">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
-    {{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
+	{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 {{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
-{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 274283 "Full Moon" >}} if all of the following conditions is met:{{</cbtext>}}
+{{<cbtext id="New Moon" type="appendListItem">}}- Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:{{</cbtext>}}
 {{<cbtext id="New Moon" type="addList">}}  - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} or you're about to cap on charges and {{< spell 393961 "Pulsar" >}} has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
-- Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met: 
-    - You would overcap AP with the next cast.
-    {{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
-    - Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
+- Use {{< spell 78674 "Starsurge" >}} if one of the following conditions is met:
+	- You would overcap AP with the next cast.
+	{{<cbtext id="Starweaver" type="appendListItem">}}- You have a {{< spell 393944 "Starweaver's Weft" >}} proc.{{</cbtext>}}
+	- Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
 {{<cbtext id="Wild Mushroom" type="appendToList">}}- Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
@@ -212,7 +212,7 @@ When reading the priority lists below, you should not think about these as steps
 - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 {{</cbtext>}}
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
-- Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast. 
+- Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast.
 {{<cbtext id="T31 2P-AoE" type="appendListItem">}}- Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
 - Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} already.
@@ -224,16 +224,16 @@ When reading the priority lists below, you should not think about these as steps
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if one of the following conditions is met:
 {{<cbtext id="Starweaver-AoE" type="addList">}}- You have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
-    - {{< spell 202345 "Starlord" >}} is below 3 stacks.
-{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274283 "Full Moon" >}} if all of the following conditions is met:
-    - You will not overcap on AP.
-    - You can finish the cast before your current eclipse ends.
-    - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
+	- {{< spell 202345 "Starlord" >}} is below 3 stacks.
+{{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:
+	- You will not overcap on AP.
+	- You can finish the cast before your current eclipse ends.
+	- You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is longer than 10 seconds. {{</cbtext>}}
 {{<cbtext id="Starweaver-AoE" type="appendToList">}}- Use {{< spell 78674 "Starsurge" >}} if you have a {{< spell 393944 "Starweaver's Weft" >}} proc and you are fighting less than 3 targets.{{</cbtext>}}
-{{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:
-    - The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
-    - You will not overcap on AP.
-    - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
+{{<cbtext id="Stellar Flare-AoE" type="appendToList">}}- Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions are met:
+	- The target will live for at least 8s+1s per target that {{< spell 194153 "Starfire" >}} can hit
+	- You will not overcap on AP.
+	- Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.{{</cbtext>}}
 {{<cbtext id="Astral Communion-AoE" type="appendToList">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Convoke the Spirits-AoE" type="appendToList">}}- Use {{< spell 391528 "Convoke the Spirits" >}} if you are fighting less than 3 targets, otherwise only use {{< spell 391528 "Convoke" >}} for movement in AoE.{{</cbtext>}}
 {{<cbtext id="New Moon-AoE" type="appendToList">}}- Use {{< spell 274281 "New Moon" >}} if you will not overcap on AP.{{</cbtext>}}
@@ -245,7 +245,7 @@ When reading the priority lists below, you should not think about these as steps
    - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 4 or more targets.
 - Use {{< spell 194153 "Wrath" >}} if any of the below conditions are true:
    - You are in Solar Eclipse.
-   - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or less targets.
+   - You are in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} and {{< spell 194153 "Starfire" >}} will hit 3 or fewer targets.
 
 
 <br><div id="fillers">
@@ -258,8 +258,8 @@ When reading the priority lists below, you should not think about these as steps
  
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
- - On 1-3 targets inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 190984 "Wrath" >}}
- - On 4 or more targets inside of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 194153 "Starfire" >}}.
+ - On 1-3 targets inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 190984 "Wrath" >}}
+ - On 4 or more targets inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 194153 "Starfire" >}}.
 
 <br><div id="woe">
 
@@ -267,15 +267,15 @@ When reading the priority lists below, you should not think about these as steps
  
  </div>
  
-{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. 
+{{< spell 202425 "Warrior of Elune" >}} is an off-gcd ability, making your next 3 {{< spell 194153 "Starfires" >}} instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
 
-{{< spell 202425 "Warrior of Elune" >}} can be used 7 seconds before an eclipse ends, this way you will have just enough time to spend your third charge before the buff runs out and the CD will start earlier which can net you more uses throughout the fight.
+{{< spell 202425 "Warrior of Elune" >}} can be used 7 seconds before an eclipse ends, this way you will have just enough time to spend your third charge before the buff runs out and the CD will start earlier, which can net you more uses throughout the fight.
 
-Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is NOT a damage increase if you do not need to move. 
+Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}}. Using a Warrior of Elune Starfire in single target during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} is NOT a damage increase if you do not need to move.
 
 If Warrior of Elune is falling off during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} and you still have a charge to spend, you can {{< spell 194153 "Starfire" >}} at 2+ targets.
 
-Warrior of Elune can also be used during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}} when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on starsurges.
+Warrior of Elune can also be used during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}} when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on Starsurges.
 
 
 <br><div id="prestack">
@@ -302,7 +302,7 @@ This will mostly be relevant during farm periods when you can one-shot a boss.
 
 </div>
 
-Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lunar Eclipse or inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if starfire will hit 3 or more targets.
+Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lunar Eclipse or inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} if Starfire will hit 3 or more targets.
 <br>Keep in mind that {{< spell 202425 "Warrior of Elune" >}} charges are consumed before {{< spell 157228 "Owlkin Frenzy" >}} procs.
 
 
@@ -393,7 +393,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 <br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides more total stats and can be worth over Intellect.
 <br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides more total stats and can be worth over Intellect.
 
-<br>The secondary food can be better as you aquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
+<br>The secondary food can be better as you acquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
 
 
 
@@ -410,7 +410,7 @@ Damage wise, with 100% uptime on all of the Phials and not counting in the downs
 
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): : Generally similar dps throughput as Tepid Versatility, but less defensive benefits. 
+- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): : Generally similar dps throughput as Tepid Versatility, but less defensive benefits.
 
 <br><div id="runes">
 
@@ -463,28 +463,28 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 - Craft/Upgrade https://www.wowhead.com/item=193452/toxic-thorn-footwraps with your first spark to 486 itemlevel.
 - Keep your https://www.wowhead.com/item=193555/toxified-armor-patch item equipped as this doubles the effect of your 486 itemlevel https://www.wowhead.com/item=193452/toxic-thorn-footwraps
 - With your next spark you can do one of the following:
-    - Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
-    - Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 486 itemlevel with Aspect Crests.
+	- Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
+	- Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 486 itemlevel with Aspect Crests.
 
 
 <br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch and you don't have the possibility of crafting a Season 2 version of it you should:
 - Craft either https://www.wowhead.com/item=193452/toxic-thorn-footwraps or https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch at 486 itemlevel.
-    - Craft a https://www.wowhead.com/item=193555/toxified-armor-patch item if your first craft was https://www.wowhead.com/item=193452/toxic-thorn-footwraps
-    - Craft a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch if your first craft was a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch item
-        - Craft the item at 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
-        - Craft the item at 486 itemlevel with Aspect Crests.
+	- Craft a https://www.wowhead.com/item=193555/toxified-armor-patch item if your first craft was https://www.wowhead.com/item=193452/toxic-thorn-footwraps
+	- Craft a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch if your first craft was a https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch item
+    	- Craft the item at 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
+    	- Craft the item at 486 itemlevel with Aspect Crests.
 
 The DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch is negligible and will just come down to your stats.
 
-The boots have predefined stats while Shadowflame can be applied to any leather item where you can choose the stats freely. 
+The boots have predefined stats while Shadowflame can be applied to any leather item where you can choose the stats freely.
 
-What slot and which method you should apply will come down to how much gear you have gotten and in what slots, Sim it. 
+What slot and which method you should apply will come down to how much gear you have gotten and in what slots, Sim it.
 
 Shoulders are a medium budget slot and the stats on our tier shoulders is not great.
 
 The other option would be bracers/belt as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
 
-<br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it's better for AoE scenarios while still being competetive in Single Target, it does however require you to have a lot of gems.
+<br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it's better for AoE scenarios while still being competitive in Single Target, it does however require you to have a lot of gems.
 
 
 <br><div id="trinkets">
@@ -546,7 +546,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 </div>
 
-No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, {{< spell 202347 "Stellar Flare " >}}) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
+No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93402 "Sunfire" >}}, {{< spell 202347 "Stellar Flare" >}}) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
 
 
 <br><div id="astral-damage">
@@ -576,7 +576,7 @@ Mind that class buffs only affect class spells so if a trinket does nature or ar
 
 **Trinket macro:**
 
-If you are using an on-use trinket that should go along with your cooldowns, use the following macro (/13 for top trinket slot, and /14 for bottom trinket slot) 
+If you are using an on-use trinket that should go along with your cooldowns, use the following macro (/13 for top trinket slot, and /14 for bottom trinket slot)
 ```
 #showtooltip
 /use 13
@@ -590,8 +590,8 @@ If you are using an on-use trinket that should go along with your cooldowns, use
  
 </div>
 
-### **Balance Weakaura Packs**
-The following links lead to various balance druid weakaura packs. These contain everything that's recommended to track to play at a high level. None of these are particular better or more useful than others, and which one you should use is up to your personal preference.
+### **Balance WeakAura Packs**
+The following links lead to various balance druid WeakAura packs. These contain everything that's recommended to track to play at a high level. None of these are particular better or more useful than others, and which one you should use is up to your personal preference.
 
 - [Shrom's Ultimate AP Bar](https://wago.io/GzpP7i8ic)
 - [Genesis DF Balance Druid](https://wago.io/1HX3XwarK)
@@ -656,3 +656,5 @@ If you want to engage in this entirely optional method without incurring a dps l
 
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+
+
