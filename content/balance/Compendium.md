@@ -143,9 +143,9 @@ When reading the priority lists below, you should not think about these as steps
 {{< checkbox id="Force of Nature" spell=205636 radio="Warrior of Elune" >}}Force of Nature{{< /checkbox >}}</br>
 {{< checkbox id="Fury of Elune" spell=202770 radio="New Moon">}}Fury of Elune{{< /checkbox >}}</br>
 {{< checkbox id="New Moon" spell=274281 checked=true radio="New Moon">}}New Moon{{< /checkbox >}}</br>
-{{< checkbox id="Wild Mushroom" spell=88747 >}}Wild Mushroom{{< /checkbox >}</br>
-{{< checkbox id="Cancelaura" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}</br>
-{{< checkbox id="T31 2P" spell=424248 >}}T31 2P{{< /checkbox >}</br>
+{{< checkbox id="Wild Mushroom" spell=88747 >}}Wild Mushroom{{< /checkbox >}}</br>
+{{< checkbox id="Cancelaura" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}</br>
+{{< checkbox id="T31 2P" spell=424248 >}}T31 2P{{< /checkbox >}}</br>
 
 
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
