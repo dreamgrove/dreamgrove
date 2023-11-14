@@ -162,7 +162,7 @@ When reading the priority lists below, you should not think about these as steps
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 {{<cbtext id="Astral Communion" type="appendListItem">}}- Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
 {{<cbtext id="Force of Nature" type="appendListItem">}}- Use {{< spell 205636 "Force of Nature" >}} if you will not overcap on AP.{{</cbtext>}}
-	{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
+{{<cbtext id="Fury of Elune" type="appendListItem">}}- Use {{< spell 211545 "Fury of Elune" >}} if you are in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, will proc {{< spell 393961 "Pulsar" >}} with your next GCD or are at less than 280 {{< spell 393961 "Pulsar" >}} stacks.{{</cbtext>}}
 {{<cbtext id="Cancelaura" type="appendListItem">}}- Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 {{<cbtext id="Starweaver" type="appendListItem">}}- Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
