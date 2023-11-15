@@ -482,7 +482,9 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 <br>
 What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
-Bracers and Belt are often used as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
+- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 489 itemlevel.
+- Cloaks are another slot with the lowest stat budget.
+- Belts have a higher stat budget, but they can have a socket.
 
 Later on you can consider crafting https://www.wowhead.com/item=193001/elemental-lariat as it can be better depending on your sim, but it does require you to have a lot of gems.
 
