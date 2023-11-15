@@ -473,7 +473,7 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 	- As these are reagent embellishments, you can craft two copies or mix one of each.
 
 <br>How do these two options compare?:
-- https://www.wowhead.com/item=193452/toxic-thorn-footwraps will give you immediate power for a single spark if you already have a https://www.wowhead.com/item=193555/toxified-armor-patch from Season 2 
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps will give you immediate power of having two high itemlevel embellishments for a single spark if you already have a https://www.wowhead.com/item=193555/toxified-armor-patch from Season 2 
 - The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
 - https://www.wowhead.com/item=208189/verdant-conduit is significantly better than https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch in multi target DPS.
 - https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch have minor downsides.
