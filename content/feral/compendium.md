@@ -519,6 +519,9 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 <br>
 
+When simming [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) you will want to set the orb pickup intervals. To do so, scroll down to the Custom APL box on your sim page, and paste in dragonflight.witherbarks_branch_timing=1/1/x where x is how long in seconds you delay grabbing the 3rd orb after the 2nd one.
+By default this is every second (1/1/1). Optimal would be something like 0/0/9.99 but thats not practical. If you feel you'll be able to delay the 3rd orb well enough on average, 1/1/7 is the generic recommended setting. Feel free to set this to whatever makes sense to you.
+
 <br>
 <div id="misc">
 
