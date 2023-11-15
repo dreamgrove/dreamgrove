@@ -509,6 +509,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 ### To use in Dungeons
 
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
+- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=496&spec=103) Yes, this is a tank trinket. Yes, it still very respectable damage. At current tuning this is a must-have for any sort of pushing due to its stellar defensive benefits whilst losing very little damage.
 - [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) You can drop this if you don't want to deal with delaying last orb
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
 - [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) 
