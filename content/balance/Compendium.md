@@ -472,14 +472,19 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 	- https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs much better on aoe.
 	- As these are reagent embellishments, you can craft two copies or mix one of each.
 
-<br>Some things to keep in mind:
+<br>How do these two options compare?:
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps will give you immediate power for a single spark if you already have a https://www.wowhead.com/item=193555/toxified-armor-patch from Season 2 
 - The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
 - https://www.wowhead.com/item=208189/verdant-conduit is significantly better than https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch in multi target DPS.
 - https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch have minor downsides.
 - https://www.wowhead.com/item=193452/toxic-thorn-footwraps have predefined stats and is a locked item while https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit can be crafted and recrafted to any leather item where you can choose the stats freely.
-- What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
-- Bracers and Belt are often used as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
--Later on you can consider crafting https://www.wowhead.com/item=193001/elemental-lariat as it can be better depending on your sim, but it does require you to have a lot of gems.
+
+<br>
+What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
+
+Bracers and Belt are often used as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
+
+Later on you can consider crafting https://www.wowhead.com/item=193001/elemental-lariat as it can be better depending on your sim, but it does require you to have a lot of gems.
 
 
 <br><div id="trinkets">
