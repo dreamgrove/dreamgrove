@@ -495,12 +495,15 @@ Later on you can consider crafting https://www.wowhead.com/item=193001/elemental
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. 
+
+Note that while still good, double on-use loses value and becomes harder to optimally play.
+
+Special [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) explanation before the other trinkets: [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) will currently sim a fair amount higher than it performs for most encounters since there is no option implemented for it yet. Before this option is implemented mind that Branch can still be good in certain situations where either the timings are very good for it(Smolderon) or where there's few damage events that remove a stack going out(M+ and maybe some raid fights that are tbd).
 
 ### ST
 
-- [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102) - Note that while still good, double on-use loses value and becomes harder to optimally play.
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
 - [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
 - [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
@@ -517,8 +520,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 ### AoE
 
-- [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102) - Note that while still good, double on-use loses value and becomes harder to optimally play.
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
 - [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
 - [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
