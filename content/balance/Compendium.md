@@ -499,7 +499,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 Note that while still good, double on-use loses value and becomes harder to optimally play.
 
-Special [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) explanation before the other trinkets: [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) will currently sim a fair amount higher than it performs for most encounters since there is no option implemented for it yet. Before this option is implemented mind that Branch can still be good in certain situations where either the timings are very good for it(Smolderon) or where there's few damage events that remove a stack going out(M+ and maybe some raid fights that are tbd).
+Special [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) explanation before the other trinkets: [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) loses 2 stacks of its buff every time you take damage. This means it becomes a bad trinket in a lot of raid encounters. Sims assume you get hit every 2 seconds by default which is a conservative estimate. To adjust the trinket for the given encounter you can adjust `dragonflight.balefire_branch_loss_tick` in the Simc options box. For example writing `dragonflight.balefire_branch_loss_tick=1` means there's a damage event hitting you every 1s while Branch is up. For M+ and some raid fights you can adjust the default down or write `dragonflight.balefire_branch_loss_rng_type=rppm` to simulate only getting hit rarely in random intervals.
 
 ### ST
 
