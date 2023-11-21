@@ -654,7 +654,7 @@ If you want to engage in this entirely optional method without incurring a dps l
 <br>[Cancelling Starlord 6T](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_6T_10.2.html)
 
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
-<br>[T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
+<br>[Sample T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
 
 [Current APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
 
