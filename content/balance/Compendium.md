@@ -656,7 +656,7 @@ If you want to engage in this entirely optional method without incurring a dps l
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
 <br>[T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
 
-[Current APL](https://www.dreamgrove.gg/sims/owl/balance.txt))
+[Current APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
 
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
