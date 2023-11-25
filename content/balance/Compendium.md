@@ -119,9 +119,9 @@ Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-dru
 **Precasting:**
 - Cast {{< spell 190984 "Wrath" >}} twice
 - Cast {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented. If you have to stand close enough so that {{< spell 194153 "Starfire" >}} will finish casting long after the boss is pulled, cast another {{< spell 190984 "Wrath" >}} instead.
+- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented.
 
-You can precast from max range about 4 seconds before a boss is pulled.
+You can precast from max range about 3.5 seconds before a boss is pulled when Dreamstate(T31 2pc) is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 Wraths+1 Starfire, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
 
 **What is a priority list?**
 
@@ -313,7 +313,10 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 ## Raid Talents
 <div style="text-align: center;">
 
-### Single Target
+### Gnarlroot
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+### Single Target (Igira(if you don't need spear damage), Volcoross, Larodar, Nymue and Smolderon)
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENxBChWSLJRENAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>
 
@@ -322,8 +325,16 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 <div style="text-align: center;">
 
-### Mixed Targets
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iQS0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+### Council of Dreams
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+
+### Tindral and Igira(if you need spear damage)
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQkWSLCR0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+
+### Fyrakk
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJ5AlkQcgQol0iEJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 </div>
 
