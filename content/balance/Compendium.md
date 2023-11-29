@@ -119,9 +119,9 @@ Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-dru
 **Precasting:**
 - Cast {{< spell 190984 "Wrath" >}} twice
 - Cast {{< spell 202347 "Stellar Flare" >}}
-- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented. If you have to stand close enough so that {{< spell 194153 "Starfire" >}} will finish casting long after the boss is pulled, cast another {{< spell 190984 "Wrath" >}} instead.
+- Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented.
 
-You can precast from max range about 4 seconds before a boss is pulled.
+You can precast from max range about 3.5 seconds before a boss is pulled when Dreamstate(T31 2pc) is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 Wraths+1 Starfire, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
 
 **What is a priority list?**
 
@@ -326,7 +326,10 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 ## Raid Talents
 <div style="text-align: center;">
 
-### Single Target
+### Gnarlroot
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+### Single Target (Igira(if you don't need spear damage), Volcoross, Larodar, Nymue and Smolderon)
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENxBChWSLJRENAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>
 
@@ -335,8 +338,16 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 <div style="text-align: center;">
 
-### Mixed Targets
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iQS0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+### Council of Dreams
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+
+### Tindral and Igira(if you need spear damage)
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQkWSLCR0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+
+### Fyrakk
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJ5AlkQcgQol0iEJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 </div>
 
@@ -485,15 +496,21 @@ If you already have an item with https://www.wowhead.com/item=193555/toxified-ar
 	- https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs much better on aoe.
 	- As these are reagent embellishments, you can craft two copies or mix one of each.
 
-The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
+<br>How do these two options compare?:
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps will give you immediate power of having two high itemlevel embellishments for a single spark if you already have a https://www.wowhead.com/item=193555/toxified-armor-patch from Season 2 
+- The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
+- https://www.wowhead.com/item=208189/verdant-conduit is significantly better than https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch in multi target DPS.
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch have minor downsides.
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps have predefined stats and is a locked item while https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit can be crafted and recrafted to any leather item where you can choose the stats freely.
 
-The boots have predefined stats while Shadowflame / Verdant can be applied to any leather item where you can choose the stats freely.
-
+<br>
 What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
-Bracers and Belt are often used as they both can be socketed and have a lower stat budget which will be good later on when your other pieces can be upgraded to 489 itemlevel.
+- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 489 itemlevel.
+- Cloaks are another slot with the lowest stat budget.
+- Belts have a higher stat budget, but they can have a socket.
 
-<br>Later on you can consider crafting [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) as it can be better depending on your sim, but it does require you to have a lot of gems.
+Later on you can consider crafting https://www.wowhead.com/item=193001/elemental-lariat as it can be better depending on your sim, but it does require you to have a lot of gems.
 
 
 <br><div id="trinkets">
@@ -502,12 +519,15 @@ Bracers and Belt are often used as they both can be socketed and have a lower st
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. 
+
+Note that while still good, double on-use loses value and becomes harder to optimally play.
+
+Special [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) explanation before the other trinkets: [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) loses 2 stacks of its buff every time you take damage. This means it becomes a bad trinket in a lot of raid encounters. Sims assume you get hit every 2 seconds by default which is a conservative estimate. To adjust the trinket for the given encounter you can adjust `dragonflight.balefire_branch_loss_tick` in the Simc options box. For example writing `dragonflight.balefire_branch_loss_tick=1` means there's a damage event hitting you every 1s while Branch is up. For M+ and some raid fights you can adjust the default down or write `dragonflight.balefire_branch_loss_rng_type=rppm` to simulate only getting hit rarely in random intervals.
 
 ### ST
 
-- [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102) - Note that while still good, double on-use loses value and becomes harder to optimally play.
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
 - [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
 - [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
@@ -524,8 +544,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 ### AoE
 
-- [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102) - Note that while still good, double on-use loses value and becomes harder to optimally play.
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
 - [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
 - [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
@@ -659,9 +678,9 @@ If you want to engage in this entirely optional method without incurring a dps l
 <br>[Cancelling Starlord 6T](https://www.dreamgrove.gg/balance/sims/cancelaura_starlord_6T_10.2.html)
 
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
-<br>[T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
+<br>[Sample T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
 
-[Current APL](https://github.com/balance-simc/Balance-SimC/blob/master/balance.txt)
+[Current APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
 
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>

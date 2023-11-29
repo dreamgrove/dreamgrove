@@ -467,6 +467,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-wafting-devotion) or [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Sim these two options to see which is best for your character.
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6)
 <br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) or [Homebound Speed](https://www.wowhead.com/item=199948/enchant-cloak-homebound-speed) 
+<br>Belt - [Shadowed Belt Clasp](https://www.wowhead.com/item=205039/shadowed-belt-clasp)
 <br>Legs - [Fierce Armor Kit](https://www.wowhead.com/item=193565/fierce-armor-kit) or [Lambent Armor Kit](https://www.wowhead.com/item=204702/lambent-armor-kit)
 <br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) or [Devotion of Speed](https://www.wowhead.com/item=199939/enchant-bracer-devotion-of-speed)
 <br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) or [Plainsrunner's Breeze](https://www.wowhead.com/ptr-2/item=199934/enchant-boots-plainsrunners-breeze)
@@ -494,30 +495,33 @@ I would recommend holding your 1st craft for as long as possible. It's not unusu
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. Acquire [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) asap.
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. Acquire [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) or [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) asap.
 ### To use in Raid
 
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103)
-- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103)
-- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
+- [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) Easier to use than [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) for similar-to-slightly worse dps assuming you can reasonably delay picking up 3rd orb.
+- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) Grab first 2 orbs asap, and delay last orb as long as possible
+- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) 
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
+- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
   
 ### To use in Dungeons
 
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
-- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) This is generally slightly better than Pip's if pulls are all around 4-6 targets. 
-- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
+- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=496&spec=103) Yes, this is a tank trinket. Yes, it still very respectable damage. At current tuning this is a must-have for any sort of pushing due to its stellar defensive benefits whilst losing very little damage.
+- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) You can drop this if you don't want to deal with delaying last orb
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
+- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) 
+- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
 - [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103)
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
 - [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This trinkets value varies heavily depending on group and dungeon. In a clean run where there isn't a lot of downtime between pulls, this becomes competitive with the top end trinkets.
 
 <br>
 
-**Note: [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) is supposedly being hotfixed-buffed soon as of November 7th. Numbers will be reran for that trinket when we learn more.**
+When simming [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) you may want to set the orb pickup intervals. To do so, scroll down to the Custom APL box on your sim page, and paste in dragonflight.witherbarks_branch_timing=1/1/x where x is how long in seconds you delay grabbing the 3rd orb after the 2nd one.
+By default this is set to pick up first 2 orbs asap, and delay last for 7 seconds after the second (1/1/7). Optimal would be something like 0/0/9.99 but thats not practical. Feel free to set this to whatever makes sense to you.
 
 <br>
 <div id="misc">
@@ -600,16 +604,16 @@ If you are using an on-use trinket/weapon that should go along with your cooldow
 
 Casts Entangling Roots on a target you mouseover, otherwise casts on current target if no mouseover.
 ```
-#showtooltip Entangling Roots
-/cast [@mouseover, harm, nodead][] Entangling Roots
+#showtooltip
+/cast [@mouseover, harm, nodead] [] Entangling Roots
 ```
 
 **Focus Skull Bash:**
 
-Casts Skull Bash at your focus target. Remember to bind focus target in WoW keybind settings.
+Casts Skull Bash at your focus target, or current target if there is no eligible enemy focus target. Remember to bind focus target in WoW keybind settings.
 ```
-#showtooltip skull bash
-/cast [@focus] skull bash
+#showtooltip
+/cast [@focus, harm, nodead] [] skull bash
 ```
 
 **Adaptive Swarm macro:**
@@ -617,7 +621,7 @@ Casts Skull Bash at your focus target. Remember to bind focus target in WoW keyb
 Casts Swarm on your current target, or a friendly if you mouseover them. This can be applied to numerous abilities you cast on allies (Dispel, Rejuv/Regrowth, Innervate etc to save on keybinds), as seen in the Rebirth macro further below. 
 ```
 #showtooltip
-/cast [@mouseover, help] [] Adaptive Swarm; [@target, harm] Adaptive Swarm 
+/cast [@mouseover, help, nodead] [] Adaptive Swarm 
 ```
 
 **Rebirth/Other Macro:**
@@ -625,7 +629,7 @@ Casts Swarm on your current target, or a friendly if you mouseover them. This ca
 Casts Rebirth when you mouseover a friendly, or otherwise Mark of the Wild. Customise these macros how you please. 
 ```
 #showtooltip
-/cast [@mouseover, help] Rebirth; Mark of the Wild
+/cast [@mouseover, help, dead] Rebirth; Mark of the Wild
 ```
 
 <br><div id="wa">
@@ -666,7 +670,7 @@ This tracks your progress towards procing {{< spell 319439 "Bloodtalons" >}}, sh
 [Bloodtalons Tracker from Cheesey's pack](https://wago.io/zinn-QaFI)
 Additional BT tracker.
 
-[Focus Skull Bash macro](https://wago.io/mOvsNkzJ7)
+[Focus Skull Bash](https://wago.io/mOvsNkzJ7)
 Helps emphasise focus kicks when your Skull Bash is off CD.
 
 </div>
