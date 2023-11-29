@@ -4,7 +4,6 @@ actions.precombat+=/food
 actions.precombat+=/augmentation
 # Snapshot raid buffed stats before combat begins and pre-potting is done.
 actions.precombat+=/snapshot_stats
-# Executed before combat begins. Accepts non-harmful actions only.
 actions.precombat+=/heart_of_the_wild
 actions.precombat+=/cat_form,if=talent.rake.enabled
 actions.precombat+=/prowl,if=talent.rake.enabled
