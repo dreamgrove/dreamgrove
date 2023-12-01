@@ -11,7 +11,14 @@ function toggleCheckbox(checkboxId, isChecked) {
     // Find all elements with the matching data-tag and toggle their visibility.
     document.querySelectorAll(`[data-tag="${checkboxId}"]`).forEach(el => {
         const listItem = el.closest('li');
-        listItem.style.display = checkbox.checked ? 'list-item' : 'none';
+        // Get the data-negate attribute from the span itself
+        const isNegated = el.getAttribute('data-negate') === 'true';
+
+        if (isNegated) {
+            listItem.style.display = checkbox.checked ? 'none' : 'list-item';
+        } else {
+            listItem.style.display = checkbox.checked ? 'list-item' : 'none';
+        }
     });
 
     // Dispatch the change event if called from an event listener.
@@ -26,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const checkboxId = checkbox.getAttribute('data-id');
 
         // Attach a change event listener
-        checkbox.addEventListener('change', function (event) {
+        checkbox.addEventListener('change', function () {
             toggleCheckbox(checkboxId);
         });
 
