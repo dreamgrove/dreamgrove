@@ -119,27 +119,25 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Select which talents you have talented to filter the priority list:**
 
-{{< checkbox id="Feral Frenzy" spell=274838 >}}Feral Frenzy{{< /checkbox >}}<br>
-{{< checkbox id="Convoke the Spirits" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}<br>
-{{< checkbox id="Unbridled Swarm" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}<br>
+{{< checkbox id="Feral Frenzy" spell=274838 checked=true >}}Feral Frenzy{{< /checkbox >}}
+{{< checkbox id="Convoke the Spirits" spell=391528 checked=true >}}Convoke the Spirits{{< /checkbox >}}
+{{< checkbox id="Unbridled Swarm" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}
 {{< checkbox id="Adaptive Swarm" spell=391889 >}}Adaptive Swarm{{< /checkbox >}}<br>
-{{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}<br>
-{{< checkbox id="Berserk" spell=106951 >}}Berserk{{< /checkbox >}}<br>
-{{< checkbox id="Dire Fixation" spell=417710 >}}Dire Fixation{{< /checkbox >}}<br>
-{{< checkbox id="Apex Predator's Craving" spell=391881 >}}Apex Predator's Craving{{< /checkbox >}}<br>
-{{< checkbox id="Predator Revealed" spell=411344 >}}Predator Revealed{{< /checkbox >}}<br>
-{{< checkbox id="Smoldering Frenzy" spell=422751 >}}Smoldering Frenzy{{< /checkbox >}}<br>
-{{< checkbox id="Bloodtalons" spell=319439 >}}Bloodtalons{{< /checkbox >}}<br>
+{{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}
+{{< checkbox id="Berserk" spell=106951 checked=true >}}Berserk{{< /checkbox >}}
+{{< checkbox id="Dire Fixation" spell=417710 checked=true >}}Dire Fixation{{< /checkbox >}}
+{{< checkbox id="Apex Predator's Craving" spell=391881 checked=true >}}Apex Predator's Craving{{< /checkbox >}}<br>
+{{< checkbox id="Predator Revealed" spell=411344 >}}Predator Revealed{{< /checkbox >}}
+{{< checkbox id="Smoldering Frenzy" spell=422751 checked=true >}}Smoldering Frenzy{{< /checkbox >}}
+{{< checkbox id="Bloodtalons" spell=319439 checked=true >}}Bloodtalons{{< /checkbox >}}
 {{< checkbox id="Relentless Predator" spell=393771 >}}Relentless Predator{{< /checkbox >}}<br>
-{{< checkbox id="Clearcasting" spell=16864 >}}Clearcasting{{< /checkbox >}}<br>
-{{< checkbox id="Thrashing Claws" spell=405300 >}}Thrashing Claws{{< /checkbox >}}<br>
-{{< checkbox id="Brutal Slash" spell=202028 >}}Brutal Slash{{< /checkbox >}}<br>
-{{< checkbox id="Shadowmeld" spell=58984 >}}Shadowmeld{{< /checkbox >}}<br>
+{{< checkbox id="Thrashing Claws" spell=405300 >}}Thrashing Claws{{< /checkbox >}}
+{{< checkbox id="Brutal Slash" spell=202028 >}}Brutal Slash{{< /checkbox >}}
+{{< checkbox id="Shadowmeld" spell=58984 >}}Shadowmeld{{< /checkbox >}}
 {{< checkbox id="Sudden Ambush" spell=384667 >}}Sudden Ambush{{< /checkbox >}}<br>
-{{< checkbox id="Moonfire" spell=155625 >}}Moonfire{{< /checkbox >}}<br>
-{{< checkbox id="Swipe" spell=106785 >}}Swipe{{< /checkbox >}}<br>
-{{< checkbox id="T31 2P">}}T31 2P{{< /checkbox>}}<br>
-{{< checkbox id="T31 4P">}}T31 4P{{< /checkbox>}}
+{{< checkbox id="Moonfire" spell=155625 >}}Moonfire{{< /checkbox >}}
+{{< checkbox id="T31 2P" checked=true >}}T31 2P{{< /checkbox >}}
+{{< checkbox id="T31 4P" checked=true >}}T31 4P{{< /checkbox >}}
 
 **Single Target priority list:**
 
@@ -147,7 +145,7 @@ The way this section is written is very formulaic and has the same structure as 
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
     - {{<cbtext id="T31 2P">}}You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.{{</cbtext>}}
-    - {{<cbtext id="Convoke the Spirits">}}You do do not have 10.2 tier set equipped and you've talented {{< spell 391528  "Convoke the Spirits" >}}(Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext>}}
+    - {{<cbtext id="Convoke the Spirits">}}You do do not have 10.2 tier set equipped and you've talented {{< spell 391528  "Convoke the Spirits" >}}(Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext >}}
 - {{<cbtext id="Adaptive Swarm" >}}Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:{{</cbtext>}}
 {{<cbtext id="Adaptive Swarm" >}}
 - There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
@@ -173,29 +171,26 @@ The way this section is written is very formulaic and has the same structure as 
 - You have 0 or 1 combo points OR Smoldering Frenzy would fall off before Convoke ends.
 {{</cbtext>}}
 - {{<cbtext id="Feral Frenzy">}}Use {{< spell 274838 "Feral Frenzy" >}} if all of the following conditions are met:{{</cbtext>}}
-{{<cbtext id="Dire Fixation">}}
-- {{< spell 417710 "Dire Fixation" >}} is applied to the target.
-{{</cbtext>}}
+{{<cbtext id="Dire Fixation">}}- {{< spell 417710 "Dire Fixation" >}} is applied to the target.{{</cbtext>}}
 {{<cbtext id="Feral Frenzy">}}
 - You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
-{{</cbtext>}}
-- Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.
+{{</cbtext >}}
+- {{<cbtext id="Apex Predator's Craving">}}Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.{{</cbtext >}}
 
 **If you are in Berserk see [here](#berserk) as your priorities from this point on change a bit.**
 
-- If you have {{< spell 411344 "Predator Revealed" >}} active from 10.1 4 piece set bonus, 4 combo points and are at least 40 energy away from cap, wait until you passively gain your 5th combo point.
 - Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
-    - You have at least 4 combo points
-    - {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
-        - You have 10.2 2 or 4 piece set bonus equipped
-        - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
-        - Your next gcd will be {{< spell 274838 "Feral Frenzy" >}}
-    - {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
-    - {{< spell 5217 "Tiger's Fury" >}} is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
-    - {{< spell 319439 "Bloodtalons" >}} (if talented) is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
+- You have at least 4 combo points
+- {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
+    - You have 10.2 2 or 4 piece set bonus equipped
+    - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
+    - Your next gcd will be {{< spell 274838 "Feral Frenzy" >}}
+- {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
+- {{< spell 5217 "Tiger's Fury" >}} is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
+- {{< spell 319439 "Bloodtalons" >}} (if talented) is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
 - Use {{< spell 22568 "Ferocious Bite" >}} when all of these conditions are met:
-    - You have at least 4 combo points
-    - You have at least 50 energy OR you have {{< spell 393771 "Relentless Predator" >}} talented and at least 45 energy. If you have the combo points, you should wait until you reach these energy thresholds.
+- You have at least 4 combo points
+- You have at least 50 energy OR you have {{< spell 393771 "Relentless Predator" >}} talented and at least 45 energy. If you have the combo points, you should wait until you reach these energy thresholds.
 
 **Below this point, skip any spells you've already casted towards {{< spell 319439 "Bloodtalons" >}}, if you have 0 or 1 stacks of {{< spell 319439 "Bloodtalons" >}} remaining.**
 
