@@ -119,6 +119,35 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Single Target priority list:**
 
+**Select which talents you have talented to filter the priority list:**
+
+{{< checkbox id="Tiger's Fury" spell=5217 >}}Tiger's Fury{{< /checkbox >}}
+{{< checkbox id="Feral Frenzy" spell=274838 >}}Feral Frenzy{{< /checkbox >}}<br>
+{{< checkbox id="Convoke the Spirits" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}<br>
+{{< checkbox id="Unbridled Swarm" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}<br>
+{{< checkbox id="Adaptive Swarm" spell=391889 >}}Adaptive Swarm{{< /checkbox >}}<br>
+{{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}<br>
+{{< checkbox id="Berserk" spell=106951 >}}Berserk{{< /checkbox >}}<br>
+{{< checkbox id="Dire Fixation" spell=417710 >}}Dire Fixation{{< /checkbox >}}<br>
+{{< checkbox id="Ferocious Bite" spell=22568 >}}Ferocious Bite{{< /checkbox >}}<br>
+{{< checkbox id="Apex Predator's Craving" spell=391881 >}}Apex Predator's Craving{{< /checkbox >}}<br>
+{{< checkbox id="Predator Revealed" spell=411344 >}}Predator Revealed{{< /checkbox >}}<br>
+{{< checkbox id="Rip" spell=1079 >}}Rip{{< /checkbox >}}<br>
+{{< checkbox id="Smoldering Frenzy" spell=422751 >}}Smoldering Frenzy{{< /checkbox >}}<br>
+{{< checkbox id="Bloodtalons" spell=319439 >}}Bloodtalons{{< /checkbox >}}<br>
+{{< checkbox id="Relentless Predator" spell=393771 >}}Relentless Predator{{< /checkbox >}}<br>
+{{< checkbox id="Clearcasting" spell=16864 >}}Clearcasting{{< /checkbox >}}<br>
+{{< checkbox id="Thrash" spell=106830 >}}Thrash{{< /checkbox >}}<br>
+{{< checkbox id="Thrashing Claws" spell=405300 >}}Thrashing Claws{{< /checkbox >}}<br>
+{{< checkbox id="Shred" spell=5221 >}}Shred{{< /checkbox >}}<br>
+{{< checkbox id="Brutal Slash" spell=202028 >}}Brutal Slash{{< /checkbox >}}<br>
+{{< checkbox id="Shadowmeld" spell=58984 >}}Shadowmeld{{< /checkbox >}}<br>
+{{< checkbox id="Rake" spell=1822 >}}Rake{{< /checkbox >}}<br>
+{{< checkbox id="Sudden Ambush" spell=384667 >}}Sudden Ambush{{< /checkbox >}}<br>
+{{< checkbox id="Moonfire" spell=155625 >}}Moonfire{{< /checkbox >}}<br>
+{{< checkbox id="Swipe" spell=106785 >}}Swipe{{< /checkbox >}}<br>
+{{< checkbox id="Prowl" spell=102547 >}}Prowl{{< /checkbox >}}<br>
+
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
