@@ -168,7 +168,7 @@ When reading the priority lists below, you should not think about these as steps
 - {{<cbtext id="Cancelaura">}}Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - {{<cbtext id="Starweaver">}}Use {{< spell 191034 "Starfall" >}} if you have a {{< spell 393942 "Starweaver's Warp" >}} proc.{{</cbtext>}}
 - Use {{< spell 78674 "Starsurge" >}} if {{< spell 202345 "Starlord" >}} has less than 3 stacks or if you have more than 2 stacks of {{< spell 394048 "BoAT" >}}.
-- {{<cbtext id="New Moon">}}Use {{< spell 274281 "New-" >}},{{< spell 202768 "Half-" >}} and {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:{{</cbtext>}}
+- {{<cbtext id="New Moon">}}Use {{< spell 274281 "New-" >}},{{< spell 274282 "Half-" >}} and {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:{{</cbtext>}}
 {{<cbtext id="New Moon">}}
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
