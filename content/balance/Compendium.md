@@ -145,7 +145,7 @@ When reading the priority lists below, you should not think about these as steps
 {{< checkbox id="New Moon" spell=274281 checked=true radio="New Moon">}}New Moon{{< /checkbox >}}</br>
 {{< checkbox id="Wild Mushroom" spell=88747 >}}Wild Mushroom{{< /checkbox >}}</br>
 {{< checkbox id="Cancelaura" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}</br>
-{{< checkbox id="T31 2P" spell=424248 >}}T31 2P{{< /checkbox >}}</br>
+{{< checkbox id="T31 2P" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}</br>
 
 
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
@@ -155,7 +155,7 @@ When reading the priority lists below, you should not think about these as steps
 - {{<cbtext id="T31 2P">}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Convoke the Spirits">}}Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
-- {{<cbtext id="T31 2P" negate="true">}}Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if you do not have {{< spell 424248 "T31 2P" >}} equipped and one of the following conditions is true:{{</cbtext>}}
+- {{<cbtext id="T31 2P" negate="true">}}Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions is true:{{</cbtext>}}
 {{<cbtext id="T31 2P" negate="true">}}
 - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
 - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
@@ -199,9 +199,9 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}
 <br>{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
-<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=true >}}Wild Mushroom{{< /checkbox >}}
+<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=false >}}Wild Mushroom{{< /checkbox >}}
 <br>{{< checkbox id="Cancelaura-AoE" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}
-<br>{{< checkbox id="T31 2P-AoE" spell=424248 >}}T31 2P{{< /checkbox >}}
+<br>{{< checkbox id="T31 2P-AoE" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}
 
 <br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} or {{< spell 393940 "Starweaver" >}}, use Starsurge as a spender on 2 targets still.**
 <br>**AoE priority list(2+ targets):**
@@ -684,5 +684,3 @@ If you want to engage in this entirely optional method without incurring a dps l
 
 <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true, iconSize: 'small'};</script>
 <script src="https://wow.zamimg.com/js/tooltips.js"></script>
-
-
