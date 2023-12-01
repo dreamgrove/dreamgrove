@@ -117,11 +117,8 @@ The way this section is written is very formulaic and has the same structure as 
 
 </div>
 
-**Single Target priority list:**
-
 **Select which talents you have talented to filter the priority list:**
 
-{{< checkbox id="Tiger's Fury" spell=5217 >}}Tiger's Fury{{< /checkbox >}}
 {{< checkbox id="Feral Frenzy" spell=274838 >}}Feral Frenzy{{< /checkbox >}}<br>
 {{< checkbox id="Convoke the Spirits" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}<br>
 {{< checkbox id="Unbridled Swarm" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}<br>
@@ -129,47 +126,59 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}<br>
 {{< checkbox id="Berserk" spell=106951 >}}Berserk{{< /checkbox >}}<br>
 {{< checkbox id="Dire Fixation" spell=417710 >}}Dire Fixation{{< /checkbox >}}<br>
-{{< checkbox id="Ferocious Bite" spell=22568 >}}Ferocious Bite{{< /checkbox >}}<br>
 {{< checkbox id="Apex Predator's Craving" spell=391881 >}}Apex Predator's Craving{{< /checkbox >}}<br>
 {{< checkbox id="Predator Revealed" spell=411344 >}}Predator Revealed{{< /checkbox >}}<br>
-{{< checkbox id="Rip" spell=1079 >}}Rip{{< /checkbox >}}<br>
 {{< checkbox id="Smoldering Frenzy" spell=422751 >}}Smoldering Frenzy{{< /checkbox >}}<br>
 {{< checkbox id="Bloodtalons" spell=319439 >}}Bloodtalons{{< /checkbox >}}<br>
 {{< checkbox id="Relentless Predator" spell=393771 >}}Relentless Predator{{< /checkbox >}}<br>
 {{< checkbox id="Clearcasting" spell=16864 >}}Clearcasting{{< /checkbox >}}<br>
-{{< checkbox id="Thrash" spell=106830 >}}Thrash{{< /checkbox >}}<br>
 {{< checkbox id="Thrashing Claws" spell=405300 >}}Thrashing Claws{{< /checkbox >}}<br>
-{{< checkbox id="Shred" spell=5221 >}}Shred{{< /checkbox >}}<br>
 {{< checkbox id="Brutal Slash" spell=202028 >}}Brutal Slash{{< /checkbox >}}<br>
 {{< checkbox id="Shadowmeld" spell=58984 >}}Shadowmeld{{< /checkbox >}}<br>
-{{< checkbox id="Rake" spell=1822 >}}Rake{{< /checkbox >}}<br>
 {{< checkbox id="Sudden Ambush" spell=384667 >}}Sudden Ambush{{< /checkbox >}}<br>
 {{< checkbox id="Moonfire" spell=155625 >}}Moonfire{{< /checkbox >}}<br>
 {{< checkbox id="Swipe" spell=106785 >}}Swipe{{< /checkbox >}}<br>
-{{< checkbox id="Prowl" spell=102547 >}}Prowl{{< /checkbox >}}<br>
+{{< checkbox id="T31 2P">}}T31 2P{{< /checkbox>}}<br>
+{{< checkbox id="T31 4P">}}T31 4P{{< /checkbox>}}
+
+**Single Target priority list:**
 
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
-    - You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.
-    - You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. <br> (Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.)
-- Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:
-    - There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
-    - {{< spell 391889 "Adaptive Swarm" >}} is either not up or it is about to expire with 1 or 2 stacks.
-- With {{< spell 391951 "Unbridled Swarm" >}} talented, the conditions change based on the amount of {{< spell 391889 "Adaptive Swarms" >}} you have out:
-    - If you have 3 {{< spell 391889 "Adaptive Swarms" >}} with at least 2 stacks out then you will target allies with priority 1 stack > 0 stack > 2 stacks.
-    - If you have 2 or fewer {{< spell 391889 "Adaptive Swarms" >}} of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
-- Use {{< spell 102543 "Incarnation" >}} if it's ready.
-- Use {{< spell 106951 "Berserk" >}} if it's ready. 
-    - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
-- Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:
-    - Rip will not fall off during Convoke's channel.
-    - Tiger's Fury is up.
-    - Smoldering Frenzy is up or you do not have 10.2 4 piece set bonus equipped.
-    - You have 0 or 1 combo points OR Smoldering Frenzy would fall off before Convoke ends.
-- Use {{< spell 274838 "Feral Frenzy" >}} if all of the following conditions are met:
-    - {{< spell 417710 "Dire Fixation" >}} (if talented) is applied to the target.
-    - You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
+    - {{<cbtext id="T31 2P">}}You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.{{</cbtext>}}
+    - {{<cbtext id="Convoke the Spirits">}}You do do not have 10.2 tier set equipped and you've talented {{< spell 391528  "Convoke the Spirits" >}}(Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext>}}
+- {{<cbtext id="Adaptive Swarm" >}}Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:{{</cbtext>}}
+{{<cbtext id="Adaptive Swarm" >}}
+- There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
+- asd{{< spell 391889 "Adaptive Swarm" >}} is either not up or it is about to expire with 1 or 2 stacks.
+{{</cbtext>}}
+- {{<cbtext id="Unbridled Swarm" >}}With {{< spell 391951 "Unbridled Swarm" >}} talented, the conditions change based on the amount of {{< spell 391889 "Adaptive Swarms" >}} you have out:{{</cbtext>}}
+{{<cbtext id="Unbridled Swarm" >}}
+- If you have 3 {{< spell 391889 "Adaptive Swarms" >}} with at least 2 stacks out then you will target allies with priority 1 stack > 0 stack > 2 stacks.
+- If you have 2 or fewer {{< spell 391889 "Adaptive Swarms" >}} of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
+{{</cbtext>}}
+- {{<cbtext id="Incarnation" >}}Use {{< spell 102543 "Incarnation" >}} if it's ready.{{</cbtext>}}
+- {{<cbtext id="Berserk" >}}Use {{< spell 106951 "Berserk" >}} if it's ready.{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits" >}}
+- If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
+{{</cbtext>}}
+- {{<cbtext id="Convoke the Spirits" >}}Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits" >}}
+- Rip will not fall off during Convoke's channel.
+- Tiger's Fury is up.
+{{</cbtext>}}
+{{<cbtext id="T31 4P">}}
+- Smoldering Frenzy is up or you do not have 10.2 4 piece set bonus equipped.
+- You have 0 or 1 combo points OR Smoldering Frenzy would fall off before Convoke ends.
+{{</cbtext>}}
+- {{<cbtext id="Feral Frenzy">}}Use {{< spell 274838 "Feral Frenzy" >}} if all of the following conditions are met:{{</cbtext>}}
+{{<cbtext id="Dire Fixation">}}
+- {{< spell 417710 "Dire Fixation" >}} is applied to the target.
+{{</cbtext>}}
+{{<cbtext id="Feral Frenzy">}}
+- You have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
+{{</cbtext>}}
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc.
 
 **If you are in Berserk see [here](#berserk) as your priorities from this point on change a bit.**
