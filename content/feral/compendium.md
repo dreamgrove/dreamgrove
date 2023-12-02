@@ -123,8 +123,8 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="Convoke the Spirits" spell=391528 checked=true >}}Convoke the Spirits{{< /checkbox >}}
 {{< checkbox id="Unbridled Swarm" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}
 {{< checkbox id="Adaptive Swarm" spell=391889 >}}Adaptive Swarm{{< /checkbox >}}<br>
-{{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}
-{{< checkbox id="Berserk" spell=106951 checked=true >}}Berserk{{< /checkbox >}}
+{{< checkbox id="Incarnation" spell=102543 radio="Incarnation">}}Incarnation{{< /checkbox >}}
+{{< checkbox id="Berserk" spell=106951 checked=true radio="Incarnation">}}Berserk{{< /checkbox >}}
 {{< checkbox id="Dire Fixation" spell=417710 checked=true >}}Dire Fixation{{< /checkbox >}}
 {{< checkbox id="Apex Predator's Craving" spell=391881 checked=true >}}Apex Predator's Craving{{< /checkbox >}}<br>
 {{< checkbox id="Predator Revealed" spell=411344 >}}Predator Revealed{{< /checkbox >}}
@@ -135,7 +135,7 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="Brutal Slash" spell=202028 >}}Brutal Slash{{< /checkbox >}}
 {{< checkbox id="Shadowmeld" spell=58984 >}}Shadowmeld{{< /checkbox >}}
 {{< checkbox id="Sudden Ambush" spell=384667 >}}Sudden Ambush{{< /checkbox >}}<br>
-{{< checkbox id="Moonfire" spell=155625 >}}Moonfire{{< /checkbox >}}
+{{< checkbox id="Lunar Inspiration" spell=155580 >}}Lunar Inspiration{{< /checkbox >}}
 {{< checkbox id="T31 2P" checked=true >}}T31 2P{{< /checkbox >}}
 {{< checkbox id="T31 4P" checked=true >}}T31 4P{{< /checkbox >}}
 
@@ -144,12 +144,12 @@ The way this section is written is very formulaic and has the same structure as 
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
-    - {{<cbtext id="T31 2P">}}You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.{{</cbtext>}}
-    - {{<cbtext id="Convoke the Spirits">}}You do do not have 10.2 tier set equipped and you've talented {{< spell 391528  "Convoke the Spirits" >}}(Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext >}}
+    - {{<cbtext id="T31 2P">}}{{< spell 274838 "Feral Frenzy" >}} is ready to be used.{{</cbtext>}}
+    - {{<cbtext id="T31 2P" negate="true">}}You do do not have 10.2 tier set equipped and you've talented {{< spell 391528  "Convoke the Spirits" >}}(Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext >}}
 - {{<cbtext id="Adaptive Swarm" >}}Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:{{</cbtext>}}
 {{<cbtext id="Adaptive Swarm" >}}
 - There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
-- asd{{< spell 391889 "Adaptive Swarm" >}} is either not up or it is about to expire with 1 or 2 stacks.
+- {{< spell 391889 "Adaptive Swarm" >}} is either not up or it is about to expire with 1 or 2 stacks.
 {{</cbtext>}}
 - {{<cbtext id="Unbridled Swarm" >}}With {{< spell 391951 "Unbridled Swarm" >}} talented, the conditions change based on the amount of {{< spell 391889 "Adaptive Swarms" >}} you have out:{{</cbtext>}}
 {{<cbtext id="Unbridled Swarm" >}}
@@ -158,15 +158,13 @@ The way this section is written is very formulaic and has the same structure as 
 {{</cbtext>}}
 - {{<cbtext id="Incarnation" >}}Use {{< spell 102543 "Incarnation" >}} if it's ready.{{</cbtext>}}
 - {{<cbtext id="Berserk" >}}Use {{< spell 106951 "Berserk" >}} if it's ready.{{</cbtext>}}
-{{<cbtext id="Convoke the Spirits" >}}
+{{<cbtext id="Berserk" >}}
 - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
 {{</cbtext>}}
 - {{<cbtext id="Convoke the Spirits" >}}Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:{{</cbtext>}}
 {{<cbtext id="Convoke the Spirits" >}}
 - Rip will not fall off during Convoke's channel.
 - Tiger's Fury is up.
-{{</cbtext>}}
-{{<cbtext id="T31 4P">}}
 - Smoldering Frenzy is up or you do not have 10.2 4 piece set bonus equipped.
 - You have 0 or 1 combo points OR Smoldering Frenzy would fall off before Convoke ends.
 {{</cbtext>}}
@@ -180,42 +178,44 @@ The way this section is written is very formulaic and has the same structure as 
 **If you are in Berserk see [here](#berserk) as your priorities from this point on change a bit.**
 
 - Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
-- You have at least 4 combo points
-- {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
-    - You have 10.2 2 or 4 piece set bonus equipped
-    - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
-    - Your next gcd will be {{< spell 274838 "Feral Frenzy" >}}
-- {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
-- {{< spell 5217 "Tiger's Fury" >}} is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
-- {{< spell 319439 "Bloodtalons" >}} (if talented) is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
+    - You have at least 4 combo points
+    - {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
+        - {{<cbtext id="T31 2P">}}You have 10.2 2 or 4 piece set bonus equipped{{</cbtext>}}
+        - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
+        - {{<cbtext id="Feral Frenzy">}}Your next gcd will be {{< spell 274838 "Feral Frenzy" >}}{{</cbtext>}}
+        - {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
+        - {{< spell 5217 "Tiger's Fury" >}} is up, or won't be up before {{< spell 1079 "Rip" >}} expires.
+        - {{<cbtext id="Bloodtalons">}}{{< spell 319439 "Bloodtalons" >}} (if talented) is up, or won't be up before {{< spell 1079 "Rip" >}} expires.{{</cbtext>}}
 - Use {{< spell 22568 "Ferocious Bite" >}} when all of these conditions are met:
-- You have at least 4 combo points
-- You have at least 50 energy OR you have {{< spell 393771 "Relentless Predator" >}} talented and at least 45 energy. If you have the combo points, you should wait until you reach these energy thresholds.
+    - You have at least 4 combo points
+    - You have at least 50 energy OR you have {{< spell 393771 "Relentless Predator" >}} talented and at least 45 energy. If you have the combo points, you should wait until you reach these energy thresholds.
 
 **Below this point, skip any spells you've already casted towards {{< spell 319439 "Bloodtalons" >}}, if you have 0 or 1 stacks of {{< spell 319439 "Bloodtalons" >}} remaining.**
 
 - Use {{< spell 16864 "Clearcasting" >}} procs on {{< spell 106830 "Thrash" >}} if all of these conditions are met:
     - {{< spell 106830 "Thrash" >}} is in Pandemic.
-    - {{< spell 405300 "Thrashing Claws" >}} is not talented.
-    - {{< spell 417710 "Dire Fixation" >}} (if talented) is already applied to your target.
+    - {{<cbtext id="Thrashing Claws" negate="true">}}{{< spell 405300 "Thrashing Claws" >}} is not talented.{{</cbtext>}}
+    - {{<cbtext id="Dire Fixation">}}{{< spell 417710 "Dire Fixation" >}} is already applied to your target.{{</cbtext>}}
 - Use {{< spell 5221 "Shred" >}} if {{< spell 417710 "Dire Fixation" >}} (if talented) is not on your target or you have a {{< spell 16864 "Clearcasting" >}} proc.
-- Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.
-- Use {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} if all of these conditions are met:
-    - You do not have a {{< spell 384667 "Sudden Ambush" >}} proc
-    - {{< spell 1822 "Rake" >}} is in pandemic OR you would be upgrading {{< spell 1822 "Rake's" >}} snapshot value.
+- {{<cbtext id ="Brutal Slash">}}Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.{{</cbtext>}}
+- {{<cbtext id="Shadowmeld">}}Use {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} if all of these conditions are met:{{</cbtext>}}
+{{<cbtext id="Shadowmeld">}}
+- You do not have a {{< spell 384667 "Sudden Ambush" >}} proc
+- {{< spell 1822 "Rake" >}} is in pandemic OR you would be upgrading {{< spell 1822 "Rake's" >}} snapshot value.
+{{</cbtext>}}
 - Use {{< spell 1822 "Rake" >}} if any of these conditions are met:
     - {{< spell 1822 "Rake" >}} is in pandemic and {{< spell 5217 "Tiger's Fury" >}} is either up, or won't be before {{< spell 1822 "Rake" >}} falls off.
     - You are in stealth
     - You have a {{< spell 384667 "Sudden Ambush" >}} proc and you would be upgrading {{< spell 1822 "Rake's" >}} snapshot value.
-- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it is in pandemic.
-- Use {{< spell 106830 "Thrash" >}} if it is in pandemic and you do not have {{< spell 405300 "Thrashing Claws" >}} talented.
-- Use {{< spell 202028 "Brutal Slash" >}}.
-- Use {{< spell 106785 "Swipe" >}} if you have Wild Slashes talented, and {{< spell 417710 "Dire Fixation" >}} (if talented) is on your target.
+- {{<cbtext id="Lunar Inspiration">}}Use {{<spell 155580  "Lunar Inspiration">}} {{< spell 155625 "Moonfire" >}} if it is in pandemic.{{</cbtext>}}
+- {{<cbtext id="Thrashing Claws" negate="true" >}}Use {{< spell 106830 "Thrash" >}} if it is in pandemic and you do not have {{< spell 405300 "Thrashing Claws" >}} talented.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash">}}Use {{< spell 202028 "Brutal Slash" >}}.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash" negate="true">}}Use {{< spell 106785 "Swipe" >}} if you have Wild Slashes talented, and {{< spell 417710 "Dire Fixation" >}} (if talented) is on your target.{{</cbtext>}}
 - Use {{< spell 5221 "Shred" >}}.
-- Clip Lunar Inspiration {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
-- Use {{< spell 106785 "Swipe" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
-- Use {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}} and it will not downgrade {{< spell 1822 "Rake's" >}} snapshot value.
-- Clip {{< spell 106830 "Thrash" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
+- {{<cbtext id="Lunar Inspiration">}}Clip Lunar Inspiration {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash" negate="true">}}Use {{< spell 106785 "Swipe" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
+- {{<cbtext id="Bloodtalons">}}Use {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}} and it will not downgrade {{< spell 1822 "Rake's" >}} snapshot value.{{</cbtext>}}
+- {{<cbtext id="Bloodtalons">}}Use {{< spell 106830 "Thrash" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
 
 <br>
 <div id="berserk">
@@ -228,10 +228,10 @@ The way this section is written is very formulaic and has the same structure as 
 - Use {{< spell 1079 "Rip" >}} when all of these conditions are met:
     - You have 5 combo points
     - {{< spell 1079 "Rip" >}} is in pandemic OR all of these conditions are met:
-        - You have 10.2 2 or 4 piece set bonus equipped
+        - {{<cbtext id="T31 2P">}}You have 10.2 2 or 4 piece set bonus equipped{{</cbtext>}}
         - {{< spell 1079 "Rip" >}} has less than 10 seconds remaining
-        - Your next gcd will be {{< spell 274838 "Feral Frenzy" >}}
-    - {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
+        - {{<cbtext id="Feral Frenzy">}}Your next gcd will be {{< spell 274838 "Feral Frenzy" >}}{{</cbtext>}}
+        - {{< spell 1079 "Rip" >}} has less than 2 seconds remaining, or you don't have {{< spell 422751 "Smoldering Frenzy" >}} up. Yes this means {{< spell 1079 "Rip" >}} will sometimes fall off with proper play.
 - Use {{< spell 22568 "Ferocious Bite" >}} with 5 combo points
 - Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} if it won't disrupt {{< spell 319439 "Bloodtalons" >}} and any of these conditions are true:
     - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
@@ -239,12 +239,12 @@ The way this section is written is very formulaic and has the same structure as 
 - Use {{< spell 1822 "Rake" >}} if it won't disrupt {{< spell 319439 "Bloodtalons" >}} and any of these conditions are true:
     - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
     - You have a {{< spell 384667 "Sudden Ambush" >}} proc AND a stealth {{< spell 1822 "Rake" >}} would be upgrading its snapshot
-- Use {{< spell 5221 "Shred" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}.
-- Use {{< spell 202028 "Brutal Slash" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}.
-- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}. This is true even if it means clipping moonfire early.
-- Use {{< spell 106830 "Thrash" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}, unless you have {{< spell 405300 "Thrashing Claws" >}} talented.
-- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it is not applied or is in pandemic range.
-- Use {{< spell 202028 "Brutal Slash" >}} if you have 2 or 3 charges
+- {{<cbtext id="Bloodtalons">}}Use {{< spell 5221 "Shred" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash">}}Use {{< spell 202028 "Brutal Slash" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
+- {{<cbtext id="Lunar Inspiration">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}. This is true even if it means clipping moonfire early.{{</cbtext>}}
+- {{<cbtext id="Bloodtalons">}}Use {{< spell 106830 "Thrash" >}} if it would proc {{< spell 319439 "Bloodtalons" >}}, unless you have {{< spell 405300 "Thrashing Claws" >}} talented.{{</cbtext>}}
+- {{<cbtext id="Lunar Inspiration">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if it is not applied or is in pandemic range.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash">}}Use {{< spell 202028 "Brutal Slash" >}} if you have 2 or 3 charges{{</cbtext>}}
 - Use {{< spell 5221 "Shred" >}}
 
 <div id="aoe">
@@ -256,54 +256,62 @@ The way this section is written is very formulaic and has the same structure as 
 **AoE priority list(2+ targets):**
 **Special Note: Try to use single-target spells on higher priority/higher healthed mobs, or mobs that have {{< spell 417710 "Dire Fixation" >}} on them.**
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met:
-    - You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.)
+    - {{<cbtext id="T31 2P" negate="true">}}You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext>}}
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
-    - You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.
-- Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:
-    - There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
-    - {{< spell 391889 "Adaptive Swarm" >}} is not up on a target.
-- With {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} as often as you can with this priority:
-    - An enemy target has 2 stacks of {{< spell 391889 "Adaptive Swarm" >}}.
-    - An enemy target has 1 stack of {{< spell 391889 "Adaptive Swarm" >}}.
-    - An enemy target does not have {{< spell 391889 "Adaptive Swarm" >}}.
-- Use {{< spell 102543 "Incarnation" >}}
-- Use {{< spell 106951 "Berserk" >}}
-- Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:
-    - Your {{< spell 1079 "Rips" >}} will not fall off during {{< spell 391528  "Convoke's" >}} channel.
-    - {{< spell 5217 "Tiger's Fury" >}} is up.
-    - {{< spell 422751 "Smoldering Frenzy" >}} is up or you do not have 10.2 4 piece set bonus equipped.
-    - You have 0 or 1 combo points OR {{< spell 422751 "Smoldering Frenzy" >}} would fall off before {{< spell 391528  "Convoke" >}} ends.
-- Use {{< spell 274838 "Feral Frenzy" >}} if you have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.
-- Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc and you either don't have {{< spell 285381 "Primal Wrath" >}} talented or {{< spell 202031 "Sabertooth" >}} up.
+    - {{<cbtext id="T31 2P">}}You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.{{</cbtext>}}
+- {{<cbtext id="Adaptive Swarm" >}}Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:{{</cbtext>}}
+{{<cbtext id="Adaptive Swarm" >}}
+- There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
+- {{< spell 391889 "Adaptive Swarm" >}} is not up on a target.
+{{</cbtext>}}
+- {{<cbtext id="Unbridled Swarm" >}}With {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} as often as you can with this priority:{{</cbtext>}}
+{{<cbtext id="Unbridled Swarm" >}}
+- An enemy target has 2 stacks of {{< spell 391889 "Adaptive Swarm" >}}.
+- An enemy target has 1 stack of {{< spell 391889 "Adaptive Swarm" >}}.
+- An enemy target does not have {{< spell 391889 "Adaptive Swarm" >}}.
+{{</cbtext>}}
+- {{<cbtext id="Incarnation" >}}Use {{< spell 102543 "Incarnation" >}}{{</cbtext>}}
+- {{<cbtext id="Berserk" >}}Use {{< spell 106951 "Berserk" >}}{{</cbtext>}}
+- {{<cbtext id="Convoke the Spirits" >}}Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits" >}}
+- Your {{< spell 1079 "Rips" >}} will not fall off during {{< spell 391528  "Convoke's" >}} channel.
+- {{< spell 5217 "Tiger's Fury" >}} is up.
+- {{< spell 422751 "Smoldering Frenzy" >}} is up or you do not have 10.2 4 piece set bonus equipped.
+- You have 0 or 1 combo points OR {{< spell 422751 "Smoldering Frenzy" >}} would fall off before {{< spell 391528  "Convoke" >}} ends.
+{{</cbtext>}}
+- {{<cbtext id="Feral Frenzy">}}Use {{< spell 274838 "Feral Frenzy" >}} if you have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.{{</cbtext>}}
+- {{<cbtext id="Apex Predator's Craving">}}Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc and you either don't have {{< spell 285381 "Primal Wrath" >}} talented or {{< spell 202031 "Sabertooth" >}} up.{{</cbtext>}}
 - Use {{< spell 285381 "Primal Wrath" >}} if you have 5 combo points, or at least 4 combo points and not in {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}} and any of these conditions are met:
     - {{< spell 1079 "Rips" >}} from {{< spell 285381 "Primal Wrath" >}} are in pandemic
-    - You have Tear Open Wounds talented
-    - You do not have Rampant Ferocity talented, and there are at least 5 targets in range
+{{<cbtext id="Tear Open Wounds">}}- You have Tear Open Wounds talented{{</cbtext>}}
+{{<cbtext id="Rampant Ferocity">}}- You do not have Rampant Ferocity talented, and there are at least 5 targets in range{{</cbtext>}}
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have 5 combo points, or at least 4 combo points and not in {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}}.
 
 **Below this point, skip any spells you've already casted towards {{< spell 319439 "Bloodtalons" >}} if inside {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}} or if you have 0 or 1 stacks of {{< spell 319439 "Bloodtalons" >}}.**
 
-- Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.
-- Use {{< spell 106830 "Thrash" >}} if in pandemic range, {{< spell 405300 "Thrashing Claws" >}} is not talented and any of these conditions:
-    - You have a {{< spell 16864 "Clearcasting" >}} proc
-    - You either do not have Double-Clawed Rake talented or {{< spell 384667 "Sudden Ambush" >}} isn't up
+- {{<cbtext id="Brutal Slash">}}Use {{< spell 202028 "Brutal Slash" >}} if it will cap on charges within the next 4 seconds.{{</cbtext>}}
+- {{<cbtext id="Thrashing Claws">}}Use {{< spell 106830 "Thrash" >}} if in pandemic range, {{< spell 405300 "Thrashing Claws" >}} is not talented and any of these conditions:{{</cbtext>}}
+{{<cbtext id="Thrashing Claws">}}
+- You have a {{< spell 16864 "Clearcasting" >}} proc
+- You either do not have Double-Clawed Rake talented or {{< spell 384667 "Sudden Ambush" >}} isn't up
+{{</cbtext>}}
 - Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} is either not applied or in pandemic range
 - Use {{< spell 102547 "Prowl" >}} or {{< spell 58984 "Shadowmeld" >}} followed by {{< spell 1822 "Rake" >}} on a target where {{< spell 1822 "Rake" >}} does not have a {{< spell 390772 "Pouncing Strikes" >}} snapshot
 - Use {{< spell 1822 "Rake" >}} on a target with either of these conditions met:
     - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
     - You have {{< spell 384667 "Sudden Ambush" >}} up and can upgrade the snapshot value of a {{< spell 1822 "Rake" >}}
-- Use {{< spell 106830 "Thrash" >}} if in pandemic range and {{< spell 405300 "Thrashing Claws" >}} is not talented.
-- Use {{< spell 202028 "Brutal Slash" >}}
-- Use {{< spell 106785 "Swipe" >}} if there are 5 or more targets
-- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on a target without {{< spell 155625 "Moonfire" >}} or if {{< spell 155625 "Moonfire" >}} is in pandemic range and there are less than 5 targets.
-- Use {{< spell 106785 "Swipe" >}}.
+- {{<cbtext id="Thrashing Claws" negate="true">}}Use {{< spell 106830 "Thrash" >}} if in pandemic range and {{< spell 405300 "Thrashing Claws" >}} is not talented.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash">}}Use {{< spell 202028 "Brutal Slash" >}}{{</cbtext>}}
+- {{<cbtext id="Brutal Slash" negate="true">}}Use {{< spell 106785 "Swipe" >}} if there are 5 or more targets{{</cbtext>}}
+- {{<cbtext id="Lunar Inspiration">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on a target without {{< spell 155625 "Moonfire" >}} or if {{< spell 155625 "Moonfire" >}} is in pandemic range and there are less than 5 targets.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash" negate="true">}}Use {{< spell 106785 "Swipe" >}}.{{</cbtext>}}
 - Use {{< spell 5221 "Shred" >}} if {{< spell 384667 "Sudden Ambush" >}} is not up and either {{< spell 417710 "Dire Fixation" >}} is talented or there are fewer than 4 targets.
 - Use {{< spell 106830 "Thrash" >}}.
-- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if there is a target without {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
+- {{<cbtext id="Lunar Inspiration">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if there is a target without {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
 - Use {{< spell 5221 "Shred" >}} if you still need {{< spell 319439 "Bloodtalons" >}}
-- Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on the target with the lowest duration if you still need {{< spell 319439 "Bloodtalons" >}}.
-- Use {{< spell 1822 "Rake" >}} ideally on a target where the new snapshot is at least the same strength as the applied {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.
+- {{<cbtext id="Lunar Inspiration">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on the target with the lowest duration if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
+- {{<cbtext id="Bloodtalons">}}Use {{< spell 1822 "Rake" >}} ideally on a target where the new snapshot is at least the same strength as the applied {{< spell 1822 "Rake" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
 
 
 <br><div id="talents">
