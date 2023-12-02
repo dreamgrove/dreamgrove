@@ -15,20 +15,27 @@ function toggleCheckbox(checkboxId, isChecked) {
             if (cb !== checkbox) {
                 cb.checked = false;
 
-            // Hide content associated with the radio checkbox
-            const uncheckCheckboxId = cb.getAttribute('data-id');
-            document.querySelectorAll(`[data-tag="${uncheckCheckboxId}"]`).forEach(el => {
-                const listItem = el.closest('li');
-                listItem.style.display = 'none';
-            });
-        }
-    });
-}
+                // Hide content associated with the radio checkbox
+                const uncheckCheckboxId = cb.getAttribute('data-id');
+                document.querySelectorAll(`[data-tag="${uncheckCheckboxId}"]`).forEach(el => {
+                    const listItem = el.closest('li');
+                    listItem.style.display = 'none';
+                });
+            }
+        });
+    }
 
     // Find all elements with the matching data-tag and toggle their visibility.
     document.querySelectorAll(`[data-tag="${checkboxId}"]`).forEach(el => {
         const listItem = el.closest('li');
-        listItem.style.display = checkbox.checked ? 'list-item' : 'none';
+        // Get the data-negate attribute from the span itself
+        const isNegated = el.getAttribute('data-negate') === 'true';
+
+        if (isNegated) {
+            listItem.style.display = checkbox.checked ? 'none' : 'list-item';
+        } else {
+            listItem.style.display = checkbox.checked ? 'list-item' : 'none';
+        }
     });
 
     // Dispatch the change event if called from an event listener.

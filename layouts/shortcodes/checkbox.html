@@ -4,16 +4,17 @@
 {{ $checked := isset .Params "checked" }}
 
 <span class="custom-checkbox">
-    <input type="checkbox" id="{{ $id }}-cb" data-id="{{ $id }}-cb" {{ if $checked }}checked{{ end }} {{ if $radio }}data-radio="{{ $radio }}-cb" {{ end }}>
+    <input type="checkbox" id="{{ $id }}-cb" data-id="{{ $id }}-cb" {{ if $checked }}checked{{ end }} {{ if $radio
+        }}data-radio="{{ $radio }}-cb" {{ end }}>
     <label for="{{ $id }}-cb" class="non-selectable">
         {{ if $spell }}
-            <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ $spell }}"
-                onclick="toggleCheckbox(event, '{{ $id }}-cb');">{{ .Inner | safeHTML }}
-            </a>
+        <a class="tooltip spell-tooltip" data-tooltip-href="http://www.wowdb.com/spells/{{ $spell }}"
+            onclick="toggleCheckbox(event, '{{ $id }}-cb');">{{ .Inner | safeHTML }}
+        </a>
         {{ else }}
-            <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">
-                {{ .Inner | safeHTML }}
-            </a>
+        <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">
+            {{ .Inner | safeHTML }}
+        </a>
         {{ end }}
     </label>
 </span>

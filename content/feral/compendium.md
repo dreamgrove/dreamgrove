@@ -266,8 +266,8 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="Thrashing Claws-AoE" spell=405300 >}}Thrashing Claws{{< /checkbox >}}
 {{< checkbox id="Brutal Slash-AoE" spell=202028 >}}Brutal Slash{{< /checkbox >}}
 {{< checkbox id="Lunar Inspiration-AoE" spell=155580 >}}Lunar Inspiration{{< /checkbox >}}<br>
-{{< checkbox id="Tear Open Wounds-AoE" spell=391785 >}}Tear Open Wounds{{</checkbox>}}
-{{< checkbox id="Rampant Ferocity-AoE" spell=391709 >}}Rampant Ferocity{{</checkbox>}}
+{{< checkbox id="Tear Open Wounds-AoE" spell=391785 >}}Tear Open Wounds{{< /checkbox >}}
+{{< checkbox id="Rampant Ferocity-AoE" spell=391709 >}}Rampant Ferocity{{< /checkbox >}}
 {{< checkbox id="T31 2P-AoE" checked=true >}}T31 2P{{< /checkbox >}}
 {{< checkbox id="T31 4P-AoE" checked=true >}}T31 4P{{< /checkbox >}}
 
@@ -299,9 +299,9 @@ The way this section is written is very formulaic and has the same structure as 
 - {{<cbtext id="Feral Frenzy-AoE">}}Use {{< spell 274838 "Feral Frenzy" >}} if you have less than 2 combo points and are not in {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}, or under 3 combo points during {{< spell 102543 "Incarn" >}}/{{< spell 106951 "Berserk" >}}.{{</cbtext>}}
 - {{<cbtext id="Apex Predator's Craving-AoE">}}Use {{< spell 22568 "Ferocious Bite" >}} if you have a {{< spell 391881 "Apex Predator's Craving" >}} proc and you either don't have {{< spell 285381 "Primal Wrath" >}} talented or {{< spell 202031 "Sabertooth" >}} up.{{</cbtext>}}
 - Use {{< spell 285381 "Primal Wrath" >}} if you have 5 combo points, or at least 4 combo points and not in {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}} and any of these conditions are met:
+    - {{<cbtext id="Tear Open Wounds-AoE">}}You have {{< spell 391785 "Tear Open Wounds">}} talented{{</cbtext>}}
+    - {{<cbtext id="Rampant Ferocity-AoE">}}You do not have Rampant Ferocity talented, and there are at least 5 targets in range{{</cbtext>}}
     - {{< spell 1079 "Rips" >}} from {{< spell 285381 "Primal Wrath" >}} are in pandemic
-{{<cbtext id="Tear Open Wounds-AoE">}}- You have {{< spell 391785 "Tear Open Wounds">}} talented{{</cbtext>}}
-{{<cbtext id="Rampant Ferocity-AoE">}}- You do not have Rampant Ferocity talented, and there are at least 5 targets in range{{</cbtext>}}
 - Use {{< spell 22568 "Ferocious Bite" >}} if you have 5 combo points, or at least 4 combo points and not in {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}}.
 
 **Below this point, skip any spells you've already casted towards {{< spell 319439 "Bloodtalons" >}} if inside {{< spell 106951 "Berserk" >}}/{{< spell 102543 "Incarnation" >}} or if you have 0 or 1 stacks of {{< spell 319439 "Bloodtalons" >}}.**
