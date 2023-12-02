@@ -492,9 +492,9 @@ See: BSL analysis for Feral: https://youtu.be/JLnEaOndrsw?t=135
 
 This can be tricky, as sims simply offer a flat uptime, where in reality it's uptime during CDs that matters more than overall uptime. There is no perfect solution to this conundrum.
 
-For M+ you might want to do anywhere from 65-75 (a lot of trash pulls it can hover around 60-80%, while for some bosses it can sit as high as 90%~). Even 65-75 may still be underselling BSL if you can ensure higher uptime during CDs etc, but ultimately you should check details or your logs to find an uptime that is most useful to you and the keys you are doing.
+For M+ you might want to do anywhere from 65-75% (a lot of trash pulls it can hover around 60-80%, while for some bosses it can sit as high as 90%~). Even 65-75% may still be underselling BSL if you can ensure higher uptime during CDs etc, but ultimately you should check details or your logs to find an uptime that is most useful to you and the keys you are doing.
 
-For raid, 45-60, depending on boss. You might have 40% overall uptime on a fight, but that doesn't show the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example.
+For raid, 45-60%, depending on boss. You might have 40% overall uptime on a fight, but that doesn't show the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example.
 
 **Alternative Options**
 
