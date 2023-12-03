@@ -199,7 +199,7 @@ When reading the priority lists below, you should not think about these as steps
 <br>{{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}
 <br>{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}
 <br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
-<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 checked=false >}}Wild Mushroom{{< /checkbox >}}
+<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 >}}Wild Mushroom{{< /checkbox >}}
 <br>{{< checkbox id="Cancelaura-AoE" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}
 <br>{{< checkbox id="T31 2P-AoE" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}
 
