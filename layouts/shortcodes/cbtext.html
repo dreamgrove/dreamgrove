@@ -1,10 +1,11 @@
 {{ $id := .Get "id" }}
+{{ $negate := .Get "negate" }}
 {{ $content := .Inner | markdownify }}
 
 {{ if strings.Contains $content "<li>" }}
-    <li data-tag="{{ $id }}-cb" class="cbtext-content" style="list-style-type: none" >
+    <div data-tag="{{ $id }}-cb" class="cbtext-content" data-negate="{{ $negate }}" style="list-style-type: none" >
         {{ $content }}
-    </li>
+    </div>
 {{ else }}
-    <span class="cbtext-placeholder" data-tag="{{ $id }}-cb" data-content="{{ $content | htmlUnescape }}"></span>
+    <span class="cbtext-placeholder" negate="{{ $negate }}" data-tag="{{ $id }}-cb" data-content="{{ $content | htmlUnescape }}"></span>
 {{ end }}
