@@ -480,48 +480,39 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 
 </div>
 
-**Recently updated**
+**Updated December 2, 2023**
 
-[Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) is generally the best embellishment for Feral Druid in season 3. {{< spell 77493 "Mastery" >}} is an extremely valuable stat with the new tier set, and BSL provides a large amount of it while your health is above 90%. This is particularly valuable due to how strong Mastery is for our cooldowns, including Feral Frenzy, Convoke, and Berserk. At the start of each boss pull there's usually not much going on in terms of damage, everyone is full health and your healers have not fallen behind. This allows you to obtain a particularly high uptime of BSL inside your cooldown window(even better if you are using pot/lust on pull). In addition to this, Nature's Vigil, Convoke, and any Leech you might have can also provide a lot of personal and group healing during your CDs, which can all facilitate increased uptime of BSL. 
+[Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) is generally the best embellishment for Feral Druid in season 3, granting you {{< spell 77493 "Mastery" >}} while your health is above 90%. This is particularly valuable as you can generally expect very high uptime for your first set of cooldowns, where you will usually not be taking much damage at all. {{< spell 391528  "Nature's Vigil" >}}, {{< spell 391528  "Convoke the Spirits" >}} and any Leech you might have will provide additional healing during your cooldowns, further facilitating [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime. Lastly, free {{<spell 8936 "Regrowth's">}} from {{< spell 16974 "Predatory Swiftness" >}} procs can be leveraged when you're low on energy/out of range. Don't overthink or stress [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime too much however, as doing so will likely lead to a dps loss.
 
-While Feral may not be the tankiest melee spec, you do have a lot of control over your health pool with free Regrowths from {{< spell 16974 "Predatory Swiftness" >}}. For example if you're sitting at 80% health and have a free GCD (i.e. no energy), you can top yourself above 90% when a healer otherwise might not - something most other specs can't do as easily. This means utilising your free Regrowth procs can now increase your DPS, along with keeping you healthy, making it extremely advantageous to do so when you can. Furthermore, you may choose to pair a defensive with your cooldowns to ensure higher uptime, but only if you truly won't otherwise need it. It's important however that you don't overthink any of this gameplay surrounding the embellishment: don't stress about always being above 90% or sacrifice DPS GCDs/overcap your energy trying to play around BSL. Simply Regrowth yourself if you are low on energy or out of range, and maybe right before popping cooldowns as well. 
-
-BSL is also the best embellishment for synergy with Augmentation Evokers, as the embellishment not only offers the most burst(with Augmentation is most likely to buff you during your CDs), but any Agility given to you by your Aug also has synergy with the Mastery provided by BSL. Conversely, this Agility provides no benefit to the damage from other embellishment such as Shadowflame or Toxic Thorn Boots.
-
-Other benefits: BSL also scales extremely well in multi-target/AOE, particularly over damage-proc embelishments such as Shadowflame or Toxic Thorn Boots. Additionally, as touched on, it offers the highest-burst potential, which can be extremely impactful on fights with damage amps or shields that need to be broken (Smolderon, Tindral, Gnarlroot, Fyrakk), or adds that need to die (Nymue, Tindral).
-
-Lastly - negative effects: there are none! Silken has no negative effects unlike many alternative embellishment options. 
-
-See: 'Crafting Order' below for which slot to craft BSL in. 
+[BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is particularly notable in multi-target/AOE or when being buffed by Augmentation Evokers compared to damage-proc embelishments such as [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps). And due to uptime generally being higher during cds, [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is often the burstier option as well.
 
 See: BSL analysis for Feral: https://youtu.be/JLnEaOndrsw?t=135
 
 **Simming BSL**
 
-This can be tricky, as sims simply offer a flat uptime, where in reality it's uptime during CDs that matters more than overall uptime. 
+This can be tricky, as sims simply offer a flat uptime, where in reality it's uptime during CDs that matters more than overall uptime. There is no perfect solution to this conundrum.
 
-For M+ you would want to do somewhere between 65-75%(a lot of trash pulls it can hover around 60-80%, while for some bosses it can be as much as 90%~). Even 65-75% may still be underselling BSL if you can ensure higher uptime during CDs. Ultimately you should check details or your logs to find an uptime that is realistic for you in the keys you are doing.
+For M+ you might want to do anywhere from 65-75% (a lot of trash pulls it can hover around 60-80%, while for some bosses it can sit as high as 90%~). Even 65-75% may still be underselling BSL if you can ensure higher uptime during CDs etc, but ultimately you should check details or your logs to find an uptime that is most useful to you and the keys you are doing.
 
-For raid, 45-60%, depending on boss. You might have 40% overall uptime on a fight, but that doesn't tell the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example, and again that may be underselling it, especially if you have an Augment Evoker buffing you.
+For raid, 45-60%, depending on boss. You might have 40% overall uptime on a fight, but that doesn't show the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example.
 
 **Alternative Options**
 
-Mythic+: There are no real alternatives for [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining). You should always use two of these as it is significantly ahead of all other embellishments.
+Firstly it should be noted that for M+, there are no real alternatives for [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining). You should always use two of these as it is significantly far ahead of all competition in M+. 
 
-Raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a fine alternative, it performs slightly worse while offering less burst and a small amount of self-damage. Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) is another alternative and may be useful for any fights where you have lower BSL uptime(possibly Mythic Smolderon and Mythic Fyrakk), however it will in most cases perform slightly worse. 
+For raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a perfectly fine alternative, though in the current tier, its generally slightly worse while offering less burst and a small amount of self-damage. Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) is a genuine alternative for raid and may be useful for any fights you have lower BSL uptime (possibly Mythic Smolderon and Mythic Fyrakk), however in most cases will be slightly worse. 
 
 **Crafting order**
 
-The most optimal 'long-term' slots to craft Blue Silken Lining on are: Ring, Cloak, Bracers, or Neck. This is because crafted gear is 3 item levels below that of a fully upgraded Mythic track piece, which means these slots are best for crafted gear as they have fewer stats compared to things like Boots, Chest, etc. However you can craft it on any piece, and may wish to choose Belt or Boots etc if they are the largest item level upgrade - generally it's better to craft for short-term gain, as you can always recraft things later as you will eventually have more Sparks than you need. 
+The most optimal 'long-term' slots to craft [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) on are: Ring, Cloak, Bracers and Neck. This is because crafted gear is 3 item levels below that of a fully upgraded Mythic track piece, and these slots have fewer stats compared to other options. However you can craft it on any slot, and may wish to do so if its the largest dps upgrade. Generally it's better to craft for short-term gain, as you can always recraft things later when you have more Sparks than you need. 
 
-It's recommended you craft a ring as soon as possible however, for two reasons: A. crafted ring comes with a socket, offering a lot of added value over other embelishments, and B. they have the highest amount of secondary stats, giving you control over the stats you need (generally Mast/Crit - depending on your gear, sim!).
+1. Craft a Ring with [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) due to the free socket.
+2. Sim yourself to see which slot offers the biggest upgrade for a second [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) embellishment. If you refuse to sim, put it on Cloak, Bracers, or Neck (assuming you have already crafted a Ring) - whichever is the lowest item level for you.
+3. Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). A second Ring may be particularly notable early on due to rings coming with a socket already applied.
+4. If you have full gems already and can no longer obtain item-level upgrades on other pieces via crafting, you can craft an [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) for niche uses.
 
-- Craft a Ring with [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) due to the free socket.
-- Sim yourself to see which slot offers the biggest upgrade for a second Blue Silken Lining piece. If you refuse to sim, put it on Cloak, Bracers, or Neck (assuming you have already crafted a Ring) - whichever is lower item level for you.
-- Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). A second Ring may be particularly notable early on due to them coming with a socket already applied.
-- If you have full gems already and can no longer obtain item-level upgrades on other pieces via crafting, you can craft an [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) for niche uses.
-
-<br><div id="trinkets">
+Note: For those who have already crafted [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) as initially recommended, you can simply recraft this piece to use [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) instead. No additional sparks needed.
+<div id="trinkets">
 
 ## [Trinkets](#trinkets)
 
@@ -532,7 +523,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 
 - [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) Easier to use than [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) for similar-to-slightly worse dps assuming you can reasonably delay picking up 3rd orb.
 - [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) Grab first 2 orbs asap, and delay last orb as long as possible
-- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) 
+- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This is reportedly doing less damage than expected, and falls down the list on shorter fights.
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
@@ -541,14 +532,14 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 ### To use in Dungeons
 
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
-- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=496&spec=103) Yes, this is a tank trinket. Yes, it still very respectable damage. At current tuning this is a must-have for any sort of pushing due to its stellar defensive benefits whilst losing very little damage.
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) You can drop this if you don't want to deal with delaying last orb
+- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=496&spec=103) Yes, this is a tank trinket. Yes, it still very respectable damage. At current tuning this is a must-have for any sort of pushing due to its stellar defensive benefits whilst losing little damage.
+- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) While this is generally the strongest option in a vacuum, its droppable if you can't reliably delay 3rd orb for a few seconds at least.
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
 - [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) 
 - [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
-- [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103)
+- [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103) This moves up if not using a 2 minute cooldown trinket already.
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
-- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This trinkets value varies heavily depending on group and dungeon. In a clean run where there isn't a lot of downtime between pulls, this becomes competitive with the top end trinkets.
+- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This trinkets value varies heavily depending on group and dungeon- particularly favoring clean runs without much downtime between pulls.
 
 <br>
 
