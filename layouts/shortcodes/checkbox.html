@@ -12,7 +12,7 @@
             onclick="toggleCheckbox(event, '{{ $id }}-cb');">{{ .Inner | safeHTML }}
         </a>
         {{ else }}
-        <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ .Get "id" }}-cb');">
+        <a class="tooltip spell-tooltip" onclick="toggleCheckbox(event, '{{ $id }}-cb');">
             {{ .Inner | safeHTML }}
         </a>
         {{ end }}
