@@ -15,15 +15,15 @@ function toggleCheckbox(checkboxId, isChecked) {
             if (cb !== checkbox) {
                 cb.checked = false;
 
-                // Hide content associated with the radio checkbox
-                const uncheckCheckboxId = cb.getAttribute('data-id');
-                document.querySelectorAll(`[data-tag="${uncheckCheckboxId}"]`).forEach(el => {
-                    const listItem = el.closest('li');
-                    listItem.style.display = 'none';
-                });
-            }
-        });
-    }
+            // Hide content associated with the radio checkbox
+            const uncheckCheckboxId = cb.getAttribute('data-id');
+            document.querySelectorAll(`[data-tag="${uncheckCheckboxId}"]`).forEach(el => {
+                const listItem = el.closest('li');
+                listItem.style.display = 'none';
+            });
+        }
+    });
+}
 
     // Find all elements with the matching data-tag and toggle their visibility.
     document.querySelectorAll(`[data-tag="${checkboxId}"]`).forEach(el => {
