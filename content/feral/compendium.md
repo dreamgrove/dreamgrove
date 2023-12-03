@@ -258,8 +258,8 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="Convoke the Spirits-AoE" spell=391528 checked=true >}}Convoke the Spirits{{< /checkbox >}}
 {{< checkbox id="Unbridled Swarm-AoE" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}
 {{< checkbox id="Adaptive Swarm-AoE" spell=391889 >}}Adaptive Swarm{{< /checkbox >}}<br>
-{{< checkbox id="Incarnation-AoE" spell=102543 radio="Incarnation">}}Incarnation{{< /checkbox >}}
-{{< checkbox id="Berserk-AoE" spell=106951 checked=true radio="Incarnation">}}Berserk{{< /checkbox >}}
+{{< checkbox id="Incarnation-AoE" spell=102543 radio="Incarnation-AoE">}}Incarnation{{< /checkbox >}}
+{{< checkbox id="Berserk-AoE" spell=106951 checked=true radio="Incarnation-AoE">}}Berserk{{< /checkbox >}}
 {{< checkbox id="Apex Predator's Craving-AoE" spell=391881 checked=true >}}Apex Predator's Craving{{< /checkbox >}}
 {{< checkbox id="Smoldering Frenzy-AoE" spell=422751 checked=true >}}Smoldering Frenzy{{< /checkbox >}}<br>
 {{< checkbox id="Bloodtalons-AoE" spell=319439 checked=true >}}Bloodtalons{{< /checkbox >}}
@@ -272,25 +272,25 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="T31 4P-AoE" checked=true >}}T31 4P{{< /checkbox >}}
 
 - Use {{< spell 5217 "Tiger's Fury" >}} if any of the following conditions are met:
-    - {{<cbtext id="T31 2P-Aoe" negate="true">}}You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext>}}
+    - {{<cbtext id="T31 2P-AoE" negate="true">}}You've talented {{< spell 391528  "Convoke the Spirits" >}} and do not have 10.2 tier set equipped. (Using it on CD keeps {{< spell 5217 "Tiger's Fury" >}} and {{< spell 391528  "Convoke" >}} aligned.){{</cbtext>}}
     - {{< spell 5217 "Tiger's Fury" >}} is not up.
     - You are more than 65 energy from the cap.
     - {{<cbtext id="T31 2P-AoE">}}You have 10.2 2 piece set bonus equipped, and {{< spell 274838 "Feral Frenzy" >}} is ready to be used.{{</cbtext>}}
-- {{<cbtext id="Adaptive Swarm-Aoe" >}}Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:{{</cbtext>}}
-{{<cbtext id="Adaptive Swarm-Aoe" >}}
+- {{<cbtext id="Adaptive Swarm-AoE" >}}Without {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} when all of these conditions are met:{{</cbtext>}}
+{{<cbtext id="Adaptive Swarm-AoE" >}}
 - There isn't an {{< spell 391889 "Adaptive Swarm" >}} heading to an enemy target.
 - {{< spell 391889 "Adaptive Swarm" >}} is not up on a target.
 {{</cbtext>}}
-- {{<cbtext id="Unbridled Swarm-Aoe">}}With {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} as often as you can with this priority:{{</cbtext>}}
-{{<cbtext id="Unbridled Swarm-Aoe">}}
+- {{<cbtext id="Unbridled Swarm-AoE">}}With {{< spell 391951 "Unbridled Swarm" >}} talented, use {{< spell 391889 "Adaptive Swarm" >}} as often as you can with this priority:{{</cbtext>}}
+{{<cbtext id="Unbridled Swarm-AoE">}}
 - An enemy target has 2 stacks of {{< spell 391889 "Adaptive Swarm" >}}.
 - An enemy target has 1 stack of {{< spell 391889 "Adaptive Swarm" >}}.
 - An enemy target does not have {{< spell 391889 "Adaptive Swarm" >}}.
 {{</cbtext>}}
-- {{<cbtext id="Incarnation-Aoe">}}Use {{< spell 102543 "Incarnation" >}}{{</cbtext>}}
-- {{<cbtext id="Berserk-Aoe">}}Use {{< spell 106951 "Berserk" >}}{{</cbtext>}}
-- {{<cbtext id="Convoke the Spirits-Aoe">}}Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:{{</cbtext>}}
-{{<cbtext id="Convoke the Spirits-Aoe">}}
+- {{<cbtext id="Incarnation-AoE">}}Use {{< spell 102543 "Incarnation" >}}{{</cbtext>}}
+- {{<cbtext id="Berserk-AoE">}}Use {{< spell 106951 "Berserk" >}}{{</cbtext>}}
+- {{<cbtext id="Convoke the Spirits-AoE">}}Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:{{</cbtext>}}
+{{<cbtext id="Convoke the Spirits-AoE">}}
 - Your {{< spell 1079 "Rips" >}} will not fall off during {{< spell 391528  "Convoke's" >}} channel.
 - {{< spell 5217 "Tiger's Fury" >}} is up.
 - {{< spell 422751 "Smoldering Frenzy" >}} is up or you do not have 10.2 4 piece set bonus equipped.
@@ -317,11 +317,11 @@ The way this section is written is very formulaic and has the same structure as 
 - Use {{< spell 1822 "Rake" >}} on a target with either of these conditions met:
     - {{< spell 1822 "Rake" >}} is not applied or is in pandemic range
     - You have {{< spell 384667 "Sudden Ambush" >}} up and can upgrade the snapshot value of a {{< spell 1822 "Rake" >}}
-- {{<cbtext id="Thrashing Claws" negate="true">}}Use {{< spell 106830 "Thrash" >}} if in pandemic range and {{< spell 405300 "Thrashing Claws" >}} is not talented.{{</cbtext>}}
+- {{<cbtext id="Thrashing Claws-AoE" negate="true">}}Use {{< spell 106830 "Thrash" >}} if in pandemic range and {{< spell 405300 "Thrashing Claws" >}} is not talented.{{</cbtext>}}
 - {{<cbtext id="Brutal Slash-AoE">}}Use {{< spell 202028 "Brutal Slash" >}}{{</cbtext>}}
-- {{<cbtext id="Brutal Slash" negate="true">}}Use {{< spell 106785 "Swipe" >}} if there are 5 or more targets{{</cbtext>}}
+- {{<cbtext id="Brutal Slash-AoE" negate="true">}}Use {{< spell 106785 "Swipe" >}} if there are 5 or more targets{{</cbtext>}}
 - {{<cbtext id="Lunar Inspiration-AoE">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} on a target without {{< spell 155625 "Moonfire" >}} or if {{< spell 155625 "Moonfire" >}} is in pandemic range and there are less than 5 targets.{{</cbtext>}}
-- {{<cbtext id="Brutal Slash" negate="true">}}Use {{< spell 106785 "Swipe" >}}.{{</cbtext>}}
+- {{<cbtext id="Brutal Slash-AoE" negate="true">}}Use {{< spell 106785 "Swipe" >}}.{{</cbtext>}}
 - Use {{< spell 5221 "Shred" >}} if {{< spell 384667 "Sudden Ambush" >}} is not up and either {{< spell 417710 "Dire Fixation" >}} is talented or there are fewer than 4 targets.
 - Use {{< spell 106830 "Thrash" >}}.
 - {{<cbtext id="Lunar Inspiration-AoE">}}Use Lunar Inspiration {{< spell 155625 "Moonfire" >}} if there is a target without {{< spell 155625 "Moonfire" >}} if you still need {{< spell 319439 "Bloodtalons" >}}.{{</cbtext>}}
