@@ -151,8 +151,8 @@ When reading the priority lists below, you should not think about these as steps
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration shown in the tooltip).
 - {{<cbtext id="Stellar Flare" >}}Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.{{</cbtext>}}
-- {{<cbtext id="T31 2P">}}Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
-- {{<cbtext id="T31 2P">}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
+- {{<cbtext id="T31 2P">}}Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
+- {{<cbtext id="T31 2P">}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Convoke the Spirits">}}Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
 - {{<cbtext id="T31 2P" negate="true">}}Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions is true:{{</cbtext>}}
@@ -216,10 +216,8 @@ When reading the priority lists below, you should not think about these as steps
 {{</cbtext>}}
 - {{<cbtext id="Cancelaura-AoE">}}Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast.
-{{<cbtext id="T31 2P-AoE">}} 
- - {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
- - Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to enter {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.
-{{</cbtext>}}
+- {{<cbtext id="T31 2P-AoE" >}}{{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
+- {{<cbtext id="T31 2P-AoE" >}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Warrior of Elune-AoE">}}Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
