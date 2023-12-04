@@ -19,6 +19,3 @@
 [[redirects]]
   from = "/feral/compendium"
   to = "/feral/compendium_ko"
-  force = true
-  status = 200
-  conditions = {Language = ["ko"]}
