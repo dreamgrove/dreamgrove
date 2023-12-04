@@ -1,8 +1,17 @@
-languageCode = "en-us"
 title = "Dreamgrove"
 copyright = "Dreamgrove"
 theme = "dg-theme"
 enableGitInfo = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight: 1
+  [languages.ko]
+    languageName = "한국어"
+    languageCode = "ko"
+    weight: 2
 
 [blackfriday]
   hrefTargetBlank = true
