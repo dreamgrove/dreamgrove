@@ -121,13 +121,11 @@ The way this section is written is very formulaic and has the same structure as 
 
 {{< checkbox id="Feral Frenzy" spell=274838 checked=true >}}Feral Frenzy{{< /checkbox >}}
 {{< checkbox id="Convoke the Spirits" spell=391528 checked=true >}}Convoke the Spirits{{< /checkbox >}}
-{{< checkbox id="Unbridled Swarm" spell=391951 >}}Unbridled Swarm{{< /checkbox >}}
+{{< checkbox id="Unbridled Swarm" spell=391951 dependent="Adaptive Swarm">}}Unbridled Swarm{{< /checkbox >}}
 {{< checkbox id="Adaptive Swarm" spell=391889 >}}Adaptive Swarm{{< /checkbox >}}<br>
-{{< checkbox id="Incarnation" spell=102543 radio="Incarnation">}}Incarnation{{< /checkbox >}}
-{{< checkbox id="Berserk" spell=106951 checked=true radio="Incarnation">}}Berserk{{< /checkbox >}}
+{{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}
 {{< checkbox id="Dire Fixation" spell=417710 checked=true >}}Dire Fixation{{< /checkbox >}}
 {{< checkbox id="Apex Predator's Craving" spell=391881 checked=true >}}Apex Predator's Craving{{< /checkbox >}}<br>
-{{< checkbox id="Predator Revealed" spell=411344 >}}Predator Revealed{{< /checkbox >}}
 {{< checkbox id="Bloodtalons" spell=319439 checked=true >}}Bloodtalons{{< /checkbox >}}
 {{< checkbox id="Relentless Predator" spell=393771 >}}Relentless Predator{{< /checkbox >}}<br>
 {{< checkbox id="Thrashing Claws" spell=405300 >}}Thrashing Claws{{< /checkbox >}}
@@ -155,8 +153,8 @@ The way this section is written is very formulaic and has the same structure as 
 - If you have 2 or fewer {{< spell 391889 "Adaptive Swarms" >}} of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
 {{</cbtext>}}
 - {{<cbtext id="Incarnation" >}}Use {{< spell 102543 "Incarnation" >}} if it's ready.{{</cbtext>}}
-- {{<cbtext id="Berserk" >}}Use {{< spell 106951 "Berserk" >}} if it's ready.{{</cbtext>}}
-{{<cbtext id="Berserk" >}}
+- {{<cbtext id="Incarnation" negate="true" >}}Use {{< spell 106951 "Berserk" >}} if it's ready.{{</cbtext>}}
+{{<cbtext id="Incarnation" negate="true" >}}
 - If you're playing 2 minute {{< spell 391528  "Convoke" >}}, you can instead hold {{< spell 106951 "Berserk" >}} for {{< spell 391528  "Convoke" >}} where fight timers are good to do so, especially if you have [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul), [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch), or will be buffed by an Augmentation Evoker every 2 minutes. Additionally, its always a gain regardless of talents and equipment to line up your last Berserk with a convoke cast if possible.
 {{</cbtext>}}
 - {{<cbtext id="Convoke the Spirits" >}}Use {{< spell 391528  "Convoke" >}} if all of the following conditions are met:{{</cbtext>}}
