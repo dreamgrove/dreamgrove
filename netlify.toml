@@ -16,4 +16,8 @@
 [context.branch-deploy]
   command = "hugo -D --config=config.toml,config.dev.toml -b $DEPLOY_PRIME_URL"
 
-
+[[redirects]]
+  from = "/content/feral/compendium"
+  to = "/content/feral/compendium_ko"
+  status = 200
+  conditions = {Language = ["ko"]}
