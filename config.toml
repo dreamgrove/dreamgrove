@@ -7,11 +7,11 @@ enableGitInfo = true
   [languages.en]
     languageName = "English"
     languageCode = "en"
-    weight: 1
+    weight = 1
   [languages.ko]
     languageName = "한국어"
     languageCode = "ko"
-    weight: 2
+    weight = 2
 
 [blackfriday]
   hrefTargetBlank = true
