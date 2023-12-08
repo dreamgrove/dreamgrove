@@ -121,7 +121,7 @@ Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-dru
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented.
 
-You can precast from max range about 3.5 seconds before a boss is pulled when Dreamstate(T31 2pc) is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 Wraths+1 Starfire, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
+You can precast from max range about 3.5 seconds before a boss is pulled when {{< spell 424248 "Dreamstate(T31 2pc)" >}} is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 {{< spell 190984 "Wraths" >}} + 1 {{< spell 194153 "Starfire" >}}, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
 
 **What is a priority list?**
 
@@ -135,17 +135,17 @@ When reading the priority lists below, you should not think about these as steps
 
 **Select which talents you have talented to filter the priority list:**
 
+{{< checkbox id="T31 2P" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}<br>
+{{< checkbox id="Warrior of Elune" spell=202425 checked=true radio="Warrior of Elune" >}}Warrior of Elune{{< /checkbox >}}
+{{< checkbox id="Force of Nature" spell=205636 radio="Warrior of Elune" >}}Force of Nature{{< /checkbox >}}</br>
 {{< checkbox id="Stellar Flare" spell=202347 >}}Stellar Flare{{< /checkbox >}}</br>
-{{< checkbox id="Warrior of Elune" spell=202425 checked=true radio="Warrior of Elune" >}}Warrior of Elune{{< /checkbox >}}</br>
+{{< checkbox id="Astral Communion" spell=400636 >}}Astral Communion{{< /checkbox >}}</br>
+{{< checkbox id="New Moon" spell=274281 checked=true radio="New Moon">}}New Moon{{< /checkbox >}}
+{{< checkbox id="Fury of Elune" spell=202770 radio="New Moon">}}Fury of Elune{{< /checkbox >}}</br>
+{{< checkbox id="Cancelaura" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}</br>
+{{< checkbox id="Wild Mushroom" spell=88747 >}}Wild Mushroom{{< /checkbox >}}</br>
 {{< checkbox id="Starweaver" spell=393940 >}}Starweaver{{< /checkbox >}}</br>
 {{< checkbox id="Convoke the Spirits" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}</br>
-{{< checkbox id="Astral Communion" spell=400636 >}}Astral Communion{{< /checkbox >}}</br>
-{{< checkbox id="Force of Nature" spell=205636 radio="Warrior of Elune" >}}Force of Nature{{< /checkbox >}}</br>
-{{< checkbox id="Fury of Elune" spell=202770 radio="New Moon">}}Fury of Elune{{< /checkbox >}}</br>
-{{< checkbox id="New Moon" spell=274281 checked=true radio="New Moon">}}New Moon{{< /checkbox >}}</br>
-{{< checkbox id="Wild Mushroom" spell=88747 >}}Wild Mushroom{{< /checkbox >}}</br>
-{{< checkbox id="Cancelaura" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}</br>
-{{< checkbox id="T31 2P" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}</br>
 
 
 **Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
@@ -190,18 +190,18 @@ When reading the priority lists below, you should not think about these as steps
 
 **Select which talents you have talented to filter the priority list:**
 
+{{< checkbox id="T31 2P-AoE" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}<br>
+{{< checkbox id="Warrior of Elune-AoE" spell=202425 radio="Force of Nature" >}}Warrior of Elune{{< /checkbox >}}
+{{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}<br>
+{{< checkbox id="Stellar Flare-AoE" spell=202347 >}}Stellar Flare{{< /checkbox >}}<br>
+{{< checkbox id="Astral Communion-AoE" spell=400636 >}}Astral Communion{{< /checkbox >}}<br>
+{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
+{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}<br>
+{{< checkbox id="Cancelaura-AoE" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}<br>
+{{< checkbox id="Wild Mushroom-AoE" spell=88747 >}}Wild Mushroom{{< /checkbox >}}<br>
+{{< checkbox id="Starweaver-AoE" spell=393940 >}}Starweaver{{< /checkbox >}}<br>
+{{< checkbox id="Convoke the Spirits-AoE" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}<br>
 
-{{< checkbox id="Stellar Flare-AoE" spell=202347 >}}Stellar Flare{{< /checkbox >}}
-<br>{{< checkbox id="Warrior of Elune-AoE" spell=202425 radio="Force of Nature" >}}Warrior of Elune{{< /checkbox >}}
-<br>{{< checkbox id="Starweaver-AoE" spell=393940 >}}Starweaver{{< /checkbox >}}
-<br>{{< checkbox id="Convoke the Spirits-AoE" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}
-<br>{{< checkbox id="Astral Communion-AoE" spell=400636 >}}Astral Communion{{< /checkbox >}}
-<br>{{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}
-<br>{{< checkbox id="Fury of Elune-AoE" spell=202770 radio="Fury Of Elune" >}}Fury of Elune{{< /checkbox >}}
-<br>{{< checkbox id="New Moon-AoE" spell=274281 checked=true radio="Fury Of Elune" >}}New Moon{{< /checkbox >}}
-<br>{{< checkbox id="Wild Mushroom-AoE" spell=88747 >}}Wild Mushroom{{< /checkbox >}}
-<br>{{< checkbox id="Cancelaura-AoE" spell=202345 >}}Cancelaura Starlord{{< /checkbox >}}
-<br>{{< checkbox id="T31 2P-AoE" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}
 
 <br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} or {{< spell 393940 "Starweaver" >}}, use Starsurge as a spender on 2 targets still.**
 <br>**AoE priority list(2+ targets):**
