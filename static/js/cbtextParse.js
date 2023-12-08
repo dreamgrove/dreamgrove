@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (el.parentNode.tagName === 'LI') {
             replacementHtml = `<span ${negate} data-tag="` + id + '">' + content + '</span>';
         } else {
+
             replacementHtml = `<span ${negate} data-tag="` + id + '">' + content + '</span>';
         }
 
