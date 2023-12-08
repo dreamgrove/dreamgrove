@@ -120,16 +120,16 @@ The way this section is written is very formulaic and has the same structure as 
 
 {{< checkbox id="Feral Frenzy" spell=274838 checked=true >}}Feral Frenzy{{< /checkbox >}}
 {{< checkbox id="Convoke the Spirits" spell=391528 checked=true >}}Convoke the Spirits{{< /checkbox >}}
-{{< checkbox id="Adaptive Swarm" spell=391889 radio="Adaptive Swarm" >}}Adaptive Swarm{{< /checkbox >}}
+{{< checkbox id="Adaptive Swarm" spell=391889 checked=true radio="Adaptive Swarm" >}}Adaptive Swarm{{< /checkbox >}}
 {{< checkbox id="Unbridled Swarm" spell=391951 radio="Adaptive Swarm" >}}Unbridled Swarm{{< /checkbox >}}<br>
 {{< checkbox id="Incarnation" spell=102543 >}}Incarnation{{< /checkbox >}}
 {{< checkbox id="Lunar Inspiration" spell=155580 >}}Lunar Inspiration{{< /checkbox >}}
 {{< checkbox id="Apex Predator's Craving" spell=391881 checked=true >}}Apex Predator's Craving{{< /checkbox >}}<br>
-{{< checkbox id="Bloodtalons" spell=319439 >}}Bloodtalons{{< /checkbox >}}
+{{< checkbox id="Bloodtalons" spell=319439 checked=true >}}Bloodtalons{{< /checkbox >}}
 {{< checkbox id="Relentless Predator" spell=393771 >}}Relentless Predator{{< /checkbox >}}
 {{< checkbox id="Thrashing Claws" spell=405300 >}}Thrashing Claws{{< /checkbox >}}
-{{< checkbox id="Sudden Ambush" spell=384667 >}}Sudden Ambush{{< /checkbox >}}<br>
-{{< checkbox id="Brutal Slash" spell=202028 radio="Brutal Slash" >}}Brutal Slash{{< /checkbox >}}
+{{< checkbox id="Sudden Ambush" spell=384667 checked=true >}}Sudden Ambush{{< /checkbox >}}<br>
+{{< checkbox id="Brutal Slash" spell=202028 checked=true radio="Brutal Slash" >}}Brutal Slash{{< /checkbox >}}
 {{< checkbox id="Wild Slashes" spell=390864 radio="Brutal Slash" >}}Wild Slashes{{< /checkbox >}}
 {{< checkbox id="Shadowmeld" spell=58984 >}}Shadowmeld{{< /checkbox >}}
 {{< checkbox id="Dire Fixation" spell=417710 checked=true >}}Dire Fixation{{< /checkbox >}}
@@ -250,12 +250,12 @@ The way this section is written is very formulaic and has the same structure as 
 {{< checkbox id="Incarnation-AOE" spell=102543 >}}Incarnation{{< /checkbox >}}
 {{< checkbox id="Lunar Inspiration-AOE" spell=155580 >}}Lunar Inspiration{{< /checkbox >}}
 {{< checkbox id="Apex Predator's Craving-AOE" spell=391881 checked=true >}}Apex Predator's Craving{{< /checkbox >}}<br>
-{{< checkbox id="Bloodtalons-AOE" spell=319439 >}}Bloodtalons{{< /checkbox >}}
-{{< checkbox id="Tear Open Wounds-AOE" spell=391786 >}}Tear Open Wounds{{< /checkbox >}}
+{{< checkbox id="Bloodtalons-AOE" spell=319439 checked=true >}}Bloodtalons{{< /checkbox >}}
+{{< checkbox id="Tear Open Wounds-AOE" spell=391786 checked=true >}}Tear Open Wounds{{< /checkbox >}}
 {{< checkbox id="Rampant Ferocity-AOE" spell=391710 >}}Rampant Ferocity{{< /checkbox >}}<br>
 {{< checkbox id="Thrashing Claws-AOE" spell=405300 >}}Thrashing Claws{{< /checkbox >}}
-{{< checkbox id="Sudden Ambush-AOE" spell=384667 >}}Sudden Ambush{{< /checkbox >}}
-{{< checkbox id="Brutal Slash-AOE" spell=202028 >}}Brutal Slash{{< /checkbox >}}
+{{< checkbox id="Sudden Ambush-AOE" spell=384667 checked=true >}}Sudden Ambush{{< /checkbox >}}
+{{< checkbox id="Brutal Slash-AOE" spell=202028 checked=true >}}Brutal Slash{{< /checkbox >}}
 {{< checkbox id="Shadowmeld-AOE" spell=58984 >}}Shadowmeld{{< /checkbox >}}
 {{< checkbox id="Dire Fixation-AOE" spell=417710 checked=true >}}Dire Fixation{{< /checkbox >}}
 {{< checkbox id="Primal Wrath-AOE" spell=285381 checked=true >}}Primal Wrath{{< /checkbox >}}
