@@ -121,7 +121,7 @@ Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-dru
 - Cast {{< spell 202347 "Stellar Flare" >}}
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented.
 
-You can precast from max range about 3.5 seconds before a boss is pulled when Dreamstate(T31 2pc) is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 Wraths+1 Starfire, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
+You can precast from max range about 3.5 seconds before a boss is pulled when {{< spell 424248 "Dreamstate(T31 2pc)" >}} is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 {{< spell 190984 "Wraths" >}} + 1 {{< spell 194153 "Starfire" >}}, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
 
 **What is a priority list?**
 
