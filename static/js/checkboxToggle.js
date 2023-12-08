@@ -1,12 +1,12 @@
 function toggleCheckbox(checkboxId) {
     const checkbox = document.querySelector(`input[type="checkbox"][data-id="${checkboxId}"]`);
     if (!checkbox) {
-        console.error('Checkbox with data-id "' + checkboxId + '" not found.');
+        // console.error('Checkbox with data-id "' + checkboxId + '" not found.');
         return;
     }
 
     // Handle radio group logic
-    if (checkbox.hasAttribute('data-radio')) {
+    if (checkbox.hasAttribute('data-radio') && checkbox.checked) {
         const radioGroup = checkbox.getAttribute('data-radio');
         document.querySelectorAll(`input[type="checkbox"][data-radio="${radioGroup}"]`).forEach(radio => {
             if (radio.getAttribute('data-id') !== checkboxId) {
