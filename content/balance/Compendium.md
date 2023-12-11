@@ -21,7 +21,9 @@ sidebarContents:  |
   <br>[How to use Owlkin Frenzy procs](#owlkin-frenzy)
  
   **[3. Talents](#talents)**
- 
+  <br>[Raid](#raid)
+  <br>[Mythic+](#mythic+)
+
   **[4.Consumables](#consumables)**
   <br>[Potions](#potions)
   <br>[Food](#food)
@@ -216,7 +218,7 @@ When reading the priority lists below, you should not think about these as steps
 {{</cbtext>}}
 - {{<cbtext id="Cancelaura-AoE">}}Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast.
-- {{<cbtext id="T31 2P-AoE" >}}{{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
+- {{<cbtext id="T31 2P-AoE" >}}Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - {{<cbtext id="T31 2P-AoE" >}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Warrior of Elune-AoE">}}Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
@@ -320,9 +322,11 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 # [3. Talents:](#talents)
 
 </div>
-
-## Raid Talents
 <div style="text-align: center;">
+<div id="raid">
+## [Raid](#raid)
+</div>
+
 
 ### Gnarlroot
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
@@ -349,10 +353,11 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 </div>
 
-
-## Mythic+ Talents
-
 <div style="text-align: center;">
+<div id="mythic+">
+## [Mythic+](#mythic+)
+</div>
+
 
 ### Balanced build
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkDkkUSCJJEaSLCJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
