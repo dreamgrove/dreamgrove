@@ -358,7 +358,8 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 <div style="text-align: center;">
 <div id="mythic+">
 	
-<br>## [Mythic+](#mythic+)
+<br>
+## [Mythic+](#mythic+)
 
 </div>
 
