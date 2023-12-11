@@ -354,11 +354,11 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJ5AlkQcgQol0iEJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 </div>
-
+<br>
 <div style="text-align: center;">
 <div id="mythic+">
 	
-<br>
+
 ## [Mythic+](#mythic+)
 
 </div>
