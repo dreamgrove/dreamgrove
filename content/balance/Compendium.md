@@ -324,7 +324,9 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 </div>
 <div style="text-align: center;">
 <div id="raid">
+	
 ## [Raid](#raid)
+
 </div>
 
 
@@ -355,7 +357,9 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 <div style="text-align: center;">
 <div id="mythic+">
+	
 ## [Mythic+](#mythic+)
+
 </div>
 
 
