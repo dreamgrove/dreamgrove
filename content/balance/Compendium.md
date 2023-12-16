@@ -477,7 +477,8 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 <br>Sim between these two options to determine which one is best for your character.
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
 <br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) Avoidance + Reduced fall damage
-<br>Legs - [Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
+<br>Legs - [Lambent Armor Kit](https://www.wowhead.com/item=204702/lambent-armor-kit?crafting-quality=6)/[Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6) Intellect + Stamina
+<br>Sim between these two options to determine which one is best for your character.
 <br>Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
 <br>Boots - [Watchers Loam](https://www.wowhead.com/item=200020/enchant-boots-watchers-loam) Stamina
 <br>Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) You should always sim your own character to determine what enchant to use in this slot.
