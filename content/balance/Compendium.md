@@ -598,7 +598,7 @@ If you double-checked your rotation and still feel like you're underperforming y
 This season there are many viable builds and in the end it, once the necessary talents are taken, it just comes down to personal preference. One notable example is the choice between {{< spell 202770 "Fury Of Elune" >}} and {{< spell 274281 "New Moon" >}}: the former performs slightly better in AOE scenarios, while the latter is slightly better in ST, so people will usually pick the one they're most comfortable with. Feel free to use any of the builds mentioned in the Talents section.
 
 ### How do I track T31 4p?
-The tooltip of Eclipse updates dynamically to reflect the stacks, but our rotation doesn't change based on it so there's no need to track it.
+The tooltip of Eclipse updates dynamically to reflect the stacks, but our rotation doesn't change based on it so there's no need to track it. However if you still want to track it you can use the [following WeakAura](https://wago.io/BoomkinTierSet)
 
 ### How can I proc {{< spell 393956 "Waning Twilight" >}} without mushrooms or flare?
 With {{< spell 394058 "Astral Smolder" >}}
