@@ -64,7 +64,7 @@ sidebarContents:  |
 
 If the buff is up before you enter combat, your first {{< spell 194153 "Starfire" >}} /{{< spell 190984 "Wrath" >}} will be affected by the buff and your {{< spell 424248 "Dreamstate" >}} stacks will then reset back to 2 when you finish your cast.
 
-Using {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} will also grant you {{< spell 424248 "Dreamstate" >}}, however proccing {{< spell 393961 "Pulsar" >}} will not.
+Casting {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation" >}} while in {{< spell 48517 "Solar Eclipse" >}} or {{< spell 48518 "Lunar Eclipse" >}} will also grant you {{< spell 424248 "Dreamstate" >}}, however proccing {{< spell 393961 "Pulsar" >}} will not.
 
 #### {{< spell 422863 "4-piece" >}}:
 > {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
