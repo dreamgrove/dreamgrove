@@ -37,6 +37,7 @@ sidebarContents:  |
   <br>[Trinkets](#trinkets)
  
   **[6. Miscellaneous](#misc)**
+  <br>[FAQ](#faq)
   <br>[Do our dots snapshot?](#snapshot)
   <br>[What is Astral damage?](#astral-damage)
   <br>[Macros](#macros)
@@ -232,7 +233,7 @@ When reading the priority lists below, you should not think about these as steps
   - You have a {{< spell 393942 "Starweaver's Warp" >}} proc.
 {{</cbtext>}}
   - {{< spell 202345 "Starlord" >}} is below 3 stacks.
-- {{<cbtext id="New Moon-AoE">}} Use {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:{{</cbtext>}}
+- {{<cbtext id="New Moon-AoE">}}Use {{< spell 274283 "Full Moon" >}} if all of the following conditions are met:{{</cbtext>}}
 {{<cbtext id="New Moon-AoE">}}
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
@@ -577,6 +578,34 @@ Special [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-bra
 </div>
 
 
+
+<br><div id="faq">
+
+## [FAQ](#faq)
+
+</div>
+
+### I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
+Log one of your fights and check it with [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs) and [wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and as close to zero cancelled casts. Another coommon issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders. 
+
+### How do I sim for AOE?
+Balance Druid's gear mostly doesn't change from ST to AOE so simming "5m 1t patchwerk" is usually fine even for AOE situations. Other sims like "5t 40s" are unrealistic scenarios that will provide skewed and wrong sims in most cases and hence shouldn't be used. If you want to do an accurate M+ sim consider using the [MDT Sim WeakAura](https://wago.io/Yya4XBbl-) and remember that ST fights are still a big part of Mythic+.
+
+### I'm doing really low damage in Mythic+, what am I doing wrong?
+If you double-checked your rotation and still feel like you're underperforming you could just be playing low keys, together with classes that have very bursty damage profiles. Whith a Balance Druid, mobs need to live long enough for you to actually start doing damage, which is something that doesn't really happen in keys lower than 20+ and especially on Tyrannical. Consider focusing a bit more on ST or trying another spec, but take into consideration the fact that DPS isn't everything in a key!
+
+### I've seen a lot of people running build X instead of Y in Mythic+, is X better?
+This season there are many viable builds and in the end it, once the necessary talents are taken, it just comes down to personal preference. One notable example is the choice between {{< spell 202770 "Fury Of Elune" >}} and {{< spell 274281 "New Moon" >}}: the former performs slightly better in AOE scenarios, while the latter is slightly better in ST, so people will usually pick the one they're most comfortable with. Feel free to use any of the builds mentioned in the Talents section.
+
+### How do I track T31 4p?
+The tooltip of Eclipse updates dynamically to reflect the stacks, but our rotation doesn't change based on it so there's no need to track it.
+
+### How can I proc {{< spell 393956 "Waning Twilight" >}} without mushrooms or flare?
+With {{< spell 394058 "Astral Smolder" >}}
+
+### Why are some top players running different embellishments from the ones mentioned in the Compendium?
+In the beginning of the season Toixic Thorn Boots + Patch were providing the biggest short term DPS gain in a purely ST scenario, and they're still simming very good for many players, which is why they were considered the best choice. At the moment there are many other viable combinations depending on the gear and the content being done, so feel free to sim them and decide accordingly.  
+
 <div id="snapshot">
 
 ## [Do our dots snapshot?](#snapshot)
@@ -595,6 +624,7 @@ No, all of our periodic damage (like {{< spell 8921 "Moonfire" >}}, {{< spell 93
 Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also applies to Astral spells, and effects that buff Arcane spells likewise also applies to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 * 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
 
 Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
+
 
 
 <br><div id="macros">
