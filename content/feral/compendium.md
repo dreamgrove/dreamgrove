@@ -349,24 +349,33 @@ The way this section is written is very formulaic and has the same structure as 
 <br>[Alternative L/R Single Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
 - Note: generally best to play 'Standard Convoke' for single-target, assuming you have an on-use trinket like Ashes or Witherbark's. They sim equally, however Convoke offers more burst, and pulls ahead with Augmentation buffing you. Kill timers can also play a factor; if you are unsure, stick to Convoke. If you do play L/R, Infected Wounds can optionally be swapped for Lunar Inspiration with T31 as well.
 
-Raid Boss Talents (intended for Mythic, but many will still apply to Heroic or Normal).
+## Raid Boss Talents (intended for Mythic, but many will still apply to Heroic or Normal).
 <br>[Gnarlroot](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVVARRUVFVoRVAQCBV)
 - If you need more AOE, swap {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 400320 "Circle" >}}. You can also play full single-target if adds don't feel like an issue.
+  
 <br>[Igira](https://www.wowhead.com/talent-calc/druid/feral/DAREUEEBCQZCFREExhUQBROVFAVRUVFVKVRAQCBU)
 - Play full single-target, the spears will die too fast for Primal Wrath to be worth it in most cases. Frenzied Regen can be useful for clearing the healing absorb.
+  
 <br>[Volcoross](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCBREExhQQBRNVFAVRUVFVoVRECBU)
 - If your kill time is above 4.20~ or so, swap to the 2 minute 'standrad convoke single-target' build listed above.
+  
 <br>[Council of Dreams](https://www.wowhead.com/talent-calc/druid/feral/DARBUUEFCYpCBREAxBQQBEOVRURRQVFVIUVRQCFQ)
 - You can play Lunar Inspiration, which is technically better, albeit more difficult to play. With Dire Fixation you use Shred as a last priority filler.
-- You can also play Incarn instead.
+- You can also play Incarn instead which is more simple to play.
+- Dispel allows you to quickly and safely dispel yourself on Mythic.
+  
 <br>[Nymue](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCBREExhQQBRNVFAVRUVFVoVRECBU)
 - 1 minute Convoke lines up with all of the intermissions.
+  
 <br>[Larodar](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCUpCBREExhUQBRNVFAVRUVFVoVRECBU)
-- L/R single target also works here, but given you probably have gear optimised for Convoke, just play 1 min Convoke.
+- L/R single target also works here, but given you probably have gear optimised for Convoke, just play 1 min Convoke, as it has great timings for this fight too.
+  
 <br>[Smolderon](https://www.wowhead.com/talent-calc/druid/feral/DAQEVEFBCQpCFREEwhEBQOVFAZREVFVKRREQCBU)
 - Extra Tireless Energy + Apex to try and get Berserk up for each intermission. 1 min Convoke for intermission damage amps.
+  
 <br>[Tindral](https://www.wowhead.com/talent-calc/druid/feral/DAREVEFBCQJCFREExhQQBROVFAVRUVFVaRRAQCBU)
 - With roots being nerfed, Feral should play full single-target on Tindral now with 2 minute Convoke. Let other specs carry the roots. Convoke will line up with the shields.
+  
 <br>[Fyrakk](https://www.wowhead.com/talent-calc/druid/feral/DAREUEEBCQJCFVEExhUQBROVFAVRUVFVKVRAQCBU)
 - Damage to adds are irrelevant, this is another 2 minute single-target Convoke fight as Feral where you can carry the boss damage. Take Typhoon to knock the adds however.
 <div id="raidcustomisation">
