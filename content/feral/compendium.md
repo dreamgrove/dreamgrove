@@ -340,17 +340,6 @@ The way this section is written is very formulaic and has the same structure as 
 ## [Raid Talents](#raidtalents)
 </div>
 
-### T30 4pc 10.2 Talent Builds (Aberrus tier-set)
-For the first week or two of the season while still wearing old tier set.
-
-[T30 Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
-<br>[T30 Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVFAZREVFVaRRAQCBU)
-<br>[T30 Sustained Cleave/AoE](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQZCFRUExhUQBBOVRURRQVFVYRVBQCFE)
-- Drop a point in {{< spell 383352 "Tireless Energy" >}} or {{< spell 48484 "Infected Wounds" >}} if you need {{< spell 285381 "Primal Wrath" >}} in either of these builds for fights with adds.
-- Note: it is preferable if you can farm an on-use stat trinket for the burst build. 
-### 2pc+2pc Talent Builds
-- Plays the same builds as T30, except you can swap a point in {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 391889 "Adaptive Swarm" >}} for the burst and cleave builds for a small gain if you want.
-- As mentioned earlier, you should sim your character to see if it's worth going to 2pc 2pc: generally it is worth due to the item level gain, but will vary e.g. tier from LFR or lower M+ catalyst vs Heroic raid.
 ### T31 4pc Talent Builds (Amirdrassil tier-set)
 
 [T31 Standard Convoke Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFVKVRAQCFQ)
@@ -358,9 +347,29 @@ For the first week or two of the season while still wearing old tier set.
 <br>[Raid ST-AoE hybrid](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVRAVRUVFVIVVBQCFU)
 <br>[Raid Cleave](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
 <br>[Alternative L/R Single Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
-- *Specific boss talents coming soon, let your mind cook with these foundations.
-- Note: generally best to play 'Standard Convoke' for single-target, assuming you have an on-use trinket like Witherbark's. They sim equally, however Convoke offers more burst, and pulls ahead with Augmentation buffing you. Kill timers can also play a factor; if you are unsure, stick to Convoke. If you do play L/R, Infected Wounds can optionally be swapped for Lunar Inspiration with T31 as well.
+- Note: generally best to play 'Standard Convoke' for single-target, assuming you have an on-use trinket like Ashes or Witherbark's. They sim equally, however Convoke offers more burst, and pulls ahead with Augmentation buffing you. Kill timers can also play a factor; if you are unsure, stick to Convoke. If you do play L/R, Infected Wounds can optionally be swapped for Lunar Inspiration with T31 as well.
 
+### Raid Boss Talents (intended for Mythic, but many will still apply to Heroic or Normal).
+<br>[Gnarlroot](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVVARRUVFVoRVAQCBV)
+- If you need more AOE, swap {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 400320 "Circle" >}}. You can also play full single-target if adds don't feel like an issue.
+<br>[Igira](https://www.wowhead.com/talent-calc/druid/feral/DAREUEEBCQZCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- Play full single-target, the spears will die too fast for Primal Wrath to be worth it in most cases. Frenzied Regen can be useful for clearing the healing absorb.
+<br>[Volcoross](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCBREExhQQBRNVFAVRUVFVoVRECBU)
+- If your kill time is above 4.20~ or so, swap to the 2 minute 'standrad convoke single-target' build listed above.
+<br>[Council of Dreams](https://www.wowhead.com/talent-calc/druid/feral/DARBUUEFCYpCBREAxBQQBEOVRURRQVFVIUVRQCFQ)
+- You can play Lunar Inspiration, which is technically better, albeit more difficult to play. With Dire Fixation you use Shred as a last priority filler.
+- You can also play Incarn instead which is more simple to play.
+- Dispel allows you to quickly and safely dispel yourself on Mythic. 
+<br>[Nymue](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCBREExhQQBRNVFAVRUVFVoVRECBU)
+- 1 minute Convoke lines up with all of the intermissions. 
+<br>[Larodar](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCUpCBREExhUQBRNVFAVRUVFVoVRECBU)
+- L/R single target also works here, but given you probably have gear optimised for Convoke, just play 1 min Convoke, as it has great timings for this fight too. 
+<br>[Smolderon](https://www.wowhead.com/talent-calc/druid/feral/DAQEVEFBCQpCFREEwhEBQOVFAZREVFVKRREQCBU)
+- Extra Tireless Energy + Apex to try and get Berserk up for each intermission. 1 min Convoke for intermission damage amps.
+<br>[Tindral](https://www.wowhead.com/talent-calc/druid/feral/DAREVEFBCQJCFREExhQQBROVFAVRUVFVaRRAQCBU)
+- With roots being nerfed, Feral should play full single-target on Tindral now with 2 minute Convoke. Let other specs carry the roots. Convoke will line up with the shields.
+<br>[Fyrakk](https://www.wowhead.com/talent-calc/druid/feral/DAREUEEBCQJCFVEExhUQBROVFAVRUVFVKVRAQCBU)
+- Damage to adds are irrelevant, this is another 2 minute single-target Convoke fight as Feral where you can carry the boss damage. Take Typhoon to knock the adds however.
 <div id="raidcustomisation">
  
 ### [T31 Raid Talent Customisation](#raidcustomisation)
@@ -536,9 +545,9 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 
 </div>
 
-**Updated December 2, 2023**
+**Updated December 21, 2023**
 
-[Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) is generally the best embellishment for Feral Druid in season 3, granting you {{< spell 77493 "Mastery" >}} while your health is above 90%. This is particularly valuable as you can generally expect very high uptime for your first set of cooldowns, where you will usually not be taking much damage at all. {{< spell 391528  "Nature's Vigil" >}}, {{< spell 391528  "Convoke the Spirits" >}} and any Leech you might have will provide additional healing during your cooldowns, further facilitating [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime. Lastly, free {{<spell 8936 "Regrowth's">}} from {{< spell 16974 "Predatory Swiftness" >}} procs can be leveraged when you're low on energy/out of range. Don't overthink or stress [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime too much however, as doing so will likely lead to a dps loss.
+[Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) is generally the best embellishment for Feral Druid in season 3 (however see below for information on [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat)), with BSL granting you {{< spell 77493 "Mastery" >}} while your health is above 90%. This is particularly valuable as you can generally expect very high uptime for your first set of cooldowns, where you will usually not be taking much damage at all. {{< spell 391528  "Nature's Vigil" >}}, {{< spell 391528  "Convoke the Spirits" >}} and any Leech you might have will provide additional healing during your cooldowns, further facilitating [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime. Lastly, free {{<spell 8936 "Regrowth's">}} from {{< spell 16974 "Predatory Swiftness" >}} procs can be leveraged when you're low on energy/out of range. Don't overthink or stress [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime too much however, as doing so will likely lead to a dps loss.
 
 [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is particularly notable in multi-target/AOE or when being buffed by Augmentation Evokers compared to damage-proc embelishments such as [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps). And due to uptime generally being higher during cds, [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is often the burstier option as well.
 
@@ -554,9 +563,11 @@ For raid, 45-60%, depending on boss. You might have 40% overall uptime on a figh
 
 **Alternative Options**
 
-Firstly it should be noted that for M+, there are no real alternatives for [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining). You should always use two of these as it is significantly far ahead of all competition in M+. 
+For M+, [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is quite far ahead of other embellishments; use two of these. However in high keys [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) may end up being competitive due to the damage you take scaling.
 
-For raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a perfectly fine alternative, though in the current tier, its generally slightly worse while offering less burst and a small amount of self-damage. Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) is a genuine alternative for raid and may be useful for any fights you have lower BSL uptime (possibly Mythic Smolderon and Mythic Fyrakk), however in most cases will be slightly worse. 
+For raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a perfectly fine alternative, though in the current tier, its generally slightly worse while offering less burst and a small amount of self-damage. 
+
+Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) is a good alternative for raid and is particularly good for the last 3 bosses on Mythic (Smolderon, Tindral, Fyrakk). It is unlikely to beat BSL on a lot of earlier fights however, and may also be worse on farm or as bosses slowly get nerfed. 
 
 **Crafting order**
 
@@ -590,6 +601,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
 - [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=496&spec=103) Yes, this is a tank trinket. Yes, it still very respectable damage. At current tuning this is a must-have for any sort of pushing due to its stellar defensive benefits whilst losing little damage.
 - [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) While this is generally the strongest option in a vacuum, its droppable if you can't reliably delay 3rd orb for a few seconds at least.
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows). Great for Bees and Incarn builds, easier to manage than Witherbark's, pair with every 2nd Berserk/Incarn.
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
 - [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) 
 - [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
