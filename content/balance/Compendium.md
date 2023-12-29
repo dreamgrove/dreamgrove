@@ -333,25 +333,28 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 ### Gnarlroot
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
-### Single Target (Igira(if you don't need spear damage), Volcoross, Larodar, Nymue and Smolderon)
+### Volcoross, Larodar, Nymue, Smolderon, Igira(if you don't need spear damage)
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENxBChWSLJRENAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>
 
-You can also play [this build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENJJgWSLJRQDgCAE?bgcolor=000000), at lower itemlevels {{< spell 394065 "Denizen of the Dream" >}} might sim better for your character.
-<br>As you aquire better gear, the build without {{< spell 394065 "Denizen of the Dream" >}} will become better because of a bug affecting their damage not scaling with base mastery.
+You can also play [this build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENJJgWSLJRQDgCAE?bgcolor=000000) if you so prefer.
+<br>With better gear the difference between them is negligible.
 
 <div style="text-align: center;">
+
+### Igira(if you need spear damage)
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTyBCkWSLJRQDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 ### Council of Dreams
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 
-### Tindral and Igira(if you need spear damage)
+### Tindral
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQkWSLCR0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 
 ### Fyrakk
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJ5AlkQcgQol0iEJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
 </div>
 <br>
@@ -365,7 +368,7 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 
 ### Balanced build
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkDkkUSCJJEaSLCJRDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>  
 
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. {{< spell 274281 "New Moon" >}} and {{< spell 211545 "Fury of Elune" >}} can be used interchangeably.
@@ -379,8 +382,8 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 
 [Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkUSCJHIEaSLCJRDgCAE?bgcolor=000000)
-<br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkDkkUSCJJEaSLCJRDgCAE?bgcolor=000000)
-<br>[AoE focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSCRaSJCJRDgCAE?bgcolor=000000)
+<br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB?bgcolor=000000)
+<br>[AoE focused build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000)
 
 <br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 <br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
@@ -420,8 +423,8 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 [Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Intellect buff
 <br>[Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
-<br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides haste+mastery which can be more dps than the Intellect food.
-<br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides crit+mastery which can be more dps than the Intellect food.
+<br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides Haste + Mastery which can be more dps than the Intellect food.
+<br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides Crit + Mastery which can be more dps than the Intellect food.
 
 <br>The secondary food can be better as you acquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
 
@@ -490,36 +493,44 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 
 </div>
 
-If you already have an item with https://www.wowhead.com/item=193555/toxified-armor-patch you should:
-- Craft/Upgrade https://www.wowhead.com/item=193452/toxic-thorn-footwraps with your first spark to 486 itemlevel.
-- Keep your https://www.wowhead.com/item=193555/toxified-armor-patch item equipped as this doubles the effect of your 486 itemlevel https://www.wowhead.com/item=193452/toxic-thorn-footwraps
-- With your next spark you can do one of the following:
-	- Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 476 itemlevel with the Renown 20 Wyrm Crest and spend your Aspect Crests on other upgrades.
-	- Craft/Upgrade a https://www.wowhead.com/item=193555/toxified-armor-patch item to 486 itemlevel with Aspect Crests.
+### For embellishments there are a couple of options this season:
+
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps with https://www.wowhead.com/item=193555/toxified-armor-patch.
+    - Provides the most single target damage and has an early spike since only the boots needs to be crafted at 489 for the effect to scale to that itemlevel.
+    - Locks you in to boots as your crafted items with predfefined stats.
+- https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch
+    - Good single target damage.
+    - Deals a small amount of self-damage.
+    - Can be added to any crafted leather slot.
+- https://www.wowhead.com/item=208189/verdant-conduit
+    - Performs slightly worse in single target.
+    - Performs well in aoe.
+    - Can be added to any crafted leather slot.
+- https://www.wowhead.com/item=193001/elemental-lariat
+    - Requires a lot of gems.
+    - Performs well in AoE and Single Target.
+    - Locks you in to a crafted neck but you can choose the stats on it freely.
+- https://www.wowhead.com/item=193946/blue-silken-lining
+    - Performs the best of all embellishments both in AoE and Single Target.
+    - Requires you to be above 90% health for it to be active.
+    - Can be applied on any crafted item.
 
 
-<br>If you don't have an item with https://www.wowhead.com/item=193555/toxified-armor-patch and you don't have the possibility of crafting a Season 2 version of it you can do one of the following:
-- Follow the above and craft https://www.wowhead.com/item=193452/toxic-thorn-footwraps first then https://www.wowhead.com/item=193555/toxified-armor-patch after.
-- Craft https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch or https://www.wowhead.com/item=208189/verdant-conduit.
-	- https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch has slightly higher single target damage, but also deals a small amount of self-damage.
-	- https://www.wowhead.com/item=208189/verdant-conduit performs slightly worse in single target, but performs much better on aoe.
-	- As these are reagent embellishments, you can craft two copies or mix one of each.
+### Which embellishments should you choose?
 
-<br>How do these two options compare?:
-- https://www.wowhead.com/item=193452/toxic-thorn-footwraps will give you immediate power of having two high itemlevel embellishments for a single spark if you already have a https://www.wowhead.com/item=193555/toxified-armor-patch from Season 2 
-- The single target DPS difference between https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit is negligible and will just come down to your stats.
-- https://www.wowhead.com/item=208189/verdant-conduit is significantly better than https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch in multi target DPS.
-- https://www.wowhead.com/item=193452/toxic-thorn-footwraps and https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch have minor downsides.
-- https://www.wowhead.com/item=193452/toxic-thorn-footwraps have predefined stats and is a locked item while https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch / https://www.wowhead.com/item=208189/verdant-conduit can be crafted and recrafted to any leather item where you can choose the stats freely.
+This is entirely up to you, below are some guidelines to make your choice more informed.
+- https://www.wowhead.com/item=193946/blue-silken-lining provides the most amount of DPS given that you have the uptime for it(usually more than 40%). Can be swapped at any point by recrafting and adding/removing the embellishment.
+- https://www.wowhead.com/item=193452/toxic-thorn-footwraps is a single target focused embellishment with an early power spike. Locks yourself with crafted boots with predfefined stats.
+- https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch and https://www.wowhead.com/item=208189/verdant-conduit is good for the flexibility, you can change these around at any point depending on what fits the content you're doing.
+- https://www.wowhead.com/item=193001/elemental-lariat performs well in both Single Target and AoE, requires a lot of gems and locks yourself with a crafted neck as the embellishment cant be removed from it.
 
-<br>
-What slot and which method you should use will come down to how much gear you have gotten and in what slots, sim it.
 
+### What slot should i craft in?
+This will depend on your current gear situtation, below are some guidelines:
 - Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 489 itemlevel.
 - Cloaks are another slot with the lowest stat budget.
 - Belts have a higher stat budget, but they can have a socket.
-
-Later on you can consider crafting https://www.wowhead.com/item=193001/elemental-lariat as it can be better depending on your sim, but it does require you to have a lot of gems.
+- Ring if you've chosen to craft https://www.wowhead.com/item=193946/blue-silken-lining is another good slot, comes with a socket.
 
 
 <br><div id="trinkets">
