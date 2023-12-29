@@ -337,8 +337,8 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENxBChWSLJRENAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>
 
-You can also play [this build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENJJgWSLJRQDgCAE?bgcolor=000000), at lower itemlevels {{< spell 394065 "Denizen of the Dream" >}} might sim better for your character.
-<br>As you aquire better gear, the build without {{< spell 394065 "Denizen of the Dream" >}} will become better because of a bug affecting their damage not scaling with base mastery.
+You can also play [this build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENJJgWSLJRQDgCAE?bgcolor=000000) if you so prefer.
+<br>With better gear the difference between them is negligible.
 
 <div style="text-align: center;">
 
