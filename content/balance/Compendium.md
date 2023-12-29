@@ -380,7 +380,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 [Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkUSCJHIEaSLCJRDgCAE?bgcolor=000000)
 <br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkDkkUSCJJEaSLCJRDgCAE?bgcolor=000000)
-<br>[AoE focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSCRaSJCJRDgCAE?bgcolor=000000)
+<br>[AoE focused build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000)
 
 <br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 <br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
