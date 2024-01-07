@@ -119,9 +119,6 @@ body.article-body .header {
       line-height: 8rem;
       padding-left: 2rem;
       padding-right: 2rem; } }
-ul p {
-  display: inline; }
-
 .header-nav > a:hover {
   background-color: #1a9c82;
   color: #fff; }
