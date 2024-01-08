@@ -342,11 +342,11 @@ The way this section is written is very formulaic and has the same structure as 
 
 ### T31 4pc Talent Builds (Amirdrassil tier-set)
 
-[T31 Standard Convoke Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFVKVRAQCFQ)
-<br>[One-minute Burst](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBNVFAVRUVFVoVRECBU)
-<br>[Raid ST-AoE hybrid](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVRAVRUVFVIVVBQCFU)
-<br>[Raid Cleave](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
-<br>[Alternative L/R Single Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBBOVBAZRUVFViURBQBF)
+[T31 Standard Convoke Single-Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVBAZRUVFVKVRAQCFQ)
+<br>[One-minute Burst](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBRNVFAVRUVFVoVRECBU)
+<br>[Raid ST-AoE hybrid](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVRAVRUVFVYRVBQCFU)
+<br>[Raid Cleave](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
+<br>[Alternative L/R Single Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVBAZRUVFViURBQBF)
 - Note: generally best to play 'Standard Convoke' for single-target, assuming you have an on-use trinket like Ashes or Witherbark's. They sim equally, however Convoke offers more burst, and pulls ahead with Augmentation buffing you. Kill timers can also play a factor; if you are unsure, stick to Convoke. If you do play L/R, Infected Wounds can optionally be swapped for Lunar Inspiration with T31 as well.
 
 ### Raid Boss Talents (intended for Mythic, but many will still apply to Heroic or Normal).
@@ -598,12 +598,13 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 ### To use in Raid
 
 - [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) Easier to use than [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) for similar-to-slightly worse dps assuming you can reasonably delay picking up 3rd orb.
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) Grab first 2 orbs asap, and delay last orb as long as possible
+- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) Grab first 2 orbs asap, and delay last orb as long as possible.
 - [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This is reportedly doing less damage than expected, and falls down the list on shorter fights.
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
 - [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
-- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
+- [Ember of Nullification](https://www.wowhead.com/item=136978/ember-of-nullification?bonus=9843)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows) Niche good with L/R single-target build and Bees/Incarn on Council depending on kill time.
   
 ### To use in Dungeons
 
@@ -612,10 +613,12 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 - [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) While this is generally the strongest option in a vacuum, its droppable if you can't reliably delay 3rd orb for a few seconds at least.
 - [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows). Great for Bees and Incarn builds, easier to manage than Witherbark's, pair with every 2nd Berserk/Incarn.
 - [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
-- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) 
-- [Coiled Serpent Idol](https://www.wowhead.com/ptr-2/item=207175/coiled-serpent-idol?bonus=4795&class=11&ilvl=489&spec=103)
-- [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103) This moves up if not using a 2 minute cooldown trinket already.
+- [Ember of Nullification](https://www.wowhead.com/item=136978/ember-of-nullification?bonus=9843)
 - [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
+
+Niche good:
+- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4795&class=11&ilvl=496&spec=103) 
+- [Bandolier of Twisted Blades](https://www.wowhead.com/ptr-2/item=207165/bandolier-of-twisted-blades?bonus=4795&class=11&ilvl=489&spec=103) This moves up if not using a 2 minute cooldown trinket already.
 - [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) This trinkets value varies heavily depending on group and dungeon- particularly favoring clean runs without much downtime between pulls.
 
 <br>
