@@ -120,15 +120,15 @@ Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-dru
 </div>
 
 **Precasting:**
-- Cast {{< spell 190984 "Wrath" >}} twice
-- Cast {{< spell 202347 "Stellar Flare" >}}
+- Cast {{< spell 190984 "Wrath" >}} twice.
+- Cast {{< spell 202347 "Stellar Flare" >}}.
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented.
 
-You can precast from max range about 3.5 seconds before a boss is pulled when {{< spell 424248 "Dreamstate(T31 2pc)" >}} is not up. If it is up you have to wait until 2.5 seconds on the pulltimer to start casting. Alternatively you can cast 3 {{< spell 190984 "Wraths" >}} + 1 {{< spell 194153 "Starfire" >}}, which allows you to start precasting at 3 seconds. The dps difference between those is negligible.
+You can precast from max range 3.5 seconds before a boss is pulled, when {{< spell 424248 "Dreamstate(T31 2pc)" >}} is not active. If it is active, you have to wait until 2.5 seconds on the pull timer to start casting. Alternatively, you can cast 3 {{< spell 190984 "Wrath" >}}s + 1 {{< spell 194153 "Starfire" >}}, which allows you to start precasting at 3 seconds. The DPS difference between these methods is negligible.
 
 **What is a priority list?**
 
-When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast if the conditions apply.
+When reading the priority lists below, you should not think of these as steps to be followed in a specific order. At any given point in combat, you should cast the first ability on the list that you are able to cast, provided the conditions for its use are met.
 
 <br><div id="st">
 
@@ -151,12 +151,12 @@ When reading the priority lists below, you should not think about these as steps
 {{< checkbox id="Convoke the Spirits" spell=391528 >}}Convoke the Spirits{{< /checkbox >}}</br>
 
 
-**Do note, while not exclusively mentioned in the priority list, if you are caught outside of eclipse and capping astral power it is better to spend to prevent further capping before entering eclipse.**
+**Note: While not explicitly mentioned in the priority list, if you find yourself outside of eclipse and are about to cap astral power, it's better to spend it to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration shown in the tooltip).
 - {{<cbtext id="Stellar Flare" >}}Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.{{</cbtext>}}
 - {{<cbtext id="T31 2P">}}Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - {{<cbtext id="T31 2P">}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
-- Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you are not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
+- Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you're not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Convoke the Spirits">}}Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
 - {{<cbtext id="T31 2P" negate="true">}}Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions is true:{{</cbtext>}}
 {{<cbtext id="T31 2P" negate="true">}}
