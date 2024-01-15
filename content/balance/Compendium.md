@@ -497,7 +497,7 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 ### For embellishments there are a couple of options this season:
 
 - https://www.wowhead.com/item=193452/toxic-thorn-footwraps with https://www.wowhead.com/item=193555/toxified-armor-patch.
-    - Provides great single target damage and has an early spike since only the boots needs to be crafted at 489 for the effect to scale to that itemlevel.
+    - Provides great single target damage and has an early spike since only the boots needs to be crafted at 486 for the effect to scale to that itemlevel.
     - Locks you in to boots as your crafted items with predfefined stats.
 - https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch
     - Good single target damage.
