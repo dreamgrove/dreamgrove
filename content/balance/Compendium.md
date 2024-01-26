@@ -185,9 +185,9 @@ When reading the priority lists below, you should not think of these as steps to
 - {{<cbtext id="Wild Mushroom">}}Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
-<br><div id="aoe">
+<br><div id="">
 
-## [AoE priority](#aoe)
+## [ priority](#aoe)
 
 </div>
 
@@ -374,8 +374,8 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. {{< spell 274281 "New Moon" >}} and {{< spell 211545 "Fury of Elune" >}} can be used interchangeably.
 
-{{< spell 274281 "New Moon" >}} provides more single target damage and is easier to pair with pulsar.
-<br>{{< spell 211545 "FoE" >}} is both easier to play and does more AoE, it will however often not align with {{< spell 393961 "Pulsar" >}}.
+{{< spell 274281 "New Moon" >}} provides more single target damage and is easy to pair with pulsar.
+<br>{{< spell 211545 "FoE" >}} does slightly more AoE but is more difficult to align with {{< spell 393961 "Pulsar" >}}, making it annoying to play.
 
 The below picture showcases which talents are "mandatory" and which talents you can opt-in to:
 
@@ -384,7 +384,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 [Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkUSCJHIEaSLCJRDgCAE?bgcolor=000000)
 <br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB?bgcolor=000000)
-<br>[AoE focused build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000)
+<br>[AoE focused build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSyBgWSLSkQDgCAE?bgcolor=000000)
 
 <br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 <br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
