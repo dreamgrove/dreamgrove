@@ -185,9 +185,9 @@ When reading the priority lists below, you should not think of these as steps to
 - {{<cbtext id="Wild Mushroom">}}Use {{< spell 88747 "Wild Mushroom" >}}  as a movement GCD.{{</cbtext>}}
 - Use {{< spell 190984 "Wrath" >}} regardless of which Eclipse you are in.
 
-<br><div id="">
+<br><div id="aoe">
 
-## [ priority](#aoe)
+## [AoE priority](#aoe)
 
 </div>
 
