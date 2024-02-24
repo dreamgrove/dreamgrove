@@ -208,7 +208,7 @@ When reading the priority lists below, you should not think of these as steps to
 
 <br>**Special Note: when NOT using the talents {{< spell 327541 "Aetherial Kindling" >}} or {{< spell 393940 "Starweaver" >}}, use Starsurge as a spender on 2 targets still.**
 <br>**AoE priority list(2+ targets):**
-- Use {{< spell 93402 "Sunfire" >}} if the targets will live for 6 minus the number of targets divided by 2 or more seconds and you will hit all targets with it. Otherwise, wait with this until they are gathered.
+- Use {{< spell 93402 "Sunfire" >}} if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use {{< spell 8921 "Moonfire" >}} if the targets will live for 6 or more seconds and you will not overcap on AP.
 - {{<cbtext id="Stellar Flare-AoE">}} Use {{< spell 202347 "Stellar Flare" >}} if all of the following conditions is met:{{</cbtext>}}
 {{<cbtext id="Stellar Flare-AoE">}}
