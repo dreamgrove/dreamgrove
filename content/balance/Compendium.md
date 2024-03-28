@@ -56,56 +56,40 @@ sidebarContents:  |
 
 </div>
 
-## 10.2 News
+## Season 4 News
 ### Tier Set
-#### {{< spell 424248 "2-piece" >}}:
-> When Eclipse ends or when you enter combat, enter a {{< spell 424248 "Dreamstate" >}}, reducing the cast time of your next 2 {{< spell 194153 "Starfires" >}} or {{< spell 190984 "Wraths" >}} by 40% and increasing their damage by 100%.
+#### {{< spell 394412 "2-piece" >}}:
+> {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} increase the damage of your next {{< spell 190984 "Wrath" >}} or {{< spell 194153 "Starfire" >}} by 30%, stacking up to 3 times
 
-~5.1% DPS increase from having no tier.
+~4% DPS increase from having no tier, 
 
-If the buff is up before you enter combat, your first {{< spell 194153 "Starfire" >}} /{{< spell 190984 "Wrath" >}} will be affected by the buff and your {{< spell 424248 "Dreamstate" >}} stacks will then reset back to 2 when you finish your cast.
+This buff has no gameplay implications and you can treat it as completely passive.
 
-Casting {{< spell 194223 "Celestial Alignment" >}}/{{< spell 102560 "Incarnation" >}} while in {{< spell 48517 "Solar Eclipse" >}} or {{< spell 48518 "Lunar Eclipse" >}} will also grant you {{< spell 424248 "Dreamstate" >}}, however proccing {{< spell 393961 "Pulsar" >}} will not.
+#### {{< spell 394414 "4-piece" >}}:
+> When you enter {{< spell 79577 "Eclipse" >}}, your next {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} cost 15 less Astral Power and deals 40¤ increased damage.
 
-#### {{< spell 422863 "4-piece" >}}:
-> {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} increase your current Eclipse’s Arcane or Nature damage bonus by an additional 2%, up to 10%.
+~4.5% DPS increase from having no tier.
 
-~9.1% DPS increase from having no tier.
+This buff gives you a reduced cost spender every time you enter {{< spell 79577 "Eclipse" >}}. Buff is also granted when activating {{< spell 393960 "Pulsar" >}} or pressing {{< spell 194223 "CA" >}}/{{< spell 102560 "Incarnation" >}}
 
-Solar and Lunar eclipse naturally gives 15% increased Nature/Arcane damage, the 4-piece adds 2% per spender used in that eclipse up to a total of 25% increased.
+Total DPS from set: ~8.6%
 
-In {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}} this will be a maximum of 25% increased Arcane and 25% increased Nature damage, meaning any Astral school spell will deal damage = x*1.25\*1.25
+Tier sim (current ilvl ~489): [https://www.raidbots.com/simbot/report/tdwsS2j8MJjAvYJYRofqg1]
 
-The stacks reset when using {{< spell 194223 "CA" >}} /{{< spell 102560 "Incarn" >}}, you do however keep the stacks of your current eclipse when proccing {{< spell 393961 "Pulsar" >}}, i.e. you're in solar eclipse with 4 stacks, proc {{< spell 393961 "Pulsar" >}}, you will now have 5 stacks of increased Nature damage and 1 stack of increased Arcane damage.
+### Antique Bronze Bullion
+Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under the name Antique Bronze Bullion. You will acquire this currency gradually from playing the game and they will allow you to buy "special" items from any of the 3 Dragonflight raids.
 
-Total DPS from set: ~14.9%
+Before making any decisions on what you should spend this currency on, you should always sim your character using Droptimizer or Top Gear functions on [Raidbots](https://raidbots.com) 
 
-Tier sim (current ilvl ~448): https://mimiron.raidbots.com/simbot/report/1uANMpAkXv1grXNeTSN5e8
+Here are items you should potentially spend the Antique Bronze Bullion on
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
+- [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
+- [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
+- [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
+- [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
 
-### Mastery Update
-Mastery is now composed of 4 separate parts:
-- A passive effect that always applies to Arcane & Astral spells
-- A passive effect that always applies to Nature & Astral spells
-- A dynamic effect that applies to Arcane & Astral spells on targets debuffed by Moonfire
-- A dynamic effect that applies to Nature & Astral spells on targets debuffed by Sunfire
-
-Each part is independent and multiplies with each other.
-
-### List of changes
-
-- Damage of all abilities increased by 2%.
-- {{< spell 393958 "Nature's Grace" >}} now grants 10% Haste (was 15%).
-- {{< spell 394046 "Power of Goldrinn" >}} damage increased by 20%. Moved to where Starlord was located in Fractures in Time.
-- {{< spell 202345 "Starlord" >}} has moved to where {{< spell 394046   "Power of Goldrinn" >}} was located in Fractures in Time.
-- {{< spell 393954 "Rattle the Stars" >}} has been redesigned – It is no longer a buff that stacks when you cast {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} and is now a passive bonus that always reduces the cost of {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} by 10% and increases their damage by 12%.
-- ~~Orbital Strike has been redesigned – Call down a bombardment of celestial energy over the target area, blasting all enemies for Astral damage and applying Stellar Flare to them for 16 seconds. Generates 30 Astral Power. Orbital Strike still hits enemies in a 40 yard line and has a 90 second cooldown. Now a choice node with Wild Mushroom.~~ Reverted due to PvP
-- {{< spell 392999 "Fungal Growth" >}} has been removed. Wild Mushrooms now includes the effects of {{< spell 81281 "Fungal Growth" >}}.
-- {{< spell 88747 "Wild Mushroom's" >}} damage has been reduced by 20% and the {{< spell 81281 "Fungal Growth" >}} damage over time has been reduced to 60% of {{< spell 88747 "Wild Mushroom's" >}} damage (was 70%). {{<spell 81281 "Fungal Growth's">}} damage over time now deals damage over 10 seconds (was 8 seconds).
-- {{< spell 393014 "Astral Invocation(Mastery)" >}} gives 2/3rds of its value at all times and the remaining value through {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}} like now.
-- The talent positions of {{< spell 327541 "Aetherial Kindling" >}} and {{< spell 415169 "Lunar Shrapnel" >}} were swapped.
-- {{< spell 202342 "Shooting Stars" >}} damage increased by 15%.
-
-Feedback post 10.2 changes: https://us.forums.blizzard.com/en/wow/t/feedback-druids/1666448/311
+Feedback post for season 4 and War Within: https://eu.forums.blizzard.com/en/wow/t/feedback-and-wishlist-on-balance-druid-for-season-4-and-war-within/501907
 
 <br><div id="rotation">
  
@@ -542,43 +526,13 @@ This will depend on your current gear situtation, below are some guidelines:
 
 Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. 
 
-Note that while still good, double on-use loses value and becomes harder to optimally play.
 
-Special [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) explanation before the other trinkets: [Balefire Branch](https://www.wowhead.com/ptr-2/item=159630/balefire-branch?bonus=4795&ilvl=489&spec=102) loses 2 stacks of its buff every time you take damage. This means it becomes a bad trinket in a lot of raid encounters. Sims assume you get hit every 2 seconds by default which is a conservative estimate. To adjust the trinket for the given encounter you can adjust `dragonflight.balefire_branch_loss_tick` in the Simc options box. For example writing `dragonflight.balefire_branch_loss_tick=1` means there's a damage event hitting you every 1s while Branch is up. For M+ and some raid fights you can adjust the default down or write `dragonflight.balefire_branch_loss_rng_type=rppm` to simulate only getting hit rarely in random intervals.
-
-### ST
-
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
+- [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
 - [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
-- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
-- [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
-- [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
-- [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
-- [Belor'relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller?bonus=4795&class=11&ilvl=489&spec=102) - Requires you to be in melee to do damage
-- [Vessel of Skittering Shadows](https://www.wowhead.com/ptr-2/item=159610/vessel-of-skittering-shadows?bonus=4795&class=11&ilvl=489&spec=102)
-- [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
-- [Lady Waycrest's Music Box](https://www.wowhead.com/ptr-2/item=159631/lady-waycrests-music-box?bonus=4795&class=11&ilvl=489&spec=102)
-- [Corrupted Starlight](https://www.wowhead.com/ptr-2/item=137301/corrupted-starlight?bonus=4795&ilvl=489&spec=102)
-- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4800:4786:1527&ilvl=496&spec=102)
-- [Time-Thief's Gambit](https://www.wowhead.com/ptr-2/item=207579/time-thiefs-gambit?bonus=4795&class=11&ilvl=489&spec=102)
-- [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=102)
-- [Caged Horror](https://www.wowhead.com/ptr-2/item=136716/caged-horror?bonus=4795&ilvl=489&spec=102)
-
-### AoE
-
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
-- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=102)
-- [Coagulated Genesaur Blood](https://www.wowhead.com/ptr-2/item=110004/coagulated-genesaur-blood?bonus=4795&class=11&ilvl=489&spec=102)
-- [Sea Star](https://www.wowhead.com/ptr-2/item=133201/sea-star?bonus=4795&ilvl=489&spec=102)
-- [Time-Thief's Gambit](https://www.wowhead.com/ptr-2/item=207579/time-thiefs-gambit?bonus=4795&class=11&ilvl=489&spec=102)
-- [Nymue's Unraveling Spindle](https://www.wowhead.com/ptr-2/item=208615/nymues-unraveling-spindle?bonus=4795&class=11&ilvl=489&spec=102)
-- [Belor'relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller?bonus=4795&class=11&ilvl=489&spec=102) - Requires you to be in melee to do damage
-- [Augury of the Primal Flame](https://www.wowhead.com/ptr-2/item=208614/augury-of-the-primal-flame?bonus=4800:4786:1527&ilvl=496&spec=102)
-- [Vessel of Skittering Shadows](https://www.wowhead.com/ptr-2/item=159610/vessel-of-skittering-shadows?bonus=4795&class=11&ilvl=489&spec=102)
-- [Oakheart's Gnarled Root](https://www.wowhead.com/ptr-2/item=137306/oakhearts-gnarled-root?bonus=4795&ilvl=489&spec=102)
-- [Lady Waycrest's Music Box](https://www.wowhead.com/ptr-2/item=159631/lady-waycrests-music-box?bonus=4795&class=11&ilvl=489&spec=102)
-- [Corrupted Starlight](https://www.wowhead.com/ptr-2/item=137301/corrupted-starlight?bonus=4795&ilvl=489&spec=102)
-- [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul?bonus=4795&ilvl=489&spec=102)
-- [Caged Horror](https://www.wowhead.com/ptr-2/item=136716/caged-horror?bonus=4795&ilvl=489&spec=102)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
+- [Belor'Relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller)
+- [Ominous Chromatic Essence](https://www.wowhead.com/ptr-2/item=203729/ominous-chromatic-essence)
 
 
 
