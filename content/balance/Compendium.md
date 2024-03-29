@@ -2,8 +2,8 @@
 date: '2023-05-09'
 authors: ["Chicken, Jundarer, Dsune (Oi)"]
 published: true
-patch: "10.2.7"
-title: Balance Druid 10.2.7 Compendium
+patch: "10.2.6"
+title: Balance Druid 10.2.6 Compendium
 showOnFrontpage: true
 description: "Everything you need to know about Balance Druid"
 showInRecent: true
