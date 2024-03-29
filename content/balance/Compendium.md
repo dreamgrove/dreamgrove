@@ -2,8 +2,8 @@
 date: '2023-05-09'
 authors: ["Chicken, Jundarer, Dsune (Oi)"]
 published: true
-patch: "10.2"
-title: Balance Druid 10.2 Compendium
+patch: "10.2.7"
+title: Balance Druid 10.2.7 Compendium
 showOnFrontpage: true
 description: "Everything you need to know about Balance Druid"
 showInRecent: true
@@ -61,33 +61,34 @@ sidebarContents:  |
 #### {{< spell 394412 "2-piece" >}}:
 > {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} increase the damage of your next {{< spell 190984 "Wrath" >}} or {{< spell 194153 "Starfire" >}} by 30%, stacking up to 3 times
 
-~4% DPS increase from having no tier, 
+This is roughly a 4% DPS increase from having no tier.
 
-This buff has no gameplay implications and you can treat it as completely passive.
+You can treat this buff either as a passive or try stacking it to 3 before using a generator, as per usual pooling for movement and getting starlord up has higher prio.
 
 #### {{< spell 394414 "4-piece" >}}:
-> When you enter {{< spell 79577 "Eclipse" >}}, your next {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} cost 15 less Astral Power and deals 40¤ increased damage.
+> When you enter {{< spell 79577 "Eclipse" >}}, your next {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} cost 15 less Astral Power and deals 40% increased damage.
 
-~4.5% DPS increase from having no tier.
+This is roughly a 4.5% DPS increase from having no tier.
 
-This buff gives you a reduced cost spender every time you enter {{< spell 79577 "Eclipse" >}}. Buff is also granted when activating {{< spell 393960 "Pulsar" >}} or pressing {{< spell 194223 "CA" >}}/{{< spell 102560 "Incarnation" >}}
+The buff gives you a reduced cost on your next spender every time you enter {{< spell 79577 "Eclipse" >}}. Buff is also applied when activating {{< spell 393960 "Pulsar" >}} or pressing {{< spell 194223 "CA" >}}/{{< spell 102560 "Incarnation" >}}
 
 Total DPS from set: ~8.6%
 
-Tier sim (current ilvl ~489): [https://www.raidbots.com/simbot/report/tdwsS2j8MJjAvYJYRofqg1]
+Tier sim (current ilvl ~489): https://www.raidbots.com/simbot/report/tdwsS2j8MJjAvYJYRofqg1
 
 ### Antique Bronze Bullion
-Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under the name Antique Bronze Bullion. You will acquire this currency gradually from playing the game and they will allow you to buy "special" items from any of the 3 Dragonflight raids.
+Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under the name Antique Bronze Bullion. You will acquire this currency gradually from playing the game and it will allow you to buy "special" items from any of the 3 Dragonflight raids.
 
 Before making any decisions on what you should spend this currency on, you should always sim your character using Droptimizer or Top Gear functions on [Raidbots](https://raidbots.com) 
 
 Here are items you should potentially spend the Antique Bronze Bullion on
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
 - [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
+- [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
+- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
 - [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
 - [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
 - [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
 
 Feedback post for season 4 and War Within: https://eu.forums.blizzard.com/en/wow/t/feedback-and-wishlist-on-balance-druid-for-season-4-and-war-within/501907
 
@@ -108,7 +109,7 @@ Feedback post for season 4 and War Within: https://eu.forums.blizzard.com/en/wow
 - Cast {{< spell 202347 "Stellar Flare" >}}.
 - Cast {{< spell 194153 "Starfire" >}} if {{< spell 202347 "Stellar Flare" >}} is not talented.
 
-You can precast from max range 3.5 seconds before a boss is pulled, when {{< spell 424248 "Dreamstate(T31 2pc)" >}} is not active. If it is active, you have to wait until 2.5 seconds on the pull timer to start casting. Alternatively, you can cast 3 {{< spell 190984 "Wrath" >}}s + 1 {{< spell 194153 "Starfire" >}}, which allows you to start precasting at 3 seconds. The DPS difference between these methods is negligible.
+You can precast from max range 4 seconds before a boss is pulled.
 
 **What is a priority list?**
 
@@ -122,7 +123,6 @@ When reading the priority lists below, you should not think of these as steps to
 
 **Select which talents you have talented to filter the priority list:**
 
-{{< checkbox id="T31 2P" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}<br>
 {{< checkbox id="Warrior of Elune" spell=202425 checked=true radio="Warrior of Elune" >}}Warrior of Elune{{< /checkbox >}}
 {{< checkbox id="Force of Nature" spell=205636 radio="Warrior of Elune" >}}Force of Nature{{< /checkbox >}}</br>
 {{< checkbox id="Stellar Flare" spell=202347 >}}Stellar Flare{{< /checkbox >}}</br>
@@ -138,15 +138,11 @@ When reading the priority lists below, you should not think of these as steps to
 **Note: While not explicitly mentioned in the priority list, if you find yourself outside of eclipse and are about to cap astral power, it's better to spend it to prevent further capping before entering eclipse.**
 - Keep up {{< spell 8921 "Moonfire" >}} and {{< spell 93402 "Sunfire" >}}, refresh within pandemic (30% of base duration shown in the tooltip).
 - {{<cbtext id="Stellar Flare" >}}Keep up {{< spell 202347 "Stellar Flare" >}} and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.{{</cbtext>}}
-- {{<cbtext id="T31 2P">}}Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
-- {{<cbtext id="T31 2P">}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "Celestial Alignment" >}} /{{< spell 102560 "Incarnation" >}} if you're not in {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Convoke the Spirits">}}Use {{< spell 391528 "Convoke the Spirits" >}} when below 40 AP, {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} will last for more than 4 seconds or your next {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} window is more than 30s away and your Eclipse will last for more than 4s.{{</cbtext>}}
-- {{<cbtext id="T31 2P" negate="true">}}Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions is true:{{</cbtext>}}
-{{<cbtext id="T31 2P" negate="true">}}
-- You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
-- The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
-{{</cbtext>}}
+- Use {{< spell 190984 "Wrath" >}} to enter Lunar Eclipse if one of the following conditions is true:
+    - You have 520 or more stacks of {{< spell 393961 "Pulsar" >}}
+    - The cooldown of {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} is less than 5 seconds.
 - {{<cbtext id="Warrior of Elune">}}Use {{< spell 202425 "Warrior of Elune" >}} if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse.
 - {{<cbtext id="Astral Communion">}}Use {{< spell 400636 "Astral Communion" >}} if you will not overcap on AP.{{</cbtext>}}
@@ -177,7 +173,6 @@ When reading the priority lists below, you should not think of these as steps to
 
 **Select which talents you have talented to filter the priority list:**
 
-{{< checkbox id="T31 2P-AoE" spell=424248 checked=true >}}T31 2P{{< /checkbox >}}<br>
 {{< checkbox id="Warrior of Elune-AoE" spell=202425 radio="Force of Nature" >}}Warrior of Elune{{< /checkbox >}}
 {{< checkbox id="Force of Nature-AoE" spell=205636 radio="Force of Nature" >}}Force of Nature{{< /checkbox >}}<br>
 {{< checkbox id="Stellar Flare-AoE" spell=202347 >}}Stellar Flare{{< /checkbox >}}<br>
@@ -203,8 +198,6 @@ When reading the priority lists below, you should not think of these as steps to
 {{</cbtext>}}
 - {{<cbtext id="Cancelaura-AoE">}}Use your macro to cancel {{< spell 202345 "Starlord" >}} as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.{{</cbtext>}}
 - Use {{< spell 191034 "Starfall" >}} if you would overcap Astral Power with your next cast.
-- {{<cbtext id="T31 2P-AoE" >}}Use {{< spell 194153 "Starfire" >}} if you're in Lunar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
-- {{<cbtext id="T31 2P-AoE" >}}Use {{< spell 190984 "Wrath" >}} if you're in Solar Eclipse, {{< spell 424248 "Dreamstate" >}} is up and you're about to use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}.{{</cbtext>}}
 - Use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} if you are not in {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} already.
 - {{<cbtext id="Warrior of Elune-AoE">}}Use {{< spell 202425 "Warrior of Elune" >}} if available.{{</cbtext>}}
 - Use {{< spell 194153 "Starfire" >}} to enter Solar Eclipse if you are fighting 2 targets.
@@ -250,8 +243,6 @@ When reading the priority lists below, you should not think of these as steps to
  
  </div>
 
- Before casting {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} you should make sure to spend your stacks of {{< spell 424248 "Dreamstate" >}}.
- 
  - On 1-2 targets, enter Solar Eclipse and cast  {{< spell 190984 "Wrath" >}}.
  - On 3 or more targets, enter Lunar Eclipse and cast {{< spell 194153 "Starfire" >}}.
  - On 1-3 targets inside {{< spell 194223 "CA" >}}/{{< spell 102560 "Inc" >}} cast {{< spell 190984 "Wrath" >}}
@@ -288,7 +279,7 @@ The goal for stacking it to these values is to refresh buffs like {{< spell 3940
 
 The other value to keep in mind is **560** {{< spell 393961 "Pulsar" >}}, it's a bit worse than 240-360 but still represents a gain.
 
-With this value you would begin the encounter with the standard opener; however, instead of using {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, proc your pulsar and use your trinket and potion. When pulsar drops off, spend your {{< spell 424248 "Dreamstate" >}} stacks and then use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
+With this value you would begin the encounter with the standard opener; however, instead of using {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, proc your pulsar and use your trinket and potion. When pulsar drops off use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
 
 This will mostly be relevant during farm periods when you can one-shot a boss.
 
@@ -315,37 +306,26 @@ Use {{< spell 157228 "Owlkin Frenzy" >}} procs to enter Solar Eclipse, inside Lu
 </div>
 
 
-### Gnarlroot
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
-
-### Volcoross, Larodar, Nymue, Smolderon, Igira(if you don't need spear damage)
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENxBChWSLJRENAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
-</div>
-
-You can also play [this build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkIJlENJJgWSLJRQDgCAE?bgcolor=000000) if you so prefer.
-<br>With better gear the difference between them is negligible.
-
-<div style="text-align: center;">
-
-### Igira(if you need spear damage)
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTyBCkWSLJRQDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
-
-### Council of Dreams
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
-
-
-### Tindral
-<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDkIJlENJHIQaJtkEBNAKAQA?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
-
-
-### Fyrakk
+### Single Target
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 
+### Single Target with Pad
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQkWSLJRQDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+### Single Target with spread add spawn
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+### Single Target with damage amp
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSLRTyBChSSLJERDgCAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+### Council Fight
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
 </div>
+
 <br>
 <div style="text-align: center;">
 <div id="mythic+">
-	
 
 ## [Mythic+](#mythic+)
 
@@ -354,6 +334,9 @@ You can also play [this build](https://www.raidbots.com/simbot/render/talents/BY
 
 ### Balanced build
 <iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
+
+### Weaver build
+<iframe src="https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJUAoAAB?bgcolor=000000&width=700&level=70&mini=&hideHeader=true&locale=en_US" width="710" height="450" frameborder="0" style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></iframe>
 </div>  
 
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. {{< spell 274281 "New Moon" >}} and {{< spell 211545 "Fury of Elune" >}} can be used interchangeably.
@@ -370,7 +353,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 <br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB?bgcolor=000000)
 <br>[AoE focused build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSyBgWSLSkQDgCAE?bgcolor=000000)
 
-<br>[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
+[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 <br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 
 - {{<spell 377842 "Ursine Vigor">}}, {{<spell 377847 "Well-Honed Instincts">}} and {{<spell 288826 "Improved Stampeding Roar">}} are the major competing talents. {{<spell 377842 "Ursine Vigor">}} should be taken if you need it to survive certain abilities. {{<spell 377847 "Well-Honed Instincts">}} is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. {{<spell 288826 "Improved Stampeding Roar">}} is extremely useful in indoor dungeons and in spiteful weeks.
@@ -562,8 +545,8 @@ If you double-checked your rotation and still feel like you're underperforming y
 ### I've seen a lot of people running build X instead of Y in Mythic+, is X better?
 This season there are many viable builds and in the end it, once the necessary talents are taken, it just comes down to personal preference. One notable example is the choice between {{< spell 202770 "Fury Of Elune" >}} and {{< spell 274281 "New Moon" >}}: the former performs slightly better in AOE scenarios, while the latter is slightly better in ST, so people will usually pick the one they're most comfortable with. Feel free to use any of the builds mentioned in the Talents section.
 
-### How do I track T31 4p?
-The tooltip of Eclipse updates dynamically to reflect the stacks, but our rotation doesn't change based on it so there's no need to track it. However if you still want to track it you can use the [following WeakAura](https://wago.io/BoomkinTierSet)
+### How do I track our tierset?
+You can use the [following WeakAura](https://wago.io/BoomkinTierSet)
 
 ### How can I proc {{< spell 393956 "Waning Twilight" >}} without mushrooms or flare?
 With {{< spell 394058 "Astral Smolder" >}}
@@ -659,7 +642,7 @@ If you want to engage in this entirely optional method without incurring a dps l
 # [7. Sims:](#sims)
 
 </div>
-
+<div style="display:none">
 [Embells 1T](https://www.dreamgrove.gg/balance/sims/embells_1T_10.2.html)
 <br>[Embells 6T](https://www.dreamgrove.gg/balance/sims/embells_6T_10.2.html)
 
@@ -683,6 +666,7 @@ If you want to engage in this entirely optional method without incurring a dps l
 
 [Item strings for simming](https://www.dreamgrove.gg/balance/sims/items.txt)
 <br>[Sample T31 Profile](https://www.dreamgrove.gg/balance/sims/T31_profile.txt)
+</div>
 
 [Current APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
 
