@@ -82,10 +82,10 @@ Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under th
 Before making any decisions on what you should spend this currency on, you should always sim your character using Droptimizer or Top Gear functions on [Raidbots](https://raidbots.com) 
 
 Here are items you should potentially spend the Antique Bronze Bullion on
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
 - [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
-- [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
+- [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
 - [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
 - [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
 - [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
@@ -263,25 +263,6 @@ Use the charges to enter Solar Eclipse or as a movement GCD in {{< spell 194223 
 If Warrior of Elune is falling off during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} and you still have a charge to spend, you can {{< spell 194153 "Starfire" >}} at 2+ targets.
 
 Warrior of Elune can also be used during {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} /{{< spell 48518 "Lunar Eclipse" >}} when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on Starsurges.
-
-
-<br><div id="prestack">
-
-## [Prestacking Pulsar](#prestack)
-
-</div>
-
-{{< spell 393961 "Pulsar" >}} can be pre-stacked before pulling a boss by spending Astral Power on trash as the buff does not reset when an encounter starts. **This represents a gain of ~1%.**
-
-The optimal value for pre-stacking pulsar is somewhere between **240-360** pulsar, the variation comes from the amount of {{< spell 383197 "Orbit Breaker" >}} stacks you have as that will vary the amount of Astral Power you gain.
-
-The goal for stacking it to these values is to refresh buffs like {{< spell 394048 "BoAT" >}} and {{< spell 343647 "Solstice" >}} after they've dropped off.
-
-The other value to keep in mind is **560** {{< spell 393961 "Pulsar" >}}, it's a bit worse than 240-360 but still represents a gain.
-
-With this value you would begin the encounter with the standard opener; however, instead of using {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}}, proc your pulsar and use your trinket and potion. When pulsar drops off use {{< spell 194223 "CA" >}} /{{< spell 102560 "Inc" >}} to have some of the benefit from {{< spell 393958 "Nature's Grace" >}} inside of it.
-
-This will mostly be relevant during farm periods when you can one-shot a boss.
 
 <br><div id="owlkin-frenzy">
 
@@ -510,10 +491,11 @@ This will depend on your current gear situtation, below are some guidelines:
 Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. 
 
 
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
-- [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
+- [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
+- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
 - [Belor'Relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr-2/item=203729/ominous-chromatic-essence)
 
@@ -541,7 +523,7 @@ Balance Druid's gear mostly doesn't change from ST to AOE so simming "5m 1t patc
 If you double-checked your rotation and still feel like you're underperforming you could just be playing low keys, together with classes that have very bursty damage profiles. When playing a Balance Druid, mobs need to live long enough for you to actually start doing damage, which is something that doesn't really happen in keys lower than 20+ and especially on Tyrannical. Consider focusing a bit more on ST or trying another spec, but take into account the fact that DPS isn't everything in a key.
 
 ### I've seen a lot of people running build X instead of Y in Mythic+, is X better?
-This season there are many viable builds and in the end it, once the necessary talents are taken, it just comes down to personal preference. One notable example is the choice between {{< spell 202770 "Fury Of Elune" >}} and {{< spell 274281 "New Moon" >}}: the former performs slightly better in AOE scenarios, while the latter is slightly better in ST, so people will usually pick the one they're most comfortable with. Feel free to use any of the builds mentioned in the Talents section.
+This season there are many viable builds and in the end, once the necessary talents are taken, it just comes down to personal preference. One notable example is the choice between {{< spell 202770 "Fury Of Elune" >}} and {{< spell 274281 "New Moon" >}}: the former performs slightly better in AOE scenarios, while the latter is slightly better in ST, so people will usually pick the one they're most comfortable with. Feel free to use any of the builds mentioned in the Talents section.
 
 ### How do I track our tierset?
 You can use the [following WeakAura](https://wago.io/BoomkinTierSet)
