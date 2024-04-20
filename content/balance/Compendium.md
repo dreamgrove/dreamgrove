@@ -17,7 +17,6 @@ sidebarContents:  |
   <br>[AoE priority](#aoe)
   <br>[Eclipses and Fillers](#fillers)
   <br>[How to Use Warrior of Elune](#woe)
-  <br>[Prestacking Pulsar](#prestack)
   <br>[How to use Owlkin Frenzy procs](#owlkin-frenzy)
  
   **[3. Talents](#talents)**
@@ -482,7 +481,7 @@ This is entirely up to you, below are some guidelines to make your choice more i
 
 ### What slot should i craft in?
 This will depend on your current gear situtation, below are some guidelines:
-- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 489 itemlevel.
+- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 525 itemlevel.
 - Cloaks are another slot with the lowest stat budget.
 - Belts have a higher stat budget, but they can have a socket.
 - Ring if you've chosen to craft https://www.wowhead.com/item=193946/blue-silken-lining is another good slot, comes with a socket.
@@ -501,7 +500,7 @@ Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order 
 - [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=489&spec=102)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=525&spec=102)
 - [Belor'Relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr-2/item=203729/ominous-chromatic-essence)
 
