@@ -558,7 +558,7 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 
 </div>
 
-In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/ptr-2/item=213089/antique-bronze-bullion) for any piece of raid loot. Below includes a rough priority list for both Raid and M+, however make sure to customise to your own needs, for example if you natty loot any of these items, or if you want to go for a more hybrid-mix between Raid and M+.
+In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/ptr-2/item=213089/antique-bronze-bullion) for any piece of raid loot. Below includes a rough priority list for both Raid and M+, however make sure to customise to your own needs, for example if you natty loot any of these items, or if you want to go for a more hybrid-mix between Raid and M+. Video on Dinar and trinkets [here](https://www.youtube.com/watch?v=lcnwAexuJG8)
 
 **Raid Priority**
 
@@ -589,9 +589,9 @@ In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/pt
 
 **Updated for Season 4**
 
-For M+ you should always use 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) on either Wrist, Neck, or Back.
+For M+: you should always use 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) on either Wrist, Neck, or Back.
 
-For Raid you should also craft 2x BSL, but try prioritise Wrist or Neck so you still have the option for [Sark Cloak](https://www.wowhead.com/item=204465/voice-of-the-silent-star?bonus=4795&class=11&ilvl=535&spec=103) later on.
+For Raid: you should also craft 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining), but try prioritise Wrist or Neck so you still have the option for [Sark Cloak](https://www.wowhead.com/item=204465/voice-of-the-silent-star?bonus=4795&class=11&ilvl=535&spec=103) later on.
 
 If your uptime is poor on certain fights (e.g. Council of Dreams or Fyrakk), [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is the alternative raid embellishment that you can craft on Wrist or Back.
 
@@ -621,9 +621,6 @@ The most optimal 'long-term' slots to craft [Blue Silken Lining](https://www.wow
 
 1. Craft Neck or Bracers with [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining).
 2. Craft whatever slot you didn't craft on next, or alternatively can craft on Back if your focus is M+.
-
-
-Note: For those who have already crafted [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) as initially recommended, you can simply recraft this piece to use [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) instead. No additional sparks needed.
 
 <div id="trinkets">
 
