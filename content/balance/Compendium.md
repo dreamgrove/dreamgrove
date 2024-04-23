@@ -80,6 +80,8 @@ Total DPS from set: ~8.6%
 
 Tier sim (current ilvl ~489): https://www.raidbots.com/simbot/report/tdwsS2j8MJjAvYJYRofqg1
 
+**Due to our new tier set being weaker than the S3 one, wearing 2+2p or replacing the old one with 4p from Normal will, most likely, result in a DPS loss. Make sure to sim your character before swapping any set items**
+
 ### Antique Bronze Bullion
 
 Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under the name Antique Bronze Bullion. You will acquire this currency gradually from playing the game and it will allow you to buy "special" items from any of the 3 Dragonflight raids.
