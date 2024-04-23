@@ -32,6 +32,7 @@ sidebarContents:  |
   **[5. Gearing](#gearing)**
   <br>[Stats](#stats)
   <br>[Enchants](#enchants)
+  <br>[Dinar/Bullion](#dinar)
   <br>[Embellishments](#embellishments)
   <br>[Tier Set](#tier-set)
   <br>[Trinkets](#trinkets)
@@ -420,6 +421,7 @@ The builds listed here are only a sample, and can be customised significantly. V
 
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
 <br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
+<br>[TFB>Dire Fixation funnel](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOURURRUVFVIVVBQCFU)
 <br>[Max Ethical Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRRUVFVIVVBQCFU)
 <br>[MDI Pad](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRVEVFVYRVBQCFU)
 <br>[Incarn](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFE)
@@ -441,6 +443,8 @@ Options for the first two gates:
 - {{< spell 391700 "Double-Clawed Rake" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you want more single target, TFB is a great option e.g. for Tyrannical weeks, while also providing some funnel value on trash.
 - {{< spell 391785 "Tear Open Wounds" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: if your goal is purely to funnel, you can change to RF and spend your finishers on Bite while only using {{< spell 285381 "Primal Wrath" >}} to maintain {{< spell 1079 "Rip" >}} in AoE. This is somewhat more advanced with more consideration for energy and combo points, and requires you to break 'primal wrath spam' muscle memory.
 - {{< spell 48484 "Infected Wounds" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you are not running Double-clawed Rake, Taste for Blood is a great option that offers a prominent single target gain over Infected Wounds this patch as a result of the {{< spell 391881 "Apex" >}} changes. Even moreso if running {{< spell 391528  "Convoke the Spirits" >}}.
+- {{< spell 384665 "Taste for Blood" >}} -> {{< spell 417710 "Dire Fixation" >}}: both are great single-target options, you can run Taste for Blood for more funnel (via Apex) and burst with Convoke.
+- {{< spell 417710 "Dire Fixation" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: you can runn both Tear Open Wounds and Rampant Ferocity together if it is an AOE heavy dungeon, but single-target will be lower without Dire Fixation or Taste for Blood.
 
 Options for the final gate:
 - {{< spell 319439 "Bloodtalons" >}} vs {{< spell 391972 "Lion's Strength" >}}: in 10.2, BT gains a lot of quality of life when changing to the new tier-set, in addition to the {{< spell 391881 "Apex" >}} change with procs slowing down slightly in AoE. This combined with the 10.1 change of 3 charges makes BT feel smooth to play in season 3 M+. However, Lion's Strength is still a competitive option and only a small DPS loss while allowing you to focus on other things. If you are fairly new to Feral, you should start with Lion's Strength and swap to Bloodtalons when you have learnt everything else.
@@ -539,7 +543,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 </div>
 
-Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-wafting-devotion) or [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6) Sim these two options to see which is best for your character.
+Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-wafting-devotion)
 <br>Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6)
 <br>Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) or [Homebound Speed](https://www.wowhead.com/item=199948/enchant-cloak-homebound-speed) 
 <br>Belt - [Shadowed Belt Clasp](https://www.wowhead.com/item=205039/shadowed-belt-clasp)
@@ -548,18 +552,52 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 <br>Boots - [Watchers Loam](https://www.wowhead.com/item=199936/enchant-boots-watchers-loam) or [Plainsrunner's Breeze](https://www.wowhead.com/ptr-2/item=199934/enchant-boots-plainsrunners-breeze)
 <br>Ring -  You should always sim your own character to determine what enchant to use in this slot. Depending on your gear, any of the four secondaries can be best for you.
 
+<div id="dinar">
 
-<div id="embellishments">
+## [S4 Dinar/Bullion:](#dinar)
+
+</div>
+
+In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/ptr-2/item=213089/antique-bronze-bullion) for any piece of raid loot. Below includes a rough priority list for both Raid and M+, however make sure to customise to your own needs, for example if you natty loot any of these items, or if you want to go for a more hybrid-mix between Raid and M+. Video on Dinar and trinkets [here](https://www.youtube.com/watch?v=lcnwAexuJG8)
+
+**Raid Priority**
+
+- [Manic Grieftorch](https://www.wowhead.com/item=194308/manic-grieftorch?bonus=4795&class=11&ilvl=528&spec=103) This should be the highest value trinket in raid, especially early on when clearing due to deaths in your raid resetting the trinket. Send on CD but don't use while Smoldering Frenzy is up. Use Ashes first on pull when running both.
+- [Djaarun](https://www.wowhead.com/item=202569/djaruun-pillar-of-the-elder-flame?bonus=4795&class=11&ilvl=528&spec=103) BIS Weapon. Macro to Berserk, and use on CD (it's off the GCD so just press Berserk again).
+- [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) BIS trinket for Convoke.
+- [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty?bonus=4795:1808&ilvl=535&spec=103) Higher item level than other rings and provides a very powerful absorb for you that procs from Fire damage like our tier set.
+- [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen?bonus=4795:1808&ilvl=528&spec=103) Another free proc from our tierset.
+- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) The most reliable stat stick, big RNG swings though but can always be favourable. 
+- [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star?bonus=4795&class=11&ilvl=535&spec=103) Sark Cloak should be low priority for when you have the raids on farm, as it reduces your health (do not use in M+ either!).
+
+
+**M+**
+- [Djaarun](https://www.wowhead.com/item=202569/djaruun-pillar-of-the-elder-flame?bonus=4795&class=11&ilvl=528&spec=103) BIS Weapon. Macro to Berserk, and use on CD (it's off the GCD so just press Berserk again).
+- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) The most reliable stat stick, big RNG swings though but can always be favourable. Great for AOE or if you don't want to run Grieftorch.
+- [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty?bonus=4795:1808&ilvl=535&spec=103) Higher item level than other rings and provides a very powerful absorb for you that procs from Fire damage like our tier set.
+- [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen?bonus=4795:1808&ilvl=528&spec=103) Another free proc from our tierset.
+- [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) (assuming you are running Convoke).
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=4795&class=11&ilvl=528&spec=103) Equal to Neltharion's, but requires a tank and healer in your raid to also equip.
+- [Manic Grieftorch](https://www.wowhead.com/item=194308/manic-grieftorch?bonus=4795&class=11&ilvl=528&spec=103) Great priority/single-target damage, S-tier if group has lots of deaths. Don't use while Smoldering Frenzy is up. Use Ashes first with CDs when running both.
+- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=535&spec=103) Defensive option for high-keys, small sim lose but less in reality as it lets your healer do more DPS and minimises your time sitting in Bear etc.
+
+<br><div id="embellishments">
 
 ## [Embellishments](#embellishments)
 
 </div>
 
-**Updated December 21, 2023**
+**Updated for Season 4**
 
-[Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) is generally the best embellishment for Feral Druid in season 3 (however see below for information on [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat)), with BSL granting you {{< spell 77493 "Mastery" >}} while your health is above 90%. This is particularly valuable as you can generally expect very high uptime for your first set of cooldowns, where you will usually not be taking much damage at all. {{< spell 391528  "Nature's Vigil" >}}, {{< spell 391528  "Convoke the Spirits" >}} and any Leech you might have will provide additional healing during your cooldowns, further facilitating [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime. Lastly, free {{<spell 8936 "Regrowth's">}} from {{< spell 16974 "Predatory Swiftness" >}} procs can be leveraged when you're low on energy/out of range. Don't overthink or stress [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) uptime too much however, as doing so will likely lead to a dps loss.
+For M+: you should always use 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) on either Wrist, Neck, or Back.
 
-[BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is particularly notable in multi-target/AOE or when being buffed by Augmentation Evokers compared to damage-proc embelishments such as [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) or [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps). And due to uptime generally being higher during cds, [BSL](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is often the burstier option as well.
+For Raid: you should also craft 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining), but try prioritise Wrist or Neck so you still have the option for [Sark Cloak](https://www.wowhead.com/item=204465/voice-of-the-silent-star?bonus=4795&class=11&ilvl=535&spec=103) later on.
+
+If your uptime is poor on certain fights (e.g. Council of Dreams or Fyrakk), [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is the alternative raid embellishment that you can craft on Wrist or Back.
+
+Never use any embellishment besides these two in Season 4. 
+
+Do NOT craft on Rings, as we will be able to access [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty?bonus=4795:1808&ilvl=535&spec=103) and [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen?bonus=4795:1808&ilvl=528&spec=103).
 
 See: BSL analysis for Feral: https://youtu.be/JLnEaOndrsw?t=135
 
@@ -569,58 +607,46 @@ This can be tricky, as sims simply offer a flat uptime, where in reality it's up
 
 For M+ you might want to do anywhere from 65-75% (a lot of trash pulls it can hover around 60-80%, while for some bosses it can sit as high as 90%~). Even 65-75% may still be underselling BSL if you can ensure higher uptime during CDs etc, but ultimately you should check details or your logs to find an uptime that is most useful to you and the keys you are doing.
 
-For raid, 45-60%, depending on boss. You might have 40% overall uptime on a fight, but that doesn't show the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example.
+For raid, 40-60%, depending on boss. You might have 40% overall uptime on a fight, but that doesn't show the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example.
 
 **Alternative Options**
 
-For M+, [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) is quite far ahead of other embellishments; use two of these. However in high keys [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) may end up being competitive due to the damage you take scaling.
+For raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a perfectly fine alternative in raid if your BSL uptime is below 40%. 
 
-For raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a perfectly fine alternative, though in the current tier, its generally slightly worse while offering less burst and a small amount of self-damage. 
-
-Once you have all of your gems, [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) is a good alternative for raid and is particularly good for the last 3 bosses on Mythic (Smolderon, Tindral, Fyrakk). It is unlikely to beat BSL on a lot of earlier fights however, and may also be worse on farm or as bosses slowly get nerfed. 
+We do not use Elemental Lariat or Toxic Boots in Season 4.
 
 **Crafting order**
 
-The most optimal 'long-term' slots to craft [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) on are: Ring, Cloak, Bracers and Neck. This is because crafted gear is 3 item levels below that of a fully upgraded Mythic track piece, and these slots have fewer stats compared to other options. However you can craft it on any slot, and may wish to do so if its the largest dps upgrade. Generally it's better to craft for short-term gain, as you can always recraft things later when you have more Sparks than you need. 
+The most optimal 'long-term' slots to craft [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) on are: Neck, Bracers, or Back. This is because crafted gear is 3 item levels below that of a fully upgraded Mythic track piece, and these slots have fewer stats compared to other options.  
 
-1. Craft a Ring with [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) due to the free socket.
-2. Sim yourself to see which slot offers the biggest upgrade for a second [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) embellishment. If you refuse to sim, put it on Cloak, Bracers, or Neck (assuming you have already crafted a Ring) - whichever is the lowest item level for you.
-3. Sim yourself for all non-embellished crafts on [Raidbots](https://www.raidbots.com/simbot/droptimizer). A second Ring may be particularly notable early on due to rings coming with a socket already applied.
-4. If you have full gems already and can no longer obtain item-level upgrades on other pieces via crafting, you can craft an [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) for niche uses.
+1. Craft Neck or Bracers with [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining).
+2. Craft whatever slot you didn't craft on next, or alternatively can craft on Back if your focus is M+.
 
-Note: For those who have already crafted [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) as initially recommended, you can simply recraft this piece to use [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) instead. No additional sparks needed.
 <div id="trinkets">
 
 ## [Trinkets](#trinkets)
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. Acquire [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) or [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) asap.
+There are a LOT of trinkets in season 4, below includes only the very best. Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets. 
 ### To use in Raid
 
-- [Ashes of the Embersoul](https://www.wowhead.com/ptr-2/item=207167/ashes-of-the-embersoul) Easier to use than [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) for similar-to-slightly worse dps assuming you can reasonably delay picking up 3rd orb.
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) Grab first 2 orbs asap, and delay last orb as long as possible.
-- [Cataclysmic Signet Brand](https://www.wowhead.com/ptr-2/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=489&spec=103) Favours longer fights (5m+) and gets punished with downtime or dying.
-- [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
-- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
-- [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
-- [Ember of Nullification](https://www.wowhead.com/item=136978/ember-of-nullification?bonus=9843)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows) Niche good with L/R single-target build and Bees/Incarn on Council depending on kill time.
+- [Manic Grieftorch](https://www.wowhead.com/item=194308/manic-grieftorch?bonus=4795&class=11&ilvl=528&spec=103) This should be the highest value trinket in raid, especially early on when clearing due to deaths in your raid resetting the trinket.
+- [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) BIS (assuming you are running Convoke) but Griefy T is a better first-pick.
+- [Cataclysmic Signet Brand](https://www.wowhead.com/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=528&spec=103) Very good on longer fights (5m+), but weak on short fights and punishing if you die.
+- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) The most reliable stat stick, big RNG swings though but can always be favourable. Great for AOE or if you don't want to run Grieftorch.
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=4795&class=11&ilvl=528&spec=103) Equal to Neltharion's, but requires a tank and healer in your raid to also equip.
+
   
 ### To use in Dungeons
 
-- [Pip's Emerald Friendship Badge](https://www.wowhead.com/ptr-2/item=207168/pips-emerald-friendship-badge?bonus=4795&class=11&ilvl=489&spec=103)
-- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=496&spec=103) Yes, this is a tank trinket. Yes, it still very respectable damage. At current tuning this is a must-have for any sort of pushing due to its stellar defensive benefits whilst losing little damage.
-- [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) While this is generally the strongest option in a vacuum, its droppable if you can't reliably delay 3rd orb for a few seconds at least.
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows). Great for Bees and Incarn builds, easier to manage than Witherbark's, pair with every 2nd Berserk/Incarn.
-- [Porcelain Crab](https://www.wowhead.com/ptr-2/item=133192/porcelain-crab?bonus=4795&class=11&ilvl=489&spec=103)
-- [Ember of Nullification](https://www.wowhead.com/item=136978/ember-of-nullification?bonus=9843)
-- [Accelerating Sandglass](https://www.wowhead.com/ptr-2/item=207566/accelerating-sandglass?bonus=4795&class=11&ilvl=489&spec=103)
+- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) The most reliable stat stick, big RNG swings though but can always be favourable. 
+- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=4795&class=11&ilvl=528&spec=103) Equal to Neltharion's, but requires a tank and healer in your group to also equip. Can run double stat stick for M+.
+- [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) Extremely good with Convoke builds and highest value in terms of burst.
+- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=535&spec=103) Defensive option for high-keys, small sim lose but less in reality as it lets your healer do more DPS and minimises your time sitting in Bear etc.
+- [Storm-Eater's Boon](https://www.wowhead.com/item=194302/storm-eaters-boon?bonus=4795&class=11&ilvl=528&spec=103) This is very niche and may only be playable in a few keys, if at all, but does big damage if you can pull it off (keeps you stationary for its duration, meaning you can't avoid any swirlies or mobs being moved away). You can always Bearform and/or Survival Instincts with this if needed too.
+- [Manic Grieftorch](https://www.wowhead.com/item=194308/manic-grieftorch?bonus=4795&class=11&ilvl=528&spec=103) Good for priority burst damage which will be valuable for many bosses and trash packs. If your group has lots of deaths, has the potential be giga-bis.
 
-<br>
-
-When simming [Witherbark's Branch](https://www.wowhead.com/ptr-2/item=109999/witherbarks-branch?bonus=4795&class=11&ilvl=489&spec=103) you may want to set the orb pickup intervals. To do so, scroll down to the Custom APL box on your sim page, and paste in dragonflight.witherbarks_branch_timing=1/1/x where x is how long in seconds you delay grabbing the 3rd orb after the 2nd one.
-By default this is set to pick up first 2 orbs asap, and delay last for 7 seconds after the second (1/1/7). Optimal would be something like 0/0/9.99 but thats not practical. Feel free to set this to whatever makes sense to you.
 
 <br>
 <div id="misc">
@@ -746,6 +772,8 @@ The following links lead to various feral druid weakaura packs. These contain ev
 - [by Cheesey](https://wago.io/18VspFroU)  
 - [variant by Cheesey](https://wago.io/H3yjY1gs1)  
 - [by Guiltyas](https://wago.io/OaJQX6khW)
+- [by Oi/Dsune](https://wago.io/OiFeral)
+- [by enthh](https://wago.io/bfgPasy27) requires his [addon](https://www.curseforge.com/wow/addons/feralsnapshots)
 
 ### **Commonly used WeakAuras and Addons**
 [Feral Bleed Power by Oi](https://wago.io/qYnbZzlmP)
