@@ -2,9 +2,9 @@
 date: '2023-11-07'
 authors: ["Crazymeow, Cheesey"]
 published: true
-patch: "10.2"
+patch: "10.2.6"
 description: Everything you need to know about Feral Druid
-title: Feral Druid 10.2 Compendium
+title: Feral Druid Season 4 Compendium
 showOnFrontpage: false
 sidebarTitle: "Quicklinks"
 sidebarContents:  |
@@ -53,37 +53,9 @@ sidebarContents:  |
 
 </div>
 
-## 10.2 News
-### Tier Set
-> 2p: {{< spell 274838 "Feral Frenzy" >}} grants {{< spell 422751 "Smoldering Frenzy" >}}, increasing all damage you deal by 20% for 8 seconds.
+## Season 4 News
 
-> 4p: {{< spell 274838 "Feral Frenzy's" >}} cooldown is reduced by 15 seconds. During {{< spell 422751 "Smoldering Frenzy" >}}, enemies burn for 10% of damage you deal as Fire over 10 seconds.
-
-This ends up being roughly a ~13% dps gain over no tier. Due to the item level increase going into next tier, its very possible that you'll want to ditch 10.1 4 piece and go with 2+2. You should sim this when you get to that point though. You'll want to get to 10.2 4 piece asap of course. 
-
-Also, its not the cast of {{< spell 274838 "Feral Frenzy" >}} that grants {{< spell 422751 "Smoldering Frenzy" >}}, it is the direct damage hits (aka the 5 ticks that give you combo points). This means when you use {{< spell 274838 "Feral Frenzy" >}}, it refreshes back to 8 seconds 5 times over roughly a second, resulting in the buff lasting just under 9s in total. {{< spell 274838 "Feral Frenzy's" >}} casted by {{< spell 391528  "Convoke" >}} also proc this effect.
-
-### List of changes
-
-**{{< spell 391881 "Apex Predator's Craving" >}}:**
-{{< spell 1079 "Rip" >}} ticks have a 7.2% (was 4%) chance in single target to make next bite free. This chance now gets reduced as {{< spell 1079 "Ripped" >}} targets increases. This comes out to be a gain below 4 targets, and a loss at 4+ targets.
-
-**{{< spell 421442 "Ashamane's Guidance (Incarnation)" >}} is reworked:**
-During {{< spell 102543 "Incarnation" >}} and for 30 seconds afterwards, {{< spell 1079 "Rip" >}} and {{< spell 1822 "Rake" >}} cause affected enemies to take 3% increased damage from your abilities. This stacks, coming out to a little over 6% damage taken debuff. This is just strictly worse than {{< spell 390902 "Carnivorous Instincts" >}} and will never be played at its current tuning.
-
-**{{< spell 421432 "Saber Jaws" >}} has been added to replace Cat's Curiosity:** 
-- Rank 1: When you spend extra Energy on {{< spell 22568 "Ferocious Bite" >}}, the extra damage is increased by 40%.<br>
-- Rank 2: When you spend extra Energy on {{< spell 22568 "Ferocious Bite" >}}, the extra damage is increased by 80%.
-
-Since this only buffs the extra damage portion of bite, at max energy the total damage of {{< spell 22568 "Ferocious Bite" >}} is increased by 20/40%. This does NOT work on free bites from {{< spell 391528  "Convoke" >}} or {{< spell 391881 "Apex Predator's Craving" >}}.
-
-**{{< spell 393771 "Relentless Predator" >}}:**
-Instead of reducing the cost of {{< spell 22568 "Ferocious Bite" >}} by 20%, this now reduces its cost by 10%. This effectively kills the talent in all situations. I am expecting this node to be replaced in a future patch.
-
-**{{< spell 391709 "Rampant Ferocity" >}}:**
-This got buffed by 10%. Nothing changes about when you select this talent, as the aformentioned {{< spell 391881 "Apex Predator's Craving" >}} nerf at larger target counts hurt the effectiveness of Rampant Ferocity.
-
-**{{< spell 29166 "Innervate" >}}:** is now castable in Cat Form. Rejoice.
+Nothing is changing for Feral Druids in terms of gameplay or talents, but the Dinar system is returning in season 4 with the new currency [Antique Bronze Bullion](https://www.wowhead.com/ptr-2/item=213089/antique-bronze-bullion). For more information on how to spend these, go [here](#dinar)
 
 
 
@@ -341,9 +313,9 @@ The way this section is written is very formulaic and has the same structure as 
 ## [Raid Talents](#raidtalents)
 </div>
 
-### T31 4pc Talent Builds (Amirdrassil tier-set)
+### T31 4pc Talent Builds (Amirdrassil tier-set, still applies in season 4)
 
-[T31 Standard Convoke Single-Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVBAZRUVFVKVRAQCFQ)
+[T31 Standard Convoke Single-Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
 <br>[One-minute Burst](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBRNVFAVRUVFVoVRECBU)
 <br>[Raid ST-AoE hybrid](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVRAVRUVFVYRVBQCFU)
 <br>[Raid Cleave](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
@@ -351,7 +323,59 @@ The way this section is written is very formulaic and has the same structure as 
 <br>[Alternative L/R BrS Single Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFViURBQCBQ) (slightly worse).
 - Note: generally best to play 'Standard Convoke' for single-target, assuming you have an on-use trinket like Ashes or Witherbark's. They sim equally, however Convoke offers more burst, and pulls ahead with Augmentation buffing you. Kill timers can also play a factor; if you are unsure, stick to Convoke. If you do play L/R, Infected Wounds can optionally be swapped for Lunar Inspiration with T31 as well.
 
-### Raid Boss Talents (intended for Mythic, but many will still apply to Heroic or Normal).
+
+### Vault of the Incarnates Raid Boss Talents
+[Eranog](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROVRQRRUVFVIVVBQCFU)
+- You can alternatively play a more single-target oriented build, or if your guild one-phases the boss can drop {{< spell 391174 "Berserk: Heart of the Lion" >}} for another talent point, and most likely 1 minute convoke with that.
+
+[The Primal Council](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROURURVQVFVYRVBQCFE)
+- Full sustain AoE. Can consider going Unbridled Swarm as well.
+
+[Terros](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- Very straightforward, full single target. Can sim your expected fight timer to see if any of the other single target builds are better for your guild.
+
+[Sennarth](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- Adds die too fast to get any meaningful cleave so just go full single target.
+
+[Kurog Grimtotem](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROURURVQVFVIVVBQCFU)
+- Mostly 2t cleave
+
+[Dathea - Boss Duty](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- This assumes you stay on boss the entire time. If you are on adds instead, then play the Add Duty build below.
+
+[Dathea - Add Duty](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQZCFVUUxRQQCQQOURURVQVFVYRVBQCFU)
+
+[Broodkeeper Diurna](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROURURVQVFVYRVBQCFU)
+- If adds end up dying too fast on Fated then you can drop double-clawed rake and/or rampant ferocity for more p3 boss burn.
+
+[Raszageth](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQZCFVUUxRQQCQQOUVQRRUVFVIRVFQCBV)
+
+### Aberrus Raid Boss Talents
+[Kazzara](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- Can sim your expected kill timer to see if 1 minute convoke would do more damage for you, but this is just a single target fight.
+
+[Amalgamation Chamber](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+
+[Forgotten Experiments](https://www.wowhead.com/talent-calc/druid/feral/DAQAUEEBCYpCFBUEwhFBAOVRQRRUVFVIUVRQCFQ)
+- Can make a case for alternate builds, feel free to 'experiment' around with things.
+
+[Assault of the Zaqali](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- This assumes zerg strat, if you dont do zerk strat then you probably should be doing zerg strat but play full aoe.
+
+[Rashok](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+
+[Zskarn](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+- Primal wrath is bait. Golems should be handled by other specs. If you absolutely need some aoe, dont do anything more than talenting primal wrath.
+
+[Magmorax](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
+
+[Echo of Neltharion](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROVVARRUVFVIVVBQCBV)
+- Can consider dropping primal wrath altogether, and can go 2 points into saber jaws, removing points from circle and rip and tear.
+
+[Sarkareth](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROVVARRUVFVIVVBQCBV)
+- Can also go 2 points into saber jaws, removing points from circle and rip and tear.
+
+### Amirdrassil Raid Boss Talents
 [Gnarlroot](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVVARRUVFVoRVAQCBV)
 - If you need more AOE, swap {{< spell 390902 "Carnivorous Instincts" >}} to {{< spell 400320 "Circle" >}}. You can also play full single-target if adds don't feel like an issue.
 
@@ -359,7 +383,7 @@ The way this section is written is very formulaic and has the same structure as 
 - Play full single-target, the spears will die too fast for Primal Wrath to be worth it in most cases. Frenzied Regen can be useful for clearing the healing absorb.
 
 [Volcoross](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCBREExhQQBRNVFAVRUVFVoVRECBU)
-- If your kill time is above 4.20~ or so, swap to the 2 minute 'standrad convoke single-target' build listed above.
+- If your kill time is above 4.20~ or so, swap to the 2 minute 'standard convoke single-target' build listed above.
 
 [Council of Dreams](https://www.wowhead.com/talent-calc/druid/feral/DARBUUEFCYpCBREAxBQQBEOVRURRQVFVIUVRQCFQ)
 - You can play Lunar Inspiration, which is technically better, albeit more difficult to play. With Dire Fixation you use Shred as a last priority filler.
@@ -421,8 +445,8 @@ The builds listed here are only a sample, and can be customised significantly. V
 
 [Standard M+](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFU)
 <br>[More Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVIVVBQCFU)
-<br>[TFB>Dire Fixation funnel](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOURURRUVFVIVVBQCFU)
-<br>[Max Ethical Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRRUVFVIVVBQCFU)
+<br>[More Priority Damage](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOURURRUVFVIVVBQCFU)
+<br>[Max Dungeon Single-Target](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRRUVFVIVVBQCFU)
 <br>[MDI Pad](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRQRVEVFVYRVBQCFU)
 <br>[Incarn](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCQJCFVUExhUQBBOVRURRQVFVYRVBQCFE)
 <br>[Beekeeping](https://www.wowhead.com/ptr-2/talent-calc/druid/feral/DARAUEEBCYJCFVUExRQQBBOVRURRQVFVIUVRQCFQ)
@@ -444,7 +468,7 @@ Options for the first two gates:
 - {{< spell 391785 "Tear Open Wounds" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: if your goal is purely to funnel, you can change to RF and spend your finishers on Bite while only using {{< spell 285381 "Primal Wrath" >}} to maintain {{< spell 1079 "Rip" >}} in AoE. This is somewhat more advanced with more consideration for energy and combo points, and requires you to break 'primal wrath spam' muscle memory.
 - {{< spell 48484 "Infected Wounds" >}} -> {{< spell 384665 "Taste for Blood" >}}: if you are not running Double-clawed Rake, Taste for Blood is a great option that offers a prominent single target gain over Infected Wounds this patch as a result of the {{< spell 391881 "Apex" >}} changes. Even moreso if running {{< spell 391528  "Convoke the Spirits" >}}.
 - {{< spell 384665 "Taste for Blood" >}} -> {{< spell 417710 "Dire Fixation" >}}: both are great single-target options, you can run Taste for Blood for more funnel (via Apex) and burst with Convoke.
-- {{< spell 417710 "Dire Fixation" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: you can runn both Tear Open Wounds and Rampant Ferocity together if it is an AOE heavy dungeon, but single-target will be lower without Dire Fixation or Taste for Blood.
+- {{< spell 417710 "Dire Fixation" >}} -> {{< spell 391709 "Rampant Ferocity" >}}: you can run both Tear Open Wounds and Rampant Ferocity together if it is an AOE heavy dungeon, but single-target will be lower without Dire Fixation or Taste for Blood.
 
 Options for the final gate:
 - {{< spell 319439 "Bloodtalons" >}} vs {{< spell 391972 "Lion's Strength" >}}: in 10.2, BT gains a lot of quality of life when changing to the new tier-set, in addition to the {{< spell 391881 "Apex" >}} change with procs slowing down slightly in AoE. This combined with the 10.1 change of 3 charges makes BT feel smooth to play in season 3 M+. However, Lion's Strength is still a competitive option and only a small DPS loss while allowing you to focus on other things. If you are fairly new to Feral, you should start with Lion's Strength and swap to Bloodtalons when you have learnt everything else.
@@ -512,7 +536,6 @@ Phials:
 
 - [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying.
 - [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Recommended phial if the fight has high damage intake or you are at risk of dying.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Generally similar dps throughput as Tepid Versatility, but less defensive benefits. 
 
 <br><div id="runes">
 
@@ -558,7 +581,7 @@ Weapon - [Wafting Devotion](https://www.wowhead.com/item=200058/enchant-weapon-w
 
 </div>
 
-In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/ptr-2/item=213089/antique-bronze-bullion) for any piece of raid loot. Below includes a rough priority list for both Raid and M+, however make sure to customise to your own needs, for example if you natty loot any of these items, or if you want to go for a more hybrid-mix between Raid and M+. Video on Dinar and trinkets [here](https://www.youtube.com/watch?v=lcnwAexuJG8)
+In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/ptr-2/item=213089/antique-bronze-bullion) for any piece of raid loot. Below includes a rough priority list for both Raid and M+, however make sure to customise to your own needs, for example if you loot any of these items, or if you want to go for a more hybrid-mix between Raid and M+. Video on Dinar and trinkets [here](https://www.youtube.com/watch?v=lcnwAexuJG8)
 
 **Raid Priority**
 
@@ -591,13 +614,11 @@ In Season 4 you can exchange [Antique Bronze Bullion](https://www.wowhead.com/pt
 
 For M+: you should always use 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining) (BSL) on either Wrist, Neck, or Back.
 
-For Raid: you should also craft 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining), but try prioritise Wrist or Neck so you still have the option for [Sark Cloak](https://www.wowhead.com/item=204465/voice-of-the-silent-star?bonus=4795&class=11&ilvl=535&spec=103) later on.
+For Raid: you should also craft 2x [Blue Silken Lining](https://www.wowhead.com/ptr-2/item=193946/blue-silken-lining), but prioritise Wrist or Neck so you still have the option for [Sark Cloak](https://www.wowhead.com/item=204465/voice-of-the-silent-star?bonus=4795&class=11&ilvl=535&spec=103) later on.
 
 If your uptime is poor on certain fights (e.g. Council of Dreams or Fyrakk), [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is the alternative raid embellishment that you can craft on Wrist or Back.
 
-Never use any embellishment besides these two in Season 4. 
-
-Do NOT craft on Rings, as we will be able to access [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty?bonus=4795:1808&ilvl=535&spec=103) and [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen?bonus=4795:1808&ilvl=528&spec=103).
+Never use any embellishment besides these two in Season 4 and do NOT craft on rings, as we have access to [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty?bonus=4795:1808&ilvl=535&spec=103) and [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen?bonus=4795:1808&ilvl=528&spec=103)
 
 See: BSL analysis for Feral: https://youtu.be/JLnEaOndrsw?t=135
 
@@ -609,11 +630,6 @@ For M+ you might want to do anywhere from 65-75% (a lot of trash pulls it can ho
 
 For raid, 40-60%, depending on boss. You might have 40% overall uptime on a fight, but that doesn't show the full picture if you had 80% uptime during CDs - therefore I would recommend adding to whatever overall uptime you are getting for simming purposes. A 45% uptime fight I might choose to sim at 55% for example.
 
-**Alternative Options**
-
-For raid: [Shadowflame-Tempered Armor Patch](https://www.wowhead.com/ptr-2/item=204710/shadowflame-tempered-armor-patch) is a perfectly fine alternative in raid if your BSL uptime is below 40%. 
-
-We do not use Elemental Lariat or Toxic Boots in Season 4.
 
 **Crafting order**
 
@@ -632,18 +648,18 @@ There are a LOT of trinkets in season 4, below includes only the very best. Plea
 ### To use in Raid
 
 - [Manic Grieftorch](https://www.wowhead.com/item=194308/manic-grieftorch?bonus=4795&class=11&ilvl=528&spec=103) This should be the highest value trinket in raid, especially early on when clearing due to deaths in your raid resetting the trinket.
-- [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) BIS (assuming you are running Convoke) but Griefy T is a better first-pick.
+- [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) BIS (assuming you are running Convoke) but Grieftorch is a better first-pick.
 - [Cataclysmic Signet Brand](https://www.wowhead.com/item=207166/cataclysmic-signet-brand?bonus=4795&class=11&ilvl=528&spec=103) Very good on longer fights (5m+), but weak on short fights and punishing if you die.
-- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) The most reliable stat stick, big RNG swings though but can always be favourable. Great for AOE or if you don't want to run Grieftorch.
+- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) Stat-stick that just works, though a bit RNG. Great for AOE or if you don't want to run Grieftorch.
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=4795&class=11&ilvl=528&spec=103) Equal to Neltharion's, but requires a tank and healer in your raid to also equip.
 
   
 ### To use in Dungeons
 
-- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) The most reliable stat stick, big RNG swings though but can always be favourable. 
+- [Neltharion's Call to Sufffering](https://www.wowhead.com/item=204211/neltharions-call-to-suffering?bonus=4795&ilvl=535&spec=103) Stat-stick that just works, though a bit RNG. 
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon?bonus=4795&class=11&ilvl=528&spec=103) Equal to Neltharion's, but requires a tank and healer in your group to also equip. Can run double stat stick for M+.
 - [Ashes of the Embersoul](https://www.wowhead.com/item=207167/ashes-of-the-embersoul?bonus=6652:7981:9576:1520:8767&ilvl=528&spec=103) Extremely good with Convoke builds and highest value in terms of burst.
-- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=535&spec=103) Defensive option for high-keys, small sim lose but less in reality as it lets your healer do more DPS and minimises your time sitting in Bear etc.
+- [Fyrakk's Tainted Rageheart](https://www.wowhead.com/item=207174/fyrakks-tainted-rageheart?bonus=4795&class=11&ilvl=535&spec=103) Defensive option for high-keys, lose thereotical damage but lets your healer do more DPS and minimises your time sitting in Bear etc.
 - [Storm-Eater's Boon](https://www.wowhead.com/item=194302/storm-eaters-boon?bonus=4795&class=11&ilvl=528&spec=103) This is very niche and may only be playable in a few keys, if at all, but does big damage if you can pull it off (keeps you stationary for its duration, meaning you can't avoid any swirlies or mobs being moved away). You can always Bearform and/or Survival Instincts with this if needed too.
 - [Manic Grieftorch](https://www.wowhead.com/item=194308/manic-grieftorch?bonus=4795&class=11&ilvl=528&spec=103) Good for priority burst damage which will be valuable for many bosses and trash packs. If your group has lots of deaths, has the potential be giga-bis.
 
@@ -689,15 +705,6 @@ Pandemic is a mechanic that most damage-over-time spells have. When you cast a d
 
 </div>
 None of these macros are required by any means, just a few that can be useful for some people.
-
-**Regrowth in Cat Form macro:**
-
-```
-#showtooltip Regrowth
-/run if InCombatLockdown() then SetCVar("autounshift",0) end
-/cast [@mouseover, help] [help] [@player] Regrowth
-/console autounshift 1
-```
 
 **Macro combining Lunar Inspiration {{< spell 155625 "Moonfire" >}} and {{< spell 391528  "Convoke" >}} to one bind:**
 
