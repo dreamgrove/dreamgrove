@@ -348,7 +348,7 @@ The way this section is written is very formulaic and has the same structure as 
 [Broodkeeper Diurna](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYZCFRUExRQQBROURURVQVFVYRVBQCFU)
 - If adds end up dying too fast on Fated then you can drop double-clawed rake and/or rampant ferocity for more p3 boss burn.
 
-[Raszageth](https://www.wowhead.com/talent-calc/druid/feral/BcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAACJt0kgkkkUSDplkkIJAAAAAAaAkkAAkkkESiUyBol4AAAAAAAIBUAA)
+[Raszageth](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFVEExhQQBBOVRQRRUVFVIRVFQCFU)
 
 ### Aberrus Raid Boss Talents
 [Kazzara](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
