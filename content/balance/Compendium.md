@@ -348,9 +348,6 @@ The below picture showcases which talents are "mandatory" and which talents you 
 {{< figure src="/balance/talent-tree-mythic+.png" >}}
 
 <b>Secondary builds:</b>
-[Single target focused build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkIikkAkESiUgWiDkkkUSCJHIEaSLCJRDgCAE?bgcolor=000000)
-<br>[Balanced build](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB?bgcolor=000000)
-<br>[AoE focused build](https://www.raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDEJJlkQSyBgWSLSkQDgCAE?bgcolor=000000)
 
 [Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
 <br>[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
@@ -374,7 +371,7 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 </div>
 
-[Elemental Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power)
+https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power
 <br> Use this for every situation. Potion of Elemental Power is only minorly worse if you want to save gold.
 
 <br><div id="food">
@@ -383,10 +380,10 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 </div>
 
-[Grand Banquet of the Kalu'ak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Intellect buff
-<br>[Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
-<br>[Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides Haste + Mastery which can be more dps than the Intellect food.
-<br>[Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides Crit + Mastery which can be more dps than the Intellect food.
+https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak: Intellect buff
+<br>https://www.wowhead.com/item=204072/deviously-deviled-eggs: Same buff as Banquet but with a cheaper individual price.
+<br>https://www.wowhead.com/item=197784/sizzling-seafood-medley: Provides Haste + Mastery which can be more dps than the Intellect food.
+<br>https://www.wowhead.com/item=197786/thousandbone-tongueslicer: Provides Crit + Mastery which can be more dps than the Intellect food.
 
 <br>The secondary food can be better as you acquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
 
@@ -400,9 +397,9 @@ The below picture showcases which talents are "mandatory" and which talents you 
 
 Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
 
-- [Iced Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying. Do not use this in progress fights unless you really need the damage.
-- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): : Generally similar dps throughput as Tepid Versatility, but less defensive benefits.
+- https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage: Default phial unless the fight has too high damage intake or you are at risk of dying. Do not use this in progress fights unless you really need the damage.
+- https://www.wowhead.com/item=191341/phial-of-tepid-versatility: Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
+- https://www.wowhead.com/item=191359/phial-of-elemental-chaos: : Generally similar dps throughput as Tepid Versatility, but less defensive benefits.
 
 <br><div id="runes">
 
@@ -410,8 +407,8 @@ Damage wise, with 100% uptime on all of the Phials and not counting in the downs
 
 </div>
 
-Our main rune is [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune): Mastery rune<br>
-In some rare cases [Sophic Rune](https://www.wowhead.com/item=194820/howling-rune) might sim slightly better.
+Our main rune is https://www.wowhead.com/item=204973/hissing-rune: Mastery rune<br>
+In some cases either https://www.wowhead.com/item=194820/howling-rune or https://www.wowhead.com/item=194823/buzzing-rune might sim slightly better.
 
 <br><div id="gearing">
 
@@ -452,7 +449,7 @@ Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-so
 ### For embellishments there are a couple of options this season:
 
 - https://www.wowhead.com/item=193452/toxic-thorn-footwraps with https://www.wowhead.com/item=193555/toxified-armor-patch.
-  - Provides great single target damage and has an early spike since only the boots needs to be crafted at 486 for the effect to scale to that itemlevel.
+  - Provides great single target damage and has an early spike since only the boots needs to be crafted at 525 for the effect to scale to that itemlevel.
   - Locks you in to boots as your crafted items with predfefined stats.
 - https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch
   - Good single target damage.
