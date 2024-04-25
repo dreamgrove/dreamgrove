@@ -1,0 +1,44 @@
+name: Update APL Bear TWW
+
+on:
+  push:
+    paths:
+      - 'static/sims/bear/guardian_tww.txt'
+
+defaults:
+  run:
+    working-directory: static/sims
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+      - name: checkout simc
+        uses: actions/checkout@v4
+        with:
+          repository: simulationcraft/simc
+          ref: 'thewarwithin'
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: './static/sims/simc'
+      - name: generate APL
+        run: |
+          python generate_apl.py --spec=bear --tww "./simc"
+      - name: commit APL
+        run: |
+          git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
+          echo >> commit_msg
+          echo >> commit_msg
+          echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
+          git config --global user.name $(git log -1 --format=%aN)
+          git config --global user.email $(git log -1 --format=%aE)
+          cd simc
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes to apl"
+          else
+            git add .
+            git commit -F ../commit_msg
+            git push
+          fi
