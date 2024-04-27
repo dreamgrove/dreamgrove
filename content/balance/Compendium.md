@@ -78,7 +78,7 @@ The buff gives you a reduced cost on your next spender every time you enter {{< 
 
 Total DPS from set: ~8.6%
 
-Tier sim (current ilvl ~489): https://www.raidbots.com/simbot/report/tdwsS2j8MJjAvYJYRofqg1
+(Tier sim current ilvl ~489:)[https://www.raidbots.com/simbot/report/4Es5i2x5SJuHYpAc2yiMAb]
 
 **Due to our new tier set being weaker than the S3 one, wearing 2+2p or replacing the old one with 4p from Normal will, most likely, result in a DPS loss. Make sure to sim your character before swapping any set items**
 
