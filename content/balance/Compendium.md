@@ -494,16 +494,18 @@ This will depend on your current gear situtation, below are some guidelines:
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
+Doing Dawn of the Infinite on hard mode without any deaths in the group can reward you with a [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows) on the myth track, allowing it to be upgraded to 528. This is very likely going to be your best on-use trinket for every scenario if you manage to get a hold of it.
 
 [Umbreiskul's Fractured Heart](https://www.wowhead.com/item=193639/umbrelskuls-fractured-heart) is simming better than a lot of other options at lower ilvl. It may be worth getting this trinket early on in the season, but it loses value on higher ilvls. 
 
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
+
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
-- [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=525&spec=102)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
+- [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus)
 - [Tome of Unstable Power](https://www.wowhead.com/item=193628/tome-of-unstable-power)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=525&spec=102)
 - [Belor'Relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr-2/item=203729/ominous-chromatic-essence)
 
