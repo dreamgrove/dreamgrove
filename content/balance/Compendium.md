@@ -62,25 +62,23 @@ If you're a visual learner there is also a [video explanation of the compendium]
 
 #### {{< spell 394412 "2-piece" >}}:
 
-> {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} increase the damage of your next {{< spell 190984 "Wrath" >}} or {{< spell 194153 "Starfire" >}} by 30%, stacking up to 3 times
+> {{< spell 78674 "Starsurge" >}} and {{< spell 191034 "Starfall" >}} increase the damage of your next {{< spell 190984 "Wrath" >}} or {{< spell 194153 "Starfire" >}} by 50%, stacking up to 3 times
 
-This is roughly a 4% DPS increase from having no tier.
+This is roughly a 6.2% DPS increase from having no tier.
 
 You can treat this buff either as a passive or try stacking it to 3 before using a generator, as per usual pooling for movement and getting starlord up has higher prio.
 
 #### {{< spell 394414 "4-piece" >}}:
 
-> When you enter {{< spell 79577 "Eclipse" >}}, your next {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} cost 15 less Astral Power and deals 40% increased damage.
+> When you enter {{< spell 79577 "Eclipse" >}}, your next {{< spell 78674 "Starsurge" >}} or {{< spell 191034 "Starfall" >}} cost 30 less Astral Power and deals 60% increased damage.
 
-This is roughly a 4.5% DPS increase from having no tier.
+This is roughly a 7.8% DPS increase from having no tier.
 
 The buff gives you a reduced cost on your next spender every time you enter {{< spell 79577 "Eclipse" >}}. Buff is also applied when activating {{< spell 393960 "Pulsar" >}} or pressing {{< spell 194223 "CA" >}}/{{< spell 102560 "Incarnation" >}}
 
-Total DPS from set: ~8.6%
+Total DPS from set: ~14.5%
 
-[Tier sim current ilvl ~489](https://www.raidbots.com/simbot/report/4Es5i2x5SJuHYpAc2yiMAb)
-
-**Due to our new tier set being weaker than the S3 one, wearing 2+2p or replacing the old one with 4p from Normal will, most likely, result in a DPS loss. Make sure to sim your character before swapping any set items**
+[[Tier sim current ilvl ~489]](https://www.raidbots.com/simbot/report/unaGdB6opkuxGgR4pGLbQe)
 
 ### Antique Bronze Bullion
 
@@ -93,12 +91,11 @@ Here are items you should potentially spend the Antique Bronze Bullion on
 - [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
+- [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen)
 - [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
 - [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
 - [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
 - [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
-
-Feedback post for season 4 and War Within: https://eu.forums.blizzard.com/en/wow/t/feedback-and-wishlist-on-balance-druid-for-season-4-and-war-within/501907
 
 <br><div id="rotation">
 
@@ -494,16 +491,21 @@ This will depend on your current gear situtation, below are some guidelines:
 
 </div>
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
-
 [Umbreiskul's Fractured Heart](https://www.wowhead.com/item=193639/umbrelskuls-fractured-heart) is simming better than a lot of other options at lower ilvl. It may be worth getting this trinket early on in the season, but it loses value on higher ilvls. 
 
+Doing [Dawn of the Infinite](https://www.wowhead.com/zone=14514/dawn-of-the-infinite) on hard mode without your group dying can reward you with a [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows) at myth track, making it possible to upgrade it to 528. This makes the trinket perform very good in both ST and AoE and should be your ideal on-use trinket if you manage to get your hands on it.
+
+[Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) is simming very good when paired with [Seal of Diurna's Chosen ](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen) for ST. These items are not that good seperately, but together they are outperforming other options by around 0.5%
+
+Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
+
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
+- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=525&spec=102)
+- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow)
 - [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
 - [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus)
 - [Tome of Unstable Power](https://www.wowhead.com/item=193628/tome-of-unstable-power)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=525&spec=102)
 - [Belor'Relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller)
 - [Ominous Chromatic Essence](https://www.wowhead.com/ptr-2/item=203729/ominous-chromatic-essence)
 
