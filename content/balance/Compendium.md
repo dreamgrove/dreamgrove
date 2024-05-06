@@ -78,9 +78,7 @@ The buff gives you a reduced cost on your next spender every time you enter {{< 
 
 Total DPS from set: ~14.5%
 
-[[Tier sim current ilvl ~489]](https://www.raidbots.com/simbot/report/ornmuf2S9g2mZ8hNiEZXVh)
-
-**Due to our new tier set being weaker than the S3 one, wearing 2+2p or replacing the old one with 4p from Normal will, most likely, result in a DPS loss. Make sure to sim your character before swapping any set items**
+[[Tier sim current ilvl ~489]](https://www.raidbots.com/simbot/report/unaGdB6opkuxGgR4pGLbQe)
 
 ### Antique Bronze Bullion
 
