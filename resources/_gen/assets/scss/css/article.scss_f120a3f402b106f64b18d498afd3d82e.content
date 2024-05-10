@@ -176,6 +176,20 @@ a.tooltip {
   -moz-user-select: none;
   -ms-user-select: none; }
 
+.custom-checkbox {
+  display: inline-block;
+  /* This makes the element inline, but allows block-level styling */ }
+
+.custom-checkbox input[type="checkbox"] {
+  margin-right: 5px;
+  /* Space between the checkbox and the label */ }
+
+.custom-checkbox label {
+  vertical-align: middle;
+  /* Ensures the label aligns with the checkbox */
+  cursor: pointer;
+  /* Changes the cursor to a pointer when hovering over the label */ }
+
 @media screen and (max-width: 700px) {
   .talent-spell {
     font-size: 1.5rem;

@@ -1,23 +1,11 @@
-{{/*
-Determines the rendering method based on the content type.
-*/}}
-{{ if eq (.Get "type") "appendListItem" }}
-<!-- Add a list item to an existing list -->
-    <div data-tag="{{ .Get "id" }}-cb" class="cbtext-list-item" style="display: none;">
-        {{ .Page.RenderString .Inner | markdownify }}
-    </div>
-{{ else if eq (.Get "type") "addList" }}
-<!-- Create a new list or sub-list -->
-    <div data-tag="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Page.RenderString .Inner | markdownify }}
-    </div>
-{{ else if eq (.Get "type") "appendToList" }}
-    <!-- Add a list item after a sublist -->
-    <div data-tag="{{ .Get "id" }}-cb" class="cbtext-append-to-list" style="display: none;">
-        {{ .Page.RenderString .Inner | markdownify }}
+{{ $id := .Get "id" }}
+{{ $negate := .Get "negate" }}
+{{ $content := .Inner | markdownify }}
+
+{{ if strings.Contains $content "<li>" }}
+    <div data-tag="{{ $id }}-cb" class="cbtext-content" data-negate="{{ $negate }}" style="list-style-type: none" >
+        {{ $content }}
     </div>
 {{ else }}
-    <div data-tag="{{ .Get "id" }}-cb" style="display: none;">
-        {{ .Page.RenderString .Inner | markdownify }}
-    </div>
+    <span class="cbtext-placeholder" negate="{{ $negate }}" data-tag="{{ $id }}-cb" data-content="{{ $content | htmlUnescape }}"></span>
 {{ end }}
