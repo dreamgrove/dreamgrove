@@ -1,4 +1,4 @@
-# Executed before combat begins. Accepts non-harmful actions only.
+# Executed beforecombat begins. Accepts non-harmful actions only.
 actions.precombat=flask
 actions.precombat+=/food
 actions.precombat+=/augmentation
