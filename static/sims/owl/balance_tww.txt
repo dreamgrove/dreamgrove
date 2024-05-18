@@ -1,5 +1,6 @@
 actions.precombat=moonkin_form
-actions=use_items/auto_attack
+actions=use_items
+actions+=/auto_attack
 actions+=/incarnation
 actions+=/celestial_alignment
 actions+=/starfire,if=!talent.lunar_calling&!buff.eclipse_solar.up
