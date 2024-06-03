@@ -90,11 +90,13 @@ Here are items you should potentially spend the Antique Bronze Bullion on
 
 - [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
 - [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
+- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence?bonus=10884:4786:1582:10338&class=11&ilvl=528&spec=102)
 - [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
 - [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen)
 - [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
 - [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
 - [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
+- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow?bonus=10884:4786:1585:10338&class=11&ilvl=528&spec=102)
 - [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
 
 <br><div id="rotation">
