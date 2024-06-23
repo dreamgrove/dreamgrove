@@ -1,13 +1,12 @@
 name: Update APL TWW
 
 on:
-  workflow_dispatch:
-#  push:
-#    paths:
-#      - 'static/sims/owl/balance_tww.txt'
-#      - 'static/sims/cat/feral_tww.txt'
-#      - 'static/sims/bear/guardian_tww.txt'
-#      - 'static/sims/tree/restoration_tww.txt'
+  push:
+    paths:
+      - 'static/sims/owl/balance_tww.txt'
+      - 'static/sims/cat/feral_tww.txt'
+      - 'static/sims/bear/guardian_tww.txt'
+      - 'static/sims/tree/restoration_tww.txt'
 
 defaults:
   run:
@@ -17,14 +16,14 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.8'
-      - uses: actions/checkout@v4
       - name: checkout simc
         uses: actions/checkout@v4
         with:
-          repository: gastank/simc
+          repository: simulationcraft/simc
           ref: 'thewarwithin'
           token: ${{ secrets.API_TOKEN_GITHUB }}
           path: './static/sims/simc'

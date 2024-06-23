@@ -1,9 +1,12 @@
-name: Update APL Bear
+name: Update APL
 
 on:
   push:
     paths:
+      - 'static/sims/owl/balance.txt'
+      - 'static/sims/cat/feral.txt'
       - 'static/sims/bear/guardian.txt'
+      - 'static/sims/tree/restoration.txt'
 
 defaults:
   run:
@@ -13,10 +16,10 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.8'
-      - uses: actions/checkout@v3
       - name: checkout simc
         uses: actions/checkout@v3
         with:
@@ -25,15 +28,22 @@ jobs:
           path: './static/sims/simc'
       - name: generate APL
         run: |
+          python generate_apl.py --spec=owl "./simc"
+          python generate_apl.py --spec=cat "./simc"
           python generate_apl.py --spec=bear "./simc"
-      - name: commit APL
+          python generate_apl.py --spec=tree "./simc"
+      - name: setup commit
         run: |
+          echo "COMMIT_AUTHOR=$(git log -1 --format=%aN)" >> $GITHUB_ENV
+          echo "COMMIT_EMAIL=$(git log -1 --format=%aE)" >> $GITHUB_ENV
           git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
           echo >> commit_msg
           echo >> commit_msg
           echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
-          git config --global user.name $(git log -1 --format=%aN)
-          git config --global user.email $(git log -1 --format=%aE)
+      - name: commit APL
+        run: |
+          git config --global user.name ${{ env.COMMIT_AUTHOR }}
+          git config --global user.email ${{ env.COMMIT_EMAIL }}
           cd simc
           if [ -z "$(git status --porcelain)" ]; then
             echo "no changes to apl"
