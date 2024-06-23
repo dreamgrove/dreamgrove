@@ -43,8 +43,14 @@ jobs:
           echo >> commit_msg
           echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
       - name: commit APL
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: ${{ env.COMMIT_AUTHOR }}
-          author_email: ${{ env.COMMIT_EMAIL }}
-          commit: -F ../commit_msg
+        run: |
+          git config --global user.name ${{ env.COMMIT_AUTHOR }}
+          git config --global user.email ${{ env.COMMIT_EMAIL }}
+          cd simc
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes to apl"
+          else
+            git add .
+            git commit -F ../commit_msg
+            git push
+          fi
