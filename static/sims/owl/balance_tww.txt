@@ -3,6 +3,7 @@ actions=use_items
 actions+=/auto_attack
 actions+=/incarnation
 actions+=/celestial_alignment
+actions+=/warrior_of_elune
 actions+=/starfire,if=!talent.lunar_calling&!buff.eclipse_solar.up
 actions+=/moonfire,target_if=refreshable
 actions+=/sunfire,target_if=refreshable
@@ -15,7 +16,6 @@ actions+=/fury_of_elune
 actions+=/new_moon
 actions+=/half_moon
 actions+=/full_moon
-actions+=/warrior_of_elune
 actions+=/wild_mushroom
 actions+=/starfire,if=talent.lunar_calling
 actions+=/wrath
