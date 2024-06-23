@@ -1,12 +1,13 @@
 name: Update APL TWW
 
 on:
-  push:
-    paths:
-      - 'static/sims/owl/balance_tww.txt'
-      - 'static/sims/cat/feral_tww.txt'
-      - 'static/sims/bear/guardian_tww.txt'
-      - 'static/sims/tree/restoration_tww.txt'
+  workflow_dispatch:
+#  push:
+#    paths:
+#      - 'static/sims/owl/balance_tww.txt'
+#      - 'static/sims/cat/feral_tww.txt'
+#      - 'static/sims/bear/guardian_tww.txt'
+#      - 'static/sims/tree/restoration_tww.txt'
 
 defaults:
   run:
@@ -35,12 +36,15 @@ jobs:
           python generate_apl.py --spec=tree --tww "./simc"
       - name: setup commit
         run: |
-          echo "COMMIT_MSG=$(git log -1 --pretty=format:%B%ndreamgrove/Dreamgrove@%h)" >> $GITHUB_ENV
           echo "COMMIT_AUTHOR=$(git log -1 --format=%aN)" >> $GITHUB_ENV
           echo "COMMIT_EMAIL=$(git log -1 --format=%aE)" >> $GITHUB_ENV
+          git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
+          echo >> commit_msg
+          echo >> commit_msg
+          echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
       - name: commit APL
         uses: EndBug/add-and-commit@v9
         with:
           author_name: ${{ env.COMMIT_AUTHOR }}
           author_email: ${{ env.COMMIT_EMAIL }}
-          message: ${{ env.COMMIT_MSG }}
+          commit: -F ../commit_msg
