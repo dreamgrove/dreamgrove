@@ -1,9 +1,0 @@
-<h3 class="article-byline">
-  published
-  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-  by
-  {{ range $index, $author := .Params.authors }}
-    {{ if gt $index 0 }}, {{ end }}<span class="author">{{ . }}</span>
-  {{ end }}
-  {{ if .Section }} in {{ partial "post-spec.html" . }} {{ end }}
-</h3>
