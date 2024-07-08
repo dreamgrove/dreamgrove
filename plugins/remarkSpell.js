@@ -36,10 +36,15 @@ export default function remarkSpell() {
             name: 'name',
             value: spellName,
           })
+          attributes.push({
+            type: 'mdxJsxAttribute',
+            name: 'type',
+            value: 'spell',
+          })
 
           newNodes.push({
             type: 'mdxJsxFlowElement',
-            name: 'Spell',
+            name: 'Wowhead',
             attributes: attributes,
             children: [],
           })

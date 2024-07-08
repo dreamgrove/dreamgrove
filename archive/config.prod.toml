@@ -1,0 +1,4 @@
+baseURL = "https://www.dreamgrove.gg/"
+buildDrafts = "false"
+buildFuture = "false"
+enableRobotsTXT = "true"

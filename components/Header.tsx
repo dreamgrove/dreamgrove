@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 text-center dark:bg-[#282828] sm:py-8 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
+      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] sm:py-8  lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
     >
       <div className="xl:max-w-8xl flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 xl:px-0">
         <div className="z-10 flex items-center">

@@ -37,6 +37,7 @@ module.exports = {
           light: '#d57f43', // Optional: light variant
         },
         gray: colors.gray,
+        main: '#d57f43',
       },
       typography: ({ theme }) => ({
         DEFAULT: {
@@ -45,6 +46,7 @@ module.exports = {
               color: theme('colors.primary.500'),
               textUnderlineOffset: '4px',
               fontWeight: '500',
+              textDecorationThickness: '2px',
               '&:hover': {
                 color: `${theme('colors.primary.600')}`,
               },
@@ -67,7 +69,7 @@ module.exports = {
               flexWrap: 'wrap',
               alignItems: 'center',
               '@screen sm': {
-                marginLeft: '-2.6rem',
+                marginLeft: '-2.2rem',
               },
             },
             h2: {
