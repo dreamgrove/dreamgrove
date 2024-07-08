@@ -10,6 +10,7 @@ import styles from './Talents.module.css'
 
 export default function Talents({ name, talents, mimiron = false }) {
   const [isVisible, setIsVisible] = useState(false)
+  const [loaded, setLoaded] = useState(false)
   const [iframeWidth, setIframeWidth] = useState(700)
 
   const arrow = !isVisible ? <FaAngleDown /> : <FaAngleUp />
@@ -37,33 +38,26 @@ export default function Talents({ name, talents, mimiron = false }) {
     <div className="mb-4">
       <div
         onClick={() => setIsVisible((prev) => !prev)}
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          cursor: 'pointer',
-          height: 'auto',
-          borderBottom: '2px solid white', // White underline
-        }}
+        className="flex h-auto cursor-pointer items-center justify-between border-b-2 border-black dark:border-white"
       >
-        <h3 className="my-2" onClick={() => setIsVisible((prev) => !prev)}>
-          {name}
-        </h3>
+        <div className="my-2 ">{name}</div>
         {arrow}
       </div>
-      <div className={`${styles.container} ${isVisible ? styles.show : styles.hide}`}>
-        <iframe
-          title={name}
-          src={`https://${mimiron ? 'mimiron' : 'www'}.raidbots.com/simbot/render/talents/${talents}?bgcolor=000000&width=${iframeWidth * 0.99}&level=70&mini=&hideHeader=true&locale=en_US`}
-          width={iframeWidth}
-          height={iframeWidth * 0.64}
-          style={{
-            border: 'none',
-            borderRadius: '15px',
-            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.5)',
-            overflow: 'hidden',
-          }}
-        />
+      <div
+        className={`${styles.container} ${isVisible ? styles.show : styles.hide}`}
+        style={{ backgroundColor: 'black' }}
+      >
+        {isVisible && (
+          <iframe
+            title={name}
+            src={`https://${mimiron ? 'mimiron' : 'www'}.raidbots.com/simbot/render/talents/${talents}?bgcolor=000000&width=${iframeWidth * 0.99}&level=70&mini=&hideHeader=true&locale=en_US`}
+            width={iframeWidth}
+            height={iframeWidth * 0.64}
+            className="overflow-hidden rounded-sm border-none bg-black"
+            style={{ visibility: loaded ? 'visible' : 'hidden' }}
+            onLoad={() => setLoaded(true)}
+          />
+        )}
       </div>
     </div>
   )

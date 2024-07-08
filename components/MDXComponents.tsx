@@ -5,7 +5,7 @@ import type { MDXComponents } from 'mdx/types'
 import Image from './Image'
 import CustomLink from './Link'
 import TableWrapper from './TableWrapper'
-import Spell from './custom/Spell'
+import Wowhead from './custom/Wowhead'
 import Talents from './custom/Talents'
 import Checkbox from './custom/Checkbox'
 import HeroTalents from './custom/HeroTalents/HeroTalents'
@@ -51,7 +51,7 @@ export const components: MDXComponents = {
   pre: Pre,
   table: TableWrapper,
   BlogNewsletterForm,
-  Spell,
+  Wowhead,
   Talents,
   Checkbox,
   HeroTalents,

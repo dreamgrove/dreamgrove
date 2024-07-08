@@ -7,19 +7,22 @@ import styles from './Talents.module.css'
 import { FaAngleDown } from 'react-icons/fa'
 import { FaAngleUp } from 'react-icons/fa'
 
+import { allBlogs, Blog } from 'contentlayer/generated'
+
 interface Chapter {
   value: string
   depth: number
 }
 
-interface TocItemProps {
-  item: Chapter
-  activeSlug: string
-  inSidebar?: boolean
-}
-
-const TocItem = ({ item, activeSlug = '', inSidebar = false, toggleNav = () => {} }) => {
-  const isActive = activeSlug ? getIdFromUrl(item.url) === activeSlug : false
+const TocItem = ({
+  item,
+  activeSlug = '',
+  inSidebar = false,
+  toggleNav = () => {},
+  setActiveSlug = (target) => {},
+}) => {
+  const targetUrl = getIdFromUrl(item.url)
+  const isActive = activeSlug ? targetUrl === activeSlug : false
 
   if (inSidebar && toggleNav) {
     return (
@@ -30,22 +33,24 @@ const TocItem = ({ item, activeSlug = '', inSidebar = false, toggleNav = () => {
           marginTop: `${item.depth === 1 ? '12px ' : '5px'}`,
         }}
       >
-        <Link onClick={() => toggleNav()} href={item.url.replace(/-\d+$/, '')}>
+        <a onClick={() => toggleNav()} href={targetUrl}>
           {item.value}
-        </Link>
+        </a>
       </li>
     )
   }
 
   return (
     <li
-      className={`my-2 text-sm ${isActive ? 'text-xl font-bold text-orange-600 dark:text-orange-600/50' : 'text-gray-800 dark:text-gray-400'}`}
+      className={`my-2 text-sm ${isActive ? 'text-xl font-bold text-main' : 'text-gray-800 dark:text-gray-400'}`}
       style={{
         marginLeft: `${(item.depth - 1) * 25}px`,
         marginTop: `${item.depth === 1 ? '12px ' : '5px'}`,
       }}
     >
-      <Link href={item.url.replace(/-\d+$/, '')}>{item.value}</Link>
+      <a onClick={() => setActiveSlug(targetUrl)} href={targetUrl}>
+        {item.value}
+      </a>
     </li>
   )
 }
@@ -125,39 +130,60 @@ const renderCollapsibleItems = (items: Chapter[], toggleNav) => {
 }
 
 export default function TableOfContents({ chapters, inSidebar = false, toggleNav = () => {} }) {
-  const [activeSlug, setActiveSlug] = useState('')
+  const [activeSlug, setActiveSlug] = useState(getIdFromUrl(chapters[0].url))
+  const [scrollingDir, setScrollingDir] = useState(1)
+
+  const handleScroll = (lastScroll) => {
+    setScrollingDir(window.scrollY > lastScroll ? 0 : 1)
+  }
+
+  const clickSlug = (slug) => {
+    setScrollingDir(1)
+  }
 
   useEffect(() => {
     if (inSidebar) return
+    if (typeof window !== 'undefined') {
+      const lastScrollY = window.scrollY
+      window.addEventListener('scroll', () => handleScroll(lastScrollY))
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        const sortedEntries = scrollingDir === 1 ? entries.reverse() : entries
+
+        sortedEntries.forEach((entry) => {
           if (entry?.isIntersecting) {
-            setActiveSlug(entry.target.id)
+            setActiveSlug(`#${entry.target.id}`)
           }
         })
       },
       {
-        rootMargin: '5% 0px 5% 0px', // Adjusting to handle multiple h1s in view
+        rootMargin: '15% 0px -25% 0px', // Adjusting to handle multiple h1s in view
       }
     )
 
     chapters.forEach((chapter) => {
       if (chapter.depth === 1) {
-        const element = document.getElementById(getIdFromUrl(chapter.url))
+        const element = document.getElementById(getIdFromUrl(chapter.url.slice(1)))
         if (element) {
           observer.observe(element)
         }
       }
     })
 
-    return () => observer.disconnect()
-  }, [chapters])
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [chapters, scrollingDir])
 
   if (inSidebar) {
     return (
-      <nav className="mb-8 flex items-center self-start px-12 pt-9" aria-label="Table of Contents">
+      <nav
+        className="mb-8 flex items-center self-start overflow-auto px-12 pt-9"
+        aria-label="Table of Contents"
+      >
         <ol className="w-full list-none space-y-3">
           {renderCollapsibleItems(chapters, toggleNav)}
         </ol>
@@ -166,11 +192,13 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
   }
 
   return (
-    <nav className="mb-8 flex items-center self-start pt-9" aria-label="Table of Contents">
-      <ol className="list-none space-y-3">
+    <nav className="flex min-h-svh self-start pt-[0.6rem]" aria-label="Table of Contents">
+      <ol className="list-none ">
         {chapters.map((item, index) => {
           if (item.depth < 3) {
-            return <TocItem key={index} item={item} activeSlug={activeSlug} />
+            return (
+              <TocItem key={index} item={item} activeSlug={activeSlug} setActiveSlug={clickSlug} />
+            )
           }
         })}
       </ol>
@@ -179,5 +207,5 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
 }
 
 function getIdFromUrl(url) {
-  return url.slice(1).replace(/-\d+$/, '') // Remove '#' and the trailing '-{number}'
+  return url.replace(/-\d+$/, '') // Remove '#' and the trailing '-{number}'
 }

@@ -1,0 +1,4 @@
+baseURL = "https://nervous-shockley-8d1c89.netlify.com/"
+buildDrafts = "true"
+buildFuture = "true"
+

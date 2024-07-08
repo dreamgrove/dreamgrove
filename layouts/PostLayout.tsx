@@ -1,4 +1,3 @@
-'use client'
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -9,6 +8,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import TableOfContents from '@/components/custom/TableOfContents'
+import { FaHistory } from 'react-icons/fa'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -19,8 +19,9 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
-  const { patch, slug, title, tags, toc } = content
+  const { patch, slug, title, tags, toc, lastModified, changelogUrl } = content
 
+  const updateInfo = `Last updated on the ${lastModified} for patch ${patch}`
   return (
     <SectionContainer>
       <ScrollTopAndComment />
@@ -43,14 +44,14 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                   ))}
                 </p>
               </div>
-              <dl className="space-y-10">
+              <div className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 sm:pt-4">
                 <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <span>Updated for patch {patch}</span>
-                  </dd>
+                  Patch: <span className="text-[#1a9c82]">{patch}</span>
                 </div>
-              </dl>
+                <div>
+                  Updated: <span className="text-[#1a9c82]">{lastModified}</span>
+                </div>
+              </div>
             </div>
           </header>
           <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:divide-y-0">
@@ -58,13 +59,19 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
               <TableOfContents chapters={toc} />
             </aside>
 
-            <div
-              id="main"
-              className="divide-y divide-gray-200 dark:divide-gray-700 lg:col-span-9 lg:pb-0"
-            >
+            <div id="main" className=" divide-gray-200 dark:divide-gray-700  lg:col-span-9 lg:pb-0">
+              <div className="pt-4 md:pt-6">
+                <a
+                  href={changelogUrl}
+                  className="ml-[-1.5rem] font-medium text-main underline decoration-2 underline-offset-4"
+                >
+                  <FaHistory className="mr-2 inline" />
+                  <span className="inline align-top">Changelog</span>
+                </a>
+              </div>
               <div
                 style={{ counterReset: 'heading' }}
-                className="prose ml-2 max-w-none pb-8 pt-10 text-base dark:prose-invert"
+                className="prose  max-w-none pb-8 pt-4 text-base dark:prose-invert"
               >
                 {children}
               </div>

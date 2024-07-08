@@ -1,5 +1,5 @@
 import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
-import { writeFileSync } from 'fs'
+import { writeFileSync, statSync } from 'fs'
 import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
 import path from 'path'
@@ -58,6 +58,18 @@ const computedFields: ComputedFields = {
     resolve: (doc) => doc._raw.sourceFilePath,
   },
   toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  lastModified: {
+    type: 'date',
+    resolve: (doc) => {
+      const stats = statSync(`data/${doc._raw.sourceFilePath}`)
+      const date = new Date(stats.mtime)
+      return date.toLocaleDateString('en-GB')
+    },
+  },
+  changelogUrl: {
+    type: 'string',
+    resolve: (doc) => `${siteMetadata.github}/commits/master/data/${doc._raw.sourceFilePath}`,
+  },
 }
 
 /**

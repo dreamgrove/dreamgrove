@@ -5,6 +5,11 @@ const cheerio = require('cheerio')
 const baseUrl = 'https://www.wowdb.com'
 const urls = ['https://www.wowdb.com/spells/class-abilities/druid']
 
+const localOverwrites = {
+  Cyclone: '33786',
+  'new ability': '9393',
+}
+
 async function fetchPageData(url, data) {
   const res = await fetch(url)
   const html = await res.text()
@@ -38,7 +43,11 @@ async function fetchData() {
     await fetchPageData(url, data)
   }
 
-  fs.writeFileSync('data.json', JSON.stringify(data, null, 2))
+  for (const [name, id] of Object.entries(localOverwrites)) {
+    data[name] = id
+  }
+
+  fs.writeFileSync('spellData.json', JSON.stringify(data, null, 2))
 }
 
 fetchData().catch(console.error)

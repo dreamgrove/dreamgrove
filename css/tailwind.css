@@ -83,3 +83,8 @@ html[style*='color-scheme: light;'] a.q1 {
 html[style*='color-scheme: light;'] li::marker {
   color: rgba(20, 20, 24, 0.571);
 }
+/* force repaint sidebar*/
+nav:focus {
+  display: none;
+  display: block;
+}

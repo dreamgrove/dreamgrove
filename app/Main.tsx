@@ -9,7 +9,7 @@ import raids from 'public/static/images/cards/raids-card.png'
 import Image from 'next/image'
 
 export default function Home() {
-  const ENABLE_EXTRA_GUIDES = true
+  const ENABLE_EXTRA_GUIDES = false
 
   const content = [
     { src: raids, href: '/raids', alt: 'Raid Guides', active: true },
@@ -38,7 +38,7 @@ export default function Home() {
               className={`relative block ${
                 image.active
                   ? 'cursor-pointer hover:scale-[1.02] hover:shadow-lg'
-                  : 'cursor-default opacity-50'
+                  : 'cursor-default opacity-30'
               } shadow-md transition-transform duration-300`}
             >
               <Image
@@ -54,15 +54,21 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      {ENABLE_EXTRA_GUIDES && (
+      {
         <div className="grid grid-cols-1 gap-4 pt-4 md:pt-4">
           {content.map((image, index) => (
-            <Link key={index} href={image.href}>
+            <Link
+              key={index}
+              href={image.href}
+              className={!ENABLE_EXTRA_GUIDES ? 'pointer-events-none' : ''}
+              aria-disabled={!ENABLE_EXTRA_GUIDES}
+              tabIndex={!ENABLE_EXTRA_GUIDES ? -1 : undefined}
+            >
               <div
                 className={`relative block ${
-                  image.active
+                  ENABLE_EXTRA_GUIDES
                     ? 'cursor-pointer hover:scale-[1.02] hover:shadow-xl'
-                    : 'cursor-default opacity-50'
+                    : 'cursor-default opacity-30'
                 } shadow-md transition-transform duration-300`}
               >
                 <Image
@@ -78,7 +84,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      )}
+      }
     </>
   )
 }

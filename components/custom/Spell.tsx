@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import data from '../../data.json'
+import spellData from '../../spellData.json'
 
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
@@ -25,7 +25,7 @@ export default async function Spell({ id, name }) {
   let displayId = id
 
   if (!id) {
-    const url = data[name]
+    const url = spellData[name]
     if (url) {
       displayId = extractIdFromUrl(url)
     } else {
