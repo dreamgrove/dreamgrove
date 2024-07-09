@@ -63,7 +63,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
               <div className="pt-4 md:pt-6">
                 <a
                   href={changelogUrl}
-                  className="ml-[-1.5rem] font-medium text-main underline decoration-2 underline-offset-4"
+                  className="ml-0 font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem]"
                 >
                   <FaHistory className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>

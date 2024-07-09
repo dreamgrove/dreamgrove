@@ -14,15 +14,23 @@ interface Chapter {
   depth: number
 }
 
-const TocItem = ({
+type TocItemProps = {
+  item
+  activeSlugs?: string[]
+  inSidebar?: boolean
+  toggleNav?: () => void
+  setActiveSlug?: (target: string[]) => void
+}
+
+const TocItem: React.FC<TocItemProps> = ({
   item,
-  activeSlug = '',
+  activeSlugs = [],
   inSidebar = false,
   toggleNav = () => {},
-  setActiveSlug = (target) => {},
+  setActiveSlug = ([target]) => {},
 }) => {
   const targetUrl = getIdFromUrl(item.url)
-  const isActive = activeSlug ? targetUrl === activeSlug : false
+  const isActive = activeSlugs.includes(targetUrl)
 
   if (inSidebar && toggleNav) {
     return (
@@ -48,7 +56,7 @@ const TocItem = ({
         marginTop: `${item.depth === 1 ? '12px ' : '5px'}`,
       }}
     >
-      <a onClick={() => setActiveSlug(targetUrl)} href={targetUrl}>
+      <a onClick={() => setActiveSlug([targetUrl])} href={targetUrl}>
         {item.value}
       </a>
     </li>
@@ -130,42 +138,30 @@ const renderCollapsibleItems = (items: Chapter[], toggleNav) => {
 }
 
 export default function TableOfContents({ chapters, inSidebar = false, toggleNav = () => {} }) {
-  const [activeSlug, setActiveSlug] = useState(getIdFromUrl(chapters[0].url))
-  const [scrollingDir, setScrollingDir] = useState(1)
-
-  const handleScroll = (lastScroll) => {
-    setScrollingDir(window.scrollY > lastScroll ? 0 : 1)
-  }
-
-  const clickSlug = (slug) => {
-    setScrollingDir(1)
-  }
+  const [activeSlugs, setActiveSlug] = useState([getIdFromUrl(chapters[0].url)])
+  console.log(activeSlugs)
 
   useEffect(() => {
     if (inSidebar) return
-    if (typeof window !== 'undefined') {
-      const lastScrollY = window.scrollY
-      window.addEventListener('scroll', () => handleScroll(lastScrollY))
-    }
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const sortedEntries = scrollingDir === 1 ? entries.reverse() : entries
-
-        sortedEntries.forEach((entry) => {
-          if (entry?.isIntersecting) {
-            setActiveSlug(`#${entry.target.id}`)
-          }
-        })
+        if (entries.some((x) => x.isIntersecting)) {
+          setActiveSlug(
+            entries
+              .filter((x) => x.isIntersecting)
+              .map((x) => `#${x.target.id.replace('container-', '')}`)
+          )
+        }
       },
       {
-        rootMargin: '15% 0px -25% 0px', // Adjusting to handle multiple h1s in view
+        rootMargin: '-9% 0px -89% 0px',
       }
     )
 
     chapters.forEach((chapter) => {
       if (chapter.depth === 1) {
-        const element = document.getElementById(getIdFromUrl(chapter.url.slice(1)))
+        const element = document.getElementById(`container-${getIdFromUrl(chapter.url.slice(1))}`)
         if (element) {
           observer.observe(element)
         }
@@ -173,10 +169,10 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
     })
 
     return () => {
+      console.log('disconnect')
       observer.disconnect()
-      window.removeEventListener('scroll', handleScroll)
     }
-  }, [chapters, scrollingDir])
+  }, [chapters])
 
   if (inSidebar) {
     return (
@@ -197,7 +193,12 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
         {chapters.map((item, index) => {
           if (item.depth < 3) {
             return (
-              <TocItem key={index} item={item} activeSlug={activeSlug} setActiveSlug={clickSlug} />
+              <TocItem
+                key={index}
+                item={item}
+                activeSlugs={activeSlugs}
+                setActiveSlug={setActiveSlug}
+              />
             )
           }
         })}
@@ -206,6 +207,6 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
   )
 }
 
-function getIdFromUrl(url) {
+function getIdFromUrl(url): string {
   return url.replace(/-\d+$/, '') // Remove '#' and the trailing '-{number}'
 }
