@@ -55,7 +55,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
             </div>
           </header>
           <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:divide-y-0">
-            <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:block lg:h-screen lg:pr-6">
+            <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:mr-6 lg:block lg:h-svh">
               <TableOfContents chapters={toc} />
             </aside>
 
