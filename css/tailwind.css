@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.content-header-link {
+  opacity: 0;
+  margin-left: -24px;
+  padding-right: 4px;
+}
+
+.content-header:hover .content-header-link,
+.content-header-link:hover {
+  opacity: 1;
+}
+
+.linkicon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h1.content-header::before {
+  counter-increment: heading;
+  content: counter(heading) '. ';
+  min-width: 1.5ch;
+  text-align: left;
+}
+
+@font-face {
+  font-family: 'thiccboi';
+  src: url('../public/fonts/THICCCBOI-ExtraBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'thiccboi';
+  src: url('../public/fonts/THICCCBOI-Bold.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'thiccboi';
+  src: url('../public/fonts/THICCCBOI-SemiBold.woff2') format('woff2');
+  font-weight: 400;
+}
+
+/*override for wowhead's item white in light mode*/
+html[style*='color-scheme: light;'] a.q1 {
+  color: darkslategrey !important;
+}
+
+html[style*='color-scheme: light;'] li::marker {
+  color: rgba(20, 20, 24, 0.571);
+}
+/* force repaint sidebar*/
+nav:focus {
+  display: none;
+  display: block;
+}
