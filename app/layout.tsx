@@ -3,7 +3,6 @@ import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Space_Grotesk } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
@@ -12,6 +11,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -79,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex h-full bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white">
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 'calc(100vw - 100%)' }}>
           <ThemeProviders>
-            <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
+            <Analytics />
             <Header />
             <SectionContainer>
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>

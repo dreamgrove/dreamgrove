@@ -14,7 +14,7 @@ export default function ContributeHeader() {
         This is a community curated resource. If you want to contribute, click{' '}
         <Link
           className="font-sans font-bold text-main underline"
-          href={`https://github.com/thevinter/react-dreamgrove/edit/master/data${url}.mdx`}
+          href={`https://github.com/dreamgrove/dreamgrove/edit/master/data${url}.mdx`}
         >
           here
         </Link>
