@@ -3,14 +3,14 @@ name: Update APL
 on:
   push:
     paths:
-      - 'static/sims/owl/balance.txt'
-      - 'static/sims/cat/feral.txt'
-      - 'static/sims/bear/guardian.txt'
-      - 'static/sims/tree/restoration.txt'
+      - 'sims/owl/balance.txt'
+      - 'sims/cat/feral.txt'
+      - 'sims/bear/guardian.txt'
+      - 'sims/tree/restoration.txt'
 
 defaults:
   run:
-    working-directory: static/sims
+    working-directory: sims
 
 jobs:
   update:
@@ -25,7 +25,7 @@ jobs:
         with:
           repository: simulationcraft/simc
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          path: './static/sims/simc'
+          path: './sims/simc'
       - name: generate APL
         run: |
           python generate_apl.py --spec=owl "./simc"

@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    working-directory: static/sims/tree
+    working-directory: sims/tree
 
 jobs:
   update_json_heroic:
@@ -52,7 +52,7 @@ jobs:
 
   update_json_mythic:
     name: Update JSON (Mythic)
-    needs: [ update_json_heroic ]
+    needs: [update_json_heroic]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
