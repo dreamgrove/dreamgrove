@@ -7,7 +7,7 @@ const siteMetadata = {
     'A website for resources, guides, theorycrafting, and discussion about all things Druid.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'www.dreamgrove.gg',
+  siteUrl: 'https://dreamgrove.gg',
   siteRepo: 'https://github.com/dreamgrove/dreamgrove',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
