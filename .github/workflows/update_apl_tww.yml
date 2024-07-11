@@ -3,14 +3,14 @@ name: Update APL TWW
 on:
   push:
     paths:
-      - 'static/sims/owl/balance_tww.txt'
-      - 'static/sims/cat/feral_tww.txt'
-      - 'static/sims/bear/guardian_tww.txt'
-      - 'static/sims/tree/restoration_tww.txt'
+      - 'sims/owl/balance_tww.txt'
+      - 'sims/cat/feral_tww.txt'
+      - 'sims/bear/guardian_tww.txt'
+      - 'sims/tree/restoration_tww.txt'
 
 defaults:
   run:
-    working-directory: static/sims
+    working-directory: sims
 
 jobs:
   update:
@@ -26,7 +26,7 @@ jobs:
           repository: simulationcraft/simc
           ref: 'thewarwithin'
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          path: './static/sims/simc'
+          path: './sims/simc'
       - name: generate APL
         run: |
           python generate_apl.py --spec=owl --tww "./simc"
