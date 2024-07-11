@@ -8,6 +8,7 @@ const rehypeGroupHeaders = () => {
         if (currentHeader) {
           newChildren.push(currentHeader)
         }
+
         currentHeader = {
           type: 'element',
           tagName: 'div',
