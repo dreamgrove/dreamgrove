@@ -4,7 +4,7 @@ Welcome to the Dreamgrove contributing guide! This document will help you get st
 
 ## Getting Started
 
-1. [Fork the repository by clicking here](https://github.com/thevinter/react-dreamgrove/fork)
+1. [Fork the repository by clicking here](https://github.com/dreamgrove/dreamgrove/fork)
 
 2. **Clone the repository:**
 
