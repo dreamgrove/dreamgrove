@@ -20,6 +20,7 @@ const CheckboxToggler = ({
   defaultCheck = false,
   radio = '',
   children,
+  className = '',
 }) => {
   const [checked, setChecked] = useState(defaultCheck)
   const { radioGroup, checkRadio, registerCheckbox } = useContext(CheckboxContext)
@@ -51,9 +52,9 @@ const CheckboxToggler = ({
   }, [radioGroup, radio, id])
 
   return (
-    <label>
+    <label className="flex items-center">
       <input
-        className="align-middle focus:outline-none"
+        className={`mr-2 focus:outline-none ${className}`}
         type="checkbox"
         checked={checked}
         onChange={() => handleToggle(!checked)}

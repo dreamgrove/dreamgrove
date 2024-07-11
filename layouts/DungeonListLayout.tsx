@@ -35,7 +35,7 @@ export default function DungeonListLayout({
             const { path, title, headerImage } = post
             return (
               <li key={path}>
-                <InstanceCard title={title} headerImage={`dungeons/${headerImage}`} path={path} />
+                <InstanceCard title={title} headerImage={`${headerImage}`} path={path} />
               </li>
             )
           })}

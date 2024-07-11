@@ -139,7 +139,6 @@ const renderCollapsibleItems = (items: Chapter[], toggleNav) => {
 
 export default function TableOfContents({ chapters, inSidebar = false, toggleNav = () => {} }) {
   const [activeSlugs, setActiveSlug] = useState([getIdFromUrl(chapters[0].url)])
-  console.log(activeSlugs)
 
   useEffect(() => {
     if (inSidebar) return
@@ -169,7 +168,6 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
     })
 
     return () => {
-      console.log('disconnect')
       observer.disconnect()
     }
   }, [chapters])
