@@ -5,17 +5,17 @@
 - You ofc need an account on github.com
 - Once you have it you go to https://github.com/dreamgrove/dreamgrove/fork
 - Leave everything as is, create fork
-- This should link you yo https://github.com/<youraccount>/dreamgrove
+- This should link you yo https://github.com/youraccount/dreamgrove
 - From here you can navigate to /data/blog/<spec>
 - compendium.mdx is the file that has the contents of the webpage
 - The quickest option is to do everything online
 - To do this you click on the file and then on the edit button and you just do all of your edits in the browser editor
 - Once you're done you click on "commit changes"
-- Here you can leave the extended description empty, but for the commit message please try to always write guide: <brief changelog>
+- Here you can leave the extended description empty, but for the commit message please try to always write guide: "brief changelog"
 - i.e. guide: added tww trinkets
 - if you forget it, it doesn't break anything, but this makes it easy to track changes over time and then you press "Commit changes"
 - You can keep doing as many changes as you want like this
-- Once you're satisfied you can go back to https://github.com/<username>/dreamgrove
+- Once you're satisfied you can go back to https://github.com/username/dreamgrove
 - And you should see a message
 - if it says that "your branch is behind" then you click sync fork > update branch. This will update your copy with the remote changes someone else might've done
 - Try to keep it always up to date before making changes
