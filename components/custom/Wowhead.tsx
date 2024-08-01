@@ -69,7 +69,7 @@ export default async function Wowhead({
     const iconFilename = match[1]
     imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`
   } else {
-    throw Error('Icon not found for ' + displayId)
+    console.error('Icon not found for ' + displayId)
   }
 
   if (type == 'item') {
@@ -86,17 +86,18 @@ export default async function Wowhead({
     display = formatUrl(res.url)
   }
 
-  const image = noIcon ? (
-    <></>
-  ) : (
-    <Image
-      src={imageUrl}
-      alt={`${display} icon`}
-      width={16}
-      height={16}
-      className="my-0 mr-1 inline-block"
-    />
-  )
+  const image =
+    noIcon || imageUrl == '' ? (
+      <></>
+    ) : (
+      <Image
+        src={imageUrl}
+        alt={`${display} icon`}
+        width={16}
+        height={16}
+        className="my-0 mr-1 inline-block"
+      />
+    )
 
   return (
     <>
