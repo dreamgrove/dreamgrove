@@ -94,7 +94,17 @@ module.exports = () => {
           permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
         },
         {
+          source: '/balance',
+          destination: '/blog/balance/compendium',
+          permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
+        },
+        {
           source: '/feral/compendium',
+          destination: '/blog/feral/compendium',
+          permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
+        },
+        {
+          source: '/feral',
           destination: '/blog/feral/compendium',
           permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
         },
