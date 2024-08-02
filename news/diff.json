@@ -1,0 +1,1669 @@
+{
+  "added": [],
+  "removed": [],
+  "modified": [
+    {
+      "name": "Incapacitating Roar",
+      "id": 99,
+      "changes": {
+        "spell_type": {
+          "latest": "Ranged",
+          "previous": "Melee"
+        }
+      }
+    },
+    {
+      "name": "Wrath",
+      "id": 5176,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1837",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Nourish",
+      "id": 50464,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "42665",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mastery: Harmony",
+      "id": 77495,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "68119",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Starsurge",
+      "id": 78674,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "68268",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fungal Growth",
+      "id": 81281,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "68703",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wild Mushroom",
+      "id": 88751,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "91242",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1031624",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Guardian Druid",
+      "id": 137010,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "179693",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "191158",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1013111",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1091200",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1091201",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1176395",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Feral Druid",
+      "id": 137011,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1176396",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1080962",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1088944",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "added",
+            "effect": {
+              "idx": "16",
+              "id": "1174663",
+              "type": "Apply Aura",
+              "subtype": "Apply Flat Modifier w/ Label",
+              "values": [
+                {
+                  "Base Value": "-10"
+                },
+                {
+                  "Scaled Value": "-10"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Misc Value": "3"
+                },
+                {
+                  "Misc Value 2": "3962 (Label)"
+                },
+                {
+                  "Target": "Self"
+                }
+              ],
+              "affected_spells": [["Harmonious Constitution"]]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Restoration Druid",
+      "id": 137012,
+      "changes": {
+        "effects": [
+          {
+            "action": "added",
+            "effect": {
+              "idx": "17",
+              "id": "1177947",
+              "type": "Apply Aura",
+              "subtype": "Modify Auto Attack Damage Done%",
+              "values": [
+                {
+                  "Base Value": "30"
+                },
+                {
+                  "Scaled Value": "30"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Target": "Self"
+                }
+              ]
+            }
+          },
+          {
+            "action": "modified",
+            "id": "260748",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "260749",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "872913",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "876348",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1081594",
+            "changes": {
+              "values": {
+                "latest": [null, null, null],
+                "previous": [null, null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1113290",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1113620",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1120675",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1120676",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1120677",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "removed",
+            "effect": {
+              "idx": "16",
+              "id": "1174663",
+              "type": "Apply Aura",
+              "subtype": "Apply Flat Modifier w/ Label",
+              "values": [
+                {
+                  "Base Value": "-10"
+                },
+                {
+                  "Scaled Value": "-10"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Misc Value": "3"
+                },
+                {
+                  "Misc Value 2": "3962 (Label)"
+                },
+                {
+                  "Target": "Self"
+                }
+              ],
+              "affected_spells": [["Harmonious Constitution"]]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Balance Druid",
+      "id": 137013,
+      "changes": {
+        "effects": [
+          {
+            "action": "added",
+            "effect": {
+              "idx": "11",
+              "id": "1088945",
+              "type": "Apply Aura",
+              "subtype": "Modify Mana Regen%",
+              "values": [
+                {
+                  "Base Value": "60"
+                },
+                {
+                  "Scaled Value": "60"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Target": "Self"
+                }
+              ]
+            }
+          },
+          {
+            "action": "added",
+            "effect": {
+              "idx": "12",
+              "id": "1177983",
+              "type": "Apply Aura",
+              "subtype": "Add Percent Modifier",
+              "values": [
+                {
+                  "Base Value": "6"
+                },
+                {
+                  "Scaled Value": "6"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Target": "Self"
+                },
+                {
+                  "Family Flags": "127"
+                }
+              ],
+              "affected_spells": [["Sunfire"]]
+            }
+          },
+          {
+            "action": "added",
+            "effect": {
+              "idx": "13",
+              "id": "1177984",
+              "type": "Apply Aura",
+              "subtype": "Add Percent Modifier",
+              "values": [
+                {
+                  "Base Value": "6"
+                },
+                {
+                  "Scaled Value": "6"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Misc Value": "22"
+                },
+                {
+                  "Target": "Self"
+                },
+                {
+                  "Family Flags": "127"
+                }
+              ],
+              "affected_spells": [["Sunfire"]]
+            }
+          },
+          {
+            "action": "added",
+            "effect": {
+              "idx": "14",
+              "id": "1177985",
+              "type": "Apply Aura",
+              "subtype": "Add Percent Modifier",
+              "values": [
+                {
+                  "Base Value": "6"
+                },
+                {
+                  "Scaled Value": "6"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Target": "Self"
+                },
+                {
+                  "Family Flags": "21, 92"
+                }
+              ],
+              "affected_spells": [["Moonfire", "Moonfire"]]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Charged Bolt",
+      "id": 137542,
+      "changes": {
+        "effects": [
+          {
+            "action": "added",
+            "effect": {
+              "idx": "15",
+              "id": "1177986",
+              "type": "Apply Aura",
+              "subtype": "Add Percent Modifier",
+              "values": [
+                {
+                  "Base Value": "6"
+                },
+                {
+                  "Scaled Value": "6"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Misc Value": "22"
+                },
+                {
+                  "Target": "Self"
+                },
+                {
+                  "Family Flags": "21, 92"
+                }
+              ],
+              "affected_spells": [["Moonfire", "Moonfire"]]
+            }
+          },
+          {
+            "action": "removed",
+            "effect": {
+              "idx": "11",
+              "id": "1088945",
+              "type": "Apply Aura",
+              "subtype": "Modify Mana Regen%",
+              "values": [
+                {
+                  "Base Value": "60"
+                },
+                {
+                  "Scaled Value": "60"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Target": "Self"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fey Missile",
+      "id": 188046,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "274309",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wrath",
+      "id": 190984,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "280098",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Starfall",
+      "id": 191037,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "280158",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Starfire",
+      "id": 194153,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "284976",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Starsurge",
+      "id": 197626,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "290376",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Starfire",
+      "id": 197628,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "290380",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Flourish",
+      "id": 197721,
+      "changes": {
+        "duration": {
+          "latest": "8 seconds",
+          "previous": "6 seconds"
+        }
+      }
+    },
+    {
+      "name": "Stellar Flare",
+      "id": 202347,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "298295",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "298296",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shooting Stars",
+      "id": 202497,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "298525",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fury of Elune",
+      "id": 211545,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "313366",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "New Moon",
+      "id": 274281,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "726522",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Half Moon",
+      "id": 274282,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "726525",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Full Moon",
+      "id": 274283,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "726528",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Orbital Strike",
+      "id": 361237,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "898966",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dream of Cenarius",
+      "id": 372152,
+      "changes": {
+        "effects": [
+          {
+            "action": "added",
+            "effect": {
+              "idx": "5",
+              "id": "1041740",
+              "type": "Apply Aura",
+              "subtype": "Add Percent Modifier",
+              "values": [
+                {
+                  "Base Value": "130"
+                },
+                {
+                  "Scaled Value": "130"
+                },
+                {
+                  "PvP Coefficient": "1.00000"
+                },
+                {
+                  "Misc Value": "22"
+                },
+                {
+                  "Target": "Self"
+                },
+                {
+                  "Family Flags": "6"
+                }
+              ],
+              "affected_spells": [["Regrowth"]]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Twin Moonfire",
+      "id": 372567,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "997281",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "997282",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Embrace of the Dream",
+      "id": 392147,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1030097",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Power of the Archdruid",
+      "id": 392302,
+      "changes": {
+        "proc_chance": {
+          "latest": "60%",
+          "previous": "40%"
+        }
+      }
+    },
+    {
+      "name": "Verdancy",
+      "id": 392329,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1030446",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Power of Goldrinn",
+      "id": 394046,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1109174",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Goldrinn's Fang",
+      "id": 394047,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1033385",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fury of Elune",
+      "id": 394111,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1033506",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Thrash",
+      "id": 405233,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1053352",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ashamane's Guidance",
+      "id": 421440,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1095725",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wild Growth",
+      "id": 422382,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1097664",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dreamstate",
+      "id": 424248,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1100831",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Boundless Moonlight",
+      "id": 428682,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1109706",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Harmony of the Grove",
+      "id": 428735,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1109828",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1109829",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Harmony of the Grove",
+      "id": 428737,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1109887",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1109888",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bounteous Bloom",
+      "id": 429217,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1113276",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Durability of Nature",
+      "id": 429227,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1113301",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Moon Guardian",
+      "id": 429520,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1117493",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dream Burst",
+      "id": 433850,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1123446",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ravage",
+      "id": 441591,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136153",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ravage",
+      "id": 441605,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136169",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Empowered Shapeshifting",
+      "id": 441689,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1137385",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1164922",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ursine Potential",
+      "id": 441698,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136320",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1137908",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Feline Potential",
+      "id": 441702,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136325",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dreadful Wound",
+      "id": 441812,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136537",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ruthless Aggression",
+      "id": 441817,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136544",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Killing Strikes",
+      "id": 441825,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136554",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bestial Strength",
+      "id": 441841,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136577",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1136578",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1136579",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1176379",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Strike for the Heart",
+      "id": 441845,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136584",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1136586",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tear Down the Mighty",
+      "id": 441846,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1136587",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Savage Fury",
+      "id": 449646,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1148998",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1148999",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Umbral Inspiration",
+      "id": 450419,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1150305",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1150306",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Astral Communion",
+      "id": 450599,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1150605",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dreadful Wound",
+      "id": 451177,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1151596",
+            "changes": {
+              "values": {
+                "latest": [null],
+                "previous": [null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Druid Balance 11.0 Class Set 2pc",
+      "id": 453666,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1155666",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1157842",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Druid Balance 11.0 Class Set 4pc",
+      "id": 453667,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1155667",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          },
+          {
+            "action": "modified",
+            "id": "1157725",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cenarius' Might",
+      "id": 455801,
+      "changes": {
+        "effects": [
+          {
+            "action": "modified",
+            "id": "1159502",
+            "changes": {
+              "values": {
+                "latest": [null, null],
+                "previous": [null, null]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
