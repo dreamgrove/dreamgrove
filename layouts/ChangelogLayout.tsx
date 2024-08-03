@@ -7,6 +7,10 @@ import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
+import fs from 'fs'
+import path from 'path'
+import Dialog from '@/components/custom/Dialog/Dialog'
+
 interface LayoutProps {
   content: CoreContent<Changelog>
   children: ReactNode
@@ -15,7 +19,25 @@ interface LayoutProps {
 }
 
 export default function ChangelogLayout({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, title } = content
+  const { slug, title } = content
+  const filePath = path.join(process.cwd(), 'news', 'druid_latest.txt')
+
+  // Get file stats
+  let creationDate = ''
+  try {
+    const stats = fs.statSync(filePath)
+    const creationDateObj = new Date(stats.birthtime)
+    creationDate = creationDateObj.toLocaleString('en-GB', {
+      day: '2-digit',
+      month: '2-digit',
+      year: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    })
+  } catch (error) {
+    console.error('Error reading file stats:', error)
+  }
 
   return (
     <SectionContainer>
@@ -31,9 +53,28 @@ export default function ChangelogLayout({ content, next, prev, children }: Layou
           </header>
           <div
             id="main"
-            className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0"
+            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0"
           >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
+            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0">
+              <div>
+                <Dialog>
+                  <span>
+                    <span className="font-bold text-main/70">Last Update: {creationDate}.</span> The
+                    information contained here is only partial. Only changes deemed relevant are
+                    displayed.
+                  </span>
+                </Dialog>
+                <div className="mx-1 mb-2">
+                  The changelog is generated based on the simc druid spelldumps. Latest dump can be
+                  found{' '}
+                  <a
+                    href="https://raw.githubusercontent.com/dreamgrove/dreamgrove/master/news/druid_latest.txt"
+                    className="text-main underline"
+                  >
+                    here
+                  </a>
+                </div>
+              </div>
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
             </div>
             <footer></footer>
