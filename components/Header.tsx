@@ -49,17 +49,19 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center space-x-4 sm:space-x-6">
-          {headerNavLinks
-            .filter((link) => link.href !== '/')
-            .map((link) => (
-              <Link
-                key={link.title}
-                href={link.href}
-                className="dark:hover:text-primary-400 mt-[4px] hidden text-xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block"
-              >
-                {link.title}
-              </Link>
-            ))}
+          <div className="hidden items-center space-x-4 lg:flex">
+            {headerNavLinks
+              .filter((link) => link.href !== '/')
+              .map((link) => (
+                <Link
+                  key={link.title}
+                  href={link.href}
+                  className="dark:hover:text-primary-400 mt-[4px] hidden text-xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block"
+                >
+                  {link.title}
+                </Link>
+              ))}
+          </div>
           <ThemeSwitch />
           <MobileNav />
         </div>
