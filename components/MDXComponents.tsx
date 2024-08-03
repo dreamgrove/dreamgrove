@@ -13,6 +13,7 @@ import HeroTalentsPicker from './custom/HeroTalents/HeroTalentsPicker'
 import BossCard from './custom/Dungeons/BossCard'
 import Npc from './custom/Npc'
 import CheckboxProvider from './custom/CheckboxProvider'
+import Changelog from './custom/Changelog/Changelog'
 
 export const components: MDXComponents = {
   Image,
@@ -50,6 +51,7 @@ export const components: MDXComponents = {
   },
   pre: Pre,
   table: TableWrapper,
+  Changelog,
   BlogNewsletterForm,
   Wowhead,
   Talents,

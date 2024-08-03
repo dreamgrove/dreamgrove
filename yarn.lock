@@ -3413,6 +3413,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/diff-match-patch@npm:^1.0.36":
+  version: 1.0.36
+  resolution: "@types/diff-match-patch@npm:1.0.36"
+  checksum: 7d7ce03422fcc3e79d0cda26e4748aeb176b75ca4b4e5f38459b112bf24660d628424bdb08d330faefa69039d19a5316e7a102a8ab68b8e294c8346790e55113
+  languageName: node
+  linkType: hard
+
 "@types/estree-jsx@npm:^1.0.0":
   version: 1.0.5
   resolution: "@types/estree-jsx@npm:1.0.5"
@@ -4079,6 +4086,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.7.3":
+  version: 1.7.3
+  resolution: "axios@npm:1.7.3"
+  dependencies:
+    follow-redirects: ^1.15.6
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: bc304d6da974922342aed7c33155934354429cdc7e1ba9d399ab9ff3ac76103f3697eeedf042a634d43cdae682182bcffd942291db42d2be45b750597cdd5eef
+  languageName: node
+  linkType: hard
+
 "axobject-query@npm:~3.1.1":
   version: 3.1.1
   resolution: "axobject-query@npm:3.1.1"
@@ -4333,7 +4351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:5.3.0":
+"chalk@npm:5.3.0, chalk@npm:^5.3.0":
   version: 5.3.0
   resolution: "chalk@npm:5.3.0"
   checksum: 623922e077b7d1e9dedaea6f8b9e9352921f8ae3afe739132e0e00c275971bdd331268183b2628cf4ab1727c45ea1f28d7e24ac23ce1db1eb653c414ca8a5a80
@@ -4599,7 +4617,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -5061,6 +5079,13 @@ __metadata:
   version: 1.2.2
   resolution: "didyoumean@npm:1.2.2"
   checksum: d5d98719d58b3c2fa59663c4c42ba9716f1fd01245c31d5fce31915bd3aa26e6aac149788e007358f778ebbd68a2256eb5973e8ca6f221df221ba060115acf2e
+  languageName: node
+  linkType: hard
+
+"diff-match-patch@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "diff-match-patch@npm:1.0.5"
+  checksum: 841522d01b09cccbc4e4402cf61514a81b906349a7d97b67222390f2d35cf5df277cb23959eeed212d5e46afb5629cebab41b87918672c5a05c11c73688630e3
   languageName: node
   linkType: hard
 
@@ -6041,6 +6066,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.6
+  resolution: "follow-redirects@npm:1.15.6"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: a62c378dfc8c00f60b9c80cab158ba54e99ba0239a5dd7c81245e5a5b39d10f0c35e249c3379eae719ff0285fff88c365dd446fab19dee771f1d76252df1bbf5
+  languageName: node
+  linkType: hard
+
 "for-each@npm:^0.3.3":
   version: 0.3.3
   resolution: "for-each@npm:0.3.3"
@@ -6068,6 +6103,17 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 5134ada56cc246b293a1ac7678dba6830000603a3979cf83ff7b2f21f2e3725202237cfb89e32bcb38a1d35727efbd3c3a22e65b42321e8ade8eec01ce755d08
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -7565,6 +7611,19 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
+  languageName: node
+  linkType: hard
+
+"jsondiffpatch@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "jsondiffpatch@npm:0.6.0"
+  dependencies:
+    "@types/diff-match-patch": ^1.0.36
+    chalk: ^5.3.0
+    diff-match-patch: ^1.0.5
+  bin:
+    jsondiffpatch: bin/jsondiffpatch.js
+  checksum: 27d7aa42c3b9f9359fd179bb49c621ed848f6095615014cd0acbd29c37e364c11cb5a19c3ef2c873631e7b5f7ba6d1465978a489efa28cb1dc9fba98b0498712
   languageName: node
   linkType: hard
 
@@ -9823,6 +9882,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: ed7fcc2ba0a33404958e34d95d18638249a68c430e30fcb6c478497d72739ba64ce9810a24f53a7d921d0c065e5b78e3822759800698167256b04659366ca4d4
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
@@ -11428,6 +11494,7 @@ __metadata:
     "@typescript-eslint/parser": ^6.1.0
     "@vercel/analytics": ^1.3.1
     autoprefixer: ^10.4.13
+    axios: ^1.7.3
     cheerio: ^1.0.0-rc.12
     clsx: ^2.1.1
     contentlayer2: 0.4.6
@@ -11442,6 +11509,7 @@ __metadata:
     hast-util-from-html-isomorphic: ^2.0.0
     husky: ^9.0.0
     image-size: 1.0.0
+    jsondiffpatch: ^0.6.0
     lint-staged: ^13.0.0
     marked: ^13.0.1
     next: 14.2.3
