@@ -4,6 +4,7 @@
       "name": "Incapacitating Roar",
       "id": 99,
       "type": "modified",
+      "talent_entry": "Generic",
       "fields": [
         {
           "field": "spell_type",
@@ -194,6 +195,7 @@
       "name": "Nourish",
       "id": 50464,
       "type": "modified",
+      "talent_entry": "Restoration",
       "fields": [],
       "effects": [
         {
@@ -237,6 +239,7 @@
       "name": "Starsurge",
       "id": 78674,
       "type": "modified",
+      "talent_entry": "Balance",
       "fields": [],
       "effects": [
         {
@@ -319,6 +322,7 @@
       "name": "Incarnation: Avatar of Ashamane",
       "id": 102543,
       "type": "modified",
+      "talent_entry": "Feral",
       "fields": [],
       "effects": [
         {
@@ -1007,6 +1011,7 @@
       "name": "Starfire",
       "id": 194153,
       "type": "modified",
+      "talent_entry": "Balance",
       "fields": [],
       "effects": [
         {
@@ -1028,6 +1033,7 @@
       "name": "Starsurge",
       "id": 197626,
       "type": "modified",
+      "talent_entry": "Feral, Guardian, Restoration",
       "fields": [],
       "effects": [
         {
@@ -1049,6 +1055,7 @@
       "name": "Starfire",
       "id": 197628,
       "type": "modified",
+      "talent_entry": "Restoration",
       "fields": [],
       "effects": [
         {
@@ -1070,6 +1077,7 @@
       "name": "Flourish",
       "id": 197721,
       "type": "modified",
+      "talent_entry": "Restoration",
       "fields": [
         {
           "field": "duration",
@@ -1083,6 +1091,7 @@
       "name": "Stellar Flare",
       "id": 202347,
       "type": "modified",
+      "talent_entry": "Balance",
       "fields": [],
       "effects": [
         {
@@ -1160,6 +1169,7 @@
       "name": "New Moon",
       "id": 274281,
       "type": "modified",
+      "talent_entry": "Balance",
       "fields": [],
       "effects": [
         {
@@ -1282,6 +1292,7 @@
       "name": "Twin Moonfire",
       "id": 372567,
       "type": "modified",
+      "talent_entry": "Guardian",
       "fields": [],
       "effects": [
         {
@@ -1351,6 +1362,7 @@
       "name": "Power of the Archdruid",
       "id": 392302,
       "type": "modified",
+      "talent_entry": "Restoration",
       "fields": [
         {
           "field": "proc_chance",
@@ -1385,6 +1397,7 @@
       "name": "Power of Goldrinn",
       "id": 394046,
       "type": "modified",
+      "talent_entry": "Balance",
       "fields": [],
       "effects": [
         {
@@ -1836,6 +1849,7 @@
       "name": "Durability of Nature",
       "id": 429227,
       "type": "modified",
+      "talent_entry": "Keeper of the Grove (Balance, Restoration)",
       "fields": [],
       "effects": [
         {
@@ -1863,6 +1877,7 @@
       "name": "Moon Guardian",
       "id": 429520,
       "type": "modified",
+      "talent_entry": "Elune's Chosen (Balance, Guardian)",
       "fields": [],
       "effects": [
         {
@@ -1954,6 +1969,7 @@
       "name": "Empowered Shapeshifting",
       "id": 441689,
       "type": "modified",
+      "talent_entry": "Druid of the Claw (Feral, Guardian)",
       "fields": [],
       "effects": [
         {
@@ -2159,6 +2175,7 @@
       "name": "Bestial Strength",
       "id": 441841,
       "type": "modified",
+      "talent_entry": "Druid of the Claw (Feral, Guardian)",
       "fields": [],
       "effects": [
         {
@@ -2252,6 +2269,7 @@
       "name": "Strike for the Heart",
       "id": 441845,
       "type": "modified",
+      "talent_entry": "Druid of the Claw (Feral, Guardian)",
       "fields": [],
       "effects": [
         {
@@ -2312,6 +2330,7 @@
       "name": "Tear Down the Mighty",
       "id": 441846,
       "type": "modified",
+      "talent_entry": "Druid of the Claw (Feral, Guardian)",
       "fields": [],
       "effects": [
         {

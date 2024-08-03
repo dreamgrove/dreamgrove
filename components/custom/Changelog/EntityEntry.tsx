@@ -1,6 +1,8 @@
 import Collapsible from '../Collapsible/Collapsible'
 import Wowhead from '../Wowhead'
 import { FaLongArrowAltRight } from 'react-icons/fa'
+import { FaRegArrowAltCircleUp } from 'react-icons/fa'
+import { FaRegArrowAltCircleDown } from 'react-icons/fa'
 
 interface FieldDisplayProps {
   field: { [key: string]: string | number }
@@ -21,6 +23,9 @@ export default function EntityEntry({ entity }) {
     <div className="mb-4 flex flex-col p-4 ">
       <div className="text-xl font-bold">
         <Wowhead type="spell" name={entity.name} id={entity.id} />
+        {entity.talent_entry && (
+          <span className="text-lg text-gray-600">{`(${entity.talent_entry})`}</span>
+        )}
       </div>
       <div className="mb-4 text-sm text-gray-600">{`Spell ID: ${entity.id}`}</div>
       {entity.fields.length > 0 && (
@@ -38,6 +43,29 @@ export default function EntityEntry({ entity }) {
 }
 
 const FieldDiff = ({ field }) => {
+  const calculatePercentageDiff = (prev, current) => {
+    if (prev === 0) return current > 0 ? 100 : -100 // handle division by zero case
+    return ((current - prev) / Math.abs(prev)) * 100
+  }
+
+  const getStatus = (prev, current) => {
+    const diff = calculatePercentageDiff(prev, current)
+    if (prev < current)
+      return (
+        <span>
+          Buffed by {diff.toFixed(2)}%{' '}
+          <FaRegArrowAltCircleUp className="inline-block align-text-top text-green-400" />
+        </span>
+      )
+    if (prev > current)
+      return (
+        <span>
+          Nerfed by {diff.toFixed(2)}%{' '}
+          <FaRegArrowAltCircleDown className="inline-block align-text-top text-red-500" />
+        </span>
+      )
+    return null
+  }
   return (
     <div>
       <span>{field.field || field.key}: </span>
@@ -46,6 +74,23 @@ const FieldDiff = ({ field }) => {
         <FaLongArrowAltRight className="ml-1 inline-block" />
       </span>
       <span className="ml-1 text-green-500">{field.new}</span>
+      {field.prev !== undefined &&
+        field.new !== undefined &&
+        (() => {
+          const prevValue = parseFloat(field.prev)
+          const newValue = parseFloat(field.new)
+
+          if (!isNaN(prevValue) && !isNaN(newValue) && prevValue !== newValue) {
+            return (
+              <span className="ml-2">
+                {' - '}
+                {getStatus(prevValue, newValue)}
+              </span>
+            )
+          }
+
+          return null
+        })()}
     </div>
   )
 }
@@ -78,6 +123,21 @@ const EffectDisplay = ({ effect }) => {
         <div className="text-sm text-gray-600">
           <span className="font-bold">ID:</span> {effect.id}
         </div>
+        {effect.affected_spells && (
+          <div>
+            <span className="font-bold">Affected Spells:</span>
+            <div className="ml-4">
+              {effect.affected_spells.map((spell, idx) => {
+                const match = spell.match(/(.*) \((\d+)\)/)
+                if (match) {
+                  const [_, name, id] = match
+                  return <Wowhead key={idx} type="spell" name={name} id={id} />
+                }
+                return null
+              })}
+            </div>
+          </div>
+        )}
         {effect.values && (
           <div>
             <span className="font-bold">Values:</span>

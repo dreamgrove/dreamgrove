@@ -42,6 +42,9 @@ function parseFile(filename, callback) {
         if (inEffectsSection) {
           if (line.startsWith('#')) {
             if (Object.keys(currentEffect).length > 0) {
+              if (currentEntity.name == 'Harmony of the Grove') {
+                console.log(currentEffect)
+              }
               currentEntity.effects.push(currentEffect)
               currentEffect = {}
             }
@@ -75,11 +78,7 @@ function parseFile(filename, callback) {
 
               if (key && val) {
                 if (key.startsWith('Affected Spells')) {
-                  if (!currentEffect.affected_spells) {
-                    currentEffect.affected_spells = []
-                  }
                   currentEffect.affected_spells = val.split(',').map((s) => s.trim())
-                  console.log(val)
                 } else {
                   currentEffect.values.push({ [key]: val })
                 }
@@ -343,6 +342,7 @@ function compareObjectArrays(prev, newArr) {
           name: prevObj.name,
           id: prevObj.id,
           type: 'modified',
+          talent_entry: prevObj.talent,
           fields: modifiedFields,
           effects: effectChanges,
         })

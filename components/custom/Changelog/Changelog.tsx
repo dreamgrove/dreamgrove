@@ -5,7 +5,9 @@ export default function Changelog() {
   const specNames = ['Druid', 'Restoration Druid', 'Feral Druid', 'Guardian Druid', 'Balance Druid']
 
   const specEntries = diff.delta.filter((entity) => specNames.includes(entity.name))
-  const spellEntries = diff.delta.filter((entity) => !specNames.includes(entity.name))
+  const spellEntries = diff.delta
+    .filter((entity) => !specNames.includes(entity.name))
+    .sort((a, b) => a.name.localeCompare(b.name))
 
   return (
     <div>
