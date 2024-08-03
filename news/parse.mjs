@@ -66,8 +66,6 @@ function parseFile(filename, callback) {
             }
           } else if (line.startsWith(' ')) {
             let effectValues = line.trim()
-            effectValues = effectValues.replace(/\(\d+\)/g, '').trim() // Remove all (number)
-            effectValues = effectValues.replace(/\s+/g, ' ') // Replace multiple spaces with a single space
             const values = effectValues.split('|')
             if (!currentEffect.values) {
               currentEffect.values = []
@@ -80,7 +78,8 @@ function parseFile(filename, callback) {
                   if (!currentEffect.affected_spells) {
                     currentEffect.affected_spells = []
                   }
-                  currentEffect.affected_spells.push(val.split(',').map((s) => s.trim()))
+                  currentEffect.affected_spells = val.split(',').map((s) => s.trim())
+                  console.log(val)
                 } else {
                   currentEffect.values.push({ [key]: val })
                 }
@@ -321,6 +320,10 @@ function compareObjectArrays(prev, newArr) {
 
           if (effectModifications.length > 0 || valueChanges.length > 0) {
             effectChanges.push({
+              idx: prevEffect.idx,
+              type: prevEffect.type,
+              subtype: prevEffect.subtype,
+              affected_spells: newEffect.affected_spells,
               id: prevEffect.id,
               modifications: effectModifications,
               values: valueChanges,
@@ -358,7 +361,13 @@ function compareObjectArrays(prev, newArr) {
 
 parseFile('druid_latest.txt', (lat) => {
   parseFile('druid_previous.txt', (prev) => {
-    const delta = compareObjectArrays(lat, prev)
-    console.log(JSON.stringify({ delta }, null, 2))
+    const delta = compareObjectArrays(prev, lat)
+    fs.writeFile('diff.json', JSON.stringify({ delta }, null, 2), 'utf-8', (err) => {
+      if (err) {
+        console.error('Error writing to diff.json:', err)
+      } else {
+        console.log('Comparison result saved to diff.json')
+      }
+    })
   })
 })

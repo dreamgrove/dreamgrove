@@ -168,6 +168,31 @@ export const Dungeons = defineDocumentType(() => ({
   },
 }))
 
+export const Changelog = defineDocumentType(() => ({
+  name: 'Changelog',
+  filePathPattern: 'changelog.mdx',
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    summary: { type: 'string' },
+    layout: { type: 'string' },
+  },
+  computedFields: {
+    ...computedFields,
+    structuredData: {
+      type: 'json',
+      resolve: (doc) => ({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: doc.title,
+        description: doc.summary,
+        image: siteMetadata.socialBanner,
+        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+      }),
+    },
+  },
+}))
+
 export const About = defineDocumentType(() => ({
   name: 'About',
   filePathPattern: 'about.mdx',
@@ -223,7 +248,7 @@ export const Raids = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Dungeons, Raids, About],
+  documentTypes: [Blog, Dungeons, Raids, About, Changelog],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [

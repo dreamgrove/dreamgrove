@@ -1,1669 +1,2632 @@
 {
-  "added": [],
-  "removed": [],
-  "modified": [
+  "delta": [
     {
       "name": "Incapacitating Roar",
       "id": 99,
-      "changes": {
-        "spell_type": {
-          "latest": "Ranged",
-          "previous": "Melee"
+      "type": "modified",
+      "fields": [
+        {
+          "field": "spell_type",
+          "prev": "Melee",
+          "new": "Ranged"
         }
-      }
+      ],
+      "effects": []
     },
     {
       "name": "Wrath",
       "id": 5176,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1837",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1837",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.57750",
+              "new": "0.61220"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Incarnation: Tree of Life",
+      "id": 5420,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Regrowth (8936)",
+            "Swiftmend (18562)",
+            "Lifebloom (33763)",
+            "Lifebloom (33778)",
+            "Wild Growth (48438)",
+            "Nourish (50464)",
+            "Efflorescence (81269)",
+            "Cenarion Ward (102352)",
+            "Rejuvenation (Germination) (155777)",
+            "Tranquility (157982)",
+            "Lifebloom (188550)",
+            "Cultivation (200389)",
+            "Reactive Resin (203406)",
+            "Spring Blossoms (207386)",
+            "Grove Tending (279793)",
+            "Early Harvest (287255)",
+            "Adaptive Swarm (325748)",
+            "Renewing Bloom (364686)",
+            "Ephemeral Profusion (367330)",
+            "Grove Tending (383193)",
+            "Adaptive Swarm (391891)",
+            "Embrace of the Dream (392147)",
+            "Invigorate (392160)",
+            "Verdancy (392329)",
+            "Nourish (422090)",
+            "Swiftmend (422094)",
+            "Wild Growth (422382)",
+            "Nourish (423618)",
+            "Minor Cenarion Ward (429222)",
+            "Dream Bloom (434141)",
+            "Symbiotic Blooms (439530)",
+            "Bursting Growth (440121)"
+          ],
+          "id": "124697",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "15",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "15",
+              "new": "10"
+            }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Regrowth (8936)",
+            "Swiftmend (18562)",
+            "Lifebloom (33763)",
+            "Lifebloom (33778)",
+            "Wild Growth (48438)",
+            "Nourish (50464)",
+            "Efflorescence (81269)",
+            "Cenarion Ward (102352)",
+            "Rejuvenation (Germination) (155777)",
+            "Tranquility (157982)",
+            "Lifebloom (188550)",
+            "Cultivation (200389)",
+            "Reactive Resin (203406)",
+            "Spring Blossoms (207386)",
+            "Grove Tending (279793)",
+            "Early Harvest (287255)",
+            "Adaptive Swarm (325748)",
+            "Renewing Bloom (364686)",
+            "Ephemeral Profusion (367330)",
+            "Grove Tending (383193)",
+            "Adaptive Swarm (391891)",
+            "Embrace of the Dream (392147)",
+            "Invigorate (392160)",
+            "Verdancy (392329)",
+            "Nourish (422090)",
+            "Swiftmend (422094)",
+            "Wild Growth (422382)",
+            "Nourish (423618)",
+            "Minor Cenarion Ward (429222)",
+            "Dream Bloom (434141)",
+            "Symbiotic Blooms (439530)",
+            "Bursting Growth (440121)"
+          ],
+          "id": "124698",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "15",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "15",
+              "new": "10"
+            }
+          ]
+        },
+        {
+          "idx": "5",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rejuvenation (774)", "Rejuvenation (Germination) (155777)"],
+          "id": "253736",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "40"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "40"
+            }
+          ]
+        },
+        {
+          "idx": "6",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rejuvenation (774)", "Rejuvenation (Germination) (155777)"],
+          "id": "253737",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "40"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "40"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Nourish",
       "id": 50464,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "42665",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Direct Heal",
+          "id": "42665",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.23000",
+              "new": "4.46000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Mastery: Harmony",
       "id": 77495,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "68119",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "68119",
+          "modifications": [],
+          "values": [
+            {
+              "key": "PvP Coefficient",
+              "prev": "1.00000",
+              "new": "0.80000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Starsurge",
       "id": 78674,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "68268",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "68268",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "1.77000",
+              "new": "1.87600"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Fungal Growth",
       "id": 81281,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "68703",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage",
+          "id": "68703",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.22600",
+              "new": "0.28700"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Wild Mushroom",
       "id": 88751,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "91242",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "91242",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.00000",
+              "new": "2.54400"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1031624",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Dummy",
+          "id": "1031624",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "16",
+              "new": "20"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "16",
+              "new": "20"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Incarnation: Avatar of Ashamane",
+      "id": 102543,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "3",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Rip (1079)",
+            "Rake (1822)",
+            "Shred (5221)",
+            "Ferocious Bite (22568)",
+            "Maim (22570)",
+            "Savage Roar (52610)",
+            "Infected Wounds (58180)",
+            "Thrash (77758)",
+            "Stampeding Roar (77761)",
+            "Stampeding Roar (77764)",
+            "Skull Bash (93985)",
+            "Swipe (106785)",
+            "Thrash (106830)",
+            "Skull Bash (106839)",
+            "Ysera's Gift (145108)",
+            "Ysera's Gift (145109)",
+            "Ysera's Gift (145110)",
+            "Moonfire (155625)",
+            "Rake (155722)",
+            "Brutal Slash (202028)",
+            "Feral Frenzy (274837)",
+            "Feral Frenzy (274838)",
+            "Primal Wrath (285381)",
+            "Infected Wounds (354571)",
+            "Thrash (405233)",
+            "Ravage (441591)"
+          ],
+          "id": "471804",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "-20",
+              "new": "-25"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "-20",
+              "new": "-25"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Guardian Druid",
       "id": 137010,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "179693",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Maul (6807)",
+            "Mangle (33917)",
+            "Thrash (77758)",
+            "Pulverize (80313)",
+            "Thrash (192090)",
+            "Brambles (203958)",
+            "Lunar Beam (204069)",
+            "Brambles (213709)",
+            "Swipe (213771)",
+            "Architect's Aligner (363789)",
+            "Thorns of Iron (400223)",
+            "Raze (400254)",
+            "Lunar Beam (414613)",
+            "Ravage (441605)",
+            "Dreadful Wound (451177)"
+          ],
+          "id": "179693",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "58",
+              "new": "90"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "58",
+              "new": "90"
             }
-          },
-          {
-            "action": "modified",
-            "id": "191158",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Maul (6807)",
+            "Mangle (33917)",
+            "Thrash (77758)",
+            "Pulverize (80313)",
+            "Thrash (192090)",
+            "Brambles (203958)",
+            "Lunar Beam (204069)",
+            "Brambles (213709)",
+            "Swipe (213771)",
+            "Architect's Aligner (363789)",
+            "Thorns of Iron (400223)",
+            "Raze (400254)",
+            "Lunar Beam (414613)",
+            "Ravage (441605)",
+            "Dreadful Wound (451177)"
+          ],
+          "id": "191158",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "58",
+              "new": "90"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "58",
+              "new": "90"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1013111",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "10",
+          "type": "Apply Aura",
+          "subtype": "Modify Auto Attack Damage Done%",
+          "id": "1013111",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "60",
+              "new": "92"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "60",
+              "new": "92"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1091200",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "19",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"],
+          "id": "1091200",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "0",
+              "new": "2"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "0",
+              "new": "2"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1091201",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "20",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"],
+          "id": "1091201",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "0",
+              "new": "2"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "0",
+              "new": "2"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1176395",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "22",
+          "type": "Apply Aura",
+          "subtype": "Apply Flat Modifier w/ Label",
+          "affected_spells": ["Lunar Insight (429530)"],
+          "id": "1176395",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "-10",
+              "new": "-12"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "-10",
+              "new": "-12"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Feral Druid",
       "id": 137011,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1176396",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "14",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rake (1822)", "Rake (155722)"],
+          "id": "1080962",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "5",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "5",
+              "new": "10"
+            }
+          ]
+        },
+        {
+          "idx": "15",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rip (1079)"],
+          "id": "1088944",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "15"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "15"
+            }
+          ]
+        },
+        {
+          "type": "added",
+          "effect": {
+            "idx": "16",
+            "id": "1174663",
+            "type": "Apply Aura",
+            "subtype": "Apply Flat Modifier w/ Label",
+            "values": [
+              {
+                "Base Value": "-10"
+              },
+              {
+                "Scaled Value": "-10"
+              },
+              {
+                "PvP Coefficient": "1.00000"
+              },
+              {
+                "Misc Value": "3"
+              },
+              {
+                "Misc Value 2": "3962 (Label)"
+              },
+              {
+                "Target": "Self (1)"
               }
-            }
-          },
-          {
-            "action": "modified",
-            "id": "1080962",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
-            }
-          },
-          {
-            "action": "modified",
-            "id": "1088944",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
-            }
-          },
-          {
-            "action": "added",
-            "effect": {
-              "idx": "16",
-              "id": "1174663",
-              "type": "Apply Aura",
-              "subtype": "Apply Flat Modifier w/ Label",
-              "values": [
-                {
-                  "Base Value": "-10"
-                },
-                {
-                  "Scaled Value": "-10"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Misc Value": "3"
-                },
-                {
-                  "Misc Value 2": "3962 (Label)"
-                },
-                {
-                  "Target": "Self"
-                }
-              ],
-              "affected_spells": [["Harmonious Constitution"]]
-            }
+            ],
+            "affected_spells": ["Harmonious Constitution (440116)"]
           }
-        ]
-      }
+        }
+      ]
     },
     {
       "name": "Restoration Druid",
       "id": 137012,
-      "changes": {
-        "effects": [
-          {
-            "action": "added",
-            "effect": {
-              "idx": "17",
-              "id": "1177947",
-              "type": "Apply Aura",
-              "subtype": "Modify Auto Attack Damage Done%",
-              "values": [
-                {
-                  "Base Value": "30"
-                },
-                {
-                  "Scaled Value": "30"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Target": "Self"
-                }
-              ]
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "7",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Sunfire (164815)"],
+          "id": "260748",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "-31",
+              "new": "-41"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "-31",
+              "new": "-41"
             }
-          },
-          {
-            "action": "modified",
-            "id": "260748",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "8",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Sunfire (164815)"],
+          "id": "260749",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "-31",
+              "new": "-41"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "-31",
+              "new": "-41"
             }
-          },
-          {
-            "action": "modified",
-            "id": "260749",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "9",
+          "type": "Apply Aura",
+          "subtype": "Add Flat Modifier",
+          "affected_spells": ["Convoke the Spirits (323764)", "Convoke the Spirits (391528)"],
+          "id": "872913",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "-4",
+              "new": "0"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "-4",
+              "new": "0"
             }
-          },
-          {
-            "action": "modified",
-            "id": "872913",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "10",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Convoke the Spirits (323764)", "Convoke the Spirits (391528)"],
+          "id": "876348",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "33",
+              "new": "0"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "33",
+              "new": "0"
             }
-          },
-          {
-            "action": "modified",
-            "id": "876348",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "21",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Wrath (5176)",
+            "Wrath (190984)",
+            "Starfire (194153)",
+            "Starfire (197628)"
+          ],
+          "id": "1081594",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "90",
+              "new": "79"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "90",
+              "new": "79"
+            },
+            {
+              "key": "PvP Coefficient",
+              "prev": "1.00000",
+              "new": "0.50000"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1081594",
-            "changes": {
-              "values": {
-                "latest": [null, null, null],
-                "previous": [null, null, null]
-              }
+          ]
+        },
+        {
+          "idx": "24",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rip (1079)"],
+          "id": "1113290",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "76",
+              "new": "50"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "76",
+              "new": "50"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1113290",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "25",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
+          "id": "1113620",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "73",
+              "new": "47"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "73",
+              "new": "47"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1113620",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "26",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Shred (5221)"],
+          "id": "1120675",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "74",
+              "new": "48"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "74",
+              "new": "48"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1120675",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "27",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rake (1822)", "Rake (155722)"],
+          "id": "1120676",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "24",
+              "new": "5"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "24",
+              "new": "5"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1120676",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "28",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Rake (1822)", "Rake (155722)"],
+          "id": "1120677",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "44",
+              "new": "22"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "44",
+              "new": "22"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1120677",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
-            }
-          },
-          {
-            "action": "removed",
-            "effect": {
-              "idx": "16",
-              "id": "1174663",
-              "type": "Apply Aura",
-              "subtype": "Apply Flat Modifier w/ Label",
-              "values": [
-                {
-                  "Base Value": "-10"
-                },
-                {
-                  "Scaled Value": "-10"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Misc Value": "3"
-                },
-                {
-                  "Misc Value 2": "3962 (Label)"
-                },
-                {
-                  "Target": "Self"
-                }
-              ],
-              "affected_spells": [["Harmonious Constitution"]]
-            }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Balance Druid",
       "id": 137013,
-      "changes": {
-        "effects": [
-          {
-            "action": "added",
-            "effect": {
-              "idx": "11",
-              "id": "1088945",
-              "type": "Apply Aura",
-              "subtype": "Modify Mana Regen%",
-              "values": [
-                {
-                  "Base Value": "60"
-                },
-                {
-                  "Scaled Value": "60"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Target": "Self"
-                }
-              ]
-            }
-          },
-          {
-            "action": "added",
-            "effect": {
-              "idx": "12",
-              "id": "1177983",
-              "type": "Apply Aura",
-              "subtype": "Add Percent Modifier",
-              "values": [
-                {
-                  "Base Value": "6"
-                },
-                {
-                  "Scaled Value": "6"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Target": "Self"
-                },
-                {
-                  "Family Flags": "127"
-                }
-              ],
-              "affected_spells": [["Sunfire"]]
-            }
-          },
-          {
-            "action": "added",
-            "effect": {
-              "idx": "13",
-              "id": "1177984",
-              "type": "Apply Aura",
-              "subtype": "Add Percent Modifier",
-              "values": [
-                {
-                  "Base Value": "6"
-                },
-                {
-                  "Scaled Value": "6"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Misc Value": "22"
-                },
-                {
-                  "Target": "Self"
-                },
-                {
-                  "Family Flags": "127"
-                }
-              ],
-              "affected_spells": [["Sunfire"]]
-            }
-          },
-          {
-            "action": "added",
-            "effect": {
-              "idx": "14",
-              "id": "1177985",
-              "type": "Apply Aura",
-              "subtype": "Add Percent Modifier",
-              "values": [
-                {
-                  "Base Value": "6"
-                },
-                {
-                  "Scaled Value": "6"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Target": "Self"
-                },
-                {
-                  "Family Flags": "21, 92"
-                }
-              ],
-              "affected_spells": [["Moonfire", "Moonfire"]]
-            }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "type": "added",
+          "effect": {
+            "idx": "11",
+            "id": "1088945",
+            "type": "Apply Aura",
+            "subtype": "Modify Mana Regen%",
+            "values": [
+              {
+                "Base Value": "60"
+              },
+              {
+                "Scaled Value": "60"
+              },
+              {
+                "PvP Coefficient": "1.00000"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
           }
-        ]
-      }
-    },
-    {
-      "name": "Charged Bolt",
-      "id": 137542,
-      "changes": {
-        "effects": [
-          {
-            "action": "added",
-            "effect": {
-              "idx": "15",
-              "id": "1177986",
-              "type": "Apply Aura",
-              "subtype": "Add Percent Modifier",
-              "values": [
-                {
-                  "Base Value": "6"
-                },
-                {
-                  "Scaled Value": "6"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Misc Value": "22"
-                },
-                {
-                  "Target": "Self"
-                },
-                {
-                  "Family Flags": "21, 92"
-                }
-              ],
-              "affected_spells": [["Moonfire", "Moonfire"]]
-            }
-          },
-          {
-            "action": "removed",
-            "effect": {
-              "idx": "11",
-              "id": "1088945",
-              "type": "Apply Aura",
-              "subtype": "Modify Mana Regen%",
-              "values": [
-                {
-                  "Base Value": "60"
-                },
-                {
-                  "Scaled Value": "60"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Target": "Self"
-                }
-              ]
-            }
+        },
+        {
+          "type": "added",
+          "effect": {
+            "idx": "12",
+            "id": "1177983",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "PvP Coefficient": "1.00000"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "127"
+              }
+            ],
+            "affected_spells": ["Sunfire (164815)"]
           }
-        ]
-      }
+        },
+        {
+          "type": "added",
+          "effect": {
+            "idx": "13",
+            "id": "1177984",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "PvP Coefficient": "1.00000"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "127"
+              }
+            ],
+            "affected_spells": ["Sunfire (164815)"]
+          }
+        },
+        {
+          "type": "added",
+          "effect": {
+            "idx": "14",
+            "id": "1177985",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "PvP Coefficient": "1.00000"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "21, 92"
+              }
+            ],
+            "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"]
+          }
+        }
+      ]
     },
     {
       "name": "Fey Missile",
       "id": 188046,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "274309",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "274309",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.38700",
+              "new": "0.45200"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Wrath",
       "id": 190984,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "280098",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "280098",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.70000",
+              "new": "0.74200"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Starfall",
       "id": 191037,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "280158",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "280158",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.14000",
+              "new": "0.14840"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Starfire",
       "id": 194153,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "284976",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "284976",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.80000",
+              "new": "0.84800"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Starsurge",
       "id": 197626,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "290376",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "290376",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "1.77000",
+              "new": "1.87600"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Starfire",
       "id": 197628,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "290380",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "290380",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.87500",
+              "new": "0.93000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Flourish",
       "id": 197721,
-      "changes": {
-        "duration": {
-          "latest": "8 seconds",
-          "previous": "6 seconds"
+      "type": "modified",
+      "fields": [
+        {
+          "field": "duration",
+          "prev": "6 seconds",
+          "new": "8 seconds"
         }
-      }
+      ],
+      "effects": []
     },
     {
       "name": "Stellar Flare",
       "id": 202347,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "298295",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "298295",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.17800",
+              "new": "0.18900"
             }
-          },
-          {
-            "action": "modified",
-            "id": "298296",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage",
+          "id": "298296",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.12500",
+              "new": "0.13300"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Shooting Stars",
       "id": 202497,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "298525",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "298525",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.30000",
+              "new": "0.31800"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Fury of Elune",
       "id": 211545,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "313366",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "313366",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.18200",
+              "new": "0.19300"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "New Moon",
       "id": 274281,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "726522",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "726522",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.44000",
+              "new": "2.58600"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Half Moon",
       "id": 274282,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "726525",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "726525",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "3.45000",
+              "new": "3.65700"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Full Moon",
       "id": 274283,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "726528",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "726528",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "4.20000",
+              "new": "4.45200"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Orbital Strike",
       "id": 361237,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "898966",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "898966",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.00000",
+              "new": "2.12000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Dream of Cenarius",
       "id": 372152,
-      "changes": {
-        "effects": [
-          {
-            "action": "added",
-            "effect": {
-              "idx": "5",
-              "id": "1041740",
-              "type": "Apply Aura",
-              "subtype": "Add Percent Modifier",
-              "values": [
-                {
-                  "Base Value": "130"
-                },
-                {
-                  "Scaled Value": "130"
-                },
-                {
-                  "PvP Coefficient": "1.00000"
-                },
-                {
-                  "Misc Value": "22"
-                },
-                {
-                  "Target": "Self"
-                },
-                {
-                  "Family Flags": "6"
-                }
-              ],
-              "affected_spells": [["Regrowth"]]
-            }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "type": "added",
+          "effect": {
+            "idx": "5",
+            "id": "1041740",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier",
+            "values": [
+              {
+                "Base Value": "130"
+              },
+              {
+                "Scaled Value": "130"
+              },
+              {
+                "PvP Coefficient": "1.00000"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "6"
+              }
+            ],
+            "affected_spells": ["Regrowth (8936)"]
           }
-        ]
-      }
+        }
+      ]
     },
     {
       "name": "Twin Moonfire",
       "id": 372567,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "997281",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Moonfire (155625)", "Moonfire (164812)"],
+          "id": "997281",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "8"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "8"
             }
-          },
-          {
-            "action": "modified",
-            "id": "997282",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Moonfire (155625)", "Moonfire (164812)"],
+          "id": "997282",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "8"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "8"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Embrace of the Dream",
       "id": 392147,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1030097",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Direct Heal",
+          "id": "1030097",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.47250",
+              "new": "0.70875"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Power of the Archdruid",
       "id": 392302,
-      "changes": {
-        "proc_chance": {
-          "latest": "60%",
-          "previous": "40%"
+      "type": "modified",
+      "fields": [
+        {
+          "field": "proc_chance",
+          "prev": "40%",
+          "new": "60%"
         }
-      }
+      ],
+      "effects": []
     },
     {
       "name": "Verdancy",
       "id": 392329,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1030446",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Direct Heal",
+          "id": "1030446",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.97200",
+              "new": "0.77760"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Power of Goldrinn",
       "id": 394046,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1109174",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "3",
+          "type": "School Damage",
+          "id": "1109174",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.85200",
+              "new": "0.95400"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Goldrinn's Fang",
       "id": 394047,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1033385",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1033385",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.90000",
+              "new": "0.95400"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Fury of Elune",
       "id": 394111,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1033506",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1033506",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.18200",
+              "new": "0.19300"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Thrash",
       "id": 405233,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1053352",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage",
+          "id": "1053352",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.12650",
+              "new": "0.13300"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Ashamane's Guidance",
       "id": 421440,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1095725",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "1095725",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "30",
+              "new": "40"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "30",
+              "new": "40"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Wild Growth",
       "id": 422382,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1097664",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Heal",
+          "id": "1097664",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.06800",
+              "new": "0.05440"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Dreamstate",
       "id": 424248,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1100831",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "3",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Wrath (5176)",
+            "Wrath (190984)",
+            "Starfire (194153)",
+            "Starfire (197628)"
+          ],
+          "id": "1100831",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "100",
+              "new": "80"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "100",
+              "new": "80"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Boundless Moonlight",
       "id": 428682,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1109706",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1109706",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.65000",
+              "new": "2.81000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Harmony of the Grove",
       "id": 428735,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1109828",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Wrath (5176)",
+            "Starsurge (78674)",
+            "Fungal Growth (81281)",
+            "Wild Mushroom (88751)",
+            "Moonfire (164812)",
+            "Sunfire (164815)",
+            "Wrath (190984)",
+            "Starfall (191037)",
+            "Starfire (194153)",
+            "Starsurge (197626)",
+            "Starfire (197628)",
+            "Sunfire (197630)",
+            "Stellar Flare (202347)",
+            "Shooting Stars (202497)",
+            "Fury of Elune (211545)",
+            "Streaking Star (272873)",
+            "New Moon (274281)",
+            "Half Moon (274282)",
+            "Full Moon (274283)",
+            "Lunar Shrapnel (279641)",
+            "Fury of Elune (281871)",
+            "Thorns (305496)",
+            "Adaptive Swarm (325733)",
+            "Star Burst (356474)",
+            "Starfall (359399)",
+            "Orbital Strike (361237)",
+            "Fury of Elune (365640)",
+            "Power of Goldrinn (394046)",
+            "Goldrinn's Fang (394047)",
+            "Fury of Elune (394111)",
+            "Star Burst (406430)",
+            "Crashing Star (408310)",
+            "Minor Moon (424588)",
+            "Boundless Moonlight (428682)",
+            "Dream Burst (433850)"
+          ],
+          "id": "1109828",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "6",
+              "new": "8"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "6",
+              "new": "8"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1109829",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Wrath (5176)",
+            "Starsurge (78674)",
+            "Fungal Growth (81281)",
+            "Wild Mushroom (88751)",
+            "Moonfire (164812)",
+            "Sunfire (164815)",
+            "Wrath (190984)",
+            "Starfall (191037)",
+            "Starfire (194153)",
+            "Starsurge (197626)",
+            "Starfire (197628)",
+            "Sunfire (197630)",
+            "Stellar Flare (202347)",
+            "Shooting Stars (202497)",
+            "Fury of Elune (211545)",
+            "Streaking Star (272873)",
+            "New Moon (274281)",
+            "Half Moon (274282)",
+            "Full Moon (274283)",
+            "Lunar Shrapnel (279641)",
+            "Fury of Elune (281871)",
+            "Thorns (305496)",
+            "Adaptive Swarm (325733)",
+            "Star Burst (356474)",
+            "Starfall (359399)",
+            "Orbital Strike (361237)",
+            "Fury of Elune (365640)",
+            "Power of Goldrinn (394046)",
+            "Goldrinn's Fang (394047)",
+            "Fury of Elune (394111)",
+            "Star Burst (406430)",
+            "Crashing Star (408310)",
+            "Minor Moon (424588)",
+            "Boundless Moonlight (428682)",
+            "Dream Burst (433850)"
+          ],
+          "id": "1109829",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "6",
+              "new": "8"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "6",
+              "new": "8"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Harmony of the Grove",
       "id": 428737,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1109887",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Regrowth (8936)",
+            "Swiftmend (18562)",
+            "Lifebloom (33763)",
+            "Lifebloom (33778)",
+            "Wild Growth (48438)",
+            "Nourish (50464)",
+            "Efflorescence (81269)",
+            "Cenarion Ward (102352)",
+            "Rejuvenation (Germination) (155777)",
+            "Tranquility (157982)",
+            "Lifebloom (188550)",
+            "Cultivation (200389)",
+            "Reactive Resin (203406)",
+            "Spring Blossoms (207386)",
+            "Grove Tending (279793)",
+            "Early Harvest (287255)",
+            "Adaptive Swarm (325748)",
+            "Renewing Bloom (364686)",
+            "Ephemeral Profusion (367330)",
+            "Grove Tending (383193)",
+            "Adaptive Swarm (391891)",
+            "Embrace of the Dream (392147)",
+            "Invigorate (392160)",
+            "Verdancy (392329)",
+            "Nourish (422090)",
+            "Swiftmend (422094)",
+            "Wild Growth (422382)",
+            "Nourish (423618)",
+            "Minor Cenarion Ward (429222)",
+            "Dream Bloom (434141)",
+            "Symbiotic Blooms (439530)",
+            "Bursting Growth (440121)"
+          ],
+          "id": "1109887",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "6",
+              "new": "5"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "6",
+              "new": "5"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1109888",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Regrowth (8936)",
+            "Swiftmend (18562)",
+            "Lifebloom (33763)",
+            "Lifebloom (33778)",
+            "Wild Growth (48438)",
+            "Nourish (50464)",
+            "Efflorescence (81269)",
+            "Cenarion Ward (102352)",
+            "Rejuvenation (Germination) (155777)",
+            "Tranquility (157982)",
+            "Lifebloom (188550)",
+            "Cultivation (200389)",
+            "Reactive Resin (203406)",
+            "Spring Blossoms (207386)",
+            "Grove Tending (279793)",
+            "Early Harvest (287255)",
+            "Adaptive Swarm (325748)",
+            "Renewing Bloom (364686)",
+            "Ephemeral Profusion (367330)",
+            "Grove Tending (383193)",
+            "Adaptive Swarm (391891)",
+            "Embrace of the Dream (392147)",
+            "Invigorate (392160)",
+            "Verdancy (392329)",
+            "Nourish (422090)",
+            "Swiftmend (422094)",
+            "Wild Growth (422382)",
+            "Nourish (423618)",
+            "Minor Cenarion Ward (429222)",
+            "Dream Bloom (434141)",
+            "Symbiotic Blooms (439530)",
+            "Bursting Growth (440121)"
+          ],
+          "id": "1109888",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "6",
+              "new": "5"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "6",
+              "new": "5"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Bounteous Bloom",
       "id": 429217,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1113276",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Pet Area Aura",
+          "subtype": "Periodic Energize Power",
+          "id": "1113276",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "70",
+              "new": "100"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "70",
+              "new": "100"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Durability of Nature",
       "id": 429227,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1113301",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Unknown",
+          "id": "1113301",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "100"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "100"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Moon Guardian",
       "id": 429520,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1117493",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Flat Modifier",
+          "affected_spells": ["Moonfire (8921)"],
+          "id": "1117493",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Family Flags",
+              "prev": "2, 21",
+              "new": "21"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Dream Burst",
       "id": 433850,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1123446",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1123446",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "2.40000",
+              "new": "3.18000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Ravage",
       "id": 441591,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136153",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1136153",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "1.88800",
+              "new": "2.55000"
+            },
+            {
+              "key": "PvP Coefficient",
+              "prev": "1.00000",
+              "new": "0.60000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Ravage",
       "id": 441605,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136169",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage",
+          "id": "1136169",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "1.58400",
+              "new": "2.14000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Empowered Shapeshifting",
       "id": 441689,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1137385",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "5",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Shred (5221)",
+            "Swipe (106785)",
+            "Brutal Slash (202028)",
+            "Swipe (213771)"
+          ],
+          "id": "1137385",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "3",
+              "new": "6"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "3",
+              "new": "6"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1164922",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "6",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Mangle (33917)"],
+          "id": "1164922",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "15"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "15"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Ursine Potential",
       "id": 441698,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136320",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Mangle (33917)"],
+          "id": "1136320",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "200",
+              "new": "300"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "200",
+              "new": "300"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1137908",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Brutal Slash (202028)", "Swipe (213771)"],
+          "id": "1137908",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "75"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "75"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Feline Potential",
       "id": 441702,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136325",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
+          "id": "1136325",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "100",
+              "new": "225"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "100",
+              "new": "225"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Dreadful Wound",
       "id": 441812,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136537",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage",
+          "id": "1136537",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.60000",
+              "new": "0.70000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Ruthless Aggression",
       "id": 441817,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136544",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Modify Melee Auto Attack Speed%",
+          "id": "1136544",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "20",
+              "new": "35"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "20",
+              "new": "35"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Killing Strikes",
       "id": 441825,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136554",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Modify Total Stat%",
+          "id": "1136554",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "5",
+              "new": "8"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "5",
+              "new": "8"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Bestial Strength",
       "id": 441841,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136577",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
+          "id": "1136577",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "8",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "8",
+              "new": "10"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1136578",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Primal Wrath (285381)"],
+          "id": "1136578",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "60"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "60"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1136579",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "3",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Maul (6807)",
+            "Strength of the Wild (236716)",
+            "Raze (400254)",
+            "Ravage (441605)"
+          ],
+          "id": "1136579",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "20"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "20"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1176379",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "4",
+          "type": "Apply Aura",
+          "subtype": "Apply Percent Modifier w/ Label",
+          "affected_spells": ["Rampant Ferocity (391710)"],
+          "id": "1176379",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "8",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "8",
+              "new": "10"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Strike for the Heart",
       "id": 441845,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136584",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Flat Modifier",
+          "affected_spells": [
+            "Shred (5221)",
+            "Mangle (33917)",
+            "Swipe (106785)",
+            "Brutal Slash (202028)",
+            "Swipe (213771)"
+          ],
+          "id": "1136584",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "6",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "6",
+              "new": "10"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1136586",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Shred (5221)",
+            "Mangle (33917)",
+            "Swipe (106785)",
+            "Brutal Slash (202028)",
+            "Swipe (213771)"
+          ],
+          "id": "1136586",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "6",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "6",
+              "new": "10"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Tear Down the Mighty",
       "id": 441846,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1136587",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Flat Modifier",
+          "affected_spells": [
+            "Pulverize (80313)",
+            "Feral Frenzy (274837)",
+            "Feral Frenzy (274838)"
+          ],
+          "id": "1136587",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "-5000",
+              "new": "-10000"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "-5000",
+              "new": "-10000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Savage Fury",
       "id": 449646,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1148998",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Modify All Haste%",
+          "id": "1148998",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "8",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "8",
+              "new": "10"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1148999",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Modify Power Regen",
+          "id": "1148999",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "20",
+              "new": "25"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "20",
+              "new": "25"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Umbral Inspiration",
       "id": 450419,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1150305",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Starfall (50286)",
+            "Moonfire (164812)",
+            "Sunfire (164815)",
+            "Starfall (191034)",
+            "Starfall (191037)",
+            "Stellar Flare (202347)",
+            "Shooting Stars (202497)",
+            "Starfall (359399)",
+            "Crashing Star (408310)"
+          ],
+          "id": "1150305",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "30",
+              "new": "35"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "30",
+              "new": "35"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1150306",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Starfall (50286)",
+            "Moonfire (164812)",
+            "Sunfire (164815)",
+            "Starfall (191034)",
+            "Starfall (191037)",
+            "Stellar Flare (202347)",
+            "Shooting Stars (202497)",
+            "Starfall (359399)",
+            "Crashing Star (408310)"
+          ],
+          "id": "1150306",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "30",
+              "new": "35"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "30",
+              "new": "35"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Astral Communion",
       "id": 450599,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1150605",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Energize Power",
+          "id": "1150605",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "200",
+              "new": "250"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "200",
+              "new": "250"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Dreadful Wound",
       "id": 451177,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1151596",
-            "changes": {
-              "values": {
-                "latest": [null],
-                "previous": [null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage",
+          "id": "1151596",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.30300",
+              "new": "0.38000"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Druid Balance 11.0 Class Set 2pc",
       "id": 453666,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1155666",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": ["Starsurge (78674)", "Starsurge (197626)"],
+          "id": "1155666",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "8",
+              "new": "10"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "8",
+              "new": "10"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1157842",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier",
+          "affected_spells": [
+            "Starfall (50286)",
+            "Starfall (191034)",
+            "Starfall (191037)",
+            "Starfall (359399)"
+          ],
+          "id": "1157842",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "14"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "14"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Druid Balance 11.0 Class Set 4pc",
       "id": 453667,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1155667",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "1155667",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "20"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "20"
             }
-          },
-          {
-            "action": "modified",
-            "id": "1157725",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+          ]
+        },
+        {
+          "idx": "2",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "1157725",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "20",
+              "new": "50"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "20",
+              "new": "50"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     },
     {
       "name": "Cenarius' Might",
       "id": 455801,
-      "changes": {
-        "effects": [
-          {
-            "action": "modified",
-            "id": "1159502",
-            "changes": {
-              "values": {
-                "latest": [null, null],
-                "previous": [null, null]
-              }
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Modify All Haste%",
+          "id": "1159502",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "12"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "12"
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     }
   ]
 }
