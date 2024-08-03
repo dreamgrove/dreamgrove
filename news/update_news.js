@@ -1,77 +1,55 @@
 const axios = require('axios')
 const fs = require('fs')
-const path = require('path')
 
-const owner = 'simulationcraft'
-const repo = 'simc'
-const branch = 'thewarwithin'
+// GitHub repository details
+const repoOwner = 'simulationcraft'
+const repoName = 'simc'
 const filePath = 'SpellDataDump/druid.txt'
-const outputDir = './news'
 
-const downloadFile = async (url, outputPath) => {
-  try {
-    const response = await axios.get(url)
-    fs.writeFileSync(outputPath, response.data)
-    console.log(`File downloaded to ${outputPath}`)
-  } catch (error) {
-    console.error(`Failed to download file: ${error}`)
-  }
+// Function to get the latest commit SHA for the specified file
+async function getLatestCommitSHA() {
+  const latestCommitUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}&per_page=1`
+  const response = await axios.get(latestCommitUrl)
+  return response.data[0].sha
 }
 
-const getPreviousCommitSha = async (currentCommitSha) => {
+// Function to get the file content at a specific commit
+async function getFileContent(commitSHA) {
+  const fileUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/${commitSHA}/${filePath}`
+  const response = await axios.get(fileUrl)
+  return response.data
+}
+
+// Main function to perform the tasks
+;(async () => {
   try {
-    // Fetch all commits from the specified branch
-    const url = `https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`
-    const response = await axios.get(url)
-    const commits = response.data
+    const latestCommitSHA = await getLatestCommitSHA()
+    const latestFileContent = await getFileContent(latestCommitSHA)
 
-    console.log(`Total commits fetched: ${commits.length}`)
-    commits.forEach((commit, index) => {
-      console.log(`Commit ${index}: SHA: ${commit.sha}, Message: ${commit.commit.message}`)
-    })
+    // Check if 'druid_latest.txt' exists
+    let previousFileContent = ''
+    if (fs.existsSync('druid_latest.txt')) {
+      previousFileContent = fs.readFileSync('druid_latest.txt', 'utf-8')
+    }
 
-    // Find the commit before the current one
-    const currentIndex = commits.findIndex((commit) => commit.sha === currentCommitSha)
-    console.log(`Current commit index: ${currentIndex}`)
-    if (currentIndex !== -1 && currentIndex < commits.length - 1) {
-      return commits[currentIndex + 1].sha
+    // Save the latest file if it's different
+    if (latestFileContent !== previousFileContent) {
+      fs.writeFileSync('druid_latest.txt', latestFileContent)
+      console.log('Saved latest file as druid_latest.txt')
+
+      // Get the previous commit SHA
+      const commitsUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?path=${filePath}&per_page=2`
+      const commits = await axios.get(commitsUrl)
+      const previousCommitSHA = commits.data[1].sha
+      const previousFileContent = await getFileContent(previousCommitSHA)
+
+      // Save the previous file content
+      fs.writeFileSync('druid_previous.txt', previousFileContent)
+      console.log('Saved previous file as druid_previous.txt')
+    } else {
+      console.log('No changes detected, no files updated.')
     }
   } catch (error) {
-    console.error(`Failed to get previous commit SHA: ${error}`)
+    console.error('Error:', error)
   }
-
-  return null
-}
-
-const main = async () => {
-  // Ensure output directory exists
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true })
-  }
-
-  // Download the latest file
-  const latestFileUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${filePath}`
-  const latestOutputPath = path.join(outputDir, 'druid_latest.txt')
-  await downloadFile(latestFileUrl, latestOutputPath)
-
-  // Get the latest commit SHA
-  const commitUrl = `https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}`
-  const commitResponse = await axios.get(commitUrl)
-  const latestCommitSha = commitResponse.data[0].sha
-
-  console.log(`Latest commit SHA: ${latestCommitSha}`)
-
-  // Get the previous commit SHA
-  const previousCommitSha = await getPreviousCommitSha(latestCommitSha)
-  if (previousCommitSha) {
-    console.log(`Previous commit SHA: ${previousCommitSha}`)
-    // Download the file from the previous commit
-    const previousFileUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${previousCommitSha}/${filePath}`
-    const previousOutputPath = path.join(outputDir, 'druid_previous.txt')
-    await downloadFile(previousFileUrl, previousOutputPath)
-  } else {
-    console.log('No previous commit found.')
-  }
-}
-
-main()
+})()
