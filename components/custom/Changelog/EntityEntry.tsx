@@ -74,7 +74,8 @@ const FieldDiff = ({ field }) => {
         <FaLongArrowAltRight className="ml-1 inline-block" />
       </span>
       <span className="ml-1 text-green-500">{field.new}</span>
-      {field.prev !== undefined &&
+      {false &&
+        field.prev !== undefined &&
         field.new !== undefined &&
         (() => {
           const prevValue = parseFloat(field.prev)
