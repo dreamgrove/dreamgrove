@@ -8,8 +8,8 @@ import { FaAngleUp } from 'react-icons/fa'
 
 import styles from './Talents.module.css'
 
-export default function Talents({ name, talents, mimiron = false }) {
-  const [isVisible, setIsVisible] = useState(false)
+export default function Talents({ name, talents, mimiron = false, open = false }) {
+  const [isVisible, setIsVisible] = useState(open)
   const [loaded, setLoaded] = useState(false)
   const [iframeWidth, setIframeWidth] = useState(700)
 
