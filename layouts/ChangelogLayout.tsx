@@ -56,25 +56,6 @@ export default function ChangelogLayout({ content, next, prev, children }: Layou
             className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0"
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0">
-              <div>
-                <Dialog type="warning">
-                  <span>
-                    <span className="font-bold text-gray-800/80">Last Update: {creationDate}.</span>{' '}
-                    This section is still a work in progress. Changes are not guaranteed to be
-                    complete or accurate.
-                  </span>
-                </Dialog>
-                <div className="mx-1 mb-2">
-                  The changelog is generated based on the simc druid spelldumps. Latest dump can be
-                  found{' '}
-                  <a
-                    href="https://raw.githubusercontent.com/dreamgrove/dreamgrove/master/news/druid_latest.txt"
-                    className="text-main underline"
-                  >
-                    here
-                  </a>
-                </div>
-              </div>
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
             </div>
             <footer></footer>

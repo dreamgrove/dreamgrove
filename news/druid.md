@@ -1,0 +1,245 @@
+---
+title: 'Changelog'
+summary: 'A list of the latest class updates'
+---
+
+## Thu, 01 Aug 2024 21:53:04 -0500
+
+With [Hotfixes: August 1, 2024](https://www.wowhead.com/blue-tracker/news/eu/24122901)
+
+- **Druid**
+  - **Restoration**
+    - Fixed an issue that caused Mastery: Harmony to increase healing as if one additional stack was always present.
+
+## Wed, 31 Jul 2024 20:19:26 -0500
+
+With [The War Within Beta Development Notes](https://www.wowhead.com/blue-tracker/topic/eu/517039)
+
+- **DRUID** _([Druid Feedback](https://us.forums.blizzard.com/en/wow/t/feedback-druids/1870405/1))_
+  - Many talents have moved locations or have had their pathing updated.
+  - New Talent: Oakskin – Survival Instincts and Barkskin reduce damage taken by an additional 10%.
+  - New Talent: Fluid Form – Shred and Rake can be used in any form and shifts you into Cat Form. Mangle can be used in any form and shifts you into Bear Form. Wrath and Starfire shifts you into Moonkin Form, if known.
+  - New Talent: Ursoc’s Spirit – Stamina in Bear Form is increased by 10%.
+  - New Talent: Instincts of the Claw – Shred, Swipe, Rake, Mangle, and Thrash damage increased by 5/10%.
+  - New Talent: Lore of the Grove – Moonfire and Sunfire damage increased by 5/10%. Rejuvenation and Wild Growth healing increased by 3/5%.
+  - New Talent: Starlight Conduit – Wrath, Starsurge, and Starfire damage increased by 5%. For non-Balance, Starsurge’s cooldown is reduced by 4 seconds and its mana cost is reduced by 50%.
+  - Swiftmend has been removed from the talent tree and is now baseline for Restoration Druids.
+  - Improved Swipe has been removed from the talent tree and its benefit added to Swipe by default.
+  - Moonkin Form has been removed from the talent tree and is now baseline for Balance Druids.
+  - Heart of the Wild now reduces the global cooldown of affected Balance cast-time spells.
+  - Cat Form now increases the range of auto-attacks and melee abilities by 3 yards.
+  - Feline Swiftness now increases movement speed by 15%. Now a 1-point talent.
+  - Thick Hide now reduces damage taken by 4%. Now a 1-point talent.
+  - Natural Recovery now increases healing received by 4% and no longer increases healing done. Now a 1-point talent.
+  - Astral Influence now increases the range of all your spells by 5 yards and no longer increases auto attack or melee ability range. Now a 1-point talent.
+  - Primal Fury now also increases critical strike damage of Mangle by 20%.
+  - Ursine Vigor now increases Stamina and armor in Bear Form by 15% for 4 seconds. Now a 1-point talent.
+  - Guardian Druid improved Bear Form Stamina bonus decreased to 10% (was 20%).
+  - Lycara’s Teachings is now a 2-point talent that grants 3/6% of various secondary stats.
+  - Forestwalk now increases your movement speed and healing received by 8% for 6 seconds. Now a 1-point talent.
+  - Well-Honed Instincts’ effect now occurs once every 120 seconds. Now a 1-point talent.
+  - Tireless Pursuit has been removed.
+  - Mass Entanglement now roots targets for 10 seconds (was 30 seconds).
+  - Connectors repositioned to avoid a scenario where Improved Stampeding Roar could be taken without Stampeding Roar.
+  - Positions of Fluid Form and Forestwalk swapped.
+  - **Hero Talents**
+    - **Druid of the Claw (Feral/Guardian)**
+      - Aggravate Wounds now causes attacks to increase the duration of Dreadful Wounds by 0.6 seconds (was 0.4 seconds), up to 8 additional seconds (was 6 seconds).
+      - Killing Strikes lasts 8 seconds (was 6 seconds).
+      - Chance for Ravage to proc increased by 30%.
+      - **Feral**
+        - Dreadful Wound damage increased by 10%.
+      - **Guardian**
+        - Ravage damage increased by 20%.
+        - Dreadful Wound damage increased by 10%.
+    - **Elune’s Chosen (Balance/Guardian)**
+      - Moondust now slows enemies by 20% (was 30%).
+      - Stellar Command now increases Full Moon damage by 25% (was 15%).
+    - **Keeper of the Grove (Balance/Restoration)**
+      - Power of Nature treant melee damage increased by 200% (was 100%).
+      - Dream Burst damage increased by 100%.
+      - Grove’s Inspiration increases Wrath and Starfire damage by 15% (was 10%)
+      - Harmony of the Grove increases damage by 6% per treant (was 5%).
+      - Wild Mushroom damage increased by 25%.
+      - Grove’s Inspiration increases damage dealt by Wrath and Starfire by 10% (was 15%).
+      - Cenarius’ Might increases your Haste by 10% (was 8%).
+    - Wildstalker (Feral/Restoration)
+  - **Balance**
+    - New Talent: Greater Alignment – Celestial Alignment lasts 40% longer. During Celestial Alignment, Solar Eclipse increases Nature damage done by an additional 5% and Lunar Eclipse increases Arcane damage done by an additional 5%.
+    - New Talent: Stellar Amplification – Starsurge increases the damage the target takes from your periodic effects and Shooting Stars for 5 seconds. Reapplying this effect extends its duration, up to 20 seconds.
+    - New Talent: Harmony of the Heavens – Starsurge or Starfall increase your current Eclipse’s Arcane or Nature damage bonus by an additional 1%, up to 5%.
+    - New Talent: Touch the Cosmos – Casting Wrath in an Eclipse has an 8% chance to make your next Starsurge free. Casting Starfire in an Eclipse has a 10% chance to make your next Starfall free.
+    - New Talent: Umbral Inspiration – Consuming Umbral Embrace increases the damage of your Moonfire, Sunfire, Shooting Stars, and Starfall by 20% for 5 seconds.
+    - Umbral Embrace has been redesigned – Wrath and Starfire have a 20% chance to cause the next Wrath or Starfire you cast in Eclipse to become Astral and deal 100% additional damage. Now a 1-point talent.
+    - Astral Smolder has been redesigned – Wrath and Starfire have a 45% chance to cause their targets to languish for an additional 80% of their damage dealt over 6 seconds.
+    - Astral Communion has been redesigned – Maximum Astral Power increased by 20. Entering Eclipse grants 12 Astral Power.
+    - Nature’s Grace has been redesigned – When Eclipse ends or when you enter combat, enter a Dreamstate, reducing the cast time of your next 2 Starfires or Wraths by 20% and increasing their damage by 50%.
+    - All ability damage increased by 6%.
+    - Wrath, Starfire, and Shooting Stars damage increased by 15%.
+    - Wild Mushrooms damage increased by 25%.
+    - Astral Power generation reduced:
+      - Wrath: 6 (was 8)
+      - Starfire: 8 (was 10)
+      - New Moon: 10 (was 12)
+      - Half Moon: 20 (was 24)
+      - Full Moon: 40 (was 50)
+      - Fury of Elune: 40 / 2.5 per tick (was 48 / 3 per tick)
+    - Celestial Alignment duration reduced to 15 seconds (was 20 seconds).
+    - Incarnation: Chosen of Elune duration reduced to 20 seconds (was 30 seconds).
+    - Mastery: Astral Invocation value reduced by 17%.
+    - Aetherial Kindling now extends during of active Sunfires and Moonfires by 3 seconds (was 4 seconds).
+    - Orbital Strike damage reduced by 25%.
+    - Umbral Intensity now increases Starfire’s damage as well as its area-of-effect damage scaling. Solar Eclipse increases the damage of Wrath by an additional 20/40%. Lunar Eclipse increases the damage of Starfire by 20/40% and the damage it deals to nearby enemies by an additional 15/30%.
+    - Waning Twilight now increases damage you deal to targets with 3 or more of your periodic effects by 6%. Now a 1-point talent.
+    - Balance of all Things now increases Critical Strike chance by 10/20%, decreasing by 1/2% every second.
+    - Denizen of the Dream damage increased by 50%.
+    - Orbital Strike has temporarily had its line-targeting reticle disabled.
+    - The following talents have been removed:
+      - Friend of the Fae
+      - Primodial Arcanic Pulsar
+    - All ability damage increased by 5%.
+    - Starsurge damage increased by 15%.
+    - Starfall damage increased by 15%.
+    - Fury of Elune damage increased by 15%.
+    - Full Moon damage increased by 15%.
+    - Shooting Stars damage increased by 20%.
+    - Stellar Flare damage increased by 10%.
+    - Power of Goldrinn damage increased by 10%.
+    - Denizen of the Dream damage increased by 10%.
+    - Orbital Strike damage increased by 25%.
+    - Greater Alignment causes Celestial Alignment to increase the damage your eclipses grant by 8% (was 5%).
+  - **Feral**
+    - New Talent: Coiled to Spring – If you generate a combo point in excess of what you can store, your next Ferocious Bite or Primal Wrath deals 10% increased direct damage.
+      - _Developer’s note: This will only trigger during Berserk if you generate a combo point in excess of five while you already have 3 stacks of Overflowing Power._
+    - New Talent: Savage Fury – Tiger’s Fury increases your Haste by 8% and Energy recovery rate by 20% for 6 seconds.
+    - Mastery: Razor Claws has been redesigned – Now increases damage of Cat Form bleed and other periodic abilities.
+    - Predator has been redesigned – No longer causes Tiger’s Fury’s cooldown to be reset when a target dies with one of your bleeds active. Tiger’s Fury lasts 5 additional seconds. Your combo point-generating abilities’ direct damage is increased by 40% of your Haste.
+    - Taste for Blood has been redesigned – No longer scales with number of bleeds on a target. Ferocious Bite damage increased by 15% and an additional 15% during Tiger’s Fury.
+    - Raging Fury has been redesigned – No longer increases Tiger’s Fury duration from spending combo points. Tiger’s Fury lasts 5 additional seconds.
+    - Rampant Ferocity has been updated – Ferocious Bite also deals damage per combo point spent to all nearby enemies affect by your Rip. Damage reduced beyond 5 targets.
+    - Rampant Ferocity damage relative to Ferocious Bite increased by 20%.
+    - Rampant Ferocity’s damage increased by up to 50% when the player spends extra Energy on Ferocious Bite.
+    - All ability damage increased by 8%.
+    - The direct damage of Shred, Rake, Swipe / Brutal Slash, and Thrash increased by an additional 10%.
+    - Berserk duration reduced to 15 seconds (was 20 seconds).
+    - Incarnation: Avatar of Ashamane duration reduced to 20 seconds (was 30 seconds).
+    - Berserk now increases all ability and auto-attack damage by 10% (was increases the damage of Shred and Rake).
+    - Sabertooth now increases damage Ferocious Bite’s primary target takes from all of your Cat Form periodic damage by 3% per combo point spent for 4 seconds (instead of 5% damage dealt by all Rips on all targets).
+    - Tireless Energy now increases passive Energy generation by 8%/15% (was 10%/20%) and total Energy by 20/40 (was 30/60).
+    - Primal Wrath Energy cost increased to 30 and its direct damage increased by 50%.
+    - Tear Open Wounds now consumes 6 seconds of Rip damage during Berserk.
+    - Moonfire in Cat Form with Lunar Inspiration duration increased to 18 seconds and overall damage reduced by 10%.
+    - Moment of Clarity now increases the rate that Omen of Clarity triggers by 30% (was 50%).
+    - Berserk: Heart of the Lion now reduces Berserk’s cooldown by 60 seconds (was reduces cooldown by 0.5 seconds per combo point spent).
+    - Berserk: Frenzy now causes enemies to bleed for 135% of all direct damage dealt by combo point generating abilities (was 100%).
+    - Soul of the Forest restores 2 Energy per combo point spent (was 3 Energy).
+    - Apex Predator’s chance to trigger on a single target is reduced, but its chance to trigger in area-of-effect increases at a faster rate.
+    - Cat Form no longer increases the range of auto-attacks and melee abilities by 3 yards.
+    - Omen of Clarity Clearcasting aura added to the personal resource bar.
+    - Omen of Clarity Clearcasting aura no longer highlights the spell icons for Shred, Swipe, and Thrash.
+    - Primal Wrath range increased to 10 yards (was 8).
+    - Thrashing Claws now requires players to know Thrash in order to apply the bleed from Thrash.
+    - The following talents have been removed:
+      - Dire Fixation
+      - Protective Growth
+      - Relentless Predator
+      - Tear Open Wounds
+    - All ability damage reduced by 20%.
+    - _Developer’s note: At the beginning of April we increased all of Feral’s ability damage by the value of their baseline passive aura (20%), but neglected to reduce their baseline passive aura at the same time._
+    - Brutal Slash damage reduced by 10%
+    - Moonfire damage reduced by 10%.
+    - Thrash direct damage increased by 20%.
+    - Dreadful Bleeding increased to 20% (was 18%).
+    - Primal Wrath energy cost reduced to 25.
+    - Tiger’s Tenacity also causes Tiger’s Fury to increase the periodic damage of your bleeds and Moonfire (if known) by an additional 10% for their full duration.
+    - Finishing move damage (Ferocious Bite, Ravage, Rip, Maim, and Primal Wrath) increased by 10%.
+  - **Restoration**
+    - New Talent: Dream of Cenarius – While Heart of the Wild is active, Wrath and Shred transfer 150% of their damage and Starfire and Swipe transfer 100% of their damage into healing onto a nearby ally.
+    - New Talent: Call of the Elder Druid – When you shift into a combat shapeshift form or cast Starsurge, you gain Heart of the Wild for 10 seconds, once every 60 seconds.
+    - New Talent: Thriving Vegetation – Rejuvenation instantly heals for 15/30% of its periodic healing and Regrowth’s duration is increased by 3/6 seconds.
+    - New Talent: Prosperity – Swiftmend now has 2 charges.
+    - _Developer’s note: We are making some changes to raid healing cooldowns in The War Within to increase their effectiveness in content with less than 20 players. Our goal is to make these spells feel powerful in all forms of content, particularly smaller dungeon, PvP, or raid groups. The healing of these cooldowns will remain equal when healing 20 injured allies as they previously did and only take into account injured allies as contributing to their splash cap. This will be a slight reduction in effectiveness when healing more than 20 players, but this tradeoff has seemed reasonable to us as the availability and strength goes up as group sizes increase._
+    - Tranquility initial healing increased by 400%.
+    - Tranquility’s initial heal now decreases its healing beyond 5 targets.
+    - Tranquility’s heal over time effect is no longer increased while out of a raid environment.
+    - Rejuvenation healing increased by 30%.
+    - Grove Guardian’s healing reduced by 15%.
+    - Wild Synthesis Wild Growth healing reduced by 15%.
+    - Verdant Infusion now extends the duration of heal over time effects by 8 seconds (was 12 seconds).
+    - Nurturing Dormancy is now capped at 4 second extension (was 6 seconds).
+    - Abundance now increases the Critical Strike chance of Regrowth by 8% and decreases its mana cost by 8% per stack (was 5%).
+    - Soul of the Forest and Heart of the Wild added to Personal Resource Display.
+    - The following talents have been removed:
+      - Adaptive Swarm
+      - Unbridled Swarm
+      - Luxuriant Soil
+
+## Tue, 30 Jul 2024 17:26:45 -0500
+
+With [Feedback: Druids](https://www.wowhead.com/blue-tracker/topic/us/1870405)
+
+- **DRUID**
+  - **Hero Talents**
+    - **Druid of the Claw (Feral/Guardian)**
+      - Ruthless Aggression increases your attack speed by 35% (was 20%).
+      - Killing Strikes increases your Agility by 8% (was 5%).
+      - Strike for the Heart increases critical strike chance and damage by 10% (was 6%).
+      - Tear Down the Mighty reduces the cooldown of Feral Frenzy and Pulverize by 10 seconds (was 5 seconds).
+      - **Feral**
+        - Ravage damage dealt to its primary target increased by 35%.
+        - Dreadful Wound damage increased by 17%.
+        - Empowered Shapeshifting increases Shred and Swipe damage by 6% (was 3%).
+        - Wildpower Surge increases the damage of Mangle by 300% (was 200%) and Swipe by 75% (was 50%).
+        - Bestial Strength increases Ferocious Bite and Rampant Ferocity damage by 10% (was 8%) and Primal Wrath by 60% (was 50%).
+      - **Guardian**
+        - Ravage damage to your primary target increased by 35%.
+        - Dreadful Wound damage increased by 25%.
+        - Empowered Shapeshifting increases Mangle damage by 15% (was 10%).
+        - Bestial Strength increases Maul and Raze damage by 20% (was 10%).
+        - Wildpower Surge increases the damage of your next Ferocious Bite or Rip by 225% (was 100%).
+    - **Elune’s Chosen (Balance/Guardian)**
+      - **Balance**
+        - Fixed an issue causing Moon Guardian to also increase the amount of damage Starfire deals to nearby targets.
+      - **Guardian**
+        - Lunar Insight increases Moonfire damage by 8% (was 10%).
+    - **Keeper of the Grove (Balance/Restoration)**
+      - Harmony of the Grove increases your healing by 5% for each active Grove Guardian (was 6%).
+      - Cenarius’ Might increases your Haste by 12% (was 10%).
+      - **Balance**
+        - Dream Surge damage increased by 25%.
+        - Durability of Nature increases your treant health by 100% (was 50%).
+        - Bounteous Bloom now causes your treants to generate 10 Astral Power per 2 seconds (was 7 Astral Power).
+        - Harmony of the Grove Increases damage your spells deal by 8% (was 6%).
+  - **Balance**
+    - All spell damage increased by 6%.
+    - Force of Nature melee damage increased by 60%.
+    - Wild Mushroom damage increased by 20% and it generates up to 20 Astral Power (was 16).
+    - Umbral Inspiration damage bonus increased to 35% (was 30%).
+    - Denizen of the Dream damage increased by 10%.
+    - Astral Communion grants 25 Astral Power (was 20).
+    - Nerub-ar Palace (2) Set Bonus updated – Starsurge damage increased by 10% (was 8%). Starfall damage increased by 14% (was 10%).
+    - Nerub-ar Palace (4) Set Bonus updated – Lunar Eclipse and Solar Eclipse each increase the Astral Power Wrath generates by 2 (was 1) and Starfire generates by 5 (was 2).
+  - **Feral**
+    - Melee auto-attack damage increased by 30%.
+    - Rip, Rake, and Thrash periodic damage increased by 5%.
+    - Incarnation reduces the Energy cost of all abilities by 25% (was 20%).
+    - Ashamane’s Guidance’s effect now lasts 40 seconds after Incarnation ends (was 30 seconds).
+    - Savage Fury increases your Haste by 10% (was 8%) and Energy recovery rate by 25% (was 20%).
+  - **Guardian**
+    - Melee auto-attack and all bear ability damage increased by 20%.
+    - Moonfire damage reduced by 15%.
+    - Twin Moonfire increases Moonfire damage by 8% (was 10%).
+  - **Restoration**
+    - Convoke the Spirits now casts an additional 4 spells over its duration for Restoration Druids.
+    - Embrace of the Dream healing increased by 50%.
+    - Regenesis now increases the healing of Rejuvenation by up to 15/30% (was 10/20%).
+    - Power of the Archdruid now has a 60% chance to activate (was 40%).
+    - Tree of Life now increases healing done by 10% (was 15%) and increases the healing of Rejuvenation by 40% (was 50%).
+    - Nourish healing increased by 100%.
+    - Flourish’s duration is now 8 seconds (was 6 seconds).
+    - Rip damage decreased by 15%. Does not affect PvP combat.
+    - Rake damage decreased by 15%.
+    - Shred damage decreased by 15%.
+    - Ferocious Bite damage decreased by 15%. Does not affect PvP combat.
+    - Sunfire damage decreased by 15%.
+    - Fixed an issue that caused Mastery: Harmony to gain an extra stack on all targets.
