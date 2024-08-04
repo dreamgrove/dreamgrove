@@ -2,10 +2,9 @@ import Link from '@/components/Link'
 
 import data from '../other/quotes.json'
 
-export default function NotFound() {
+export default async function NotFound() {
   const quotes = data.quotes
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
-
   return (
     <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
       <div className="space-x-2 pb-8 pt-6 md:space-y-5">
