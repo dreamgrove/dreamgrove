@@ -38,6 +38,7 @@ module.exports = {
         },
         gray: colors.gray,
         main: '#d57f43',
+        secondary: '#1a9c82',
       },
       typography: ({ theme }) => ({
         DEFAULT: {
@@ -82,7 +83,7 @@ module.exports = {
               display: 'block',
               width: '50px',
               height: '3px',
-              backgroundColor: '#d57f43',
+              backgroundColor: theme('colors.primary.500'),
               marginTop: '0px',
             },
           },
