@@ -57,11 +57,11 @@ export default function ChangelogLayout({ content, next, prev, children }: Layou
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0">
               <div>
-                <Dialog>
+                <Dialog type="warning">
                   <span>
-                    <span className="font-bold text-main/70">Last Update: {creationDate}.</span> The
-                    information contained here is only partial. Only changes deemed relevant are
-                    displayed.
+                    <span className="font-bold text-gray-800/80">Last Update: {creationDate}.</span>{' '}
+                    This section is still a work in progress. Changes are not guaranteed to be
+                    complete or accurate.
                   </span>
                 </Dialog>
                 <div className="mx-1 mb-2">

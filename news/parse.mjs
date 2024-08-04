@@ -42,9 +42,6 @@ function parseFile(filename, callback) {
         if (inEffectsSection) {
           if (line.startsWith('#')) {
             if (Object.keys(currentEffect).length > 0) {
-              if (currentEntity.name == 'Harmony of the Grove') {
-                console.log(currentEffect)
-              }
               currentEntity.effects.push(currentEffect)
               currentEffect = {}
             }
@@ -53,7 +50,7 @@ function parseFile(filename, callback) {
             if (idMatch) {
               currentEffect.idx = idMatch[1]
               currentEffect.id = idMatch[2]
-              const parts = line.split(':', 2) // Split on the first colon
+              const parts = line.split(/:(.+)/) // Split on the first colon
               if (parts.length > 1) {
                 let effectDetails = parts[1].trim()
                 effectDetails = effectDetails.replace(/\(\d+\)/g, '').trim() // Remove all (number)

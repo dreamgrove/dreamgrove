@@ -1,20 +1,6 @@
 {
   "delta": [
     {
-      "name": "Incapacitating Roar",
-      "id": 99,
-      "type": "modified",
-      "talent_entry": "Generic",
-      "fields": [
-        {
-          "field": "spell_type",
-          "prev": "Melee",
-          "new": "Ranged"
-        }
-      ],
-      "effects": []
-    },
-    {
       "name": "Wrath",
       "id": 5176,
       "type": "modified",
@@ -22,7 +8,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : nature",
           "id": "1837",
           "modifications": [],
           "values": [
@@ -44,7 +30,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Rejuvenation (774)",
             "Regrowth (8936)",
@@ -98,7 +84,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": [
             "Rejuvenation (774)",
             "Regrowth (8936)",
@@ -152,7 +138,7 @@
         {
           "idx": "5",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Rejuvenation (774)", "Rejuvenation (Germination) (155777)"],
           "id": "253736",
           "modifications": [],
@@ -172,7 +158,7 @@
         {
           "idx": "6",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Rejuvenation (774)", "Rejuvenation (Germination) (155777)"],
           "id": "253737",
           "modifications": [],
@@ -244,7 +230,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "68268",
           "modifications": [],
           "values": [
@@ -266,7 +252,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Periodic Damage",
+          "subtype": "Periodic Damage : nature every 2 seconds",
           "id": "68703",
           "modifications": [],
           "values": [
@@ -287,7 +273,8 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : nature",
+          "subtype": "Attributes: Area Effects Use Target Radius",
           "id": "91242",
           "modifications": [],
           "values": [
@@ -328,7 +315,7 @@
         {
           "idx": "3",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Resource Cost",
           "affected_spells": [
             "Rip (1079)",
             "Rake (1822)",
@@ -383,7 +370,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Maul (6807)",
             "Mangle (33917)",
@@ -419,7 +406,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": [
             "Maul (6807)",
             "Mangle (33917)",
@@ -474,7 +461,7 @@
         {
           "idx": "19",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"],
           "id": "1091200",
           "modifications": [],
@@ -494,7 +481,7 @@
         {
           "idx": "20",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"],
           "id": "1091201",
           "modifications": [],
@@ -514,7 +501,7 @@
         {
           "idx": "22",
           "type": "Apply Aura",
-          "subtype": "Apply Flat Modifier w/ Label",
+          "subtype": "Apply Flat Modifier w/ Label : Spell Effect 1",
           "affected_spells": ["Lunar Insight (429530)"],
           "id": "1176395",
           "modifications": [],
@@ -542,7 +529,7 @@
         {
           "idx": "14",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Rake (1822)", "Rake (155722)"],
           "id": "1080962",
           "modifications": [],
@@ -562,7 +549,7 @@
         {
           "idx": "15",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Rip (1079)"],
           "id": "1088944",
           "modifications": [],
@@ -585,7 +572,7 @@
             "idx": "16",
             "id": "1174663",
             "type": "Apply Aura",
-            "subtype": "Apply Flat Modifier w/ Label",
+            "subtype": "Apply Flat Modifier w/ Label : Spell Effect 1",
             "values": [
               {
                 "Base Value": "-10"
@@ -620,7 +607,7 @@
         {
           "idx": "7",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Sunfire (164815)"],
           "id": "260748",
           "modifications": [],
@@ -640,7 +627,7 @@
         {
           "idx": "8",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Sunfire (164815)"],
           "id": "260749",
           "modifications": [],
@@ -660,7 +647,7 @@
         {
           "idx": "9",
           "type": "Apply Aura",
-          "subtype": "Add Flat Modifier",
+          "subtype": "Add Flat Modifier : Spell Effect 2",
           "affected_spells": ["Convoke the Spirits (323764)", "Convoke the Spirits (391528)"],
           "id": "872913",
           "modifications": [],
@@ -680,7 +667,7 @@
         {
           "idx": "10",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Tick Time",
           "affected_spells": ["Convoke the Spirits (323764)", "Convoke the Spirits (391528)"],
           "id": "876348",
           "modifications": [],
@@ -700,7 +687,7 @@
         {
           "idx": "21",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Wrath (5176)",
             "Wrath (190984)",
@@ -730,7 +717,7 @@
         {
           "idx": "24",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Rip (1079)"],
           "id": "1113290",
           "modifications": [],
@@ -750,7 +737,7 @@
         {
           "idx": "25",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
           "id": "1113620",
           "modifications": [],
@@ -770,7 +757,7 @@
         {
           "idx": "26",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Shred (5221)"],
           "id": "1120675",
           "modifications": [],
@@ -790,7 +777,7 @@
         {
           "idx": "27",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Rake (1822)", "Rake (155722)"],
           "id": "1120676",
           "modifications": [],
@@ -810,7 +797,7 @@
         {
           "idx": "28",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Rake (1822)", "Rake (155722)"],
           "id": "1120677",
           "modifications": [],
@@ -864,7 +851,7 @@
             "idx": "12",
             "id": "1177983",
             "type": "Apply Aura",
-            "subtype": "Add Percent Modifier",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
             "values": [
               {
                 "Base Value": "6"
@@ -891,7 +878,7 @@
             "idx": "13",
             "id": "1177984",
             "type": "Apply Aura",
-            "subtype": "Add Percent Modifier",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
             "values": [
               {
                 "Base Value": "6"
@@ -921,7 +908,7 @@
             "idx": "14",
             "id": "1177985",
             "type": "Apply Aura",
-            "subtype": "Add Percent Modifier",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
             "values": [
               {
                 "Base Value": "6"
@@ -952,7 +939,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "274309",
           "modifications": [],
           "values": [
@@ -973,7 +960,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : nature",
           "id": "280098",
           "modifications": [],
           "values": [
@@ -994,7 +981,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "280158",
           "modifications": [],
           "values": [
@@ -1016,7 +1003,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : arcane",
           "id": "284976",
           "modifications": [],
           "values": [
@@ -1038,7 +1025,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "290376",
           "modifications": [],
           "values": [
@@ -1060,7 +1047,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : arcane",
           "id": "290380",
           "modifications": [],
           "values": [
@@ -1096,7 +1083,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "298295",
           "modifications": [],
           "values": [
@@ -1110,7 +1097,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Periodic Damage",
+          "subtype": "Periodic Damage : astral every 2 seconds",
           "id": "298296",
           "modifications": [],
           "values": [
@@ -1131,7 +1118,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "298525",
           "modifications": [],
           "values": [
@@ -1152,7 +1139,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "313366",
           "modifications": [],
           "values": [
@@ -1174,7 +1161,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "726522",
           "modifications": [],
           "values": [
@@ -1195,7 +1182,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "726525",
           "modifications": [],
           "values": [
@@ -1216,7 +1203,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "726528",
           "modifications": [],
           "values": [
@@ -1237,7 +1224,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "898966",
           "modifications": [],
           "values": [
@@ -1262,7 +1249,7 @@
             "idx": "5",
             "id": "1041740",
             "type": "Apply Aura",
-            "subtype": "Add Percent Modifier",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
             "values": [
               {
                 "Base Value": "130"
@@ -1298,7 +1285,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Moonfire (155625)", "Moonfire (164812)"],
           "id": "997281",
           "modifications": [],
@@ -1318,7 +1305,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": ["Moonfire (155625)", "Moonfire (164812)"],
           "id": "997282",
           "modifications": [],
@@ -1402,7 +1389,7 @@
       "effects": [
         {
           "idx": "3",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "1109174",
           "modifications": [],
           "values": [
@@ -1423,7 +1410,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "1033385",
           "modifications": [],
           "values": [
@@ -1444,7 +1431,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "1033506",
           "modifications": [],
           "values": [
@@ -1466,7 +1453,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Periodic Damage",
+          "subtype": "Periodic Damage : physical every 3 seconds",
           "id": "1053352",
           "modifications": [],
           "values": [
@@ -1515,7 +1502,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Periodic Heal",
+          "subtype": "Periodic Heal : every 1 seconds",
           "id": "1097664",
           "modifications": [],
           "values": [
@@ -1537,7 +1524,7 @@
         {
           "idx": "3",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Wrath (5176)",
             "Wrath (190984)",
@@ -1569,7 +1556,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : astral",
           "id": "1109706",
           "modifications": [],
           "values": [
@@ -1591,7 +1578,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Wrath (5176)",
             "Starsurge (78674)",
@@ -1647,7 +1634,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": [
             "Wrath (5176)",
             "Starsurge (78674)",
@@ -1711,7 +1698,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Rejuvenation (774)",
             "Regrowth (8936)",
@@ -1765,7 +1752,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": [
             "Rejuvenation (774)",
             "Regrowth (8936)",
@@ -1827,7 +1814,7 @@
         {
           "idx": "1",
           "type": "Apply Pet Area Aura",
-          "subtype": "Periodic Energize Power",
+          "subtype": "Periodic Energize Power : every 2 seconds",
           "id": "1113276",
           "modifications": [],
           "values": [
@@ -1883,7 +1870,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Flat Modifier",
+          "subtype": "Add Flat Modifier : Spell Effect 3",
           "affected_spells": ["Moonfire (8921)"],
           "id": "1117493",
           "modifications": [],
@@ -1905,7 +1892,8 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : nature",
+          "subtype": "Attributes: Always AOE Line of Sight , Suppress Points Stacking",
           "id": "1123446",
           "modifications": [],
           "values": [
@@ -1926,7 +1914,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : physical",
           "id": "1136153",
           "modifications": [],
           "values": [
@@ -1952,7 +1940,7 @@
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage",
+          "type": "School Damage : physical",
           "id": "1136169",
           "modifications": [],
           "values": [
@@ -1975,7 +1963,7 @@
         {
           "idx": "5",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Shred (5221)",
             "Swipe (106785)",
@@ -2000,7 +1988,7 @@
         {
           "idx": "6",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Mangle (33917)"],
           "id": "1164922",
           "modifications": [],
@@ -2028,7 +2016,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Mangle (33917)"],
           "id": "1136320",
           "modifications": [],
@@ -2048,7 +2036,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Brutal Slash (202028)", "Swipe (213771)"],
           "id": "1137908",
           "modifications": [],
@@ -2076,7 +2064,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
           "id": "1136325",
           "modifications": [],
@@ -2104,7 +2092,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Periodic Damage",
+          "subtype": "Periodic Damage : physical every 2 seconds",
           "id": "1136537",
           "modifications": [],
           "values": [
@@ -2181,7 +2169,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
           "id": "1136577",
           "modifications": [],
@@ -2201,7 +2189,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Primal Wrath (285381)"],
           "id": "1136578",
           "modifications": [],
@@ -2221,7 +2209,7 @@
         {
           "idx": "3",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Maul (6807)",
             "Strength of the Wild (236716)",
@@ -2246,7 +2234,7 @@
         {
           "idx": "4",
           "type": "Apply Aura",
-          "subtype": "Apply Percent Modifier w/ Label",
+          "subtype": "Apply Percent Modifier w/ Label : Spell Direct Amount",
           "affected_spells": ["Rampant Ferocity (391710)"],
           "id": "1176379",
           "modifications": [],
@@ -2275,7 +2263,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Flat Modifier",
+          "subtype": "Add Flat Modifier : Spell Critical Chance",
           "affected_spells": [
             "Shred (5221)",
             "Mangle (33917)",
@@ -2301,7 +2289,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Critical Damage",
           "affected_spells": [
             "Shred (5221)",
             "Mangle (33917)",
@@ -2336,7 +2324,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Flat Modifier",
+          "subtype": "Add Flat Modifier : Spell Cooldown",
           "affected_spells": [
             "Pulverize (80313)",
             "Feral Frenzy (274837)",
@@ -2414,7 +2402,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Starfall (50286)",
             "Moonfire (164812)",
@@ -2444,7 +2432,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
           "affected_spells": [
             "Starfall (50286)",
             "Moonfire (164812)",
@@ -2508,7 +2496,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Periodic Damage",
+          "subtype": "Periodic Damage : physical every 2 seconds",
           "id": "1151596",
           "modifications": [],
           "values": [
@@ -2530,7 +2518,7 @@
         {
           "idx": "1",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": ["Starsurge (78674)", "Starsurge (197626)"],
           "id": "1155666",
           "modifications": [],
@@ -2550,7 +2538,7 @@
         {
           "idx": "2",
           "type": "Apply Aura",
-          "subtype": "Add Percent Modifier",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
           "affected_spells": [
             "Starfall (50286)",
             "Starfall (191034)",
