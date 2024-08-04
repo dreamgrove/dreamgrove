@@ -59,20 +59,75 @@ summary: "A list of the latest class updates"
         console.log(`Checking: ${item.link}`)
         await page.goto(item.link, { waitUntil: 'domcontentloaded' })
 
-        // Check for <ul> > <li> > <strong> containing "DRUID"
-        const druidElement = await page.evaluate(() => {
-          const ulElements = document.querySelectorAll('ul')
-          for (const ul of ulElements) {
-            const liElements = ul.querySelectorAll('li')
-            for (const li of liElements) {
-              const strongTag = li.querySelector('strong')
-              if (strongTag && strongTag.textContent.toUpperCase().includes('DRUID')) {
-                return li.outerHTML
+        // Check if the page should be skipped
+        const pageContent = await page.content()
+        if (pageContent.includes('The War Within Beta Development Notes')) {
+          console.log(
+            `Skipping content for: ${title} due to 'The War Within Beta Development Notes'`
+          )
+          continue
+        }
+
+        let druidElement = null
+
+        if (pageContent.includes('Hotfixes')) {
+          // Get the content between the first and second <hr> and then find <strong>DRUID</strong>
+          druidElement = await page.evaluate(() => {
+            const hrElements = document.querySelectorAll('hr')
+            if (hrElements.length >= 2) {
+              const start = hrElements[0]
+              const end = hrElements[1]
+              let content = ''
+              let currentNode = start.nextSibling
+
+              while (currentNode && currentNode !== end) {
+                if (currentNode.nodeType === Node.ELEMENT_NODE) {
+                  content += currentNode.outerHTML
+                }
+                currentNode = currentNode.nextSibling
+              }
+
+              // Now look for <strong> containing "DRUID" in the extracted content
+              const tempDiv = document.createElement('div')
+              tempDiv.innerHTML = content
+              const strongTags = tempDiv.querySelectorAll('strong')
+              for (const strong of strongTags) {
+                if (strong.textContent.toUpperCase().includes('DRUID')) {
+                  return strong.parentElement.outerHTML
+                }
               }
             }
-          }
-          return null
-        })
+            return null
+          })
+        } else if (pageContent.includes('Development Notes')) {
+          // Get the last <div> within .listview-mode-div
+          druidElement = await page.evaluate(() => {
+            const listViewDiv = document.querySelector('.listview-mode-div')
+            if (listViewDiv) {
+              const divElements = listViewDiv.querySelectorAll('div')
+              if (divElements.length > 0) {
+                const lastDiv = divElements[divElements.length - 1]
+                return lastDiv.outerHTML
+              }
+            }
+            return null
+          })
+        } else {
+          // Default behavior: check the entire page
+          druidElement = await page.evaluate(() => {
+            const ulElements = document.querySelectorAll('ul')
+            for (const ul of ulElements) {
+              const liElements = ul.querySelectorAll('li')
+              for (const li of liElements) {
+                const strongTag = li.querySelector('strong')
+                if (strongTag && strongTag.textContent.toUpperCase().includes('DRUID')) {
+                  return li.outerHTML
+                }
+              }
+            }
+            return null
+          })
+        }
 
         if (druidElement) {
           // Convert the found HTML element to Markdown
