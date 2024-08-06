@@ -16,7 +16,7 @@ actions.precombat+=/variable,name=trinket_2_sync,op=setif,value=1,value_else=0.5
 # prioritize trinkets that line-up with cds -> main-stat on uses -> longer cd trinkets -> shorter duration trinkets
 actions.precombat+=/variable,name=trinket_priority,op=setif,value=2,value_else=1,condition=!variable.trinket_1_buffs&variable.trinket_2_buffs|variable.trinket_2_buffs&((trinket.2.cooldown.duration%trinket.2.proc.any_dps.duration)*(1.5+trinket.2.has_buff.agility)*(1.2+trinket.2.has_buff.mastery)*(variable.trinket_2_sync))>((trinket.1.cooldown.duration%trinket.1.proc.any_dps.duration)*(1.5+trinket.1.has_buff.agility)*(1.2+trinket.1.has_buff.mastery)*(variable.trinket_1_sync))
 
-actions+=/prowl,if=buff.bs_inc.down&!buff.prowl.up
+actions=prowl,if=buff.bs_inc.down&!buff.prowl.up
 actions+=/cat_form,if=!buff.cat_form.up&!talent.fluid_form
 # Line up <a href='https://www.wowhead.com/spell=10060/power-infusion'>Power Infusion</a> with Berserk.
 actions+=/invoke_external_buff,name=power_infusion,if=buff.bs_inc.up|!talent.berserk_heart_of_the_lion
@@ -37,7 +37,7 @@ actions+=/call_action_list,name=aoe_builder,if=spell_targets.swipe_cat>=2&combo_
 actions+=/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
 
 # this variable tracks whether or not we've started our bt sequence
-actions.aoe_builder+=/variable,name=proccing_bt,op=set,value=variable.need_bt
+actions.aoe_builder=variable,name=proccing_bt,op=set,value=variable.need_bt
 actions.aoe_builder+=/rake,target_if=!dot.rake.ticking,if=buff.sudden_ambush.up&!(variable.need_bt&buff.bt_rake.up)
 actions.aoe_builder+=/brutal_slash,target_if=max:time_to_die,if=!(variable.need_bt&buff.bt_swipe.up)&(cooldown.brutal_slash.full_recharge_time<4|time_to_die<4|raid_event.adds.remains<4)
 actions.aoe_builder+=/thrash_cat,if=refreshable&!talent.thrashing_claws
@@ -58,7 +58,7 @@ actions.aoe_builder+=/moonfire_cat,target_if=max:dot.moonfire.ticks_gained_on_re
 actions.aoe_builder+=/shred,if=variable.need_bt&buff.bt_shred.down&!variable.easy_swipe
 actions.aoe_builder+=/rake,target_if=dot.rake.pmultiplier<1.6,if=variable.need_bt&buff.bt_rake.down
 
-actions.berserk+=/call_action_list,name=finisher,if=combo_points=5
+actions.berserk=call_action_list,name=finisher,if=combo_points=5
 actions.berserk+=/run_action_list,name=aoe_builder,if=spell_targets.swipe_cat>=2
 actions.berserk+=/prowl,if=!(buff.bt_rake.up&active_bt_triggers=2)&action.rake.ready&gcd.remains=0&!buff.sudden_ambush.up&(dot.rake.refreshable|dot.rake.pmultiplier<1.4)&!buff.shadowmeld.up
 actions.berserk+=/shadowmeld,if=!(buff.bt_rake.up&active_bt_triggers=2)&action.rake.ready&!buff.sudden_ambush.up&(dot.rake.refreshable|dot.rake.pmultiplier<1.4)&!buff.prowl.up
@@ -76,7 +76,7 @@ actions.berserk+=/brutal_slash,if=cooldown.brutal_slash.charges>1
 actions.berserk+=/shred
 
 # this variable tracks whether or not we've started our bt sequence
-actions.builder+=/variable,name=proccing_bt,op=set,value=variable.need_bt
+actions.builder=variable,name=proccing_bt,op=set,value=variable.need_bt
 actions.builder+=/shadowmeld,if=gcd=0&energy>=35&!buff.sudden_ambush.up&(dot.rake.refreshable|dot.rake.pmultiplier<1.4)*!(variable.need_bt&buff.bt_rake.up)&buff.tigers_fury.up
 # upgrade to stealth rakes, otherwise refresh in pandemic. Delay rake as long as possible if it would downgrade
 actions.builder+=/rake,if=((refreshable&persistent_multiplier>=dot.rake.pmultiplier|dot.rake.remains<3)|buff.sudden_ambush.up&persistent_multiplier>dot.rake.pmultiplier)&!(variable.need_bt&buff.bt_rake.up)
@@ -93,7 +93,7 @@ actions.builder+=/rake,if=variable.need_bt&buff.bt_rake.down&persistent_multipli
 actions.builder+=/moonfire_cat,if=variable.need_bt&buff.bt_moonfire.down
 actions.builder+=/thrash_cat,if=variable.need_bt&buff.bt_thrash.down
 
-actions.cooldown+=/incarnation
+actions.cooldown=incarnation
 actions.cooldown+=/berserk
 actions.cooldown+=/berserking,if=buff.bs_inc.up|cooldown.bs_inc.remains>50
 actions.cooldown+=/potion,if=buff.bs_inc.up|fight_remains<32|(!variable.lastZerk&variable.lastConvoke&cooldown.convoke_the_spirits.remains<10)
@@ -116,7 +116,7 @@ actions.finisher+=/ferocious_bite,max_energy=1,target_if=max:target.time_to_die,
 actions.finisher+=/ferocious_bite,target_if=max:target.time_to_die
 
 # most expensive bt cycle is Shred + Thrash + Rake, 40+40+35 for 115 energy. During incarn it is 32+32+28 for 92energy
-actions.variable+=/variable,name=effective_energy,op=set,value=energy+(40*buff.clearcasting.stack)+(3*energy.regen)+(50*cooldown.tigers_fury.remains<3.5)
+actions.variable=variable,name=effective_energy,op=set,value=energy+(40*buff.clearcasting.stack)+(3*energy.regen)+(50*cooldown.tigers_fury.remains<3.5)
 # estimated time until we have enough energy to proc bloodtalons.
 actions.variable+=/variable,name=time_to_pool,op=set,value=((115-variable.effective_energy-(23*buff.incarnation.up))%energy.regen)
 # try to proc bt if we have 1 or 0 stacks of bloodtalons
