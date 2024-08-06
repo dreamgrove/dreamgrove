@@ -96,17 +96,27 @@ module.exports = () => {
         {
           source: '/balance',
           destination: '/blog/balance/compendium',
-          permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
+          permanent: true,
         },
         {
           source: '/feral/compendium',
           destination: '/blog/feral/compendium',
-          permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
+          permanent: true,
         },
         {
           source: '/feral',
           destination: '/blog/feral/compendium',
-          permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
+          permanent: true,
+        },
+        {
+          source: '/resto/compendium',
+          destination: '/blog/resto/compendium',
+          permanent: true,
+        },
+        {
+          source: '/resto',
+          destination: '/blog/resto/compendium',
+          permanent: true,
         },
       ]
     },

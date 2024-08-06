@@ -12,14 +12,14 @@ export default function Home() {
   const ENABLE_EXTRA_GUIDES = false
 
   const content = [
-    { src: raids, href: '/raids', alt: 'Raid Guides', active: true },
-    { src: dungeons, href: '/dungeons', alt: 'Dungeon Guides', active: true },
+    { src: raids, href: '/raids', alt: 'Raid Guides' },
+    { src: dungeons, href: '/dungeons', alt: 'Dungeon Guides' },
   ]
 
   const images = [
     { src: balance, href: '/blog/balance/compendium', alt: 'Balance guide', active: true },
     { src: feral, href: '/blog/feral/compendium', alt: 'Feral guide', active: true },
-    { src: resto, href: '/', alt: 'Resto guide', active: false },
+    { src: resto, href: '/blog/resto/compendium', alt: 'Resto guide', active: true },
     { src: guardian, href: '/', alt: 'Guardian guide', active: false },
   ]
 

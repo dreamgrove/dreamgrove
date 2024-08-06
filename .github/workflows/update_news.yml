@@ -1,0 +1,36 @@
+name: RSS Feed Check
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  check-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify the Node.js version
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./news
+
+      - name: Check RSS Feed
+        run: node fetch_news.js
+        working-directory: ./news
+
+      - name: Commit and push changes
+        if: steps.check-rss.outputs.update_required == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          cp ./news/druid.md ./data/changelog.mdx
+          git add ./news/druid.md ./data/changelog.mdx ./news/lastBuildDate.txt
+          git commit -m "news: Updated News from RSS feed"
+          git push origin master
