@@ -562,28 +562,79 @@ It is therefore best to wait until 70% or more of your bleed has ticked to refre
 
 Fun trivia: the name “pandemic” derives from an old warlock passive that was eventually integrated as a baseline feature of damage over time spells.
 
+## What is snapshotting?
+
+Snapshotting refers to the process of continually ensuring that your strongest bleeds are ticking on your targets. The strength of feral bleed ticks is snapshotted (calculated) at the moment of application and lasts for the duration of the bleed. If certain buffs are active when the bleed is applied, such as !Tiger’s Fury!, the damage of its snapshot will be stronger. A good feral player is aware of this and will weave between applying stronger bleeds and leaving currently ticking bleeds alone. 
+
+Tracking the strength of different bleeds across multiple/changing mobs is notoriously difficult, so we recommend the use of Weak Aura bleed packages such as those found in dreamgrove.gg. All our WA packages follow the same general format:
+* If the bleed’s icon is highlighted in green or its number is higher than 100: this is a stronger bleed than the one you currently have active
+* If the bleed’s icon is highlighted in grey or its number is equal to 100: equal value bleed
+* If the bleed’s icon is highlighted in red or its number is lower than 100: this is a weaker bleed than the one you currently have active
+
+Note: You will not necessarily upgrade every snapshot. Please review the rotation section.
+
+__Which bleeds are snapshotted?__
+
+* _All_ feral bleeds will snapshot at higher values when paired with:
+    * !Tiger’s Fury!
+* !Rake!’s snapshot can also be buffed by: 
+    * !Prowl!
+    * !Shadowmeld!
+    * !390772/Pouncing Strikes! procs
+* Rip’s snapshot can also be buffed by:
+    * !Bloodtalons!
+* Thrash’s snapshot can also be buffed by:
+    * !236068/Moment of Clarity!
+* Shred’s snapshot can also be buffed by:
+    * !390772/Pouncing Strikes! procs (usually, though, !390772/Pouncing Strikes! is used on !Rake!)
+
+A bleed will ideally be applied only when 30% or less of the prior bleed remains. This triggers a mechanic known as “pandemic,” which is common to most damage over time spells.  
+
+## What is “pandemic range?”
+This term refers to a DoT mechanic in WoW. The baseline duration of a DoT can be extended by up to 30% if a target is already affected by that DoT. Due to the 30% cap on extension, the DoT ought not to be refreshed early, or potential ticks will be lost. The ideal window of time to refresh a DoT is known as its “pandemic range.” 
+
+Let’s use an example. Consider a 10 second DoT:
+* Refresh with 1s remaining: the new DoT will be 11s long (10s baseline duration + 1s from prior DoT)
+* Refresh with 3s remaining: the new DoT will be 13s long (10s baseline duration + 3s from prior DoT)
+* Refresh with 8s remaining: the new DoT will still be 13s long (10s baseline + up to 30% from prior DoT)
+
+It is therefore best to wait until 70% or more of your bleed has ticked to refresh its DoT. 
+
+Fun trivia: the name “pandemic” derives from an old warlock passive that was eventually integrated as a baseline feature of damage over time spells. 
+
+__What is “clipping?”__
+
+Clipping refers to refreshing a dot prior to its pandemic window.
+_Important note:_ Rake is the only bleed that ought to be clipped early to maintain stronger snapshots.
+
 ## Macros
 
-None of these macros are required by any means, just a few that can be useful for some people.
+Here, we provide a list of helpful macros. These macros are not _required_, but using them may elevate your gameplay. (_Note:_ These macros are not set in stone. Customize them as you see fit!)
 
-**Macro combining Lunar Inspiration !Moonfire! and !391528|Convoke! to one bind:**
+**Tie Lunar Inspiration !Moonfire! and !391528|Convoke! to one keybind:**
 
 ```
 #showtooltip
 /cast [known: Lunar Inspiration] Moonfire; [known: Convoke the Spirits] Convoke the Spirits
 ```
-The idea behind this macro is that there are no talent builds that play both of these things.
+This macro helps save a keybind, as there are no talent builds that play both Lunar Inspiration !Moonfire! and !391528|Convoke! at the same time.
 
-**Ursol's Vortex @cursor macro:**
+**Cast Ursol's Vortex at your cursor location (@cursor macro):**
 
 ```
 #showtooltip
 /cast [@cursor] Ursol's Vortex
 ```
 
-**Trinket macro:**
+**Use your trinket(s) and/or weapon at the same time as an ability:**
 
-If you are using an on-use trinket/weapon that should go along with your cooldowns, use the following macro: (/13 for top trinket slot, /14 for bottom trinket slot and /16 for weapon.)
+Some trinkets and weapons ought to be procced at the same time as a major cooldown. It is best to macro these items with Berserk. 
+* 13 is the top trinket slot
+* 14 is the bottom trinket slot
+* 16 is your weapon slot
+
+If you would like to use all three items with Berserk, use this macro:
+
 ```
 #showtooltip
 /use 13
@@ -591,34 +642,45 @@ If you are using an on-use trinket/weapon that should go along with your cooldow
 /use 16
 /cast Berserk
 ```
+This macro may be modified. For example, the macro below only uses the 2nd trinket with Berserk:
 
-**Entangling Roots macro:**
+```
+#showtooltip
+/use 14
+/cast Berserk
+```
 
-Casts Entangling Roots on a target you mouseover, otherwise casts on current target if no mouseover.
+**Cast Entangling Roots on your mouseover target:**
+
+This macro casts Entangling Roots on your mouseover target. If your mouse is not hovering over a target, the macro instead casts Entangling Roots on your current target.
 ```
 #showtooltip
 /cast [@mouseover, harm, nodead] [] Entangling Roots
 ```
 
-**Focus Skull Bash:**
+**Skull Bash your Focus target:**
 
-Casts Skull Bash at your focus target, or current target if there is no eligible enemy focus target. Remember to bind focus target in WoW keybind settings.
+This macro casts Skull Bash on your focus target. If you have not set a focus target, the macro instead casts Skull Bash on your current target.
+
+We recommend creating a keybind that will assign a target as your focus with one click. This option can be found in the game's keybind settings. 
 ```
 #showtooltip
 /cast [@focus, harm, nodead] [] skull bash
 ```
 
-**Adaptive Swarm macro:**
+**Cast Adaptive Swarm on your ally or enemy mouseover target:**
 
-Casts Swarm on your current target, or a friendly if you mouseover them. This can be applied to numerous abilities you cast on allies (Dispel, Rejuv/Regrowth, Innervate etc to save on keybinds), as seen in the Rebirth macro further below. 
+This macro casts Adaptive Swarm on your mouseover target. If your mouse is not hovering over a target, the macro instead casts Adaptive Swarm on your current target. (Your mouseover target may be an ally.)
+
+Many abilities that are cast on allies - Rejuvenation, Regrowth, Innervate, etc - may be macro'd in this fashion. To make those macros, simply replace the term "Adaptive Swarm" with your spell of choice.
 ```
 #showtooltip
 /cast [@mouseover, help, nodead] [] Adaptive Swarm 
 ```
 
-**Rebirth/Other Macro:**
+**Cast Rebirth on an ally:**
 
-Casts Rebirth when you mouseover a friendly, or otherwise Mark of the Wild. Customise these macros how you please. 
+This macro casts Rebirth on your current friendly mouseover target. If your ally is alive, the macro instead casts Mark of the Wild.
 ```
 #showtooltip
 /cast [@mouseover, help, dead] Rebirth; Mark of the Wild
