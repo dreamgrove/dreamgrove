@@ -50,7 +50,7 @@ export default async function Wowhead({
       if (url) {
         displayId = extractIdFromUrl(url)
       } else {
-        throw Error(`${name} not found in local spelldata`)
+        console.log(`${name} not found in local spelldata`)
       }
     } else {
       throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
