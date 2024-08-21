@@ -5,49 +5,6 @@ draft: false
 authors: ["Chicken", "Jundarer", "Dsune (Oi)"]
 summary: 'A guide to Balance Druid'
 ---
-If you're a visual learner there is also a [video explanation of the compendium](https://www.youtube.com/watch?v=BzDBvOrlvjA). It was made during 10.2 but most of the concepts still apply.
-
-# News
-## Tier Set
-
-#### !393632|2-piece!
-
-
->!Starsurge! and !Starfall! increase the damage of your next !Wrath! or !Starfire! by 50%, stacking up to 3 times
-
-This is roughly a 6.2% DPS increase from having no tier.
-
-You can treat this buff either as a passive or try stacking it to 3 before using a generator, as per usual pooling for movement and getting starlord up has higher prio.
-
-#### !394414|4-piece!
-
->When you enter !Eclipse!, your next !Starsurge! or !Starfall! cost 30 less Astral Power and deals 60% increased damage.
-
-This is roughly a 7.8% DPS increase from having no tier.
-
-The buff gives you a reduced cost on your next spender every time you enter !Eclipse!. Buff is also applied when activating !393960|Pulsar! or pressing !194223|CA!/!102560|Incarnation!
-
-Total DPS from set: ~14.5%
-
-[Tier sim current ilvl ~489](https://www.raidbots.com/simbot/report/unaGdB6opkuxGgR4pGLbQe)
-
-## Antique Bronze Bullion
-Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under the name Antique Bronze Bullion. You will acquire this currency gradually from playing the game and it will allow you to buy "special" items from any of the 3 Dragonflight raids.
-
-Before making any decisions on what you should spend this currency on, you should always sim your character using Droptimizer or Top Gear functions on [Raidbots](https://raidbots.com)
-
-Here are items you should potentially spend the Antique Bronze Bullion on
-
-- [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence?bonus=10884:4786:1582:10338&class=11&ilvl=528&spec=102)
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
-- [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen)
-- [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
-- [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
-- [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow?bonus=10884:4786:1585:10338&class=11&ilvl=528&spec=102)
-- [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
 
 # Rotation
 ## Precasting
@@ -65,13 +22,15 @@ When reading the priority lists below, you should not think of these as steps to
 
 ## Single Target Priority
 <CheckboxProvider>
+<Checkbox id="KOTG" name="Keeper Of The Grove" defaultCheck radio="Hero" />
+<Checkbox id="EC" name="Elune's Chosen" defaultCheck radio="Hero" />
+<Checkbox id="Lunar Calling" spellId={429523} name="Lunar Calling" />
 <Checkbox id="Warrior of Elune" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
 <Checkbox id="Force of Nature" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
 <Checkbox id="Stellar Flare" spellId={202347} name="Stellar Flare" />
 <Checkbox id="Astral Communion" spellId={400636} name="Astral Communion" />
 <Checkbox id="New Moon" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
 <Checkbox id="Fury of Elune" spellId={202770} name="Fury of Elune" radio="New Moon" />
-<Checkbox id="Cancelaura" spellId={202345} name="Cancelaura Starlord" />
 <Checkbox id="Wild Mushroom" spellId={88747} name="Wild Mushroom" />
 <Checkbox id="Starweaver" spellId={393940} name="Starweaver" />
 <Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" />
@@ -80,30 +39,42 @@ When reading the priority lists below, you should not think of these as steps to
 **Note: While not explicitly mentioned in the priority list, if you find yourself outside of eclipse and are about to cap astral power, it's better to spend it to prevent further capping before entering eclipse.**
 
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
+- [*Force of Nature&&KOTG] Use !Force Of Nature! if you will not overcap AP.
+- [*Fury of Elune&&KOTG] Use !Fury of Elune!
 - [*Stellar Flare] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already.
-- [*Convoke the Spirits] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
+- [*Fury of Elune&&EC] Use !Fury of Elune!
+- [*KOTG]Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already and one of the following conditions is met:
+  - You have the !428731|Harmony Of The Grove! buff
+  - The cooldown on !Force of Nature! is longer than 25 seconds
+- [*EC]Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already and one of the following conditions is met:
+  - You have the !428731|Harmony Of The Grove! buff
+  - The cooldown on !Force of Nature! is longer than 25 seconds
+- [*Lunar Calling&&Warrior of Elune] Use !Warrior of Elune! 
+- [*~Lunar Calling&&Warrior of Elune] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
 - Use !Wrath! to enter Lunar Eclipse if one of the following conditions is true:
   - You have 520 or more stacks of !393960|Pulsar!
   - The cooldown of !194223|CA!/!102560|Incarnation! is less than 5 seconds.
-- [*Warrior of Elune] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
 - Use !Starfire! to enter Solar Eclipse.
+- [*Convoke the Spirits&&EC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
+- [*Convoke the Spirits&&KOTG] Use !Convoke the Spirits! when
+  - You are below 40 AP
+  - !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
+  - One of the following conditions is true:
+    - You have the !428731|Harmony Of The Grove! buff
+    - The cooldown on !Force of Nature! is longer than 25 seconds
 - [*Astral Communion] Use !Astral Communion! if you will not overcap on AP.
-- [*Force of Nature] Use !248280|Force of Nature! if you will not overcap on AP.
-- [*Fury of Elune] Use !Fury of Elune! if you are in !194223|CA!/!102560|Incarnation!, will proc !393960|Pulsar! with your next GCD or are at less than 280 !393960|Pulsar! stacks.
-- [*Cancelaura] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
 - [*Starweaver] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
 - Use !Starsurge! if !Starlord! has less than 3 stacks or if you have more than 2 stacks of !394048|BoAT!.
 - [*New Moon] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and !393960|Pulsar! has 520 or fewer stacks and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
-- [*Cancelaura] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
+  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
 - Use !Starsurge! if one of the following conditions is met:
   - You would overcap AP with the next cast.
   - [*Starweaver] You have a !393944|Starweaver's Weft! proc.
   - Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
 - [*Wild Mushroom] Use !Wild Mushroom! as a movement GCD.
+- [*Lunar Calling] Use !Starfire!
 - Use !Wrath! regardless of which Eclipse you are in.
 
 ## AoE priority
@@ -193,40 +164,56 @@ Keep in mind that !Warrior of Elune! charges are consumed before !Owlkin Frenzy!
 # Talents
 ## Raid
 
-<Talents name={"Single Target"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE"}/>
-<Talents name={"Single Target with Short Burst"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQkWSLJRQDgCAE"}/>
-<Talents name={"Single Target with spread add spawn"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB"}/>
-<Talents name={"Single Target with damage amp"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSLRTyBChSSLJERDgCAE"}/>
-<Talents name={"Two Target Starweaver"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSIJHIFolIRSSJJkkQol0iQSUAoBAB"}/>
-<Talents name={"Council of Dreams"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE"}/>
-<Talents name={"The Primal Council"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSIJHIFolIRSSJJEJHgoJlIRCNAKAQA"}/>
+<Talents name={"Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYBADw2yYBTzMLjAAAAsZmZM"}/>
+<Talents name={"Single Target with spread add spawn"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWogZmhhZGwMDzMjFYbmZhZmtZsZmZmxYbmlZGzgNwCAGLbzshxsMCMBAAAYxMzYA"}/>
 
 ## Mythic+
 
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. !New Moon! and !Fury of Elune! can be used interchangeably.
 
-<Talents name={"Balanced build"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB"}/>
-<Talents name={"Weaver build"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJUAoAAB"}/>
+<Talents name={"Balanced build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWogZmhhZGwMDzMjFYbmZxMzYmZzMzMjx2MLjxMYDsAgxy2MbYMLjATAAAAWMzMG"}/>
 
-!New Moon! provides more single target damage and is easy to pair with pulsar.
-!202770|FoE! does slightly more AoE but is more difficult to align with !393960|Pulsar!, making it annoying to play.
+# Consumables:
 
-The below picture showcases which talents are "mandatory" and which talents you can opt-in to:
+## Potions
 
-![Mythic](/static/images/talent-tree-mythic+.png)
+[Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion) for every situation
 
-**Secondary builds:**
+## Food
 
-[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
+[Feast of the Midnight Masquerade](https://www.wowhead.com/item=222733/feast-of-the-midnight-masquerade) or [Feast of the Divine Day](https://www.wowhead.com/spell=445112/feast-of-the-divine-day)
 
-[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
+## Phials
 
-- !Ursine Vigor!, !Well-Honed Instincts! and !Improved Stampeding Roar! are the major competing talents. !Ursine Vigor! should be taken if you need it to survive certain abilities. !Well-Honed Instincts! is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. spell 288826 "Improved Stampeding Roar">}} is extremely useful in indoor dungeons and in spiteful weeks.
-- !Remove Corruption! should be taken in Afflicted weeks.
-- !Cyclone! has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
-- !Hibernate! can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into !Feline Swiftness! like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000). This skips !Ursine Vigor! and !Typhoon!. You can also drop any of the other bottom talents you don't need to get a 2nd point in !Feline Swiftness! to get around even quicker for farming keys.
-- All other talents in the druid tree are more or less set.
+[Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) for every situation
+
+## Weapon Rune
+
+[Ironclaw Whetstone](https://www.wowhead.com/item=222503/ironclaw-whetstone) for every situation
+
+# Gearing:
+ 
+## Stat Priority:
+
+Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
+
+## Gems and Enchants
+
+Gems - 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) and a mixture of the other gems based on your sims. I would generally recommend [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite), as the crit effect portion of [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) is incredibly weak.
+
+Weapon - [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) for raid, [Stonebound Artistry](https://www.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) or [Stormrider's Fury](https://www.wowhead.com/item=223762/enchant-weapon-stormriders-fury) for M+
+
+Chest - [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
+
+Cloak - [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
+
+Legs - [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit)
+
+Wrist - [Chant of Armored Avoidance](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
+
+Boots - [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march)
+
+Ring -  You should always sim your own character to determine what enchant to use in this slot. They tend to be very close.
 
 # Consumables
 ## Potions
