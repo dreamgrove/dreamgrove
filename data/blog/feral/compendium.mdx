@@ -156,24 +156,24 @@ The way this section is written is very formulaic and has the same structure as 
 **Select which talents you have talented to filter the priority list:**
 
 <CheckboxProvider>
-<Checkbox id="Feral Frenzy-AOE" spellId={274838} name="Feral Frenzy" defaultCheck />
-<Checkbox id="Convoke the Spirits-AOE" spellId={391528} name="Convoke the Spirits" defaultCheck />
-<Checkbox id="Adaptive Swarm-AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" />
-<Checkbox id="Unbridled Swarm-AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
-<Checkbox id="Incarnation-AOE" spellId={102543} name="Incarnation"  />
-<Checkbox id="Lunar Inspiration-AOE" spellId={155580} name="Lunar Inspiration"  />
-<Checkbox id="Apex Predator's Craving-AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
-<Checkbox id="Bloodtalons-AOE" spellId={319439} name="Bloodtalons" defaultCheck />
-<Checkbox id="Tear Open Wounds-AOE" spellId={391786} name="Tear Open Wounds" defaultCheck />
-<Checkbox id="Rampant Ferocity-AOE" spellId={391710} name="Rampant Ferocity"  />
-<Checkbox id="Thrashing Claws-AOE" spellId={405300} name="Thrashing Claws"  />
-<Checkbox id="Sudden Ambush-AOE" spellId={384667} name="Sudden Ambush" defaultCheck />
-<Checkbox id="Brutal Slash-AOE" spellId={202028} name="Brutal Slash" defaultCheck />
-<Checkbox id="Shadowmeld-AOE" spellId={58984} name="Shadowmeld"  />
-<Checkbox id="Dire Fixation-AOE" spellId={417710} name="Dire Fixation" defaultCheck />
-<Checkbox id="Primal Wrath-AOE" spellId={285381} name="Primal Wrath" defaultCheck />
-<Checkbox id="T31 2P-AOE" name="T31 2P" defaultCheck isText/>
-<Checkbox id="T31 4P-AOE" name="T31 4P" defaultCheck isText/>
+<Checkbox id="Feral FrenzyAoE" spellId={274838} name="Feral Frenzy" defaultCheck />
+<Checkbox id="Convoke the SpiritsAoE" spellId={391528} name="Convoke the Spirits" defaultCheck />
+<Checkbox id="Adaptive SwarmAoE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" />
+<Checkbox id="Unbridled SwarmAoE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
+<Checkbox id="IncarnationAoE" spellId={102543} name="Incarnation"  />
+<Checkbox id="Lunar InspirationAoE" spellId={155580} name="Lunar Inspiration"  />
+<Checkbox id="Apex Predator's CravingAoE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
+<Checkbox id="BloodtalonsAoE" spellId={319439} name="Bloodtalons" defaultCheck />
+<Checkbox id="Tear Open WoundsAoE" spellId={391786} name="Tear Open Wounds" defaultCheck />
+<Checkbox id="Rampant FerocityAoE" spellId={391710} name="Rampant Ferocity"  />
+<Checkbox id="Thrashing ClawsAoE" spellId={405300} name="Thrashing Claws"  />
+<Checkbox id="Sudden AmbushAoE" spellId={384667} name="Sudden Ambush" defaultCheck />
+<Checkbox id="Brutal SlashAoE" spellId={202028} name="Brutal Slash" defaultCheck />
+<Checkbox id="ShadowmeldAoE" spellId={58984} name="Shadowmeld"  />
+<Checkbox id="Dire FixationAoE" spellId={417710} name="Dire Fixation" defaultCheck />
+<Checkbox id="Primal WrathAoE" spellId={285381} name="Primal Wrath" defaultCheck />
+<Checkbox id="T31 2PAoE" name="T31 2P" defaultCheck isText/>
+<Checkbox id="T31 4PAoE" name="T31 4P" defaultCheck isText/>
 </CheckboxProvider>
 
 **AoE priority list(2+ targets):**
@@ -181,65 +181,65 @@ The way this section is written is very formulaic and has the same structure as 
 - Use !Tiger's Fury! if any of the following conditions are met
     - !Tiger's Fury! is not up.
     - You are more than 65 energy from the cap.
-    - [*T31 2P-AOE] !Feral Frenzy! is ready to be used.
-    - [*~T31 4P-AOE] You've talented !Convoke the Spirits! (This keeps !Tiger's Fury! and !391528|Convoke! aligned.)
-- [*Adaptive Swarm-AOE] Use !Adaptive Swarm! when all of these conditions are met:
+    - [*T31 2PAoE] !Feral Frenzy! is ready to be used.
+    - [*~T31 4PAoE] You've talented !Convoke the Spirits! (This keeps !Tiger's Fury! and !391528|Convoke! aligned.)
+- [*Adaptive SwarmAoE] Use !Adaptive Swarm! when all of these conditions are met:
     - There isn't an !Adaptive Swarm! heading to an enemy target.
     - !Adaptive Swarm! is not up on a target.
-- [*Unbridled Swarm-AOE] With !Unbridled Swarm! talented, use !Adaptive Swarm! as often as you can with this priority:
+- [*Unbridled SwarmAoE] With !Unbridled Swarm! talented, use !Adaptive Swarm! as often as you can with this priority:
     - An enemy target has 2 stacks of !Adaptive Swarm!.
     - An enemy target has 1 stack of !Adaptive Swarm!.
     - An enemy target does not have !Adaptive Swarm!.
-- [*Incarnation-AOE] Use !102543|Incarnation!
-- [*~Incarnation-AOE] Use !Berserk!
-- [*Convoke the Spirits-AOE] Use !391528|Convoke! if all of the following conditions are met:
+- [*IncarnationAoE] Use !102543|Incarnation!
+- [*~IncarnationAoE] Use !Berserk!
+- [*Convoke the SpiritsAoE] Use !391528|Convoke! if all of the following conditions are met:
     - Your !Rip!s will not fall off during !391528|Convoke's! channel.
     - !Tiger's Fury! is up.
-    - [*T31 4P-AOE] !422751|Smoldering Frenzy! is up.
-    - [*T31 2P-AOE] You have 0 or 1 combo points OR !422751|Smoldering Frenzy! would fall off before !391528|Convoke! ends.
-    - [*~T31 2P-AOE] You have 0 or 1 combo points
-- [*Feral Frenzy-AOE] Use !Feral Frenzy! if you have less than 2 combo points and are not in !102543|Incarn!/!Berserk!, or under 3 combo points during !102543|Incarn!/!Berserk!.
-- [*Apex Predator's Craving-AOE] Use !Ferocious Bite! if you have a !Apex Predator's Craving! proc and:
-    - [*~Primal Wrath-AOE] Don't have !Primal Wrath! talented or
+    - [*T31 4PAoE] !422751|Smoldering Frenzy! is up.
+    - [*T31 2PAoE] You have 0 or 1 combo points OR !422751|Smoldering Frenzy! would fall off before !391528|Convoke! ends.
+    - [*~T31 2PAoE] You have 0 or 1 combo points
+- [*Feral FrenzyAoE] Use !Feral Frenzy! if you have less than 2 combo points and are not in !102543|Incarn!/!Berserk!, or under 3 combo points during !102543|Incarn!/!Berserk!.
+- [*Apex Predator's CravingAoE] Use !Ferocious Bite! if you have a !Apex Predator's Craving! proc and:
+    - [*~Primal WrathAoE] Don't have !Primal Wrath! talented or
     - Don't have !Sabertooth! up.
-- [*Primal Wrath-AOE] Use !Primal Wrath! if you have 5 combo points, or at least 4 combo points outside of !Berserk!/!102543|Incarnation! and any of these conditions are met:
-    - [*~Tear Open Wounds-AOE] !Rip!s from !Primal Wrath! are in pandemic
-    - [*Tear Open Wounds-AOE] You have Tear Open Wounds talented
-    - [*~Rampant Ferocity-AOE] There are at least 5 targets in range
-- [*~Primal Wrath-AOE] Use !Rip! on targets without !Rip! that will live for a decent amount of time.
+- [*Primal WrathAoE] Use !Primal Wrath! if you have 5 combo points, or at least 4 combo points outside of !Berserk!/!102543|Incarnation! and any of these conditions are met:
+    - [*~Tear Open WoundsAoE] !Rip!s from !Primal Wrath! are in pandemic
+    - [*Tear Open WoundsAoE] You have Tear Open Wounds talented
+    - [*~Rampant FerocityAoE] There are at least 5 targets in range
+- [*~Primal WrathAoE] Use !Rip! on targets without !Rip! that will live for a decent amount of time.
     - Please, I beg you, if you are using !Rip! on multiple targets you should seriously be talenting !Primal Wrath!. It's as close to mandatory as it gets.
 - Use !Ferocious Bite! if you have 5 combo points, or at least 4 combo points outside of !Berserk!/!102543|Incarnation!.
-- [*Bloodtalons-AOE] **Below this point, skip any spells you've already casted towards !Bloodtalons! if inside !Berserk!/!102543|Incarnation! or if you have 0 or 1 stacks of !Bloodtalons!.**
-- [*Brutal Slash-AOE] Use !Brutal Slash! if it will cap on charges within the next 4 seconds.
-- [*~Thrashing Claws-AOE] Use !Thrash! if in pandemic range and any of these conditions:
+- [*BloodtalonsAoE] **Below this point, skip any spells you've already casted towards !Bloodtalons! if inside !Berserk!/!102543|Incarnation! or if you have 0 or 1 stacks of !Bloodtalons!.**
+- [*Brutal SlashAoE] Use !Brutal Slash! if it will cap on charges within the next 4 seconds.
+- [*~Thrashing ClawsAoE] Use !Thrash! if in pandemic range and any of these conditions:
     - You have a !Clearcasting! proc
-    - [*Sudden Ambush-AOE] You either do not have !Double-Clawed Rake! talented or !Sudden Ambush! isn't up
-    - [*~Sudden Ambush-AOE] You do not have !Double-Clawed Rake! talented
-- [*Incarnation-AOE] Use !Prowl! followed by !Rake! on a target where !Rake! is either not applied or in pandemic range
-- [*Shadowmeld-AOE] Use !58984|Shadowmeld! followed by !Rake! on a target where !Rake! is either not applied or in pandemic range
-- [*Incarnation-AOE] Use !Prowl! followed by !Rake! on a target where !Rake! does not have a !Pouncing Strikes! snapshot
-- [*Shadowmeld-AOE] Use !58984|Shadowmeld! followed by !Rake! on a target where !Rake! does not have a !Pouncing Strikes! snapshot
+    - [*Sudden AmbushAoE] You either do not have !Double-Clawed Rake! talented or !Sudden Ambush! isn't up
+    - [*~Sudden AmbushAoE] You do not have !Double-Clawed Rake! talented
+- [*IncarnationAoE] Use !Prowl! followed by !Rake! on a target where !Rake! is either not applied or in pandemic range
+- [*ShadowmeldAoE] Use !58984|Shadowmeld! followed by !Rake! on a target where !Rake! is either not applied or in pandemic range
+- [*IncarnationAoE] Use !Prowl! followed by !Rake! on a target where !Rake! does not have a !Pouncing Strikes! snapshot
+- [*ShadowmeldAoE] Use !58984|Shadowmeld! followed by !Rake! on a target where !Rake! does not have a !Pouncing Strikes! snapshot
 - Use !Rake! on a target with either of these conditions met:
     - !Rake! is not applied or is in pandemic range
-    - [*Sudden Ambush-AOE] You have !Sudden Ambush! up and can upgrade the snapshot value of a !Rake!
-- [*~Thrashing Claws-AOE] Use !Thrash! if in pandemic range
-- [*Brutal Slash-AOE] Use !Brutal Slash!
-- [*~Brutal Slash-AOE] Use !Swipe! if there are 5 or more targets
-- [*Lunar Inspiration-AOE] Use Lunar Inspiration !Moonfire! on a target without !Moonfire! or if !Moonfire! is in pandemic range and there are less than 5 targets.
-- [*~Brutal Slash-AOE] Use !Swipe!.
-- [*Sudden Ambush-AOE] Use !Shred! if !Sudden Ambush! is not up and:
-    - [*Dire Fixation-AOE]  !Dire Fixation! is talented
-    - [*~Dire Fixation-AOE] There are 3 or fewer targets.
-- [*~Sudden Ambush-AOE] Use !Shred! if:
-    - [*Dire Fixation-AOE]  !Dire Fixation! is talented
-    - [*~Dire Fixation-AOE] There are 3 or fewer targets.
-- [*~Thrashing Claws-AOE] Use !Thrash!.
-- [*Bloodtalons-AOE] If you still need !Bloodtalons! proc it with this priority:
-    - [*Lunar Inspiration-AOE] Lunar Inspiration !Moonfire! if there is a target without !Moonfire!.
+    - [*Sudden AmbushAoE] You have !Sudden Ambush! up and can upgrade the snapshot value of a !Rake!
+- [*~Thrashing ClawsAoE] Use !Thrash! if in pandemic range
+- [*Brutal SlashAoE] Use !Brutal Slash!
+- [*~Brutal SlashAoE] Use !Swipe! if there are 5 or more targets
+- [*Lunar InspirationAoE] Use Lunar Inspiration !Moonfire! on a target without !Moonfire! or if !Moonfire! is in pandemic range and there are less than 5 targets.
+- [*~Brutal SlashAoE] Use !Swipe!.
+- [*Sudden AmbushAoE] Use !Shred! if !Sudden Ambush! is not up and:
+    - [*Dire FixationAoE]  !Dire Fixation! is talented
+    - [*~Dire FixationAoE] There are 3 or fewer targets.
+- [*~Sudden AmbushAoE] Use !Shred! if:
+    - [*Dire FixationAoE]  !Dire Fixation! is talented
+    - [*~Dire FixationAoE] There are 3 or fewer targets.
+- [*~Thrashing ClawsAoE] Use !Thrash!.
+- [*BloodtalonsAoE] If you still need !Bloodtalons! proc it with this priority:
+    - [*Lunar InspirationAoE] Lunar Inspiration !Moonfire! if there is a target without !Moonfire!.
     - !Shred!
-    - [*Lunar Inspiration-AOE] Lunar Inspiration !Moonfire! on the target with the lowest duration.
+    - [*Lunar InspirationAoE] Lunar Inspiration !Moonfire! on the target with the lowest duration.
     - !Rake! ideally on a target where the new snapshot would be at least the same strength as the currently applied !Rake!.
-    - [*Thrashing Claws-AOE] !Thrash!
+    - [*Thrashing ClawsAoE] !Thrash!
 
 # Talents:
 
@@ -249,7 +249,7 @@ The way this section is written is very formulaic and has the same structure as 
 
 [T31 Standard Convoke Single-Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFVKVRAQCBU)
 [One-minute Burst](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBRNVFAVRUVFVoVRECBU)
-[Raid ST-AoE hybrid](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVRAVRUVFVYRVBQCFU)
+[Raid STAoE hybrid](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVRAVRUVFVYRVBQCFU)
 [Raid Cleave](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBBOVRURRQVFVIUVRQCFQ)
 [Alternative L/R LI Single Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCYpCFREExRQQBROVBAZRVVFUiURBQBE)
 [Alternative L/R BrS Single Target](https://www.wowhead.com/talent-calc/druid/feral/DARAUEEBCQpCFREExhUQBROVFAVRUVFViURBQCBQ) (slightly worse).
