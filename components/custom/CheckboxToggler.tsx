@@ -1,47 +1,32 @@
 'use client'
 import React, { useState, useEffect, useContext } from 'react'
+import useToggleText from '../hooks/useToggleText'
 import { CheckboxContext } from './CheckboxProvider'
 
-const toggleText = (state, id) => {
-  const elements = document.querySelectorAll<HTMLElement>(`[id^="${id}"]`)
-  const negativeElements = document.querySelectorAll<HTMLElement>(`[id^="~${id}"]`)
-  elements.forEach((element) => {
-    element.style.display = state ? 'list-item' : 'none'
-  })
-  negativeElements.forEach((element) => {
-    element.style.display = state ? 'none' : 'list-item'
-  })
-}
-
-const CheckboxToggler = ({
-  id,
-  spellId = '',
-  name = '',
-  defaultCheck = false,
-  radio = '',
-  children,
-  className = '',
-}) => {
+const CheckboxToggler = ({ id, defaultCheck = false, radio = '', children, className = '' }) => {
   const [checked, setChecked] = useState(defaultCheck)
-  const { radioGroup, checkRadio, registerCheckbox } = useContext(CheckboxContext)
+  const { radioGroup, checkRadio, registerCheckbox, toggleCheckbox, checkboxStates } =
+    useContext(CheckboxContext)
+  const toggleText = useToggleText()
 
   useEffect(() => {
     if (radio) {
       registerCheckbox(radio, id, defaultCheck)
+    } else {
+      toggleCheckbox(id, defaultCheck)
     }
-  }, [radio, id, defaultCheck, registerCheckbox])
+  }, [radio, id, defaultCheck, registerCheckbox, toggleCheckbox])
 
-  const handleToggle = (value) => {
-    setChecked(value)
-    toggleText(value, id)
-
+  const handleToggle = () => {
+    const newValue = !checked
     if (radio) {
-      checkRadio(radio, value ? id : '')
+      checkRadio(radio, newValue ? id : '')
+    } else {
+      toggleCheckbox(id, newValue)
     }
+    setChecked(newValue)
+    toggleText(newValue, id)
   }
-  useEffect(() => {
-    toggleText(checked, id)
-  }, [checked])
 
   useEffect(() => {
     if (radio && radioGroup[radio] !== id) {
@@ -51,13 +36,20 @@ const CheckboxToggler = ({
     }
   }, [radioGroup, radio, id])
 
+  useEffect(() => {
+    if (checkboxStates[id] !== undefined) {
+      setChecked(checkboxStates[id])
+      toggleText(checkboxStates[id], id) // Apply the logic whenever the state changes
+    }
+  }, [checkboxStates, id])
+
   return (
     <label className="flex items-center">
       <input
         className={`mr-2 focus:outline-none ${className}`}
         type="checkbox"
         checked={checked}
-        onChange={() => handleToggle(!checked)}
+        onChange={handleToggle}
       />{' '}
       {children}
     </label>

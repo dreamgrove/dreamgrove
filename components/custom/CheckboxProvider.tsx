@@ -3,54 +3,79 @@ import React, { createContext, useState, useContext, useCallback } from 'react'
 
 interface CheckboxContextType {
   radioGroup: Record<string, string>
+  checkboxStates: Record<string, boolean>
   checkRadio: (radio: string, id: string) => void
   registerCheckbox: (radio: string, id: string, defaultCheck: boolean) => void
+  toggleCheckbox: (id: string, state: boolean) => void
 }
 
 // Create context with default value
 const CheckboxContext = createContext<CheckboxContextType>({
   radioGroup: {},
+  checkboxStates: {},
   checkRadio: () => {},
   registerCheckbox: () => {},
+  toggleCheckbox: () => {},
 })
 
-// Provider component
 export default function CheckboxProvider({ children }) {
-  const [radioGroup, setRadioGroup] = useState<Record<string, string>>({})
+  const [radioGroup, setRadioGroup] = useState({})
+  const [checkboxStates, setCheckboxStates] = useState({})
 
-  const registerCheckbox = useCallback((radio: string, id: string, defaultCheck: boolean) => {
-    setRadioGroup((prev) => {
-      const updatedRadioGroup = { ...prev }
+  const registerCheckbox = useCallback((radio, id, defaultCheck) => {
+    if (radio) {
+      setRadioGroup((prev) => {
+        const updatedRadioGroup = { ...prev }
+        if (defaultCheck && !updatedRadioGroup[radio]) {
+          updatedRadioGroup[radio] = id
+        }
+        return updatedRadioGroup
+      })
+    }
 
-      // Set the initial checked state
-      if (defaultCheck && !updatedRadioGroup[radio]) {
-        updatedRadioGroup[radio] = id
-      }
-
-      return updatedRadioGroup
-    })
+    setCheckboxStates((prev) => ({
+      ...prev,
+      [id]: defaultCheck,
+    }))
   }, [])
 
-  const checkRadio = useCallback((radio: string, id: string) => {
-    setRadioGroup((prev) => {
-      const updatedRadioGroup = { ...prev }
+  const checkRadio = useCallback(
+    (radio, id) => {
+      if (radio) {
+        setRadioGroup((prev) => ({
+          ...prev,
+          [radio]: id,
+        }))
 
-      // Uncheck all checkboxes in the same radio group
-      Object.keys(updatedRadioGroup).forEach((key) => {
-        if (key === radio && updatedRadioGroup[key] !== id) {
-          updatedRadioGroup[key] = ''
-        }
-      })
+        setCheckboxStates((prev) => {
+          const updatedStates = { ...prev }
 
-      // Check the current checkbox
-      updatedRadioGroup[radio] = id
+          // Only update checkboxes that belong to the same radio group
+          Object.keys(prev).forEach((key) => {
+            if (prev[key] !== undefined) {
+              // Uncheck all in the same group except the one being selected
+              updatedStates[key] = key === id ? true : radioGroup[radio] === key ? false : prev[key]
+            }
+          })
 
-      return updatedRadioGroup
-    })
+          return updatedStates
+        })
+      }
+    },
+    [radioGroup]
+  )
+
+  const toggleCheckbox = useCallback((id, state) => {
+    setCheckboxStates((prev) => ({
+      ...prev,
+      [id]: state,
+    }))
   }, [])
 
   return (
-    <CheckboxContext.Provider value={{ radioGroup, checkRadio, registerCheckbox }}>
+    <CheckboxContext.Provider
+      value={{ radioGroup, checkboxStates, checkRadio, registerCheckbox, toggleCheckbox }}
+    >
       {children}
     </CheckboxContext.Provider>
   )
