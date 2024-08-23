@@ -24,9 +24,10 @@ export const components: MDXComponents = {
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
     const processChildren = (children) => {
       if (typeof children === 'string') {
+        const regex = /^\[\*(.*?)\]/
         const match = children.match(regex)
         if (match) {
-          id = match[1]
+          id = match[1] // This will now hold the entire logical expression
           return children.replace(regex, '')
         }
       } else if (Array.isArray(children)) {
