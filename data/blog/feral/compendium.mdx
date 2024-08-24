@@ -325,8 +325,6 @@ __Which bleeds are snapshotted?__
     * !Bloodtalons!
 * Thrash’s snapshot can also be buffed by:
     * !236068|Moment of Clarity!
-* Shred’s snapshot can also be buffed by:
-    * !390772|Pouncing Strikes! procs (usually, though, !390772|Pouncing Strikes! is used on !Rake!)
 
 A bleed will ideally be applied only when 30% or less of the prior bleed remains. This triggers a mechanic known as “pandemic,” which is common to most damage over time spells.  
 
@@ -350,14 +348,6 @@ _Important note:_ Rake is the only bleed that ought to be clipped early to maint
 ## Macros
 
 Here, we provide a list of helpful macros. These macros are not _required_, but using them may elevate your gameplay. (_Note:_ These macros are not set in stone. Customize them as you see fit!)
-
-**Tie Lunar Inspiration !Moonfire! and !391528|Convoke the Spirits! to one keybind:**
-
-```
-#showtooltip
-/cast [known: Lunar Inspiration] Moonfire; [known: Convoke the Spirits] Convoke the Spirits
-```
-This macro helps save a keybind, as there are no talent builds that play both Lunar Inspiration !Moonfire! and !391528|Convoke the Spirits! at the same time.
 
 **Cast Ursol's Vortex at your cursor location (@cursor macro):**
 
@@ -440,6 +430,7 @@ Each package contains multiple WeakAuras that work with each other to help you u
 - [variant by Cheesey](https://wago.io/H3yjY1gs1)  
 - [by Guiltyas](https://wago.io/OaJQX6khW)
 - [by Oi/Dsune](https://wago.io/OiFeral)
+- [by Raven](https://wago.io/dkuzHlvmX)
 - [by enthh](https://wago.io/bfgPasy27) - requires his [addon](https://www.curseforge.com/wow/addons/feralsnapshots)
 
 ### **Common Standalone WeakAuras and Addons**
@@ -455,11 +446,14 @@ This Addon does many things, including tracking the talents, buffs and damage mo
 [Rake Plater mods by Sretnuh](https://wago.io/p/Sretnuh)
 This links to a collection of Rake mods for the Plater addon. Their purpose is to help you track which targets have Rake at a glance. No listed mod is superior to the others. We recommend you try out several, and settle on your favorite. 
 
+[Clearcasting Glows by Sretnuh](https://wago.io/JVlmx5sU3)
+This WA generates a glowing icon on your !Shred!, !Thrash!, !Swipe!, and !Brutal Slash! buttons when !Clearcasting! procs. For more details, check out the WA description.
+
 [Apex Predator's Craving by Marvel](https://wago.io/KzSX7dDMM)
 This WA produces a glowing icon + sound cue when !Apex Predator's Craving! procs for a free bite. For more details, check out the WA description.
 
 [Adaptive Swarm Helper by KnewOne](https://wago.io/0P93t1-nG)
- This WA assists with proper use of !325727|Adaptive Swarm!. It also includes Unbridled Swarm support for when you need to cast Swarm on allies in need of health. For more details, check out the WA description.
+ This WA assists with proper use of !325727|Adaptive Swarm!. It also includes Unbridled Swarm support for casting on allies. For more details, check out the WA description.
 
 [Bloodtalons Tracker from Fore's pack](https://wago.io/cQkL9nrAw)
 This WA tracks your progress towards crucial procs of !Bloodtalons!. Bloodtalons is procced when you cast three different combo point generation abilities within 4s. This WA displays the 4s timer. For more details, check out the WA description.
