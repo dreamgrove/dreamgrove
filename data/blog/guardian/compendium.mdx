@@ -76,7 +76,7 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*Dotc_Vicious Cycle] Press !Maul! if at 3 stacks of Vicious Cycle
 - [*Dotc_Thorns of Iron] Press !Ironfur! if above 40 rage
 - [*~Dotc_Wildpower Surge] Press !Mangle!
-- Press Thrash
+- Press !Thrash!
 - [*Dotc_Extra Catweaving] If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !Mangle!
     1. If the Feline Potential !Rip! has fallen off the target AND you have 3 or fewer combo points, press !Rip!. **Never overwrite a Feline Potential empowered !Rip!**
     2. If the Feline Potential !Rip! has not fallen off the target OR you have 4 or more combo points press !Ferocious Bite!. Make sure to press it at >50 energy
@@ -125,6 +125,8 @@ When reading the rotations below, you should not think about them as steps to fo
     - You have < 40 rage
 - [*Dotc_Tooth and Claw_cleave] Press !Raze! if at 2 stacks of Tooth and Claw
 - [*Dotc_Vicious Cycle_cleave] Press !Raze! if at 3 stacks of Vicious Cycle
+- [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] Press !Maul! if at 2 stacks of Tooth and Claw
+- [*Dotc_Vicious Cycle_cleave&&~Dotc_Raze_cleave] Press !Maul! if at 3 stacks of Vicious Cycle
 - [*Dotc_Thorns of Iron_cleave] Press !Ironfur! if above 40 rage
 - Press !Mangle!
 - Press !Thrash!
@@ -154,8 +156,8 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*Dotc_Convoke the Spirits_aoe] Press !Convoke the Spirits! if the following conditions are met:
     - You are not in Berserk
     - You have < 40 rage
-- [*Dotc_Tooth and Claw_aoe] Press !Raze! if at 2 stacks of Tooth and Claw
-- [*Dotc_Vicious Cycle_aoe] Press !Raze! if at 3 stacks of Vicious Cycle
+- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] Press !Raze! if at 2 stacks of Tooth and Claw
+- [*Dotc_Vicious Cycle_aoe&&Dotc_Raze_aoe] Press !Raze! if at 3 stacks of Vicious Cycle
 - [*Dotc_Thorns of Iron_aoe] Press !Ironfur! if above 40 rage
 - Press !Mangle!
 - Press !Thrash!
@@ -175,8 +177,8 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 <Checkbox id="Dotc_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
 <Checkbox id="Dotc_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
 <Checkbox id="Dotc_Thorns of Iron_incarn" spellId={400222} name="Thorns of Iron" defaultCheck />
-<Checkbox id="Dotc_Rage of the Sleeper_incarn" spellId={391528} name="Rage of the Sleeper" defaultCheck />
-<Checkbox id="Dotc_Convoke the Spirits_incarn" spellId={200851} name="Convoke the Spirits" />
+<Checkbox id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_incarn" spellId={391528} name="Convoke the Spirits" />
 </CheckboxProvider>
 
 - [*Dotc_Single Target_incarn] Press !441605|Ravage!
@@ -209,8 +211,8 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 - [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] Press !Raze! if at 2 stacks of Tooth and Claw
 - [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] Press !Raze! if at 3 stacks of Vicious Cycle
 - [*Dotc_Thorns of Iron_incarn] Press !Ironfur! if you have the rage to do so 
-- Press Mangle   
-- Press Thrash
+- Press !Mangle!   
+- Press !Thrash!
 
 ## Elune's Chosen
 
@@ -281,7 +283,7 @@ When reading the rotations below, you should not think about them as steps to fo
 
 - [*~EC_Thorns of Iron style_cleave&&EC_Raze_cleave] Press !Raze! if you will overcap rage
 - [*~EC_Thorns of Iron style_cleave&&~EC_Raze_cleave] Press !Maul! if you will overcap rage
-- [*EC_Thorns of Iron style_cleave] Press !Ironfur! if you will overcap rage
+- [*EC_Thorns of Iron style_cleave] Press !Ironfur! if you have the rage to do so
 - Press !Moonfire! if the dot completely falls off
 - Press !Thrash! if not at max stacks of the debuff or it is about to expire
 - [*EC_Heart of the Wild_cleave] Press !Heart of the Wild! if available
@@ -304,6 +306,7 @@ When reading the rotations below, you should not think about them as steps to fo
 
 ### AOE Rotation
 
+<CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
 <Checkbox id="EC_Lunation_aoe" spellId={429539} name="Lunation" defaultCheck />
 <Checkbox id="EC_Lunar Beam_aoe" spellId={204066} name="Lunar Beam" defaultCheck />
@@ -314,9 +317,10 @@ When reading the rotations below, you should not think about them as steps to fo
 <Checkbox id="EC_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn AOE" />
 <Checkbox id="EC_Rage of the Sleeper_aoe" spellId={200851} name="Rage of the Sleeper" />
 <Checkbox id="EC_Thorns of Iron style_aoe" spellId={192081} name="Thorns of Iron Playstyle" />
+</CheckboxProvider>
 
 - [*~EC_Thorns of Iron style_aoe&&EC_Raze_aoe] Press !Raze! if you will overcap rage
-- [*EC_Thorns of Iron style_aoe] Press !Ironfur! if you will overcap rage
+- [*EC_Thorns of Iron style_aoe] Press !Ironfur! if you have the rage to do so
 - Press !Moonfire! if the dot completely falls off
 - Press !Thrash! if not at max stacks of the debuff or it is about to expire
 - [*EC_Heart of the Wild_aoe] Press !Heart of the Wild! if available
@@ -555,6 +559,8 @@ The Spec tree is where the majority of our customisation options come in:
     - Moonless night is a powerful offensive tool but offers next to no defensive value, its worth mentioning as an option for your weekly keys but do not expect to see it much in higher difficulty key levels.
     - Even with the slightly higher rage generation from EC's hero tree, Blood Frenzy contributes 30-40% of your rage generation throughout a dungeon. This point continues to be far too good to drop.
     - Berserk: Aggression is an option to consider dropping if you choose to focus entirely on the Thorns of Iron playstyle. However, be aware that this is your best path towards Rend and Tear which is a very strong node.
+
+# Consumables
 
 ## Flasks
 
