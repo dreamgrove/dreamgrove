@@ -21,64 +21,106 @@ When reading the priority lists below, you should not think of these as steps to
 
 
 ## Single Target Priority
+
+<details>
+<summary>Keeper of the Grove</summary>
+
 <CheckboxProvider>
-<Checkbox id="KOTG" name="Keeper Of The Grove" defaultCheck radio="Hero" />
-<Checkbox id="EC" name="Elune's Chosen" defaultCheck radio="Hero" />
-<Checkbox id="Lunar Calling" spellId={429523} name="Lunar Calling" />
-<Checkbox id="Warrior of Elune" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
-<Checkbox id="Force of Nature" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
-<Checkbox id="Stellar Flare" spellId={202347} name="Stellar Flare" />
-<Checkbox id="New Moon" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
-<Checkbox id="Fury of Elune" spellId={202770} name="Fury of Elune" radio="New Moon" />
-<Checkbox id="Wild Mushroom" spellId={88747} name="Wild Mushroom" />
-<Checkbox id="Starweaver" spellId={393940} name="Starweaver" />
-<Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" />
+<Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" />
+<Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
+<Checkbox id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
+<Checkbox id="Nature's GraceKOTG" spellId={392162} name="Nature's Grace" />
+<Checkbox id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
+<Checkbox id="StarweaverKOTG" spellId={393940} name="Starweaver" />
+<Checkbox id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
+
 </CheckboxProvider>
 
-**Note: While not explicitly mentioned in the priority list, if you find yourself outside of eclipse and are about to cap astral power, it's better to spend it to prevent further capping before entering eclipse.**
-
-- Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- [*Force of Nature&&KOTG] Use !Force Of Nature! if your Solar Eclipse has more than 3 seconds left
-- [*Fury of Elune&&KOTG] Use !Fury of Elune!
-- [*Stellar Flare] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of Elune&&EC] Use !Fury of Elune!
-- [*KOTG]Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already and one of the following conditions is met:
+- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
+- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) unless your next GCD is !Force of Nature!
+- Use !Starfire! to enter Solar Eclipse
+- Use !Force Of Nature! if your Solar Eclipse has more than 3 seconds left
+- [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
+- [*Fury of EluneKOTG] Use !Fury of Elune!
+- Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already and one of the following conditions is met:
   - You have the !428731|Harmony Of The Grove! buff
   - The cooldown on !Force of Nature! is longer than 25 seconds
-- [*EC]Use !194223|Celestial Alignment!/!102560|Incarnation! 
-- [*Lunar Calling&&Warrior of Elune] Use !Warrior of Elune! 
-- [*~Lunar Calling&&Warrior of Elune] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
-- Use !Wrath! to enter Lunar Eclipse if the cooldown of !194223|CA!/!102560|Incarnation! is less than 5 seconds.
-- [*~Lunar Calling] Use !Starfire! to enter Solar Eclipse.
-- [*Convoke the Spirits&&EC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-- [*Convoke the Spirits&&KOTG] Use !Convoke the Spirits! when
+- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when
   - You are below 40 AP
   - !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
   - One of the following conditions is true:
     - You have the !428731|Harmony Of The Grove! buff
     - The cooldown on !Force of Nature! is longer than 25 seconds
-- [*Starweaver] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
 - Use !Starsurge! if !Starlord! has less than 3 stacks
-- [*New Moon] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
+- [*New MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
 - Use !Starsurge! if one of the following conditions is met:
+  - You are about to overcap
   - You need to move
   - [*Starweaver] You have a !393944|Starweaver's Weft! proc.
-- [*Wild Mushroom] Use !Wild Mushroom! as a movement GCD.
+- [*Wild MushroomKOTG] Use !Wild Mushroom! as a movement GCD.
+- Use !Wrath!
+
+</details>
+
+<details>
+<summary>Elune's Chosen</summary>
+
+<CheckboxProvider>
+
+<Checkbox id="Lunar Calling" spellId={429523} name="Lunar Calling" />
+<Checkbox id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
+<Checkbox id="Fury of EluneEC" spellId={202770} name="Fury of Elune" radio="New Moon" />
+<Checkbox id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits"
+<Checkbox id="Nature's GraceEC" spellId={392162} name="Nature's Grace" />
+<Checkbox id="Stellar FlareEC" spellId={202347} name="Stellar Flare" />
+<Checkbox id="New MoonEC" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
+<Checkbox id="StarweaverEC" spellId={393940} name="Starweaver" />
+<Checkbox id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
+<Checkbox id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
+</CheckboxProvider>
+
+- Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
+- [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
+- [*Fury of Elune&&EC] Use !Fury of Elune!
+- Use !194223|Celestial Alignment!/!102560|Incarnation! 
+- [*Lunar Calling&&Warrior of EluneEC] Use !Warrior of Elune! 
+- [*~Lunar Calling&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
+- [*Lunar Calling] Use !Wrath! to enter Lunar Eclipse
+- [*~Lunar Calling] Use !Starfire! to enter Solar Eclipse.
+- [*Nature's GraceEC] Use !Starfire! if all of the following conditions is met:
+  - You have stacks of !Dreamstate!
+  - You are in CA and your next global would be !Convoke the Spirits!
+- [*Convoke the SpiritsEC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
+- [*StarweaverEC] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
+- Use !Starsurge! if !Starlord! has less than 3 stacks
+- [*New MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
+  - You will not overcap on AP.
+  - You can finish the cast before your current eclipse ends.
+  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
+- Use !Starsurge! if one of the following conditions is met:
+  - You are about to overcap
+  - You need to move
+  - [*StarweaverEC] You have a !393944|Starweaver's Weft! proc.
+- [*Wild MushroomEC] Use !Wild Mushroom! as a movement GCD.
+- [*Force of NatureEC] Use !Force Of Nature! if you will not overcap on AP.
 - [*Lunar Calling] Use !Starfire!
 - [*~Lunar Calling] Use !Wrath! if you are in Solar Eclipse
+
+</details>
 
 ## AoE priority
 
 TODO
 
 <CheckboxProvider>
+<Checkbox id="KOTGAoE" name="Keeper Of The Grove" defaultCheck radio="Hero" />
+<Checkbox id="ECAoE" name="Elune's Chosen" defaultCheck radio="Hero" />
 <Checkbox id="Warrior of EluneAoE" spellId={202425} name="Warrior of Elune" radio="Force of Nature"/>
 <Checkbox id="Force of NatureAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
 <Checkbox id="Stellar FlareAoE" spellId={202347} name="Stellar Flare"/>
-<Checkbox id="Astral CommunionAoE" spellId={400636} name="Astral Communion"/>
 <Checkbox id="New MoonAoE" spellId={274281} name="New Moon" defaultCheck radio="FoE"/>
 <Checkbox id="Fury of EluneAoE" spellId={202770} name="Fury of Elune" radio="FoE"/>
 <Checkbox id="CancelauraAoE" spellId={202345} name="Cancelaura Starlord"/>
@@ -99,6 +141,9 @@ TODO
   - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
 - [*CancelauraAoE] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
 - Use !Starfall! if you would overcap Astral Power with your next cast.
+- [*Force of NatureAoE] Use !248280|Force of Nature! if one of the following conditions is met:
+  - Your current Eclipse has more than 3 seconds left
+  - Your next GCD is !194223|CA!/!102560|Incarnation!
 - Use !194223|CA!/!102560|Incarnation! if you are not in !194223|CA!/!102560|Incarnation! already.
 - [*Warrior of EluneAoE] Use !Warrior of Elune! if available.
 - Use !Starfire! to enter Solar Eclipse if you are fighting 2 targets.
@@ -122,7 +167,6 @@ TODO
 - [*Convoke the SpiritsAoE] Use !Convoke the Spirits! if you are fighting less than 3 targets, otherwise only use !391528|Convoke! for movement in AoE.
 - [*New MoonAoE] Use !New Moon! if you will not overcap on AP.
 - [*New MoonAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
-- [*Force of NatureAoE] Use !248280|Force of Nature! if you will not overcap on AP.
 - [*StarweaverAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc and !Starfire! will hit less than 17 targets.
 - !Starfire! if any of the below conditions are true:
   - You are in Lunar Eclipse.
