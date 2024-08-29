@@ -66,11 +66,15 @@ export async function generateMetadata({
     },
   }
 }
+
 export const generateStaticParams = async () => {
-  return allBlogs.map((p) => ({
-    params: { slug: p.slug.split('/').map((name) => decodeURI(name)) },
-    locale: p.locale,
-  }))
+  // Filter to generate static paths only for specific locales
+  return allBlogs
+    .filter((p) => ['en', 'kr'].includes(p.locale)) // Adjust based on your supported locales
+    .map((p) => ({
+      locale: p.locale,
+      slug: p.slug.split('/').map((name) => decodeURI(name)),
+    }))
 }
 
 export default function Page({ params }: { params: { locale: string; slug: string[] } }) {
@@ -78,14 +82,13 @@ export default function Page({ params }: { params: { locale: string; slug: strin
 
   const blogPath = params.locale === 'en' ? `/blog/${slug}` : `/${params.locale}/blog/${slug}`
 
-  const post = allBlogs.find((p) => {
-    return p.url_path === blogPath && p.locale === params.locale
-  })
+  const post = allBlogs.find((p) => p.url_path === blogPath && p.locale === params.locale)
 
   if (!post) {
     return notFound()
   }
 
+  // Handle previous and next posts for navigation
   const sortedCoreContents = allCoreContent(allBlogs)
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
   const prev = sortedCoreContents[postIndex + 1]
