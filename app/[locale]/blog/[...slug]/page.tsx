@@ -7,6 +7,7 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
+import { useRouter } from 'next/navigation' // Import the useRouter hook
 import PostSimple from '@/layouts/PostSimple'
 import PostLayout from '@/layouts/PostLayout'
 import PostBanner from '@/layouts/PostBanner'
@@ -65,33 +66,39 @@ export async function generateMetadata({
     },
   }
 }
-
 export const generateStaticParams = async () => {
-  return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
+  return allBlogs.map((p) => ({
+    params: { slug: p.slug.split('/').map((name) => decodeURI(name)) },
+    locale: p.locale,
+  }))
 }
-export default async function Page({ params }: { params: { slug: string[] } }) {
-  const slug = decodeURI(params.slug.join('/'))
-  const sortedCoreContents = allCoreContent(allBlogs)
-  const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
 
-  if (postIndex === -1) {
+export default function Page({ params }: { params: { locale: string; slug: string[] } }) {
+  const slug = decodeURI(params.slug.join('/'))
+
+  const blogPath = params.locale === 'en' ? `/blog/${slug}` : `/${params.locale}/blog/${slug}`
+
+  const post = allBlogs.find((p) => {
+    return p.url_path === blogPath && p.locale === params.locale
+  })
+
+  if (!post) {
     return notFound()
   }
 
+  const sortedCoreContents = allCoreContent(allBlogs)
+  const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
-  const post = allBlogs.find((p) => p.slug === slug) as Blog
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author) => author)
 
   const mainContent = coreContent(post)
   const jsonLd = post.structuredData
-  jsonLd['author'] = authorDetails.map((name) => {
-    return {
-      '@type': 'Person',
-      name,
-    }
-  })
+  jsonLd['author'] = authorDetails.map((name) => ({
+    '@type': 'Person',
+    name,
+  }))
 
   const Layout = layouts[post.layout || defaultLayout]
 
