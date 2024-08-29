@@ -14,7 +14,6 @@ import Npc from './custom/Npc'
 import CheckboxProvider from './custom/CheckboxProvider'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
-import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 
 export const components: MDXComponents = {
   Image,
@@ -63,5 +62,4 @@ export const components: MDXComponents = {
   Npc,
   CheckboxProvider,
   Collapsible,
-  HeroTalentsHeader,
 }
