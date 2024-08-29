@@ -20,7 +20,7 @@ export default function Home() {
     { src: balance, href: '/blog/balance/compendium', alt: 'Balance guide', active: true },
     { src: feral, href: '/blog/feral/compendium', alt: 'Feral guide', active: true },
     { src: resto, href: '/blog/resto/compendium', alt: 'Resto guide', active: true },
-    { src: guardian, href: '/', alt: 'Guardian guide', active: false },
+    { src: guardian, href: '/blog/guardian/compendium', alt: 'Guardian guide', active: true },
   ]
 
   return (
