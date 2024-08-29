@@ -1,6 +1,6 @@
 ---
 title: 'Feral Druid Compendium'
-patch: '10.2.6'
+patch: '11.0'
 draft: false
 authors: ["Crazymeow", "Cheesey"]
 summary: 'Everything you need to know about Feral Druid'
@@ -8,9 +8,9 @@ summary: 'Everything you need to know about Feral Druid'
 
 # News:
 
-# Rotation:
+# 로테이션:
 
-## Single Target
+## 단일 대상
 
 <div className="block dark:hidden">
 ![Image Light](/static/images/feral_single.png)
@@ -20,446 +20,397 @@ summary: 'Everything you need to know about Feral Druid'
 </div>
 
 <details>
-<summary>Advanced Single Target Priority</summary>
+<summary>(심화)시전 우선순위 상세</summary>
 
-**What is a priority list?**
+**우선순위란?**
 
-When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast.
+아래의 내용은 행동 우선순위로써 작성됨. 이는 그 내용을 순서대로 따라하라는 것이 아니라, 매 순간 현재 사용할 수 있는 기술 중 목록에서 가장 위에 있는 것을 골라 사용하는 식으로 적용해야 함을 의미함. 이 목록은 SimulationCraft에서 사용되는 APL(Action Priority List)와 그 구조가 동일함.
 
-The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
+**전투 시작 전**
+1. !야생의 정수!
+2. !숨기!
+3. 은신 상태에서, !갈퀴 발톱!
 
-**Pre-Combat:**
-1. !Heart of the Wild!
-2. !Prowl!
-3. !Rake! from stealth.
-
-**Select which talents you have talented to filter the priority list:**
+**다음 중 현재 선택한 특성을 모두 체크**
 
 <CheckboxProvider>
-<Checkbox id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
-<Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" defaultCheck />
-<Checkbox id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" defaultCheck radio="Adaptive Swarm"/>
-<Checkbox id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
-<Checkbox id="Incarnation" spellId={102543} name="Incarnation"  />
-<Checkbox id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration"  />
-<Checkbox id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" defaultCheck />
-<Checkbox id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
-<Checkbox id="Thrashing Claws" spellId={405300} name="Thrashing Claws"  />
-<Checkbox id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
-<Checkbox id="Brutal Slash" spellId={202028} name="Brutal Slash" radio="Brutal Slash" defaultCheck />
-<Checkbox id="Wild Slashes" spellId={390864} name="Wild Slashes" radio="Brutal Slash" />
-<Checkbox id="Shadowmeld" spellId={58984} name="Shadowmeld"  />
+<Checkbox id="Feral Frenzy" spellId={274838} name="야성의 광기" defaultCheck />
+<Checkbox id="Convoke the Spirits" spellId={391528} name="영혼 소집" defaultCheck />
+<Checkbox id="Adaptive Swarm" spellId={391889} name="적응의 무리" defaultCheck radio="Adaptive Swarm"/>
+<Checkbox id="Unbridled Swarm" spellId={391951} name="걷잡을 수 없는 무리" radio="Adaptive Swarm"/>
+<Checkbox id="Incarnation" spellId={102543} name="화신"  />
+<Checkbox id="Lunar Inspiration" spellId={155580} name="달 바라기"  />
+<Checkbox id="Apex Predator's Craving" spellId={391881} name="최상위 포식자의 갈망" defaultCheck />
+<Checkbox id="Bloodtalons" spellId={319439} name="피투성이 손길" defaultCheck />
+<Checkbox id="Thrashing Claws" spellId={405300} name="난타의 발톱"  />
+<Checkbox id="Sudden Ambush" spellId={384667} name="기습 공격" defaultCheck />
+<Checkbox id="Brutal Slash" spellId={202028} name="잔혹한 베기" radio="Brutal Slash" defaultCheck />
+<Checkbox id="Wild Slashes" spellId={390864} name="거친 베기" radio="Brutal Slash" />
+<Checkbox id="Shadowmeld" spellId={58984} name="그림자 숨기"  />
 
 </CheckboxProvider>
 
-**Single Target priority list:**
+**단일 대상 시전 우선순위**
 
-1. !Tiger's Fury! with 5 combo points or if you're missing more than 35 energy.
-2. [*Apex Predator's Craving&&Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs if it won't disrupt procing !Bloodtalons!.
-3. [*Apex Predator's Craving&&~Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs.
-4. [*Adaptive Swarm] !Adaptive Swarm! when:
-    - There isn't an !Adaptive Swarm! heading to an enemy target, AND
-    - !Adaptive Swarm! is either not applied, or is close to expiration with 1 or 2 stacks.
-5. [*Unbridled Swarm] !Adaptive Swarm! conditions change based on the amount of !391888|Adaptive Swarms! you have out:
-    - If you have 3 !391888|Adaptive Swarms! with at least 2 stacks out then you will target allies with priority 1 stack > 0 stack > 2 stacks.
-    - If you have 2 or fewer !391888|Adaptive Swarms! of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
-6. [*Incarnation] !102543|Incarnation! if it's ready.
-7. [*~Incarnation] !Berserk! if it's ready.
-8. [*Feral Frenzy] !Feral Frenzy! with 1 or no combo points. 2 is also acceptable during !102543|Incarn!/!Berserk!. 
-9. [*Convoke the Spirits] !391528|Convoke! when:
-    - !Rip! is up. AND
-    - !Tiger's Fury! is up. AND
-    - You have 2 or fewer combo points outside !102543|Incarn!/!Berserk! or 3 or fewer inside !102543|Incarn!/!Berserk!.
-10. [*Convoke the Spirits] You may also !391528|Convoke! if the fight is about to end.
+1. 연계 점수가 5점일 때, 혹은 기력이 최대치로부터 35 이상 모자랄 때, !Tiger's Fury!.
+2. [*Apex Predator's Craving&&Bloodtalons] !Apex Predator's Craving!에 의한 비용 없는 !Ferocious Bite!를 시전. 단, 이렇게 할 경우 !Bloodtalons! 발동이 실패하는 상황이라면 무시.
+3. [*Apex Predator's Craving&&~Bloodtalons] !Apex Predator's Craving!에 의한 비용 없는 !Ferocious Bite!를 시전.
+4. [*Adaptive Swarm] 다음의 조건을 모두 만족할 때, !Adaptive Swarm!.
+    - 적 대상에게 향하고 있는 !Adaptive Swarm! 투사체가 없을 것.
+    - 적 대상에게 !Adaptive Swarm!가 걸려 있지 않거나, 1/2중첩으로 곧 만료될 것.
+5. [*Unbridled Swarm] !Unbridled Swarm! 선택 시, 현재 활성화된 !391888|Adaptive Swarms! 개수에 따라 다음 내용에 맞게 !Adaptive Swarm! 시전.
+    - 2중첩 이상의 !391888|Adaptive Swarms!가 3개 활성화되어 있다면, 아군을 지정하여 1중첩 > 0 중첩 > 2 중첩 순으로 시전.
+    - 2중첩 이상의 활성화된 !391888|Adaptive Swarms!가 2개 이하라면, 현재 적응의 무리가 붙어 있지 않고 투사체가 향하고 있지 않은 적 대상을 지정하여 시전.
+6. [*Incarnation] 쿨마다 !102543|Incarnation!.
+7. [*~Incarnation] 쿨마다 !Berserk!.
+8. [*Feral Frenzy] 연계 점수 1점 이하에서, !Feral Frenzy!. !102543|Incarn!/!Berserk! 중일 경우, 2점에서도 사용 가능.
+9. [*Convoke the Spirits] 다음의 조건을 모두 만족할 때, !391528|Convoke!.
+    - 대상에게 !Rip!가 활성화되어 있을 것
+    - !Tiger's Fury! 효과를 받고 있을 것
+    - !102543|Incarn!/!Berserk! 중이 아닐 경우, 현재 보유한 연계 점수가 2점 이하일 것. !102543|Incarn!/!Berserk! 중일 경우, 현재 보유한 연계 점수가 3점 이하일 것.
+10. [*Convoke the Spirits] 전투가 끝나기 직전이라면 위 조건을 무시하고 !391528|Convoke!.
 
-**If you are in !Berserk! check this as your priorities from here on out change a bit:**
+**!Berserk! 중의 단일 대상 시전 우선순위**
 
 <CheckboxProvider>
-<Checkbox id="Berserk" spellId={106951} name="Berserk" />
+<Checkbox id="Berserk" spellId={106951} name="광폭화" />
 </CheckboxProvider>
 
 <div>
-- [*~Berserk] **Standard Priority**
-    1. !Rip! if all of these are true:
-        - You have 5 combo points.
-        - !Rip! is in pandemic range or is missing.
-        - !Tiger's Fury! is up, or won't be up before !Rip! expires.
-        - [*Bloodtalons] !Bloodtalons! is up.
-    2. !Ferocious Bite! when:
-        - You have at 5 combo points AND
-        - You have at least 50 energy. If you have the combo points, you should wait until you reach these energy thresholds.
-    3. [*Bloodtalons] **Below this point, skip any spells you've already casted towards !Bloodtalons!, if you have 0 or 1 stacks of !Bloodtalons! remaining.**
-    3. [*Shadowmeld] !58984|Shadowmeld! into !Rake! if all of these are true:
-        - [*Sudden Ambush] You do not have a !Sudden Ambush! proc.
-        - !Rake! is in pandemic OR you would be upgrading !Rake!'s snapshot value.
-        - !Tiger's Fury! is up.
-    4. !Rake! if any of these are true:
-        - !Rake! is in pandemic and !Tiger's Fury! is either up, or won't be before !Rake! falls off.
-        - You are in stealth.
-        - [*Sudden Ambush] You have a !Sudden Ambush! proc and you would be upgrading !Rake!'s snapshot value.
-    5. [*Brutal Slash] Use !Brutal Slash! if it will cap on charges within the next 4 seconds.
-    6. [*~Thrashing Claws] Cast !Thrash! if it is in pandemic range
-    7. !Shred! with !Clearcasting! procs.
-    8. [*Lunar Inspiration] Use Lunar Inspiration !155580|Moonfire! if it is in pandemic
-    9. [*Brutal Slash] !Brutal Slash!
-    10. [*Wild Slashes] !Swipe!
+- [*~Berserk] **평상시의 단일 대상 시전 우선순위**
+    1. 다음의 조건을 모두 만족할 때, !Rip!.
+        - 연계 점수 5점 보유
+        - 현재 대상이 !Rip!를 갖고 있지 않거나, pandemic 적용이 가능할 만큼 지속시간이 적게 남았을 것.
+        - !Tiger's Fury! 효과를 받고 있거나, 현재 대상이 가진 !Rip!가 만료될 때까지 !Tiger's Fury!의 쿨다운이 돌아오지 않을 것.
+        - [*Bloodtalons] !Bloodtalons! 효과를 1개 이상 받고 있을 것.
+    2. 다음의 조건을 모두 만족할 때, !Ferocious Bite!.
+        - 연계 점수 5점 보유
+        - 50 이상의 기력 보유(연계 점수는 있지만 기력이 모자랄 경우, 별도의 기술 시전 없이 기력이 차오를 때까지 기다릴 것)
+    3. [*Bloodtalons] **현재 보유한 !Bloodtalons!가 1개 이하일 경우, 이 아래 내용에서 최근 4초 내에 이미 시전한 기술은 무시할 것.**
+    3. [*Shadowmeld] 다음의 조건을 모두 만족할 때, !58984|Shadowmeld! > !Rake!.
+        - [*Sudden Ambush] !Sudden Ambush! 효과를 받고 있지 않을 것.
+        - !Rake!의 지속시간이 pandemic 적용이 가능할 만큼 적게 남았을 것, 혹은 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 강할 것.
+        - !Tiger's Fury! 효과를 받고 있을 것.
+    4. 다음 중 하나라도 만족하면, !Rake!.
+        - !Rake! 의 지속시간이 pandemic 적용이 가능할 만큼 적게 남아 있고, !Tiger's Fury! 효과를 받고 있거나 현재 대상이 가진 !Rake!가 만료될 때까지 !Tiger's Fury!의 쿨다운이 돌아오지 않을 것.
+        - 은신 상태
+        - [*Sudden Ambush] !Sudden Ambush! 효과를 갖고 있으며, 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 강할 것.
+    5. [*Brutal Slash] !Brutal Slash!가 4초 내로 3개 꽉 찬다면, !Brutal Slash!.
+    6. [*~Thrashing Claws] !Thrash!의 지속시간이 pandemic 적용이 가능할 만큼 적게 남았을 때, !Thrash!.
+    7. !Clearcasting! 효과를 받고 있을 때, !Shred!.
+    8. [*Lunar Inspiration] !155580|Moonfire!의 지속시간이 pandemic 적용이 가능할 만큼 적게 남았을 때, !155580|Moonfire!.
+    9. [*Brutal Slash] !Brutal Slash!.
+    10. [*Wild Slashes] !Swipe!.
     11. !Shred!.
-    12. [*Bloodtalons] If you still need !Bloodtalons! proc it with this priority:
-        - [*~Brutal Slash] !Swipe!
-        - !Rake! if it will not downgrade !Rake!'s snapshot value.
-        - [*Lunar Inspiration] Clip Lunar Inspiration !Moonfire!
-        - Clip !Thrash!
+    12. [*Bloodtalons] 아직 !Bloodtalons! 효과를 얻지 못했다면, 아래의 우선순위에 따라 발동시킬 것.
+        - [*~Brutal Slash] !Swipe!.
+        - 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 약하지 않다면, Rake!.
+        - [*Lunar Inspiration] 남은 지속시간을 무시하고, !Moonfire!.
+        - 남은 지속시간을 무시하고, !Thrash!.
 </div>
 <div>
-- [*Berserk] **Berserk Priority**
-    1. !Rip! if all of these are true:
-        - You have 5 combo points.
-        - !Rip! is missing or in pandemic range.
-        - You're buffed by !Tiger's Fury!, or won't be before !Rip! expires.
-        - [*Bloodtalons] You're buffed by !Bloodtalons!.
-    2. !Ferocious Bite! with 5 combo points.
-    3. [*Incarnation] !Prowl! into !Rake! if all of these are true:
-        - [*Sudden Ambush] You do not have a !Sudden Ambush! proc.
-        - !Rake! is missing or in pandemic range OR you would be upgrading !Rake!'s snapshot value.
-        - [*~Bloodtalons] Casting !Rake! would not inhibit !Bloodtalons! from proccing.
-    4. [*Shadowmeld] !58984|Shadowmeld! into !Rake! if all of these are true:
-        - [*Sudden Ambush] You do not have a !Sudden Ambush! proc.
-        - !Rake! is in pandemic OR you would be upgrading !Rake!'s snapshot value.
-        - [*~Bloodtalons] Casting !Rake! would not inhibit !Bloodtalons! from proccing.
-    5. [*Bloodtalons] !Rake! if it won't disrupt !Bloodtalons! and any of these are true:
-        - [*Sudden Ambush] !Rake! has 3 or fewer seconds remaining. You are trying to fish for a !Sudden Ambush! proc.
-        - [*Sudden Ambush] You have a !Sudden Ambush! proc and !Rake! is either missing, in pandemic range, or can be upgraded.
-        - [*~Sudden Ambush] !Rake! is missing or in pandemic range.
-    6. [*~Bloodtalons] !Rake! if any of these are true:
-        - [*Sudden Ambush] !Rake! has 3 or fewer seconds remaining. You are trying to fish for a !Sudden Ambush! proc.
-        - [*Sudden Ambush] You have a !Sudden Ambush! proc and !Rake! is either missing, in pandemic range, or can be upgraded.
-        - [*~Sudden Ambush] !Rake! is missing or in pandemic range
-    7. [*Lunar Inspiration] Lunar Inspiration !Moonfire! if it is missing or in pandemic range.
-    8. [*~Thrashing Claws] !Thrash! if it is in pandemic range
-    9. [*Bloodtalons] If you are one spell away from proccing !Bloodtalons! then proc it with this priority:
+- [*Berserk] **광폭화 중의 단일 대상 시전 우선순위**
+    1. 다음의 조건을 모두 만족할 때, !Rip!.
+        - 연계 점수 5점 보유
+        - 현재 대상이 !Rip!를 갖고 있지 않거나, pandemic 적용이 가능할 만큼 지속시간이 적게 남았을 것.
+        - !Tiger's Fury! 효과를 받고 있거나, 현재 대상이 가진 !Rip!가 만료될 때까지 !Tiger's Fury!의 쿨다운이 돌아오지 않을 것.
+        - [*Bloodtalons] !Bloodtalons! 효과를 1개 이상 받고 있을 것.
+    2. 연계 점수 5점에서 (기력과 무관하게) !Ferocious Bite!.
+    3. [*Incarnation] 다음의 조건을 모두 만족할 때, !Prowl! > !Rake!.
+        - [*Sudden Ambush] !Sudden Ambush! 효과를 받고 있지 않을 것.
+        - 현재 !Rake!가 걸려 있지 않거나, pandemic 적용이 가능할 만큼 남은 지속시간이 적을 것, 혹은 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 강할 것.
+        - [*~Bloodtalons] 지금 !Rake!을 시전해도 !Bloodtalons! 발동에 문제가 없을 것.
+    4. [*Shadowmeld] 다음의 조건을 모두 만족할 때, !58984|Shadowmeld! > !Rake!.
+        - [*Sudden Ambush] !Sudden Ambush! 효과를 받고 있지 않을 것.
+        - !Rake!의 지속시간이 pandemic 적용이 가능할 만큼 적게 남았을 것, 혹은 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 강할 것.
+        - [*~Bloodtalons] 지금 !Rake!을 시전해도 !Bloodtalons! 발동에 문제가 없을 것.
+    5. [*Bloodtalons] 지금 !Rake!을 시전해도 !Bloodtalons! 발동에 문제가 없고, 동시에 다음 중 하나라도 만족할 때, !Rake!.
+        - [*Sudden Ambush] !Rake!의 남은 지속시간이 3초 이하일 경우, (!Sudden Ambush!를 띄우려고 시도하지 말고) 일반 !Rake!를 시전하는 것이 더 나음.
+        - [*Sudden Ambush] !Sudden Ambush! 효과를 받고 있으며, 현재 대상에게 !Rake!이 걸려 있지 않거나, pandemic 적용이 가능할 만큼 남은 지속시간이 적거나, 혹은 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 강할 것.
+        - [*~Sudden Ambush] 현재 대상에게 !Rake!이 걸려 있지 않거나, pandemic 적용이 가능할 만큼 남은 지속시간이 적을 것.
+    6. [*~Bloodtalons] 다음 중 하나라도 만족할 때, !Rake!.
+        - [*Sudden Ambush] !Rake!의 남은 지속시간이 3초 이하일 것. (!Sudden Ambush!를 띄우려고 시도하지 말고) 일반 !Rake!를 시전하는 것이 더 나음.
+        - [*Sudden Ambush] !Sudden Ambush! 효과를 받고 있으며, 현재 대상에게 !Rake!이 걸려 있지 않거나, pandemic 적용이 가능할 만큼 남은 지속시간이 적거나, 혹은 지금 상태에서 시전하는 !Rake!가 현재 적용된 것보다 강할 것.
+        - [*~Sudden Ambush] 현재 대상에게 !Rake!이 걸려 있지 않거나, pandemic 적용이 가능할 만큼 남은 지속시간이 적을 것.
+    7. [*Lunar Inspiration] 현재 대상에게 !Moonfire!이 걸려 있지 않거나, pandemic 적용이 가능할 만큼 남은 지속시간이 적을 때, !Moonfire!.
+    8. [*~Thrashing Claws] !Thrash!의 지속시간이 pandemic 적용이 가능할 만큼 적게 남았을 때, !Thrash!.
+    9. [*Bloodtalons] 연계 점수 생성 기술을 하나만 더 시전하면 !Bloodtalons!을 얻을 수 있는 상황이라면, 다음 중 우선순위가 가장 높은 것을 시전.
         - !Shred!.
         - [*Brutal Slash] !Brutal Slash!.
         - [*Wild Slashes] !Swipe!.
-    10. !Shred! with !Clearcasting! procs.
-    11. [*Brutal Slash] Alternate between !Brutal Slash! and !Shred!, but save at least one charge of !Brutal Slash!.
+    10. !Clearcasting! 효과를 받고 있을 때, !Shred!.
+    11. [*Brutal Slash] !Brutal Slash!와 !Shred! 중 최근에 사용하지 않은 기술 사용. 단, !Brutal Slash!가 딱 1개 남았다면 아낄 것.
     12. !Shred!.
 </div>
 
 </details>
 
-## Multi Target
+## 다중 대상
 
 ![Multi Target Opener](/static/images/feral_multi.png)
 
 <details>
-<summary>Advanced Multi-target Priority</summary>
+<summary>(심화)시전 우선순위 상세</summary>
 
-**What is a priority list?**
+**우선순위란?**
 
-When reading the priority lists below, you should not think about these as steps to follow in a specific order. At any given point in combat, you should cast the first thing in the list that you are able to cast.
+아래의 내용은 행동 우선순위로써 작성됨. 이는 그 내용을 순서대로 따라하라는 것이 아니라, 매 순간 현재 사용할 수 있는 기술 중 목록에서 가장 위에 있는 것을 골라 사용하는 식으로 적용해야 함을 의미함. 이 목록은 SimulationCraft에서 사용되는 APL(Action Priority List)와 그 구조가 동일함.
 
-The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
+**전투 시작 전**
+1. !야생의 정수!
+2. !숨기!
+3. 은신 상태에서, !갈퀴 발톱!
 
-**Pre-Combat:**
-1. !Heart of the Wild!
-2. !Prowl!
-3. !Rake! from stealth.
-
-**Select which talents you have talented to filter the priority list:**
+**다음 중 현재 선택한 특성을 모두 체크**
 
 <CheckboxProvider>
-<Checkbox id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents"/>
-<Checkbox id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents"/>
-<Checkbox id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" defaultCheck />
-<Checkbox id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" defaultCheck />
-<Checkbox id="Adaptive Swarm AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" />
-<Checkbox id="Unbridled Swarm AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
-<Checkbox id="Incarnation AOE" spellId={102543} name="Incarnation"  />
-<Checkbox id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration"  />
-<Checkbox id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
-<Checkbox id="Bloodtalons AOE" spellId={319439} name="Bloodtalons" defaultCheck />
-<Checkbox id="Rampant Ferocity AOE" spellId={391710} name="Rampant Ferocity" defaultCheck />
-<Checkbox id="Thrashing Claws AOE" spellId={405300} name="Thrashing Claws"  />
-<Checkbox id="Sudden Ambush AOE" spellId={384667} name="Sudden Ambush" defaultCheck />
-<Checkbox id="Brutal Slash AOE" spellId={202028} name="Brutal Slash" radio="Brutal Slash" defaultCheck />
-<Checkbox id="Wild Slashes AOE" spellId={390864} name="Wild Slashes" radio="Brutal Slash" />
-<Checkbox id="Shadowmeld AOE" spellId={58984} name="Shadowmeld"  />
-<Checkbox id="Primal Wrath AOE" spellId={285381} name="Primal Wrath" defaultCheck />
+<Checkbox id="Druid of the Claw AOE" spellId={441583} name="발톱의 드루이드" radio="hero talents"/>
+<Checkbox id="Wildstalker AOE" spellId={439528} name="야생추적자" radio="hero talents"/>
+<Checkbox id="Feral Frenzy AOE" spellId={274838} name="야성의 광기" defaultCheck />
+<Checkbox id="Convoke the Spirits AOE" spellId={391528} name="영혼 소집" defaultCheck />
+<Checkbox id="Adaptive Swarm AOE" spellId={391889} name="적응의 무리" radio="Adaptive Swarm" />
+<Checkbox id="Unbridled Swarm AOE" spellId={391951} name="걷잡을 수 없는 무리" radio="Adaptive Swarm"/>
+<Checkbox id="Incarnation AOE" spellId={102543} name="화신"  />
+<Checkbox id="Lunar Inspiration AOE" spellId={155580} name="달 바라기"  />
+<Checkbox id="Apex Predator's Craving AOE" spellId={391881} name="최상위 포식자의 갈망" defaultCheck />
+<Checkbox id="Bloodtalons AOE" spellId={319439} name="피투성이 손길" defaultCheck />
+<Checkbox id="Rampant Ferocity AOE" spellId={391710} name="날뛰는 야성" defaultCheck />
+<Checkbox id="Thrashing Claws AOE" spellId={405300} name="난타의 발톱"  />
+<Checkbox id="Sudden Ambush AOE" spellId={384667} name="기습 공격" defaultCheck />
+<Checkbox id="Brutal Slash AOE" spellId={202028} name="잔혹한 베기" radio="Brutal Slash" defaultCheck />
+<Checkbox id="Wild Slashes AOE" spellId={390864} name="거친 베기" radio="Brutal Slash" />
+<Checkbox id="Shadowmeld AOE" spellId={58984} name="그림자 숨기"  />
+<Checkbox id="Primal Wrath AOE" spellId={285381} name="원시 분노" defaultCheck />
 </CheckboxProvider>
 
-**AoE priority list (2+ targets):**
+**다중 대상 시전 우선순위 (2+ 대상):**
 
-**Special Note: Use single-target spells on higher priority/higher healthed mobs**
-1. !Tiger's Fury! with 5 combo points or if you're missing more than 35 energy.
-2. [*Apex Predator's Craving AOE&&Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs if it won't inhibit !Bloodtalons! from proccing.
-2. [*Apex Predator's Craving AOE&&~Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs.
-3. [*Adaptive Swarm AOE] !Adaptive Swarm! when all of these are true:
-    - There isn't an !Adaptive Swarm! heading to an enemy target.
-    - !Adaptive Swarm! is not on your target.
-4. [*Unbridled Swarm AOE] With !Unbridled Swarm! talented, use !Adaptive Swarm! as often as you can with this priority:
-    - An enemy target has 2 stacks of !Adaptive Swarm!.
-    - An enemy target has 1 stack of !Adaptive Swarm!.
-    - An enemy target does not have !Adaptive Swarm!.
+**중요: 모든 단일 대상 기술은 점사 대상 / 체력이 높은 적에게 사용할 것**
+1. 연계 점수가 5점일 때, 혹은 기력이 최대치로부터 35 이상 모자랄 때, !Tiger's Fury!.
+2. [*Apex Predator's Craving AOE&&Bloodtalons] [*Apex Predator's Craving&&Bloodtalons] !Apex Predator's Craving!에 의한 비용 없는 !Ferocious Bite!를 시전. 단, 이렇게 할 경우 !Bloodtalons! 발동이 실패하는 상황이라면 무시.
+2. [*Apex Predator's Craving AOE&&~Bloodtalons] !Apex Predator's Craving!에 의한 비용 없는 !Ferocious Bite!를 시전.
+3. [*Adaptive Swarm AOE] 다음의 조건을 모두 만족할 때, !Adaptive Swarm!.
+    - 적 대상에게 향하고 있는 !Adaptive Swarm! 투사체가 없을 것.
+    - 적 대상에게 !Adaptive Swarm!이 걸려 있지 않을 것.
+4. [*Unbridled Swarm AOE] !Unbridled Swarm! 선택 시, 쿨마다 !Adaptive Swarm!를 다음 우선순위에 따라 적절한 적 대상에게 시전.
+    - !Adaptive Swarm! 2중첩인 적 대상.
+    - !Adaptive Swarm! 1중첩인 적 대상.
+    - !Adaptive Swarm!를 갖고 있지 않은 적 대상.
 5. [*Incarnation AOE] !102543|Incarnation!
 6. [*~Incarnation AOE] !Berserk!
-7. [*Feral Frenzy AOE] !Feral Frenzy! with 2 or fewer combo points outside !102543|Incarn!/!Berserk!, or 3 or fewer inside !102543|Incarn!/!Berserk!.
-8. [*Convoke the Spirits AOE] !391528|Convoke! when:
-    - Your !Rip!'s will not fall off during !391528|Convoke's! channel. AND
-    - !Tiger's Fury! is up. AND
-    - You have 1 or fewer combo points outside !102543|Incarn!/!Berserk!, or 2 or fewer combo points during !102543|Incarn!/!Berserk!.
-9. [*~Rampant Ferocity AOE&&Primal Wrath AOE] !Ferocious Bite! at 5 combo points and both of these are true:
-    - If inside !102543|Incarn!/!Berserk!, !Primal Wrath! is not in pandemic. Otherwise !Rip!'s from !Primal Wrath! have at least 6.5s remaining.
-    - [*Druid of the Claw AOE] You have a !441583|Ravage! proc and there are fewer than 8 targets.
-    - [*Wildstalker AOE] A target has !439531|Bloodseeker Vines! and there are fewer than 7 targets.
-10. [*Primal Wrath AOE] !Primal Wrath! with 5 combo points if any of these conditions are met:
-    - [*Rampant Ferocity AOE] !Rip!'s from !Primal Wrath! have 6.5 seconds or less remaining outside of !102543|Incarn!/!Berserk!.
-    - [*Rampant Ferocity AOE] !Rip!'s from !Primal Wrath! are missing or in pandemic range inside !102543|Incarn!/!Berserk!.
-    - [*Rampant Ferocity AOE] You would be upgrading !Primal Wrath!'s snapshot value.
-    - [*~Rampant Ferocity AOE] There are 2 or more targets
-11. [*~Primal Wrath AOE] !Rip! on targets without !Rip! that will live for a decent amount of time.
-    - Please, I beg you, if you are using !Rip! on multiple targets you should seriously be talenting !Primal Wrath!. It's as close to mandatory as it gets.
-12. !Ferocious Bite! with 5 combo points and 50 energy.
-13. [*Bloodtalons AOE] **Below this point, skip any spells you've already casted towards !Bloodtalons! if you have 0 or 1 stacks of !Bloodtalons!.**
-13. [*Sudden Ambush AOE] !Rake! with !Sudden Ambush! procs if there's a target without !Rake!.
-14. [*Brutal Slash AOE] !Brutal Slash! if it will cap on charges within the next 4 seconds, or mobs will die in the next 4 seconds.
-15. [*~Thrashing Claws AOE] !Thrash! if it's either missing or in pandemic range.
-16. [*Incarnation AOE&&Sudden Ambush AOE] !Prowl! into !Rake! on a target where !Rake! is either missing, in pandemic range or can be upgraded as long as you don't have a !Sudden Ambush! proc.
-16. [*Incarnation AOE&&~Sudden Ambush AOE] !Prowl! into !Rake! on a target where !Rake! is either missing, in pandemic range or can be upgraded.
-17. [*Shadowmeld AOE&&Sudden Ambush AOE] !58984|Shadowmeld! into !Rake! on a target where !Rake! is either missing, in pandemic range or can be upgraded as long as you don't have a !Sudden Ambush! proc.
-17. [*Shadowmeld AOE&&~Sudden Ambush AOE] !58984|Shadowmeld! into !Rake! on a target where !Rake! is either missing, in pandemic range or can be upgraded
-18. Refresh !Rake!'s that are either missing, or in pandemic range, as long as !Rake! wouldn't downgrade its snapshot value.
+7. [*Feral Frenzy AOE] 연계 점수 2점 이하에서, !Feral Frenzy!. !102543|Incarn!/!Berserk! 중일 경우, 3점에서도 사용 가능.
+8. [*Convoke the Spirits AOE] 다음의 조건을 모두 만족할 때, !391528|Convoke!.
+    - 현재 적 대상의 !Rip!은 !391528|Convoke!의 정신 집중이 끝날 때까지 남아 있을 만큼 지속시간이 충분할 것
+    - !Tiger's Fury! 효과를 받고 있을 것
+    - !102543|Incarn!/!Berserk! 중이 아닐 경우, 현재 보유한 연계 점수가 1점 이하일 것. !102543|Incarn!/!Berserk! 중일 경우, 현재 보유한 연계 점수가 2점 이하일 것.
+9. [*~Rampant Ferocity AOE&&Primal Wrath AOE] 다음의 조건을 모두 만족할 때, 연계 점수 5점에서 !Ferocious Bite!.
+    - !102543|Incarn!/!Berserk! 중일 경우, !Primal Wrath!로 부여한 !Rip!의 지속시간의 6.5초 이상일 것.
+    - [*Druid of the Claw AOE] !441583|Ravage! 발동 중이며, 적 대상이 7개 이하일 것.
+    - [*Wildstalker AOE] 현재 적 대상에게 !439531|Bloodseeker Vines!이 걸려 있고, 적 대상이 6개 이하일 것.
+10. [*Primal Wrath AOE] 다음 중 하나라도 만족할 때, 연계 점수 5점에서 !Primal Wrath!.
+    - [*Rampant Ferocity AOE] !102543|Incarn!/!Berserk! 중이 아니며, 현재 적들에게 부여된 !Rip!의 지속시간이 6.5초 이하일 것.
+    - [*Rampant Ferocity AOE] !102543|Incarn!/!Berserk! 중이며, 현재 적들에게 !Rip!가 걸려 있지 않거나 그 지속시간이 pandemic 구간 내일 것.
+    - [*Rampant Ferocity AOE] 지금 시전하는 !Rip!이 기존에 걸려 있던 것보다 강할 것.
+    - [*~Rampant Ferocity AOE] 현재 적 대상이 2개 이상일 것.
+11. [*~Primal Wrath AOE] 현재 !Rip!가 걸려 있지 않고, 충분히 오래 살아있을 적 대상에게 !Rip!.
+    - 하지만 이래야 할 상황이라면 반드시 !Primal Wrath!를 찍는 것이 맞다.
+12. 연계 점수 5점, 기력 50에서 !Ferocious Bite!.
+13. [*Bloodtalons AOE] **현재 보유한 !Bloodtalons!가 1개 이하일 경우, 이 아래 내용에서 최근 4초 내에 이미 시전한 기술은 무시할 것.**
+13. [*Sudden Ambush AOE] !Sudden Ambush! 효과를 갖고 있고 현재 !Rake! 효과를 받고 있지 않은 적이 있다면, 그 대상에게 !Rake!.
+14. [*Brutal Slash AOE] 4초 내로 !Brutal Slash!가 3개 꽉 차거나 적 여럿이 곧 죽기 직전이라면, !Brutal Slash!.
+15. [*~Thrashing Claws AOE] 현재 적 대상에게 !Thrash!가 걸려 있지 않거나 남은 지속시간이 pandemic 구간 내일 경우, !Thrash!.
+16. [*Incarnation AOE&&Sudden Ambush AOE] !Sudden Ambush! 효과를 갖고 있고, 적 대상에게 !Rake!가 걸려 있지 않거나, 걸려 있지만 그 지속시간이 pandemic 구간 내이거나, 현재 시전하는 !Rake!가 기존의 것보다 더 강한 상태일 경우, !Prowl! > !Rake!
+16. [*Incarnation AOE&&~Sudden Ambush AOE] 적 대상에게 !Rake!가 걸려 있지 않거나, 걸려 있지만 그 지속시간이 pandemic 구간 내이거나, 현재 시전하는 !Rake!가 기존의 것보다 더 강한 상태인 경우 !Prowl! > !Rake!.
+17. [*Shadowmeld AOE&&Sudden Ambush AOE] !Sudden Ambush! 효과를 갖고 있지 않고, 적 대상에게 !Rake!가 걸려 있지 않거나, 걸려 있지만 그 지속시간이 pandemic 구간 내이거나, 현재 시전하는 !Rake!가 기존의 것보다 더 강한 상태인 경우 !58984|Shadowmeld! > !Rake!.
+17. [*Shadowmeld AOE&&~Sudden Ambush AOE] 적 대상에게 !Rake!가 걸려 있지 않거나, 걸려 있지만 그 지속시간이 pandemic 구간 내이거나, 현재 시전하는 !Rake!가 기존의 것보다 더 강한 상태인 경우 !58984|Shadowmeld! > !Rake!.
+18. 적 대상에게 !Rake!가 걸려 있지 않거나, 걸려 있지만 그 지속시간이 pandemic 구간 내이거나, 현재 시전하는 !Rake!가 기존의 것과 동등하거나 더 강한 상태일 경우, !Rake!.
 19. [*Brutal Slash AOE] !Brutal Slash!
-20. [*Lunar Inspiration AOE&&~Wild Slashes AOE] Refresh !Moonfire!'s that are in pandemic range.
-21. [*Lunar Inspiration AOE&&Wild Slashes AOE] Refresh !Moonfire!'s that are in pandemic range if there are fewer than 4 targets.
+20. [*Lunar Inspiration AOE&&~Wild Slashes AOE] 남은 지속시간이 pandemic 구간 내인 !Moonfire!'를 갱신.
+21. [*Lunar Inspiration AOE&&Wild Slashes AOE] 적 대상이 3개 이하일 경우, 남은 지속시간이 pandemic 구간 내인 !Moonfire!'를 갱신.
 22. [*Wild Slashes AOE] !Swipe!
-23. [*Lunar Inspiration AOE&&Wild Slashes AOE] Refresh !Moonfire!'s that are in pandemic range.
-24. !Rake! targets that won't downgrade its snapshot value
+23. [*Lunar Inspiration AOE&&Wild Slashes AOE] 남은 지속시간이 pandemic 구간 내인 !Moonfire!'를 갱신.
+24. 현재 시전하는 !Rake!가 기존의 것과 동등하거나 더 강한 상태일 경우, !Rake!.
 25. [*~Wild Slashes AOE] !Swipe!
-26. [*Sudden Ambush AOE] !Shred! if !Sudden Ambush! is not up
+26. [*Sudden Ambush AOE] !Sudden Ambush! 효과를 갖고 있지 않을 경우, !Shred!.
 27. [*~Sudden Ambush AOE] !Shred!
 28. [*~Thrashing Claws AOE] !Thrash!
-29. [*Bloodtalons AOE] If you still need !Bloodtalons! proc it with this priority:
-    - [*Lunar Inspiration AOE] Lunar Inspiration !Moonfire! on the target with the lowest remaining !Moonfire! duration.
+29. [*Bloodtalons AOE] 아직 !Bloodtalons! 효과를 얻지 못했다면, 아래의 우선순위에 따라 발동시킬 것.
+    - [*Lunar Inspiration AOE] !Moonfire! 지속시간이 가장 적게 남은 대상에게 !Moonfire!.
     - [*Sudden Ambush AOE] !Shred!
-    - !Rake! a target without a !Pouncing Strikes! snapshot.
+    - !Pouncing Strikes! 효과가 들어가지 않은 !Rake! 대상에게 !Rake!.
     - [*Thrashing Claws AOE] !Thrash!
 
 </details>
 
-# Talents:
+# 특성 빌드
 
-This section is still a work in progress and will be updated before raid/m+ release, so check back before then.
+현재 작업 중 / 레이드, 쐐기 출시 이전에 업데이트 예정
 
-# Consumables:
+# 소모품
 
-## Potions
+## 물약
 
-[Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion) for every situation
+[절제된 물약](https://www.wowhead.com/spell=430599/tempered-potion) (항상)
 
-## Food
+## 음식
 
-[Feast of the Midnight Masquerade](https://www.wowhead.com/item=222733/feast-of-the-midnight-masquerade) or [Feast of the Divine Day](https://www.wowhead.com/spell=445112/feast-of-the-divine-day)
+[한밤의 가장무도회 잔칫상](https://www.wowhead.com/item=222733/feast-of-the-midnight-masquerade) 또는 [거룩한 날 잔칫상](https://www.wowhead.com/spell=445112/feast-of-the-divine-day)
 
-## Phials
+## 영약
 
-[Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) for every situation
+[연금술적 혼돈 영약](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) (항상)
 
-## Weapon Rune
+## 무기 강화
 
-[Ironclaw Whetstone](https://www.wowhead.com/item=222503/ironclaw-whetstone) or [Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil). These have extremely similar value, though you should default to [Ironclaw Whetstone](https://www.wowhead.com/item=222503/ironclaw-whetstone).
+[무쇠발톱 숫돌](https://www.wowhead.com/item=222503/ironclaw-whetstone) 또는 [알가르 마나 기름](https://www.wowhead.com/item=224107/algari-mana-oil). 성능은 거의 동일하나 [무쇠발톱 숫돌](https://www.wowhead.com/item=222503/ironclaw-whetstone)을 기본값으로 할 것.
 
-# Gearing:
+# 세팅
  
-## Stat Priority:
+## 능력치
 
-Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
+[Raidbots의 Top Gear](https://www.raidbots.com/simbot/topgear) 결과를 따를 것. 능력치 우선순위는 잘못된 개념임.
 
-## Gems and Enchants
+## 보석과 마법부여
 
-Gems - 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) and a mixture of the other gems based on your sims. I would generally recommend [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite), as the crit effect portion of [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) is incredibly weak.
+보석 - [교묘함의 블라스페마이트](https://www.wowhead.com/item=213746/elusive-blasphemite) 또는 [한계의 블라스페마이트](https://www.wowhead.com/item=213743/culminating-blasphemite) 1개 고정, 나머지는 개인 심크에 따를 것. 다만 현재 기준으로는 치명타 증폭 효과는 매우 약하기 때문에 [교묘함의 블라스페마이트](https://www.wowhead.com/item=213746/elusive-blasphemite)를 추천.
 
-Weapon - [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) for raid, [Stonebound Artistry](https://www.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) or [Stormrider's Fury](https://www.wowhead.com/item=223762/enchant-weapon-stormriders-fury) for M+
+무기 - 레이드는 [심연의 권위](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths), 쐐기는 [돌매듭의 기예](https://www.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) 또는 [폭풍기수의 분노](https://www.wowhead.com/item=223762/enchant-weapon-stormriders-fury)
 
-Chest - [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
+가슴 - [수정의 광휘](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
 
-Cloak - [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
+망토 - [날개 달린 은총의 성가](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
 
-Legs - [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit)
+다리 - [폭풍결속 방어구 강화도구](https://www.wowhead.com/item=219911/stormbound-armor-kit)
 
-Wrist - [Chant of Armored Avoidance](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
+손목 - [장갑 광역회피의 성가](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
 
-Boots - [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march)
+장화 - [수호자의 행진](https://www.wowhead.com/item=223656/enchant-boots-defenders-march), 혹은 [척후병의 행진](https://www.wowhead.com/item=223653/enchant-boots-scouts-march)
 
-Ring -  You should always sim your own character to determine what enchant to use in this slot. They tend to be very close.
+반지 -  본인의 심크 결과를 따를 것. 종류에 따른 큰 차이는 없음.
 
-## Embellishments
+## 장식됨 아이템
 
-Currently still awaiting tuning and for some embellishments to be fixed in game. This section will be updated closer to Raid release.
+아직 수치 조정이 이루어지고 있는 영역. 레이드 출시 전에 업데이트 예정.
 
-## Trinkets
+## 장신구
 
-Much like embellishments, this section will be updated closer to Raid/m+ release. In the meantime do Delves just in case blizzard makes on busted by accident.
+장식됨 아이템과 마찬가지로, 레이드/쐐기 출시 전에 업데이트 예정.
 
-# Miscellaneous:
+# 기타
 
-## What is snapshotting?
+## '강한 도트' / Snapshot에 대해
 
-Snapshotting refers to the process of continually ensuring that your strongest bleeds are ticking on your targets. The strength of feral bleed ticks is snapshotted (calculated) at the moment of application and lasts for the duration of the bleed. If certain buffs are active when the bleed is applied, such as !Tiger’s Fury!, the damage of its snapshot will be stronger. A good feral player is aware of this and will weave between applying stronger bleeds and leaving currently ticking bleeds alone. 
+야성 드루이드의 출혈 계열 기술은 현재 내가 보유한 강화 효과의 실시간 상태가 아니라, 기술 시전 시점의 강화 효과 상태를 계속해서 유지하는 특성을 지닌다. 이를 Snapshotting이라고 한다. 예를 들어, !Rake!을 먼저 쓰고 !Tiger's Fury!를 쓰면 그 !Rake!의 지속 피해는 !Tiger's Fury! 효과를 받지 못한다. 반대로 !Tiger's Fury!가 있는 상태에서 !Rake!을 썼다면, !Tiger's Fury! 효과가 만료된 후에도 해당 !Rake!의 지속 피해는 강화된 상태가 유지된다.
 
-Tracking the strength of different bleeds across multiple/changing mobs is notoriously difficult, so we recommend the use of Weak Aura bleed packages such as those found in dreamgrove.gg. All our WA packages follow the same general format:
-* If the bleed’s icon is highlighted in green or its number is higher than 100: this is a stronger bleed than the one you currently have active
-* If the bleed’s icon is highlighted in grey or its number is equal to 100: equal value bleed
-* If the bleed’s icon is highlighted in red or its number is lower than 100: this is a weaker bleed than the one you currently have active
+갈퀴 발톱은 !Tiger's Fury! 와 은신 상태 (실제 은신이 아니라 !Sudden Ambush!에 의한 것도 포함: !Pouncing Strikes! 참조) 에 의해 강화된다.
+도려내기는 !Tiger's Fury!와 !Bloodtalons!에 의해 강화된다.
+난타는 !Tiger's Fury! 와 !Moment of Clarity!에 의해 강화된다.
+(달 바라기 선택 시)달빛섬광은 !Tiger's Fury!에 의해 강화된다.
 
-Note: You will not necessarily upgrade every snapshot. Please review the rotation section.
+이와 같은 Snapshot 상태를 시각화하는 위크오라를 설치할 경우, 각 표기는 다음을 의미한다.
+초록색/100 초과: 지금 해당 기술을 쓰면, 이미 걸려 있던 것보다 강해짐.
+회색/100: 지금 쓸 수 있는 해당 기술의 상태가 이미 걸려 있는 것과 동일함.
+빨간색/100 미만: 지금 해당 기술을 쓰면, 이미 걸려 있던 것보다 약해짐.
 
-__Which bleeds are snapshotted?__
+일반적으로 각 출혈 기술을 가능한 한 강력한 상태로 유지하는 것이 좋다. 위의 로테이션 항목은 고려하여 작성된 것이다.
 
-* _All_ feral bleeds will snapshot at higher values when paired with:
-    * !Tiger’s Fury!
-* !Rake!’s snapshot can also be buffed by: 
-    * !Prowl!
-    * !Shadowmeld!
-    * !390772|Pouncing Strikes! procs
-* Rip’s snapshot can also be buffed by:
-    * !Bloodtalons!
-* Thrash’s snapshot can also be buffed by:
-    * !236068|Moment of Clarity!
+## Pandemic이란?
 
-A bleed will ideally be applied only when 30% or less of the prior bleed remains. This triggers a mechanic known as “pandemic,” which is common to most damage over time spells.  
-
-## What is “pandemic range?”
-This term refers to a DoT mechanic in WoW. The baseline duration of a DoT can be extended by up to 30% if a target is already affected by that DoT. Due to the 30% cap on extension, the DoT ought not to be refreshed early, or potential ticks will be lost. The ideal window of time to refresh a DoT is known as its “pandemic range.” 
-
-Let’s use an example. Consider a 10 second DoT:
-* Refresh with 1s remaining: the new DoT will be 11s long (10s baseline duration + 1s from prior DoT)
-* Refresh with 3s remaining: the new DoT will be 13s long (10s baseline duration + 3s from prior DoT)
-* Refresh with 8s remaining: the new DoT will still be 13s long (10s baseline + up to 30% from prior DoT)
-
-It is therefore best to wait until 70% or more of your bleed has ticked to refresh its DoT. 
-
-Fun trivia: the name “pandemic” derives from an old warlock passive that was eventually integrated as a baseline feature of damage over time spells. 
-
-__What is “clipping?”__
-
-Clipping refers to refreshing a dot prior to its pandemic window.
-_Important note:_ Rake is the only bleed that ought to be clipped early to maintain stronger snapshots.
-
+Pandemic이란, 지속 피해 기술이나 버프 / 디버프를 완전히 만료되기 전에 갱신하면 기존의 남은 지속시간이 이월되는 현상을 의미한다. 그 상한은 전체 지속시간의 30%로, 예를 들어 10초간 지속되는 기술을 2초 남았을 때 리필하면 새 지속시간은 12초가 된다. 하지만 8초가 남았을 때 리필해도 새 것의 지속시간은 13초를 초과하지 못한다.
+이 용어는 본래 이 효과를 제공하던 옛날 고통 흑마법사의 특성 이름으로부터 유래했는데, 현재는 거의 모든 지속 피해 기술의 기본 기능으로 탑재되어 있다.
 ## Macros
 
-Here, we provide a list of helpful macros. These macros are not _required_, but using them may elevate your gameplay. (_Note:_ These macros are not set in stone. Customize them as you see fit!)
+야성 드루이드에게는 필수적으로 요구되는 매크로가 없다. 다음 중 있으면 편리하겠다 싶은 것을 골라 사용하면 된다.
 
-**Cast Ursol's Vortex at your cursor location (@cursor macro):**
+**커서 위치에 우르솔의 회오리 즉시 시전:**
 
 ```
 #showtooltip
-/cast [@cursor] Ursol's Vortex
+/cast [@cursor] 우르솔의 회오리
 ```
 
-**Use your trinket(s) and/or weapon at the same time as an ability:**
+**쿨기에 장신구 묶기**
 
-Some trinkets and weapons ought to be procced at the same time as a major cooldown. It is best to macro these items with Berserk. 
-* 13 is the top trinket slot
-* 14 is the bottom trinket slot
-* 16 is your weapon slot
-
-If you would like to use all three items with Berserk, use this macro:
-
+장신구나 사용 효과가 있는 무기 등을 광폭화와 동시에 발동하도록 한다.(/13: 1번 장신구, /14: 2번 장신구, /16: 무기)
 ```
 #showtooltip
 /use 13
 /use 14
 /use 16
-/cast Berserk
-```
-This macro may be modified. For example, the macro below only uses the 2nd trinket with Berserk:
-
-```
-#showtooltip
-/use 14
-/cast Berserk
+/cast 광폭화
 ```
 
-**Cast Entangling Roots on your mouseover target:**
+**스마트 휘감는 뿌리**
 
-This macro casts Entangling Roots on your mouseover target. If your mouse is not hovering over a target, the macro instead casts Entangling Roots on your current target.
+가능하다면 현재 커서가 올라가 있는(=마우스오버) 대상을 우선적으로 지정하고, 그 외에는 현재 내 캐릭터가 선택한 대상에게 이동 불가 기술인 휘감는 뿌리를 시전하도록 한다.
 ```
 #showtooltip
-/cast [@mouseover, harm, nodead] [] Entangling Roots
+/cast [@mouseover, harm, nodead] [] 휘감는 뿌리
 ```
 
-**Skull Bash your Focus target:**
+**주시 차단**
 
-This macro casts Skull Bash on your focus target. If you have not set a focus target, the macro instead casts Skull Bash on your current target.
-
-We recommend creating a keybind that will assign a target as your focus with one click. This option can be found in the game's keybind settings. 
+가능하다면 현재 주시 대상을 우선적으로 지정하고, 그 외에는 현재 내 캐릭터가 선택한 대상에게 차단기를 시전한다. 주시 대상 지정은 별도로 해야 한다.
 ```
 #showtooltip
-/cast [@focus, harm, nodead] [] skull bash
+/cast [@focus, harm, nodead] [] 두개골 강타
 ```
 
-**Cast Adaptive Swarm on your ally or enemy mouseover target:**
+**원버튼 적응의 무리**
 
-This macro casts Adaptive Swarm on your mouseover target. If your mouse is not hovering over a target, the macro instead casts Adaptive Swarm on your current target. (Your mouseover target may be an ally.)
-
-Many abilities that are cast on allies - Rejuvenation, Regrowth, Innervate, etc - may be macro'd in this fashion. To make those macros, simply replace the term "Adaptive Swarm" with your spell of choice.
+가능하다면 현재 커서가 올라가 있는 아군 대상을 우선적으로 지정하고, 그 외에는 현재 내 캐릭터가 선택한 대상에게 적응의 무리를 시전한다.
 ```
 #showtooltip
-/cast [@mouseover, help, nodead] [] Adaptive Swarm 
+/cast [@mouseover, help, nodead] [] 적응의 무리
 ```
 
-**Cast Rebirth on an ally:**
+**전투 부활 / 시너지**
 
-This macro casts Rebirth on your current friendly mouseover target. If your ally is alive, the macro instead casts Mark of the Wild.
+아군 대상에게 커서가 올라가 있다면 해당 아군에게 전투 부활을, 그 외에는 야생의 징표를 시전한다. 해제, 회복, 재생, 정신 자극 등에도 응용하여 단축키 수를 줄일 수 있다.
 ```
 #showtooltip
-/cast [@mouseover, help, dead] Rebirth; Mark of the Wild
+/cast [@mouseover, help, dead] 환생; 야생의 징표
 ```
  
-## Useful WeakAura(s) and Addons
+## 유용한 위크오라
 
-### **Full WeakAura Packages for Feral**
-To play feral competently, many variables must be tracked. A single WeakAura is not up to this task, so our contributors have spent many hours assembling full WA packages from individual WeakAuras. 
-
-Each package contains multiple WeakAuras that work with each other to help you understand what's happening in combat. No package is superior to the others in the list. We recommend you try out several, and settle on your favorite.
+### **야성 드루이드 통합팩**
+다음 목록의 위크오라는 모두 최고 수준의 플레이에서 필요한 기술과 버프 등의 추적을 제공한다. 성능적인 차이는 없으므로 취향에 맞는 것을 골라 사용하면 된다.
  
-- [by Drufearr](https://wago.io/us2RURgE6) 
-- [by Chips](https://wago.io/WkTBZuH3y) 
-- [by Fore](https://wago.io/H1tFNCh-t) 
-- [by Cheesey](https://wago.io/18VspFroU)  
-- [variant by Cheesey](https://wago.io/H3yjY1gs1)  
-- [by Guiltyas](https://wago.io/OaJQX6khW)
-- [by Oi/Dsune](https://wago.io/OiFeral)
-- [by Raven](https://wago.io/dkuzHlvmX)
-- [by enthh](https://wago.io/bfgPasy27) - requires his [addon](https://www.curseforge.com/wow/addons/feralsnapshots)
+- [Drufearr 판](https://wago.io/us2RURgE6) 
+- [Chips 판](https://wago.io/WkTBZuH3y) 
+- [Fore 판](https://wago.io/H1tFNCh-t) 
+- [Cheesey 판](https://wago.io/18VspFroU)  
+- [Cheesey의 변형판](https://wago.io/H3yjY1gs1)  
+- [Guiltyas 판](https://wago.io/OaJQX6khW)
+- [Oi/Dsune 판](https://wago.io/OiFeral)
+- [Raven 판](https://wago.io/dkuzHlvmX)
+- [enthh 판](https://wago.io/bfgPasy27) (동일 제작자의 [애드온](https://www.curseforge.com/wow/addons/feralsnapshots) 설치 필요)
 
-### **Common Standalone WeakAuras and Addons**
+### **많이 사용하는 위크오라/애드온**
+[Oi의 야드 도트 트래커 위크오라](https://wago.io/qYnbZzlmP)
+자체 설명 참고. 강한 도트 유지를 쉽게 할 수 있게 해 줌.
 
-None of these WeakAuras or Addons are _required,_ but using them may elevate your gameplay.
+[Enth의 야드 Snapshot 애드온](https://www.curseforge.com/wow/addons/feralsnapshots)
+위의 것과 기능적으로 동일하지만, 위크오라가 아니라 독립 애드온으로 작동함. 자체 설명 참고. 적 체력바(기본 스킨과 plater 모두)나 개인 자원 바 양쪽에 띄울 수 있음.
 
-[Feral Bleed Power by Oi](https://wago.io/qYnbZzlmP)
-This WA will make it easier to track the power of your next bleed compared to the currently active one. For more details, check out the WA description. 
+[Sretnuh의 갈퀴 발톱 Plater 모드](https://wago.io/p/Sretnuh)
+갈퀴 발톱 효과가 걸려 있지 않은 적의 체력바를 하이라이트하는 기능.
 
-[Feral Snapshots by Enth](https://www.curseforge.com/wow/addons/feralsnapshots)
-This Addon does many things, including tracking the talents, buffs and damage modifiers affecting DoT abilities. This information is displayed on WAs, standard Blizzard nameplates, Plater, and other addons. For more details, check out the Addon description.
+[Sretnuh의 청명 적용 기술 시각화](https://wago.io/JVlmx5sU3)
+!Clearcasting! 발동 시, !Shred!, !Thrash!, !Swipe!, !Brutal Slash! 기술 칸을 빛나게 해 주는 기능.
 
-[Rake Plater mods by Sretnuh](https://wago.io/p/Sretnuh)
-This links to a collection of Rake mods for the Plater addon. Their purpose is to help you track which targets have Rake at a glance. No listed mod is superior to the others. We recommend you try out several, and settle on your favorite. 
+[Marvel의 최상위 포식자의 갈망 알리미](https://wago.io/KzSX7dDMM)
+!Apex Predator's Craving! (비용 없는 흉포한 이빨) 효과 발동 시, 빛나는 아이콘 표시 및 효과음 출력으로 빠르게 반응할 수 있게 돕는 기능.
 
-[Clearcasting Glows by Sretnuh](https://wago.io/JVlmx5sU3)
-This WA generates a glowing icon on your !Shred!, !Thrash!, !Swipe!, and !Brutal Slash! buttons when !Clearcasting! procs. For more details, check out the WA description.
+[KnewOne의 적응의 무리 도우미](https://wago.io/0P93t1-nG)
+자체 설명 참고. 적응의 무리 및 걷잡을 수 없는 무리 선택 시의 적절한 시전 대상 선정을 도와 주는 기능.
 
-[Apex Predator's Craving by Marvel](https://wago.io/KzSX7dDMM)
-This WA produces a glowing icon + sound cue when !Apex Predator's Craving! procs for a free bite. For more details, check out the WA description.
+[Fore's pack 중, 피투성이 손길 트래커](https://wago.io/cQkL9nrAw)
+!Bloodtalons! 발동을 돕기 위해, 각 연계 점수 생성기에 최근 시전으로부터의 4초 타이머를 표시하는 기능.
 
-[Adaptive Swarm Helper by KnewOne](https://wago.io/0P93t1-nG)
- This WA assists with proper use of !325727|Adaptive Swarm!. It also includes Unbridled Swarm support for casting on allies. For more details, check out the WA description.
+[Cheesey's pack 중, 피투성이 손길 트래커](https://wago.io/zinn-QaFI)
+약간의 추가 기능.
 
-[Bloodtalons Tracker from Fore's pack](https://wago.io/cQkL9nrAw)
-This WA tracks your progress towards crucial procs of !Bloodtalons!. Bloodtalons is procced when you cast three different combo point generation abilities within 4s. This WA displays the 4s timer. For more details, check out the WA description.
-
-[Bloodtalons Tracker from Cheesey's pack](https://wago.io/zinn-QaFI)
-This WA is another alternative for tracking crucial procs of !Bloodtalons!. For more details, check out the WA description.
-
-[Focus Skull Bash](https://wago.io/mOvsNkzJ7)
-This WA tracks when your Skull Bash interrupt is off cooldown and ready for use on your Focus target. For more details, check out the WA description.
+[주시 차단 매크로](https://wago.io/mOvsNkzJ7)
+주시 차단을 보다 쉽게 할 수 있도록 도와주는 기능.
