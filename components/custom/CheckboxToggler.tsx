@@ -44,14 +44,14 @@ const CheckboxToggler = ({ id, defaultCheck = false, radio = '', children, class
   }, [checkboxStates, id])
 
   return (
-    <label className="flex items-center">
+    <label className="flex items-start">
       <input
-        className={`mr-2 focus:outline-none ${className}`}
+        className={`mr-2 mt-2 focus:outline-none ${className}`}
         type="checkbox"
         checked={checked}
         onChange={handleToggle}
       />{' '}
-      {children}
+      <div className="flex-1">{children}</div>
     </label>
   )
 }

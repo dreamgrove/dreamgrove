@@ -102,9 +102,12 @@ export default async function Wowhead({
   return (
     <>
       {disabled ? (
-        <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
+        <div
+          className={`inline-block decoration-2 q${quality}`}
+          style={{ color: linkColor, maxWidth: '100%' }}
+        >
           {image}
-          <span className="align-middle">{display}</span>
+          <span className="whitespace-normal text-wrap break-words align-middle">{display}</span>
         </div>
       ) : (
         <a
