@@ -1,45 +1,46 @@
 ---
 title: 'Balance Druid Compendium'
-patch: '10.2.6'
+patch: '11.0.0'
 draft: false
-authors: ["Chicken", "Jundarer", "Dsune (Oi)"]
+authors: ["Vinter", "Gamz", "Dsune (Oi)"]
 summary: 'A guide to Balance Druid'
 ---
 
 # Rotation
 ## Precasting
+<CheckboxProvider>
+  <Checkbox id="Keeper of the GroveLOL" spellId={433831} name="Keeper of the Grove" defaultCheck radio="Hero" />
+  <Checkbox id="Elune's ChosenLOL" spellId={424058} name="Elune's Chosen" radio="Hero" />
+</CheckboxProvider>
 
-- Cast !Wrath! twice.
-- Cast !Stellar Flare!.
-- Cast !Starfire! if !Stellar Flare! is not talented.
+- [*Keeper of the GroveLOL] Use !Regrowth! 4 times
+- [*Keeper of the GroveLOL] Use !Wrath!
+- [*Elune's ChosenLOL] Use !Warrior of Elune!
+- [*Elune's ChosenLOL] Use !Wrath!
 
-You can precast from max range 4 seconds before a boss is pulled.
+You can precast from max range 2 seconds before a boss is pulled.
+
 
 ### **What is a priority list?**
 
 When reading the priority lists below, you should not think of these as steps to be followed in a specific order. At any given point in combat, you should cast the first ability on the list that you are able to cast, provided the conditions for its use are met.
 
-
 ## Single Target Priority
 
-<details>
-<summary>Keeper of the Grove</summary>
-
+<HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
 <CheckboxProvider>
-<Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" />
-<Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
-<Checkbox id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
-<Checkbox id="Nature's GraceKOTG" spellId={450347} name="Nature's Grace" />
-<Checkbox id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
-<Checkbox id="StarweaverKOTG" spellId={393940} name="Starweaver" />
-<Checkbox id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
-<Checkbox id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
-
-</CheckboxProvider>
+    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" />
+    <Checkbox id="StarweaverKOTG" spellId={393940} name="Starweaver" />
+    <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
+    <Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
+    <Checkbox id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
+    <Checkbox id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
+    <Checkbox id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
+ </CheckboxProvider>
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) unless your next GCD is !Force of Nature!
-- Start casting !Starfire! when your current Eclipse has less duration 
+- Start casting !Starfire! when your current Eclipse is about run out and carry a stack of !Nature's Grace! into your new Solar Eclipse
 - Use !Force of Nature! if your Solar Eclipse has more than 3 seconds left
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
 - [*Fury of EluneKOTG] Use !Fury of Elune!
@@ -66,25 +67,25 @@ When reading the priority lists below, you should not think of these as steps to
   - [*Touch the CosmosKOTG] You have a !450356|Touch the Cosmos! proc.
 - [*Wild MushroomKOTG] Use !Wild Mushroom! as a movement GCD.
 - Use !Wrath!
+</HeroTalentsHeader>
 
-</details>
 
-<details>
-<summary>Elune's Chosen</summary>
+<HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
 
 <CheckboxProvider>
-
-<Checkbox id="Lunar CallingST" spellId={429523} name="Lunar Calling" />
-<Checkbox id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
-<Checkbox id="Fury of EluneEC" spellId={202770} name="Fury of Elune" radio="New Moon" />
-<Checkbox id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" />
-<Checkbox id="Nature's GraceEC" spellId={450347} name="Nature's Grace" />
-<Checkbox id="Stellar FlareEC" spellId={202347} name="Stellar Flare" /> 
-<Checkbox id="New MoonEC" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
-<Checkbox id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
-<Checkbox id="StarweaverEC" spellId={393940} name="Starweaver" />
-<Checkbox id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
-<Checkbox id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
+  
+    <Checkbox id="Lunar CallingST" spellId={429523} name="Lunar Calling" /> 
+    <Checkbox id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
+    <Checkbox id="Fury of EluneEC" spellId={202770} name="Fury of Elune" radio="New Moon" /> 
+    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" />
+    <Checkbox id="New MoonEC" spellId={274281} name="New Moon" defaultCheck radio="New Moon" /> 
+    <Checkbox id="Nature's GraceEC" spellId={450347} name="Nature's Grace" /> 
+    <Checkbox id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
+    <Checkbox id="StarweaverEC" spellId={393940} name="Starweaver" /> 
+    <Checkbox id="Stellar FlareEC" spellId={202347} name="Stellar Flare" /> 
+    <Checkbox id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
+    <Checkbox id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
+ 
 </CheckboxProvider>
 
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -93,11 +94,11 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !194223|Celestial Alignment!/!102560|Incarnation! 
 - [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! 
 - [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
-- [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse
+- [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
 - [*~Lunar CallingST] Use !Starfire! to enter Solar Eclipse.
-- [*Nature's GraceEC&&Convoke the SpiritsEC] Use !Starfire! if all of the following conditions is met:
-  - You have stacks of !Dreamstate!
-  - You are in CA and your next global would be !Convoke the Spirits!
+- [*Nature's GraceEC] Use !Starfire! if all of the following conditions is met:
+  - You have stacks of !Nature's Grace!
+  - [*Convoke the SpiritsEC] You are in CA and your next global would be !Convoke the Spirits!
 - [*Convoke the SpiritsEC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
 - [*StarweaverEC] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
 - [*Touch the CosmosEC] Use !Starfall! if you have a !450356|Touch the Cosmos! proc.
@@ -114,26 +115,21 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Wild MushroomEC] Use !Wild Mushroom! as a movement GCD.
 - [*Force of NatureEC] Use !Force of Nature! if you will not overcap on AP.
 - [*Lunar CallingST] Use !Starfire!
-- [*~Lunar CallingST] Use !Wrath! if you are in Solar Eclipse
+- [*~Lunar CallingST] Use !Wrath! if you are in Solar Eclipse 
 
-</details>
+</HeroTalentsHeader>
 
 ## AoE priority
 
-<details>
-<summary>Keeper of the Grove</summary>
-
+<HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
 <CheckboxProvider>
 <Checkbox id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" radio="New Moon" />
 <Checkbox id="New MoonKAOE" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
-<Checkbox id="Nature's GraceKAOE" spellId={450347} name="Nature's Grace" />
 <Checkbox id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
 <Checkbox id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
 <Checkbox id="StarweaverKAOE" spellId={393940} name="Starweaver" />
 <Checkbox id="Convoke the SpiritsKAOE" spellId={391528} name="Convoke the Spirits" />
 <Checkbox id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
-
-
 </CheckboxProvider>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
@@ -165,11 +161,10 @@ When reading the priority lists below, you should not think of these as steps to
 - [*StarweaverKAOE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
 - [*Touch the CosmosKAOE] Use !Starsurge! if you have a !450356|Touch the Cosmos! proc.
 - Use !Starfire!
-</details>
+</HeroTalentsHeader>
 
-<details>
-<summary>Elune's Chosen</summary>
 
+<HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
 <CheckboxProvider>
 <Checkbox id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" radio="Force of Nature"/>
 <Checkbox id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" radio="FoE"/>
@@ -181,6 +176,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
 <Checkbox id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
 </CheckboxProvider>
+
 
 **Special Note: when NOT using the talents !Aetherial Kindling! or !Starweaver!, use Starsurge as a spender on 2 targets still.**
 **AoE priority list(2+ targets):**
@@ -211,7 +207,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Force of NatureECAoE] Use !248280|Force of Nature! if you will not overcap on AP.
 - Use !Starfire!
 
-</details>
+</HeroTalentsHeader>
 
 ## Eclipses and Fillers
 
@@ -288,19 +284,16 @@ Boots - [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-def
 Ring -  You should always sim your own character to determine what enchant to use in this slot.
 
 ## Embellishments
-### For embellishments there are a couple of options this season:
 
-TODO
+WIP
 
 ### Which embellishments should you choose?
 
-This is entirely up to you, below are some guidelines to make your choice more informed.
-
-TODO
+WIP
 
 ### What slot should i craft in?
 
-This will depend on your current gear situtation, below are some guidelines:
+You should always sim your character using Top Gear on Raidbots before making any gearing decision, but here are some guidelines:
 
 - Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 525 itemlevel.
 - Cloaks are another slot with the lowest stat budget, but they can't be socketed.
