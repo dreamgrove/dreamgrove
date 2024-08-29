@@ -8,8 +8,7 @@ import TableWrapper from './TableWrapper'
 import Wowhead from './custom/Wowhead'
 import Talents from './custom/Talents'
 import Checkbox from './custom/Checkbox'
-import HeroTalents from './custom/HeroTalents/HeroTalents'
-import HeroTalentsPicker from './custom/HeroTalents/HeroTalentsPicker'
+import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 import BossCard from './custom/Dungeons/BossCard'
 import Npc from './custom/Npc'
 import CheckboxProvider from './custom/CheckboxProvider'
@@ -54,8 +53,7 @@ export const components: MDXComponents = {
   Wowhead,
   Talents,
   Checkbox,
-  HeroTalents,
-  HeroTalentsPicker,
+  HeroTalentsHeader,
   BossCard,
   Npc,
   CheckboxProvider,
