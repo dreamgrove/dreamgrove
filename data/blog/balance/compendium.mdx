@@ -2,9 +2,29 @@
 title: 'Balance Druid Compendium'
 patch: '11.0.0'
 draft: false
-authors: ["Vinter", "Gamz", "Dsune (Oi)"]
+authors: ["Vinter", "Gamz"]
 summary: 'A guide to Balance Druid'
 ---
+
+# Season 1 News
+
+#### [2-piece](https://www.wowhead.com/spell=453666/druid-balance-11-0-class-set-2pc#used-by-item-set)
+
+
+>!Starsurge! damage increased by 10%. !Starfall! damage increased by 14%.
+
+This is a 2.3% dmg increase from having no set
+
+#### [4-piece](https://www.wowhead.com/spell=453667/druid-balance-11-0-class-set-4pc)
+
+
+>Lunar Eclipse and Solar Eclipse each increase the Astral Power !Wrath! generates by 2 and !Starfire! generates by 5.
+
+This is a 1.4% dmg increase from having no set
+
+
+[Sim for tier set](https://www.raidbots.com/simbot/report/8jUgRnAVU3fwHdPPkN21Qb)
+
 
 # Rotation
 ## Precasting
@@ -14,12 +34,12 @@ summary: 'A guide to Balance Druid'
 </CheckboxProvider>
 
 - [*Keeper of the GroveLOL] Use !Regrowth! 4 times
-- [*Keeper of the GroveLOL] Use !Wrath!
 - [*Elune's ChosenLOL] Use !Warrior of Elune!
-- [*Elune's ChosenLOL] Use !Wrath!
+- Use !Wrath!
+- Use !Wrath!
+- Use !Starfire!
 
-You can precast from max range 2 seconds before a boss is pulled.
-
+You can precast from max range 4 seconds before a boss is pulled.
 
 ### **What is a priority list?**
 
@@ -30,29 +50,31 @@ When reading the priority lists below, you should not think of these as steps to
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
 <CheckboxProvider>
     <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" />
+    <Checkbox id="Control of the Dream" spellId={434249} name="Control of the Dream" />
     <Checkbox id="StarweaverKOTG" spellId={393940} name="Starweaver" />
     <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
     <Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
     <Checkbox id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
     <Checkbox id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
     <Checkbox id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
- </CheckboxProvider>
+ </CheckboxProvider> 
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) unless your next GCD is !Force of Nature!
-- Start casting !Starfire! when your current Eclipse is about run out and carry a stack of !Nature's Grace! into your new Solar Eclipse
-- Use !Force of Nature! if your Solar Eclipse has more than 3 seconds left
+- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) unless your next GCD is !205636|Force of Nature!.
+- Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! right before your current Eclipse will end, so that you carry a stack of !Nature's Grace! into your new Solar Eclipse.
+- [*~Control of the Dream] Use !205636|Force of Nature! if your Solar Eclipse has more than 3 seconds left or if !194223|Celestial Alignment!/!102560|Incarnation! is available.
+- [*Control of the Dream] Use !205636|Force of Nature! on cooldown, or hold for up to 15 seconds to line up with !194223|Celestial Alignment!/!102560|Incarnation! and !Convoke the Spirits!.
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of EluneKOTG] Use !Fury of Elune!
-- Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already and one of the following conditions is met:
-  - You have the !428731|Harmony Of The Grove! buff
-  - The cooldown on !Force of Nature! is longer than 25 seconds
-- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when
-  - You are below 40 AP 
+- [*Fury of EluneKOTG] Use !Fury of Elune!.
+- Use !194223|Celestial Alignment!/!102560|Incarnation! if:
+  - You just used !205636|Force of Nature!.
+  - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
+- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when:
+  - You are below 40 AP.
   - !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-  - One of the following conditions is true:
-    - You have the !428731|Harmony Of The Grove! buff
-    - The cooldown on !Force of Nature! is longer than 25 seconds
+  - All of the following conditions is true:
+    - You just used !205636|Force of Nature!.
+    - The cooldown on !194223|CA!/!102560|Incarnation! is longer than 30 seconds.
 - [*StarweaverKOTG] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
 - [*Touch the CosmosKOTG] Use !Starfall! if you have a !450356|Touch the Cosmos! proc.
 - Use !Starsurge! if !Starlord! has less than 3 stacks
@@ -61,12 +83,12 @@ When reading the priority lists below, you should not think of these as steps to
   - You can finish the cast before your current eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
 - Use !Starsurge! if one of the following conditions is met:
-  - You are about to overcap
-  - You need to move
+  - You are about to overcap on AP.
+  - You need to move.
   - [*StarweaverKOTG] You have a !393944|Starweaver's Weft! proc.
   - [*Touch the CosmosKOTG] You have a !450356|Touch the Cosmos! proc.
 - [*Wild MushroomKOTG] Use !Wild Mushroom! as a movement GCD.
-- Use !Wrath!
+- Use !Wrath!.
 </HeroTalentsHeader>
 
 
@@ -90,32 +112,32 @@ When reading the priority lists below, you should not think of these as steps to
 
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of Elune&&EC] Use !Fury of Elune!
+- [*Fury of EluneEC] Use !Fury of Elune!
 - Use !194223|Celestial Alignment!/!102560|Incarnation! 
 - [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! 
 - [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
 - [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
 - [*~Lunar CallingST] Use !Starfire! to enter Solar Eclipse.
-- [*Nature's GraceEC] Use !Starfire! if all of the following conditions is met:
-  - You have stacks of !Nature's Grace!
-  - [*Convoke the SpiritsEC] You are in CA and your next global would be !Convoke the Spirits!
+- [*Nature's GraceEC&&Lunar CallingST] Use !Starfire! if all of the following conditions is met:
+  - You have stacks of !Nature's Grace!.
+  - [*Convoke the SpiritsEC] You are in CA and your next global would be !Convoke the Spirits!.
 - [*Convoke the SpiritsEC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-- [*StarweaverEC] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
-- [*Touch the CosmosEC] Use !Starfall! if you have a !450356|Touch the Cosmos! proc.
 - Use !Starsurge! if !Starlord! has less than 3 stacks
 - [*New MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
 - Use !Starsurge! if one of the following conditions is met:
-  - You are about to overcap
-  - You need to move
+  - You are about to overcap on  AP.
+  - You need to move.
   - [*StarweaverEC] You have a !393944|Starweaver's Weft! proc.
   - [*Touch the CosmosEC] You have a !450356|Touch the Cosmos! proc.
+- [*StarweaverEC] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
+- [*Touch the CosmosEC] Use !Starfall! if you have a !450356|Touch the Cosmos! proc.
 - [*Wild MushroomEC] Use !Wild Mushroom! as a movement GCD.
-- [*Force of NatureEC] Use !Force of Nature! if you will not overcap on AP.
-- [*Lunar CallingST] Use !Starfire!
-- [*~Lunar CallingST] Use !Wrath! if you are in Solar Eclipse 
+- [*Force of NatureEC] Use !205636|Force of Nature! if you will not overcap on AP.
+- [*Lunar CallingST] Use !Starfire!.
+- [*~Lunar CallingST] Use !Wrath! if you are in Solar Eclipse.
 
 </HeroTalentsHeader>
 
@@ -133,7 +155,7 @@ When reading the priority lists below, you should not think of these as steps to
 </CheckboxProvider>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
-- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !Force of Nature! also spreads !Moonfire!
+- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
 - [*Stellar FlareKAOE] Use !Stellar Flare! if all of the following conditions is met:
   - The target will live for at least 8s+1s per target that !Starfire! can hit
   - You will not overcap on AP.
@@ -143,9 +165,9 @@ When reading the priority lists below, you should not think of these as steps to
   - Your next GCD is !194223|CA!/!102560|Incarnation!
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if one of the following conditions is met:
   - You have the !428731|Harmony Of The Grove! buff
-  - The cooldown on !Force of Nature! is longer than 25 seconds
+  - The cooldown on !205636|Force of Nature! is longer than 25 seconds
 - Use !Wrath! to enter Lunar Eclipse
-- [*Fury of EluneKAOE] Use !Fury of Elune! 
+- [*Fury of EluneKAOE] Use !Fury of Elune!.
 - Use !Starfall! if one of the following conditions is met:
   - [*StarweaverKAOE] You have a !393942|Starweaver's Warp! proc.
   - [*Touch the CosmosKAOE] You have a !450356|Touch the Cosmos! proc.
@@ -209,27 +231,10 @@ When reading the priority lists below, you should not think of these as steps to
 
 </HeroTalentsHeader>
 
-## Eclipses and Fillers
-
-- On 1 target, enter Solar Eclipse and cast !Wrath!.
-- On 2 targets and more, enter Lunar Eclipse and cast !Starfire!
-- If talented into Lunar Calling, enter Lunar Eclipse and cast !Starfire! at all times
-
-## How to Use Warrior of Elune
-
-- !Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
-- !Warrior of Elune! can be used on cooldown while talented into Lunar Calling
-- When not talented into Lunar Calling, use !Warrior of Elune! charges to enter Solar Eclipse. 
-
-## How to use Owlkin Frenzy procs
-
-- Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside !194223|CA!/!102560|Incarnation! if Starfire will hit 3 or more targets.
-- Keep in mind that !Warrior of Elune! charges are consumed before !Owlkin Frenzy! procs.
-
 # Talents
 ## Raid
 
-<Talents name={"Single Target"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZsYYbMGzMbzYBzMzM2mxMjZM2ALAYssNz2yyMLzyMNzsMTBAgAYzMDD"}/>
+<Talents name={"Single Target"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYhBYssNz22yMLzyMNzsMTBAgAYzMDD"}/>
 
 <Talents name={"Single Target with add spawn"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbLLzsMLz0MzyMFAACgFzMM"}/>
 
@@ -241,11 +246,73 @@ The following are dungeon talent builds that will always serve you well but mind
 
 <Talents name={"Keeper of the Grove build"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMLzMLGzMzM2mxYYG2ALAYssNz2yyMLzyMNzsMTBAgAYzMjZA"}/>
 
+
+# FAQ
+
+## Eclipses and Fillers
+
+- On 1-2 targets, enter Solar Eclipse and cast !Wrath!.
+- On 3 targets and more, enter Lunar Eclipse and cast !Starfire!.
+- If talented into Lunar Calling, enter Lunar Eclipse and cast !Starfire! at all times.
+
+## How to Use Warrior of Elune
+
+- !Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
+- !Warrior of Elune! should be used on cooldown while talented into Lunar Calling, or held for up to 15 seconds to line up with !194223|CA!/!102560|Incarnation!.
+- When not talented into Lunar Calling, use !Warrior of Elune! charges to enter Solar Eclipse. 
+
+## How to Use Control of the Dream
+
+- !Control of the Dream! is a talent that lets you hold on to either !194223|Celestial Alignment!/!102560|Incarnation!, !Convoke the Spirits! or !205636|Force of Nature! for up to 15 seconds without losing a use, subtracting the amount of time you held the ability from its cooldown. This also stacks out of combat, meaning your first !Force of Nature! will have a 30/45 second cooldown compared to 45/60 seconds depending on whether you play !Early Spring! or not. 
+
+## How to use Owlkin Frenzy procs
+
+- Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside !194223|CA!/!102560|Incarnation! if Starfire will hit 3 or more targets.
+- Keep in mind that !Warrior of Elune! charges are consumed before !Owlkin Frenzy! procs.
+
+### Why can I not enter Solar Eclipse?
+
+- Because you are talented into !Lunar Calling!.
+
+### How can I proc !Waning Twilight! without !Wild Mushroom! or !Stellar Flare!?
+
+- With !Astral Smolder!.
+
+### I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
+
+- Log one of your fights and check it with [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs) and [wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and, as close to zero as possible, cancelled casts. Another common issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders.
+
+### What is Astral damage?
+
+- Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also applies to Astral spells, and effects that buff Arcane spells likewise also applies to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 \* 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
+
+- Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
+
+### How do I sim for AoE?
+
+- It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, you can use the [MDT Sim WeakAura](https://wago.io/Yya4XBbl-) which allows you to sim dungeon routes. Please keep in mind that ST damage is still a big part of mythic+.
+
+### I'm doing really low damage in Mythic+, what am I doing wrong?
+
+- If you double-checked your rotation and still feel like you're underperforming you could just be playing low keys, together with classes that have very bursty damage profiles. When playing a Balance Druid, mobs need to live long enough for you to actually start doing damage, which is something that doesn't really happen in keys lower than 12+. Consider focusing a bit more on ST or trying another spec, but take into account the fact that DPS isn't everything in a key.
+
+### I've seen a lot of people running build X instead of Y in Mythic+, is X better?
+
+- Try them out and make an informed decision! Most differences between builds are based on variables like target count, comps, combat timer or utility needed.
+
+### Why are some top players running different embellishments from the ones mentioned in the Compendium
+
+- The DPS gain provided by the embellishments can vary significantly because of many external factors such as gear, type of content and group composition. Some of the top players might also happen to use niche embellishments for the same reasons. If you don't have any specific requirements then your best option is to just sim your character and choose the embellishments that provide the highest DPS upgrade.
+
+### Do our dots snapshot?
+
+- No, all of our periodic damage (like !Moonfire!, !Sunfire!, !Stellar Flare!) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
+
 # Consumables:
 
 ## Potions
 
-[Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion) for every situation
+[Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion) 
 
 ## Food
 
@@ -253,11 +320,11 @@ The following are dungeon talent builds that will always serve you well but mind
 
 ## Phials
 
-[Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) for every situation
+[Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) 
 
 ## Weapon Rune
 
-[Ironclaw Whetstone](https://www.wowhead.com/item=222503/ironclaw-whetstone) for every situation
+[Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil) 
 
 # Gearing:
  
@@ -285,63 +352,31 @@ Ring -  You should always sim your own character to determine what enchant to us
 
 ## Embellishments
 
-WIP
+BLIZZARD ARE STILL TUNING EMBELLISHMENTS. CHECK BACK IN LATER.
 
-### Which embellishments should you choose?
-
-WIP
-
-### What slot should i craft in?
+### What slot should I craft in?
 
 You should always sim your character using Top Gear on Raidbots before making any gearing decision, but here are some guidelines:
 
-- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 525 itemlevel.
+- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 639 itemlevel.
 - Cloaks are another slot with the lowest stat budget, but they can't be socketed.
 - Belts have a higher stat budget, but they can have a socket.
 
-
 ## Trinkets
 
-TODO
+[Spymaster's Web](https://www.wowhead.com/item=220202/spymasters-web) is a trinket with a passively stacking intellect buff, capping at 40 stacks and an on-use effect that gives you intellect based on the amount of stacks you've accumulated. Ideally this means you should save it for your 3rd use of !194223|Celestial Alignment!/!102560|Incarnation! if the fight timer allows for it. 
 
+Please use Top Gear on [Raidbots](https://www.raidbots.com/simbot) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
 
-# Miscellaneous:
-
-## FAQ
-
-### I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
-
-Log one of your fights and check it with [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs) and [wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and, as close to zero as possible, cancelled casts. Another common issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders.
-
-### What is Astral damage?
-
-Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also applies to Astral spells, and effects that buff Arcane spells likewise also applies to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 \* 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
-
-Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
-
-### How do I sim for AoE?
-
-Balance Druid's gear mostly doesn't change from ST to AoE so simming "5m 1t patchwerk" is usually fine even for AoE situations. Other sims like "5t 40s" are unrealistic scenarios that will provide skewed and wrong sims in most cases and shouldn't be used. If you want to do an accurate M+ sim consider using the [MDT Sim WeakAura](https://wago.io/Yya4XBbl-) and remember that ST fights are still a big part of Mythic+.
-
-### I'm doing really low damage in Mythic+, what am I doing wrong?
-
-If you double-checked your rotation and still feel like you're underperforming you could just be playing low keys, together with classes that have very bursty damage profiles. When playing a Balance Druid, mobs need to live long enough for you to actually start doing damage, which is something that doesn't really happen in keys lower than 12+ and especially on Tyrannical. Consider focusing a bit more on ST or trying another spec, but take into account the fact that DPS isn't everything in a key.
-
-### I've seen a lot of people running build X instead of Y in Mythic+, is X better?
-
-Try them out and make an informed decision! Most differences between builds are based on variables like target count, comps, combat timer or utility needed.
-
-### How can I proc !Waning Twilight! without !Wild Mushroom! or !Stellar Flare!?
-
-With !Astral Smolder!
-
-### Why are some top players running different embellishments from the ones mentioned in the Compendium
-
-The DPS gain provided by the embellishments can vary significantly because of many external factors such as gear, type of content and group composition. Some of the top players might also happen to use niche embellishments for the same reasons. If you don't have any specific requirements then your best option is to just sim your character and choose the embellishments that provide the highest DPS upgrade.
-
-### Do our dots snapshot?
-
-No, all of our periodic damage (like !Moonfire!, !Sunfire!, !Stellar Flare!) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
+    - [Spymaster's Web](https://www.wowhead.com/item=220202/spymasters-web)
+    - [Ara-Kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood)
+    - [Gale of Shadows](https://www.wowhead.com/item=133304/gale-of-shadows?ilvl=639&spec=102)
+    - [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&ilvl=639&spec=102)
+    - [Unbound Changeling](https://www.wowhead.com/item=178708/unbound-changeling?class=11&ilvl=639&spec=102)
+    - [Ovi'nax's Mercurial Egg](https://www.wowhead.com/item=220305/ovinaxs-mercurial-egg?ilvl=639&spec=102)
+    - [Satchel of Misbegotten Minions](https://www.wowhead.com/item=178772/satchel-of-misbegotten-minions?class=11&ilvl=639&spec=102)
+    - [Hadal's Nautilus](https://www.wowhead.com/item=159622/hadals-nautilus?class=11&ilvl=639&spec=102)
+    - [Harvester's Edict](https://www.wowhead.com/item=219317/harvesters-edict?class=11&ilvl=639&spec=102)
 
 
 # Additional Resources
@@ -369,7 +404,7 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 
 ### **Cancelling Starlord**
 
-**With baseline changes and new set in 10.2, cancelling your Starlord aura is back to being insignificant (~0.2%)**
+**Cancelling Starlord is entirely optional and does not give you more or less DPS.**
 
 If you want to engage in this entirely optional method without incurring a dps loss, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use !Starsurge! to prevent overcapping.
 

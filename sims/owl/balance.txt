@@ -1,8 +1,0 @@
-# Executed before combat begins. Accepts non-harmful actions only.
-actions.precombat=flask
-actions.precombat+=/food
-actions.precombat+=/augmentation
-# Snapshot raid buffed stats before combat begins and pre-potting is done.
-actions.precombat+=/snapshot_stats
-
-actions=auto_attack
