@@ -49,11 +49,11 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
 <CheckboxProvider>
-    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" />
-    <Checkbox id="Control of the Dream" spellId={434249} name="Control of the Dream" />
+    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
+    <Checkbox id="Control of the Dream" spellId={434249} name="Control of the Dream" defaultCheck radio="Control of the Dream" />
     <Checkbox id="StarweaverKOTG" spellId={393940} name="Starweaver" />
     <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
-    <Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
+    <Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon" />
     <Checkbox id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
     <Checkbox id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
     <Checkbox id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
@@ -96,12 +96,12 @@ When reading the priority lists below, you should not think of these as steps to
 
 <CheckboxProvider>
   
-    <Checkbox id="Lunar CallingST" spellId={429523} name="Lunar Calling" /> 
+    <Checkbox id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck radio="Lunar Calling" /> 
     <Checkbox id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
-    <Checkbox id="Fury of EluneEC" spellId={202770} name="Fury of Elune" radio="New Moon" /> 
-    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" />
-    <Checkbox id="New MoonEC" spellId={274281} name="New Moon" defaultCheck radio="New Moon" /> 
-    <Checkbox id="Nature's GraceEC" spellId={450347} name="Nature's Grace" /> 
+    <Checkbox id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" /> 
+    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
+    <Checkbox id="New MoonEC" spellId={274281} name="New Moon" radio="New Moon" /> 
+    <Checkbox id="Nature's GraceEC" spellId={450347} name="Nature's Grace" defaultCheck radio="Nature's Grace" /> 
     <Checkbox id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
     <Checkbox id="StarweaverEC" spellId={393940} name="Starweaver" /> 
     <Checkbox id="Stellar FlareEC" spellId={202347} name="Stellar Flare" /> 
@@ -145,8 +145,8 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
 <CheckboxProvider>
-<Checkbox id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" radio="New Moon" />
-<Checkbox id="New MoonKAOE" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
+<Checkbox id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" />
+<Checkbox id="New MoonKAOE" spellId={274281} name="New Moon" radio="New Moon" />
 <Checkbox id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
 <Checkbox id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
 <Checkbox id="StarweaverKAOE" spellId={393940} name="Starweaver" />
@@ -221,7 +221,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*New MoonECAoE] Use !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
+  - You are in CA/Inc or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
 - [*StarweaverECAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc and you are fighting less than 3 targets.
 - [*New MoonECAoE] Use !New Moon! if you will not overcap on AP.
 - [*New MoonECAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
@@ -234,17 +234,17 @@ When reading the priority lists below, you should not think of these as steps to
 # Talents
 ## Raid
 
-<Talents name={"Single Target"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYhBYssNz22yMLzyMNzsMTBAgAYzMDD"}/>
+<Talents name={"Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYhBYA2WGLYamZZEAAAgNzMM"}/>
 
-<Talents name={"Single Target with add spawn"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbLLzsMLz0MzyMFAACgFzMM"}/>
+<Talents name={"Single Target with add spawn"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbYMLjATAAAAWMzwA"}/>
 
 ## Mythic+
 
 The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
 
-<Talents name={"Elune's Chosen build"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZM2mZZMmBbgFAMW2mZbZZmlZZmmZWmpAAQAsYmhB"}/>
+<Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZM2mZZMmBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
 
-<Talents name={"Keeper of the Grove build"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMLzMLGzMzM2mxYYG2ALAYssNz2yyMLzyMNzsMTBAgAYzMjZA"}/>
+<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMLzMLGzMzM2mxYYG2ALAYAWWGLYamZZEAAAgNzMmB"}/>
 
 
 # FAQ
