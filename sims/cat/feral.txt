@@ -133,7 +133,7 @@ actions.finisher=primal_wrath,target_if=max:dot.bloodseeker_vines.ticking,if=spe
 # rip if single target or pw isnt up. Rip with bloodtalons if talented. If tigers fury will be up before rip falls off, then delay refresh
 actions.finisher+=/rip,target_if=refreshable,if=(!talent.primal_wrath|spell_targets=1)&(buff.bloodtalons.up|!talent.bloodtalons)&(buff.tigers_fury.up|dot.rip.remains<cooldown.tigers_fury.remains)
 actions.finisher+=/pool_resource,for_next=1
-actions.finisher+=/ferocious_bite,max_energy=1,target_if=max:dot.bloodseeker_vines.ticking,if=spell_targets=1&(!buff.bs_inc.up|!talent.soul_of_the_forest.enabled)
+actions.finisher+=/ferocious_bite,max_energy=1,target_if=max:dot.bloodseeker_vines.ticking,if=!buff.bs_inc.up|!talent.soul_of_the_forest.enabled
 actions.finisher+=/ferocious_bite,target_if=max:dot.bloodseeker_vines.ticking
 
 # most expensive bt cycle is Shred + Thrash + Rake, 40+40+35 for 115 energy. During incarn it is 32+32+28 for 92energy
