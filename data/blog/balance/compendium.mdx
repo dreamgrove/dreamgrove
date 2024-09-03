@@ -1,6 +1,6 @@
 ---
 title: 'Balance Druid Compendium'
-patch: '11.0.0'
+patch: '11.0.2'
 draft: false
 authors: ["Vinter", "Gamz"]
 summary: 'A guide to Balance Druid'
@@ -33,7 +33,7 @@ This is a 1.4% dmg increase from having no set
   <Checkbox id="Elune's ChosenLOL" spellId={424058} name="Elune's Chosen" radio="Hero" />
 </CheckboxProvider>
 
-- [*Keeper of the GroveLOL] Use !Regrowth! 4 times
+- [*Keeper of the GroveLOL] Use !Regrowth! 4 times (for !Blooming Infusion!)
 - [*Elune's ChosenLOL] Use !Warrior of Elune!
 - Use !Wrath!
 - Use !Wrath!
@@ -69,24 +69,23 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if:
   - You just used !205636|Force of Nature!.
   - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
-- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! either when 
-  - You are below 40 AP.
+- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when you are below 40 AP and:
   - !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
   - All of the following conditions is true:
     - You just used !205636|Force of Nature!.
     - The cooldown on !194223|CA!/!102560|Incarnation! is longer than 30 seconds.
 - [*StarweaverKOTG] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
 - [*Touch the CosmosKOTG] Use !Starfall! if you have a !450356|Touch the Cosmos! proc.
-- Use !Starsurge! if !Starlord! has less than 3 stacks
+- Use !Starsurge! if !Starlord! has less than 3 stacks.
 - [*New MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
+    - You will not overcap on AP.
+    - You can finish the cast before your current eclipse ends.
+    - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
 - Use !Starsurge! if one of the following conditions is met:
-  - You are about to overcap on AP.
-  - You need to move.
-  - [*StarweaverKOTG] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosKOTG] You have a !450356|Touch the Cosmos! proc.
+    - You are about to overcap on AP.
+    - You need to move.
+    - [*StarweaverKOTG] You have a !393944|Starweaver's Weft! proc.
+    - [*Touch the CosmosKOTG] You have a !450356|Touch the Cosmos! proc.
 - [*Wild MushroomKOTG] Use !Wild Mushroom! as a movement GCD.
 - Use !Wrath!.
 </HeroTalentsHeader>
@@ -112,9 +111,9 @@ When reading the priority lists below, you should not think of these as steps to
 
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of EluneEC] Use !Fury of Elune!
-- Use !194223|Celestial Alignment!/!102560|Incarnation! 
-- [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! 
+- [*Fury of EluneEC] Use !Fury of Elune!.
+- Use !194223|Celestial Alignment!/!102560|Incarnation!.
+- [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
 - [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
 - [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
 - [*~Lunar CallingST] Use !Starfire! to enter Solar Eclipse.
@@ -122,7 +121,7 @@ When reading the priority lists below, you should not think of these as steps to
   - You have stacks of !Nature's Grace!.
   - [*Convoke the SpiritsEC] You are in CA and your next global would be !Convoke the Spirits!.
 - [*Convoke the SpiritsEC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-- Use !Starsurge! if !Starlord! has less than 3 stacks
+- Use !Starsurge! if !Starlord! has less than 3 stacks.
 - [*New MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
@@ -188,9 +187,9 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
 <CheckboxProvider>
-<Checkbox id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" radio="Force of Nature"/>
-<Checkbox id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" radio="FoE"/>
-<Checkbox id="New MoonECAoE" spellId={274281} name="New Moon" defaultCheck radio="FoE"/>
+<Checkbox id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of Nature"/>
+<Checkbox id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoE"/>
+<Checkbox id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoE"/>
 <Checkbox id="Stellar FlareECAoE" spellId={202347} name="Stellar Flare"/>
 <Checkbox id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
 <Checkbox id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
@@ -234,7 +233,7 @@ When reading the priority lists below, you should not think of these as steps to
 # Talents
 ## Raid
 
-<Talents name={"Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYhBYA2WGLYamZZEAAAgNzMM"}/>
+<Talents name={"Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MjxMz2MWwMzMjtZMzYGjNwCAGgttxCmmZWGBAAAYzMDD"}/>
 
 <Talents name={"Single Target with add spawn"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbYMLjATAAAAWMzwA"}/>
 
@@ -244,31 +243,31 @@ The following are dungeon talent builds that will always serve you well but mind
 
 <Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZM2mZZMmBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
 
-<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMLzMLGzMzM2mxYYG2ALAYAWWGLYamZZEAAAgNzMmB"}/>
+<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjZzMzsMzsYMzMzYbGjhZYDswAMAbLjFMNzsMCAAAwmZGG"}/>
 
 
 # FAQ
 
 ## Eclipses and Fillers
 
-On 1-2 targets, enter Solar Eclipse and cast !Wrath!.
-On 3 targets and more, enter Lunar Eclipse and cast !Starfire!.
-If talented into Lunar Calling, enter Lunar Eclipse and cast !Starfire! at all times.
+- On 1 target, enter Solar Eclipse and cast !Wrath!.
+- On 2 targets and more, enter Lunar Eclipse and cast !Starfire!.
+- If talented into Lunar Calling, enter Lunar Eclipse and cast !Starfire! at all times.
 
 ## How to Use Warrior of Elune
 
-!Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
-!Warrior of Elune! should be used on cooldown while talented into Lunar Calling, or held for up to 15 seconds to line up with !194223|CA!/!102560|Incarnation!.
-When not talented into Lunar Calling, use !Warrior of Elune! charges to enter Solar Eclipse. 
+- !Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
+- !Warrior of Elune! should be used on cooldown while talented into Lunar Calling, or held for up to 15 seconds to line up with !194223|CA!/!102560|Incarnation!.
+- When not talented into Lunar Calling, use !Warrior of Elune! charges to enter Solar Eclipse. 
 
 ## How to Use Control of the Dream
 
-!Control of the Dream! is a talent that lets you hold on to either !194223|Celestial Alignment!/!102560|Incarnation!, !Convoke the Spirits! or !205636|Force of Nature! for up to 15 seconds without losing a use, subtracting the amount of time you held the ability from its cooldown. This also stacks out of combat, meaning your first !Force of Nature! will have a 30/45 second cooldown compared to 45/60 seconds depending on whether you play !Early Spring! or not. 
+!Control of the Dream! lets you hold on to either !194223|Celestial Alignment!/!102560|Incarnation!, !Convoke the Spirits! or !205636|Force of Nature! for up to 15 seconds without losing a use, subtracting the amount of time you held the ability from its cooldown. This is used to help you in consistently alining your cooldowns.
 
 ## How to use Owlkin Frenzy procs
 
-Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside !194223|CA!/!102560|Incarnation! if Starfire will hit 3 or more targets.
-Keep in mind that !Warrior of Elune! charges are consumed before !Owlkin Frenzy! procs.
+- Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside !194223|CA!/!102560|Incarnation! if Starfire will hit 2 or more targets.
+- Keep in mind that !Warrior of Elune! charges are consumed before !Owlkin Frenzy! procs.
 
 ### Why can I not enter Solar Eclipse?
 
@@ -316,11 +315,11 @@ No, all of our periodic damage (like !Moonfire!, !Sunfire!, !Stellar Flare!) do 
 
 ## Food
 
-[Feast of the Midnight Masquerade](https://www.wowhead.com/item=222733/feast-of-the-midnight-masquerade) or [Feast of the Divine Day](https://www.wowhead.com/spell=445112/feast-of-the-divine-day)
+[Feast of the Midnight Masquerade](https://www.wowhead.com/item=222733/feast-of-the-midnight-masquerade) or [The Sushi Special](https://www.wowhead.com/item=222720/the-sushi-special)
 
-## Phials
+## Flasks
 
-[Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) 
+[Flask of Tempered Mastery](https://www.wowhead.com/item=212280/flask-of-tempered-mastery) 
 
 ## Weapon Rune
 
@@ -368,15 +367,19 @@ You should always sim your character using Top Gear on Raidbots before making an
 
 Please use Top Gear on [Raidbots](https://www.raidbots.com/simbot) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
 
-    - [Spymaster's Web](https://www.wowhead.com/item=220202/spymasters-web)
-    - [Ara-Kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood)
+    - [Spymaster's Web](https://www.wowhead.com/item=220202/spymasters-web?bonus=4800:4786:1540:10299&ilvl=639&spec=102)
+    - [Ara-Kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?bonus=4786:3131:10299&ilvl=639&spec=102)
     - [Gale of Shadows](https://www.wowhead.com/item=133304/gale-of-shadows?ilvl=639&spec=102)
-    - [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&ilvl=639&spec=102)
-    - [Unbound Changeling](https://www.wowhead.com/item=178708/unbound-changeling?class=11&ilvl=639&spec=102)
-    - [Ovi'nax's Mercurial Egg](https://www.wowhead.com/item=220305/ovinaxs-mercurial-egg?ilvl=639&spec=102)
+    - [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?bonus=4786:3131:10299&class=11&ilvl=639&spec=102)
+    - [Unbound Changeling](https://www.wowhead.com/item=178708/unbound-changeling?bonus=4786:9948:10299&class=11&ilvl=639&spec=102)
+    - [Ovi'nax's Mercurial Egg](https://www.wowhead.com/item=220305/ovinaxs-mercurial-egg?bonus=4800:4786:1540:10299&ilvl=639&spec=102)
     - [Satchel of Misbegotten Minions](https://www.wowhead.com/item=178772/satchel-of-misbegotten-minions?class=11&ilvl=639&spec=102)
+    - [Aberrant Spellforge](https://www.wowhead.com/item=212451/aberrant-spellforge?bonus=4800:4786:1540:10299&class=11&ilvl=639&spec=102)
+    - [Cirral Concoctory](https://www.wowhead.com/item=219321/cirral-concoctory?bonus=657:11143:5878:7981:10299)
     - [Hadal's Nautilus](https://www.wowhead.com/item=159622/hadals-nautilus?class=11&ilvl=639&spec=102)
-    - [Harvester's Edict](https://www.wowhead.com/item=219317/harvesters-edict?class=11&ilvl=639&spec=102)
+    - [Harvester's Edict](https://www.wowhead.com/item=219317/harvesters-edict?bonus=4786:3131:10299&class=11&ilvl=639&spec=102)
+    - [Mad Queen's Mandate](https://www.wowhead.com/item=212454/mad-queens-mandate?bonus=7981:11143:5878:10299)
+    - [High Speaker's Accretion](https://www.wowhead.com/item=219303/high-speakers-accretion?bonus=657:11143:5878:7981:10299)
 
 
 # Additional Resources
@@ -413,15 +416,16 @@ If you want to engage in this entirely optional method without incurring a dps l
 /cancelaura Starlord
 ```
 
-## Useful WeakAura(s)
+## Useful WeakAuras and Plater Profile
 
 ### **Balance WeakAura Packs**
 
 The following links lead to various balance druid WeakAura packs. These contain everything that's recommended to track to play at a high level. None of these are particular better or more useful than others, and which one you should use is up to your personal preference.
 
 - [Shrom's Ultimate AP Bar](https://wago.io/GzpP7i8ic)
-- [Genesis DF Balance Druid](https://wago.io/1HX3XwarK)
 - [Oi Balance pack](https://wago.io/OiBalance)
+- [Shrom's AP Bar - Standalone](https://wago.io/J5V9sTM0FK)
+- [Jundies Plater Script](https://wago.io/ak3iS95aa)
 
 ### **Casts until you can cast Starfire**
 
