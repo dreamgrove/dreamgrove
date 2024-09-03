@@ -37,6 +37,7 @@ export default async function Wowhead({
   disabled = false,
   noIcon = false,
   beta = false,
+  queryParams = {},
 }) {
   let display = name
   let displayId = id
@@ -56,8 +57,8 @@ export default async function Wowhead({
       throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
     }
   }
-
-  const whUrl = `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
+  const paramString = new URLSearchParams(queryParams).toString()
+  const whUrl = `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}${paramString ? `?${paramString}` : ''}`
 
   const res = await fetch(whUrl)
   const text = await res.text()
