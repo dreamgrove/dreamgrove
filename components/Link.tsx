@@ -25,10 +25,12 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
   }
 
   if (href.startsWith('https://www.wowhead.com')) {
-    const parts = href.split('/')
+    const url = new URL(href)
+    const parts = url.pathname.split('/')
     const validTypes = ['item', 'spell', 'npc']
     const possibleType = parts.at(-2)?.split('=')
     const possibleName = parts.at(-1)?.split('?')[0]
+    const queryParams = Object.fromEntries(url.searchParams.entries());
     if (
       possibleType &&
       possibleType[0] &&
@@ -40,6 +42,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
           type={possibleType[0]}
           id={possibleType[1]}
           name={rest && rest.children ? rest.children : capitalize(possibleName)}
+          queryParams={queryParams}
         />
       )
     }
