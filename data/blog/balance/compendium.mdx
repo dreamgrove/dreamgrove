@@ -1,442 +1,434 @@
 ---
-title: 'Balance Druid Compendium'
-patch: '10.2.6'
+title: '조화 드루이드 백과사전'
+patch: '11.0.0'
 draft: false
-authors: ["Chicken", "Jundarer", "Dsune (Oi)"]
-summary: 'A guide to Balance Druid'
+authors: ["Vinter", "Gamz"]
+summary: '조화 드루이드 가이드'
+locale: 'kr'
 ---
-If you're a visual learner there is also a [video explanation of the compendium](https://www.youtube.com/watch?v=BzDBvOrlvjA). It was made during 10.2 but most of the concepts still apply.
 
-# News
-## Tier Set
+# 1시즌 새소식
 
-#### !393632|2-piece!
+#### [2세트 효과](https://ko.wowhead.com/spell=453666/druid-balance-11-0-class-set-2pc#used-by-item-set)
 
 
->!Starsurge! and !Starfall! increase the damage of your next !Wrath! or !Starfire! by 50%, stacking up to 3 times
+>!197626|별빛쇄도!의 공격력이 10%만큼, !191034|별똥별!의 공격력이 14%만큼 증가합니다.
 
-This is roughly a 6.2% DPS increase from having no tier.
+세트 미착용 대비 +2.3%의 효과. 
 
-You can treat this buff either as a passive or try stacking it to 3 before using a generator, as per usual pooling for movement and getting starlord up has higher prio.
-
-#### !394414|4-piece!
-
->When you enter !Eclipse!, your next !Starsurge! or !Starfall! cost 30 less Astral Power and deals 60% increased damage.
-
-This is roughly a 7.8% DPS increase from having no tier.
-
-The buff gives you a reduced cost on your next spender every time you enter !Eclipse!. Buff is also applied when activating !393960|Pulsar! or pressing !194223|CA!/!102560|Incarnation!
-
-Total DPS from set: ~14.5%
-
-[Tier sim current ilvl ~489](https://www.raidbots.com/simbot/report/unaGdB6opkuxGgR4pGLbQe)
-
-## Antique Bronze Bullion
-Season 4 brings back the Dinar system from Season 4 in Shadowlands, now under the name Antique Bronze Bullion. You will acquire this currency gradually from playing the game and it will allow you to buy "special" items from any of the 3 Dragonflight raids.
-
-Before making any decisions on what you should spend this currency on, you should always sim your character using Droptimizer or Top Gear functions on [Raidbots](https://raidbots.com)
-
-Here are items you should potentially spend the Antique Bronze Bullion on
-
-- [Vakash, the Shadowed Inferno](https://www.wowhead.com/item=207788/vakash-the-shadowed-inferno)
-- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
-- [Ominous Chromatic Essence](https://www.wowhead.com/item=203729/ominous-chromatic-essence?bonus=10884:4786:1582:10338&class=11&ilvl=528&spec=102)
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
-- [Seal of Diurna's Chosen](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen)
-- [Dreambinder, Loom of the Great Cycle](https://www.wowhead.com/item=208616/dreambinder-loom-of-the-great-cycle)
-- [Seal of Filial Duty](https://www.wowhead.com/item=195526/seal-of-filial-duty)
-- [Voice of the Silent Star](https://www.wowhead.com/item=204465/voice-of-the-silent-star)
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow?bonus=10884:4786:1585:10338&class=11&ilvl=528&spec=102)
-- [Icewrath's Channeling Conduit](https://www.wowhead.com/item=195484/icewraths-channeling-conduit)
-
-# Rotation
-## Precasting
-
-- Cast !Wrath! twice.
-- Cast !Stellar Flare!.
-- Cast !Starfire! if !Stellar Flare! is not talented.
-
-You can precast from max range 4 seconds before a boss is pulled.
-
-### **What is a priority list?**
-
-When reading the priority lists below, you should not think of these as steps to be followed in a specific order. At any given point in combat, you should cast the first ability on the list that you are able to cast, provided the conditions for its use are met.
+#### [4세트 효과](https://ko.wowhead.com/spell=453667/druid-balance-11-0-class-set-4pc)
 
 
-## Single Target Priority
+>월식 및 일식이 각각 !190984|천벌!이 생성하는 천공의 힘을 2만큼, !194153|별빛섬광!이 생성하는 천공의 힘을 5만큼 증가시킵니다.
+
+세트 미착용 대비 +1.4%의 효과.
+
+
+[티어 세트 시뮬레이션 결과](https://www.raidbots.com/simbot/report/8jUgRnAVU3fwHdPPkN21Qb)
+
+
+# 로테이션
+## 전투 시작 전
 <CheckboxProvider>
-<Checkbox id="Warrior of Elune" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
-<Checkbox id="Force of Nature" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
-<Checkbox id="Stellar Flare" spellId={202347} name="Stellar Flare" />
-<Checkbox id="Astral Communion" spellId={400636} name="Astral Communion" />
-<Checkbox id="New Moon" spellId={274281} name="New Moon" defaultCheck radio="New Moon" />
-<Checkbox id="Fury of Elune" spellId={202770} name="Fury of Elune" radio="New Moon" />
-<Checkbox id="Cancelaura" spellId={202345} name="Cancelaura Starlord" />
-<Checkbox id="Wild Mushroom" spellId={88747} name="Wild Mushroom" />
-<Checkbox id="Starweaver" spellId={393940} name="Starweaver" />
-<Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" />
+  <Checkbox id="Keeper of the GroveLOL" spellId={433831} name="숲의 수호자" defaultCheck radio="Hero" />
+  <Checkbox id="Elune's ChosenLOL" spellId={424058} name="엘룬의 대행자" radio="Hero" />
 </CheckboxProvider>
 
-**Note: While not explicitly mentioned in the priority list, if you find yourself outside of eclipse and are about to cap astral power, it's better to spend it to prevent further capping before entering eclipse.**
+- [*Keeper of the GroveLOL] !8936|재생! 4회 시전
+- [*Elune's ChosenLOL] Use !202425|엘룬의 전사!
+- !190984|천벌!
+- !190984|천벌!
+- !194153|별빛섬광!
 
-- Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- [*Stellar Flare||Wild Mushroom] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! if you're not in !194223|CA!/!102560|Incarnation! already.
-- [*Convoke the Spirits] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-- Use !Wrath! to enter Lunar Eclipse if one of the following conditions is true:
-  - You have 520 or more stacks of !393960|Pulsar!
-  - The cooldown of !194223|CA!/!102560|Incarnation! is less than 5 seconds.
-- [*Warrior of Elune] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
-- Use !Starfire! to enter Solar Eclipse.
-- [*Astral Communion] Use !Astral Communion! if you will not overcap on AP.
-- [*Force of Nature] Use !248280|Force of Nature! if you will not overcap on AP.
-- [*Fury of Elune] Use !Fury of Elune! if you are in !194223|CA!/!102560|Incarnation!, will proc !393960|Pulsar! with your next GCD or are at less than 280 !393960|Pulsar! stacks.
-- [*Cancelaura] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
-- [*Starweaver] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
-- Use !Starsurge! if !Starlord! has less than 3 stacks or if you have more than 2 stacks of !394048|BoAT!.
-- [*New Moon] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and !393960|Pulsar! has 520 or fewer stacks and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
-- [*Cancelaura] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
-- Use !Starsurge! if one of the following conditions is met:
-  - You would overcap AP with the next cast.
-  - [*Starweaver] You have a !393944|Starweaver's Weft! proc.
-  - Solar or Lunar Eclipse will end in the next 4 seconds and you have more than 70 AP.
-- [*Wild Mushroom] Use !Wild Mushroom! as a movement GCD.
-- Use !Wrath! regardless of which Eclipse you are in.
+최대 사거리를 기준으로, 전투 시작 4초 전부터 기술을 써도 된다.
 
-## AoE priority
+### **시전 우선순위란?**
+
+아래의 시전 우선순위는 순서대로 따라하기 위한 '단계' 개념이 아니다. 전투 중의 매 순간, 목록에서 지금 사용할 수 있는 것 중 가장 위에 있는 것을 쓰는 식으로 적용해야 한다.
+
+## 단일 대상 시전 우선순위
+
+<HeroTalentsHeader id="kotg" title="숲의 수호자 - 단일">
+<CheckboxProvider>
+    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="영혼 소집" />
+    <Checkbox id="Control of the Dream" spellId={434249} name="꿈의 통제" />
+    <Checkbox id="StarweaverKOTG" spellId={393940} name="별재봉사" />
+    <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="우주의 손길" />
+    <Checkbox id="New MoonKOTG" spellId={274281} name="초승달" defaultCheck radio="New Moon" />
+    <Checkbox id="Fury of EluneKOTG" spellId={202770} name="엘룬의 분노" radio="New Moon" />
+    <Checkbox id="Stellar FlareKOTG" spellId={202347} name="항성의 섬광" />
+    <Checkbox id="Wild MushroomKOTG" spellId={88747} name="야생 버섯" />
+ </CheckboxProvider> 
+
+- !164815|태양섬광! 유지. Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
+- !164812|달빛섬광! 유지. Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신. 단, 직후에 !205636|자연의 군대!를 시전할 예정이라면 예외.
+- !194153|별빛섬광!을 2회 시전해 일식 발동. 현재 일식이 끝나기 직전에 미리 !194153|별빛섬광! 시전을 시작해 !450347|자연의 은혜! 1중첩을 들고 다음 일식에 들어가는 것이 이상적이다.
+- [*~Control of the Dream] 현재 일식이 3초 이상 남았거나, !194223|천체의 정렬!/!102560|화신!이 준비됐을 때, !205636|자연의 군대!.
+- [*Control of the Dream] 쿨마다 !205636|자연의 군대!. 단, 곧 !194223|천체의 정렬!/!102560|화신! + !391528|영혼 소집!이 온다면 맞춰 쓰기 위해 15초까지는 아낄 수 있음.
+- [*Stellar FlareKOTG] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
+- [*Fury of EluneKOTG] !202770|엘룬의 분노!
+- 다음 중 하나라도 만족하면, !194223|천체의 정렬!/!102560|화신!.
+  - 방금 막 !205636|자연의 군대!를 썼을 경우.
+  - !205636|자연의 군대!의 재사용 대기 시간이 25초를 넘을 경우.
+- [*Convoke the SpiritsKOTG] 다음 중 하나라도 해당하면, !391528|영혼 소집!.
+  - 현재 보유한 천공의 힘이 40 미만일 것.
+  - 현재 발동 중인 !194223|천체의 정렬!/!102560|화신!의 남은 지속시간이 4초 이상이거나, 다음 !194223|천체의 정렬!/!102560|화신!까지 30초 이상 남았고 현재 일식의 남은 지속시간이 4초 이상일 것.
+  - 혹은, 다음 두 조건을 모두 만족할 것.
+    - !205636|자연의 군대!를 방금 막 사용했을 것.
+    - !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 30초 이상일 것.
+- [*StarweaverKOTG] !393942|별재봉사의 날실! 효과를 받고 있을 때, !191034|별똥별!.
+- [*Touch the CosmosKOTG] !450356|우주의 손길! 효과를 받고 있을 때, !191034|별똥별!.
+- !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
+- [*New MoonKOTG] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
+  - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 일식이 만료되기 전에 시전을 끝낼 수 있을 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+- 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+  - 천공의 힘이 꽉 차기 직전일 것.
+  - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
+  - [*StarweaverKOTG] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosKOTG] !450356|우주의 손길! 효과를 받고 있을 것.
+- [*Wild MushroomKOTG] 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없다면, !88747|야생 버섯!.
+- !190984|천벌!.
+</HeroTalentsHeader>
+
+
+<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 단일">
 
 <CheckboxProvider>
-<Checkbox id="Warrior of EluneAoE" spellId={202425} name="Warrior of Elune" radio="Force of Nature"/>
-<Checkbox id="Force of NatureAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
-<Checkbox id="Stellar FlareAoE" spellId={202347} name="Stellar Flare"/>
-<Checkbox id="Astral CommunionAoE" spellId={400636} name="Astral Communion"/>
-<Checkbox id="New MoonAoE" spellId={274281} name="New Moon" defaultCheck radio="FoE"/>
-<Checkbox id="Fury of EluneAoE" spellId={202770} name="Fury of Elune" radio="FoE"/>
-<Checkbox id="CancelauraAoE" spellId={202345} name="Cancelaura Starlord"/>
-<Checkbox id="Wild MushroomAoE" spellId={88747} name="Wild Mushroom"/>
-<Checkbox id="StarweaverAoE" spellId={393940} name="Starweaver"/>
-<Checkbox id="Convoke the SpiritsAoE" spellId={391528} name="Convoke the Spirits"/>
+  
+    <Checkbox id="Lunar CallingST" spellId={429523} name="달의 부름" /> 
+    <Checkbox id="Warrior of EluneEC" spellId={202425} name="엘룬의 전사" defaultCheck radio="Warrior of Elune" />
+    <Checkbox id="Fury of EluneEC" spellId={202770} name="엘룬의 분노" radio="New Moon" /> 
+    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="영혼 소집" />
+    <Checkbox id="New MoonEC" spellId={274281} name="초승달" defaultCheck radio="New Moon" /> 
+    <Checkbox id="Nature's GraceEC" spellId={450347} name="자연의 은혜" /> 
+    <Checkbox id="Touch the CosmosEC" spellId={450356} name="우주의 손길" />
+    <Checkbox id="StarweaverEC" spellId={393940} name="별재봉사" /> 
+    <Checkbox id="Stellar FlareEC" spellId={202347} name="항성의 섬광" /> 
+    <Checkbox id="Wild MushroomEC" spellId={88747} name="야생 버섯" />
+    <Checkbox id="Force of NatureEC" spellId={205636} name="자연의 군대" radio="Warrior of Elune" />
+ 
 </CheckboxProvider>
 
-**Special Note: when NOT using the talents !Aetherial Kindling! or !Starweaver!, use Starsurge as a spender on 2 targets still.**
-**AoE priority list(2+ targets):**
-
-- Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
-- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP.
-- [*Stellar FlareAoE] Use !Stellar Flare! if all of the following conditions is met:
-  - The target will live for at least 8s+1s per target that !Starfire! can hit
-  - You will not overcap on AP.
-  - You're about to use !194223|CA!/!102560|Incarnation!
-  - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
-- [*CancelauraAoE] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
-- Use !Starfall! if you would overcap Astral Power with your next cast.
-- Use !194223|CA!/!102560|Incarnation! if you are not in !194223|CA!/!102560|Incarnation! already.
-- [*Warrior of EluneAoE] Use !Warrior of Elune! if available.
-- Use !Starfire! to enter Solar Eclipse if you are fighting 2 targets.
-- Use !Wrath! to enter Lunar Eclipse if you are fighting 3+ targets.
-- [*Wild MushroomAoE] Use !Wild Mushroom! if you will not overcap on AP and !Waning Twilight! is not up on your targets.
-- [*Fury of EluneAoE] Use !Fury of Elune! if you are in !194223|CA!/!102560|Incarnation!, will proc !393960|Pulsar! with your next GCD or are at less than 280 !393960|Pulsar! stacks.
-- [*CancelauraAoE] Use your macro to cancel !Starlord! as referenced [here](#cancel) if conditions apply. Note that this is back to being an insignificant gain.
-- Use !Starfall! if one of the following conditions is met:
-  - [*StarweaverAoE] You have a !393942|Starweaver's Warp! proc.
-  - !Starlord! is below 3 stacks.
-- [*New MoonAoE] Use !Full Moon! if all of the following conditions are met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and Pulsar has 520 or fewer stacks and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
-- [*StarweaverAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc and you are fighting less than 3 targets.
-- [*Stellar FlareAoE]  Use !Stellar Flare! if all of the following conditions are met:
-  - The target will live for at least 8s+1s per target that !Starfire! can hit
-  - You will not overcap on AP.
-  - Your fighting less than 11 targets -1 per talent in Umbral Intensity or Astral Smolder.
-- [*Astral CommunionAoE] Use !Astral Communion! if you will not overcap on AP.
-- [*Convoke the SpiritsAoE] Use !Convoke the Spirits! if you are fighting less than 3 targets, otherwise only use !391528|Convoke! for movement in AoE.
-- [*New MoonAoE] Use !New Moon! if you will not overcap on AP.
-- [*New MoonAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
-- [*Force of NatureAoE] Use !248280|Force of Nature! if you will not overcap on AP.
-- [*StarweaverAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc and !Starfire! will hit less than 17 targets.
-- !Starfire! if any of the below conditions are true:
-  - You are in Lunar Eclipse.
-  - You are in !194223|CA!/!102560|Incarnation! and !Starfire! will hit 4 or more targets.
-- Use !Wrath! if any of the below conditions are true:
-  - You are in Solar Eclipse.
-  - You are in !194223|CA!/!102560|Incarnation! and !Starfire! will hit 3 or fewer targets.
+- !164812|달빛섬광! & !164815|태양섬광! 유지. 각각 pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
+- [*Stellar FlareEC] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
+- [*Fury of EluneEC] !202770|엘룬의 분노!
+- !194223|천체의 정렬!/!102560|화신! 
+- [*Lunar CallingST&&Warrior of EluneEC] !202425|엘룬의 전사! 
+- [*~Lunar CallingST&&Warrior of EluneEC] 현재 발동 중인 일월식의 남은 지속시간이 7초 미만이며, 다음에 일식에 진입할 예정이라면, !202425|엘룬의 전사!.
+- [*Lunar CallingST] !190984|천벌!을 시전해 월식 발동.
+- [*~Lunar CallingST] !194153|별빛섬광!을 시전해 일식 발동.
+- [*Nature's GraceEC&&Lunar CallingST] 다음의 조건을 모두 만족할 때, !194153|별빛섬광!.
+  - !450347|자연의 은혜! 효과를 받고 있을 것.
+  - [*Convoke the SpiritsEC] 천체의 정렬 발동 중이며, 직후에 시전할 기술이 !391528|영혼 소집!일 것.
+- [*Convoke the SpiritsEC] 천공의 힘이 40 미만이고, 현재 발동 중인 !194223|천체의 정렬!/!102560|화신!의 남은 지속시간이 4초 이상이거나 다음 !194223|천체의 정렬!/!102560|화신! 까지 30초 이상 남았고 현재 일월식의 남은 지속시간이 4초 이상일 때, !391528|영혼 소집!.
+- !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
+- [*New MoonEC] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
+  - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있을 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+- 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+  - 천공의 힘이 꽉 차기 직전일 것.
+  - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
+  - [*StarweaverEC] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosEC] !450356|우주의 손길! 효과를 받고 있을 것.
+- [*StarweaverEC] !393942|별재봉사의 날실! 효과를 받고 있을 때, !191034|별똥별!.
+- [*Touch the CosmosEC] !450356|우주의 손길! 효과를 받고 있을 때, !191034|별똥별!.
+- [*Wild MushroomEC] 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없다면, !88747|야생 버섯!.
+- [*Force of NatureEC] 지금 !205636|자연의 군대!를 시전해도 천공의 힘이 넘치지 않는다면, !205636|자연의 군대!. 
+- [*Lunar CallingST] !194153|별빛섬광!
+- [*~Lunar CallingST] 일식 발동 중이라면, !190984|천벌!.
+
+</HeroTalentsHeader>
+
+## 다중 대상 시전 우선순위
+
+<HeroTalentsHeader id="kotg" title="숲의 수호자 - 광역">
+<CheckboxProvider>
+<Checkbox id="Fury of EluneKAOE" spellId={202770} name="엘룬의 분노" radio="New Moon" />
+<Checkbox id="New MoonKAOE" spellId={274281} name="초승달" defaultCheck radio="New Moon" />
+<Checkbox id="Stellar FlareKAOE" spellId={202347} name="항성의 섬광" />
+<Checkbox id="Touch the CosmosKAOE" spellId={450356} name="우주의 손길" />
+<Checkbox id="StarweaverKAOE" spellId={393940} name="별재봉사" />
+<Checkbox id="Convoke the SpiritsKAOE" spellId={391528} name="영혼 소집" />
+<Checkbox id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
+</CheckboxProvider>
+
+- 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 대상이 한곳에 모인 뒤에 시전할 것.
+- 대상이 6초 내로 죽지 않으며, 현재 !164812|달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, !164812|달빛섬광!. !205636|자연의 군대!가 자동으로 시전하는 !164812|달빛섬광!을 항상 고려할 것.
+- [*Stellar FlareKAOE] 다음의 조건을 모두 만족할 때, !202347|항성의 섬광!.
+  - 대상이 8초 내로 죽지 않을 것. 현재 대상에게 시전하는 !194153|별빛섬광!이 닿는 추가 대상의 수에 따라 이 조건을 1초씩 늘릴 것. (예를 들어, 밀집 5개 대상에서는 12초가 기준이 됨.)
+  - 지금 !202347|항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 것.
+- 다른 기술을 시전하면 천공의 힘이 넘치는 상황이라면, !191034|별똥별!.
+- 다음 중 하나라도 만족하면, !248280|자연의 군대!.
+  - 현재 발동 중인 일월식의 남은 지속시간이 3초 이상일 것.
+  - 직후에 시전할 기술이 !194223|천체의 정렬!/!102560|화신!일 것.
+- 다음 중 하나라도 만족하면, !194223|천체의 정렬!/!102560|화신!.
+  - !428731|숲의 조화! 효과를 받고 있을 것.
+  - !205636|자연의 군대!의 남은 재사용 대기 시간이 25초 이상일 것.
+- !190984|천벌!을 시전해 월식 발동.
+- [*Fury of EluneKAOE] !202770|엘룬의 분노!.
+- 다음 중 하나라도 만족하면, !191034|별똥별!.
+  - [*StarweaverKAOE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
+  - [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 것.
+  - !202345|별의 군주! 중첩이 2개 이하일 것.
+- [*Wild MushroomKAOE] 지금 !88747|야생 버섯!을 시전해도 천공의 힘이 넘치지 않고, 적 대상이 !393956|저무는 황혼! 효과를 받고 있지 않다면, !88747|야생 버섯!.
+- [*New MoonKAOE] 다음의 조건을 모두 만족할 때, !274283|보름달!.
+  - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있을 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+- [*New MoonKAOE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
+- [*New MoonKAOE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
+- [*Convoke the SpiritsKAOE] 2개 대상 이하일 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 때, !197626|별빛쇄도!.
+- [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 때, !197626|별빛쇄도!.
+- !194153|별빛섬광!
+</HeroTalentsHeader>
+
+
+<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 광역">
+<CheckboxProvider>
+<Checkbox id="Warrior of EluneECAoE" spellId={202425} name="엘룬의 전사" radio="Force of Nature"/>
+<Checkbox id="Fury of EluneECAoE" spellId={202770} name="엘룬의 분노" radio="FoE"/>
+<Checkbox id="New MoonECAoE" spellId={274281} name="초승달" defaultCheck radio="FoE"/>
+<Checkbox id="Stellar FlareECAoE" spellId={202347} name="항성의 섬광"/>
+<Checkbox id="StarweaverECAoE" spellId={393940} name="별재봉사"/>
+<Checkbox id="Touch the CosmosECAoE" spellId={450356} name="우주의 손길" />
+<Checkbox id="Convoke the SpiritsECAoE" spellId={391528} name="영혼 소집"/>
+<Checkbox id="Force of NatureECAoE" spellId={205636} name="자연의 군대" radio="Force of Nature"/>
+<Checkbox id="Wild MushroomECAoE" spellId={88747} name="야생 버섯"/>
+</CheckboxProvider>
+
+
+**참고: !327541|에테르 덧불!과 !393940|별재봉사! 중 하나라도 찍지 않았을 경우, 2개 대상까지는 별똥별이 아니라 별빛쇄도를 사용할 것.**
+
+**다중 대상 시전 우선순위(2+개 대상)**
+
+- 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 대상이 한곳에 모인 뒤에 시전할 것.
+- 대상이 6초 내로 죽지 않으며, 현재 !164812|달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, !164812|달빛섬광!.
+- [*Stellar FlareECAoE] 다음의 조건을 모두 만족할 때, !202347|항성의 섬광!.
+  - 대상이 8초 내로 죽지 않을 것. 현재 대상에게 시전하는 !194153|별빛섬광!이 닿는 추가 대상의 수에 따라 이 조건을 1초씩 늘릴 것. (예를 들어, 밀집 5개 대상에서는 12초가 기준이 됨.)
+  - 지금 !202347|항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 것.
+- 다른 기술을 시전하면 천공의 힘이 넘치는 상황이라면, !191034|별똥별!.
+- !194223|천체의 정렬!/!102560|화신!
+- [*Warrior of EluneECAoE] !202425|엘룬의 전사!
+- !190984|천벌!을 시전해 월식 발동
+- [*Wild MushroomECAoE] 지금 !88747|야생 버섯!을 시전해도 천공의 힘이 넘치지 않고, 적 대상이 !393956|저무는 황혼! 효과를 받고 있지 않다면, !88747|야생 버섯!.
+- [*Fury of EluneECAoE] !202770|엘룬의 분노! 
+- 다음 중 하나라도 만족하면, !191034|별똥별!.
+  - !202345|별의 군주! 중첩이 2개 이하일 것.
+  - [*StarweaverECAoE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
+  - [*Touch the CosmosECAoE] !450356|우주의 손길! 효과를 받고 있을 것.
+- [*New MoonECAoE] 다음의 조건을 모두 만족할 때, !274283|보름달!.
+  - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 월식이 만료되기 전에 시전을 끝낼 수 있을 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+- [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있고, 2개 대상과 전투 중일 경우, !197626|별빛쇄도!.
+- [*New MoonECAoE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
+- [*New MoonECAoE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
+- [*Convoke the SpiritsECAoE] 2개 대상 이하일 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*Force of NatureECAoE] 지금 !205636|자연의 군대!를 시전해도 천공의 힘이 넘치지 않는다면, !205636|자연의 군대!. 
+- !194153|별빛섬광!
 
-## Eclipses and Fillers
+</HeroTalentsHeader>
 
-- On 1-2 targets, enter Solar Eclipse and cast !Wrath!.
-- On 3 or more targets, enter Lunar Eclipse and cast !Starfire!.
-- On 1-3 targets inside !194223|CA!/!102560|Incarnation! cast !Wrath!
-- On 4 or more targets inside !194223|CA!/!102560|Incarnation! cast !Starfire!.
+# 특성 빌드
+## 레이드
 
-## How to Use Warrior of Elune
+<Talents name={"단일 대상 전투"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYhBYssNz22yMLzyMNzsMTBAgAYzMDD"}/>
 
-!Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
+<Talents name={"추가적인 적이 등장하는 단일 대상 전투"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbLLzsMLz0MzyMFAACgFzMM"}/>
 
-!Warrior of Elune! can be used 7 seconds before an eclipse ends, this way you will have just enough time to spend your third charge before the buff runs out and the CD will start earlier, which can net you more uses throughout the fight.
+## 신화+ / 쐐기돌 던전
 
-Use the charges to enter Solar Eclipse or as a movement GCD in !194223|CA!/!102560|Incarnation! /Lunar Eclipse. Using a Warrior of Elune Starfire in single target during !194223|CA!/!102560|Incarnation! is NOT a damage increase if you do not need to move.
+다음에 소개된 빌드는 언제나 제 성능을 발휘하나, 파티 구성이나 주간 수정치에 맞게 적절히 변화를 줄 것.
 
-If Warrior of Elune is falling off during !194223|CA!/!102560|Incarnation! and you still have a charge to spend, you can !Starfire! at 2+ targets.
+<Talents name={"엘룬의 대행자"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZM2mZZMmBbgFAMW2mZbZZmlZZmmZWmpAAQAsYmhB"}/>
 
-Warrior of Elune can also be used during !194223|CA!/!102560|Incarnation! /Lunar Eclipse when there are adds up, this will net you a lot of Astral Power which can be useful to target down a specific add or to provide more boss damage by utilizing the AP on Starsurges.
+<Talents name={"숲의 수호자"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMLzMLGzMzM2mxYYG2ALAYssNz2yyMLzyMNzsMTBAgAYzMjZA"}/>
 
-## How to use Owlkin Frenzy procs
 
-Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside !194223|CA!/!102560|Incarnation! if Starfire will hit 3 or more targets.
+# FAQ
 
-Keep in mind that !Warrior of Elune! charges are consumed before !Owlkin Frenzy! procs.
+## 일월식 / 필러 선택 기준
 
-# Talents
-## Raid
+- 1-2개 대상에서는 일식을 발동하고 !190984|천벌!을 쓴다.
+- 3개 이상의 대상에서는 월식을 발동하고 !194153|별빛섬광!을 쓴다.
+- !429523|달의 부름! 선택 시, 상황에 무관하게 월식을 발동하고 !194153|별빛섬광!을 쓴다.
 
-<Talents name={"Single Target"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQol0SSERDgCAE"}/>
-<Talents name={"Single Target with Short Burst"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSJRTcgQkWSLJRQDgCAE"}/>
-<Talents name={"Single Target with spread add spawn"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJJJlkQcgQol0iER0AoAAB"}/>
-<Talents name={"Single Target with damage amp"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIJSSLRTyBChSSLJERDgCAE"}/>
-<Talents name={"Two Target Starweaver"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSIJHIFolIRSSJJkkQol0iQSUAoBAB"}/>
-<Talents name={"Council of Dreams"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikIFolIRSUSCJJEaJtkEJRDgGAE"}/>
-<Talents name={"The Primal Council"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSIJHIFolIRSSJJEJHgoJlIRCNAKAQA"}/>
+## 엘룬의 전사 활용
 
-## Mythic+
-
-The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. !New Moon! and !Fury of Elune! can be used interchangeably.
+- !202425|엘룬의 전사!는 전역 재사용 대기 시간의 영향을 받지 않으며, 발동 시 25초간 다음 3회의 !194153|별빛섬광!을 즉시 시전되도록 해 주는 기술이다. 재사용 대기 시간은 사용 직후부터 돌기 시작한다.
+- !429523|달의 부름! 선택 시, !202425|엘룬의 전사!는 기본적으로 재사용 대기 시간이 돌아올 때마다 쓴다. 단, !194223|천체의 정렬!/!102560|화신!과 맞추기 위해서라면 15초까지는 아낄 수 있다.
+- !429523|달의 부름! 미선택 시, 일식에 빠르게 진입하기 위한 용도로 사용한다. 
 
-<Talents name={"Balanced build"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJ0AoAAB"}/>
-<Talents name={"Weaver build"} talents={"BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJigkQQSikcgUgWiDkkkUSCJJgm0iEJUAoAAB"}/>
+## 꿈의 통제의 이해
 
-!New Moon! provides more single target damage and is easy to pair with pulsar.
-!202770|FoE! does slightly more AoE but is more difficult to align with !393960|Pulsar!, making it annoying to play.
+- !434249|꿈의 통제!는 !194223|천체의 정렬!/!102560|화신!, !391528|영혼 소집!, !205636|자연의 군대!를 쓰지 않고 아낀 시간을 최대 15초까지 축적해 손해를 보지 않도록 해 주는 특성이다. 이는 전투 중이 아닐 때에도 적용되기 때문에, !205636|자연의 군대!의 실제 재사용 대기 시간은 (!428937|새봄! 선택 여부에 따라) 45/60초 또는 30초/45초가 된다.
 
-The below picture showcases which talents are "mandatory" and which talents you can opt-in to:
+## 올빼미야수의 광기 활용
 
-![Mythic](/static/images/talent-tree-mythic+.png)
+- !231042|올빼미야수의 광기! 효과는 일식 진입 용도나 월식 동안의 추가 공격, 혹은 !194223|천체의 정렬!/!102560|화신! 발동 중에 별빛섬광으로 3개 대상 이상을 공격할 수 있을 때 쓴다.
+- !202425|엘룬의 전사! 효과가 !231042|올빼미야수의 광기! 효과보다 먼저 소모됨에 주의.
 
-**Secondary builds:**
+### 일식이 안 켜져요
 
-[Class tree with Hibernate for Incorporeal](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJJJCSCBJJSiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
+- 이는 엘룬의 대행자 영웅 특성 중 !429523|달의 부름!의 효과이다.
 
-[If you really need both Hibernate and Remove Corruption](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCQkkkISSAkESiUgWiDkkkUSCJHIEaSJCJRDgCAE?bgcolor=000000)
+### !88747|야생 버섯!이랑 !202347|항성의 섬광! 둘 다 없는데 !393956|저무는 황혼! 왜 찍나요?
 
-- !Ursine Vigor!, !Well-Honed Instincts! and !Improved Stampeding Roar! are the major competing talents. !Ursine Vigor! should be taken if you need it to survive certain abilities. !Well-Honed Instincts! is always on 1 point but a 2nd can be taken if you rarely/never use Bear Form. spell 288826 "Improved Stampeding Roar">}} is extremely useful in indoor dungeons and in spiteful weeks.
-- !Remove Corruption! should be taken in Afflicted weeks.
-- !Cyclone! has basically no use other than stopping Bursting and can be replaced with anything else(which also won't have any use).
-- !Hibernate! can be used for the Incorporeal affix.
-- For lower keys, you can put 1 point into !Feline Swiftness! like [this](https://raidbots.com/simbot/render/talents/BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAJiIIJSQSikIFHgWiDEJJlkQSChmUiEJRDgCAE?bgcolor=000000). This skips !Ursine Vigor! and !Typhoon!. You can also drop any of the other bottom talents you don't need to get a 2nd point in !Feline Swiftness! to get around even quicker for farming keys.
-- All other talents in the druid tree are more or less set.
+- !394058|천공의 번민!에 의해 발동된다.
 
-# Consumables
-## Potions
+### 시전 우선순위대로 잘 하고 있는 것 같은데 딜이 안 나와요
 
-[Potion of Ultimate Power](https://www.wowhead.com/item=191383/elemental-potion-of-ultimate-power)
+- 전투 기록을 저장하고 [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs)와 [wowanalyzer](https://wowanalyzer.com/)로 분석할 필요가 있다. 언제나 뭔가를 시전해야 한다는 것을 잊지 마라! '쉬는 시간'은 없어야 하고, 기술을 시전하다가 취소하는 일도 가능한 한 없어야 한다. 움직일 때를 잘못 잡아서 주문을 시전할 수 있었을 시간에 지속 피해 기술만 쓰는 것도 자주 볼 수 있는 실수이다. 이럴 때를 위해 언제나 약간의 천공의 힘을 들고 있는 것이 좋다.
 
-Use this for every situation. Potion of Elemental Power is only minorly worse if you want to save gold.
+### 천공 피해가 뭔가요
 
-## Food
+- 천공 피해는 자연 피해인 동시에 비전 피해이다. 자연 주문에 적용되는 모든 효과는 천공 주문에 적용되며, 마찬가지로 비전 주문에 적용되는 모든 효과도 천공 주문에 적용된다. 예를 들어 일식은 자연 주문과 천공 주문을 1.15배로, 월식은 비전 주문과 천공 주문을 1.15배로 강화한다. (천체의 정렬/화신에 의해) 일식과 월식을 둘 다 가진 상태라면, 자연과 비전 주문은 각각 1.15배 강화되지만 천공 주문은 1.15 \* 1.15 = 1.3225배로 강화된다.
 
-- [Grand Banquet of the Kaluak](https://www.wowhead.com/item=197794/grand-banquet-of-the-kaluak): Intellect buff
-- [Deviously Deviled Eggs](https://www.wowhead.com/item=204072/deviously-deviled-eggs): Same buff as Banquet but with a cheaper individual price.
-- [Sizzling Seafood Medley](https://www.wowhead.com/item=197784/sizzling-seafood-medley): Provides Haste + Mastery which can be more dps than the Intellect food.
-- [Thousandbone Tongueslicer](https://www.wowhead.com/item=197786/thousandbone-tongueslicer): Provides Crit + Mastery which can be more dps than the Intellect food.
+- 이와 같은 속성 강화 효과는 직업 기술에만 적용된다. 자연 / 비전 피해를 가하는 장신구 등은 일월식의 효과를 받지 않는다.
 
-The secondary food can be better as you acquire more gear, they provide more total stats than the main stat one. Sim your character to see what is best for you.
+### 광역 전투 시뮬레이션에 대해
 
-## Phials
+- "5개 대상, 40초"와 같은 비현실적인 상황에 대한 시뮬레이션은 지나치게 편향된 결과를 낼 수 있으므로 피하는 것이 좋다. 조화 드루이드의 능력치는 대상 수의 영향을 별로 받지 않으므로, "패치워크 5분"이 잘 나오는 상태로 둬도 충분하다. 특정 쐐기 상황에 맞는 결과를 원한다면, 던전 루트를 입력할 수 있게 해 주는 [MDT 시뮬레이션 위크오라](https://wago.io/Yya4XBbl-)를 참조하기 바란다. 쐐기에서도 단일 대상 피해량은 중요하다는 것을 잊지 말자!
 
-**ST & AoE**
+### 쐐기에서 딜이 너무 안 나와요
 
-Damage wise, with 100% uptime on all of the Phials and not counting in the downsides their hierarchy is as follows on ST:
+- 로테이션에 문제가 없는 것이 확실하다면, 순간 화력이 높은 클래스 사이에 끼어서 너무 낮은 단수를 돌고 있기 때문이다. 조화 드루이드로 화력을 뽐내려면 적들이 충분히 오래 살아남아야 하는데, 12단 아래에서는 그런 상황을 기대하기 어렵다. 단일 대상 화력에 좀 더 투자하거나 다른 클래스를 시도해 보는 것도 방법이지만, 쐐기는 DPS가 다가 아니라는 것도 잊지 말자.
 
-- [Phial of Corrupting Rage](https://www.wowhead.com/item=191329/iced-phial-of-corrupting-rage): Default phial unless the fight has too high damage intake or you are at risk of dying. Do not use this in progress fights unless you really need the damage.
-- [Phial of Tepid Versatility](https://www.wowhead.com/item=191341/phial-of-tepid-versatility): Has the same value as Corrupting Rage at 60% uptime. Can be worth to play if the damage intake is high.
-- [Phial of Elemental Chaos](https://www.wowhead.com/item=191359/phial-of-elemental-chaos): Generally similar dps throughput as Tepid Versatility, but less defensive benefits.
+### 다른 쐐기 빌드 쓰는 사람 많던데 뭐가 더 낫나요
 
-## Runes
+- 직접 써 보고 결정하자! 대부분의 차이는 대상 수, 조합, 전투 시간, 유틸리티와 같은 변수에서 발생한다.
 
-Our main rune is [Hissing Rune](https://www.wowhead.com/item=204973/hissing-rune)
-In some cases either [Howling Rune](https://www.wowhead.com/item=194820/howling-rune) or [Buzzing Rune](https://www.wowhead.com/item=194823/buzzing-rune) might sim slightly better.
+### 랭커들은 왜 장식 다른 거 쓰나요
 
-# Gearing
-## Stat Priority
+- 장식됨 아이템의 효력은 전체 장비 구성, 플레이하는 컨텐츠, 조합 등에 따라 달라지며, 일부 최상위권 플레이어들이 특이한 장식 아이템을 사용하는 것도 이 때문이다. 특별한 상황이 아니라면 본인 캐릭터의 시뮬레이션 결과에 따라 가장 높은 효과를 보여주는 장식을 선택하는 것이 좋다.
 
-Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). **Do not follow any stat priorities.**
+### 조드도 도트 부스팅(Snapshot) 있나요
 
-## Enchants
+- 없다. 조화 드루이드의 모든 지속 피해 기술 (!164812|달빛섬광!, !164815|태양섬광!, !202347|항성의 섬광!) 은 실시간으로 강화 효과를 적용한다. 즉, 각 기술은 일월식 발동/만료, 능력치/공격력 증가 효과의 적용/해제에 따라 자동으로 강화/약화된다.
 
-- Weapon - [Sophic Devotion](https://www.wowhead.com/item=200054/enchant-weapon-sophic-devotion?crafting-quality=6)/[Wafting Devotion](https://www.wowhead.com/beta/item=200058/enchant-weapon-wafting-devotion)
-Sim between these two options to determine which one is best for your character.
+# 소모품
 
-- Chest - [Waking Stats](https://www.wowhead.com/item=200030/enchant-chest-waking-stats?crafting-quality=6) Intellect
-- Cloak - [Graceful Avoidance](https://www.wowhead.com/item=200031/enchant-cloak-graceful-avoidance) Avoidance + Reduced fall damage
-- Legs - [Lambent Armor Kit](https://www.wowhead.com/item=204702/lambent-armor-kit?crafting-quality=6)/[Frozen Spellthread](https://www.wowhead.com/item=194013/frozen-spellthread?crafting-quality=6)
-  - Sim between these two options to determine which one is best for your character.
-- Wrist - [Devotion of Avoidance](https://www.wowhead.com/item=200021/enchant-bracer-devotion-of-avoidance?crafting-quality=6) Avoidance
-- Boots - [Watchers Loam](https://www.wowhead.com/item=200020/enchant-boots-watchers-loam) Stamina
-- Ring - [Devotion of Mastery](https://www.wowhead.com/item=200039/enchant-ring-devotion-of-mastery?crafting-quality=6) You should always sim your own character to determine what enchant to use in this slot.
+## 물약
 
-## Gems
+[절제된 물약](https://ko.wowhead.com/spell=430599/tempered-potion)
 
-Use [Skillfull Illimited Diamond](https://www.wowhead.com/item=192988/skillful-illimited-diamond) as your Primalist Gem. For normal gems refer to [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear)
+## 음식
 
-## Embellishments
-### For embellishments there are a couple of options this season:
+[한밤의 가장무도회 잔칫상](https://ko.wowhead.com/item=222733/feast-of-the-midnight-masquerade) 또는 [거룩한 날 잔칫상](https://ko.wowhead.com/spell=445112/feast-of-the-divine-day)
 
-- [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) with [Toxified Armor Patch](https://www.wowhead.com/item=193555/toxified-armor-patch).
-  - Provides great single target damage and has an early spike since only the boots needs to be crafted at 525 for the effect to scale to that itemlevel.
-  - Locks you in to boots as your crafted items with predfefined stats.
-- [Shadowflame Tempered Armor Patch](https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch)
-  - Good single target damage.
-  - Deals a small amount of self-damage.
-  - Can be added to any crafted leather slot.
-- [Verdant Conduit](https://www.wowhead.com/item=208189/verdant-conduit)
-  - Performs slightly worse in single target.
-  - Performs well in aoe.
-  - Can be added to any crafted leather slot.
-- [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat)
-  - Requires a lot of gems.
-  - Performs well in AoE and Single Target.
-  - Locks you in to a crafted neck but you can choose the stats on it freely.
-- [Blue Silken Lining](https://www.wowhead.com/item=193946/blue-silken-lining)
-  - Performs the best of all embellishments both in AoE and Single Target.
-  - Requires you to be above 90% health for it to be active.
-  - Can be applied on any crafted item.
+## 영약
 
-### Which embellishments should you choose?
+[연금술적 혼돈 영약](https://ko.wowhead.com/item=212283/flask-of-alchemical-chaos)
 
-This is entirely up to you, below are some guidelines to make your choice more informed.
+## 무기 강화
 
-- [Blue Silken Lining](https://www.wowhead.com/item=193946/blue-silken-lining) provides the most amount of DPS given that you have the uptime for it(usually more than 40%). Can be swapped at any point by recrafting and adding/removing the embellishment.
-- [Toxic Thorn Footwraps](https://www.wowhead.com/item=193452/toxic-thorn-footwraps) is a single target focused embellishment with an early power spike. Locks yourself with crafted boots with predfefined stats.
-- [Shadowflame Tempered Armor Patch](https://www.wowhead.com/item=204710/shadowflame-tempered-armor-patch) and [Verdant Conduit](https://www.wowhead.com/item=208189/verdant-conduit) are good for the flexibility, you can change these around at any point depending on what fits the content you're doing.
-- [Elemental Lariat](https://www.wowhead.com/item=193001/elemental-lariat) performs well in both Single Target and AoE, but requires a lot of gems and locks yourself with a crafted neck as the embellishment can't be removed from it.
+[알가르 마나 기름](https://ko.wowhead.com/item=224107/algari-mana-oil)
 
-### What slot should i craft in?
+# 세팅
+ 
+## 능력치
 
-This will depend on your current gear situtation, below are some guidelines:
+본인 캐릭터에 대한 [Raidbots의 Top Gear](https://www.raidbots.com/simbot/topgear) 결과를 따를 것. 능력치 우선순위 같은 것은 무시해야 함.
 
-- Bracers are often used as they have the lowest stat budget and can have a socket. This will be good later on when your other pieces can be upgraded to 525 itemlevel.
-- Cloaks are another slot with the lowest stat budget, but they can't be socketed.
-- Belts have a higher stat budget, but they can have a socket.
-- A Ring, if you've chosen to craft [Blue Silken Lining](https://www.wowhead.com/item=193946/blue-silken-lining), is another good slot. It also comes with a socket.
+## 보석과 마법부여
 
+보석 - [교묘함의 블라스페마이트](https://ko.wowhead.com/item=213746/elusive-blasphemite) 또는 [한계의 블라스페마이트](https://ko.wowhead.com/item=213743/culminating-blasphemite) 1개 고정, 나머지는 개인 심크에 따를 것. 보통 [강력한 에메랄드](https://www.wowhead.com/ko/item=213482/강력한-에메랄드)가 잘 맞음.
 
-## Trinkets
+무기 - 레이드는 [심연의 권위](https://ko.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths), 쐐기는 [돌매듭의 기예](https://ko.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) 또는 [폭풍기수의 분노](https://ko.wowhead.com/item=223762/enchant-weapon-stormriders-fury)
 
-[Umbreiskul's Fractured Heart](https://www.wowhead.com/item=193639/umbrelskuls-fractured-heart) is simming better than a lot of other options at lower ilvl. It may be worth getting this trinket early on in the season, but it loses value on higher ilvls. 
+가슴 - [수정의 광휘](https://ko.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
 
-Doing [Dawn of the Infinite](https://www.wowhead.com/zone=14514/dawn-of-the-infinite) on hard mode without your group dying can reward you with a [Mirror of Fractured Tomorrows](https://www.wowhead.com/item=207581/mirror-of-fractured-tomorrows) at myth track, making it possible to upgrade it to 528. This makes the trinket perform very good in both ST and AoE and should be your ideal on-use trinket if you manage to get your hands on it.
+망토 - [날개 달린 은총의 성가](https://ko.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
 
-[Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow) is simming very good when paired with [Seal of Diurna's Chosen ](https://www.wowhead.com/item=195480/seal-of-diurnas-chosen) for ST. These items are not that good seperately, but together they are outperforming other options by around 0.5%
+다리 - [석양 마법실타래](https://www.wowhead.com/ko/item=222893/석양-마법실타래)
 
-Please use Top Gear or Droptimizer on [Raidbots](https://raidbots.com) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
+손목 - [장갑 광역회피의 성가](https://ko.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
 
-- [Neltharion's Call to Suffering](https://www.wowhead.com/ptr-2/item=204211/neltharions-call-to-suffering)
-- [Mirror of Fractured Tomorrows](https://www.wowhead.com/ptr-2/item=207581/mirror-of-fractured-tomorrows?bonus=4795&class=11&ilvl=525&spec=102)
-- [Vessel of Searing Shadow](https://www.wowhead.com/item=202615/vessel-of-searing-shadow)
-- [Irideus Fragment](https://www.wowhead.com/ptr-2/item=193743/irideus-fragment)
-- [Whispering Incarnate Icon](https://www.wowhead.com/item=194301/whispering-incarnate-icon)
-- [Spoils of Neltharus](https://www.wowhead.com/item=193773/spoils-of-neltharus)
-- [Tome of Unstable Power](https://www.wowhead.com/item=193628/tome-of-unstable-power)
-- [Belor'Relos, the Suncaller](https://www.wowhead.com/ptr-2/item=207172/belorrelos-the-suncaller)
-- [Ominous Chromatic Essence](https://www.wowhead.com/ptr-2/item=203729/ominous-chromatic-essence)
+장화 - [수호자의 행진](https://ko.wowhead.com/item=223656/enchant-boots-defenders-march), 혹은 [척후병의 행진](https://ko.wowhead.com/item=223653/enchant-boots-scouts-march)
 
-# Miscellaneous:
+반지 -  본인의 심크 결과를 따를 것.
 
-## FAQ
+## 장식됨 아이템
 
-### I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
+아직 조정 중인 부분이므로 나중에 확인할 것.
 
-Log one of your fights and check it with [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs) and [wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and, as close to zero as possible, cancelled casts. Another common issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders.
+### 뭐 제작해야 하나요
 
-### How do I sim for AoE?
+언제나 Raidbots의 Top gear 결과로 판단하는 것이 옳지만, 전반적인 방향은 다음과 같다.
 
-Balance Druid's gear mostly doesn't change from ST to AoE so simming "5m 1t patchwerk" is usually fine even for AoE situations. Other sims like "5t 40s" are unrealistic scenarios that will provide skewed and wrong sims in most cases and hence shouldn't be used. If you want to do an accurate M+ sim consider using the [MDT Sim WeakAura](https://wago.io/Yya4XBbl-) and remember that ST fights are still a big part of Mythic+.
+- 손목 부위는 능력치 총량이 가장 낮고 보석 홈을 가질 수 있기 때문에 선호된다. 후반에 이르러 다른 장비를 639까지 강화할 때 특히 효율이 좋다.
+- 망토 역시 능력치 총합이 가장 낮지만, 보석 홈을 가질 수 없다.
+- 허리 부위는 능력치 총합이 약간 더 높지만 보석 홈을 가질 수 있다.
 
-### I'm doing really low damage in Mythic+, what am I doing wrong?
+## 장신구
 
-If you double-checked your rotation and still feel like you're underperforming you could just be playing low keys, together with classes that have very bursty damage profiles. When playing a Balance Druid, mobs need to live long enough for you to actually start doing damage, which is something that doesn't really happen in keys lower than 20+ and especially on Tyrannical. Consider focusing a bit more on ST or trying another spec, but take into account the fact that DPS isn't everything in a key.
+[첩보단장의 거미줄](https://www.wowhead.com/ko/item=220202/첩보단장의-거미줄)은 최대 40중첩까지 부여되는 지능 강화 효과를 제공하며, 사용 시 중첩 수에 비례해 추가 지능을 제공한다. 전투 시간이 맞다면 3번째 !194223|천체의 정렬!/!102560|화신!을 이와 맞춰 쓰는 것이 이상적이다.
 
-### I've seen a lot of people running build X instead of Y in Mythic+, is X better?
+[Raidbots](https://www.raidbots.com/simbot)의 Top gear 기능을 활용해 착용할 / 파밍할 장신구를 판단하는 것이 최선이나, 아래의 목록을 참고하는 것도 좋다. 최고 레벨 기준으로 가장 강한 성능의 장신구를 순서대로 나열한 것이다.
 
-This season there are many viable builds and in the end, once the necessary talents are taken, it just comes down to personal preference. One notable example is the choice between !Fury of Elune! and !New Moon!: the former performs slightly better in AoE scenarios, while the latter is slightly better in ST, so people will usually pick the one they're most comfortable with. Feel free to use any of the builds mentioned in the Talents section.
+    - [첩보단장의 거미줄](https://www.wowhead.com/ko/item=220202/첩보단장의-거미줄)
+    - [아라카라 낭충봉아](https://www.wowhead.com/ko/item=219314/아라카라-낭충봉아)
+    - [암흑 돌풍](https://www.wowhead.com/ko/item=133304/암흑-돌풍?ilvl=639&spec=102)
+    - [아눕이카즈의 강화의 수정](https://www.wowhead.com/ko/item=219312/아눕이카즈의-강화의-수정?class=11&ilvl=639&spec=102)
+    - [속박 풀린 변신수](https://www.wowhead.com/ko/item=178708/속박-풀린-변신수?class=11&ilvl=639&spec=102)
+    - [오비낙스의 변화성 알](https://www.wowhead.com/ko/item=220305/오비낙스의-변화성-알?ilvl=639&spec=102)
+    - [그릇된 하수인 주머니](https://www.wowhead.com/ko/item=178772/그릇된-하수인-주머니?class=11&ilvl=639&spec=102)
+    - [하달의 앵무조개](https://www.wowhead.com/ko/item=159622/하달의-앵무조개?class=11&ilvl=639&spec=102)
+    - [수확자의 칙령](https://www.wowhead.com/ko/item=219317/수확자의-칙령?class=11&ilvl=639&spec=102)
 
-### How do I track our tierset?
 
-You can use the [following WeakAura](https://wago.io/BoomkinTierSet)
+# 추가 자료
+## 매크로
 
-### How can I proc !Waning Twilight! without mushrooms or flare?
-
-With !Astral Smolder!
-
-### Why are some top players running different embellishments from the ones mentioned in the Compendium
-
-The DPS gain provided by the embellishments can vary significantly because of many external factors such as gear, type of content and group composition. Some of the top players might also happen to use niche embellishments for the same reasons. If you don't have any specific requirements then your best option is to just sim your character and choose the embellishments that provide the highest DPS upgrade.
-
-### Do our dots snapshot?
-
-No, all of our periodic damage (like !Moonfire!, !Sunfire!, !Stellar Flare!) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
-
-### What is Astral damage?
-
-Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also applies to Astral spells, and effects that buff Arcane spells likewise also applies to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 \* 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
-
-Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
-
-# Additional Resources
-## Macros
-
-**Orbital Strike macro:**
+**커서 위치로 천체의 정렬 공격 발동**
 
 ```
 #showtooltip
-/cast [@cursor] Celestial Alignment
+/cast [@cursor] 천체의 정렬
 ```
 
-**Trinket macro:**
+**쿨기에 장신구 묶기**
 
-If you are using an on-use trinket that should go along with your cooldowns, use the following macro (/13 for top trinket slot, and /14 for bottom trinket slot)
+장신구나 사용 효과가 있는 무기 등을 천체의 정렬과 동시에 발동하도록 한다. (/13: 위 칸 장신구, and /14: 아래 칸 장신구)
 
 ```
 #showtooltip
 /use 13
 /use 14
-/cast [@cursor] Celestial Alignment
+/cast [@cursor] 천체의 정렬
 ```
 
-## Cancelaura Macros
+## 오라취소 매크로
 
-### **Cancelling Pulsar**
+### **별의 군주 오라취소**
 
-**As of 10.1.5 and forward this no longer represents a relevant gain with the change to Radiant Moonlight increasing the cooldown of Fury of Elune by 5 seconds.**
+**별의 군주 오라취소는 화력에 전혀 영향을 끼치지 않는다.**
 
-### **Cancelling Starlord**
-
-**With baseline changes and new set in 10.2, cancelling your Starlord aura is back to being insignificant (~0.2%)**
-
-If you want to engage in this entirely optional method without incurring a dps loss, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use !Starsurge! to prevent overcapping.
+정확한 사용법은 일월식 도중에 별의 군주의 남은 지속시간이 2초 미만이고 !197626|별빛쇄도!를 쓰기 직전일 때 누르는 것이다.
 
 ```
 #showtooltip
 /cancelaura Starlord
 ```
 
-## Useful WeakAura(s)
+## 유용한 위크오라
 
-### **Balance WeakAura Packs**
+### **조화 드루이드 통합팩**
 
-The following links lead to various balance druid WeakAura packs. These contain everything that's recommended to track to play at a high level. None of these are particular better or more useful than others, and which one you should use is up to your personal preference.
+다음 목록의 위크오라는 모두 최고 수준의 플레이에서 필요한 기술과 강화 효과 등의 추적을 제공한다. 성능적인 차이는 없으므로 취향에 맞는 것을 골라 사용하면 된다.
 
-- [Shrom's Ultimate AP Bar](https://wago.io/GzpP7i8ic)
-- [Genesis DF Balance Druid](https://wago.io/1HX3XwarK)
-- [Oi Balance pack](https://wago.io/OiBalance)
+- [Shrom의 천공의 힘 바](https://wago.io/GzpP7i8ic)
+- [Genesis의 용군단 조화 드루이드 팩](https://wago.io/1HX3XwarK)
+- [Oi의 조화 드루이드 팩](https://wago.io/OiBalance)
 
-### **Casts until you can cast Starfire**
+### **단일 별섬 타이머**
 
-[Starfire Alerter](https://wago.io/rrtAyRQjF):
-See the description of the WA for more details. This is not a required WA but will make it easier to not get into situations where you are wasting a Starfire cast inside Solar Eclipse.
+[별빛섬광 경고 위크오라](https://wago.io/rrtAyRQjF):
+자체 설명 참고. 필수적인 기능은 아니지만, 실수로 일식 중에 별빛섬광을 쓰는 일을 피할 수 있게 해 준다.
 
 ---
-[Current APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
+[현행 APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
