@@ -50,7 +50,7 @@ export default function Talents({ name, talents, mimiron = false, open = false }
         {isVisible && (
           <iframe
             title={name}
-            src={`https://${mimiron ? 'mimiron' : 'www'}.raidbots.com/simbot/render/talents/${talents}?bgcolor=000000&width=${iframeWidth * 0.99}&level=70&mini=&hideHeader=true&locale=en_US&level=80`}
+            src={`https://${mimiron ? 'mimiron' : 'www'}.raidbots.com/simbot/render/talents/${talents}?bgcolor=000000&width=${iframeWidth * 0.99}&level=80&mini=&hideHeader=true&locale=en_US`}
             width={iframeWidth}
             height={iframeWidth * 0.64}
             className="overflow-hidden rounded-sm border-none bg-black"
