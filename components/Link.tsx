@@ -30,7 +30,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
     const validTypes = ['item', 'spell', 'npc']
     const possibleType = parts.at(-2)?.split('=')
     const possibleName = parts.at(-1)?.split('?')[0]
-    const queryParams = Object.fromEntries(url.searchParams.entries());
+    const queryParams = Object.fromEntries(url.searchParams.entries())
     if (
       possibleType &&
       possibleType[0] &&
