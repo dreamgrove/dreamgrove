@@ -10,7 +10,7 @@ import styles from './HeroTalents.module.css'
 function HeroTalentsHeader({ title, id, children }) {
   const [isCollapsed, setIsCollapsed] = useState(true)
   const contentRef = useRef<HTMLDivElement>(null)
-  const arrow = !isCollapsed ? (
+  const arrow = isCollapsed ? (
     <IoIosArrowDown className="block h-10 w-10 text-lg" />
   ) : (
     <IoIosArrowUp className="block h-10 w-10 text-lg" />
@@ -34,7 +34,7 @@ function HeroTalentsHeader({ title, id, children }) {
           ref={contentRef}
           className={`px-8 transition-all duration-300 ease-in-out`}
           style={{
-            maxHeight: !isCollapsed ? '0' : `${contentRef.current?.scrollHeight}px`,
+            maxHeight: isCollapsed ? '0' : `${contentRef.current?.scrollHeight}px`,
             overflow: 'hidden',
           }}
         >
