@@ -37,6 +37,7 @@ export default async function Wowhead({
   disabled = false,
   noIcon = false,
   beta = false,
+  url = '',
 }) {
   let display = name
   let displayId = id
@@ -57,7 +58,8 @@ export default async function Wowhead({
     }
   }
 
-  const whUrl = `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
+  const whUrl =
+    url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
   const res = await fetch(whUrl)
   const text = await res.text()
