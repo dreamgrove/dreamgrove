@@ -39,6 +39,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
         <Wowhead
           type={possibleType[0]}
           id={possibleType[1]}
+          url={href}
           name={rest && rest.children ? rest.children : capitalize(possibleName)}
         />
       )
