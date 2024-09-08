@@ -62,10 +62,6 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
 
             <div id="main" className=" divide-gray-200 dark:divide-gray-700  lg:col-span-9 lg:pb-0">
               <div className="pt-4 md:pt-6">
-                <Dialog type="warning">
-                  All the guides are currently being updated for 11.0. Stuff might be broken and
-                  information might be inaccurate.
-                </Dialog>
                 <a
                   href={changelogUrl}
                   className="ml-0 font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem]"
