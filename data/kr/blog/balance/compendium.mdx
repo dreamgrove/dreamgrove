@@ -1,11 +1,12 @@
 ---
 title: '조화 드루이드 백과사전'
-patch: '11.0.0'
+patch: '11.0.2'
 draft: false
-authors: ["Vinter", "Gamz"]
+authors: ["Gamz, Vinter, Dsune(Oi)"]
 summary: '조화 드루이드 가이드'
 locale: 'kr'
 ---
+
 # 1시즌 새소식
 
 #### [2세트 효과](https://ko.wowhead.com/spell=453666/druid-balance-11-0-class-set-2pc#used-by-item-set)
@@ -20,7 +21,7 @@ locale: 'kr'
 
 >월식 및 일식이 각각 !190984|천벌!이 생성하는 천공의 힘을 2만큼, !194153|별빛섬광!이 생성하는 천공의 힘을 5만큼 증가시킵니다.
 
-세트 미착용 대비 +1.4%의 효과.
+2세트와 합산하여, 세트 미착용 대비 총 +3.7%의 효과. 
 
 
 [티어 세트 시뮬레이션 결과](https://www.raidbots.com/simbot/report/8jUgRnAVU3fwHdPPkN21Qb)
@@ -33,8 +34,8 @@ locale: 'kr'
   <Checkbox id="Elune's ChosenLOL" spellId={424058} name="엘룬의 대행자" radio="Hero" />
 </CheckboxProvider>
 
-- [*Keeper of the GroveLOL] !8936|재생! 4회 시전
-- [*Elune's ChosenLOL] Use !202425|엘룬의 전사!
+**현재 !450347|자연의 은혜! 효과를 받고 있다면, 전투 시작 전에 이를 수동으로 지워 줘야 아래의 오프너를 수행하고 !450347|자연의 은혜! 1중첩을 확보한 채로 전투에 돌입할 수 있다..**
+- [*Keeper of the GroveLOL] !8936|재생!을 4회 시전해 !429433|만발하는 주입! 발동.
 - !190984|천벌!
 - !190984|천벌!
 - !194153|별빛섬광!
@@ -47,10 +48,10 @@ locale: 'kr'
 
 ## 단일 대상 시전 우선순위
 
-<HeroTalentsHeader id="kotg" title="숲의 수호자 - 단일">
+<HeroTalentsHeader id="kotg" title="숲의 수호자 - 단일 대상">
 <CheckboxProvider>
-    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="영혼 소집" />
-    <Checkbox id="Control of the Dream" spellId={434249} name="꿈의 통제" />
+    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="영혼 소집" defaultCheck radio="Convoke the Spirits" />
+    <Checkbox id="Control of the Dream" spellId={434249} name="꿈의 통제" defaultCheck radio="Control of the Dream" />
     <Checkbox id="StarweaverKOTG" spellId={393940} name="별재봉사" />
     <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="우주의 손길" />
     <Checkbox id="New MoonKOTG" spellId={274281} name="초승달" defaultCheck radio="New Moon" />
@@ -65,43 +66,49 @@ locale: 'kr'
 - [*~Control of the Dream] 현재 일식이 3초 이상 남았거나, !194223|천체의 정렬!/!102560|화신!이 준비됐을 때, !205636|자연의 군대!.
 - [*Control of the Dream] 쿨마다 !205636|자연의 군대!. 단, 곧 !194223|천체의 정렬!/!102560|화신! + !391528|영혼 소집!이 온다면 맞춰 쓰기 위해 15초까지는 아낄 수 있음.
 - [*Stellar FlareKOTG] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
-- [*Fury of EluneKOTG] !202770|엘룬의 분노!
 - 다음 중 하나라도 만족하면, !194223|천체의 정렬!/!102560|화신!.
   - 방금 막 !205636|자연의 군대!를 썼을 경우.
   - !205636|자연의 군대!의 재사용 대기 시간이 25초를 넘을 경우.
-- [*Convoke the SpiritsKOTG] 다음 중 하나라도 해당하면, !391528|영혼 소집!.
-  - 현재 보유한 천공의 힘이 40 미만일 것.
+- [*Convoke the SpiritsKOTG] 현재 보유한 천공의 힘이 40 미만이고, 다음 중 하나라도 만족하면, !391528|영혼 소집!.
   - 현재 발동 중인 !194223|천체의 정렬!/!102560|화신!의 남은 지속시간이 4초 이상이거나, 다음 !194223|천체의 정렬!/!102560|화신!까지 30초 이상 남았고 현재 일식의 남은 지속시간이 4초 이상일 것.
   - 혹은, 다음 두 조건을 모두 만족할 것.
     - !205636|자연의 군대!를 방금 막 사용했을 것.
     - !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 30초 이상일 것.
-- [*StarweaverKOTG] !393942|별재봉사의 날실! 효과를 받고 있을 때, !191034|별똥별!.
-- [*Touch the CosmosKOTG] !450356|우주의 손길! 효과를 받고 있을 때, !191034|별똥별!.
-- !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
-- [*New MoonKOTG] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
-  - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
-  - 현재 발동 중인 일식이 만료되기 전에 시전을 끝낼 수 있을 것.
-  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
-- 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+- [*Fury of EluneKOTG] !202770|엘룬의 분노!.
+- [*New MoonKOTG] !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
+- [*~New MoonKOTG] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+  - !202345|별의 군주! 중첩이 2개 이하일 것.
   - 천공의 힘이 꽉 차기 직전일 것.
   - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
-  - [*StarweaverKOTG] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
-  - [*Touch the CosmosKOTG] !450356|우주의 손길! 효과를 받고 있을 것.
+  - [*StarweaverKOTG&&~New MoonKOTG] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosKOTG&&~New MoonKOTG] !450356|우주의 손길! 효과를 받고 있을 것.
+- [*New MoonKOTG] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
+  - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있을 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+- [*New MoonKOTG] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+  - 천공의 힘이 꽉 차기 직전일 것.
+  - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
+  - [*StarweaverKOTG&&New MoonKOTG] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosKOTG&&New MoonKOTG] !450356|우주의 손길! 효과를 받고 있을 것.
+- [*StarweaverKOTG] !393942|별재봉사의 날실! 효과를 받고 있을 때, !191034|별똥별!.
+- [*Touch the CosmosKOTG] !450356|우주의 손길! 효과를 받고 있을 때, !191034|별똥별!.
 - [*Wild MushroomKOTG] 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없다면, !88747|야생 버섯!.
 - !190984|천벌!.
+
 </HeroTalentsHeader>
 
 
-<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 단일">
+<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 단일 대상">
 
 <CheckboxProvider>
   
-    <Checkbox id="Lunar CallingST" spellId={429523} name="달의 부름" /> 
+    <Checkbox id="Lunar CallingST" spellId={429523} name="달의 부름" defaultCheck radio="Lunar Calling" /> 
     <Checkbox id="Warrior of EluneEC" spellId={202425} name="엘룬의 전사" defaultCheck radio="Warrior of Elune" />
-    <Checkbox id="Fury of EluneEC" spellId={202770} name="엘룬의 분노" radio="New Moon" /> 
-    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="영혼 소집" />
-    <Checkbox id="New MoonEC" spellId={274281} name="초승달" defaultCheck radio="New Moon" /> 
-    <Checkbox id="Nature's GraceEC" spellId={450347} name="자연의 은혜" /> 
+    <Checkbox id="Fury of EluneEC" spellId={202770} name="엘룬의 분노" defaultCheck radio="New Moon" /> 
+    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="영혼 소집" defaultCheck radio="Convoke the Spirits" />
+    <Checkbox id="New MoonEC" spellId={274281} name="초승달" radio="New Moon" /> 
+    <Checkbox id="Nature's GraceEC" spellId={450347} name="자연의 은혜" defaultCheck radio="Nature's Grace" /> 
     <Checkbox id="Touch the CosmosEC" spellId={450356} name="우주의 손길" />
     <Checkbox id="StarweaverEC" spellId={393940} name="별재봉사" /> 
     <Checkbox id="Stellar FlareEC" spellId={202347} name="항성의 섬광" /> 
@@ -110,43 +117,47 @@ locale: 'kr'
  
 </CheckboxProvider>
 
+- [*Lunar CallingST&&Warrior of EluneEC] !202425|엘룬의 전사!.
 - !164812|달빛섬광! & !164815|태양섬광! 유지. 각각 pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - [*Stellar FlareEC] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - [*Fury of EluneEC] !202770|엘룬의 분노!
 - !194223|천체의 정렬!/!102560|화신! 
-- [*Lunar CallingST&&Warrior of EluneEC] !202425|엘룬의 전사! 
 - [*~Lunar CallingST&&Warrior of EluneEC] 현재 발동 중인 일월식의 남은 지속시간이 7초 미만이며, 다음에 일식에 진입할 예정이라면, !202425|엘룬의 전사!.
 - [*Lunar CallingST] !190984|천벌!을 시전해 월식 발동.
 - [*~Lunar CallingST] !194153|별빛섬광!을 시전해 일식 발동.
-- [*Nature's GraceEC&&Lunar CallingST] 다음의 조건을 모두 만족할 때, !194153|별빛섬광!.
-  - !450347|자연의 은혜! 효과를 받고 있을 것.
-  - [*Convoke the SpiritsEC] 천체의 정렬 발동 중이며, 직후에 시전할 기술이 !391528|영혼 소집!일 것.
-- [*Convoke the SpiritsEC] 천공의 힘이 40 미만이고, 현재 발동 중인 !194223|천체의 정렬!/!102560|화신!의 남은 지속시간이 4초 이상이거나 다음 !194223|천체의 정렬!/!102560|화신! 까지 30초 이상 남았고 현재 일월식의 남은 지속시간이 4초 이상일 때, !391528|영혼 소집!.
-- !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
+- [*Nature's GraceEC&&Lunar CallingST] !450347|자연의 은혜! 효과를 받고 있다면, !391528|영혼 소집!을 시전하기에 앞서 !194153|별빛섬광!으로 소모.
+- [*Convoke the SpiritsEC] 현재 보유한 천공의 힘이 40 미만이고, !391528|영혼 소집! 현재 발동 중인 !194223|천체의 정렬!/!102560|화신!의 남은 지속시간이 4초 이상이거나, 다음 !194223|천체의 정렬!/!102560|화신!까지 30초 이상 남았고 현재 일식의 남은 지속시간이 4초 이상이라면, !391528|영혼 소집!.
+- [*New MoonEC] !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
+- [*~New MoonEC] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+  - !202345|별의 군주! 중첩이 2개 이하일 것.
+  - 천공의 힘이 꽉 차기 직전일 것.
+  - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
+  - [*StarweaverEC&&~New MoonEC] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosEC&&~New MoonEC] !450356|우주의 손길! 효과를 받고 있을 것.
 - [*New MoonEC] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
   - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
   - 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있을 것.
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
-- 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+- [*New MoonEC] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
   - 천공의 힘이 꽉 차기 직전일 것.
   - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
-  - [*StarweaverEC] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
-  - [*Touch the CosmosEC] !450356|우주의 손길! 효과를 받고 있을 것.
+  - [*StarweaverEC&&New MoonEC] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosEC&&New MoonEC] !450356|우주의 손길! 효과를 받고 있을 것.
 - [*StarweaverEC] !393942|별재봉사의 날실! 효과를 받고 있을 때, !191034|별똥별!.
 - [*Touch the CosmosEC] !450356|우주의 손길! 효과를 받고 있을 때, !191034|별똥별!.
 - [*Wild MushroomEC] 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없다면, !88747|야생 버섯!.
 - [*Force of NatureEC] 지금 !205636|자연의 군대!를 시전해도 천공의 힘이 넘치지 않는다면, !205636|자연의 군대!. 
 - [*Lunar CallingST] !194153|별빛섬광!
-- [*~Lunar CallingST] 일식 발동 중이라면, !190984|천벌!.
+- [*~Lunar CallingST] !190984|천벌!.
 
 </HeroTalentsHeader>
 
 ## 다중 대상 시전 우선순위
 
-<HeroTalentsHeader id="kotg" title="숲의 수호자 - 광역">
+<HeroTalentsHeader id="kotg" title="숲의 수호자 - 다중 대상">
 <CheckboxProvider>
-<Checkbox id="Fury of EluneKAOE" spellId={202770} name="엘룬의 분노" radio="New Moon" />
-<Checkbox id="New MoonKAOE" spellId={274281} name="초승달" defaultCheck radio="New Moon" />
+<Checkbox id="Fury of EluneKAOE" spellId={202770} name="엘룬의 분노" defaultCheck radio="New Moon" />
+<Checkbox id="New MoonKAOE" spellId={274281} name="초승달" radio="New Moon" />
 <Checkbox id="Stellar FlareKAOE" spellId={202347} name="항성의 섬광" />
 <Checkbox id="Touch the CosmosKAOE" spellId={450356} name="우주의 손길" />
 <Checkbox id="StarweaverKAOE" spellId={393940} name="별재봉사" />
@@ -154,7 +165,7 @@ locale: 'kr'
 <Checkbox id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
 </CheckboxProvider>
 
-- 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 대상이 한곳에 모인 뒤에 시전할 것.
+- 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 대상이 한 곳에 모인 뒤에 시전할 것.
 - 대상이 6초 내로 죽지 않으며, 현재 !164812|달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, !164812|달빛섬광!. !205636|자연의 군대!가 자동으로 시전하는 !164812|달빛섬광!을 항상 고려할 것.
 - [*Stellar FlareKAOE] 다음의 조건을 모두 만족할 때, !202347|항성의 섬광!.
   - 대상이 8초 내로 죽지 않을 것. 현재 대상에게 시전하는 !194153|별빛섬광!이 닿는 추가 대상의 수에 따라 이 조건을 1초씩 늘릴 것. (예를 들어, 밀집 5개 대상에서는 12초가 기준이 됨.)
@@ -164,14 +175,14 @@ locale: 'kr'
   - 현재 발동 중인 일월식의 남은 지속시간이 3초 이상일 것.
   - 직후에 시전할 기술이 !194223|천체의 정렬!/!102560|화신!일 것.
 - 다음 중 하나라도 만족하면, !194223|천체의 정렬!/!102560|화신!.
-  - !428731|숲의 조화! 효과를 받고 있을 것.
+  - 직전에 사용한 기술이 !205636|자연의 군대!일 것.
   - !205636|자연의 군대!의 남은 재사용 대기 시간이 25초 이상일 것.
 - !190984|천벌!을 시전해 월식 발동.
 - [*Fury of EluneKAOE] !202770|엘룬의 분노!.
 - 다음 중 하나라도 만족하면, !191034|별똥별!.
+  - !202345|별의 군주! 중첩이 2개 이하일 것.
   - [*StarweaverKAOE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
   - [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 것.
-  - !202345|별의 군주! 중첩이 2개 이하일 것.
 - [*Wild MushroomKAOE] 지금 !88747|야생 버섯!을 시전해도 천공의 힘이 넘치지 않고, 적 대상이 !393956|저무는 황혼! 효과를 받고 있지 않다면, !88747|야생 버섯!.
 - [*New MoonKAOE] 다음의 조건을 모두 만족할 때, !274283|보름달!.
   - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
@@ -180,17 +191,18 @@ locale: 'kr'
 - [*New MoonKAOE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonKAOE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
 - [*Convoke the SpiritsKAOE] 2개 대상 이하일 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
-- [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 때, !197626|별빛쇄도!.
-- [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 때, !197626|별빛쇄도!.
+- [*StarweaverKAOE||Touch the CosmosKAOE] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
+  - [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 것.
 - !194153|별빛섬광!
 </HeroTalentsHeader>
 
 
-<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 광역">
+<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 다중 대상">
 <CheckboxProvider>
-<Checkbox id="Warrior of EluneECAoE" spellId={202425} name="엘룬의 전사" radio="Force of Nature"/>
-<Checkbox id="Fury of EluneECAoE" spellId={202770} name="엘룬의 분노" radio="FoE"/>
-<Checkbox id="New MoonECAoE" spellId={274281} name="초승달" defaultCheck radio="FoE"/>
+<Checkbox id="Warrior of EluneECAoE" spellId={202425} name="엘룬의 전사" defaultCheck radio="Force of Nature"/>
+<Checkbox id="Fury of EluneECAoE" spellId={202770} name="엘룬의 분노" defaultCheck radio="FoE"/>
+<Checkbox id="New MoonECAoE" spellId={274281} name="초승달" radio="FoE"/>
 <Checkbox id="Stellar FlareECAoE" spellId={202347} name="항성의 섬광"/>
 <Checkbox id="StarweaverECAoE" spellId={393940} name="별재봉사"/>
 <Checkbox id="Touch the CosmosECAoE" spellId={450356} name="우주의 손길" />
@@ -199,12 +211,9 @@ locale: 'kr'
 <Checkbox id="Wild MushroomECAoE" spellId={88747} name="야생 버섯"/>
 </CheckboxProvider>
 
-
-**참고: !327541|에테르 덧불!과 !393940|별재봉사! 중 하나라도 찍지 않았을 경우, 2개 대상까지는 별똥별이 아니라 별빛쇄도를 사용할 것.**
-
 **다중 대상 시전 우선순위(2+개 대상)**
 
-- 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 대상이 한곳에 모인 뒤에 시전할 것.
+- 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 모든 대상이 한 곳에 모인 뒤에 시전할 것.
 - 대상이 6초 내로 죽지 않으며, 현재 !164812|달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, !164812|달빛섬광!.
 - [*Stellar FlareECAoE] 다음의 조건을 모두 만족할 때, !202347|항성의 섬광!.
   - 대상이 8초 내로 죽지 않을 것. 현재 대상에게 시전하는 !194153|별빛섬광!이 닿는 추가 대상의 수에 따라 이 조건을 1초씩 늘릴 것. (예를 들어, 밀집 5개 대상에서는 12초가 기준이 됨.)
@@ -212,7 +221,7 @@ locale: 'kr'
 - 다른 기술을 시전하면 천공의 힘이 넘치는 상황이라면, !191034|별똥별!.
 - !194223|천체의 정렬!/!102560|화신!
 - [*Warrior of EluneECAoE] !202425|엘룬의 전사!
-- !190984|천벌!을 시전해 월식 발동
+- !190984|천벌!을 시전해 월식 발동.
 - [*Wild MushroomECAoE] 지금 !88747|야생 버섯!을 시전해도 천공의 힘이 넘치지 않고, 적 대상이 !393956|저무는 황혼! 효과를 받고 있지 않다면, !88747|야생 버섯!.
 - [*Fury of EluneECAoE] !202770|엘룬의 분노! 
 - 다음 중 하나라도 만족하면, !191034|별똥별!.
@@ -223,53 +232,136 @@ locale: 'kr'
   - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
   - 현재 발동 중인 월식이 만료되기 전에 시전을 끝낼 수 있을 것.
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
-- [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있고, 2개 대상과 전투 중일 경우, !197626|별빛쇄도!.
 - [*New MoonECAoE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonECAoE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
 - [*Convoke the SpiritsECAoE] 2개 대상 이하일 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*StarweaverECAoE||Touch the CosmosECAoE] 다음에 해당하면, !197626|별빛쇄도!.
+  - [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosECAoE] !450356|우주의 손길! 효과를 받고 있을 것.
 - [*Force of NatureECAoE] 지금 !205636|자연의 군대!를 시전해도 천공의 힘이 넘치지 않는다면, !205636|자연의 군대!. 
 - !194153|별빛섬광!
 
 </HeroTalentsHeader>
 
+## 로테이션 심화
+
+### 일월식과 필러 기술 선택 기준
+
+- 단일 대상에서는 일식을 발동하고 !190984|천벌!을 쓴다.
+- 2개 이상의 대상에서는 월식을 발동하고 !194153|별빛섬광!을 쓴다.
+- !429523|달의 부름! 선택 시, 상황에 무관하게 월식을 발동하고 !194153|별빛섬광!을 쓴다.
+
+### 엘룬의 전사 활용
+
+!202425|엘룬의 전사!는 전역 재사용 대기 시간의 영향을 받지 않으며, 발동 시 25초간 다음 3회의 !194153|별빛섬광!을 즉시 시전되도록 해 주는 기술이다. 재사용 대기 시간은 사용 직후부터 돌기 시작한다. !429523|달의 부름! 선택 시, !202425|엘룬의 전사!는 기본적으로 재사용 대기 시간이 돌아올 때마다 쓴다. 단, !194223|천체의 정렬!/!102560|화신!과 맞추기 위해서라면 몇 초 더 아껴도 무방하다.
+
+!429523|달의 부름! 미선택 시에는 단순히 일식에 빠르게 진입하기 위한 용도로 사용한다. 
+
+### 꿈의 통제 vs 꿈의 힘
+
+!434249|꿈의 통제!는 !194223|천체의 정렬!/!102560|화신!, !391528|영혼 소집!, !205636|자연의 군대!를 쓰지 않고 아낀 시간을 최대 15초까지 축적해 손해를 보지 않도록 해 주는 특성이다.
+
+이 특성은 전투 시간에 따라 대체 특성인 !434220|꿈의 힘!보다 더 좋은 결과를 보여 줄 수 있다. 다만, 최종적인 결정은 언제나 [warcraftlogs](https://www.warcraftlogs.com/)나 본인의 캐릭터에 대한 시뮬레이션 결과를 기반으로 도출하도록 하는 것이 좋다.
+
+### 올빼미야수의 광기 활용
+
+!231042|올빼미야수의 광기! 효과는 일식 진입 용도나 월식 동안의 추가 공격, 혹은 !194223|천체의 정렬!/!102560|화신! 발동 중에 별빛섬광으로 2개 이상의 대상을 공격할 수 있을 때 쓴다. !202425|엘룬의 전사! 효과가 !231042|올빼미야수의 광기! 효과보다 먼저 소모됨에 주의.
+
+
 # 특성 빌드
 ## 레이드
 
-<Talents name={"단일 대상 전투"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjxYmZbGLYmZmx2MmZMjxGYhBYssNz22yMLzyMNzsMTBAgAYzMDD"}/>
+<Talents name={"단일 대상 전투"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MjxMz2MWwMzMjtZMzYGjNwCAGgttxCmmZWGBAAAYzMDD"}/>
 
-<Talents name={"추가적인 적이 등장하는 단일 대상 전투"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbLLzsMLz0MzyMFAACgFzMM"}/>
+<Talents name={"추가적인 적이 등장하는 단일 대상 전투"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyYmZbGbMzMM2mZZmxMYDsAgxy2MbYMLjATAAAAWMzwA"}/>
 
 ## 신화+ / 쐐기돌 던전
 
 다음에 소개된 빌드는 언제나 제 성능을 발휘하나, 파티 구성이나 주간 수정치에 맞게 적절히 변화를 줄 것.
 
-<Talents name={"엘룬의 대행자"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZM2mZZMmBbgFAMW2mZbZZmlZZmmZWmpAAQAsYmhB"}/>
+<Talents name={"엘룬의 대행자"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZmx2MLjhBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
 
-<Talents name={"숲의 수호자"} talents={"CYGAqvgeoHLefPLb/Pa8nkKXDBAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMLzMLGzMzM2mxYYG2ALAYssNz2yyMLzyMNzsMTBAgAYzMjZA"}/>
+<Talents name={"숲의 수호자"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMbmZmlZmFjZmZGbzYMMDbgFAMAbLjFMNzsMCAAAwmZGG"}/>
 
+
+# 소모품
+
+## 물약
+
+[절제된 물약](https://ko.wowhead.com/spell=430599/tempered-potion)
+
+## 음식
+
+[한밤의 가장무도회 잔칫상](https://ko.wowhead.com/item=222733/feast-of-the-midnight-masquerade) 또는 [특선 초밥](https://www.wowhead.com/ko/item=222720/특선-초밥)
+
+## 영약
+
+[연금술적 혼돈 영약](https://ko.wowhead.com/item=212283/flask-of-alchemical-chaos) 또는 [절제된 특화 영약](https://www.wowhead.com/ko/item=212280/절제된-특화-영약)
+
+## 무기 강화
+
+[알가르 마나 기름](https://www.wowhead.com/ko/item=224107/알가르-마나-기름)
+
+# 세팅
+ 
+## 능력치
+
+본인 캐릭터에 대한 [Raidbots의 Top Gear](https://www.raidbots.com/simbot/topgear) 결과를 따를 것. 능력치 우선순위 같은 것은 무시해야 함.
+
+## 보석과 마법부여
+
+보석 - [교묘함의 블라스페마이트](https://ko.wowhead.com/item=213746/elusive-blasphemite) 또는 [한계의 블라스페마이트](https://ko.wowhead.com/item=213743/culminating-blasphemite) 1개 고정, 나머지는 개인 심크에 따를 것.
+
+무기 - 단일 대상 / 레이드는 [심연의 권위](https://ko.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths), 다중 대상 / 쐐기는 [폭풍기수의 분노](https://www.wowhead.com/ko/spell=445317/폭풍기수의-분노)
+
+가슴 - [수정의 광휘](https://ko.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
+
+망토 - [날개 달린 은총의 성가](https://ko.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
+
+다리 - [석양 마법실타래](https://www.wowhead.com/ko/item=222893/석양-마법실타래)
+
+손목 - [장갑 광역회피의 성가](https://ko.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
+
+장화 - [수호자의 행진](https://ko.wowhead.com/item=223656/enchant-boots-defenders-march) 또는 [척후병의 행진](https://ko.wowhead.com/item=223653/enchant-boots-scouts-march)
+
+반지 -  본인의 심크 결과를 따를 것.
+
+## 장식됨 아이템 / 제작
+
+이번 시즌의 장식됨 아이템은 특별히 눈에 띄는 효과를 발휘하지 않는다. 실제 제작에 들어가기 전에는 반드시 [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear) 결과를 참고하는 것이 좋지만, 전반적인 방향은 다음과 같다.
+
+[다크문 인장: 승천](https://www.wowhead.com/ko/item=226024/다크문-인장-승천) + [꿈틀거리는 방어구 결속끈](https://www.wowhead.com/ko/item=219506/꿈틀거리는-방어구-결속끈)
+  - 단일 대상과 다중 대상 양쪽 모두에서 우수한 성능을 발휘한다. [다크문 인장: 승천](https://www.wowhead.com/ko/item=226024/다크문-인장-승천)은 무기에만 쓸 수 있는 장식이다. 이 둘을 제작하려면 먼저 양손 무기에 다크문을 넣어 제작하고, [꿈틀거리는 방어구 결속끈](https://www.wowhead.com/ko/item=219506/꿈틀거리는-방어구-결속끈)은 능력치 총량이 가장 낮은 망토, 허리, 손목 등의 부위에 불꽃을 사용하지 않는 590 아이템에 넣어 제작하는 방식을 권장한다. 이때 효과 중첩은 전투 중에만 생성되기 때문에, 쐐기돌 던전에서는 성능이 크게 저하된다. 추후 639 한손 무기를 확보할 경우, 이 장식을 넣은 보조 장비를 제작하면 된다.
+ 
+[원소 집중의 렌즈](https://www.wowhead.com/ko/item=213770/원소-집중의-렌즈) * 2
+  - 단일 대상과 쐐기 양쪽 모두에서 우수한 성능을 발휘한다. 보유한 보석의 종류에 따라 피해 속성이 달라지는 무작위 발동 효과로, 보석의 개수나 종류 그 자체는 이 장식의 성능에 영향을 주지 않는다. 이 둘을 제작하려면 능력치 총합이 가장 낮은 망토, 허리, 손목 등의 부위를 추천한다.
+
+[황혼견사 안감](https://www.wowhead.com/ko/item=222873/황혼견사-안감) 또는 [여명견사 안감](https://www.wowhead.com/ko/item=222869/여명견사-안감)
+  - 생명력이 80% 이상일 때 각각 유연성 / 치명타 및 극대화를 제공하는 효과. 활성화 시간에 따라 쐐기에서 좋은 선택이 될 수 있다. 용군단에서의 푸른 비단 안감과 유사하다고 할 수 있겠다. 이 장식을 제작하려면 능력치 총합이 가장 낮은 망토, 허리, 손목 등의 부위를 추천한다.
+
+이번 시즌에는 퀘스트 보상으로 영웅급 문장 재료를 획득하게 되어, 비교적 이른 시점에 별도의 문장 소비 없이 619 제작이 가능하다는 점을 기억하라.
+
+## Trinkets
+
+[첩보단장의 거미줄](https://www.wowhead.com/ko/item=220202/첩보단장의-거미줄)은 최대 40중첩까지 부여되는 지능 강화 효과를 제공하며, 사용 시 중첩 수에 비례해 추가 지능을 제공한다. 전투 시간이 맞다면 3번째 !194223|천체의 정렬!/!102560|화신!을 이와 맞춰 쓰는 것이 이상적이다.
+
+[Raidbots](https://www.raidbots.com/simbot)의 Top gear 기능을 활용해 착용할 / 파밍할 장신구를 판단하는 것이 최선이나, 아래의 목록을 참고하는 것도 좋다. 최고 레벨 기준으로 가장 강한 성능의 장신구를 순서대로 나열한 것이다.
+
+    - [첩보단장의 거미줄](https://www.wowhead.com/ko/item=220202/첩보단장의-거미줄)
+    - [아라카라 낭충봉아](https://www.wowhead.com/ko/item=219314/아라카라-낭충봉아)
+    - [암흑 돌풍](https://www.wowhead.com/ko/item=133304/암흑-돌풍?ilvl=639&spec=102)
+    - [아눕이카즈의 강화의 수정](https://www.wowhead.com/ko/item=219312/아눕이카즈의-강화의-수정?class=11&ilvl=639&spec=102)
+    - [속박 풀린 변신수](https://www.wowhead.com/ko/item=178708/속박-풀린-변신수?class=11&ilvl=639&spec=102)
+    - [오비낙스의 변화성 알](https://www.wowhead.com/ko/item=220305/오비낙스의-변화성-알?ilvl=639&spec=102)
+    - [그릇된 하수인 주머니](https://www.wowhead.com/ko/item=178772/그릇된-하수인-주머니?class=11&ilvl=639&spec=102)
+    - [기괴한 주문가열로](https://www.wowhead.com/ko/item=212451/기괴한-주문가열로)
+    - [구름의 비약](https://www.wowhead.com/ko/item=219321/구름의-비약)
+    - [하달의 앵무조개](https://www.wowhead.com/ko/item=159622/하달의-앵무조개)
+    - [수확자의 칙령](https://www.wowhead.com/ko/item=219317/수확자의-칙령)
+    - [미치광이 여왕의 칙령](https://www.wowhead.com/ko/item=212454/미치광이-여왕의-칙령)
+    - [고위 대변자의 부착물](https://www.wowhead.com/ko/item=219303/고위-대변자의-부착물)
 
 # FAQ
-
-## 일월식 / 필러 선택 기준
-
-- 1-2개 대상에서는 일식을 발동하고 !190984|천벌!을 쓴다.
-- 3개 이상의 대상에서는 월식을 발동하고 !194153|별빛섬광!을 쓴다.
-- !429523|달의 부름! 선택 시, 상황에 무관하게 월식을 발동하고 !194153|별빛섬광!을 쓴다.
-
-## 엘룬의 전사 활용
-
-- !202425|엘룬의 전사!는 전역 재사용 대기 시간의 영향을 받지 않으며, 발동 시 25초간 다음 3회의 !194153|별빛섬광!을 즉시 시전되도록 해 주는 기술이다. 재사용 대기 시간은 사용 직후부터 돌기 시작한다.
-- !429523|달의 부름! 선택 시, !202425|엘룬의 전사!는 기본적으로 재사용 대기 시간이 돌아올 때마다 쓴다. 단, !194223|천체의 정렬!/!102560|화신!과 맞추기 위해서라면 15초까지는 아낄 수 있다.
-- !429523|달의 부름! 미선택 시, 일식에 빠르게 진입하기 위한 용도로 사용한다. 
-
-## 꿈의 통제의 이해
-
-- !434249|꿈의 통제!는 !194223|천체의 정렬!/!102560|화신!, !391528|영혼 소집!, !205636|자연의 군대!를 쓰지 않고 아낀 시간을 최대 15초까지 축적해 손해를 보지 않도록 해 주는 특성이다. 이는 전투 중이 아닐 때에도 적용되기 때문에, !205636|자연의 군대!의 실제 재사용 대기 시간은 (!428937|새봄! 선택 여부에 따라) 45/60초 또는 30초/45초가 된다.
-
-## 올빼미야수의 광기 활용
-
-- !231042|올빼미야수의 광기! 효과는 일식 진입 용도나 월식 동안의 추가 공격, 혹은 !194223|천체의 정렬!/!102560|화신! 발동 중에 별빛섬광으로 3개 대상 이상을 공격할 수 있을 때 쓴다.
-- !202425|엘룬의 전사! 효과가 !231042|올빼미야수의 광기! 효과보다 먼저 소모됨에 주의.
 
 ### 일식이 안 켜져요
 
@@ -288,6 +380,10 @@ locale: 'kr'
 - 천공 피해는 자연 피해인 동시에 비전 피해이다. 자연 주문에 적용되는 모든 효과는 천공 주문에 적용되며, 마찬가지로 비전 주문에 적용되는 모든 효과도 천공 주문에 적용된다. 예를 들어 일식은 자연 주문과 천공 주문을 1.15배로, 월식은 비전 주문과 천공 주문을 1.15배로 강화한다. (천체의 정렬/화신에 의해) 일식과 월식을 둘 다 가진 상태라면, 자연과 비전 주문은 각각 1.15배 강화되지만 천공 주문은 1.15 \* 1.15 = 1.3225배로 강화된다.
 
 - 이와 같은 속성 강화 효과는 직업 기술에만 적용된다. 자연 / 비전 피해를 가하는 장신구 등은 일월식의 효과를 받지 않는다.
+
+### 쫄 많아지면 달섬/태섬 무시해도 되나요?
+
+- 안 된다. having your DoT effects up increases your damage done to the target. The conditions for spreading Sunfire and Moonfire are tied to how long the target will live, and not how many targets there are. 
 
 ### 광역 전투 시뮬레이션에 대해
 
@@ -309,78 +405,7 @@ locale: 'kr'
 
 - 없다. 조화 드루이드의 모든 지속 피해 기술 (!164812|달빛섬광!, !164815|태양섬광!, !202347|항성의 섬광!) 은 실시간으로 강화 효과를 적용한다. 즉, 각 기술은 일월식 발동/만료, 능력치/공격력 증가 효과의 적용/해제에 따라 자동으로 강화/약화된다.
 
-# 소모품
-
-## 물약
-
-[절제된 물약](https://ko.wowhead.com/spell=430599/tempered-potion)
-
-## 음식
-
-[한밤의 가장무도회 잔칫상](https://ko.wowhead.com/item=222733/feast-of-the-midnight-masquerade) 또는 [거룩한 날 잔칫상](https://ko.wowhead.com/spell=445112/feast-of-the-divine-day)
-
-## 영약
-
-[연금술적 혼돈 영약](https://ko.wowhead.com/item=212283/flask-of-alchemical-chaos)
-
-## 무기 강화
-
-[알가르 마나 기름](https://ko.wowhead.com/item=224107/algari-mana-oil)
-
-# 세팅
- 
-## 능력치
-
-본인 캐릭터에 대한 [Raidbots의 Top Gear](https://www.raidbots.com/simbot/topgear) 결과를 따를 것. 능력치 우선순위 같은 것은 무시해야 함.
-
-## 보석과 마법부여
-
-보석 - [교묘함의 블라스페마이트](https://ko.wowhead.com/item=213746/elusive-blasphemite) 또는 [한계의 블라스페마이트](https://ko.wowhead.com/item=213743/culminating-blasphemite) 1개 고정, 나머지는 개인 심크에 따를 것. 보통 [강력한 에메랄드](https://www.wowhead.com/ko/item=213482/강력한-에메랄드)가 잘 맞음.
-
-무기 - 레이드는 [심연의 권위](https://ko.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths), 쐐기는 [돌매듭의 기예](https://ko.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) 또는 [폭풍기수의 분노](https://ko.wowhead.com/item=223762/enchant-weapon-stormriders-fury)
-
-가슴 - [수정의 광휘](https://ko.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
-
-망토 - [날개 달린 은총의 성가](https://ko.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
-
-다리 - [석양 마법실타래](https://www.wowhead.com/ko/item=222893/석양-마법실타래)
-
-손목 - [장갑 광역회피의 성가](https://ko.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
-
-장화 - [수호자의 행진](https://ko.wowhead.com/item=223656/enchant-boots-defenders-march), 혹은 [척후병의 행진](https://ko.wowhead.com/item=223653/enchant-boots-scouts-march)
-
-반지 -  본인의 심크 결과를 따를 것.
-
-## 장식됨 아이템
-
-아직 조정 중인 부분이므로 나중에 확인할 것.
-
-### 뭐 제작해야 하나요
-
-언제나 Raidbots의 Top gear 결과로 판단하는 것이 옳지만, 전반적인 방향은 다음과 같다.
-
-- 손목 부위는 능력치 총량이 가장 낮고 보석 홈을 가질 수 있기 때문에 선호된다. 후반에 이르러 다른 장비를 639까지 강화할 때 특히 효율이 좋다.
-- 망토 역시 능력치 총합이 가장 낮지만, 보석 홈을 가질 수 없다.
-- 허리 부위는 능력치 총합이 약간 더 높지만 보석 홈을 가질 수 있다.
-
-## 장신구
-
-[첩보단장의 거미줄](https://www.wowhead.com/ko/item=220202/첩보단장의-거미줄)은 최대 40중첩까지 부여되는 지능 강화 효과를 제공하며, 사용 시 중첩 수에 비례해 추가 지능을 제공한다. 전투 시간이 맞다면 3번째 !194223|천체의 정렬!/!102560|화신!을 이와 맞춰 쓰는 것이 이상적이다.
-
-[Raidbots](https://www.raidbots.com/simbot)의 Top gear 기능을 활용해 착용할 / 파밍할 장신구를 판단하는 것이 최선이나, 아래의 목록을 참고하는 것도 좋다. 최고 레벨 기준으로 가장 강한 성능의 장신구를 순서대로 나열한 것이다.
-
-    - [첩보단장의 거미줄](https://www.wowhead.com/ko/item=220202/첩보단장의-거미줄)
-    - [아라카라 낭충봉아](https://www.wowhead.com/ko/item=219314/아라카라-낭충봉아)
-    - [암흑 돌풍](https://www.wowhead.com/ko/item=133304/암흑-돌풍?ilvl=639&spec=102)
-    - [아눕이카즈의 강화의 수정](https://www.wowhead.com/ko/item=219312/아눕이카즈의-강화의-수정?class=11&ilvl=639&spec=102)
-    - [속박 풀린 변신수](https://www.wowhead.com/ko/item=178708/속박-풀린-변신수?class=11&ilvl=639&spec=102)
-    - [오비낙스의 변화성 알](https://www.wowhead.com/ko/item=220305/오비낙스의-변화성-알?ilvl=639&spec=102)
-    - [그릇된 하수인 주머니](https://www.wowhead.com/ko/item=178772/그릇된-하수인-주머니?class=11&ilvl=639&spec=102)
-    - [하달의 앵무조개](https://www.wowhead.com/ko/item=159622/하달의-앵무조개?class=11&ilvl=639&spec=102)
-    - [수확자의 칙령](https://www.wowhead.com/ko/item=219317/수확자의-칙령?class=11&ilvl=639&spec=102)
-
-
-# 추가 자료
+# 추가 리소스
 ## 매크로
 
 **커서 위치로 천체의 정렬 공격 발동**
@@ -388,6 +413,13 @@ locale: 'kr'
 ```
 #showtooltip
 /cast [@cursor] 천체의 정렬
+```
+
+**커서 위치에 자연의 군대 소환**
+
+```
+#showtooltip
+/cast [@cursor] 자연의 군대
 ```
 
 **쿨기에 장신구 묶기**
@@ -405,26 +437,39 @@ locale: 'kr'
 
 ### **별의 군주 오라취소**
 
-**별의 군주 오라취소는 화력에 전혀 영향을 끼치지 않는다.**
+**별의 군주 오라취소는 운용의 필수 요소가 아니며 화력에 전혀 영향을 끼치지 않는다.**
 
-정확한 사용법은 일월식 도중에 별의 군주의 남은 지속시간이 2초 미만이고 !197626|별빛쇄도!를 쓰기 직전일 때 누르는 것이다.
+정확한 사용법은 일월식 도중에 별의 군주의 남은 지속시간이 2초 미만이고 천공의 힘이 꽉 차서 !197626|별빛쇄도!를 쓰기 직전일 때 누르는 것이다.
 
 ```
 #showtooltip
-/cancelaura Starlord
+/cancelaura 별의 군주
 ```
 
-## 유용한 위크오라
+## 유용한 위크오라 및 프로필
 
 ### **조화 드루이드 통합팩**
 
 다음 목록의 위크오라는 모두 최고 수준의 플레이에서 필요한 기술과 강화 효과 등의 추적을 제공한다. 성능적인 차이는 없으므로 취향에 맞는 것을 골라 사용하면 된다.
 
-- [Shrom의 천공의 힘 바](https://wago.io/GzpP7i8ic)
-- [Genesis의 용군단 조화 드루이드 팩](https://wago.io/1HX3XwarK)
-- [Oi의 조화 드루이드 팩](https://wago.io/OiBalance)
+- [Shrom의 통합 천공의 힘 바](https://wago.io/GzpP7i8ic)
+- [Oi의 조화 드루이드 통합팩](https://wago.io/OiBalance)
+- [LuckyOneUI 드루이드판](https://wago.io/LuckyoneUI-Druid)
+- [Afenar 내부 전쟁판 (KechhaUI edit)](https://wago.io/hCRbakfyr)
+- [Shrom의 천공의 힘 바](https://wago.io/J5V9sTM0FK)
+
+### Jundies의 Plater 프로필
+
+[이 프로필](https://wago.io/ak3iS95aa)은 조화 드루이드 유저 사이에서 가장 널리 사용되는 Plater 프로필로, 현재 대상에게 활성화된 지속 피해 기술의 종류에 따라 그 이름표의 색을 바꾸어 주는 기능을 통해 많은 대상과의 전투에서도 지속 피해 기술을 편하게 관리할 수 있도록 해 준다.
+
+### **만발하는 주입 재생 카운터**
+
+[이 위크오라](https://wago.io/WQiorkdEi)는 다음 천벌/별빛섬광을 강화하는 '만발하는 주입' 효과를 얻기 전까지 시전한 재생의 횟수를 세어 준다.
 
 ### **단일 별섬 타이머**
 
 [별빛섬광 경고 위크오라](https://wago.io/rrtAyRQjF):
 자체 설명 참고. 필수적인 기능은 아니지만, 실수로 일식 중에 별빛섬광을 쓰는 일을 피할 수 있게 해 준다.
+
+---
+[현행 APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
