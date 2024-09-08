@@ -33,9 +33,9 @@ This is a 1.4% dmg increase from having no set.
   <Checkbox id="Elune's ChosenLOL" spellId={424058} name="Elune's Chosen" radio="Hero" />
 </CheckboxProvider>
 
-- You want to cancel !Nature's Grace! if you have any stacks of !Dreamstate! before pulling a raid boss. This allows you to do the following opener, and still keep 1 stack of !Dreamstate! rolling into your cooldowns.
+**You want to cancel !Nature's Grace! if you have any stacks before pulling a raid boss. This allows you to do the following opener, and still keep 1 stack of !Nature's Grace! rolling into your cooldowns.**
 - [*Keeper of the GroveLOL] Use !Regrowth! 4 times (for !Blooming Infusion!).
-- Use !Wrath! 
+- Use !Wrath!.
 - Use !Wrath!.
 - Use !Starfire!.
 
@@ -124,10 +124,8 @@ When reading the priority lists below, you should not think of these as steps to
 - [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
 - [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
 - [*~Lunar CallingST] Use !Starfire! to enter Solar Eclipse.
-- [*Nature's GraceEC&&Lunar CallingST] Use !Starfire! if all of the following conditions is met:
-  - You have stacks of !Nature's Grace!.
-  - [*Convoke the SpiritsEC] You are in CA and your next global would be !Convoke the Spirits!.
-- [*Convoke the SpiritsEC] Use !Convoke the Spirits! when below 40 AP, !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
+- [*Nature's GraceEC&&Lunar CallingST] Use !Starfire! to spend any stacks of !Nature's Grace! before using !Convoke the Spirits!
+- [*Convoke the SpiritsEC] Use !Convoke the Spirits! if you're below 40 AP and !194223|CA!/!102560|Incarnation! will last for more than 4 seconds, or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
 - [*New MoonEC] Use !Starsurge! if !Starlord! has less than 3 stacks
 - [*~New MoonEC] Use !Starsurge! if one of the following conditions is met:
   - !Starlord! has less than 3 stacks.
@@ -149,7 +147,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Wild MushroomEC] Use !Wild Mushroom! as a movement GCD.
 - [*Force of NatureEC] Use !205636|Force of Nature! if you will not overcap on AP.
 - [*Lunar CallingST] Use !Starfire!.
-- [*~Lunar CallingST] Use !Wrath! if you are in Solar Eclipse.
+- [*~Lunar CallingST] Use !Wrath!.
 
 </HeroTalentsHeader>
 
@@ -180,7 +178,7 @@ When reading the priority lists below, you should not think of these as steps to
   - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
 - Use !Wrath! to enter Lunar Eclipse.
 - [*Fury of EluneKAOE] Use !Fury of Elune!.
-- Use !Starfall! if one of the following conditions is met:
+- Use !Starfall! if:
   - !Starlord! is below 3 stacks.
   - [*StarweaverKAOE] You have a !393942|Starweaver's Warp! proc.
   - [*Touch the CosmosKAOE] You have a !450356|Touch the Cosmos! proc.
@@ -192,8 +190,9 @@ When reading the priority lists below, you should not think of these as steps to
 - [*New MoonKAOE] Use !New Moon! if you will not overcap on AP.
 - [*New MoonKAOE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
 - [*Convoke the SpiritsKAOE] Use !Convoke the Spirits! if you are fighting less than 3 targets, otherwise only use !391528|Convoke! for movement in AoE.
-- [*StarweaverKAOE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
-- [*Touch the CosmosKAOE] Use !Starsurge! if you have a !450356|Touch the Cosmos! proc.
+- [*StarweaverKAOE||Touch the CosmosKAOE] Use !Starsurge! if:
+  - [*StarweaverKAOE] You have a !393944|Starweaver's Weft! proc.
+  - [*Touch the CosmosKAOE] You have a !450356|Touch the Cosmos! proc.
 - Use !Starfire!
 </HeroTalentsHeader>
 
@@ -232,10 +231,12 @@ When reading the priority lists below, you should not think of these as steps to
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
   - You are in CA/Inc or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
-- [*StarweaverECAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc and you are fighting less than 3 targets.
 - [*New MoonECAoE] Use !New Moon! if you will not overcap on AP.
 - [*New MoonECAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
 - [*Convoke the SpiritsECAoE] Use !Convoke the Spirits! if you are fighting less than 3 targets, otherwise only use !391528|Convoke! for movement in AoE.
+- [*StarweaverECAoE||Touch the CosmosECAoE] Use !Starsurge! if:
+  - [*StarweaverECAoE] You have a !393944|Starweaver's Weft! proc.
+  - [*Touch the CosmosECAoE] You have a !450356|Touch the Cosmos! proc.
 - [*Force of NatureECAoE] Use !248280|Force of Nature! if you will not overcap on AP.
 - Use !Starfire!.
 
@@ -252,11 +253,13 @@ When reading the priority lists below, you should not think of these as steps to
 ### How to Use Warrior of Elune
 
 !Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it. It should be used on cooldown while talented into Lunar Calling, or you can hold for a few seconds to line up with !194223|CA!/!102560|Incarnation!.
+
 When not talented into Lunar Calling, use !Warrior of Elune! charges to enter Solar Eclipse. 
 
 ### Control of the Dream vs. Power of the Dream
 
 !Control of the Dream! lets you hold on to either !194223|Celestial Alignment!/!102560|Incarnation!, !Convoke the Spirits! or !205636|Force of Nature! for up to 15 seconds without losing a use, subtracting the amount of time you held the ability from its cooldown. 
+
 Depending on timer, this talent is stronger than !Power of the Dream! which it shares a choice node with. As always, you should research the fight you are preparing for on [warcraftlogs](https://www.warcraftlogs.com/) or sim your character and make an educated guess.
 
 ### How to use Owlkin Frenzy procs
@@ -273,11 +276,11 @@ Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside
 
 ## Mythic+
 
-The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes.
+The following are dungeon talent builds that will always serve you well but mind that there can be some variations based on your group comp or affixes. Do not be afraid of swapping some talents out if you think it can help your group.
 
 <Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZmx2MLjhBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
 
-<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjZzMzsMzsYMzMzYbGjhZYDswAMAbLjFMNzsMCAAAwmZGG"}/>
+<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMbmZmlZmFjZmZGbzYMMDbgFAMAbLjFMNzsMCAAAwmZGG"}/>
 
 
 # Consumables:
@@ -306,7 +309,7 @@ Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear).
 
 ## Gems and Enchants
 
-Gems - 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) mixed with whatever gem sims the highest for your character. 
+Gems - 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) mixed with whatever gems sim the highest for your character. 
 
 Weapon - [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) for single target and raid, [Stormrider's Fury](https://www.wowhead.com/spell=445317/stormriders-fury) for AoE and m+
 
@@ -324,7 +327,7 @@ Ring -  You should always sim your own character to determine what enchant to us
 
 ## Embellishments & Crafted Items
 
-Embellishments for this season don't offer a substantial gain, so it's important that you always sim your character using Top Gear on Raidbots before making any gearing decision, but here are some guidelines:
+Embellishments for this season don't offer a substantial gain, so it's important that you always sim your character using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear) before making any gearing decision, but here are some guidelines:
 
 [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=222561/darkmoon-sigil-ascension) and [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding)
   - This is a solid all-round choice for both single target and AoE. The [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=222561/darkmoon-sigil-ascension) can be crafted on any weapon. If you go this route, you should aim to craft this on a two-handed weapon early, and crafting the [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) on a 590 item level low stat budget slot without spending a spark, preferably on the cloak, belt or wrist slot. Keep in mind that this embellishment only stacks during combat, making it a lot less valuable in mythic+. For later in the season when you acquire a 639 weapon, you should recraft the Ascension embellishment on an off-hand.
@@ -376,6 +379,10 @@ Please use Top Gear on [Raidbots](https://www.raidbots.com/simbot) in order to d
 - Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also applies to Astral spells, and effects that buff Arcane spells likewise also applies to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 \* 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
 
 - Mind that class buffs only affect class spells so if a trinket does nature or arcane damage they are not affected by our buffs to these spell schools.
+
+### Is there a target count where spreading Sunfire or Moonfire is not worth it?
+
+- No, having your DoT effects up increases your damage done to the target. The conditions for spreading Sunfire and Moonfire are tied to how long the target will live, and not how many targets there are. 
 
 ### How do I sim for AoE?
 
@@ -439,6 +446,7 @@ The following links lead to various Balance Druid WeakAura packs. These contain 
 
 - [Shrom's Ultimate AP Bar](https://wago.io/GzpP7i8ic)
 - [Oi Balance pack](https://wago.io/OiBalance)
+- [LuckyOneUI Druid](https://wago.io/LuckyoneUI-Druid)
 - [Shrom's AP Bar - Standalone](https://wago.io/J5V9sTM0FK)
 
 ### Jundies Plater Profile
