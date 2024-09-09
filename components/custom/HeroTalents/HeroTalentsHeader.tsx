@@ -18,7 +18,7 @@ function HeroTalentsHeader({ title, id, children }) {
       // Force a reflow by reading scrollHeight
       const scrollHeight = content.scrollHeight
       // Apply the height for the collapsed or expanded state
-      setMaxHeight(isCollapsed ? '0' : `1500px`)
+      setMaxHeight(isCollapsed ? '0' : `100%`)
     }
   }, [isCollapsed, children]) // Re-run when either state changes
 
