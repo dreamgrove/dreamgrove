@@ -37,10 +37,10 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" defaultCheck/>
 <Checkbox id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents"/>
 <Checkbox id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
-<Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" defaultCheck />
+<Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
 <Checkbox id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" defaultCheck />
 <Checkbox id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
-<Checkbox id="Incarnation" spellId={102543} name="Incarnation"  />
+<Checkbox id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
 <Checkbox id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration"  />
 <Checkbox id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
 <Checkbox id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
@@ -61,16 +61,16 @@ The way this section is written is very formulaic and has the same structure as 
 2. [*Apex Predator's Craving&&Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs if it won't disrupt procing !Bloodtalons!.
 3. [*Apex Predator's Craving&&~Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs.
 4. [*Adaptive Swarm] !Adaptive Swarm! when:
-    - [*Wildstalker] !Rip! is up. AND
-    - There isn't an !Adaptive Swarm! heading to your target, AND
-    - !Adaptive Swarm! is either missing or about to expire with 1/2 stacks. For example, with 3 stacks, you would refresh as soon as !Adaptive Swarm! falls off.
+    1. [*Wildstalker] !Rip! is up. AND
+    2. There isn't an !Adaptive Swarm! heading to your target, AND
+    3. !Adaptive Swarm! is either missing or about to expire with 1/2 stacks. For example, with 3 stacks, you would refresh as soon as !Adaptive Swarm! falls off.
 5. [*Unbridled Swarm] !Adaptive Swarm! conditions change based on the amount of !391888|Adaptive Swarms! you have out:
     - If you have 3 !391888|Adaptive Swarms! with at least 2 stacks out, then you will target allies with priority 1 stack > 0 stack > 2 stacks.
     - If you have 2 or fewer !391888|Adaptive Swarms! of at least 2 stacks, cast on your enemy target when swarm is not on them, and is not traveling towards them.
 6. [*Incarnation] !102543|Incarnation! if it's ready.
 7. [*~Incarnation] !Berserk! if it's ready. This should always be paired with !5217|Tiger's Fury!.
 8. [*Feral Frenzy&&Incarnation] !Feral Frenzy! with 1 or no combo points. 2 combo points is also acceptable during !102543|Incarn!.
-8. [*Feral Frenzy&&Incarnation] !Feral Frenzy! with 1 or no combo points. 2 combo points is also acceptable during !Berserk!.
+8. [*Feral Frenzy&&~Incarnation] !Feral Frenzy! with 1 or no combo points. 2 combo points is also acceptable during !Berserk!.
 9. [*Convoke the Spirits] !391528|Convoke! when:
     - !Rip! is up. AND
     - !5217|Tiger's Fury! is up. AND
@@ -151,10 +151,10 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
 <Checkbox id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" defaultCheck />
 <Checkbox id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" />
-<Checkbox id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" defaultCheck />
+<Checkbox id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" radio="Convoke AOE" defaultCheck />
 <Checkbox id="Adaptive Swarm AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm AOE" defaultCheck />
 <Checkbox id="Unbridled Swarm AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm AOE"/>
-<Checkbox id="Incarnation AOE" spellId={102543} name="Incarnation"  />
+<Checkbox id="Incarnation AOE" spellId={102543} name="Incarnation"  radio="Convoke AOE"/>
 <Checkbox id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration"  />
 <Checkbox id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
 <Checkbox id="Bloodtalons AOE" spellId={319439} name="Bloodtalons" defaultCheck />
@@ -186,11 +186,12 @@ The way this section is written is very formulaic and has the same structure as 
     - An enemy target does not have !Adaptive Swarm!.
 6. [*Incarnation AOE] !102543|Incarnation!. This should always be paired with !5217|Tiger's Fury!.
 7. [*~Incarnation AOE] !Berserk!. This should always be paired with !5217|Tiger's Fury!.
-8. [*Feral Frenzy AOE] !Feral Frenzy! with 2 or fewer combo points outside !102543|Incarn!/!Berserk!, or 3 or fewer inside !102543|Incarn!/!Berserk!.
+8. [*Feral Frenzy AOE&&Incarnation AOE] !Feral Frenzy! with 2 or fewer combo points outside !102543|Incarn!, or 3 or fewer inside !102543|Incarn!.
+8. [*Feral Frenzy AOE&&~Incarnation AOE] !Feral Frenzy! with 2 or fewer combo points outside !Berserk!, or 3 or fewer inside !Berserk!.
 9. [*Convoke the Spirits AOE] !391528|Convoke! when:
     - Your !Rip!'s will not fall off during !391528|Convoke's! channel. AND
     - !5217|Tiger's Fury! is up. AND
-    - You have 1 or fewer combo points outside of !Berserk!, or 2 or fewer combo points during !102543|Incarn!/!Berserk!.
+    - You have 1 or fewer combo points outside of !Berserk!, or 2 or fewer combo points during !Berserk!.
     - *note: You generally want to pair this with !Berserk! if possible.
 
 </details>
@@ -247,73 +248,7 @@ The way this section is written is very formulaic and has the same structure as 
 
 # Talents:
 
-## Dungeon Talents:
-
-![WS](/static/images/wsm%2B.jpg) 
-
-![DOTC](/static/images/dotcm%2B.jpg) 
-
-Feral goes into TWW with even more options when it comes to M+, with both Hero trees creating two distinct options on their own, and within each the widest variety of spec-tree talent options yet. Embrace these options and find what works for you, there is simply no ‘best’ build, especially because different talents will suit different dungeons and groups. However listed below are some reference builds you can play around with, and the images above can help guide you to customise these builds to your liking.
-
-[DOTC  All-Rounder](https://www.wowhead.com/talent-calc/druid/feral/druid-of-the-claw/DARFFQAQgFUVEERalBEQBQNUVFRVFVRWFVAUCBVEFVVUBQ)
-
-[DOTC Swipe+Berserk Build](https://www.wowhead.com/talent-calc/druid/feral/druid-of-the-claw/DARFFQAQgFUVEERalBEQBQNUVFRVFVRaEVAUCBVEFVVUBQ)
-
-[DOTC Double-Rake](https://www.wowhead.com/talent-calc/druid/feral/druid-of-the-claw/DARFFQAQgFUVEERalBEQBQNURVUVFVRaEVAUCVUEFVVUBQ) 
-
-[DOTC Heavy-ST](https://www.wowhead.com/talent-calc/druid/feral/druid-of-the-claw/DARFFQAQgFUVEERalBEQBQNUVFUVFVRSlUAUCFUEFVVUBA) 
-
-[Wildstalker Basic](https://www.wowhead.com/talent-calc/druid/feral/wildstalker/DARFFQAQgFUVEERalBEQBQNURVVVFRRWFVAUCVQEFVVUCAA)
-
-[Wildstalker ST/funnel](https://www.wowhead.com/talent-calc/druid/feral/wildstalker/DARFFQAQgFUVEERalBEQBQNURVUVFVRWFVAUCVQEFVVUCAA) 
-
-[Wildstalker Bees+Moonfire](https://www.wowhead.com/talent-calc/druid/feral/wildstalker/DARFFQAQgFUVEERalBEQBQNURVVUVRRSFVEUCVQEFVVUCAA)
-
-[Wildstalker Thrashing Claws+Moonfire](https://www.wowhead.com/talent-calc/druid/feral/wildstalker/DARFFQAQgFUVEERalBEQBQNUVUVUVRRSFVEUCVREFVVUCAA)
-
-Section 1 Options
-
-!383352|Tireless Energy!: generally it’s recommended you take 1 point in this, unless running Thrashing Claws as Wildstalker. Two points as Druid of the Claw can be decent too.
-
-!391700|Double-Clawed Rake!: always run this as Wildstalker. Optionally strong for cleave and medium (pug-size) pulls as Druid of the Claw. 
-
-!231063|Merciless Claws!: particularly good as Druid of the Claw, providing good single-target, decent AOE, and great burst, particularly due to its synergy with !384668|Berserk: Frenzy!.
-
-!405300|Thrashing Claws!: great option if running Lunar Inspiration, frees up more globals to Moonfire more. Video guide [here](https://www.youtube.com/watch?v=8IwnGdWeD-k). 
-
-Section 2 Options
-
-!384665|Taste for Blood!: strong single-target and funnel (if a particular dungeon has priority mobs you want to funnel Apex procs into). Strong synergy with !391528|Convoke!, and particularly Druid of the Claw in general.
-
-!48484|Infected Wounds!: decent single-target and cleave, particularly good if playing !391700|Double-Clawed Rake! and Wildstalker in general. As Druid of the Claw this is generally only taken if playing !384665|Taste for Blood!.
-
-!384667|Sudden Ambush!: good single-target, and similar to above can be great for cleave due to the synergy it has with !391700|Double-Clawed Rake!. Generally recommended as Wildstalker, but this expansion can be easily skipped as Druid of the Claw for dungeons with large pull sizes or when playing !231063|Merciless Claws! ‘swipe builds’.
-
-!108165|Savage Fury!: great burst and great for larger pull sizes, however a little bit less effective on single-target. Longer travel time between packs in some dungeons can give time for TF to reset, thereby giving talents like this higher overall uptime as well.
-
-!155580|Lunar Inspiration!: strong single-target and cleave as Wildstalker, and can help proc Bloodtalons more often.
-
-!236068|Moment of Clarity!: good single-target and decent all-rounder, can help if you are struggling with energy too.
-
-!391078|Raging Fury! vs !391872|Tiger’s Tenacity!: both are good for both Hero trees, Tiger’s Tenacity is generally a bit better overall, particularly with DOT-focused builds, but Raging Fury is competitive and the added uptime can be useful depending on how long packs are living, or if you simply prefer playing with a higher uptime on !5217|Tiger’s Fury!.
-
-Section 3 Options
-
-!391528|Convoke! vs !102543|Incarn!: Druid of the Claw in general favours !391528|Convoke!, however both are competitive as Wildstalker, with a slight edge to !391528|Convoke!. Similar to last expansion, !391528|Convoke! is a bit more single-target oriented than Incarn, however it still offers great AOE burst as well. If you drop !384665|Taste for Blood! with Wildstalker, Incarn should be very competitive, and I recommend playing around with it in different dungeons, especially if there’s any boss mechanics you can dodge with the free Prowl cast.
-
-!319439|Bloodtalons! vs !391972|Lion’s Strength!: similar to last expansion, feel free to play the latter for an easier option if you are learning the spec or simply prefer it. The difference is probably even smaller than sims suggest as you’ll be making less mistakes and can focus that tiny bit more on mechanics or crowd control. 
-
-!391888|Adaptive Swarm!: good for both Hero trees, with 1 point in bees is one of the single best options you can take for pure single-target, and I would recommend running it almost all the time as Wildstalker. 2 points into !391951|Unbridled! ‘beekeeping’ is where it gets really interesting if you want more cleave and AOE value, particularly on medium size pulls. However its value drops off on really large AOE.
-
-!390902|Carnivorous Instinct!: good all-rounder, with particular strength in large AOE, and for burst, due to not only amplifying !5217|Tiger’s Fury!, but also synergies with !343223|Berserk! and !391528|Convoke!. Related to burst, it’s one of the only talents in the bottom section that buffs Brutal Slash for example, which again is stronger inside of !343223|Berserk!. Gains even more value if playing !391078|Raging Fury!.
-
-!274837|Feral Frenzy!: a good single-target option for both Hero trees, and not useless in AOE either, as it can help you weave !Ferocious Bite! with the free combo points. 
-
-!391347|Rip & Tear! vs !391978|Veinripper!: this node is more competitive than ever, and somewhat comes down to R&T offering more AOE, with Veinripper offering more funnel - as the added !Rip! duration in AOE can help you weave !Ferocious Bite!. However the added !Rake! duration is also great for Wildstalker, with more !Rake! uptime resulting in more !439531|Bloodseeker Vines! uptime.
-
-!421432|Saber Jaws!: a pure single-target option for Druid of the Claw, its value will vary significantly based on dungeon.
-
-
+This section is still a work in progress and will be updated before raid/m+ release, so check back before then.
 
 # Consumables:
 
@@ -368,7 +303,7 @@ Ring:  You should always sim your own character to determine what enchant to us
 *This is prone to be updated with tuning. Dreamgrove is not responsible for any mistakes made in crafting if you do so before Mythic week.*
 
 - [Charged Halberd](https://www.wowhead.com/item=222448/charged-halberd?bonus=8791&class=11&ilvl=636&spec=103) (or any crafted 2h agi weapon) with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension). An alternative if you are out of combat a lot is [Elemental Focusing Lens](https://www.wowhead.com/item=213770/elemental-focusing-lens)
-- [Binding of Binding](https://www.wowhead.com/item=215133/binding-of-binding) if you have a partner you can trade with, otherwise sim the best slot for your gear using [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) or [Elemental Focusing Lens](https://www.wowhead.com/item=213770/elemental-focusing-lens). For mythic+ you should use [Dawnthread Lining](https://www.wowhead.com/item=222868/dawnthread-lining)
+- [Binding of Binding](https://www.wowhead.com/item=215133/binding-of-binding) if you have a partner you can trade with, otherwise sim the best slot for your gear using [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) or [Elemental Focusing Lens](https://www.wowhead.com/item=213770/elemental-focusing-lens)
 - To be updated sometime after Heroic week.
 
 Special Note: You can craft 610 PvE item level PvP gear with [Forged Gladiator's Heraldry](https://www.wowhead.com/item=210233/forged-gladiators-heraldry) and slot your 2nd embellishment slot on that at the start. This requires farming 525-700 conquest depending on item slot. This item can additionally be socketed by farming Honor to purchase [Vicious Jeweler's Setting](https://www.wowhead.com/item=213778/vicious-jewelers-setting).
@@ -409,7 +344,7 @@ Note: You will not necessarily upgrade every snapshot. Please review the rotatio
 
 __Which bleeds are snapshotted?__
 
-1. All Feral bleeds will snapshot at higher values when paired with !5217|Tiger's Fury!
+1. All Feral dots and bleeds will snapshot at higher values when paired with !5217|Tiger's Fury!
 2. !Rake! will also snapshot 
     - !Prowl!
     - !58984|Shadowmeld!
@@ -417,7 +352,7 @@ __Which bleeds are snapshotted?__
 3. !Rip! will also snapshot !Bloodtalons!
 4. !Thrash! will also snapshot !236068|Moment of Clarity!
 
-A bleed will ideally be applied only when 30% or less of the prior bleed remains. This triggers a mechanic known as “pandemic,” which is common to most damage over time spells.  
+A dot will ideally be applied only when 30% or less of the prior dot remains. This triggers a mechanic known as “pandemic,” which is common to most damage over time spells.  
 
 ## What is “pandemic range?”
 This term refers to a DoT mechanic in WoW. The baseline duration of a DoT can be extended by up to 30% if a target is already affected by that DoT. Due to the 30% cap on extension, DoTs generally shouldn't be refreshed too early, as potential ticks will be lost. The ideal window of time to refresh a DoT is known as its “pandemic range.” 
