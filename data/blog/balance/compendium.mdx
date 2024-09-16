@@ -39,7 +39,7 @@ This is a 4.3% dmg increase from having no set.
   <Checkbox id="Elune's ChosenLOL" spellId={424058} name="Elune's Chosen" radio="Hero" />
 </CheckboxProvider>
 
-**You want to cancel !Nature's Grace! if you have any stacks before pulling a raid boss. This allows you to do the following opener, and still keep any stacks of !Nature's Grace! rolling into your cooldowns.**
+**You want to cancel !Nature's Grace! if you have any stacks before pulling a raid boss. This allows you to do the following opener, and still keep any stacks of !Nature's Grace! rolling into your cooldowns. Alternatively you can use a macro specified in the "Macros" section.**
 - Use !Wrath!.
 - Use !Wrath!.
 
@@ -439,6 +439,15 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 ```
 
 ## Cancelaura Macros
+
+### **Cancelling Dreamstate**
+
+This macro lets you cancel your !Nature's Grace! stacks while pre-casting before combat starts. This is entirely optional, but lets you skip the step of clicking away your buff.
+```
+#showtooltip
+/cancelaura [nocombat] Dreamstate
+/cast Wrath
+```
 
 ### **Cancelling Starlord**
 
