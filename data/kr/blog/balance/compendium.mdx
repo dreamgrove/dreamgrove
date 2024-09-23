@@ -42,7 +42,7 @@ locale: 'kr'
   <Checkbox id="Elune's ChosenLOL" spellId={424058} name="엘룬의 대행자" radio="Hero" />
 </CheckboxProvider>
 
-**현재 !450347|자연의 은혜! 효과를 받고 있다면, 전투 시작 전에 이를 수동으로 지워 줘야 아래의 오프너를 수행하고 !450347|자연의 은혜! 1중첩을 확보한 채로 전투에 돌입할 수 있다.**
+**현재 !450347|자연의 은혜! 효과를 받고 있다면, 전투 시작 전에 이를 수동으로 지워 줘야 아래의 오프너를 수행하고 !450347|자연의 은혜! 1중첩을 확보한 채로 전투에 돌입할 수 있다. 매크로 항목 참조.**
 - !190984|천벌!
 - !190984|천벌!
 
@@ -116,7 +116,6 @@ locale: 'kr'
     <Checkbox id="Fury of EluneEC" spellId={202770} name="엘룬의 분노" defaultCheck radio="New Moon" /> 
     <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="영혼 소집" defaultCheck radio="Convoke the Spirits" />
     <Checkbox id="New MoonEC" spellId={274281} name="초승달" radio="New Moon" /> 
-    <Checkbox id="Nature's GraceEC" spellId={450347} name="자연의 은혜" defaultCheck radio="Nature's Grace" /> 
     <Checkbox id="Touch the CosmosEC" spellId={450356} name="우주의 손길" />
     <Checkbox id="StarweaverEC" spellId={393940} name="별재봉사" /> 
     <Checkbox id="Stellar FlareEC" spellId={202347} name="항성의 섬광" /> 
@@ -133,7 +132,8 @@ locale: 'kr'
 - [*~Lunar CallingST&&Warrior of EluneEC] 현재 발동 중인 일월식의 남은 지속시간이 7초 미만이며, 다음에 일식에 진입할 예정이라면, !202425|엘룬의 전사!.
 - [*Lunar CallingST] !190984|천벌!을 시전해 월식 발동.
 - [*~Lunar CallingST] !194153|별빛섬광!을 시전해 일식 발동.
-- [*Nature's GraceEC&&Lunar CallingST] !450347|자연의 은혜! 효과를 받고 있다면, !391528|영혼 소집!을 시전하기에 앞서 !194153|별빛섬광!으로 소모.
+- [*Fury of EluneEC] !202770|엘룬의 분노!.
+- [*Lunar CallingST&&Convoke The SpiritsEC] !450347|자연의 은혜! 효과를 받고 있다면, !391528|영혼 소집!을 시전하기에 앞서 !194153|별빛섬광!으로 소모.
 - [*Convoke the SpiritsEC] 현재 보유한 천공의 힘이 40 미만이고, !391528|영혼 소집! 현재 발동 중인 !194223|천체의 정렬!/!102560|화신!의 남은 지속시간이 4초 이상이거나, 다음 !194223|천체의 정렬!/!102560|화신!까지 30초 이상 남았고 현재 일식의 남은 지속시간이 4초 이상이라면, !391528|영혼 소집!.
 - [*New MoonEC] !202345|별의 군주! 중첩이 2개 이하일 때, !197626|별빛쇄도!.
 - [*~New MoonEC] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
@@ -198,7 +198,7 @@ locale: 'kr'
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
 - [*New MoonKAOE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonKAOE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
-- [*Convoke the SpiritsKAOE] 2개 대상 이하일 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 3개 이하이거나 점사가 필요할 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
 - [*StarweaverKAOE||Touch the CosmosKAOE] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
   - [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
   - [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 것.
@@ -227,11 +227,11 @@ locale: 'kr'
   - 대상이 8초 내로 죽지 않을 것. 현재 대상에게 시전하는 !194153|별빛섬광!이 닿는 추가 대상의 수에 따라 이 조건을 1초씩 늘릴 것. (예를 들어, 밀집 5개 대상에서는 12초가 기준이 됨.)
   - 지금 !202347|항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 것.
 - 다른 기술을 시전하면 천공의 힘이 넘치는 상황이라면, !191034|별똥별!.
+- [*Fury of EluneECAoE] !202770|엘룬의 분노!
 - !194223|천체의 정렬!/!102560|화신!
 - [*Warrior of EluneECAoE] !202425|엘룬의 전사!
 - !190984|천벌!을 시전해 월식 발동.
-- [*Wild MushroomECAoE] 지금 !88747|야생 버섯!을 시전해도 천공의 힘이 넘치지 않고, 적 대상이 !393956|저무는 황혼! 효과를 받고 있지 않다면, !88747|야생 버섯!.
-- [*Fury of EluneECAoE] !202770|엘룬의 분노! 
+- [*Wild MushroomECAoE] 지금 !88747|야생 버섯!을 시전해도 천공의 힘이 넘치지 않고, 적 대상이 !393956|저무는 황혼! 효과를 받고 있지 않다면, !88747|야생 버섯!. 
 - 다음 중 하나라도 만족하면, !191034|별똥별!.
   - !202345|별의 군주! 중첩이 2개 이하일 것.
   - [*StarweaverECAoE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
@@ -242,7 +242,7 @@ locale: 'kr'
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
 - [*New MoonECAoE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonECAoE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
-- [*Convoke the SpiritsECAoE] 2개 대상 이하일 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*Convoke the SpiritsECAoE] 현재 전투 중인 대상이 3개 이하이거나 점사가 필요할 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
 - [*StarweaverECAoE||Touch the CosmosECAoE] 다음에 해당하면, !197626|별빛쇄도!.
   - [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
   - [*Touch the CosmosECAoE] !450356|우주의 손길! 효과를 받고 있을 것.
@@ -447,6 +447,14 @@ locale: 'kr'
 
 ## 오라취소 매크로
 
+### **자연의 은혜 오라취소**
+전투 시작 전에 천벌을 미리 시전할 때, 그에 앞서 현재 보유한 자연의 은혜 효과를 자동으로 지워 주는 매크로.
+```
+#showtooltip
+/cancelaura [nocombat] 꿈결
+/cast 천벌
+```
+
 ### **별의 군주 오라취소**
 
 **별의 군주 오라취소는 운용의 필수 요소가 아니며 화력에 전혀 영향을 끼치지 않는다.**
@@ -467,7 +475,7 @@ locale: 'kr'
 - [Shrom의 통합 천공의 힘 바](https://wago.io/GzpP7i8ic)
 - [Oi의 조화 드루이드 통합팩](https://wago.io/OiBalance)
 - [LuckyOneUI 드루이드판](https://wago.io/LuckyoneUI-Druid)
-- [Afenar 내부 전쟁판 (KechhaUI edit)](https://wago.io/hCRbakfyr)
+- [Afenar 내부 전쟁판](https://wago.io/HkrSdHFMG)
 - [Shrom의 천공의 힘 바](https://wago.io/J5V9sTM0FK)
 
 ### Jundies의 Plater 프로필
@@ -484,4 +492,6 @@ locale: 'kr'
 자체 설명 참고. 필수적인 기능은 아니지만, 실수로 일식 중에 별빛섬광을 쓰는 일을 피할 수 있게 해 준다.
 
 ---
+[시뮬레이션에 사용된 장비 문자열](https://pastebin.com/eChnxnGY)
+
 [현행 APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
