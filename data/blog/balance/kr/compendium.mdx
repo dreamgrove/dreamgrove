@@ -169,7 +169,7 @@ locale: 'kr'
 <Checkbox id="Stellar FlareKAOE" spellId={202347} name="항성의 섬광" />
 <Checkbox id="Touch the CosmosKAOE" spellId={450356} name="우주의 손길" />
 <Checkbox id="StarweaverKAOE" spellId={393940} name="별재봉사" />
-<Checkbox id="Convoke the SpiritsKAOE" spellId={391528} name="영혼 소집" />
+<Checkbox id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="영혼 소집" />
 <Checkbox id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
 </CheckboxProvider>
 
@@ -198,7 +198,7 @@ locale: 'kr'
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
 - [*New MoonKAOE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonKAOE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
-- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 3개 이하이거나 점사가 필요할 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 6개 이하이며, !393760|암영의 포옹! 또는 !450347|자연의 은혜! 효과를 받고 있지 않다면, !391528|영혼 소집!.
 - [*StarweaverKAOE||Touch the CosmosKAOE] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
   - [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
   - [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 것.
@@ -242,7 +242,7 @@ locale: 'kr'
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
 - [*New MoonECAoE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonECAoE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
-- [*Convoke the SpiritsECAoE] 현재 전투 중인 대상이 3개 이하이거나 점사가 필요할 경우, !391528|영혼 소집!. 그 외의 경우, !391528|영혼 소집!은 움직이면서 공격하기 위한 용도로만 사용할 것.
+- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 6개 이하이며, !393760|암영의 포옹! 또는 !450347|자연의 은혜! 효과를 받고 있지 않다면, !391528|영혼 소집!.
 - [*StarweaverECAoE||Touch the CosmosECAoE] 다음에 해당하면, !197626|별빛쇄도!.
   - [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
   - [*Touch the CosmosECAoE] !450356|우주의 손길! 효과를 받고 있을 것.
@@ -279,22 +279,28 @@ locale: 'kr'
 # 특성 빌드
 ## 공격대 / 레이드 빌드
 
+<details>
+<summary>레이드 빌드</summary>
 
-<Talents name={"숲의 수호자 - 레이드"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YMmZ2mxixMzMPgtZMzYGjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
-단일 대상 화력에 집중하는 빌드.
+<Talents name={"단일 (시크란, 라샤난, 카이베자, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YMmZ2mxixMzMPgtZMzYGjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
 
+<Talents name={"단일 + 묻딜 (울그락스, 피결속 공포)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MjZmZ2mxixMzMPgtZMGzYsBWAwAstNWw0MzyIAAAAbmZYA"}/>
 
-<Talents name={"엘룬의 대행자 - 레이드"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MzyDYmZbGbMzMmHw2MLzMmxYDsAgxy2MbYMLjATAAAAWMzwA"}/>
-묻딜에 집중하는 빌드.
+<Talents name={"오비낙스"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZmhhZGwMDzMDG2GDzMz2MWMmZmZsNjxYmZsBWAwAstNWw0MzyIAAAAbmZYA"}/>
+
+<Talents name={"비단 궁정"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YYmZ2mZWMmZmZsNjxwMjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
+
+<Talents name={"엘룬의 대행자 - 단일"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjZhZmtZsxMzYGbzsMzYGjNwCDwYZbmNMmlRgJAAAALmZYA"}/>
+
+</details>
 
 ## 신화+ / 쐐기돌 던전
 
 다음에 소개된 빌드는 언제나 제 성능을 발휘하나, 파티 구성이나 주간 수정치에 맞게 적절히 변화를 줄 것.
 
+<Talents name={"숲의 수호자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmxsAbMMzMbzMLGzMzM2mxYYmxGYBADw22YBTzMLjAAAAsZmhB"}/>
+
 <Talents name={"엘룬의 대행자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZmx2MLjhBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
-
-<Talents name={"숲의 수호자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMMzMbzMLGzMzM2mxYYmxGYBADw2yYBTzMLjAAAAsZmhB"}/>
-
 
 # 소모품
 
@@ -494,4 +500,6 @@ locale: 'kr'
 ---
 [시뮬레이션에 사용된 장비 문자열](https://pastebin.com/eChnxnGY)
 
-[현행 APL](https://www.dreamgrove.gg/sims/owl/balance.txt)
+[종족별 시뮬레이션](https://www.raidbots.com/simbot/report/sZbNX3EKTgkqvntmBWtKnx)
+
+[현행 APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
