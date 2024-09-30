@@ -64,7 +64,12 @@ const computedFields: ComputedFields = {
     resolve: (doc) => {
       const stats = statSync(`data/${doc._raw.sourceFilePath}`)
       const date = new Date(stats.mtime)
-      return date.toLocaleDateString('en-GB')
+
+      const day = date.getDate()
+      const monthName = date.toLocaleString('default', { month: 'long' })
+      const year = date.getFullYear()
+
+      return `${day} of ${monthName}, ${year}`
     },
   },
   changelogUrl: {

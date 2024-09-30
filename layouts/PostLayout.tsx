@@ -9,7 +9,6 @@ import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import TableOfContents from '@/components/custom/TableOfContents'
 import { FaHistory } from 'react-icons/fa'
-import Dialog from '@/components/custom/Dialog/Dialog'
 
 interface LayoutProps {
   content: CoreContent<Blog>
