@@ -16,10 +16,11 @@ interface LayoutProps {
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
+  translator: string
 }
 
 export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
-  const { patch, slug, title, tags, toc, lastModified, changelogUrl } = content
+  const { patch, slug, title, tags, toc, lastModified, changelogUrl, translator } = content
 
   const updateInfo = `Last updated on the ${lastModified} for patch ${patch}`
   return (
@@ -43,6 +44,11 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                     </span>
                   ))}
                 </p>
+                {translator != '' && (
+                  <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                    Translated by <span className="text-[#1a9c82]">{translator}</span>
+                  </p>
+                )}
               </div>
               <div className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 sm:pt-4">
                 <div>
