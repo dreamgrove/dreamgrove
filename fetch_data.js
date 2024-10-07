@@ -7,6 +7,8 @@ const urls = ['https://www.wowdb.com/spells/class-abilities/druid']
 
 const localOverwrites = {
   Cyclone: '33786',
+  'Keeper of the Grove': '433831',
+  "Elune's Chosen": '424058',
   'new ability': '9393',
 }
 
