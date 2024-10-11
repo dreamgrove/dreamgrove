@@ -1,0 +1,947 @@
+---
+title: '수호 드루이드 백과사전'
+patch: '11.0.0'
+draft: false
+authors: ["Kitch, Xora"]
+summary: '수호 드루이드의 모든 것'
+translator: 'NeruTe'
+locale: 'kr'
+---
+# 새소식
+
+## 1시즌
+
+#### [2세트 효과](https://www.wowhead.com/spell=453665/druid-guardian-11-0-class-set-2pc)
+
+>!106830|난타! 및 !164812|달빛섬광! 사용 시 8초 동안 공격력이 1%만큼 증가하고 받는 피해는 그만큼 감소합니다. 최대 3번까지 중첩됩니다.
+
+심심하고 그다지 중요하지 않은 효과지만, 거의 상시 유지된다. 양쪽 다 수동 시전 우선순위가 높지 않은 기술이라 실제 화력 기여도는 2% 정도. 
+
+#### [4세트 효과](https://www.wowhead.com/spell=453664/druid-guardian-11-0-class-set-4pc)
+
+>비전 공격력이 5%만큼, 출혈 공격력이 8%만큼 증가합니다.
+
+이 역시 영향력이 크지 않은 효과지만, 별다른 노력 없이 상시 유지된다. 화력 기여도는 영웅 특성에 따라 2-2.5%.
+
+# 로테이션 
+
+## 발톱의 드루이드
+
+#### **중요: 아래의 로테이션은 오직 최대한의 피해를 내기 위한 것으로, 생존 관련 요소는 뒤에 이어지는 내용(특히 무쇠가죽과 생존기 부분)을 참고하기 바람.**
+
+#### **시전 우선순위란?** ####
+
+아래의 내용은 그 순서대로 기술을 사용하라는 것이 아니라 말 그대로 매 순간 현재 사용할 수 있는 기술 중 가장 위에 있는 것을 써야 함을 의미한다. 
+
+### 전투 시작 전
+
+<CheckboxProvider>
+<Checkbox id="Dotc_Heart of the Wild_PC" spellId={319454} name="야생의 정수 선택 + 솟구치는 자연력 미선택" />
+</CheckboxProvider>
+
+- 영약, 음식, 무기 룬 등 강화 효과의 남은 지속 시간이 충분한지 확인.
+- 전투 시작 몇 초 전에 !5487|곰 변신!(!17057|분노 25 생성 효과!).
+- [*Dotc_Heart of the Wild_PC] 전투 시작 1초 전, !319454|야생의 정수!.
+
+
+
+### 단일 대상 시전 우선순위
+
+<CheckboxProvider>
+<Checkbox id="Dotc_Wildpower Surge" spellId={411824} name="솟구치는 자연력(=도려내기 활용)" defaultCheck />
+<Checkbox id="Dotc_Heart of the Wild" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="Dotc_Extra Catweaving" spellId={768} name="전투 내내 표범 형상 유지(화력 약 +5%)" />
+<Checkbox id="Dotc_Lunar Beam" spellId={204066} name="달 광선" />
+<Checkbox id="Dotc_Vicious Cycle" spellId={371999} name="무자비한 공격성" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron" spellId={400222} name="무쇠 가시" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits" spellId={391528} name="영혼 소집" radio="Dotc_Incarn" />
+<Checkbox id="Dotc_Incarnation: Guardian of Ursoc" spellId={102558} name="화신: 우르속의 수호자" radio="Dotc_Incarn" defaultCheck />
+<Checkbox id="Dotc_Rage of the Sleeper" spellId={200851} name="잠자는 자의 분노" defaultCheck />
+</CheckboxProvider>
+
+- !441605|찢어발기기!.
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
+- !164812|달빛섬광!이 걸려 있지 않다면, !164812|달빛섬광!.
+- [*Dotc_Heart of the Wild&&Dotc_Wildpower Surge] 표범의 잠재력 중첩이 6개일 때, !319454|야생의 정수!.
+- [*Dotc_Wildpower Surge] 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
+    - [*Dotc_Convoke the Spirits] 지금 !391528|영혼 소집!이 **있다면**,
+        - !6807|후려갈기기! > !1822|갈퀴 발톱! > !391528|영혼 소집! > !1079|도려내기! > !33917|짓이기기!
+    - [*Dotc_Convoke the Spirits] 지금 !391528|영혼 소집!이 **없다면**,
+        - !6807|후려갈기기! > !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
+    - [*Dotc_Convoke the Spirits] 첫 !6807|후려갈기기!를 시전할 분노가 없다면, !6807|후려갈기기!를 건너뛰고 !1822|갈퀴 발톱!으로 시작.
+    - [*~Dotc_Convoke the Spirits] !6807|후려갈기기! > !1822|갈퀴 발톱! > !1079|도려내기! > !33917|짓이기기!
+        - 첫 !6807|후려갈기기!를 시전할 분노가 없다면, !6807|후려갈기기!를 건너뛰고 !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
+    - !6807|후려갈기기! 사용 이후에도 분노가 40 이상 남아 있다면, !1822|갈퀴 발톱! 직전에 !192081|무쇠가죽!으로 소모.
+- [*Dotc_Wildpower Surge&&~Dotc_Tooth and Claw] 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
+    - [*Dotc_Convoke the Spirits] 지금 !391528|영혼 소집!이 **있다면**,
+        - Dump rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+    - [*Dotc_Convoke the Spirits] 지금 !391528|영혼 소집!이 **없다면**,
+        - Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*~Dotc_Convoke the Spirits] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence
+- [*Dotc_Heart of the Wild&&~Dotc_Wildpower Surge] Press !Heart of the Wild!
+- [*Dotc_Lunar Beam] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*Dotc_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*Dotc_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*~Dotc_Incarnation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
+- [*Dotc_Wildpower Surge] Press !33917|Mangle! if at < 6 stacks of Feline Potential
+- [*Dotc_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle] Press !Maul! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Thorns of Iron] Press !Ironfur! if above 40 rage
+- [*~Dotc_Wildpower Surge] Press !33917|Mangle!
+- Press !Thrash!
+- [*Dotc_Extra Catweaving] If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
+    1. If the Feline Potential !Rip! has fallen off the target AND you have 3 or fewer combo points, press !Rip!. **Never overwrite a Feline Potential empowered !Rip!**
+    2. If the Feline Potential !Rip! has not fallen off the target OR you have 4 or more combo points press !Ferocious Bite!. Make sure to press it at >50 energy
+- [*Dotc_Extra Catweaving] Press !Rake! if it not currently active on the target (or in pandemic range) and you are below 40 rage
+- [*Dotc_Extra Catweaving] Press !Shred! if:
+    - You are below 40 rage and !Rake! is already active on the target
+    - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
+- Press !Swipe!
+
+### Cleave Rotation (2-3 Targets)
+
+<CheckboxProvider>
+<Checkbox id="Dotc_Wildpower Surge_cleave" spellId={411824} name="Wildpower Surge" defaultCheck />
+<Checkbox id="Dotc_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="Dotc_Extra Catweaving_cleave" spellId={768} name="Full Catweaving" />
+<Checkbox id="Dotc_Lunar Beam_cleave" spellId={204066} name="Lunar Beam" />
+<Checkbox id="Dotc_Vicious Cycle_cleave" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw_cleave" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron_cleave" spellId={400222} name="Thorns of Iron" defaultCheck />
+<Checkbox id="Dotc_Raze_cleave" spellId={400254} name="Raze" defaultCheck />
+<Checkbox id="Dotc_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="Dotc_Incarn Cleave" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_cleave" spellId={391528} name="Convoke the Spirits" radio="Dotc_Incarn Cleave" />
+<Checkbox id="Dotc_Rage of the Sleeper_cleave" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+</CheckboxProvider>
+
+- Press !441605|찢어발기기! (on your priority target if there is one)
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
+- Press !Moonfire! if the dot completely falls of a target
+- [*Dotc_Wildpower Surge_cleave] Please note, the following points are only a net gain for 2 target cleave:
+    - [*Dotc_Heart of the Wild_cleave&&Dotc_Wildpower Surge_cleave] Press !Heart of the Wild! if you have 6 Feline Potential stacks
+    - [*Dotc_Wildpower Surge_cleave] 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
+        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !Raze! > !Rake! > !Rip! > !33917|Mangle! 
+        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If you do not have rage to !Raze! after hitting 6 stacks then: !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+        - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] !6807|후려갈기기! > !1822|갈퀴 발톱! > !1079|도려내기! > !33917|짓이기기!
+        - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If you do not have rage to !Maul! after hitting 6 stacks then: !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+        - [*~Dotc_Tooth and Claw_cleave] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+        - [*Dotc_Convoke the Spirits_cleave] Press !Convoke the Spirits! immediately before you !Rip! in this sequence
+        - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
+- [*Dotc_Heart of the Wild_cleave&&~Dotc_Wildpower Surge_cleave] Press !Heart of the Wild! if available. Ideally press this as you are running into a pull to save yourself the global during combat.
+- [*Dotc_Lunar Beam_cleave] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*Dotc_Rage of the Sleeper_cleave] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*Dotc_Incarnation: Guardian of Ursoc_cleave] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*~Dotc_Incarnation: Guardian of Ursoc_cleave] Press !Berserk! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Wildpower Surge_cleave] Press !Convoke the Spirits! if the following conditions are met:
+    - You are not in Berserk
+    - You have < 40 rage
+- [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] Press !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_cleave&&Dotc_Raze_cleave] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] Press !Maul! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_cleave&&~Dotc_Raze_cleave] Press !Maul! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Thorns of Iron_cleave] Press !Ironfur! if above 40 rage
+- Press !33917|Mangle!
+- Press !Thrash!
+- [*Dotc_Extra Catweaving_cleave] Please note, the following points (full catweaving) are only a net gain for 2 target cleave:
+    - If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
+    1. Press !Rip! on the target that does not have the Feline Potential !Rip! currently active if the target will live for 80%+ of the rips duration. **Never overwrite a Feline Potential empowered !Rip!**
+    2. If the target will not live for 80%+ of the duration of a !Rip! then press !Ferocious Bite! on either target. Make sure to press it at >50 energy
+- [*Dotc_Extra Catweaving_cleave] Press !Rake! on a target if rake is not already active (or it is in pandemic range) and you are below 40 rage
+- [*Dotc_Extra Catweaving_cleave] Press !Shred! if:
+    - You are below 40 rage
+    - !Rake! is already active on both targets and is not in pandemic range for either
+    - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
+- Press !Swipe!
+
+### AOE Rotation
+
+<CheckboxProvider>
+<Checkbox id="Dotc_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="Dotc_Lunar Beam_aoe" spellId={204066} name="Lunar Beam" />
+<Checkbox id="Dotc_Vicious Cycle_aoe" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw_aoe" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron_aoe" spellId={400222} name="Thorns of Iron" defaultCheck />
+<Checkbox id="Dotc_Raze_aoe" spellId={400254} name="Raze" defaultCheck />
+<Checkbox id="Dotc_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="Dotc_Incarn_AOE" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_aoe" spellId={391528} name="Convoke the Spirits" radio="Dotc_Incarn_AOE" />
+<Checkbox id="Dotc_Rage of the Sleeper_aoe" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+</CheckboxProvider>
+
+- Press !441605|찢어발기기! (on your priority target if there is one)
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
+- [*Dotc_Heart of the Wild_aoe] Press !Heart of the Wild! if available. Ideally press this as you are running into a pull to save yourself the global during combat.
+- [*Dotc_Lunar Beam_aoe] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*Dotc_Rage of the Sleeper_aoe] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*Dotc_Incarnation: Guardian of Ursoc_aoe] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*~Dotc_Incarnation: Guardian of Ursoc_aoe] Press !Berserk! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*Dotc_Convoke the Spirits_aoe] Press !Convoke the Spirits! if the following conditions are met:
+    - You are not in Berserk
+    - You have < 40 rage
+- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] Press !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_aoe&&Dotc_Raze_aoe] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Thorns of Iron_aoe] Press !Ironfur! if above 40 rage
+- Press !33917|Mangle!
+- Press !Thrash!
+- Press !Swipe!
+
+### Incarn/Berserk Rotation
+
+During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
+
+<CheckboxProvider>
+<Checkbox id="Dotc_Single Target_incarn" name="Single Target" radio="Dotc_Target count" defaultCheck />
+<Checkbox id="Dotc_Cleave_incarn" name="Cleave (2-3 Targets)" radio="Dotc_Target count" />
+<Checkbox id="Dotc_AOE_incarn" name="AOE (4+ Targets)" radio="Dotc_Target count" />
+<Checkbox id="Dotc_Wildpower Surge_incarn" spellId={411824} name="Wildpower Surge" defaultCheck />
+<Checkbox id="Dotc_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="Dotc_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" />
+<Checkbox id="Dotc_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron_incarn" spellId={400222} name="Thorns of Iron" defaultCheck />
+<Checkbox id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_incarn" spellId={391528} name="Convoke the Spirits" />
+</CheckboxProvider>
+
+- [*Dotc_Single Target_incarn] Press !441605|찢어발기기!
+- [*~Dotc_Single Target_incarn] Press !441605|찢어발기기! (on your priority target if there is one)
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire
+- [*Dotc_Heart of the Wild_incarn&&Dotc_Single Target_incarn] Press !Heart of the Wild!
+    - [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
+- [*Dotc_Heart of the Wild_incarn&&Dotc_Cleave_incarn] Press !Heart of the Wild!
+    - [*Dotc_Wildpower Surge_incarn] On 2T you can hold !Heart of the Wild! until you're at 6 stacks of Feline Potential for a minor gain by Ripweaving. 
+- [*Dotc_Heart of the Wild_incarn&&Dotc_AOE_incarn] Press !Heart of the Wild!
+- [*Dotc_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper!
+    - [*Dotc_Wildpower Surge_incarn] If you are above 1-2 stacks of Feline Potential when !200851|Rage of the Sleeper! becomes available, you may wish to hold it until **after** you have applied your empowered !Rip!
+    - [*Dotc_Wildpower Surge_incarn] This is because leaving !Bear Form! will cause you lose any remaining duration of RotS, which will be more costly the closer you are to achieving 6 stacks of Feline Potential 
+- [*Dotc_Lunar Beam_incarn] Press !Lunar Beam! 
+    - [*Dotc_Single Target_incarn&&Dotc_Wildpower Surge_incarn] You may choose to hold this until after your !Wildpower Surge! empowered !Rip! is active on the target for a slight gain.
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **있다면**,
+        - !6807|후려갈기기! > !1822|갈퀴 발톱! > !391528|영혼 소집! > !1079|도려내기! > !33917|짓이기기!
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **없다면**,
+        - !6807|후려갈기기! > !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
+    - [*Dotc_Tooth and Claw_incarn&&~Dotc_Convoke the Spirits_incarn] !6807|후려갈기기! > !1822|갈퀴 발톱! > !1079|도려내기! > !33917|짓이기기!
+        - 첫 !6807|후려갈기기!를 시전할 분노가 없다면, !6807|후려갈기기!를 건너뛰고 !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 첫 !6807|후려갈기기!를 시전할 분노가 없다면, !6807|후려갈기기!를 건너뛰고 !1822|갈퀴 발톱!으로 시작.
+    - [*Dotc_Tooth and Claw_incarn] !6807|후려갈기기! 사용 이후에도 분노가 40 이상 남아 있다면, !1822|갈퀴 발톱! 직전에 !192081|무쇠가죽!으로 소모.
+    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] 지금 !391528|영혼 소집!이 **있다면**,
+        - Dump rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] 지금 !391528|영혼 소집!이 **없다면**,
+        - Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] 
+        - [*~Dotc_Convoke the Spirits_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - If an empowered !Rip! is still active on the target then replace !Rip! in the above sequences with a !Ferocious Bite! cast
+    - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] (The following is only a gain on 2T) 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **있다면**,
+        - !Raze! (or !Maul!) > !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **없다면**,
+        - !Raze! (or !Maul!) > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*Dotc_Tooth and Claw_incarn&&~Dotc_Convoke the Spirits_incarn] !Raze! (or !Maul!) > !Rake! > !Rip! > !33917|Mangle!
+        - If you do not have the rage to cast !Raze! or !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If you do not have the rage to cast !Raze! or !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
+    - [*Dotc_Tooth and Claw_incarn] If you still have more than 40 rage after using the !Raze! or !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] 지금 !391528|영혼 소집!이 **있다면**,
+        - Dump rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] 지금 !391528|영혼 소집!이 **없다면**,
+        - Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] 
+        - [*~Dotc_Convoke the Spirits_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - If an empowered !Rip! is still active on your primary target then either:
+        - Cast !Rip! on the secondary target (more overall damage)
+        - Replace !Rip! in the above sequences with a !Ferocious Bite! cast on the primary target (more priority damage)
+    - If !Rake! is already active and not within pandemic then either:
+        - Cast !Rake! on the secondary target OR
+        - Replace !Rake! with !Shred! on the primary target in the above sequences
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential (only a potential gain on 2 targets)
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Single Target_incarn] Press !Maul! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Single Target_incarn] Press !Maul! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Cleave_incarn] Press !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] Press !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Thorns of Iron_incarn] Press !Ironfur! if you have the rage to do so 
+- Press !33917|Mangle!   
+- Press !Thrash!
+
+## Elune's Chosen
+
+#### **What is a priority list?**
+
+When reading the rotations below, you should not think about them as steps to follow in a specific order. At any given point in combat, you should cast the highest priority thing on the list that you are able to cast, providing any stated conditions are met.
+
+### Pre-combat
+
+<CheckboxProvider>
+<Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild" defaultCheck />
+</CheckboxProvider>
+
+- Make sure the duration of your Flask, Food, Oil/Stone and Rune buffs will last for the entire encounter
+- Enter !Bear Form! a few seconds before you pull
+- [*EC_Heart of the Wild_PC] Press !Heart of the Wild! a second before you start combat 
+
+### Single Target Rotation
+
+<CheckboxProvider>
+<Checkbox id="EC_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="EC_Lunation" spellId={429539} name="Lunation" defaultCheck />
+<Checkbox id="EC_Lunar Beam" spellId={204066} name="Lunar Beam" defaultCheck />
+<Checkbox id="EC_Vicious Cycle" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox id="EC_Tooth and Claw" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox id="EC_Galactic Guardian" spellId={203964} name="Galactic Guardian" defaultCheck />
+<Checkbox id="EC_Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="EC_Incarn" />
+<Checkbox id="EC_Incarnation: Guardian of Ursoc" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn" />
+<Checkbox id="EC_Rage of the Sleeper" spellId={200851} name="Rage of the Sleeper" />
+<Checkbox id="EC_Thorns of Iron style" spellId={192081} name="Thorns of Iron Playstyle" />
+</CheckboxProvider>
+
+- [*~EC_Thorns of Iron style] Press !Maul! if you will overcap rage
+- [*EC_Thorns of Iron style] Press !Ironfur! if you will overcap rage
+- Press !Moonfire! if the dot completely falls off
+- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- [*EC_Heart of the Wild] Press !Heart of the Wild! if available
+- [*EC_Lunar Beam&&EC_Lunation] Press !Lunar Beam! if available
+- [*EC_Lunar Beam&&~EC_Lunation] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*EC_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*EC_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*~EC_Incarnation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
+- [*EC_Convoke the Spirits] Press !Convoke the Spirits! if the following conditions are met:
+    - You are not in !Berserk!
+    - You have < 40 rage
+- [*EC_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw!
+- [*EC_Vicious Cycle] Press !Maul! if at 3 stacks of !Vicious Cycle!
+- Press !33917|Mangle!
+- Press !Thrash!
+- [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
+- Press !Swipe!
+
+### Cleave Rotation (2-3 Targets)
+
+<CheckboxProvider>
+<Checkbox id="EC_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck/>
+<Checkbox id="EC_Lunation_cleave" spellId={429539} name="Lunation" defaultCheck/>
+<Checkbox id="EC_Lunar Beam_cleave" spellId={204066} name="Lunar Beam" defaultCheck/>
+<Checkbox id="EC_Vicious Cycle_cleave" spellId={371999} name="Vicious Cycle" defaultCheck/>
+<Checkbox id="EC_Tooth and Claw_cleave" spellId={135288} name="Tooth and Claw" defaultCheck/>
+<Checkbox id="EC_Galactic Guardian_cleave" spellId={203964} name="Galactic Guardian" defaultCheck/>
+<Checkbox id="EC_Raze_cleave" spellId={400254} name="Raze" defaultCheck/>
+<Checkbox id="EC_Convoke the Spirits_cleave" spellId={391528} name="Convoke the Spirits" radio="EC_Incarn Cleave" />
+<Checkbox id="EC_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn Cleave" />
+<Checkbox id="EC_Rage of the Sleeper_cleave" spellId={200851} name="Rage of the Sleeper" />
+<Checkbox id="EC_Thorns of Iron style_cleave" spellId={192081} name="Thorns of Iron Playstyle" />
+</CheckboxProvider>
+
+- [*~EC_Thorns of Iron style_cleave&&EC_Raze_cleave] Press !Raze! if you will overcap rage
+- [*~EC_Thorns of Iron style_cleave&&~EC_Raze_cleave] Press !Maul! if you will overcap rage
+- [*EC_Thorns of Iron style_cleave] Press !Ironfur! if you have the rage to do so
+- Press !Moonfire! if the dot completely falls off
+- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- [*EC_Heart of the Wild_cleave] Press !Heart of the Wild! if available
+- [*EC_Lunar Beam_cleave&&EC_Lunation_cleave] Press !Lunar Beam! if available
+- [*EC_Lunar Beam_cleave&&~EC_Lunation_cleave] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*EC_Rage of the Sleeper_cleave] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*EC_Incarnation: Guardian of Ursoc_cleave] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*~EC_Incarnation: Guardian of Ursoc_cleave] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
+- [*EC_Convoke the Spirits_cleave] Press !Convoke the Spirits! if the following conditions are met:
+    - You are not in !Berserk!
+    - You have < 40 rage
+- [*EC_Tooth and Claw_cleave&&EC_Raze_cleave] Press !Raze! if at 2 stacks of !Tooth and Claw!
+- [*EC_Vicious Cycle_cleave&&EC_Raze_cleave] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*EC_Tooth and Claw_cleave&&~EC_Raze_cleave] Press !Maul! if at 2 stacks of !Tooth and Claw!
+- [*EC_Vicious Cycle_cleave&&~EC_Raze_cleave] Press !Maul! if at 3 stacks of !Vicious Cycle!
+- Press !33917|Mangle!
+- Press !Thrash!
+- [*EC_Galactic Guardian_cleave] Press !Moonfire! if you have a Galactic Guardian buff
+- Press !Swipe!
+
+### AOE Rotation
+
+<CheckboxProvider>
+<Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="EC_Lunation_aoe" spellId={429539} name="Lunation" defaultCheck />
+<Checkbox id="EC_Lunar Beam_aoe" spellId={204066} name="Lunar Beam" defaultCheck />
+<Checkbox id="EC_Vicious Cycle_aoe" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox id="EC_Tooth and Claw_aoe" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox id="EC_Raze_aoe" spellId={400254} name="Raze" defaultCheck />
+<Checkbox id="EC_Convoke the Spirits_aoe" spellId={391528} name="Convoke the Spirits" radio="EC_Incarn AOE" />
+<Checkbox id="EC_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn AOE" />
+<Checkbox id="EC_Rage of the Sleeper_aoe" spellId={200851} name="Rage of the Sleeper" />
+<Checkbox id="EC_Thorns of Iron style_aoe" spellId={192081} name="Thorns of Iron Playstyle" />
+</CheckboxProvider>
+
+- [*~EC_Thorns of Iron style_aoe&&EC_Raze_aoe] Press !Raze! if you will overcap rage
+- [*EC_Thorns of Iron style_aoe] Press !Ironfur! if you have the rage to do so
+- Press !Moonfire! if the dot completely falls off
+- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- [*EC_Heart of the Wild_aoe] Press !Heart of the Wild! if available
+- [*EC_Lunar Beam_aoe&&EC_Lunation_aoe] Press !Lunar Beam! if available
+- [*EC_Lunar Beam_aoe&&~EC_Lunation_aoe] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*EC_Rage of the Sleeper_aoe] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
+- [*EC_Incarnation: Guardian of Ursoc_aoe] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
+- [*~EC_Incarnation: Guardian of Ursoc_aoe] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
+- [*EC_Convoke the Spirits_aoe] Press !Convoke the Spirits! if the following conditions are met:
+    - You are not in !Berserk!
+    - You have < 40 rage
+- [*EC_Tooth and Claw_aoe&&EC_Raze_aoe] Press !Raze! if at 2 stacks of !Tooth and Claw!
+- [*EC_Vicious Cycle_aoe&&EC_Raze_aoe] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- Press !33917|Mangle!
+- Press !Thrash!
+- Press !Swipe!
+
+### Incarn/Berserk Rotation
+
+During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
+
+<CheckboxProvider>
+<Checkbox id="EC_Single Target_incarn" name="Single Target" radio="EC_Target count" defaultCheck />
+<Checkbox id="EC_Cleave_incarn" name="Cleave" radio="EC_Target count" />
+<Checkbox id="EC_AOE_incarn" name="AOE" radio="EC_Target count" />
+<Checkbox id="EC_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="EC_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" defaultCheck />
+<Checkbox id="EC_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox id="EC_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox id="EC_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" />
+<Checkbox id="EC_Thorns of Iron style_incarn" spellId={192081} name="Thorns of Iron Playstyle" />
+<Checkbox id="EC_Raze_incarn" spellId={400254} name="Raze" />
+</CheckboxProvider>
+
+- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- [*EC_Thorns of Iron style_incarn] Press !Ironfur! if you have the rage
+    - Make sure you pool when Incarn/Berserk is finishing so you leave with a full rage bar
+- [*EC_Heart of the Wild_incarn] Press !Heart of the Wild! if it becomes available
+- [*EC_Lunar Beam_incarn] Press !Lunar Beam! if it becomes available
+- [*EC_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper! if it becomes available  
+- [*~EC_Thorns of Iron style_incarn] 
+    - [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_Thorns of Iron style_incarn&&EC_Tooth and Claw_incarn] 
+    - [*EC_Single Target_incarn] Press !Maul! if you have a !Tooth and Claw! Proc
+    - [*EC_Cleave_incarn&&~EC_Raze_incarn] Press !Maul! on your priority target if you have a !Tooth and Claw! Proc 
+    - [*EC_Cleave_incarn&&EC_Raze_incarn] Press !Raze! if you have a !Tooth and Claw! Proc
+    - [*EC_AOE_incarn&&EC_Raze_incarn] Press !Raze! if you have a !Tooth and Claw! Proc
+- [*~EC_Thorns of Iron style_incarn] 
+    - [*EC_Single Target_incarn] Press !Maul! if you have rage to do so or have a !Tooth and Claw! Proc
+    - [*EC_Cleave_incarn&&~EC_Raze_incarn] Press !Maul! if you have rage to do so or have a !Tooth and Claw! Proc
+    - [*EC_Cleave_incarn&&EC_Raze_incarn] Press !Raze! if you have rage to do so or have a !Tooth and Claw! Proc
+    - [*EC_AOE_incarn&&EC_Raze_incarn] Press !Raze! if you have rage to do so or have a !Tooth and Claw! Proc
+- [*~EC_Thorns of Iron style_incarn] Spend any excess rage on !Ironfur!. You should never fully cap rage.
+- [*~EC_Thorns of Iron style_incarn] Press !33917|Mangle! if you need rage
+    - [*EC_Single Target_incarn] This will typically be around every 2-3 Mauls.
+    - [*EC_Cleave_incarn&&~EC_Raze_incarn] This will typically be around every 2-3 Mauls.
+    - [*EC_Cleave_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
+    - [*EC_AOE_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
+- [*EC_Thorns of Iron style_incarn] Press !33917|Mangle!
+- Press !Thrash!
+
+## Ironfur
+
+!Ironfur! is your active mitigation as a Guardian Druid. !Ironfur! costs 40 rage, and each application of !Ironfur! increases your armour by 112% of your agility. 
+
+You hit the armour cap at 85% physical mitigation, so roughly 5-6 stacks (4-5 with an augmentation evoker) will reach the armour cap.
+
+#### How To Use Ironfur
+
+The general aim with !Ironfur! is to: 
+- Maintain at least one !Ironfur! whilst tanking.
+- Use more !Ironfur!s if you're ever in a scenario where you're taking heavy physical damage and have limited/no defensive cooldowns available (a large pull in a key, taking a tank buster etc).
+- Use additional !Ironfur!s if you're ever going to overcap on Rage. This is for some (very minimal) ToI damage, and to dip into Incarn cooldown reduction if you're specced into it.
+
+## Defensive Usage
+
+In addition to !Ironfur!, which is our active mitigation (meaning it should basically be active all of the time that we are tanking mobs and taking physical damage) Guardian has a plethora of limited window Cooldowns which also significantly aid our survivability. The main way that defensive cooldowns function is by increasing our **Effective Health Pool (EHP)**. EHP is a measure of how much damage we can take whilst also factoring any damage reduction or resistances we have, E.g. if someone has 1 million health, but takes 50% reduced damage then they can actually take 2 million damage before dying. That would make their EHP 2 million, which is obviously a big increase from their Raw Health Pool (1 million in this scenario).
+
+Cooldowns for Guardian work in two primary ways but both fulfil the criteria of increasing our EHP. They will either reduce the damage that we take for their duration in some way and/or massively increase our hp for the duration, often doing this with some additional benefits. Our main Defensive cooldowns are:
+    - !Barkskin!
+    - !Survival Instincts!
+    - !Berserk!/!Incarnation: Guardian of Ursoc!
+    - !200851|Rage of the Sleeper!
+    - !Lunar Beam!
+    - !Pulverize!
+
+These defensive's should primarily be used in a way that enables us to survive through an encounter but as mentioned, several do come with additional benefits. For example, !200851|Rage of the Sleeper! will reduce our damage taken by 20% and also grant 20% leech for its 8 second duration, both of which aiding our survivability. However, it will also increase our damage done by 15% and reflect damage back at our attackers. 
+
+Because of this Offensive and Defensive duality that many of our cooldowns possess we need to factor in both sides of them when planning for an encounter. The general goals for any encounter should be:
+    - Cover all major/threatening damage events (typically tank busters) with an adequate cooldown.
+        - It is usually not advised to use multiple defensive cooldowns to cover a single damage event due to how they interact with each other (see below).
+    - Aim to cover as many individual damage events as possible by having some form of cooldown active and "rolling" into the next one as the first expires. 
+    - Prioritise getting as many uses of your multi-purpose cooldowns as possible.
+        - E.g. if you have a choice between using !200851|Rage of the Sleeper! and !Barkskin! to cover a tank buster, it would be ideal to use Rage of the Sleeper since it also provides a sizable damage benefit and may lead to additional uses of this cooldown later in the encounter.
+
+Overlapping cooldowns with a direct damage reduction component (!Barkskin!, !200851|Rage of the Sleeper!, !Survival Instincts! and !Pulverize!) is less ideal than spacing them out because multiple instances of damage reduction reduce the effectiveness of the cooldowns i.e. they are multiplicative with one and other, not additive. 
+For example, say that without a cooldown a tankbuster would hit you for 1 million damage. With !Barkskin! (20% Damage Reduction) you would take 80% of this, so 800k. If you then pressed !Survival Instincts! (50% damage reduction) on top of this, you would reduce your incoming damage (800k after factoring in !Barkskin!) by 50%. So you would take 400k damage, from a 1 million damage hit, meaning that combined you would mitigate 60% of damage - **not** 70% (20% + 50%), effectively reducing the effectiveness of the cooldowns compared to their seperate use. 
+
+
+# Talents
+
+## General Talent Build Information
+
+Before choosing your talent setup there's a couple of important details to be aware of:
+    - Whilst both hero talent trees perform similarly damage wise in AoE scenarios, there is a huge disparity between the damage of the two trees in Raid/Single Target situations, with Druid of the Claw being ahead by around 10-25% depending on talents.
+    - Both trees offer similarly strong defensive benefits with the option to easily swap into additional survviability or damage talents if they're needed/wanted.
+
+It's also important to clarify what we mean by the terms "Maul-Centric" and "ToI-Centric" (!Thorns of Iron!) playstyles:
+    - Maul-Centric is simply where !Maul! is considered you're primary spender. The goal is to spend as much rage as possible on !Maul! which will account for the majority of your damage from spenders. These builds will likely still take !Thorns of Iron! but this is simply because some rage will still be spent on !Ironfur! (e.g. If you need additional physical mitigation for a physical tank buster or if you are about to overcap rage) 
+    - A ToI-Centric playstyle is in opposition to this, where !Ironfur! will make up the vast majority of your rage expenditure. !Maul! will still be pressed sometimes, such as to utilise !Tooth and Claw! procs (either offensively or defensively) or when at 3 stacks of !Vicious Cycle!, but the focus is usually not on !Maul! as the primary spender - see the DotC section below for clarity on why its "usually" and not "always".
+
+To further clarify, because there is a lot of overlap in the talent choices between these builds you are not hard locked into one particular playstyle for an entire encounter or key. For example, you could play more toi-centric whilst doing a large trash pull in a dungeon but then play more maul-centric on a boss encounter. Ultimately a fluid approach is often best - especially for keys, where there are vast differences in the requirements of an encounter from pull to pull.
+
+## Raid Talents
+
+Below you will find the most optimal builds for **DAMAGE** in a raid setting, with additional notes mentioning what to change for a more mixed/defensive style build.
+
+### Druid of the Claw Raid Talents
+
+<Talents name={"ToI-Centric with Full Catweaving"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxMzMzsMPwYGzwMW8ADzYxyAYAzMmMNzYMzMDzw2YAAAAAAAjZGAAAAUzsNLzMLDAgFmZA"}/>
+
+Despite being a "ToI-Centric" build, the primary focus of this build is !441605|찢어발기기!. For a detailed overview of the rotation refer to the Rotation section above but in general the goal of this build is to spend as many !Maul! modifiers (!Tooth and Claw!, !Vicious Cycle!) on !441605|찢어발기기! as possible. As a consequence of this we actively press !Maul! less because they would consume the buffs that we ideally use to get massive !441605|찢어발기기! casts. Because we can only press !441605|찢어발기기! when it procs and we press !Maul! infrequently to save the modifiers our last remaining option is to spend rage on !Ironfur! for damage - hence this being a (technically) "ToI" build.
+
+#### Druid of the Claw Notes
+
+- For more sustain across an encounter you can opt to pick up !Ursoc's Fury! instead of the point in !Flashing Claws!.
+- You could also similarly improve self-sustain by opting into !Innate Resolve! - likely moving !200854|Gory Fur! to do so.
+- If you're lacking DR cooldown coverage then you have three main options:
+    - Moving the two single points from !Flashing Claws! and !Fury of Nature! into !Survival of the Fittest!.
+    - Moving two points to pick up !Pulverize!. The most likely points to move for this would be !Blood Frenzy! and !Flashing Claws! to move into !Ursoc's Fury! and !Pulverize!.
+    - !Improved Survival Instincts! is also an option if you've planned out your cooldown usage and know that the flexibility of the second charge will allow you to cover everything. Dropping !200854|Gory Fur! or !Brambles! to enable this is probably your best option.
+- For a large increase to group survivability you could drop !Layered Mane! and !Reinforced Fur! in favour of !Survival of the Fittest! and !After the Wildfire!. This would be a fairly singificant loss to !Thorns of Iron! damage specifically but would be a large increase to self healing as well as the healing cleave onto any stacked raid group.
+- If an encounter requires !Improved Stampeding Roar! or !Mighty Bash!/!Incapacitating Roar! then both !Well-Honed Instincts! and !Innervate! are both fairly inconsequential and easy to move around.
+- You could also use these point for nodes outside of the bottom third if required, such as !Typhoon! or !Thick Hide!
+- Because of the introduction of !Wildshape Mastery!, !Tiger Dash! actually becomes a very potent burst movement speed cooldown that is usable in almost any situation without fear of getting one shot. Very useful if you need cover a distance quickly and are unable to !Wild Charge! to a target.
+- The suggested build was made with the idea of Rip/Catweaving. If you are not planning on doing this aspect of the rotation then you have no need for: !Rake!, !Rip!, !Ursine Vigor! (Swap to !Matted Fur! to allow pathing) nor !449193|Fluid Form! (Swap to !Improved Stampeding Roar! to allow pathing).
+- On some encounters with predictable increased damage phases there is an argument to be made for taking !Convoke the Spirits! over !Incarnation: Guardian of Ursoc! if damage is your primary concern. This is because if you have the fully stacked Feline Potential buff (the one that causes your next cat finisher to hit for 225%), convoke will not consume the buff. This means that all of your Bites during convoke will gain the increased damage from !Wildpower Surge! and you can then consume the buff with !Rip! afterwards. Ordinarily, this is a damage loss compared to Incarn but during fights with short damage increased phases (Sludgefist, Smolderon, Silken Court) there is a potential for Convoke to win if the damage multiplier is large enough and it aligns well with Convokes cooldown.
+
+### Elune's Chosen Raid Talents
+
+<Talents name={"Maul-Centric EC"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxMzMDzDMGmxMjFzwMWsAwAmZmJamZmZmZMGsNGAAAAAAwwMDYZbmNMmtBwUAAAgNmZGA"}/>
+
+Important to note that Elune's chosen (at least the builds presented here) is noticably easier to play. There is no form of catweaving to worry about and generally less attention will be focused on tracking buffs like !Vicious Cycle!/!Tooth and Claw!. Worth baring in mind if you're looking for a simpler rotation and playstyle, albeit at the cost of a significant amount of damage.
+
+If you do not enjoy Maul-Centric builds and would prefer a lower damage (around 5% lower) ToI-centric alternative for Elune's Chosen then you can use the same talents and potential adjustments as seen below but your rotational priority would shift.
+
+#### Elune's Chosen Notes
+
+- Elune's Chosen offers fantastic defensive cooldown coverage. Between !Barkskin!, !Survival Instincts! and !Lunar Beam!, along with the option to add on !200851|Rage of the Sleeper! and !Pulverize!, you'll basically always have something rolling.
+- If !Pulverize! is required then your best option is to drop !Flashing Claws! and path through !Ursoc's Fury! and !Pulverize!. Alternatively if damage is of no convern at all then dropping !200851|Rage of the Sleeper! to access it through !Flashing Claws! is another option.
+- An alternate option to talent into defensively is !Incarnation: Guardian of Ursoc!. This talent isn't taken since it is a damage loss for EC but for progress it is another powerful defensive option that is easily accesible by dropping one point from !Flashing Claws!.
+- Dropping !Layered Mane! and !Reinforced Fur! for !Survival of the Fittest! and !After the Wildfire! is a strong increase to personal and group healing. The damage loss is less than DotC given that !Thorns of Iron! makes up a noticably smaller % of Elune's Chosen's damage profile (this is not true if you are running the alternate ToI-Centric EC build)
+- Another option to help increase self sustain would be to drop !200854|Gory Fur! or !Ursoc's Endurance! and talent into !Innate Resolve! for the second charge and empowerment of !Frenzied Regeneration!.
+- Without Catweaving there are a few more low value points in our class tree that can easily be moved around to suit needs. !Verdant Heart! in particular is a very low impact point that could be moved around to !Typhoon! or !Hibernate! if needed.
+- It is still possible to take !Feline Swiftness! too, even if !Rake! isn't a spell that Elune's Chosen will make use of, by taking two points out !Verdant Heart!, !Ursoc's Spirit! or !Primal Fury!. This could be useful for some encounters, a recent example being Tindral Safeswift as movespeed made moving between Blazing/Poisonous Mushroom soaks all the easier.
+- If an encounter requires !Improved Stampeding Roar! or !Mighty Bash!/!Incapacitating Roar! then both !Well-Honed Instincts! and !Innervate! are both fairly inconsequential and easy to move around.
+- You could also use these points for nodes outside of the bottom third if required, such as !Typhoon! but with the flexibility of low value points in the top two thirds of the class tree due to no cat weaving this usually isn't the best option on the whole.
+
+### Boss Specific Build changes
+
+**This section will be updated upon Raid Release**
+
+Below is a short summary of noteworthy talents to swap and take on each individual boss in Nerub-Ar Palace. These are not mandatory but may be beneficial to you as a guardian or to your raid group.
+
+#### Ulgrax
+
+#### Bloodbound Horror
+
+#### Sikran
+
+#### Rasha'nan
+
+#### Broodtwister Ovi'nax
+
+#### Nexus-Princess Ky'veza
+
+#### Silken Corruption
+
+#### Queen Ansurek
+ 
+
+## Mythic+ Talents
+
+### Druid of the Claw Builds
+
+Below are some potential ideas for builds you could run using Druid of the Claw. There is a decent amount of variation due to a selection of talents you could swap in and out to suit different scenarios, see the customisation section underneath for more information on the benefits and costs of swapping out some of Guardian's talents.
+
+<Talents name={"High Damage"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxMzMmlxYGzYmZWYYmZxyAYAzMzkpZmZMzMjFYDAAAAAAgxMMAAAAqZ2mlZmtBAwCzMD"}/>
+<Talents name={"Balanced Build"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxMzMmlxYGzYmZWYYmZxyAMDYmxkpZmZMzMjFYDAAAAAAgxMGAAAAqZ2mlZmtBAwCzMD"}/>
+<Talents name={"Heavy CD Cycling"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxYmxsMGzMzYmxCDzMLWAMDYmZmoZmZmZmxsAbMAAAAAAghxAAAAQNzysMmtBAwCzMD"}/>
+
+#### Customisation
+
+This image gives a rough idea of the relative power of a talent node based on its assigned colour, I strongly encourage you to take this information below and use it to either adjust the trees above to you/your groups needs and wants or to come up with your own from scratch. The key for what each colour represents is:
+    - <span className="text-yellow-400"> Yellow </span> - These are your staples. Every DotC mythic+ build should aim to have every single one of these talents.
+    - <span className="text-green-500"> Green </span> - Niche options but when played in the right scenario can be very powerful.
+    - <span className="text-purple-600"> Purple </span> - In a vacuum, pretty powerful talents that should be taken in most builds.
+    - <span className="text-blue-600"> Blue </span> - Generally a bit meh, either because of their relative power or their cost or position. However, these nodes are needed to either flesh out a sections point total or for pathing to stronger nodes further down the tree.
+    - <span className="text-grey-500"> Grey </span>  - Not worth considering currently.
+
+![GuardianDotCM+](/static/images/Guardian-DotC-mythic+.png)
+
+In the class tree there's a few talents to move around that offer some customisation. Here are some of the main ones to consider:
+- !Rake!, !Rip!, !Ursine Vigor! and !449193|Fluid Form! are all reliant on catweaving so without !441691|Wildpower Surge! they are effectively useless. Worth noting that typically you'll only want one of !Matted Fur! or !Ursine Vigor! for pathing, so simply make this choice based on whether you're planning to weave or not
+- !Hibernate! is situational because not only do you need a beast mob present in dungeons, it's also a fairly awkward ability to use - even though you don't drop form it does still have a cast time - so it is likely best to find an alterantive method for cc in the group if possible.
+- As for !Innervate!, most of the time in m+ this won't be needed given the healers ability to constantly top up their mana - they may be times where a healer requests it for a particularly rough tyrannical boss and we don't typically lose too much given !Heart of the Wild! nor !Well-Honed Instincts! are not particularly significant.
+- !Rejuvenation! and !Remove Corruption! would be niche picks if they werent our best method to access the entire right side of the tree so realistically will be taken all the time despite being entirely useless in some dungeons.
+- It's a similar story with regards to Ursol's vortex and !Soothe! to access the likes of !Stampeding Roar! and Lycara's, but at least !Ursol's Vortex! is always a useful spell to have even if soothe isn't
+- !Tiger Dash! has some potential as a personal burst movement cooldown. Particularly useful if you need to kite and are already being slowed since it will automatically shift you into !Cat Form! (removing the slow/root) and give you the massive movement speed buff to create distance immediately without putting you in danger due to the bonuses from !Wildshape Mastery!
+
+The only real choice in the Druid of the Claw hero tree is whether to take !441691|Wildpower Surge! or !441689|Empowered Shapeshifting!. In short, if you intend to weave on bosses for a significant gain to ST damage, take !441691|Wildpower Surge! and the talents mentioned above in the class tree, if not then take !441689|Empowered Shapeshifting!
+
+The Spec tree easily has the most factors to consider, especially at the changeover from Dragonflight to The War Within:
+- !After the Wildfire! will still do a very good amount of group healing, however, its not the automatic group Lay-on-Hands that it was in Dragonflight, due to the significantly inflated health pools with no compensation buff to the healing and also a nerf to the rage to trigger. It will still contribute a lot of healing on a high throughput, rot encounter but the factors mentioned previously mean its not an automatic lock in anymore.
+- !Dream of Cenarius! was affected similarly by the stamina inflation, you can still save a life but it may not be enough healing alone to immediately put a DPS out of danger entirely.
+- !Improved Survival Instincts! will still provide the added flexibility to some boss encounter by allowing you keep one charge rolling and pooling the second to allow for better cooldown coverage, but unless the encounter is planned out and this is the only way to safely cover all tank hits (unlikely given barks power and low cooldown, !200851|Rage of the Sleeper! or the option to take !Pulverize!) it's usually not worth the point.
+- !Pulverize! is incredibly niche, but that niche is usually what people take improved SI to try and handle - there is no singular node in our class tree that provides more ST mitigation than !Pulverize!. For particularly hard hitting Tyrannical bosses/Scary, singular Fortified threats it is absolutely incredible, but thats about it.
+- Ursoc's fury took a hit with the stamina changes and another significant hit by nerfs reducing its shield conversion from ~50% to 25%. It will still provide a very solid amount of absorbs (which speaks to its stupidly high power level in Dragonflight), not in small part due to the ridiculous power of !441605|찢어발기기! but it's not the throughput machine that it was last expansion.
+- !Galactic Guardian! and !Twin Moons! are still incredible talents even in the largely physical focused DotC tree, just like in Dragonflight they will provide a good 15-20% of your rage generation in AoE without you even pressing !Moonfire! at all.
+- On the topic of Rage generation, !Blood Frenzy! still conitrbutes around 30+% of your total rage gen across a dungeon, this talent is absurdly powerful and you should never be without it in mythic+.
+- There is definitely a case to be made for taking one point away from the bottom third of the tree to get 2/2 Sotf - potentially having a 34 second !Barkskin! with 40% DR (!Reinforced Fur! + !Oakskin!) for 12 seconds is a frankly ridiculous combination of defensive talents.
+- !Earthwarden! as a talent is good against slow but hard hitting mobs. What mobs will hit you and eat the earthwarden stacks is generally out of your control unless you pull with that in mind or take it for a specific Boss/Lieutenant.
+- Also worth noting that we will likely be sitting at the armour cap of 85% phsyical reduction a lot in aoe and even ST pulls, the combination of Killing Strikes' agility gain (which increases !Ironfur! armour), Killing Strikes' 20% more armour from !Ironfur!, !Layered Mane! procs and !Reinforced Fur! will likely make maintaining the 85% armour cap fairly trivial with good rage generation.
+- !343240|Berserk: Ravage! is an unusual point to consider dropping but because of !Claw Rampage!'s chance scaling per target hit (i.e. 57% per mangle cleave cast and each Thrash cast scaling to a higher chance at 4+ targets) it is very unlikely that we'll ever be in the situation to press it anyway. And even if we are !Swipe! would grant the same Ravage proc chance as thrash due to being included in the !Claw Rampage! effect. Food for thought.
+
+### Elune's Chosen Builds
+
+Below are some potential ideas for builds you could run using Elune's Chosen. There is a little variation of talents you could swap in and out to suit different scenarios - albeit, typically less than Druid of the Claw. See the customisation section underneath for more information on the benefits and costs of swapping out some of Guardian's talents.
+
+<Talents name={"Balanced Build"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxYmZsMzYGzYmxCDzMsAYGwMzMRzMzMzMjZB2YAAAAAAAzgZgltZ2wYWGATBAAA2YmZA"}/>
+<Talents name={"High Self+Group Sustain"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxYmZsMPgFzMjxMLMMzwCgZAzMzENzMzMzMmFYjBAAAAAAMjxMwy2MbYMLDgpAAAAbMzMA"}/>
+<Talents name={"Thorns of Iron build"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmxMDzsMzYGzYmxCzMMLWAMDYmZmoZmZmZmxsAbMAAAAAAghxAW2mZDjZZAMFAAAYjZmB"}/>
+
+#### Customisation
+
+This image gives a rough idea of the relative power of a talent node based on its assigned colour, I strongly encourage you to take this information below and use it to either adjust the trees above to you/your groups needs and wants or to come up with your own from scratch. The key for what each colour represents is:
+    - <span className="text-yellow-400"> Yellow </span> - These are your staples. Every EC mythic+ build should aim to have every single one of these talents.
+    - <span className="text-green-500"> Green </span> - Niche options but when played in the right scenario can be very powerful.
+    - <span className="text-purple-600"> Purple </span> - In a vacuum, pretty powerful talents that should be taken in most builds.
+    - <span className="text-blue-600"> Blue </span> - Generally a bit meh, either because of their relative power or their cost or position. However, these nodes are needed to either flesh out a sections point total or for pathing to stronger nodes further down the tree.
+    - <span className="text-grey-500"> Grey </span>  - Not worth considering currently.
+
+![GuardianECM+](/static/images/Guardian-EC-mythic+.png)
+
+The Druid class tree offers a little more in the way of customisation for EC compared to EC, largely due to the points saved from not having weaving being a part of the rotation. Below are some of the notable options to consider:
+    - Since several points are saved in comparison to DotC (due to the lack of catweaving in EC) we do have a couple more points to play with in the top/middle section of the class tree.
+    - As a standard picking two from !Primal Fury!, !Verdant Heart! and Naturalk Recovery are likely the best options to consider.
+    - You could also make a case for spending those two points in !Rake! and !Feline Swiftness!, but this would purely be for the movement speed whilst running EC.
+    - The two extra points to play with also do allow an easier time taking some utility that would other leave us very right on points, !Typhoon! is a potentially useful stop/displacement that was difficult to justify as DotC but is much easier to grab here.
+    - !Rejuvenation! and !Remove Corruption! would be niche picks if they werent our best method to access the entire right side of the tree so realistically will be taken all the time despite being entirely useless in some dungeons.
+    - It's a similar story with regards to Ursol's vortex and !Soothe! to access the likes of !Stampeding Roar! and Lycara's, but at least !Ursol's Vortex! is always a useful spell to have even if soothe isn't
+    - !Hibernate! is situational because not only do you need a beast mob present in dungeons, it's also a fairly awkward ability to use as a tank - even though you don't drop form it does still have a cast time. So it is likely best to find an alterantive method for cc in the group if possible.
+    - As for !Innervate!, most of the time in m+ this won't be needed given the healers ability to constantly top up their mana - they may be times where a healer requests it for a particularly rough tyrannical boss and we don't typically lose too much given !Heart of the Wild! nor !Well-Honed Instincts! are not particularly significant.
+
+In the Hero Tree there is really no choice at all for keys. 
+    - Due to the Bear aura not affected non guardian spells and frankly very low tuning of !Lunar Beam!, Stellar Command offers no perceivable benefit whilst Lunar Calling does increase thrash damage by all of our arcane modifiers and also increases kit synergy with Lunation. 
+    - The Light of Elune offers a decent chunk of rage at fairly regular intervals and Astral Insight is unfortunately tuned too low to make a massive impact. 
+    - Moondust is effectively a permanent slow on any cc'able mob in the dungeon due to our automatic moonfire spreading which is significantly more impactful than a 3s shorter cooldown on wild charge. 
+    - Lastly, Lunation drastically increases our uptime on the focal point ability of the hero tree (!Lunar Beam!) whilst Arcane Affinity offers an almost inperceivable buff to our Arcane damage.
+
+The Spec tree is where the majority of our customisation options come in:
+    - Given the nature of the Elune's Chosen hero tree we are naturally pushed towards taking more of the arcane focused talents, in particular !Lunar Beam! for which the shortest and most powerful path to access is directly through !Galactic Guardian! and !Twin Moons!.
+    - !After the Wildfire! will still do a very good amount of group healing, however, its not the automatic group Lay-on-Hands that it was due to the significantly inflated health pools. It will still contribute a lot of healing on a high throughput, rot encounter but the rage trigger nerf combined with this means its not an automatic lock in anymore.
+    - !Dream of Cenarius! was affected similarly by the stamina inflation, you can still save a life but it may not be enough healing alone to immediately put a DPS out of danger entirely.
+    - !Improved Survival Instincts! will still provide the added flexibility to some boss encounter by allowing you keep one charge rolling and pooling the second to allow for better cooldown coverage, but unless the encounter is planned out and this is the only way to safely cover all tank hits (unlikely given barks power and low cooldown, !200851|Rage of the Sleeper! or the option to take !Pulverize!) it's usually not worth the point.
+    - The previously mentioned focus on Arcane tends to push Elune's Favoured ahead of !Ursoc's Fury! as a trickle sustain option. Whilst UF is still a decent consideration given the increased damage on Thrash thanks to Lunar Calling and amount of razing possible through rage generation, the raw damage of Moonfire, arcane Thrash and !Lunar Beam! (on mass AOE) tends to push the healing of Elunes favoured noticably ahead.
+    - !Earthwarden! as a talent is good against slow but hard hitting mobs. What mobs will hit you and eat the earthwarden stacks is generally out of your control unless you pull with that in mind or take it for a specific Boss/Lieutenant.
+    - Because of the massively increased health pool due to the high uptime of !Lunar Beam!, talents that increase the frequency with which we can cast Frenzied Regeneration do gain a bit of value since their healing directly scales with health.
+    - Because of the rage generation and lack of need to save !Vicious Cycle!/!Tooth and Claw! for a specific ability (ravage), dropping !343240|Berserk: Ravage! is an even more likely option as EC since so many more of your globals during Incarn/Berserk will be pressing Raze you will stil never need to swipe unless you're overpressing !Ironfur!.
+    - Incarn is still an incredibly powerful defensive cooldown, but given the abundance of low cooldown defensives available to EC it may be an option to consider dropping the two incarn points in favour of other talents in the final third - such as RotS, UF, or !Flashing Claws!.
+    - Moonless night is a powerful offensive tool but offers next to no defensive value, its worth mentioning as an option for your weekly keys but do not expect to see it much in higher difficulty key levels.
+    - Even with the slightly higher rage generation from EC's hero tree, !Blood Frenzy! contributes 30-40% of your rage generation throughout a dungeon. This point continues to be far too good to drop.
+    - Berserk: Aggression is an option to consider dropping if you choose to focus entirely on the !Thorns of Iron! playstyle. However, be aware that this is your best path towards Rend and Tear and still an additional 15% haste during your biggest damage window, so even in ToI-centric builds it is a very strong node.
+
+# Consumables
+
+## Flasks
+
+- [Flask of Alchemical Chaos](https://www.wowhead.com/beta/spell=432021/flask-of-alchemical-chaos): Default flask for everything. It is slightly stronger than the four traditional stat flasks since it provides more stats, albeit with a random component but it's biggest power comes from its interaction with [Tempered Potion](https://www.wowhead.com/beta/spell=431932/tempered-potion) (see below).
+- If you are not using [Tempered Potion](https://www.wowhead.com/beta/spell=431932/tempered-potion) then [Flask of Tempered Swiftness](https://www.wowhead.com/beta/item=212274/flask-of-tempered-swiftness), [Flask of Tempered Mastery](https://www.wowhead.com/beta/item=212280/flask-of-tempered-mastery), [Flask of Tempered Aggression](https://www.wowhead.com/beta/item=212271/flask-of-tempered-aggression) and [Flask of Tempered Versatility](https://www.wowhead.com/beta/item=212277/flask-of-tempered-versatility) become options. Either sim yourself so see which of the four is best or pick your preferred secondary stat.
+
+## Food
+
+- [Feast of the Midnight Masquerade](https://www.wowhead.com/beta/spell=457285/feast-of-the-midnight-masquerade) or [Feast of the Divine Day](https://www.wowhead.com/item=222732/feast-of-the-divine-day): Best available food by a long way, use this whenever one is available.
+- [Mycobloom Risotto](https://www.wowhead.com/item=222725/mycobloom-risotto) The best personal food alternative to feasts in TeWaWi. It gives about half of the main stat of a feast but does provide stamina in addition. Use this if you don't want to drop a feast.
+
+
+## Potions
+
+- [Tempered Potion](https://www.wowhead.com/beta/spell=431932/tempered-potion) Strongest combat potion available. Important to note that whilst using [Flask of Alchemical Chaos](https://www.wowhead.com/beta/spell=432021/flask-of-alchemical-chaos) it will provide all 4 secondary stats.
+- [Algari Healing Potion](https://www.wowhead.com/beta/spell=430590/algari-healing-potion) The standard healing potion for the first tier of TeWaWi. You should always have some of these on you if you're planning to do any challenging content.
+- [Draught of Silent Footfalls](https://www.wowhead.com/beta/spell=430594/draught-of-silent-footfalls) The invisibility potion for TeWaWi, fairly niche given our access to !Prowl! but, on occasion, invisiability does enable pathing that stealth does not.
+
+## Oils/Stones
+
+- [Ironclaw Whetstone](https://www.wowhead.com/item=222504/ironclaw-whetstone)/[Ironclaw Weightstone](https://www.wowhead.com/beta/item=222510/ironclaw-weightstone) Both of these are functionally identical except they can only be applied to one type of weapon. The whetstone variant can be applied to Polearms and the weightstone can be applied to Staffs and 2h Maces.
+
+## Runes
+
+- [Crystallised Augment Rune](https://www.wowhead.com/beta/item=224572/crystallized-augment-rune): The standard augment rune for the first tier of TeWaWi
+
+# Gearing
+
+## Stat Priority
+
+#### Offensive
+
+Sim yourself using Radibots Top Gear to decide on what to use out of items you have. Use Droptimizer to identify potential damage upgrades you can get from content. **Do not follow a set stat priority for damage**
+
+#### Defensive
+
+**Initial Disclaimer:** The defensive difference between secondary stats on the whole is incredibly minor. In terms of a rough value, generally less than a % gain in survivability by focusing on one secondary stat over another. The defensive gain from equipping a higher item level piece of equipment will (with the exception of trinkets/cantrip effects) always be better for survivability than choosing a lower item level piece with specific secondary stats.
+
+Agility >>>> Mastery > Vers > Haste/Crit
+
+#### Tertiary Stats
+
+Tertiary stats are - as the name implies - a tertiary consideration. They are not a significant enough factor to Tank survivability to influence your gearing on their own outside of very specific circumstance.
+
+## Embellishments
+
+- [Adrenal Surge Clasp](https://www.wowhead.com/item=219502/adrenal-surge-clasp) and [Writhing Armour Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) - This is the ideal end game setup for us this tier. Patch would ideally go on wrists but if not boots are fine as the next best option.
+
+- For more immediate gains or if you're not raiding (and thus have a lower chance to obtain a Myth track weapon quickly) you could consider crafting a [Charged Halberd](https://www.wowhead.com/item=222448/charged-halberd#created-by-spell) with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226024/darkmoon-sigil-ascension) applied. Follow this up with a [Writhing Armour Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) applied to wrists (or boots if not) and you're in a very strong position and ready to transition to Adrenal Surge Clasp when you receive your fourth spark and/or a Myth track weapon.
+
+## Enchantments
+
+- Weapon - [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) gives a free damage proc that stacks and does some pretty solid numbers making this our highest ST damage enchant. [Authority of Radiant Power](https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power) is another solid option that provides less damage but does grant some main stat on a proc.
+
+- Chest - [Enchants Chest - Crystalline Radiance](https://www.wowhead.com/beta/item=223692/enchant-chest-crystalline-radiance) Grants a decent chunk of Agility. If you're a speed demon you can use [Enchant Chest - Stormrider's Agility](https://www.wowhead.com/beta/item=223683/enchant-chest-stormriders-agility) instead which will grant you some move speed in place of some Agility.
+
+- Legs - [Stormbound Armour Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit)/[Defender's Armour Kit](https://www.wowhead.com/item=219908/defenders-armor-kit) Grants some main stat and either a bit of stamina or armour. There is a ridiculously tiny difference in that armour in very, very, very slightly better against physical damage whilst stamina is very, very, very slightly better against magical damage but this is something you'll never notice in practice. Pick whichever you prefer.
+
+- Cloak - Entirely preference between Avoidance ([Enchant Cloak - Chant of Winged Grace](https://www.wowhead.com/beta/item=223731/enchant-cloak-chant-of-winged-grace)), Leech ([Enchant Cloak - Chant of Leeching Fangs](https://www.wowhead.com/beta/item=223737/enchant-cloak-chant-of-leeching-fangs)) and Speed ([Enchant Cloak - Chant of Burrowing Rapidity](https://www.wowhead.com/beta/item=223800/enchant-cloak-chant-of-burrowing-rapidity)). All of them can have a case made for them, avoidance reduces "some" AOE effects but bare in if you're using [Wings of Shattered Sorrow](https://www.wowhead.com/item=225574/wings-of-shattered-sorrow) you'll have a lot of avoidance during high damage periods already. Leech is just a bit of small but constant self healing and move speed can be useful for avoiding floor effects or kiting out mobs, entirely your choice.
+
+- Bracers - Same story as cloak between Avoidance ([Enchant Bracers - Change of Armoured Avoidance](https://www.wowhead.com/beta/item=223713/enchant-bracer-chant-of-armored-avoidance)), Leech ([Enchant Bracers - Change of Armoured Leech](https://www.wowhead.com/beta/item=223719/enchant-bracer-chant-of-armored-leech)) and Speed ([Enchant Bracers - Change of Armoured Speed](https://www.wowhead.com/beta/item=223725/enchant-bracer-chant-of-armored-speed)).
+
+- Boots - Either [Enchant Boots - Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Enchant Boots - Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march). Defender's stamina is a relatively small amount but does still increase our hp pool, Scout's will potentially contribute to mitigated damage by allowing us to succesfully kite out melee abilities or ground effects.
+
+- Ring - Our preference for ring enchants is the Radiant variants ([Enchant Ring - Radiant Critical Strike](https://www.wowhead.com/beta/item=223662/enchant-ring-radiant-critical-strike), [Enchant Ring - Radiant Haste](https://www.wowhead.com/beta/item=223674/enchant-ring-radiant-haste), [Enchant Ring - Radiant Mastery](https://www.wowhead.com/beta/item=223677/enchant-ring-radiant-mastery) and [Enchant Ring - Radiant Versatility](https://www.wowhead.com/beta/item=223680/enchant-ring-radiant-versatility)). You can sim yourself regularly to find your highest dps combination or pick your favourite. Haste is typically very good for Bear at this early point in the expansion.
+
+## Gems
+
+In TeWaWi, we have seen some changes to how Gems work compared to Dragonflight:
+- You can now only add two gems to your neck, instead of three.
+- You can now add two gems to each of your rings rather than just one.
+
+### Blasphemite Gems
+Effectively Meta gems from previous expansions, each gem will provide you with an amount of Primary stat and an additional buff based on what other gems you have equipped. You can only have 1 Blasphemite Gem socketted in your gear at a time.
+
+[Culminating Blasphemite](https://www.wowhead.com/beta/item=213743/culminating-blasphemite) is our gem of choice. It will provide 181 Agility and increases your critical strike damage by 0.15% per unique Algari gem colour you have equipped.
+
+[Elusive Blaphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) a potential alternative for those who like to go fast. Especially given how minor the critical strike damage from Culminating Blasphemite ends up being. 
+
+### Algari Gems
+These are your standard gems, you can equip as many of these types of gems as you want so long as you have the socket slots to hold them. They come in various combinations of Critical Strike (Rubies), Haste (Emeralds), Versatility (Sapphires), Mastery (Onyxes) and Stamina (Ambers). 
+You will typically wear one of each of the four secondary stat variants (and not socketing an amber gem) but simming using Raidbots' Top Gear function is the best way to find the ideal combinations of gems for your gear. Be aware that this will likely change through the tier as your gear changes so sim regularly to check!
+
+
+## Trinkets and Cantrip Items
+
+### Trinkets
+
+#### Damage Trinkets
+
+Because of the new addition of the "Tank Tax" in the form of a 33% reduction to trinket/cantrip damage for non dps specs our options here are bit limited because **everything is close**. That said, the main damage trinkets of note are:
+
+- [Foul Behemoth's Celicera](https://www.wowhead.com/item=219915/foul-behemoths-chelicera) - Provides a decently powerful on use damage effect and also comes with a defensive benefit (discussed below). Likely to be a staple raid prog trinket for any tank.
+
+- [Mad Queen's Mandate](https://www.wowhead.com/item=212454/mad-queens-mandate) - Very strong, bursty, on-use damage trinket. Trying to game the cooldown reduction portion is very difficult as you need to actually deal the killing blow with it (not just be hitting it as it dies), but even without that its very strong.
+
+- [Void Reaper's Contract](https://www.wowhead.com/item=212456/void-reapers-contract) - Powerful damage proc. Great if you can get it but if you are being selfless then you would be a lower priority for this trinket than other agi classes that can equip [Void Reaper's Warp Blade](https://www.wowhead.com/item=219877/void-reapers-warp-blade) in your raid group since this would activate the 2-set effect (Monks, DH's, Enh Shaman's and Outlaw Rogues).
+
+- [Ara-Kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood) - A strong passive option for damage, even with the nerfs to it.
+
+#### Defensive Trinkets
+
+- [Swarmlord's Authority](https://www.wowhead.com/item=212450/swarmlords-authority) - Decent passive absorb procs combined with a potent on use absorb effect on a very short cooldown. This trinket will likely be a lock-in for key pushing.
+
+- [Foul Behemoth's Celicera](https://www.wowhead.com/item=219915/foul-behemoths-chelicera) - Noticably more beneficial in raid, where the longer encounters allow you gain a notable amount of additional HP over several uses. This is less prevalent in keys since when you leave combat the additional HP becomes a shield, could be played around a bit by chain pulling or using at the start of pulls.
+
+- [Silken Chain Weaver](https://www.wowhead.com/item=215172/silken-chain-weaver) - Difficult to acquire one of relevant item level, however if you do manage to acquire a Champion track (Tier 7+ Delves) or Hero track (Tier 8 Delve Vault slot) then this will likely be a very strong defensive option for dungeons. 
+**DISCLAIMER:** Currently, the attack speed reduction part of this trinket is not functioning. If this changes then this disclaimer will be removed but for now be aware that this massively reduces the power of this trinket.
+
+### Cantrip Items
+
+[Wings of Shattered Sorrow](https://www.wowhead.com/item=225574/wings-of-shattered-sorrow) Not a very strong effect for tanks but it does come with a full stat budget in addition to the proc. It's fine to wear but would not reccomend going out of your way to get it. 
+
+[Seal of the Poisoned Pact](https://www.wowhead.com/item=225578/seal-of-the-poisoned-pact) Full stat budget ring with an additional free damage proc. We should also be able to take advantage of the additional dose effect via !Brambles! pulsing damage (not the reflect portion). Regardless, this will be one of your BiS rings.
+
+[Sureki Zealot's Insignia](https://www.wowhead.com/item=225577/sureki-zealots-insignia) Another full stat budget item with an additional free proc, this time providing stats to you simply for being healed. This one also has the added benefit of making your healers like you more. One of, if not the, BiS necks for Bear. 
+
+[Harvester's Interdiction](https://www.wowhead.com/item=221159/harvesters-interdiction) Full stat budget weapon with an additional damage proc. Unfortunately, this weapon is only available from Mythic+ so to get a Mythic track weapon you'll need some luck on your side in the Great Vault. The damage proc is only worth around 0.5% damage compared to a standard weapon of the same ilvl, so sim yourself to see if a Heroic track version is better than any Mythic track weapons you acquire.
+
+# Miscellaneous
+
+## Macros
+
+#### BoP Cancelaura macro
+
+A situationally useful macro for tanks primarily. BoP (Blessing of Protection) is a paladin external that will remove many harmful debuffs from its target, the downside is that it renders the target immune to physical damage so mobs will target someone else since they cannot hit you as the tank while Bop’d. 
+
+This macro will remove the Blessing of Protection buff from yourself, meaning that mobs will continue to target you rather than your allies but you will still have the applicable debuffs removed by the BoP application.
+
+```
+/cancelaura Blessing of Protection
+```
+
+
+#### Set Mouseover as Focus macro
+
+A macro that is more useful in some content than other (Keys and pvp primarily) but still a useful tool to use is the focus targets. To set a mouseover target as your Focus target simply mouseover over the mob and press this macro:
+
+```
+/focus [@mouseover,exists,nodead]
+```
+
+Note: To select a different mob as your focus you can simply mouseover the new mob and press the macro again. To completely remove any mob as your focus you can simply mouseover nothing and press the macro once more.
+
+
+#### Mouseover Combat Res macros
+
+An essential macro for all druid specs. This macro will attempt to cast Rebirth at your current mouseover target so long as they are a friendly character and are dead. 
+
+```
+#showtooltip
+/cast [@mouseover,help,dead] Rebirth 
+```
+
+Many players prefer to use a more advanced version of this macro which will cast either Rebirth or Revive based on whether the player is in combat or not. This is entirely personal preference but the macro would look something like:
+
+```
+#showtooltip
+/cast [@mouseover,combat,help,dead] Rebirth;
+/cast [@mouseover,nocombat,help,dead][] Revive
+```
+
+
+#### One Key Shapeshift/Fluid Form macros
+
+Some people prefer to have a single keybind that will allow them to shift between !Bear Form! and !Cat Form! rather than binding both forms seperately, which is typically done by a macro. 
+
+This macro will:
+1. Check if you are not in Bear Form, and if so will attempt to switch you to Bear Form
+2. If you are already in Bear Form, it will attempt to switch you to Cat Form
+
+```
+#showtooltip
+/cast [noform:1] bear form
+/cast [form:1] cat form
+```
+
+With the addition of !449193|Fluid Form! a variant of this macro has become fairly popular for use during combat that allows lets you press Rake (or Shred) in Bear Form and Mangle in Cat Form using a single key bind.
+
+This macro will:
+1. Check if you are not in Bear Form, and if so will attempt to cast Mangle
+2. If you are already in Bear Form, it will attempt to cast Rake 
+
+Note: If the macro is not shifting you when you press it then check that:
+    - You have Fluid Form talented
+    - You are in range of the target to cast Rake/Shred/Mangle
+    - Mangle is not on cooldown
+
+```
+#showtooltip
+/cast [noform:1] Mangle
+/cast [form:1] Rake
+```
+
+
+#### Bear Form Required Ability macros
+
+Several spells require you to be in bear form in order to actually function. You can add a condition to the macro to first check if you’re in bear form (and if not, then cast it) before casting the desired spell.
+
+This macro will:
+1. Check if you are in bear form, and if not will attempt to switch you to bear form.
+2. Will cast Growl at your current target
+
+```
+#showtooltip Growl
+/cast [noform:1] bear form
+/cast Growl
+```
+
+This macro will:
+1. Check if you are in bear or cat form and if not switch you to bear form.
+2. Check if you have an active focus target and if so will attempt to cast Skull Bash at it.
+3. Will attempt to cast Skull Bash at your current target.
+
+```
+#showtooltip skull bash
+/use [noform:1/2] Bear Form;
+/use [@focus,harm,nodead][] Skull Bash
+```
+
+
+#### Ursol's Vortex and Mass Entanglement macro
+
+This macro is useful because Ursol’s Vortex and !Mass Entanglement! are mutually exclusive as they are two halves of a choice node, meaning they can share a keybind.
+
+This macro will:
+1. Cast !Ursol's Vortex! at your cursor location if the spell is known
+2. Cast !Mass Entanglement! at your mouseover target so long as your mouseover is a hostile target and the spell is known
+3. Cast !Mass Entanglement! at your target if you do not have a mouseover so long as your target is a hostile target and the spell is known
+
+```
+#showtooltip
+/cast [known:102793,@cursor] Ursol's Vortex;
+/cast [known:102359,@mouseover,harm,nodead][known:102359] Mass Entanglement
+```
+
+
+#### Mighty Bash and Incapacitating Roar macro
+
+Similar to the above, this macro is useful because !Mighty Bash! and !Incapacitating Roar! are mutually exclusive being two halves of a choice node.
+
+This macro will:
+1. Cast !Incapacitating Roar! if the spell is known
+2. Cast !Mighty Bash! at your target if the spell is known
+
+```
+#showtooltip
+/cast [known:99] Incapacitating Roar;
+/cast [known:5211] Mighty Bash
+```
+
+
+#### Soothe and Remove Corruption macro
+
+It can be useful to macro certain spells that require mutually exclusive conditions together onto one keybind. The following does that using !Soothe! (requires an enemy target) and Remove Corruption (requires a friendly target). There are many different spells that this can be done with so simply change the name and possibly the conditions to suit your needs.
+
+This macro will:
+1. Attempt to cast !Remove Corruption! at your current mouseover target if they are friendly.
+2. Attempt to cast !Soothe! at your current mouseover target if they are hostile.
+3. Attempt to cast !Soothe! at your current target
+
+```
+#showtooltip
+/cast [@mouseover,help,nodead] Remove Corruption;
+/cast [@mouseover,harm,nodead][] Soothe
+```
+
+
+#### Cooldown with trinkets macro
+
+Macroing big cooldowns together with trinkets and cantrip effects is often a sensible idea, it makes things easier for you as the player since you only have to press a single key to trigger multiple effects that you would want to happen at the same time. This ultimately requires that all or all except one effect be off the GCD. It is generally best to not do this with trinkets that trigger GCD or channeling effects. Refer to the trinket section for info on which trinkets this is applicable to.
+
+This macro will:
+1. Attempt to cast berserk or incarn (if talented).
+2. Use whatever trinket is located in Trinket slot 1 (top).
+3. Use whatever trinket is located in Trinket slot 2 (bottom).
+4. Use whatever cantrip effect is located on your Weapon slot
+
+**Delete rows as required before using this macro or you may not use the correct trinket slot with your cooldowns.**
+
+```
+#showtooltip
+/cast berserk
+/use 13
+/use 14
+/use 16
+```
+
+
+## Useful WeakAura(s)
+
+[Ironfur Tracking WeakAura](https://wago.io/IronfurBar) by Naemesis
+
+[Kitch's Guardian WeakAuras](https://wago.io/Bx59MYXe8) by Kitch
+
+[Xora's Bear WeakAuras](https://wago.io/eZHPR7i1w) by Xora
