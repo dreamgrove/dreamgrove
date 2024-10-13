@@ -58,6 +58,24 @@ h1.content-header::before {
 }
 
 @font-face {
+  font-family: 'magnificent';
+  src: url('../public/fonts/Magnificent Serif.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'magnificent';
+  src: url('../public/fonts/Magnificent Serif.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'magnificent';
+  src: url('../public/fonts/Magnificent Serif.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
   font-family: 'thiccboi';
   src: url('../public/fonts/THICCCBOI-ExtraBold.woff2') format('woff2');
   font-weight: 600;

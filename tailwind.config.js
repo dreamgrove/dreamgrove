@@ -27,8 +27,9 @@ module.exports = {
         lg: '1.1rem',
       },
       fontFamily: {
-        sans: ['thiccboi', ...fontFamily.sans],
+        sans: ['thiccboi', 'magnificent', ...fontFamily.sans],
         thiccboi: ['thiccboi', 'sans-serif'],
+        magnificent: ['magnificent', 'sans-serif'],
       },
       colors: {
         primary: {
