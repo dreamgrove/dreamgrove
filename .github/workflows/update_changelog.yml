@@ -17,11 +17,10 @@ jobs:
         with:
           node-version: '16' # Specify your Node.js version
 
-      - name: CD
-        run: cd news
-
       - name: Install Dependencies
-        run: npm install axios
+        run: |
+          cd news
+          npm install axios
 
       - name: Run update_news.js
         run: |
@@ -31,17 +30,20 @@ jobs:
       - name: Check for Updates
         id: check_updates
         run: |
-          git diff --exit-code news/druid_latest.txt || echo "changes"
-          git diff --exit-code news/druid_previous.txt || echo "changes"
+          if git diff --quiet news/druid_latest.txt && git diff --quiet news/druid_previous.txt; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Run parse.mjs if changes detected
-        if: steps.check_updates.outputs.changes == 'changes'
+        if: steps.check_updates.outputs.changes == 'true'
         run: |
           cd news
           node parse.mjs
 
       - name: Commit and Push Changes
-        if: steps.check_updates.outputs.changes == 'changes'
+        if: steps.check_updates.outputs.changes == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'

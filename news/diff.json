@@ -139,7 +139,10 @@
           "idx": "5",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Rejuvenation (774)", "Rejuvenation (Germination) (155777)"],
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Rejuvenation (Germination) (155777)"
+          ],
           "id": "253736",
           "modifications": [],
           "values": [
@@ -159,7 +162,10 @@
           "idx": "6",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Rejuvenation (774)", "Rejuvenation (Germination) (155777)"],
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Rejuvenation (Germination) (155777)"
+          ],
           "id": "253737",
           "modifications": [],
           "values": [
@@ -462,7 +468,10 @@
           "idx": "19",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"],
+          "affected_spells": [
+            "Moonfire (8921)",
+            "Moonfire (164812)"
+          ],
           "id": "1091200",
           "modifications": [],
           "values": [
@@ -482,7 +491,10 @@
           "idx": "20",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"],
+          "affected_spells": [
+            "Moonfire (8921)",
+            "Moonfire (164812)"
+          ],
           "id": "1091201",
           "modifications": [],
           "values": [
@@ -502,7 +514,9 @@
           "idx": "22",
           "type": "Apply Aura",
           "subtype": "Apply Flat Modifier w/ Label : Spell Effect 1",
-          "affected_spells": ["Lunar Insight (429530)"],
+          "affected_spells": [
+            "Lunar Insight (429530)"
+          ],
           "id": "1176395",
           "modifications": [],
           "values": [
@@ -530,7 +544,10 @@
           "idx": "14",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Rake (1822)", "Rake (155722)"],
+          "affected_spells": [
+            "Rake (1822)",
+            "Rake (155722)"
+          ],
           "id": "1080962",
           "modifications": [],
           "values": [
@@ -550,7 +567,9 @@
           "idx": "15",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Rip (1079)"],
+          "affected_spells": [
+            "Rip (1079)"
+          ],
           "id": "1088944",
           "modifications": [],
           "values": [
@@ -593,7 +612,9 @@
                 "Target": "Self (1)"
               }
             ],
-            "affected_spells": ["Harmonious Constitution (440116)"]
+            "affected_spells": [
+              "Harmonious Constitution (440116)"
+            ]
           }
         }
       ]
@@ -608,7 +629,9 @@
           "idx": "7",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Sunfire (164815)"],
+          "affected_spells": [
+            "Sunfire (164815)"
+          ],
           "id": "260748",
           "modifications": [],
           "values": [
@@ -628,7 +651,9 @@
           "idx": "8",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Sunfire (164815)"],
+          "affected_spells": [
+            "Sunfire (164815)"
+          ],
           "id": "260749",
           "modifications": [],
           "values": [
@@ -648,7 +673,10 @@
           "idx": "9",
           "type": "Apply Aura",
           "subtype": "Add Flat Modifier : Spell Effect 2",
-          "affected_spells": ["Convoke the Spirits (323764)", "Convoke the Spirits (391528)"],
+          "affected_spells": [
+            "Convoke the Spirits (323764)",
+            "Convoke the Spirits (391528)"
+          ],
           "id": "872913",
           "modifications": [],
           "values": [
@@ -668,7 +696,10 @@
           "idx": "10",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Tick Time",
-          "affected_spells": ["Convoke the Spirits (323764)", "Convoke the Spirits (391528)"],
+          "affected_spells": [
+            "Convoke the Spirits (323764)",
+            "Convoke the Spirits (391528)"
+          ],
           "id": "876348",
           "modifications": [],
           "values": [
@@ -718,7 +749,9 @@
           "idx": "24",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Rip (1079)"],
+          "affected_spells": [
+            "Rip (1079)"
+          ],
           "id": "1113290",
           "modifications": [],
           "values": [
@@ -738,7 +771,10 @@
           "idx": "25",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
+          "affected_spells": [
+            "Ferocious Bite (22568)",
+            "Ravage (441591)"
+          ],
           "id": "1113620",
           "modifications": [],
           "values": [
@@ -758,7 +794,9 @@
           "idx": "26",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Shred (5221)"],
+          "affected_spells": [
+            "Shred (5221)"
+          ],
           "id": "1120675",
           "modifications": [],
           "values": [
@@ -778,7 +816,10 @@
           "idx": "27",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Rake (1822)", "Rake (155722)"],
+          "affected_spells": [
+            "Rake (1822)",
+            "Rake (155722)"
+          ],
           "id": "1120676",
           "modifications": [],
           "values": [
@@ -798,7 +839,10 @@
           "idx": "28",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Rake (1822)", "Rake (155722)"],
+          "affected_spells": [
+            "Rake (1822)",
+            "Rake (155722)"
+          ],
           "id": "1120677",
           "modifications": [],
           "values": [
@@ -869,7 +913,9 @@
                 "Family Flags": "127"
               }
             ],
-            "affected_spells": ["Sunfire (164815)"]
+            "affected_spells": [
+              "Sunfire (164815)"
+            ]
           }
         },
         {
@@ -899,7 +945,9 @@
                 "Family Flags": "127"
               }
             ],
-            "affected_spells": ["Sunfire (164815)"]
+            "affected_spells": [
+              "Sunfire (164815)"
+            ]
           }
         },
         {
@@ -926,7 +974,10 @@
                 "Family Flags": "21, 92"
               }
             ],
-            "affected_spells": ["Moonfire (8921)", "Moonfire (164812)"]
+            "affected_spells": [
+              "Moonfire (8921)",
+              "Moonfire (164812)"
+            ]
           }
         }
       ]
@@ -1270,7 +1321,9 @@
                 "Family Flags": "6"
               }
             ],
-            "affected_spells": ["Regrowth (8936)"]
+            "affected_spells": [
+              "Regrowth (8936)"
+            ]
           }
         }
       ]
@@ -1286,7 +1339,10 @@
           "idx": "1",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Moonfire (155625)", "Moonfire (164812)"],
+          "affected_spells": [
+            "Moonfire (155625)",
+            "Moonfire (164812)"
+          ],
           "id": "997281",
           "modifications": [],
           "values": [
@@ -1306,7 +1362,10 @@
           "idx": "2",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": ["Moonfire (155625)", "Moonfire (164812)"],
+          "affected_spells": [
+            "Moonfire (155625)",
+            "Moonfire (164812)"
+          ],
           "id": "997282",
           "modifications": [],
           "values": [
@@ -1871,7 +1930,9 @@
           "idx": "2",
           "type": "Apply Aura",
           "subtype": "Add Flat Modifier : Spell Effect 3",
-          "affected_spells": ["Moonfire (8921)"],
+          "affected_spells": [
+            "Moonfire (8921)"
+          ],
           "id": "1117493",
           "modifications": [],
           "values": [
@@ -1989,7 +2050,9 @@
           "idx": "6",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Mangle (33917)"],
+          "affected_spells": [
+            "Mangle (33917)"
+          ],
           "id": "1164922",
           "modifications": [],
           "values": [
@@ -2017,7 +2080,9 @@
           "idx": "1",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Mangle (33917)"],
+          "affected_spells": [
+            "Mangle (33917)"
+          ],
           "id": "1136320",
           "modifications": [],
           "values": [
@@ -2037,7 +2102,10 @@
           "idx": "2",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Brutal Slash (202028)", "Swipe (213771)"],
+          "affected_spells": [
+            "Brutal Slash (202028)",
+            "Swipe (213771)"
+          ],
           "id": "1137908",
           "modifications": [],
           "values": [
@@ -2065,7 +2133,10 @@
           "idx": "1",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
+          "affected_spells": [
+            "Ferocious Bite (22568)",
+            "Ravage (441591)"
+          ],
           "id": "1136325",
           "modifications": [],
           "values": [
@@ -2170,7 +2241,10 @@
           "idx": "1",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Ferocious Bite (22568)", "Ravage (441591)"],
+          "affected_spells": [
+            "Ferocious Bite (22568)",
+            "Ravage (441591)"
+          ],
           "id": "1136577",
           "modifications": [],
           "values": [
@@ -2190,7 +2264,9 @@
           "idx": "2",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Primal Wrath (285381)"],
+          "affected_spells": [
+            "Primal Wrath (285381)"
+          ],
           "id": "1136578",
           "modifications": [],
           "values": [
@@ -2235,7 +2311,9 @@
           "idx": "4",
           "type": "Apply Aura",
           "subtype": "Apply Percent Modifier w/ Label : Spell Direct Amount",
-          "affected_spells": ["Rampant Ferocity (391710)"],
+          "affected_spells": [
+            "Rampant Ferocity (391710)"
+          ],
           "id": "1176379",
           "modifications": [],
           "values": [
@@ -2519,7 +2597,10 @@
           "idx": "1",
           "type": "Apply Aura",
           "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": ["Starsurge (78674)", "Starsurge (197626)"],
+          "affected_spells": [
+            "Starsurge (78674)",
+            "Starsurge (197626)"
+          ],
           "id": "1155666",
           "modifications": [],
           "values": [
