@@ -46,8 +46,8 @@ const useToggleText = () => {
     })
 
     negativeElements.forEach((element) => {
-      const conditionString = id.split('-')[0]
-      const shouldDisplay = !evaluateCondition(conditionString)
+      const conditionString = element.id.split('-')[0]
+      const shouldDisplay = evaluateCondition(conditionString)
 
       if (element instanceof HTMLElement) {
         element.style.display = shouldDisplay ? 'list-item' : 'none'
