@@ -35,12 +35,12 @@ const Header = () => {
         <div className="z-10 flex items-center">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
             <div className="flex items-center">
-              <div className="mr-3">
-                <Image src={png} alt="Logo" width={40} height={40} />
+              <div className="mr-3 hidden sm:block">
+                <Image src={png} alt="Logo" width={60} height={60} />
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-thiccboi text-4xl font-bold text-[#dd6b20] sm:block">
-                  {siteMetadata.headerTitle}
+                <div className="font-magnificent text-3xl font-bold text-[#dd6b20] sm:block">
+                  {siteMetadata.headerTitle.toUpperCase()}
                 </div>
               ) : (
                 siteMetadata.headerTitle
