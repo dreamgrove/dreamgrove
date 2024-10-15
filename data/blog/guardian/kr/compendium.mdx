@@ -100,7 +100,7 @@ locale: 'kr'
     - 현재 표범 형상이고, 달리 할 일 없이 !33917|짓이기기!가 돌아오기를 기다리고 있을 것.
 - !213764|휘둘러치기!.
 
-### 소규모 다중 대상 시전 우선순위 (2-3개 대상)
+### 소규모 전투 시전 우선순위 (2-3개 대상)
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Wildpower Surge_cleave" spellId={411824} name="솟구치는 자연력" defaultCheck />
@@ -155,7 +155,7 @@ locale: 'kr'
     - 현재 표범 형상이고, 달리 할 일 없이 !33917|짓이기기!가 돌아오기를 기다리고 있을 것.
 - !213764|휘둘러치기!.
 
-### AOE Rotation
+### 광역 전투 시전 우선순위
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Heart of the Wild_aoe" spellId={319454} name="야생의 정수" defaultCheck />
@@ -188,7 +188,7 @@ locale: 'kr'
 
 ### 화신/광폭화 중 시전 우선순위
 
-During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
+!102558|화신!/!50334|광폭화! 중에는 아래와 같이 평상시와 약간 다른 시전 우선순위를 적용한다. 
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Single Target_incarn" name="단일 대상" radio="Dotc_Target count" defaultCheck />
@@ -267,23 +267,23 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 - !33917|짓이기기!   
 - !106830|난타!
 
-## Elune's Chosen
+## 엘룬의 대행자
 
-#### **What is a priority list?**
+#### **시전 우선순위란?** ####
 
-When reading the rotations below, you should not think about them as steps to follow in a specific order. At any given point in combat, you should cast the highest priority thing on the list that you are able to cast, providing any stated conditions are met.
+아래의 내용은 그 순서대로 기술을 사용하라는 것이 아니라 말 그대로 매 순간 현재 사용할 수 있는 기술 중 가장 위에 있는 것을 써야 함을 의미한다. 
 
-### Pre-combat
+### 전투 시작 전
 
 <CheckboxProvider>
-<Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name=야생의 정수" defaultCheck />
 </CheckboxProvider>
 
-- Make sure the duration of your Flask, Food, Oil/Stone and Rune buffs will last for the entire encounter
-- Enter !Bear Form! a few seconds before you pull
-- [*EC_Heart of the Wild_PC] !319454|야생의 정수! a second before you start combat 
+- 영약, 음식, 무기 룬 등 강화 효과의 남은 지속 시간이 충분한지 확인.
+- 전투 시작 몇 초 전에 !5487|곰 변신!(!17057|분노 25 생성 효과!).
+- [*EC_Heart of the Wild_PC] 전투 시작 1초 전, !319454|야생의 정수!.
 
-### Single Target Rotation
+### 단일 대상 시전 우선순위
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
@@ -318,7 +318,7 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
 - !213764|휘둘러치기!.
 
-### Cleave Rotation (2-3 Targets)
+### 소규모 전투 시전 우선순위 (2-3개 대상)
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck/>
@@ -357,7 +357,7 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*EC_Galactic Guardian_cleave] Press !Moonfire! if you have a Galactic Guardian buff
 - !213764|휘둘러치기!.
 
-### AOE Rotation
+### 광역 전투 우선순위
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
@@ -391,9 +391,9 @@ When reading the rotations below, you should not think about them as steps to fo
 - !106830|난타!
 - !213764|휘둘러치기!.
 
-### Incarn/Berserk Rotation
+### 화신/광폭화 중 시전 우선순위
 
-During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
+!102558|화신!/!50334|광폭화! 중에는 아래와 같이 평상시와 약간 다른 시전 우선순위를 적용한다. 
 
 <CheckboxProvider>
 <Checkbox id="EC_Single Target_incarn" name="Single Target" radio="EC_Target count" defaultCheck />
