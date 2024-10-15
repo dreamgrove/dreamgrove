@@ -12,8 +12,8 @@ export default function Home() {
   const ENABLE_EXTRA_GUIDES = false
 
   const content = [
-    { src: raids, href: '/raids', alt: 'Raid Guides' },
     { src: dungeons, href: '/dungeons', alt: 'Dungeon Guides' },
+    { src: raids, href: '/raids', alt: 'Raid Guides', active: true },
   ]
 
   const images = [
@@ -60,13 +60,13 @@ export default function Home() {
             <Link
               key={index}
               href={image.href}
-              className={!ENABLE_EXTRA_GUIDES ? 'pointer-events-none' : ''}
-              aria-disabled={!ENABLE_EXTRA_GUIDES}
-              tabIndex={!ENABLE_EXTRA_GUIDES ? -1 : undefined}
+              className={image.active ? 'pointer-events-none' : ''}
+              aria-disabled={image.active}
+              tabIndex={image.active ? -1 : undefined}
             >
               <div
                 className={`relative block ${
-                  ENABLE_EXTRA_GUIDES
+                  !image.active
                     ? 'cursor-pointer hover:scale-[1.02] hover:shadow-xl'
                     : 'cursor-default opacity-30'
                 } shadow-md transition-transform duration-300`}
