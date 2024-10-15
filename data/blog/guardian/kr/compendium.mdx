@@ -91,29 +91,29 @@ locale: 'kr'
 - [*Dotc_Thorns of Iron] 분노가 40 이상이라면, !192081|무쇠가죽!.
 - [*~Dotc_Wildpower Surge] !33917|짓이기기!.
 - !106830|난타!.
-- [*Dotc_Extra Catweaving] If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
-    1. If the Feline Potential !Rip! has fallen off the target AND you have 3 or fewer combo points, press !Rip!. **Never overwrite a Feline Potential empowered !Rip!**
-    2. If the Feline Potential !Rip! has not fallen off the target OR you have 4 or more combo points press !Ferocious Bite!. Make sure to press it at >50 energy
-- [*Dotc_Extra Catweaving] Press !Rake! if it not currently active on the target (or in pandemic range) and you are below 40 rage
-- [*Dotc_Extra Catweaving] Press !Shred! if:
-    - You are below 40 rage and !Rake! is already active on the target
-    - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
-- Press !Swipe!
+- [*Dotc_Extra Catweaving] 다음 중 해당사항이 있다면, 표범으로 변신하여 각기 제시된 마무리 일격을 시전한 뒤 !33917|짓이기기!를 사용해 곰 형상으로 복귀.
+    1. 표범의 잠재력으로 강화된 !1079|도려내기!가 적에게 걸려 있지 않고, 현재 보유한 연계 점수가 3점 이하일 때, !1079|도려내기!. **표범의 잠재력으로 강화된 !1079|도려내기!는 절대 덮어쓰지 않고 끝까지 유지해야 한다.**
+    2. 표범의 잠재력으로 강화된 !1079|도려내기!가 적에게 걸려 있거나 현재 보유한 연계 점수가 4점 이상일 때, 기력 50 이상에서 !22568|흉포한 이빨!.
+- [*Dotc_Extra Catweaving] 현재 적에게 !1822|갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속 시간이 pandemic 구간 내이며 현재 보유한 분노가 40 미만일 때, !1822|갈퀴 발톱!.
+- [*Dotc_Extra Catweaving] 다음 중 해당사항이 있다면, !5221|칼날 발톱!.
+    - 현재 보유한 분노가 40 미만이고, 현재 대상에게 !1822|갈퀴 발톱!이 걸려 있을 것.
+    - 현재 표범 형상이고, 달리 할 일 없이 !33917|짓이기기!가 돌아오기를 기다리고 있을 것.
+- !213764|휘둘러치기!.
 
-### Cleave Rotation (2-3 Targets)
+### 소규모 다중 대상 시전 우선순위 (2-3개 대상)
 
 <CheckboxProvider>
-<Checkbox id="Dotc_Wildpower Surge_cleave" spellId={411824} name="Wildpower Surge" defaultCheck />
-<Checkbox id="Dotc_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox id="Dotc_Extra Catweaving_cleave" spellId={768} name="Full Catweaving" />
-<Checkbox id="Dotc_Lunar Beam_cleave" spellId={204066} name="Lunar Beam" />
-<Checkbox id="Dotc_Vicious Cycle_cleave" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox id="Dotc_Tooth and Claw_cleave" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox id="Dotc_Thorns of Iron_cleave" spellId={400222} name="Thorns of Iron" defaultCheck />
-<Checkbox id="Dotc_Raze_cleave" spellId={400254} name="Raze" defaultCheck />
-<Checkbox id="Dotc_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="Dotc_Incarn Cleave" defaultCheck />
-<Checkbox id="Dotc_Convoke the Spirits_cleave" spellId={391528} name="Convoke the Spirits" radio="Dotc_Incarn Cleave" />
-<Checkbox id="Dotc_Rage of the Sleeper_cleave" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+<Checkbox id="Dotc_Wildpower Surge_cleave" spellId={411824} name="솟구치는 자연력" defaultCheck />
+<Checkbox id="Dotc_Heart of the Wild_cleave" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="Dotc_Extra Catweaving_cleave" spellId={768} name="전투 내내 표범 형상 유지" />
+<Checkbox id="Dotc_Lunar Beam_cleave" spellId={204066} name="달 광선" />
+<Checkbox id="Dotc_Vicious Cycle_cleave" spellId={371999} name="흉포한 순환" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw_cleave" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron_cleave" spellId={400222} name="무쇠 가시" defaultCheck />
+<Checkbox id="Dotc_Raze_cleave" spellId={400254} name="말살" defaultCheck />
+<Checkbox id="Dotc_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="화신: 우르속의 수호자" radio="Dotc_Incarn Cleave" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_cleave" spellId={391528} name="영혼 소집" radio="Dotc_Incarn Cleave" />
+<Checkbox id="Dotc_Rage of the Sleeper_cleave" spellId={200851} name="잠자는 자의 분노" defaultCheck />
 </CheckboxProvider>
 
 - (가능하면 점사 대상에게) !441605|찢어발기기!
@@ -122,79 +122,79 @@ locale: 'kr'
 - [*Dotc_Wildpower Surge_cleave] 참고: 아래의 내용은 정확히 2개 대상을 공격할 때에 한해서만 유의미한 화력 증가를 불러온다.
     - [*Dotc_Heart of the Wild_cleave&&Dotc_Wildpower Surge_cleave] 표범의 잠재력 중첩이 6개일 때, !319454|야생의 정수!.
     - [*Dotc_Wildpower Surge_cleave] 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
-        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !Raze! > !Rake! > !Rip! > !33917|Mangle! 
-        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If you do not have rage to !Raze! after hitting 6 stacks then: !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !400254|말살! > !1822|갈퀴 발톱! > !1079|도려내기! > !33917|짓이기기!
+        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] 분노가 모자라 !400254|말살!을 시전할 수 없다면, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
         - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] !6807|후려갈기기! > !1822|갈퀴 발톱! > !1079|도려내기! > !33917|짓이기기!
-        - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If you do not have rage to !Maul! after hitting 6 stacks then: !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+        - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] 분노가 모자라 !6807|후려갈기기!를 시전할 수 없다면, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
         - [*~Dotc_Tooth and Claw_cleave] 남은 분노를 !192081|무쇠가죽!으로 소모하고, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
-        - [*Dotc_Convoke the Spirits_cleave] Press !Convoke the Spirits! immediately before you !Rip! in this sequence
-        - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
-- [*Dotc_Heart of the Wild_cleave&&~Dotc_Wildpower Surge_cleave] !319454|야생의 정수! if available. Ideally press this as you are running into a pull to save yourself the global during combat.
+        - [*Dotc_Convoke the Spirits_cleave] 위의 내용에서 !1079|도려내기! 직전에, !391528|영혼 소집!.
+        - 위의 내용에서, 대상에게 !1822|갈퀴 발톱!이 이미 걸려 있고 그 남은 지속시간이 pandemic 구간을 초과한다면, !1822|갈퀴 발톱!을 !5221|칼날 발톱!으로 대체.
+- [*Dotc_Heart of the Wild_cleave&&~Dotc_Wildpower Surge_cleave] !319454|야생의 정수!. 가능하다면 전투 시작 직전, 이동 중에 시전해 전역 재사용 대기 시간을 아낄 것.
 - [*Dotc_Lunar Beam_cleave] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*Dotc_Rage of the Sleeper_cleave] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*Dotc_Incarnation: Guardian of Ursoc_cleave] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~Dotc_Incarnation: Guardian of Ursoc_cleave] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Wildpower Surge_cleave] Press !Convoke the Spirits! if the following conditions are met:
-    - You are not in Berserk
-    - You have < 40 rage
-- [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_cleave&&Dotc_Raze_cleave] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Wildpower Surge_cleave] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
+    - 광폭화 효과를 받고 있지 않을 것.
+    - 현재 보유한 분노가 40 미만일 것.
+- [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
+- [*Dotc_Vicious Cycle_cleave&&Dotc_Raze_cleave] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
 - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] !135288|맹위! 중첩이 2개일 때, !6807|후려갈기기!.
 - [*Dotc_Vicious Cycle_cleave&&~Dotc_Raze_cleave] !371999|흉포한 순환! 중첩이 3개일 때, !6807|후려갈기기!.
 - [*Dotc_Thorns of Iron_cleave] 분노가 40 이상이라면, !192081|무쇠가죽!.
-- Press !33917|Mangle!
-- Press !Thrash!
-- [*Dotc_Extra Catweaving_cleave] Please note, the following points (full catweaving) are only a net gain for 2 target cleave:
-    - If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
-    1. Press !Rip! on the target that does not have the Feline Potential !Rip! currently active if the target will live for 80%+ of the rips duration. **Never overwrite a Feline Potential empowered !Rip!**
-    2. If the target will not live for 80%+ of the duration of a !Rip! then press !Ferocious Bite! on either target. Make sure to press it at >50 energy
-- [*Dotc_Extra Catweaving_cleave] Press !Rake! on a target if rake is not already active (or it is in pandemic range) and you are below 40 rage
-- [*Dotc_Extra Catweaving_cleave] Press !Shred! if:
-    - You are below 40 rage
-    - !Rake! is already active on both targets and is not in pandemic range for either
-    - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
-- Press !Swipe!
+- !33917|짓이기기!.
+- !106830|난타!.
+- [*Dotc_Extra Catweaving_cleave] 참고: 아래의 내용은 정확히 2개 대상을 공격할 때에 한해서만 유의미한 화력 증가를 불러온다.
+    - 다음 중 해당사항이 있다면, 표범으로 변신하여 각기 제시된 마무리 일격을 시전한 뒤 !33917|짓이기기!를 사용해 곰 형상으로 복귀.
+    1. 표범의 잠재력으로 강화된 !1079|도려내기!가 걸려 있지 않고, !1079|도려내기!의 지속시간 중 최소 80%가 지나갈 때까지 살아 있을 적에게 !1079|도려내기!. **표범의 잠재력으로 강화된 !1079|도려내기!는 절대 덮어쓰지 않고 끝까지 유지해야 한다.**
+    2. 대상이 !1079|도려내기!의 지속시간 중 최소 80%가 지나가기 전에 죽을 상황이라면, 기력 50 이상에서 !22568|흉포한 이빨!.
+- [*Dotc_Extra Catweaving_cleave] !1822|갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속 시간이 pandemic 구간 내인 적이 있고 현재 보유한 분노가 40 미만일 때, !1822|갈퀴 발톱!.
+- [*Dotc_Extra Catweaving_cleave] 다음 중 해당사항이 있다면, !5221|칼날 발톱!.
+    - 현재 보유한 분노가 40 미만일 것.
+    - 두 대상 모두에게 !1822|갈퀴 발톱!이 이미 걸려 있고, 각각의 남은 지속시간이 pandemic 구간을 초과할 것.
+    - 현재 표범 형상이고, 달리 할 일 없이 !33917|짓이기기!가 돌아오기를 기다리고 있을 것.
+- !213764|휘둘러치기!.
 
 ### AOE Rotation
 
 <CheckboxProvider>
-<Checkbox id="Dotc_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox id="Dotc_Lunar Beam_aoe" spellId={204066} name="Lunar Beam" />
-<Checkbox id="Dotc_Vicious Cycle_aoe" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox id="Dotc_Tooth and Claw_aoe" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox id="Dotc_Thorns of Iron_aoe" spellId={400222} name="Thorns of Iron" defaultCheck />
-<Checkbox id="Dotc_Raze_aoe" spellId={400254} name="Raze" defaultCheck />
-<Checkbox id="Dotc_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="Dotc_Incarn_AOE" defaultCheck />
-<Checkbox id="Dotc_Convoke the Spirits_aoe" spellId={391528} name="Convoke the Spirits" radio="Dotc_Incarn_AOE" />
-<Checkbox id="Dotc_Rage of the Sleeper_aoe" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+<Checkbox id="Dotc_Heart of the Wild_aoe" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="Dotc_Lunar Beam_aoe" spellId={204066} name="달 광선" />
+<Checkbox id="Dotc_Vicious Cycle_aoe" spellId={371999} name="흉포한 순환" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw_aoe" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron_aoe" spellId={400222} name="무쇠 가시" defaultCheck />
+<Checkbox id="Dotc_Raze_aoe" spellId={400254} name="말살" defaultCheck />
+<Checkbox id="Dotc_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="화신: 우르속의 수호자" radio="Dotc_Incarn_AOE" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_aoe" spellId={391528} name="영혼 소집" radio="Dotc_Incarn_AOE" />
+<Checkbox id="Dotc_Rage of the Sleeper_aoe" spellId={200851} name="잠자는 자의 분노" defaultCheck />
 </CheckboxProvider>
 
-- Press !441605|찢어발기기! (on your priority target if there is one)
-- Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
-- [*Dotc_Heart of the Wild_aoe] !319454|야생의 정수! if available. Ideally press this as you are running into a pull to save yourself the global during combat.
+- (가능하면 점사 대상에게) !441605|찢어발기기!
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!. 
+- [*Dotc_Heart of the Wild_aoe] !319454|야생의 정수!. 가능하다면 전투 시작 직전, 이동 중에 시전해 전역 재사용 대기 시간을 아낄 것.
 - [*Dotc_Lunar Beam_aoe] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*Dotc_Rage of the Sleeper_aoe] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*Dotc_Incarnation: Guardian of Ursoc_aoe] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~Dotc_Incarnation: Guardian of Ursoc_aoe] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*Dotc_Convoke the Spirits_aoe] Press !Convoke the Spirits! if the following conditions are met:
-    - You are not in Berserk
-    - You have < 40 rage
-- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_aoe&&Dotc_Raze_aoe] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Convoke the Spirits_aoe] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
+    - 광폭화 효과를 받고 있지 않을 것.
+    - 현재 보유한 분노가 40 미만일 것.
+- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
+- [*Dotc_Vicious Cycle_aoe&&Dotc_Raze_aoe] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
 - [*Dotc_Thorns of Iron_aoe] 분노가 40 이상이라면, !192081|무쇠가죽!.
-- Press !33917|Mangle!
-- Press !Thrash!
-- Press !Swipe!
+- !33917|짓이기기!
+- !106830|난타!
+- !213764|휘둘러치기!.
 
 ### 화신/광폭화 중 시전 우선순위
 
 During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
 
 <CheckboxProvider>
-<Checkbox id="Dotc_Single Target_incarn" name="Single Target" radio="Dotc_Target count" defaultCheck />
-<Checkbox id="Dotc_Cleave_incarn" name="Cleave (2-3 Targets)" radio="Dotc_Target count" />
-<Checkbox id="Dotc_AOE_incarn" name="AOE (4+ Targets)" radio="Dotc_Target count" />
-<Checkbox id="Dotc_Wildpower Surge_incarn" spellId={411824} name="Wildpower Surge" defaultCheck />
+<Checkbox id="Dotc_Single Target_incarn" name="단일 대상" radio="Dotc_Target count" defaultCheck />
+<Checkbox id="Dotc_Cleave_incarn" name="소규모 (2-3개 대상)" radio="Dotc_Target count" />
+<Checkbox id="Dotc_AOE_incarn" name="광역 (4+개 대상)" radio="Dotc_Target count" />
+<Checkbox id="Dotc_Wildpower Surge_incarn" spellId={411824} name="솟구치는 자연력" defaultCheck />
 <Checkbox id="Dotc_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
 <Checkbox id="Dotc_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" />
 <Checkbox id="Dotc_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
@@ -205,8 +205,8 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 </CheckboxProvider>
 
 - [*Dotc_Single Target_incarn] Press !441605|찢어발기기!
-- [*~Dotc_Single Target_incarn] Press !441605|찢어발기기! (on your priority target if there is one)
-- Press !Thrash! if not at max stacks of the debuff or if it is about to expire
+- [*~Dotc_Single Target_incarn] (가능하면 점사 대상에게) !441605|찢어발기기!
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
 - [*Dotc_Heart of the Wild_incarn&&Dotc_Single Target_incarn] !319454|야생의 정수!
     - [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
 - [*Dotc_Heart of the Wild_incarn&&Dotc_Cleave_incarn] !319454|야생의 정수!
@@ -259,13 +259,13 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] 표범의 잠재력 중첩이 6개 미만이라면, !33917|짓이기기!. (2개 대상에서만 유의미함)
 - [*Dotc_Tooth and Claw_incarn&&Dotc_Single Target_incarn] !135288|맹위! 중첩이 2개일 때, !6807|후려갈기기!.
 - [*Dotc_Vicious Cycle_incarn&&Dotc_Single Target_incarn] !371999|흉포한 순환! 중첩이 3개일 때, !6807|후려갈기기!.
-- [*Dotc_Tooth and Claw_incarn&&Dotc_Cleave_incarn] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] Press !Raze! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Cleave_incarn] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
+- [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
+- [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
 - [*Dotc_Thorns of Iron_incarn] Press !192081|무쇠가죽! if you have the rage to do so 
-- Press !33917|Mangle!   
-- Press !Thrash!
+- !33917|짓이기기!   
+- !106830|난타!
 
 ## Elune's Chosen
 
@@ -301,22 +301,22 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*~EC_Thorns of Iron style] Press !Maul! if you will overcap rage
 - [*EC_Thorns of Iron style] Press !192081|무쇠가죽! if you will overcap rage
 - Press !Moonfire! if the dot completely falls off
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- !106830|난타! if not at max stacks of the debuff or it is about to expire
 - [*EC_Heart of the Wild] !319454|야생의 정수! if available
 - [*EC_Lunar Beam&&EC_Lunation] Press !Lunar Beam! if available
 - [*EC_Lunar Beam&&~EC_Lunation] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Rage of the Sleeper] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Incarnation: Guardian of Ursoc] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~EC_Incarnation: Guardian of Ursoc] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*EC_Convoke the Spirits] Press !Convoke the Spirits! if the following conditions are met:
+- [*EC_Convoke the Spirits] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
     - You are not in !Berserk!
-    - You have < 40 rage
+    - 현재 보유한 분노가 40 미만일 것.
 - [*EC_Tooth and Claw] !135288|맹위! 중첩이 2개일 때, !6807|후려갈기기!.
 - [*EC_Vicious Cycle] !371999|흉포한 순환! 중첩이 3개일 때, !6807|후려갈기기!.
-- Press !33917|Mangle!
-- Press !Thrash!
+- !33917|짓이기기!
+- !106830|난타!
 - [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
-- Press !Swipe!
+- !213764|휘둘러치기!.
 
 ### Cleave Rotation (2-3 Targets)
 
@@ -338,24 +338,24 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*~EC_Thorns of Iron style_cleave&&~EC_Raze_cleave] Press !Maul! if you will overcap rage
 - [*EC_Thorns of Iron style_cleave] Press !192081|무쇠가죽! if you have the rage to do so
 - Press !Moonfire! if the dot completely falls off
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- !106830|난타! if not at max stacks of the debuff or it is about to expire
 - [*EC_Heart of the Wild_cleave] !319454|야생의 정수! if available
 - [*EC_Lunar Beam_cleave&&EC_Lunation_cleave] Press !Lunar Beam! if available
 - [*EC_Lunar Beam_cleave&&~EC_Lunation_cleave] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Rage of the Sleeper_cleave] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Incarnation: Guardian of Ursoc_cleave] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~EC_Incarnation: Guardian of Ursoc_cleave] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*EC_Convoke the Spirits_cleave] Press !Convoke the Spirits! if the following conditions are met:
+- [*EC_Convoke the Spirits_cleave] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
     - You are not in !Berserk!
-    - You have < 40 rage
-- [*EC_Tooth and Claw_cleave&&EC_Raze_cleave] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*EC_Vicious Cycle_cleave&&EC_Raze_cleave] Press !Raze! if at 3 stacks of !Vicious Cycle!
+    - 현재 보유한 분노가 40 미만일 것.
+- [*EC_Tooth and Claw_cleave&&EC_Raze_cleave] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
+- [*EC_Vicious Cycle_cleave&&EC_Raze_cleave] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
 - [*EC_Tooth and Claw_cleave&&~EC_Raze_cleave] !135288|맹위! 중첩이 2개일 때, !6807|후려갈기기!.
 - [*EC_Vicious Cycle_cleave&&~EC_Raze_cleave] !371999|흉포한 순환! 중첩이 3개일 때, !6807|후려갈기기!.
-- Press !33917|Mangle!
-- Press !Thrash!
+- !33917|짓이기기!
+- !106830|난타!
 - [*EC_Galactic Guardian_cleave] Press !Moonfire! if you have a Galactic Guardian buff
-- Press !Swipe!
+- !213764|휘둘러치기!.
 
 ### AOE Rotation
 
@@ -375,21 +375,21 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*~EC_Thorns of Iron style_aoe&&EC_Raze_aoe] Press !Raze! if you will overcap rage
 - [*EC_Thorns of Iron style_aoe] Press !192081|무쇠가죽! if you have the rage to do so
 - Press !Moonfire! if the dot completely falls off
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- !106830|난타! if not at max stacks of the debuff or it is about to expire
 - [*EC_Heart of the Wild_aoe] !319454|야생의 정수! if available
 - [*EC_Lunar Beam_aoe&&EC_Lunation_aoe] Press !Lunar Beam! if available
 - [*EC_Lunar Beam_aoe&&~EC_Lunation_aoe] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Rage of the Sleeper_aoe] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Incarnation: Guardian of Ursoc_aoe] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~EC_Incarnation: Guardian of Ursoc_aoe] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*EC_Convoke the Spirits_aoe] Press !Convoke the Spirits! if the following conditions are met:
+- [*EC_Convoke the Spirits_aoe] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
     - You are not in !Berserk!
-    - You have < 40 rage
-- [*EC_Tooth and Claw_aoe&&EC_Raze_aoe] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*EC_Vicious Cycle_aoe&&EC_Raze_aoe] Press !Raze! if at 3 stacks of !Vicious Cycle!
-- Press !33917|Mangle!
-- Press !Thrash!
-- Press !Swipe!
+    - 현재 보유한 분노가 40 미만일 것.
+- [*EC_Tooth and Claw_aoe&&EC_Raze_aoe] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
+- [*EC_Vicious Cycle_aoe&&EC_Raze_aoe] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
+- !33917|짓이기기!
+- !106830|난타!
+- !213764|휘둘러치기!.
 
 ### Incarn/Berserk Rotation
 
@@ -408,14 +408,14 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 <Checkbox id="EC_Raze_incarn" spellId={400254} name="Raze" />
 </CheckboxProvider>
 
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
+- !106830|난타! if not at max stacks of the debuff or it is about to expire
 - [*EC_Thorns of Iron style_incarn] Press !192081|무쇠가죽! if you have the rage
     - Make sure you pool when Incarn/Berserk is finishing so you leave with a full rage bar
 - [*EC_Heart of the Wild_incarn] !319454|야생의 정수! if it becomes available
 - [*EC_Lunar Beam_incarn] Press !Lunar Beam! if it becomes available
 - [*EC_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper! if it becomes available  
 - [*~EC_Thorns of Iron style_incarn] 
-    - [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
+    - [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn] !33917|짓이기기! if you are at 3 stacks of !Vicious Cycle!
 - [*EC_Thorns of Iron style_incarn&&EC_Tooth and Claw_incarn] 
     - [*EC_Single Target_incarn] Press !Maul! if you have a !Tooth and Claw! Proc
     - [*EC_Cleave_incarn&&~EC_Raze_incarn] Press !Maul! on your priority target if you have a !Tooth and Claw! Proc 
@@ -427,13 +427,13 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
     - [*EC_Cleave_incarn&&EC_Raze_incarn] Press !Raze! if you have rage to do so or have a !Tooth and Claw! Proc
     - [*EC_AOE_incarn&&EC_Raze_incarn] Press !Raze! if you have rage to do so or have a !Tooth and Claw! Proc
 - [*~EC_Thorns of Iron style_incarn] Spend any excess rage on !192081|무쇠가죽!. You should never fully cap rage.
-- [*~EC_Thorns of Iron style_incarn] Press !33917|Mangle! if you need rage
+- [*~EC_Thorns of Iron style_incarn] !33917|짓이기기! if you need rage
     - [*EC_Single Target_incarn] This will typically be around every 2-3 Mauls.
     - [*EC_Cleave_incarn&&~EC_Raze_incarn] This will typically be around every 2-3 Mauls.
     - [*EC_Cleave_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
     - [*EC_AOE_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
-- [*EC_Thorns of Iron style_incarn] Press !33917|Mangle!
-- Press !Thrash!
+- [*EC_Thorns of Iron style_incarn] !33917|짓이기기!
+- !106830|난타!
 
 ## 무쇠가죽
 
