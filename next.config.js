@@ -118,6 +118,16 @@ module.exports = () => {
           destination: '/blog/resto/compendium',
           permanent: true,
         },
+        {
+          source: '/guardian',
+          destination: '/blog/guardian/compendium',
+          permanent: true,
+        },
+        {
+          source: '/guardian/diminishing-returns',
+          destination: '/blog/guardian/diminishing-returns',
+          permanent: true,
+        },
       ]
     },
     async headers() {
