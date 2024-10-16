@@ -1,331 +1,3966 @@
 {
   "delta": [
     {
-      "name": "Berserk",
-      "id": 50334,
+      "name": "Feral Druid",
+      "id": 137011,
       "type": "modified",
       "fields": [],
       "effects": [
         {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Recharge Time% (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "98174",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Incarnation: Guardian of Ursoc",
-      "id": 102558,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Recharge Time% (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "111384",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Heart of the Wild",
-      "id": 108293,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "3",
-          "type": "Apply Aura",
-          "subtype": "Modify Cooldown Charge (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "810228",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Druid",
-      "id": 137009,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Hasted Cooldown Duration (Category)",
-          "affected_spells": [
-            "Brutal Slash (202028)"
-          ],
-          "id": "179692",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1581",
-              "new": "1581 (Category)"
-            }
-          ]
+          "type": "removed",
+          "id": "1032348"
         },
         {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Hasted Cooldown Duration (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "191162",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
+          "type": "removed",
+          "id": "1049862"
+        },
+        {
+          "type": "removed",
+          "id": "1049863"
+        },
+        {
+          "type": "removed",
+          "id": "1080962"
+        },
+        {
+          "type": "removed",
+          "id": "1088944"
+        },
+        {
+          "type": "removed",
+          "id": "1174663"
         }
       ]
     },
     {
+      "type": "removed",
+      "name": "Restoration Druid",
+      "id": 137012
+    },
+    {
+      "type": "removed",
+      "name": "Balance Druid",
+      "id": 137013
+    },
+    {
+      "type": "removed",
+      "name": "Charged Bolt",
+      "id": 137542
+    },
+    {
+      "type": "removed",
+      "name": "Item - Druid T15 Restoration 2P Bonus",
+      "id": 138284
+    },
+    {
+      "type": "removed",
+      "name": "Ysera's Gift",
+      "id": 145108
+    },
+    {
+      "type": "removed",
+      "name": "Ysera's Gift",
+      "id": 145109
+    },
+    {
+      "type": "removed",
+      "name": "Ysera's Gift",
+      "id": 145110
+    },
+    {
+      "type": "removed",
+      "name": "Bloodtalons",
+      "id": 145152
+    },
+    {
+      "type": "removed",
+      "name": "Dream of Cenarius",
+      "id": 145153
+    },
+    {
+      "type": "removed",
+      "name": "Efflorescence",
+      "id": 145205
+    },
+    {
+      "type": "removed",
+      "name": "Guardian of Elune",
+      "id": 155578
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Inspiration",
+      "id": 155580
+    },
+    {
+      "type": "removed",
+      "name": "Moonfire",
+      "id": 155625
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Inspiration",
+      "id": 155627
+    },
+    {
+      "type": "removed",
+      "name": "Germination",
+      "id": 155675
+    },
+    {
+      "type": "removed",
+      "name": "Rake",
+      "id": 155722
+    },
+    {
+      "type": "removed",
+      "name": "Rejuvenation",
+      "id": 155777
+    },
+    {
+      "type": "removed",
+      "name": "Mastery: Nature's Guardian",
+      "id": 155783
+    },
+    {
+      "type": "removed",
+      "name": "Bristling Fur",
+      "id": 155835
+    },
+    {
+      "type": "removed",
+      "name": "Owlkin Frenzy",
+      "id": 157228
+    },
+    {
+      "type": "removed",
+      "name": "Critical Strikes",
+      "id": 157447
+    },
+    {
+      "type": "removed",
+      "name": "Tranquility",
+      "id": 157982
+    },
+    {
+      "type": "removed",
+      "name": "Soul of the Forest",
+      "id": 158476
+    },
+    {
+      "type": "removed",
+      "name": "Soul of the Forest",
+      "id": 158477
+    },
+    {
+      "type": "removed",
+      "name": "Soul of the Forest",
+      "id": 158478
+    },
+    {
+      "type": "removed",
+      "name": "Dream of Cenarius",
+      "id": 158504
+    },
+    {
+      "type": "removed",
+      "name": "Thrash",
+      "id": 158723
+    },
+    {
+      "type": "removed",
+      "name": "Mastery: Nature's Guardian",
+      "id": 159195
+    },
+    {
+      "type": "removed",
+      "name": "Primal Fury",
+      "id": 159286
+    },
+    {
+      "type": "removed",
+      "name": "Travel Form",
+      "id": 159456
+    },
+    {
+      "type": "removed",
+      "name": "Stat Negation Aura - Agility DPS",
+      "id": 162697
+    },
+    {
+      "type": "removed",
+      "name": "Stat Negation Aura - Intellect DPS",
+      "id": 162699
+    },
+    {
+      "type": "removed",
+      "name": "Stat Negation Aura - Agility Tank",
+      "id": 162700
+    },
+    {
+      "type": "removed",
+      "name": "Stat Negation Aura - Intellect Healer",
+      "id": 162701
+    },
+    {
+      "type": "removed",
+      "name": "Rake",
+      "id": 163505
+    },
+    {
+      "type": "removed",
+      "name": "Fungal Growth",
+      "id": 164717
+    },
+    {
+      "type": "removed",
+      "name": "Moonfire",
+      "id": 164812
+    },
+    {
+      "type": "removed",
+      "name": "Sunfire",
+      "id": 164815
+    },
+    {
+      "type": "removed",
+      "name": "Flap",
+      "id": 164862
+    },
+    {
+      "type": "removed",
+      "name": "Flight Form",
+      "id": 165962
+    },
+    {
+      "type": "removed",
+      "name": "Glyph of the Sun",
+      "id": 171803
+    },
+    {
+      "type": "removed",
+      "name": "The Sun",
+      "id": 171891
+    },
+    {
+      "type": "removed",
+      "name": "Item - Druid T18 Balance 2P Bonus",
+      "id": 187875
+    },
+    {
+      "type": "removed",
+      "name": "Fey Missile",
+      "id": 188046
+    },
+    {
+      "type": "removed",
+      "name": "Fey Moonwing",
+      "id": 188083
+    },
+    {
+      "type": "removed",
+      "name": "Lifebloom",
+      "id": 188550
+    },
+    {
+      "type": "removed",
+      "name": "Memory of the Mother Tree",
+      "id": 189877
+    },
+    {
+      "type": "removed",
+      "name": "Wrath",
+      "id": 190984
+    },
+    {
+      "type": "removed",
+      "name": "Starfall",
+      "id": 191034
+    },
+    {
+      "type": "removed",
+      "name": "Starfall",
+      "id": 191037
+    },
+    {
+      "type": "removed",
+      "name": "Ironfur",
+      "id": 192081
+    },
+    {
+      "type": "removed",
+      "name": "Thrash",
+      "id": 192090
+    },
+    {
+      "type": "removed",
+      "name": "Dreamwalk",
+      "id": 193753
+    },
+    {
+      "type": "removed",
+      "name": "Starfire",
+      "id": 194153
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Alignment",
+      "id": 194223
+    },
+    {
+      "type": "removed",
+      "name": "Stonebark",
+      "id": 197061
+    },
+    {
+      "type": "removed",
+      "name": "Inner Peace",
+      "id": 197073
+    },
+    {
+      "type": "removed",
+      "name": "Balance Affinity",
+      "id": 197488
+    },
+    {
+      "type": "removed",
+      "name": "Feral Affinity",
+      "id": 197490
+    },
+    {
+      "type": "removed",
+      "name": "Guardian Affinity",
+      "id": 197491
+    },
+    {
+      "type": "removed",
+      "name": "Astral Influence",
+      "id": 197524
+    },
+    {
+      "type": "removed",
+      "name": "Moonkin Form",
+      "id": 197625
+    },
+    {
+      "type": "removed",
+      "name": "Starsurge",
+      "id": 197626
+    },
+    {
+      "type": "removed",
+      "name": "Starfire",
+      "id": 197628
+    },
+    {
+      "type": "removed",
+      "name": "Sunfire",
+      "id": 197630
+    },
+    {
+      "type": "removed",
+      "name": "Balance Affinity",
+      "id": 197632
+    },
+    {
+      "type": "removed",
+      "name": "Feral Overrides Passive",
+      "id": 197692
+    },
+    {
+      "type": "removed",
+      "name": "Flourish",
+      "id": 197721
+    },
+    {
+      "type": "removed",
+      "name": "Astral Power",
+      "id": 197911
+    },
+    {
+      "type": "removed",
       "name": "Prosperity",
-      "id": 200383,
-      "type": "modified",
-      "talent_entry": "Restoration",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Modify Cooldown Charge (Category)",
-          "affected_spells": [
-            "Swiftmend (18562)"
-          ],
-          "id": "294998",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1576",
-              "new": "1576 (Category)"
-            }
-          ]
-        }
-      ]
+      "id": 200383
     },
     {
+      "type": "removed",
+      "name": "Cultivation",
+      "id": 200389
+    },
+    {
+      "type": "removed",
+      "name": "Cultivation",
+      "id": 200390
+    },
+    {
+      "type": "removed",
+      "name": "Activating Specialization",
+      "id": 200749
+    },
+    {
+      "type": "removed",
+      "name": "Rage of the Sleeper",
+      "id": 200851
+    },
+    {
+      "type": "removed",
+      "name": "Gory Fur",
+      "id": 200854
+    },
+    {
+      "type": "removed",
+      "name": "Gory Fur",
+      "id": 201671
+    },
+    {
+      "type": "removed",
+      "name": "Predator",
+      "id": 202021
+    },
+    {
+      "type": "removed",
+      "name": "Brutal Slash",
+      "id": 202028
+    },
+    {
+      "type": "removed",
+      "name": "Sabertooth",
+      "id": 202031
+    },
+    {
+      "type": "removed",
+      "name": "Feral Affinity",
+      "id": 202155
+    },
+    {
+      "type": "removed",
+      "name": "Shooting Stars",
+      "id": 202342
+    },
+    {
+      "type": "removed",
+      "name": "Starlord",
+      "id": 202345
+    },
+    {
+      "type": "removed",
+      "name": "Stellar Flare",
+      "id": 202347
+    },
+    {
+      "type": "removed",
+      "name": "Starlord",
+      "id": 202416
+    },
+    {
+      "type": "removed",
+      "name": "Starlord",
+      "id": 202423
+    },
+    {
+      "type": "removed",
+      "name": "Warrior of Elune",
+      "id": 202425
+    },
+    {
+      "type": "removed",
+      "name": "Nature's Balance",
+      "id": 202430
+    },
+    {
+      "type": "removed",
+      "name": "Shooting Stars",
+      "id": 202497
+    },
+    {
+      "type": "removed",
+      "name": "Half Moon",
+      "id": 202768
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Elune",
+      "id": 202770
+    },
+    {
+      "type": "removed",
+      "name": "Full Moon",
+      "id": 202771
+    },
+    {
+      "type": "removed",
+      "name": "Light of the Sun",
+      "id": 202918
+    },
+    {
+      "type": "removed",
+      "name": "Goldrinn's Fang",
+      "id": 203001
+    },
+    {
+      "type": "removed",
+      "name": "Overgrowth",
+      "id": 203651
+    },
+    {
+      "type": "removed",
+      "name": "Overgrowth",
+      "id": 203652
+    },
+    {
+      "type": "removed",
+      "name": "Brambles",
+      "id": 203953
+    },
+    {
+      "type": "removed",
+      "name": "Brambles",
+      "id": 203958
+    },
+    {
+      "type": "removed",
+      "name": "Blood Frenzy",
+      "id": 203961
+    },
+    {
+      "type": "removed",
+      "name": "Blood Frenzy",
+      "id": 203962
+    },
+    {
+      "type": "removed",
+      "name": "Galactic Guardian",
+      "id": 203964
+    },
+    {
+      "type": "removed",
       "name": "Survival of the Fittest",
-      "id": 203965,
-      "type": "modified",
-      "talent_entry": "Guardian",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Recharge Time% (Category)",
-          "affected_spells": [
-            "Survival Instincts (61336)"
-          ],
-          "id": "301037",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1469",
-              "new": "1469 (Category)"
-            }
-          ]
-        }
-      ]
+      "id": 203965
     },
     {
+      "type": "removed",
+      "name": "Earthwarden",
+      "id": 203974
+    },
+    {
+      "type": "removed",
+      "name": "Earthwarden",
+      "id": 203975
+    },
+    {
+      "type": "removed",
+      "name": "Bristling Fur",
+      "id": 204031
+    },
+    {
+      "type": "removed",
+      "name": "Rend and Tear",
+      "id": 204053
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Beam",
+      "id": 204066
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Beam",
+      "id": 204069
+    },
+    {
+      "type": "removed",
+      "name": "Force of Nature",
+      "id": 205636
+    },
+    {
+      "type": "removed",
+      "name": "Abundance",
+      "id": 207383
+    },
+    {
+      "type": "removed",
+      "name": "Spring Blossoms",
+      "id": 207385
+    },
+    {
+      "type": "removed",
+      "name": "Spring Blossoms",
+      "id": 207386
+    },
+    {
+      "type": "removed",
+      "name": "Abundance",
+      "id": 207640
+    },
+    {
+      "type": "removed",
+      "name": "Essence of G'Hanir",
+      "id": 208253
+    },
+    {
+      "type": "removed",
+      "name": "Oneth's Intuition",
+      "id": 209405
+    },
+    {
+      "type": "removed",
+      "name": "Oneth's Intuition",
+      "id": 209406
+    },
+    {
+      "type": "removed",
+      "name": "Oneth's Overconfidence",
+      "id": 209407
+    },
+    {
+      "type": "removed",
+      "name": "Mount Form",
+      "id": 210053
+    },
+    {
+      "type": "removed",
+      "name": "Feral Instinct",
+      "id": 210631
+    },
+    {
+      "type": "removed",
+      "name": "Feral Instinct",
+      "id": 210649
+    },
+    {
+      "type": "removed",
+      "name": "Protection of Ashamane",
+      "id": 210650
+    },
+    {
+      "type": "removed",
+      "name": "Protection of Ashamane",
+      "id": 210655
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Bite",
+      "id": 210702
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Rip",
+      "id": 210705
+    },
+    {
+      "type": "removed",
+      "name": "Gore",
+      "id": 210706
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Frenzy",
+      "id": 210722
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Frenzy",
+      "id": 210723
+    },
+    {
+      "type": "removed",
+      "name": "Thrash",
+      "id": 211141
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Elune",
+      "id": 211545
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Elune",
+      "id": 211547
+    },
+    {
+      "type": "removed",
+      "name": "Revitalize",
+      "id": 212040
+    },
+    {
+      "type": "removed",
+      "name": "Protection of Ashamane",
+      "id": 213557
+    },
+    {
+      "type": "removed",
+      "name": "Guardian of Elune",
+      "id": 213680
+    },
+    {
+      "type": "removed",
+      "name": "Galactic Guardian",
+      "id": 213708
+    },
+    {
+      "type": "removed",
+      "name": "Brambles",
+      "id": 213709
+    },
+    {
+      "type": "removed",
+      "name": "Swipe",
+      "id": 213764
+    },
+    {
+      "type": "removed",
+      "name": "Swipe",
+      "id": 213771
+    },
+    {
+      "type": "removed",
+      "name": "Protection of Ashamane",
+      "id": 214274
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Frenzy",
+      "id": 217363
+    },
+    {
+      "type": "removed",
+      "name": "Guardian Affinity",
+      "id": 217615
+    },
+    {
+      "type": "removed",
+      "name": "Essence of G'Hanir",
+      "id": 218889
+    },
+    {
+      "type": "removed",
+      "name": "Rage of the Sleeper",
+      "id": 219432
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Rip",
+      "id": 224435
+    },
+    {
+      "type": "removed",
+      "name": "Nature's Guardian",
+      "id": 227034
+    },
+    {
+      "type": "removed",
+      "name": "Shapeshift Form",
+      "id": 228545
+    },
+    {
+      "type": "removed",
+      "name": "Improved Regrowth",
+      "id": 231032
+    },
+    {
+      "type": "removed",
+      "name": "Improved Rejuvenation",
+      "id": 231040
+    },
+    {
+      "type": "removed",
+      "name": "Owlkin Frenzy",
+      "id": 231042
+    },
+    {
+      "type": "removed",
+      "name": "Improved Sunfire",
+      "id": 231050
+    },
+    {
+      "type": "removed",
+      "name": "Improved Prowl",
+      "id": 231052
+    },
+    {
+      "type": "removed",
+      "name": "Merciless Claws",
+      "id": 231063
+    },
+    {
+      "type": "removed",
+      "name": "Mangle",
+      "id": 231064
+    },
+    {
+      "type": "removed",
+      "name": "Lightning Reflexes",
+      "id": 231065
+    },
+    {
+      "type": "removed",
+      "name": "Ironfur",
+      "id": 231070
+    },
+    {
+      "type": "removed",
+      "name": "Archdruid's Lunarwing Form",
+      "id": 231437
+    },
+    {
+      "type": "removed",
+      "name": "Thorns",
+      "id": 232559
+    },
+    {
+      "type": "removed",
+      "name": "Moment of Clarity",
+      "id": 236068
+    },
+    {
+      "type": "removed",
+      "name": "Strength of the Wild",
+      "id": 236716
+    },
+    {
+      "type": "removed",
+      "name": "Scintillating Moonlight",
+      "id": 238049
+    },
+    {
+      "type": "removed",
+      "name": "Force of Nature",
+      "id": 248280
+    },
+    {
+      "type": "removed",
+      "name": "Vindicaar Matrix Crystal",
+      "id": 251463
+    },
+    {
+      "type": "removed",
+      "name": "Incarnation: Avatar of Ashamane",
+      "id": 252071
+    },
+    {
+      "type": "removed",
+      "name": "Tiger Dash",
+      "id": 252216
+    },
+    {
+      "type": "removed",
+      "name": "Vindicaar Matrix Crystal",
+      "id": 255529
+    },
+    {
+      "type": "removed",
+      "name": "Light's Judgment",
+      "id": 255647
+    },
+    {
+      "type": "removed",
+      "name": "Holy Resistance",
+      "id": 255651
+    },
+    {
+      "type": "removed",
+      "name": "Light's Reckoning",
+      "id": 255652
+    },
+    {
+      "type": "removed",
+      "name": "Demonbane",
+      "id": 255653
+    },
+    {
+      "type": "removed",
+      "name": "Light's Judgment",
+      "id": 256893
+    },
+    {
+      "type": "removed",
+      "name": "Light's Reckoning",
+      "id": 256896
+    },
+    {
+      "type": "removed",
+      "name": "Bear Form",
+      "id": 270100
+    },
+    {
+      "type": "removed",
+      "name": "Streaking Stars",
+      "id": 272871
+    },
+    {
+      "type": "removed",
+      "name": "Streaking Stars",
+      "id": 272872
+    },
+    {
+      "type": "removed",
+      "name": "Streaking Star",
+      "id": 272873
+    },
+    {
+      "type": "removed",
+      "name": "New Moon",
+      "id": 274281
+    },
+    {
+      "type": "removed",
+      "name": "Half Moon",
+      "id": 274282
+    },
+    {
+      "type": "removed",
+      "name": "Full Moon",
+      "id": 274283
+    },
+    {
+      "type": "removed",
+      "name": "Feral Frenzy",
+      "id": 274837
+    },
+    {
+      "type": "removed",
+      "name": "Feral Frenzy",
+      "id": 274838
+    },
+    {
+      "type": "removed",
+      "name": "Photosynthesis",
+      "id": 274902
+    },
+    {
+      "type": "removed",
+      "name": "Photosynthesis",
+      "id": 274906
+    },
+    {
+      "type": "removed",
+      "name": "Aquatic Form",
+      "id": 276012
+    },
+    {
+      "type": "removed",
+      "name": "Iron Jaws",
+      "id": 276021
+    },
+    {
+      "type": "removed",
+      "name": "Iron Jaws",
+      "id": 276026
+    },
+    {
+      "type": "removed",
+      "name": "Flight Form",
+      "id": 276029
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Shrapnel",
+      "id": 278507
+    },
+    {
+      "type": "removed",
+      "name": "Layered Mane",
+      "id": 279552
+    },
+    {
+      "type": "removed",
+      "name": "Layered Mane",
+      "id": 279555
+    },
+    {
+      "type": "removed",
+      "name": "Twin Moons",
+      "id": 279620
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Shrapnel",
+      "id": 279641
+    },
+    {
+      "type": "removed",
+      "name": "Nature's Balance",
+      "id": 279649
+    },
+    {
+      "type": "removed",
+      "name": "Nature's Balance",
+      "id": 279652
+    },
+    {
+      "type": "removed",
+      "name": "Starlord",
+      "id": 279709
+    },
+    {
+      "type": "removed",
+      "name": "Wrath",
+      "id": 279729
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Endurance",
+      "id": 280013
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Endurance",
+      "id": 280161
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Endurance",
+      "id": 280165
+    },
+    {
+      "type": "removed",
+      "name": "Twin Moons",
+      "id": 281847
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Elune",
+      "id": 281871
+    },
+    {
+      "type": "removed",
+      "name": "Primal Wrath",
+      "id": 285381
+    },
+    {
+      "type": "removed",
+      "name": "Scent of Blood",
+      "id": 285564
+    },
+    {
+      "type": "removed",
+      "name": "Scent of Blood",
+      "id": 285646
+    },
+    {
+      "type": "removed",
+      "name": "Improved Stampeding Roar",
+      "id": 288826
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 289237
+    },
+    {
+      "type": "removed",
+      "name": "Burst of Savagery",
+      "id": 289314
+    },
+    {
+      "type": "removed",
+      "name": "Burst of Savagery",
+      "id": 289315
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 290640
+    },
+    {
+      "type": "removed",
+      "name": "Dreamwalk",
+      "id": 293887
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 295966
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Adept",
+      "id": 300346
+    },
+    {
+      "type": "removed",
+      "name": "Feline Adept",
+      "id": 300349
+    },
+    {
+      "type": "removed",
+      "name": "Verdant Heart",
+      "id": 301768
+    },
+    {
+      "type": "removed",
+      "name": "Thorns",
+      "id": 305496
+    },
+    {
+      "type": "removed",
+      "name": "Thorns",
+      "id": 305497
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Spirits",
+      "id": 312946
+    },
+    {
+      "type": "removed",
+      "name": "Skull Bash",
+      "id": 314330
+    },
+    {
+      "type": "removed",
+      "name": "Bloodtalons",
+      "id": 319439
+    },
+    {
+      "type": "removed",
       "name": "Heart of the Wild",
-      "id": 319454,
-      "type": "modified",
-      "talent_entry": "Generic",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "9",
-          "type": "Apply Aura",
-          "subtype": "Modify Cooldown Charge (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "1005992",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
-        }
-      ]
+      "id": 319454
     },
     {
+      "type": "removed",
+      "name": "Ravenous Frenzy",
+      "id": 323546
+    },
+    {
+      "type": "removed",
+      "name": "Ravenous Frenzy",
+      "id": 323557
+    },
+    {
+      "type": "removed",
+      "name": "Convoke the Spirits",
+      "id": 323764
+    },
+    {
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 325727
+    },
+    {
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 325733
+    },
+    {
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 325748
+    },
+    {
+      "type": "removed",
+      "name": "Eclipse",
+      "id": 326053
+    },
+    {
+      "type": "removed",
+      "name": "Eclipse",
+      "id": 326055
+    },
+    {
+      "type": "removed",
+      "name": "Natural Wisdom",
+      "id": 326228
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Spirits",
+      "id": 326434
+    },
+    {
+      "type": "removed",
+      "name": "Empower Bond",
+      "id": 326446
+    },
+    {
+      "type": "removed",
+      "name": "Empower Bond",
+      "id": 326462
+    },
+    {
+      "type": "removed",
+      "name": "Moonfire",
+      "id": 326646
+    },
+    {
+      "type": "removed",
+      "name": "Empower Bond",
+      "id": 326647
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Spirits",
+      "id": 326967
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Empowerment",
+      "id": 327022
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Protection",
+      "id": 327037
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Focus",
+      "id": 327071
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Spirits",
+      "id": 327097
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Empowerment",
+      "id": 327139
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Focus",
+      "id": 327148
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Focus",
+      "id": 327149
+    },
+    {
+      "type": "removed",
+      "name": "Aetherial Kindling",
+      "id": 327541
+    },
+    {
+      "type": "removed",
+      "name": "Improved Barkskin",
+      "id": 327993
+    },
+    {
+      "type": "removed",
+      "name": "Improved Wild Growth",
+      "id": 328025
+    },
+    {
+      "type": "removed",
       "name": "Improved Survival Instincts",
-      "id": 328767,
-      "type": "modified",
-      "talent_entry": "Guardian",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Modify Cooldown Charge (Category)",
-          "affected_spells": [
-            "Survival Instincts (61336)"
-          ],
-          "id": "821504",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1469",
-              "new": "1469 (Category)"
-            }
-          ]
-        }
-      ]
+      "id": 328767
     },
     {
-      "name": "Born of the Wilds",
-      "id": 341451,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Cooldown Time (Category)",
-          "affected_spells": [
-            "Heart of the Wild (108291)",
-            "Heart of the Wild (108292)",
-            "Heart of the Wild (108293)",
-            "Heart of the Wild (108294)"
-          ],
-          "id": "841855",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1383",
-              "new": "1383 (Category)"
-            }
-          ]
-        }
-      ]
+      "type": "removed",
+      "name": "Eclipse",
+      "id": 329910
     },
     {
-      "name": "Reinvigoration",
-      "id": 372945,
-      "type": "modified",
-      "talent_entry": "Guardian",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Recharge Time% (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "997885",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
-        }
-      ]
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 335935
     },
     {
+      "type": "removed",
+      "name": "Ravenous Frenzy",
+      "id": 337045
+    },
+    {
+      "type": "removed",
+      "name": "Lone Empowerment",
+      "id": 338142
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Empowerment",
+      "id": 338411
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Empowerment",
+      "id": 338525
+    },
+    {
+      "type": "removed",
+      "name": "Oath of the Elder Druid",
+      "id": 338608
+    },
+    {
+      "type": "removed",
+      "name": "Oath of the Elder Druid",
+      "id": 338643
+    },
+    {
+      "type": "removed",
+      "name": "Circle of Life and Death",
+      "id": 338657
+    },
+    {
+      "type": "removed",
+      "name": "Draught of Deep Focus",
+      "id": 338658
+    },
+    {
+      "type": "removed",
+      "name": "Oneth's Clear Vision",
+      "id": 338661
+    },
+    {
+      "type": "removed",
+      "name": "Primordial Arcanic Pulsar",
+      "id": 338668
+    },
+    {
+      "type": "removed",
+      "name": "Primordial Arcanic Pulsar",
+      "id": 338825
+    },
+    {
+      "type": "removed",
+      "name": "Primordial Arcanic Pulsar",
+      "id": 338828
+    },
+    {
+      "type": "removed",
+      "name": "Verdant Infusion",
+      "id": 338829
+    },
+    {
+      "type": "removed",
+      "name": "The Dark Titan's Lesson",
+      "id": 338831
+    },
+    {
+      "type": "removed",
+      "name": "Vision of Unending Growth",
+      "id": 338832
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Fury Remembered",
+      "id": 339056
+    },
+    {
+      "type": "removed",
+      "name": "Luffa-Infused Embrace",
+      "id": 339060
+    },
+    {
+      "type": "removed",
+      "name": "Legacy of the Sleeper",
+      "id": 339062
+    },
+    {
+      "type": "removed",
+      "name": "The Natural Order's Will",
+      "id": 339063
+    },
+    {
+      "type": "removed",
+      "name": "Memory of the Mother Tree",
+      "id": 339064
+    },
+    {
+      "type": "removed",
+      "name": "Apex Predator's Craving",
+      "id": 339139
+    },
+    {
+      "type": "removed",
+      "name": "Apex Predator's Craving",
+      "id": 339140
+    },
+    {
+      "type": "removed",
+      "name": "Eye of Fearful Symmetry",
+      "id": 339141
+    },
+    {
+      "type": "removed",
+      "name": "Eye of Fearful Symmetry",
+      "id": 339142
+    },
+    {
+      "type": "removed",
+      "name": "Cat-Eye Curio",
+      "id": 339144
+    },
+    {
+      "type": "removed",
+      "name": "Oneth's Clear Vision",
+      "id": 339797
+    },
+    {
+      "type": "removed",
+      "name": "Oneth's Perception",
+      "id": 339800
+    },
+    {
+      "type": "removed",
+      "name": "Balance of All Things",
+      "id": 339942
+    },
+    {
+      "type": "removed",
+      "name": "Balance of All Things",
+      "id": 339943
+    },
+    {
+      "type": "removed",
+      "name": "Balance of All Things",
+      "id": 339946
+    },
+    {
+      "type": "removed",
+      "name": "Timeworn Dreambinder",
+      "id": 339949
+    },
+    {
+      "type": "removed",
+      "name": "Timeworn Dreambinder",
+      "id": 340049
+    },
+    {
+      "type": "removed",
+      "name": "Frenzyband",
+      "id": 340053
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Fleeting Glimpse",
+      "id": 340059
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Fleeting Glimpse",
+      "id": 340060
+    },
+    {
+      "type": "removed",
+      "name": "Tough as Bark",
+      "id": 340529
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Vigor",
+      "id": 340540
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Vigor",
+      "id": 340541
+    },
+    {
+      "type": "removed",
       "name": "Innate Resolve",
-      "id": 377811,
-      "type": "modified",
-      "talent_entry": "Guardian",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Cooldown Charge (Category)",
-          "affected_spells": [
-            "Frenzied Regeneration (22842)"
-          ],
-          "id": "1017562",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1568",
-              "new": "1568 (Category)"
-            }
-          ]
-        }
-      ]
+      "id": 340543
     },
     {
+      "type": "removed",
+      "name": "Tireless Pursuit",
+      "id": 340545
+    },
+    {
+      "type": "removed",
+      "name": "Tireless Pursuit",
+      "id": 340546
+    },
+    {
+      "type": "removed",
+      "name": "Unstoppable Growth",
+      "id": 340549
+    },
+    {
+      "type": "removed",
+      "name": "Ready for Anything",
+      "id": 340550
+    },
+    {
+      "type": "removed",
+      "name": "Unchecked Aggression",
+      "id": 340552
+    },
+    {
+      "type": "removed",
+      "name": "Well-Honed Instincts",
+      "id": 340553
+    },
+    {
+      "type": "removed",
+      "name": "Well-Honed Instincts",
+      "id": 340555
+    },
+    {
+      "type": "removed",
+      "name": "Well-Honed Instincts",
+      "id": 340556
+    },
+    {
+      "type": "removed",
+      "name": "Layered Mane",
+      "id": 340605
+    },
+    {
+      "type": "removed",
+      "name": "Savage Combatant",
+      "id": 340609
+    },
+    {
+      "type": "removed",
+      "name": "Savage Combatant",
+      "id": 340613
+    },
+    {
+      "type": "removed",
+      "name": "Flash of Clarity",
+      "id": 340616
+    },
+    {
+      "type": "removed",
+      "name": "Floral Recycling",
+      "id": 340621
+    },
+    {
+      "type": "removed",
+      "name": "Taste for Blood",
+      "id": 340682
+    },
+    {
+      "type": "removed",
+      "name": "Incessant Hunter",
+      "id": 340686
+    },
+    {
+      "type": "removed",
+      "name": "Incessant Hunter",
+      "id": 340688
+    },
+    {
+      "type": "removed",
+      "name": "Sudden Ambush",
+      "id": 340694
+    },
+    {
+      "type": "removed",
+      "name": "Sudden Ambush",
+      "id": 340698
+    },
+    {
+      "type": "removed",
+      "name": "Carnivorous Instinct",
+      "id": 340705
+    },
+    {
+      "type": "removed",
+      "name": "Precise Alignment",
+      "id": 340706
+    },
+    {
+      "type": "removed",
+      "name": "Fury of the Skies",
+      "id": 340708
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Intensity",
+      "id": 340719
+    },
+    {
+      "type": "removed",
+      "name": "Stellar Inspiration",
+      "id": 340720
+    },
+    {
+      "type": "removed",
+      "name": "Born Anew",
+      "id": 341280
+    },
+    {
+      "type": "removed",
+      "name": "Deep Allegiance",
+      "id": 341378
+    },
+    {
+      "type": "removed",
+      "name": "Endless Thirst",
+      "id": 341383
+    },
+    {
+      "type": "removed",
+      "name": "Conflux of Elements",
+      "id": 341446
+    },
+    {
+      "type": "removed",
+      "name": "Evolved Swarm",
+      "id": 341447
+    },
+    {
+      "type": "removed",
+      "name": "Front of the Pack",
+      "id": 341450
+    },
+    {
+      "type": "removed",
+      "name": "Born of the Wilds",
+      "id": 341451
+    },
+    {
+      "type": "removed",
+      "name": "Berserk",
+      "id": 343216
+    },
+    {
+      "type": "removed",
+      "name": "Berserk",
+      "id": 343223
+    },
+    {
+      "type": "removed",
+      "name": "Improved Shred",
+      "id": 343232
+    },
+    {
+      "type": "removed",
+      "name": "Entangling Roots",
+      "id": 343238
+    },
+    {
+      "type": "removed",
+      "name": "Berserk: Ravage",
+      "id": 343240
+    },
+    {
+      "type": "removed",
+      "name": "Solstice",
+      "id": 343647
+    },
+    {
+      "type": "removed",
+      "name": "Solstice",
+      "id": 343648
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Empowerment",
+      "id": 344991
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Fury Remembered",
+      "id": 345048
+    },
+    {
+      "type": "removed",
+      "name": "Infected Wounds",
+      "id": 345208
+    },
+    {
+      "type": "removed",
+      "name": "Infected Wounds",
+      "id": 345209
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Affinity",
+      "id": 354115
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Spirits",
+      "id": 354118
+    },
+    {
+      "type": "removed",
+      "name": "Owlkin Adept",
+      "id": 354541
+    },
+    {
+      "type": "removed",
+      "name": "Infected Wounds",
+      "id": 354571
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 356433
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 356468
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 356474
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 356517
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 356536
+    },
+    {
+      "type": "removed",
+      "name": "Owlkin Adept",
+      "id": 357745
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 358124
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 358134
+    },
+    {
+      "type": "removed",
+      "name": "Starfall",
+      "id": 359399
+    },
+    {
+      "type": "removed",
+      "name": "Orbital Strike",
+      "id": 361237
+    },
+    {
+      "type": "removed",
+      "name": "Ephemeral Incarnation",
+      "id": 363495
+    },
+    {
+      "type": "removed",
+      "name": "Architect's Aligner",
+      "id": 363496
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Infusion",
+      "id": 363497
+    },
+    {
+      "type": "removed",
+      "name": "Sickle of the Lion",
+      "id": 363498
+    },
+    {
+      "type": "removed",
+      "name": "Architect's Aligner",
+      "id": 363789
+    },
+    {
+      "type": "removed",
+      "name": "Architect's Aligner",
+      "id": 363793
+    },
+    {
+      "type": "removed",
+      "name": "Ephemeral Blossom",
+      "id": 363813
+    },
+    {
+      "type": "removed",
+      "name": "Sickle of the Lion",
+      "id": 363830
+    },
+    {
+      "type": "removed",
+      "name": "Bleeding Soul",
+      "id": 363831
+    },
+    {
+      "type": "removed",
+      "name": "Architect's Design",
+      "id": 364362
+    },
+    {
+      "type": "removed",
+      "name": "Renewing Bloom",
+      "id": 364365
+    },
+    {
+      "type": "removed",
+      "name": "Heart of the Lion",
+      "id": 364416
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Pillar",
+      "id": 364423
+    },
+    {
+      "type": "removed",
+      "name": "Renewing Bloom",
+      "id": 364686
+    },
+    {
+      "type": "removed",
+      "name": "Kindred Affinity",
+      "id": 364815
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Spirits",
+      "id": 364819
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Power",
+      "id": 364920
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Power",
+      "id": 365097
+    },
+    {
+      "type": "removed",
+      "name": "Ephemeral Mote",
+      "id": 365117
+    },
+    {
+      "type": "removed",
+      "name": "Ephemeral Being",
+      "id": 365119
+    },
+    {
+      "type": "removed",
+      "name": "Cosmic Predator",
+      "id": 365334
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Embrace",
+      "id": 365473
+    },
+    {
+      "type": "removed",
+      "name": "Darkening Sun",
+      "id": 365475
+    },
+    {
+      "type": "removed",
+      "name": "Darkening Moon",
+      "id": 365476
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Pillar",
+      "id": 365478
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Elune",
+      "id": 365640
+    },
+    {
+      "type": "removed",
+      "name": "Ephemeral Profusion",
+      "id": 367330
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Infusion",
+      "id": 367907
+    },
+    {
+      "type": "removed",
+      "name": "Elune's Favored",
+      "id": 370586
+    },
+    {
+      "type": "removed",
+      "name": "Elune's Favored",
+      "id": 370588
+    },
+    {
+      "type": "removed",
+      "name": "Elune's Favored",
+      "id": 370602
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Nature",
+      "id": 370695
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Nature",
+      "id": 370701
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Nature",
+      "id": 370704
+    },
+    {
+      "type": "removed",
+      "name": "After the Wildfire",
+      "id": 371905
+    },
+    {
+      "type": "removed",
+      "name": "After the Wildfire",
+      "id": 371982
+    },
+    {
+      "type": "removed",
+      "name": "Vicious Cycle",
+      "id": 371999
+    },
+    {
+      "type": "removed",
+      "name": "Vicious Cycle",
+      "id": 372015
+    },
+    {
+      "type": "removed",
+      "name": "Vicious Cycle",
+      "id": 372019
+    },
+    {
+      "type": "removed",
+      "name": "Dream of Cenarius",
+      "id": 372119
+    },
+    {
+      "type": "removed",
+      "name": "Dream of Cenarius",
+      "id": 372152
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Fury",
+      "id": 372505
+    },
+    {
+      "type": "removed",
+      "name": "Dream of Cenarius",
+      "id": 372523
+    },
+    {
+      "type": "removed",
+      "name": "Twin Moonfire",
+      "id": 372567
+    },
+    {
+      "type": "removed",
+      "name": "Vulnerable Flesh",
+      "id": 372618
+    },
+    {
+      "type": "removed",
+      "name": "Untamed Savagery",
+      "id": 372943
+    },
+    {
+      "type": "removed",
+      "name": "Reinvigoration",
+      "id": 372945
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Fury",
+      "id": 377210
+    },
+    {
+      "type": "removed",
+      "name": "Berserk: Unchecked Aggression",
+      "id": 377623
+    },
+    {
+      "type": "removed",
+      "name": "Berserk: Persistence",
+      "id": 377779
+    },
+    {
+      "type": "removed",
+      "name": "Natural Recovery",
+      "id": 377796
+    },
+    {
+      "type": "removed",
+      "name": "Innate Resolve",
+      "id": 377811
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Vigor",
+      "id": 377842
+    },
+    {
+      "type": "removed",
+      "name": "Well-Honed Instincts",
+      "id": 377847
+    },
+    {
+      "type": "removed",
+      "name": "Protector of the Pack",
+      "id": 378986
+    },
+    {
+      "type": "removed",
+      "name": "Protector of the Pack",
+      "id": 378987
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Teachings",
+      "id": 378988
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Teachings",
+      "id": 378989
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Teachings",
+      "id": 378990
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Teachings",
+      "id": 378991
+    },
+    {
+      "type": "removed",
+      "name": "Lycara's Teachings",
+      "id": 378992
+    },
+    {
+      "type": "removed",
+      "name": "Passing Seasons",
+      "id": 382550
+    },
+    {
+      "type": "removed",
+      "name": "Improved Ironbark",
+      "id": 382552
+    },
+    {
+      "type": "removed",
+      "name": "Unstoppable Growth",
+      "id": 382559
+    },
+    {
+      "type": "removed",
+      "name": "Well-Honed Instincts",
+      "id": 382912
+    },
+    {
+      "type": "removed",
+      "name": "Regenesis",
+      "id": 383191
+    },
+    {
+      "type": "removed",
+      "name": "Grove Tending",
+      "id": 383192
+    },
+    {
+      "type": "removed",
+      "name": "Grove Tending",
+      "id": 383193
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Intensity",
+      "id": 383195
+    },
+    {
+      "type": "removed",
+      "name": "Orbit Breaker",
+      "id": 383197
+    },
+    {
+      "type": "removed",
+      "name": "Tireless Energy",
+      "id": 383352
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Alignment",
+      "id": 383410
+    },
+    {
+      "type": "removed",
+      "name": "Taste for Blood",
+      "id": 384665
+    },
+    {
+      "type": "removed",
+      "name": "Sudden Ambush",
+      "id": 384667
+    },
+    {
+      "type": "removed",
+      "name": "Berserk: Frenzy",
+      "id": 384668
+    },
+    {
+      "type": "removed",
+      "name": "Berserk: Jungle Stalker",
+      "id": 384671
+    },
+    {
+      "type": "removed",
+      "name": "Layered Mane",
+      "id": 384721
+    },
+    {
+      "type": "removed",
+      "name": "Matted Fur",
+      "id": 385786
+    },
+    {
+      "type": "removed",
+      "name": "Matted Fur",
+      "id": 385787
+    },
+    {
+      "type": "removed",
+      "name": "Orbital Strike",
+      "id": 390378
+    },
+    {
+      "type": "removed",
+      "name": "Incarnation: Chosen of Elune",
+      "id": 390414
+    },
+    {
+      "type": "removed",
+      "name": "Pouncing Strikes",
+      "id": 390772
+    },
+    {
+      "type": "removed",
+      "name": "Wild Slashes",
+      "id": 390864
+    },
+    {
+      "type": "removed",
+      "name": "Carnivorous Instinct",
+      "id": 390902
+    },
+    {
+      "type": "removed",
+      "name": "Primal Claws",
+      "id": 391037
+    },
+    {
+      "type": "removed",
+      "name": "Dreadful Bleeding",
+      "id": 391045
+    },
+    {
+      "type": "removed",
+      "name": "Raging Fury",
+      "id": 391078
+    },
+    {
+      "type": "removed",
+      "name": "Frenzied Assault",
+      "id": 391140
+    },
+    {
+      "type": "removed",
+      "name": "Berserk: Heart of the Lion",
+      "id": 391174
+    },
+    {
+      "type": "removed",
+      "name": "Rip and Tear",
+      "id": 391347
+    },
+    {
+      "type": "removed",
+      "name": "Tear",
+      "id": 391356
+    },
+    {
+      "type": "removed",
+      "name": "Convoke the Spirits",
+      "id": 391528
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Guidance",
+      "id": 391538
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Guidance",
+      "id": 391548
+    },
+    {
+      "type": "removed",
+      "name": "Double-Clawed Rake",
+      "id": 391700
+    },
+    {
+      "type": "removed",
+      "name": "Rampant Ferocity",
+      "id": 391709
+    },
+    {
+      "type": "removed",
+      "name": "Rampant Ferocity",
+      "id": 391710
+    },
+    {
+      "type": "removed",
+      "name": "Sabertooth",
+      "id": 391722
+    },
+    {
+      "type": "removed",
+      "name": "Tear Open Wounds",
+      "id": 391785
+    },
+    {
+      "type": "removed",
+      "name": "Tear Open Wounds",
+      "id": 391786
+    },
+    {
+      "type": "removed",
+      "name": "Tiger's Tenacity",
+      "id": 391872
+    },
+    {
+      "type": "removed",
+      "name": "Tiger's Tenacity",
+      "id": 391873
+    },
+    {
+      "type": "removed",
+      "name": "Tiger's Tenacity",
+      "id": 391874
+    },
+    {
+      "type": "removed",
+      "name": "Frantic Momentum",
+      "id": 391875
+    },
+    {
+      "type": "removed",
+      "name": "Frantic Momentum",
+      "id": 391876
+    },
+    {
+      "type": "removed",
+      "name": "Apex Predator's Craving",
+      "id": 391881
+    },
+    {
+      "type": "removed",
+      "name": "Apex Predator's Craving",
+      "id": 391882
+    },
+    {
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 391888
+    },
+    {
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 391889
+    },
+    {
+      "type": "removed",
+      "name": "Adaptive Swarm",
+      "id": 391891
+    },
+    {
+      "type": "removed",
+      "name": "Unbridled Swarm",
+      "id": 391951
+    },
+    {
+      "type": "removed",
+      "name": "Circle of Life and Death",
+      "id": 391969
+    },
+    {
+      "type": "removed",
+      "name": "Lion's Strength",
+      "id": 391972
+    },
+    {
+      "type": "removed",
+      "name": "Sudden Ambush",
+      "id": 391974
+    },
+    {
+      "type": "removed",
+      "name": "Veinripper",
+      "id": 391978
+    },
+    {
+      "type": "removed",
+      "name": "Nurturing Dormancy",
+      "id": 392099
+    },
+    {
+      "type": "removed",
+      "name": "Nurturing Dormancy",
+      "id": 392101
+    },
+    {
+      "type": "removed",
+      "name": "Nurturing Dormancy",
+      "id": 392103
+    },
+    {
+      "type": "removed",
+      "name": "Regenerative Heartwood",
+      "id": 392116
+    },
+    {
+      "type": "removed",
+      "name": "Regenerative Heartwood",
+      "id": 392117
+    },
+    {
+      "type": "removed",
+      "name": "Embrace of the Dream",
+      "id": 392124
+    },
+    {
+      "type": "removed",
+      "name": "Embrace of the Dream",
+      "id": 392146
+    },
+    {
+      "type": "removed",
+      "name": "Embrace of the Dream",
+      "id": 392147
+    },
+    {
+      "type": "removed",
+      "name": "Invigorate",
+      "id": 392160
+    },
+    {
+      "type": "removed",
+      "name": "Dreamstate",
+      "id": 392162
+    },
+    {
+      "type": "removed",
+      "name": "Budding Leaves",
+      "id": 392167
+    },
+    {
+      "type": "removed",
+      "name": "Budding Leaves",
+      "id": 392168
+    },
+    {
+      "type": "removed",
+      "name": "Flash of Clarity",
+      "id": 392220
+    },
+    {
+      "type": "removed",
+      "name": "Waking Dream",
+      "id": 392221
+    },
+    {
+      "type": "removed",
+      "name": "Waking Dream",
+      "id": 392223
+    },
+    {
+      "type": "removed",
+      "name": "Harmonious Blooming",
+      "id": 392256
+    },
+    {
+      "type": "removed",
+      "name": "Nature's Splendor",
+      "id": 392288
+    },
+    {
+      "type": "removed",
+      "name": "Undergrowth",
+      "id": 392301
+    },
+    {
+      "type": "removed",
+      "name": "Power of the Archdruid",
+      "id": 392302
+    },
+    {
+      "type": "removed",
+      "name": "Power of the Archdruid",
+      "id": 392303
+    },
+    {
+      "type": "removed",
+      "name": "Verdancy",
+      "id": 392325
+    },
+    {
+      "type": "removed",
+      "name": "Verdancy",
+      "id": 392329
+    },
+    {
+      "type": "removed",
+      "name": "Reforestation",
+      "id": 392356
+    },
+    {
+      "type": "removed",
+      "name": "Reforestation",
+      "id": 392360
+    },
+    {
+      "type": "removed",
+      "name": "Improved Nature's Cure",
+      "id": 392378
+    },
+    {
+      "type": "removed",
+      "name": "Verdant Infusion",
+      "id": 392410
+    },
+    {
+      "type": "removed",
+      "name": "Wild Mushroom",
+      "id": 392996
+    },
+    {
+      "type": "removed",
+      "name": "Mastery: Astral Invocation",
+      "id": 393014
+    },
+    {
+      "type": "removed",
+      "name": "Cenarius' Guidance",
+      "id": 393371
+    },
+    {
+      "type": "removed",
+      "name": "Cenarius' Guidance",
+      "id": 393374
+    },
+    {
+      "type": "removed",
+      "name": "Cenarius' Guidance",
+      "id": 393381
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Guidance",
+      "id": 393414
+    },
+    {
+      "type": "removed",
+      "name": "Cenarius' Guidance",
+      "id": 393418
+    },
+    {
+      "type": "removed",
+      "name": "Flashing Claws",
+      "id": 393427
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Endurance",
+      "id": 393611
+    },
+    {
+      "type": "removed",
+      "name": "Primal Claws",
+      "id": 393617
+    },
+    {
+      "type": "removed",
+      "name": "Reinforced Fur",
+      "id": 393618
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance Class Set 2pc",
+      "id": 393632
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance Class Set 4pc",
+      "id": 393633
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral Class Set 2pc",
+      "id": 393635
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral Class Set 4pc",
+      "id": 393636
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian Class Set 2pc",
+      "id": 393637
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian Class Set 4pc",
+      "id": 393638
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration Class Set 2pc",
+      "id": 393639
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration Class Set 4pc",
+      "id": 393641
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Embrace",
+      "id": 393760
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Embrace",
+      "id": 393763
+    },
+    {
+      "type": "removed",
+      "name": "Tireless Pursuit",
+      "id": 393897
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Vigor",
+      "id": 393903
+    },
+    {
+      "type": "removed",
+      "name": "Starweaver",
+      "id": 393940
+    },
+    {
+      "type": "removed",
+      "name": "Starweaver's Warp",
+      "id": 393942
+    },
+    {
+      "type": "removed",
+      "name": "Starweaver's Weft",
+      "id": 393944
+    },
+    {
+      "type": "removed",
+      "name": "Rattle the Stars",
+      "id": 393954
+    },
+    {
+      "type": "removed",
+      "name": "Waning Twilight",
+      "id": 393956
+    },
+    {
+      "type": "removed",
+      "name": "Waning Twilight",
+      "id": 393957
+    },
+    {
+      "type": "removed",
+      "name": "Primordial Arcanic Pulsar",
+      "id": 393960
+    },
+    {
+      "type": "removed",
+      "name": "Primordial Arcanic Pulsar",
+      "id": 393961
+    },
+    {
+      "type": "removed",
+      "name": "Elune's Guidance",
+      "id": 393991
+    },
+    {
+      "type": "removed",
+      "name": "Incarnation: Chosen of Elune",
+      "id": 394013
+    },
+    {
+      "type": "removed",
+      "name": "Power of Goldrinn",
+      "id": 394046
+    },
+    {
+      "type": "removed",
+      "name": "Goldrinn's Fang",
+      "id": 394047
+    },
+    {
+      "type": "removed",
+      "name": "Balance of All Things",
+      "id": 394048
+    },
+    {
+      "type": "removed",
+      "name": "Balance of All Things",
+      "id": 394049
+    },
+    {
+      "type": "removed",
+      "name": "Balance of All Things",
+      "id": 394050
+    },
+    {
+      "type": "removed",
+      "name": "Astral Smolder",
+      "id": 394058
+    },
+    {
+      "type": "removed",
+      "name": "Astral Smolder",
+      "id": 394061
+    },
+    {
+      "type": "removed",
+      "name": "Denizen of the Dream",
+      "id": 394065
+    },
+    {
+      "type": "removed",
+      "name": "Denizen of the Dream",
+      "id": 394076
+    },
+    {
+      "type": "removed",
+      "name": "Sundered Firmament",
+      "id": 394094
+    },
+    {
+      "type": "removed",
+      "name": "Sundered Firmament",
+      "id": 394103
+    },
+    {
+      "type": "removed",
+      "name": "Sundered Firmament",
+      "id": 394106
+    },
+    {
+      "type": "removed",
+      "name": "Sundered Firmament",
+      "id": 394108
+    },
+    {
+      "type": "removed",
+      "name": "Fury of Elune",
+      "id": 394111
+    },
+    {
+      "type": "removed",
+      "name": "Radiant Moonlight",
+      "id": 394121
+    },
+    {
+      "type": "removed",
+      "name": "Gathering Starstuff",
+      "id": 394412
+    },
+    {
+      "type": "removed",
+      "name": "Touch the Cosmos",
+      "id": 394414
+    },
+    {
+      "type": "removed",
+      "name": "Touch the Cosmos",
+      "id": 394451
+    },
+    {
+      "type": "removed",
+      "name": "Sharpened Claws",
+      "id": 394465
+    },
+    {
+      "type": "removed",
+      "name": "Bloody Healing",
+      "id": 394504
+    },
+    {
+      "type": "removed",
+      "name": "Critical Growth",
+      "id": 394565
+    },
+    {
+      "type": "removed",
+      "name": "Incarnation: Guardian of Ursoc",
+      "id": 394786
+    },
+    {
+      "type": "removed",
+      "name": "Celestial Alignment",
+      "id": 395022
+    },
+    {
+      "type": "removed",
+      "name": "Budding Leaves",
+      "id": 395072
+    },
+    {
+      "type": "removed",
+      "name": "Parting Skies",
+      "id": 395110
+    },
+    {
+      "type": "removed",
+      "name": "Protector of the Pack",
+      "id": 395336
+    },
+    {
+      "type": "removed",
+      "name": "Swiping Mangle",
+      "id": 395942
+    },
+    {
+      "type": "removed",
+      "name": "Overpowering Aura",
+      "id": 395944
+    },
+    {
+      "type": "removed",
+      "name": "Well-Honed Instincts",
+      "id": 396425
+    },
+    {
+      "type": "removed",
+      "name": "Cosmic Rapidity",
+      "id": 400059
+    },
+    {
+      "type": "removed",
+      "name": "Forestwalk",
+      "id": 400126
+    },
+    {
+      "type": "removed",
+      "name": "Forestwalk",
+      "id": 400129
+    },
+    {
+      "type": "removed",
+      "name": "Protector of the Pack",
+      "id": 400202
+    },
+    {
+      "type": "removed",
+      "name": "Protector of the Pack",
+      "id": 400204
+    },
+    {
+      "type": "removed",
+      "name": "Thorns of Iron",
+      "id": 400222
+    },
+    {
+      "type": "removed",
+      "name": "Thorns of Iron",
+      "id": 400223
+    },
+    {
+      "type": "removed",
+      "name": "Raze",
+      "id": 400254
+    },
+    {
+      "type": "removed",
+      "name": "Moonless Night",
+      "id": 400278
+    },
+    {
+      "type": "removed",
+      "name": "Circle of Life and Death",
+      "id": 400320
+    },
+    {
+      "type": "removed",
+      "name": "Moonless Night",
+      "id": 400360
+    },
+    {
+      "type": "removed",
+      "name": "Wild Synthesis",
+      "id": 400533
+    },
+    {
+      "type": "removed",
+      "name": "Wild Synthesis",
+      "id": 400534
+    },
+    {
+      "type": "removed",
+      "name": "After the Wildfire",
+      "id": 400734
+    },
+    {
+      "type": "removed",
+      "name": "Tranquil Mind",
+      "id": 403521
+    },
+    {
+      "type": "removed",
+      "name": "Rampant Growth",
+      "id": 404521
+    },
+    {
+      "type": "removed",
+      "name": "Overflowing Power",
+      "id": 405069
+    },
+    {
+      "type": "removed",
+      "name": "Overflowing Power",
+      "id": 405189
+    },
+    {
+      "type": "removed",
+      "name": "Overflowing Power",
+      "id": 405191
+    },
+    {
+      "type": "removed",
+      "name": "Thrash",
+      "id": 405233
+    },
+    {
+      "type": "removed",
+      "name": "Thrashing Claws",
+      "id": 405300
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 405389
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance 10.1 Class Set 2pc",
+      "id": 405510
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance 10.1 Class Set 4pc",
+      "id": 405511
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral 10.1 Class Set 2pc",
+      "id": 405512
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral 10.1 Class Set 4pc",
+      "id": 405513
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian 10.1 Class Set 2pc",
+      "id": 405514
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian 10.1 Class Set 4pc",
+      "id": 405515
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration 10.1 Class Set 2pc",
+      "id": 405516
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration 10.1 Class Set 4pc",
+      "id": 405517
+    },
+    {
+      "type": "removed",
+      "name": "Improved Prowl",
+      "id": 405834
+    },
+    {
+      "type": "removed",
+      "name": "Calm the Wolf",
+      "id": 406087
+    },
+    {
+      "type": "removed",
+      "name": "Calm the Wolf",
+      "id": 406088
+    },
+    {
+      "type": "removed",
+      "name": "Calm the Wolf",
+      "id": 406090
+    },
+    {
+      "type": "removed",
+      "name": "Calm the Wolf",
+      "id": 406096
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 406430
+    },
+    {
+      "type": "removed",
+      "name": "Wild Surges",
+      "id": 406890
+    },
+    {
+      "type": "removed",
+      "name": "Crashing Star",
+      "id": 408310
+    },
+    {
+      "type": "removed",
+      "name": "Shadows of the Predator",
+      "id": 408340
+    },
+    {
+      "type": "removed",
+      "name": "Predator Revealed",
+      "id": 408468
+    },
+    {
+      "type": "removed",
+      "name": "Furious Regeneration",
+      "id": 408504
+    },
+    {
+      "type": "removed",
+      "name": "Indomitable Guardian",
+      "id": 408522
+    },
+    {
+      "type": "removed",
+      "name": "Tenacious Flourishing",
+      "id": 408546
+    },
+    {
+      "type": "removed",
+      "name": "Blossoming Infusion",
+      "id": 408571
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 411143
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 411144
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 411146
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 411267
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 411269
+    },
+    {
+      "type": "removed",
+      "name": "Master Shapeshifter",
+      "id": 411270
+    },
+    {
+      "type": "removed",
+      "name": "Predator Revealed",
+      "id": 411344
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Beam",
+      "id": 414613
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Shrapnel",
+      "id": 415169
+    },
+    {
+      "type": "removed",
+      "name": "Initial Druid",
+      "id": 417382
+    },
+    {
+      "type": "removed",
+      "name": "Rising Light, Falling Night",
+      "id": 417712
+    },
+    {
+      "type": "removed",
+      "name": "Rising Light, Falling Night - Day",
+      "id": 417714
+    },
+    {
+      "type": "removed",
+      "name": "Rising Light, Falling Night - Night",
+      "id": 417715
+    },
+    {
+      "type": "removed",
+      "name": "Star Burst",
+      "id": 421072
+    },
+    {
+      "type": "removed",
+      "name": "Saber Jaws",
+      "id": 421432
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Guidance",
+      "id": 421440
+    },
+    {
+      "type": "removed",
+      "name": "Ashamane's Guidance",
+      "id": 421442
+    },
+    {
+      "type": "removed",
+      "name": "Nourish",
+      "id": 422090
+    },
+    {
+      "type": "removed",
+      "name": "Swiftmend",
+      "id": 422094
+    },
+    {
+      "type": "removed",
+      "name": "Wild Growth",
+      "id": 422382
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral 10.2 Class Set 2pc",
+      "id": 422747
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral 10.2 Class Set 4pc",
+      "id": 422748
+    },
+    {
+      "type": "removed",
+      "name": "Smoldering Frenzy",
+      "id": 422751
+    },
+    {
+      "type": "removed",
+      "name": "Burning Frenzy",
+      "id": 422779
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance 10.2 Class Set 2pc",
+      "id": 422862
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance 10.2 Class Set 4pc",
+      "id": 422863
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian 10.2 Class Set 2pc",
+      "id": 422864
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian 10.2 Class Set 4pc",
+      "id": 422865
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration 10.2 Class Set 2pc",
+      "id": 422866
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration 10.2 Class Set 4pc",
+      "id": 422867
+    },
+    {
+      "type": "removed",
+      "name": "Nourish",
+      "id": 423618
+    },
+    {
+      "type": "removed",
+      "name": "Boundless Moonlight",
+      "id": 424058
+    },
+    {
+      "type": "removed",
+      "name": "The Eternal Moon",
+      "id": 424113
+    },
+    {
+      "type": "removed",
+      "name": "Dreamstate",
+      "id": 424248
+    },
+    {
+      "type": "removed",
+      "name": "Minor Moon",
+      "id": 424588
+    },
+    {
+      "type": "removed",
+      "name": "Boundless Moonlight",
+      "id": 425206
+    },
+    {
+      "type": "removed",
+      "name": "Boundless Moonlight",
+      "id": 425217
+    },
+    {
+      "type": "removed",
+      "name": "Boundless Moonlight",
+      "id": 425219
+    },
+    {
+      "type": "removed",
+      "name": "Dream Thorns",
+      "id": 425402
+    },
+    {
+      "type": "removed",
+      "name": "Dream Thorns",
+      "id": 425407
+    },
+    {
+      "type": "removed",
+      "name": "Blazing Thorns",
+      "id": 425441
+    },
+    {
+      "type": "removed",
+      "name": "Blazing Thorns",
+      "id": 425448
+    },
+    {
+      "type": "removed",
+      "name": "Liveliness",
+      "id": 426702
+    },
+    {
+      "type": "removed",
+      "name": "Call of the Elder Druid",
+      "id": 426784
+    },
+    {
+      "type": "removed",
+      "name": "Call of the Elder Druid",
+      "id": 426790
+    },
+    {
+      "type": "removed",
+      "name": "Treants of the Moon",
+      "id": 428544
+    },
+    {
+      "type": "removed",
+      "name": "Moonfire",
+      "id": 428545
+    },
+    {
+      "type": "removed",
+      "name": "The Light of Elune",
+      "id": 428655
+    },
+    {
+      "type": "removed",
+      "name": "Boundless Moonlight",
+      "id": 428682
+    },
+    {
+      "type": "removed",
+      "name": "Harmony of the Grove",
+      "id": 428731
+    },
+    {
+      "type": "removed",
+      "name": "Harmony of the Grove",
+      "id": 428735
+    },
+    {
+      "type": "removed",
+      "name": "Harmony of the Grove",
+      "id": 428737
+    },
+    {
+      "type": "removed",
+      "name": "Power of Nature",
+      "id": 428859
+    },
+    {
+      "type": "removed",
+      "name": "Power of Nature",
+      "id": 428866
+    },
+    {
+      "type": "removed",
       "name": "Early Spring",
-      "id": 428937,
-      "type": "modified",
-      "talent_entry": "Keeper of the Grove (Balance, Restoration)",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "2",
-          "type": "Apply Aura",
-          "subtype": "Modify Recharge Time (Category)",
-          "affected_spells": [
-            "Grove Guardians (102693)"
-          ],
-          "id": "1112687",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Misc Value",
-              "prev": "1440",
-              "new": "1440 (Category)"
-            }
-          ]
-        }
-      ]
+      "id": 428937
+    },
+    {
+      "type": "removed",
+      "name": "Bounteous Bloom",
+      "id": 429215
+    },
+    {
+      "type": "removed",
+      "name": "Bounteous Bloom",
+      "id": 429217
+    },
+    {
+      "type": "removed",
+      "name": "Minor Cenarion Ward",
+      "id": 429222
+    },
+    {
+      "type": "removed",
+      "name": "Durability of Nature",
+      "id": 429227
+    },
+    {
+      "type": "removed",
+      "name": "Expansiveness",
+      "id": 429399
+    },
+    {
+      "type": "removed",
+      "name": "Grove's Inspiration",
+      "id": 429402
+    },
+    {
+      "type": "removed",
+      "name": "Potent Enchantments",
+      "id": 429420
+    },
+    {
+      "type": "removed",
+      "name": "Blooming Infusion",
+      "id": 429433
+    },
+    {
+      "type": "removed",
+      "name": "Blooming Infusion",
+      "id": 429438
+    },
+    {
+      "type": "removed",
+      "name": "Blooming Infusion",
+      "id": 429474
+    },
+    {
+      "type": "removed",
+      "name": "Moon Guardian",
+      "id": 429520
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Calling",
+      "id": 429523
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Amplification",
+      "id": 429529
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Insight",
+      "id": 429530
+    },
+    {
+      "type": "removed",
+      "name": "Atmospheric Exposure",
+      "id": 429532
+    },
+    {
+      "type": "removed",
+      "name": "Glistening Fur",
+      "id": 429533
+    },
+    {
+      "type": "removed",
+      "name": "Astral Insight",
+      "id": 429536
+    },
+    {
+      "type": "removed",
+      "name": "Moondust",
+      "id": 429538
+    },
+    {
+      "type": "removed",
+      "name": "Lunation",
+      "id": 429539
+    },
+    {
+      "type": "removed",
+      "name": "Arcane Affinity",
+      "id": 429540
+    },
+    {
+      "type": "removed",
+      "name": "Efflorescence",
+      "id": 429573
+    },
+    {
+      "type": "removed",
+      "name": "Stellar Command",
+      "id": 429668
+    },
+    {
+      "type": "removed",
+      "name": "Moon Guardian",
+      "id": 430581
+    },
+    {
+      "type": "removed",
+      "name": "Atmospheric Exposure",
+      "id": 430589
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Amplification",
+      "id": 431250
+    },
+    {
+      "type": "removed",
+      "name": "Mark of the Wild",
+      "id": 432661
+    },
+    {
+      "type": "removed",
+      "name": "Lunar Amplification",
+      "id": 432846
+    },
+    {
+      "type": "removed",
+      "name": "Protective Growth",
+      "id": 433748
+    },
+    {
+      "type": "removed",
+      "name": "Protective Growth",
+      "id": 433749
+    },
+    {
+      "type": "removed",
+      "name": "Dream Surge",
+      "id": 433831
+    },
+    {
+      "type": "removed",
+      "name": "Dream Burst",
+      "id": 433832
+    },
+    {
+      "type": "removed",
+      "name": "Dream Burst",
+      "id": 433850
+    },
+    {
+      "type": "removed",
+      "name": "Dream Surge",
+      "id": 434112
+    },
+    {
+      "type": "removed",
+      "name": "Dream Bloom",
+      "id": 434141
+    },
+    {
+      "type": "removed",
+      "name": "Power of the Dream",
+      "id": 434220
+    },
+    {
+      "type": "removed",
+      "name": "Control of the Dream",
+      "id": 434249
+    },
+    {
+      "type": "removed",
+      "name": "Thriving Growth",
+      "id": 439528
+    },
+    {
+      "type": "removed",
+      "name": "Symbiotic Blooms",
+      "id": 439530
+    },
+    {
+      "type": "removed",
+      "name": "Bloodseeker Vines",
+      "id": 439531
+    },
+    {
+      "type": "removed",
+      "name": "Hunt Beneath the Open Skies",
+      "id": 439868
+    },
+    {
+      "type": "removed",
+      "name": "Resilient Flourishing",
+      "id": 439880
+    },
+    {
+      "type": "removed",
+      "name": "Root Network",
+      "id": 439882
+    },
+    {
+      "type": "removed",
+      "name": "Root Network",
+      "id": 439887
+    },
+    {
+      "type": "removed",
+      "name": "Root Network",
+      "id": 439888
+    },
+    {
+      "type": "removed",
+      "name": "Strategic Infusion",
+      "id": 439890
+    },
+    {
+      "type": "removed",
+      "name": "Strategic Infusion",
+      "id": 439891
+    },
+    {
+      "type": "removed",
+      "name": "Strategic Infusion",
+      "id": 439893
+    },
+    {
+      "type": "removed",
+      "name": "Entangling Vortex",
+      "id": 439895
+    },
+    {
+      "type": "removed",
+      "name": "Flower Walk",
+      "id": 439901
+    },
+    {
+      "type": "removed",
+      "name": "Flower Walk",
+      "id": 439902
+    },
+    {
+      "type": "removed",
+      "name": "Wildstalker's Power",
+      "id": 439926
+    },
+    {
+      "type": "removed",
+      "name": "Bond with Nature",
+      "id": 439929
+    },
+    {
+      "type": "removed",
+      "name": "Remove Corruption",
+      "id": 440015
+    },
+    {
+      "type": "removed",
+      "name": "Harmonious Constitution",
+      "id": 440116
+    },
+    {
+      "type": "removed",
+      "name": "Twin Sprouts",
+      "id": 440117
+    },
+    {
+      "type": "removed",
+      "name": "Implant",
+      "id": 440118
+    },
+    {
+      "type": "removed",
+      "name": "Vigorous Creepers",
+      "id": 440119
+    },
+    {
+      "type": "removed",
+      "name": "Bursting Growth",
+      "id": 440120
+    },
+    {
+      "type": "removed",
+      "name": "Bursting Growth",
+      "id": 440121
+    },
+    {
+      "type": "removed",
+      "name": "Bursting Growth",
+      "id": 440122
+    },
+    {
+      "type": "removed",
+      "name": "Ravage",
+      "id": 441583
+    },
+    {
+      "type": "removed",
+      "name": "Ravage",
+      "id": 441585
+    },
+    {
+      "type": "removed",
+      "name": "Ravage",
+      "id": 441591
+    },
+    {
+      "type": "removed",
+      "name": "Ravage",
+      "id": 441602
+    },
+    {
+      "type": "removed",
+      "name": "Ravage",
+      "id": 441605
+    },
+    {
+      "type": "removed",
+      "name": "Fount of Strength",
+      "id": 441675
+    },
+    {
+      "type": "removed",
+      "name": "Wildshape Mastery",
+      "id": 441678
+    },
+    {
+      "type": "removed",
+      "name": "Wildshape Mastery",
+      "id": 441685
+    },
+    {
+      "type": "removed",
+      "name": "Wildshape Mastery",
+      "id": 441686
+    },
+    {
+      "type": "removed",
+      "name": "Wildshape Mastery",
+      "id": 441688
+    },
+    {
+      "type": "removed",
+      "name": "Empowered Shapeshifting",
+      "id": 441689
+    },
+    {
+      "type": "removed",
+      "name": "Wildpower Surge",
+      "id": 441691
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Potential",
+      "id": 441695
+    },
+    {
+      "type": "removed",
+      "name": "Ursine Potential",
+      "id": 441698
+    },
+    {
+      "type": "removed",
+      "name": "Feline Potential",
+      "id": 441701
+    },
+    {
+      "type": "removed",
+      "name": "Feline Potential",
+      "id": 441702
+    },
+    {
+      "type": "removed",
+      "name": "Wildpower Surge",
+      "id": 441704
+    },
+    {
+      "type": "removed",
+      "name": "Dreadful Wound",
+      "id": 441809
+    },
+    {
+      "type": "removed",
+      "name": "Dreadful Wound",
+      "id": 441812
+    },
+    {
+      "type": "removed",
+      "name": "Ruthless Aggression",
+      "id": 441814
+    },
+    {
+      "type": "removed",
+      "name": "Ruthless Aggression",
+      "id": 441817
+    },
+    {
+      "type": "removed",
+      "name": "Killing Strikes",
+      "id": 441824
+    },
+    {
+      "type": "removed",
+      "name": "Killing Strikes",
+      "id": 441825
+    },
+    {
+      "type": "removed",
+      "name": "Killing Strikes",
+      "id": 441827
+    },
+    {
+      "type": "removed",
+      "name": "Aggravate Wounds",
+      "id": 441829
+    },
+    {
+      "type": "removed",
+      "name": "Claw Rampage",
+      "id": 441835
+    },
+    {
+      "type": "removed",
+      "name": "Bestial Strength",
+      "id": 441841
+    },
+    {
+      "type": "removed",
+      "name": "Pack's Endurance",
+      "id": 441844
+    },
+    {
+      "type": "removed",
+      "name": "Strike for the Heart",
+      "id": 441845
+    },
+    {
+      "type": "removed",
+      "name": "Tear Down the Mighty",
+      "id": 441846
+    },
+    {
+      "type": "removed",
+      "name": "Wildpower Surge",
+      "id": 442562
+    },
+    {
+      "type": "removed",
+      "name": "Elune's Grace",
+      "id": 443046
+    },
+    {
+      "type": "removed",
+      "name": "Thriving Vegetation",
+      "id": 447131
+    },
+    {
+      "type": "removed",
+      "name": "Thriving Vegetation",
+      "id": 447132
+    },
+    {
+      "type": "removed",
+      "name": "Power of Nature",
+      "id": 449001
+    },
+    {
+      "type": "removed",
+      "name": "Ursoc's Spirit",
+      "id": 449182
+    },
+    {
+      "type": "removed",
+      "name": "Instincts of the Claw",
+      "id": 449184
+    },
+    {
+      "type": "removed",
+      "name": "Lore of the Grove",
+      "id": 449185
+    },
+    {
+      "type": "removed",
+      "name": "Oakskin",
+      "id": 449191
+    },
+    {
+      "type": "removed",
+      "name": "Fluid Form",
+      "id": 449193
+    },
+    {
+      "type": "removed",
+      "name": "Coiled to Spring",
+      "id": 449537
+    },
+    {
+      "type": "removed",
+      "name": "Coiled to Spring",
+      "id": 449538
+    },
+    {
+      "type": "removed",
+      "name": "Savage Fury",
+      "id": 449645
+    },
+    {
+      "type": "removed",
+      "name": "Savage Fury",
+      "id": 449646
+    },
+    {
+      "type": "removed",
+      "name": "Predator",
+      "id": 449864
+    },
+    {
+      "type": "removed",
+      "name": "Greater Alignment",
+      "id": 450184
+    },
+    {
+      "type": "removed",
+      "name": "Stellar Amplification",
+      "id": 450212
+    },
+    {
+      "type": "removed",
+      "name": "Stellar Amplification",
+      "id": 450214
+    },
+    {
+      "type": "removed",
+      "name": "Dreamstate",
+      "id": 450346
+    },
+    {
+      "type": "removed",
+      "name": "Nature's Grace",
+      "id": 450347
+    },
+    {
+      "type": "removed",
+      "name": "Touch the Cosmos",
+      "id": 450356
+    },
+    {
+      "type": "removed",
+      "name": "Touch the Cosmos",
+      "id": 450360
+    },
+    {
+      "type": "removed",
+      "name": "Touch the Cosmos",
+      "id": 450361
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Inspiration",
+      "id": 450418
+    },
+    {
+      "type": "removed",
+      "name": "Umbral Inspiration",
+      "id": 450419
+    },
+    {
+      "type": "removed",
+      "name": "Harmony of the Heavens",
+      "id": 450558
+    },
+    {
+      "type": "removed",
+      "name": "Astral Communion",
+      "id": 450598
+    },
+    {
+      "type": "removed",
+      "name": "Astral Communion",
+      "id": 450599
+    },
+    {
+      "type": "removed",
+      "name": "Dreadful Wound",
+      "id": 451177
+    },
+    {
+      "type": "removed",
+      "name": "Starlight Conduit",
+      "id": 451211
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian 11.0 Class Set 4pc",
+      "id": 453664
+    },
+    {
+      "type": "removed",
+      "name": "Druid Guardian 11.0 Class Set 2pc",
+      "id": 453665
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance 11.0 Class Set 2pc",
+      "id": 453666
+    },
+    {
+      "type": "removed",
+      "name": "Druid Balance 11.0 Class Set 4pc",
+      "id": 453667
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration 11.0 Class Set 4pc",
+      "id": 453668
+    },
+    {
+      "type": "removed",
+      "name": "Druid Restoration 11.0 Class Set 2pc",
+      "id": 453669
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral 11.0 Class Set 2pc",
+      "id": 453670
+    },
+    {
+      "type": "removed",
+      "name": "Druid Feral 11.0 Class Set 4pc",
+      "id": 454839
+    },
+    {
+      "type": "removed",
+      "name": "Tiger's Strength",
+      "id": 454943
+    },
+    {
+      "type": "removed",
+      "name": "Fell Prey",
+      "id": 454957
+    },
+    {
+      "type": "removed",
+      "name": "Guardian's Tenacity",
+      "id": 455011
+    },
+    {
+      "type": "removed",
+      "name": "Power of the Forest",
+      "id": 455070
+    },
+    {
+      "type": "removed",
+      "name": "Lethal Preservation",
+      "id": 455461
+    },
+    {
+      "type": "removed",
+      "name": "Lethal Preservation",
+      "id": 455466
+    },
+    {
+      "type": "removed",
+      "name": "Lethal Preservation",
+      "id": 455470
+    },
+    {
+      "type": "removed",
+      "name": "Lethal Preservation",
+      "id": 455474
+    },
+    {
+      "type": "removed",
+      "name": "Implant",
+      "id": 455496
+    },
+    {
+      "type": "removed",
+      "name": "Cenarius' Might",
+      "id": 455797
+    },
+    {
+      "type": "removed",
+      "name": "Cenarius' Might",
+      "id": 455801
+    },
+    {
+      "type": "removed",
+      "name": "Strike for the Heart",
+      "id": 458724
+    },
+    {
+      "type": "removed",
+      "name": "Balance Druid",
+      "id": 462068
+    },
+    {
+      "type": "removed",
+      "name": "Druid",
+      "id": 462069
+    },
+    {
+      "type": "removed",
+      "name": "Feral Druid",
+      "id": 462070
+    },
+    {
+      "type": "removed",
+      "name": "Guardian Druid",
+      "id": 462071
+    },
+    {
+      "type": "removed",
+      "name": "Restoration Druid",
+      "id": 462073
     }
   ]
 }
