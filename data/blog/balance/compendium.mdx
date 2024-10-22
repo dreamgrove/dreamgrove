@@ -8,11 +8,18 @@ summary: 'A guide to Balance Druid'
 
 # News
 
+## 11.0.5 Update 
+
+- The upcoming patch is a nerf to the best builds on both ST and AoE, substantially more on AoE because of the removal of Lunar Shrapnel. The introduction of !Whirling Stars! also increased the value of !Stellar Flare! on ST encounters, since you no longer gain the !Waning Twilight! uptime from pressing !194223|Celestial Alignment!/!102560|Incarnation! that you would with !Orbital Strike!.
+  !Elune's Chosen! is currently simming better than !Keeper of the Grove! in all content, but is more difficult to play optimally, relying on constant uptime to get full value out of !Lunation! CDR for more !Fury of Elune! casts. The !Elune's Chosen! playstyle has not gotten any substantial change and plays the exact same, except for a few passive damage procs and the introduction of !Stellar Flare!.
+  !Keeper of the Grove! is still usable in a lot of scenarios, even if it's simming worse. It has a reliable burst on a 2m cooldown with !Convoke the Spirits! and damage reduction with !Protective Growth!. The builds for !Keeper of the Grove! have changed to include !New Moon! as this talent is a 0.4% dmg increase over !Power of Goldrinn!. You could alternatively also talent into !Radiant Moonlight! over !Umbral Inspiration! for a 0.1% dps increase, but this is not recommended as that playstyle is very tight on fitting long cast globals into a short cooldown window.
+
+
 ## Current Bugs
 
 There are currently some bugs in mythic+ that you should be weary about.
 
-- If your raid wipes within 15 seconds of you using !194223|Celestial Alignment!/!102560|Incarnation!, !205636|Force of Nature! or !Convoke the Spirits!, then !Control of the Dream! will not provide the correct amount of reduction to these talents, effectively desyncing your cooldowns for the next pull.
+- If your raid wipes within 15 seconds of you using !194223|Celestial Alignment!/!102560|Incarnation!, !205636|Force of Nature! or !Convoke the Spirits!, then !Control of the Dream! will not provide the correct amount of reduction to these talents, effectively desyncing your cooldowns for the next pull. 
 
 
 ## Tier set
@@ -30,26 +37,22 @@ This is a ~3.0% dmg increase from having no set.
 This is a ~4.7% dmg increase from having no set.
 
 
-[Sim for tier set](https://www.raidbots.com/simbot/report/rArz1pApNfXUG9q3nq4Thm)
+[Sim for tier set](https://mimiron.raidbots.com/simbot/report/5YZHSh7mNFKkTo4XF5Sw34)
 
 
 # Rotation
 ## Precasting
 <CheckboxProvider>
-  <Checkbox id="Keeper of the GroveLOL" spellId={433831} name="Keeper of the Grove" defaultCheck radio="Hero" />
-  <Checkbox id="Elune's ChosenLOL" spellId={424058} name="Elune's Chosen" radio="Hero" />
+  <Checkbox id="Stellar FlareLOL" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
 </CheckboxProvider>
 
 **You want to cancel !Nature's Grace! if you have any stacks before pulling a raid boss, either by clicking off the buff or using the macro specified in the "Macros" section. This allows you to do the following opener, and still keep any stacks of !Nature's Grace! rolling into your cooldowns.**
 - Use !Wrath!.
 - Use !Wrath!.
-- [*Keeper of the GroveLOL] Use !Regrowth!
-
-You can precast at max range, 3 seconds before a boss is pulled.
-
-**16th October 2024 update: Added !Regrowth! into the opener. Casting !Regrowth! before combat so that the cast finishes after combat start is a tiny DPS increase by starting to stack !Blooming Infusion!, and also provides DR. The alternative is casting !Wrath! two times and waiting for the boss to be pulled.**
-
-**Keeper Explanation:** When playing Keeper of the Grove, your opener can vary depending on your distance to the target. The general rule is, you want both casts of !Wrath! to hit the boss before you use !205636|Force of Nature!, since !Wrath! consumes stacks of !Dream Surge! on impact. Usually this means using a global on !Moonfire! before !205636|Force of Nature!.
+- [*Stellar FlareLOL] Use !Stellar Flare!
+- [~*Stellar FlareLOL] Use !Starfire!
+ 
+You can precast from max range, 4 seconds before a boss is pulled.
 
 ### **What is a priority list?**
 
@@ -92,7 +95,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*New MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current Eclipse ends.
-  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
+  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
 - [*New MoonKOTG] Use !Starsurge! if one of the following conditions is met:
   - You are about to overcap on AP.
   - You need to move.
@@ -126,7 +129,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of EluneEC] Use !Fury of Elune! if your next global is !194223|Celestial Alignment!/!102560|Incarnation!.
+- [*Fury of EluneEC] Use !Fury of Elune! together with !194223|Celestial Alignment!/!102560|Incarnation!.
 - Use !194223|Celestial Alignment!/!102560|Incarnation!.
 - [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
 - [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
@@ -144,7 +147,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*New MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
-  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
+  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
 - [*New MoonEC] Use !Starsurge! if one of the following conditions is met:
   - You are about to overcap on AP.
   - You need to move.
@@ -277,15 +280,19 @@ Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside
 <details>
 <summary>Raid Talents</summary>
 
-<Talents name={"Single Target (Sikran, Rasha'nan, Nexus Princess Kyveza, Queen Ansurek)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YMmZ2mxixMzMPgtZMzYGjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
+These are template builds for each boss encounter and could see substantial change depending on what is being played in the upcoming weeks. Will be updating this consistently.
 
-<Talents name={"Single Target Cleave (Ulgrax, Bloodbound Horror)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MjZmZ2mxixMzMPgtZMGzYsBWAwAstNWw0MzyIAAAAbmZYA"}/>
+<Talents name={"Single Target Keeper of the Grove (Sikran, Rasha'nan, Nexus Princess Kyveza)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZhlZ2mxixMzMzwsNzYmZsBWAwAstNWw0MzyIAAAAbmZMA"}/>
 
-<Talents name={"Broodtwister Ovi'nax"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZmhhZGwMDzMDG2GDzMz2MWMmZmZsNjxYmZsBWAwAstNWw0MzyIAAAAbmZYA"}/>
+<Talents name={"Single Target Elune's Chosen (Sikran, Rasha'nan, Nexus Princess Kyveza)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZYYmhZmBDbMLsMz2M2YmZMzsYWmZMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
 
-<Talents name={"Silken Court"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YYmZ2mZWMmZmZsNjxwMjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
+<Talents name={"Single Target Cleave Keeper of the Grove (Ulgrax, Bloodbound Horror, Queen Ansurek)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxsMz2MWwMzMzsY2GjZmxGYBADw22YBTzMLjAAAAsZmxAA"}/>
 
-<Talents name={"Elune's Chosen Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjZhZmtZsxMzYGbzsMzYGjNwCDwYZbmNMmlRgJAAAALmZYA"}/>
+<Talents name={"Single Target Cleave Elune's Chosen (Ulgrax, Bloodbound Horror, Queen Ansurek)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZYYmhZmBDbMLmlZ2mxGzMjZmFzyYMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
+
+<Talents name={"Broodtwister Ovi'nax"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxYmtZmNzMzYmZxsMGzMsBWAwYZbmNMmtRgJAAAALmZMA"}/>
+
+<Talents name={"Silken Court"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxYmtZmNzMzYmZxsMGzMsBWAwYZbmNMmtRgJAAAALmZMA"}/>
 
 </details>
 
@@ -295,18 +302,14 @@ The following are dungeon talent builds that will always serve you well but mind
 
 Both hero trees are viable and perform very close to each other. Feel free to choose the one you prefer.
 
-<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmxsAbMMzMbzMLGzMzM2mxYYmxGYBADw22YBTzMLjAAAAsZmhB"}/>
+<Talents name={"Keeper of the Grove build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxYmtZmFjZmZmZxsNGzYsBWAwAstNWw0MzyIAAAAbmZMA"}/>
 
-<Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZmx2MLjhBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
+<Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUMmZGGzMDYmhZmZWgNmFjZMzsZmZmZmZzsMGzMsBWAwYZbmNMmlRgJAAAALmZMA"}/>
 
 ## In-Depth Talent Explanations
 
-<Collapsible title="Keeper of the Grove vs. Elune's Chosen">
-Keeper of the Grove has generally performed better in all content since release. It provides a good burst window on a 30-45s cooldown, while also synergizing well with !Convoke the Spirits!, being less taxing on your talent page than Elune's Chosen and allowing for more variety in talents from the spec tree. Elune's Chosen requires you to take the !Fury of Elune! and !Radiant Moonlight!, talent points both at the bottom of your tree, effectively locking you out of other options. Keeper of the Grove also has a stronger defensive option with !Protective Growth! compared to !Glistening Fur! in the Elune's Chosen tree. 
-</Collapsible>
-
 <Collapsible title="Incarnation: Chosen of Elune vs. Convoke the Spirits ">
-Both of these talents are seeing a lot of play in Mythic+ this season when using !Keeper of the Grove!. !Incarnation: Chosen of Elune! is at times very strong in AoE encounters and in keys where you're playing with a coordinated group that's pulling at times catered to your cooldowns. !Convoke the Spirits! in return gives you a lot of boss damage, and/or damage on high priority mobs that have to die. When using !Convoke the Spirits! in Mythic+, you should use the spell in AoE as long as the conditions laid out in the AoE priority section are met. 
+Both of these talents are seeing a lot of play in Mythic+ this season. !Incarnation: Chosen of Elune! is at times very strong in AoE encounters and in keys where you're playing with a coordinated group that's pulling at times catered to your cooldowns. !Convoke the Spirits! in return gives you a lot of boss damage, and/or damage on high priority mobs that have to die. When using !Convoke the Spirits! in Mythic+, you should use the spell in AoE as long as the conditions laid out in the AoE priority section are met. 
 </Collapsible>
 
 <Collapsible title="Control of the Dream vs. Power of the Dream">
@@ -400,18 +403,20 @@ Remember that you will acquire an enchanted heroic crest early in the season as 
 
 [Spymaster's Web](https://www.wowhead.com/item=220202/spymasters-web) is a trinket with a passively stacking intellect buff, capping at 40 stacks and an on-use effect that gives you intellect based on the amount of stacks you've accumulated. Ideally this means you should save it for your 3rd or 2nd use of !194223|Celestial Alignment!/!102560|Incarnation!, depending on fight timer. 
 
+[Treacherous Transmitter](https://www.wowhead.com/item=221023/treacherous-transmitter?ilvl=639&spec=102) is an on-use trinket that gives you a random task to perform out of 3 possible tasks, either collect an orb, stand in a circle or jump 3 times to get a primary stat buff. This trinket is good paired with !Keeper of the Grove!'s burst cooldowns, but not as good for !Elune's Chosen! as it has a more flat damage profile.
+
 Please use Top Gear on [Raidbots](https://www.raidbots.com/simbot) in order to decide what trinkets to use/farm, but the following list should give you a good idea of some of the trinkets you will want to look out for. The list is in roughly power-level order assuming the highest item level versions of the trinkets.
 
     - [Spymaster's Web](https://www.wowhead.com/item=220202/spymasters-web?bonus=4800:4786:1540:10299&ilvl=639&spec=102)
-    - [Ara-Kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?bonus=4786:3131:10299&ilvl=639&spec=102)
-    - [Gale of Shadows](https://www.wowhead.com/item=133304/gale-of-shadows?ilvl=639&spec=102)
+    - [Unbound Changeling](https://www.wowhead.com/item=178708/unbound-changeling?bonus=4786:9948:10299&class=11&ilvl=639&spec=102)
     - [Treacherous Transmitter](https://www.wowhead.com/item=221023/treacherous-transmitter?ilvl=639&spec=102)
+    - [Ovi'nax's Mercurial Egg](https://www.wowhead.com/item=220305/ovinaxs-mercurial-egg?bonus=4800:4786:1540:10299&ilvl=639&spec=102)
+    - [Gale of Shadows](https://www.wowhead.com/item=133304/gale-of-shadows?ilvl=639&spec=102)
+    - [Ara-Kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?bonus=4786:3131:10299&ilvl=639&spec=102)
     - [Candle Confidant](https://www.wowhead.com/item=225648/candle-confidant?bonus=3145:10263&ilvl=626&spec=102&pcs=225648:220202)
     - [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?bonus=4786:3131:10299&class=11&ilvl=639&spec=102)
     - [Shadow-Binding Ritual Knife](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife?bonus=3295:10263&ilvl=626&spec=102)
-    - [Unbound Changeling](https://www.wowhead.com/item=178708/unbound-changeling?bonus=4786:9948:10299&class=11&ilvl=639&spec=102)
     - [High Speaker's Accretion](https://www.wowhead.com/item=219303/high-speakers-accretion?bonus=657:11143:5878:7981:10299)
-    - [Ovi'nax's Mercurial Egg](https://www.wowhead.com/item=220305/ovinaxs-mercurial-egg?bonus=4800:4786:1540:10299&ilvl=639&spec=102)
     - [Satchel of Misbegotten Minions](https://www.wowhead.com/item=178772/satchel-of-misbegotten-minions?class=11&ilvl=639&spec=102)
     - [Aberrant Spellforge](https://www.wowhead.com/item=212451/aberrant-spellforge?bonus=4800:4786:1540:10299&class=11&ilvl=639&spec=102)
     - [Cirral Concoctory](https://www.wowhead.com/item=219321/cirral-concoctory?bonus=657:11143:5878:7981:10299)
@@ -443,7 +448,7 @@ Please use Top Gear on [Raidbots](https://www.raidbots.com/simbot) in order to d
 
 - No, having your DoT effects up increases your damage done to the target. The conditions for spreading Sunfire and Moonfire are tied to how long the target will live, and not how many targets there are.
 
-### How do I sim for AoE?
+### How do I sim for M+?
 
 - It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, you can use the [MDT Sim WeakAura](https://wago.io/Yya4XBbl-) which allows you to sim dungeon routes. Please keep in mind that ST damage is still a big part of mythic+.
 
@@ -462,6 +467,10 @@ Please use Top Gear on [Raidbots](https://www.raidbots.com/simbot) in order to d
 ### Do our dots snapshot?
 
 - No, all of our periodic damage (like !Moonfire!, !Sunfire!, !Stellar Flare!) do NOT snapshot, everything is dynamic. That means any dots gain/lose the damage bonus upon entering/leaving the Eclipse that buffs them and whenever any other stat/damage increases are applied/expire.
+
+### I have read through the Compendium and I have some questions that are not outlined in this FAQ?
+
+- If you have any questions, you can go to the [Dreamgrove discord server] (https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to recieve the answer you would like.
 
 # Additional Resources
 ## Macros

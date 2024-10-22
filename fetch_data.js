@@ -10,6 +10,9 @@ const localOverwrites = {
   'Keeper of the Grove': '433831',
   "Elune's Chosen": '424058',
   'new ability': '9393',
+  'Bear Form': '5487',
+  'Whirling Stars': '468743',
+  'Sunseeker Mushroom': '468936'
 }
 
 async function fetchPageData(url, data) {
