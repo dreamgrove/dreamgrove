@@ -134,7 +134,7 @@ locale: 'kr'
 - [*Dotc_Rage of the Sleeper_cleave] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*Dotc_Incarnation: Guardian of Ursoc_cleave] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~Dotc_Incarnation: Guardian of Ursoc_cleave] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Wildpower Surge_cleave] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
+- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Wildpower Surge_cleave] 다음 조건을 모두 만족할 때, !391528|영혼 소집!.
     - 광폭화 효과를 받고 있지 않을 것.
     - 현재 보유한 분노가 40 미만일 것.
 - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
@@ -176,7 +176,7 @@ locale: 'kr'
 - [*Dotc_Rage of the Sleeper_aoe] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*Dotc_Incarnation: Guardian of Ursoc_aoe] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~Dotc_Incarnation: Guardian of Ursoc_aoe] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*Dotc_Convoke the Spirits_aoe] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
+- [*Dotc_Convoke the Spirits_aoe] 다음 조건을 모두 만족할 때, !391528|영혼 소집!.
     - 광폭화 효과를 받고 있지 않을 것.
     - 현재 보유한 분노가 40 미만일 것.
 - [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
@@ -195,28 +195,28 @@ locale: 'kr'
 <Checkbox id="Dotc_Cleave_incarn" name="소규모 (2-3개 대상)" radio="Dotc_Target count" />
 <Checkbox id="Dotc_AOE_incarn" name="광역 (4+개 대상)" radio="Dotc_Target count" />
 <Checkbox id="Dotc_Wildpower Surge_incarn" spellId={411824} name="솟구치는 자연력" defaultCheck />
-<Checkbox id="Dotc_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox id="Dotc_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" />
-<Checkbox id="Dotc_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox id="Dotc_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox id="Dotc_Thorns of Iron_incarn" spellId={400222} name="Thorns of Iron" defaultCheck />
-<Checkbox id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" defaultCheck />
-<Checkbox id="Dotc_Convoke the Spirits_incarn" spellId={391528} name="Convoke the Spirits" />
+<Checkbox id="Dotc_Heart of the Wild_incarn" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="Dotc_Lunar Beam_incarn" spellId={204066} name="달 광선" />
+<Checkbox id="Dotc_Vicious Cycle_incarn" spellId={371999} name="흉포한 순환" defaultCheck />
+<Checkbox id="Dotc_Tooth and Claw_incarn" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="Dotc_Thorns of Iron_incarn" spellId={400222} name="무쇠 가시" defaultCheck />
+<Checkbox id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="잠자는 자의 분노" defaultCheck />
+<Checkbox id="Dotc_Convoke the Spirits_incarn" spellId={391528} name="영혼 소집" />
 </CheckboxProvider>
 
-- [*Dotc_Single Target_incarn] Press !441605|찢어발기기!
+- [*Dotc_Single Target_incarn] !441605|찢어발기기!
 - [*~Dotc_Single Target_incarn] (가능하면 점사 대상에게) !441605|찢어발기기!
 - !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
 - [*Dotc_Heart of the Wild_incarn&&Dotc_Single Target_incarn] !319454|야생의 정수!
-    - [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
+    - [*Dotc_Wildpower Surge_incarn] 솟구치는 자연력 선택 시, !319454|야생의 정수!는 표범의 잠재력 중첩이 6개가 될 때까지 아낄 것.
 - [*Dotc_Heart of the Wild_incarn&&Dotc_Cleave_incarn] !319454|야생의 정수!
-    - [*Dotc_Wildpower Surge_incarn] On 2T you can hold !Heart of the Wild! until you're at 6 stacks of Feline Potential for a minor gain by Ripweaving. 
+    - [*Dotc_Wildpower Surge_incarn] 정확히 2개 대상과 전투 시, 도려내기 활용을 위해 표범의 잠재력 중첩이 6개가 될 때까지 !319454|야생의 정수!를 아끼는 것이 약간의 이득임.
 - [*Dotc_Heart of the Wild_incarn&&Dotc_AOE_incarn] !319454|야생의 정수!
-- [*Dotc_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper!
-    - [*Dotc_Wildpower Surge_incarn] If you are above 1-2 stacks of Feline Potential when !200851|Rage of the Sleeper! becomes available, you may wish to hold it until **after** you have applied your empowered !Rip!
-    - [*Dotc_Wildpower Surge_incarn] This is because leaving !Bear Form! will cause you lose any remaining duration of RotS, which will be more costly the closer you are to achieving 6 stacks of Feline Potential 
-- [*Dotc_Lunar Beam_incarn] Press !Lunar Beam! 
-    - [*Dotc_Single Target_incarn&&Dotc_Wildpower Surge_incarn] You may choose to hold this until after your !Wildpower Surge! empowered !Rip! is active on the target for a slight gain.
+- [*Dotc_Rage of the Sleeper_incarn] !200851|잠자는 자의 분노!.
+    - [*Dotc_Wildpower Surge_incarn] !200851|잠자는 자의 분노!가 준비된 시점에서 표범의 잠재력 중첩이 2개 이상이라면, 6중첩에서 강화된 도려내기를 적용한 후에  !200851|잠자는 자의 분노!를 쓰는 것이 약간의 이득임.
+    - [*Dotc_Wildpower Surge_incarn] 표범의 잠재력 6중첩이 준비되면 곧 표범 형상으로 변신해야 하는데, 곰 형상이 해제되면 발동 중이던 !200851|잠자는 자의 분노!가 즉시 없어지기 때문.
+- [*Dotc_Lunar Beam_incarn] !204066|달 광선!
+    - [*Dotc_Single Target_incarn&&Dotc_Wildpower Surge_incarn] 표범의 잠재력 6중첩에서 강화된 도려내기를 적용한 후에 !204066|달 광선!을 쓰는 것이 약간의 이득임.
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
     - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **있다면**,
         - !6807|후려갈기기! > !1822|갈퀴 발톱! > !391528|영혼 소집! > !1079|도려내기! > !33917|짓이기기!
@@ -232,29 +232,29 @@ locale: 'kr'
         - 남은 분노를 !192081|무쇠가죽!으로 소모하고, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
     - [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] 
         - [*~Dotc_Convoke the Spirits_incarn] 남은 분노를 !192081|무쇠가죽!으로 소모하고, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
-    - If an empowered !Rip! is still active on the target then replace !Rip! in the above sequences with a !Ferocious Bite! cast
-    - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
-- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] (The following is only a gain on 2T) 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
+    - 대상에게 이미 표범의 잠재력으로 강화된 !1079|도려내기!가 걸려 있다면, 위에서 !1079|도려내기!를 !22568|흉포한 이빨!로 대체.
+    - 대상에게 !1822|갈퀴 발톱!이 이미 걸려 있고 그 남은 지속시간이 pandemic 구간을 초과한다면, !1822|갈퀴 발톱!을 !5221|칼날 발톱!으로 대체.
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] (정확히 2개 대상과 전투 시) 표범의 잠재력 중첩이 6개일 때, 다음 기술들을 주어진 순서대로 시전.
     - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **있다면**,
-        - !Raze! (or !Maul!) > !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+        - !400254|말살! (또는 !6807|후려갈기기!) > !1822|갈퀴 발톱! > !391528|영혼 소집! > !1079|도려내기! > !33917|짓이기기!
     - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 지금 !391528|영혼 소집!이 **없다면**,
-        - !Raze! (or !Maul!) > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&~Dotc_Convoke the Spirits_incarn] !Raze! (or !Maul!) > !Rake! > !Rip! > !33917|Mangle!
-        - If you do not have the rage to cast !Raze! or !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If you do not have the rage to cast !Raze! or !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
-    - [*Dotc_Tooth and Claw_incarn] If you still have more than 40 rage after using the !Raze! or !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+        - !400254|말살! (또는 !6807|후려갈기기!) > !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
+    - [*Dotc_Tooth and Claw_incarn&&~Dotc_Convoke the Spirits_incarn] !400254|말살! (또는 !6807|후려갈기기!) > !1822|갈퀴 발톱! > !1079|도려내기! > !33917|짓이기기!
+        - 첫 !400254|말살! (또는 !6807|후려갈기기!)를 시전할 분노가 없다면, 건너뛰고 !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
+    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] 첫 !400254|말살! (또는 !6807|후려갈기기!)를 시전할 분노가 없다면, 건너뛰고 !1822|갈퀴 발톱!부터 진행.
+    - [*Dotc_Tooth and Claw_incarn] !400254|말살! / !6807|후려갈기기! 사용 이후에도 분노가 40 이상 남아 있다면, !1822|갈퀴 발톱! 직전에 !192081|무쇠가죽!으로 소모.
     - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] 지금 !391528|영혼 소집!이 **있다면**,
         - 남은 분노를 !192081|무쇠가죽!으로 소모하고, !1822|갈퀴 발톱! > !391528|영혼 소집! > !1079|도려내기! > !33917|짓이기기!
     - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] 지금 !391528|영혼 소집!이 **없다면**,
         - 남은 분노를 !192081|무쇠가죽!으로 소모하고, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
     - [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] 
         - [*~Dotc_Convoke the Spirits_incarn] 남은 분노를 !192081|무쇠가죽!으로 소모하고, !1822|갈퀴 발톱! > !1079|도려내기! > (!33917|짓이기기!가 돌아올 때까지) !5221|칼날 발톱! > !33917|짓이기기!
-    - If an empowered !Rip! is still active on your primary target then either:
-        - Cast !Rip! on the secondary target (more overall damage)
-        - Replace !Rip! in the above sequences with a !Ferocious Bite! cast on the primary target (more priority damage)
-    - If !Rake! is already active and not within pandemic then either:
-        - Cast !Rake! on the secondary target OR
-        - Replace !Rake! with !Shred! on the primary target in the above sequences
+    - 대상에게 이미 표범의 잠재력으로 강화된 !1079|도려내기!가 걸려 있다면, 다음 중 하나를 선택.
+        - 다른 대상에게 !1079|도려내기! (총 피해량 측면에서 이득)
+        - !1079|도려내기! 대신, 주 대상에게 !22568|흉포한 이빨! (점사 측면에서 이득)
+    - 대상에게 !1822|갈퀴 발톱!이 이미 걸려 있고 그 남은 지속시간이 pandemic 구간을 초과한다면, 다음 중 하나를 선택.
+        - 다른 대상에게 !1822|갈퀴 발톱!
+        - !1822|갈퀴 발톱! 대신, 주 대상에게 !5221|칼날 발톱!.
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] 표범의 잠재력 중첩이 6개 미만이라면, !33917|짓이기기!.
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] 표범의 잠재력 중첩이 6개 미만이라면, !33917|짓이기기!. (2개 대상에서만 유의미함)
 - [*Dotc_Tooth and Claw_incarn&&Dotc_Single Target_incarn] !135288|맹위! 중첩이 2개일 때, !6807|후려갈기기!.
@@ -263,7 +263,7 @@ locale: 'kr'
 - [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
 - [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
 - [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
-- [*Dotc_Thorns of Iron_incarn] Press !192081|무쇠가죽! if you have the rage to do so 
+- [*Dotc_Thorns of Iron_incarn] 분노가 남는다면, !192081|무쇠가죽!으로 소모.
 - !33917|짓이기기!   
 - !106830|난타!
 
@@ -276,7 +276,7 @@ locale: 'kr'
 ### 전투 시작 전
 
 <CheckboxProvider>
-<Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name=야생의 정수" defaultCheck />
+<Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name="야생의 정수" defaultCheck />
 </CheckboxProvider>
 
 - 영약, 음식, 무기 룬 등 강화 효과의 남은 지속 시간이 충분한지 확인.
@@ -286,67 +286,67 @@ locale: 'kr'
 ### 단일 대상 시전 우선순위
 
 <CheckboxProvider>
-<Checkbox id="EC_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox id="EC_Lunation" spellId={429539} name="Lunation" defaultCheck />
-<Checkbox id="EC_Lunar Beam" spellId={204066} name="Lunar Beam" defaultCheck />
-<Checkbox id="EC_Vicious Cycle" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox id="EC_Tooth and Claw" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox id="EC_Galactic Guardian" spellId={203964} name="Galactic Guardian" defaultCheck />
-<Checkbox id="EC_Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="EC_Incarn" />
-<Checkbox id="EC_Incarnation: Guardian of Ursoc" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn" />
-<Checkbox id="EC_Rage of the Sleeper" spellId={200851} name="Rage of the Sleeper" />
-<Checkbox id="EC_Thorns of Iron style" spellId={192081} name="Thorns of Iron Playstyle" />
+<Checkbox id="EC_Heart of the Wild" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="EC_Lunation" spellId={429539} name="삭망월" defaultCheck />
+<Checkbox id="EC_Lunar Beam" spellId={204066} name="달 광선" defaultCheck />
+<Checkbox id="EC_Vicious Cycle" spellId={371999} name="흉포한 순환" defaultCheck />
+<Checkbox id="EC_Tooth and Claw" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="EC_Galactic Guardian" spellId={203964} name="은하의 수호자" defaultCheck />
+<Checkbox id="EC_Convoke the Spirits" spellId={391528} name="영혼 소집" radio="EC_Incarn" />
+<Checkbox id="EC_Incarnation: Guardian of Ursoc" spellId={102558} name="화신: 우르속의 수호자" defaultCheck radio="EC_Incarn" />
+<Checkbox id="EC_Rage of the Sleeper" spellId={200851} name="잠자는 자의 분노" />
+<Checkbox id="EC_Thorns of Iron style" spellId={192081} name="무쇠 가시" />
 </CheckboxProvider>
 
-- [*~EC_Thorns of Iron style] Press !Maul! if you will overcap rage
-- [*EC_Thorns of Iron style] Press !192081|무쇠가죽! if you will overcap rage
-- Press !Moonfire! if the dot completely falls off
-- !106830|난타! if not at max stacks of the debuff or it is about to expire
-- [*EC_Heart of the Wild] !319454|야생의 정수! if available
-- [*EC_Lunar Beam&&EC_Lunation] Press !Lunar Beam! if available
+- [*~EC_Thorns of Iron style] 분노가 넘치기 직전이라면, !6807|후려갈기기!.
+- [*EC_Thorns of Iron style] 분노가 넘치기 직전이라면, !192081|무쇠가죽!.
+- !164812|달빛섬광!이 걸려 있지 않다면, !164812|달빛섬광!.
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
+- [*EC_Heart of the Wild] !319454|야생의 정수!.
+- [*EC_Lunar Beam&&EC_Lunation] !204066|달 광선!.
 - [*EC_Lunar Beam&&~EC_Lunation] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Rage of the Sleeper] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Incarnation: Guardian of Ursoc] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~EC_Incarnation: Guardian of Ursoc] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*EC_Convoke the Spirits] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
-    - You are not in !Berserk!
+- [*EC_Convoke the Spirits] 다음 조건을 모두 만족할 때, !391528|영혼 소집!.
+    - !50334|광폭화! 중이 아닐 것.
     - 현재 보유한 분노가 40 미만일 것.
 - [*EC_Tooth and Claw] !135288|맹위! 중첩이 2개일 때, !6807|후려갈기기!.
 - [*EC_Vicious Cycle] !371999|흉포한 순환! 중첩이 3개일 때, !6807|후려갈기기!.
 - !33917|짓이기기!
 - !106830|난타!
-- [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
+- [*EC_Galactic Guardian] !203964|은하의 수호자! 효과가 있다면, !164812|달빛섬광!.
 - !213764|휘둘러치기!.
 
 ### 소규모 전투 시전 우선순위 (2-3개 대상)
 
 <CheckboxProvider>
-<Checkbox id="EC_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck/>
-<Checkbox id="EC_Lunation_cleave" spellId={429539} name="Lunation" defaultCheck/>
-<Checkbox id="EC_Lunar Beam_cleave" spellId={204066} name="Lunar Beam" defaultCheck/>
-<Checkbox id="EC_Vicious Cycle_cleave" spellId={371999} name="Vicious Cycle" defaultCheck/>
-<Checkbox id="EC_Tooth and Claw_cleave" spellId={135288} name="Tooth and Claw" defaultCheck/>
-<Checkbox id="EC_Galactic Guardian_cleave" spellId={203964} name="Galactic Guardian" defaultCheck/>
-<Checkbox id="EC_Raze_cleave" spellId={400254} name="Raze" defaultCheck/>
-<Checkbox id="EC_Convoke the Spirits_cleave" spellId={391528} name="Convoke the Spirits" radio="EC_Incarn Cleave" />
-<Checkbox id="EC_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn Cleave" />
-<Checkbox id="EC_Rage of the Sleeper_cleave" spellId={200851} name="Rage of the Sleeper" />
-<Checkbox id="EC_Thorns of Iron style_cleave" spellId={192081} name="Thorns of Iron Playstyle" />
+<Checkbox id="EC_Heart of the Wild_cleave" spellId={319454} name="야생의 정수" defaultCheck/>
+<Checkbox id="EC_Lunation_cleave" spellId={429539} name="삭망월" defaultCheck/>
+<Checkbox id="EC_Lunar Beam_cleave" spellId={204066} name="달 광선" defaultCheck/>
+<Checkbox id="EC_Vicious Cycle_cleave" spellId={371999} name="흉포한 순환" defaultCheck/>
+<Checkbox id="EC_Tooth and Claw_cleave" spellId={135288} name="맹위" defaultCheck/>
+<Checkbox id="EC_Galactic Guardian_cleave" spellId={203964} name="은하의 수호자" defaultCheck/>
+<Checkbox id="EC_Raze_cleave" spellId={400254} name="말살" defaultCheck/>
+<Checkbox id="EC_Convoke the Spirits_cleave" spellId={391528} name="영혼 소집" radio="EC_Incarn Cleave" />
+<Checkbox id="EC_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="화신: 우르속의 수호자" defaultCheck radio="EC_Incarn Cleave" />
+<Checkbox id="EC_Rage of the Sleeper_cleave" spellId={200851} name="잠자는 자의 분노" />
+<Checkbox id="EC_Thorns of Iron style_cleave" spellId={192081} name="무쇠 가시" />
 </CheckboxProvider>
 
-- [*~EC_Thorns of Iron style_cleave&&EC_Raze_cleave] Press !Raze! if you will overcap rage
-- [*~EC_Thorns of Iron style_cleave&&~EC_Raze_cleave] Press !Maul! if you will overcap rage
-- [*EC_Thorns of Iron style_cleave] Press !192081|무쇠가죽! if you have the rage to do so
-- Press !Moonfire! if the dot completely falls off
-- !106830|난타! if not at max stacks of the debuff or it is about to expire
-- [*EC_Heart of the Wild_cleave] !319454|야생의 정수! if available
-- [*EC_Lunar Beam_cleave&&EC_Lunation_cleave] Press !Lunar Beam! if available
+- [*~EC_Thorns of Iron style_cleave&&EC_Raze_cleave] 분노가 넘치기 직전이라면, !400254|말살!.
+- [*~EC_Thorns of Iron style_cleave&&~EC_Raze_cleave] 분노가 넘치기 직전이라면, !6807|후려갈기기!.
+- [*EC_Thorns of Iron style_cleave] 분노를 !192081|무쇠가죽!으로 소모.
+- !164812|달빛섬광!이 걸려 있지 않다면, !164812|달빛섬광!.
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
+- [*EC_Heart of the Wild_cleave] !319454|야생의 정수!.
+- [*EC_Lunar Beam_cleave&&EC_Lunation_cleave] !204066|달 광선!.
 - [*EC_Lunar Beam_cleave&&~EC_Lunation_cleave] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Rage of the Sleeper_cleave] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Incarnation: Guardian of Ursoc_cleave] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~EC_Incarnation: Guardian of Ursoc_cleave] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*EC_Convoke the Spirits_cleave] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
-    - You are not in !Berserk!
+- [*EC_Convoke the Spirits_cleave] 다음 조건을 모두 만족할 때, !391528|영혼 소집!.
+    - !50334|광폭화! 중이 아닐 것.
     - 현재 보유한 분노가 40 미만일 것.
 - [*EC_Tooth and Claw_cleave&&EC_Raze_cleave] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
 - [*EC_Vicious Cycle_cleave&&EC_Raze_cleave] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
@@ -354,36 +354,36 @@ locale: 'kr'
 - [*EC_Vicious Cycle_cleave&&~EC_Raze_cleave] !371999|흉포한 순환! 중첩이 3개일 때, !6807|후려갈기기!.
 - !33917|짓이기기!
 - !106830|난타!
-- [*EC_Galactic Guardian_cleave] Press !Moonfire! if you have a Galactic Guardian buff
+- [*EC_Galactic Guardian_cleave] !203964|은하의 수호자! 효과가 있다면, !164812|달빛섬광!.
 - !213764|휘둘러치기!.
 
 ### 광역 전투 우선순위
 
 <CheckboxProvider>
-<Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox id="EC_Lunation_aoe" spellId={429539} name="Lunation" defaultCheck />
-<Checkbox id="EC_Lunar Beam_aoe" spellId={204066} name="Lunar Beam" defaultCheck />
-<Checkbox id="EC_Vicious Cycle_aoe" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox id="EC_Tooth and Claw_aoe" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox id="EC_Raze_aoe" spellId={400254} name="Raze" defaultCheck />
-<Checkbox id="EC_Convoke the Spirits_aoe" spellId={391528} name="Convoke the Spirits" radio="EC_Incarn AOE" />
-<Checkbox id="EC_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC_Incarn AOE" />
-<Checkbox id="EC_Rage of the Sleeper_aoe" spellId={200851} name="Rage of the Sleeper" />
-<Checkbox id="EC_Thorns of Iron style_aoe" spellId={192081} name="Thorns of Iron Playstyle" />
+<Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="EC_Lunation_aoe" spellId={429539} name="삭망월" defaultCheck />
+<Checkbox id="EC_Lunar Beam_aoe" spellId={204066} name="달 광선" defaultCheck />
+<Checkbox id="EC_Vicious Cycle_aoe" spellId={371999} name="흉포한 순환" defaultCheck />
+<Checkbox id="EC_Tooth and Claw_aoe" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="EC_Raze_aoe" spellId={400254} name="말살" defaultCheck />
+<Checkbox id="EC_Convoke the Spirits_aoe" spellId={391528} name="영혼 소집" radio="EC_Incarn AOE" />
+<Checkbox id="EC_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="화신: 우르속의 수호자" defaultCheck radio="EC_Incarn AOE" />
+<Checkbox id="EC_Rage of the Sleeper_aoe" spellId={200851} name="잠자는 자의 분노" />
+<Checkbox id="EC_Thorns of Iron style_aoe" spellId={192081} name="무쇠 가시" />
 </CheckboxProvider>
 
-- [*~EC_Thorns of Iron style_aoe&&EC_Raze_aoe] Press !Raze! if you will overcap rage
-- [*EC_Thorns of Iron style_aoe] Press !192081|무쇠가죽! if you have the rage to do so
-- Press !Moonfire! if the dot completely falls off
-- !106830|난타! if not at max stacks of the debuff or it is about to expire
-- [*EC_Heart of the Wild_aoe] !319454|야생의 정수! if available
-- [*EC_Lunar Beam_aoe&&EC_Lunation_aoe] Press !Lunar Beam! if available
+- [*~EC_Thorns of Iron style_aoe&&EC_Raze_aoe] 분노가 넘치기 직전이라면, !400254|말살!.
+- [*EC_Thorns of Iron style_aoe] 분노를 !192081|무쇠가죽!으로 소모.
+- !164812|달빛섬광!이 걸려 있지 않다면, !164812|달빛섬광!.
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
+- [*EC_Heart of the Wild_aoe] !319454|야생의 정수!
+- [*EC_Lunar Beam_aoe&&EC_Lunation_aoe] !204066|달 광선!.
 - [*EC_Lunar Beam_aoe&&~EC_Lunation_aoe] !204066|달 광선!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Rage of the Sleeper_aoe] !200851|잠자는 자의 분노!. 단, 10초 안에 화신/광폭화가 준비된다면 맞춰 쓰기 위해 아낄 것.
 - [*EC_Incarnation: Guardian of Ursoc_aoe] !102558|화신: 우르속의 수호자!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
 - [*~EC_Incarnation: Guardian of Ursoc_aoe] !50334|광폭화!. (발동 후, 아래의 화신/광폭화 중 시전 우선순위 항목으로 넘어갈 것)
-- [*EC_Convoke the Spirits_aoe] 다음 조건을 모두 만족할 때,  !391528|영혼 소집!.
-    - You are not in !Berserk!
+- [*EC_Convoke the Spirits_aoe] 다음 조건을 모두 만족할 때, !391528|영혼 소집!.
+    - !50334|광폭화! 중이 아닐 것.
     - 현재 보유한 분노가 40 미만일 것.
 - [*EC_Tooth and Claw_aoe&&EC_Raze_aoe] !135288|맹위! 중첩이 2개일 때, !400254|말살!.
 - [*EC_Vicious Cycle_aoe&&EC_Raze_aoe] !371999|흉포한 순환! 중첩이 3개일 때, !400254|말살!.
@@ -408,14 +408,14 @@ locale: 'kr'
 <Checkbox id="EC_Raze_incarn" spellId={400254} name="Raze" />
 </CheckboxProvider>
 
-- !106830|난타! if not at max stacks of the debuff or it is about to expire
-- [*EC_Thorns of Iron style_incarn] Press !192081|무쇠가죽! if you have the rage
-    - Make sure you pool when Incarn/Berserk is finishing so you leave with a full rage bar
-- [*EC_Heart of the Wild_incarn] !319454|야생의 정수! if it becomes available
-- [*EC_Lunar Beam_incarn] Press !Lunar Beam! if it becomes available
-- [*EC_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper! if it becomes available  
+- !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
+- [*EC_Thorns of Iron style_incarn] 분노를 !192081|무쇠가죽!으로 소모.
+    - 단, 화신/광폭화가 끝나갈 때는 분노를 최대한 쌓아 둘 것.
+- [*EC_Heart of the Wild_incarn] !319454|야생의 정수!.
+- [*EC_Lunar Beam_incarn] !204066|달 광선!.
+- [*EC_Rage of the Sleeper_incarn] !200851|잠자는 자의 분노!.
 - [*~EC_Thorns of Iron style_incarn] 
-    - [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn] !33917|짓이기기! if you are at 3 stacks of !Vicious Cycle!
+    - [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn] !371999|흉포한 순환!이 3중첩일 때, !33917|짓이기기!.
 - [*EC_Thorns of Iron style_incarn&&EC_Tooth and Claw_incarn] 
     - [*EC_Single Target_incarn] Press !Maul! if you have a !Tooth and Claw! Proc
     - [*EC_Cleave_incarn&&~EC_Raze_incarn] Press !Maul! on your priority target if you have a !Tooth and Claw! Proc 
@@ -457,7 +457,7 @@ Cooldowns for Guardian work in two primary ways but both fulfil the criteria of 
     - !Survival Instincts!
     - !Berserk!/!Incarnation: Guardian of Ursoc!
     - !200851|Rage of the Sleeper!
-    - !Lunar Beam!
+    - !204066|달 광선!
     - !Pulverize!
 
 These defensive's should primarily be used in a way that enables us to survive through an encounter but as mentioned, several do come with additional benefits. For example, !200851|Rage of the Sleeper! will reduce our damage taken by 20% and also grant 20% leech for its 8 second duration, both of which aiding our survivability. However, it will also increase our damage done by 15% and reflect damage back at our attackers. 
@@ -522,7 +522,7 @@ If you do not enjoy Maul-Centric builds and would prefer a lower damage (around 
 
 #### 엘룬의 대행자 참고 사항
 
-- Elune's Chosen offers fantastic defensive cooldown coverage. Between !Barkskin!, !Survival Instincts! and !Lunar Beam!, along with the option to add on !200851|Rage of the Sleeper! and !Pulverize!, you'll basically always have something rolling.
+- Elune's Chosen offers fantastic defensive cooldown coverage. Between !Barkskin!, !Survival Instincts! and !204066|달 광선!, along with the option to add on !200851|Rage of the Sleeper! and !Pulverize!, you'll basically always have something rolling.
 - If !Pulverize! is required then your best option is to drop !Flashing Claws! and path through !Ursoc's Fury! and !Pulverize!. Alternatively if damage is of no convern at all then dropping !200851|Rage of the Sleeper! to access it through !Flashing Claws! is another option.
 - An alternate option to talent into defensively is !Incarnation: Guardian of Ursoc!. This talent isn't taken since it is a damage loss for EC but for progress it is another powerful defensive option that is easily accesible by dropping one point from !Flashing Claws!.
 - Dropping !Layered Mane! and !Reinforced Fur! for !Survival of the Fittest! and !After the Wildfire! is a strong increase to personal and group healing. The damage loss is less than DotC given that !Thorns of Iron! makes up a noticably smaller % of Elune's Chosen's damage profile (this is not true if you are running the alternate ToI-Centric EC build)
@@ -629,19 +629,19 @@ The Druid class tree offers a little more in the way of customisation for EC com
     - As for !Innervate!, most of the time in m+ this won't be needed given the healers ability to constantly top up their mana - they may be times where a healer requests it for a particularly rough tyrannical boss and we don't typically lose too much given !Heart of the Wild! nor !Well-Honed Instincts! are not particularly significant.
 
 In the Hero Tree there is really no choice at all for keys. 
-    - Due to the Bear aura not affected non guardian spells and frankly very low tuning of !Lunar Beam!, Stellar Command offers no perceivable benefit whilst Lunar Calling does increase thrash damage by all of our arcane modifiers and also increases kit synergy with Lunation. 
+    - Due to the Bear aura not affected non guardian spells and frankly very low tuning of !204066|달 광선!, Stellar Command offers no perceivable benefit whilst Lunar Calling does increase thrash damage by all of our arcane modifiers and also increases kit synergy with Lunation. 
     - The Light of Elune offers a decent chunk of rage at fairly regular intervals and Astral Insight is unfortunately tuned too low to make a massive impact. 
     - Moondust is effectively a permanent slow on any cc'able mob in the dungeon due to our automatic moonfire spreading which is significantly more impactful than a 3s shorter cooldown on wild charge. 
-    - Lastly, Lunation drastically increases our uptime on the focal point ability of the hero tree (!Lunar Beam!) whilst Arcane Affinity offers an almost inperceivable buff to our Arcane damage.
+    - Lastly, Lunation drastically increases our uptime on the focal point ability of the hero tree (!204066|달 광선!) whilst Arcane Affinity offers an almost inperceivable buff to our Arcane damage.
 
 The Spec tree is where the majority of our customisation options come in:
-    - Given the nature of the Elune's Chosen hero tree we are naturally pushed towards taking more of the arcane focused talents, in particular !Lunar Beam! for which the shortest and most powerful path to access is directly through !Galactic Guardian! and !Twin Moons!.
+    - Given the nature of the Elune's Chosen hero tree we are naturally pushed towards taking more of the arcane focused talents, in particular !204066|달 광선! for which the shortest and most powerful path to access is directly through !Galactic Guardian! and !Twin Moons!.
     - !After the Wildfire! will still do a very good amount of group healing, however, its not the automatic group Lay-on-Hands that it was due to the significantly inflated health pools. It will still contribute a lot of healing on a high throughput, rot encounter but the rage trigger nerf combined with this means its not an automatic lock in anymore.
     - !Dream of Cenarius! was affected similarly by the stamina inflation, you can still save a life but it may not be enough healing alone to immediately put a DPS out of danger entirely.
     - !Improved Survival Instincts! will still provide the added flexibility to some boss encounter by allowing you keep one charge rolling and pooling the second to allow for better cooldown coverage, but unless the encounter is planned out and this is the only way to safely cover all tank hits (unlikely given barks power and low cooldown, !200851|Rage of the Sleeper! or the option to take !Pulverize!) it's usually not worth the point.
-    - The previously mentioned focus on Arcane tends to push Elune's Favoured ahead of !Ursoc's Fury! as a trickle sustain option. Whilst UF is still a decent consideration given the increased damage on Thrash thanks to Lunar Calling and amount of razing possible through rage generation, the raw damage of Moonfire, arcane Thrash and !Lunar Beam! (on mass AOE) tends to push the healing of Elunes favoured noticably ahead.
+    - The previously mentioned focus on Arcane tends to push Elune's Favoured ahead of !Ursoc's Fury! as a trickle sustain option. Whilst UF is still a decent consideration given the increased damage on Thrash thanks to Lunar Calling and amount of razing possible through rage generation, the raw damage of Moonfire, arcane Thrash and !204066|달 광선! (on mass AOE) tends to push the healing of Elunes favoured noticably ahead.
     - !Earthwarden! as a talent is good against slow but hard hitting mobs. What mobs will hit you and eat the earthwarden stacks is generally out of your control unless you pull with that in mind or take it for a specific Boss/Lieutenant.
-    - Because of the massively increased health pool due to the high uptime of !Lunar Beam!, talents that increase the frequency with which we can cast Frenzied Regeneration do gain a bit of value since their healing directly scales with health.
+    - Because of the massively increased health pool due to the high uptime of !204066|달 광선!, talents that increase the frequency with which we can cast Frenzied Regeneration do gain a bit of value since their healing directly scales with health.
     - Because of the rage generation and lack of need to save !Vicious Cycle!/!Tooth and Claw! for a specific ability (ravage), dropping !343240|Berserk: Ravage! is an even more likely option as EC since so many more of your globals during Incarn/Berserk will be pressing Raze you will stil never need to swipe unless you're overpressing !192081|무쇠가죽!.
     - Incarn is still an incredibly powerful defensive cooldown, but given the abundance of low cooldown defensives available to EC it may be an option to consider dropping the two incarn points in favour of other talents in the final third - such as RotS, UF, or !Flashing Claws!.
     - Moonless night is a powerful offensive tool but offers next to no defensive value, its worth mentioning as an option for your weekly keys but do not expect to see it much in higher difficulty key levels.
@@ -685,25 +685,25 @@ Sim yourself using Radibots Top Gear to decide on what to use out of items you h
 
 #### 방어 측면
 
-**Initial Disclaimer:** The defensive difference between secondary stats on the whole is incredibly minor. In terms of a rough value, generally less than a % gain in survivability by focusing on one secondary stat over another. The defensive gain from equipping a higher item level piece of equipment will (with the exception of trinkets/cantrip effects) always be better for survivability than choosing a lower item level piece with specific secondary stats.
+**주의:** The defensive difference between secondary stats on the whole is incredibly minor. In terms of a rough value, generally less than a % gain in survivability by focusing on one secondary stat over another. The defensive gain from equipping a higher item level piece of equipment will (with the exception of trinkets/cantrip effects) always be better for survivability than choosing a lower item level piece with specific secondary stats.
 
 Agility >>>> Mastery > Vers > Haste/Crit
 
 #### 기타 능력치
 
-Tertiary stats are - as the name implies - a tertiary consideration. They are not a significant enough factor to Tank survivability to influence your gearing on their own outside of very specific circumstance.
+기타 능력치는 이름 그대로 큰 영향을 주지 않는다. 방어 전담 입장에서 고려할 만큼 생존력에 기여하는 일은 거의 없다.
 
 ## 장식
 
-- [Adrenal Surge Clasp](https://www.wowhead.com/item=219502/adrenal-surge-clasp) and [Writhing Armour Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) - This is the ideal end game setup for us this tier. Patch would ideally go on wrists but if not boots are fine as the next best option.
+- [솟구치는 아드레날린 죔쇠띠](https://www.wowhead.com/item=219502/adrenal-surge-clasp) + [꿈틀거리는 방어구 결속끈](https://www.wowhead.com/item=219506/writhing-armor-banding) - 1시즌의 이상적인 졸업 세팅. 결속끈은 손목에 만드는 것이 이상적이나, 다른 곳에 제작해야 한다면 장화도 유효하다.
 
-- For more immediate gains or if you're not raiding (and thus have a lower chance to obtain a Myth track weapon quickly) you could consider crafting a [Charged Halberd](https://www.wowhead.com/item=222448/charged-halberd#created-by-spell) with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226024/darkmoon-sigil-ascension) applied. Follow this up with a [Writhing Armour Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) applied to wrists (or boots if not) and you're in a very strong position and ready to transition to Adrenal Surge Clasp when you receive your fourth spark and/or a Myth track weapon.
+- 제작 즉시 최대의 효과를 얻고 싶거나, 신화 레이드를 진행하지 않는다면 [충만한 미늘창](https://www.wowhead.com/item=222448/charged-halberd#created-by-spell) + [다크문 인장: 승천](https://www.wowhead.com/item=226024/darkmoon-sigil-ascension)도 좋은 선택이다. 여기에 [꿈틀거리는 방어구 결속끈](https://www.wowhead.com/item=219506/writhing-armor-banding)을 손목/장화로 제작해 함께 착용하면 매우 강력하며, 추가 불꽃이나 신화급 무기를 획득한 후 아드레날린으로 넘어가기에도 문제가 없다.
 
 ## 마법부여
 
-- 무기 - [심연의 권위](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) gives a free damage proc that stacks and does some pretty solid numbers making this our highest ST damage enchant. [Authority of Radiant Power](https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power) is another solid option that provides less damage but does grant some main stat on a proc.
+- 무기 - [심연의 권위](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths)는 중첩되는 공격형 발동 효과를 제공하고, 그 수치가 상당하여 단일 대상 기준으로 가장 높은 성능을 보여준다. [찬란한 힘의 권위](https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power) 역시 유효한 선택으로, 자체 화력에서는 밀리지만 효과 발동 시 주 능력치를 추가로 제공한다.
 
-- 가슴 - [Enchants Chest - Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) Grants a decent chunk of Agility. If you're a speed demon you can use [Enchant Chest - Stormrider's Agility](https://www.wowhead.com/item=223683/enchant-chest-stormriders-agility) instead which will grant you some move speed in place of some Agility.
+- 가슴 - [가슴보호구 마법부여 - 수정의 광휘](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) 준수한 양의 추가 민첩. 이동 속도가 너무나도 좋다면 [가슴보호구 마법부여 - 폭풍기수의 민첩성](https://www.wowhead.com/item=223683/enchant-chest-stormriders-agility)을 고려할 수 있지만, 그 대신 민첩은 약간 줄어든다.
 
 - 다리 - [폭풍결속 방어구 강화도구](https://www.wowhead.com/item=219911/stormbound-armor-kit)/[파수병의 방어구 강화도구](https://www.wowhead.com/item=219908/defenders-armor-kit). 주 능력치와 더불어, 각각 추가 체력과 방어도를 제공한다. 방어도는 물리 피해에서, 체력은 마법 피해에서 아주 약간 더 앞서지만 실제로는 거의 차이가 없다. 취향에 따라 선택.
 
