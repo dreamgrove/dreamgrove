@@ -1,6 +1,6 @@
 ---
 title: '조화 드루이드 백과사전'
-patch: '11.0.2'
+patch: '11.0.5'
 draft: false
 authors: ["Gamz, Vinter, Dsune(Oi)"]
 summary: '조화 드루이드 가이드'
@@ -10,11 +10,11 @@ locale: 'kr'
 
 # 새소식
 
-## 버그
+## 11.0.5 변경점
 
-현재 조화 드루이드에게는 쐐기에서 신경써야 하는 버그가 몇 가지 존재한다.
-
-- !194223|천체의 정렬!/!102560|화신!, !205636|자연의 군대!, !391528|영혼 소집!을 시전하고 15초 이내로 전멸하게 될 경우, !434249|꿈의 통제!의 재사용 대기 시간 단축 효과가 정상적으로 작동하지 않아 다음 트라이에서 쿨기가 어긋나는 현상이 발생한다.
+- 종합적으로 단일, 광역 빌드 둘 다 하향 조정되었다. 달 파편 특성이 삭제된 광역 빌드 쪽의 타격이 더 큰 편. 한편, 신규 특성 !468743|휘도는 별!을 !390378|궤도 타격! 대신 채택하게 됨에 따라 !393956|저무는 황혼! 유지 시간은 짧아졌기 때문에 단일 대상 빌드에서 !202347|항성의 섬광!의 가치가 올라갔다.
+- 이제 시뮬레이션 기준으로는 엘룬의 대행자가 숲의 수호자보다 모든 상황에서 더 뛰어난 성능을 보여주지만, 운용 난이도가 더 높다는 점은 고쳐지지 않았다. 끊임없이 !429539|삭망월!을 발동시켜 !202770|엘룬의 분노!를 자주 써야 하기 때문이다. 엘룬의 대행자 운용법은 기존과 크게 달라진 점이 없으나, 다만 따로 신경쓸 필요가 없는 자동 발동형 피해 효과가 몇 개 생겨났고 !202347|항성의 섬광!을 쓰게 되었다.
+- 시뮬레이션에서는 밀린다고 하더라도 숲의 수호자는 여전히 많은 상황에서 유용하다. !391528|영혼 소집!이 제공하는 든든한 2분 버스트와 !433748|보호의 성장!에 의한 내구 강화 효과가 있기 때문이다. 빌드는 약간 바뀌어 !274281|초승달!을 채택하게 되었는데, 이는 기존에 대신 가져가던 !394046|골드린의 힘! 대비 0.4% 앞선다. 나아가 !450418|암영의 강화! 대신 !394121|찬란한 달빛!까지 가져가는 것도 가능한데, 이는 화력만 놓고 보면 0.1% 우위에 있지만 긴 시전 시간을 갖는 초승달 / 반달 / 보름달을 쿨기 내에 욱여넣는 것은 너무 빡빡하기 때문에 추천되지 않는다.
 
 
 ## 티어 세트
@@ -34,26 +34,21 @@ locale: 'kr'
 2세트와 합산하여, 세트 미착용 대비 약 +4.7%의 효과. 
 
 
-[티어 세트 시뮬레이션 결과](https://www.raidbots.com/simbot/report/rArz1pApNfXUG9q3nq4Thm)
+[티어 세트 시뮬레이션 결과](https:/mimiron.raidbots.com/simbot/report/5YZHSh7mNFKkTo4XF5Sw34)
 
 
 # 로테이션
 ## 전투 시작 전
 <CheckboxProvider>
-  <Checkbox id="Keeper of the GroveLOL" spellId={433831} name="숲의 수호자" defaultCheck radio="Hero" />
-  <Checkbox id="Elune's ChosenLOL" spellId={424058} name="엘룬의 대행자" radio="Hero" />
+  <Checkbox id="Stellar FlareLOL" spellId={202347} name="항성의 섬광" defaultCheck radio="Stellar Flare" />
 </CheckboxProvider>
 
-**현재 !450347|자연의 은혜! 효과를 받고 있다면, 전투 시작 전에 이를 수동으로 지워 줘야 아래의 오프너를 수행하고 !450347|자연의 은혜! 1중첩을 확보한 채로 전투에 돌입할 수 있다. 해당 강화 효과를 직접 눌러서 지우거나, 매크로 항목에 있는 오라취소 매크로를 사용하면 된다.**
 - !190984|천벌!
 - !190984|천벌!
-- [*Keeper of the GroveLOL]!8936|재생!
+- [*Stellar FlareLOL] !202347|항성의 섬광!
+- [*~Stellar FlareLOL] !194153|별빛섬광!
 
-최대 사정거리를 기준으로, 전투 시작 3초 전부터 시전을 시작해도 안전하다.
-
-**2024/10/26 추가 사항: 숲의 수호자 오프너에 !8936|재생! 추가. 전투 시작 직전에 !8936|재생! 시전을 시작해, 전투가 시작하면서 시전이 끝나게 하여 !429433|만발하는 주입!을 얻는 것은 약간이지만 화력에 기여하며 생존 측면에서도 유의미하다. 하지만 단순히 !190984|천벌! 두 번을 쓰고 전투가 시작될 때까지 기다려도 무방하다.**
-
-**숲의 수호자 참고사항:** 숲의 수호자 선택 시, 대상과의 거리에 따라 오프너가 바뀔 수 있다. 기본은 !205636|자연의 군대!를 쓰기 전에 2회의 !190984|천벌!이 보스에게 들어가도록 하는 것으로, 이는 !190984|천벌!이 !433831|꿈의 쇄도!를 소모하도록 하기 위함이다. 이에 따라, 일반적으로 !205636|자연의 군대!를 쓰기 전에 !164812|달빛섬광!을 쓰게 된다.
+최대 사정거리를 기준으로, 전투 시작 4초 전부터 시전을 시작해도 안전하다.
 
 ### **시전 우선순위란?**
 
@@ -69,15 +64,15 @@ locale: 'kr'
     <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="우주의 손길" />
     <Checkbox id="New MoonKOTG" spellId={274281} name="초승달" radio="New Moon" />
     <Checkbox id="Fury of EluneKOTG" spellId={202770} name="엘룬의 분노" radio="New Moon" />
-    <Checkbox id="Stellar FlareKOTG" spellId={202347} name="항성의 섬광" />
+    <Checkbox id="Stellar FlareKOTG" spellId={202347} name="항성의 섬광" defaultCheck radio="Stellar Flare" />
     <Checkbox id="Wild MushroomKOTG" spellId={88747} name="야생 버섯" />
  </CheckboxProvider> 
 
 - !164815|태양섬광! 유지. Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - !164812|달빛섬광! 유지. Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신. 단, 직후에 !205636|자연의 군대!를 시전할 예정이라면 예외.
+- [*Stellar FlareKOTG] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - [*~Control of the Dream] 쿨마다, 혹은 !194223|천체의 정렬!/!102560|화신! + !391528|영혼 소집!이 준비됐을 때, !205636|자연의 군대!.
 - [*Control of the Dream] 현재 발동 중인 일식이 6초 이상 남았거나,!194223|천체의 정렬!/!102560|화신! + !391528|영혼 소집!이 준비됐을 때, !205636|자연의 군대!.
-- [*Stellar FlareKOTG] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - 다음 중 하나라도 만족하면, !194223|천체의 정렬!/!102560|화신!.
   - 방금 막 !205636|자연의 군대!를 썼을 경우.
   - !205636|자연의 군대!의 재사용 대기 시간이 25초를 넘을 경우.
@@ -96,7 +91,7 @@ locale: 'kr'
 - [*New MoonKOTG] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
   - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
   - 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있을 것.
-  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 15초 이상일 것.
 - [*New MoonKOTG] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
   - 천공의 힘이 꽉 차기 직전일 것.
   - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
@@ -121,7 +116,7 @@ locale: 'kr'
     <Checkbox id="New MoonEC" spellId={274281} name="초승달" radio="New Moon" /> 
     <Checkbox id="Touch the CosmosEC" spellId={450356} name="우주의 손길" />
     <Checkbox id="StarweaverEC" spellId={393940} name="별재봉사" /> 
-    <Checkbox id="Stellar FlareEC" spellId={202347} name="항성의 섬광" /> 
+    <Checkbox id="Stellar FlareEC" spellId={202347} name="항성의 섬광" defaultCheck radio="Stellar Flare" /> 
     <Checkbox id="Wild MushroomEC" spellId={88747} name="야생 버섯" />
     <Checkbox id="Force of NatureEC" spellId={205636} name="자연의 군대" radio="Warrior of Elune" />
  
@@ -130,7 +125,7 @@ locale: 'kr'
 - [*Lunar CallingST&&Warrior of EluneEC] !202425|엘룬의 전사!.
 - !164812|달빛섬광! & !164815|태양섬광! 유지. 각각 pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - [*Stellar FlareEC] !202347|항성의 섬광! 유지. 천공의 힘이 넘치지 않는 한, Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
-- [*Fury of EluneEC] 직후에 시전할 기술이 !194223|천체의 정렬!/!102560|화신!이라면, !202770|엘룬의 분노!.
+- [*Fury of EluneEC] !194223|천체의 정렬!/!102560|화신!과 함께, !202770|엘룬의 분노!.
 - !194223|천체의 정렬!/!102560|화신! 
 - [*~Lunar CallingST&&Warrior of EluneEC] 현재 발동 중인 일월식의 남은 지속시간이 7초 미만이며, 다음에 일식에 진입할 예정이라면, !202425|엘룬의 전사!.
 - [*Lunar CallingST] !190984|천벌!을 시전해 월식 발동.
@@ -148,7 +143,7 @@ locale: 'kr'
 - [*New MoonEC] 다음의 조건을 모두 만족할 때, !274281|초승달!/!274282|반달!/!274283|보름달!.
   - 해당 기술 시전으로 얻는 천공의 힘이 최대치를 초과하지 않을 것.
   - 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있을 것.
-  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
+  - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274281|초승달!/!274282|반달!/!274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 15초 이상일 것.
 - [*New MoonEC] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
   - 천공의 힘이 꽉 차기 직전일 것.
   - 지금 즉시 움직여야 해서 시전 시간이 있는 주문을 쓸 수 없을 것.
@@ -203,7 +198,7 @@ locale: 'kr'
   - 현재 !194223|천체의 정렬!/!102560|화신! 중이거나, !274283|보름달!이 3개 꽉 차기 직전이고 !194223|천체의 정렬!/!102560|화신!의 남은 재사용 대기 시간이 10초 이상일 것.
 - [*New MoonKAOE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonKAOE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
-- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 6개 이하이며, !393760|암영의 포옹! 또는 !450347|자연의 은혜! 효과를 받고 있지 않다면, !391528|영혼 소집!.
+- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 6개 이하이며, !393760|암영의 포옹! 효과를 받고 있지 않다면, !391528|영혼 소집!.
 - [*StarweaverKAOE||Touch the CosmosKAOE] 다음 중 하나라도 만족하면, !197626|별빛쇄도!.
   - [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
   - [*Touch the CosmosKAOE] !450356|우주의 손길! 효과를 받고 있을 것.
@@ -246,7 +241,7 @@ locale: 'kr'
 - [*New MoonECAoE] 지금 !274281|초승달!을 시전해도 천공의 힘이 넘치지 않는다면, !274281|초승달!
 - [*New MoonECAoE] 지금 !274282|반달!을 시전해도 천공의 힘이 넘치지 않고, 현재 발동 중인 일월식이 만료되기 전에 시전을 끝낼 수 있다면, !274282|반달!.
 - !393760|암영의 포옹! 또는 !450347|자연의 은혜! 효과를 받고 있다면, !194153|별빛섬광!.
-- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 6개 이하이며, !393760|암영의 포옹! 또는 !450347|자연의 은혜! 효과를 받고 있지 않다면, !391528|영혼 소집!.
+- [*Convoke the SpiritsKAOE] 현재 전투 중인 대상이 6개 이하이며, !393760|암영의 포옹! 효과를 받고 있지 않다면, !391528|영혼 소집!.
 - [*StarweaverECAoE||Touch the CosmosECAoE] 다음에 해당하면, !197626|별빛쇄도!.
   - [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
   - [*Touch the CosmosECAoE] !450356|우주의 손길! 효과를 받고 있을 것.
@@ -282,15 +277,19 @@ locale: 'kr'
 <details>
 <summary>레이드 빌드</summary>
 
-<Talents name={"단일 (시크란, 라샤난, 카이베자, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YMmZ2mxixMzMPgtZMzYGjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
+**보스별 기본 빌드. 추후 조정에 따라 변화할 수 있으며, 지속적으로 업데이트 예정.**
 
-<Talents name={"단일 + 묻딜 (울그락스, 피결속 공포)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2MjZmZ2mxixMzMPgtZMGzYsBWAwAstNWw0MzyIAAAAbmZYA"}/>
+<Talents name={"단일 / 숲의 수호자 (시크란, 라샤난, 카이베자)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMLsMz2MWwMzMzsY2mZMzM2AbMADw22YBTzMLjAAAAsZmxAA"}/>
 
-<Talents name={"오비낙스"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZmhhZGwMDzMDG2GDzMz2MWMmZmZsNjxYmZsBWAwAstNWw0MzyIAAAAbmZYA"}/>
+<Talents name={"단일 / 엘룬의 대행자 (시크란, 라샤난, 카이베자)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZAzMMzMYYbMLsMz2M2YmZMzsYWmZMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
 
-<Talents name={"비단 궁정"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGFmZMMMzAmZYmZww2YYmZ2mZWMmZmZsNjxwMjNwCDwAstNWw0MzyIAAAAbmZYA"}/>
+<Talents name={"묻딜 / 숲의 수호자 (울그락스, 피결속 공포, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxsMz2MWwMzMzsY2GjZmxGYBADw22YBTzMLjAAAAsZmxAA"}/>
 
-<Talents name={"엘룬의 대행자 - 단일"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWowMzMMMzAmZYmZsAbjZhZmtZsxMzYGbzsMzYGjNwCDwYZbmNMmlRgJAAAALmZYA"}/>
+<Talents name={"묻딜 / 엘룬의 대행자 (울그락스, 피결속 공포, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZAzMMzMYYbMLmlZ2mxGzMjZmFzyYMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
+
+<Talents name={"오비낙스"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxYmtZmNzMzYmZxsMGzMsBWAwYZbmNMmtRgJAAAALmZMA"}/>
+
+<Talents name={"비단 궁정"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxYmtZmNzMzYmZxsMGzMsBWAwYZbmNMmtRgJAAAALmZMA"}/>
 
 </details>
 
@@ -300,24 +299,24 @@ locale: 'kr'
 
 조화 드루이드의 두 영웅 특성은 모두 채택이 가능하며 그 차이도 크지 않으므로, 선호하는 것을 사용하면 된다.
 
-<Talents name={"숲의 수호자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmxsAbMMzMbzMLGzMzM2mxYYmxGYBADw22YBTzMLjAAAAsZmhB"}/>
+<Talents name={"숲의 수호자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUMzMzwYMDYmhZmxCsxsYMz2MzixMzMzsZ2GjZG2ALMADw22YBTzMLjAAAAsZmxAA"}/>
 
-<Talents name={"엘룬의 대행자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoYmZmhxMzAmZYmZsAbMLmZGzMbmZmZmx2MLjhBbgFAMW2mZDjZZEYCAAAwiZGG"}/>
+<Talents name={"엘룬의 대행자 - 쐐기"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUMmZGGzMDYmhZmZWgNmFjZMzsZmZmZmZzsMGzMsBWAwYZbmNMmlRgJAAAALmZMA"}/>
 
 ## 특성 설명(심화)
 
-<Collapsible title="숲의 수호자 vs. 엘룬의 대행자">
-출시 이래 숲의 수호자가 상황을 막론하고 일반적으로 더 좋은 성능을 보여주고 있다. 자연의 군대는 30-45초마다 준수한 순간 화력을 제공하며, !391528|영혼 소집!과도 잘 맞고, 엘룬의 대행자와 달리 기존 특성 선택을 제한하지 않아 보다 많은 빌드의 가능성을 지니고 있다. 반면 엘룬의 대행자는 조화 트리 오른쪽 아래의 !202770|엘룬의 분노!와 !394121|찬란한 달빛!을 요구하기 때문에 그만큼 선택의 폭이 제한된다. 또한, 생존 측면에서도 숲의 수호자가 제공하는 !433748|보호의 성장!이 엘룬의 수호자에서 얻는 !429533|반들거리는 털가죽!보다 더 뛰어나다.
-</Collapsible>
-
 <Collapsible title="화신 vs. 영혼 소집">
-이번 시즌 쐐기에서는 숲의 수호자 빌드에서 두 특성 모두 비교적 균등하게 선택되고 있다. !102560|화신!은 다중 대상 전투에서 매우 강력하며, 쐐기의 경우 이 타이머에 맞는 풀을 설계하여 운용할 때 높은 효율을 보여준다. 한편 !391528|영혼 소집!은 보스전과 점사 대상에게 큰 피해를 입힐 수 있는 선택지이다. 다만, 쐐기에서 !391528|영혼 소집!을 쓸 때는 위의 다중 대상 시전 우선순위 내용에 맞는 상황인지 확인할 필요가 있다.
+이번 시즌 쐐기에서는 두 특성 모두 비교적 균등하게 선택되고 있다. !102560|화신!은 다중 대상 전투에서 매우 강력하며, 쐐기의 경우 이 타이머에 맞는 풀을 설계하여 운용할 때 높은 효율을 보여준다. 한편 !391528|영혼 소집!은 보스전과 점사 대상에게 큰 피해를 입힐 수 있는 선택지이다. 다만, 쐐기에서 !391528|영혼 소집!을 쓸 때는 위의 다중 대상 시전 우선순위 내용에 맞는 상황인지 확인할 필요가 있다.
 </Collapsible>
 
 <Collapsible title="꿈의 통제 vs 꿈의 힘">
 !434249|꿈의 통제!는 !194223|천체의 정렬!/!102560|화신!, !391528|영혼 소집!, !205636|자연의 군대!를 쓰지 않고 아낀 시간을 최대 15초까지 축적해 손해를 보지 않도록 해 주는 특성이다.
 
 이 특성은 전투 시간에 따라 대체 특성인 !434220|꿈의 힘!보다 더 좋은 결과를 보여 줄 수 있다. 다만, 최종적인 결정은 언제나 [warcraftlogs](https://www.warcraftlogs.com/)나 본인의 캐릭터에 대한 시뮬레이션 결과를 기반으로 도출하도록 하는 것이 좋다.
+</Collapsible>
+
+<Collapsible title="우주의 손길, 빗발치는 별, 몰아치는 별">
+11.0.5에서 새로 추가되거나 큰 폭의 변화를 겪은 이 특성들은, !393940|별재봉사!를 기반으로 별빛쇄도와 별똥별을 번갈아 사용하고 !469004|빗발치는 별!에 의한 비용 없는 자원 소모기 사용을 통해 !343647|지점! 유지 시간을 높임으로써 !202342|몰아치는 별!의 발동 횟수를 늘리는 새로운 운용법을 제시하고 있다. 이는 기존에 시도된 적 없는 것인데, 현재로서는 기존 빌드에 비해 장점이 없다.
 </Collapsible>
 
 <Collapsible title="드루이드 공용 특성">
@@ -405,18 +404,20 @@ locale: 'kr'
 
 [첩보단장의 거미줄](https://www.wowhead.com/item=220202/첩보단장의-거미줄)은 최대 40중첩까지 부여되는 지능 강화 효과를 제공하며, 사용 시 중첩 수에 비례해 추가 지능을 제공한다. 전투 시간에 따라 3번째 / 2번째 !194223|천체의 정렬!/!102560|화신!을 이와 맞춰 쓰는 것이 이상적이다.
 
+[위험한 송출기](https://www.wowhead.com/item=221023/treacherous-transmitter?ilvl=639&spec=102)는 구슬 줍기, 범위 안에 서 있기, 점프 3회라는 3종의 무작위 '과업' 중 하나를 제시하고, 이를 달성하면 일시적으로 주 능력치 보너스를 제공하는 장신구이다. 숲의 수호자 빌드에서 쿨다운 기술과 맞춰 쓰기 좋지만, 엘룬의 대행자는 몰아치기보다는 꾸준히 피해를 입히는 형식이기 때문에 잘 어울리지 않는다.
+
 [Raidbots](https://www.raidbots.com/simbot)의 Top gear 기능을 활용해 착용할 / 파밍할 장신구를 판단하는 것이 최선이나, 아래의 목록을 참고하는 것도 좋다. 최고 레벨 기준으로 가장 강한 성능의 장신구를 순서대로 나열한 것이다.
 
     - [첩보단장의 거미줄](https://www.wowhead.com/item=220202/첩보단장의-거미줄)
-    - [아라카라 낭충봉아](https://www.wowhead.com/item=219314/아라카라-낭충봉아)
-    - [암흑 돌풍](https://www.wowhead.com/item=133304/암흑-돌풍?ilvl=639&spec=102)
+    - [속박 풀린 변신수](https://www.wowhead.com/item=178708/속박-풀린-변신수?class=11&ilvl=639&spec=102)
     - [위험한 송출기](https://www.wowhead.com/item=221023/treacherous-transmitter?ilvl=639&spec=102)
+    - [오비낙스의 변화성 알](https://www.wowhead.com/item=220305/오비낙스의-변화성-알?ilvl=639&spec=102)
+    - [암흑 돌풍](https://www.wowhead.com/item=133304/암흑-돌풍?ilvl=639&spec=102)
+    - [아라카라 낭충봉아](https://www.wowhead.com/item=219314/아라카라-낭충봉아)
     - [양초 친구](https://www.wowhead.com/item=225648/candle-confidant?bonus=3145:10263&ilvl=626&spec=102&pcs=225648:220202)
     - [아눕이카즈의 강화의 수정](https://www.wowhead.com/item=219312/아눕이카즈의-강화의-수정?class=11&ilvl=639&spec=102)
     - [어둠결속 의식용 손칼](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife?bonus=3295:10263&ilvl=626&spec=102)
-    - [속박 풀린 변신수](https://www.wowhead.com/item=178708/속박-풀린-변신수?class=11&ilvl=639&spec=102)
     - [고위 대변자의 부착물](https://www.wowhead.com/item=219303/고위-대변자의-부착물)
-    - [오비낙스의 변화성 알](https://www.wowhead.com/item=220305/오비낙스의-변화성-알?ilvl=639&spec=102)
     - [그릇된 하수인 주머니](https://www.wowhead.com/item=178772/그릇된-하수인-주머니?class=11&ilvl=639&spec=102)
     - [기괴한 주문가열로](https://www.wowhead.com/item=212451/기괴한-주문가열로)
     - [구름의 비약](https://www.wowhead.com/item=219321/구름의-비약)
@@ -448,7 +449,7 @@ locale: 'kr'
 
 - 안 된다. 조화 드루이드는 특화 효과에 의해 지속 피해 기술이 걸려 있는 적들을 더 강하게 칠 수 있으므로, 대상의 수와 무관하게 충분히 오래 살 적들에게는 전부 달섬/태섬을 유지해야 한다.
 
-### 광역 전투 시뮬레이션에 대해
+### 쐐기 시뮬레이션에 대해
 
 - "5개 대상, 40초"와 같은 비현실적인 상황에 대한 시뮬레이션은 지나치게 편향된 결과를 낼 수 있으므로 피하는 것이 좋다. 조화 드루이드의 능력치는 대상 수의 영향을 별로 받지 않으므로, "패치워크 5분"이 잘 나오는 상태로 둬도 충분하다. 특정 쐐기 상황에 맞는 결과를 원한다면, 던전 루트를 입력할 수 있게 해 주는 [MDT 시뮬레이션 위크오라](https://wago.io/Yya4XBbl-)를 참조하기 바란다. 쐐기에서도 단일 대상 피해량은 중요하다는 것을 잊지 말자!
 
@@ -467,6 +468,11 @@ locale: 'kr'
 ### 조드도 도트 부스팅(Snapshot) 있나요
 
 - 없다. 조화 드루이드의 모든 지속 피해 기술 (!164812|달빛섬광!, !164815|태양섬광!, !202347|항성의 섬광!) 은 실시간으로 강화 효과를 적용한다. 즉, 각 기술은 일월식 발동/만료, 능력치/공격력 증가 효과의 적용/해제에 따라 자동으로 강화/약화된다.
+
+### 여기까지 다 읽었는데 아직 궁금증이 있어요
+
+- 드루이드 직업 디스코드 서버인 [Dreamgrove](https://discord.gg/XaZ3uXJc)에서 물어보면 된다. 이 가이드에는 가능한 한 필요한 모든 내용을 담으려고 노력했지만, 부족하거나 미처 생각하지 못한 점도 있기 마련이다. 한 번에 원하는 답변을 받을 수 있으리란 보장은 없으니 주의.
+
 
 # 추가 리소스
 ## 매크로
@@ -497,14 +503,6 @@ locale: 'kr'
 ```
 
 ## 오라취소 매크로
-
-### **자연의 은혜 오라취소**
-전투 시작 전에 천벌을 미리 시전할 때, 그에 앞서 현재 보유한 자연의 은혜 효과를 자동으로 지워 주는 매크로.
-```
-#showtooltip
-/cancelaura [nocombat] 꿈결
-/cast 천벌
-```
 
 ### **별의 군주 오라취소**
 
