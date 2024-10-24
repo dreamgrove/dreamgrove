@@ -3352,7 +3352,7 @@ Effects          :
                    Base Value: 0 | Scaled Value: 0 (delta=0.05) | AP Coefficient: 0.263 | Radius: 0 - 8 yards | Mechanic: Bleed | Target: At Self (22) -> Enemy in Area (15)
 #2 (id=117263)   : Energize Power (30)
                    Base Value: 1 | Scaled Value: 1 | Resource: combo_points | Target: Self (1)
-Description      : Strikes all nearby enemies, dealing $m1 $?a429523[Arcane][Bleed] damage and an additional $405233o1 $?a429523[Arcane][Bleed] damage over $405233d.
+Description      : Strikes all nearby enemies, dealing $s1 $?a429523[Arcane][Bleed] damage and an additional $405233o1 $?a429523[Arcane][Bleed] damage over $405233d.
 
 |cFFFFFFFFAwards $s2 combo $lpoint:points;.|r
 
@@ -12825,11 +12825,10 @@ Effects          :
                    Base Value: 390414 | Scaled Value: 390414 | Misc Value: 102560 | Misc Value 2: 0x2 | Target: Self (1)
                    Affected Spells: Incarnation: Tree of Life (33891), Incarnation: Avatar of Ashamane (102543), Incarnation: Guardian of Ursoc (102558), Incarnation: Chosen of Elune (102560), Incarnation: Chosen of Elune (390414)
                    Family Flags: 43
-#3 (id=1038807)  : Apply Aura (6) | Add Flat Modifier (107): Spell Cooldown (11)
-                   Base Value: -60000 | Scaled Value: -60000 | Misc Value: 11 | Target: Self (1)
-                   Affected Spells: Incarnation: Tree of Life (33891), Incarnation: Avatar of Ashamane (102543), Incarnation: Guardian of Ursoc (102558), Incarnation: Chosen of Elune (102560), Celestial Alignment (194223), Celestial Alignment (383410), Incarnation: Chosen of Elune (390414)
-                   Family Flags: 43, 113
-Description      : Celestial Alignment blasts all enemies in a targeted area for ${$361237s1*$<mastery>} Astral damage and applies Stellar Flare to them.
+#3 (id=1038807)  : Apply Aura (6) | Modify Recharge Time (Category) (453)
+                   Base Value: -60000 | Scaled Value: -60000 | Misc Value: 2328 (Category) | Target: Self (1)
+                   Affected Spells (Category): Incarnation: Chosen of Elune (102560), Celestial Alignment (194223), Celestial Alignment (383410), Incarnation: Chosen of Elune (390414)
+Description      : $?s102560[Incarnation: Chosen of Elune][Celestial Alignment] blasts all enemies in a targeted area for ${$361237s1*$<mastery>} Astral damage and applies Stellar Flare to them.
 
 Reduces the cooldown of $?s102560[Incarnation: Chosen of Elune][Celestial Alignment] by ${$s3/-1000} sec.
 Variables        : $mastery=${(1+$393014s1/100)*(1+$393014s3/100)}
@@ -13300,7 +13299,7 @@ Effects          :
                    Family Flags: 75
 Description      : Tiger's Fury causes your next $391873n finishing $Lmove:moves; to restore $391874s1 combo $Lpoint:points;.
 
-Tiger's Fury's also increases the periodic damage of your bleeds $?a155580[and Moonfire ][]by an additional $s3% for their full duration.
+Tiger's Fury also increases the periodic damage of your bleeds $?a155580[and Moonfire ][]by an additional $s3% for their full duration.
 
 Name             : Tiger's Tenacity (id=391873) [Spell Family (7)] 
 Class            : Druid
@@ -17326,7 +17325,7 @@ Effects          :
                    Affected Spells (Label): Reforestation (392356)
 Description      : $?a137013[Orbital Strike applies Stellar Flare for ${$s1/1000} additional sec and deals $s2% increased damage.
 
-Greater Alignment increases the duration of ][]$?s394013[Incarnation: Chosen of Elune]?s194223[Celestial Alignment][]$?a137013[ by an additional $s3% and increases Eclipse damage during ][]$?s394013[Incarnation: Chosen of Elune]?s194223[Celestial Alignment][]$?a137013[ by an additional $s4%.][Reforestation grants Tree of Life for $s5 additional sec.]
+Whirling Stars reduces the cooldown of ][]$?s394013[Incarnation: Chosen of Elune]?s194223[Celestial Alignment][]$?a137013[ by an additional ${-$s3/1000} sec.][Reforestation grants Tree of Life for $s4 additional sec.]
 
 Name             : Blooming Infusion (id=429433) [Spell Family (7), Passive] 
 Talent Entry     : Keeper of the Grove (Balance, Restoration) [tree=hero, row=4, col=3, max_rank=1, req_points=1]
@@ -17536,7 +17535,7 @@ Effects          :
                    Base Value: 25 | Scaled Value: 25 | Misc Value: 12 | Target: Self (1)
                    Affected Spells: Convoke the Spirits (323764), Convoke the Spirits (391528)
                    Family Flags: 16
-Description      : $?a137013[Incarnation: Chosen of Elune][Incarnation: Guardian of Ursoc] increase Arcane damage from spells and abilities by $102560s6% while active.
+Description      : $?a137013[Incarnation: Chosen of Elune][Incarnation: Guardian of Ursoc] increases Arcane damage from spells and abilities by $102560s6% while active.
 
 Increases the duration and number of spells cast by Convoke the Spirits by $s1%.
 
@@ -17894,7 +17893,7 @@ Attributes       : Passive (6), Not In Spellbook (143), Do Not Log on Learn (355
 Effects          :
 #1 (id=1124148)  : Apply Aura (6) | Dummy (4)
                    Base Value: 15 | Scaled Value: 15 | Target: Self (1)
-Description      : Time elapsed while your major abilities are available to be used is subtracted from that ability's cooldown after the next time you use it, up to $s1 seconds.
+Description      : Time elapsed while your major abilities are available to be used or at maximum charges is subtracted from that ability's cooldown after the next time you use it, up to $s1 seconds.
 
 Affects $?a137012[Nature's Swiftness, Incarnation: Tree of Life,][Force of Nature,] $?a137012[]?a394013[Incarnation: Chosen of Elune, ][Celestial Alignment, ]and Convoke the Spirits.
 
@@ -18126,7 +18125,7 @@ Attributes       : Passive (6), Not In Spellbook (143), Do Not Log on Learn (355
 Effects          :
 #1 (id=1133456)  : Apply Aura (6) | Dummy (4)
                    Base Value: 0 | Scaled Value: 0 | Target: Self (1)
-Description      : $?a137011[Tiger's Fury and attacking][Attacking] from Prowl increases the chance for Shred, Rake, and $?s202028[Brutal Slash][Swipe] to critically strike by $439891s1% for $439891d.
+Description      : $?a137011[Tiger's Fury and attacking from Prowl increase][Attacking from Prowl increases] the chance for Shred, Rake, and $?s202028[Brutal Slash][Swipe] to critically strike by $439891s1% for $439891d.
 
 Casting Regrowth increases the chance for your periodic heals to critically heal by $439893s1% for $439893d.
 
@@ -19347,27 +19346,6 @@ Effects          :
                    Base Value: 40 | Scaled Value: 40
 Description      : $@spelldesc202021
 
-Name             : Greater Alignment (id=450184) [Spell Family (7), Passive] 
-Talent Entry     : Balance [tree=spec, row=6, col=4, max_rank=1, req_points=8, select_idx=100]
-Class            : Druid
-School           : Physical
-Spell Type       : None
-Labels           : 16: Class Spells
-                 : 21: Druid Spells
-                 : 292
-                 : 3688: Potent Enchantments (429420 effect#3), Potent Enchantments (429420 effect#4)
-Attributes       : Passive (6), Not In Spellbook (143), Do Not Log on Learn (355)
-Effects          :
-#1 (id=1150006)  : Apply Aura (6) | Add Percent Modifier (108): Spell Duration (1)
-                   Base Value: 40 | Scaled Value: 40 | Misc Value: 1 | Target: Self (1)
-                   Affected Spells: Incarnation: Tree of Life (33891), Incarnation: Avatar of Ashamane (102543), Incarnation: Guardian of Ursoc (102558), Incarnation: Chosen of Elune (102560), Celestial Alignment (194223), Celestial Alignment (383410), Incarnation: Chosen of Elune (390414)
-                   Family Flags: 43, 113
-#2 (id=1150007)  : Apply Aura (6) | Dummy (4)
-                   Base Value: 8 | Scaled Value: 8 | Misc Value: 23 | Target: Self (1)
-Description      : $?s394013[Incarnation: Chosen of Elune][Celestial Alignment] lasts $s1% longer.
-
-During $?s394013[Incarnation: Chosen of Elune][Celestial Alignment], Solar Eclipse increases Nature damage done by an additional $s2% and Lunar Eclipse increases Arcane damage done by an additional $s2%.
-
 Name             : Stellar Amplification (id=450212) [Spell Family (7), Passive] 
 Talent Entry     : Balance [tree=spec, row=6, col=2, max_rank=1, req_points=8]
 Class            : Druid
@@ -19467,10 +19445,10 @@ Effects          :
 #1 (id=1150218)  : Apply Aura (6) | Dummy (4)
                    Base Value: 12 | Scaled Value: 12 | Target: Self (1)
 #2 (id=1150219)  : Apply Aura (6) | Dummy (4)
-                   Base Value: 15 | Scaled Value: 15 | Misc Value: 23 | Target: Self (1)
-Description      : Casting Wrath in an Eclipse has an $s1% chance to make your next Starsurge free.$?s191034[
+                   Base Value: 18 | Scaled Value: 18 | Misc Value: 23 | Target: Self (1)
+Description      : Casting Wrath in an Eclipse has a $s1% chance to make your next Starsurge or Starfall free.
 
-Casting Starfire in an Eclipse has a $s2% chance to make your next Starfall free.][]
+Casting Starfire in an Eclipse has a $s2% chance to make your next Starsurge or Starfall free.
 
 Name             : Touch the Cosmos (id=450360) [Spell Family (7)] 
 Class            : Druid
@@ -19558,7 +19536,7 @@ Attributes       : Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log
 Effects          :
 #1 (id=1150604)  : Apply Aura (6) | Modify Max Resource (418)
                    Base Value: 200 | Scaled Value: 200 | Resource: astral_power | Target: Self (1)
-Description      : Increases maximum Astral Power by ${$s1/10}. Entering Eclipse grants ${$450599s1/10} Astral Power.
+Description      : Increases maximum Astral Power by ${$s1/10}. Entering Eclipse reduces the Astral Power cost of your next Starsurge or Starfall by ${$450599s1/-10}.
 
 
 
