@@ -8,11 +8,14 @@ summary: 'A guide to Balance Druid'
 
 # News
 
-## 11.0.5 Update 
+## 25th October update: 
+- The Moonkin APL's CD conditions has gotten improved for !Keeper of the Grove!, pushing it above !Elune's Chosen! in ST and raid scenarios. The highest simming talent builds still include !New Moon! and !Sundered Firmament!, but you can choose to move these points into !Soul of the Forest! and !Crashing Star! for a 0.5% dps loss. This is likely to be better in raid for fights with required movement, and even despite the 0.5% dps loss from changing these talents, it is still ahead of !Elune's Chosen!. Talent pages in the [talent section](https://www.dreamgrove.gg/blog/balance/compendium#talents) has been changed to reflect this. 
 
-- The upcoming patch is a nerf to the best builds on both ST and AoE, substantially more on AoE due to the removal of Lunar Shrapnel. The introduction of !Whirling Stars! also increases the value of !Stellar Flare! on ST encounters, since you no longer gain the !Waning Twilight! uptime from pressing !194223|Celestial Alignment!/!102560|Incarnation! that you would with !Orbital Strike!.
-- !Elune's Chosen! is currently simming better than !Keeper of the Grove! in all content, but is more difficult to play optimally, relying on constant uptime to get full value out of !Lunation! CDR for more !Fury of Elune! casts. The !Elune's Chosen! playstyle has not had any substantial change and plays the exact same, except for a few passive damage procs and the introduction of !Stellar Flare!.
-- !Keeper of the Grove! is still good for a lot of scenarios, even if it's simming worse. It has a reliable burst on a 2m cooldown with !Convoke the Spirits! and damage reduction with !Protective Growth!. The builds for !Keeper of the Grove! have changed to include !New Moon! as this talent is a 0.4% dmg increase over !Power of Goldrinn!. You could alternatively also talent into !Radiant Moonlight! over !Umbral Inspiration! for a 0.1% dps increase, but this is not recommended as that playstyle is very tight on fitting long cast globals into a short cooldown window.
+
+## Current Bugs
+- !Control of the Dream! does not provide the correct CDR value if your raid wipes after you use your cooldowns. The temporary fix to this is to talent into !Power of the Dream! in the choice node, swap back and then wait 15 seconds for the CDR to finish counting. 
+
+- !194223|Celestial Alignment!/!102560|Incarnation! does not reset on encounter end. After Blizzard introduced the talent !Whirling Stars!, they made !194223|CA!/!102560|INC! work on a charge system. Even without !Whirling Stars! or !Orbital Strike! talented, it still counts as having 1 charge. Abilities with charges do not reset on encounter end unless specifically scripted to. The temporary way to work around this is to change spec into Guardian with !Whirling Stars! talented and earn a charge back. This fix does not work without !Whirling Stars! talented and will in worst case scenario make your raid have to wait 2 minutes for your cooldowns to come back.
 
 
 ## Tier set
@@ -275,19 +278,15 @@ Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside
 <details>
 <summary>Raid Talents</summary>
 
-<Talents name={"Single Target Keeper of the Grove (Sikran, Rasha'nan, Nexus Princess Kyveza)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMLsMz2MWwMzMzsY2mZMzM2AbMADw22YBTzMLjAAAAsZmxAA"}/>
+<Talents name={"Single Target (Sikran, Rasha'nan, Nexus Princess Kyveza)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMYZmtZsYMzMzMLGzMmZGbgNGgBYbbsgpZmlRAAAA2MzYMA"}/>
 
-<Talents name={"Single Target Elune's Chosen (Sikran, Rasha'nan, Nexus Princess Kyveza)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZAzMMzMYYbMLsMz2M2YmZMzsYWmZMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
-
-<Talents name={"Single Target Cleave Keeper of the Grove (Ulgrax, Bloodbound Horror, Queen Ansurek)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxsMz2MWwMzMzsY2GjZmxGYBADw22YBTzMLjAAAAsZmxAA"}/>
-
-<Talents name={"Single Target Cleave Elune's Chosen (Ulgrax, Bloodbound Horror, Queen Ansurek)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZAzMMzMYYbMLmlZ2mxGzMjZmFzyYMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
-
-<Talents name={"Broodtwister Ovi'nax Keeper of the Grove"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZzsMz2MzixMzMzsZMGzMsBWAwAstNWw0MzyIAAAAbmZMA"}/>
+<Talents name={"Single Target Cleave (Ulgrax, Bloodbound Horror, Queen Ansurek)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMMLzsNjFjZmZmZxYMmZGbgNGgBYbbsgpZmlRAAAA2MzYMA"}/>
 
 <Talents name={"Broodtwister Ovi'nax Elune's Chosen"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbMLmlZ2mxmZmZmZmFzyYYG2ALMAjltZ2wYWGBmAAAAsYmxAA"}/>
 
-<Talents name={"Silken Court"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwgZAzMMzMYYbMLGzsNzsZmZmZmZzsMGmhNwCDwYZbmNMmtRgJAAAALmZMA"}/>
+<Talents name={"Silken Court/Broodtwister Ovi'Nax Keeper of the Grove"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzMAbzMbmlZ2mZWMmZmZmNjxwMjNwCDwAstNWw0MzyIAAAAbmZMA"}/>
+
+<Talents name={"Silken Court Elune's Chosen"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwgZAzMMzMYYbMLGzsNzsZmZmZmZzsMGmhNwCDwYZbmNMmtRgJAAAALmZMA"}/>
 
 </details>
 
