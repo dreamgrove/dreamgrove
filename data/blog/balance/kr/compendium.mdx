@@ -10,12 +10,13 @@ locale: 'kr'
 
 # 새소식
 
-## 11.0.5 변경점
+## 10/25 업데이트
+- 조화 드루이드 APL의 쿨다운 기술 시전 조건 개선에 따라, 숲의 수호자가 단일 / 레이드 상황에서 엘룬의 대행자를 상회한다는 결과를 얻게 되었다. 이론상 최고 성능을 내는 빌드는 !274281|초승달!과 !394094|분리된 하늘!을 채택하고 있으나, 0.5%의 손실을 감수하면 !114107|숲의 영혼! + !468978|몰아치는 별!을 선택하는 것도 가능하다. 이 조합은 움직임이 요구되는 전투에서 보다 운용이 편리하고, 이 0.5%의 손실이 있는 상태에서도 여전히 엘룬의 대행자보다 앞서는 성능을 보여준다. [특성 항목](https://www.dreamgrove.gg/blog/balance/kr/compendium#talents)의 내용도 이를 반영해 개선되었다.
 
-- 종합적으로 단일, 광역 빌드 둘 다 하향 조정되었다. 달 파편 특성이 삭제된 광역 빌드 쪽의 타격이 더 큰 편. 한편, 신규 특성 !468743|휘도는 별!을 !390378|궤도 타격! 대신 채택하게 됨에 따라 !393956|저무는 황혼! 유지 시간은 짧아졌기 때문에 단일 대상 빌드에서 !202347|항성의 섬광!의 가치가 올라갔다.
-- 이제 시뮬레이션 기준으로는 엘룬의 대행자가 숲의 수호자보다 모든 상황에서 더 뛰어난 성능을 보여주지만, 운용 난이도가 더 높다는 점은 고쳐지지 않았다. 끊임없이 !429539|삭망월!을 발동시켜 !202770|엘룬의 분노!를 자주 써야 하기 때문이다. 엘룬의 대행자 운용법은 기존과 크게 달라진 점이 없으나, 다만 따로 신경쓸 필요가 없는 자동 발동형 피해 효과가 몇 개 생겨났고 !202347|항성의 섬광!을 쓰게 되었다.
-- 시뮬레이션에서는 밀린다고 하더라도 숲의 수호자는 여전히 많은 상황에서 유용하다. !391528|영혼 소집!이 제공하는 든든한 2분 버스트와 !433748|보호의 성장!에 의한 내구 강화 효과가 있기 때문이다. 빌드는 약간 바뀌어 !274281|초승달!을 채택하게 되었는데, 이는 기존에 대신 가져가던 !394046|골드린의 힘! 대비 0.4% 앞선다. 나아가 !450418|암영의 강화! 대신 !394121|찬란한 달빛!까지 가져가는 것도 가능한데, 이는 화력만 놓고 보면 0.1% 우위에 있지만 긴 시전 시간을 갖는 초승달 / 반달 / 보름달을 쿨기 내에 욱여넣는 것은 너무 빡빡하기 때문에 추천되지 않는다.
+## 현행 버그
+- 쿨다운 기술 사용 후에 전멸할 경우, !434249|꿈의 통제!가 쿨다운 저축 효과를 정상적으로 발동시키지 않고 있다. 현재 임시로 적용 가능한 해결 방법은, 전멸 후 !434220|꿈의 힘!으로 특성을 바꿨다가 다시 !434249|꿈의 통제!로 바꾸고 15초를 기다리는 것이다.
 
+- !194223|천체의 정렬!/!102560|화신!이 전투 종료 후 초기화되지 않고 있다. 이는 신규 특성 !468743|휘도는 별!의 추가와 함께 !194223|천체의 정렬!/!102560|화신!이 충전식 기술로 바뀌었기 때문이다. 심지어 !468743|휘도는 별!이나 !390378|활공의 일격!을 아예 선택하지 않더라도, !194223|천체의 정렬!/!102560|화신!은 여전히 1회 충전되는 기술로 간주된다. 전멸 시 이들 기술의 **재사용 대기 시간**은 정상적으로 초기화되지만, **충전 횟수**가 바로 돌아오지는 않아 이러한 현상이 발생하게 되는 것이다. 또한, 가을의 축복이나 잘아타스의 제안: 공허결속과 같이 재사용 대기 시간이 빠르게 돌도록 하는 효과도 받지 못하고 있다. 현재 임시로 적용 가능한 해결 방법은, !468743|휘도는 별!을 선택한 상태에서 수호 전문화로 변경했다가 돌아오는 것이다. !468743|휘도는 별!을 선택하지 않았다면 이 방법을 쓸 수 없어, 최악의 경우 공격대원 전체가 2분을 기다려야 한다.
 
 ## 티어 세트
 
@@ -280,19 +281,15 @@ locale: 'kr'
 <details>
 <summary>레이드 빌드</summary>
 
-<Talents name={"단일 / 숲의 수호자 (시크란, 라샤난, 카이베자)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMLsMz2MWwMzMzsY2mZMzM2AbMADw22YBTzMLjAAAAsZmxAA"}/>
+<Talents name={"단일 (시크란, 라샤난, 카이베자)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMYZmtZsYMzMzMLGzMmZGbgNGgBYbbsgpZmlRAAAA2MzYMA"}/>
 
-<Talents name={"단일 / 엘룬의 대행자 (시크란, 라샤난, 카이베자)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZAzMMzMYYbMLsMz2M2YmZMzsYWmZMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
-
-<Talents name={"묻딜 / 숲의 수호자 (울그락스, 피결속 공포, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZxsMz2MWwMzMzsY2GjZmxGYBADw22YBTzMLjAAAAsZmxAA"}/>
-
-<Talents name={"묻딜 / 엘룬의 대행자 (울그락스, 피결속 공포, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMGGmZAzMMzMYYbMLmlZ2mxGzMjZmFzyYMzM2AbMAjltZ2wY2GBmAAAAsYmxAA"}/>
-
-<Talents name={"오비낙스 / 숲의 수호자"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbjZzsMz2MzixMzMzsZMGzMsBWAwAstNWw0MzyIAAAAbmZMA"}/>
+<Talents name={"묻딜 (울그락스, 피결속 공포, 안수레크)"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzYAbzMMLzsNjFjZmZmZxYMmZGbgNGgBYbbsgpZmlRAAAA2MzYMA"}/>
 
 <Talents name={"오비낙스 / 엘룬의 대행자"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwwMDYmhZmBDbMLmlZ2mxmZmZmZmFzyYYG2ALMAjltZ2wYWGBmAAAAsYmxAA"}/>
 
-<Talents name={"비단 궁정"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwgZAzMMzMYYbMLGzsNzsZmZmZmZzsMGmhNwCDwYZbmNMmtRgJAAAALmZMA"}/>
+<Talents name={"오비낙스 & 비단 궁정 / 숲의 수호자"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUYmZGGmZAzMMzMAbzMbmlZ2mZWMmZmZmNjxwMjNwCDwAstNWw0MzyIAAAAbmZMA"}/>
+
+<Talents name={"비단 궁정 / 엘룬의 대행자"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALjCzMzwgZAzMMzMYYbMLGzsNzsZmZmZmZzsMGmhNwCDwYZbmNMmtRgJAAAALmZMA"}/>
 
 </details>
 
