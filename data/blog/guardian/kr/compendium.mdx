@@ -396,16 +396,16 @@ locale: 'kr'
 !102558|화신!/!50334|광폭화! 중에는 아래와 같이 평상시와 약간 다른 시전 우선순위를 적용한다. 
 
 <CheckboxProvider>
-<Checkbox id="EC_Single Target_incarn" name="Single Target" radio="EC_Target count" defaultCheck />
-<Checkbox id="EC_Cleave_incarn" name="Cleave" radio="EC_Target count" />
-<Checkbox id="EC_AOE_incarn" name="AOE" radio="EC_Target count" />
-<Checkbox id="EC_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox id="EC_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" defaultCheck />
-<Checkbox id="EC_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox id="EC_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox id="EC_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" />
-<Checkbox id="EC_Thorns of Iron style_incarn" spellId={192081} name="Thorns of Iron Playstyle" />
-<Checkbox id="EC_Raze_incarn" spellId={400254} name="Raze" />
+<Checkbox id="EC_Single Target_incarn" name="단일 대상" radio="EC_Target count" defaultCheck />
+<Checkbox id="EC_Cleave_incarn" name="소규모 (2-3개 대상)" radio="EC_Target count" />
+<Checkbox id="EC_AOE_incarn" name="광역 (4+개 대상)" radio="EC_Target count" />
+<Checkbox id="EC_Heart of the Wild_incarn" spellId={319454} name="야생의 정수" defaultCheck />
+<Checkbox id="EC_Lunar Beam_incarn" spellId={204066} name="달 광선" defaultCheck />
+<Checkbox id="EC_Vicious Cycle_incarn" spellId={371999} name="흉포한 순환" defaultCheck />
+<Checkbox id="EC_Tooth and Claw_incarn" spellId={135288} name="맹위" defaultCheck />
+<Checkbox id="EC_Rage of the Sleeper_incarn" spellId={200851} name="잠자는 자의 분노" />
+<Checkbox id="EC_Thorns of Iron style_incarn" spellId={192081} name="무쇠 가시" />
+<Checkbox id="EC_Raze_incarn" spellId={400254} name="말살" />
 </CheckboxProvider>
 
 - !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
@@ -417,75 +417,75 @@ locale: 'kr'
 - [*~EC_Thorns of Iron style_incarn] 
     - [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn] !371999|흉포한 순환!이 3중첩일 때, !33917|짓이기기!.
 - [*EC_Thorns of Iron style_incarn&&EC_Tooth and Claw_incarn] 
-    - [*EC_Single Target_incarn] Press !Maul! if you have a !Tooth and Claw! Proc
-    - [*EC_Cleave_incarn&&~EC_Raze_incarn] Press !Maul! on your priority target if you have a !Tooth and Claw! Proc 
-    - [*EC_Cleave_incarn&&EC_Raze_incarn] Press !Raze! if you have a !Tooth and Claw! Proc
-    - [*EC_AOE_incarn&&EC_Raze_incarn] Press !Raze! if you have a !Tooth and Claw! Proc
+    - [*EC_Single Target_incarn] !135288|맹위! 효과를 받고 있을 때, !6807|후려갈기기!.
+    - [*EC_Cleave_incarn&&~EC_Raze_incarn] !135288|맹위! 효과를 받고 있을 때, 주 대상에게 !6807|후려갈기기!.
+    - [*EC_Cleave_incarn&&EC_Raze_incarn] !135288|맹위! 효과를 받고 있을 때, !400254|말살!.
+    - [*EC_AOE_incarn&&EC_Raze_incarn] !135288|맹위! 효과를 받고 있을 때, !400254|말살!.
 - [*~EC_Thorns of Iron style_incarn] 
-    - [*EC_Single Target_incarn] Press !Maul! if you have rage to do so or have a !Tooth and Claw! Proc
-    - [*EC_Cleave_incarn&&~EC_Raze_incarn] Press !Maul! if you have rage to do so or have a !Tooth and Claw! Proc
-    - [*EC_Cleave_incarn&&EC_Raze_incarn] Press !Raze! if you have rage to do so or have a !Tooth and Claw! Proc
-    - [*EC_AOE_incarn&&EC_Raze_incarn] Press !Raze! if you have rage to do so or have a !Tooth and Claw! Proc
-- [*~EC_Thorns of Iron style_incarn] Spend any excess rage on !192081|무쇠가죽!. You should never fully cap rage.
-- [*~EC_Thorns of Iron style_incarn] !33917|짓이기기! if you need rage
-    - [*EC_Single Target_incarn] This will typically be around every 2-3 Mauls.
-    - [*EC_Cleave_incarn&&~EC_Raze_incarn] This will typically be around every 2-3 Mauls.
-    - [*EC_Cleave_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
-    - [*EC_AOE_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
-- [*EC_Thorns of Iron style_incarn] !33917|짓이기기!
-- !106830|난타!
+    - [*EC_Single Target_incarn] 분노가 충분하거나, !135288|맹위! 효과를 받고 있을 때, !6807|후려갈기기!.
+    - [*EC_Cleave_incarn&&~EC_Raze_incarn] 분노가 충분하거나, !135288|맹위! 효과를 받고 있을 때, 주 대상에게 !6807|후려갈기기!.
+    - [*EC_Cleave_incarn&&EC_Raze_incarn] 분노가 충분하거나, !135288|맹위! 효과를 받고 있을 때, !6807|후려갈기기!.
+    - [*EC_AOE_incarn&&EC_Raze_incarn] 분노가 충분하거나, !135288|맹위! 효과를 받고 있을 때, !400254|말살!.
+- [*~EC_Thorns of Iron style_incarn] 남는 분노를 !192081|무쇠가죽!으로 소모. 분노가 버려지는 일은 반드시 피할 것.
+- [*~EC_Thorns of Iron style_incarn] 분노가 필요할 때, !33917|짓이기기!.
+    - [*EC_Single Target_incarn] 대략 !6807|후려갈기기! 2-3회에 !33917|짓이기기! 한 번 정도의 빈도.
+    - [*EC_Cleave_incarn&&~EC_Raze_incarn] 대략 !6807|후려갈기기! 2-3회에 !33917|짓이기기! 한 번 정도의 빈도.
+    - [*EC_Cleave_incarn&&EC_Raze_incarn] 대략 !400254|말살! 2-3회에 !33917|짓이기기! 한 번 정도의 빈도.
+    - [*EC_AOE_incarn&&EC_Raze_incarn] 대략 !400254|말살! 2-3회에 !33917|짓이기기! 한 번 정도의 빈도.
+- [*EC_Thorns of Iron style_incarn] !33917|짓이기기!.
+- !106830|난타!.
 
 ## 무쇠가죽
 
-!192081|무쇠가죽! is your active mitigation as a Guardian Druid. !192081|무쇠가죽! costs 40 rage, and each application of !192081|무쇠가죽! increases your armour by 112% of your agility. 
+!192081|무쇠가죽!은 수호 드루이드가 상시 유지하는 기본 방어 기제로, 40의 분노를 소모해 민첩성의 112%에 해당하는 방어도를 일시적으로 얻는 기술이다.
 
-You hit the armour cap at 85% physical mitigation, so roughly 5-6 stacks (4-5 with an augmentation evoker) will reach the armour cap.
+방어도가 아무리 높게 올라가도 이에 의한 물리 피해 감소는 최대 85%로 제한되며, 이는 약 5-6중첩 (증강 기원사의 끓어오르는 비늘을 받고 있다면 4-5중첩) 에 해당한다.
 
 #### 무쇠가죽의 활용
 
-The general aim with !192081|무쇠가죽! is to: 
-- Maintain at least one !192081|무쇠가죽! whilst tanking.
-- Use more !192081|무쇠가죽!s if you're ever in a scenario where you're taking heavy physical damage and have limited/no defensive cooldowns available (a large pull in a key, taking a tank buster etc).
-- Use additional !192081|무쇠가죽!s if you're ever going to overcap on Rage. This is for some (very minimal) ToI damage, and to dip into Incarn cooldown reduction if you're specced into it.
+일반적인 !192081|무쇠가죽! 활용법은 다음과 같다.
+- 탱킹 중, !192081|무쇠가죽! 최소 1중첩을 상시 유지.
+- 큰 규모의 풀(쐐기), 교대 패턴(레이드) 등에서 다른 생존기 없이 큰 물리 피해를 받아내야 한다면, !192081|무쇠가죽!을 추가로 중첩.
+- 분노가 넘치기 직전이라면, 일단 !192081|무쇠가죽!. 무쇠 가시를 채용할 경우 (아주 약간) 화력 측면에서도 도움이 되며, 화신의 재사용 대기 시간도 줄어든다.
 
 ## 생존기의 활용
 
-In addition to !192081|무쇠가죽!, which is our active mitigation (meaning it should basically be active all of the time that we are tanking mobs and taking physical damage) Guardian has a plethora of limited window Cooldowns which also significantly aid our survivability. The main way that defensive cooldowns function is by increasing our **Effective Health Pool (EHP)**. EHP is a measure of how much damage we can take whilst also factoring any damage reduction or resistances we have, E.g. if someone has 1 million health, but takes 50% reduced damage then they can actually take 2 million damage before dying. That would make their EHP 2 million, which is obviously a big increase from their Raw Health Pool (1 million in this scenario).
+사실상 상시 유지해야 하는 !192081|무쇠가죽! 외에도, 수호 드루이드는 매우 다양한 생존기를 갖고 있다. 이러한 생존기들은 **유효 체력 (EHP, Effective Health Pool)**을 증가시키는 방식으로 동작하는데, 이때 유효 체력이란 발동 중인 각종 피해 감쇠 효과에 의해 '죽지 않고 받아낼 수 있는 피해의 양'을 의미한다. 예를 들어 현재 체력은 100만일 때 50%의 피해 감쇠 효과를 받고 있다면 유효 체력은 200만이 되는데, 이는 유효 체력이 100만 늘어난 것이므로 매우 강력한 효과라고 볼 수 있다.
 
-Cooldowns for Guardian work in two primary ways but both fulfil the criteria of increasing our EHP. They will either reduce the damage that we take for their duration in some way and/or massively increase our hp for the duration, often doing this with some additional benefits. Our main Defensive cooldowns are:
-    - !Barkskin!
-    - !Survival Instincts!
-    - !Berserk!/!Incarnation: Guardian of Ursoc!
-    - !200851|Rage of the Sleeper!
+수호 드루이드의 생존기는 크게 피해 감쇠 또는 최대 체력 증가라는 두 가지의 서로 다른 방식으로 작동하지만, 유효 체력을 증가시킨다는 면에서 이들은 기능적으로 동일하다. 각 생존기들은 약간의 추가 효과를 제공하기도 하는데, 그 목록은 다음과 같다.
+    - !22812|나무 껍질!
+    - !61336|생존 본능!
+    - !50334|광폭화!/!394786|화신: 우르속의 수호자!
+    - !200851|잠자는 자의 분노!
     - !204066|달 광선!
-    - !Pulverize!
+    - !80313|파쇄!
 
-These defensive's should primarily be used in a way that enables us to survive through an encounter but as mentioned, several do come with additional benefits. For example, !200851|Rage of the Sleeper! will reduce our damage taken by 20% and also grant 20% leech for its 8 second duration, both of which aiding our survivability. However, it will also increase our damage done by 15% and reflect damage back at our attackers. 
+생존기는 말 그대로 생존을 위해 사용하는 것이 기본이나, 앞서 말한 바와 같이 각 기술이 제공하는 추가 효과도 의미가 있다. 예를 들어 !200851|잠자는 자의 분노!는 8초간 받는 피해를 20% 줄여 주지만, 동시에 생기흡수 20%를 제공하여 생존력을 더욱 증폭시킨다. 또한, 지속 시간 동안 공격력을 15% 증가시키고 받는 피해의 일부를 반사시키는 기능도 붙어 있다.
 
-Because of this Offensive and Defensive duality that many of our cooldowns possess we need to factor in both sides of them when planning for an encounter. The general goals for any encounter should be:
-    - Cover all major/threatening damage events (typically tank busters) with an adequate cooldown.
-        - It is usually not advised to use multiple defensive cooldowns to cover a single damage event due to how they interact with each other (see below).
-    - Aim to cover as many individual damage events as possible by having some form of cooldown active and "rolling" into the next one as the first expires. 
-    - Prioritise getting as many uses of your multi-purpose cooldowns as possible.
-        - E.g. if you have a choice between using !200851|Rage of the Sleeper! and !Barkskin! to cover a tank buster, it would be ideal to use Rage of the Sleeper since it also provides a sizable damage benefit and may lead to additional uses of this cooldown later in the encounter.
+이와 같이 공방 양면의 효과를 지니는 특징 때문에, 수호 드루이드의 생존기는 대부분 발동 시점을 미리 설계하여 사용해야 한다. 그 기본 규칙은 다음과 같다.
+    - 중요한/위험한 상황(특히 교대 기술)은 항상 적절한 생존기를 발동해 대응할 것.
+        - 하지만, 한 번의 상황에서 여러 종류의 생존기를 중첩해 사용하는 것은 일반적으로 권장되지 않는다. 이는 피해 감쇠 효과가 곱연산으로 적용되기 때문이다(아래 항목 참조).
+    - 생존기를 하나씩 '굴려서', 하나가 끝나면 다른 기술을 사용하는 식으로 가능한 한 많은 피해 상황에 대응할 것.
+    - 쓸 수 있는 생존기가 여러 가지라면, 다목적 기술을 우선적으로 발동할 것.
+        - 예를 들어 !200851|잠자는 자의 분노!와 !22812|나무 껍질!이 둘 다 돌아와 있다면, 화력 증가 효과가 함께 있는 잠자는 자의 분노를 쓰는 것이 더 좋은 선택이다. 또한, 이를 통해 전투가 끝나기 전에 잠자는 자의 분노를 한 번 더 쓸 수 있을 가능성도 생겨난다.
 
-Overlapping cooldowns with a direct damage reduction component (!Barkskin!, !200851|Rage of the Sleeper!, !Survival Instincts! and !Pulverize!) is less ideal than spacing them out because multiple instances of damage reduction reduce the effectiveness of the cooldowns i.e. they are multiplicative with one and other, not additive. 
-For example, say that without a cooldown a tankbuster would hit you for 1 million damage. With !Barkskin! (20% Damage Reduction) you would take 80% of this, so 800k. If you then pressed !Survival Instincts! (50% damage reduction) on top of this, you would reduce your incoming damage (800k after factoring in !Barkskin!) by 50%. So you would take 400k damage, from a 1 million damage hit, meaning that combined you would mitigate 60% of damage - **not** 70% (20% + 50%), effectively reducing the effectiveness of the cooldowns compared to their seperate use. 
+직접 피해 감쇠 기술(!22812|나무 껍질!, !200851|잠자는 자의 분노!, !61336|생존 본능!, !80313|파쇄!) 여러 개를 동시에 발동하는 것은 이상적이지 않다. 피해 감쇠 효과는 합연산이 아니라 곱연산이라 중첩되면 각각의 효율은 떨어지기 때문이다.
+예를 들어 100만의 피해를 주는 교대 기술을 맞는 상황을 생각해 보자. !22812|나무 껍질!(-20%)을 쓰면 이 피해는 80만으로 줄어든다. 여기에 !61336|생존 본능!(-50%) 까지 같이 쓰면, 이제 받는 피해는 40만이 된다. 즉, 받는 피해는 70% (20% + 50%)가 ***아니라*** 60%만 줄어, 각각을 따로 쓰는 것보다 효율이 떨어진 것이다.
 
 
-# Talents
+# 특성
 
-## General Talent Build Information
+## 기본 참고 사항
 
-Before choosing your talent setup there's a couple of important details to be aware of:
-    - Whilst both hero talent trees perform similarly damage wise in AoE scenarios, there is a huge disparity between the damage of the two trees in Raid/Single Target situations, with Druid of the Claw being ahead by around 10-25% depending on talents.
-    - Both trees offer similarly strong defensive benefits with the option to easily swap into additional survviability or damage talents if they're needed/wanted.
+특성 빌드를 결정하기 전에, 다음 내용을 참고.
+    - 다중 대상 화력 측면에서 두 영웅 특성은 거의 동등하나, 레이드/단일 대상 화력에서는 발톱의 드루이드가 매우 크게 (특성에 따라 10-25%) 앞선다.
+    - 방어 측면에서는 두 영웅 특성이 거의 동등하게 강력하며, 둘 다 내구와 화력 중 원하는 쪽에 더 투자할 수 있는 형태이다.
 
-It's also important to clarify what we mean by the terms "Maul-Centric" and "ToI-Centric" (!Thorns of Iron!) playstyles:
-    - Maul-Centric is simply where !Maul! is considered you're primary spender. The goal is to spend as much rage as possible on !Maul! which will account for the majority of your damage from spenders. These builds will likely still take !Thorns of Iron! but this is simply because some rage will still be spent on !192081|무쇠가죽! (e.g. If you need additional physical mitigation for a physical tank buster or if you are about to overcap rage) 
-    - A ToI-Centric playstyle is in opposition to this, where !192081|무쇠가죽! will make up the vast majority of your rage expenditure. !Maul! will still be pressed sometimes, such as to utilise !Tooth and Claw! procs (either offensively or defensively) or when at 3 stacks of !Vicious Cycle!, but the focus is usually not on !Maul! as the primary spender - see the DotC section below for clarity on why its "usually" and not "always".
+또한, 앞으로 자주 등장하는 표현인 '후려갈기기 중심'과 '무쇠 가시 중심'의 의미는 다음과 같다.
+    - 후려갈기기 중심 운용법은 !6807|후려갈기기!를 주력 자원 소모기로 활용한다. 이 빌드의 목표는 최대한 많은 분노를 !6807|후려갈기기!에 투자하는 것으로, 따라서 피해 비중도 !6807|후려갈기기!가 대부분을 차지하게 된다. 여기에서도 !192081|무쇠 가시!를 가져가는 경우가 있지만, 이는 !192081|무쇠가죽!을 여러 번 중첩시킬 일이 가끔 있기 때문이지 !192081|무쇠가죽!을 난사하기 위함이 아니다.
+    - 무쇠 가시 중심 운용법은 반대로 대부분의 분노를 !192081|무쇠가죽!으로 소모한다. !6807|후려갈기기!도 가끔(!135288|맹위!가 있거나 !371999|흉포한 순환! 3중첩일 때) 쓰긴 하지만, 일반적으로 그 비중은 높지 않다. 왜 '일반적으로'인지는 아래 발톱의 드루이드 항목 참조.
 
-To further clarify, because there is a lot of overlap in the talent choices between these builds you are not hard locked into one particular playstyle for an entire encounter or key. For example, you could play more toi-centric whilst doing a large trash pull in a dungeon but then play more maul-centric on a boss encounter. Ultimately a fluid approach is often best - especially for keys, where there are vast differences in the requirements of an encounter from pull to pull.
+그런데 이 두 운용법은 사실 특성만 놓고 보면 대부분이 겹치기 때문에, 한 특성 빌드에서도 상황에 따라 운용법을 바꾸어 사용하는 것이 가능하다. 가령 쐐기에서 큰 규모의 풀을 진행할 때는 무쇠 가시 중심 운용법을 따르게 되지만, 보스전에서는 후려갈기기 중심의 운용법을 따르는 것이다. 결국 가장 좋은 것은 현재 상황에 맞는 유연한 운용이며, 이는 다양한 상황이 일어나는 쐐기에서 특히 중요하다.
 
 ## 레이드 특성
 
@@ -652,24 +652,24 @@ The Spec tree is where the majority of our customisation options come in:
 
 ## 영약
 
-- [Flask of Alchemical Chaos](https://www.wowhead.com/spell=432021/flask-of-alchemical-chaos): Default flask for everything. It is slightly stronger than the four traditional stat flasks since it provides more stats, albeit with a random component but it's biggest power comes from its interaction with [Tempered Potion](https://www.wowhead.com/spell=431932/tempered-potion) (see below).
-- If you are not using [Tempered Potion](https://www.wowhead.com/spell=431932/tempered-potion) then [Flask of Tempered Swiftness](https://www.wowhead.com/item=212274/flask-of-tempered-swiftness), [Flask of Tempered Mastery](https://www.wowhead.com/item=212280/flask-of-tempered-mastery), [Flask of Tempered Aggression](https://www.wowhead.com/item=212271/flask-of-tempered-aggression) and [Flask of Tempered Versatility](https://www.wowhead.com/item=212277/flask-of-tempered-versatility) become options. Either sim yourself so see which of the four is best or pick your preferred secondary stat.
+- [연금술적 혼돈 영약](https://www.wowhead.com/spell=432021/flask-of-alchemical-chaos): 모든 상황에서 복용하는 기본 영약. 능력치 종류가 무작위로 바뀌는 대신, 그 제공량 자체는 조금 더 높다. 무엇보다, [절제된 물약](https://www.wowhead.com/spell=431932/tempered-potion)과 함께 사용할 때 매우 강력한 시너지를 자랑한다(물약 항목 참고).
+- [절제된 물약](https://www.wowhead.com/spell=431932/tempered-potion)을 쓰지 않는다면, [절제된 신속 영약](https://www.wowhead.com/item=212274/flask-of-tempered-swiftness), [절제된 특화 영약](https://www.wowhead.com/item=212280/flask-of-tempered-mastery), [절제된 공격성 영약](https://www.wowhead.com/item=212271/flask-of-tempered-aggression), [절제된 유연성 영약](https://www.wowhead.com/item=212277/flask-of-tempered-versatility)을 고려할 수 있다. 시뮬레이션 결과를 따르거나, 선호하는 능력치의 것을 복용할 것.
 
 ## 음식
 
-- [Feast of the Midnight Masquerade](https://www.wowhead.com/spell=457285/feast-of-the-midnight-masquerade) or [Feast of the Divine Day](https://www.wowhead.com/item=222732/feast-of-the-divine-day): Best available food by a long way, use this whenever one is available.
-- [Mycobloom Risotto](https://www.wowhead.com/item=222725/mycobloom-risotto) The best personal food alternative to feasts in TeWaWi. It gives about half of the main stat of a feast but does provide stamina in addition. Use this if you don't want to drop a feast.
+- [한밤의 가장무도회 잔칫상](https://www.wowhead.com/spell=457285/feast-of-the-midnight-masquerade) 또는 [거룩한 날 잔칫상](https://www.wowhead.com/item=222732/feast-of-the-divine-day): 최고 성능의 음식. 가능하면 항상 복용할 것.
+- [진균꽃 볶음밥](https://www.wowhead.com/item=222725/mycobloom-risotto): 개인 음식 중에서는 가장 뛰어나다. 잔칫상에 비하면 주 능력치는 절반이지만, 대신 체력을 함께 제공한다. 가성비를 위한 선택.
 
 
 ## 물약
 
-- [Tempered Potion](https://www.wowhead.com/spell=431932/tempered-potion) Strongest combat potion available. Important to note that whilst using [Flask of Alchemical Chaos](https://www.wowhead.com/spell=432021/flask-of-alchemical-chaos) it will provide all 4 secondary stats.
-- [Algari Healing Potion](https://www.wowhead.com/spell=430590/algari-healing-potion) The standard healing potion for the first tier of TeWaWi. You should always have some of these on you if you're planning to do any challenging content.
-- [Draught of Silent Footfalls](https://www.wowhead.com/spell=430594/draught-of-silent-footfalls) The invisibility potion for TeWaWi, fairly niche given our access to !Prowl! but, on occasion, invisiability does enable pathing that stealth does not.
+- [절제된 물약](https://www.wowhead.com/spell=431932/tempered-potion): 현재 가장 강력한 전투 물약. [연금술적 혼돈 영약](https://www.wowhead.com/spell=432021/flask-of-alchemical-chaos)과 함께 사용 시, 4개 능력치 모두를 제공한다.
+- [알가르 치유 물약](https://www.wowhead.com/spell=430590/algari-healing-potion): 내부 전쟁 1시즌의 표준 치유 물약. 난이도 있는 컨텐츠를 플레이한다면 언제나 구비해 둬야 한다.
+- [조용한 발소리의 비약](https://www.wowhead.com/spell=430594/draught-of-silent-footfalls): 투명 물약. !5215|숨기!로도 대부분의 상황에서는 충분하지만, 이 비약의 은신 판정이 더 좋기 때문에 특정 루트에서 필요할 수 있다.
 
 ## 기름/숫돌
 
-- [무쇠발톱 숫돌](https://www.wowhead.com/item=222504/ironclaw-whetstone)/[무쇠발톱 무게추](https://www.wowhead.com/item=222510/ironclaw-weightstone) Both of these are functionally identical except they can only be applied to one type of weapon. The whetstone variant can be applied to Polearms and the weightstone can be applied to Staffs and 2h Maces.
+- [무쇠발톱 숫돌](https://www.wowhead.com/item=222504/ironclaw-whetstone)/[무쇠발톱 무게추](https://www.wowhead.com/item=222510/ironclaw-weightstone): 무기 종류에 따라 달라지고, 성능 자체는 동일. 숫돌은 장창에, 무게추는 지팡이와 둔기에 사용한다.
 
 ## 증강의 룬
 
@@ -681,13 +681,13 @@ The Spec tree is where the majority of our customisation options come in:
 
 #### 공격 측면
 
-Sim yourself using Radibots Top Gear to decide on what to use out of items you have. Use Droptimizer to identify potential damage upgrades you can get from content. **Do not follow a set stat priority for damage**
+Raidbots의 Top Gear 기능을 통해 구성할 것. 파밍 목표를 정하기 위해 Droptimizer 기능을 사용할 수 있다. **공격 측면에서 장비를 구성할 때는, 일체의 능력치 우선순위를 무시할 것.**
 
 #### 방어 측면
 
-**주의:** The defensive difference between secondary stats on the whole is incredibly minor. In terms of a rough value, generally less than a % gain in survivability by focusing on one secondary stat over another. The defensive gain from equipping a higher item level piece of equipment will (with the exception of trinkets/cantrip effects) always be better for survivability than choosing a lower item level piece with specific secondary stats.
+**주의:** 각 2차 능력치가 제공하는 생존력의 차이는 놀라울 정도로 미미하다. '최적화된 2차 능력치'로 얻는 생존력의 이득은 수치로 볼 때 1% 미만에 불과하다. 장신구나 특수 효과 장비를 제외하면, 능력치 구성과는 무관하게 단순히 아이템 레벨이 높은 장비를 착용하는 것이 생존 측면에서 더 좋은 선택이다.
 
-Agility >>>> Mastery > Vers > Haste/Crit
+민첩 >>>> 특화 > 유연성 > 가속/치명타 및 극대화
 
 #### 기타 능력치
 
@@ -762,7 +762,7 @@ Agility >>>> Mastery > Vers > Haste/Crit
 
 [조각난 슬픔의 날개](https://www.wowhead.com/item=225574/wings-of-shattered-sorrow) 발동 효과는 방어 전담에게 특별히 의미가 있지는 않지만, 능력치 손해 없이 추가 효과를 제공하는 망토. 있으면 좋지만 무리해서 얻을 가치는 없다.
 
-[독성 맹약의 인장](https://www.wowhead.com/item=225578/seal-of-the-poisoned-pact) 능력치 손해 없이 추가 피해 발동 효과를 제공하는 반지. 수호 드루이드는 나무껍질 중 !203953|가시나무!에 의해 자동으로 주변에 광역으로 자연 피해를 입히기 때문에 추가 발동 효과도 누릴 수 있다(평상시의 반사 효과는 자연 속성이 아님). 어쨌든 졸업 반지 중 하나. 
+[독성 맹약의 인장](https://www.wowhead.com/item=225578/seal-of-the-poisoned-pact) 능력치 손해 없이 추가 피해 발동 효과를 제공하는 반지. 수호 드루이드는 나무 껍질 발동 중 !203953|가시나무!에 의해 자동으로 주변에 광역으로 자연 피해를 입히기 때문에 추가 발동 효과도 누릴 수 있다(평상시의 반사 효과는 자연 속성이 아님). 어쨌든 졸업 반지 중 하나. 
 
 [수레키 광신도의 휘장](https://www.wowhead.com/item=225577/sureki-zealots-insignia) 능력치 손해 없이 추가 효과를 제공하는 또다른 장비로, 여기에서는 단순히 치유와 추가 능력치를 제공한다. 마나 환급 효과 덕분에 힐을 조금 더 잘 받게 되는 경향이 있다. 곰에게는 졸업 목걸이 중 하나. 
 
