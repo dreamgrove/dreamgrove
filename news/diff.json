@@ -1,3 +1,609 @@
 {
-  "delta": []
+  "delta": [
+    {
+      "name": "Starsurge",
+      "id": 78674,
+      "type": "modified",
+      "talent_entry": "Balance",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "68268",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.437",
+              "new": "2.632"
+            },
+            {
+              "type": "added",
+              "key": "PvP Coefficient",
+              "new": "0.926"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "816907"
+        },
+        {
+          "type": "removed",
+          "id": "845292"
+        }
+      ]
+    },
+    {
+      "name": "Incarnation: Avatar of Ashamane",
+      "id": 102543,
+      "type": "modified",
+      "talent_entry": "Feral",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "4",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Rip (1079)",
+            "Rake (1822)",
+            "Shred (5221)",
+            "Ferocious Bite (22568)",
+            "Maim (22570)",
+            "Swipe (106785)",
+            "Thrash (106830)",
+            "Moonfire (155625)",
+            "Rake (155722)",
+            "Brutal Slash (202028)",
+            "Feral Frenzy (274838)",
+            "Primal Wrath (285381)",
+            "Sickle of the Lion (363830)",
+            "Rampant Ferocity (391710)",
+            "Adaptive Swarm (391889)",
+            "Thrash (405233)",
+            "Bloodseeker Vines (439531)",
+            "Bursting Growth (440122)",
+            "Ravage (441591)",
+            "Dreadful Wound (441812)"
+          ],
+          "id": "1149781",
+          "modifications": [],
+          "values": [
+            {
+              "type": "added",
+              "key": "PvP Coefficient",
+              "new": "0.6667"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1149782"
+        },
+        {
+          "type": "removed",
+          "id": "1149783"
+        }
+      ]
+    },
+    {
+      "name": "Berserk",
+      "id": 106951,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "3",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Rip (1079)",
+            "Rake (1822)",
+            "Shred (5221)",
+            "Ferocious Bite (22568)",
+            "Maim (22570)",
+            "Swipe (106785)",
+            "Thrash (106830)",
+            "Moonfire (155625)",
+            "Rake (155722)",
+            "Brutal Slash (202028)",
+            "Feral Frenzy (274838)",
+            "Primal Wrath (285381)",
+            "Sickle of the Lion (363830)",
+            "Rampant Ferocity (391710)",
+            "Adaptive Swarm (391889)",
+            "Thrash (405233)",
+            "Bloodseeker Vines (439531)",
+            "Bursting Growth (440122)",
+            "Ravage (441591)",
+            "Dreadful Wound (441812)"
+          ],
+          "id": "1149776",
+          "modifications": [],
+          "values": [
+            {
+              "type": "added",
+              "key": "PvP Coefficient",
+              "new": "0.667"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1149777"
+        },
+        {
+          "type": "removed",
+          "id": "1149778"
+        }
+      ]
+    },
+    {
+      "name": "Balance Druid",
+      "id": 137013,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "9",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Swiftmend (18562)",
+            "Swiftmend (422094)"
+          ],
+          "id": "1080967",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "15",
+              "new": "50"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "15",
+              "new": "50"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1080968"
+        },
+        {
+          "type": "removed",
+          "id": "1088945"
+        },
+        {
+          "type": "removed",
+          "id": "1177983"
+        },
+        {
+          "type": "removed",
+          "id": "1177984"
+        },
+        {
+          "type": "removed",
+          "id": "1177985"
+        },
+        {
+          "type": "removed",
+          "id": "1177986"
+        }
+      ]
+    },
+    {
+      "name": "Dream of Cenarius",
+      "id": 158504,
+      "type": "modified",
+      "talent_entry": "Restoration",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "221552",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "100"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "100"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1144889"
+        },
+        {
+          "type": "removed",
+          "id": "1185835"
+        }
+      ]
+    },
+    {
+      "name": "Wrath",
+      "id": 190984,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : nature",
+          "id": "280098",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.742",
+              "new": "0.816"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "280099"
+        }
+      ]
+    },
+    {
+      "name": "Starfall",
+      "id": 191037,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "280158",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.235",
+              "new": "0.249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Starfire",
+      "id": 194153,
+      "type": "modified",
+      "talent_entry": "Balance",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : arcane",
+          "id": "284976",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.848",
+              "new": "0.89"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "284977"
+        },
+        {
+          "type": "removed",
+          "id": "295015"
+        },
+        {
+          "type": "removed",
+          "id": "298448"
+        },
+        {
+          "type": "removed",
+          "id": "1081718"
+        }
+      ]
+    },
+    {
+      "name": "Shooting Stars",
+      "id": 202497,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "298525",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.318",
+              "new": "0.3816"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "298537"
+        }
+      ]
+    },
+    {
+      "name": "New Moon",
+      "id": 274281,
+      "type": "modified",
+      "talent_entry": "Balance",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "726522",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "2.85",
+              "new": "2.72"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "726523"
+        },
+        {
+          "type": "removed",
+          "id": "726524"
+        }
+      ]
+    },
+    {
+      "name": "Half Moon",
+      "id": 274282,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "726525",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "4.02",
+              "new": "3.84"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "726526"
+        },
+        {
+          "type": "removed",
+          "id": "726527"
+        }
+      ]
+    },
+    {
+      "name": "Rattle the Stars",
+      "id": 393954,
+      "type": "modified",
+      "talent_entry": "Balance",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Starfall (50286)",
+            "Starsurge (78674)",
+            "Starfall (191034)",
+            "Starfall (191037)",
+            "Starsurge (197626)",
+            "Starfall (359399)"
+          ],
+          "id": "1033218",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "8"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "8"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1096835"
+        },
+        {
+          "type": "removed",
+          "id": "1189263"
+        }
+      ]
+    },
+    {
+      "name": "Goldrinn's Fang",
+      "id": 394047,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "1033385",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.62",
+              "new": "0.775"
+            },
+            {
+              "key": "PvP Coefficient",
+              "prev": "0.5",
+              "new": "0.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Call of the Elder Druid",
+      "id": 426784,
+      "type": "modified",
+      "talent_entry": "Restoration",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "1105560",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "15"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Touch the Cosmos",
+      "id": 450356,
+      "type": "modified",
+      "talent_entry": "Balance",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Dummy",
+          "id": "1150218",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "12",
+              "new": "15"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "12",
+              "new": "15"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1150219"
+        }
+      ]
+    },
+    {
+      "name": "Fell Prey",
+      "id": 454957,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1157971",
+            "type": "Apply Aura",
+            "subtype": "Apply Percent Modifier w/ Label : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "PvP Coefficient": "0.5"
+              },
+              {
+                "Misc Value 2": "2740 (Label)"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ],
+            "affected_spells": [
+              "Rampant Ferocity (391710)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sunseeker Mushroom",
+      "id": 468936,
+      "type": "modified",
+      "talent_entry": "Balance",
+      "fields": [
+        {
+          "field": "real_ppm",
+          "prev": "2",
+          "new": "1.75"
+        }
+      ],
+      "effects": []
+    },
+    {
+      "name": "Crashing Star",
+      "id": 468981,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : astral",
+          "id": "1183020",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "0.954",
+              "new": "1.145"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1183021"
+        }
+      ]
+    }
+  ]
 }
