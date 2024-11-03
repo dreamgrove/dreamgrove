@@ -8,30 +8,42 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "68268",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "2.437",
-              "new": "2.632"
-            },
-            {
-              "type": "added",
-              "key": "PvP Coefficient",
-              "new": "0.926"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "816907",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "816907"
-        },
-        {
-          "type": "removed",
-          "id": "845292"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "845292",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -43,48 +55,78 @@
       "fields": [],
       "effects": [
         {
-          "idx": "4",
-          "type": "Apply Aura",
-          "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": [
-            "Rip (1079)",
-            "Rake (1822)",
-            "Shred (5221)",
-            "Ferocious Bite (22568)",
-            "Maim (22570)",
-            "Swipe (106785)",
-            "Thrash (106830)",
-            "Moonfire (155625)",
-            "Rake (155722)",
-            "Brutal Slash (202028)",
-            "Feral Frenzy (274838)",
-            "Primal Wrath (285381)",
-            "Sickle of the Lion (363830)",
-            "Rampant Ferocity (391710)",
-            "Adaptive Swarm (391889)",
-            "Thrash (405233)",
-            "Bloodseeker Vines (439531)",
-            "Bursting Growth (440122)",
-            "Ravage (441591)",
-            "Dreadful Wound (441812)"
-          ],
-          "id": "1149781",
-          "modifications": [],
-          "values": [
-            {
-              "type": "added",
-              "key": "PvP Coefficient",
-              "new": "0.6667"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "5",
+            "id": "1149782",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
+            "values": [
+              {
+                "Base Value": "15"
+              },
+              {
+                "Scaled Value": "15"
+              },
+              {
+                "PvP Coefficient": "0.6667"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "98"
+              }
+            ],
+            "affected_spells": [
+              "Rip (1079)",
+              "Rake (1822)",
+              "Shred (5221)",
+              "Ferocious Bite (22568)",
+              "Maim (22570)",
+              "Swipe (106785)",
+              "Thrash (106830)",
+              "Moonfire (155625)",
+              "Rake (155722)",
+              "Brutal Slash (202028)",
+              "Feral Frenzy (274838)",
+              "Primal Wrath (285381)",
+              "Sickle of the Lion (363830)",
+              "Rampant Ferocity (391710)",
+              "Adaptive Swarm (391889)",
+              "Thrash (405233)",
+              "Bloodseeker Vines (439531)",
+              "Bursting Growth (440122)",
+              "Ravage (441591)",
+              "Dreadful Wound (441812)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1149782"
-        },
-        {
-          "type": "removed",
-          "id": "1149783"
+          "type": "added",
+          "effect": {
+            "idx": "6",
+            "id": "1149783",
+            "type": "Apply Aura",
+            "subtype": "Modify Auto Attack Damage Done%",
+            "values": [
+              {
+                "Base Value": "15"
+              },
+              {
+                "Scaled Value": "15"
+              },
+              {
+                "PvP Coefficient": "0.6667"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -95,48 +137,78 @@
       "fields": [],
       "effects": [
         {
-          "idx": "3",
-          "type": "Apply Aura",
-          "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": [
-            "Rip (1079)",
-            "Rake (1822)",
-            "Shred (5221)",
-            "Ferocious Bite (22568)",
-            "Maim (22570)",
-            "Swipe (106785)",
-            "Thrash (106830)",
-            "Moonfire (155625)",
-            "Rake (155722)",
-            "Brutal Slash (202028)",
-            "Feral Frenzy (274838)",
-            "Primal Wrath (285381)",
-            "Sickle of the Lion (363830)",
-            "Rampant Ferocity (391710)",
-            "Adaptive Swarm (391889)",
-            "Thrash (405233)",
-            "Bloodseeker Vines (439531)",
-            "Bursting Growth (440122)",
-            "Ravage (441591)",
-            "Dreadful Wound (441812)"
-          ],
-          "id": "1149776",
-          "modifications": [],
-          "values": [
-            {
-              "type": "added",
-              "key": "PvP Coefficient",
-              "new": "0.667"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "4",
+            "id": "1149777",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
+            "values": [
+              {
+                "Base Value": "15"
+              },
+              {
+                "Scaled Value": "15"
+              },
+              {
+                "PvP Coefficient": "0.667"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "98"
+              }
+            ],
+            "affected_spells": [
+              "Rip (1079)",
+              "Rake (1822)",
+              "Shred (5221)",
+              "Ferocious Bite (22568)",
+              "Maim (22570)",
+              "Swipe (106785)",
+              "Thrash (106830)",
+              "Moonfire (155625)",
+              "Rake (155722)",
+              "Brutal Slash (202028)",
+              "Feral Frenzy (274838)",
+              "Primal Wrath (285381)",
+              "Sickle of the Lion (363830)",
+              "Rampant Ferocity (391710)",
+              "Adaptive Swarm (391889)",
+              "Thrash (405233)",
+              "Bloodseeker Vines (439531)",
+              "Bursting Growth (440122)",
+              "Ravage (441591)",
+              "Dreadful Wound (441812)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1149777"
-        },
-        {
-          "type": "removed",
-          "id": "1149778"
+          "type": "added",
+          "effect": {
+            "idx": "5",
+            "id": "1149778",
+            "type": "Apply Aura",
+            "subtype": "Modify Auto Attack Damage Done%",
+            "values": [
+              {
+                "Base Value": "15"
+              },
+              {
+                "Scaled Value": "15"
+              },
+              {
+                "PvP Coefficient": "0.667"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -147,51 +219,167 @@
       "fields": [],
       "effects": [
         {
-          "idx": "9",
-          "type": "Apply Aura",
-          "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": [
-            "Swiftmend (18562)",
-            "Swiftmend (422094)"
-          ],
-          "id": "1080967",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "15",
-              "new": "50"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "15",
-              "new": "50"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "10",
+            "id": "1080968",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
+            "values": [
+              {
+                "Base Value": "50"
+              },
+              {
+                "Scaled Value": "50"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "4, 58"
+              }
+            ],
+            "affected_spells": [
+              "Rejuvenation (774)",
+              "Wild Growth (48438)",
+              "Rejuvenation (Germination) (155777)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1080968"
+          "type": "added",
+          "effect": {
+            "idx": "11",
+            "id": "1088945",
+            "type": "Apply Aura",
+            "subtype": "Modify Mana Regen%",
+            "values": [
+              {
+                "Base Value": "60"
+              },
+              {
+                "Scaled Value": "60"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1088945"
+          "type": "added",
+          "effect": {
+            "idx": "12",
+            "id": "1177983",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "127"
+              }
+            ],
+            "affected_spells": [
+              "Sunfire (164815)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1177983"
+          "type": "added",
+          "effect": {
+            "idx": "13",
+            "id": "1177984",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "127"
+              }
+            ],
+            "affected_spells": [
+              "Sunfire (164815)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1177984"
+          "type": "added",
+          "effect": {
+            "idx": "14",
+            "id": "1177985",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "21, 92"
+              }
+            ],
+            "affected_spells": [
+              "Moonfire (8921)",
+              "Moonfire (164812)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1177985"
-        },
-        {
-          "type": "removed",
-          "id": "1177986"
+          "type": "added",
+          "effect": {
+            "idx": "15",
+            "id": "1177986",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "21, 92"
+              }
+            ],
+            "affected_spells": [
+              "Moonfire (8921)",
+              "Moonfire (164812)"
+            ]
+          }
         }
       ]
     },
@@ -203,31 +391,44 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Dummy",
-          "id": "221552",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "50",
-              "new": "100"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "50",
-              "new": "100"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1144889",
+            "type": "Apply Aura",
+            "subtype": "Dummy",
+            "values": [
+              {
+                "Base Value": "50"
+              },
+              {
+                "Scaled Value": "50"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1144889"
-        },
-        {
-          "type": "removed",
-          "id": "1185835"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "1185835",
+            "type": "Apply Aura",
+            "subtype": "Dummy",
+            "values": [
+              {
+                "Base Value": "200"
+              },
+              {
+                "Scaled Value": "200"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -238,42 +439,26 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : nature",
-          "id": "280098",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "0.742",
-              "new": "0.816"
-            }
-          ]
-        },
-        {
-          "type": "removed",
-          "id": "280099"
-        }
-      ]
-    },
-    {
-      "name": "Starfall",
-      "id": 191037,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "280158",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "0.235",
-              "new": "0.249"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "280099",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Resource": "astral_power"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -285,33 +470,92 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : arcane",
-          "id": "284976",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "0.848",
-              "new": "0.89"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "284977",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "80"
+              },
+              {
+                "Scaled Value": "80"
+              },
+              {
+                "Resource": "astral_power"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "284977"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "295015",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "33"
+              },
+              {
+                "Scaled Value": "33"
+              },
+              {
+                "Radius": "0 - 8 yards"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "295015"
+          "type": "added",
+          "effect": {
+            "idx": "4",
+            "id": "298448",
+            "type": "Server Side Script",
+            "values": [
+              {
+                "Base Value": "20"
+              },
+              {
+                "Scaled Value": "20"
+              },
+              {
+                "Radius": "0 - 8 yards"
+              },
+              {
+                "Target": "At Enemy (53) -> At Enemy in Area (16)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "298448"
-        },
-        {
-          "type": "removed",
-          "id": "1081718"
+          "type": "added",
+          "effect": {
+            "idx": "5",
+            "id": "1081718",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "8"
+              },
+              {
+                "Scaled Value": "8"
+              },
+              {
+                "Radius": "0 - 8 yards"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -322,21 +566,26 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "298525",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "0.318",
-              "new": "0.3816"
-            }
-          ]
-        },
-        {
-          "type": "removed",
-          "id": "298537"
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "298537",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "20"
+              },
+              {
+                "Scaled Value": "20"
+              },
+              {
+                "Resource": "astral_power"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -348,25 +597,45 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "726522",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "2.85",
-              "new": "2.72"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "726523",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "726523"
-        },
-        {
-          "type": "removed",
-          "id": "726524"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "726524",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "100"
+              },
+              {
+                "Scaled Value": "100"
+              },
+              {
+                "Resource": "astral_power"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -377,25 +646,45 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "726525",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "4.02",
-              "new": "3.84"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "726526",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "726526"
-        },
-        {
-          "type": "removed",
-          "id": "726527"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "726527",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "200"
+              },
+              {
+                "Scaled Value": "200"
+              },
+              {
+                "Resource": "astral_power"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -407,93 +696,67 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Add Percent Modifier : Spell Direct Amount",
-          "affected_spells": [
-            "Starfall (50286)",
-            "Starsurge (78674)",
-            "Starfall (191034)",
-            "Starfall (191037)",
-            "Starsurge (197626)",
-            "Starfall (359399)"
-          ],
-          "id": "1033218",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "10",
-              "new": "8"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "10",
-              "new": "8"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1096835",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Resource Cost",
+            "values": [
+              {
+                "Base Value": "-10"
+              },
+              {
+                "Scaled Value": "-10"
+              },
+              {
+                "Misc Value": "14"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "55, 89"
+              }
+            ],
+            "affected_spells": [
+              "Starfall (50286)",
+              "Starsurge (78674)",
+              "Starfall (191034)",
+              "Starfall (191037)",
+              "Starsurge (197626)",
+              "Starfall (359399)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1096835"
-        },
-        {
-          "type": "removed",
-          "id": "1189263"
-        }
-      ]
-    },
-    {
-      "name": "Goldrinn's Fang",
-      "id": 394047,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "1033385",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "0.62",
-              "new": "0.775"
-            },
-            {
-              "key": "PvP Coefficient",
-              "prev": "0.5",
-              "new": "0.4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Call of the Elder Druid",
-      "id": 426784,
-      "type": "modified",
-      "talent_entry": "Restoration",
-      "fields": [],
-      "effects": [
-        {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Dummy",
-          "id": "1105560",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "10",
-              "new": "15"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "10",
-              "new": "15"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "1189263",
+            "type": "Apply Aura",
+            "subtype": "Apply Percent Modifier w/ Label : Spell Effect 2",
+            "values": [
+              {
+                "Base Value": "11"
+              },
+              {
+                "Scaled Value": "11"
+              },
+              {
+                "Misc Value": "12"
+              },
+              {
+                "Misc Value 2": "4160 (Label)"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ],
+            "affected_spells": [
+              "Astral Communion (450599)"
+            ]
+          }
         }
       ]
     },
@@ -505,80 +768,29 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Dummy",
-          "id": "1150218",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "12",
-              "new": "15"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "12",
-              "new": "15"
-            }
-          ]
-        },
-        {
-          "type": "removed",
-          "id": "1150219"
-        }
-      ]
-    },
-    {
-      "name": "Fell Prey",
-      "id": 454957,
-      "type": "modified",
-      "fields": [],
-      "effects": [
-        {
           "type": "added",
           "effect": {
             "idx": "2",
-            "id": "1157971",
+            "id": "1150219",
             "type": "Apply Aura",
-            "subtype": "Apply Percent Modifier w/ Label : Spell Direct Amount",
+            "subtype": "Dummy",
             "values": [
               {
-                "Base Value": "0"
+                "Base Value": "22"
               },
               {
-                "Scaled Value": "0"
+                "Scaled Value": "22"
               },
               {
-                "PvP Coefficient": "0.5"
-              },
-              {
-                "Misc Value 2": "2740 (Label)"
+                "Misc Value": "23"
               },
               {
                 "Target": "Self (1)"
               }
-            ],
-            "affected_spells": [
-              "Rampant Ferocity (391710)"
             ]
           }
         }
       ]
-    },
-    {
-      "name": "Sunseeker Mushroom",
-      "id": 468936,
-      "type": "modified",
-      "talent_entry": "Balance",
-      "fields": [
-        {
-          "field": "real_ppm",
-          "prev": "2",
-          "new": "1.75"
-        }
-      ],
-      "effects": []
     },
     {
       "name": "Crashing Star",
@@ -587,21 +799,29 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : astral",
-          "id": "1183020",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "0.954",
-              "new": "1.145"
-            }
-          ]
-        },
-        {
-          "type": "removed",
-          "id": "1183021"
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1183021",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "40"
+              },
+              {
+                "Scaled Value": "40"
+              },
+              {
+                "PvP Coefficient": "0.5"
+              },
+              {
+                "Resource": "astral_power"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     }
