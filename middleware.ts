@@ -23,8 +23,9 @@ export function middleware(request: NextRequest) {
   const isCompendiumPage = pathname.startsWith('/blog') && pathname.endsWith('/compendium')
   console.log('Is Compendium Page:', isCompendiumPage)
 
-  // Check if the pathname already has a locale prefix
-  const hasLocalePrefix = locales.some((locale) => pathname.startsWith(`/${locale}/`))
+  // Use a regular expression to check if the pathname has a locale prefix
+  const localePrefixRegex = new RegExp(`^/(${locales.join('|')})/`)
+  const hasLocalePrefix = localePrefixRegex.test(pathname)
   console.log('Has Locale Prefix:', hasLocalePrefix)
 
   if (isCompendiumPage && !hasLocalePrefix) {
