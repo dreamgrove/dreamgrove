@@ -26,7 +26,7 @@ export function middleware(request: NextRequest) {
   console.log('Is Compendium Page:', isCompendiumPage)
 
   // Updated regex to check if any locale appears anywhere in the path
-  const localePrefixRegex = new RegExp(`/(en-US|fr|nl-NL|ko)/`)
+  const localePrefixRegex = new RegExp(`/(en-US|fr|nl-NL|kr)/`)
   const hasLocalePrefix = localePrefixRegex.test(urlPath)
   console.log('Has Locale Prefix:', hasLocalePrefix)
 
@@ -38,7 +38,7 @@ export function middleware(request: NextRequest) {
     if (locale === 'ko-KR') {
       // Dynamically create the redirect URL by adding `/ko` before `/compendium`
       const redirectUrl = new URL(
-        `${urlPath.replace('/compendium', '/ko/compendium')}`,
+        `${urlPath.replace('/compendium', '/kr/compendium')}`,
         request.url
       )
       console.log('Redirecting to:', redirectUrl.toString())
