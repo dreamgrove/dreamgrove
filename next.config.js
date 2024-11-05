@@ -79,6 +79,8 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     i18n: {
+      locales: ['en-US', 'fr', 'nl-NL'],
+      defaultLocale: 'en-US',
       localeDetection: false,
     },
     images: {
