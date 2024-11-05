@@ -16,27 +16,27 @@ function getLocale(request: NextRequest) {
 }
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
-  console.log('Requested pathname:', pathname)
+  const fullPath = request.nextUrl.pathname
+  console.log('Full requested path:', fullPath)
 
   // Check if the path is within /blog and ends with /compendium
-  const isCompendiumPage = pathname.startsWith('/blog') && pathname.endsWith('/compendium')
+  const isCompendiumPage = fullPath.includes('/blog') && fullPath.endsWith('/compendium')
   console.log('Is Compendium Page:', isCompendiumPage)
 
-  // Use a regular expression to check if the pathname has a locale prefix
-  const localePrefixRegex = new RegExp(`^/(${locales.join('|')})/`)
-  const hasLocalePrefix = localePrefixRegex.test(pathname)
+  // Use a regular expression to check if the fullPath has a locale prefix
+  const localePrefixRegex = new RegExp(`^/(${locales.join('|')})`)
+  const hasLocalePrefix = localePrefixRegex.test(fullPath)
   console.log('Has Locale Prefix:', hasLocalePrefix)
 
   if (isCompendiumPage && !hasLocalePrefix) {
     const locale = getLocale(request)
-    const redirectUrl = new URL(`/${locale}${pathname}`, request.url)
+    const redirectUrl = new URL(`/${locale}${fullPath}`, request.url)
     console.log('Redirecting to:', redirectUrl.toString())
     return NextResponse.redirect(redirectUrl)
   }
 
   // Log if no redirect is necessary and proceed normally
-  console.log('No redirect needed, continuing to:', pathname)
+  console.log('No redirect needed, continuing to:', fullPath)
   return NextResponse.next()
 }
 
