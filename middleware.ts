@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Negotiator from 'negotiator'
 import { match } from '@formatjs/intl-localematcher'
 
-const locales = ['en-US', 'fr', 'nl-NL']
+const locales = ['en-US', 'fr', 'nl-NL', 'ko-KR']
 const defaultLocale = 'en-US'
 
 function getLocale(request: NextRequest) {
@@ -16,33 +16,34 @@ function getLocale(request: NextRequest) {
 }
 
 export function middleware(request: NextRequest) {
-  const fullPath = request.url // Use the full URL instead of pathname
+  const fullPath = request.url
   console.log('Full URL:', fullPath)
 
-  // Extract the path from the full URL
   const urlPath = new URL(fullPath).pathname
   console.log('URL Path:', urlPath)
 
-  // Check if the path is within /blog and ends with /compendium
-  const isCompendiumPage = urlPath.includes('/blog') && urlPath.endsWith('/compendium')
+  const isCompendiumPage = urlPath.endsWith('/compendium')
   console.log('Is Compendium Page:', isCompendiumPage)
 
-  // Use a regular expression to check if the urlPath has a locale prefix
-  const localePrefixRegex = new RegExp(`^/(${locales.join('|')})`)
+  const localePrefixRegex = new RegExp(`^/(${locales.join('|').replace(/-\w+/g, '')})`)
   const hasLocalePrefix = localePrefixRegex.test(urlPath)
   console.log('Has Locale Prefix:', hasLocalePrefix)
 
-  // Check if this is a prefetch request
   const isPrefetch = request.headers.get('x-middleware-prefetch') === '1'
 
   if (isCompendiumPage && !hasLocalePrefix && !isPrefetch) {
     const locale = getLocale(request)
-    const redirectUrl = new URL(`/${locale}${urlPath}`, request.url)
-    console.log('Redirecting to:', redirectUrl.toString())
-    return NextResponse.redirect(redirectUrl)
+
+    if (locale === 'ko-KR') {
+      const redirectUrl = new URL(`/blog/guardian/ko/compendium`, request.url)
+      console.log('Redirecting to:', redirectUrl.toString())
+      return NextResponse.redirect(redirectUrl)
+    } else {
+      console.log('Locale is not ko-KR, no redirect needed')
+      return NextResponse.next()
+    }
   }
 
-  // Log if no redirect is necessary and proceed normally
   console.log('No redirect needed, continuing to:', urlPath)
   return NextResponse.next()
 }
