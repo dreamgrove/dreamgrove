@@ -16,25 +16,23 @@ function getLocale(request: NextRequest) {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // Check if the path is within /blog and ends with /compendium
-  const isCompendiumPage =
-    pathname.startsWith('/blog') &&
-    (pathname.endsWith('/compendium') || pathname.includes('/compendium/'))
-
-  if (isCompendiumPage) {
-    const locale = getLocale(request)
-    const pathnameIsMissingLocale = locales.every(
-      (locale) =>
-        !pathname.startsWith(`/${locale}/blog/compendium`) &&
-        !pathname.includes(`/${locale}/blog/compendium/`)
-    )
+  if (pathname.endsWith('/compendium')) {
+    const pathnameIsMissingLocale = locales.every((locale) => !pathname.startsWith(`/${locale}/`))
 
     if (pathnameIsMissingLocale) {
-      return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url))
+      const locale = getLocale(request)
+      const newPath = `/${locale}${pathname}`
+      return NextResponse.redirect(new URL(newPath, request.url))
     }
   }
+
+  // Your existing middleware logic for other routes
 }
 
 export const config = {
-  matcher: ['/blog', '/blog/**'], // Apply middleware only to /blog and its sub-paths
+  matcher: [
+    '/:path*/compendium',
+    // Keep your existing matchers if needed
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
 }
