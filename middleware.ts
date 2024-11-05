@@ -25,7 +25,8 @@ export function middleware(request: NextRequest) {
   const isCompendiumPage = urlPath.endsWith('/compendium')
   console.log('Is Compendium Page:', isCompendiumPage)
 
-  const localePrefixRegex = new RegExp(`^/(${locales.join('|').replace(/-\w+/g, '')})`)
+  const localePrefixRegex = new RegExp(`^/(${locales.join('|').replace(/-\w+/g, '')}|ko)`)
+
   const hasLocalePrefix = localePrefixRegex.test(urlPath)
   console.log('Has Locale Prefix:', hasLocalePrefix)
 
