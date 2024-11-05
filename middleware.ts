@@ -22,8 +22,9 @@ export function middleware(request: NextRequest) {
     if (pathnameIsMissingLocale) {
       const locale = getLocale(request)
       const newPath = `/${locale}${pathname}`
-      // Check if we're not already on the localized path
-      if (newPath !== pathname) {
+
+      // Only redirect if the path does not already contain the locale
+      if (!pathname.startsWith(`/${locale}/`)) {
         return NextResponse.redirect(new URL(newPath, request.url))
       }
     }
@@ -33,9 +34,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    '/:path*/compendium',
-    // Keep your existing matchers if needed
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+  matcher: ['/:path*/compendium', '/((?!api|_next/static|_next/image|favicon.ico).*)'],
 }
