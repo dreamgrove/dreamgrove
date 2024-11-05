@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.7",
     "@headlessui/react": "1.7.19",
     "@mdx-js/react": "^3.0.1",
     "@next/bundle-analyzer": "14.2.3",
@@ -30,6 +31,7 @@
     "image-size": "1.0.0",
     "jsondiffpatch": "^0.6.0",
     "marked": "^13.0.1",
+    "negotiator": "^1.0.0",
     "next": "14.2.10",
     "next-contentlayer2": "0.4.6",
     "next-themes": "^0.3.0",
