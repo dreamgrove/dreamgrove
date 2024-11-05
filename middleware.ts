@@ -22,7 +22,10 @@ export function middleware(request: NextRequest) {
     if (pathnameIsMissingLocale) {
       const locale = getLocale(request)
       const newPath = `/${locale}${pathname}`
-      return NextResponse.redirect(new URL(newPath, request.url))
+      // Check if we're not already on the localized path
+      if (newPath !== pathname) {
+        return NextResponse.redirect(new URL(newPath, request.url))
+      }
     }
   }
 
