@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Negotiator from 'negotiator'
 import { match } from '@formatjs/intl-localematcher'
 
-const locales = ['en-US', 'ko-KR']
+const locales = ['en-US', 'fr', 'nl-NL']
 const defaultLocale = 'en-US'
 
 function getLocale(request: NextRequest) {
@@ -16,21 +16,20 @@ function getLocale(request: NextRequest) {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  if (pathname.endsWith('/compendium')) {
-    const pathnameIsMissingLocale = locales.every((locale) => !pathname.startsWith(`/${locale}/`))
+  // Check if the path is within /blog and ends with /compendium
+  const isCompendiumPage = pathname.startsWith('/blog') && pathname.endsWith('/compendium')
 
-    if (pathnameIsMissingLocale) {
-      const locale = getLocale(request)
-      const newPath = `/${locale}${pathname}`
+  // Check if the pathname already has a locale prefix
+  const hasLocalePrefix = locales.some((locale) => pathname.startsWith(`/${locale}/`))
 
-      // Only redirect if the path does not already contain the locale
-      if (!pathname.startsWith(`/${locale}/`)) {
-        return NextResponse.redirect(new URL(newPath, request.url))
-      }
-    }
+  if (isCompendiumPage && !hasLocalePrefix) {
+    const locale = getLocale(request)
+    const redirectUrl = new URL(`/${locale}${pathname}`, request.url)
+    return NextResponse.redirect(redirectUrl)
   }
 
-  // Your existing middleware logic for other routes
+  // Return NextResponse.next() for paths that don't match or already have a locale
+  return NextResponse.next()
 }
 
 export const config = {
