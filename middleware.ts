@@ -15,16 +15,22 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
+  const isCompendiumPage = pathname.endsWith('/compendium') || pathname.includes('/compendium/')
 
-  if (pathnameIsMissingLocale) {
+  if (isCompendiumPage) {
     const locale = getLocale(request)
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url))
+    const pathnameIsMissingLocale = locales.every(
+      (locale) =>
+        !pathname.startsWith(`/${locale}/compendium`) &&
+        !pathname.includes(`/${locale}/compendium/`)
+    )
+
+    if (pathnameIsMissingLocale) {
+      return NextResponse.redirect(new URL(`/${locale}/compendium`, request.url))
+    }
   }
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['**/compendium', '**/compendium/**'], // Match any path ending in /compendium or nested under it
 }
