@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Negotiator from 'negotiator'
 import { match } from '@formatjs/intl-localematcher'
 
-const locales = ['en-US', 'ko-KR']
+const locales = ['en-US', 'fr', 'nl-NL', 'ko-KR']
 const defaultLocale = 'en-US'
 
 function getLocale(request: NextRequest) {
@@ -25,8 +25,8 @@ export function middleware(request: NextRequest) {
   const isCompendiumPage = urlPath.endsWith('/compendium')
   console.log('Is Compendium Page:', isCompendiumPage)
 
-  const localePrefixRegex = new RegExp(`^/(${locales.join('|').replace(/-\w+/g, '')}|ko)`)
-
+  // Updated regex to check if any locale appears anywhere in the path
+  const localePrefixRegex = new RegExp(`/(en-US|fr|nl-NL|ko)/`)
   const hasLocalePrefix = localePrefixRegex.test(urlPath)
   console.log('Has Locale Prefix:', hasLocalePrefix)
 
@@ -36,7 +36,11 @@ export function middleware(request: NextRequest) {
     const locale = getLocale(request)
 
     if (locale === 'ko-KR') {
-      const redirectUrl = new URL(`/blog/guardian/ko/compendium`, request.url)
+      // Dynamically create the redirect URL by adding `/ko` before `/compendium`
+      const redirectUrl = new URL(
+        `${urlPath.replace('/compendium', '/ko/compendium')}`,
+        request.url
+      )
       console.log('Redirecting to:', redirectUrl.toString())
       return NextResponse.redirect(redirectUrl)
     } else {
