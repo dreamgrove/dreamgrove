@@ -39,7 +39,7 @@ const Header = () => {
                 <Image src={png} alt="Logo" width={60} height={60} />
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-magnificent text-3xl font-bold text-[#dd6b20] sm:block">
+                <div className="text-3xl font-bold text-[#dd6b20] sm:block">
                   {siteMetadata.headerTitle.toUpperCase()}
                 </div>
               ) : (
