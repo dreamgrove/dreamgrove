@@ -1,3 +1,283 @@
 {
-  "delta": []
+  "delta": [
+    {
+      "name": "Rip",
+      "id": 1079,
+      "type": "modified",
+      "talent_entry": "Generic",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage : physical every 2 seconds",
+          "id": "390",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.2929",
+              "new": "0.3222"
+            },
+            {
+              "key": "PvP Coefficient",
+              "prev": "1.25",
+              "new": "1.136"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "117625"
+        },
+        {
+          "type": "removed",
+          "id": "117626"
+        },
+        {
+          "type": "removed",
+          "id": "1099584"
+        }
+      ]
+    },
+    {
+      "name": "Rake",
+      "id": 1822,
+      "type": "modified",
+      "talent_entry": "Generic",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : physical",
+          "id": "559",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.294",
+              "new": "0.3234"
+            },
+            {
+              "key": "PvP Coefficient",
+              "prev": "1.25",
+              "new": "1.136"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "560"
+        },
+        {
+          "type": "removed",
+          "id": "561"
+        },
+        {
+          "type": "removed",
+          "id": "310505"
+        }
+      ]
+    },
+    {
+      "name": "Swiftmend",
+      "id": 18562,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Direct Heal",
+          "id": "10065",
+          "modifications": [],
+          "values": [
+            {
+              "key": "SP Coefficient",
+              "prev": "6.1824",
+              "new": "7.728"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Restoration Druid",
+      "id": 137012,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "24",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Periodic Amount",
+          "affected_spells": [
+            "Rip (1079)"
+          ],
+          "id": "1113290",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "50",
+              "new": "36"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "50",
+              "new": "36"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1113620"
+        },
+        {
+          "type": "removed",
+          "id": "1120675"
+        },
+        {
+          "type": "removed",
+          "id": "1120676"
+        },
+        {
+          "type": "removed",
+          "id": "1120677"
+        },
+        {
+          "type": "removed",
+          "id": "1178737"
+        },
+        {
+          "type": "removed",
+          "id": "1187014"
+        }
+      ]
+    },
+    {
+      "name": "Rake",
+      "id": 155722,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Damage : physical every 3 seconds",
+          "id": "216427",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.297",
+              "new": "0.3267"
+            },
+            {
+              "type": "removed",
+              "key": "PvP Coefficient"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1095738"
+        }
+      ]
+    },
+    {
+      "name": "Rampant Ferocity",
+      "id": 391710,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : physical",
+          "id": "1029376",
+          "modifications": [],
+          "values": [
+            {
+              "key": "AP Coefficient",
+              "prev": "0.333",
+              "new": "0.363"
+            },
+            {
+              "type": "added",
+              "key": "PvP Coefficient",
+              "new": "0.91"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Symbiotic Blooms",
+      "id": 439530,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Periodic Heal : every 2 seconds",
+          "id": "1132873",
+          "modifications": [],
+          "values": [
+            {
+              "type": "added",
+              "key": "PvP Coefficient",
+              "new": "1.25"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1133530"
+        }
+      ]
+    },
+    {
+      "name": "Strike for the Heart",
+      "id": 441845,
+      "type": "modified",
+      "talent_entry": "Druid of the Claw (Feral, Guardian)",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Flat Modifier : Spell Critical Chance",
+          "affected_spells": [
+            "Shred (5221)",
+            "Mangle (33917)",
+            "Swipe (106785)",
+            "Brutal Slash (202028)",
+            "Swipe (213771)"
+          ],
+          "id": "1136584",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Base Value",
+              "prev": "10",
+              "new": "15"
+            },
+            {
+              "key": "Scaled Value",
+              "prev": "10",
+              "new": "15"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1136586"
+        },
+        {
+          "type": "removed",
+          "id": "1164931"
+        }
+      ]
+    }
+  ]
 }
