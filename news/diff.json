@@ -8,35 +8,91 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Periodic Damage : physical every 2 seconds",
-          "id": "390",
-          "modifications": [],
-          "values": [
-            {
-              "key": "AP Coefficient",
-              "prev": "0.2929",
-              "new": "0.3222"
-            },
-            {
-              "key": "PvP Coefficient",
-              "prev": "1.25",
-              "new": "1.136"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "117625",
+            "type": "Apply Aura",
+            "subtype": "Dummy",
+            "values": [
+              {
+                "Base Value": "2"
+              },
+              {
+                "Scaled Value": "2"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "117625"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "117626",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "6"
+              },
+              {
+                "Scaled Value": "6"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "117626"
-        },
-        {
-          "type": "removed",
-          "id": "1099584"
+          "type": "added",
+          "effect": {
+            "idx": "4",
+            "id": "1099584",
+            "type": "Apply Aura",
+            "subtype": "Modify Damage Taken% from Caster's Spells",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Enemy (6)"
+              },
+              {
+                "Family Flags": "22, 98"
+              }
+            ],
+            "affected_spells": [
+              "Rip (1079)",
+              "Rake (1822)",
+              "Shred (5221)",
+              "Ferocious Bite (22568)",
+              "Maim (22570)",
+              "Swipe (106785)",
+              "Thrash (106830)",
+              "Moonfire (155625)",
+              "Rake (155722)",
+              "Brutal Slash (202028)",
+              "Feral Frenzy (274838)",
+              "Primal Wrath (285381)",
+              "Adaptive Swarm (325733)",
+              "Adaptive Swarm (325748)",
+              "Sickle of the Lion (363830)",
+              "Rampant Ferocity (391710)",
+              "Adaptive Swarm (391889)",
+              "Adaptive Swarm (391891)",
+              "Thrash (405233)",
+              "Bloodseeker Vines (439531)",
+              "Bursting Growth (440122)",
+              "Ravage (441591)",
+              "Dreadful Wound (441812)"
+            ]
+          }
         }
       ]
     },
@@ -48,57 +104,82 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "School Damage : physical",
-          "id": "559",
-          "modifications": [],
-          "values": [
-            {
-              "key": "AP Coefficient",
-              "prev": "0.294",
-              "new": "0.3234"
-            },
-            {
-              "key": "PvP Coefficient",
-              "prev": "1.25",
-              "new": "1.136"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "560",
+            "type": "Energize Power",
+            "values": [
+              {
+                "Base Value": "1"
+              },
+              {
+                "Scaled Value": "1"
+              },
+              {
+                "Resource": "combo_points"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "560"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "561",
+            "type": "Trigger Spell : Rake",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Trigger Spell": "155722"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "561"
-        },
-        {
-          "type": "removed",
-          "id": "310505"
+          "type": "added",
+          "effect": {
+            "idx": "4",
+            "id": "310505",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "60"
+              },
+              {
+                "Scaled Value": "60"
+              },
+              {
+                "Target": "Enemy (6)"
+              }
+            ]
+          }
         }
       ]
     },
     {
-      "name": "Swiftmend",
-      "id": 18562,
+      "name": "Darkflight",
+      "id": 68992,
       "type": "modified",
-      "fields": [],
-      "effects": [
+      "fields": [
         {
-          "idx": "1",
-          "type": "Direct Heal",
-          "id": "10065",
-          "modifications": [],
-          "values": [
-            {
-              "key": "SP Coefficient",
-              "prev": "6.1824",
-              "new": "7.728"
-            }
-          ]
+          "field": "cooldown",
+          "prev": "120 seconds",
+          "new": "90 seconds"
         }
-      ]
+      ],
+      "effects": []
     },
     {
       "name": "Restoration Druid",
@@ -107,50 +188,177 @@
       "fields": [],
       "effects": [
         {
-          "idx": "24",
-          "type": "Apply Aura",
-          "subtype": "Add Percent Modifier : Spell Periodic Amount",
-          "affected_spells": [
-            "Rip (1079)"
-          ],
-          "id": "1113290",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "50",
-              "new": "36"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "50",
-              "new": "36"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "25",
+            "id": "1113620",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "47"
+              },
+              {
+                "Scaled Value": "47"
+              },
+              {
+                "PvP Coefficient": "0"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "108"
+              }
+            ],
+            "affected_spells": [
+              "Ferocious Bite (22568)",
+              "Ravage (441591)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1113620"
+          "type": "added",
+          "effect": {
+            "idx": "26",
+            "id": "1120675",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "48"
+              },
+              {
+                "Scaled Value": "48"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "15"
+              }
+            ],
+            "affected_spells": [
+              "Shred (5221)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1120675"
+          "type": "added",
+          "effect": {
+            "idx": "27",
+            "id": "1120676",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "-5"
+              },
+              {
+                "Scaled Value": "-5"
+              },
+              {
+                "PvP Coefficient": "0"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "12"
+              }
+            ],
+            "affected_spells": [
+              "Rake (1822)",
+              "Rake (155722)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1120676"
+          "type": "added",
+          "effect": {
+            "idx": "28",
+            "id": "1120677",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Periodic Amount",
+            "values": [
+              {
+                "Base Value": "11"
+              },
+              {
+                "Scaled Value": "11"
+              },
+              {
+                "PvP Coefficient": "2"
+              },
+              {
+                "Misc Value": "22"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "12"
+              }
+            ],
+            "affected_spells": [
+              "Rake (1822)",
+              "Rake (155722)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1120677"
+          "type": "added",
+          "effect": {
+            "idx": "29",
+            "id": "1178737",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "-10"
+              },
+              {
+                "Scaled Value": "-10"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "33"
+              }
+            ],
+            "affected_spells": [
+              "Swiftmend (18562)",
+              "Swiftmend (422094)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1178737"
-        },
-        {
-          "type": "removed",
-          "id": "1187014"
+          "type": "added",
+          "effect": {
+            "idx": "30",
+            "id": "1187014",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "20"
+              },
+              {
+                "Scaled Value": "20"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "89"
+              }
+            ],
+            "affected_spells": [
+              "Starsurge (78674)",
+              "Starsurge (197626)"
+            ]
+          }
         }
       ]
     },
@@ -161,50 +369,158 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Periodic Damage : physical every 3 seconds",
-          "id": "216427",
-          "modifications": [],
-          "values": [
-            {
-              "key": "AP Coefficient",
-              "prev": "0.297",
-              "new": "0.3267"
-            },
-            {
-              "type": "removed",
-              "key": "PvP Coefficient"
-            }
-          ]
-        },
-        {
-          "type": "removed",
-          "id": "1095738"
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1095738",
+            "type": "Apply Aura",
+            "subtype": "Modify Damage Taken% from Caster's Spells",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Enemy (6)"
+              },
+              {
+                "Family Flags": "22, 98"
+              }
+            ],
+            "affected_spells": [
+              "Rip (1079)",
+              "Rake (1822)",
+              "Shred (5221)",
+              "Ferocious Bite (22568)",
+              "Maim (22570)",
+              "Swipe (106785)",
+              "Thrash (106830)",
+              "Moonfire (155625)",
+              "Rake (155722)",
+              "Brutal Slash (202028)",
+              "Feral Frenzy (274838)",
+              "Primal Wrath (285381)",
+              "Adaptive Swarm (325733)",
+              "Adaptive Swarm (325748)",
+              "Sickle of the Lion (363830)",
+              "Rampant Ferocity (391710)",
+              "Adaptive Swarm (391889)",
+              "Adaptive Swarm (391891)",
+              "Thrash (405233)",
+              "Bloodseeker Vines (439531)",
+              "Bursting Growth (440122)",
+              "Ravage (441591)",
+              "Dreadful Wound (441812)"
+            ]
+          }
         }
       ]
     },
     {
-      "name": "Rampant Ferocity",
-      "id": 391710,
+      "name": "Light's Judgment",
+      "id": 255647,
       "type": "modified",
       "fields": [],
       "effects": [
         {
           "idx": "1",
-          "type": "School Damage : physical",
-          "id": "1029376",
+          "type": "Trigger Missiles",
+          "id": "477694",
           "modifications": [],
           "values": [
             {
-              "key": "AP Coefficient",
-              "prev": "0.333",
-              "new": "0.363"
+              "key": "Base Value",
+              "prev": "0",
+              "new": "3"
             },
             {
-              "type": "added",
-              "key": "PvP Coefficient",
-              "new": "0.91"
+              "key": "Scaled Value",
+              "prev": "0",
+              "new": "3"
+            },
+            {
+              "key": "Radius",
+              "prev": "0 - 5 yards",
+              "new": "0 - 10 yards"
+            }
+          ]
+        },
+        {
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1192214",
+            "type": "Dummy",
+            "values": [
+              {
+                "Base Value": "8"
+              },
+              {
+                "Scaled Value": "8"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Holy Resistance",
+      "id": 255651,
+      "type": "modified",
+      "fields": [
+        {
+          "field": "name",
+          "prev": "Holy Resistance",
+          "new": "Holy Providence"
+        }
+      ],
+      "effects": [
+        {
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1192226",
+            "type": "Apply Aura",
+            "subtype": "Modify Healing% Done",
+            "values": [
+              {
+                "Base Value": "1"
+              },
+              {
+                "Scaled Value": "1"
+              },
+              {
+                "Misc Value": "0x7f"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Affected School(s)": "All"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Light's Judgment",
+      "id": 256893,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : holy",
+          "id": "479673",
+          "modifications": [],
+          "values": [
+            {
+              "key": "Radius",
+              "prev": "0 - 5 yards",
+              "new": "0 - 10 yards"
             }
           ]
         }
@@ -217,22 +533,24 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Periodic Heal : every 2 seconds",
-          "id": "1132873",
-          "modifications": [],
-          "values": [
-            {
-              "type": "added",
-              "key": "PvP Coefficient",
-              "new": "1.25"
-            }
-          ]
-        },
-        {
-          "type": "removed",
-          "id": "1133530"
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1133530",
+            "type": "Apply Aura",
+            "subtype": "Modify Healing Taken% from Caster",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Target": "Friendly (21)"
+              }
+            ]
+          }
         }
       ]
     },
@@ -244,38 +562,60 @@
       "fields": [],
       "effects": [
         {
-          "idx": "1",
-          "type": "Apply Aura",
-          "subtype": "Add Flat Modifier : Spell Critical Chance",
-          "affected_spells": [
-            "Shred (5221)",
-            "Mangle (33917)",
-            "Swipe (106785)",
-            "Brutal Slash (202028)",
-            "Swipe (213771)"
-          ],
-          "id": "1136584",
-          "modifications": [],
-          "values": [
-            {
-              "key": "Base Value",
-              "prev": "10",
-              "new": "15"
-            },
-            {
-              "key": "Scaled Value",
-              "prev": "10",
-              "new": "15"
-            }
-          ]
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1136586",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Critical Bonus Multiplier",
+            "values": [
+              {
+                "Base Value": "15"
+              },
+              {
+                "Scaled Value": "15"
+              },
+              {
+                "Misc Value": "15"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "15, 38, 52, 74, 99"
+              }
+            ],
+            "affected_spells": [
+              "Shred (5221)",
+              "Mangle (33917)",
+              "Swipe (106785)",
+              "Brutal Slash (202028)",
+              "Swipe (213771)"
+            ]
+          }
         },
         {
-          "type": "removed",
-          "id": "1136586"
-        },
-        {
-          "type": "removed",
-          "id": "1164931"
+          "type": "added",
+          "effect": {
+            "idx": "3",
+            "id": "1164931",
+            "type": "Apply Aura",
+            "subtype": "Proc Trigger Spell : Strike for the Heart",
+            "values": [
+              {
+                "Base Value": "0"
+              },
+              {
+                "Scaled Value": "0"
+              },
+              {
+                "Trigger Spell": "458724"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
         }
       ]
     }
