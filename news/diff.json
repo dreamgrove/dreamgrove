@@ -1,3 +1,217 @@
 {
-  "delta": []
+  "delta": [
+    {
+      "name": "Restoration Druid",
+      "id": 137012,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Rejuvenation (774)",
+            "Regrowth (8936)",
+            "Swiftmend (18562)",
+            "Lifebloom (33763)",
+            "Lifebloom (33778)",
+            "Wild Growth (48438)",
+            "Nourish (50464)",
+            "Efflorescence (81269)",
+            "Cenarion Ward (102352)",
+            "Rejuvenation (Germination) (155777)",
+            "Tranquility (157982)",
+            "Lifebloom (188550)",
+            "Cultivation (200389)",
+            "Reactive Resin (203406)",
+            "Spring Blossoms (207386)",
+            "Grove Tending (279793)",
+            "Early Harvest (287255)",
+            "Adaptive Swarm (325748)",
+            "Renewing Bloom (364686)",
+            "Ephemeral Profusion (367330)",
+            "Grove Tending (383193)",
+            "Adaptive Swarm (391891)",
+            "Embrace of the Dream (392147)",
+            "Invigorate (392160)",
+            "Verdancy (392329)",
+            "Nourish (422090)",
+            "Swiftmend (422094)",
+            "Wild Growth (422382)",
+            "Nourish (423618)",
+            "Minor Cenarion Ward (429222)",
+            "Dream Bloom (434141)",
+            "Symbiotic Blooms (439530)",
+            "Bursting Growth (440121)",
+            "Reactive Resin (468152)"
+          ],
+          "id": "179695",
+          "modifications": [],
+          "values": [
+            {
+              "key": "PvP Coefficient",
+              "prev": "0",
+              "new": "0.278"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "191150"
+        },
+        {
+          "type": "removed",
+          "id": "191151"
+        },
+        {
+          "type": "removed",
+          "id": "191152"
+        },
+        {
+          "type": "removed",
+          "id": "191153"
+        },
+        {
+          "type": "removed",
+          "id": "260747"
+        },
+        {
+          "type": "removed",
+          "id": "260748"
+        },
+        {
+          "type": "removed",
+          "id": "260749"
+        },
+        {
+          "type": "removed",
+          "id": "872913"
+        },
+        {
+          "type": "removed",
+          "id": "876348"
+        },
+        {
+          "type": "removed",
+          "id": "876349"
+        },
+        {
+          "type": "removed",
+          "id": "1032349"
+        },
+        {
+          "type": "removed",
+          "id": "1032350"
+        },
+        {
+          "type": "removed",
+          "id": "1039258"
+        },
+        {
+          "type": "removed",
+          "id": "1039259"
+        },
+        {
+          "type": "removed",
+          "id": "1039291"
+        },
+        {
+          "type": "removed",
+          "id": "1049694"
+        },
+        {
+          "type": "removed",
+          "id": "1049860"
+        },
+        {
+          "type": "removed",
+          "id": "1049861"
+        },
+        {
+          "type": "removed",
+          "id": "1080082"
+        },
+        {
+          "type": "removed",
+          "id": "1081594"
+        },
+        {
+          "type": "removed",
+          "id": "1099906"
+        },
+        {
+          "type": "removed",
+          "id": "1099956"
+        },
+        {
+          "type": "removed",
+          "id": "1113290"
+        },
+        {
+          "type": "removed",
+          "id": "1113620"
+        },
+        {
+          "type": "removed",
+          "id": "1120675"
+        },
+        {
+          "type": "removed",
+          "id": "1120676"
+        },
+        {
+          "type": "removed",
+          "id": "1120677"
+        },
+        {
+          "type": "removed",
+          "id": "1178737"
+        },
+        {
+          "type": "removed",
+          "id": "1187014"
+        }
+      ]
+    },
+    {
+      "name": "Lunar Calling",
+      "id": 429523,
+      "type": "modified",
+      "talent_entry": "Elune's Chosen (Balance, Guardian)",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Starfire (194153)",
+            "Starfire (197628)"
+          ],
+          "id": "1113818",
+          "modifications": [],
+          "values": [
+            {
+              "key": "PvP Coefficient",
+              "prev": "0.625",
+              "new": "0.8"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1118640"
+        },
+        {
+          "type": "removed",
+          "id": "1118641"
+        },
+        {
+          "type": "removed",
+          "id": "1118642"
+        }
+      ]
+    }
+  ]
 }
