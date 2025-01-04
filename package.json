@@ -32,7 +32,7 @@
     "jsondiffpatch": "^0.6.0",
     "marked": "^13.0.1",
     "negotiator": "^1.0.0",
-    "next": "14.2.15",
+    "next": "14.2.21",
     "next-contentlayer2": "0.4.6",
     "next-themes": "^0.3.0",
     "plaiceholder": "^3.0.0",
