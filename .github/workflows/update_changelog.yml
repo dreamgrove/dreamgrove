@@ -1,0 +1,52 @@
+name: Update Changelog and Generate Diff
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+
+jobs:
+  update-and-parse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify your Node.js version
+
+      - name: Install Dependencies
+        run: |
+          cd news
+          npm install axios
+
+      - name: Run update_news.js
+        run: |
+          cd news
+          node update_news.js
+
+      - name: Check for Updates
+        id: check_updates
+        run: |
+          if git diff --quiet news/druid_latest.txt && git diff --quiet news/druid_previous.txt; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run parse.mjs if changes detected
+        if: steps.check_updates.outputs.changes == 'true'
+        run: |
+          cd news
+          node parse.mjs
+
+      - name: Commit and Push Changes
+        if: steps.check_updates.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add news/druid_latest.txt news/druid_previous.txt news/diff.json
+          git commit -m 'changelog: Updating Druid Changelog'
+          git push

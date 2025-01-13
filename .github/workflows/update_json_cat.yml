@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    working-directory: static/sims/cat
+    working-directory: sims/cat
 
 jobs:
   update_json:
@@ -41,7 +41,7 @@ jobs:
             *.json
 
   update_json_2:
-    needs: [ update_json ]
+    needs: [update_json]
     name: Update JSON 2T
     runs-on: ubuntu-latest
     steps:
@@ -74,7 +74,7 @@ jobs:
             *.json
 
   update_json_3:
-    needs: [ update_json_2 ]
+    needs: [update_json_2]
     name: Update JSON 3T
     runs-on: ubuntu-latest
     steps:
@@ -107,7 +107,7 @@ jobs:
             *.json
 
   update_json_4:
-    needs: [ update_json_3 ]
+    needs: [update_json_3]
     name: Update JSON 4T
     runs-on: ubuntu-latest
     steps:
@@ -140,7 +140,7 @@ jobs:
             *.json
 
   update_json_5:
-    needs: [ update_json_4 ]
+    needs: [update_json_4]
     name: Update JSON 5T
     runs-on: ubuntu-latest
     steps:
@@ -174,7 +174,7 @@ jobs:
 
   update_json_d:
     name: Update JSON Dungeon
-    needs: [ update_json_5 ]
+    needs: [update_json_5]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -207,7 +207,7 @@ jobs:
 
   update_json_hoa:
     name: Update JSON HoA Route
-    needs: [ update_json_d ]
+    needs: [update_json_d]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

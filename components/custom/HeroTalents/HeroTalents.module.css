@@ -1,0 +1,44 @@
+@keyframes fadeBalanceToResto {
+  0% {
+    background: url('../../../public/static/images/talents/balance.png') no-repeat center
+      center/cover;
+  }
+  50% {
+    background: url('../../../public/static/images/talents/resto.png') no-repeat center center/cover;
+  }
+  100% {
+    background: url('../../../public/static/images/talents/resto.png') no-repeat center center/cover;
+  }
+}
+
+@keyframes fadeRestoToBalance {
+  0% {
+    background: url('../../../public/static/images/talents/resto.png') no-repeat center center/cover;
+  }
+  50% {
+    background: url('../../../public/static/images/talents/balance.png') no-repeat center
+      center/cover;
+  }
+  100% {
+    background: url('../../../public/static/images/talents/balance.png') no-repeat center
+      center/cover;
+  }
+}
+
+.bg-fade-balance {
+  animation: fadeRestoToBalance 2s forwards;
+  background-size: cover;
+}
+
+.bg-fade-resto {
+  animation: fadeBalanceToResto 2s forwards;
+  background-size: cover;
+}
+
+.border-balance {
+  border-color: #184118;
+}
+
+.border-resto {
+  border-color: #4b62be;
+}

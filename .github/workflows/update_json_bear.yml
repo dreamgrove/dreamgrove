@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    working-directory: static/sims/bear
+    working-directory: sims/bear
 
 jobs:
   update_json:
@@ -41,7 +41,7 @@ jobs:
             *.json
 
   update_json_2:
-    needs: [ update_json ]
+    needs: [update_json]
     name: Update JSON 2T
     runs-on: ubuntu-latest
     steps:
@@ -74,7 +74,7 @@ jobs:
             *.json
 
   update_json_3:
-    needs: [ update_json_2 ]
+    needs: [update_json_2]
     name: Update JSON 3T
     runs-on: ubuntu-latest
     steps:
@@ -107,7 +107,7 @@ jobs:
             *.json
 
   update_json_4:
-    needs: [ update_json_3 ]
+    needs: [update_json_3]
     name: Update JSON 4T
     runs-on: ubuntu-latest
     steps:
@@ -140,7 +140,7 @@ jobs:
             *.json
 
   update_json_5:
-    needs: [ update_json_4 ]
+    needs: [update_json_4]
     name: Update JSON 5T
     runs-on: ubuntu-latest
     steps:
@@ -173,7 +173,7 @@ jobs:
             *.json
 
   update_json_c:
-    needs: [ update_json_5 ]
+    needs: [update_json_5]
     name: Update JSON Catweave
     runs-on: ubuntu-latest
     steps:
@@ -206,7 +206,7 @@ jobs:
             *.json
 
   update_json_d:
-    needs: [ update_json_c ]
+    needs: [update_json_c]
     name: Update JSON Dungeon
     runs-on: ubuntu-latest
     steps:
@@ -239,7 +239,7 @@ jobs:
             *.json
 
   update_json_hoa:
-    needs: [ update_json_d ]
+    needs: [update_json_d]
     name: Update JSON HoA Route
     runs-on: ubuntu-latest
     steps:

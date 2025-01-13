@@ -1,0 +1,15 @@
+.title {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contentWrapper {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.content {
+  padding: 10px;
+}

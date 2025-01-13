@@ -1,0 +1,50 @@
+name: Update APL PTR
+
+on:
+  push:
+    paths:
+      - 'sims/owl/balance_ptr.txt'
+      - 'sims/cat/feral_ptr.txt'
+
+defaults:
+  run:
+    working-directory: sims
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      - name: checkout simc
+        uses: actions/checkout@v4
+        with:
+          repository: simulationcraft/simc
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: './sims/simc'
+      - name: generate APL
+        run: |
+          python generate_apl.py --ptr --spec=owl "./simc"
+          python generate_apl.py --ptr --spec=cat "./simc"
+      - name: setup commit
+        run: |
+          echo "COMMIT_AUTHOR=$(git log -1 --format=%aN)" >> $GITHUB_ENV
+          echo "COMMIT_EMAIL=$(git log -1 --format=%aE)" >> $GITHUB_ENV
+          git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
+          echo >> commit_msg
+          echo >> commit_msg
+          echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
+      - name: commit APL
+        run: |
+          git config --global user.name ${{ env.COMMIT_AUTHOR }}
+          git config --global user.email ${{ env.COMMIT_EMAIL }}
+          cd simc
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes to apl"
+          else
+            git add .
+            git commit -F ../commit_msg
+            git push
+          fi
