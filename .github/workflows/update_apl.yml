@@ -42,8 +42,8 @@ jobs:
           echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
       - name: commit APL
         run: |
-          git config --global user.name ${{ env.COMMIT_AUTHOR }}
-          git config --global user.email ${{ env.COMMIT_EMAIL }}
+          git config --global user.name "${{ env.COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.COMMIT_EMAIL }}"
           cd simc
           if [ -z "$(git status --porcelain)" ]; then
             echo "no changes to apl"
