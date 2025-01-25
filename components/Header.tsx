@@ -40,7 +40,7 @@ const Header = () => {
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
                 <div className="text-3xl font-bold text-[#dd6b20] sm:block">
-                  {siteMetadata.headerTitle.toUpperCase()}
+                  {siteMetadata.headerTitle.capitalize()}
                 </div>
               ) : (
                 siteMetadata.headerTitle
