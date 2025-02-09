@@ -14,7 +14,7 @@ import Npc from './custom/Npc'
 import CheckboxProvider from './custom/CheckboxProvider'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
-import SpellIconRow from './custom/SpellIconRow'
+import Timeline from './custom/Timeline'
 
 export const components: MDXComponents = {
   Image,
@@ -63,5 +63,38 @@ export const components: MDXComponents = {
   Npc,
   CheckboxProvider,
   Collapsible,
-  SpellIconRow,
+  Timeline,
+  p: ({ children, ...props }) => {
+    let id = ''
+    const regex = /^\[\*(.*?)\]/ //Matches [*text]
+    const processChildren = (children) => {
+      if (typeof children === 'string') {
+        const regex = /^\[\*(.*?)\]/
+        const match = children.match(regex)
+        if (match) {
+          id = match[1]
+          return children.replace(regex, '')
+        }
+      } else if (Array.isArray(children)) {
+        const firstElement = [...children][0]
+        if (typeof firstElement === 'string') {
+          const match = firstElement.match(/^\[\*(.*?)\]/)
+          if (match) {
+            id = match[1]
+            const modifiedFirstElement = firstElement.replace(regex, '')
+            return [modifiedFirstElement, ...children.slice(1)]
+          }
+        }
+      }
+      return children
+    }
+    children = processChildren(children)
+    return id ? (
+      <div id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
+        {children}
+      </div>
+    ) : (
+      <p {...props}>{children}</p>
+    )
+  },
 }
