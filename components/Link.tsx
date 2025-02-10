@@ -4,14 +4,6 @@ import type { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
 import Wowhead from './custom/Wowhead'
 
-const capitalize = (url) => {
-  if (!url) return ''
-  return url
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
-}
-
 const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
@@ -50,3 +42,11 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
 }
 
 export default CustomLink
+
+const capitalize = (url) => {
+  if (!url) return ''
+  return url
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
+}

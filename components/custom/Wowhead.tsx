@@ -1,5 +1,6 @@
 import fetch from 'node-fetch'
 import spellData from '../../spellData.json'
+import WowheadIcon from './WowheadIcon'
 
 import Image from 'next/image'
 
@@ -38,14 +39,15 @@ export default async function Wowhead({
   noIcon = false,
   beta = false,
   url = '',
+  showLabel = true,
 }) {
   let display = name
   let displayId = id
-  let imageUrl = ''
   let linkColor = '#d57f43'
   let quality = -1
 
   if (!id) {
+    console.log(id)
     if (type == 'spell') {
       const url = spellData[name]
       if (url) {
@@ -61,20 +63,9 @@ export default async function Wowhead({
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  const res = await fetch(whUrl)
-  const text = await res.text()
-  const regex = new RegExp(`"${displayId}":\\{"name_enus":"[^"]+".*?,"icon":"([^"]+)"`)
-
-  const match = regex.exec(text)
-
-  if (match && match[1]) {
-    const iconFilename = match[1]
-    imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`
-  } else {
-    console.error('Icon not found for ' + displayId)
-  }
-
   if (type == 'item') {
+    const res = await fetch(whUrl)
+    const text = await res.text()
     const qualityRegex = /<b class=\\"q(\d+)\\">/
     const qualityMatch = text.match(qualityRegex)
 
@@ -85,21 +76,13 @@ export default async function Wowhead({
   }
 
   if (!name) {
+    const res = await fetch(whUrl)
     display = formatUrl(res.url)
   }
 
-  const image =
-    noIcon || imageUrl == '' ? (
-      <></>
-    ) : (
-      <Image
-        src={imageUrl}
-        alt={`${display} icon`}
-        width={16}
-        height={16}
-        className="my-0 mr-1 inline-block"
-      />
-    )
+  const icon = noIcon ? null : (
+    <WowheadIcon id={displayId} type={type} name={display} beta={beta} url={url} noLink={true} />
+  )
 
   return (
     <>
@@ -108,8 +91,10 @@ export default async function Wowhead({
           className={`inline-block decoration-2 q${quality}`}
           style={{ color: linkColor, maxWidth: '100%' }}
         >
-          {image}
-          <span className="whitespace-normal text-wrap break-words align-middle">{display}</span>
+          {icon}
+          {showLabel && (
+            <span className="whitespace-normal text-wrap break-words align-middle">{display}</span>
+          )}
         </div>
       ) : (
         <a
@@ -117,8 +102,8 @@ export default async function Wowhead({
           className={`inline decoration-2 q${quality}`}
           style={{ color: linkColor, marginBottom: '1px', textWrap: 'nowrap' }}
         >
-          {image}
-          <span className="mr-1 text-balance">{display}</span>
+          {icon}
+          {showLabel && <span className="mr-1 text-balance">{display}</span>}
         </a>
       )}
     </>
