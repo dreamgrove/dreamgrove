@@ -47,6 +47,7 @@ export default async function Wowhead({
   let quality = -1
 
   if (!id) {
+    console.log(id)
     if (type == 'spell') {
       const url = spellData[name]
       if (url) {

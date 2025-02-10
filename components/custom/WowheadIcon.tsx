@@ -9,6 +9,7 @@ interface WowheadIconProps {
   url?: string
   size?: number
   noLink?: boolean
+  noMargin?: boolean
 }
 
 export default async function WowheadIcon({
@@ -19,6 +20,7 @@ export default async function WowheadIcon({
   url = '',
   size = 16,
   noLink = false,
+  noMargin = false,
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
@@ -38,7 +40,7 @@ export default async function WowheadIcon({
           alt={`${name} icon`}
           width={size}
           height={size}
-          className="my-0 mr-1 inline-block"
+          className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
         />
       )
 
