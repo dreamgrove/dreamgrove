@@ -5,7 +5,14 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useState } from 'react'
 import styles from './HeroTalents.module.css'
 
-function HeroTalentsHeader({ title, id, children }) {
+interface HeroTalentsHeaderProps {
+  title: string
+  id: string
+  children: React.ReactNode
+  titleClassName?: string
+}
+
+function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
   const [isCollapsed, setIsCollapsed] = useState(true)
 
   const arrow = isCollapsed ? (
@@ -14,19 +21,25 @@ function HeroTalentsHeader({ title, id, children }) {
     <IoIosArrowUp className="block h-10 w-10 text-lg" />
   )
 
+  const getBorderStyle = () => {
+    if (id === 'kotg') return styles['border-balance']
+    if (id === 'ec') return styles['border-resto']
+    return styles['border-generic']
+  }
+
+  const getBackgroundStyle = () => {
+    if (id === 'kotg') return styles['bg-fade-resto']
+    if (id === 'ec') return styles['bg-fade-balance']
+    return styles['bg-fade-generic']
+  }
+
   return (
-    <div
-      className={`mb-2 grid rounded-md border-4 ${
-        id === 'kotg' ? styles['border-balance'] : styles['border-resto']
-      }`}
-    >
+    <div className={`mb-2 grid rounded-md border-4 ${getBorderStyle()}`}>
       <div
-        className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${
-          id === 'kotg' ? styles['bg-fade-resto'] : styles['bg-fade-balance']
-        }`}
+        className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${getBackgroundStyle()}`}
         onClick={() => setIsCollapsed((prev) => !prev)}
       >
-        <h3 className="mb-2 mt-2 text-left align-baseline text-xl font-bold">{title}</h3>
+        <h3 className={`mb-2 mt-2 text-left align-baseline text-xl font-bold`}>{title}</h3>
         {arrow}
       </div>
       <div
