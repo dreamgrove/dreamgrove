@@ -24,7 +24,7 @@
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.1.1",
     "contentlayer2": "0.4.6",
-    "esbuild": "0.20.2",
+    "esbuild": "0.25.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",
     "hast-util-from-html-isomorphic": "^2.0.0",
