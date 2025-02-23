@@ -2,25 +2,18 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 'use client'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
-import { useRef, useState, useLayoutEffect } from 'react'
+import { useState } from 'react'
 import styles from './HeroTalents.module.css'
 
-function HeroTalentsHeader({ title, id, children }) {
-  const [isCollapsed, setIsCollapsed] = useState(true)
-  const [maxHeight, setMaxHeight] = useState('0')
-  const contentRef = useRef<HTMLDivElement>(null)
+interface HeroTalentsHeaderProps {
+  title: string
+  id: string
+  children: React.ReactNode
+  titleClassName?: string
+}
 
-  useLayoutEffect(() => {
-    if (contentRef.current) {
-      const content = contentRef.current
-      // Temporarily set maxHeight to auto to measure the full height
-      content.style.maxHeight = 'auto'
-      // Force a reflow by reading scrollHeight
-      const scrollHeight = content.scrollHeight
-      // Apply the height for the collapsed or expanded state
-      setMaxHeight(isCollapsed ? '0' : `100%`)
-    }
-  }, [isCollapsed, children]) // Re-run when either state changes
+function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   const arrow = isCollapsed ? (
     <IoIosArrowDown className="block h-10 w-10 text-lg" />
@@ -28,34 +21,37 @@ function HeroTalentsHeader({ title, id, children }) {
     <IoIosArrowUp className="block h-10 w-10 text-lg" />
   )
 
-  console.log(maxHeight)
+  const getBorderStyle = () => {
+    if (id === 'kotg') return styles['border-balance']
+    if (id === 'ec') return styles['border-resto']
+    return styles['border-generic']
+  }
+
+  const getBackgroundStyle = () => {
+    if (id === 'kotg') return styles['bg-fade-resto']
+    if (id === 'ec') return styles['bg-fade-balance']
+    return styles['bg-fade-generic']
+  }
 
   return (
-    <>
+    <div className={`mb-2 grid rounded-md border-4 ${getBorderStyle()}`}>
       <div
-        className={`mb-2 rounded-md border-4 ${id === 'kotg' ? styles['border-balance'] : styles['border-resto']}`}
+        className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${getBackgroundStyle()}`}
+        onClick={() => setIsCollapsed((prev) => !prev)}
       >
-        <div
-          className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${
-            id === 'kotg' ? styles['bg-fade-resto'] : styles['bg-fade-balance']
-          }`}
-          onClick={() => setIsCollapsed((prev) => !prev)}
-        >
-          <h3 className="mb-2 mt-2 text-left align-baseline text-xl font-bold">{title}</h3>
-          {arrow}
-        </div>
-        <div
-          ref={contentRef}
-          className={`px-8 transition-all duration-300 ease-in-out`}
-          style={{
-            maxHeight: maxHeight,
-            overflow: 'hidden',
-          }}
-        >
-          {children}
+        <h3 className={`mb-2 mt-2 text-left align-baseline text-xl font-bold`}>{title}</h3>
+        {arrow}
+      </div>
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+          isCollapsed ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="px-8">{children}</div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
