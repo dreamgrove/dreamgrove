@@ -42,3 +42,15 @@
 .border-resto {
   border-color: #4b62be;
 }
+
+.border-generic {
+  border-color: #d57f43;
+}
+
+.bg-fade-generic {
+  background:
+    linear-gradient(rgba(73, 44, 23, 0.1), rgba(117, 70, 37, 0.7)),
+    url('../../../public/static/images/talents/generic.png') no-repeat center center/cover;
+  background-size: cover;
+  background-color: #8b4f2b;
+}

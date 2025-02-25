@@ -41,7 +41,7 @@ const useToggleText = () => {
       const shouldDisplay = evaluateCondition(conditionString)
 
       if (element instanceof HTMLElement) {
-        element.style.display = shouldDisplay ? 'list-item' : 'none'
+        element.style.display = shouldDisplay ? '' : 'none'
       }
     })
 
@@ -50,7 +50,7 @@ const useToggleText = () => {
       const shouldDisplay = evaluateCondition(conditionString)
 
       if (element instanceof HTMLElement) {
-        element.style.display = shouldDisplay ? 'list-item' : 'none'
+        element.style.display = shouldDisplay ? '' : 'none'
       }
     })
   }
