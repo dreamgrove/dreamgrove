@@ -15,6 +15,7 @@ import CheckboxProvider from './custom/CheckboxProvider'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
+import YouTube from './custom/YouTube'
 
 export const components: MDXComponents = {
   Image,
@@ -64,6 +65,7 @@ export const components: MDXComponents = {
   CheckboxProvider,
   Collapsible,
   Timeline,
+  YouTube,
   p: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
