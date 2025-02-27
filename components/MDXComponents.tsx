@@ -15,6 +15,7 @@ import CheckboxProvider from './custom/CheckboxProvider'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
+import TalentTree from './custom/TalentTree'
 
 export const components: MDXComponents = {
   Image,
@@ -63,6 +64,7 @@ export const components: MDXComponents = {
   Npc,
   CheckboxProvider,
   Collapsible,
+  TalentTree,
   Timeline,
   p: ({ children, ...props }) => {
     let id = ''
