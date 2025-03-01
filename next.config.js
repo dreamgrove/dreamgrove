@@ -56,11 +56,11 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: `
       default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://wow.zamimg.com https://www.raidbots.com https://mimiron.raidbots.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://wow.zamimg.com https://www.raidbots.com https://mimiron.raidbots.com https://www.youtube.com https://s.ytimg.com https://www.youtube-nocookie.com;
       style-src 'self' 'unsafe-inline' 'unsafe-eval' https://wow.zamimg.com;
-      img-src 'self' data: https://wow.zamimg.com;
+      img-src 'self' data: https://wow.zamimg.com https://i.ytimg.com https://img.youtube.com;
       connect-src 'self' https://nether.wowhead.com;
-      frame-src 'self' https://www.raidbots.com https://mimiron.raidbots.com;
+      frame-src 'self' https://www.raidbots.com https://mimiron.raidbots.com https://www.youtube.com https://www.youtube-nocookie.com;
     `
       .replace(/\s{2,}/g, ' ')
       .trim(),
