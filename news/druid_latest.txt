@@ -4832,7 +4832,7 @@ Attributes       : Passive (6), Do Not Log (8), Can Proc From Procs (122), Can P
 Effects          :
 #1 (id=216520)   : Apply Aura (6) | Modify Max Health% (133)
                    Base Value: 0 | Scaled Value: 0 | SP Coefficient: 0.7 | Target: Self (1)
-#2 (id=345062)   : Apply Aura (6) | Modify Absorb% Done (422)
+#2 (id=345062)   : Apply Aura (6) | Modify Absorb% Received (422)
                    Base Value: 0 | Scaled Value: 0 | SP Coefficient: 0.7 | Target: Self (1)
 Description      : Increases your maximum health and healing received by ${$s1}.1%.
 
