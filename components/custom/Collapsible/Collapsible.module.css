@@ -13,3 +13,5 @@
 .content {
   padding: 10px;
 }
+
+/* Removing the color-specific classes since we're using a standard grey border now */

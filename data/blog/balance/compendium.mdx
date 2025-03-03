@@ -32,7 +32,9 @@ This is approximately ~11% dmg increase from having no set.
 - !Harmony of the Heavens! counts spenders cast outside of !Eclipse! towards your next !Eclipse!'s bonus, but does not increase the damage bonus.
 
 
-<YouTube id="KgOQUvbz9Ms"/>
+<Collapsible title="Video Guide">
+  <YouTube id="KgOQUvbz9Ms"/>
+</Collapsible>
 
 
 # Rotation
@@ -44,7 +46,6 @@ This is approximately ~11% dmg increase from having no set.
   <Checkbox id="OPENFLARE" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
   <Checkbox id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
   <Checkbox id="MEDITATION" spellId={474728} name="Lycara's Meditation" defaultCheck />
-
 </CheckboxProvider>
 
 [*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164815, 164812, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
@@ -95,34 +96,35 @@ This is approximately ~11% dmg increase from having no set.
 
 [*OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
 
+<div className="py-4">
+  <Collapsible title="Not using cooldowns on pull ">
 
-<Collapsible title="Not using cooldowns on pull ">
+  [*~OPENFLARE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*~OPENFLARE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*OPENFLARE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*~OPENFLARE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*~OPENFLARE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164815, 164812, 202347, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*OPENFLARE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164815, 164812, 202347, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+  [*~OPENFLARE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+  [*~OPENFLARE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*~OPENFLARE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*OPENFLARE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*~OPENFLARE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164815, 164812, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*~OPENFLARE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164815, 164812, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164815, 164812, 202347, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-[*OPENFLARE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164815, 164812, 202347, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+  [*~OPENFLARE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-</Collapsible>
+  </Collapsible>
+</div>
 
 </HeroTalentsHeader>
 
