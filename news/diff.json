@@ -1,3 +1,164 @@
 {
-  "delta": []
+  "delta": [
+    {
+      "name": "Ferocious Bite",
+      "id": 22568,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "1",
+          "type": "School Damage : physical",
+          "id": "12790",
+          "modifications": [],
+          "values": [
+            {
+              "type": "added",
+              "key": "PvP Coefficient",
+              "new": "0.9"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "12791"
+        }
+      ]
+    },
+    {
+      "name": "Berserk",
+      "id": 106951,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "idx": "3",
+          "type": "Apply Aura",
+          "subtype": "Add Percent Modifier : Spell Direct Amount",
+          "affected_spells": [
+            "Rip (1079)",
+            "Rake (1822)",
+            "Shred (5221)",
+            "Ferocious Bite (22568)",
+            "Maim (22570)",
+            "Swipe (106785)",
+            "Thrash (106830)",
+            "Moonfire (155625)",
+            "Rake (155722)",
+            "Brutal Slash (202028)",
+            "Feral Frenzy (274838)",
+            "Primal Wrath (285381)",
+            "Sickle of the Lion (363830)",
+            "Rampant Ferocity (391710)",
+            "Adaptive Swarm (391889)",
+            "Thrash (405233)",
+            "Bloodseeker Vines (439531)",
+            "Bursting Growth (440122)",
+            "Ravage (441591)",
+            "Dreadful Wound (441812)"
+          ],
+          "id": "1149776",
+          "modifications": [],
+          "values": [
+            {
+              "key": "PvP Coefficient",
+              "prev": "0.667",
+              "new": "0.3334"
+            }
+          ]
+        },
+        {
+          "type": "removed",
+          "id": "1149777"
+        },
+        {
+          "type": "removed",
+          "id": "1149778"
+        }
+      ]
+    },
+    {
+      "name": "Feral Druid",
+      "id": 137011,
+      "type": "modified",
+      "fields": [],
+      "effects": [
+        {
+          "type": "added",
+          "effect": {
+            "idx": "17",
+            "id": "1177947",
+            "type": "Apply Aura",
+            "subtype": "Modify Auto Attack Damage Done%",
+            "values": [
+              {
+                "Base Value": "62"
+              },
+              {
+                "Scaled Value": "62"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
+        },
+        {
+          "type": "added",
+          "effect": {
+            "idx": "18",
+            "id": "1222119",
+            "type": "Apply Aura",
+            "subtype": "Add Percent Modifier : Spell Direct Amount",
+            "values": [
+              {
+                "Base Value": "-40"
+              },
+              {
+                "Scaled Value": "-40"
+              },
+              {
+                "Target": "Self (1)"
+              },
+              {
+                "Family Flags": "127"
+              }
+            ],
+            "affected_spells": [
+              "Sunfire (164815)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lycara's Meditation",
+      "id": 474728,
+      "type": "modified",
+      "talent_entry": "Generic",
+      "fields": [],
+      "effects": [
+        {
+          "type": "added",
+          "effect": {
+            "idx": "2",
+            "id": "1222964",
+            "type": "Apply Aura",
+            "subtype": "Dummy",
+            "values": [
+              {
+                "Base Value": "2900"
+              },
+              {
+                "Scaled Value": "2900"
+              },
+              {
+                "Target": "Self (1)"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }
