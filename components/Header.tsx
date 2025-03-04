@@ -15,6 +15,8 @@ const Header = () => {
   const [isSticky, setIsSticky] = useState(false)
 
   useEffect(() => {
+    console.info('[Header] Initializing header component with route:', route)
+
     const handleScroll = (route) => {
       if (window.scrollY > 50 && route != '/') {
         setIsSticky(true)
@@ -29,7 +31,7 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] sm:py-8  lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
+      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] sm:py-8 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
     >
       <div className="xl:max-w-8xl flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 xl:px-0">
         <div className="z-10 flex items-center">
@@ -39,8 +41,15 @@ const Header = () => {
                 <Image src={png} alt="Logo" width={60} height={60} />
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="text-3xl font-bold text-[#dd6b20] sm:block">
-                  {siteMetadata.headerTitle}
+                <div className="font-familiar-pro text-5xl font-bold sm:block">
+                  <div className="title-effect">
+                    <span className="title-effect-back">
+                      {siteMetadata.headerTitle.toLowerCase()}.gg
+                    </span>
+                    <span className="title-effect-front">
+                      {siteMetadata.headerTitle.toLowerCase()}.gg
+                    </span>
+                  </div>
                 </div>
               ) : (
                 siteMetadata.headerTitle

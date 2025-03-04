@@ -21,6 +21,11 @@ const CheckboxContext = createContext<CheckboxContextType>({
 export default function CheckboxProvider({ children }) {
   const [radioGroup, setRadioGroup] = useState({})
   const [checkboxStates, setCheckboxStates] = useState({})
+  const logger = console
+
+  logger.info('[CheckboxProvider] Initializing provider', {
+    origin: 'components/custom/CheckboxProvider.tsx',
+  })
 
   const registerCheckbox = useCallback((radio, id, defaultCheck) => {
     if (radio) {
@@ -37,6 +42,13 @@ export default function CheckboxProvider({ children }) {
       ...prev,
       [id]: defaultCheck,
     }))
+
+    logger.info(
+      `[CheckboxProvider] Registered checkbox: ${id}, radio: ${radio || 'none'}, default: ${defaultCheck}`,
+      {
+        origin: 'components/custom/CheckboxProvider.tsx',
+      }
+    )
   }, [])
 
   const checkRadio = useCallback(
@@ -60,6 +72,10 @@ export default function CheckboxProvider({ children }) {
 
           return updatedStates
         })
+
+        logger.info(`[CheckboxProvider] Radio group ${radio} updated with selected id: ${id}`, {
+          origin: 'components/custom/CheckboxProvider.tsx',
+        })
       }
     },
     [radioGroup]
@@ -70,13 +86,17 @@ export default function CheckboxProvider({ children }) {
       ...prev,
       [id]: state,
     }))
+
+    logger.info(`[CheckboxProvider] Toggled checkbox ${id} to ${state}`, {
+      origin: 'components/custom/CheckboxProvider.tsx',
+    })
   }, [])
 
   return (
     <CheckboxContext.Provider
       value={{ radioGroup, checkboxStates, checkRadio, registerCheckbox, toggleCheckbox }}
     >
-      <div className="grid grid-cols-2 gap-x-4 gap-y-1">{children}</div>
+      <div className="grid auto-rows-fr grid-cols-2 gap-x-4 gap-y-2">{children}</div>
     </CheckboxContext.Provider>
   )
 }

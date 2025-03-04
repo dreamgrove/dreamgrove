@@ -16,11 +16,14 @@ import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
 import YouTube from './custom/YouTube'
+import Alert from './custom/Alert'
+import MDXBlockquote from './custom/MDXBlockquote'
 
 export const components: MDXComponents = {
   Image,
   TOCInline,
   a: CustomLink,
+  blockquote: MDXBlockquote,
   li: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
@@ -66,6 +69,7 @@ export const components: MDXComponents = {
   Collapsible,
   Timeline,
   YouTube,
+  Alert,
   p: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]

@@ -34,9 +34,9 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
   }
 
   return (
-    <div className={`mb-2 grid rounded-md border-4 ${getBorderStyle()}`}>
+    <div className={`mb-2 mt-2 grid rounded-md border-2 ${getBorderStyle()}`}>
       <div
-        className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${getBackgroundStyle()}`}
+        className={`flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4 ${getBackgroundStyle()}`}
         onClick={() => setIsCollapsed((prev) => !prev)}
       >
         <h3 className={`mb-2 mt-2 text-left align-baseline text-xl font-bold`}>{title}</h3>
@@ -48,7 +48,7 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-8">{children}</div>
+          <div className="px-2 pt-2 md:px-6 md:pt-8">{children}</div>
         </div>
       </div>
     </div>
