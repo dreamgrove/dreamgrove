@@ -35,9 +35,6 @@ const Checkbox = ({
   }
 
   if (isIcon) {
-    logger.info(`[Checkbox] Rendering icon checkbox for id: ${checkboxId}`, {
-      origin: 'components/custom/Checkbox.tsx',
-    })
     return (
       <div style={{ userSelect: 'none', height: '100%' }} className="relative flex h-full w-full">
         <CheckboxToggler
