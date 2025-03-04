@@ -7,10 +7,6 @@ summary: 'Everything you need to know about Feral Druid'
 ---
 # News
 
-## How much dps am I gaining with this patch?
-
-If you have [Treacherous Transmitter](https://www.wowhead.com/item=221023/treacherous-transmitter?class=11&ilvl=639&spec=103) equipped, you will gain ~9.3% dps just from logging on with the patch. If you use [Skardyn's Grace](https://www.wowhead.com/item=56115/skardyns-grace?class=11&ilvl=639&spec=103) this number is a little bit higher.
-
 ## 11.1 Tier Set
 
 2p: Your spells and abilities have a chance to activate a Winning Streak increasing the damage of your Ferocious Bite, Rip, and Primal Wrath by 3% stacking up to 10 times. Ferocious Bite, Rip, and Primal Wrath have a 15% chance to remove Winning Streak!. Free Ferocious Bites are exempt from this chance.
@@ -19,12 +15,10 @@ If you have [Treacherous Transmitter](https://www.wowhead.com/item=221023/treach
 
 The 2p is worth ~2.1% dps, 2p+4p is worth ~7.1% dps. While this is on the weaker side for 11.1 tier sets, we will still equip 2p2p as long as the new 2p is of hero-track or better. (Sim your character to be certain)
 
-
 ## Talent Builds
 
 All talent builds will now contain !Apex Predator's Craving! once we acquire the new 4p. Switching to this new tier set also means we are likely playing Wildstalker for most if not all bosses in this raid. In other words, Wildstalker will be the default raid hero tree, and Druid of the Claw will be the default mythic+ tree. Additionally, the Druid Class Tree has been updated. Like usual, make sure to grab the throughput nodes first, and then whatever you may need for the fight afterwards.
 
-**Talent Builds on this page will not work properly until 11.1 is live, and WoWHead switches their live talent calculator to the 11.1 version.**
 ## Cyrce's Circlet
 
 Yes we are still going to play this ring in 11.1, and it will end up being our best-in-slot barring future nerfs. (this is updated for the [Legendary Skipper's Citrine](https://www.wowhead.com/item=228646/legendary-skippers-citrine)/[Roaring War-Queen Citrine](https://www.wowhead.com/item=228648/roaring-war-queens-citrine) nerfs.)
@@ -49,8 +43,7 @@ Wind Citrine: Always play [Windsinger's Runed Citrine](https://www.wowhead.com/i
 ![Image Dark](/static/images/feral_single.png)
 </div>
 
-<details>
-<summary>Advanced Single Target Priority</summary>
+<Collapsible title="Advanced Single Target Priority">
 
 **What is a priority list?**
 
@@ -59,28 +52,28 @@ When reading the priority lists below, you should not think about these as steps
 The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
 
 **Pre-Combat:**
-1. !Heart of the Wild!
+1. !Bear Form! incredibly minor dps gain for the opener, you can just sit in !Bear Form! until about to pull, and then use !Prowl! to instantly shift into !Cat Form!.
 2. !Prowl!
 3. !Rake! from stealth.
 
 **Select which talents you have to filter the priority list:**
 
 <CheckboxProvider>
-<Checkbox id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" defaultCheck/>
-<Checkbox id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents"/>
-<Checkbox id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
-<Checkbox id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
-<Checkbox id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" defaultCheck />
-<Checkbox id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
-<Checkbox id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
-<Checkbox id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration"  />
-<Checkbox id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
-<Checkbox id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
-<Checkbox id="Thrashing Claws" spellId={405300} name="Thrashing Claws"  />
-<Checkbox id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
-<Checkbox id="Brutal Slash" spellId={202028} name="Brutal Slash" radio="Brutal Slash" defaultCheck />
-<Checkbox id="Wild Slashes" spellId={390864} name="Wild Slashes" radio="Brutal Slash" />
-<Checkbox id="Shadowmeld" spellId={58984} name="Shadowmeld"  />
+<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" defaultCheck/>
+<Checkbox isIcon id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents"/>
+<Checkbox isIcon id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
+<Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
+<Checkbox isIcon id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" defaultCheck />
+<Checkbox isIcon id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
+<Checkbox isIcon id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
+<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration"  />
+<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
+<Checkbox isIcon id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
+<Checkbox isIcon id="Thrashing Claws" spellId={405300} name="Thrashing Claws"  />
+<Checkbox isIcon id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
+<Checkbox isIcon id="Brutal Slash" spellId={202028} name="Brutal Slash" radio="Brutal Slash" defaultCheck />
+<Checkbox isIcon id="Wild Slashes" spellId={390864} name="Wild Slashes" radio="Brutal Slash" />
+<Checkbox isIcon id="Shadowmeld" spellId={58984} name="Shadowmeld"  />
 
 </CheckboxProvider>
 
@@ -165,14 +158,13 @@ The way this section is written is very formulaic and has the same structure as 
 
 </details>
 
-</details>
+</Collapsible>
 
 ## Multi Target
 
 ![Multi Target Opener](/static/images/feral_multi.png)
 
-<details>
-<summary>Advanced Multi-target Priority</summary>
+<Collapsible title="Advanced Multi-Target Priority">
 
 **What is a priority list?**
 
@@ -181,31 +173,31 @@ When reading the priority lists below, you should not think about these as steps
 The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
 
 **Pre-Combat:**
-1. !Heart of the Wild!
+1. [*Unbridled Swarm AOE] !Adaptive Swarm!
 2. !Prowl!
 3. !Rake! from stealth.
 
 **Select which talents you have to filter the priority list:**
 
 <CheckboxProvider>
-<Checkbox id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck/>
-<Checkbox id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
-<Checkbox id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" defaultCheck />
-<Checkbox id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" />
-<Checkbox id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" radio="Convoke AOE" defaultCheck />
-<Checkbox id="Adaptive Swarm AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm AOE" defaultCheck />
-<Checkbox id="Unbridled Swarm AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm AOE"/>
-<Checkbox id="Incarnation AOE" spellId={102543} name="Incarnation"  radio="Convoke AOE"/>
-<Checkbox id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration"  />
-<Checkbox id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
-<Checkbox id="Bloodtalons AOE" spellId={319439} name="Bloodtalons" defaultCheck />
-<Checkbox id="Rampant Ferocity AOE" spellId={391710} name="Rampant Ferocity" defaultCheck />
-<Checkbox id="Thrashing Claws AOE" spellId={405300} name="Thrashing Claws"  />
-<Checkbox id="Sudden Ambush AOE" spellId={384667} name="Sudden Ambush" defaultCheck />
-<Checkbox id="Brutal Slash AOE" spellId={202028} name="Brutal Slash" radio="Brutal Slash AOE" defaultCheck />
-<Checkbox id="Wild Slashes AOE" spellId={390864} name="Wild Slashes" radio="Brutal Slash AOE" />
-<Checkbox id="Shadowmeld AOE" spellId={58984} name="Shadowmeld"  />
-<Checkbox id="Primal Wrath AOE" spellId={285381} name="Primal Wrath" defaultCheck />
+<Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck/>
+<Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
+<Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" defaultCheck />
+<Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" />
+<Checkbox isIcon id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" radio="Convoke AOE" defaultCheck />
+<Checkbox isIcon id="Adaptive Swarm AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm AOE" defaultCheck />
+<Checkbox isIcon id="Unbridled Swarm AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm AOE"/>
+<Checkbox isIcon id="Incarnation AOE" spellId={102543} name="Incarnation"  radio="Convoke AOE"/>
+<Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration"  />
+<Checkbox isIcon id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
+<Checkbox isIcon id="Bloodtalons AOE" spellId={319439} name="Bloodtalons" defaultCheck />
+<Checkbox isIcon id="Rampant Ferocity AOE" spellId={391710} name="Rampant Ferocity" defaultCheck />
+<Checkbox isIcon id="Thrashing Claws AOE" spellId={405300} name="Thrashing Claws"  />
+<Checkbox isIcon id="Sudden Ambush AOE" spellId={384667} name="Sudden Ambush" defaultCheck />
+<Checkbox isIcon id="Brutal Slash AOE" spellId={202028} name="Brutal Slash" radio="Brutal Slash AOE" defaultCheck />
+<Checkbox isIcon id="Wild Slashes AOE" spellId={390864} name="Wild Slashes" radio="Brutal Slash AOE" />
+<Checkbox isIcon id="Shadowmeld AOE" spellId={58984} name="Shadowmeld"  />
+<Checkbox isIcon id="Primal Wrath AOE" spellId={285381} name="Primal Wrath" defaultCheck />
 </CheckboxProvider>
 
 **AoE priority list (2+ targets):**
@@ -272,8 +264,8 @@ The way this section is written is very formulaic and has the same structure as 
 11. [*Shadowmeld AOE&&~Sudden Ambush AOE] !58984|Shadowmeld! into !Rake! on a target where !Rake! is either missing, in pandemic range, or can be upgraded.
 12. [*Double Clawed Rake AOE] Refresh !Rake!'s that are either missing, or in pandemic range if you're not capped on !Clearcasting! stacks.
 13. [*Wild Slashes AOE] !Swipe! if there are 3 or more targets.
-14. [*Wildstalker AOE] !Rake! if you have no !Rake!'s out. We want at least one !Rake! rolling for the sake of proccing !439531|Bloodseeker Vines!.
-15. [*Lunar Inspiration] Refresh !Moonfire!'s that are either missing, or in pandemic range if you're not capped on !Clearcasting! stacks.
+14. [*Wildstalker AOE&&~Double Clawed Rake AOE] !Rake! if you have no !Rake!'s out. We want at least one !Rake! rolling for the sake of proccing !439531|Bloodseeker Vines!.
+15. [*Lunar Inspiration AOE] Refresh !Moonfire!'s that are either missing, or in pandemic range if you're not capped on !Clearcasting! stacks.
 16. [*~Double Clawed Rake AOE] !Rake! if it's either missing, or in pandemic range.
 17. [*Brutal Slash AOE] !Brutal Slash!
 18. [*Wild Slashes AOE] !Swipe!
@@ -291,17 +283,18 @@ The way this section is written is very formulaic and has the same structure as 
 
 </details>
 
-</details>
+</Collapsible>
 
 # Talents:
-**WARNING: Talent Links will not work properly until 11.1 starts and WoWHead switches the live talent calculator over to 11.1**
 
 ## Class Tree (all pve content)
 
 ![Class Tree Talents](/static/images/FERALCLASS.png)
 
+### Talent Explanations:
+
 <details>
-<summary>Purple Choice Options Explained</summary>
+<summary>Purple Choice Options Explained</summary> 
 
 !Lore of the Grove!: If you talent !Lunar Inspiration!, you should be talenting this as well.
 
@@ -325,6 +318,8 @@ The way this section is written is very formulaic and has the same structure as 
 
 !Ursol's Vortex!: Excellent kiting tool that wont leave mobs spread out all over the place. Can also pair with !Typhoon! as a poor mans mass grip, or just to use typhoon as a soft-kick without splaying the mobs all over the place.
 
+!Mass Entanglement!: More of a niche option compared to !Ursol's Vortex!, !Mass Entanglement! can be good if you want to root a group of mobs that the group does not intend to attack. 
+
 !Innervate!: If your healer told you to talent this. Well that or you want !Nature's Vigil! and/or !Forestwalk!.
 
 !Nature's Vigil!: Solid healing during your cooldown windows, especially in keys. Pair this with !Berserk! a vast majority of the time. I would pick this a vast majority of the time with the Class Tree rework.
@@ -334,10 +329,11 @@ The way this section is written is very formulaic and has the same structure as 
 !Improved Stampeding Roar!: Great in keys/world content for a more frequent movement cooldown between pulls; also frequently played in raids when you need !Stampeding Roar! more often than every 2 minutes.
 
 !474728|Lycara's Meditation!: If you have the points to spare and you will be shapeshifting a decent amount, this is just more damage. It is best in keys, where you often enter !Bear Form!.
+
 </details>
 
 <details>
-<summary>Niche Options Explained</summary>
+<summary>Niche Options Explained</summary> 
 
 !Matted Fur!: If you have nowhere else to put your talent points, this technically does something. It's extremely weak, but technically a defensive increase.
 
@@ -361,12 +357,77 @@ The way this section is written is very formulaic and has the same structure as 
 
 ## Raid Talents:
 
-**Mythic Liberation of Undermine Raid Builds are still a Work-in-Progress**
+Our recommended default hero-tree for raiding is Wildstalker once you acquire at least the 2 piece 11.1 set bonus. That being said, Druid of the Claw may see some play on fights with high AoE.
 
-Our recommended default hero-tree for raiding is Wildstalker. That being said, Druid of the Claw may see some play on fights with high AoE.
+![WS](/static/images/wildstalkerr%2B.png)
 
-<details>
-<summary>Mythic Neru'bar Palace Raid Builds (updated for 11.1, assumes 11.0 4p)</summary>
+<HeroTalentsHeader title="Mythic Liberation of Undermine Raid Builds">
+ 
+> [!WARNING]
+> Builds are based on PTR testing and some guesswork, this section is highly liable to change.
+
+<CheckboxProvider>
+    
+<Checkbox id="10.1 4p" spellId={439528} name="10.1 4p" radio="setbonus" />
+<Checkbox id="2p2p" spellId={439528} name="10.1 2p + 10.0 2p" radio="setbonus"/>
+<Checkbox id="10.0 4p" spellId={441583} name="10.0 4p" radio="setbonus" defaultCheck/>
+
+</CheckboxProvider>
+
+[*10.1 4p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*10.1 4p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYYYMzomxsMWmxYMDDAAAAAAMwAAAAIAY2mZpZbmlNYmBgFzgB"}/>
+
+[*10.1 4p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*10.1 4p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*10.1 4p]<Talents name={"Sprocketmonger Lockenstock"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYYYMzomxsMWmxYMDDAAAAAAMwAAAAIAY2mZpZbmlNYmBgFzgB"}/>
+
+[*10.1 4p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*10.1 4p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYWgxMjaGzyYZGjxMMAAAAAAwADAAAgAgZbmlmtZW2gZGAWMDG"}/>
+
+[*10.1 4p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+
+[*2p2p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*2p2p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMMMmZUzYWGLzYMmhBAAAAAAGYAAAAEAMbzs0sNzyGMzAwiZwA"}/>
+
+[*2p2p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*2p2p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*2p2p]<Talents name={"Sprocketmonger Lockenstock"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMMMmZUzYWGLzYMmhBAAAAAAGYAAAAEAMbzs0sNzyGMzAwiZwA"}/>
+
+[*2p2p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+[*2p2p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMLwYmRNjZZsMjxYGGAAAAAAYgBAAAQAwsNzSz2MLbwMDALmBD"}/>
+
+[*2p2p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+
+
+[*10.0 4p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+[*10.0 4p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+[*10.0 4p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+[*10.0 4p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+[*10.0 4p]<Talents name={"Sprocketmonger Lockenstock"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+[*10.0 4p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+[*10.0 4p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwWwsAPgZG1MmlxyMzYMjZAAAAAAgBAAAAoZWmlZmtBEYBmZAYhBD"}/>
+
+[*10.0 4p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
+
+</HeroTalentsHeader>
+
+
+<Collapsible title="Mythic Neru'bar Palace Raid Builds">
 
 <Talents name={"Ulgrax"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmlZmxY2mtHwYbmZGPwMDAAAAAwSwsBjZG1MmlxyMzYMzMDAAAAAAAAAAAoZWmlZmtBEYBMDALMYA"}/>
 
@@ -384,10 +445,10 @@ Our recommended default hero-tree for raiding is Wildstalker. That being said, D
 
 <Talents name={"Queen Ansurek"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAALBzG8AmZUzYWGLzMjxMzMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
 
-</details>
+</Collapsible>
 
-<details>
-<summary>Generic raid build archetypes.</summary>
+
+<Collapsible title="Generic Raid Build Archetypes">
 
 <Talents name={"WS Pure-ST L Build"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsEMM8AmZUzYWGLzMjxMzMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
 <Talents name={"WS Pure-ST Apex Build (11.1 4p)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYJYY4BMzomxsMWmZGjZmZAAAAAAAwAAAAIAY2mZpZbmlNwMAsYGM"}/>
@@ -397,22 +458,23 @@ Our recommended default hero-tree for raiding is Wildstalker. That being said, D
 
 Please note you can significantly customise the above, see the talent write-up in the following M+ section. Or take inspiration from the given Mythic Raid talents.
 
-</details>
+</Collapsible>
+
 
 ## Dungeon Talents:
 **These talents are still good for 11.1, though new images are on their way soon.**
 
 <CheckboxProvider>
-<Checkbox id="Druid of the Claw Image" spellId={441583} name="Druid of the Claw" radio="image" defaultCheck/>
-<Checkbox id="Wildstalker Image" spellId={439528} name="Wildstalker" radio="image"/>
+<Checkbox isIcon id="Druid of the Claw Image" spellId={441583} name="Druid of the Claw" radio="image" defaultCheck/>
+<Checkbox isIcon id="Wildstalker Image" spellId={439528} name="Wildstalker" radio="image"/>
 
 </CheckboxProvider>
 
 [*Wildstalker Image]
-![WS](/static/images/wsm%2B.jpg)
+![WS](/static/images/wildstalkerm%2B.png)
 
 [*Druid of the Claw Image]
-![DOTC](/static/images/dotcm%2B.jpg)
+![DOTC](/static/images/dotcm%2B.png)
 
 Feral goes into 11.1 with plenty of options yet again when it comes to M+, with both Hero trees creating two distinct options on their own. Embrace these options and find what works for you, there is simply no ‘best’ build, especially because different talents will suit different dungeons and groups. However, listed below are some reference builds you can play around with, and the images above can help guide you to customise these builds to your liking.
 
@@ -468,6 +530,8 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
 
 !391078|Raging Fury! vs !391872|Tiger’s Tenacity!: both are good for both Hero trees, Tiger’s Tenacity is generally a bit better overall, particularly with DOT-focused builds, but Raging Fury is competitive and the added uptime can be useful depending on how long packs are living, or if you simply prefer playing with a higher uptime on !5217|Tiger’s Fury!.
 
+!391078|Raging Fury!/!391872|Tiger's Tenacity! cont.: You can technically drop this node, if and only if you're playing 2x !Carnivorous Instinct! anyway as Druid of the Claw. This nets a small gain in Single Target in exchange for a small loss in AoE. I find this an odd trade-off if you're full sending !Carnivorous Instinct! though, so marked not playing this as niche.
+
 !Brutal Slash! vs !390864|Wild Slashes!: !Brutal Slash! is always better, largely due to it being a relevant dps gain in Single Target, unlike !390864|Wild Slashes!. That being said, !390864|Wild Slashes! has a straightforward way of playing, and is decent enough to comment on. Do NOT pair !390864|Wild Slashes! with !391700|Double-Clawed Rake!, these talents are anti-synergistic.
 
 </details>
@@ -475,7 +539,7 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
 <details>
 <summary>Section 3 Options Explained</summary> 
 
-!319439|Bloodtalons! vs !391972|Lion’s Strength!: Similar to last expansion, feel free to play the latter for an easier option if you are learning the spec or simply prefer it. The difference is probably smaller than sims suggest as you’ll be making less mistakes and can focus that tiny bit more on mechanics or crowd control. 
+!319439|Bloodtalons! vs !391972|Lion’s Strength!: I would almost always play !319439|Bloodtalons!. Optimizing !319439|Bloodtalons! is a very small gain in single target, so even as a new player you will see ~2% more damage there. In AoE, the talents are much closer in overall value, and !Lion's Strength! even wins in burst AoE, so in that regard you can justify !Lion's Strength!, especially since it is easier to play. 
 
 !391888|Adaptive Swarm!: Good for both Hero trees, with the first point being one of the single best options you can take for pure single-target, and I would recommend running it almost all the time as Wildstalker. 2 points into !391951|Unbridled! ‘beekeeping’ is where it gets really interesting if you want more cleave and AOE value, particularly on medium size pulls. However its value drops off on really large AOE.
 
@@ -485,7 +549,7 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
 
 !391347|Rip & Tear! vs !391978|Veinripper!: !391347|Rip & Tear! offers more overall damage, though Veinripper nets more priority damage.
 
-!421432|Saber Jaws!: A pure single-target option for Druid of the Claw, its value will vary significantly based on dungeon.
+!421432|Saber Jaws!: A pure single-target option for Druid of the Claw, its value will vary significantly based on dungeon. Mutually exclusive with the !391347|Rip & Tear! vs !391978|Veinripper! node.
 
 </details>
 
@@ -517,29 +581,28 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
  
 ## Stat Priority:
 
-Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
+> [!WARNING]
+> Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
 
 ## Gems and Enchants
 
-Gems:  1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) and a mixture of the other gems based on your sims. It is not worth slotting in a Stamina gem. Personally don't think [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) is necessary as a Feral Druid, given that we already have a lot of speed, but it would be a disservice to not mention it.
-
-Weapon: [Stonebound Artistry](https://www.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) is our weapon enchant of choice this tier. [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths?crafting-quality=6) is thereotically slightly better in pure single-target, but there won't be much of that this tier.
-
-Chest:  [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance)
-
-Cloak:  [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace)
-
-Legs:  [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit)
-
-Wrist:  [Chant of Armored Avoidance](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance)
-
-Boots:  [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march)
-
-Ring:  You should always sim your own character to determine what enchant to use in this slot. They tend to be very close. If you don't want to sim, [Radiant Mastery](https://www.wowhead.com/item=223677/enchant-ring-radiant-mastery) is usually a safe choice.
+| Slot | Gem/Enchant |
+|------|---------|
+| **Gems** |  1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) and a mixture of the other gems based on your sims. It is not worth slotting in a Stamina gem. Personally don't think [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) is necessary as a Feral Druid, given that we already have a lot of speed, but it would be a disservice to not mention it. |
+| **Weapon** | [Stonebound Artistry](https://www.wowhead.com/item=223765/enchant-weapon-stonebound-artistry) is our weapon enchant of choice this tier. [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths?crafting-quality=6) is slightly better on pure single-target. |
+| **Chest** | [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) |
+| **Cloak** | [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace) |
+| **Legs** | [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit) |
+| **Wrist** | [Chant of Armored Avoidance](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance) |
+| **Boots** | [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march) |
+| **Ring** |  You should always sim your own character to determine what enchant to use in this slot. They tend to be very close. If you don't want to sim, [Radiant Mastery](https://www.wowhead.com/item=223677/enchant-ring-radiant-mastery) is usually a safe choice. |
 
 ## Crafting
 
-The main consideration is whether or not to craft a weapon, or gamble on acquiring [Best-in-Slots](https://www.wowhead.com/ptr-2/item=232526/best-in-slots), our bis weapon for this tier, but also a Very Rare drop. There is also a weapon from the first boss of the raid, if you'll enter Mythic quickly.
+> [!INFO]
+> The biggest question is whether or not to craft a weapon, or gamble on acquiring a myth track weapon early on. (for example [Greasemonkey's Shift Stick](https://www.wowhead.com/item=228892/greasemonkeys-shift-stick?bonus=4800:4786:1511:11991&class=11&ilvl=662&spec=103) from the first boss of the raid, if you'll enter Mythic quickly.) If you do get one, then skip crafting a weapon.
+
+**Crafting Order:**
 
 - [Charged Halberd](https://www.wowhead.com/item=222448/charged-halberd?bonus=8791&class=11&ilvl=636&spec=103) (or any crafted 2h agi weapon) with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension). If you already have a myth track weapon, you can skip this.
 - Sim the best slot for your gear using [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) (if you have weapon with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension)) or [Dawnthread Lining](https://www.wowhead.com/item=222868/dawnthread-lining).
@@ -550,7 +613,8 @@ The main consideration is whether or not to craft a weapon, or gamble on acquiri
 
 These trinket lists are in rough order of strength, assuming the highest item level version of the items. You should always sim your own character to determine which trinkets you should equip. 
 
-**This list is still a Work-in-Progress. Some trinkets are not yet implemented, and may find their way on or off this chart. Check back at a later date.**
+> [!WARNING]
+> This list is not finalized, last minute tuning may impact the positioning of the trinkets. Additionally, [Kujo's Flame Vents](https://www.wowhead.com/item=232546/k-u-j-0-s-flame-vents) is not yet implemented in sims, as it wasn't on the PTR trinket vendor for some reason.
 
 **For use in Raid:**
 - [Eye of Kezan](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) Unfortunately it is everyone's bis so good luck acquiring.
@@ -578,12 +642,14 @@ These trinket lists are in rough order of strength, assuming the highest item le
 - [Shadow-Binding Ritual Knife](https://www.wowhead.com/ptr-2/item=215178/shadow-binding-ritual-knife?bonus=9838:11992:11964&ilvl=665&spec=103)
 - [Reverb Radio](https://www.wowhead.com/ptr-2/item=230194/reverb-radio?class=11&ilvl=678&spec=103)
 
+> [!WARNING]
+> [Eye of Kezan](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) is extremely dungeon and group dependent. I would recommend not playing this, unless you are confident in acquiring high combat uptime.
 
 ### Trinket FAQ
 
 Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
 
-A: By default, none. You can add the buffs yourself by pasting thewarwithin.signet_of_the_priory_party_stats=crit/haste/mastery/versatility into the Custom APL box of your sim. Remove whatever ally stat you dont want to sim.
+A: By default, none. You can add the buffs yourself by pasting `thewarwithin.signet_of_the_priory_party_stats=crit/haste/mastery/versatility` into the Custom APL box of your sim. Remove whatever ally stat you dont want to sim.
 
 Q: [Shadow-Binding Ritual Knife](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife)/[Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103)/[Suspicious Energy Drink](https://www.wowhead.com/ptr-2/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=103) is simming better than some of the higher item level stuff on this list for me, should I use it?
 
@@ -606,15 +672,19 @@ Tracking the strength of different bleeds across multiple/changing mobs is notor
 
 Note: You will not necessarily upgrade every snapshot. Please review the rotation section.
 
-__Which bleeds are snapshotted?__
+__Which bleeds snapshot which buffs?__
 
-1. All Feral dots and bleeds will snapshot at higher values when paired with !5217|Tiger's Fury!
-2. !Rake! will also snapshot 
-    - !Prowl!
-    - !58984|Shadowmeld!
-    - !Sudden Ambush! procs due to !390772|Pouncing Strikes!
-3. !Rip! will also snapshot !Bloodtalons!
-4. !Thrash! will also snapshot !236068|Moment of Clarity!
+| DoT | !Tiger's Fury! | !Pouncing Strikes! | !Bloodtalons! | !Moment of Clarity! |
+| :-: | :-: | :-: | :-: | :-: |
+| !Rake! | Yes | Yes | No | No |
+| !Thrash! | Yes | No | No | Yes |
+| !Rip! | Yes | No | Yes | No |
+| !Lunar Inspiration! | Yes | No | No | No |
+| !Adaptive Swarm! | First Jump Only | No | No | No |
+| !Dreadful Wound! | Upgrades and extends | No | No | No |
+
+> [!TIP]
+> !Pouncing Strikes! can be applied via !58984|Shadowmeld!/!Prowl!/!Sudden Ambush!
 
 A dot will ideally be applied only when 30% or less of the prior dot remains. This triggers a mechanic known as “pandemic,” which is common to most damage over time spells.  
 
