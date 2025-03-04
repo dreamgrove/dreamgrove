@@ -2,8 +2,30 @@
 import React, { useState, useEffect, useContext } from 'react'
 import useToggleText from '../hooks/useToggleText'
 import { CheckboxContext } from './CheckboxProvider'
+import clsx from 'clsx'
 
-const CheckboxToggler = ({ id, defaultCheck = false, radio = '', children, className = '' }) => {
+// Define the prop types to make renderChecked optional
+interface CheckboxTogglerProps {
+  id: string
+  defaultCheck?: boolean
+  radio?: string
+  children: React.ReactNode
+  className?: string
+  isIcon?: boolean
+  checkedContent?: React.ReactNode
+  uncheckedContent?: React.ReactNode
+}
+
+const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
+  id,
+  defaultCheck = false,
+  radio = '',
+  children,
+  className = '',
+  isIcon = false,
+  checkedContent,
+  uncheckedContent,
+}) => {
   const [checked, setChecked] = useState(defaultCheck)
   const { radioGroup, checkRadio, registerCheckbox, toggleCheckbox, checkboxStates } =
     useContext(CheckboxContext)
@@ -26,6 +48,10 @@ const CheckboxToggler = ({ id, defaultCheck = false, radio = '', children, class
     }
     setChecked(newValue)
     toggleText(newValue, id)
+
+    console.info(`[CheckboxToggler] Toggle state for ${id}: ${newValue}`, {
+      origin: 'components/custom/CheckboxToggler.tsx',
+    })
   }
 
   useEffect(() => {
@@ -39,19 +65,25 @@ const CheckboxToggler = ({ id, defaultCheck = false, radio = '', children, class
   useEffect(() => {
     if (checkboxStates[id] !== undefined) {
       setChecked(checkboxStates[id])
-      toggleText(checkboxStates[id], id) // Apply the logic whenever the state changes
+      toggleText(checkboxStates[id], id)
     }
   }, [checkboxStates, id])
 
   return (
-    <label className="flex items-start">
+    <label className={clsx('flex items-start', isIcon && 'w-full')}>
       <input
         className={`mr-2 mt-2 focus:outline-none ${className}`}
         type="checkbox"
         checked={checked}
         onChange={handleToggle}
-      />{' '}
-      <div className="flex-1">{children}</div>
+      />
+      <div className={clsx('flex-1', isIcon && 'w-full')}>
+        {checkedContent && uncheckedContent
+          ? checked
+            ? checkedContent
+            : uncheckedContent
+          : children}
+      </div>
     </label>
   )
 }

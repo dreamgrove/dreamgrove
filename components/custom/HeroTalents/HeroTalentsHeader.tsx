@@ -34,7 +34,7 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
   }
 
   return (
-    <div className={`mb-2 grid rounded-md border-4 ${getBorderStyle()}`}>
+    <div className={`mb-2 mt-2 grid rounded-md border-4 ${getBorderStyle()}`}>
       <div
         className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${getBackgroundStyle()}`}
         onClick={() => setIsCollapsed((prev) => !prev)}

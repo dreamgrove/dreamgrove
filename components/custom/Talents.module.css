@@ -1,17 +1,30 @@
 .container {
   opacity: 0;
-  max-height: 1000px; /* Adjust this value if needed */
+  max-height: 0;
   overflow: hidden;
   transition:
     opacity 0.3s ease,
     max-height 0.5s ease;
+  user-select: none; /* Prevent content selection */
 }
 
 .show {
   opacity: 1;
+  max-height: 1000px; /* Adjust this value if needed */
+  overflow-x: hidden;
 }
 
 .hide {
   opacity: 0;
   max-height: 0;
+}
+
+.iframe-fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  will-change: opacity; /* Optimize for animations */
+}
+
+.iframe-fade-in {
+  opacity: 1;
 }

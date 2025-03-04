@@ -57,6 +57,24 @@ h1.content-header::before {
   text-align: left;
 }
 
+/* Alert component styles */
+.alert-content > p:first-child {
+  @apply mt-0;
+}
+
+.alert-content > p:last-child {
+  @apply mb-0;
+}
+
+.alert-content a {
+  @apply underline;
+}
+
+/* Remove top margin from markdown alert titles */
+.markdown-alert-title {
+  @apply mt-0 !important;
+}
+
 @font-face {
   font-family: 'magnificent';
   src: url('../public/fonts/Magnificent Serif.ttf') format('truetype');

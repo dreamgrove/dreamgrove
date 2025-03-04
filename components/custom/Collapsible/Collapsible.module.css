@@ -14,4 +14,21 @@
   padding: 10px;
 }
 
+/* Collapsible container styling */
+.container {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: black;
+}
+
+/* Remove top border when a collapsible follows another collapsible */
+.container + .container {
+  border-top: none;
+}
+
+/* Dark mode support */
+:global(.dark) .container {
+  border-color: #c4c4c4;
+}
+
 /* Removing the color-specific classes since we're using a standard grey border now */
