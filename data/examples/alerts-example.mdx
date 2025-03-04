@@ -1,0 +1,101 @@
+---
+title: 'Using Alerts in MDX'
+summary: 'A guide to using alert components in your MDX content'
+---
+
+# Using Alerts in MDX
+
+This guide demonstrates how to use alert components in your MDX content.
+
+## Basic Alerts
+
+You can use alerts in two ways:
+
+### 1. Using the Alert Component Directly
+
+You can use the Alert component directly in your MDX:
+
+<Alert type="info">
+  This is an info alert. It provides general information to the reader.
+</Alert>
+
+<Alert type="warning">
+  This is a warning alert. It warns the reader about potential issues.
+</Alert>
+
+<Alert type="error">
+  This is an error alert. It indicates something that's incorrect or problematic.
+</Alert>
+
+<Alert type="success">
+  This is a success alert. It indicates a successful operation or positive outcome.
+</Alert>
+
+<Alert type="note">
+  This is a note alert. It provides additional notes or tips.
+</Alert>
+
+### 2. Using GitHub-style Blockquote Syntax
+
+Alternatively, you can use GitHub-style blockquote syntax:
+
+> [!INFO]
+> This is an info alert using blockquote syntax.
+> 
+> It can span multiple paragraphs.
+
+> [!WARNING]
+> This is a warning alert using blockquote syntax.
+
+> [!ERROR]
+> This is an error alert using blockquote syntax.
+
+> [!SUCCESS]
+> This is a success alert using blockquote syntax.
+
+> [!NOTE]
+> This is a note alert using blockquote syntax.
+
+## Alerts with Custom Titles
+
+You can also add custom titles to your alerts:
+
+<Alert type="info" title="Custom Info Title">
+  This is an info alert with a custom title.
+</Alert>
+
+<Alert type="warning" title="Important Warning">
+  This is a warning alert with a custom title.
+</Alert>
+
+## Alerts with Rich Content
+
+Alerts can contain rich content, including links, code, and more:
+
+<Alert type="info">
+  You can include [links](https://example.com) in your alerts.
+  
+  You can also include code snippets:
+  
+  ```js
+  function hello() {
+    console.log("Hello, world!");
+  }
+  ```
+  
+  And lists:
+  
+  - Item 1
+  - Item 2
+  - Item 3
+</Alert>
+
+## When to Use Alerts
+
+- **Info alerts**: Use for general information, tips, or additional context
+- **Warning alerts**: Use to warn users about potential issues or things to be careful about
+- **Error alerts**: Use to highlight errors, problems, or incorrect approaches
+- **Success alerts**: Use to indicate successful operations or positive outcomes
+- **Note alerts**: Use for additional notes, tips, or asides
+
+Alerts help make your content more scannable and highlight important information for your readers. 

@@ -6,6 +6,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { FaAngleDown } from 'react-icons/fa'
 import { FaAngleUp } from 'react-icons/fa'
 import { useLogger } from '@/components/hooks/useLogger'
+import { useIntersectionObserver } from '@/components/hooks/useIntersectionObserver'
 
 import styles from './Talents.module.css'
 
@@ -15,11 +16,29 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   const [iframeWidth, setIframeWidth] = useState(700)
   const [iframeLoaded, setIframeLoaded] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [shouldRenderIframe, setShouldRenderIframe] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const iframeRef = useRef(null)
   const logger = useLogger('Talents')
 
+  // Use intersection observer to detect when the component is in view
+  const [headerRef, isHeaderInView] = useIntersectionObserver<HTMLDivElement>(
+    {
+      rootMargin: '200px', // Load a bit before it comes into view
+      threshold: 0,
+    },
+    `Talents-${name}`
+  )
+
   const arrow = !isVisible ? <FaAngleDown /> : <FaAngleUp />
+
+  // Effect to handle lazy loading of iframe when header is in view
+  useEffect(() => {
+    if (isHeaderInView && !shouldRenderIframe) {
+      logger.info(`Talent "${name}" is in view, preparing to render iframe`)
+      setShouldRenderIframe(true)
+    }
+  }, [isHeaderInView, shouldRenderIframe, name, logger])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -113,6 +132,7 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   return (
     <div className="mb-4 w-full border-y-2 border-black dark:border-[#c4c4c4] " ref={containerRef}>
       <div
+        ref={headerRef}
         onClick={toggleVisibility}
         className="flex h-auto cursor-pointer items-center justify-between "
       >
@@ -149,32 +169,34 @@ export default function Talents({ name, talents, mimiron = false, open = false }
             </div>
           )}
 
-          {/* Always render the iframe but only show it when needed */}
-          <div
-            style={{
-              display: showContent && loaded ? 'block' : 'none',
-              position: 'relative',
-            }}
-          >
-            <iframe
-              ref={iframeRef}
-              title={name}
-              src={iframeUrl}
-              width={`${calculatedIframeWidth}px`}
-              height={iframeWidth * 0.64}
-              className={`rounded-sm border-none bg-[#282828] ${styles['iframe-fade']} ${loaded ? styles['iframe-fade-in'] : ''}`}
+          {/* Only render the iframe when needed and component is in view */}
+          {shouldRenderIframe && (
+            <div
               style={{
-                marginLeft: '-5px', // Shift slightly left to hide left empty space if needed
+                display: showContent && loaded ? 'block' : 'none',
                 position: 'relative',
-                left: '0',
-                right: '-10px', // Allow overflow on the right
               }}
-              onLoad={handleIframeLoad}
-            />
-          </div>
+            >
+              <iframe
+                ref={iframeRef}
+                title={name}
+                src={iframeUrl}
+                width={`${calculatedIframeWidth}px`}
+                height={iframeWidth * 0.64}
+                className={`rounded-sm border-none bg-[#282828] ${styles['iframe-fade']} ${loaded ? styles['iframe-fade-in'] : ''}`}
+                style={{
+                  marginLeft: '-5px', // Shift slightly left to hide left empty space if needed
+                  position: 'relative',
+                  left: '0',
+                  right: '-10px', // Allow overflow on the right
+                }}
+                onLoad={handleIframeLoad}
+              />
+            </div>
+          )}
 
-          {/* Hidden iframe for preloading - always present but invisible */}
-          {!iframeLoaded && (
+          {/* Hidden iframe for preloading - only render when component is in view */}
+          {shouldRenderIframe && !iframeLoaded && (
             <div
               style={{
                 position: 'absolute',
