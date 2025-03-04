@@ -41,7 +41,21 @@ const TocItem: React.FC<TocItemProps> = ({
           marginTop: `${item.depth === 1 ? '12px ' : '5px'}`,
         }}
       >
-        <a onClick={() => toggleNav()} href={targetUrl}>
+        <a
+          onClick={(e) => {
+            e.preventDefault()
+            const element = document.querySelector(targetUrl)
+            if (element) {
+              // First close the sidebar
+              toggleNav()
+              // Then scroll to the element after a small delay
+              setTimeout(() => {
+                element.scrollIntoView({ behavior: 'smooth' })
+              }, 300)
+            }
+          }}
+          href={targetUrl}
+        >
           {item.value}
         </a>
       </li>
