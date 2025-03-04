@@ -5,6 +5,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { FaAngleDown } from 'react-icons/fa'
 import { FaAngleUp } from 'react-icons/fa'
+import { LuSwords } from 'react-icons/lu'
+
 import { useLogger } from '@/components/hooks/useLogger'
 import { useIntersectionObserver } from '@/components/hooks/useIntersectionObserver'
 
@@ -128,7 +130,10 @@ export default function Talents({ name, talents, mimiron = false, open = false }
         onClick={toggleVisibility}
         className="flex h-auto cursor-pointer items-center justify-between px-2 "
       >
-        <div className="my-2 select-none text-left text-lg font-bold">{name}</div>
+        <div className="my-2 flex select-none items-center text-left text-lg font-bold">
+          <LuSwords className="mr-2" />
+          {name}
+        </div>
         {arrow}
       </div>
       <div
