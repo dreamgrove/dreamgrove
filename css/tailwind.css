@@ -111,6 +111,43 @@ h1.content-header::before {
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'familiar-pro';
+  src: url('../public/fonts/Familiar Pro-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+.font-familiar-pro {
+  font-family: 'familiar-pro', sans-serif;
+}
+
+.title-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.title-effect-back {
+  position: absolute;
+  left: -2px;
+  top: 2px;
+  color: #dd6b20;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.title-effect-front {
+  position: relative;
+  color: white;
+  z-index: 2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.title-effect:hover .title-effect-back {
+  left: -4px;
+  top: 2px;
+}
+
 /*override for wowhead's item white in light mode*/
 html[style*='color-scheme: light;'] a.q1 {
   color: darkslategrey !important;
