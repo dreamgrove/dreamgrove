@@ -39,11 +39,11 @@ This is approximately ~11% dmg increase from having no set.
 
 <HeroTalentsHeader id="generic" title="Openers">
 <CheckboxProvider>
-  <Checkbox id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
-  <Checkbox id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
-  <Checkbox id="OPENFLARE" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
-  <Checkbox id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-  <Checkbox id="MEDITATION" spellId={474728} name="Lycara's Meditation" defaultCheck />
+  <Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
+  <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
+  <Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
+  <Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
+  <Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" defaultCheck />
 </CheckboxProvider>
 
 [*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164815, 164812, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
@@ -134,14 +134,14 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
 <CheckboxProvider>
-    <Checkbox id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-    <Checkbox id="Control of the Dream" spellId={434249} name="Control of the Dream" defaultCheck radio="Control of the Dream" />
-    <Checkbox id="StarweaverKOTG" spellId={393940} name="Starweaver" />
-    <Checkbox id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
-    <Checkbox id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon" />
-    <Checkbox id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
-    <Checkbox id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
-    <Checkbox id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
+    <Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
+    <Checkbox isIcon id="Control of the Dream" spellId={434249} name="Control of the Dream" defaultCheck radio="Control of the Dream" />
+    <Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
+    <Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
+    <Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon" />
+    <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
+    <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
+    <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
  </CheckboxProvider>
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -182,18 +182,16 @@ When reading the priority lists below, you should not think of these as steps to
 <HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
 
 <CheckboxProvider>
-  
-    <Checkbox id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck radio="Lunar Calling" /> 
-    <Checkbox id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
-    <Checkbox id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" /> 
-    <Checkbox id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-    <Checkbox id="New MoonEC" spellId={274281} name="New Moon" radio="New Moon" /> 
-    <Checkbox id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
-    <Checkbox id="StarweaverEC" spellId={393940} name="Starweaver" /> 
-    <Checkbox id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" /> 
-    <Checkbox id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
-    <Checkbox id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
- 
+  <Checkbox isIcon id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck radio="Lunar Calling" /> 
+  <Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
+  <Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" /> 
+  <Checkbox isIcon id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
+  <Checkbox isIcon id="New MoonEC" spellId={274281} name="New Moon" radio="New Moon" /> 
+  <Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
+  <Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" /> 
+  <Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" /> 
+  <Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
+  <Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
 </CheckboxProvider>
 
 - [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
@@ -236,13 +234,13 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
 <CheckboxProvider>
-<Checkbox id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" />
-<Checkbox id="New MoonKAOE" spellId={274281} name="New Moon" radio="New Moon" />
-<Checkbox id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
-<Checkbox id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
-<Checkbox id="StarweaverKAOE" spellId={393940} name="Starweaver" />
-<Checkbox id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="Convoke the Spirits" />
-<Checkbox id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
+  <Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" />
+  <Checkbox isIcon id="New MoonKAOE" spellId={274281} name="New Moon" radio="New Moon" />
+  <Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
+  <Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
+  <Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
+  <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="Convoke the Spirits" />
+  <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
 </CheckboxProvider>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
@@ -278,15 +276,15 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
 <CheckboxProvider>
-<Checkbox id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of Nature"/>
-<Checkbox id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoE"/>
-<Checkbox id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoE"/>
-<Checkbox id="Stellar FlareECAoE" spellId={202347} name="Stellar Flare"/>
-<Checkbox id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
-<Checkbox id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
-<Checkbox id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
-<Checkbox id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
-<Checkbox id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
+  <Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of Nature"/>
+  <Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoE"/>
+  <Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoE"/>
+  <Checkbox isIcon id="Stellar FlareECAoE" spellId={202347} name="Stellar Flare"/>
+  <Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
+  <Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
+  <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
+  <Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
+  <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
 </CheckboxProvider>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
@@ -354,7 +352,8 @@ When using !Elune's Chosen! and not talented into !391528|Convoke!, you can use 
 
 ## Raid
 
-### These builds will be updated as people are progressing the raid and builds are more solidified and figured out.
+> [!NOTE]
+> These builds will be updated as people are progressing the raid and builds are more solidified and figured out.
 
 <Talents name={"Single Target Without New 4pc"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGmZbGLjZmZMLzYmxMGbYjBYA22GLYamZZEAAAgNzMzMDsZgB"}/>
 

@@ -30,6 +30,7 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
   const { radioGroup, checkRadio, registerCheckbox, toggleCheckbox, checkboxStates } =
     useContext(CheckboxContext)
   const toggleText = useToggleText()
+  const logger = console
 
   useEffect(() => {
     if (radio) {
@@ -37,6 +38,10 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
     } else {
       toggleCheckbox(id, defaultCheck)
     }
+
+    logger.info(`[CheckboxToggler] Registered ${id} with default state: ${defaultCheck}`, {
+      origin: 'components/custom/CheckboxToggler.tsx',
+    })
   }, [radio, id, defaultCheck, registerCheckbox, toggleCheckbox])
 
   const handleToggle = () => {
@@ -49,7 +54,7 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
     setChecked(newValue)
     toggleText(newValue, id)
 
-    console.info(`[CheckboxToggler] Toggle state for ${id}: ${newValue}`, {
+    logger.info(`[CheckboxToggler] Toggle state for ${id}: ${newValue}`, {
       origin: 'components/custom/CheckboxToggler.tsx',
     })
   }
@@ -67,17 +72,17 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
       setChecked(checkboxStates[id])
       toggleText(checkboxStates[id], id)
     }
-  }, [checkboxStates, id])
+  }, [checkboxStates, id, toggleText])
 
   return (
-    <label className={clsx('flex items-start', isIcon && 'w-full')}>
+    <label className={clsx('flex h-full', isIcon ? 'h-full w-full' : 'items-start')}>
       <input
         className={`mr-2 mt-2 focus:outline-none ${className}`}
         type="checkbox"
         checked={checked}
         onChange={handleToggle}
       />
-      <div className={clsx('flex-1', isIcon && 'w-full')}>
+      <div className={clsx('flex-1', isIcon && 'h-full w-full')}>
         {checkedContent && uncheckedContent
           ? checked
             ? checkedContent

@@ -136,12 +136,12 @@ export default function Talents({ name, talents, mimiron = false, open = false }
         onClick={toggleVisibility}
         className="flex h-auto cursor-pointer items-center justify-between "
       >
-        <div className="my-2 select-none font-bold">{name}</div>
+        <div className="my-2 select-none text-left font-bold">{name}</div>
         {arrow}
       </div>
       <div
         className={`${styles.container} ${isVisible ? styles.show : styles.hide}`}
-        style={{ backgroundColor: 'black', width: '100%', overflow: 'hidden' }}
+        style={{ backgroundColor: '#282828', width: '100%', overflow: 'hidden' }}
       >
         <div style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
           {/* Loading placeholder - shown while iframe is loading */}

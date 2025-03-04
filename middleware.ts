@@ -11,23 +11,17 @@ function getLocale(request: NextRequest) {
 
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
   const matchedLocale = match(languages, locales, defaultLocale)
-  console.log('Detected locale:', matchedLocale)
   return matchedLocale
 }
 
 export function middleware(request: NextRequest) {
   const fullPath = request.url
-  console.log('Full URL:', fullPath)
-
   const urlPath = new URL(fullPath).pathname
-  console.log('URL Path:', urlPath)
 
   const isCompendiumPage = urlPath.endsWith('/compendium')
-  console.log('Is Compendium Page:', isCompendiumPage)
 
   const localePrefixRegex = new RegExp(`/(en-US|ko-KR|kr)/`)
   const hasLocalePrefix = localePrefixRegex.test(urlPath)
-  console.log('Has Locale Prefix:', hasLocalePrefix)
 
   const isPrefetch = request.headers.get('x-middleware-prefetch') === '1'
 
@@ -39,15 +33,12 @@ export function middleware(request: NextRequest) {
         `${urlPath.replace('/compendium', '/kr/compendium')}`,
         request.url
       )
-      console.log('Redirecting to:', redirectUrl.toString())
       return NextResponse.redirect(redirectUrl)
     } else {
-      console.log('Locale is not ko-KR, no redirect needed')
       return NextResponse.next()
     }
   }
 
-  console.log('No redirect needed, continuing to:', urlPath)
   return NextResponse.next()
 }
 

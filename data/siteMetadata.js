@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Dreamgrove',
-  author: 'Dreamgrove',
+  author: 'thevinter',
   headerTitle: 'Dreamgrove',
   description:
     'A website for resources, guides, theorycrafting, and discussion about all things Druid.',
