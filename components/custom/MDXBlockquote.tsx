@@ -6,11 +6,6 @@ interface MDXBlockquoteProps {
 }
 
 const MDXBlockquote: React.FC<MDXBlockquoteProps> = ({ children }) => {
-  const logger = console
-  logger.info('[MDXBlockquote] Processing blockquote content', {
-    origin: 'components/custom/MDXBlockquote.tsx',
-  })
-
   // Check if this is an alert blockquote
   if (React.isValidElement(children) && children.props.children) {
     const childrenArray = React.Children.toArray(children.props.children)
@@ -30,9 +25,6 @@ const MDXBlockquote: React.FC<MDXBlockquoteProps> = ({ children }) => {
             | 'error'
             | 'success'
             | 'note'
-          logger.info(`[MDXBlockquote] Detected alert type: ${alertType}`, {
-            origin: 'components/custom/MDXBlockquote.tsx',
-          })
 
           // Remove the alert type from the content
           const restOfContent = firstChild

@@ -122,13 +122,13 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   const showContent = isVisible || isAnimating
 
   return (
-    <div className="mb-4 w-full border-y-2 border-black dark:border-[#c4c4c4] " ref={containerRef}>
+    <div className={`mb-4 w-full ${styles.borderContainer}`} ref={containerRef}>
       <div
         ref={headerRef}
         onClick={toggleVisibility}
-        className="flex h-auto cursor-pointer items-center justify-between "
+        className="flex h-auto cursor-pointer items-center justify-between px-2 "
       >
-        <div className="my-2 select-none text-left font-bold">{name}</div>
+        <div className="my-2 select-none text-left text-lg font-bold">{name}</div>
         {arrow}
       </div>
       <div

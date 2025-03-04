@@ -22,10 +22,6 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
     return acc
   }, [])
 
-  logger.info(
-    `Rendering Timeline with ${spellIds.length} spells (${processedSpells.length} unique) using alternating pattern`
-  )
-
   return (
     <div>
       {children && <div className="mb-1 mt-4 text-center text-lg font-medium">{children}</div>}

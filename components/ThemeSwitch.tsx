@@ -54,8 +54,8 @@ const ThemeSwitch = () => {
   useEffect(() => setMounted(true), [])
 
   return (
-    <div className="mr-5">
-      <Menu as="div" className="relative inline-block text-left">
+    <div className="mr-5 ">
+      <Menu as="div" className="relative inline-block text-left align-super">
         <div className="dark:hover:text-primary-400 hover:text-primary-500">
           <Menu.Button className="align-middle" aria-label="Theme Toggle">
             {mounted ? resolvedTheme === 'dark' ? <Moon /> : <Sun /> : <Blank />}

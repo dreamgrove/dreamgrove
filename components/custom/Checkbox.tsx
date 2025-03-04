@@ -16,9 +16,6 @@ const Checkbox = ({
   children,
 }) => {
   const logger = console
-  logger.info(`[Checkbox] Rendering checkbox with id: ${id || spellId}`, {
-    origin: 'components/custom/Checkbox.tsx',
-  })
 
   const checkboxId = id === '' ? spellId : id
 

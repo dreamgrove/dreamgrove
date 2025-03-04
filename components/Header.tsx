@@ -26,17 +26,20 @@ const Header = () => {
     }
 
     window.addEventListener('scroll', () => handleScroll(route))
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      console.info('[Header] Removing scroll event listener')
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [route])
 
   return (
     <header
       className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] sm:py-8 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
     >
-      <div className="xl:max-w-8xl flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 xl:px-0">
-        <div className="z-10 flex items-center">
+      <div className="xl:max-w-8xl flex w-full max-w-6xl items-end justify-between px-4 sm:px-6 xl:px-0">
+        <div className="z-10 flex items-end">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
-            <div className="flex items-center">
+            <div className="flex items-end">
               <div className="mr-3 hidden sm:block">
                 <Image src={png} alt="Logo" width={60} height={60} />
               </div>
@@ -57,15 +60,15 @@ const Header = () => {
             </div>
           </Link>
         </div>
-        <div className="flex items-center space-x-4 sm:space-x-6">
-          <div className="hidden items-center space-x-4 lg:flex">
+        <div className="flex items-end space-x-4 sm:space-x-6">
+          <div className="hidden items-end space-x-4 lg:flex">
             {headerNavLinks
               .filter((link) => link.href !== '/')
               .map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="dark:hover:text-primary-400 mt-[4px] hidden text-xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block"
+                  className="dark:hover:text-primary-400 text-2xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block"
                 >
                   {link.title}
                 </Link>
