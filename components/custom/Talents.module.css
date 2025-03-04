@@ -28,3 +28,35 @@
 .iframe-fade-in {
   opacity: 1;
 }
+
+/* Fading border container */
+.borderContainer {
+  position: relative;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.borderContainer::before,
+.borderContainer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  z-index: 1;
+}
+
+.borderContainer::before {
+  top: 0;
+}
+
+.borderContainer::after {
+  bottom: 0;
+}
+
+/* Dark mode support */
+:global(.dark) .borderContainer::before,
+:global(.dark) .borderContainer::after {
+  background: linear-gradient(to right, transparent, #636363 5%, #636363 95%, transparent);
+}

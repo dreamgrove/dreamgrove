@@ -5,6 +5,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { FaAngleDown } from 'react-icons/fa'
 import { FaAngleUp } from 'react-icons/fa'
+import { LuSwords } from 'react-icons/lu'
+
 import { useLogger } from '@/components/hooks/useLogger'
 import { useIntersectionObserver } from '@/components/hooks/useIntersectionObserver'
 
@@ -35,7 +37,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   // Effect to handle lazy loading of iframe when header is in view
   useEffect(() => {
     if (isHeaderInView && !shouldRenderIframe) {
-      logger.info(`Talent "${name}" is in view, preparing to render iframe`)
       setShouldRenderIframe(true)
     }
   }, [isHeaderInView, shouldRenderIframe, name, logger])
@@ -46,7 +47,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
         // First try to get width from our own container
         if (containerRef.current) {
           const containerWidth = containerRef.current.clientWidth
-          logger.info(`Container width: ${containerWidth}px`)
 
           if (containerWidth > 0) {
             setIframeWidth(containerWidth)
@@ -58,7 +58,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
         const mainElement = document.getElementById('main')
         if (mainElement) {
           const width = mainElement.clientWidth
-          logger.info(`Main element width: ${width}px`)
           setIframeWidth(width)
         }
       }
@@ -92,7 +91,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
       return () => clearTimeout(timeoutId)
     } else if (iframeLoaded) {
       // If iframe is already loaded, show it immediately
-      logger.info(`Iframe for "${name}" was preloaded, showing immediately`)
       setTimeout(() => {
         setLoaded(true)
       }, 50)
@@ -100,7 +98,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   }, [isVisible, iframeLoaded, name, logger])
 
   const toggleVisibility = () => {
-    logger.info(`Toggling talents visibility for "${name}" to ${!isVisible}`)
     setIsVisible((prev) => !prev)
   }
 
@@ -109,9 +106,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
 
   // Function to handle iframe loading
   const handleIframeLoad = () => {
-    logger.info(
-      `Talents iframe for "${name}" loaded with width: ${calculatedIframeWidth}px (original: ${iframeWidth}px)`
-    )
     setIframeLoaded(true)
 
     // Only update the loaded state if the section is visible
@@ -130,13 +124,16 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   const showContent = isVisible || isAnimating
 
   return (
-    <div className="mb-4 w-full border-y-2 border-black dark:border-[#c4c4c4] " ref={containerRef}>
+    <div className={`mb-4 w-full ${styles.borderContainer}`} ref={containerRef}>
       <div
         ref={headerRef}
         onClick={toggleVisibility}
-        className="flex h-auto cursor-pointer items-center justify-between "
+        className="flex h-auto cursor-pointer items-center justify-between px-2 "
       >
-        <div className="my-2 select-none text-left font-bold">{name}</div>
+        <div className="my-2 flex select-none items-center text-left text-lg font-bold">
+          <LuSwords className="mr-2" />
+          {name}
+        </div>
         {arrow}
       </div>
       <div

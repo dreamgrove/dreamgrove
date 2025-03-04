@@ -17,10 +17,10 @@ const Collapsible = ({ title, children, type = 'info' }) => {
   return (
     <div className={`grid ${styles.container}`}>
       <button
-        className="flex h-auto w-full cursor-pointer items-center justify-between "
+        className="flex h-auto w-full cursor-pointer items-center justify-between px-4 "
         onClick={toggle}
       >
-        <span className="my-2 text-left text-lg font-bold">{title}</span>
+        <span className="my-2  text-left text-lg font-bold">{title}</span>
         {isOpen ? <FaAngleUp /> : <FaAngleDown />}
       </button>
       <div

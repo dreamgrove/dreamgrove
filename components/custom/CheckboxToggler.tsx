@@ -38,10 +38,6 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
     } else {
       toggleCheckbox(id, defaultCheck)
     }
-
-    logger.info(`[CheckboxToggler] Registered ${id} with default state: ${defaultCheck}`, {
-      origin: 'components/custom/CheckboxToggler.tsx',
-    })
   }, [radio, id, defaultCheck, registerCheckbox, toggleCheckbox])
 
   const handleToggle = () => {
@@ -53,10 +49,6 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
     }
     setChecked(newValue)
     toggleText(newValue, id)
-
-    logger.info(`[CheckboxToggler] Toggle state for ${id}: ${newValue}`, {
-      origin: 'components/custom/CheckboxToggler.tsx',
-    })
   }
 
   useEffect(() => {

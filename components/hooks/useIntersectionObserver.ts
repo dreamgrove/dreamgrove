@@ -28,7 +28,6 @@ export const useIntersectionObserver = <T extends Element>(
       ([entry]) => {
         const newIsIntersecting = entry.isIntersecting
         if (newIsIntersecting !== isIntersecting) {
-          logger.info(`Element intersection state changed to: ${newIsIntersecting}`)
           setIsIntersecting(newIsIntersecting)
         }
       },
@@ -39,11 +38,9 @@ export const useIntersectionObserver = <T extends Element>(
       }
     )
 
-    logger.info('Setting up intersection observer')
     observer.observe(element)
 
     return () => {
-      logger.info('Cleaning up intersection observer')
       observer.disconnect()
     }
   }, [options.root, options.rootMargin, options.threshold, isIntersecting, logger])
