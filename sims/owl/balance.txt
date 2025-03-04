@@ -112,6 +112,6 @@ actions.st+=/full_moon,if=astral_power.deficit>variable.passive_asp+energize_amo
 actions.st+=/starsurge,if=buff.starweavers_weft.up|buff.touch_the_cosmos.up
 actions.st+=/starsurge,if=astral_power.deficit<variable.passive_asp+action.wrath.energize_amount+(action.starfire.energize_amount+variable.passive_asp)*(buff.eclipse_solar.remains<(gcd.max*3))
 actions.st+=/force_of_nature,if=!hero_tree.keeper_of_the_grove
-actions.st+=/wild_mushroom
+actions.st+=/wild_mushroom,if=!prev_gcd.1.wild_mushroom&dot.fungal_growth.remains<2
 actions.st+=/starfire,if=talent.lunar_calling
 actions.st+=/wrath
