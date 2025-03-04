@@ -63,6 +63,7 @@ module.exports = {
             },
             code: {
               color: theme('colors.indigo.500'),
+              wordWrap: 'break-word',
             },
             h1: {
               marginBottom: '0px',

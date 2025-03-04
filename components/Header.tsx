@@ -41,7 +41,7 @@ const Header = () => {
                 <Image src={png} alt="Logo" width={60} height={60} />
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-familiar-pro text-5xl font-bold sm:block">
+                <div className="font-familiar-pro text-4xl font-bold sm:block md:text-6xl">
                   <div className="title-effect">
                     <span className="title-effect-back">
                       {siteMetadata.headerTitle.toLowerCase()}.gg
