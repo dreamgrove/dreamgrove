@@ -13,10 +13,13 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
 
   // Process spell IDs to count occurrences
   const processedSpells = spellIds.reduce<{ id: string; count: number }[]>((acc, id) => {
-    const existingSpell = acc.find((spell) => spell.id === id)
-    if (existingSpell) {
-      existingSpell.count++
+    const lastSpell = acc.length > 0 ? acc[acc.length - 1] : null
+
+    // If the current spell ID matches the last one processed, increment its count
+    if (lastSpell && lastSpell.id === id) {
+      lastSpell.count++
     } else {
+      // Otherwise, add as a new entry
       acc.push({ id, count: 1 })
     }
     return acc
