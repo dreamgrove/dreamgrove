@@ -19,11 +19,9 @@ Blizzard are trying something different with the new tier sets where each 2p is 
 
 >After you gain Luck of the Draw! your next 10 Druid abilities cast another Druid ability at 125% effectiveness.
 
-The 4p effect plays off of the 2p procs but changes nothing for Guardian rotationally. The spells that can be cast by the 4p are: !Swipe!, !Mangle!, !Maul!/!Raze!/!441605|Ravage!, !Wrath!, !Starfire!, !Starsurge!, !Shred!, !Ferocious Bite! and !Renewal! (if below 50% health). The 10 Druid abilities will be consumed naturally as a result of our standard rotation and results in an average increase of around 6% offensively. It is worth noting that there is no protection in place for multiple procs in a short window, so if you get lucky (unlucky?) and trigger the 2p again whilst already having the 4p charges active then the counter will be reset to 10, you will lose however charges were remaining and there is absolutely nothing you can do to prevent this.
+The 4p effect plays off of the 2p procs but changes nothing for Guardian rotationally. The spells that can be cast by the 4p are: !Swipe!, !Mangle!, !Maul!/!Raze!/!441605|Ravage!, !Wrath!, !Starfire!, !Starsurge!, !Shred!, !Ferocious Bite! and !Renewal! (if below 50% health). The 10 Druid abilities will be consumed naturally as a result of our standard rotation and results in an average increase of around 6% offensively. It is worth noting that there is no protection in place for multiple procs in a short window, so if you get lucky (unlucky?) and trigger the 2p again whilst already having the 4p charges active then the counter will be reset to 10, you will lose however many charges were remaining and there is absolutely nothing you can do to prevent this.
 
 # Rotation 
-
-## Druid of the Claw
 
 #### **Reminder: The rotations below are purely about damage dealing. For further information on potential nuance for the rotations with regards to survivability please read the follow-up sections (primarily Ironfur and Defensives)**
 
@@ -31,7 +29,10 @@ The 4p effect plays off of the 2p procs but changes nothing for Guardian rotatio
 
 When reading the rotations below, you should not think about them as steps to follow in a specific order. At any given point in combat, you should cast the highest priority thing on the list that you are able to cast, providing any stated conditions are met.
 
-### Pre-combat
+<Collapsible title="Druid of the Claw">
+
+<details open>
+<summary>**Pre-Combat**</summary>
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild without Wildpower Surge" />
@@ -41,9 +42,10 @@ When reading the rotations below, you should not think about them as steps to fo
 - Enter !Bear Form! a few seconds before you pull
 - [*Dotc_Heart of the Wild_PC] Press !Heart of the Wild! a second before you start combat 
 
+</details>
 
-
-### Single Target Rotation
+<details open>
+<summary>**Single Target Rotation**</summary>
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Wildpower Surge" spellId={411824} name="Wildpower Surge (Ripweaving)" defaultCheck />
@@ -98,7 +100,10 @@ When reading the rotations below, you should not think about them as steps to fo
     - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
 - Press !Swipe!
 
-### Cleave Rotation (2-3 Targets)
+</details>
+
+<details open>
+<summary>**Cleave Rotation (2-3 Targets)**</summary>
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Wildpower Surge_cleave" spellId={411824} name="Wildpower Surge" defaultCheck />
@@ -153,7 +158,10 @@ When reading the rotations below, you should not think about them as steps to fo
     - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
 - Press !Swipe!
 
-### AOE Rotation
+</details>
+
+<details open>
+<summary>**AOE Rotation**</summary>
 
 <CheckboxProvider>
 <Checkbox id="Dotc_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
@@ -184,7 +192,10 @@ When reading the rotations below, you should not think about them as steps to fo
 - Press !Thrash!
 - Press !Swipe!
 
-### Incarn/Berserk Rotation
+</details>
+
+<details open>
+<summary>**Incarn/Berserk Rotation**</summary>
 
 During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
 
@@ -265,13 +276,18 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 - Press !33917|Mangle!   
 - Press !Thrash!
 
-## Elune's Chosen
+</details>
+
+</Collapsible>
+
+<Collapsible title="Elune's Chosen">
 
 #### **What is a priority list?**
 
 When reading the rotations below, you should not think about them as steps to follow in a specific order. At any given point in combat, you should cast the highest priority thing on the list that you are able to cast, providing any stated conditions are met.
 
-### Pre-combat
+<details open>
+<summary>**Pre-Combat**</summary>
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild" defaultCheck />
@@ -281,7 +297,10 @@ When reading the rotations below, you should not think about them as steps to fo
 - Enter !Bear Form! a few seconds before you pull
 - [*EC_Heart of the Wild_PC] Press !Heart of the Wild! a second before you start combat 
 
-### Single Target Rotation
+</details>
+
+<details open>
+<summary>**Single Target Rotation**</summary>
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
@@ -316,7 +335,10 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
 - Press !Swipe!
 
-### Cleave Rotation (2-3 Targets)
+</details>
+
+<details open>
+<summary>**Cleave Rotation (2-3 Targets)**</summary>
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck/>
@@ -355,7 +377,10 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*EC_Galactic Guardian_cleave] Press !Moonfire! if you have a Galactic Guardian buff
 - Press !Swipe!
 
-### AOE Rotation
+</details>
+
+<details open>
+<summary>**AOE Rotation**</summary>
 
 <CheckboxProvider>
 <Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
@@ -389,7 +414,10 @@ When reading the rotations below, you should not think about them as steps to fo
 - Press !Thrash!
 - Press !Swipe!
 
-### Incarn/Berserk Rotation
+</details>
+
+<details open>
+<summary>**Incarn/Berserk Rotation**</summary>
 
 During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
 
@@ -432,6 +460,10 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
     - [*EC_AOE_incarn&&EC_Raze_incarn] This will typically be around every 2-3 Razes.
 - [*EC_Thorns of Iron style_incarn] Press !33917|Mangle!
 - Press !Thrash!
+
+</details>
+
+</Collapsible>
 
 ## Ironfur
 
@@ -477,7 +509,7 @@ For example, say that without a cooldown a tankbuster would hit you for 1 millio
 
 Before choosing your talent setup there's a couple of important details to be aware of:
     - Whilst both hero talent trees perform similarly damage wise in AoE scenarios, there is a huge disparity between the damage of the two trees in Raid/Single Target situations, with Druid of the Claw being ahead by around 10-25% depending on talents.
-    - Both trees offer similarly strong defensive benefits with the option to easily swap into additional survviability or damage talents if they're needed/wanted.
+    - Both trees offer similarly strong defensive benefits with the option to easily swap into additional surviability or damage talents if they're needed/wanted.
 
 It's also important to clarify what we mean by the terms "Maul-Centric" and "ToI-Centric" (!Thorns of Iron!) playstyles:
     - Maul-Centric is simply where !Maul! is considered you're primary spender. The goal is to spend as much rage as possible on !Maul! which will account for the majority of your damage from spenders. These builds will likely still take !Thorns of Iron! but this is simply because some rage will still be spent on !Ironfur! (e.g. If you need additional physical mitigation for a physical tank buster or if you are about to overcap rage) 
@@ -538,19 +570,20 @@ If you do not enjoy Maul-Centric builds and would prefer a lower damage (around 
 
 ### Druid of the Claw Builds
 
-Below are some potential ideas for builds you could run using Druid of the Claw. There is a decent amount of variation due to a selection of talents you could swap in and out to suit different scenarios, see the customisation section underneath for more information on the benefits and costs of swapping out some of Guardian's talents.
+I strongly encourage you to experiment with talents and find something you enjoy and succeed with but below are some potential ideas for builds you could use as a starting point or run as-is using Druid of the Claw. I've tried to show some of the variation available due to talent swaps that would allow you to tailor your talent build to suit different scenarios, for more extensive information on these swaps please see the customisation section below the examples.
 
-<Talents name={"High Damage"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzYmxMzy8AjZMjZGLMMzsYZAMgZmZy0MzMmZmxCsBAAAAAAwYGGAAAA1MbzyMz2AAYhZmBA"}/>
-<Talents name={"Balanced Build"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMmZWGjZMjZmZhhZmFLAmBMzMT0MzMzMzYWgNGAAAAAAwwAAAAA1MLzyMz2AAYhZmBA"}/>
-<Talents name={"Heavy CD Cycling"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzYMzYWGjZmZMzMLMMzsYZAMgZmZy0MzMmZmxCsBAAAAAAwYGAAAAomZZWmZ2GAALMzMAA"}/>
+<Talents name={"High Damage"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzYmxYWmHYMjZMzYhhZmFLDYDGNZamZWmZZGzyYGGAAAAAAGGzAAAAomZbWmZWGAALMGAWMDG"}/>
+<Talents name={"High Sustain"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzYMzMzywyMzMGzsw4BmZWsMwsBjmMZmZZsNzMLzMDDAAAAAADDAAAAUzsNLzMbDAgFYAYxMYA"}/>
+<Talents name={"Heavy CD Cycling"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMzYWGMzMjxMLMMzsYZgZzwoJyMzyMLzMzyYGAAAAAAwwwAAAAomZZWmZ2GAALwAwyyMYA"}/>
 
 #### Customisation
 
 This image gives a rough idea of the relative power of a talent node based on its assigned colour, I strongly encourage you to take this information below and use it to either adjust the trees above to you/your groups needs and wants or to come up with your own from scratch. The key for what each colour represents is:
-    - <span className="text-yellow-400"> Yellow </span> - These are your staples. Every DotC mythic+ build should aim to have every single one of these talents.
-    - <span className="text-green-500"> Green </span> - Niche options but when played in the right scenario can be very powerful.
-    - <span className="text-purple-600"> Purple </span> - In a vacuum, pretty powerful talents that should be taken in most builds.
-    - <span className="text-blue-600"> Blue </span> - Generally a bit meh, either because of their relative power or their cost or position. However, these nodes are needed to either flesh out a sections point total or for pathing to stronger nodes further down the tree.
+    - <span className="text-preen-500"> Green </span> - These are your staples. Every DotC mythic+ build should aim to always have these talents.
+    - <span className="text-purple-600"> Purple </span> - Strong talents in their own right that will fit into most builds.
+    - <span className="text-blue-600"> Blue </span> - Talents that are a bit weak either due to their position, cost or power relative to nearby nodes. However, these nodes are usually needed to flesh out a sections point total or for pathing to access stronger talents further down the tree.
+    - <span className="text-orange-500"> Orange </span> - This shows where both of the talents in a choice node are a competitive choice. The reasoning behind which of these choices to talent will be discussed below the image.
+    - <span className="text-white"> White </span> - These are niche options that on their own are a bit weak with specific complimentary talents can be very powerful options to take. The reasonings on when to talent these can be found below the image
     - <span className="text-grey-500"> Grey </span>  - Not worth considering currently.
 
 ![GuardianDotCM+](/static/images/Guardian-DotC-mythic+.png)
@@ -590,10 +623,11 @@ Below are some potential ideas for builds you could run using Elune's Chosen. Th
 #### Customisation
 
 This image gives a rough idea of the relative power of a talent node based on its assigned colour, I strongly encourage you to take this information below and use it to either adjust the trees above to you/your groups needs and wants or to come up with your own from scratch. The key for what each colour represents is:
-    - <span className="text-yellow-400"> Yellow </span> - These are your staples. Every EC mythic+ build should aim to have every single one of these talents.
-    - <span className="text-green-500"> Green </span> - Niche options but when played in the right scenario can be very powerful.
-    - <span className="text-purple-600"> Purple </span> - In a vacuum, pretty powerful talents that should be taken in most builds.
-    - <span className="text-blue-600"> Blue </span> - Generally a bit meh, either because of their relative power or their cost or position. However, these nodes are needed to either flesh out a sections point total or for pathing to stronger nodes further down the tree.
+    - <span className="text-preen-500"> Green </span> - These are your staples. Every DotC mythic+ build should aim to always have these talents.
+    - <span className="text-purple-600"> Purple </span> - Strong talents in their own right that will fit into most builds.
+    - <span className="text-blue-600"> Blue </span> - Talents that are a bit weak either due to their position, cost or power relative to nearby nodes. However, these nodes are usually needed to flesh out a sections point total or for pathing to access stronger talents further down the tree.
+    - <span className="text-orange-500"> Orange </span> - This shows where both of the talents in a choice node are a competitive choice. The reasoning behind which of these choices to talent will be discussed below the image.
+    - <span className="text-white"> White </span> - These are niche options that on their own are a bit weak with specific complimentary talents can be very powerful options to take. The reasonings on when to talent these can be found below the image
     - <span className="text-grey-500"> Grey </span>  - Not worth considering currently.
 
 ![GuardianECM+](/static/images/Guardian-EC-mythic+.png)
