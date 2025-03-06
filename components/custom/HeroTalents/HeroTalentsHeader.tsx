@@ -24,12 +24,14 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
   const getBorderStyle = () => {
     if (id === 'kotg') return styles['border-balance']
     if (id === 'ec') return styles['border-resto']
+    if (id === 'dotc') return styles['border-dotc']
     return styles['border-generic']
   }
 
   const getBackgroundColorStyle = () => {
     if (id === 'kotg') return 'bg-[#184118] bg-opacity-10'
     if (id === 'ec') return 'bg-[#4b62be] bg-opacity-10'
+    if (id === 'dotc') return 'bg-[#c41e3a] bg-opacity-10'
     return 'bg-[#d57f43] bg-opacity-10'
   }
 
