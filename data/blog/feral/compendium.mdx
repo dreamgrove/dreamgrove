@@ -21,7 +21,7 @@ All talent builds will now contain !Apex Predator's Craving! once we acquire the
 
 ## Cyrce's Circlet
 
-Yes we are still going to play this ring in 11.1, and it will end up being our best-in-slot barring future nerfs. (this is updated for the [Legendary Skipper's Citrine](https://www.wowhead.com/item=228646/legendary-skippers-citrine)/[Roaring War-Queen Citrine](https://www.wowhead.com/item=228648/roaring-war-queens-citrine) nerfs.)
+Yes we are still going to play this ring in 11.1, and it will be our best-in-slot. 
 
 ### Recommended Citrines
 
@@ -362,12 +362,15 @@ Our recommended default hero-tree for raiding is Wildstalker once you acquire at
 > Builds are based on PTR testing and some guesswork, this section is highly liable to change.
 
 <CheckboxProvider>
-    
-<Checkbox id="11.1 4p" spellId={439528} name="11.1 4p" radio="setbonus" />
-<Checkbox id="2p2p" spellId={439528} name="11.1 2p + 11.0 2p" radio="setbonus"/>
-<Checkbox id="11.0 4p" spellId={441583} name="11.0 4p" radio="setbonus" defaultCheck/>
+
+<Checkbox id="11.1 4p" isIcon spellId={439528} name="11.1 4p" radio="setbonus" />
+<Checkbox id="2p2p" isIcon spellId={439528} name="11.1 2p + 11.0 2p" radio="setbonus"/>
+<Checkbox id="11.0 4p" isIcon spellId={441583} name="11.0 4p" radio="setbonus" defaultCheck/>
 
 </CheckboxProvider>
+
+<div className="pb-6">
+</div>
 
 [*11.1 4p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
 
@@ -421,6 +424,8 @@ Our recommended default hero-tree for raiding is Wildstalker once you acquire at
 
 </HeroTalentsHeader>
 
+<div className="pb-2">
+</div>
 
 <Collapsible title="Mythic Neru'bar Palace Raid Builds">
 
@@ -646,6 +651,10 @@ These trinket lists are in rough order of strength, assuming the highest item le
 
 ### Trinket FAQ
 
+Q: Should we playing double on-use with [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) and [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103)?
+
+A: No, usually we only play 1 on-use trinket. Though you should always sim just in case.
+
 Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
 
 A: By default, none. You can add the buffs yourself by pasting `thewarwithin.signet_of_the_priory_party_stats=crit/haste/mastery/versatility` into the Custom APL box of your sim. Remove whatever ally stat you dont want to sim.
@@ -835,3 +844,44 @@ This WA is another alternative for tracking crucial procs of !Bloodtalons!. For 
 
 [Focus Skull Bash](https://wago.io/mOvsNkzJ7)
 This WA tracks when your Skull Bash interrupt is off cooldown and ready for use on your Focus target. For more details, check out the WA description.
+
+# Feral Druid Abbreviations
+
+| Shortcut | Name | Shortcut | Name |
+| :-: | :- | :-: | :- |
+| tf | !Tiger's Fury! | omen/cc | !Omen of Clarity! |
+| coiled | !Coiled to Spring! | pw | !Primal Wrath! |
+| mc | !Merciless Claws! | tc | !Thrashing Claws! (can also be theorycraft) |
+| pred | !Predator! | DCR | !Double-Clawed Rake! |
+| TE | !Tireless Energy! | SA | !Sudden Ambush! |
+| SI | !Survival Instincts! | RF | Usually !Rampant Ferocity! (sometimes its !Raging Fury!) |
+| IW | !Infected Wounds! | LI | !Lunar Inspiration! |
+| PS | !Predatory Swiftness! | zerk | !Berserk!, sometimes !Incarnation: Avatar of Ashamane! |
+| incarn | !Incarnation: Avatar of Ashamane!, sometimes !Berserk! | TFB | !Taste for Blood! |
+| TT | !Tiger's Tenacity! | Lion | !Berserk: Heart of the Lion! |
+| MOC | !Moment of Clarity! | Frenzy(band) | !Berserk: Frenzy! |
+| BRS | !Brutal Slash! | CI | !Carnivorous Instinct! |
+| FM | !Frantic Momentum! | SJ | !Saber Jaws! |
+| BT | !Bloodtalons! | LS | !Lion's Strength! |
+| swarm/AS | !Adaptive Swarm! | Unbridled | !Unbridled Swarm! |
+| Beekeeping | Also !Unbridled Swarm! | Convoke | !Convoke the Spirits! |
+| SOTF | !Soul of the Forest! | R&T/Tear | !Rip and Tear! |
+| VR | !Veinripper! | FF | !Feral Frenzy! ~~Surrender~~ |
+| AG incarn | !Ashamane's Guidance! for !Incarnation: Avatar of Ashamane! | AG | Usually refers to AG incarn |
+| 1min voke | !Ashamane's Guidance! for !Convoke the Spirits! | Circle | !Circle of Life and Death! |
+| Apex | !Apex Predator's Craving! | DOTC | Druid of the Claw Hero Talent |
+| WS | Wildstalker Hero Talent, rarely !Wild Slashes! | RA | !Ruthless Aggression! |
+| KS | !Killing Strikes! | FR | !Frenzied Regeneration! |
+| rejuv | !Rejuvenation! | owl | !Moonkin Form! |
+| dispel/decurse | !Remove Corruption! | IF | !Ironfur! |
+| WC | !Wild Charge! | Clone | !Cyclone! |
+| Vortex | !Ursol's Vortex! | Mass Root | !Mass Entanglement! |
+| Roar | !Stampeding Roar! | WHI | !Well-Honed Instincts! |
+| vate | !Innervate! | incap | !Incapacitating Roar! |
+| bash | !Mighty Bash!, sometimes !Skull Bash! | vigor | !Ursine Vigor! |
+| 1min roar | !Improved Stampeding Roar! | meditation | !Lycara's Meditation! ~~please delete~~ |
+| HOTW | !Heart of the Wild! | NV | !Nature's Vigil! |
+| Roots | !Entangling Roots! | brez/cr/br | !Rebirth! |
+| Bark | !Barkskin! | cp | combo points |
+
+
