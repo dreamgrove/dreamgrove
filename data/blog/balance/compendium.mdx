@@ -647,11 +647,12 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 
 **Synergistic Brewtaliser Macro:**
 
-This macro will target the [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) barrel and use !Sunfire! to proc the damage, and then change back to your previous target.
+This macro will target the [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) barrel and use !Moonfire! to proc the damage, and then change back to your previous target.
 
 ```
-#showtooltip
-/target Backfill Barrel
+#showtooltip Moonfire
+/cleartarget
+/targetexact Backfill Barrel
 /cast Moonfire
 /targetlasttarget
 ```
