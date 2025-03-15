@@ -178,6 +178,7 @@ export default function Talents({ name, talents, mimiron = false, open = false }
                 ref={iframeRef}
                 title={name}
                 src={iframeUrl}
+                loading="lazy"
                 width={`${calculatedIframeWidth}px`}
                 height={iframeWidth * 0.64}
                 className={`rounded-sm border-none bg-[#282828] ${styles['iframe-fade']} ${loaded ? styles['iframe-fade-in'] : ''}`}
