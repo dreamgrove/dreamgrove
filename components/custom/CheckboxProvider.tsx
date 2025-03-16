@@ -76,7 +76,7 @@ export default function CheckboxProvider({ children }) {
     <CheckboxContext.Provider
       value={{ radioGroup, checkboxStates, checkRadio, registerCheckbox, toggleCheckbox }}
     >
-      <div className="grid grid-cols-2 gap-x-4 gap-y-1">{children}</div>
+      <div className="grid auto-rows-fr grid-cols-2 gap-x-4 gap-y-2">{children}</div>
     </CheckboxContext.Provider>
   )
 }

@@ -63,6 +63,7 @@ module.exports = {
             },
             code: {
               color: theme('colors.indigo.500'),
+              wordWrap: 'break-word',
             },
             h1: {
               marginBottom: '0px',
@@ -79,14 +80,14 @@ module.exports = {
               marginBottom: '10px',
               position: 'relative',
             },
-            'h2::after': {
-              content: '""',
-              display: 'block',
-              width: '50px',
-              height: '3px',
-              backgroundColor: theme('colors.primary.500'),
-              marginTop: '0px',
-            },
+            // 'h2::after': {
+            //   content: '""',
+            //   display: 'block',
+            //   width: '50px',
+            //   height: '3px',
+            //   backgroundColor: theme('colors.primary.500'),
+            //   marginTop: '0px',
+            // },
           },
         },
         invert: {
@@ -106,5 +107,9 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

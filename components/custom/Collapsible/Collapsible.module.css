@@ -13,3 +13,40 @@
 .content {
   padding: 10px;
 }
+
+/* Collapsible container styling */
+.container {
+  position: relative;
+}
+
+.container::before,
+.container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  z-index: 1;
+}
+
+.container::before {
+  top: 0;
+}
+
+.container::after {
+  bottom: 0;
+}
+
+/* Dark mode support */
+:global(.dark) .container::before,
+:global(.dark) .container::after {
+  background: linear-gradient(to right, transparent, #636363 5%, #636363 95%, transparent);
+}
+
+/* Remove top border when a collapsible follows another collapsible */
+.container + .container::before {
+  display: none;
+}
+
+/* Removing the color-specific classes since we're using a standard grey border now */

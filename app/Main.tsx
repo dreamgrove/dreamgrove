@@ -13,7 +13,7 @@ export default function Home() {
 
   const content = [
     { src: dungeons, href: '/dungeons', alt: 'Dungeon Guides' },
-    { src: raids, href: '/raids', alt: 'Raid Guides', active: true },
+    { src: raids, href: '/raids', alt: 'Raid Guides', active: false },
   ]
 
   const images = [

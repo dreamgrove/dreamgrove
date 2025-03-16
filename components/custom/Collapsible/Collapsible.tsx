@@ -1,18 +1,26 @@
 'use client'
 import { useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
+import styles from './Collapsible.module.css'
+import { useLogger } from '@/components/hooks/useLogger'
+import { CSSProperties } from 'react'
 
 const Collapsible = ({ title, children, type = 'info' }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => setIsOpen(!isOpen)
+  const logger = useLogger('Collapsible')
+
+  const toggle = () => {
+    logger.info(`Collapsible "${title}" ${isOpen ? 'closed' : 'opened'}`)
+    setIsOpen(!isOpen)
+  }
 
   return (
-    <div className="grid">
+    <div className={`grid ${styles.container}`}>
       <button
-        className="flex h-auto w-full cursor-pointer items-center justify-between border-b-2 border-black dark:border-white"
+        className="flex h-auto w-full cursor-pointer items-center justify-between px-4 "
         onClick={toggle}
       >
-        <span className="my-2">{title}</span>
+        <span className="my-2  text-left text-lg font-bold">{title}</span>
         {isOpen ? <FaAngleUp /> : <FaAngleDown />}
       </button>
       <div

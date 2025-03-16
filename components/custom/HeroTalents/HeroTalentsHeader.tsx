@@ -24,22 +24,30 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
   const getBorderStyle = () => {
     if (id === 'kotg') return styles['border-balance']
     if (id === 'ec') return styles['border-resto']
+    if (id === 'dotc') return styles['border-dotc']
     return styles['border-generic']
   }
 
-  const getBackgroundStyle = () => {
-    if (id === 'kotg') return styles['bg-fade-resto']
-    if (id === 'ec') return styles['bg-fade-balance']
-    return styles['bg-fade-generic']
+  const getBackgroundColorStyle = () => {
+    if (id === 'kotg') return 'bg-[#184118] bg-opacity-10'
+    if (id === 'ec') return 'bg-[#4b62be] bg-opacity-10'
+    if (id === 'dotc') return 'bg-[#c41e3a] bg-opacity-10'
+    return 'bg-[#d57f43] bg-opacity-10'
   }
 
   return (
-    <div className={`mb-2 grid rounded-md border-4 ${getBorderStyle()}`}>
+    <div
+      className={`mb-2 mt-2 grid rounded-md border-2 ${getBorderStyle()} ${getBackgroundColorStyle()}`}
+    >
       <div
-        className={`flex cursor-pointer justify-between p-4 transition-colors duration-500 ${getBackgroundStyle()}`}
+        className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"
         onClick={() => setIsCollapsed((prev) => !prev)}
       >
-        <h3 className={`mb-2 mt-2 text-left align-baseline text-xl font-bold`}>{title}</h3>
+        <h3
+          className={`mb-2 mt-2 select-none pl-0 text-left align-baseline text-xl font-bold sm:pl-2`}
+        >
+          {title}
+        </h3>
         {arrow}
       </div>
       <div
@@ -48,7 +56,7 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="px-8">{children}</div>
+          <div className="px-2 md:px-6 ">{children}</div>
         </div>
       </div>
     </div>
