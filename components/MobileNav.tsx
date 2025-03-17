@@ -28,13 +28,13 @@ const MobileNav = () => {
       <button
         aria-label="Toggle Menu"
         onClick={onToggleNav}
-        className="flex items-center lg:hidden"
+        className="mt-[2px] align-middle lg:hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="dark:hover:text-primary-400 h-6 w-6 text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:h-7 sm:w-7 md:h-8 md:w-8"
+          className="dark:hover:text-primary-400 h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100"
         >
           <path
             fillRule="evenodd"
@@ -99,7 +99,7 @@ const MobileNav = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="dark:hover:text-primary-400 h-6 w-6 text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:h-7 sm:w-7 md:h-8 md:w-8"
+                        className="dark:hover:text-primary-400 text-gray-900 hover:text-primary-500 dark:text-gray-100"
                       >
                         <path
                           fillRule="evenodd"

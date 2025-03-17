@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 pt-0 lg:grid-cols-2 ">
+      <div className="mt-1 grid grid-cols-1 gap-4 pt-0 lg:grid-cols-2 ">
         {images.map((image, index) => (
           <Link
             className={!image.active ? 'pointer-events-none' : ''}
