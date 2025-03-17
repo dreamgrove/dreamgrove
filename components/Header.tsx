@@ -107,7 +107,7 @@ const LanguageSwitch = () => {
     <button
       aria-label="Toggle Language"
       onClick={toggleLanguage}
-      className="rounded-md border border-gray-300 p-1.5 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700"
+      className="flex h-6 items-center rounded-md border border-gray-300 p-1 text-xs font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700 sm:h-7 sm:p-1.5 sm:text-sm md:h-8"
     >
       {currentLocale === 'en-US' ? 'KR' : 'EN'}
     </button>
@@ -139,7 +139,7 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] sm:py-8 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
+      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-4 pt-4 text-center dark:bg-[#282828] sm:py-6 sm:pt-5 md:py-8 md:pt-6 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
     >
       <div className="xl:max-w-8xl flex w-full max-w-6xl items-end justify-between px-4 sm:px-6 xl:px-0">
         <div className="z-10 flex items-end">
@@ -151,11 +151,11 @@ const Header = () => {
                   alt="Logo"
                   width={54}
                   height={54}
-                  className="mb-[-6px] h-auto object-contain drop-shadow-[0_0_1px_rgba(221,107,32,1)] dark:drop-shadow-[0_0_2px_rgba(221,107,32,1)] md:h-[60px]"
+                  className="mb-[-6px] h-[40px] object-contain drop-shadow-[0_0_1px_rgba(221,107,32,1)] dark:drop-shadow-[0_0_2px_rgba(221,107,32,1)] sm:h-[50px] md:h-[60px]"
                 />
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-familiar-pro text-4xl font-bold sm:block md:text-6xl">
+                <div className="font-familiar-pro text-3xl font-bold sm:text-4xl md:text-6xl">
                   <div className="title-effect">
                     <span className="title-effect-back">
                       {siteMetadata.headerTitle.toLowerCase()}.gg
@@ -171,15 +171,15 @@ const Header = () => {
             </div>
           </Link>
         </div>
-        <div className="flex items-end space-x-4 sm:space-x-6">
-          <div className="hidden items-end space-x-4 lg:flex">
+        <div className="flex items-center space-x-3 sm:space-x-6">
+          <div className="hidden items-center space-x-4 lg:flex">
             {headerNavLinks
               .filter((link) => link.href !== '/')
               .map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="dark:hover:text-primary-400 text-2xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block"
+                  className="dark:hover:text-primary-400 text-lg font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block sm:text-xl md:text-2xl"
                 >
                   {link.title}
                 </Link>
