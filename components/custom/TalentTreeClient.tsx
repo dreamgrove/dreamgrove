@@ -42,6 +42,48 @@ export default function TalentTreeClient({
     type: 'success',
   })
   const [copyButtonState, setCopyButtonState] = useState<'ready' | 'copied'>('ready')
+  const [isMobile, setIsMobile] = useState<boolean>(false)
+
+  // Initialize mobile detection on component mount (SSR-safe)
+  useEffect(() => {
+    // Safe check for window object (for SSR)
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth < 768)
+
+      // If mobile, set active tree to 'class' on initial load
+      if (window.innerWidth < 768) {
+        setActiveTree('class')
+      }
+    }
+  }, [])
+
+  // Check if the screen is mobile-sized
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+
+      // If it's mobile and the tree is set to 'full', change to 'class'
+      if (window.innerWidth < 768 && activeTree === 'full') {
+        setActiveTree('class')
+      }
+    }
+
+    // Initialize
+    checkIfMobile()
+
+    // Add resize listener
+    window.addEventListener('resize', checkIfMobile)
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile)
+  }, [activeTree])
+
+  // Set default tree to 'class' on mobile
+  useEffect(() => {
+    if (isMobile && activeTree === 'full') {
+      setActiveTree('class')
+    }
+  }, [isMobile, activeTree])
 
   // Sample talent string for testing
   const sampleTalentString =
@@ -879,7 +921,7 @@ export default function TalentTreeClient({
                     activeTree === 'full'
                       ? 'bg-yellow-600 text-white'
                       : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-                  }`}
+                  } ${isMobile ? 'hidden' : ''}`}
                 >
                   Full Tree
                 </button>
@@ -932,7 +974,7 @@ export default function TalentTreeClient({
               activeTree === 'full'
                 ? 'bg-yellow-600 text-white'
                 : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-            }`}
+            } ${isMobile ? 'hidden' : ''}`}
           >
             Full Tree
           </button>
