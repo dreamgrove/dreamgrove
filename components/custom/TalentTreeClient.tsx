@@ -565,15 +565,15 @@ export default function TalentTreeClient({
         // Increment the import counter to trigger a re-render
         setImportCounter((prev) => prev + 1)
 
-        showNotification(`Successfully imported ${totalSelected} talents`, 'success')
+        // showNotification(`Successfully imported ${totalSelected} talents`, 'success')
       } else {
-        showNotification('No talents were selected from the import string', 'error')
+        // showNotification('No talents were selected from the import string', 'error')
       }
 
       return true
     } catch (error) {
       console.error('Failed to import talent string:', error)
-      showNotification('Failed to import talent string', 'error')
+      // showNotification('Failed to import talent string', 'error')
       return false
     }
   }
