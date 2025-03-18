@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState, useRef } from 'react'
+import Image from 'next/image'
 import talentData from '../../other/talents.json'
 
 interface TalentNode {
@@ -17,6 +18,26 @@ interface TalentNode {
   }[]
   subTreeId?: number
   maxRanks?: number
+}
+
+interface SubTreeEntry {
+  id: number
+  name: string
+  type: string
+  posX: number
+  posY: number
+  entries: {
+    id: number
+    name: string
+    type: string
+    traitSubTreeId: number
+    traitTreeId: number
+    atlasMemberName: string
+    nodes?: number[]
+  }[]
+  entryNode?: boolean
+  next?: number[]
+  prev?: number[]
 }
 
 interface TalentData {
@@ -203,14 +224,15 @@ const buildTalentGrid = (nodes: TalentNode[]) => {
   return grid
 }
 
-// Modify the renderTalentTree function to better fill the available space
+// Modify the renderTalentTree function to disable clicks in viewOnly mode
 const renderTalentTree = (
   nodes: TalentNode[],
   isSelected: (id: number) => boolean,
   toggleSelection: (id: number) => void,
   treeType: 'class' | 'spec' | 'hero' = 'class',
   nodeChoices: Map<number, number>,
-  nodeRanks: Map<number, number>
+  nodeRanks: Map<number, number>,
+  disableInteraction: boolean = false
 ) => {
   // Build the grid
   const grid = buildTalentGrid(nodes)
@@ -396,31 +418,49 @@ const renderTalentTree = (
                   <div
                     className={`absolute flex h-[70%] w-[70%] items-center justify-center rounded-full border-2 ${
                       selected ? 'border-green-500' : 'border-yellow-400'
-                    } cursor-pointer transition-all duration-200 hover:scale-110 hover:border-white`}
+                    } ${!disableInteraction ? 'cursor-pointer hover:scale-110 hover:border-white' : ''} transition-all duration-200`}
                     style={{
                       zIndex: 10, // Ensure nodes appear above connection lines
                     }}
-                    onClick={() => toggleSelection(node.id)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        toggleSelection(node.id)
-                        e.preventDefault()
-                      }
-                    }}
-                    role="button"
-                    tabIndex={0}
+                    onClick={disableInteraction ? undefined : () => toggleSelection(node.id)}
+                    onKeyDown={
+                      disableInteraction
+                        ? undefined
+                        : (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              toggleSelection(node.id)
+                              e.preventDefault()
+                            }
+                          }
+                    }
+                    role={disableInteraction ? undefined : 'button'}
+                    tabIndex={disableInteraction ? undefined : 0}
                     title={displayName}
-                    aria-pressed={selected}
+                    aria-pressed={disableInteraction ? undefined : selected}
                   >
                     {icon && (
                       <>
-                        <img
-                          src={`https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`}
-                          alt={displayName}
-                          className={`h-[90%] w-[90%] rounded-full ${
-                            selected ? 'brightness-125' : 'opacity-70 brightness-50 grayscale-[50%]'
-                          }`}
-                        />
+                        <a
+                          href={`https://www.wowhead.com/spell=${node.entries[selectedChoiceIndex]?.spellId || node.entries[0]?.spellId || '0'}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => (disableInteraction ? undefined : e.stopPropagation())}
+                          className="flex h-[90%] w-[90%] items-center justify-center"
+                        >
+                          <Image
+                            src={`https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`}
+                            alt={displayName}
+                            width={56}
+                            height={56}
+                            className={`rounded-full ${
+                              selected
+                                ? 'brightness-125'
+                                : 'opacity-70 brightness-50 grayscale-[50%]'
+                            }`}
+                            unoptimized={true}
+                            priority={false}
+                          />
+                        </a>
                         {node.maxRanks && node.maxRanks > 1 && (
                           <div
                             className={`absolute bottom-0 right-0 rounded-full bg-black bg-opacity-70 px-1 text-xs font-bold ${selected ? 'text-white' : 'text-gray-400'}`}
@@ -431,7 +471,7 @@ const renderTalentTree = (
                               fontSize: '0.65rem', // Smaller font size for the rank indicator
                             }}
                           >
-                            {nodeRanks.has(node.id) ? nodeRanks.get(node.id) : 1}/{node.maxRanks}
+                            {nodeRanks.has(node.id) ? nodeRanks.get(node.id) : 0}/{node.maxRanks}
                           </div>
                         )}
                       </>
@@ -447,23 +487,25 @@ const renderTalentTree = (
   )
 }
 
-// Update the ClassTree component with simpler structure
+// Update the ClassTree component with viewOnly support
 const ClassTree = ({
   nodes,
   isNodeSelected,
   toggleNodeSelection,
   nodeChoices,
   nodeRanks,
+  viewOnly = false,
 }: {
   nodes: TalentNode[]
   isNodeSelected: (id: number) => boolean
   toggleNodeSelection: (id: number) => void
   nodeChoices: Map<number, number>
   nodeRanks: Map<number, number>
+  viewOnly?: boolean
 }) => {
   return (
     <div className="flex w-full flex-col">
-      <h2 className="mb-2 text-xl font-bold text-yellow-400">Class Tree</h2>
+      <h2 className="mb-2 mt-0 text-xl font-bold text-yellow-400">Class Tree</h2>
       <div className="flex-1 overflow-hidden">
         {renderTalentTree(
           nodes,
@@ -471,30 +513,33 @@ const ClassTree = ({
           toggleNodeSelection,
           'class',
           nodeChoices,
-          nodeRanks
+          nodeRanks,
+          viewOnly
         )}
       </div>
     </div>
   )
 }
 
-// Update the SpecTree component with simpler structure
+// Update the SpecTree component with viewOnly support
 const SpecTree = ({
   nodes,
   isNodeSelected,
   toggleNodeSelection,
   nodeChoices,
   nodeRanks,
+  viewOnly = false,
 }: {
   nodes: TalentNode[]
   isNodeSelected: (id: number) => boolean
   toggleNodeSelection: (id: number) => void
   nodeChoices: Map<number, number>
   nodeRanks: Map<number, number>
+  viewOnly?: boolean
 }) => {
   return (
     <div className="flex h-full w-full flex-col">
-      <h2 className="mb-2 text-xl font-bold text-yellow-400">Specialization Tree</h2>
+      <h2 className="mb-2 mt-0 text-xl font-bold text-yellow-400">Specialization Tree</h2>
       <div className="flex-1 overflow-hidden">
         {renderTalentTree(
           nodes,
@@ -502,14 +547,15 @@ const SpecTree = ({
           toggleNodeSelection,
           'spec',
           nodeChoices,
-          nodeRanks
+          nodeRanks,
+          viewOnly
         )}
       </div>
     </div>
   )
 }
 
-// Update the HeroTree component with simpler structure
+// Update the HeroTree component with viewOnly support and better debugging
 const HeroTree = ({
   nodes,
   isNodeSelected,
@@ -518,6 +564,8 @@ const HeroTree = ({
   showAllHeroTalents,
   nodeChoices,
   nodeRanks,
+  viewOnly = false,
+  talentString = '',
 }: {
   nodes: TalentNode[]
   isNodeSelected: (id: number) => boolean
@@ -526,32 +574,55 @@ const HeroTree = ({
   showAllHeroTalents: () => void
   nodeChoices: Map<number, number>
   nodeRanks: Map<number, number>
+  viewOnly?: boolean
+  talentString?: string
 }) => {
+  // Group nodes by subTreeId
+  const subTreeCounts = new Map<number, { total: number; selected: number }>()
+  nodes.forEach((node) => {
+    if (!node.subTreeId) return
+
+    if (!subTreeCounts.has(node.subTreeId)) {
+      subTreeCounts.set(node.subTreeId, { total: 0, selected: 0 })
+    }
+
+    const counts = subTreeCounts.get(node.subTreeId)!
+    counts.total++
+    if (isNodeSelected(node.id)) {
+      counts.selected++
+    }
+  })
+
+  // Filter nodes for display - keeping only subTrees where all nodes are selected
+  const filteredNodes = nodes.filter((node) => {
+    // Group hero nodes by their subTreeId
+    const subTreeId = node.subTreeId
+    if (!subTreeId) {
+      return true // Keep nodes without subTreeId
+    }
+
+    // Check if ALL nodes in this subTree are selected
+    const allNodesInSubTree = nodes.filter((n) => n.subTreeId === subTreeId)
+    const allNodesSelected = allNodesInSubTree.every((n) => isNodeSelected(n.id))
+
+    // Only include nodes from subTrees where all nodes are selected
+    return allNodesSelected
+  })
+
   return (
     <div className="flex h-full w-full flex-col">
-      <h2 className="mb-2 text-xl font-bold text-yellow-400">Hero Tree</h2>
+      <h2 className="mb-2 mt-0 text-xl font-bold text-yellow-400">Hero Tree</h2>
       {nodes.length > 0 ? (
         selectedNodes.length > 0 ? (
           <div className="flex-1 overflow-hidden">
             {renderTalentTree(
-              // Filter out hero nodes that belong to trees where not all nodes are selected
-              nodes.filter((node) => {
-                // Group hero nodes by their subTreeId
-                const subTreeId = node.subTreeId
-                if (!subTreeId) return true // Keep nodes without subTreeId
-
-                // Check if ALL nodes in this subTree are selected
-                const allNodesInSubTree = nodes.filter((n) => n.subTreeId === subTreeId)
-                const allNodesSelected = allNodesInSubTree.every((n) => isNodeSelected(n.id))
-
-                // Only include nodes from subTrees where all nodes are selected
-                return allNodesSelected
-              }),
+              filteredNodes,
               isNodeSelected,
               toggleNodeSelection,
               'hero',
               nodeChoices,
-              nodeRanks
+              nodeRanks,
+              viewOnly
             )}
           </div>
         ) : (
@@ -561,12 +632,14 @@ const HeroTree = ({
               <p className="mt-2 text-gray-400">
                 All talents in a hero tree must be selected to display it
               </p>
-              <button
-                onClick={showAllHeroTalents}
-                className="mt-4 rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-              >
-                Select All Hero Talents
-              </button>
+              {!viewOnly && (
+                <button
+                  onClick={showAllHeroTalents}
+                  className="mt-4 rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+                >
+                  Select All Hero Talents
+                </button>
+              )}
             </div>
           </div>
         )
@@ -577,7 +650,13 @@ const HeroTree = ({
   )
 }
 
-export default function TalentTree() {
+export default function TalentTree({
+  viewOnly = false,
+  talents = '',
+}: {
+  viewOnly?: boolean
+  talents?: string
+}) {
   const [classNodes, setClassNodes] = useState<TalentNode[]>([])
   const [specNodes, setSpecNodes] = useState<TalentNode[]>([])
   const [heroNodes, setHeroNodes] = useState<TalentNode[]>([])
@@ -586,8 +665,8 @@ export default function TalentTree() {
   const [selectedHeroNodes, setSelectedHeroNodes] = useState<number[]>([])
   const [nodeChoices, setNodeChoices] = useState<Map<number, number>>(new Map())
   const [nodeRanks, setNodeRanks] = useState<Map<number, number>>(new Map())
-  const [activeTree, setActiveTree] = useState<'class' | 'spec' | 'hero' | 'full'>('class')
-  const [talentString, setTalentString] = useState<string>('')
+  const [activeTree, setActiveTree] = useState<'class' | 'spec' | 'hero' | 'full'>('full')
+  const [talentString, setTalentString] = useState<string>(talents || '')
   const [currentSpecId, setCurrentSpecId] = useState<number>(102) // Default to Balance Druid
   const [importCounter, setImportCounter] = useState<number>(0) // Counter to track imports
   const [notification, setNotification] = useState<NotificationState>({
@@ -595,20 +674,25 @@ export default function TalentTree() {
     message: '',
     type: 'success',
   })
+  const [copyButtonState, setCopyButtonState] = useState<'ready' | 'copied'>('ready')
 
   // Sample talent string for testing
   const sampleTalentString =
-    'BYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDwMbjlZ2mxCzMzYWmxMjZM2wCDwAstNWw0MzyIAAAAbmZmZAbGYA'
+    'CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDwMbjlZ2mxCzMzYWmxMjZM2wCDwAstNWw0MzyIAAAAbmZmZAbGYA'
+
+  // Effect to import talent string if provided via props
+  useEffect(() => {
+    if (talents && talents.length > 0) {
+      setTalentString(talents)
+      importTalentString(talents)
+    }
+  }, [talents])
 
   useEffect(() => {
     // Find the Druid spec based on the specID (default to Balance - 102)
     const druidData = talentData.find(
       (spec) => spec.className === 'Druid' && spec.specId === currentSpecId
     ) as TalentData
-
-    console.log(
-      `Loading Druid spec: ${currentSpecId} - ${druidData?.specName || 'Unknown'} (import #${importCounter})`
-    )
 
     if (druidData) {
       // Get class nodes (shared across all specs)
@@ -625,8 +709,8 @@ export default function TalentTree() {
         setHeroNodes([])
       }
 
-      // Only set initial selections if this is not an import (importCounter === 0)
-      if (importCounter === 0) {
+      // Only set initial selections if this is not an import (importCounter === 0) and no talents were provided
+      if (importCounter === 0 && !talents) {
         // Set some initial selected nodes for testing
         setSelectedClassNodes([
           druidData.classNodes[0].id,
@@ -651,11 +735,11 @@ export default function TalentTree() {
             ...(druidData.heroNodes.length > 3 ? [druidData.heroNodes[3].id] : []),
           ])
         }
+      } else {
+        console.error('Could not find Druid data in talents.json')
       }
-    } else {
-      console.error('Could not find Druid data in talents.json')
     }
-  }, [currentSpecId, importCounter])
+  }, [currentSpecId, importCounter, talents])
 
   // Hide notification after 3 seconds
   useEffect(() => {
@@ -979,6 +1063,12 @@ export default function TalentTree() {
     return binaryResult
   }
 
+  // Function to correctly determine if a hero node belongs to the active hero tree
+  const determineHeroNodeSubTree = (nodeId: number, allHeroNodes: TalentNode[]) => {
+    const node = allHeroNodes.find((n) => n.id === nodeId)
+    return node?.subTreeId || 0
+  }
+
   const importTalentString = (talentString: string) => {
     try {
       // Convert from base64 to binary string and extract specID
@@ -986,7 +1076,6 @@ export default function TalentTree() {
 
       // Extract the specID from the binary string (at bits 8-24)
       const specID = parseInt(binaryString.substring(8, 24), 2)
-      console.log(`Using specID for talent import: ${specID}`)
 
       // Skip header (152 bits: 8 bits version + 16 bits specID + 128 bits treeHash)
       const headerLength = 152
@@ -1018,7 +1107,9 @@ export default function TalentTree() {
       const nodeMap = new Map<number, TalentNode>()
 
       // Collect nodes from all specs in the talent data
-      console.log('Collecting nodes from all specs in the talent data')
+      let subTreeNodeId: number | undefined
+      let subTrees: number[] = []
+      let selectedHeroSubTreeId: number | undefined
       talentData.forEach((specData) => {
         // Add class nodes
         if (specData.classNodes && Array.isArray(specData.classNodes)) {
@@ -1046,6 +1137,24 @@ export default function TalentTree() {
             }
           })
         }
+
+        if (druidData && druidData.subTreeNodes) {
+          subTreeNodeId = druidData.subTreeNodes[0].id
+          subTrees = druidData.subTreeNodes[0].entries.map(
+            (entry) =>
+              // Use optional chaining instead of type assertion
+              (entry as unknown as SubTreeEntry['entries'][0]).traitSubTreeId || 0
+          )
+        }
+
+        if (specData.subTreeNodes && Array.isArray(specData.subTreeNodes)) {
+          specData.subTreeNodes.forEach((node) => {
+            if (!nodeMap.has(node.id)) {
+              // Cast the node to TalentNode type
+              nodeMap.set(node.id, node as unknown as TalentNode)
+            }
+          })
+        }
       })
 
       // New arrays to store selected nodes
@@ -1056,6 +1165,8 @@ export default function TalentTree() {
       const newNodeChoices = new Map<number, number>()
       // New map to store node ranks
       const newNodeRanks = new Map<number, number>()
+      // Map to track which hero subTreeIds have selected nodes
+      const selectedHeroSubTreeIds = new Set<number>()
 
       // Process each node in the order specified by fullNodeOrder
       let currentPosition = 0
@@ -1067,8 +1178,6 @@ export default function TalentTree() {
 
         // Skip if node not found in the map
         if (!node) {
-          console.warn(`Node ID ${nodeId} from fullNodeOrder not found in talent data`)
-
           // Still need to process the bit for this node even if we don't have the node data
           if (currentPosition < nodeSelectionBits.length) {
             const isSelectedBit = nodeSelectionBits.charAt(currentPosition)
@@ -1089,9 +1198,6 @@ export default function TalentTree() {
                     const isPartiallyRankedBit = nodeSelectionBits.charAt(currentPosition)
                     const isPartiallyRanked = isPartiallyRankedBit === '1'
                     currentPosition++
-                    console.log(
-                      `  isPartiallyRanked: ${isPartiallyRanked}, bit: ${isPartiallyRankedBit}`
-                    )
 
                     if (isPartiallyRanked) {
                       // Ranks Purchased (6 bits)
@@ -1103,9 +1209,6 @@ export default function TalentTree() {
                       const reversedBits = ranksPurchasedBits.split('').reverse().join('')
                       const ranksPurchased = parseInt(reversedBits, 2)
                       currentPosition += 6
-                      console.log(
-                        `  ranksPurchased: ${ranksPurchased}, bits: ${ranksPurchasedBits} (reversed: ${reversedBits})`
-                      )
 
                       // Update the node rank based on the ranks purchased
                       if (
@@ -1125,7 +1228,6 @@ export default function TalentTree() {
                           newSelectedHeroNodes.includes(nodeId)
                         ) {
                           newNodeRanks.set(nodeId, node.maxRanks)
-                          console.log(`  Setting to max ranks: ${node.maxRanks}`)
                         }
                       }
                     }
@@ -1136,7 +1238,6 @@ export default function TalentTree() {
                     const isChoiceNodeBit = nodeSelectionBits.charAt(currentPosition)
                     const isChoiceNode = isChoiceNodeBit === '1'
                     currentPosition++
-                    console.log(`  isChoiceNode: ${isChoiceNode}, bit: ${isChoiceNodeBit}`)
 
                     if (isChoiceNode && currentPosition + 2 <= nodeSelectionBits.length) {
                       // Choice Entry Index (2 bits)
@@ -1153,9 +1254,6 @@ export default function TalentTree() {
 
         // Check if we have enough bits left
         if (currentPosition >= nodeSelectionBits.length) {
-          console.warn(
-            `Reached end of binary string at node ${i + 1}/${druidData.fullNodeOrder.length}`
-          )
           break
         }
 
@@ -1164,13 +1262,8 @@ export default function TalentTree() {
         const isNodeSelected = isSelectedBit === '1'
         currentPosition++
 
-        if (i < 50 || isNodeSelected) {
-          console.log(`Node ${i + 1}/${druidData.fullNodeOrder.length}:`)
-          console.log(`  nodeId: ${nodeId}`)
-          console.log(`  node name: ${node.name}`)
-          console.log(`  isSelected: ${isNodeSelected}`)
-          console.log(`  bit position: ${currentPosition - 1}, bit value: ${isSelectedBit}`)
-        }
+        // isTargetNode is our choice node for the Hero Talents
+        const isTargetNode = nodeId === subTreeNodeId
 
         if (isNodeSelected) {
           totalSelected++
@@ -1187,34 +1280,34 @@ export default function TalentTree() {
             newSelectedClassNodes.push(nodeId)
             // Set initial rank to 1
             newNodeRanks.set(nodeId, 1)
-            console.log(`  Added to selected class nodes`)
           } else if (isHeroNode) {
+            // Track which hero subTree this node belongs to
+            const heroSubTreeId = determineHeroNodeSubTree(nodeId, druidData.heroNodes || [])
+            if (heroSubTreeId) {
+              selectedHeroSubTreeIds.add(heroSubTreeId)
+            }
+
             newSelectedHeroNodes.push(nodeId)
             // Set initial rank to 1
             newNodeRanks.set(nodeId, 1)
-            console.log(`  Added to selected hero nodes`)
           } else if (isSpecNode) {
             newSelectedSpecNodes.push(nodeId)
             // Set initial rank to 1
             newNodeRanks.set(nodeId, 1)
-            console.log(`  Added to selected spec nodes`)
           } else {
             // Node belongs to a different spec, we'll skip it for selection purposes
-            console.log(`  Node belongs to a different spec, not selecting it`)
           }
 
           // Is Node Purchased (1 bit)
           const isPurchasedBit = nodeSelectionBits.charAt(currentPosition)
           const isNodePurchased = isPurchasedBit === '1'
           currentPosition++
-          console.log(`  isNotDefault: ${isNodePurchased}, bit: ${isPurchasedBit}`)
 
           if (isNodePurchased) {
             // Is Partially Ranked (1 bit)
             const isPartiallyRankedBit = nodeSelectionBits.charAt(currentPosition)
             const isPartiallyRanked = isPartiallyRankedBit === '1'
             currentPosition++
-            console.log(`  isPartiallyRanked: ${isPartiallyRanked}, bit: ${isPartiallyRankedBit}`)
 
             if (isPartiallyRanked) {
               // Ranks Purchased (6 bits)
@@ -1226,9 +1319,6 @@ export default function TalentTree() {
               const reversedBits = ranksPurchasedBits.split('').reverse().join('')
               const ranksPurchased = parseInt(reversedBits, 2)
               currentPosition += 6
-              console.log(
-                `  ranksPurchased: ${ranksPurchased}, bits: ${ranksPurchasedBits} (reversed: ${reversedBits})`
-              )
 
               // Update the node rank based on the ranks purchased
               if (
@@ -1248,7 +1338,6 @@ export default function TalentTree() {
                   newSelectedHeroNodes.includes(nodeId)
                 ) {
                   newNodeRanks.set(nodeId, node.maxRanks)
-                  console.log(`  Setting to max ranks: ${node.maxRanks}`)
                 }
               }
             }
@@ -1257,13 +1346,53 @@ export default function TalentTree() {
             const isChoiceNodeBit = nodeSelectionBits.charAt(currentPosition)
             const isChoiceNode = isChoiceNodeBit === '1'
             currentPosition++
-            console.log(`  isChoiceNode: ${isChoiceNode}, bit: ${isChoiceNodeBit}`)
 
             if (isChoiceNode && currentPosition + 2 <= nodeSelectionBits.length) {
               // Choice Entry Index (2 bits)
+              const choiceEntryIndexBits = nodeSelectionBits.substring(
+                currentPosition,
+                currentPosition + 2
+              )
+              const choiceEntryIndex = parseInt(
+                choiceEntryIndexBits.split('').reverse().join(''),
+                2
+              )
               currentPosition += 2
+              if (isTargetNode) {
+                selectedHeroSubTreeId = subTrees[choiceEntryIndex]
+              }
+
+              // Update the node choice
+              if (
+                newSelectedClassNodes.includes(nodeId) ||
+                newSelectedSpecNodes.includes(nodeId) ||
+                newSelectedHeroNodes.includes(nodeId)
+              ) {
+                newNodeChoices.set(nodeId, choiceEntryIndex)
+              }
             }
           }
+        }
+      }
+
+      // Clean up hero nodes - only include nodes from the chosen hero subTree
+      if (selectedHeroSubTreeIds.size > 0 && druidData.heroNodes) {
+        // Filter the hero nodes to keep only those from selected subTreeIds
+        const filteredHeroNodes = newSelectedHeroNodes.filter((nodeId) => {
+          const node = druidData.heroNodes?.find((n) => n.id === nodeId)
+          if (
+            node?.subTreeId &&
+            (!selectedHeroSubTreeIds.has(node.subTreeId) ||
+              node.subTreeId !== selectedHeroSubTreeId)
+          ) {
+            return false
+          }
+          return true
+        })
+
+        if (filteredHeroNodes.length !== newSelectedHeroNodes.length) {
+          newSelectedHeroNodes.length = 0 // Clear the array
+          newSelectedHeroNodes.push(...filteredHeroNodes) // Add back only the filtered nodes
         }
       }
 
@@ -1283,15 +1412,15 @@ export default function TalentTree() {
         // Increment the import counter to trigger a re-render
         setImportCounter((prev) => prev + 1)
 
-        showNotification(`Successfully imported ${totalSelected} talents`, 'success')
+        // showNotification(`Successfully imported ${totalSelected} talents`, 'success')
       } else {
-        showNotification('No talents were selected from the import string', 'error')
+        // showNotification('No talents were selected from the import string', 'error')
       }
 
       return true
     } catch (error) {
       console.error('Failed to import talent string:', error)
-      showNotification('Failed to import talent string', 'error')
+      // showNotification('Failed to import talent string', 'error')
       return false
     }
   }
@@ -1422,14 +1551,11 @@ export default function TalentTree() {
         }
       })
 
-      console.log(`Collected ${nodeMap.size} unique nodes from all specs for encoding`)
-
       // Process nodes in the order specified by fullNodeOrder
       for (const nodeId of druidData.fullNodeOrder) {
         // Check if the node is selected based on its type
         const nodeInfo = nodeMap.get(nodeId)
         if (!nodeInfo) {
-          console.warn(`Node ID ${nodeId} not found in any node collection`)
           // Still need to add a bit for this node (not selected)
           binaryData.addBits(0, 1)
           continue
@@ -1501,7 +1627,6 @@ export default function TalentTree() {
 
       // Convert to Base64 and add 'C' prefix for class talents
       const base64String = 'C' + binaryData.toBase64()
-      console.log('Exported talent string:', base64String)
       return base64String
     } catch (error) {
       console.error('Failed to export talent string:', error)
@@ -1569,84 +1694,151 @@ export default function TalentTree() {
 
   const { classWidth, specWidth, heroWidth } = getWidthClass()
 
+  const handleCopyTalentString = () => {
+    // Copy the talent string to clipboard
+    if (talents) {
+      navigator.clipboard
+        .writeText(talents)
+        .then(() => {
+          setCopyButtonState('copied')
+          setTimeout(() => setCopyButtonState('ready'), 2000) // Reset after 2 seconds
+        })
+        .catch((err) => {
+          console.error('Failed to copy talent string:', err)
+          showNotification('Failed to copy talent string', 'error')
+        })
+    }
+  }
+
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-2">
-          <input
-            type="text"
-            value={talentString}
-            onChange={handleTalentStringChange}
-            placeholder="Paste talent string here..."
-            className="flex-1 rounded-md border border-gray-600 bg-gray-800 p-2 text-white"
-          />
-          <button
-            onClick={handleImportClick}
-            className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-          >
-            Import
-          </button>
-          <button
-            onClick={handleExportClick}
-            className="rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700"
-          >
-            Export
-          </button>
-          <button
-            onClick={resetSelections}
-            className="rounded-md bg-red-600 px-4 py-2 text-white hover:bg-red-700"
-          >
-            Reset
-          </button>
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="flex space-x-2">
-            <button
-              onClick={() => handleTreeChange('class')}
-              className={`rounded px-3 py-1 ${
-                activeTree === 'class'
-                  ? 'bg-yellow-600 text-white'
-                  : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-              }`}
-            >
-              Class Tree
-            </button>
-            <button
-              onClick={() => handleTreeChange('spec')}
-              className={`rounded px-3 py-1 ${
-                activeTree === 'spec'
-                  ? 'bg-yellow-600 text-white'
-                  : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-              }`}
-            >
-              Spec Tree
-            </button>
-            <button
-              onClick={() => handleTreeChange('hero')}
-              className={`rounded px-3 py-1 ${
-                activeTree === 'hero'
-                  ? 'bg-yellow-600 text-white'
-                  : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-              }`}
-            >
-              Hero Tree
-            </button>
-            <button
-              onClick={() => handleTreeChange('full')}
-              className={`rounded px-3 py-1 ${
-                activeTree === 'full'
-                  ? 'bg-yellow-600 text-white'
-                  : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-              }`}
-            >
-              Full Tree
-            </button>
+      {!viewOnly ? (
+        <>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                value={talentString}
+                onChange={handleTalentStringChange}
+                placeholder="Paste talent string here..."
+                className="flex-1 rounded-md border border-gray-600 bg-gray-800 p-2 text-white"
+              />
+              <button
+                onClick={handleImportClick}
+                className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+              >
+                Import
+              </button>
+              <button
+                onClick={handleExportClick}
+                className="rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700"
+              >
+                Export
+              </button>
+              <button
+                onClick={resetSelections}
+                className="rounded-md bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+              >
+                Reset
+              </button>
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => handleTreeChange('full')}
+                  className={`rounded px-3 py-1 ${
+                    activeTree === 'full'
+                      ? 'bg-yellow-600 text-white'
+                      : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+                  }`}
+                >
+                  Full Tree
+                </button>
+                <button
+                  onClick={() => handleTreeChange('class')}
+                  className={`rounded px-3 py-1 ${
+                    activeTree === 'class'
+                      ? 'bg-yellow-600 text-white'
+                      : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+                  }`}
+                >
+                  Class Tree
+                </button>
+                <button
+                  onClick={() => handleTreeChange('spec')}
+                  className={`rounded px-3 py-1 ${
+                    activeTree === 'spec'
+                      ? 'bg-yellow-600 text-white'
+                      : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+                  }`}
+                >
+                  Spec Tree
+                </button>
+                <button
+                  onClick={() => handleTreeChange('hero')}
+                  className={`rounded px-3 py-1 ${
+                    activeTree === 'hero'
+                      ? 'bg-yellow-600 text-white'
+                      : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+                  }`}
+                >
+                  Hero Tree
+                </button>
+              </div>
+              <button
+                onClick={handleSampleClick}
+                className="text-sm text-blue-400 hover:text-blue-300"
+              >
+                Use sample talent string
+              </button>
+            </div>
           </div>
-          <button onClick={handleSampleClick} className="text-sm text-blue-400 hover:text-blue-300">
-            Use sample talent string
+        </>
+      ) : (
+        // In viewOnly mode, only show the tree navigation buttons
+        <div className="flex space-x-2">
+          <button
+            onClick={() => handleTreeChange('full')}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'full'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Full Tree
+          </button>
+          <button
+            onClick={() => handleTreeChange('class')}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'class'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Class Tree
+          </button>
+          <button
+            onClick={() => handleTreeChange('spec')}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'spec'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Spec Tree
+          </button>
+          <button
+            onClick={() => handleTreeChange('hero')}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'hero'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Hero Tree
           </button>
         </div>
-      </div>
+      )}
 
       {notification.visible && (
         <div
@@ -1669,6 +1861,7 @@ export default function TalentTree() {
                 toggleNodeSelection={toggleClassNodeSelection}
                 nodeChoices={nodeChoices}
                 nodeRanks={nodeRanks}
+                viewOnly={viewOnly}
               />
             </div>
           )}
@@ -1683,6 +1876,8 @@ export default function TalentTree() {
                 showAllHeroTalents={showAllHeroTalents}
                 nodeChoices={nodeChoices}
                 nodeRanks={nodeRanks}
+                viewOnly={viewOnly}
+                talentString={talentString}
               />
             </div>
           )}
@@ -1695,11 +1890,28 @@ export default function TalentTree() {
                 toggleNodeSelection={toggleSpecNodeSelection}
                 nodeChoices={nodeChoices}
                 nodeRanks={nodeRanks}
+                viewOnly={viewOnly}
               />
             </div>
           )}
         </div>
       </div>
+
+      {/* Add button to copy talent string */}
+      {talents && (
+        <div className="mt-4 flex justify-center">
+          <button
+            onClick={handleCopyTalentString}
+            className={`rounded-md px-4 py-2 text-white transition-all duration-300 ${
+              copyButtonState === 'copied'
+                ? 'scale-105 animate-pulse bg-yellow-600'
+                : 'bg-gray-700 hover:bg-gray-600'
+            }`}
+          >
+            {copyButtonState === 'copied' ? 'Copied to Clipboard!' : 'Copy Talent String'}
+          </button>
+        </div>
+      )}
     </div>
   )
 }
