@@ -32,7 +32,7 @@ Sea Citrine: Always play [Fathomdweller's Runed Citrine](https://www.wowhead.com
 Wind Citrine: Always play [Windsinger's Runed Citrine](https://www.wowhead.com/item=228640/windsingers-runed-citrine).
 
 
-# Rotation:
+# Rotation
 
 ## Single Target
 
@@ -53,16 +53,19 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Select which talents you have to filter the priority list:**
 
+> [!TIP]
+> Uncheck !Bloodtalons! if you want a simpler builder priority.
+
 <CheckboxProvider>
-<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" defaultCheck/>
-<Checkbox isIcon id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents"/>
+<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" />
+<Checkbox isIcon id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents" defaultCheck />
 <Checkbox isIcon id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
 <Checkbox isIcon id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" defaultCheck />
 <Checkbox isIcon id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
 <Checkbox isIcon id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
-<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" />
-<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
+<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" defaultCheck />
+<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" defaultCheck />
 <Checkbox isIcon id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws" spellId={405300} name="Thrashing Claws" />
 <Checkbox isIcon id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
@@ -174,14 +177,17 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Select which talents you have to filter the priority list:**
 
+> [!TIP]
+> Uncheck !Bloodtalons! if you want a simpler builder priority.
+
 <CheckboxProvider>
 <Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck/>
 <Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
-<Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" defaultCheck />
+<Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" />
 <Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" />
 <Checkbox isIcon id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" radio="Convoke AOE" defaultCheck />
-<Checkbox isIcon id="Adaptive Swarm AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm AOE" defaultCheck />
-<Checkbox isIcon id="Unbridled Swarm AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm AOE"/>
+<Checkbox isIcon id="Adaptive Swarm AOE" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm AOE" />
+<Checkbox isIcon id="Unbridled Swarm AOE" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm AOE" defaultCheck />
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="Incarnation" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration" />
 <Checkbox isIcon id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
@@ -280,13 +286,13 @@ The way this section is written is very formulaic and has the same structure as 
 
 </Collapsible>
 
-# Talents:
+# Talents
 
 ## Class Tree (all pve content)
 
 ![Class Tree Talents](/static/images/FERALCLASS.png)
 
-### Talent Explanations:
+### Talent Explanations
 
 <details>
 <summary>Purple Choice Options Explained</summary> 
@@ -350,7 +356,7 @@ The way this section is written is very formulaic and has the same structure as 
 
 </details>
 
-## Raid Talents:
+## Raid Talents
 
 Our recommended default hero-tree for raiding is Wildstalker once you acquire at least the 2 piece 11.1 set bonus. That being said, Druid of the Claw may see some play on fights with high AoE.
 
@@ -363,47 +369,47 @@ Our recommended default hero-tree for raiding is Wildstalker once you acquire at
 
 <CheckboxProvider>
 
-<Checkbox id="11.1 4p" isIcon spellId={439528} name="11.1 4p" radio="setbonus" />
+<Checkbox id="11.1 4p" isIcon spellId={439528} name="11.1 4p" radio="setbonus" defaultCheck/>
 <Checkbox id="2p2p" isIcon spellId={439528} name="11.1 2p + 11.0 2p" radio="setbonus"/>
-<Checkbox id="11.0 4p" isIcon spellId={441583} name="11.0 4p" radio="setbonus" defaultCheck/>
+<Checkbox id="11.0 4p" isIcon spellId={441583} name="11.0 4p" radio="setbonus" />
 
 </CheckboxProvider>
 
 <div className="pb-6">
 </div>
 
-[*11.1 4p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*11.1 4p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBzGMmZUzYWYZGjxMzMAAAAAAAYAAAAEAMLzs0sNzyGMzAwiZwA"}/>
 
-[*11.1 4p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYYYMzomxsMWmxYMDDAAAAAAMwAAAAIAY2mZpZbmlNYmBgFzgB"}/>
+[*11.1 4p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYWgxMjaGzCLzMjxMzMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
 
-[*11.1 4p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*11.1 4p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmFWmZGjZMDAAAAAAAGAAAABAz2MLNbzssBzMAsYGM"}/>
 
-[*11.1 4p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*11.1 4p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZmZAAAAAAAwAAAAIAY2mZpZbmlNwMAsYGM"}/>
 
 [*11.1 4p]<Talents name={"Sprocketmonger Lockenstock"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYYYMzomxsMWmxYMDDAAAAAAMwAAAAIAY2mZpZbmlNYmBgFzgB"}/>
 
-[*11.1 4p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*11.1 4p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBzGMmZUzYWYZmZMmZmBAAAAAAADAAAgAgZbmlmtZW2AzAwiZwA"}/>
 
-[*11.1 4p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYWgxMjaGzyYZGjxMMAAAAAAwADAAAgAgZbmlmtZW2gZGAWMDG"}/>
+[*11.1 4p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYWgxMjaGzCLzMjxMzMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
 
-[*11.1 4p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*11.1 4p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmFWmxYMzMDAAAAAAAGAAAABAz2MLNbzssBzMAsYGM"}/>
 
 
-[*2p2p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*2p2p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBzGMmZUzYWYZGjxMzMAAAAAAAYAAAAEAMLzs0sNzyGMzAwiZwA"}/>
 
-[*2p2p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMMMmZUzYWGLzYMmhBAAAAAAGYAAAAEAMbzs0sNzyGMzAwiZwA"}/>
+[*2p2p]<Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMLwYmRNjZhlZmxYmZGAAAAAAAMAAAACAmtZWa2mZZDMDALmBD"}/>
 
-[*2p2p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*2p2p]<Talents name={"Rik Reverb"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmFWmZGjZMDAAAAAAAGAAAABAz2MLNbzssBzMAsYGM"}/>
 
-[*2p2p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*2p2p]<Talents name={"Stix Bunkjunker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZmZAAAAAAAwAAAAIAY2mZpZbmlNwMAsYGM"}/>
 
-[*2p2p]<Talents name={"Sprocketmonger Lockenstock"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMMMmZUzYWGLzYMmhBAAAAAAGYAAAAEAMbzs0sNzyGMzAwiZwA"}/>
+[*2p2p]<Talents name={"Sprocketmonger Lockenstock"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMMMmZUzYWYZmZMmZmBAAAAAAADAAAgAgZbmlmtZW2AzAwiZwA"}/>
 
-[*2p2p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*2p2p]<Talents name={"One-Armed Bandit"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBzGMmZUzYWYZmZMmZmBAAAAAAADAAAgAgZbmlmtZW2AzAwiZwA"}/>
 
-[*2p2p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMLwYmRNjZZsMjxYGGAAAAAAYgBAAAQAwsNzSz2MLbwMDALmBD"}/>
+[*2p2p]<Talents name={"Mug'zee"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsFMLwYmRNjZhlZmxYmZGAAAAAAAMAAAACAmtZWa2mZZDMDALmBD"}/>
 
-[*2p2p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmlxyMGjZYAAAAAAgBGAAAABAz2MLNbzssBzMAsYGM"}/>
+[*2p2p]<Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBDDjZG1MmFWmxYMzMDAAAAAAAGAAAABAz2MLNbzssBzMAsYGM"}/>
 
 
 [*11.0 4p]<Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwWwwwDYmRNjZZsMzMGzYGAAAAAAYAAAAAamlZZmZbABWgZGAWYwA"}/>
@@ -461,7 +467,7 @@ Please note you can significantly customise the above, see the talent write-up i
 </Collapsible>
 
 
-## Dungeon Talents:
+## Dungeon Talents
 
 Feral goes into 11.1 with plenty of options yet again when it comes to M+, with both Hero trees creating two distinct options on their own. Embrace these options and find what works for you, there is simply no 'best' build, especially because different talents will suit different dungeons and groups. However, listed below are some reference builds you can play around with, and the images below can help guide you to customise these builds to your liking.
 
@@ -498,7 +504,7 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
 
 <Talents name={"Wildstalker Thrashing Claws (note: slightly inferior wildstalker build)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZbWMz2YmZmZzmZsNzYGzMAAAAAALBzmBmZUzYWMLzMzyYGGAAAAAAYgBAAAQAwsNzSz2MLbwYAYxMYA"}/>
 
-### Talent Explanations:
+### Talent Explanations
 
 <details>
 <summary>Section 1 Options Explained</summary> 
@@ -553,7 +559,7 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
 
 </details>
 
-# Consumables:
+# Consumables
 
 ## Potions
 
@@ -577,9 +583,9 @@ Highly Recommend you talent Druid of the Claw, unless you have a specific reason
 
 [Crystallized Augment Rune](https://www.wowhead.com/item=224572/crystallized-augment-rune)
 
-# Gearing:
+# Gearing
 
-## Stat Priority:
+## Stat Priority
 
 > [!WARNING]
 > Sim yourself using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear). Do not follow any stat priorities.
@@ -621,9 +627,9 @@ These trinket lists are in rough order of strength, assuming the highest item le
 | :-: | :- | :- |
 | **S Tier** | [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103) | 90s on-use trinket. Generally will hold this to pair with Berserk. On some fight timers where you hold Berserk, you can squeeze an extra use of this in between.
 |  | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) |
-|  | [Eye of Kezan](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) | The longer the fight, the more this pulls ahead of everything else.
-|  | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) | 2 min on-use trinket. Pair this with Berserk. The value of this trinket is reduced slightly if nobody else in your group is running it.
-|  | [Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103) |
+|  | [Eye of Kezan](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) | The longer the fight, the more this pulls ahead of everything else. The shorter the fight, the more this falls behind. This ranking assumes a ~5minute fight.
+|  | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) | 2 min on-use trinket. Pair this with Berserk. The value of this trinket is increased slightly if others in your group are running it.
+|  | [Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103) | Highly recommend doing your delve bounty/map and filling delve vault for this trinket if you don't have the above on myth track.
 | **A Tier** | [Suspicious Energy Drink](https://www.wowhead.com/ptr-2/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=103) |
 |  | [Reverb Radio](https://www.wowhead.com/ptr-2/item=230194/reverb-radio?class=11&ilvl=678&spec=103) |
 |  | [Azerokk's Resonating Heart](https://www.wowhead.com/ptr-2/item=159612/azerokks-resonating-heart?ilvl=678&spec=103) |
@@ -651,7 +657,7 @@ These trinket lists are in rough order of strength, assuming the highest item le
 
 ### Trinket FAQ
 
-Q: Should we playing double on-use with [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) and [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103)?
+Q: Should we be playing double on-use with [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) and [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103)?
 
 A: No, usually we only play 1 on-use trinket. Though you should always sim just in case.
 
@@ -667,7 +673,7 @@ Q: Why do damaging trinkets deal more damage as Wildstalker?
 
 A: The Wildstalker Hero Talent !440119|Vigorous Creepers! buffs non-feral damage as well, including damage from trinkets.
 
-# Miscellaneous:
+# Miscellaneous
 
 ## What is snapshotting?
 
@@ -820,9 +826,6 @@ None of these WeakAuras or Addons are _required,_ but using them may elevate you
 
 [Feral Bleed Power by Oi](https://wago.io/qYnbZzlmP)
 This WA will make it easier to track the power of your next bleed compared to the currently active one. For more details, check out the WA description.
-
-[Feral Snapshots by Enth](https://www.curseforge.com/wow/addons/feralsnapshots)
-This Addon does many things, including tracking the talents, buffs and damage modifiers affecting DoT abilities. This information is displayed on WAs, standard Blizzard nameplates, Plater, and other addons. For more details, check out the Addon description.
 
 [Rake Plater mods by Sretnuh](https://wago.io/search/imports/wow/all?q=User%3A%22Sretnuh%22)
 This links to a collection of Rake mods for the Plater addon. Their purpose is to help you track which targets have Rake at a glance. No listed mod is superior to the others. We recommend you try out several, and settle on your favorite.
