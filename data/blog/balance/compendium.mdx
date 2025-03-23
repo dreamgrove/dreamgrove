@@ -7,6 +7,18 @@ summary: 'A guide to Balance Druid'
 ---
 # News
 
+## 25th of March tuning notes
+  > [!NOTE]
+  > - !Wrath! damage increased by 30%.
+  > - !Starsurge! damage increased by 5%.
+  > - Elune’s Chosen: !Lunar Calling! increases !Starfire!’s damage to its primary target by 160% (was 100%).
+
+- This is around a 7% buff on ST for both hero talents. The buff to !Wrath! has resulted in some talent changes for ST and builds in the talent section has been updated.
+
+## Raid Guide 
+
+- Dreamgrove has a [raid guide](https://www.dreamgrove.gg/raids/liberation_of_undermine) page that is a community curated resource that anybody can submit contributions to. It should include different talent builds for each boss, general tips for how to handle some mechanics and/or links to kill videos or relevant VODs.
+
 ## Tier set
 
 #### [2-piece](https://www.wowhead.com/spell=1215695/druid-balance-11-1-class-set-2pc)
@@ -40,9 +52,9 @@ This is approximately ~11% dmg increase from having no set.
 <CheckboxProvider>
   <Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
   <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
-  <Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
+  <Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" radio="Stellar Flare" />
   <Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-  <Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" defaultCheck />
+  <Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" />
 </CheckboxProvider>
 
 [*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
@@ -180,7 +192,6 @@ When reading the priority lists below, you should not think of these as steps to
 - [*StarweaverKOTG] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
 - [*Wild MushroomKOTG] Use !Wild Mushroom! if you will not overcap on  AP and !Fungal Growth! is not active on your target.
 - Use !Wrath!.
-
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
@@ -325,8 +336,8 @@ When reading the priority lists below, you should not think of these as steps to
 ### Eclipses and Fillers
 
 - Enter !Solar Eclipse! and cast !Wrath! on 1 target.
-- If talented into !114107|Soul of the Forest! and !Umbral Intensity!, enter !Lunar Eclipse! and cast !Starfire! on 2 targets. Otherwise, enter !Solar Eclipse! and cast !Wrath!.
-- Enter !Lunar Eclipse! on 3+ targets.
+- If talented into !114107|Soul of the Forest! and !Umbral Intensity!, enter !Lunar Eclipse! on 3 targets. Otherwise, enter !Solar Eclipse! and cast !Wrath!.
+- Enter !Lunar Eclipse! on 4+ targets.
 - If talented into !Lunar Calling!, enter !Lunar Eclipse! and use !Starfire! on all target counts.
 - Always cast the appropriate filler for your !Eclipse! regardless of target count.
 - Use !Starsurge! on 1 target.
@@ -362,15 +373,11 @@ When using !Elune's Chosen! and not talented into !391528|Convoke!, you can use 
 > [!NOTE]
 > These builds will be updated as people are progressing the raid and builds are more solidified and figured out. For specific raid tips and builds, check out the [raid page](https://www.dreamgrove.gg/raids/liberation_of_undermine) and click the "Balance" checkbox. This page will keep being updated as people are progressing bosses.
 
-<Talents name={"Single Target Without New 4pc"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGmZbGLjZmZMLzYmxMGbYjBYA22GLYamZZEAAAgNzMzMDsZgB"}/>
+<Talents name={"Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBMzCLzMDzwMLjlZ2mxCzMmZWmxMjZmxGWYAGgttxCmmZWGBAAAYjZMAbGYA"}/>
 
-<Talents name={"Single Target With New 4pc"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMbjlZ2mxCzMzYWmxMjZM2wCDwAstNWw0MzyIAAAAbMzMDYzYYA"}/>
+<Talents name={"Single Target Cleave"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBMzCLzMDzwMmZZmtZswMzMzsMjxYmZshFGgBYbbsgpZmlRAAAA2YGDwmBG"}/>
 
 <Talents name={"Stix Bunkjunker"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBeAzCLzMDwMMLzsMzsMmZmxsMjxMmhNswAMAbbjFMNzsMAAAAYzMjZAbGGD"}/>
-
-<Talents name={"Single Target Cleave"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUGNjxMD8AmFWmZGgZ2mZZmtZswMzMmlZMGzYshFGgBYbbsgpZmlRAAAA2MzMzA2MGG"}/>
-
-<Talents name={"AoE"} talents={"CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtmxYmBeAzCLzMDYmZxsMzyMz2MzMzMziZZMMYDLMAjltZ2wY2GBmCAABwCzYA2MGG"}/>
 
 ## Mythic+
 
@@ -436,25 +443,27 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
 </Collapsible>
     <Collapsible title="Spec Tree ">
 
-- For the Balance Druid spec tree there are currently a solid number of talent iterations to choose from that don't provide a meaningful increase to your damage. Talents like !114107|Soul of the Forest!, !Crashing Star!, !Hail of Stars!, !Umbral Intensity!, !Astronomical Impact!, !Umbral Inspiration!, !Orbit Breaker! and !Sundered Firmament! are mostly interchangeable in ST with Keeper of the Grove, which is the recommended hero talent for raid encounters. Below there will be short explanations for each talent. Keep in mind that most of these options don't provide any changes in your rotation or decision making.
+- For the Balance Druid spec tree there are currently a solid number of talent iterations to choose from that don't provide a meaningful increase to your damage. Talents like !114107|Soul of the Forest!, !Crashing Star!, !Touch the Cosmos!, !Hail of Stars!, !Umbral Inspiration! and !Sundered Firmament! are mostly interchangeable in ST with Keeper of the Grove, which is the recommended hero talent for raid encounters. Below there will be short explanations for each talent. Keep in mind that most of these options don't provide any changes in your rotation or decision making.
 
 ### Top Section
 
-- !Stellar Flare! and !Wild Surges! are simming very close to each other so you can take whichever one you want. !Wild Surges! can be slightly easier to play where !Stellar Flare! requires you to keep refreshing the dot in pandemic. !Wild Surges! is better whenever there is stacked AoE, so will generally be the preferred choice for M+.
+- !Stellar Flare! is currently simming noticeably worse than !Wild Surges! on ST and is generally untakeable outside of niche situations where you can maintain dots on targets that are far apart, like if you stand in the middle on [Cauldron of Carnage](https://www.wowhead.com/guide/the-war-within/raids/liberation-of-undermine/cauldron-of-carnage-boss-strategy) or on [One-Armed Bandit](https://www.wowhead.com/guide/the-war-within/raids/liberation-of-undermine/one-armed-bandit-boss-strategy). !Wild Surges! is the recommended choice for most content outside of the niche scenarios where !Stellar Flare! can be useful.
   
-  !Nature's Balance! sims around 0.3% higher than !Twin Moons! on pure single target, but loses out whenever there are more targets, where you can benefit from !Twin Moons! spreading !Moonfire!.
+  !Nature's Balance! sims around 0.6% higher than !Twin Moons! on pure single target, but loses out whenever there are more targets, where you can benefit from !Twin Moons! spreading !Moonfire!.
   
   !Aetherial Kindling! is a preferred choice for any sustained AoE scenario where you can benefit from your DoT effects being extended. Very good for m+.
 
 ### Middle Section
 
-- !Sunseeker Mushroom! or !Wild Mushroom! are mandatory talents since they help saturate the [4-piece](https://www.wowhead.com/spell=1215698/druid-balance-11-1-class-set-4pc) uptime. 
+- !Sunseeker Mushroom! or !Wild Mushroom! are mandatory talents since they help saturate the [4-piece](https://www.wowhead.com/spell=1215698/druid-balance-11-1-class-set-4pc) uptime. !Sunseeker Mushroom! is by far the preferred option as the active !Wild Mushroom! ability does not do a lot of damage by itself and !Sunseeker Mushroom! is more than enough paired with the [2-piece](https://www.wowhead.com/spell=1215695/druid-balance-11-1-class-set-2pc) to get decent enough uptime.
   
   !Stellar Amplification! is recommended for ST scenarios where you cast Starsurge enough to keep good uptime on it, taken for most raid encounters.
   
-  !Touch the Cosmos! got a buff since 11.0 and is picked in most iterations. The best build without !Touch the Cosmos! is 0.4% worse on ST.
+  !Touch the Cosmos! got a buff since 11.0 and is picked in most ST iterations. You can drop this talent for !Umbral Inspiration!. In M+ with !Elune's Chosen! your choice will generally be between !Touch the Cosmos! or !Umbral Inspiration! and the choice does not make a big difference. !Umbral Inspiration! is better on AoE, while !Touch the Cosmos! provides some needed movement globals.
   
-  !Astronomical Impact! is a decent talent for both ST and AoE, but requires you to route through !Umbral Intensity! to reach it. You can take this talent over !Hail of Stars! whenever applicable.
+  !Umbral Intensity! is a very good talent for both !Keeper of the Grove! and !Elune's Chosen!. The best build on ST that isn't taking !Umbral Intensity! is around 1% behind on ST.
+  
+  !Astronomical Impact! is a decent talent for both ST and AoE, but requires you to route through !Umbral Intensity! to reach it.
   
   !114107|Soul of the Forest! in itself is an okay talent in ST and the extra Astral Power generation can help you in dealing with spots in raid where there is a lot of movement. It is mandatory in AoE.
   
@@ -468,11 +477,15 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
   
   !Umbral Inspiration! can be swapped out on ST for another talent, but is generally recommended for all content.
   
-  !Sundered Firmament! is optional for !Keeper of the Grove!, but mandatory for !Elune's Chosen! since it helps provide uptime for !Atmospheric Exposure!.
+  !Sundered Firmament! is optional for !Keeper of the Grove!, but mandatory for !Elune's Chosen! since it helps provide uptime for !Atmospheric Exposure!. 
   
-  !Orbit Breaker! is good whenever paired with !Hail of Stars!, as the increased duration on !Solstice! helps saturate !Orbit Breaker! procs.
+  !Orbit Breaker! is good whenever paired with !Hail of Stars!, as the increased duration on !Solstice! helps saturate !Orbit Breaker! procs. 
+
+  !Sundered Firmament! and !Orbit Breaker! both benefit from the damage increase from !Radiant Moonlight!.
   
   !Denizen of the Dream! is a strong single target node, but loses value in AoE scenarios. Recommended for all raid fights.
+
+  !Fury of Elune! and !Radiant Moonlight! are both mandatory talents for !Elune's Chosen!, but are generally not picked for !Keeper of the Grove!. You can pick !Fury of Elune! in !Keeper of the Grove! if you can consistently line up the cooldown with add spawns.
 
 </Collapsible>
 
