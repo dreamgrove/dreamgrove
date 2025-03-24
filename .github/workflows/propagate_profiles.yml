@@ -118,7 +118,7 @@ jobs:
           # Create PR
           cd simc
           gh auth login --with-token <<< "${{ secrets.API_TOKEN_GITHUB }}"
-          gh pr create --title "Updated profiles from Dreamgrove" \
+          gh pr create --title "[Balance] Updated profiles from Dreamgrove" \
                       --body "This PR updates profiles based on recent changes in the Dreamgrove repository." \
                       --base master \
                       --head ${{ env.BRANCH_NAME }}
