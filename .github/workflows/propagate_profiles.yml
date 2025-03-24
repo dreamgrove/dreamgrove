@@ -3,127 +3,70 @@ name: Propagate profile changes to SimulationCraft
 on:
   push:
     branches:
-      - master # or main, depending on your default branch
+      - master
     paths:
       - 'sims/owl/profiles/**'
-
-permissions:
-  contents: write
-  pull-requests: write
 
 jobs:
   propagate-profiles:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetch all history to identify changed files
+          fetch-depth: 0
 
       - name: Get changed files
         id: changed-files
         run: |
           echo "files=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep "^sims/owl/profiles/" | tr '\n' ' ')" >> $GITHUB_OUTPUT
 
-      - name: Set up Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Fork SimulationCraft Repository
-        id: fork-repo
-        uses: actions/github-script@v6
+      - name: Checkout simc
+        if: steps.changed-files.outputs.files != ''
+        uses: actions/checkout@v4
         with:
-          github-token: ${{ github.token }}
-          script: |
-            try {
-              // Check if fork already exists
-              const forks = await github.rest.repos.listForks({
-                owner: 'simulationcraft',
-                repo: 'simc'
-              });
-              
-              const existingFork = forks.data.find(fork => fork.owner.login === context.repo.owner);
-              
-              if (!existingFork) {
-                // Create a fork
-                await github.rest.repos.createFork({
-                  owner: 'simulationcraft',
-                  repo: 'simc'
-                });
-                // Fork creation is async and takes time, so we'll pause
-                await new Promise(resolve => setTimeout(resolve, 20000));
-              }
-              
-              return { fork_exists: true };
-            } catch (error) {
-              console.error('Error forking repository:', error);
-              return { fork_exists: false, error: error.message };
-            }
+          repository: simulationcraft/simc
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: './simc'
 
-      - name: Clone and prepare changes
-        if: steps.changed-files.outputs.files != '' && steps.fork-repo.outputs.result && fromJSON(steps.fork-repo.outputs.result).fork_exists
+      - name: Setup commit
+        if: steps.changed-files.outputs.files != ''
+        run: |
+          echo "COMMIT_AUTHOR=$(git log -1 --format=%aN)" >> $GITHUB_ENV
+          echo "COMMIT_EMAIL=$(git log -1 --format=%aE)" >> $GITHUB_ENV
+          git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
+          echo >> commit_msg
+          echo >> commit_msg
+          echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
+
+      - name: Copy profile files
+        if: steps.changed-files.outputs.files != ''
         env:
           PROFILE_FILES: ${{ steps.changed-files.outputs.files }}
         run: |
-          # Clone SimulationCraft repository
-          git clone https://github.com/${{ github.repository_owner }}/simc.git simc-repo
-          cd simc-repo
-
-          # Set upstream
-          git remote add upstream https://github.com/simulationcraft/simc.git
-          git fetch upstream
-          git checkout -b dreamgrove-profiles-update-$(date +%Y%m%d%H%M%S) upstream/master
-
           # Copy each changed profile file to the corresponding location in simc
-          cd ..
           for file in $PROFILE_FILES; do
             # Extract relative path within profiles directory
             relative_path=${file#sims/owl/profiles/}
             
             # Create directory structure if it doesn't exist
-            mkdir -p "simc-repo/profiles/$(dirname "$relative_path")"
+            mkdir -p "simc/profiles/$(dirname "$relative_path")"
             
             # Copy the file
-            cp "$file" "simc-repo/profiles/$relative_path"
+            cp "$file" "simc/profiles/$relative_path"
             
-            echo "Copied $file to simc-repo/profiles/$relative_path"
+            echo "Copied $file to simc/profiles/$relative_path"
           done
 
-          cd simc-repo
-
-          # Check if there are changes to commit
-          if git status --porcelain | grep -q '^'; then
-            git add .
-            git commit -m "Update profiles from Dreamgrove"
-            git push -u origin HEAD
+      - name: Commit profiles
+        if: steps.changed-files.outputs.files != ''
+        run: |
+          git config --global user.name ${{ env.COMMIT_AUTHOR }}
+          git config --global user.email ${{ env.COMMIT_EMAIL }}
+          cd simc
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes to profiles"
           else
-            echo "No changes to commit"
-            exit 1
+            git add .
+            git commit -F ../commit_msg
+            git push
           fi
-
-      - name: Create Pull Request
-        if: success()
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ github.token }}
-          script: |
-            try {
-              const branchName = `dreamgrove-profiles-update-${new Date().toISOString().replace(/[:.]/g, '-')}`;
-              
-              const PR = await github.rest.pulls.create({
-                owner: 'simulationcraft',
-                repo: 'simc',
-                title: 'Update profiles from Dreamgrove',
-                body: 'This PR updates profiles based on recent changes in the Dreamgrove repository.',
-                head: `${{ github.repository_owner }}:${branchName}`,
-                base: 'master',
-                maintainer_can_modify: true
-              });
-              
-              console.log(`Pull request created: ${PR.data.html_url}`);
-            } catch (error) {
-              console.error('Error creating PR:', error);
-              core.setFailed('Failed to create PR: ' + error.message);
-            }
