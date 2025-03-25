@@ -1,0 +1,124 @@
+name: Propagate profile changes to SimulationCraft
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'sims/owl/profiles/**'
+
+jobs:
+  propagate-profiles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          echo "files=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep "^sims/owl/profiles/" | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Validate file names
+        if: steps.changed-files.outputs.files != ''
+        env:
+          PROFILE_FILES: ${{ steps.changed-files.outputs.files }}
+        run: |
+          # Check each changed file for correct naming pattern
+          has_error=false
+
+          for file in $PROFILE_FILES; do
+            # Extract folder name from path
+            folder_name=$(basename $(dirname "$file"))
+            file_name=$(basename "$file")
+            expected_name="${folder_name}_Druid_Balance.simc"
+            
+            # Check if file name follows the expected pattern
+            if [[ "$file_name" != "$expected_name" ]]; then
+              echo "Error: $file should be named $expected_name"
+              has_error=true
+            fi
+          done
+
+          # Exit with error if any file names don't match expected pattern
+          if [ "$has_error" = true ]; then
+            echo "Some files don't follow the required naming pattern. Please fix and try again."
+            exit 1
+          fi
+
+      - name: Checkout simc
+        if: steps.changed-files.outputs.files != ''
+        uses: actions/checkout@v4
+        with:
+          repository: simulationcraft/simc
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: './simc'
+
+      - name: Setup commit
+        if: steps.changed-files.outputs.files != ''
+        run: |
+          echo "COMMIT_AUTHOR=$(git log -1 --format=%aN)" >> $GITHUB_ENV
+          echo "COMMIT_EMAIL=$(git log -1 --format=%aE)" >> $GITHUB_ENV
+          echo "BRANCH_NAME=dreamgrove-profiles-update-$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+          git log -1 --pretty=format:"%B%ndreamgrove/Dreamgrove@%h" > commit_msg
+          echo >> commit_msg
+          echo >> commit_msg
+          echo "Co-authored-by: Dreamgrove <dreamgrove@github.com>" >> commit_msg
+
+      - name: Copy profile files
+        if: steps.changed-files.outputs.files != ''
+        env:
+          PROFILE_FILES: ${{ steps.changed-files.outputs.files }}
+        run: |
+          # Copy each changed profile file to the corresponding location in simc
+          for file in $PROFILE_FILES; do
+            # Extract relative path within profiles directory
+            relative_path=${file#sims/owl/profiles/}
+            
+            # Create directory structure if it doesn't exist
+            mkdir -p "simc/profiles/$(dirname "$relative_path")"
+            
+            # Copy the file as is
+            cp "$file" "simc/profiles/$relative_path"
+            
+            echo "Copied $file to simc/profiles/$relative_path"
+          done
+
+      - name: Create PR
+        if: steps.changed-files.outputs.files != ''
+        run: |
+          cd simc
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "no changes to profiles"
+            exit 0
+          fi
+
+          # Configure Git
+          git config user.name "${{ env.COMMIT_AUTHOR }}"
+          git config user.email "${{ env.COMMIT_EMAIL }}"
+
+          # Create branch for PR
+          git checkout -b ${{ env.BRANCH_NAME }}
+
+          # Commit changes
+          git add .
+          git commit -F ../commit_msg
+
+          # Push to branch
+          git push origin ${{ env.BRANCH_NAME }}
+
+          # Install GitHub CLI
+          cd ..
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update
+          sudo apt install gh
+
+          # Create PR
+          cd simc
+          gh auth login --with-token <<< "${{ secrets.API_TOKEN_GITHUB }}"
+          gh pr create --title "[Balance] Updated profiles from Dreamgrove" \
+                      --body "This PR updates profiles based on recent changes in the Dreamgrove repository." \
+                      --base master \
+                      --head ${{ env.BRANCH_NAME }}
