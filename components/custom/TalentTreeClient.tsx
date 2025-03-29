@@ -557,7 +557,6 @@ export default function TalentTreeClient({
               currentPosition += 2
 
               if (isTargetNode) {
-                console.log('Sub Trees', subTrees)
                 selectedHeroSubTreeId = subTrees[choiceEntryIndex]
               }
 
@@ -568,8 +567,6 @@ export default function TalentTreeClient({
         }
       }
 
-      console.log(`Selected hero subTreeIds: ${Array.from(selectedHeroSubTreeIds).join(', ')}`)
-      console.log(`Selected hero subTreeId: ${selectedHeroSubTreeId}`)
       // Clean up hero nodes - only include nodes from the chosen hero subTree
       if (selectedHeroSubTreeIds.size > 0 && druidData.heroNodes) {
         // Filter the hero nodes to keep only those from selected subTreeIds
