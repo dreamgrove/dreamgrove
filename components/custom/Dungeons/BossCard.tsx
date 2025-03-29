@@ -33,7 +33,7 @@ export default async function BossCard({ title, image, id, children }) {
           {title}
         </div>
       </div>
-      <div className="w-full  px-4 py-2  ">{children}</div>
+      <div className="w-full px-4 py-2 [&>div]:list-none">{children}</div>
     </div>
   )
 }
