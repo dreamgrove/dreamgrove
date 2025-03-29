@@ -7,7 +7,7 @@ import feralIcon from '../../../public/static/images/icons/feral.jpg'
 import guardianIcon from '../../../public/static/images/icons/guardian.jpg'
 import Image, { StaticImageData } from 'next/image'
 import { useEffect, useState, Suspense } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 
 const toggleText = (state, id, selected) => {
   console.log('Current selected roles:', selected)
@@ -143,6 +143,7 @@ const specs = ['Guardian', 'Feral', 'Resto', 'Balance']
 function RoleSelectorContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
+  const pathname = usePathname()
   const [selected, setSelected] = useState<string[]>([])
 
   // Initialize selected roles from URL parameters
@@ -156,16 +157,15 @@ function RoleSelectorContent() {
 
   // Update URL when selected roles change
   useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString())
     if (selected.length > 0) {
-      const params = new URLSearchParams(searchParams.toString())
       params.set('roles', selected.join(','))
-      router.push(`?${params.toString()}`)
     } else {
-      const params = new URLSearchParams(searchParams.toString())
       params.delete('roles')
-      router.push(`?${params.toString()}`)
     }
-  }, [selected, router, searchParams])
+    const newUrl = `${pathname}${params.toString() ? `?${params.toString()}` : ''}`
+    window.history.replaceState({}, '', newUrl)
+  }, [selected, pathname, searchParams])
 
   useEffect(() => {
     const addDps = [...specs, 'DPS']
