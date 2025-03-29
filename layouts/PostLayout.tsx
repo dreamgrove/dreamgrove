@@ -21,7 +21,6 @@ interface LayoutProps {
 
 export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
   const { patch, slug, title, tags, toc, lastModified, changelogUrl, translator } = content
-  console.log(translator)
 
   const updateInfo = `Last updated on the ${lastModified} for patch ${patch}`
   return (

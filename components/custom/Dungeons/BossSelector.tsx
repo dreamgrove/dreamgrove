@@ -17,7 +17,6 @@ export default function BossSelector({ children }: BossSelectorProps) {
   const bossCards = Children.toArray(children).filter(
     (child) => isValidElement(child) && child.type?.toString().includes('BossCard')
   )
-  console.log(bossCards)
 
   const bossList = bossCards.map((card: ReactElement) => ({
     title: card.props.title as string,

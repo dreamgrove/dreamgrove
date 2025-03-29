@@ -47,7 +47,6 @@ export default function Talents({ name, talents, mimiron = false, open = false }
   // Effect to handle preloading when header is in view
   useEffect(() => {
     if (isHeaderInView && !shouldPreload) {
-      console.log(`Talent ${name} is in view, preloading...`)
       setShouldPreload(true)
     }
   }, [isHeaderInView, shouldPreload, name, logger])
