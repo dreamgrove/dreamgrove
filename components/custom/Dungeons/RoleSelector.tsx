@@ -6,7 +6,7 @@ import restoIcon from '../../../public/static/images/icons/resto.jpg'
 import feralIcon from '../../../public/static/images/icons/feral.jpg'
 import guardianIcon from '../../../public/static/images/icons/guardian.jpg'
 import Image, { StaticImageData } from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 
 const toggleText = (state, id, selected) => {
@@ -140,7 +140,7 @@ const IconDisplay = ({ text, setSelected, isSelected }) => {
 
 const specs = ['Guardian', 'Feral', 'Resto', 'Balance']
 
-export default function RoleSelector() {
+function RoleSelectorContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [selected, setSelected] = useState<string[]>([])
@@ -189,5 +189,29 @@ export default function RoleSelector() {
         ))}
       </div>
     </div>
+  )
+}
+
+export default function RoleSelector() {
+  return (
+    <Suspense
+      fallback={
+        <div className="mt-4 flex flex-col items-center">
+          <div className="text-xl">Choose your roles:</div>
+          <div className="flex w-full flex-col items-center justify-center space-y-3 py-4 sm:h-auto md:h-24 md:flex-row md:space-x-3 md:space-y-0 md:py-0">
+            {specs.map((spec) => (
+              <div key={spec} className="w-full flex-1">
+                <div className="cursor-pointer select-none rounded-md border-2 border-main/20 p-1">
+                  <div className="inline-block h-10 w-10 rounded-md bg-gray-700 opacity-20" />
+                  <span className="ml-2 align-sub text-xl text-white/20">{spec}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      }
+    >
+      <RoleSelectorContent />
+    </Suspense>
   )
 }
