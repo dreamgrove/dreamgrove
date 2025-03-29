@@ -186,7 +186,7 @@ const Header = () => {
               ))}
           </div>
           <LanguageSwitch />
-          <ThemeSwitch />
+          {false && <ThemeSwitch />}
           <MobileNav />
         </div>
       </div>
