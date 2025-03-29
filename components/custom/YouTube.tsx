@@ -36,21 +36,10 @@ const YouTube: React.FC<YouTubeProps> = ({
       setError('Missing YouTube video ID')
       return
     }
-
-    logger.info(`Rendering YouTube video: ${id}`)
   }, [id, logger])
 
-  const onReady = (event: YouTubeEvent) => {
-    logger.info(`YouTube video ready: ${id}`)
-  }
-
   const onError = (event: YouTubeEvent) => {
-    logger.error(`YouTube video error: ${id}, code: ${event.data}`)
     setFallbackMode(true)
-  }
-
-  const onPlay = (event: YouTubeEvent) => {
-    logger.info(`YouTube video playing: ${id}`)
   }
 
   if (!isClient) {
@@ -120,9 +109,7 @@ const YouTube: React.FC<YouTubeProps> = ({
             videoId={id}
             title={title}
             opts={opts}
-            onReady={onReady}
             onError={onError}
-            onPlay={onPlay}
             className="absolute inset-0 h-full w-full"
           />
         </div>

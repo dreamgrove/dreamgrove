@@ -112,7 +112,6 @@ export default function TalentTreeClient({
       if (druidData.heroNodes && druidData.heroNodes.length > 0) {
         setHeroNodes(druidData.heroNodes)
       } else {
-        console.log('No hero nodes found in the data')
         setHeroNodes([])
       }
 

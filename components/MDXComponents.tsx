@@ -21,10 +21,62 @@ import Alert from './custom/Alert'
 import MDXBlockquote from './custom/MDXBlockquote'
 
 export const components: MDXComponents = {
-  Image,
+  Image: ({ src, alt, ...props }) => {
+    let id = ''
+    const regex = /^\[\*(.*?)\]/ //Matches [*text]
+
+    if (typeof alt === 'string') {
+      const match = alt.trim().match(regex)
+      if (match) {
+        id = match[1]
+        alt = alt.replace(regex, '').trim()
+      }
+    }
+
+    const wrappedImage = <Image src={src} alt={alt} {...props} />
+    return id ? (
+      <div id={`${id}-${Math.floor(Math.random() * 1000)}`}>{wrappedImage}</div>
+    ) : (
+      wrappedImage
+    )
+  },
   TOCInline,
   a: CustomLink,
   blockquote: MDXBlockquote,
+  div: ({ children, ...props }) => {
+    let id = ''
+    const regex = /^\[\*(.*?)\]/ //Matches [*text]
+
+    const processChildren = (children) => {
+      if (typeof children === 'string') {
+        const match = children.trim().match(regex)
+        if (match) {
+          id = match[1]
+          return children.replace(regex, '').trim()
+        }
+      } else if (Array.isArray(children)) {
+        const firstElement = children[0]
+        if (typeof firstElement === 'string') {
+          const match = firstElement.trim().match(regex)
+          if (match) {
+            id = match[1]
+            return children.filter((_, index) => index !== 0)
+          }
+        }
+      }
+      return children
+    }
+
+    children = processChildren(children)
+
+    return id ? (
+      <div id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
+        {children}
+      </div>
+    ) : (
+      <div {...props}>{children}</div>
+    )
+  },
   li: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]

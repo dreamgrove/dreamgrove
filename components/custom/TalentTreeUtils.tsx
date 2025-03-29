@@ -171,8 +171,6 @@ export class BitStreamEncoder {
 
 // Function to decode base64 talent string to binary
 export function base64ToBinaryString(base64: string) {
-  console.log('Decoding talent string using WoW bit-packing algorithm')
-
   // Create the base64 to number conversion table
   const base64ToNumberMap = new Map()
 
@@ -275,11 +273,9 @@ export function base64ToBinaryString(base64: string) {
 
   // Extract version (8 bits)
   const version = bitReader.extractBits(8)
-  console.log(`Extracted version: ${version}`)
 
   // Extract spec ID (16 bits)
   const specID = bitReader.extractBits(16)
-  console.log(`Extracted spec ID: ${specID}`)
 
   // Extract tree hash (128 bits as 16 bytes)
   const treeHash: number[] = []
