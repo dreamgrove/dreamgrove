@@ -20,7 +20,6 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
-import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 import remarkSpell from './plugins/remarkSpell.js'
@@ -274,11 +273,11 @@ export default makeSource({
     cwd: process.cwd(),
     remarkPlugins: [
       remarkExtractFrontmatter,
-      remarkSpell,
       remarkGfm,
       remarkCodeTitles,
       remarkMath,
       remarkImgToJsx,
+      remarkSpell,
       remarkAlert,
     ],
     rehypePlugins: [
@@ -297,7 +296,6 @@ export default makeSource({
       rehypeKatex,
       [rehypeCitation, { path: path.join(root, 'data') }],
       [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true }],
-      rehypePresetMinify,
     ],
   },
   onSuccess: async (importData) => {

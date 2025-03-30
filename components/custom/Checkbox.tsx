@@ -15,8 +15,6 @@ const Checkbox = ({
   isIcon = false,
   children,
 }) => {
-  const logger = console
-
   const checkboxId = id === '' ? spellId : id
 
   const child = isText ? (

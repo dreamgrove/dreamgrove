@@ -10,7 +10,6 @@ const Collapsible = ({ title, children, type = 'info' }) => {
   const logger = useLogger('Collapsible')
 
   const toggle = () => {
-    logger.info(`Collapsible "${title}" ${isOpen ? 'closed' : 'opened'}`)
     setIsOpen(!isOpen)
   }
 

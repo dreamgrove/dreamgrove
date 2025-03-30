@@ -10,59 +10,43 @@ import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 
 const toggleText = (state, id, selected) => {
-  console.log('Current selected roles:', selected)
-
   // Handle elements with logical operators (&&)
   const logicalElements = document.querySelectorAll<HTMLElement>(`[id*="&&"]`)
-  console.log('Found logical elements:', logicalElements.length)
   logicalElements.forEach((element) => {
-    console.log('Processing logical element:', element.id)
     // Strip any suffixes (numbers after hyphens) from the ID before splitting
     const baseId = element.id.replace(/-\d+$/, '')
     const conditions = baseId.split('&&')
-    console.log('Conditions:', conditions)
     const shouldShow = conditions.every((condition) => {
       const trimmed = condition.trim()
-      console.log('Checking condition:', trimmed, 'Selected includes:', selected.includes(trimmed))
       return selected.includes(trimmed)
     })
-    console.log('Should show:', shouldShow)
     element.style.display = shouldShow ? 'list-item' : 'none'
   })
 
   // Handle elements with OR operator (||)
   const orElements = document.querySelectorAll<HTMLElement>(`[id*="||"]`)
-  console.log('Found OR elements:', orElements.length)
   orElements.forEach((element) => {
-    console.log('Processing OR element:', element.id)
     // Strip any suffixes (numbers after hyphens) from the ID before splitting
     const baseId = element.id.replace(/-\d+$/, '')
     const conditions = baseId.split('||')
-    console.log('Conditions:', conditions)
     const shouldShow = conditions.some((condition) => {
       const trimmed = condition.trim()
-      console.log('Checking condition:', trimmed, 'Selected includes:', selected.includes(trimmed))
       return selected.includes(trimmed)
     })
-    console.log('Should show:', shouldShow)
     element.style.display = shouldShow ? 'list-item' : 'none'
   })
 
   // Handle regular elements
   const elements = document.querySelectorAll<HTMLElement>(`[id^="${id}"]`)
-  console.log('Found regular elements:', elements.length)
   const negativeElements = document.querySelectorAll<HTMLElement>(`[id^="~${id}"]`)
-  console.log('Found negative elements:', negativeElements.length)
 
   elements.forEach((element) => {
     if (!element.id.includes('&&') && !element.id.includes('||')) {
-      console.log('Processing regular element:', element.id)
       element.style.display = state ? 'list-item' : 'none'
     }
   })
   negativeElements.forEach((element) => {
     if (!element.id.includes('&&') && !element.id.includes('||')) {
-      console.log('Processing negative element:', element.id)
       element.style.display = state ? 'none' : 'list-item'
     }
   })
