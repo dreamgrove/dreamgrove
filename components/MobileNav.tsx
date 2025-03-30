@@ -28,17 +28,17 @@ const MobileNav = () => {
       <button
         aria-label="Toggle Menu"
         onClick={onToggleNav}
-        className="mt-[2px] align-middle lg:hidden"
+        className="h-full w-full align-middle lg:hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="dark:hover:text-primary-400 h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100"
+          className="dark:hover:text-primary-400 mb-[-2px] h-[31px] w-[31px] text-gray-900 hover:text-primary-500 dark:text-gray-100"
         >
           <path
             fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            d="M2 4a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM2 10a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM2 16a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1z"
             clipRule="evenodd"
           />
         </svg>

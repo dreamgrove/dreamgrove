@@ -107,9 +107,9 @@ const LanguageSwitch = () => {
     <button
       aria-label="Toggle Language"
       onClick={toggleLanguage}
-      className="rounded-md border border-gray-300 p-1.5 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700"
+      className="inline-flex h-[31px] w-[31px] items-center justify-center rounded-md border border-gray-300 p-0 text-sm font-bold text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700 md:mb-[1px] md:h-[27px] md:w-[27px] lg:mb-[-2px] lg:h-8 lg:w-8"
     >
-      {currentLocale === 'en-US' ? 'KR' : 'EN'}
+      <span className="mb-[-4px]">{currentLocale === 'en-US' ? 'KR' : 'EN'}</span>
     </button>
   )
 }
@@ -136,24 +136,24 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-20 flex w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] sm:py-8 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
+      className={`top-0 z-20 box-border flex min-h-[90px] w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] md:pt-6 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
     >
-      <div className="xl:max-w-8xl flex w-full max-w-6xl items-end justify-between px-4 sm:px-6 xl:px-0">
+      <div className="xl:max-w-8xl mx-auto flex w-full max-w-6xl items-end justify-between px-6 sm:px-12 xl:px-6">
         <div className="z-10 flex items-end">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
             <div className="flex items-end">
-              <div className="mr-3 hidden sm:block">
+              <div className="mr-3 hidden md:block">
                 <Image
                   src={png}
                   alt="Logo"
-                  width={54}
-                  height={54}
-                  className="mb-[-6px] h-auto object-contain drop-shadow-[0_0_1px_rgba(221,107,32,1)] dark:drop-shadow-[0_0_2px_rgba(221,107,32,1)] md:h-[60px]"
+                  width={40}
+                  height={40}
+                  className="mb-[-1px] h-auto object-contain drop-shadow-[0_0_1px_rgba(221,107,32,1)] dark:drop-shadow-[0_0_2px_rgba(221,107,32,1)] sm:mb-[-4px] md:mb-[-10px] md:h-[60px]"
                 />
               </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-familiar-pro text-4xl font-bold sm:block md:text-6xl">
-                  <div className="title-effect">
+                <div className="font-familiar-pro mb-[-5px] flex items-end text-[2rem] font-bold sm:mb-0 sm:text-4xl md:text-4xl lg:text-5xl">
+                  <div className="title-effect self-end">
                     <span className="title-effect-back">
                       {siteMetadata.headerTitle.toLowerCase()}.gg
                     </span>
@@ -168,23 +168,27 @@ const Header = () => {
             </div>
           </Link>
         </div>
-        <div className="flex items-end space-x-4 sm:space-x-6">
-          <div className="hidden items-end space-x-4 lg:flex">
+        <div className="flex h-full items-end">
+          <div className="hidden space-x-4 sm:inline-flex sm:items-end lg:space-x-6">
             {headerNavLinks
               .filter((link) => link.href !== '/')
               .map((link) => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="dark:hover:text-primary-400 text-2xl font-bold text-gray-900 hover:text-primary-500 dark:text-gray-100 sm:block"
+                  className="dark:hover:text-primary-400 flex items-end pb-0 text-2xl font-bold leading-none text-gray-900 hover:text-primary-500 dark:text-gray-100 md:mb-[-1px] md:text-[1.7rem] lg:mb-[-4px] lg:text-[2rem]"
                 >
                   {link.title}
                 </Link>
               ))}
           </div>
-          <LanguageSwitch />
-          {false && <ThemeSwitch />}
-          <MobileNav />
+          <div className="ml-4 flex items-end lg:ml-6">
+            <LanguageSwitch />
+          </div>
+          <div className="ml-2 flex h-[31px] items-end sm:ml-6 sm:hidden">
+            {false && <ThemeSwitch />}
+            <MobileNav />
+          </div>
         </div>
       </div>
     </header>

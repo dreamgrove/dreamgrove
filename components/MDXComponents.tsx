@@ -121,17 +121,11 @@ export const components: MDXComponents = {
     }
     children = processChildren(children)
     return id ? (
-      <li
-        id={`${id}-${Math.floor(Math.random() * 1000)}`}
-        {...props}
-        style={{ whiteSpace: 'pre-wrap' }}
-      >
+      <li id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
         {children}
       </li>
     ) : (
-      <li {...props} style={{ whiteSpace: 'pre-wrap' }}>
-        {children}
-      </li>
+      <li {...props}>{children}</li>
     )
   },
   pre: Pre,
