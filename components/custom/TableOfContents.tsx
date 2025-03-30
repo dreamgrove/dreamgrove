@@ -38,7 +38,7 @@ const TocItem: React.FC<TocItemProps> = ({
         className={`text-md my-2 font-bold text-gray-800 dark:text-gray-400`}
         style={{
           marginLeft: `${(item.depth - 1) * 25}px`,
-          marginTop: `${item.depth === 1 ? '12px ' : '5px'}`,
+          marginTop: item.depth === 1 ? '0' : '5px',
         }}
       >
         <a
@@ -67,7 +67,7 @@ const TocItem: React.FC<TocItemProps> = ({
       className={`my-2 text-sm ${isActive ? 'text-xl font-bold text-main' : 'text-gray-800 dark:text-gray-400'}`}
       style={{
         marginLeft: `${(item.depth - 1) * 25}px`,
-        marginTop: `${item.depth === 1 ? '12px ' : '5px'}`,
+        marginTop: item.depth === 1 ? '0' : '5px',
       }}
     >
       <a onClick={() => setActiveSlug([targetUrl])} href={targetUrl}>
@@ -200,7 +200,7 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
   }
 
   return (
-    <nav className="flex min-h-svh self-start pt-[0.6rem]" aria-label="Table of Contents">
+    <nav className="flex self-start" aria-label="Table of Contents">
       <ol className="list-none ">
         {chapters.map((item, index) => {
           if (item.depth < 3) {

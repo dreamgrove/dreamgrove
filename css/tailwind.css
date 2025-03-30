@@ -173,3 +173,8 @@ nav:focus {
   display: none;
   display: block;
 }
+
+/* Prevent content shift when scrollbar appears */
+html {
+  scrollbar-gutter: stable;
+}

@@ -1,7 +1,7 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-  { href: '/about', title: 'about' },
-  { href: 'https://discord.com/invite/dreamgrove', title: 'discord' },
+  { href: '/about', title: 'About' },
+  { href: 'https://discord.com/invite/dreamgrove', title: 'Discord' },
 ]
 
 export default headerNavLinks

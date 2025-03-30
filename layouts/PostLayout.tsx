@@ -1,4 +1,3 @@
-'use client'
 import { ReactNode, useEffect } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -23,12 +22,6 @@ interface LayoutProps {
 
 export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
   const { patch, slug, title, tags, toc, lastModified, changelogUrl, translator } = content
-  const { setTitle } = usePostTitle()
-
-  useEffect(() => {
-    setTitle(title)
-    return () => setTitle(null)
-  }, [setTitle, title])
 
   const updateInfo = `Last updated on the ${lastModified} for patch ${patch}`
   return (
@@ -36,7 +29,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
       <ScrollTopAndComment />
       <article>
         <div>
-          <header className="pb-6 pt-0 sm:pt-8 lg:pt-6">
+          <header className="py-6 sm:pt-8 lg:py-9">
             <div className="space-y-1 text-center">
               <div className="lg:hidden">
                 <PageTitle>{title}</PageTitle>
@@ -55,7 +48,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                       ))}
                     </p>
                     {translator && translator != '' && (
-                      <p className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                      <p className="text-lg font-medium text-gray-900 dark:text-gray-100 lg:text-left">
                         Translated by <span className="text-[#1a9c82]">{translator}</span>
                       </p>
                     )}
@@ -72,17 +65,14 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
               </div>
             </div>
           </header>
-          <div className="h-[1px] bg-gray-600 opacity-35"></div>
-          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:divide-y-0">
-            <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:mr-6 lg:block lg:h-svh">
+          <div className="mb-5 h-[1px] bg-gray-600 opacity-35"></div>
+          <div className="grid-rows-[auto_1fr] pb-8 lg:grid lg:grid-cols-12 lg:gap-x-6 lg:divide-y-0 lg:divide-gray-200 lg:dark:divide-gray-700">
+            <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:mr-6 lg:block lg:h-svh lg:pt-5">
               <TableOfContents chapters={toc} />
             </aside>
 
-            <div
-              id="main"
-              className="relative divide-gray-200 dark:divide-gray-700  lg:col-span-9 lg:pb-0"
-            >
-              <div className="absolute right-0 top-[10px] pt-4 md:pt-6">
+            <div id="main" className="relative lg:col-span-9 lg:pb-0">
+              <div className="absolute right-0 top-[8px] sm:top-[5px] lg:top-[24px]">
                 <a
                   href={changelogUrl}
                   className="ml-0 font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem]"
@@ -93,7 +83,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
               </div>
               <div
                 style={{ counterReset: 'heading' }}
-                className="prose  max-w-none pb-8 pt-4 text-base dark:prose-invert"
+                className="prose max-w-none pb-8 text-base dark:prose-invert"
               >
                 {children}
               </div>

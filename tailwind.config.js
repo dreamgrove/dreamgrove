@@ -45,6 +45,10 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
+            hr: {
+              marginTop: '2rem',
+              marginBottom: '2rem',
+            },
             a: {
               color: theme('colors.primary.500'),
               textUnderlineOffset: '4px',
@@ -77,8 +81,8 @@ module.exports = {
               },
             },
             h2: {
-              marginTop: '25px',
-              marginBottom: '10px',
+              marginTop: '15px',
+              marginBottom: '15px',
               position: 'relative',
             },
             // 'h2::after': {

@@ -8,6 +8,7 @@ import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import { remarkAlert } from 'remark-github-blockquote-alert'
+
 import {
   remarkExtractFrontmatter,
   remarkCodeTitles,
@@ -27,6 +28,47 @@ import rehypeGroupHeaders from './plugins/rehypeGroupHeaders.js'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
+
+/**
+ * Custom plugin to preserve spaces after closing tags
+ * This plugin runs through the HTML AST and ensures spaces are preserved
+ * where they're semantically important (after tags followed by text)
+ */
+function rehypePreserveSpaces() {
+  return (tree) => {
+    // Process the tree to modify HTML elements
+    function processNode(node) {
+      // Skip non-element nodes
+      if (!node || !node.children) return
+
+      // Process all children
+      for (let i = 0; i < node.children.length; i++) {
+        const child = node.children[i]
+
+        // If this is a text node following an element, and starts with a letter/number
+        if (
+          i > 0 &&
+          node.children[i - 1].type === 'element' &&
+          child.type === 'text' &&
+          child.value &&
+          /^[a-zA-Z0-9]/.test(child.value.trimStart()) &&
+          !child.value.startsWith(' ')
+        ) {
+          // Add a space before the text to preserve spacing
+          child.value = ' ' + child.value
+        }
+
+        // Recursively process child elements
+        if (child.type === 'element' && child.children) {
+          processNode(child)
+        }
+      }
+    }
+
+    // Start processing from the root
+    processNode(tree)
+  }
+}
 
 // heroicon mini link
 const icon = fromHtmlIsomorphic(
@@ -273,12 +315,12 @@ export default makeSource({
     cwd: process.cwd(),
     remarkPlugins: [
       remarkExtractFrontmatter,
+      remarkAlert,
       remarkGfm,
       remarkCodeTitles,
       remarkMath,
       remarkImgToJsx,
       remarkSpell,
-      remarkAlert,
     ],
     rehypePlugins: [
       rehypeSlug,
@@ -296,6 +338,7 @@ export default makeSource({
       rehypeKatex,
       [rehypeCitation, { path: path.join(root, 'data') }],
       [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true }],
+      rehypePreserveSpaces, // Add our whitespace preservation plugin
     ],
   },
   onSuccess: async (importData) => {

@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa'
 import clsx from 'clsx'
 
-type AlertType = 'info' | 'warning' | 'error' | 'success' | 'note'
+type AlertType = 'info' | 'warning' | 'error' | 'success' | 'note' | 'tip'
 
 interface AlertProps {
   type: AlertType
@@ -23,6 +23,7 @@ const Alert: React.FC<AlertProps> = ({ type, title, children }) => {
     error: <FaExclamationCircle className="h-5 w-5" />,
     success: <FaCheckCircle className="h-5 w-5" />,
     note: <FaLightbulb className="h-5 w-5" />,
+    tip: <FaLightbulb className="h-5 w-5" />,
   }
 
   const styles = {
@@ -34,6 +35,7 @@ const Alert: React.FC<AlertProps> = ({ type, title, children }) => {
     success:
       'bg-green-50 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-200 dark:border-green-800',
     note: 'bg-gray-50 text-gray-800 border-gray-200 dark:bg-gray-800/30 dark:text-gray-200 dark:border-gray-700',
+    tip: 'bg-green-50 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-200 dark:border-green-800',
   }
 
   const iconStyles = {
@@ -42,6 +44,7 @@ const Alert: React.FC<AlertProps> = ({ type, title, children }) => {
     error: 'text-red-500 dark:text-red-400',
     success: 'text-green-500 dark:text-green-400',
     note: 'text-gray-500 dark:text-gray-400',
+    tip: 'text-green-500 dark:text-green-400',
   }
 
   // Check if children already contains a markdown-alert-title

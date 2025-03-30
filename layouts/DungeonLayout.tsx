@@ -32,7 +32,7 @@ export default function DungeonLayout({ content, authorDetails, children }: Layo
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+          <header className="pt-0 xl:pb-6">
             <div className="space-y-6 text-center">
               <div className="relative block overflow-hidden rounded-lg">
                 <div className="relative h-48 w-full">
