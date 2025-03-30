@@ -7,13 +7,18 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { usePathname, useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import { IoLanguage } from 'react-icons/io5'
+import { usePostTitle } from './PostTitleContext'
+import PageTitle from './PageTitle'
 
 // Language switcher component
 const LanguageSwitch = () => {
   const pathname = usePathname()
   const router = useRouter()
   const [currentLocale, setCurrentLocale] = useState('en-US')
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   // Check if we're on a blog page
   const isBlogPage = pathname.includes('/blog')
@@ -27,14 +32,31 @@ const LanguageSwitch = () => {
     }
   }, [pathname])
 
+  // Add click outside handler
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    // Add the event listener when dropdown is open
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    // Clean up
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
+
   // Don't render the button if not on a blog page
   if (!isBlogPage) {
     return null
   }
 
-  const toggleLanguage = () => {
-    const newLocale = currentLocale === 'en-US' ? 'ko-KR' : 'en-US'
-
+  const navigateToLanguage = (locale) => {
     // Handle URL transformation for language change
     let newPath = pathname
 
@@ -50,7 +72,7 @@ const LanguageSwitch = () => {
       // This is a Korean compendium page
       const compendiumType = koreanMatch[1]
 
-      if (newLocale === 'ko-KR') {
+      if (locale === 'ko-KR') {
         // Already in Korean, no change needed
         newPath = pathname
       } else {
@@ -61,7 +83,7 @@ const LanguageSwitch = () => {
       // This is an English compendium page
       const compendiumType = englishMatch[1]
 
-      if (newLocale === 'ko-KR') {
+      if (locale === 'ko-KR') {
         // For Korean, add the kr segment
         newPath = `/blog/${compendiumType}/kr/compendium`
       } else {
@@ -79,20 +101,20 @@ const LanguageSwitch = () => {
         if (blogType === 'kr') {
           const restOfPath = pathname.replace('/blog/kr/', '')
 
-          if (newLocale === 'ko-KR') {
+          if (locale === 'ko-KR') {
             newPath = pathname
           } else {
             newPath = `/blog/${restOfPath}`
           }
         } else {
-          if (newLocale === 'ko-KR') {
+          if (locale === 'ko-KR') {
             newPath = `/blog/${blogType}/kr/compendium`
           } else {
             newPath = `/blog/${blogType}/compendium`
           }
         }
       } else {
-        if (newLocale === 'ko-KR') {
+        if (locale === 'ko-KR') {
           newPath = '/blog/kr'
         } else {
           newPath = '/blog'
@@ -101,21 +123,66 @@ const LanguageSwitch = () => {
     }
 
     router.push(newPath)
+    setIsOpen(false)
   }
 
   return (
-    <button
-      aria-label="Toggle Language"
-      onClick={toggleLanguage}
-      className="inline-flex h-[31px] w-[31px] items-center justify-center rounded-md border border-gray-300 p-0 text-sm font-bold text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700 md:mb-[1px] md:h-[27px] md:w-[27px] lg:mb-[-2px] lg:h-8 lg:w-8"
-    >
-      <span className="mb-[-4px]">{currentLocale === 'en-US' ? 'KR' : 'EN'}</span>
-    </button>
+    <div className="relative flex h-full items-center" ref={dropdownRef}>
+      <button
+        aria-label="Language Menu"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen(!isOpen)}
+        className="inline-flex h-full items-center justify-center self-center rounded-md font-familiar-pro font-normal transition-all hover:opacity-80"
+      >
+        <IoLanguage className="translate-y-[-1px] text-xl text-main" />
+      </button>
+
+      <div
+        className={`absolute right-0 top-[calc(100%+2px)] z-50 mt-1 min-w-[120px] rounded-md border border-gray-200 bg-white shadow-lg transition-opacity dark:border-gray-700 dark:bg-gray-800 ${
+          isOpen ? 'visible opacity-100' : 'invisible opacity-0'
+        }`}
+      >
+        <div className="py-1">
+          <a
+            href={currentLocale !== 'en-US' ? pathname.replace('/kr/', '/') : '#'}
+            className={`block w-full px-4 py-2 text-left font-familiar-pro text-sm font-normal hover:bg-gray-100 dark:hover:bg-gray-700 ${currentLocale === 'en-US' ? 'font-bold' : ''}`}
+            onClick={(e) => {
+              if (currentLocale === 'en-US') {
+                e.preventDefault()
+                setIsOpen(false)
+              } else {
+                navigateToLanguage('en-US')
+              }
+            }}
+          >
+            English
+          </a>
+          <a
+            href={
+              currentLocale !== 'ko-KR' ? pathname.replace(/\/blog\/([^/]+)/, '/blog/$1/kr') : '#'
+            }
+            className={`block w-full px-4 py-2 text-left font-familiar-pro text-sm font-normal hover:bg-gray-100 dark:hover:bg-gray-700 ${currentLocale === 'ko-KR' ? 'font-bold' : ''}`}
+            onClick={(e) => {
+              if (currentLocale === 'ko-KR') {
+                e.preventDefault()
+                setIsOpen(false)
+              } else {
+                navigateToLanguage('ko-KR')
+              }
+            }}
+          >
+            한국어
+          </a>
+        </div>
+      </div>
+    </div>
   )
 }
 
 const Header = () => {
   const route = usePathname()
+  const isBlogPage = route.includes('/blog')
+  const { title } = usePostTitle()
 
   const [isSticky, setIsSticky] = useState(false)
 
@@ -136,58 +203,68 @@ const Header = () => {
 
   return (
     <header
-      className={`top-0 z-20 box-border flex min-h-[90px] w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] md:pt-6 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
+      className={`top-0 z-20 mt-8 box-border flex min-h-[70px] w-full justify-center bg-[#F2F3F4] text-center dark:bg-[#282828] md:mt-0 md:pt-8 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
     >
-      <div className="xl:max-w-8xl mx-auto flex w-full max-w-6xl items-end justify-between px-6 sm:px-12 xl:px-6">
-        <div className="z-10 flex items-end">
-          <Link href="/" aria-label={siteMetadata.headerTitle}>
-            <div className="flex items-end">
-              <div className="mr-3 hidden md:block">
-                <Image
-                  src={png}
-                  alt="Logo"
-                  width={40}
-                  height={40}
-                  className="mb-[-1px] h-auto object-contain drop-shadow-[0_0_1px_rgba(221,107,32,1)] dark:drop-shadow-[0_0_2px_rgba(221,107,32,1)] sm:mb-[-4px] md:mb-[-10px] md:h-[60px]"
-                />
-              </div>
-              {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-familiar-pro mb-[-5px] flex items-end text-[2rem] font-bold sm:mb-0 sm:text-4xl md:text-4xl lg:text-5xl">
-                  <div className="title-effect self-end">
-                    <span className="title-effect-back">
-                      {siteMetadata.headerTitle.toLowerCase()}.gg
-                    </span>
-                    <span className="title-effect-front">
-                      {siteMetadata.headerTitle.toLowerCase()}.gg
-                    </span>
+      <div className="xl:max-w-8xl mx-auto w-full max-w-6xl px-6 sm:px-12 xl:px-6">
+        <div className="relative flex w-full items-end justify-between pb-8">
+          {title && (
+            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gray-600 opacity-35"></div>
+          )}
+          <div className="z-10 flex h-full items-center">
+            <Link href="/" aria-label={siteMetadata.headerTitle}>
+              <div className="relative flex items-center">
+                {typeof siteMetadata.headerTitle === 'string' ? (
+                  <div className="mb-[-5px] flex items-center font-familiar-pro text-[2rem] font-bold sm:mb-0 sm:text-3xl md:text-3xl lg:text-3xl">
+                    <div className="title-effect self-end">
+                      <span className="title-effect-front">
+                        {siteMetadata.headerTitle.toLowerCase()}
+                        <span className="text-main">.</span>gg
+                      </span>
+                    </div>
                   </div>
+                ) : (
+                  siteMetadata.headerTitle
+                )}
+                <div className="absolute -right-5 -top-[9px] z-50 md:block">
+                  <Image
+                    src={png}
+                    alt="Logo"
+                    width={40}
+                    height={40}
+                    className="h-auto object-contain"
+                  />
                 </div>
-              ) : (
-                siteMetadata.headerTitle
-              )}
+              </div>
+            </Link>
+          </div>
+
+          {title && (
+            <div className="hidden h-full items-center lg:flex lg:text-center">
+              <PageTitle className="font-familiar-pro text-2xl lg:text-3xl">{title}</PageTitle>
             </div>
-          </Link>
-        </div>
-        <div className="flex h-full items-end">
-          <div className="hidden space-x-4 sm:inline-flex sm:items-end lg:space-x-6">
-            {headerNavLinks
-              .filter((link) => link.href !== '/')
-              .map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="dark:hover:text-primary-400 flex items-end pb-0 text-2xl font-bold leading-none text-gray-900 hover:text-primary-500 dark:text-gray-100 md:mb-[-1px] md:text-[1.7rem] lg:mb-[-4px] lg:text-[2rem]"
-                >
-                  {link.title}
-                </Link>
-              ))}
-          </div>
-          <div className="ml-4 flex items-end lg:ml-6">
-            <LanguageSwitch />
-          </div>
-          <div className="ml-2 flex h-[31px] items-end sm:ml-6 sm:hidden">
-            {false && <ThemeSwitch />}
-            <MobileNav />
+          )}
+
+          <div className="flex h-full items-center">
+            <div className="hidden space-x-4 sm:inline-flex sm:items-end lg:space-x-4">
+              {headerNavLinks
+                .filter((link) => link.href !== '/')
+                .map((link) => (
+                  <div className="title-effect text-xl" key={link.title}>
+                    <Link href={link.href} className="font-familiar-pro font-normal">
+                      <span className="title-effect-front">{link.title}</span>
+                    </Link>
+                  </div>
+                ))}
+            </div>
+            {isBlogPage && (
+              <div className="ml-4 flex h-full items-center self-center lg:ml-4">
+                <LanguageSwitch />
+              </div>
+            )}
+            <div className="ml-2 flex h-[31px] items-center sm:ml-6 sm:hidden">
+              {false && <ThemeSwitch />}
+              <MobileNav />
+            </div>
           </div>
         </div>
       </div>

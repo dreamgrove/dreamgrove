@@ -117,6 +117,18 @@ h1.content-header::before {
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'familiar-pro';
+  src: url('../public/fonts/familiar/familiarpro-regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'familiar-pro';
+  src: url('../public/fonts/familiar/familiarpro-light.ttf') format('truetype');
+  font-weight: 300;
+}
+
 .font-familiar-pro {
   font-family: 'familiar-pro', sans-serif;
 }
@@ -137,14 +149,14 @@ h1.content-header::before {
 
 .title-effect-front {
   position: relative;
-  color: white;
+  color: #f2f2f2;
   z-index: 2;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .title-effect:hover .title-effect-back {
-  left: -4px;
+  left: -3px;
   top: 2px;
 }
 

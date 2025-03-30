@@ -24,7 +24,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="mx-auto px-3 sm:px-6 xl:px-6">
+    <div className="mx-auto px-3 sm:px-3 xl:px-3">
       <div className="mt-1 grid grid-cols-1 gap-4 pt-0 lg:grid-cols-2 ">
         {images.map((image, index) => (
           <Link

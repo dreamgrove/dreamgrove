@@ -30,6 +30,7 @@ module.exports = {
         sans: ['thiccboi', 'magnificent', ...fontFamily.sans],
         thiccboi: ['thiccboi', 'sans-serif'],
         magnificent: ['magnificent', 'sans-serif'],
+        'familiar-pro': ['familiar-pro', 'sans-serif'],
       },
       colors: {
         primary: {
@@ -67,7 +68,7 @@ module.exports = {
             },
             h1: {
               marginBottom: '0px',
-              marginTop: '50px',
+              marginTop: '20px',
               display: 'flex',
               flexWrap: 'wrap',
               alignItems: 'center',

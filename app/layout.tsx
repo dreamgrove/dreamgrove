@@ -12,6 +12,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
+import { PostTitleProvider } from '@/components/PostTitleContext'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -79,14 +80,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex h-full bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white">
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
           <ThemeProviders>
-            <Analytics />
-            <Header />
-            <SectionContainer>
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <main className="mb-auto">{children}</main>
-              </SearchProvider>
-              <Footer />
-            </SectionContainer>
+            <PostTitleProvider>
+              <Analytics />
+              <Header />
+              <SectionContainer>
+                <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                  <main className="mb-auto">{children}</main>
+                </SearchProvider>
+                <Footer />
+              </SectionContainer>
+            </PostTitleProvider>
           </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
