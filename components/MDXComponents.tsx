@@ -18,7 +18,6 @@ import Timeline from './custom/Timeline'
 import TalentTree from './custom/TalentTree'
 import YouTube from './custom/YouTube'
 import Alert from './custom/Alert'
-import MDXBlockquote from './custom/MDXBlockquote'
 import React from 'react'
 
 export const components: MDXComponents = {

@@ -6,16 +6,18 @@ import Image from 'next/image'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import { usePathname, useRouter } from 'next/navigation'
-import { useEffect, useState, useRef } from 'react'
-import { usePostTitle } from './PostTitleContext'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
 
-const Header = () => {
+interface HeaderProps {
+  title?: string
+}
+
+const Header = ({ title }: HeaderProps) => {
   const route = usePathname()
   const isBlogPage = route.includes('/blog')
-  const { title } = usePostTitle()
 
   const [isSticky, setIsSticky] = useState(false)
 
