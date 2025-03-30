@@ -17,9 +17,6 @@ interface AlertProps {
 }
 
 const Alert: React.FC<AlertProps> = ({ type, title, children }) => {
-  const logger = console
-  logger.info(`[Alert] Rendering alert of type: ${type}`, { origin: 'components/custom/Alert.tsx' })
-
   const icons = {
     info: <FaInfoCircle className="h-5 w-5" />,
     warning: <FaExclamationTriangle className="h-5 w-5" />,

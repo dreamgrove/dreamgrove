@@ -29,6 +29,10 @@ const qualityToColor = {
   5: '#ff8000',
 }
 
+function WowheadWrapper({ children }) {
+  return <span className="text-wrap break-words align-middle">{children}</span>
+}
+
 /*This whole component is retarded because wowhead is retarded*/
 
 export default async function Wowhead({
@@ -83,28 +87,19 @@ export default async function Wowhead({
     <WowheadIcon id={displayId} type={type} name={display} beta={beta} url={url} noLink={true} />
   )
 
-  return (
-    <>
-      {disabled ? (
-        <div
-          className={`inline-block decoration-2 q${quality}`}
-          style={{ color: linkColor, maxWidth: '100%' }}
-        >
-          {icon}
-          {showLabel && (
-            <span className="whitespace-normal text-wrap break-words align-middle">{display}</span>
-          )}
-        </div>
-      ) : (
-        <a
-          href={whUrl}
-          className={`inline decoration-2 q${quality}`}
-          style={{ color: linkColor, marginBottom: '1px', textWrap: 'nowrap' }}
-        >
-          {icon}
-          {showLabel && <span className="mr-1 text-balance">{display}</span>}
-        </a>
-      )}
-    </>
+  return disabled ? (
+    <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
+      {icon}
+      {showLabel && <span className="text-wrap break-words align-middle">{display}</span>}
+    </div>
+  ) : (
+    <a
+      href={whUrl}
+      className={`inline decoration-2 q${quality}`}
+      style={{ color: linkColor, textWrap: 'nowrap' }}
+    >
+      {icon}
+      {showLabel && <span className="text-wrap break-words align-middle">{display}</span>}
+    </a>
   )
 }

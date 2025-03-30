@@ -120,8 +120,6 @@ const Header = () => {
   const [isSticky, setIsSticky] = useState(false)
 
   useEffect(() => {
-    console.info('[Header] Initializing header component with route:', route)
-
     const handleScroll = (route) => {
       if (window.scrollY > 50 && route != '/') {
         setIsSticky(true)
@@ -132,7 +130,6 @@ const Header = () => {
 
     window.addEventListener('scroll', () => handleScroll(route))
     return () => {
-      console.info('[Header] Removing scroll event listener')
       window.removeEventListener('scroll', handleScroll)
     }
   }, [route])

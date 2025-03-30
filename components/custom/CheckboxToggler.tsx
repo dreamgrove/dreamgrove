@@ -30,7 +30,6 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
   const { radioGroup, checkRadio, registerCheckbox, toggleCheckbox, checkboxStates } =
     useContext(CheckboxContext)
   const toggleText = useToggleText()
-  const logger = console
 
   useEffect(() => {
     if (radio) {

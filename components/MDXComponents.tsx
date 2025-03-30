@@ -86,24 +86,50 @@ export const components: MDXComponents = {
         const match = children.match(regex)
         if (match) {
           id = match[1] // This will now hold the entire logical expression
-          return children.replace(regex, '')
+          // Remove only leading space after the tag, keep the rest
+          const afterSelector = children.slice(match[0].length)
+          return afterSelector.charAt(0) === ' ' ? afterSelector.slice(1) : afterSelector
         }
       } else if (Array.isArray(children)) {
-        const firstElement = [...children][0]
-        if (typeof firstElement === 'string') {
-          const match = firstElement.match(/^\[\*(.*?)\]/)
-          if (match) {
-            id = match[1]
-            const modifiedFirstElement = firstElement.replace(regex, '')
-            return [modifiedFirstElement, ...children.slice(1)]
+        // Find the first text node that contains the selector
+        const selectorIndex = children.findIndex(
+          (child) => typeof child === 'string' && child.match(/^\[\*(.*?)\]/)
+        )
+
+        if (selectorIndex !== -1) {
+          const match = children[selectorIndex].match(/^\[\*(.*?)\]/)
+          id = match[1]
+
+          // Preserve the remaining text in the matched node, but trim leading space
+          let remainingText = children[selectorIndex].slice(match[0].length)
+          if (remainingText.charAt(0) === ' ') {
+            remainingText = remainingText.slice(1)
           }
+
+          // Create a new array with the remaining text and everything after
+          const newChildren = [
+            ...(remainingText ? [remainingText] : []),
+            ...children.slice(selectorIndex + 1),
+          ]
+
+          return newChildren
         }
+        // If no match, return the children array exactly as is
+        return children
       }
       return children
     }
     children = processChildren(children)
-    return (
-      <li id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
+    return id ? (
+      <li
+        id={`${id}-${Math.floor(Math.random() * 1000)}`}
+        {...props}
+        style={{ whiteSpace: 'pre-wrap' }}
+      >
+        {children}
+      </li>
+    ) : (
+      <li {...props} style={{ whiteSpace: 'pre-wrap' }}>
         {children}
       </li>
     )
