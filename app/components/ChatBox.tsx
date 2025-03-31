@@ -96,7 +96,7 @@ export const ChatBox = () => {
 
   return (
     <div
-      className="flex h-full flex-col px-3 py-2"
+      className="flex h-full min-h-[300px] flex-col px-3 py-2"
       style={{
         borderStyle: 'solid',
         borderWidth: '7px',
@@ -132,7 +132,7 @@ export const ChatBox = () => {
           </div>
         )}
       </div>
-      <div className="mt-2 flex flex-col gap-2">
+      <div className="mt-2 flex flex-col gap-2 md:flex-row">
         <input
           type="text"
           placeholder="Your name..."
@@ -140,7 +140,7 @@ export const ChatBox = () => {
           onChange={(e) => setUsername(e.target.value)}
           className="font-pixel rounded border border-pink-200 bg-white/80 px-3 py-1 text-sm"
         />
-        <div className="flex gap-2">
+        <div className="flex flex-1 gap-2">
           <input
             type="text"
             placeholder="Leave a message..."

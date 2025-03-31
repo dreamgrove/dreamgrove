@@ -310,8 +310,8 @@ export default function HomeAprilFools() {
 
           <WalkingCat />
 
-          <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row">
-            <div className="md:w-[220px]">
+          <div className="flex w-full flex-col justify-center gap-4 px-4 lg:h-[300px] lg:flex-row">
+            <div className="lg:w-[220px]">
               <NavigationMenu />
             </div>
             <div className="flex-1">
