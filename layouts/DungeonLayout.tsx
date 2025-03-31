@@ -29,7 +29,7 @@ export default function DungeonLayout({ content, children, showTitle = true }: L
     <SectionContainer>
       <ScrollTopAndComment />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div className="toChange xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-0 xl:pb-6">
             <div className="space-y-6 text-center">
               {showTitle && headerImage && (

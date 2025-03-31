@@ -59,7 +59,21 @@
   color: var(--af-pink-dark) !important;
 }
 
+[data-theme='april-fools'] .toChange h1:not(:is(.talentTree *)),
+[data-theme='april-fools'] .toChange h2:not(:is(.talentTree *)),
+[data-theme='april-fools'] .toChange h3:not(:is(.talentTree *)),
+[data-theme='april-fools'] .toChange h4:not(:is(.talentTree *)),
+[data-theme='april-fools'] .toChange h5:not(:is(.talentTree *)),
+[data-theme='april-fools'] .toChange h6:not(:is(.talentTree *)) {
+  color: var(--af-pink-dark) !important;
+}
+
 /* change color of text in article but not if the p has a class of markdown-alert-title */
+[data-theme='april-fools'] .toChange p:not(.markdown-alert-title),
+[data-theme='april-fools'] .toChange .roleSelector,
+[data-theme='april-fools'] .toChange .roleSelector span,
+[data-theme='april-fools'] .toChange header span,
+[data-theme='april-fools'] .toChange .bossTitle,
 [data-theme='april-fools'] section section article p:not(.markdown-alert-title) {
   color: #513e58 !important;
 }
@@ -118,10 +132,6 @@
 [data-theme='april-fools'] a:hover {
   color: var(--af-accent-purple);
   background-position: -100% 100%;
-}
-
-[data-theme='april-fools'] header.sticky {
-  background-color: var(--af-pink-light);
 }
 
 /* Buttons */
