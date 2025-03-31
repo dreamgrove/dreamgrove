@@ -14,11 +14,10 @@ interface LayoutProps {
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
+  showTitle?: boolean
 }
 
-export default function RaidLayout({ content, children }: LayoutProps) {
-  const { title } = content
-
+export default function RaidLayout({ content, children, showTitle = false }: LayoutProps) {
   return (
     <SectionContainer>
       <ScrollTopAndComment />
@@ -26,9 +25,6 @@ export default function RaidLayout({ content, children }: LayoutProps) {
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-6 text-center">
-              <div>
-                <PageTitle>{title}</PageTitle>
-              </div>
               <Link href="/raids">
                 <div className="flex items-center text-left underline md:text-xl">
                   <FaArrowLeft className="inline " />

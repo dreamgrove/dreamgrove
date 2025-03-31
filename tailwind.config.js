@@ -80,6 +80,12 @@ module.exports = {
                 marginLeft: '-2.2rem',
               },
             },
+            'div > h1:first-child': {
+              marginTop: '0px',
+            },
+            '.header-group': {
+              marginBottom: '2rem',
+            },
             h2: {
               marginTop: '15px',
               marginBottom: '15px',

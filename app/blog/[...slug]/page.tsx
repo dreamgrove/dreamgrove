@@ -1,10 +1,9 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
@@ -101,7 +100,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       : `Blog Post: ${slug}`
 
   return (
-    <PageWrapper title={pageTitle}>
+    <PageWrapper title={pageTitle} isBlog={true}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

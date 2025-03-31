@@ -1,9 +1,8 @@
-import ListLayout from '@/layouts/ListLayoutWithTags'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
-import { allBlogs, allDungeons, allRaids } from 'contentlayer/generated'
+import { allCoreContent } from 'pliny/utils/contentlayer'
+import { allRaids } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
-import DungeonListLayout from '@/layouts/DungeonListLayout'
 import RaidListLayout from '@/layouts/RaidListLayout'
+import PageWrapper from '@/components/PageWrapper'
 
 const POSTS_PER_PAGE = 8
 
@@ -22,11 +21,13 @@ export default function BlogPage() {
   }
 
   return (
-    <RaidListLayout
-      posts={posts}
-      initialDisplayPosts={initialDisplayPosts}
-      pagination={pagination}
-      title="Raids"
-    />
+    <PageWrapper>
+      <RaidListLayout
+        posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title="Raids"
+      />
+    </PageWrapper>
   )
 }

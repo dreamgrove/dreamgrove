@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <PageWrapper title="Home">
+    <PageWrapper title="Main" showTitle={false}>
       <Main />
     </PageWrapper>
   )
