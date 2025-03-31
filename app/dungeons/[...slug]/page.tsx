@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const pageTitle = post.title || `Dungeon: ${slug}`
 
   return (
-    <PageWrapper title={pageTitle}>
+    <PageWrapper title={pageTitle} showTitle={false}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

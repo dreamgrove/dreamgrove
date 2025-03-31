@@ -71,6 +71,7 @@ module.exports = {
               wordWrap: 'break-word',
             },
             h1: {
+              fontSize: '2rem',
               marginBottom: '0px',
               marginTop: '20px',
               display: 'flex',
@@ -88,6 +89,7 @@ module.exports = {
             },
             h2: {
               marginTop: '15px',
+              fontSize: '1.4rem',
               marginBottom: '15px',
               position: 'relative',
             },

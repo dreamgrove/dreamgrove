@@ -21,14 +21,8 @@ interface LayoutProps {
   showTitle?: boolean
 }
 
-export default function DungeonLayout({
-  content,
-  authorDetails,
-  children,
-  showTitle = true,
-}: LayoutProps) {
-  const { path, title, headerImage } = content
-  const basePath = path.split('/')[0]
+export default function DungeonLayout({ content, children, showTitle = true }: LayoutProps) {
+  const { title, headerImage } = content
   const router = useRouter()
 
   return (

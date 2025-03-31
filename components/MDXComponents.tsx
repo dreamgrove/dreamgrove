@@ -17,7 +17,6 @@ import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
 import TalentTree from './custom/TalentTree'
 import YouTube from './custom/YouTube'
-import Alert from './custom/Alert'
 import React from 'react'
 
 export const components: MDXComponents = {
@@ -143,7 +142,6 @@ export const components: MDXComponents = {
   TalentTree,
   Timeline,
   YouTube,
-  Alert,
   p: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
