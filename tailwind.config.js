@@ -30,6 +30,7 @@ module.exports = {
         sans: ['thiccboi', 'magnificent', ...fontFamily.sans],
         thiccboi: ['thiccboi', 'sans-serif'],
         magnificent: ['magnificent', 'sans-serif'],
+        'familiar-pro': ['familiar-pro', 'sans-serif'],
       },
       colors: {
         primary: {
@@ -44,6 +45,10 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
+            hr: {
+              marginTop: '2rem',
+              marginBottom: '2rem',
+            },
             a: {
               color: theme('colors.primary.500'),
               textUnderlineOffset: '4px',
@@ -66,8 +71,9 @@ module.exports = {
               wordWrap: 'break-word',
             },
             h1: {
+              fontSize: '2rem',
               marginBottom: '0px',
-              marginTop: '50px',
+              marginTop: '20px',
               display: 'flex',
               flexWrap: 'wrap',
               alignItems: 'center',
@@ -75,9 +81,16 @@ module.exports = {
                 marginLeft: '-2.2rem',
               },
             },
+            'div > h1:first-child': {
+              marginTop: '0px',
+            },
+            '.header-group': {
+              marginBottom: '2rem',
+            },
             h2: {
-              marginTop: '25px',
-              marginBottom: '10px',
+              marginTop: '15px',
+              fontSize: '1.4rem',
+              marginBottom: '15px',
               position: 'relative',
             },
             // 'h2::after': {

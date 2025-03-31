@@ -1,10 +1,9 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import type { Dungeons } from 'contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
@@ -14,6 +13,7 @@ import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import DungeonLayout from '@/layouts/DungeonLayout'
+import PageWrapper from '@/components/PageWrapper'
 
 const defaultLayout = 'DungeonLayout'
 const layouts = {
@@ -83,9 +83,10 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const jsonLd = post.structuredData
 
   const Layout = layouts[post.layout || defaultLayout]
+  const pageTitle = post.title || `Dungeon: ${slug}`
 
   return (
-    <>
+    <PageWrapper title={pageTitle} showTitle={false}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -93,6 +94,6 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       <Layout content={mainContent} next={next} prev={prev}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
-    </>
+    </PageWrapper>
   )
 }

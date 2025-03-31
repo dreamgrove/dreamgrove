@@ -1,10 +1,9 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
@@ -13,6 +12,7 @@ import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
+import PageWrapper from '@/components/PageWrapper'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -94,9 +94,13 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   })
 
   const Layout = layouts[post.layout || defaultLayout]
+  const pageTitle =
+    typeof post.title === 'string' && post.title.trim() !== ''
+      ? post.title.trim()
+      : `Blog Post: ${slug}`
 
   return (
-    <>
+    <PageWrapper title={pageTitle} isBlog={true}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -104,6 +108,6 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
-    </>
+    </PageWrapper>
   )
 }

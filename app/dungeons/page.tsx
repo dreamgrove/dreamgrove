@@ -2,6 +2,7 @@ import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 import DungeonListLayout from '@/layouts/DungeonListLayout'
+import PageWrapper from '@/components/PageWrapper'
 
 const POSTS_PER_PAGE = 8
 
@@ -20,11 +21,13 @@ export default function DungeonPage() {
   }
 
   return (
-    <DungeonListLayout
-      posts={posts}
-      initialDisplayPosts={initialDisplayPosts}
-      pagination={pagination}
-      title="Dungeons"
-    />
+    <PageWrapper>
+      <DungeonListLayout
+        posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title="Dungeons"
+      />
+    </PageWrapper>
   )
 }

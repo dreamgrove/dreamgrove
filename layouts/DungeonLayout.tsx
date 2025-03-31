@@ -1,11 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 'use client'
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Dungeons } from 'contentlayer/generated'
-import Link from '@/components/Link'
-import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { FaArrowLeft } from 'react-icons/fa'
@@ -20,11 +18,11 @@ interface LayoutProps {
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
+  showTitle?: boolean
 }
 
-export default function DungeonLayout({ content, authorDetails, children }: LayoutProps) {
-  const { path, title, headerImage } = content
-  const basePath = path.split('/')[0]
+export default function DungeonLayout({ content, children, showTitle = true }: LayoutProps) {
+  const { title, headerImage } = content
   const router = useRouter()
 
   return (
@@ -32,25 +30,27 @@ export default function DungeonLayout({ content, authorDetails, children }: Layo
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+          <header className="pt-0 xl:pb-6">
             <div className="space-y-6 text-center">
-              <div className="relative block overflow-hidden rounded-lg">
-                <div className="relative h-48 w-full">
-                  <Image
-                    alt={title}
-                    src={`/static/images/${headerImage}`}
-                    quality={100}
-                    layout="fill"
-                    sizes="100vw"
-                    style={{
-                      objectFit: 'cover',
-                    }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 p-2 font-thiccboi text-[50px] text-white">
-                    {title}
+              {showTitle && headerImage && (
+                <div className="relative block overflow-hidden rounded-lg">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      alt={title}
+                      src={`/static/images/${headerImage}`}
+                      quality={100}
+                      layout="fill"
+                      sizes="100vw"
+                      style={{
+                        objectFit: 'cover',
+                      }}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 p-2 font-thiccboi text-[50px] text-white">
+                      {title}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
               <ContributeHeader />
               <div className="cursor-pointer" onClick={() => router.back()}>
                 <div className="flex items-center pt-0 text-left underline md:text-xl">

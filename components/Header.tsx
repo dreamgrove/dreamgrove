@@ -1,4 +1,3 @@
-'use client'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import png from '../public/static/images/logo.png'
@@ -6,192 +5,113 @@ import Image from 'next/image'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import { usePathname, useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import PageTitle from './PageTitle'
+import LanguageSwitcher from './LanguageSwitcher'
 
-// Language switcher component
-const LanguageSwitch = () => {
-  const pathname = usePathname()
-  const router = useRouter()
-  const [currentLocale, setCurrentLocale] = useState('en-US')
-
-  // Check if we're on a blog page
-  const isBlogPage = pathname.includes('/blog')
-
-  useEffect(() => {
-    // Determine current locale from URL
-    if (pathname.includes('/kr/')) {
-      setCurrentLocale('ko-KR')
-    } else {
-      setCurrentLocale('en-US')
-    }
-  }, [pathname])
-
-  // Don't render the button if not on a blog page
-  if (!isBlogPage) {
-    return null
-  }
-
-  const toggleLanguage = () => {
-    const newLocale = currentLocale === 'en-US' ? 'ko-KR' : 'en-US'
-
-    // Handle URL transformation for language change
-    let newPath = pathname
-
-    // Check if this is a compendium page with the pattern /blog/[compendium_type]/kr/compendium (Korean)
-    // or /blog/[compendium_type]/compendium (English)
-    const koreanCompendiumRegex = /\/blog\/([^/]+)\/kr\/compendium/
-    const englishCompendiumRegex = /\/blog\/([^/]+)\/compendium/
-
-    const koreanMatch = pathname.match(koreanCompendiumRegex)
-    const englishMatch = pathname.match(englishCompendiumRegex)
-
-    if (koreanMatch) {
-      // This is a Korean compendium page
-      const compendiumType = koreanMatch[1]
-
-      if (newLocale === 'ko-KR') {
-        // Already in Korean, no change needed
-        newPath = pathname
-      } else {
-        // For English, remove the kr segment
-        newPath = `/blog/${compendiumType}/compendium`
-      }
-    } else if (englishMatch) {
-      // This is an English compendium page
-      const compendiumType = englishMatch[1]
-
-      if (newLocale === 'ko-KR') {
-        // For Korean, add the kr segment
-        newPath = `/blog/${compendiumType}/kr/compendium`
-      } else {
-        // Already in English, no change needed
-        newPath = pathname
-      }
-    } else if (pathname.includes('/blog')) {
-      // For other blog pages, check if they follow a pattern like /blog/[something]
-      const blogPathRegex = /\/blog\/([^/]+)/
-      const blogMatch = pathname.match(blogPathRegex)
-
-      if (blogMatch) {
-        const blogType = blogMatch[1]
-
-        if (blogType === 'kr') {
-          const restOfPath = pathname.replace('/blog/kr/', '')
-
-          if (newLocale === 'ko-KR') {
-            newPath = pathname
-          } else {
-            newPath = `/blog/${restOfPath}`
-          }
-        } else {
-          if (newLocale === 'ko-KR') {
-            newPath = `/blog/${blogType}/kr/compendium`
-          } else {
-            newPath = `/blog/${blogType}/compendium`
-          }
-        }
-      } else {
-        if (newLocale === 'ko-KR') {
-          newPath = '/blog/kr'
-        } else {
-          newPath = '/blog'
-        }
-      }
-    }
-
-    router.push(newPath)
-  }
-
-  return (
-    <button
-      aria-label="Toggle Language"
-      onClick={toggleLanguage}
-      className="inline-flex h-[31px] w-[31px] items-center justify-center rounded-md border border-gray-300 p-0 text-sm font-bold text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700 md:mb-[1px] md:h-[27px] md:w-[27px] lg:mb-[-2px] lg:h-8 lg:w-8"
-    >
-      <span className="mb-[-4px]">{currentLocale === 'en-US' ? 'KR' : 'EN'}</span>
-    </button>
-  )
+interface HeaderProps {
+  title?: string
+  showTitle?: boolean
+  isBlog?: boolean
 }
 
-const Header = () => {
-  const route = usePathname()
-
-  const [isSticky, setIsSticky] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = (route) => {
-      if (window.scrollY > 50 && route != '/') {
-        setIsSticky(true)
-      } else {
-        setIsSticky(false)
-      }
-    }
-
-    window.addEventListener('scroll', () => handleScroll(route))
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [route])
+const Header = ({ title, showTitle = true, isBlog = false }: HeaderProps) => {
+  const isMainPage = title === 'Main'
 
   return (
-    <header
-      className={`top-0 z-20 box-border flex min-h-[90px] w-full justify-center bg-[#F2F3F4] py-8 pt-6 text-center dark:bg-[#282828] md:pt-6 lg:static ${isSticky ? 'sticky shadow-md' : ''}`}
-    >
-      <div className="xl:max-w-8xl mx-auto flex w-full max-w-6xl items-end justify-between px-6 sm:px-12 xl:px-6">
-        <div className="z-10 flex items-end">
-          <Link href="/" aria-label={siteMetadata.headerTitle}>
-            <div className="flex items-end">
-              <div className="mr-3 hidden md:block">
-                <Image
-                  src={png}
-                  alt="Logo"
-                  width={40}
-                  height={40}
-                  className="mb-[-1px] h-auto object-contain drop-shadow-[0_0_1px_rgba(221,107,32,1)] dark:drop-shadow-[0_0_2px_rgba(221,107,32,1)] sm:mb-[-4px] md:mb-[-10px] md:h-[60px]"
-                />
-              </div>
-              {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="font-familiar-pro mb-[-5px] flex items-end text-[2rem] font-bold sm:mb-0 sm:text-4xl md:text-4xl lg:text-5xl">
-                  <div className="title-effect self-end">
-                    <span className="title-effect-back">
-                      {siteMetadata.headerTitle.toLowerCase()}.gg
-                    </span>
-                    <span className="title-effect-front">
-                      {siteMetadata.headerTitle.toLowerCase()}.gg
-                    </span>
+    <>
+      <style jsx global>{`
+        :root {
+          --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        /* Fade in shadow on scroll when supported */
+        @supports (animation-timeline: scroll()) {
+          .header-scroll-shadow {
+            animation: scroll-shadow linear both;
+            animation-timeline: scroll();
+            animation-range: 0 80px;
+          }
+
+          @keyframes scroll-shadow {
+            from {
+              box-shadow: none;
+            }
+            to {
+              box-shadow: var(--shadow);
+            }
+          }
+        }
+      `}</style>
+      <header
+        className={`header-scroll-shadow top-0 z-20 box-border flex min-h-[70px] w-full justify-center bg-[#F2F3F4] pt-6 text-center dark:bg-[#282828] sm:static sm:pt-8 md:mt-0 md:pt-8 ${
+          !isMainPage ? 'sticky' : ''
+        }`}
+      >
+        <div className="xl:max-w-8xl mx-auto w-full max-w-7xl px-6 sm:px-12 xl:px-6">
+          <div className="relative flex w-full items-end justify-between pb-7 sm:pb-8 ">
+            {title && title != '' && showTitle && (
+              <div className="absolute bottom-0 left-0 right-0 hidden h-[1px] bg-gray-600 opacity-35 md:block"></div>
+            )}
+            <div className="z-10 flex h-full items-center">
+              <Link href="/" aria-label={siteMetadata.headerTitle}>
+                <div className="relative flex items-center">
+                  {typeof siteMetadata.headerTitle === 'string' ? (
+                    <div className="mb-[-5px] flex items-center font-familiar-pro text-[2rem] font-bold sm:mb-0 sm:text-4xl md:text-4xl lg:text-3xl">
+                      <div className="title-effect self-end">
+                        <span className="title-effect-front">
+                          {siteMetadata.headerTitle.toLowerCase()}
+                          <span className="text-main">.</span>gg
+                        </span>
+                      </div>
+                    </div>
+                  ) : (
+                    siteMetadata.headerTitle
+                  )}
+                  <div className="absolute -right-4 -top-[2px] z-50 sm:-right-5 sm:-top-[9px] md:block">
+                    <Image
+                      src={png}
+                      alt="Logo"
+                      width={40}
+                      height={40}
+                      className="h-auto object-contain"
+                    />
                   </div>
                 </div>
-              ) : (
-                siteMetadata.headerTitle
-              )}
+              </Link>
             </div>
-          </Link>
+
+            {title && title != '' && showTitle && (
+              <div className="hidden h-full items-center lg:flex lg:text-center">
+                <PageTitle className="font-familiar-pro text-[2rem] lg:text-3xl">{title}</PageTitle>
+              </div>
+            )}
+
+            <div className="mb-[-2px] flex h-full items-center">
+              <div className="hidden space-x-3 sm:inline-flex sm:items-end lg:space-x-3">
+                {headerNavLinks
+                  .filter((link) => link.href !== '/')
+                  .map((link) => (
+                    <div className="title-effect sm:text-xl lg:text-lg" key={link.title}>
+                      <Link href={link.href} className="font-familiar-pro font-bold">
+                        <span className="title-effect-front">{link.title}</span>
+                      </Link>
+                    </div>
+                  ))}
+              </div>
+              {isBlog && (
+                <div className="ml-4 flex h-full items-center self-center lg:ml-3">
+                  <LanguageSwitcher />
+                </div>
+              )}
+              <div className="ml-2 flex h-[31px] items-center sm:ml-6 sm:hidden">
+                {false && <ThemeSwitch />}
+                <MobileNav />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex h-full items-end">
-          <div className="hidden space-x-4 sm:inline-flex sm:items-end lg:space-x-6">
-            {headerNavLinks
-              .filter((link) => link.href !== '/')
-              .map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="dark:hover:text-primary-400 flex items-end pb-0 text-2xl font-bold leading-none text-gray-900 hover:text-primary-500 dark:text-gray-100 md:mb-[-1px] md:text-[1.7rem] lg:mb-[-4px] lg:text-[2rem]"
-                >
-                  {link.title}
-                </Link>
-              ))}
-          </div>
-          <div className="ml-4 flex items-end lg:ml-6">
-            <LanguageSwitch />
-          </div>
-          <div className="ml-2 flex h-[31px] items-end sm:ml-6 sm:hidden">
-            {false && <ThemeSwitch />}
-            <MobileNav />
-          </div>
-        </div>
-      </div>
-    </header>
+      </header>
+    </>
   )
 }
 

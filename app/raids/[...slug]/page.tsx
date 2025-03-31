@@ -14,6 +14,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import RaidLayout from '@/layouts/RaidLayout'
 import DungeonLayout from '@/layouts/DungeonLayout'
+import PageWrapper from '@/components/PageWrapper'
 
 const defaultLayout = 'DungeonLayout'
 const layouts = {
@@ -85,14 +86,14 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   const Layout = layouts[post.layout || defaultLayout]
 
   return (
-    <>
+    <PageWrapper title="">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Layout content={mainContent} next={next} prev={prev}>
+      <Layout content={mainContent} next={next} prev={prev} showTitle={false} authorDetails={[]}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
-    </>
+    </PageWrapper>
   )
 }

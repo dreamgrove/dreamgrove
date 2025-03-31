@@ -17,8 +17,7 @@ import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
 import TalentTree from './custom/TalentTree'
 import YouTube from './custom/YouTube'
-import Alert from './custom/Alert'
-import MDXBlockquote from './custom/MDXBlockquote'
+import React from 'react'
 
 export const components: MDXComponents = {
   Image: ({ src, alt, ...props }) => {
@@ -42,7 +41,7 @@ export const components: MDXComponents = {
   },
   TOCInline,
   a: CustomLink,
-  blockquote: MDXBlockquote,
+
   div: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
@@ -143,7 +142,6 @@ export const components: MDXComponents = {
   TalentTree,
   Timeline,
   YouTube,
-  Alert,
   p: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
