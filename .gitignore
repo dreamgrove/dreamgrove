@@ -49,3 +49,4 @@ yarn-error.log*
 
 # Cursor specific folder
 /cursor
+.cursor
