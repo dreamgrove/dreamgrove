@@ -1,0 +1,186 @@
+/* April Fools' Theme - Neocities Inspired */
+
+:root {
+  /* Color Palette */
+  --af-pink-primary: #ff9ecd;
+  --af-pink-light: #ffd1e6;
+  --af-pink-dark: #e65aa0;
+  --af-header-color: #e774ad;
+  --af-accent-purple: #d4a5ff;
+  --af-accent-yellow: #ffeb3b;
+  --af-text: #4a154b;
+  --af-background: #f3f3f3;
+
+  /* Font families */
+  --af-heading-font: 'Comic Sans MS', 'Comic Sans', cursive;
+  --af-body-font: 'Comic Sans MS', 'Comic Sans', sans-serif;
+}
+
+/* Base theme styles */
+[data-theme='april-fools'] {
+  background-image: url('/static/images/april/bg.gif') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: var(--af-body-font);
+}
+[data-theme='april-fools'] .home {
+  color: var(--af-text) !important;
+}
+
+[data-theme='april-fools'] section section a.q1 {
+  color: #aa83b8 !important;
+  /* text underline color */
+  text-decoration-color: #aa83b8 !important;
+}
+
+/* Override any dark mode styles */
+[data-theme='april-fools'].dark {
+  background-image: url('/static/images/april/bg.gif') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: var(--af-text) !important;
+}
+[data-theme='april-fools'] section section {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--af-pink-primary);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  background-image: url('/static/images/april/checks.jpg') !important;
+}
+[data-theme='april-fools'] section section h1:not(:is(.talentTree *)),
+[data-theme='april-fools'] section section h2:not(:is(.talentTree *)),
+[data-theme='april-fools'] section section h3:not(:is(.talentTree *)),
+[data-theme='april-fools'] section section h4:not(:is(.talentTree *)),
+[data-theme='april-fools'] section section h5:not(:is(.talentTree *)),
+[data-theme='april-fools'] section section h6:not(:is(.talentTree *)) {
+  color: var(--af-pink-dark) !important;
+}
+
+/* change color of text in article but not if the p has a class of markdown-alert-title */
+[data-theme='april-fools'] section section article p:not(.markdown-alert-title) {
+  color: #513e58 !important;
+}
+
+/* change color of text in article but not if the p has a class of markdown-alert-title */
+[data-theme='april-fools'] section section article li {
+  color: #513e58 !important;
+}
+
+[data-theme='april-fools'] section section article td {
+  color: #513e58 !important;
+}
+
+[data-theme='april-fools'] section section article strong {
+  color: #513e58 !important;
+}
+
+[data-theme='april-fools'] nav {
+  background: transparent !important;
+}
+
+[data-theme='april-fools'] header h1,
+[data-theme='april-fools'] nav h1 {
+  /*color: #ffb6d2 !important;*/
+  color: var(--af-pink-dark) !important;
+  /* text outilne */
+  text-shadow: 0px 0px 3px rgba(119, 71, 105, 0);
+}
+
+[data-theme='april-fools'] header a {
+  color: #ff7aad !important;
+  opacity: 0.8;
+}
+
+[data-theme='april-fools'] footer a,
+[data-theme='april-fools'] footer div {
+  color: #c0356a !important;
+}
+
+[data-theme='april-fools'] nav li a {
+  color: var(--af-pink-dark) !important;
+
+  /* text outilne */
+}
+
+/* Links */
+[data-theme='april-fools'] .home a {
+  color: var(--af-pink-dark);
+  text-decoration: none;
+  background-size: 200% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: all 0.3s ease;
+}
+/* Link */
+[data-theme='april-fools'] a:hover {
+  color: var(--af-accent-purple);
+  background-position: -100% 100%;
+}
+
+[data-theme='april-fools'] header.sticky {
+  background-color: var(--af-pink-light);
+}
+
+/* Buttons */
+[data-theme='april-fools'] button:not(:is(article *, .talentTree *, header *)),
+[data-theme='april-fools'] .button {
+  border: 2px solid var(--af-pink-primary);
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-family: var(--af-heading-font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[data-theme='april-fools'] header button svg {
+  color: var(--af-pink-dark) !important;
+}
+
+[data-theme='april-fools'] button:not(:is(article *, header *)):hover,
+[data-theme='april-fools'] .button:hover {
+  transform: scale(1.04);
+}
+
+[data-theme='april-fools'] article button:not(:is(.talentTree *)) {
+  color: #513e58 !important;
+}
+
+[data-theme='april-fools'] article .talentTree .talentName {
+  color: #513e58 !important;
+}
+/* Cards and Containers */
+[data-theme='april-fools'] .card,
+[data-theme='april-fools'] .container {
+  background-color: white;
+  border: 3px solid var(--af-pink-primary);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow:
+    0 0 10px var(--af-pink-light),
+    inset 0 0 20px var(--af-pink-light);
+}
+
+/* Custom Scrollbar */
+[data-theme='april-fools'] ::-webkit-scrollbar {
+  width: 12px;
+}
+
+[data-theme='april-fools'] ::-webkit-scrollbar-track {
+  background: var(--af-pink-light);
+  border-radius: 10px;
+}
+
+[data-theme='april-fools'] ::-webkit-scrollbar-thumb {
+  background: var(--af-pink-primary);
+  border-radius: 10px;
+  border: 2px solid var(--af-pink-light);
+}
+
+/* Selection */
+[data-theme='april-fools'] ::selection {
+  background: var(--af-pink-light);
+  color: var(--af-pink-dark);
+}

@@ -1,6 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 news/*
-
 # dependencies
 /node_modules
 /.pnp
@@ -47,3 +46,6 @@ yarn-error.log*
 # Contentlayer
 .contentlayer
 /.vs
+
+# Cursor specific folder
+/cursor

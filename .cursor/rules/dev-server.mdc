@@ -1,0 +1,7 @@
+---
+description: This rule can allow the agent to access the running dev server 
+globs: 
+alwaysApply: false
+---
+- Assume the dev server is already running
+- If you need to check the output of a page you can always perform a curl on localhost:3000/

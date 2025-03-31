@@ -1,17 +1,16 @@
-import Main from './Main'
-import { Metadata } from 'next'
-import siteMetadata from '@/data/siteMetadata'
-import PageWrapper from '@/components/PageWrapper'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Home',
-  description: siteMetadata.description,
-}
+import Main from './Main'
+import MainAprilFools from './MainAprilFools'
+import PageWrapper from '@/components/PageWrapper'
+import { isAprilFools } from './utils/dateUtils'
 
 export default function Page() {
+  const isAprilFirst = isAprilFools()
+
   return (
     <PageWrapper title="Main" showTitle={false}>
-      <Main />
+      {isAprilFirst ? <MainAprilFools /> : <Main />}
     </PageWrapper>
   )
 }
