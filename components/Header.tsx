@@ -7,6 +7,8 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
+import HeaderAprilFools from '../app/components/HeaderAprilFools'
+import { isAprilFools } from '../app/utils/dateUtils'
 
 interface HeaderProps {
   title?: string
@@ -14,7 +16,12 @@ interface HeaderProps {
   isBlog?: boolean
 }
 
-const Header = ({ title, showTitle = true, isBlog = false }: HeaderProps) => {
+const Header = (props: HeaderProps) => {
+  if (isAprilFools()) {
+    return <HeaderAprilFools {...props} />
+  }
+
+  const { title, showTitle = true, isBlog = false } = props
   const isMainPage = title === 'Main'
 
   return (

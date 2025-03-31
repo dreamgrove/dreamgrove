@@ -1,4 +1,5 @@
 import 'css/tailwind.css'
+import 'css/april-fools.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
@@ -10,6 +11,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
+import { AprilFoolsTheme } from '@/components/AprilFoolsTheme'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -82,11 +84,13 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className="flex h-full bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white">
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
           <ThemeProviders>
-            <Analytics />
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <main className="mb-auto">{children}</main>
-              <Footer />
-            </SearchProvider>
+            <AprilFoolsTheme>
+              <Analytics />
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <main className="mb-auto">{children}</main>
+                <Footer />
+              </SearchProvider>
+            </AprilFoolsTheme>
           </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
