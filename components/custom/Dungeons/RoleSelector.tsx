@@ -159,7 +159,7 @@ function RoleSelectorContent() {
   }, [selected])
 
   return (
-    <div className="mt-4 flex flex-col items-center">
+    <div className="roleSelector mt-4 flex flex-col items-center">
       <div className="text-xl">Choose your roles:</div>
       <div className="flex w-full flex-col items-center justify-center space-y-3 py-4 sm:h-auto md:h-24 md:flex-row md:space-x-3 md:space-y-0 md:py-0">
         {specs.map((spec) => (

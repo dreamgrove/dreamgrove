@@ -22,7 +22,7 @@ export default function RaidLayout({ content, children, showTitle = false }: Lay
     <SectionContainer>
       <ScrollTopAndComment />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div className="toChange xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-6 text-center">
               <Link href="/raids">
