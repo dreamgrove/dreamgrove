@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import { Poll } from './components/Poll'
 import { AsciiArt } from './components/AsciiArt'
+import { ChatBox } from './components/ChatBox'
 import balance from 'public/static/images/cards/balance-card.png'
 import feral from 'public/static/images/cards/feral-card.png'
 import resto from 'public/static/images/cards/resto-card.png'
@@ -121,7 +122,7 @@ const Separator = () => (
 const AboutMeSection = () => (
   <div className="relative mx-auto h-full max-w-3xl">
     <div
-      className="flex h-full flex-col justify-start p-3 font-[auto] italic"
+      className="flex h-full flex-col justify-start overflow-y-scroll p-3 font-[auto] italic"
       style={{
         borderStyle: 'solid',
         borderWidth: '7px',
@@ -149,73 +150,6 @@ const AboutMeSection = () => (
       <p className="justify-self-start text-sm">
         Made with ♥ by the Druid community for the Druid community! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
       </p>
-    </div>
-  </div>
-)
-
-const ChatMessage = ({
-  username,
-  message,
-  time,
-}: {
-  username: string
-  message: string
-  time: string
-}) => (
-  <div className="mb-2 flex flex-col">
-    <div className="flex items-baseline gap-2">
-      <span className="font-pixel text-sm text-blue-400">{username}</span>
-      <span className="text-xs text-gray-400">{time}</span>
-    </div>
-    <div className="font-pixel text-sm text-[#FF7AAD]">{message}</div>
-  </div>
-)
-
-const ChatBox = () => (
-  <div
-    className="flex h-full flex-col px-3 py-2"
-    style={{
-      borderStyle: 'solid',
-      borderWidth: '7px',
-      borderImage: `url(${border.src}) 7 fill round`,
-      backgroundColor: 'white',
-    }}
-  >
-    <div className="mb-2 text-center">
-      <h2 className="font-pixel mb-1 text-xl font-bold text-[#FF7AAD]">✧ ℊ𝓊ℯ𝓈𝓉𝒷ℴℴ𝓀 ✧</h2>
-    </div>
-    <div className="flex-1 overflow-y-auto rounded border border-pink-200 bg-white/80 p-3">
-      <ChatMessage
-        username="Moonkin✧"
-        message="love your page, it looks so cute!"
-        time="8 hours ago"
-      />
-      <ChatMessage
-        username="TreeOfLife"
-        message="This is the best druid resource (◕‿◕✿)"
-        time="8 hours ago"
-      />
-      <ChatMessage username="KittyDPS" message="rawr! great guides!" time="6 hours ago" />
-      <ChatMessage
-        username="BearTank"
-        message="(ᵔᴥᵔ) thank you for the guardian guide!"
-        time="4 hours ago"
-      />
-      <ChatMessage username="DruidLover" message="～(^з^)-♥ so helpful!" time="2 hours ago" />
-    </div>
-    <div className="mt-2 flex gap-2">
-      <input
-        type="text"
-        placeholder="Leave a message..."
-        className="font-pixel flex-1 rounded border border-pink-200 bg-white/80 px-3 py-1 text-sm"
-        disabled
-      />
-      <button
-        className="font-pixel rounded border border-pink-200 bg-white/80 px-3 py-1 text-sm text-[#FF7AAD]"
-        disabled
-      >
-        Send ✧
-      </button>
     </div>
   </div>
 )
@@ -387,8 +321,8 @@ export default function HomeAprilFools() {
 
           <Separator />
 
-          <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row ">
-            <div className="md:w-[720px]">
+          <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px] ">
+            <div className=" md:w-[400px] lg:w-[720px]">
               <AboutMeSection />
             </div>
             <div className="flex-1">
@@ -403,8 +337,12 @@ export default function HomeAprilFools() {
                   backgroundRepeat: 'repeat',
                 }}
               >
-                <Image src={pepe} alt="Dancing Pepe" className="h-[100%] w-full object-contain" />
-                <div className="absolute bottom-0 mt-2 h-[10%] text-lg font-bold text-[#FF7AAD]">
+                <Image
+                  src={pepe}
+                  alt="Dancing Pepe"
+                  className="h-[100%] w-full object-contain md:h-[300px]"
+                />
+                <div className="absolute bottom-0 mt-2 h-[10%] text-xl font-bold text-[#FF7AAD] md:text-sm lg:text-lg">
                   say hiii to my best friend uwu
                 </div>
                 <Image
@@ -425,11 +363,11 @@ export default function HomeAprilFools() {
 
           <Separator />
 
-          <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[330px] md:flex-row">
-            <div className="md:w-[390px]">
+          <div className="flex w-full flex-col justify-center gap-4 px-4 lg:h-[330px] lg:flex-row">
+            <div className="lg:w-[390px]">
               <Poll />
             </div>
-            <div className="mb-8 flex-1 md:mb-0">
+            <div className="mb-8 flex-1 lg:mb-0">
               <AsciiArt />
             </div>
             <div className="flex-1">
