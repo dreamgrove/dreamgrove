@@ -96,7 +96,7 @@ export const ChatBox = () => {
 
   return (
     <div
-      className="flex h-full min-h-[300px] flex-col px-3 py-2"
+      className="flex h-[350px] min-h-[300px] flex-col px-3 py-2 lg:h-full"
       style={{
         borderStyle: 'solid',
         borderWidth: '7px',
