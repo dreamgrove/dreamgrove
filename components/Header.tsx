@@ -8,7 +8,8 @@ import ThemeSwitch from './ThemeSwitch'
 import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
 import HeaderAprilFools from '../app/components/HeaderAprilFools'
-import { isAprilFools } from '../app/utils/dateUtils'
+import { isAprilFoolsServer } from '../app/utils/serverDateUtils'
+import styles from './Header.module.css'
 
 interface HeaderProps {
   title?: string
@@ -17,7 +18,7 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
-  if (isAprilFools()) {
+  if (isAprilFoolsServer()) {
     return <HeaderAprilFools {...props} />
   }
 
@@ -26,31 +27,8 @@ const Header = (props: HeaderProps) => {
 
   return (
     <>
-      <style jsx global>{`
-        :root {
-          --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-
-        /* Fade in shadow on scroll when supported */
-        @supports (animation-timeline: scroll()) {
-          .header-scroll-shadow {
-            animation: scroll-shadow linear both;
-            animation-timeline: scroll();
-            animation-range: 0 80px;
-          }
-
-          @keyframes scroll-shadow {
-            from {
-              box-shadow: none;
-            }
-            to {
-              box-shadow: var(--shadow);
-            }
-          }
-        }
-      `}</style>
       <header
-        className={`header-scroll-shadow top-0 z-20 box-border flex min-h-[70px] w-full justify-center bg-[#F2F3F4] pt-6 text-center dark:bg-[#282828] sm:static sm:pt-8 md:mt-0 md:pt-8 ${
+        className={`${styles.headerScrollShadow} top-0 z-20 box-border flex min-h-[70px] w-full justify-center bg-[#F2F3F4] pt-6 text-center dark:bg-[#282828] sm:static sm:pt-8 md:mt-0 md:pt-8 ${
           !isMainPage ? 'sticky' : ''
         }`}
       >

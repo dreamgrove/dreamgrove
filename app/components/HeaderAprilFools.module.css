@@ -1,0 +1,30 @@
+/* Fade in shadow and background on scroll when supported */
+@supports (animation-timeline: scroll()) {
+  .headerScrollShadow {
+    animation:
+      scrollShadow linear both,
+      scrollBg linear both;
+    animation-timeline: scroll();
+    animation-range: 0 80px;
+  }
+
+  @keyframes scrollShadow {
+    from {
+      box-shadow: none;
+    }
+    to {
+      box-shadow: var(--shadow);
+    }
+  }
+
+  @keyframes scrollBg {
+    from {
+      backdrop-filter: blur(0px);
+      background: transparent;
+    }
+    to {
+      backdrop-filter: blur(8px);
+      background: rgba(255, 158, 205, 0.1);
+    }
+  }
+}

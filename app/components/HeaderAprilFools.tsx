@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from '@/components/Link'
 import MobileNav from '@/components/MobileNav'
 import PageTitle from '@/components/PageTitle'
+import styles from './HeaderAprilFools.module.css'
 
 interface HeaderProps {
   title?: string
@@ -19,44 +20,8 @@ const HeaderAprilFools = ({ title, showTitle = true, isBlog = false }: HeaderPro
 
   return (
     <>
-      <style jsx global>{`
-        :root {
-          --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-
-        /* Fade in shadow and background on scroll when supported */
-        @supports (animation-timeline: scroll()) {
-          .header-scroll-shadow {
-            animation:
-              scroll-shadow linear both,
-              scroll-bg linear both;
-            animation-timeline: scroll();
-            animation-range: 0 80px;
-          }
-
-          @keyframes scroll-shadow {
-            from {
-              box-shadow: none;
-            }
-            to {
-              box-shadow: var(--shadow);
-            }
-          }
-
-          @keyframes scroll-bg {
-            from {
-              backdrop-filter: blur(0px);
-              background: transparent;
-            }
-            to {
-              backdrop-filter: blur(8px);
-              background: rgba(255, 158, 205, 0.1);
-            }
-          }
-        }
-      `}</style>
       <header
-        className={`header-scroll-shadow top-0 z-20 mt-0 box-border flex min-h-[70px] w-full justify-center bg-transparent pt-6 text-center sm:static sm:mt-6 sm:pt-8 md:pt-8 ${
+        className={`${styles.headerScrollShadow} top-0 z-20 mt-0 box-border flex min-h-[70px] w-full justify-center bg-transparent pt-6 text-center sm:static sm:mt-6 sm:pt-8 md:pt-8 ${
           !isMainPage ? 'sticky' : ''
         }`}
       >

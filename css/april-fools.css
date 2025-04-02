@@ -194,3 +194,14 @@
   background: var(--af-pink-light);
   color: var(--af-pink-dark);
 }
+
+/* Custom cursor for April Fools theme */
+[data-theme='april-fools'] body {
+  cursor: url('/static/images/april/cursor.gif'), auto;
+}
+
+[data-theme='april-fools'] a,
+[data-theme='april-fools'] button,
+[data-theme='april-fools'] [role='button'] {
+  cursor: url('/static/images/april/cursor.gif'), pointer;
+}

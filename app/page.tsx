@@ -1,12 +1,10 @@
-'use client'
-
 import Main from './Main'
 import MainAprilFools from './MainAprilFools'
 import PageWrapper from '@/components/PageWrapper'
-import { isAprilFools } from './utils/dateUtils'
+import { isAprilFoolsServer } from './utils/serverDateUtils'
 
 export default function Page() {
-  const isAprilFirst = isAprilFools()
+  const isAprilFirst = isAprilFoolsServer()
 
   return (
     <PageWrapper title="Main" showTitle={false}>

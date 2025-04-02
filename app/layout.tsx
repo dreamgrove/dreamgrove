@@ -12,6 +12,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { AprilFoolsTheme } from '@/components/AprilFoolsTheme'
+import WelcomePopover from '@/components/WelcomePopover'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: LayoutProps) {
           <ThemeProviders>
             <AprilFoolsTheme>
               <Analytics />
+              <WelcomePopover />
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <main className="mb-auto">{children}</main>
                 <Footer />
