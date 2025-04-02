@@ -26,7 +26,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string[] }
 }): Promise<Metadata | undefined> {
-  const slug = decodeURI(params.slug.join('/'))
+  const slug = decodeURI(await params.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
 
   const authorList = post?.authors || ['default']

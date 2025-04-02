@@ -1,7 +1,6 @@
 import CheckboxToggler from './CheckboxToggler'
 import Wowhead from './Wowhead'
 import { FaCheck } from 'react-icons/fa'
-import clsx from 'clsx'
 
 const Checkbox = ({
   id = '',

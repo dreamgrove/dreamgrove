@@ -27,43 +27,27 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
   uncheckedContent,
 }) => {
   const [checked, setChecked] = useState(defaultCheck)
-  const { radioGroup, checkRadio, registerCheckbox, toggleCheckbox, checkboxStates } =
-    useContext(CheckboxContext)
+  const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
   const toggleText = useToggleText()
 
   useEffect(() => {
-    if (radio) {
-      registerCheckbox(radio, id, defaultCheck)
-    } else {
-      toggleCheckbox(id, defaultCheck)
-    }
-  }, [radio, id, defaultCheck, registerCheckbox, toggleCheckbox])
+    // Register the checkbox with the provider
+    updateCheckbox(id, defaultCheck, radio || null)
+  }, [])
 
   const handleToggle = () => {
     const newValue = !checked
-    if (radio) {
-      checkRadio(radio, newValue ? id : '')
-    } else {
-      toggleCheckbox(id, newValue)
-    }
+    updateCheckbox(id, newValue, radio || null)
     setChecked(newValue)
-    toggleText(newValue, id)
+    //toggleText(newValue, id)
   }
 
   useEffect(() => {
-    if (radio && radioGroup[radio] !== id) {
-      setChecked(false)
-    } else if (radio && radioGroup[radio] === id) {
-      setChecked(true)
+    // Update local state when the checkbox state changes in the provider
+    if (checkboxMap[id]) {
+      setChecked(checkboxMap[id].checked)
     }
-  }, [radioGroup, radio, id])
-
-  useEffect(() => {
-    if (checkboxStates[id] !== undefined) {
-      setChecked(checkboxStates[id])
-      toggleText(checkboxStates[id], id)
-    }
-  }, [checkboxStates, id, toggleText])
+  }, [checkboxMap, id])
 
   return (
     <label className={clsx('flex h-full', isIcon ? 'h-full w-full' : 'items-start')}>

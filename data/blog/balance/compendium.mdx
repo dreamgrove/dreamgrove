@@ -50,13 +50,11 @@ This is approximately ~11% dmg increase from having no set.
 # Rotation
 
 <HeroTalentsHeader id="generic" title="Openers">
-<CheckboxProvider>
-  <Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
-  <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
-  <Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" radio="Stellar Flare" />
-  <Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-  <Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" />
-</CheckboxProvider>
+<Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
+<Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
+<Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" radio="Stellar Flare" />
+<Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
+<Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" />
 
 [*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
@@ -145,7 +143,6 @@ This is approximately ~11% dmg increase from having no set.
 When reading the priority lists below, you should not think of these as steps to be followed in a specific order. At any given point in combat, you should cast the first ability on the list that you are able to cast, provided the conditions for its use are met.
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
-<CheckboxProvider>
     <Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
     <Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
     <Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
@@ -154,7 +151,6 @@ When reading the priority lists below, you should not think of these as steps to
     <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
     <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
     <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
- </CheckboxProvider>
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -197,7 +193,6 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
 
-<CheckboxProvider>
   <Checkbox isIcon id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck radio="Lunar Calling" /> 
   <Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
   <Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" /> 
@@ -208,7 +203,6 @@ When reading the priority lists below, you should not think of these as steps to
   <Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" /> 
   <Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
   <Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
-</CheckboxProvider>
 
 - [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -249,7 +243,6 @@ When reading the priority lists below, you should not think of these as steps to
 
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
-<CheckboxProvider>
   <Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" />
   <Checkbox isIcon id="New MoonKAOE" spellId={274281} name="New Moon" radio="New Moon" />
   <Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
@@ -257,7 +250,6 @@ When reading the priority lists below, you should not think of these as steps to
   <Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
   <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="Convoke the Spirits" />
   <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
-</CheckboxProvider>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
@@ -291,7 +283,6 @@ When reading the priority lists below, you should not think of these as steps to
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
-<CheckboxProvider>
   <Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of Nature"/>
   <Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoE"/>
   <Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoE"/>
@@ -301,7 +292,6 @@ When reading the priority lists below, you should not think of these as steps to
   <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
   <Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
   <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
-</CheckboxProvider>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP.
@@ -336,10 +326,8 @@ When reading the priority lists below, you should not think of these as steps to
 
 ### Eclipses and Fillers
 
-<CheckboxProvider>
-  <Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
-  <Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
-</CheckboxProvider>
+<Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
+<Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
 
 - [*Keeper Fillers] Enter !Solar Eclipse! and cast !Wrath! on 1 and 2 targets.
 - [*Keeper Fillers] If you enter !Lunar Eclipse! by mistake on 1 target, cast !Wrath!.
@@ -407,10 +395,8 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
 
 ![ClassTree](/static/images/classtreebalance%2B.png)
 
-<CheckboxProvider>
-  <Checkbox isIcon id="Keeper Image" spellId={205636} name="Keeper" defaultCheck radio="image"/>
-  <Checkbox isIcon id="EC Image" spellId={202770} name="Elune's Chosen" radio="image" />
-</CheckboxProvider>
+<Checkbox isIcon id="Keeper Image" spellId={205636} name="Keeper" defaultCheck radio="image"/>
+<Checkbox isIcon id="EC Image" spellId={202770} name="Elune's Chosen" radio="image" />
 
 [*Keeper Image] ![KeeperTalents](/static/images/talentboxkotg.png)
 

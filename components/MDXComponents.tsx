@@ -17,6 +17,7 @@ import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
 import TalentTree from './custom/TalentTree'
 import YouTube from './custom/YouTube'
+import ConditionalElement from './custom/ConditionalElement'
 import React from 'react'
 
 export const components: MDXComponents = {
@@ -33,11 +34,7 @@ export const components: MDXComponents = {
     }
 
     const wrappedImage = <Image src={src} alt={alt} {...props} />
-    return id ? (
-      <div id={`${id}-${Math.floor(Math.random() * 1000)}`}>{wrappedImage}</div>
-    ) : (
-      wrappedImage
-    )
+    return id ? <ConditionalElement id={id}>{wrappedImage}</ConditionalElement> : wrappedImage
   },
   TOCInline,
   a: CustomLink,
@@ -69,9 +66,9 @@ export const components: MDXComponents = {
     children = processChildren(children)
 
     return id ? (
-      <div id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
+      <ConditionalElement id={id} {...props}>
         {children}
-      </div>
+      </ConditionalElement>
     ) : (
       <div {...props}>{children}</div>
     )
@@ -120,9 +117,9 @@ export const components: MDXComponents = {
     }
     children = processChildren(children)
     return id ? (
-      <li id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
+      <ConditionalElement id={id} {...props}>
         {children}
-      </li>
+      </ConditionalElement>
     ) : (
       <li {...props}>{children}</li>
     )
@@ -168,9 +165,9 @@ export const components: MDXComponents = {
     }
     children = processChildren(children)
     return id ? (
-      <div id={`${id}-${Math.floor(Math.random() * 1000)}`} {...props}>
+      <ConditionalElement id={id} {...props}>
         {children}
-      </div>
+      </ConditionalElement>
     ) : (
       <p {...props}>{children}</p>
     )
