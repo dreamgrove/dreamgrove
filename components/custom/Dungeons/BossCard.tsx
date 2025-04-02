@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
-import UwU from './UwU'
 export default async function BossCard({ title, image, id, children }) {
   const whUrl = `https://www.wowhead.com/beta/npc=${id}`
 
@@ -34,9 +33,7 @@ export default async function BossCard({ title, image, id, children }) {
           {title}
         </div>
       </div>
-      <div className="w-full px-1 py-2 md:px-4 [&>div]:list-none">
-        <UwU>{children}</UwU>
-      </div>
+      <div className="w-full px-1 py-2 md:px-4 [&>div]:list-none">{children}</div>
     </div>
   )
 }
