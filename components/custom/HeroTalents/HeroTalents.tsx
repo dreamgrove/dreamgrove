@@ -6,7 +6,7 @@ export default function HeroTalents() {
   const [isOn, setIsOn] = useState(false)
 
   return (
-    <div className="flex w-full flex-col items-center">
+    <div className="talents flex w-full flex-col items-center">
       <div className="mb-4 flex w-full items-center justify-center space-x-4">
         <span
           className={`flex-1 text-right text-lg font-bold ${isOn ? 'text-gray-500' : 'text-[#4b62be]'}`}

@@ -1,5 +1,3 @@
-'use client'
-
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import { ReactNode } from 'react'

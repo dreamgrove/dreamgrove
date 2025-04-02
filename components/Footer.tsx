@@ -1,6 +1,7 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import ThemeSwitcher from './ThemeSwitcher'
 
 export default function Footer() {
   return (
@@ -30,6 +31,9 @@ export default function Footer() {
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
             Built with NextJS + Tailwind
           </Link>
+        </div>
+        <div className="mb-8">
+          <ThemeSwitcher />
         </div>
       </div>
     </footer>

@@ -3,8 +3,10 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { Menu, RadioGroup, Transition } from '@headlessui/react'
+import { useRouter } from 'next/navigation'
+import { setCookie } from 'app/utils/serverDateUtils'
 
-const Sun = () => (
+const NormalIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
@@ -18,117 +20,82 @@ const Sun = () => (
     />
   </svg>
 )
-const Moon = () => (
+
+const CuteIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20 20"
     fill="currentColor"
     className="group:hover:text-gray-100 h-6 w-6"
   >
-    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+    <path
+      fillRule="evenodd"
+      d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+      clipRule="evenodd"
+    />
   </svg>
 )
-const Monitor = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 20 20"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    className="group:hover:text-gray-100 h-6 w-6"
-  >
-    <rect x="3" y="3" width="14" height="10" rx="2" ry="2"></rect>
-    <line x1="7" y1="17" x2="13" y2="17"></line>
-    <line x1="10" y1="13" x2="10" y2="17"></line>
-  </svg>
-)
+
 const Blank = () => <svg className="h-6 w-6" />
 
-const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false)
-  const { theme, setTheme, resolvedTheme } = useTheme()
+const NormalButton = ({ setTheme }: { setTheme: () => void }) => (
+  <button
+    aria-label="Set theme to normal"
+    className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
+    onClick={setTheme}
+  >
+    <div className="mr-2">
+      <NormalIcon />
+    </div>
+    Dark Theme
+  </button>
+)
 
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
+const CuteButton = ({ setTheme }: { setTheme: () => void }) => (
+  <button
+    aria-label="Set theme to cute"
+    className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
+    onClick={setTheme}
+  >
+    <div className="mr-2">
+      <CuteIcon />
+    </div>
+    Cute Theme
+  </button>
+)
+
+const ThemeSwitch = () => {
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  console.log(theme)
+
+  const setAprilFoolsTheme = (enabled: boolean) => {
+    console.log('setAprilFoolsTheme', enabled)
+    setTheme(enabled ? 'april-fools' : 'dark')
+  }
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
-    <div className="mr-5 ">
-      <Menu as="div" className="relative inline-block text-left align-super">
-        <div className="dark:hover:text-primary-400 hover:text-primary-500">
-          <Menu.Button className="align-middle" aria-label="Theme Toggle">
-            {mounted ? resolvedTheme === 'dark' ? <Moon /> : <Sun /> : <Blank />}
-          </Menu.Button>
-        </div>
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="absolute right-0 z-50 mt-2 w-32 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800">
-            <RadioGroup value={theme} onChange={setTheme}>
-              <div className="p-1">
-                <RadioGroup.Option value="light">
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button
-                        aria-label="Set theme to light"
-                        className={`${
-                          active ? 'bg-primary-600 text-white' : ''
-                        } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                      >
-                        <div className="mr-2">
-                          <Sun />
-                        </div>
-                        Light
-                      </button>
-                    )}
-                  </Menu.Item>
-                </RadioGroup.Option>
-                <RadioGroup.Option value="dark">
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button
-                        aria-label="Set theme to dark"
-                        className={`${
-                          active ? 'bg-primary-600 text-white' : ''
-                        } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                      >
-                        <div className="mr-2">
-                          <Moon />
-                        </div>
-                        Dark
-                      </button>
-                    )}
-                  </Menu.Item>
-                </RadioGroup.Option>
-                <RadioGroup.Option value="system">
-                  <Menu.Item>
-                    {({ active }) => (
-                      <button
-                        className={`${
-                          active ? 'bg-primary-600 text-white' : ''
-                        } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                        aria-label="Set theme to system default"
-                      >
-                        <div className="mr-2">
-                          <Monitor />
-                        </div>
-                        System
-                      </button>
-                    )}
-                  </Menu.Item>
-                </RadioGroup.Option>
-              </div>
-            </RadioGroup>
-          </Menu.Items>
-        </Transition>
-      </Menu>
+    <div className="mr-5">
+      <div className="dark:hover:text-primary-400 hover:text-primary-500">
+        {mounted ? (
+          theme === 'april-fools' ? (
+            <NormalButton setTheme={() => setAprilFoolsTheme(false)} />
+          ) : (
+            <CuteButton setTheme={() => setAprilFoolsTheme(true)} />
+          )
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   )
 }

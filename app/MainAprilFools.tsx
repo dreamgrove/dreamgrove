@@ -34,20 +34,17 @@ import notperfect from 'public/static/images/april/badges/notperfect.gif'
 import catto from 'public/static/images/april/catto.gif'
 import curtain from 'public/static/images/april/curtain.png'
 import lace from 'public/static/images/april/lace.png'
+import styles from './MainAprilFools.module.css'
 
 const MarqueeText = ({ text }: { text: string }) => (
   <div
-    className="marquee-container m-4 overflow-hidden whitespace-nowrap py-5"
+    className={styles.marqueeContainer}
     style={{
       backgroundImage: `url(${dot.src})`,
       backgroundRepeat: 'repeat',
-      borderStyle: 'solid',
-      borderWidth: '1px',
-      // Black border with 50% opacity
-      borderColor: 'rgba(0, 0, 0, 0.5)',
     }}
   >
-    <div className="animate-marquee inline-block">
+    <div className={styles.marqueeText}>
       {Array(3)
         .fill('★ ' + text + ' ★ ')
         .join(' ')}
@@ -57,39 +54,36 @@ const MarqueeText = ({ text }: { text: string }) => (
 
 const NavLink = ({ href, icon, text }: { href: string; icon: StaticImageData; text: string }) => (
   <Link href={href}>
-    <div className="group relative flex items-center border-2 border-purple-500/30 transition-transform hover:scale-[1.02]">
+    <div className={styles.navLink}>
       <div
-        className="relative flex w-full items-center gap-3 px-3 py-2 text-[#FF7AAD] "
+        className={styles.navLinkContent}
         style={{
           backgroundImage: `url(${buttonBg.src})`,
           backgroundRepeat: 'repeat',
           backgroundSize: '22px 22px',
         }}
       >
-        <div className="h-6 w-6">
+        <div className={styles.navIcon}>
           <Image src={icon} alt="" className="h-full w-full object-contain" />
         </div>
-        <span className="font-pixel mb-[-3px] ml-[-3px] text-sm">{text}</span>
+        <span className={styles.navText}>{text}</span>
       </div>
     </div>
   </Link>
 )
 
 const NavigationMenu = () => (
-  <div className="h-full w-full">
+  <div className={styles.navigationMenu}>
     <div
-      className="flex h-full flex-col px-3 py-2"
+      className={styles.navigationContent}
       style={{
-        borderStyle: 'solid',
-        borderWidth: '7px',
         borderImage: `url(${border.src}) 7 fill round`,
-        backgroundColor: 'white',
       }}
     >
       <div className="mb-2 text-center">
-        <h2 className="font-pixel mb-1 text-xl font-bold text-[#FF7AAD]">✧ 𝓃𝒶𝓋𝒾ℊ𝒶𝓉𝒾ℴ𝓃 ✧</h2>
+        <h2 className={styles.navigationTitle}>✧ 𝓃𝒶𝓋𝒾ℊ𝒶𝓉𝒾ℴ𝓃 ✧</h2>
       </div>
-      <div className="flex flex-1 flex-col justify-between gap-2">
+      <div className={styles.navigationLinks}>
         <NavLink href="/blog/balance/compendium" icon={balanceGif} text="𝕓𝕒𝕝𝕒𝕟𝕔𝕖 𝕘𝕦𝕚𝕕𝕖" />
         <NavLink href="/blog/feral/compendium" icon={feralGif} text="𝕗𝕖𝕣𝕒𝕝 𝕘𝕦𝕚𝕕𝕖" />
         <NavLink href="/blog/resto/compendium" icon={restoGif} text="𝕣𝕖𝕤𝕥𝕠 𝕘𝕦𝕚𝕕𝕖" />
@@ -156,7 +150,7 @@ const AboutMeSection = () => (
 
 const WalkingCat = () => (
   <div className="relative h-[45px] w-full overflow-hidden">
-    <div className="walking-cat absolute bottom-[-14px]">
+    <div className={styles.walkingCat}>
       <Image src={catto} alt="Walking cat" className="h-[65px] w-auto" />
     </div>
   </div>
@@ -215,243 +209,178 @@ export default function HomeAprilFools() {
   ]
 
   return (
-    <>
-      <style jsx global>{`
-        @keyframes sparkle {
-          0% {
-            transform: scale(1) rotate(0deg);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.2) rotate(180deg);
-            opacity: 0.8;
-          }
-          100% {
-            transform: scale(1) rotate(360deg);
-            opacity: 1;
-          }
-        }
-        @keyframes marquee {
-          0% {
-            transform: translateX(100%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-        @keyframes walkingCat {
-          0% {
-            transform: translateX(-100px) scaleX(-1);
-          }
-          45% {
-            transform: translateX(calc(100vw - 100px)) scaleX(-1);
-          }
-          50% {
-            transform: translateX(calc(100vw - 100px)) scaleX(1);
-          }
-          95% {
-            transform: translateX(-100px) scaleX(1);
-          }
-          100% {
-            transform: translateX(-100px) scaleX(-1);
-          }
-        }
-        .animate-sparkle {
-          animation: sparkle 2s infinite;
-          font-size: 1.5rem;
-        }
-        .animate-marquee {
-          animation: marquee 20s linear infinite;
-        }
-        .walking-cat {
-          animation: walkingCat 45s linear infinite;
-        }
-        .font-pixel {
-          font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-        }
-        body {
-          cursor: url('/static/images/april/cursor.gif'), auto;
-        }
-        a,
-        button,
-        [role='button'] {
-          cursor: url('/static/images/april/cursor.gif'), pointer;
-        }
-      `}</style>
-
+    <div
+      className="home min-h-screen w-full p-4 font-[auto]"
+      style={{
+        borderStyle: 'solid',
+        borderWidth: '7px',
+        borderImage: `url(${border.src}) 7 fill round`,
+      }}
+    >
       <div
-        className="home min-h-screen w-full p-4 font-[auto]"
         style={{
+          backgroundImage: `url(${lace.src})`,
+          backgroundRepeat: 'repeat-x',
+          backgroundSize: '346px 113px',
+          backgroundAttachment: 'fixed',
+        }}
+        className="absolute left-0 top-0 h-[30px] w-full"
+      ></div>
+      <div
+        style={{
+          backgroundImage: `url(${checks.src})`,
+          backgroundRepeat: 'repeat',
+          backgroundAttachment: 'fixed',
           borderStyle: 'solid',
-          borderWidth: '7px',
-          borderImage: `url(${border.src}) 7 fill round`,
+          borderWidth: '2px',
+          backgroundColor: 'white',
         }}
       >
-        <div
-          style={{
-            backgroundImage: `url(${lace.src})`,
-            backgroundRepeat: 'repeat-x',
-            backgroundSize: '346px 113px',
-            backgroundAttachment: 'fixed',
-          }}
-          className="absolute left-0 top-0 h-[30px] w-full"
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url(${checks.src})`,
-            backgroundRepeat: 'repeat',
-            backgroundAttachment: 'fixed',
-            borderStyle: 'solid',
-            borderWidth: '2px',
-            backgroundColor: 'white',
-          }}
-        >
-          <MarqueeText text="✧･ﾟ Welcome to Dreamgrove! The cutest Druid site on the internet! ･ﾟ✧" />
+        <MarqueeText text="✧･ﾟ Welcome to Dreamgrove! The cutest Druid site on the internet! ･ﾟ✧" />
 
-          <WalkingCat />
+        <WalkingCat />
 
-          <div className="flex w-full flex-col justify-center gap-4 px-4 lg:h-[300px] lg:flex-row">
-            <div className="lg:w-[220px]">
-              <NavigationMenu />
-            </div>
-            <div className="flex-1">
-              <ChatBox />
-            </div>
+        <div className="flex w-full flex-col justify-center gap-4 px-4 lg:h-[300px] lg:flex-row">
+          <div className="lg:w-[220px]">
+            <NavigationMenu />
           </div>
+          <div className="flex-1">
+            <ChatBox />
+          </div>
+        </div>
 
-          <Separator />
+        <Separator />
 
-          <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px] ">
-            <div className=" md:w-[400px] lg:w-[720px]">
-              <AboutMeSection />
-            </div>
-            <div className="flex-1">
-              <div
-                className="relative flex h-full w-full flex-col items-center justify-center"
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '1px',
-                  backgroundColor: 'white',
-                  borderColor: 'black',
-                  backgroundImage: `url(${dot.src})`,
-                  backgroundRepeat: 'repeat',
-                }}
-              >
-                <Image
-                  src={pepe}
-                  alt="Dancing Pepe"
-                  className="h-[100%] w-full object-contain md:h-[300px]"
-                />
-                <div className="absolute bottom-0 mt-2 h-[10%] text-xl font-bold text-[#FF7AAD] md:text-sm lg:text-lg">
-                  say hiii to my best friend uwu
-                </div>
-                <Image
-                  src={curtain}
-                  alt="left curtain"
-                  className="absolute left-0 top-0 h-full w-auto"
-                  style={{ objectFit: 'cover' }}
-                />
-                <Image
-                  src={curtain}
-                  alt="right curtain"
-                  className="absolute right-0 top-0 h-full w-auto scale-x-[-1]"
-                  style={{ objectFit: 'cover' }}
-                />
+        <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px] ">
+          <div className=" md:w-[400px] lg:w-[720px]">
+            <AboutMeSection />
+          </div>
+          <div className="flex-1">
+            <div
+              className="relative flex h-full w-full flex-col items-center justify-center"
+              style={{
+                borderStyle: 'solid',
+                borderWidth: '1px',
+                backgroundColor: 'white',
+                borderColor: 'black',
+                backgroundImage: `url(${dot.src})`,
+                backgroundRepeat: 'repeat',
+              }}
+            >
+              <Image
+                src={pepe}
+                alt="Dancing Pepe"
+                className="h-[100%] w-full object-contain md:h-[300px]"
+              />
+              <div className="absolute bottom-0 mt-2 h-[10%] text-xl font-bold text-[#FF7AAD] md:text-sm lg:text-lg">
+                say hiii to my best friend uwu
               </div>
+              <Image
+                src={curtain}
+                alt="left curtain"
+                className="absolute left-0 top-0 h-full w-auto"
+                style={{ objectFit: 'cover' }}
+              />
+              <Image
+                src={curtain}
+                alt="right curtain"
+                className="absolute right-0 top-0 h-full w-auto scale-x-[-1]"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
           </div>
+        </div>
 
-          <Separator />
+        <Separator />
 
-          <div className="flex w-full flex-col justify-center gap-4 px-4 lg:h-[330px] lg:flex-row">
-            <div className="lg:w-[390px]">
-              <Poll />
-            </div>
-            <div className="mb-8 flex-1 lg:mb-0">
-              <AsciiArt />
-            </div>
-            <div className="flex-1">
-              <div
-                className="flex h-full flex-col px-3 py-2"
-                style={{
-                  borderStyle: 'solid',
-                  borderWidth: '7px',
-                  borderImage: `url(${border.src}) 7 fill round`,
-                  backgroundColor: 'white',
-                }}
-              >
-                <div className="mb-2 text-center">
-                  <h2 className="font-pixel mb-1 text-2xl font-bold text-[#FF7AAD]">
-                    ✧ 𝓂ℴ𝓇ℯ ℊ𝓊𝒾𝒹ℯ𝓈 ✧
-                  </h2>
-                </div>
-                <div className="flex flex-1 flex-col justify-between">
-                  {content.map((image, index) => (
-                    <NavLink
-                      key={index}
-                      href={image.href}
-                      icon={image.decorativeGif}
-                      text={image.alt}
-                    />
-                  ))}
-                  <div className="group relative flex items-center border-2 border-purple-500/30 transition-transform hover:scale-[1.02]">
-                    <div
-                      className="relative flex w-full items-center gap-3 px-4 py-2 text-[#FF7AAD] "
-                      style={{
-                        backgroundImage: `url(${buttonBg.src})`,
-                        backgroundRepeat: 'repeat',
-                        backgroundSize: '22px 22px',
-                      }}
-                    >
-                      <span className="font-pixel text-sm">𝕔𝕠𝕞𝕚𝕟𝕘 𝕤𝕠𝕠𝕟 ( ˘ ³˘)</span>
-                    </div>
-                  </div>
-                  <div className="group relative flex items-center border-2 border-purple-500/30 transition-transform hover:scale-[1.02]">
-                    <div
-                      className="relative flex w-full items-center gap-3 px-4 py-2 text-[#FF7AAD] "
-                      style={{
-                        backgroundImage: `url(${buttonBg.src})`,
-                        backgroundRepeat: 'repeat',
-                        backgroundSize: '22px 22px',
-                      }}
-                    >
-                      <span className="font-pixel text-sm"> (˘³ ˘) 𝕔𝕠𝕞𝕚𝕟𝕘 𝕤𝕠𝕠𝕟</span>
-                    </div>
+        <div className="flex w-full flex-col justify-center gap-4 px-4 lg:h-[330px] lg:flex-row">
+          <div className="lg:w-[390px]">
+            <Poll />
+          </div>
+          <div className="mb-8 flex-1 lg:mb-0">
+            <AsciiArt />
+          </div>
+          <div className="flex-1">
+            <div
+              className="flex h-full flex-col px-3 py-2"
+              style={{
+                borderStyle: 'solid',
+                borderWidth: '7px',
+                borderImage: `url(${border.src}) 7 fill round`,
+                backgroundColor: 'white',
+              }}
+            >
+              <div className="mb-2 text-center">
+                <h2 className={styles.pixelFont + ' mb-1 text-2xl font-bold text-[#FF7AAD]'}>
+                  ✧ 𝓂ℴ𝓇ℯ ℊ𝓊𝒾𝒹ℯ𝓈 ✧
+                </h2>
+              </div>
+              <div className="flex flex-1 flex-col justify-between">
+                {content.map((image, index) => (
+                  <NavLink
+                    key={index}
+                    href={image.href}
+                    icon={image.decorativeGif}
+                    text={image.alt}
+                  />
+                ))}
+                <div className={styles.navLink}>
+                  <div
+                    className={styles.navLinkContent}
+                    style={{
+                      backgroundImage: `url(${buttonBg.src})`,
+                      backgroundRepeat: 'repeat',
+                      backgroundSize: '22px 22px',
+                    }}
+                  >
+                    <span className={styles.navText}>𝕔𝕠𝕞𝕚𝕟𝕘 𝕤𝕠𝕠𝕟 ( ˘ ³˘)</span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <Separator />
-
-          <div className="mb-4 flex flex-col gap-4 px-4 md:h-[90px] md:flex-row">
-            <div className="border border-black bg-white/80 p-4 text-center md:w-[300px]">
-              <div className="mb-2 text-base font-bold text-[#FF7AAD]">✧ Visitor Counter ✧</div>
-              <div className="font-mono text-lg" suppressHydrationWarning>
-                {Math.floor(Math.random() * 1000000)
-                  .toString()
-                  .padStart(6, '0')}
-              </div>
-            </div>
-            <div className="flex-1 overflow-hidden whitespace-nowrap border border-black bg-white/80 p-4">
-              <div className="animate-marquee inline-block">
-                {Array(2)
-                  .fill(badges)
-                  .flat()
-                  .map((badge, index) => (
-                    <Image
-                      key={index}
-                      src={badge}
-                      alt="Decorative badge"
-                      className="mx-2 inline-block h-[60px] w-auto"
-                    />
-                  ))}
+                <div className={styles.navLink}>
+                  <div
+                    className={styles.navLinkContent}
+                    style={{
+                      backgroundImage: `url(${buttonBg.src})`,
+                      backgroundRepeat: 'repeat',
+                      backgroundSize: '22px 22px',
+                    }}
+                  >
+                    <span className={styles.navText}> (˘³ ˘) 𝕔𝕞𝕚��𝕘 𝕤𝕠𝕠𝕟</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <Separator />
+
+        <div className="mb-4 flex flex-col gap-4 px-4 md:h-[90px] md:flex-row">
+          <div className="border border-black bg-white/80 p-4 text-center md:w-[300px]">
+            <div className="mb-2 text-base font-bold text-[#FF7AAD]">✧ Visitor Counter ✧</div>
+            <div className="font-mono text-lg" suppressHydrationWarning>
+              {Math.floor(Math.random() * 1000000)
+                .toString()
+                .padStart(6, '0')}
+            </div>
+          </div>
+          <div className="flex-1 overflow-hidden whitespace-nowrap border border-black bg-white/80 p-4">
+            <div className={styles.marqueeText}>
+              {Array(2)
+                .fill(badges)
+                .flat()
+                .map((badge, index) => (
+                  <Image
+                    key={index}
+                    src={badge}
+                    alt="Decorative badge"
+                    className="mx-2 inline-block h-[60px] w-auto"
+                  />
+                ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   )
 }

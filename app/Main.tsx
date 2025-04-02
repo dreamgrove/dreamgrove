@@ -1,3 +1,4 @@
+'use client'
 import Link from '@/components/Link'
 import balance from 'public/static/images/cards/balance-card.png'
 import feral from 'public/static/images/cards/feral-card.png'
@@ -5,11 +6,22 @@ import resto from 'public/static/images/cards/resto-card.png'
 import guardian from 'public/static/images/cards/guardian-card.png'
 import dungeons from 'public/static/images/cards/dungeons-card.png'
 import raids from 'public/static/images/cards/raids-card.png'
-
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import MainAprilFools from './MainAprilFools'
 
 export default function Home() {
-  const ENABLE_EXTRA_GUIDES = false
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (theme === 'april-fools' && mounted) {
+    return <MainAprilFools />
+  }
 
   const content = [
     { src: dungeons, href: '/dungeons', alt: 'Dungeon Guides' },
