@@ -11,7 +11,6 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
-import { AprilFoolsTheme } from '@/components/AprilFoolsTheme'
 import WelcomePopover from '@/components/WelcomePopover'
 
 const space_grotesk = Space_Grotesk({
@@ -70,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} dark`}
+      className={`${space_grotesk.variable}`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
@@ -85,14 +84,12 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className="flex h-full bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white">
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
           <ThemeProviders>
-            <AprilFoolsTheme>
-              <Analytics />
-              <WelcomePopover />
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <main className="mb-auto">{children}</main>
-                <Footer />
-              </SearchProvider>
-            </AprilFoolsTheme>
+            <Analytics />
+            <WelcomePopover />
+            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+              <main className="mb-auto">{children}</main>
+              <Footer />
+            </SearchProvider>
           </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />

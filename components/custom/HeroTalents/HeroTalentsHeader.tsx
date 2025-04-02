@@ -37,7 +37,7 @@ function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
 
   return (
     <div
-      className={`mb-2 mt-2 grid rounded-md border-2 ${getBorderStyle()} ${getBackgroundColorStyle()}`}
+      className={`talentTree mb-2 mt-2 grid rounded-md border-2 ${getBorderStyle()} ${getBackgroundColorStyle()}`}
     >
       <div
         className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"

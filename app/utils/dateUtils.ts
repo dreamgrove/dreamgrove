@@ -13,10 +13,3 @@ export function isAprilFools(): boolean {
 
   return themePreference === 'true'
 }
-
-export function setAprilFoolsTheme(value: boolean) {
-  // Set cookie with 1 year expiry
-  const expiryDate = new Date()
-  expiryDate.setFullYear(expiryDate.getFullYear() + 1)
-  document.cookie = `aprilFoolsTheme=${value}; expires=${expiryDate.toUTCString()}; path=/`
-}

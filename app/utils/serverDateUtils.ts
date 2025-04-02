@@ -1,7 +1,8 @@
+'use server'
 import { cookies } from 'next/headers'
 
-export function isAprilFoolsServer(): boolean {
-  const cookieStore = cookies()
-  const themePreference = cookieStore.get('aprilFoolsTheme')
-  return themePreference?.value === 'true'
+export async function setCookie(isAprilFools: boolean) {
+  const cookieStore = await cookies()
+  cookieStore.set('aprilFoolsTheme', isAprilFools ? 'true' : 'false')
+  console.log('cookieStore set', cookieStore.getAll())
 }

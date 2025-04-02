@@ -1,3 +1,4 @@
+'use client'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import png from '../public/static/images/logo.png'
@@ -8,8 +9,11 @@ import ThemeSwitch from './ThemeSwitch'
 import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
 import HeaderAprilFools from '../app/components/HeaderAprilFools'
-import { isAprilFoolsServer } from '../app/utils/serverDateUtils'
 import styles from './Header.module.css'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { useTheme } from 'next-themes'
+import MainAprilFools from 'app/MainAprilFools'
 
 interface HeaderProps {
   title?: string
@@ -18,7 +22,14 @@ interface HeaderProps {
 }
 
 const Header = (props: HeaderProps) => {
-  if (isAprilFoolsServer()) {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (mounted && theme === 'april-fools') {
     return <HeaderAprilFools {...props} />
   }
 

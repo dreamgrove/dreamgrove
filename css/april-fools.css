@@ -17,191 +17,204 @@
 }
 
 /* Base theme styles */
-[data-theme='april-fools'] {
+.april-fools {
   background-image: url('/static/images/april/bg.gif') !important;
   background-repeat: repeat;
   background-attachment: fixed;
   min-height: 100vh;
   font-family: var(--af-body-font);
 }
-[data-theme='april-fools'] .home {
+
+/* Make sure the theme is applied to the html element */
+html.april-fools {
+  background-image: url('/static/images/april/bg.gif') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.april-fools .home {
   color: var(--af-text) !important;
 }
 
-[data-theme='april-fools'] section section a.q1 {
+.april-fools section section a.q1 {
   color: #aa83b8 !important;
   /* text underline color */
   text-decoration-color: #aa83b8 !important;
 }
 
 /* Override any dark mode styles */
-[data-theme='april-fools'].dark {
+.april-fools.dark {
   background-image: url('/static/images/april/bg.gif') !important;
   background-repeat: repeat;
   background-attachment: fixed;
   color: var(--af-text) !important;
 }
-[data-theme='april-fools'] section section {
+.april-fools section section {
   border-style: solid;
   border-width: 2px;
   border-color: var(--af-pink-primary);
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
-  background-image: url('/static/images/april/checks.jpg') !important;
-}
-[data-theme='april-fools'] section section h1:not(:is(.talentTree *)),
-[data-theme='april-fools'] section section h2:not(:is(.talentTree *)),
-[data-theme='april-fools'] section section h3:not(:is(.talentTree *)),
-[data-theme='april-fools'] section section h4:not(:is(.talentTree *)),
-[data-theme='april-fools'] section section h5:not(:is(.talentTree *)),
-[data-theme='april-fools'] section section h6:not(:is(.talentTree *)) {
-  color: var(--af-pink-dark) !important;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-[data-theme='april-fools'] .toChange h1:not(:is(.talentTree *)),
-[data-theme='april-fools'] .toChange h2:not(:is(.talentTree *)),
-[data-theme='april-fools'] .toChange h3:not(:is(.talentTree *)),
-[data-theme='april-fools'] .toChange h4:not(:is(.talentTree *)),
-[data-theme='april-fools'] .toChange h5:not(:is(.talentTree *)),
-[data-theme='april-fools'] .toChange h6:not(:is(.talentTree *)) {
-  color: var(--af-pink-dark) !important;
+.april-fools section section h1:not(:is(.talentTree *)),
+.april-fools section section h2:not(:is(.talentTree *)),
+.april-fools section section h3:not(:is(.talentTree *)),
+.april-fools section section h4:not(:is(.talentTree *)),
+.april-fools section section h5:not(:is(.talentTree *)),
+.april-fools section section h6:not(:is(.talentTree *)) {
+  font-family: var(--af-heading-font);
+  color: var(--af-header-color);
+  margin-bottom: 10px;
 }
 
-/* change color of text in article but not if the p has a class of markdown-alert-title */
-[data-theme='april-fools'] .toChange p:not(.markdown-alert-title),
-[data-theme='april-fools'] .toChange .roleSelector,
-[data-theme='april-fools'] .toChange .roleSelector span,
-[data-theme='april-fools'] .toChange header span,
-[data-theme='april-fools'] .toChange .bossTitle,
-[data-theme='april-fools'] section section article p:not(.markdown-alert-title) {
-  color: #513e58 !important;
+.april-fools .toChange h1:not(:is(.talentTree *)),
+.april-fools .toChange h2:not(:is(.talentTree *)),
+.april-fools .toChange h3:not(:is(.talentTree *)),
+.april-fools .toChange h4:not(:is(.talentTree *)),
+.april-fools .toChange h5:not(:is(.talentTree *)),
+.april-fools .toChange h6:not(:is(.talentTree *)) {
+  font-family: var(--af-heading-font);
+  color: var(--af-header-color);
+  margin-bottom: 10px;
 }
 
-/* change color of text in article but not if the p has a class of markdown-alert-title */
-[data-theme='april-fools'] section section article li {
-  color: #513e58 !important;
+.april-fools .toChange p:not(.markdown-alert-title),
+.april-fools section section p {
+  font-family: var(--af-body-font);
+  color: var(--af-text);
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-[data-theme='april-fools'] section section article td {
-  color: #513e58 !important;
+.april-fools .roleSelector span {
+  color: var(--af-text);
 }
 
-[data-theme='april-fools'] section section article strong {
-  color: #513e58 !important;
+.april-fools section section article li {
+  font-family: var(--af-body-font);
 }
 
-[data-theme='april-fools'] nav {
-  background: transparent !important;
+.april-fools section section article td {
+  font-family: var(--af-body-font);
 }
 
-[data-theme='april-fools'] header h1,
-[data-theme='april-fools'] nav h1 {
-  /*color: #ffb6d2 !important;*/
-  color: var(--af-pink-dark) !important;
-  /* text outilne */
-  text-shadow: 0px 0px 3px rgba(119, 71, 105, 0);
+.april-fools section section article strong {
+  color: var(--af-pink-dark);
 }
 
-[data-theme='april-fools'] header a {
-  color: #ff7aad !important;
-  opacity: 0.8;
+.april-fools nav {
+  background-color: var(--af-pink-light);
+  border-bottom: 3px solid var(--af-pink-primary);
+  padding-left: 10px;
 }
 
-[data-theme='april-fools'] footer a,
-[data-theme='april-fools'] footer div {
-  color: #c0356a !important;
+.april-fools header h1,
+.april-fools header h2,
+.april-fools header h3:not(:is(.talents *)),
+.april-fools header h4,
+.april-fools header h5,
+.april-fools header h6 {
+  font-family: var(--af-heading-font);
+  color: var(--af-header-color);
+  text-shadow: 2px 2px 0px var(--af-accent-purple);
 }
 
-[data-theme='april-fools'] nav li a {
-  color: var(--af-pink-dark) !important;
-
-  /* text outilne */
-}
-
-/* Links */
-[data-theme='april-fools'] .home a {
+.april-fools header a {
   color: var(--af-pink-dark);
   text-decoration: none;
-  background-size: 200% 2px;
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  transition: all 0.3s ease;
-}
-/* Link */
-[data-theme='april-fools'] a:hover {
-  color: var(--af-accent-purple);
-  background-position: -100% 100%;
 }
 
-/* Buttons */
-[data-theme='april-fools'] button:not(:is(article *, .talentTree *, header *)),
-[data-theme='april-fools'] .button {
-  border: 2px solid var(--af-pink-primary);
+.april-fools footer a,
+.april-fools footer p {
+  color: var(--af-pink-dark);
+}
+
+.april-fools nav li a {
+  color: var(--af-text);
+  font-family: var(--af-body-font);
+  font-weight: bold;
+}
+
+.april-fools nav li a:hover {
+  color: var(--af-pink-dark);
+}
+
+.april-fools .home a {
+  color: var(--af-pink-dark);
+}
+
+.april-fools button:not(:is(article *, .talentTree *, header *)) {
+  background-color: var(--af-pink-primary);
+  color: var(--af-text);
+  border: 2px solid var(--af-pink-dark);
   border-radius: 5px;
-  padding: 8px 16px;
-  font-family: var(--af-heading-font);
+  padding: 8px 15px;
+  font-family: var(--af-body-font);
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-[data-theme='april-fools'] header button svg {
-  color: var(--af-pink-dark) !important;
-}
-
-[data-theme='april-fools'] button:not(:is(article *, header *)):hover,
-[data-theme='april-fools'] .button:hover {
-  transform: scale(1.04);
-}
-
-[data-theme='april-fools'] article button:not(:is(.talentTree *)) {
-  color: #513e58 !important;
-}
-
-[data-theme='april-fools'] article .talentTree .talentName {
-  color: #513e58 !important;
-}
-/* Cards and Containers */
-[data-theme='april-fools'] .card,
-[data-theme='april-fools'] .container {
-  background-color: white;
-  border: 3px solid var(--af-pink-primary);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow:
-    0 0 10px var(--af-pink-light),
-    inset 0 0 20px var(--af-pink-light);
-}
-
-/* Custom Scrollbar */
-[data-theme='april-fools'] ::-webkit-scrollbar {
-  width: 12px;
-}
-
-[data-theme='april-fools'] ::-webkit-scrollbar-track {
-  background: var(--af-pink-light);
-  border-radius: 10px;
-}
-
-[data-theme='april-fools'] ::-webkit-scrollbar-thumb {
-  background: var(--af-pink-primary);
-  border-radius: 10px;
-  border: 2px solid var(--af-pink-light);
-}
-
-/* Selection */
-[data-theme='april-fools'] ::selection {
-  background: var(--af-pink-light);
+.april-fools header button svg {
   color: var(--af-pink-dark);
 }
 
-/* Custom cursor for April Fools theme */
-[data-theme='april-fools'] body {
-  cursor: url('/static/images/april/cursor.gif'), auto;
+.april-fools button:not(:is(article *, header *)):hover {
+  background-color: var(--af-pink-dark);
+  color: white;
+  transform: scale(1.05);
 }
 
-[data-theme='april-fools'] a,
-[data-theme='april-fools'] button,
-[data-theme='april-fools'] [role='button'] {
-  cursor: url('/static/images/april/cursor.gif'), pointer;
+.april-fools article button:not(:is(.talentTree *)) {
+  background-color: var(--af-pink-primary);
+}
+
+.april-fools article .talentTree .talentName {
+  font-family: var(--af-body-font);
+}
+
+.april-fools .card,
+.april-fools .card:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--af-pink-primary);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.april-fools ::-webkit-scrollbar {
+  width: 15px;
+}
+
+.april-fools ::-webkit-scrollbar-track {
+  background: var(--af-pink-light);
+  border: 2px solid var(--af-pink-primary);
+}
+
+.april-fools ::-webkit-scrollbar-thumb {
+  background: var(--af-pink-primary);
+  border: 2px solid var(--af-pink-dark);
+  border-radius: 10px;
+}
+
+.april-fools ::selection {
+  background-color: var(--af-accent-purple);
+  color: var(--af-text);
+}
+
+.april-fools body {
+  background-color: transparent;
+}
+
+.april-fools header {
+  background-color: transparent;
+}
+
+.april-fools button {
+  text-decoration: none;
 }

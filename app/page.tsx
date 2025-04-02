@@ -1,14 +1,13 @@
-import Main from './Main'
-import MainAprilFools from './MainAprilFools'
 import PageWrapper from '@/components/PageWrapper'
-import { isAprilFoolsServer } from './utils/serverDateUtils'
+import Main from './Main'
+
+// Force static generation
+export const dynamic = 'force-static'
 
 export default function Page() {
-  const isAprilFirst = isAprilFoolsServer()
-
   return (
     <PageWrapper title="Main" showTitle={false}>
-      {isAprilFirst ? <MainAprilFools /> : <Main />}
+      <Main />
     </PageWrapper>
   )
 }
