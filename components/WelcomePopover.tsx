@@ -35,7 +35,7 @@ export default function WelcomePopover() {
         leaveTo="transform scale-95 opacity-0"
       >
         <Popover className="relative">
-          <div className="w-[130vw] max-w-lg rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
+          <div className="max-w-xs rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800 md:max-w-lg">
             <div className="flex items-start justify-between">
               <h2 className="mb-2 text-xl font-medium text-gray-900 dark:text-white">
                 Welcome Back {':3'}
@@ -48,9 +48,9 @@ export default function WelcomePopover() {
               </button>
             </div>
             <hr />
-            <div className="mt-2 flex flex-col gap-3">
+            <div className="mt-4 flex flex-col gap-3">
               <p className=" text-sm text-gray-500 dark:text-gray-300">
-                Thank you very much for the appreciation you showed for the april fools update.
+                Thank you very much for the appreciation you showed for the april update!!!
               </p>
               <p className=" text-sm text-gray-500 dark:text-gray-300">
                 It has been incredibly fun to develop the website and watch you all react to it.
