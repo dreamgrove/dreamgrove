@@ -6,18 +6,17 @@ import Image from './Image'
 import CustomLink from './Link'
 import TableWrapper from './TableWrapper'
 import Wowhead from './custom/Wowhead'
-import Talents from './custom/Talents'
+import Talents from './custom/Talents/Talents'
 import Checkbox from './custom/Checkbox'
 import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 import BossCard from './custom/Dungeons/BossCard'
 import Npc from './custom/Npc'
-import CheckboxProvider from './custom/CheckboxProvider'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
-import TalentTree from './custom/TalentTree'
 import YouTube from './custom/YouTube'
 import ConditionalElement from './custom/ConditionalElement'
+import CheckboxProvider from './custom/CheckboxProvider'
 import React from 'react'
 
 export const components: MDXComponents = {
@@ -34,11 +33,17 @@ export const components: MDXComponents = {
     }
 
     const wrappedImage = <Image src={src} alt={alt} {...props} />
-    return id ? <ConditionalElement id={id}>{wrappedImage}</ConditionalElement> : wrappedImage
+    return id ? (
+      <ConditionalElement type="img" id={id}>
+        {wrappedImage}
+      </ConditionalElement>
+    ) : (
+      wrappedImage
+    )
   },
   TOCInline,
   a: CustomLink,
-
+  CheckboxProvider,
   div: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
@@ -75,7 +80,6 @@ export const components: MDXComponents = {
   },
   li: ({ children, ...props }) => {
     let id = ''
-    const regex = /^\[\*(.*?)\]/ //Matches [*text]
     const processChildren = (children) => {
       if (typeof children === 'string') {
         const regex = /^\[\*(.*?)\]/
@@ -117,7 +121,7 @@ export const components: MDXComponents = {
     }
     children = processChildren(children)
     return id ? (
-      <ConditionalElement id={id} {...props}>
+      <ConditionalElement type="li" id={id} {...props}>
         {children}
       </ConditionalElement>
     ) : (
@@ -134,9 +138,7 @@ export const components: MDXComponents = {
   HeroTalentsHeader,
   BossCard,
   Npc,
-  CheckboxProvider,
   Collapsible,
-  TalentTree,
   Timeline,
   YouTube,
   p: ({ children, ...props }) => {

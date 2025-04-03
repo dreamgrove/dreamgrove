@@ -2,8 +2,6 @@ import fetch from 'node-fetch'
 import spellData from '../../spellData.json'
 import WowheadIcon from './WowheadIcon'
 
-import Image from 'next/image'
-
 function formatUrl(url) {
   const parts = url.split('/')
   const lastPart = parts.pop()
@@ -29,10 +27,6 @@ const qualityToColor = {
   5: '#ff8000',
 }
 
-function WowheadWrapper({ children }) {
-  return <span className="text-wrap break-words align-middle">{children}</span>
-}
-
 /*This whole component is retarded because wowhead is retarded*/
 
 export default async function Wowhead({
@@ -55,8 +49,6 @@ export default async function Wowhead({
       const url = spellData[name]
       if (url) {
         displayId = extractIdFromUrl(url)
-      } else {
-        console.log(`${name} not found in local spelldata`)
       }
     } else {
       throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
@@ -66,8 +58,9 @@ export default async function Wowhead({
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
+  const res = await fetch(whUrl)
+
   if (type == 'item') {
-    const res = await fetch(whUrl)
     const text = await res.text()
     const qualityRegex = /<b class=\\"q(\d+)\\">/
     const qualityMatch = text.match(qualityRegex)
@@ -79,7 +72,6 @@ export default async function Wowhead({
   }
 
   if (!name) {
-    const res = await fetch(whUrl)
     display = formatUrl(res.url)
   }
 

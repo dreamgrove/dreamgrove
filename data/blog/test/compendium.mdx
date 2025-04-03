@@ -1,0 +1,75 @@
+---
+title: 'Restoration Druid Resources'
+patch: '11.1'
+draft: false
+authors: ["nance"]
+summary: 'A list of the main resources for Restoration Druid'
+---
+
+# Testing HeroTalentsHeader Collapsible Elements
+
+## Working Examples
+
+<HeroTalentsHeader id="ec" title="1. Checkbox Component (works)">
+<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" /> 
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="2. Simple List (works)">
+- Simple list item without special formatting
+</HeroTalentsHeader>
+
+## Problematic Examples
+
+<HeroTalentsHeader id="ec" title="3. List with Special Formatting (problem)">
+- Keep up !Moonfire! and refresh within pandemic.
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="4. Text with Special Formatting (problem)">
+Keep up !Moonfire! and refresh within pandemic.
+</HeroTalentsHeader>
+
+## Additional Test Cases
+
+<HeroTalentsHeader id="ec" title="5. Text without Special Formatting">
+This is a plain text without any special formatting.
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="6. List without Special Formatting">
+- First item
+- Second item
+- Third item
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="7. Mixed Content">
+<div>This is a div inside HeroTalentsHeader</div>
+- This is a list item
+</HeroTalentsHeader>
+
+
+<HeroTalentsHeader id="ec" title="one">
+
+<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" /> 
+
+- [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
+
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="two">
+
+- Keep up !Moonfire!.
+
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="three">
+
+Keep up !Moonfire!.
+
+</HeroTalentsHeader>
+
+
+<HeroTalentsHeader id="ec" title="four">
+
+- has less than 3 stacks.
+
+</HeroTalentsHeader>
+

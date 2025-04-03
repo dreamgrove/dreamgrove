@@ -1,12 +1,8 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import png from '../../public/static/images/logo.png'
-import border from '../../public/static/images/april/border.png'
 import buttonCute from '../../public/static/images/april/button_cute.gif'
-import Image from 'next/image'
 import Link from '@/components/Link'
 import MobileNav from '@/components/MobileNav'
-import PageTitle from '@/components/PageTitle'
 import styles from './HeaderAprilFools.module.css'
 
 interface HeaderProps {
@@ -15,7 +11,7 @@ interface HeaderProps {
   isBlog?: boolean
 }
 
-const HeaderAprilFools = ({ title, showTitle = true, isBlog = false }: HeaderProps) => {
+const HeaderAprilFools = ({ title }: HeaderProps) => {
   const isMainPage = title === 'Main'
 
   return (

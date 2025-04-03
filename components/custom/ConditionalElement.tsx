@@ -6,6 +6,7 @@ interface ConditionalElementProps {
   id: string
   children: React.ReactNode
   className?: string
+  type?: string
 }
 
 /**
@@ -19,12 +20,55 @@ const ConditionalElement: React.FC<ConditionalElementProps> = ({
   id,
   children,
   className = '',
+  type = 'div',
 }) => {
   const { checkboxMap } = useContext(CheckboxContext)
 
-  console.log(checkboxMap)
+  /**
+   * Evaluates a single checkbox ID
+   * If the ID starts with ~ it means we negate it
+   * @param checkboxId - The ID of the checkbox to check
+   * @returns boolean indicating if the checkbox is checked
+   */
+  const evaluateCheckbox = (checkboxId: string): boolean => {
+    if (checkboxId.startsWith('~')) {
+      return !checkboxMap[checkboxId.slice(1)]?.checked
+    }
+    return checkboxMap[checkboxId]?.checked || false
+  }
 
-  return <div className={className}>{children}</div>
+  /**
+   * Evaluates an expression with OR operators (||)
+   * @param expression - Expression with OR operators
+   * @returns boolean result of the OR expression
+   */
+  const evaluateOrExpression = (expression: string): boolean => {
+    const parts = expression.split('||').map((part) => part.trim())
+    return parts.some((part) => evaluateCheckbox(part))
+  }
+
+  /**
+   * Evaluates the full expression with AND operators (&&)
+   * @param expression - Full expression with AND and OR operators
+   * @returns boolean result of the expression
+   */
+  const evaluateExpression = (expression: string): boolean => {
+    const andParts = expression.split('&&').map((part) => part.trim())
+    return andParts.every((part) => evaluateOrExpression(part))
+  }
+
+  // Evaluate the expression
+  const shouldRender = evaluateExpression(id)
+
+  if (type === 'img') {
+    return <div className={`${shouldRender ? 'block' : 'hidden'}`}>{children}</div>
+  } else if (type === 'li') {
+    return <li className={`${shouldRender ? 'list-item' : 'hidden'}`}>{children}</li>
+  } else if (type === 'div') {
+    return <div className={`${shouldRender ? 'inline' : 'hidden'}`}>{children}</div>
+  }
+
+  return null
 }
 
 export default ConditionalElement

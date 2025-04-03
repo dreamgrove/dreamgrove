@@ -2,15 +2,10 @@ import Link from '@/components/Link'
 import { Poll } from './components/Poll'
 import { AsciiArt } from './components/AsciiArt'
 import { ChatBox } from './components/ChatBox'
-import balance from 'public/static/images/cards/balance-card.png'
-import feral from 'public/static/images/cards/feral-card.png'
-import resto from 'public/static/images/cards/resto-card.png'
-import guardian from 'public/static/images/cards/guardian-card.png'
 import dungeons from 'public/static/images/cards/dungeons-card.png'
 import raids from 'public/static/images/cards/raids-card.png'
 import separator from 'public/static/images/april/separator.gif'
 import usuhana from 'public/static/images/april/usuhana.gif'
-import clouds from 'public/static/images/april/clouds.png'
 import checks from 'public/static/images/april/checks.jpg'
 import border from 'public/static/images/april/border.png'
 import dot from 'public/static/images/april/dot.jpg'
@@ -171,8 +166,6 @@ const WalkingCat = () => (
 )
 
 export default function HomeAprilFools() {
-  const ENABLE_EXTRA_GUIDES = false
-
   const badges = [
     strawberry,
     chillPill,
@@ -198,37 +191,6 @@ export default function HomeAprilFools() {
       href: '/raids',
       alt: '𝕣𝕒𝕚𝕕 𝕘𝕦𝕚𝕕𝕖𝕤',
       active: false,
-      decorativeGif: '/static/images/april/bear.webp',
-    },
-  ]
-
-  const images = [
-    {
-      src: balance,
-      href: '/blog/balance/compendium',
-      alt: 'Balance guide',
-      active: true,
-      decorativeGif: '/static/images/april/balance.webp',
-    },
-    {
-      src: feral,
-      href: '/blog/feral/compendium',
-      alt: 'Feral guide',
-      active: true,
-      decorativeGif: '/static/images/april/feral.webp',
-    },
-    {
-      src: resto,
-      href: '/blog/resto/compendium',
-      alt: 'Resto guide',
-      active: true,
-      decorativeGif: '/static/images/april/resto.webp',
-    },
-    {
-      src: guardian,
-      href: '/blog/guardian/compendium',
-      alt: 'Guardian guide',
-      active: true,
       decorativeGif: '/static/images/april/bear.webp',
     },
   ]

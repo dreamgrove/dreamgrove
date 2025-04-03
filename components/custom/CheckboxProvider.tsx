@@ -1,5 +1,5 @@
 'use client'
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useMemo, useCallback } from 'react'
 
 interface CheckboxItem {
   checked: boolean
@@ -17,12 +17,22 @@ const CheckboxContext = createContext<CheckboxContextType>({
   updateCheckbox: () => {},
 })
 
+export { CheckboxContext }
+
 export default function CheckboxProvider({ children }) {
   const [checkboxMap, setCheckboxMap] = useState<Record<string, CheckboxItem>>({})
 
-  const updateCheckbox = (id: string, checked: boolean, radioGroup: string | null) => {
-    console.log('updateCheckbox', id, checked, radioGroup)
+  const updateCheckbox = useCallback((id: string, checked: boolean, radioGroup: string | null) => {
     setCheckboxMap((prevMap) => {
+      // If nothing would change, return the same object reference to prevent re-renders
+      if (
+        prevMap[id]?.checked === checked &&
+        prevMap[id]?.radioGroup === radioGroup &&
+        (!radioGroup || !checked)
+      ) {
+        return prevMap
+      }
+
       const newMap = { ...prevMap }
 
       // If the element doesn't exist, insert it
@@ -48,16 +58,21 @@ export default function CheckboxProvider({ children }) {
         })
       }
 
-      console.log('newMap', newMap)
       return newMap
     })
-  }
+  }, [])
+
+  const contextValue = useMemo(
+    () => ({
+      checkboxMap,
+      updateCheckbox,
+    }),
+    [checkboxMap, updateCheckbox]
+  )
 
   return (
-    <CheckboxContext.Provider value={{ checkboxMap, updateCheckbox }}>
-      {children}
-    </CheckboxContext.Provider>
+    <div className="custom-checkbox-provider">
+      <CheckboxContext.Provider value={contextValue}>{children}</CheckboxContext.Provider>
+    </div>
   )
 }
-
-export { CheckboxProvider, CheckboxContext }
