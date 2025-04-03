@@ -1,7 +1,7 @@
 'use client'
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Dungeons } from 'contentlayer/generated'
+import type { Dungeons, Raids } from 'contentlayer/generated'
 import SectionContainer from '@/components/SectionContainer'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { FaArrowLeft } from 'react-icons/fa'
@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 interface LayoutProps {
-  content: CoreContent<Dungeons>
+  content: CoreContent<Dungeons | Raids>
   authorDetails: string[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }

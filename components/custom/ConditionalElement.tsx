@@ -16,7 +16,12 @@ interface ConditionalElementProps {
  * @param children - The content to render when the checkbox is checked
  * @param className - Optional CSS class name
  */
-const ConditionalElement: React.FC = ({ id, children, className = '', type = 'div' }) => {
+const ConditionalElement: React.FC<ConditionalElementProps> = ({
+  id,
+  children,
+  className = '',
+  type = 'div',
+}) => {
   const { checkboxMap } = useContext(CheckboxContext)
 
   /**

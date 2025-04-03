@@ -17,6 +17,9 @@ const layouts = {
   DungeonLayout,
 }
 
+// Define a type for our layout keys
+type LayoutKey = keyof typeof layouts
+
 export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>
 }): Promise<Metadata | undefined> {
@@ -76,10 +79,11 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const mainContent = coreContent(post)
   const jsonLd = post.structuredData
 
-  const Layout = layouts[post.layout || defaultLayout]
+  const Layout = layouts[(post.layout || defaultLayout) as LayoutKey]
+  const pageTitle = post.title || `Raid: ${slug}`
 
   return (
-    <PageWrapper title="">
+    <PageWrapper title={pageTitle} showTitle={false}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

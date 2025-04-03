@@ -10,7 +10,7 @@ import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 
 interface LayoutProps {
-  content: CoreContent
+  content: CoreContent<Blog>
   authorDetails: string[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
