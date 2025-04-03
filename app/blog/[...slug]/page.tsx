@@ -67,7 +67,7 @@ export async function generateMetadata({
 export const generateStaticParams = async () => {
   return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
-export default async function Page(props: { params: Params }): Promise<React.ReactNode> {
+export default async function Page(props: { params: Promise<Params> }): Promise<React.ReactNode> {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const sortedCoreContents = allCoreContent(allBlogs)
