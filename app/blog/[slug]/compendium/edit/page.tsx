@@ -1,21 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSession, signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
 import { FaQuestion } from 'react-icons/fa'
-import { SessionProvider } from 'next-auth/react'
 
-export default async function CompendiumEditPage({ params }: { params: { slug: string } }) {
+export default function CompendiumEditPage({ params }: { params: { slug: string } }) {
   const slug = params.slug
-
-  return (
-    <SessionProvider>
-      <CompendiumEditor slug={slug} />
-    </SessionProvider>
-  )
+  return <CompendiumEditor slug={slug} />
 }
 
 function CompendiumEditor({ slug }: { slug: string }) {
@@ -23,10 +17,11 @@ function CompendiumEditor({ slug }: { slug: string }) {
   const [content, setContent] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(true)
   const [saving, setSaving] = useState<boolean>(false)
-  const [preview, setPreview] = useState<boolean>(false)
+  const [viewMode, setViewMode] = useState<'edit' | 'preview' | 'split'>('edit')
   const [showHelp, setShowHelp] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const [hasPermission, setHasPermission] = useState<boolean>(true)
+  const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -56,6 +51,8 @@ function CompendiumEditor({ slug }: { slug: string }) {
     if (!session) return
 
     setSaving(true)
+    setSaveMessage(null)
+
     try {
       const res = await fetch('/api/compendium/save', {
         method: 'POST',
@@ -77,8 +74,16 @@ function CompendiumEditor({ slug }: { slug: string }) {
         throw new Error(`Error saving content: ${res.statusText}`)
       }
 
-      // Redirect to the compendium page after saving
-      router.push(`/blog/${slug}/compendium`)
+      const data = await res.json()
+
+      if (data.message) {
+        setSaveMessage(data.message)
+        setTimeout(() => {
+          router.push(`/blog/${slug}/compendium`)
+        }, 2000)
+      } else {
+        router.push(`/blog/${slug}/compendium`)
+      }
     } catch (err: Error | unknown) {
       setError(err instanceof Error ? err.message : 'Unknown error occurred')
     } finally {
@@ -151,12 +156,32 @@ function CompendiumEditor({ slug }: { slug: string }) {
           </button>
         </div>
         <div className="flex space-x-4">
-          <button
-            onClick={() => setPreview(!preview)}
-            className="rounded-md bg-gray-200 px-4 py-2 text-gray-800"
-          >
-            {preview ? 'Edit' : 'Preview'}
-          </button>
+          <div className="flex overflow-hidden rounded-md">
+            <button
+              onClick={() => setViewMode('edit')}
+              className={`px-4 py-2 ${
+                viewMode === 'edit' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
+              }`}
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => setViewMode('split')}
+              className={`px-4 py-2 ${
+                viewMode === 'split' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
+              }`}
+            >
+              Split
+            </button>
+            <button
+              onClick={() => setViewMode('preview')}
+              className={`px-4 py-2 ${
+                viewMode === 'preview' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
+              }`}
+            >
+              Preview
+            </button>
+          </div>
           <button
             onClick={saveChanges}
             disabled={saving}
@@ -199,20 +224,36 @@ function CompendiumEditor({ slug }: { slug: string }) {
         </div>
       )}
 
-      {!preview ? (
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          className="h-[70vh] w-full rounded-md border border-gray-300 bg-white p-4 font-mono text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
-        />
-      ) : (
-        <div className="prose prose-lg min-h-[70vh] max-w-none rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-gray-800">
-          <div className="mb-4 italic text-gray-500 dark:text-gray-400">
-            Preview mode - MDX components will be rendered properly when saved
-          </div>
-          <MDXPreview content={content} />
+      {saveMessage && (
+        <div className="mb-6 rounded-md bg-green-100 p-4 text-green-800 dark:bg-green-800 dark:text-green-100">
+          <p>{saveMessage}</p>
         </div>
       )}
+
+      <div className={`${viewMode === 'split' ? 'flex gap-4' : ''}`}>
+        {(viewMode === 'edit' || viewMode === 'split') && (
+          <div className={viewMode === 'split' ? 'w-1/2' : 'w-full'}>
+            <textarea
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              className="h-[70vh] w-full rounded-md border border-gray-300 bg-white p-4 font-mono text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+            />
+          </div>
+        )}
+
+        {(viewMode === 'preview' || viewMode === 'split') && (
+          <div
+            className={`${viewMode === 'split' ? 'w-1/2' : 'w-full'} min-h-[70vh] max-w-none rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-gray-800`}
+          >
+            <div className="mb-4 italic text-gray-500 dark:text-gray-400">
+              Live Preview - Custom components appear below. Server components may differ.
+            </div>
+            <Suspense fallback={<div className="italic text-gray-500">Loading preview...</div>}>
+              <MDXPreview content={content} />
+            </Suspense>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
