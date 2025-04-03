@@ -28,7 +28,7 @@ interface WowheadIconProps {
   noMargin?: boolean
 }
 
-const WowheadClientIcon = ({
+export const WowheadClientIcon = ({
   id,
   type,
   name,
@@ -40,7 +40,12 @@ const WowheadClientIcon = ({
 }: WowheadIconProps) => {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
-  const image = <div className="my-0 mr-1 inline-block h-4 w-4 rounded  bg-main" />
+  const image = (
+    <div
+      style={{ width: size, height: size }}
+      className="my-0 mb-[-3px] mr-1 inline-block rounded  bg-main"
+    />
+  )
 
   return noLink ? (
     image

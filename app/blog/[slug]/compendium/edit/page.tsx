@@ -1,11 +1,12 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, Suspense, ChangeEvent } from 'react'
 import { useSession, signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
 import { FaQuestion } from 'react-icons/fa'
+import matter from 'gray-matter'
 
 export default function CompendiumEditPage({ params }: { params: { slug: string } }) {
   const slug = params.slug
@@ -14,7 +15,8 @@ export default function CompendiumEditPage({ params }: { params: { slug: string 
 
 function CompendiumEditor({ slug }: { slug: string }) {
   const { data: session, status } = useSession()
-  const [content, setContent] = useState<string>('')
+  const [bodyContent, setBodyContent] = useState<string>('')
+  const [frontmatterData, setFrontmatterData] = useState<Record>({})
   const [loading, setLoading] = useState<boolean>(true)
   const [saving, setSaving] = useState<boolean>(false)
   const [viewMode, setViewMode] = useState<'edit' | 'preview' | 'split'>('edit')
@@ -26,7 +28,6 @@ function CompendiumEditor({ slug }: { slug: string }) {
 
   useEffect(() => {
     if (status === 'authenticated') {
-      // Fetch the content of the compendium file
       fetch(`/api/compendium/content?slug=${slug}`)
         .then((res) => {
           if (res.status === 403) {
@@ -37,7 +38,9 @@ function CompendiumEditor({ slug }: { slug: string }) {
           return res.json()
         })
         .then((data) => {
-          setContent(data.content)
+          const { data: fmData, content: body } = matter(data.content || '')
+          setFrontmatterData(fmData)
+          setBodyContent(body)
           setLoading(false)
         })
         .catch((err) => {
@@ -47,6 +50,23 @@ function CompendiumEditor({ slug }: { slug: string }) {
     }
   }, [status, slug])
 
+  const handleFrontmatterChange = (key: string, value: string | number | boolean) => {
+    const originalValue = frontmatterData[key]
+    const newValue =
+      typeof originalValue === 'number' && typeof value === 'string' && !isNaN(parseFloat(value))
+        ? parseFloat(value)
+        : value
+
+    setFrontmatterData((prev) => ({
+      ...prev,
+      [key]: newValue,
+    }))
+  }
+
+  const handleBodyContentChange = (e: ChangeEvent) => {
+    setBodyContent((e.target as HTMLTextAreaElement).value)
+  }
+
   const saveChanges = async () => {
     if (!session) return
 
@@ -54,6 +74,8 @@ function CompendiumEditor({ slug }: { slug: string }) {
     setSaveMessage(null)
 
     try {
+      const fullContent = matter.stringify(bodyContent, frontmatterData)
+
       const res = await fetch('/api/compendium/save', {
         method: 'POST',
         headers: {
@@ -61,7 +83,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
         },
         body: JSON.stringify({
           slug,
-          content,
+          content: fullContent,
         }),
       })
 
@@ -230,13 +252,74 @@ function CompendiumEditor({ slug }: { slug: string }) {
         </div>
       )}
 
+      <div className="mb-6 rounded-md border border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800">
+        <h2 className="mb-4 text-xl font-semibold">Metadata (Frontmatter)</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {Object.entries(frontmatterData).map(([key, value]) => {
+            const inputType =
+              typeof value === 'boolean'
+                ? 'checkbox'
+                : typeof value === 'number'
+                  ? 'number'
+                  : 'text'
+            const isTextArea = typeof value === 'string' && value.includes('\n')
+
+            return (
+              <div key={key}>
+                <label
+                  htmlFor={`fm-${key}`}
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                >
+                  {key}
+                </label>
+                {isTextArea ? (
+                  <textarea
+                    id={`fm-${key}`}
+                    name={key}
+                    rows={3}
+                    value={typeof value === 'string' ? value : ''}
+                    onChange={(e: ChangeEvent) =>
+                      handleFrontmatterChange(key, (e.target as HTMLTextAreaElement).value)
+                    }
+                    className="mt-1 block w-full rounded-md border-gray-300 bg-white p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 sm:text-sm"
+                  />
+                ) : inputType === 'checkbox' ? (
+                  <input
+                    id={`fm-${key}`}
+                    name={key}
+                    type="checkbox"
+                    checked={typeof value === 'boolean' ? value : false}
+                    onChange={(e: ChangeEvent) =>
+                      handleFrontmatterChange(key, (e.target as HTMLInputElement).checked)
+                    }
+                    className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                  />
+                ) : (
+                  <input
+                    id={`fm-${key}`}
+                    name={key}
+                    type={inputType}
+                    value={typeof value === 'string' || typeof value === 'number' ? value : ''}
+                    onChange={(e: ChangeEvent) =>
+                      handleFrontmatterChange(key, (e.target as HTMLInputElement).value)
+                    }
+                    className="mt-1 block w-full rounded-md border-gray-300 bg-white p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 sm:text-sm"
+                  />
+                )}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
       <div className={`${viewMode === 'split' ? 'flex gap-4' : ''}`}>
         {(viewMode === 'edit' || viewMode === 'split') && (
           <div className={viewMode === 'split' ? 'w-1/2' : 'w-full'}>
             <textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              className="h-[70vh] w-full rounded-md border border-gray-300 bg-white p-4 font-mono text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+              value={bodyContent}
+              onChange={handleBodyContentChange}
+              className="h-[70vh] w-full rounded-md border border-gray-300 p-4 font-mono text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+              placeholder="Enter MDX content here..."
             />
           </div>
         )}
@@ -249,7 +332,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
               Live Preview - Custom components appear below. Server components may differ.
             </div>
             <Suspense fallback={<div className="italic text-gray-500">Loading preview...</div>}>
-              <MDXPreview content={content} />
+              <MDXPreview content={bodyContent} />
             </Suspense>
           </div>
         )}

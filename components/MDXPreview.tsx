@@ -16,6 +16,12 @@ import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 import remarkSpell from '../plugins/remarkSpell.js'
 import remarkGroupCheckboxes from '../plugins/remarkGroupCheckboxes.js'
 import ConditionalElement from './custom/ConditionalElement'
+import TimelineClientVersion from './csm/TimelineClientVersion'
+
+import { remarkAlert } from 'remark-github-blockquote-alert'
+import YouTube from './custom/YouTube'
+import Image from 'next/image'
+import TableWrapper from './TableWrapper'
 
 interface MDXPreviewProps {
   content: string
@@ -39,11 +45,102 @@ function debounce(func: (...args: string[]) => void, wait: number): (...args: st
 }
 
 const components: MDXComponents = {
+  table: TableWrapper,
+  Image: ({ src, alt, ...props }) => {
+    let id = ''
+    const regex = /^\[\*(.*?)\]/ //Matches [*text]
+
+    if (typeof alt === 'string') {
+      const match = alt.trim().match(regex)
+      if (match) {
+        id = match[1]
+        alt = alt.replace(regex, '').trim()
+      }
+    }
+
+    const wrappedImage = <Image src={src} alt={alt} {...props} />
+    return id ? (
+      <ConditionalElement type="img" id={id}>
+        {wrappedImage}
+      </ConditionalElement>
+    ) : (
+      wrappedImage
+    )
+  },
+  div: ({ children, ...props }) => {
+    let id = ''
+    const regex = /^\[\*(.*?)\]/ //Matches [*text]
+
+    const processChildren = (children) => {
+      if (typeof children === 'string') {
+        const match = children.trim().match(regex)
+        if (match) {
+          id = match[1]
+          return children.replace(regex, '').trim()
+        }
+      } else if (Array.isArray(children)) {
+        const firstElement = children[0]
+        if (typeof firstElement === 'string') {
+          const match = firstElement.trim().match(regex)
+          if (match) {
+            id = match[1]
+            return children.filter((_, index) => index !== 0)
+          }
+        }
+      }
+      return children
+    }
+
+    children = processChildren(children)
+
+    return id ? (
+      <ConditionalElement id={id} {...props}>
+        {children}
+      </ConditionalElement>
+    ) : (
+      <div {...props}>{children}</div>
+    )
+  },
   Talents,
   Collapsible,
+  YouTube: YouTube,
   Checkbox: CheckboxClientVersion,
   Wowhead: WowheadClientVersion,
+  Timeline: TimelineClientVersion,
   HeroTalentsHeader,
+  p: ({ children, ...props }) => {
+    let id = ''
+    const regex = /^\[\*(.*?)\]/ //Matches [*text]
+    const processChildren = (children) => {
+      if (typeof children === 'string') {
+        const regex = /^\[\*(.*?)\]/
+        const match = children.match(regex)
+        if (match) {
+          id = match[1]
+          return children.replace(regex, '')
+        }
+      } else if (Array.isArray(children)) {
+        const firstElement = [...children][0]
+        if (typeof firstElement === 'string') {
+          const match = firstElement.match(/^\[\*(.*?)\]/)
+          if (match) {
+            id = match[1]
+            const modifiedFirstElement = firstElement.replace(regex, '')
+            return [modifiedFirstElement, ...children.slice(1)]
+          }
+        }
+      }
+      return children
+    }
+    children = processChildren(children)
+    return id ? (
+      <ConditionalElement id={id} {...props}>
+        {children}
+      </ConditionalElement>
+    ) : (
+      <p {...props}>{children}</p>
+    )
+  },
   li: ({ children, ...props }) => {
     let id = ''
     const processChildren = (children) => {
@@ -115,7 +212,7 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
           Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
           useMDXComponents: () => components,
           development: isDevelopment,
-          remarkPlugins: [remarkSpell, remarkGroupCheckboxes],
+          remarkPlugins: [remarkAlert, remarkSpell, remarkGroupCheckboxes],
         }
 
         const evaluated = await evaluate(mdxContent, evaluateOptions)
@@ -156,7 +253,9 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
       {isEvaluating && (
         <div className="italic text-gray-500 dark:text-gray-400">Generating preview...</div>
       )}
-      <div className={`${LiveComponent && !error ? 'max-w-none' : ''}`}>
+      <div
+        className={`${LiveComponent && !error ? 'prose max-w-none px-16 pb-8 pt-4 text-base dark:prose-invert sm:pt-0' : ''}`}
+      >
         {LiveComponent && !isEvaluating ? (
           <LiveComponent />
         ) : (
