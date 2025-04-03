@@ -7,6 +7,15 @@ import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
 import { FaQuestion } from 'react-icons/fa'
 import matter from 'gray-matter'
+import CodeMirror from '@uiw/react-codemirror'
+import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
+import { javascript } from '@codemirror/lang-javascript'
+import { languages } from '@codemirror/language-data'
+import { oneDark } from '@codemirror/theme-one-dark'
+import { EditorView } from '@codemirror/view'
+import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
+import { tags } from '@lezer/highlight'
+import { parseMixed } from '@lezer/common'
 
 // Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
@@ -41,6 +50,62 @@ function CompendiumEditor({ slug }: { slug: string }) {
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const router = useRouter()
   const workerRef = useRef<Worker | null>(null)
+
+  // Custom highlight style for frontmatter and MDX
+  const customHighlightStyle = HighlightStyle.define([
+    { tag: tags.heading, color: '#81A1C1', fontWeight: 'bold' },
+    { tag: tags.link, color: '#88C0D0', textDecoration: 'underline' },
+    { tag: tags.emphasis, fontStyle: 'italic' },
+    { tag: tags.strong, fontWeight: 'bold', color: '#EBCB8B' },
+    { tag: tags.keyword, color: '#81A1C1' },
+    { tag: tags.atom, color: '#8FBCBB' },
+    { tag: tags.meta, color: '#D08770' },
+    { tag: tags.comment, color: '#4C566A', fontStyle: 'italic' },
+    // Add specific tag highlighting for JSX/MDX components
+    { tag: tags.angleBracket, color: '#EBCB8B' }, // < > brackets for JSX
+    { tag: tags.tagName, color: '#EBCB8B' }, // Component names
+    { tag: tags.attributeName, color: '#A3BE8C' }, // Attribute names
+    { tag: tags.attributeValue, color: '#B48EAD' }, // Attribute values
+    { tag: tags.processingInstruction, color: '#EBCB8B' }, // Additional JSX syntax
+    { tag: tags.monospace, color: '#88C0D0' }, // Code blocks
+    { tag: tags.content, backgroundColor: 'transparent' },
+  ])
+
+  // Create a custom mixed parser for markdown with improved JSX handling
+  const mixedLanguageSupport = [
+    oneDark,
+    syntaxHighlighting(customHighlightStyle),
+    EditorView.theme({
+      '&': {
+        fontSize: '14px',
+        height: '70vh',
+      },
+      '.cm-content': {
+        fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+        padding: '10px 0',
+      },
+      '.cm-line': {
+        padding: '0 10px',
+      },
+      '.cm-activeLine': {
+        backgroundColor: 'rgba(255,255,255,0.05)',
+      },
+      '.cm-gutters': {
+        backgroundColor: 'transparent',
+        border: 'none',
+      },
+      '.cm-activeLineGutter': {
+        backgroundColor: 'rgba(255,255,255,0.05)',
+      },
+    }),
+    markdown({
+      base: markdownLanguage,
+      codeLanguages: languages,
+      addKeymap: true,
+    }),
+    javascript({ jsx: true }),
+    EditorView.lineWrapping,
+  ]
 
   // Set up the worker when the component mounts
   useEffect(() => {
@@ -121,8 +186,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
     }, 300)
   ).current
 
-  const handleRawContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newContent = e.target.value
+  const handleRawContentChange = (newContent: string) => {
     setRawContent(newContent)
 
     // Use the debounced function to update the preview
@@ -319,11 +383,22 @@ function CompendiumEditor({ slug }: { slug: string }) {
       <div className={`${viewMode === 'split' ? 'flex gap-4' : ''}`}>
         {(viewMode === 'edit' || viewMode === 'split') && (
           <div className={viewMode === 'split' ? 'w-1/2' : 'w-full'}>
-            <textarea
+            <CodeMirror
               value={rawContent}
               onChange={handleRawContentChange}
-              className="h-[70vh] w-full rounded-md border border-gray-300 p-4 font-mono text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+              className="overflow-auto rounded-md border border-gray-300 dark:border-gray-600"
+              theme={oneDark}
+              extensions={mixedLanguageSupport}
               placeholder="Enter content with frontmatter and MDX..."
+              basicSetup={{
+                lineNumbers: true,
+                highlightActiveLine: true,
+                highlightActiveLineGutter: true,
+                foldGutter: true,
+                autocompletion: true,
+                closeBrackets: true,
+                searchKeymap: true,
+              }}
             />
           </div>
         )}
