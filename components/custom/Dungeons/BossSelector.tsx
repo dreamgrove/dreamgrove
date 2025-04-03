@@ -3,8 +3,9 @@ import { useState } from 'react'
 import { Children, isValidElement } from 'react'
 import type { ReactElement } from 'react'
 
-interface ComponentWithDisplayName {
-  displayName?: string
+interface BossCardProps {
+  title: string
+  id?: string
 }
 
 interface BossSelectorProps {
@@ -18,10 +19,13 @@ export default function BossSelector({ children }: BossSelectorProps) {
     (child) => isValidElement(child) && child.type?.toString().includes('BossCard')
   )
 
-  const bossList = bossCards.map((card: ReactElement) => ({
-    title: card.props.title as string,
-    id: (card.props.id as string) || (card.props.title as string),
-  }))
+  const bossList = bossCards.map((card) => {
+    const typedCard = card as ReactElement<BossCardProps>
+    return {
+      title: typedCard.props.title,
+      id: typedCard.props.id || typedCard.props.title,
+    }
+  })
 
   return (
     <div>
@@ -44,7 +48,8 @@ export default function BossSelector({ children }: BossSelectorProps) {
       <div className="space-y-8">
         {Children.map(children, (child) => {
           if (!isValidElement(child) || !child.type?.toString().includes('BossCard')) return null
-          const bossId = child.props.id || child.props.title
+          const typedChild = child as ReactElement<BossCardProps>
+          const bossId = typedChild.props.id || typedChild.props.title
           return selectedBoss === null || selectedBoss === bossId ? child : null
         })}
       </div>

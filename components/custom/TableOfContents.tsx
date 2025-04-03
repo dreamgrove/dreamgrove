@@ -2,12 +2,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 'use client'
 import { ReactNode, useEffect, useState } from 'react'
-import Link from 'next/link'
-import styles from './Talents.module.css'
+import styles from './Talents/Talents.module.css'
 import { FaAngleDown } from 'react-icons/fa'
 import { FaAngleUp } from 'react-icons/fa'
-
-import { allBlogs, Blog } from 'contentlayer/generated'
 
 interface Chapter {
   value: string
@@ -111,7 +108,7 @@ const Collapsible = ({ name, children }: { name: string; children: ReactNode }) 
 }
 
 const renderCollapsibleItems = (items: Chapter[], toggleNav) => {
-  const collapsibleItems: JSX.Element[] = []
+  const collapsibleItems: React.ReactNode[] = []
   let currentDepth1Item: Chapter | null = null
 
   let currentDepth2Items: Chapter[] = []
@@ -184,7 +181,7 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
     return () => {
       observer.disconnect()
     }
-  }, [chapters])
+  }, [chapters, inSidebar])
 
   if (inSidebar) {
     return (

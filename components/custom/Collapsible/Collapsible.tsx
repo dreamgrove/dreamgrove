@@ -2,12 +2,9 @@
 import { useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import styles from './Collapsible.module.css'
-import { useLogger } from '@/components/hooks/useLogger'
-import { CSSProperties } from 'react'
 
-const Collapsible = ({ title, children, type = 'info' }) => {
+const Collapsible = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const logger = useLogger('Collapsible')
 
   const toggle = () => {
     setIsOpen(!isOpen)

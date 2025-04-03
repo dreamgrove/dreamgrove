@@ -12,8 +12,13 @@ const ScrollTopAndComment = () => {
       else setShow(false)
     }
 
-    window.addEventListener('scroll', handleWindowScroll)
-    return () => window.removeEventListener('scroll', handleWindowScroll)
+    window.addEventListener('scroll', handleWindowScroll, {
+      passive: true,
+    } as AddEventListenerOptions)
+    return () =>
+      window.removeEventListener('scroll', handleWindowScroll, {
+        passive: true,
+      } as AddEventListenerOptions)
   }, [])
 
   const handleScrollTop = () => {

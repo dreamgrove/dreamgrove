@@ -5,7 +5,6 @@ draft: false
 authors: ["Kitch, Xora"]
 summary: '수호 드루이드의 모든 것'
 translator: 'NeruTe'
-locale: 'kr'
 ---
 # 새소식
 
@@ -35,9 +34,9 @@ locale: 'kr'
 
 ### 전투 시작 전
 
-<CheckboxProvider>
+
 <Checkbox id="Dotc_Heart of the Wild_PC" spellId={319454} name="야생의 정수 선택 + 솟구치는 자연력 미선택" />
-</CheckboxProvider>
+
 
 - 영약, 음식, 무기 룬 등 강화 효과의 남은 지속 시간이 충분한지 확인.
 - 전투 시작 몇 초 전에 !5487|곰 변신!(!17057|분노 25 생성 효과!).
@@ -47,7 +46,7 @@ locale: 'kr'
 
 ### 단일 대상 시전 우선순위
 
-<CheckboxProvider>
+
 <Checkbox id="Dotc_Wildpower Surge" spellId={411824} name="솟구치는 자연력(=도려내기 활용)" defaultCheck />
 <Checkbox id="Dotc_Heart of the Wild" spellId={319454} name="야생의 정수" defaultCheck />
 <Checkbox id="Dotc_Extra Catweaving" spellId={768} name="전투 내내 표범 형상 유지(화력 약 +5%)" />
@@ -58,7 +57,7 @@ locale: 'kr'
 <Checkbox id="Dotc_Convoke the Spirits" spellId={391528} name="영혼 소집" radio="Dotc_Incarn" />
 <Checkbox id="Dotc_Incarnation: Guardian of Ursoc" spellId={102558} name="화신: 우르속의 수호자" radio="Dotc_Incarn" defaultCheck />
 <Checkbox id="Dotc_Rage of the Sleeper" spellId={200851} name="잠자는 자의 분노" defaultCheck />
-</CheckboxProvider>
+
 
 - !441605|찢어발기기!.
 - !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
@@ -102,7 +101,7 @@ locale: 'kr'
 
 ### 소규모 전투 시전 우선순위 (2-3개 대상)
 
-<CheckboxProvider>
+
 <Checkbox id="Dotc_Wildpower Surge_cleave" spellId={411824} name="솟구치는 자연력" defaultCheck />
 <Checkbox id="Dotc_Heart of the Wild_cleave" spellId={319454} name="야생의 정수" defaultCheck />
 <Checkbox id="Dotc_Extra Catweaving_cleave" spellId={768} name="전투 내내 표범 형상 유지" />
@@ -114,7 +113,7 @@ locale: 'kr'
 <Checkbox id="Dotc_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="화신: 우르속의 수호자" radio="Dotc_Incarn Cleave" defaultCheck />
 <Checkbox id="Dotc_Convoke the Spirits_cleave" spellId={391528} name="영혼 소집" radio="Dotc_Incarn Cleave" />
 <Checkbox id="Dotc_Rage of the Sleeper_cleave" spellId={200851} name="잠자는 자의 분노" defaultCheck />
-</CheckboxProvider>
+
 
 - (가능하면 점사 대상에게) !441605|찢어발기기!
 - !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
@@ -157,7 +156,7 @@ locale: 'kr'
 
 ### 광역 전투 시전 우선순위
 
-<CheckboxProvider>
+
 <Checkbox id="Dotc_Heart of the Wild_aoe" spellId={319454} name="야생의 정수" defaultCheck />
 <Checkbox id="Dotc_Lunar Beam_aoe" spellId={204066} name="달 광선" />
 <Checkbox id="Dotc_Vicious Cycle_aoe" spellId={371999} name="흉포한 순환" defaultCheck />
@@ -167,7 +166,7 @@ locale: 'kr'
 <Checkbox id="Dotc_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="화신: 우르속의 수호자" radio="Dotc_Incarn_AOE" defaultCheck />
 <Checkbox id="Dotc_Convoke the Spirits_aoe" spellId={391528} name="영혼 소집" radio="Dotc_Incarn_AOE" />
 <Checkbox id="Dotc_Rage of the Sleeper_aoe" spellId={200851} name="잠자는 자의 분노" defaultCheck />
-</CheckboxProvider>
+
 
 - (가능하면 점사 대상에게) !441605|찢어발기기!
 - !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!. 
@@ -190,7 +189,7 @@ locale: 'kr'
 
 !102558|화신!/!50334|광폭화! 중에는 아래와 같이 평상시와 약간 다른 시전 우선순위를 적용한다. 
 
-<CheckboxProvider>
+
 <Checkbox id="Dotc_Single Target_incarn" name="단일 대상" radio="Dotc_Target count" defaultCheck />
 <Checkbox id="Dotc_Cleave_incarn" name="소규모 (2-3개 대상)" radio="Dotc_Target count" />
 <Checkbox id="Dotc_AOE_incarn" name="광역 (4+개 대상)" radio="Dotc_Target count" />
@@ -202,7 +201,7 @@ locale: 'kr'
 <Checkbox id="Dotc_Thorns of Iron_incarn" spellId={400222} name="무쇠 가시" defaultCheck />
 <Checkbox id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="잠자는 자의 분노" defaultCheck />
 <Checkbox id="Dotc_Convoke the Spirits_incarn" spellId={391528} name="영혼 소집" />
-</CheckboxProvider>
+
 
 - [*Dotc_Single Target_incarn] !441605|찢어발기기!
 - [*~Dotc_Single Target_incarn] (가능하면 점사 대상에게) !441605|찢어발기기!
@@ -275,9 +274,9 @@ locale: 'kr'
 
 ### 전투 시작 전
 
-<CheckboxProvider>
+
 <Checkbox id="EC_Heart of the Wild_PC" spellId={319454} name="야생의 정수" defaultCheck />
-</CheckboxProvider>
+
 
 - 영약, 음식, 무기 룬 등 강화 효과의 남은 지속 시간이 충분한지 확인.
 - 전투 시작 몇 초 전에 !5487|곰 변신!(!17057|분노 25 생성 효과!).
@@ -285,7 +284,7 @@ locale: 'kr'
 
 ### 단일 대상 시전 우선순위
 
-<CheckboxProvider>
+
 <Checkbox id="EC_Heart of the Wild" spellId={319454} name="야생의 정수" defaultCheck />
 <Checkbox id="EC_Lunation" spellId={429539} name="삭망월" defaultCheck />
 <Checkbox id="EC_Lunar Beam" spellId={204066} name="달 광선" defaultCheck />
@@ -296,7 +295,7 @@ locale: 'kr'
 <Checkbox id="EC_Incarnation: Guardian of Ursoc" spellId={102558} name="화신: 우르속의 수호자" defaultCheck radio="EC_Incarn" />
 <Checkbox id="EC_Rage of the Sleeper" spellId={200851} name="잠자는 자의 분노" />
 <Checkbox id="EC_Thorns of Iron style" spellId={192081} name="무쇠 가시" />
-</CheckboxProvider>
+
 
 - [*~EC_Thorns of Iron style] 분노가 넘치기 직전이라면, !6807|후려갈기기!.
 - [*EC_Thorns of Iron style] 분노가 넘치기 직전이라면, !192081|무쇠가죽!.
@@ -320,7 +319,7 @@ locale: 'kr'
 
 ### 소규모 전투 시전 우선순위 (2-3개 대상)
 
-<CheckboxProvider>
+
 <Checkbox id="EC_Heart of the Wild_cleave" spellId={319454} name="야생의 정수" defaultCheck/>
 <Checkbox id="EC_Lunation_cleave" spellId={429539} name="삭망월" defaultCheck/>
 <Checkbox id="EC_Lunar Beam_cleave" spellId={204066} name="달 광선" defaultCheck/>
@@ -332,7 +331,7 @@ locale: 'kr'
 <Checkbox id="EC_Incarnation: Guardian of Ursoc_cleave" spellId={102558} name="화신: 우르속의 수호자" defaultCheck radio="EC_Incarn Cleave" />
 <Checkbox id="EC_Rage of the Sleeper_cleave" spellId={200851} name="잠자는 자의 분노" />
 <Checkbox id="EC_Thorns of Iron style_cleave" spellId={192081} name="무쇠 가시" />
-</CheckboxProvider>
+
 
 - [*~EC_Thorns of Iron style_cleave&&EC_Raze_cleave] 분노가 넘치기 직전이라면, !400254|말살!.
 - [*~EC_Thorns of Iron style_cleave&&~EC_Raze_cleave] 분노가 넘치기 직전이라면, !6807|후려갈기기!.
@@ -359,7 +358,7 @@ locale: 'kr'
 
 ### 광역 전투 우선순위
 
-<CheckboxProvider>
+
 <Checkbox id="EC_Heart of the Wild_aoe" spellId={319454} name="야생의 정수" defaultCheck />
 <Checkbox id="EC_Lunation_aoe" spellId={429539} name="삭망월" defaultCheck />
 <Checkbox id="EC_Lunar Beam_aoe" spellId={204066} name="달 광선" defaultCheck />
@@ -370,7 +369,7 @@ locale: 'kr'
 <Checkbox id="EC_Incarnation: Guardian of Ursoc_aoe" spellId={102558} name="화신: 우르속의 수호자" defaultCheck radio="EC_Incarn AOE" />
 <Checkbox id="EC_Rage of the Sleeper_aoe" spellId={200851} name="잠자는 자의 분노" />
 <Checkbox id="EC_Thorns of Iron style_aoe" spellId={192081} name="무쇠 가시" />
-</CheckboxProvider>
+
 
 - [*~EC_Thorns of Iron style_aoe&&EC_Raze_aoe] 분노가 넘치기 직전이라면, !400254|말살!.
 - [*EC_Thorns of Iron style_aoe] 분노를 !192081|무쇠가죽!으로 소모.
@@ -395,7 +394,7 @@ locale: 'kr'
 
 !102558|화신!/!50334|광폭화! 중에는 아래와 같이 평상시와 약간 다른 시전 우선순위를 적용한다. 
 
-<CheckboxProvider>
+
 <Checkbox id="EC_Single Target_incarn" name="단일 대상" radio="EC_Target count" defaultCheck />
 <Checkbox id="EC_Cleave_incarn" name="소규모 (2-3개 대상)" radio="EC_Target count" />
 <Checkbox id="EC_AOE_incarn" name="광역 (4+개 대상)" radio="EC_Target count" />
@@ -406,7 +405,7 @@ locale: 'kr'
 <Checkbox id="EC_Rage of the Sleeper_incarn" spellId={200851} name="잠자는 자의 분노" />
 <Checkbox id="EC_Thorns of Iron style_incarn" spellId={192081} name="무쇠 가시" />
 <Checkbox id="EC_Raze_incarn" spellId={400254} name="말살" />
-</CheckboxProvider>
+
 
 - !106830|난타!가 최대 중첩 상태가 아니거나 곧 만료된다면, !106830|난타!.
 - [*EC_Thorns of Iron style_incarn] 분노를 !192081|무쇠가죽!으로 소모.

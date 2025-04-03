@@ -1,5 +1,4 @@
 'use client'
-import Image from 'next/image'
 import border from 'public/static/images/april/border.png'
 import { useState, useEffect, useRef } from 'react'
 import { GuestbookMessage } from 'bot/types'

@@ -1,4 +1,4 @@
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { allCoreContent } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 import DungeonListLayout from '@/layouts/DungeonListLayout'

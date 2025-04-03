@@ -6,9 +6,6 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import type { Dungeons } from 'contentlayer/generated'
-import PostSimple from '@/layouts/PostSimple'
-import PostLayout from '@/layouts/PostLayout'
-import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
@@ -17,17 +14,13 @@ import PageWrapper from '@/components/PageWrapper'
 
 const defaultLayout = 'DungeonLayout'
 const layouts = {
-  PostSimple,
-  PostLayout,
-  PostBanner,
   DungeonLayout,
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string[] }
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string[] }>
 }): Promise<Metadata | undefined> {
+  const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allDungeons.find((p) => p.slug === slug)
 
@@ -66,7 +59,8 @@ export async function generateMetadata({
 export const generateStaticParams = async () => {
   return allDungeons.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
-export default async function Page({ params }: { params: { slug: string[] } }) {
+export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
+  const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const sortedCoreContents = allCoreContent(allDungeons)
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)

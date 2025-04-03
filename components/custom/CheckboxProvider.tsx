@@ -1,84 +1,78 @@
 'use client'
-import React, { createContext, useState, useCallback } from 'react'
+import React, { createContext, useState, useMemo, useCallback } from 'react'
+
+interface CheckboxItem {
+  checked: boolean
+  radioGroup: string | null
+}
 
 interface CheckboxContextType {
-  radioGroup: Record<string, string>
-  checkboxStates: Record<string, boolean>
-  checkRadio: (radio: string, id: string) => void
-  registerCheckbox: (radio: string, id: string, defaultCheck: boolean) => void
-  toggleCheckbox: (id: string, state: boolean) => void
+  checkboxMap: Record<string, CheckboxItem>
+  updateCheckbox: (id: string, checked: boolean, radioGroup: string | null) => void
 }
 
 // Create context with default value
 const CheckboxContext = createContext<CheckboxContextType>({
-  radioGroup: {},
-  checkboxStates: {},
-  checkRadio: () => {},
-  registerCheckbox: () => {},
-  toggleCheckbox: () => {},
+  checkboxMap: {},
+  updateCheckbox: () => {},
 })
 
+export { CheckboxContext }
+
 export default function CheckboxProvider({ children }) {
-  const [radioGroup, setRadioGroup] = useState({})
-  const [checkboxStates, setCheckboxStates] = useState({})
+  const [checkboxMap, setCheckboxMap] = useState<Record<string, CheckboxItem>>({})
 
-  const registerCheckbox = useCallback((radio, id, defaultCheck) => {
-    if (radio) {
-      setRadioGroup((prev) => {
-        const updatedRadioGroup = { ...prev }
-        if (defaultCheck && !updatedRadioGroup[radio]) {
-          updatedRadioGroup[radio] = id
+  const updateCheckbox = useCallback((id: string, checked: boolean, radioGroup: string | null) => {
+    setCheckboxMap((prevMap) => {
+      // If nothing would change, return the same object reference to prevent re-renders
+      if (
+        prevMap[id]?.checked === checked &&
+        prevMap[id]?.radioGroup === radioGroup &&
+        (!radioGroup || !checked)
+      ) {
+        return prevMap
+      }
+
+      const newMap = { ...prevMap }
+
+      // If the element doesn't exist, insert it
+      if (!newMap[id]) {
+        newMap[id] = { checked, radioGroup }
+      } else {
+        // Update the checked state
+        newMap[id].checked = checked
+
+        // If radioGroup is provided, update it
+        if (radioGroup !== undefined) {
+          newMap[id].radioGroup = radioGroup
         }
-        return updatedRadioGroup
-      })
-    }
+      }
 
-    setCheckboxStates((prev) => ({
-      ...prev,
-      [id]: defaultCheck,
-    }))
-  }, [])
-
-  const checkRadio = useCallback(
-    (radio, id) => {
-      if (radio) {
-        setRadioGroup((prev) => ({
-          ...prev,
-          [radio]: id,
-        }))
-
-        setCheckboxStates((prev) => {
-          const updatedStates = { ...prev }
-
-          // Only update checkboxes that belong to the same radio group
-          Object.keys(prev).forEach((key) => {
-            if (prev[key] !== undefined) {
-              // Uncheck all in the same group except the one being selected
-              updatedStates[key] = key === id ? true : radioGroup[radio] === key ? false : prev[key]
-            }
-          })
-
-          return updatedStates
+      // If this is a radio button and it's being checked
+      if (newMap[id].radioGroup && checked) {
+        // Set all other elements with the same radioGroup to false
+        Object.keys(newMap).forEach((key) => {
+          if (key !== id && newMap[key].radioGroup === newMap[id].radioGroup) {
+            newMap[key].checked = false
+          }
         })
       }
-    },
-    [radioGroup]
-  )
 
-  const toggleCheckbox = useCallback((id, state) => {
-    setCheckboxStates((prev) => ({
-      ...prev,
-      [id]: state,
-    }))
+      return newMap
+    })
   }, [])
 
+  const contextValue = useMemo(
+    () => ({
+      checkboxMap,
+      updateCheckbox,
+    }),
+    [checkboxMap, updateCheckbox]
+  )
+
   return (
-    <CheckboxContext.Provider
-      value={{ radioGroup, checkboxStates, checkRadio, registerCheckbox, toggleCheckbox }}
-    >
-      <div className="grid auto-rows-fr grid-cols-2 gap-x-4 gap-y-2">{children}</div>
-    </CheckboxContext.Provider>
+    <div className="custom-checkbox-provider">
+      <CheckboxContext.Provider value={contextValue}>{children}</CheckboxContext.Provider>
+    </div>
   )
 }
-
-export { CheckboxProvider, CheckboxContext }

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import talentData from '../../other/talents.json'
+import talentData from '../../../other/talents.json'
 
 // Type definitions
 export interface TalentNode {
@@ -17,6 +17,13 @@ export interface TalentNode {
   }[]
   subTreeId?: number
   maxRanks?: number
+  requirements?: (number | { nodeId: number; choice: number })[]
+  choices?: {
+    icon: string
+    name: string
+    spellId?: number
+    type?: string
+  }[]
 }
 
 export interface SubTreeEntry {

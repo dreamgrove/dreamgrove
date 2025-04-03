@@ -1,5 +1,4 @@
-import ListLayout from '@/layouts/ListLayoutWithTags'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { allCoreContent } from 'pliny/utils/contentlayer'
 import { allRaids } from 'contentlayer/generated'
 import RaidListLayout from '@/layouts/RaidListLayout'
 
@@ -12,7 +11,8 @@ export const generateStaticParams = async () => {
   return paths
 }
 
-export default function Page({ params }: { params: { page: string } }) {
+export default async function Page(props: { params: Promise<{ page: string }> }) {
+  const params = await props.params
   const posts = allCoreContent(allRaids)
   const pageNumber = parseInt(params.page as string)
   const initialDisplayPosts = posts.slice(

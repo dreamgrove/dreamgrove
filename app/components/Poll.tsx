@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import border from 'public/static/images/april/border.png'
 
 export const Poll = () => {

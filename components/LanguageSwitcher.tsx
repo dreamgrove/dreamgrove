@@ -32,12 +32,16 @@ const LanguageSwitcher = () => {
 
     // Add the event listener when dropdown is open
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('mousedown', handleClickOutside, {
+        passive: true,
+      } as AddEventListenerOptions)
     }
 
     // Clean up
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('mousedown', handleClickOutside, {
+        passive: true,
+      } as AddEventListenerOptions)
     }
   }, [isOpen])
 

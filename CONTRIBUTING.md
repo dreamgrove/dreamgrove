@@ -76,7 +76,7 @@ Both will be replaced with the correct <Wowhead> component
 
 ### `<Checkbox/>` component
 
-Checkboxes are used to dynamically show/hide `<li>` tags. All checkboxes that use the radio function need to be wrapped within one <CheckboxProvider>.
+Checkboxes are used to dynamically show/hide `<li>` tags. All checkboxes that use the radio function need to be wrapped within one .
 
 It is good practice to logically group multiple checkboxes in such a component even if radio isn't used.
 
@@ -90,7 +90,7 @@ It is good practice to logically group multiple checkboxes in such a component e
 **Example Usage:**
 
 ```jsx
-<CheckboxProvider>
+
   <Checkbox
     id="Adaptive Swarm"
     spellId={391889}
@@ -99,7 +99,7 @@ It is good practice to logically group multiple checkboxes in such a component e
     radio="Adaptive Swarm"
   />
   <Checkbox id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm" />
-</CheckboxProvider>
+
 ```
 
 **Controlled Elements:**
