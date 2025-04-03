@@ -12,13 +12,17 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import PageWrapper from '@/components/PageWrapper'
 
+type Params = {
+  slug: string[]
+}
+
 const defaultLayout = 'PostLayout'
-const layouts = {
+const layouts: Record<string, React.ComponentType<any>> = {
   PostLayout,
 }
 
-export async function generateMetadata(props: { params: Promise }): Promise {
-  const params = await props.params
+export async function generateMetadata(props: { params: Params }): Promise<Metadata | undefined> {
+  const params = props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
 
@@ -62,8 +66,8 @@ export async function generateMetadata(props: { params: Promise }): Promise {
 export const generateStaticParams = async () => {
   return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
-export default async function Page(props: { params: Promise }): Promise {
-  const params = await props.params
+export default async function Page(props: { params: Params }): Promise<React.ReactNode> {
+  const params = props.params
   const slug = decodeURI(params.slug.join('/'))
   const sortedCoreContents = allCoreContent(allBlogs)
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)

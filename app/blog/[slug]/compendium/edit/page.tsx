@@ -12,9 +12,9 @@ import matter from 'gray-matter'
 function debounce<T extends (...args: any[]) => any>(
   func: T,
   timeout = 300
-): (...args: Parameters) => void {
-  let timer: ReturnType | undefined
-  return (...args: Parameters) => {
+): (...args: Parameters<T>) => void {
+  let timer: ReturnType<typeof setTimeout> | undefined
+  return (...args: Parameters<T>) => {
     clearTimeout(timer)
     timer = setTimeout(() => {
       func(...args)
@@ -121,7 +121,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
     }, 300)
   ).current
 
-  const handleRawContentChange = (e: React.ChangeEvent) => {
+  const handleRawContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newContent = e.target.value
     setRawContent(newContent)
 
