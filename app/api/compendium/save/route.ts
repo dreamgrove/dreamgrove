@@ -5,7 +5,7 @@ import fs from 'fs/promises'
 import path from 'path'
 import { exec } from 'child_process'
 import { promisify } from 'util'
-import { authOptions } from '../../auth/[...nextauth]/route'
+import authOptions from 'app/api/auth/[...nextauth]/options'
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER || 'dreamgrove'
 const REPO_NAME = process.env.GITHUB_REPO_NAME || 'dreamgrove'

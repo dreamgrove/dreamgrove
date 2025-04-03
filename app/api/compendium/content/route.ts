@@ -3,7 +3,7 @@ import { getServerSession } from 'next-auth/next'
 import { Octokit } from 'octokit'
 import fs from 'fs'
 import path from 'path'
-import { authOptions } from '../../auth/[...nextauth]/route'
+import authOptions from 'app/api/auth/[...nextauth]/options'
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER || 'dreamgrove'
 const REPO_NAME = process.env.GITHUB_REPO_NAME || 'dreamgrove'
