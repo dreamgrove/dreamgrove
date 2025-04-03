@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app github.com
 `
 
 const securityHeaders = [
@@ -84,11 +84,22 @@ module.exports = () => {
           protocol: 'https',
           hostname: 'wow.zamimg.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'avatars.githubusercontent.com',
+        },
       ],
       formats: ['image/webp'],
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       minimumCacheTTL: 60,
+    },
+    env: {
+      GITHUB_ID: process.env.GITHUB_ID,
+      GITHUB_SECRET: process.env.GITHUB_SECRET,
+      GITHUB_REPO_OWNER: process.env.GITHUB_REPO_OWNER || 'dreamgrove',
+      GITHUB_REPO_NAME: process.env.GITHUB_REPO_NAME || 'dreamgrove',
+      GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'next-15',
     },
     experimental: {
       turbo: {

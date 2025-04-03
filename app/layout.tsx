@@ -13,6 +13,7 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import WelcomePopover from '@/components/WelcomePopover'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
+import { Providers } from './providers'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -87,16 +88,18 @@ export default function RootLayout({ children }: LayoutProps) {
         suppressHydrationWarning
       >
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
-          <ThemeProviders>
-            <CheckboxProvider>
-              <Analytics />
-              <WelcomePopover />
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <main className="mb-auto">{children}</main>
-                <Footer />
-              </SearchProvider>
-            </CheckboxProvider>
-          </ThemeProviders>
+          <Providers>
+            <ThemeProviders>
+              <CheckboxProvider>
+                <Analytics />
+                <WelcomePopover />
+                <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                  <main className="mb-auto">{children}</main>
+                  <Footer />
+                </SearchProvider>
+              </CheckboxProvider>
+            </ThemeProviders>
+          </Providers>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
         <Script src={scriptSrc} strategy="beforeInteractive" />

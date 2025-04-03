@@ -6,10 +6,11 @@ import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import TableOfContents from '@/components/custom/TableOfContents'
-import { FaHistory } from 'react-icons/fa'
+import { FaHistory, FaEdit } from 'react-icons/fa'
+import Link from 'next/link'
 
 interface LayoutProps {
-  content: CoreContent<Blog>
+  content: CoreContent
   authorDetails: string[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
@@ -19,6 +20,11 @@ interface LayoutProps {
 
 export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
   const { patch, slug, title, tags, toc, lastModified, changelogUrl, translator } = content
+
+  // Check if this is a compendium page
+  const isCompendium = slug?.endsWith('/compendium')
+  // Extract the spec from the slug for the edit link
+  const specSlug = isCompendium ? slug.split('/')[0] : ''
 
   return (
     <SectionContainer>
@@ -67,6 +73,16 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                       <FaHistory className="mr-2 inline" />
                       <span className="inline">Changelog</span>
                     </a>
+
+                    {isCompendium && (
+                      <Link
+                        href={`/blog/${specSlug}/compendium/edit`}
+                        className="ml-4 mt-[-2px] text-base text-main underline decoration-2 underline-offset-4"
+                      >
+                        <FaEdit className="mr-2 inline" />
+                        <span className="inline">Edit</span>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -87,6 +103,16 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                   <FaHistory className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>
                 </a>
+
+                {isCompendium && (
+                  <Link
+                    href={`/blog/${specSlug}/compendium/edit`}
+                    className="ml-4 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:text-base"
+                  >
+                    <FaEdit className="mr-2 inline" />
+                    <span className="inline align-top">Edit</span>
+                  </Link>
+                )}
               </div>
               <div
                 style={{ counterReset: 'heading' }}
