@@ -16,12 +16,7 @@ interface ConditionalElementProps {
  * @param children - The content to render when the checkbox is checked
  * @param className - Optional CSS class name
  */
-const ConditionalElement: React.FC<ConditionalElementProps> = ({
-  id,
-  children,
-  className = '',
-  type = 'div',
-}) => {
+const ConditionalElement: React.FC = ({ id, children, className = '', type = 'div' }) => {
   const { checkboxMap } = useContext(CheckboxContext)
 
   /**
@@ -60,15 +55,7 @@ const ConditionalElement: React.FC<ConditionalElementProps> = ({
   // Evaluate the expression
   const shouldRender = evaluateExpression(id)
 
-  if (type === 'img') {
-    return <div className={`${shouldRender ? 'block' : 'hidden'}`}>{children}</div>
-  } else if (type === 'li') {
-    return <li className={`${shouldRender ? 'list-item' : 'hidden'}`}>{children}</li>
-  } else if (type === 'div') {
-    return <div className={`${shouldRender ? 'inline' : 'hidden'}`}>{children}</div>
-  }
-
-  return null
+  return shouldRender ? children : null
 }
 
 export default ConditionalElement

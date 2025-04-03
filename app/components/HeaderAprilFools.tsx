@@ -29,7 +29,7 @@ const HeaderAprilFools = ({ title }: HeaderProps) => {
                   {typeof siteMetadata.headerTitle === 'string' ? (
                     <div className="font-pixel mb-[-5px] flex items-center text-[2rem] font-bold text-[#ffd4e4] sm:mb-0 sm:text-4xl md:text-4xl lg:text-5xl">
                       <div className="title-effect self-end">
-                        <h1 className="title-effect-front  text-[#ffd4e4]">✩☽⋆𝕯𝖗𝖊𝖆𝖒𝖌𝖗𝖔𝖛𝖊⋆☾⁺₊✩</h1>
+                        <h1 className="title-effect-front text-[#ffd4e4]">✩☽⋆𝕯𝖗𝖊𝖆𝖒𝖌𝖗𝖔𝖛𝖊⋆☾⁺₊✩</h1>
                       </div>
                     </div>
                   ) : (

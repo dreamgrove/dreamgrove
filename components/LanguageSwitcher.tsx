@@ -128,7 +128,7 @@ const LanguageSwitcher = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="inline-flex h-full items-center justify-center self-center rounded-md font-familiar-pro font-normal transition-all hover:opacity-80"
       >
-        <IoLanguage className=" text-3xl text-main sm:translate-y-[0px] sm:text-[1.4rem]" />
+        <IoLanguage className="text-3xl text-main sm:translate-y-[0px] sm:text-[1.4rem]" />
       </button>
 
       <div

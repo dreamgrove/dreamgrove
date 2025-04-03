@@ -82,7 +82,6 @@ export default function remarkSpell() {
           const start = match.index
           const end = start + match[0].length
           const [fullMatch, id, spellName] = match
-          console.log(match)
 
           // Check for spaces before and after the match
           const hasSpaceBefore = start > 0 && value[start - 1] === ' '

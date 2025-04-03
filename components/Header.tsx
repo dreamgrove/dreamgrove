@@ -44,7 +44,7 @@ const Header = (props: HeaderProps) => {
         }`}
       >
         <div className="xl:max-w-8xl mx-auto w-full max-w-7xl px-6 sm:px-12 xl:px-6">
-          <div className="relative flex w-full items-end justify-between pb-7 sm:pb-8 ">
+          <div className="relative flex w-full items-end justify-between pb-7 sm:pb-8">
             {title && title != '' && showTitle && (
               <div className="absolute bottom-0 left-0 right-0 hidden h-[1px] bg-gray-600 opacity-35 md:block"></div>
             )}

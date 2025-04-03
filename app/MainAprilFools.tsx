@@ -238,8 +238,8 @@ export default function HomeAprilFools() {
 
         <Separator />
 
-        <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px] ">
-          <div className=" md:w-[400px] lg:w-[720px]">
+        <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px]">
+          <div className="md:w-[400px] lg:w-[720px]">
             <AboutMeSection />
           </div>
           <div className="flex-1">

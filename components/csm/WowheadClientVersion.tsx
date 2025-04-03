@@ -41,9 +41,9 @@ export const WowheadClientIcon = ({
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
   const image = (
-    <div
+    <span
       style={{ width: size, height: size }}
-      className="my-0 mb-[-3px] mr-1 inline-block rounded  bg-main"
+      className="my-0 mb-[-3px] mr-1 inline-block rounded bg-main"
     />
   )
 

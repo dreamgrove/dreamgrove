@@ -17,9 +17,7 @@ const layouts = {
   PostLayout,
 }
 
-export async function generateMetadata(props: {
-  params: Promise<{ slug: string[] }>
-}): Promise<Metadata | undefined> {
+export async function generateMetadata(props: { params: Promise }): Promise {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
@@ -64,9 +62,7 @@ export async function generateMetadata(props: {
 export const generateStaticParams = async () => {
   return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
-export default async function Page(props: {
-  params: Promise<{ slug: string[] }>
-}): Promise<React.ReactNode> {
+export default async function Page(props: { params: Promise }): Promise {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const sortedCoreContents = allCoreContent(allBlogs)

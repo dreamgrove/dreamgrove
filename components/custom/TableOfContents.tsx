@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 'use client'
 import { ReactNode, useEffect, useState } from 'react'
 import styles from './Talents/Talents.module.css'
@@ -198,7 +196,7 @@ export default function TableOfContents({ chapters, inSidebar = false, toggleNav
 
   return (
     <nav className="flex self-start" aria-label="Table of Contents">
-      <ol className="list-none ">
+      <ol className="list-none">
         {chapters.map((item, index) => {
           if (item.depth < 3) {
             return (

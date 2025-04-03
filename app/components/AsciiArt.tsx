@@ -12,7 +12,7 @@ export const AsciiArt = () => {
 　| (￣ヽ＿_ヽ_)__)                          じしˍ,)ノ
 　＼二つ`
   return (
-    <div className="relative flex h-full w-full flex-col p-3 pb-0 ">
+    <div className="relative flex h-full w-full flex-col p-3 pb-0">
       <pre className="z-10 mb-[-1.75rem] flex flex-1 items-end justify-end font-mono text-sm text-[#4b2e39]">
         <code>{art}</code>
       </pre>

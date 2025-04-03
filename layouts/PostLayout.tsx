@@ -37,7 +37,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                 <PageTitle>{title}</PageTitle>
               </div>
 
-              <div className="flex h-full flex-col lg:flex-row lg:items-center lg:justify-between ">
+              <div className="flex h-full flex-col lg:flex-row lg:items-center lg:justify-between">
                 <div className="pt-4 lg:h-full lg:content-around lg:self-end lg:pt-0">
                   <div className="flex flex-col space-y-0">
                     <p
@@ -68,7 +68,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                   <div className="hidden lg:inline">
                     <a
                       href={changelogUrl}
-                      className="mt-[-2px] text-base text-main underline decoration-2 underline-offset-4 "
+                      className="mt-[-2px] text-base text-main underline decoration-2 underline-offset-4"
                     >
                       <FaHistory className="mr-2 inline" />
                       <span className="inline">Changelog</span>
@@ -95,10 +95,10 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
             </aside>
 
             <div id="main" className="relative pt-4 lg:col-span-9 lg:pb-0 lg:pl-6 lg:pt-5">
-              <div className="absolute right-0 top-[-5px] sm:left-auto sm:right-[0px] sm:top-[-50px] lg:hidden ">
+              <div className="absolute right-0 top-[-5px] sm:left-auto sm:right-[0px] sm:top-[-50px] lg:hidden">
                 <a
                   href={changelogUrl}
-                  className="ml-0 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem] sm:text-base "
+                  className="ml-0 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem] sm:text-base"
                 >
                   <FaHistory className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>

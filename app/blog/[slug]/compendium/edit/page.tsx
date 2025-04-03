@@ -1,22 +1,37 @@
 'use client'
 
-import { useState, useEffect, Suspense, ChangeEvent } from 'react'
+import { useState, useEffect, Suspense, useRef } from 'react'
 import { useSession, signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
 import { FaQuestion } from 'react-icons/fa'
 import matter from 'gray-matter'
 
-export default function CompendiumEditPage({ params }: { params: { slug: string } }) {
+// Create a debounce function to prevent excessive worker updates
+function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  timeout = 300
+): (...args: Parameters) => void {
+  let timer: ReturnType | undefined
+  return (...args: Parameters) => {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      func(...args)
+    }, timeout)
+  }
+}
+
+export default function CompendiumEditPage() {
+  const params = useParams<{ slug: string }>()
   const slug = params.slug
   return <CompendiumEditor slug={slug} />
 }
 
 function CompendiumEditor({ slug }: { slug: string }) {
   const { data: session, status } = useSession()
+  const [rawContent, setRawContent] = useState<string>('')
   const [bodyContent, setBodyContent] = useState<string>('')
-  const [frontmatterData, setFrontmatterData] = useState<Record>({})
   const [loading, setLoading] = useState<boolean>(true)
   const [saving, setSaving] = useState<boolean>(false)
   const [viewMode, setViewMode] = useState<'edit' | 'preview' | 'split'>('edit')
@@ -25,6 +40,26 @@ function CompendiumEditor({ slug }: { slug: string }) {
   const [hasPermission, setHasPermission] = useState<boolean>(true)
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const router = useRouter()
+  const workerRef = useRef<Worker | null>(null)
+
+  // Set up the worker when the component mounts
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      workerRef.current = new Worker(new URL('./matterWorker.ts', import.meta.url))
+
+      workerRef.current.onmessage = (event) => {
+        if (event.data.type === 'parseResult') {
+          setBodyContent(event.data.content)
+        } else if (event.data.type === 'error') {
+          console.error('Error in worker:', event.data.message)
+        }
+      }
+
+      return () => {
+        workerRef.current?.terminate()
+      }
+    }
+  }, [])
 
   useEffect(() => {
     if (status === 'authenticated') {
@@ -38,9 +73,25 @@ function CompendiumEditor({ slug }: { slug: string }) {
           return res.json()
         })
         .then((data) => {
-          const { data: fmData, content: body } = matter(data.content || '')
-          setFrontmatterData(fmData)
-          setBodyContent(body)
+          const content = data.content || ''
+          setRawContent(content)
+
+          // Parse the initial content with the worker
+          if (workerRef.current) {
+            workerRef.current.postMessage({
+              type: 'parse',
+              content,
+            })
+          } else {
+            // Fallback if worker isn't available
+            try {
+              const { content: body } = matter(content)
+              setBodyContent(body)
+            } catch (err) {
+              console.error('Error parsing markdown content:', err)
+            }
+          }
+
           setLoading(false)
         })
         .catch((err) => {
@@ -50,21 +101,32 @@ function CompendiumEditor({ slug }: { slug: string }) {
     }
   }, [status, slug])
 
-  const handleFrontmatterChange = (key: string, value: string | number | boolean) => {
-    const originalValue = frontmatterData[key]
-    const newValue =
-      typeof originalValue === 'number' && typeof value === 'string' && !isNaN(parseFloat(value))
-        ? parseFloat(value)
-        : value
+  // Debounced function to update content in worker
+  const debouncedUpdateContent = useRef(
+    debounce((content: string) => {
+      if (workerRef.current) {
+        workerRef.current.postMessage({
+          type: 'parse',
+          content,
+        })
+      } else {
+        // Fallback if worker isn't available
+        try {
+          const { content: body } = matter(content)
+          setBodyContent(body)
+        } catch (err) {
+          console.error('Error parsing markdown content:', err)
+        }
+      }
+    }, 300)
+  ).current
 
-    setFrontmatterData((prev) => ({
-      ...prev,
-      [key]: newValue,
-    }))
-  }
+  const handleRawContentChange = (e: React.ChangeEvent) => {
+    const newContent = e.target.value
+    setRawContent(newContent)
 
-  const handleBodyContentChange = (e: ChangeEvent) => {
-    setBodyContent((e.target as HTMLTextAreaElement).value)
+    // Use the debounced function to update the preview
+    debouncedUpdateContent(newContent)
   }
 
   const saveChanges = async () => {
@@ -74,8 +136,6 @@ function CompendiumEditor({ slug }: { slug: string }) {
     setSaveMessage(null)
 
     try {
-      const fullContent = matter.stringify(bodyContent, frontmatterData)
-
       const res = await fetch('/api/compendium/save', {
         method: 'POST',
         headers: {
@@ -83,7 +143,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
         },
         body: JSON.stringify({
           slug,
-          content: fullContent,
+          content: rawContent,
         }),
       })
 
@@ -226,6 +286,10 @@ function CompendiumEditor({ slug }: { slug: string }) {
           <ul className="mb-2 list-disc pl-5">
             <li>Edit the content using Markdown and MDX syntax</li>
             <li>
+              Frontmatter can be edited directly at the top of the file between <code>---</code>{' '}
+              delimiters
+            </li>
+            <li>
               Use <code>!47032|Spell!</code> for Wowhead links
             </li>
             <li>
@@ -252,81 +316,22 @@ function CompendiumEditor({ slug }: { slug: string }) {
         </div>
       )}
 
-      <div className="mb-6 rounded-md border border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800">
-        <h2 className="mb-4 text-xl font-semibold">Metadata (Frontmatter)</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {Object.entries(frontmatterData).map(([key, value]) => {
-            const inputType =
-              typeof value === 'boolean'
-                ? 'checkbox'
-                : typeof value === 'number'
-                  ? 'number'
-                  : 'text'
-            const isTextArea = typeof value === 'string' && value.includes('\n')
-
-            return (
-              <div key={key}>
-                <label
-                  htmlFor={`fm-${key}`}
-                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  {key}
-                </label>
-                {isTextArea ? (
-                  <textarea
-                    id={`fm-${key}`}
-                    name={key}
-                    rows={3}
-                    value={typeof value === 'string' ? value : ''}
-                    onChange={(e: ChangeEvent) =>
-                      handleFrontmatterChange(key, (e.target as HTMLTextAreaElement).value)
-                    }
-                    className="mt-1 block w-full rounded-md border-gray-300 bg-white p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 sm:text-sm"
-                  />
-                ) : inputType === 'checkbox' ? (
-                  <input
-                    id={`fm-${key}`}
-                    name={key}
-                    type="checkbox"
-                    checked={typeof value === 'boolean' ? value : false}
-                    onChange={(e: ChangeEvent) =>
-                      handleFrontmatterChange(key, (e.target as HTMLInputElement).checked)
-                    }
-                    className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                  />
-                ) : (
-                  <input
-                    id={`fm-${key}`}
-                    name={key}
-                    type={inputType}
-                    value={typeof value === 'string' || typeof value === 'number' ? value : ''}
-                    onChange={(e: ChangeEvent) =>
-                      handleFrontmatterChange(key, (e.target as HTMLInputElement).value)
-                    }
-                    className="mt-1 block w-full rounded-md border-gray-300 bg-white p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 sm:text-sm"
-                  />
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-
       <div className={`${viewMode === 'split' ? 'flex gap-4' : ''}`}>
         {(viewMode === 'edit' || viewMode === 'split') && (
           <div className={viewMode === 'split' ? 'w-1/2' : 'w-full'}>
             <textarea
-              value={bodyContent}
-              onChange={handleBodyContentChange}
+              value={rawContent}
+              onChange={handleRawContentChange}
               className="h-[70vh] w-full rounded-md border border-gray-300 p-4 font-mono text-gray-800 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
-              placeholder="Enter MDX content here..."
+              placeholder="Enter content with frontmatter and MDX..."
             />
           </div>
         )}
 
         {(viewMode === 'preview' || viewMode === 'split') && (
           <div
-            className={`${viewMode === 'split' ? 'w-1/2' : 'w-full'} min-h-[70vh] max-w-none rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-gray-800`}
+            className={`${viewMode === 'split' ? 'w-1/2' : 'w-full'} min-h-[70vh] max-w-none rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
+            suppressHydrationWarning
           >
             <div className="mb-4 italic text-gray-500 dark:text-gray-400">
               Live Preview - Custom components appear below. Server components may differ.

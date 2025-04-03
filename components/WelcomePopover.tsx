@@ -49,21 +49,21 @@ export default function WelcomePopover() {
             </div>
             <hr />
             <div className="mt-4 flex flex-col gap-3">
-              <p className=" text-sm text-gray-500 dark:text-gray-300">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 Thank you very much for the appreciation you showed for the april update!!!
               </p>
-              <p className=" text-sm text-gray-500 dark:text-gray-300">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 It has been incredibly fun to develop the website and watch you all react to it.
               </p>
-              <p className=" text-sm text-gray-500 dark:text-gray-300">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 It really became way bigger than I ever anticipated, and I saw many of the comments
                 asking for the version to be permanent!
               </p>
-              <p className=" text-sm text-gray-500 dark:text-gray-300">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 Because of this, there is now a button at the bottom of the page that allows you to
                 switch between the themes!
               </p>
-              <p className=" text-sm font-bold text-gray-500 dark:text-gray-300">
+              <p className="text-sm font-bold text-gray-500 dark:text-gray-300">
                 NB: The april fools theme still has some visual bugs and won't be updated in the
                 future, so use it at your own discretion!
               </p>

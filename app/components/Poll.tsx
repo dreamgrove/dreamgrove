@@ -3,7 +3,7 @@ import border from 'public/static/images/april/border.png'
 export const Poll = () => {
   return (
     <div
-      className="flex h-full w-full flex-col px-3 py-2 "
+      className="flex h-full w-full flex-col px-3 py-2"
       style={{
         borderStyle: 'solid',
         borderWidth: '7px',
@@ -20,24 +20,24 @@ export const Poll = () => {
           action="https://poll.pollcode.com/66746461"
           className="flex flex-1 flex-col gap-2"
         >
-          <div className="font-pixel text-lg font-bold text-[#FF7AAD] ">
+          <div className="font-pixel text-lg font-bold text-[#FF7AAD]">
             What's the most adorable thing about Druids?
           </div>
           <label className="font-pixel flex items-center gap-2">
             <input type="radio" name="answer" value="1" className="accent-pink-500" />
-            <span className="text-sm ">Their little paw prints when in animal form</span>
+            <span className="text-sm">Their little paw prints when in animal form</span>
           </label>
           <label className="font-pixel flex items-center gap-2">
             <input type="radio" name="answer" value="2" className="accent-pink-500" />
-            <span className="text-sm ">Wiggly butt animation when shifting into Cat Form 🐈</span>
+            <span className="text-sm">Wiggly butt animation when shifting into Cat Form 🐈</span>
           </label>
           <label className="font-pixel flex items-center gap-2">
             <input type="radio" name="answer" value="3" className="accent-pink-500" />
-            <span className="text-sm ">Moonkin dance party!!!</span>
+            <span className="text-sm">Moonkin dance party!!!</span>
           </label>
           <label className="font-pixel flex items-center gap-2">
             <input type="radio" name="answer" value="4" className="accent-pink-500" />
-            <span className="text-sm ">Trees, flowers, and nature :3</span>
+            <span className="text-sm">Trees, flowers, and nature :3</span>
           </label>
           <div className="mt-auto flex justify-center gap-2">
             <input

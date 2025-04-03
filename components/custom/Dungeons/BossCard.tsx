@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 export default async function BossCard({ title, image, id, children }) {
@@ -21,10 +20,10 @@ export default async function BossCard({ title, image, id, children }) {
 
   return (
     <div className={`mb-16 mt-4 ${!children || children.length === 0 ? 'hidden' : ''}`}>
-      <div className="items-bottom flex min-h-[64px] ">
+      <div className="items-bottom flex min-h-[64px]">
         {imageUrl != '' && (
           <div className="mr-2 flex h-[50px] w-[50px] justify-center overflow-hidden rounded-md border-4 border-[#524C42] align-middle">
-            <img src={imageUrl} alt="Image" className=" my-0 h-full w-auto object-cover" />
+            <img src={imageUrl} alt="Image" className="my-0 h-full w-auto object-cover" />
           </div>
         )}
         <h2

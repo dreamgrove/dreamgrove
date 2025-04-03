@@ -19,9 +19,10 @@ import ConditionalElement from './custom/ConditionalElement'
 import TimelineClientVersion from './csm/TimelineClientVersion'
 
 import { remarkAlert } from 'remark-github-blockquote-alert'
+import remarkGfm from 'remark-gfm'
+import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
 import YouTube from './custom/YouTube'
 import Image from 'next/image'
-import TableWrapper from './TableWrapper'
 
 interface MDXPreviewProps {
   content: string
@@ -45,7 +46,6 @@ function debounce(func: (...args: string[]) => void, wait: number): (...args: st
 }
 
 const components: MDXComponents = {
-  table: TableWrapper,
   Image: ({ src, alt, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
@@ -101,7 +101,13 @@ const components: MDXComponents = {
       <div {...props}>{children}</div>
     )
   },
-  Talents,
+  Talents: ({ children, ...props }) => {
+    return (
+      <Collapsible title={'Talents'}>
+        <div>fake content</div>
+      </Collapsible>
+    )
+  },
   Collapsible,
   YouTube: YouTube,
   Checkbox: CheckboxClientVersion,
@@ -134,7 +140,7 @@ const components: MDXComponents = {
     }
     children = processChildren(children)
     return id ? (
-      <ConditionalElement id={id} {...props}>
+      <ConditionalElement type="p" id={id} {...props}>
         {children}
       </ConditionalElement>
     ) : (
@@ -212,7 +218,8 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
           Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
           useMDXComponents: () => components,
           development: isDevelopment,
-          remarkPlugins: [remarkAlert, remarkSpell, remarkGroupCheckboxes],
+          remarkPlugins: [remarkAlert, remarkGfm, remarkSpell, remarkGroupCheckboxes],
+          rehypePlugins: [rehypeGroupHeaders],
         }
 
         const evaluated = await evaluate(mdxContent, evaluateOptions)
@@ -244,7 +251,7 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
   const LiveComponent = mdxModule ? mdxModule.default : null
 
   return (
-    <div className="mdx-preview text-gray-800 dark:text-gray-200">
+    <div className="mdx-preview bg-transparent text-gray-900 dark:text-gray-100">
       {error && (
         <div className="my-2 rounded-md border border-red-400 bg-red-50 p-3 text-red-700 dark:border-red-600 dark:bg-red-900 dark:text-red-300">
           {error}

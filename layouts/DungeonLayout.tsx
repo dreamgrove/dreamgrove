@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 'use client'
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
@@ -54,7 +52,7 @@ export default function DungeonLayout({ content, children, showTitle = true }: L
               <ContributeHeader />
               <div className="cursor-pointer" onClick={() => router.back()}>
                 <div className="flex items-center pt-0 text-left underline md:text-xl">
-                  <FaArrowLeft className="inline " />
+                  <FaArrowLeft className="inline" />
                   <span className="ml-2">Go Back</span>
                 </div>
               </div>

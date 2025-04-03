@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 'use client'
 import balanceIcon from '../../../public/static/images/icons/balance.jpg'
 import restoIcon from '../../../public/static/images/icons/resto.jpg'
@@ -109,7 +107,7 @@ const IconDisplay = ({ text, setSelected, isSelected }) => {
       onClick={() => setClicked((s) => !s)}
     >
       <Image
-        className={`inline-block rounded-md  ${clicked ? 'opacity-100' : 'opacity-20'}`}
+        className={`inline-block rounded-md ${clicked ? 'opacity-100' : 'opacity-20'}`}
         src={imgSrc}
         alt={`${text} icon`}
         width={40}
