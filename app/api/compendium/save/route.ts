@@ -141,7 +141,7 @@ export async function POST(request: Request) {
             sha: fileSha,
             branch: newBranchName,
           })
-        } catch (error) {
+        } catch (_) {
           // File doesn't exist yet, create it
           await octokit.rest.repos.createOrUpdateFileContents({
             owner: REPO_OWNER,

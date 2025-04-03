@@ -13,7 +13,6 @@ import styles from './Header.module.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import MainAprilFools from 'app/MainAprilFools'
 
 interface HeaderProps {
   title?: string
