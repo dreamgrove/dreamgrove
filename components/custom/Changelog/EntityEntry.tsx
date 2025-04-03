@@ -115,7 +115,6 @@ const EffectDisplay = ({ effect }) => {
   return (
     <Collapsible
       title={`# ${effect.idx}: ${effect.type} ${effect.subtype ? '- ' + effect.subtype : ''}`}
-      type="added"
     >
       <div className="mt-1 pl-4 text-green-900">
         <span className="text-xl font-bold ">Added</span>
