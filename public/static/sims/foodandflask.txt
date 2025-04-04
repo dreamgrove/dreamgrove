@@ -1,0 +1,66 @@
+copy="beledar and crit"
+
+flask=flask_of_tempered_aggression_3
+food=beledars_bounty
+
+copy="beledar and mastery"
+
+food=beledars_bounty
+flask=flask_of_tempered_mastery_3
+
+copy="beledar and alch chaos"
+
+food=beledars_bounty
+flask=flask_of_alchemical_chaos_3
+
+copy="beledar and haste"
+
+food=beledars_bounty
+flask=flask_of_tempered_swiftness_3
+
+copy="beledar and vers"
+
+food=beledars_bounty
+flask=flask_of_tempered_versatility_3
+
+
+copy="feast and crit"
+
+flask=flask_of_tempered_aggression_3
+food=feast_of_the_midnight_masquerade
+
+copy="feast and vers"
+flask=flask_of_tempered_versatility_3
+food=feast_of_the_midnight_masquerade
+
+copy="feast and haste"
+flask=flask_of_tempered_swiftness_3
+food=feast_of_the_midnight_masquerade
+
+copy="feast and mast"
+flask=flask_of_tempered_mastery_3
+food=feast_of_the_midnight_masquerade
+
+copy="feast and chaos"
+flask=flask_of_alchemical_chaos_3
+food=feast_of_the_midnight_masquerade
+
+copy="lowest secondary and crit"
+flask=flask_of_tempered_aggression_3
+food=everything_stew
+
+copy="lowest secondary and vers"
+flask=flask_of_tempered_versatility_3
+food=everything_stew
+
+copy="lowest secondary and haste"
+flask=flask_of_tempered_swiftness_3
+food=everything_stew
+
+copy="lowest secondary and mast"
+flask=flask_of_tempered_mastery_3
+food=everything_stew
+
+copy"lowest secondary and chaos"
+flask=flask_of_alchemical_chaos_3
+food=everything_stew
