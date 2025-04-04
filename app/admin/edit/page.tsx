@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense, useRef } from 'react'
 import { useSession, signIn } from 'next-auth/react'
-import { useRouter, useParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
 import { FaQuestion } from 'react-icons/fa'
@@ -15,7 +15,6 @@ import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView } from '@codemirror/view'
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { tags } from '@lezer/highlight'
-import { parseMixed } from '@lezer/common'
 
 // Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
@@ -31,13 +30,30 @@ function debounce<T extends (...args: any[]) => any>(
   }
 }
 
-export default function CompendiumEditPage() {
-  const params = useParams<{ slug: string }>()
-  const slug = params.slug
-  return <CompendiumEditor slug={slug} />
+export default function GenericEditPage() {
+  const searchParams = useSearchParams()
+  const filePath = searchParams.get('path')
+
+  if (!filePath) {
+    return <MissingPathError />
+  }
+
+  return <FileEditor filePath={filePath} />
 }
 
-function CompendiumEditor({ slug }: { slug: string }) {
+function MissingPathError() {
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <h1 className="mb-6 text-3xl font-bold">Error</h1>
+      <p className="mb-6 text-red-500">No file path specified.</p>
+      <Link href="/admin/select" className="text-blue-500 hover:underline">
+        Select a file to edit
+      </Link>
+    </div>
+  )
+}
+
+function FileEditor({ filePath }: { filePath: string }) {
   const { data: session, status } = useSession()
   const [rawContent, setRawContent] = useState<string>('')
   const [bodyContent, setBodyContent] = useState<string>('')
@@ -48,8 +64,17 @@ function CompendiumEditor({ slug }: { slug: string }) {
   const [error, setError] = useState<string | null>(null)
   const [hasPermission, setHasPermission] = useState<boolean>(true)
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
+  const [splitPosition, setSplitPosition] = useState<number>(50) // Default 50% split
+  const [isDragging, setIsDragging] = useState<boolean>(false)
   const router = useRouter()
   const workerRef = useRef<Worker | null>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  // Extract filename from path for display
+  const fileName = filePath.split('/').pop() || 'Unknown'
+  // Extract group from path (last directory name)
+  const pathParts = filePath.split('/')
+  const group = pathParts.length > 1 ? pathParts[pathParts.length - 2] : 'root'
 
   // Custom highlight style for frontmatter and MDX
   const customHighlightStyle = HighlightStyle.define([
@@ -71,14 +96,13 @@ function CompendiumEditor({ slug }: { slug: string }) {
     { tag: tags.content, backgroundColor: 'transparent' },
   ])
 
-  // Create a custom mixed parser for markdown with improved JSX handling
   const mixedLanguageSupport = [
     oneDark,
     syntaxHighlighting(customHighlightStyle),
     EditorView.theme({
       '&': {
         fontSize: '14px',
-        height: '70vh',
+        height: '85vh',
       },
       '.cm-content': {
         fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
@@ -128,7 +152,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
 
   useEffect(() => {
     if (status === 'authenticated') {
-      fetch(`/api/compendium/content?slug=${slug}`)
+      fetch(`/api/compendium/content?filePath=${filePath}`)
         .then((res) => {
           if (res.status === 403) {
             setHasPermission(false)
@@ -164,7 +188,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
           setLoading(false)
         })
     }
-  }, [status, slug])
+  }, [status, filePath])
 
   // Debounced function to update content in worker
   const debouncedUpdateContent = useRef(
@@ -206,7 +230,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          slug,
+          filePath,
           content: rawContent,
         }),
       })
@@ -224,11 +248,23 @@ function CompendiumEditor({ slug }: { slug: string }) {
 
       if (data.message) {
         setSaveMessage(data.message)
+
+        // Determine the proper return URL
+        // For compendium files, redirect to the compendium view
+        const isCompendium =
+          fileName.toLowerCase() === 'compendium.mdx' && filePath.includes('blog/')
+
         setTimeout(() => {
-          router.push(`/blog/${slug}/compendium`)
+          if (isCompendium) {
+            // Extract the blog slug from the path (e.g., blog/balance/compendium.mdx -> balance)
+            const blogSlug = filePath.split('/').slice(1, -1).join('/')
+            router.push(`/blog/${blogSlug}/compendium`)
+          } else {
+            router.push('/admin/select')
+          }
         }, 2000)
       } else {
-        router.push(`/blog/${slug}/compendium`)
+        router.push('/admin/select')
       }
     } catch (err: Error | unknown) {
       setError(err instanceof Error ? err.message : 'Unknown error occurred')
@@ -236,6 +272,77 @@ function CompendiumEditor({ slug }: { slug: string }) {
       setSaving(false)
     }
   }
+
+  const handleDragStart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsDragging(true)
+  }
+
+  const handleDragMove = (e: React.MouseEvent) => {
+    if (isDragging && containerRef.current) {
+      const containerRect = containerRef.current.getBoundingClientRect()
+      const newPosition = ((e.clientX - containerRect.left) / containerRect.width) * 100
+      // Limit the range between 20% and 80%
+      const limitedPosition = Math.min(Math.max(newPosition, 20), 80)
+      setSplitPosition(limitedPosition)
+    }
+  }
+
+  const handleDragEnd = () => {
+    setIsDragging(false)
+  }
+
+  // Debounced function to update split position in localStorage
+  const debouncedSavePosition = useRef(
+    debounce((position: number) => {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('editor-split-position', position.toString())
+      }
+    }, 500)
+  ).current
+
+  // Set up event listeners for dragging outside the divider
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isDragging && containerRef.current) {
+        const containerRect = containerRef.current.getBoundingClientRect()
+        const newPosition = ((e.clientX - containerRect.left) / containerRect.width) * 100
+        // Limit the range between 20% and 80%
+        const limitedPosition = Math.min(Math.max(newPosition, 20), 80)
+        setSplitPosition(limitedPosition)
+      }
+    }
+
+    const handleMouseUp = () => {
+      setIsDragging(false)
+      // When dragging ends, save the final position
+      debouncedSavePosition(splitPosition)
+    }
+
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove)
+      document.addEventListener('mouseup', handleMouseUp)
+      // Apply a cursor style to the entire document while dragging
+      document.body.style.cursor = 'col-resize'
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove)
+      document.removeEventListener('mouseup', handleMouseUp)
+      // Reset cursor style
+      document.body.style.cursor = ''
+    }
+  }, [isDragging, splitPosition, debouncedSavePosition])
+
+  // Load saved split position from localStorage on component mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedPosition = localStorage.getItem('editor-split-position')
+      if (savedPosition) {
+        setSplitPosition(Number(savedPosition))
+      }
+    }
+  }, [])
 
   if (status === 'loading') {
     return <div className="flex min-h-screen items-center justify-center">Loading...</div>
@@ -263,10 +370,10 @@ function CompendiumEditor({ slug }: { slug: string }) {
         <p className="mb-6 text-red-500">
           You do not have write permission to the dreamgrove repository.
           <br />
-          Only contributors with write access to the repository can edit compendium pages.
+          Only contributors with write access to the repository can edit files.
         </p>
-        <Link href={`/blog/${slug}/compendium`} className="text-blue-500 hover:underline">
-          Return to Compendium
+        <Link href="/admin/select" className="text-blue-500 hover:underline">
+          Return to File Selection
         </Link>
       </div>
     )
@@ -278,21 +385,26 @@ function CompendiumEditor({ slug }: { slug: string }) {
 
   if (error) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center">
+      <div className="mx-auto flex min-h-screen w-full max-w-[85vw] flex-col items-center justify-center">
         <h1 className="mb-6 text-3xl font-bold">Error</h1>
         <p className="mb-6 text-red-500">{error}</p>
-        <Link href={`/blog/${slug}/compendium`} className="text-blue-500 hover:underline">
-          Return to Compendium
+        <Link href="/admin/select" className="text-blue-500 hover:underline">
+          Return to File Selection
         </Link>
       </div>
     )
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto min-h-screen w-full max-w-[90vw] px-4 py-8">
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center">
-          <h1 className="text-3xl font-bold">Edit {slug} Compendium</h1>
+          <div>
+            <h1 className="text-3xl font-bold">Edit {fileName}</h1>
+            <p className="text-sm text-gray-500">
+              <span className="capitalize">{group}</span> / {filePath}
+            </p>
+          </div>
           <button
             onClick={() => setShowHelp(!showHelp)}
             className="ml-4 p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
@@ -335,10 +447,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
           >
             {saving ? 'Saving...' : 'Save Changes'}
           </button>
-          <Link
-            href={`/blog/${slug}/compendium`}
-            className="rounded-md bg-gray-800 px-4 py-2 text-white"
-          >
+          <Link href="/admin/select" className="rounded-md bg-gray-800 px-4 py-2 text-white">
             Cancel
           </Link>
         </div>
@@ -365,7 +474,7 @@ function CompendiumEditor({ slug }: { slug: string }) {
             </li>
           </ul>
           <Link
-            href={`/blog/${slug}/compendium/edit/README.md`}
+            href="/admin/edit/README.md"
             target="_blank"
             className="text-blue-600 hover:underline dark:text-blue-400"
           >
@@ -380,9 +489,17 @@ function CompendiumEditor({ slug }: { slug: string }) {
         </div>
       )}
 
-      <div className={`${viewMode === 'split' ? 'flex gap-4' : ''}`}>
+      <div
+        ref={containerRef}
+        className={`${viewMode === 'split' ? 'relative flex gap-0' : ''}`}
+        onMouseMove={viewMode === 'split' ? handleDragMove : undefined}
+        onMouseUp={viewMode === 'split' ? handleDragEnd : undefined}
+      >
         {(viewMode === 'edit' || viewMode === 'split') && (
-          <div className={viewMode === 'split' ? 'w-1/2' : 'w-full'}>
+          <div
+            className={`${viewMode === 'split' ? '' : 'w-full'} sticky top-0 h-[85vh]`}
+            style={viewMode === 'split' ? { width: `${splitPosition}%` } : undefined}
+          >
             <CodeMirror
               value={rawContent}
               onChange={handleRawContentChange}
@@ -403,9 +520,19 @@ function CompendiumEditor({ slug }: { slug: string }) {
           </div>
         )}
 
+        {viewMode === 'split' && (
+          <div
+            className={`w-[6px] ${isDragging ? 'bg-blue-500 dark:bg-blue-400' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500'} relative z-10 flex-shrink-0 cursor-col-resize`}
+            onMouseDown={handleDragStart}
+          >
+            <div className="absolute left-1/2 top-1/2 h-8 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current"></div>
+          </div>
+        )}
+
         {(viewMode === 'preview' || viewMode === 'split') && (
           <div
-            className={`${viewMode === 'split' ? 'w-1/2' : 'w-full'} min-h-[70vh] max-w-none rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
+            className={`${viewMode === 'split' ? '' : 'w-full'} min-h-[70vh] max-w-none overflow-auto rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
+            style={viewMode === 'split' ? { width: `${100 - splitPosition}%` } : undefined}
             suppressHydrationWarning
           >
             <div className="mb-4 italic text-gray-500 dark:text-gray-400">

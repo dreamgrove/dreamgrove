@@ -42,8 +42,8 @@ export const WowheadClientIcon = ({
 
   const image = (
     <span
-      style={{ width: size, height: size }}
-      className="my-0 mb-[-3px] mr-1 inline-block rounded bg-main"
+      style={{ width: size - 1, height: size - 1 }}
+      className="mx-1 my-0 mb-[-3px] inline-block bg-main/50"
     />
   )
 

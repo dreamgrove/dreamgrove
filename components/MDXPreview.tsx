@@ -23,6 +23,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
 import YouTube from './custom/YouTube'
 import Image from 'next/image'
+import TalentsClientVersion from './csm/TalentsClientVersion'
 
 interface MDXPreviewProps {
   content: string
@@ -101,13 +102,7 @@ const components: MDXComponents = {
       <div {...props}>{children}</div>
     )
   },
-  Talents: ({ children, ...props }) => {
-    return (
-      <Collapsible title={'Talents'}>
-        <div>fake content</div>
-      </Collapsible>
-    )
-  },
+  Talents: TalentsClientVersion,
   Collapsible,
   YouTube: YouTube,
   Checkbox: CheckboxClientVersion,

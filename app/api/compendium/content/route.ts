@@ -55,22 +55,22 @@ export async function GET(request: Request) {
 
     // Get the slug from the request URL
     const { searchParams } = new URL(request.url)
-    const slug = searchParams.get('slug')
+    const filePath = searchParams.get('filePath')
 
-    if (!slug) {
-      return NextResponse.json({ error: 'Missing slug parameter' }, { status: 400 })
+    if (!filePath) {
+      return NextResponse.json({ error: 'Missing filePath parameter' }, { status: 400 })
     }
 
-    // Construct the path to the compendium file
-    const filePath = path.join(process.cwd(), 'data', 'blog', slug, 'compendium.mdx')
+    // Construct the path to the MDX file
+    const fullFilePath = path.join(process.cwd(), 'data', filePath)
 
     // Check if the file exists
-    if (!fs.existsSync(filePath)) {
+    if (!fs.existsSync(fullFilePath)) {
       return NextResponse.json({ error: 'File not found' }, { status: 404 })
     }
 
     // Read the file content
-    const content = fs.readFileSync(filePath, 'utf8')
+    const content = fs.readFileSync(fullFilePath, 'utf8')
 
     return NextResponse.json({ content })
   } catch (error) {

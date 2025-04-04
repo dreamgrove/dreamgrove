@@ -24,21 +24,20 @@ export async function POST(request: Request) {
 
   try {
     // Parse the request body
-    const { slug, content } = await request.json()
+    const { filePath, content } = await request.json()
 
-    if (!slug || !content) {
+    if (!filePath || !content) {
       return NextResponse.json({ error: 'Missing required parameters' }, { status: 400 })
     }
 
     // Construct the file path
-    const filePath = `data/blog/${slug}/compendium.mdx`
-    const fullFilePath = path.join(PROJECT_ROOT, filePath)
+    const fullFilePath = path.join(PROJECT_ROOT, 'data', filePath)
 
     if (IS_LOCAL) {
       // Local environment - use git directly on filesystem
       try {
-        // Create a branch name based on slug and timestamp
-        const branchName = `local-edit-${slug}-${Date.now()}`
+        // Create a branch name based on file path and timestamp
+        const branchName = `local-edit-${path.basename(filePath, '.mdx')}-${Date.now()}`
 
         // Ensure the directory exists
         const dirPath = path.dirname(fullFilePath)
@@ -49,8 +48,8 @@ export async function POST(request: Request) {
 
         // Git operations
         await execPromise(`git checkout -b ${branchName}`)
-        await execPromise(`git add ${filePath}`)
-        await execPromise(`git commit -m "Update ${slug} compendium"`)
+        await execPromise(`git add data/${filePath}`)
+        await execPromise(`git commit -m "Update ${path.basename(filePath)}"`)
 
         console.log(`Changes committed locally to branch: ${branchName}`)
 
@@ -99,7 +98,8 @@ export async function POST(request: Request) {
       }
 
       // Create a unique branch name for this edit
-      const newBranchName = `edit-${slug}-${Date.now()}`
+      const fileName = path.basename(filePath, '.mdx')
+      const newBranchName = `edit-${fileName}-${Date.now()}`
 
       try {
         // Get the current commit SHA from the main branch to branch from
@@ -124,7 +124,7 @@ export async function POST(request: Request) {
           const currentFile = await octokit.rest.repos.getContent({
             owner: REPO_OWNER,
             repo: REPO_NAME,
-            path: filePath,
+            path: `data/${filePath}`,
             ref: newBranchName,
           })
 
@@ -135,8 +135,8 @@ export async function POST(request: Request) {
           await octokit.rest.repos.createOrUpdateFileContents({
             owner: REPO_OWNER,
             repo: REPO_NAME,
-            path: filePath,
-            message: `Update ${slug} compendium`,
+            path: `data/${filePath}`,
+            message: `Update ${fileName}`,
             content: Buffer.from(content).toString('base64'),
             sha: fileSha,
             branch: newBranchName,
@@ -146,8 +146,8 @@ export async function POST(request: Request) {
           await octokit.rest.repos.createOrUpdateFileContents({
             owner: REPO_OWNER,
             repo: REPO_NAME,
-            path: filePath,
-            message: `Create ${slug} compendium`,
+            path: `data/${filePath}`,
+            message: `Create ${fileName}`,
             content: Buffer.from(content).toString('base64'),
             branch: newBranchName,
           })
