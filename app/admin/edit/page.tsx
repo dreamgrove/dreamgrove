@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, Suspense, useRef } from 'react'
+import { useState, useEffect, Suspense, useRef, useMemo } from 'react'
 import { useSession, signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -15,6 +15,15 @@ import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView } from '@codemirror/view'
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { tags } from '@lezer/highlight'
+import customMarkdownExtension, {
+  customInlineTag,
+  customElementTag,
+  customOperatorTag,
+  exclamationMarkTag,
+  exclamationMarkPrimaryTag,
+  exclamationMarkSecondaryTag,
+  exclamationMarkSeparatorTag,
+} from './customMarkdownExtension'
 
 // Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
@@ -77,59 +86,77 @@ function FileEditor({ filePath }: { filePath: string }) {
   const group = pathParts.length > 1 ? pathParts[pathParts.length - 2] : 'root'
 
   // Custom highlight style for frontmatter and MDX
-  const customHighlightStyle = HighlightStyle.define([
-    { tag: tags.heading, color: '#81A1C1', fontWeight: 'bold' },
-    { tag: tags.link, color: '#88C0D0', textDecoration: 'underline' },
-    { tag: tags.emphasis, fontStyle: 'italic' },
-    { tag: tags.strong, fontWeight: 'bold', color: '#EBCB8B' },
-    { tag: tags.keyword, color: '#81A1C1' },
-    { tag: tags.atom, color: '#8FBCBB' },
-    { tag: tags.meta, color: '#D08770' },
-    { tag: tags.comment, color: '#4C566A', fontStyle: 'italic' },
-    // Add specific tag highlighting for JSX/MDX components
-    { tag: tags.angleBracket, color: '#EBCB8B' }, // < > brackets for JSX
-    { tag: tags.tagName, color: '#EBCB8B' }, // Component names
-    { tag: tags.attributeName, color: '#A3BE8C' }, // Attribute names
-    { tag: tags.attributeValue, color: '#B48EAD' }, // Attribute values
-    { tag: tags.processingInstruction, color: '#EBCB8B' }, // Additional JSX syntax
-    { tag: tags.monospace, color: '#88C0D0' }, // Code blocks
-    { tag: tags.content, backgroundColor: 'transparent' },
-  ])
+  const customHighlightStyle = useMemo(
+    () =>
+      HighlightStyle.define([
+        { tag: tags.heading, color: '#81A1C1', fontWeight: 'bold' },
+        { tag: tags.link, color: '#88C0D0', textDecoration: 'underline' },
+        { tag: tags.emphasis, fontStyle: 'italic' },
+        { tag: tags.strong, fontWeight: 'bold', color: '#EBCB8B' },
+        { tag: tags.keyword, color: '#81A1C1' },
+        { tag: tags.atom, color: '#8FBCBB' },
+        { tag: tags.meta, color: '#D08770' },
+        { tag: tags.comment, color: '#4C566A', fontStyle: 'italic' },
+        // Add specific tag highlighting for JSX/MDX components
+        { tag: tags.angleBracket, color: '#EBCB8B' }, // < > brackets for JSX
+        { tag: tags.tagName, color: '#EBCB8B' }, // Component names
+        { tag: tags.attributeName, color: '#A3BE8C' }, // Attribute names
+        { tag: tags.attributeValue, color: '#B48EAD' }, // Attribute values
+        { tag: tags.processingInstruction, color: '#EBCB8B' }, // Additional JSX syntax
+        { tag: tags.monospace, color: '#88C0D0' }, // Code blocks
+        { tag: tags.content, backgroundColor: 'transparent' },
+        // Add custom highlight for our [*whatever] syntax
+        { tag: customInlineTag, color: '#D08770', fontWeight: 'bold' },
+        // Highlight elements and operators differently - elements brighter, operators dimmer
+        { tag: customElementTag, color: '#EBCB8B', fontWeight: 'bold' }, // Bright yellow for elements
+        { tag: customOperatorTag, color: '#4C566A', fontStyle: 'italic' }, // Dimmer gray for operators
+        // Add custom highlight for !whatever! syntax
+        { tag: exclamationMarkTag, color: '#8FBCBB', fontWeight: 'bold' }, // Teal for overall pattern
+        { tag: exclamationMarkPrimaryTag, color: '#88C0D0' }, // Light blue for primary content
+        { tag: exclamationMarkSecondaryTag, color: '#A3BE8C', fontWeight: 'bold' }, // Brighter green for secondary content
+        { tag: exclamationMarkSeparatorTag, color: '#4C566A' }, // Dimmer gray for separator
+      ]),
+    []
+  ) // Empty dependency array ensures this is only created once
 
-  const mixedLanguageSupport = [
-    oneDark,
-    syntaxHighlighting(customHighlightStyle),
-    EditorView.theme({
-      '&': {
-        fontSize: '14px',
-        height: '85vh',
-      },
-      '.cm-content': {
-        fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
-        padding: '10px 0',
-      },
-      '.cm-line': {
-        padding: '0 10px',
-      },
-      '.cm-activeLine': {
-        backgroundColor: 'rgba(255,255,255,0.05)',
-      },
-      '.cm-gutters': {
-        backgroundColor: 'transparent',
-        border: 'none',
-      },
-      '.cm-activeLineGutter': {
-        backgroundColor: 'rgba(255,255,255,0.05)',
-      },
-    }),
-    markdown({
-      base: markdownLanguage,
-      codeLanguages: languages,
-      addKeymap: true,
-    }),
-    javascript({ jsx: true }),
-    EditorView.lineWrapping,
-  ]
+  const mixedLanguageSupport = useMemo(
+    () => [
+      oneDark,
+      syntaxHighlighting(customHighlightStyle),
+      EditorView.theme({
+        '&': {
+          fontSize: '14px',
+          height: '85vh',
+        },
+        '.cm-content': {
+          fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+          padding: '10px 0',
+        },
+        '.cm-line': {
+          padding: '0 10px',
+        },
+        '.cm-activeLine': {
+          backgroundColor: 'rgba(255,255,255,0.05)',
+        },
+        '.cm-gutters': {
+          backgroundColor: 'transparent',
+          border: 'none',
+        },
+        '.cm-activeLineGutter': {
+          backgroundColor: 'rgba(255,255,255,0.05)',
+        },
+      }),
+      markdown({
+        base: markdownLanguage,
+        codeLanguages: languages,
+        addKeymap: true,
+        extensions: [customMarkdownExtension],
+      }),
+      javascript({ jsx: true }),
+      EditorView.lineWrapping,
+    ],
+    [customHighlightStyle]
+  ) // Only depends on the highlight style
 
   // Set up the worker when the component mounts
   useEffect(() => {
