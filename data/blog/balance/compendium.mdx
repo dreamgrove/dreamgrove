@@ -35,9 +35,11 @@ This is approximately ~6% dmg increase from having no set.
 
 This is approximately ~11% dmg increase from having no set.
 
-[Sim for tier set](https://www.raidbots.com/simbot/report/8x93eG6Z8Fk3zfVCowwd4h/simc)
+[Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersim.html)
 
 ## Current Bugs
+
+- !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
 
 - Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA!/!102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
 
@@ -338,7 +340,7 @@ When reading the priority lists below, you should not think of these as steps to
 
 <CheckboxProvider>
   <Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
-  <Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
+  <Checkbox isIcon id="EC Fillers" spellId={429523} name="Lunar Calling" radio="Fillers" />
 </CheckboxProvider>
 
 - [*Keeper Fillers] Enter !Solar Eclipse! and cast !Wrath! on 1 and 2 targets.
@@ -521,7 +523,7 @@ Depending on the fight timer, this talent is stronger than !Power of the Dream! 
 
 | Slot |  |
 |------|---------|
-| **Gems** | 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) mixed with whatever gems sim the highest for your character |
+| **Gems** | 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) mixed with whatever gems sim the highest for your character. |
 | **Weapon** | [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) for single target and raid, [Authority of Radiant Power](https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power) for AoE and m+ |
 | **Chest** | [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) |
 | **Cloak** | [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace) |
@@ -575,12 +577,12 @@ These are part of a set that has a chance to drop an orb close to your target, g
 |------|-----|-----|
 | **S Tier** | [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=4795&class=11&ilvl=678&spec=102) | 1:30 CD use effect trinket. Easy to line up with [CA/Inc](https://www.wowhead.com/spell=194223/celestial-alignment) |
 |  | [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102) | |
-|  | [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=6652:10356:11996:1527:10255&ilvl=678&spec=102) | Good for longer raid fights, loses value in m+. |
+|  | [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=6652:10356:11996:1527:10255&ilvl=678&spec=102) | Good for longer raid fights, loses value in m+. Very good for One-Armed Bandit or Mugzee prog where damage in execute phase is important.|
 | **A Tier** | [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102)  | |
 |  | [Carved Blazikon Wax](https://www.wowhead.com/item=219305/carved-blazikon-wax?bonus=4795&class=11&ilvl=678&spec=102) | Solid m+ trinket, good passive versatility effect. |
-|  | [Reverb Radio](https://www.wowhead.com/item=230194/reverb-radio?bonus=6652:10356:11996:1527:10255&class=11&ilvl=678&spec=102) | Good haste proc, drops early in the raid. |
 |  | [Suspicious Energy Drink](https://www.wowhead.com/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=102) | Best trinket from delve. |
 | **B Tier** | [Spymaster's Web(639)](https://www.wowhead.com/item=220202/spymasters-web?bonus=1540:11978:11964&ilvl=639&spec=102) | This trinket is from last tier, but is still pretty solid early in the tier. |
+|  | [Reverb Radio](https://www.wowhead.com/item=230194/reverb-radio?bonus=6652:10356:11996:1527:10255&class=11&ilvl=678&spec=102) | Good haste proc, drops early in the raid. |
 |  | [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) | Sims well, requires using a global [or macro](https://www.dreamgrove.gg/blog/balance/compendium#macros) to kill the barrel. |
 |  | [Shadow-Binding Ritual Knife](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife?bonus=9838:11992:11964&ilvl=665&spec=102) | Delve trinket, good option if you can get it. |
 |  | [Soulletting Ruby](https://www.wowhead.com/item=178809/soulletting-ruby?bonus=4795&class=11&ilvl=678&spec=102) | |
@@ -593,7 +595,7 @@ These are part of a set that has a chance to drop an orb close to your target, g
 |  | [Geargrinder's Spare Keys](https://www.wowhead.com/item=230197/geargrinders-spare-keys?bonus=4795&class=11&ilvl=678&spec=102) | |
 |  | [Flarendo's Pilot Light](https://www.wowhead.com/item=230191/flarendos-pilot-light?bonus=4795&ilvl=678&spec=102) | |
 
-[Trinket Sim](https://www.raidbots.com/simbot/report/cNTVA9quPTRLeVhiw772dF)
+[Trinket Sim](https://www.raidbots.com/simbot/report/sNct8EeZwQtGF89tuJFSS2)
 
 ## Weapons
 
@@ -658,6 +660,14 @@ Keep in mind that class buffs only affect class spells so if a trinket does natu
 ### Q: I have read through the Compendium and I have some questions that are not outlined in this FAQ?
 
 **A:**  If you have any questions, you can go to the [Dreamgrove discord server](https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to receive the answer you would like.
+
+## Balance Druid Video Guide
+
+For 11.1, the Balance Compendium writer decided to make a video guide in addition to the written guide. Be aware that some things can change depending on tuning, like talents or trinkets, and you should always double check the written guide. You can find the video by opening the collapsible below.
+
+<Collapsible title="Balance Druid 11.1 Video Guide">
+  <YouTube id="KgOQUvbz9Ms"/>
+</Collapsible>
 
 # Additional Resources
 ## Macros
@@ -724,7 +734,7 @@ The following links lead to various Balance Druid WeakAura packs. These contain 
 - [Afenar The War Within](https://wago.io/HkrSdHFMG)
 - [Shrom's AP Bar - Standalone](https://wago.io/J5V9sTM0F)
 
-### Jundies Plater Profile
+### **Jundies Plater Profile**
 
 [This profile for Plater](https://wago.io/ak3iS95aa) is among the most used and asked about public nameplate profiles for Moonkins, having customized colors for each NPC identity. 
 
@@ -741,9 +751,12 @@ See the description of the WA for more details. This is not a required WA but wi
 
 [This weakaura](https://wago.io/rIj_5wU8P) will play a sound and show a timer whenever the trinket [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) procs. The timer shows the latest barrel spawned.
 
----
-[Item Strings for Simming](https://pastebin.com/eChnxnGY)
+## Simc Code Directory 
+[Item Strings for Simming](https://www.dreamgrove.gg/static/sims/itemstrings.txt)
 
-[Race Sim](https://www.raidbots.com/simbot/report/s5YtbqmvZBzqfV8VH4ZCKK)
+[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt)
+
+[Race Sim](https://www.dreamgrove.gg/static/sims/racesim.html)
 
 [Current APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
+
