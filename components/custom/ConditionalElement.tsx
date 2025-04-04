@@ -60,6 +60,10 @@ const ConditionalElement: React.FC<ConditionalElementProps> = ({
   // Evaluate the expression
   const shouldRender = evaluateExpression(id)
 
+  if (type === 'li') {
+    return <li className={`${shouldRender ? 'list-item' : 'hidden'}`}>{children}</li>
+  }
+
   return shouldRender ? children : null
 }
 
