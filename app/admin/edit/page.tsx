@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense, useRef, useMemo } from 'react'
 import { useSession, signIn } from 'next-auth/react'
+import { tags as t } from '@lezer/highlight'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
@@ -11,19 +12,12 @@ import CodeMirror from '@uiw/react-codemirror'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { javascript } from '@codemirror/lang-javascript'
 import { languages } from '@codemirror/language-data'
-import { oneDark } from '@codemirror/theme-one-dark'
 import { EditorView } from '@codemirror/view'
+import { darcula, darculaInit } from '@uiw/codemirror-theme-darcula'
+
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { tags } from '@lezer/highlight'
-import customMarkdownExtension, {
-  customInlineTag,
-  customElementTag,
-  customOperatorTag,
-  exclamationMarkTag,
-  exclamationMarkPrimaryTag,
-  exclamationMarkSecondaryTag,
-  exclamationMarkSeparatorTag,
-} from './customMarkdownExtension'
+import customMarkdownExtension from './customMarkdownExtension'
 
 // Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
@@ -40,6 +34,18 @@ function debounce<T extends (...args: any[]) => any>(
 }
 
 export default function GenericEditPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center">Loading parameters...</div>
+      }
+    >
+      <EditPageWithParams />
+    </Suspense>
+  )
+}
+
+function EditPageWithParams() {
   const searchParams = useSearchParams()
   const filePath = searchParams.get('path')
 
@@ -86,51 +92,41 @@ function FileEditor({ filePath }: { filePath: string }) {
   const group = pathParts.length > 1 ? pathParts[pathParts.length - 2] : 'root'
 
   // Custom highlight style for frontmatter and MDX
+
   const customHighlightStyle = useMemo(
     () =>
       HighlightStyle.define([
-        { tag: tags.heading, color: '#81A1C1', fontWeight: 'bold' },
-        { tag: tags.link, color: '#88C0D0', textDecoration: 'underline' },
+        { tag: tags.heading, fontWeight: 'bold', color: '#ffb86c' },
+        { tag: tags.link, textDecoration: 'underline' },
         { tag: tags.emphasis, fontStyle: 'italic' },
-        { tag: tags.strong, fontWeight: 'bold', color: '#EBCB8B' },
-        { tag: tags.keyword, color: '#81A1C1' },
-        { tag: tags.atom, color: '#8FBCBB' },
-        { tag: tags.meta, color: '#D08770' },
-        { tag: tags.comment, color: '#4C566A', fontStyle: 'italic' },
-        // Add specific tag highlighting for JSX/MDX components
-        { tag: tags.angleBracket, color: '#EBCB8B' }, // < > brackets for JSX
-        { tag: tags.tagName, color: '#EBCB8B' }, // Component names
-        { tag: tags.attributeName, color: '#A3BE8C' }, // Attribute names
-        { tag: tags.attributeValue, color: '#B48EAD' }, // Attribute values
-        { tag: tags.processingInstruction, color: '#EBCB8B' }, // Additional JSX syntax
-        { tag: tags.monospace, color: '#88C0D0' }, // Code blocks
-        { tag: tags.content, backgroundColor: 'transparent' },
-        // Add custom highlight for our [*whatever] syntax
-        { tag: customInlineTag, color: '#D08770', fontWeight: 'bold' },
-        // Highlight elements and operators differently - elements brighter, operators dimmer
-        { tag: customElementTag, color: '#EBCB8B', fontWeight: 'bold' }, // Bright yellow for elements
-        { tag: customOperatorTag, color: '#4C566A', fontStyle: 'italic' }, // Dimmer gray for operators
-        // Add custom highlight for !whatever! syntax
-        { tag: exclamationMarkTag, color: '#8FBCBB', fontWeight: 'bold' }, // Teal for overall pattern
-        { tag: exclamationMarkPrimaryTag, color: '#88C0D0' }, // Light blue for primary content
-        { tag: exclamationMarkSecondaryTag, color: '#A3BE8C', fontWeight: 'bold' }, // Brighter green for secondary content
-        { tag: exclamationMarkSeparatorTag, color: '#4C566A' }, // Dimmer gray for separator
+        { tag: tags.bool, fontStyle: 'italic' },
+        { tag: tags.strong, fontWeight: 'bold' },
+        { tag: tags.comment, fontStyle: 'italic' },
+        // Add specific tag highlighting for our custom syntax
+        { tag: t.processingInstruction, color: '#FFFFFF', fontWeight: 'bold' }, // For CustomInlineMark
+        { tag: t.bool, color: '#d79a59' }, // For CustomInlineElement
+        { tag: t.operator, color: '#C5E6A6' }, // For CustomInlineOperator
+        { tag: t.special(t.content), color: '#ffb86c', fontWeight: 'bold' }, // For ExclamationMark
+        { tag: t.emphasis, color: '#cc8800' }, // For ExclamationMarkPrimary
+        { tag: t.strong, color: '#ffb86c', fontWeight: 'bold' }, // For ExclamationMarkSecondary
+        { tag: t.separator, color: '#AAAAAA' }, // For ExclamationMarkSeparator
       ]),
     []
   ) // Empty dependency array ensures this is only created once
 
   const mixedLanguageSupport = useMemo(
     () => [
-      oneDark,
       syntaxHighlighting(customHighlightStyle),
       EditorView.theme({
         '&': {
           fontSize: '14px',
           height: '85vh',
+          color: 'green',
         },
         '.cm-content': {
           fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
           padding: '10px 0',
+          color: '#FFF5E4',
         },
         '.cm-line': {
           padding: '0 10px',
@@ -151,8 +147,8 @@ function FileEditor({ filePath }: { filePath: string }) {
         codeLanguages: languages,
         addKeymap: true,
         extensions: [customMarkdownExtension],
+        htmlTagLanguage: javascript({ jsx: true }),
       }),
-      javascript({ jsx: true }),
       EditorView.lineWrapping,
     ],
     [customHighlightStyle]
@@ -531,7 +527,14 @@ function FileEditor({ filePath }: { filePath: string }) {
               value={rawContent}
               onChange={handleRawContentChange}
               className="overflow-auto rounded-md border border-gray-300 dark:border-gray-600"
-              theme={oneDark}
+              theme={darculaInit({
+                styles: [
+                  { tag: t.tagName, color: '#B0DAF1' },
+                  { tag: t.attributeName, color: '#C5E6A6' },
+                  { tag: t.attributeValue, color: '#ffb86c' },
+                  { tag: t.operator, color: '#989898' },
+                ],
+              })}
               extensions={mixedLanguageSupport}
               placeholder="Enter content with frontmatter and MDX..."
               basicSetup={{

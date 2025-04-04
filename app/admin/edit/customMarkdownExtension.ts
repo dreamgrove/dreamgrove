@@ -1,5 +1,5 @@
 import { MarkdownExtension, InlineParser, InlineContext } from '@lezer/markdown'
-import { Tag, tags as defaultTags } from '@lezer/highlight'
+import { Tag, tags as t } from '@lezer/highlight'
 
 // Define node types for our custom syntax
 export const CustomInlineMark = 'CustomInlineMark'
@@ -12,33 +12,14 @@ export const ExclamationMarkPrimary = 'ExclamationMarkPrimary'
 export const ExclamationMarkSecondary = 'ExclamationMarkSecondary'
 export const ExclamationMarkSeparator = 'ExclamationMarkSeparator'
 
-// Create Tags for highlighting - define them once as constants
-// These are stable identities that won't change between renders
-const CUSTOM_INLINE_TAG = Tag.define()
-const CUSTOM_ELEMENT_TAG = Tag.define()
-const CUSTOM_OPERATOR_TAG = Tag.define()
-const EXCLAMATION_MARK_TAG = Tag.define()
-const EXCLAMATION_MARK_PRIMARY_TAG = Tag.define()
-const EXCLAMATION_MARK_SECONDARY_TAG = Tag.define()
-const EXCLAMATION_MARK_SEPARATOR_TAG = Tag.define()
-
-// Export the stable tag references
-export const customInlineTag = CUSTOM_INLINE_TAG
-export const customElementTag = CUSTOM_ELEMENT_TAG
-export const customOperatorTag = CUSTOM_OPERATOR_TAG
-export const exclamationMarkTag = EXCLAMATION_MARK_TAG
-export const exclamationMarkPrimaryTag = EXCLAMATION_MARK_PRIMARY_TAG
-export const exclamationMarkSecondaryTag = EXCLAMATION_MARK_SECONDARY_TAG
-export const exclamationMarkSeparatorTag = EXCLAMATION_MARK_SEPARATOR_TAG
-
 /**
  * Custom inline parser that matches [*whatever] patterns in markdown text
  * and distinguishes between elements and operators (|| and &&)
  */
 const customInlineParser: InlineParser = {
   name: 'CustomInlineParser',
-  // This will run before the default Link parser
-  before: 'Link',
+  // Run this parser before the Emphasis parser to ensure our syntax is prioritized
+  before: 'Emphasis',
 
   parse(cx: InlineContext, next: number, pos: number): number {
     // Match [* at the start of the syntax
@@ -48,12 +29,18 @@ const customInlineParser: InlineParser = {
     let end = pos + 2
     while (end < cx.end) {
       const char = cx.char(end)
+      if (char == 10 /* '\n' */) return -1
       if (char == 93 /* ']' */) break
       end++
     }
 
     // If we didn't find a closing bracket, this isn't our syntax
     if (end == cx.end) return -1
+
+    console.log('Parsing custom inline syntax:', cx.text.slice(pos, end + 1))
+
+    // Add the opening [* mark
+    const elements: any[] = [cx.elt(CustomInlineMark, pos, pos + 2)]
 
     // Now parse the inside of [*...] to identify operators and elements
     let current = pos + 2 // Start after [*
@@ -63,27 +50,23 @@ const customInlineParser: InlineParser = {
     while (current < end) {
       // Check for operators
       if (current + 1 < end) {
-        // Check for ||
-        if (cx.char(current) == 124 /* '|' */ && cx.char(current + 1) == 124 /* '|' */) {
+        // Check for || or &&
+        if (
+          (cx.char(current) == 124 /* '|' */ && cx.char(current + 1) == 124) /* '|' */ ||
+          (cx.char(current) == 38 /* '&' */ && cx.char(current + 1) == 38) /* '&' */
+        ) {
           // If we have accumulated text before this operator, add it as an element
           if (tokenStart < current) {
-            cx.addElement(cx.elt(CustomInlineElement, tokenStart, current))
+            const element = cx.text.slice(tokenStart, current)
+            console.log('Adding element:', element, 'from', tokenStart, 'to', current)
+            elements.push(cx.elt(CustomInlineElement, tokenStart, current))
           }
-          // Add the operator
-          cx.addElement(cx.elt(CustomInlineOperator, current, current + 2))
-          current += 2
-          tokenStart = current
-          continue
-        }
 
-        // Check for &&
-        if (cx.char(current) == 38 /* '&' */ && cx.char(current + 1) == 38 /* '&' */) {
-          // If we have accumulated text before this operator, add it as an element
-          if (tokenStart < current) {
-            cx.addElement(cx.elt(CustomInlineElement, tokenStart, current))
-          }
           // Add the operator
-          cx.addElement(cx.elt(CustomInlineOperator, current, current + 2))
+          const operator = cx.text.slice(current, current + 2)
+          console.log('Adding operator:', operator, 'from', current, 'to', current + 2)
+          elements.push(cx.elt(CustomInlineOperator, current, current + 2))
+
           current += 2
           tokenStart = current
           continue
@@ -95,14 +78,16 @@ const customInlineParser: InlineParser = {
 
     // Add any remaining text as an element
     if (tokenStart < current) {
-      cx.addElement(cx.elt(CustomInlineElement, tokenStart, current))
+      const finalElement = cx.text.slice(tokenStart, current)
+      console.log('Adding final element:', finalElement, 'from', tokenStart, 'to', current)
+      elements.push(cx.elt(CustomInlineElement, tokenStart, current))
     }
 
-    // Add the overall wrapper mark
-    cx.addElement(cx.elt(CustomInlineMark, pos, end + 1))
+    // Add the closing ] mark
+    elements.push(cx.elt(CustomInlineMark, end, end + 1))
 
-    // Return the position after the closing bracket
-    return end + 1
+    // Create the combined element with all children
+    return cx.addElement(cx.elt('CustomInline', pos, end + 1, elements))
   },
 }
 
@@ -126,6 +111,7 @@ const exclamationMarkParser: InlineParser = {
     let end = pos + 1
     while (end < cx.end) {
       const char = cx.char(end)
+      if (char == 10 /* '\n' */) return -1
       if (char == 33 /* '!' */) break
       end++
     }
@@ -136,6 +122,9 @@ const exclamationMarkParser: InlineParser = {
     // Check that there's content between the exclamations
     if (end <= pos + 1) return -1
 
+    // Create the elements array
+    const elements: any[] = []
+
     // Now check if there's a pipe separator
     let pipePos = -1
     for (let i = pos + 1; i < end; i++) {
@@ -145,43 +134,41 @@ const exclamationMarkParser: InlineParser = {
       }
     }
 
-    // Add the overall wrapper mark
-    cx.addElement(cx.elt(ExclamationMark, pos, end + 1))
-
     if (pipePos !== -1) {
       // We have a separator, add primary and secondary parts
       if (pipePos > pos + 1) {
         // Add primary part (before the pipe)
-        cx.addElement(cx.elt(ExclamationMarkPrimary, pos + 1, pipePos))
+        elements.push(cx.elt(ExclamationMarkPrimary, pos + 1, pipePos))
       }
 
       // Add the separator
-      cx.addElement(cx.elt(ExclamationMarkSeparator, pipePos, pipePos + 1))
+      elements.push(cx.elt(ExclamationMarkSeparator, pipePos, pipePos + 1))
 
       if (pipePos + 1 < end) {
         // Add secondary part (after the pipe) - will be brighter
-        cx.addElement(cx.elt(ExclamationMarkSecondary, pipePos + 1, end))
+        elements.push(cx.elt(ExclamationMarkSecondary, pipePos + 1, end))
       }
     } else {
       // No separator, just add the whole content as primary
-      cx.addElement(cx.elt(ExclamationMarkPrimary, pos + 1, end))
+      elements.push(cx.elt(ExclamationMarkSecondary, pos + 1, end))
     }
 
-    // Return the position after the closing exclamation
-    return end + 1
+    // Return the composite element
+    return cx.addElement(cx.elt(ExclamationMark, pos, end + 1, elements))
   },
 }
 
 // Create a stable extension object that won't be recreated
 const customMarkdownExtension: MarkdownExtension = {
   defineNodes: [
-    { name: CustomInlineMark, style: customInlineTag },
-    { name: CustomInlineElement, style: customElementTag },
-    { name: CustomInlineOperator, style: customOperatorTag },
-    { name: ExclamationMark, style: exclamationMarkTag },
-    { name: ExclamationMarkPrimary, style: exclamationMarkPrimaryTag },
-    { name: ExclamationMarkSecondary, style: exclamationMarkSecondaryTag },
-    { name: ExclamationMarkSeparator, style: exclamationMarkSeparatorTag },
+    { name: 'CustomInline', style: t.special(t.content) },
+    { name: CustomInlineMark, style: t.processingInstruction },
+    { name: CustomInlineElement, style: t.bool },
+    { name: CustomInlineOperator, style: t.operator },
+    { name: ExclamationMark, style: t.special(t.content) },
+    { name: ExclamationMarkPrimary, style: t.number },
+    { name: ExclamationMarkSecondary, style: t.strong },
+    { name: ExclamationMarkSeparator, style: t.separator },
   ],
   parseInline: [customInlineParser, exclamationMarkParser],
 }

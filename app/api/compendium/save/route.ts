@@ -9,7 +9,7 @@ import authOptions from 'app/api/auth/[...nextauth]/options'
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER || 'dreamgrove'
 const REPO_NAME = process.env.GITHUB_REPO_NAME || 'dreamgrove'
-const BRANCH = process.env.GITHUB_BRANCH || 'next-15'
+const BRANCH = process.env.GITHUB_BRANCH || 'master'
 const IS_LOCAL = process.env.NODE_ENV === 'development' || process.env.VERCEL_ENV === 'development'
 const PROJECT_ROOT = process.cwd()
 
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
 
       // Create a unique branch name for this edit
       const fileName = path.basename(filePath, '.mdx')
-      const newBranchName = `edit-${fileName}-${Date.now()}`
+      const newBranchName = `${username}-${fileName}-${Date.now()}`
 
       try {
         // Get the current commit SHA from the main branch to branch from
