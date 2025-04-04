@@ -28,10 +28,6 @@ const Checkbox = ({
 }: CheckboxProps) => {
   const child = <WowheadClientVersion type={type} id={spellId} name={name} disabled={disabled} />
 
-  if (spellId === '' && id === '') {
-    throw Error('A Checkbox without children needs at least an id or a spellId')
-  }
-
   const [checked, setChecked] = useState(defaultCheck)
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
 
