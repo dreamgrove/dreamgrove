@@ -12,7 +12,7 @@ export default function Page() {
   const mainContent = coreContent(about)
 
   return (
-    <PageWrapper title="About">
+    <PageWrapper title="About" showTitle={false}>
       <AboutLayout content={mainContent}>
         <MDXLayoutRenderer code={about.body.code} />
       </AboutLayout>

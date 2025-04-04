@@ -1,0 +1,17 @@
+/* Fade in shadow on scroll when supported */
+@supports (animation-timeline: scroll()) {
+  .headerScrollShadow {
+    animation: scrollShadow linear both;
+    animation-timeline: scroll();
+    animation-range: 0 80px;
+  }
+
+  @keyframes scrollShadow {
+    from {
+      box-shadow: none;
+    }
+    to {
+      box-shadow: var(--shadow);
+    }
+  }
+}

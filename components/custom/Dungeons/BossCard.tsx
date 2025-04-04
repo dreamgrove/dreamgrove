@@ -27,11 +27,11 @@ export default async function BossCard({ title, image, id, children }) {
             <img src={imageUrl} alt="Image" className=" my-0 h-full w-auto object-cover" />
           </div>
         )}
-        <div
-          className={`mb-4 flex-grow self-center border-b-4 border-main pb-2 text-3xl font-semibold text-white`}
+        <h2
+          className={`bossTitle mb-4 flex-grow self-center border-b-4 border-main pb-2 text-3xl font-semibold text-white`}
         >
           {title}
-        </div>
+        </h2>
       </div>
       <div className="w-full px-1 py-2 md:px-4 [&>div]:list-none">{children}</div>
     </div>

@@ -1,0 +1,220 @@
+/* April Fools' Theme - Neocities Inspired */
+
+:root {
+  /* Color Palette */
+  --af-pink-primary: #ff9ecd;
+  --af-pink-light: #ffd1e6;
+  --af-pink-dark: #e65aa0;
+  --af-header-color: #e774ad;
+  --af-accent-purple: #d4a5ff;
+  --af-accent-yellow: #ffeb3b;
+  --af-text: #4a154b;
+  --af-background: #f3f3f3;
+
+  /* Font families */
+  --af-heading-font: 'Comic Sans MS', 'Comic Sans', cursive;
+  --af-body-font: 'Comic Sans MS', 'Comic Sans', sans-serif;
+}
+
+/* Base theme styles */
+.april-fools {
+  background-image: url('/static/images/april/bg.gif') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: var(--af-body-font);
+}
+
+/* Make sure the theme is applied to the html element */
+html.april-fools {
+  background-image: url('/static/images/april/bg.gif') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.april-fools .home {
+  color: var(--af-text) !important;
+}
+
+.april-fools section section a.q1 {
+  color: #aa83b8 !important;
+  /* text underline color */
+  text-decoration-color: #aa83b8 !important;
+}
+
+/* Override any dark mode styles */
+.april-fools.dark {
+  background-image: url('/static/images/april/bg.gif') !important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: var(--af-text) !important;
+}
+.april-fools section section {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--af-pink-primary);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.april-fools section section h1:not(:is(.talentTree *)),
+.april-fools section section h2:not(:is(.talentTree *)),
+.april-fools section section h3:not(:is(.talentTree *)),
+.april-fools section section h4:not(:is(.talentTree *)),
+.april-fools section section h5:not(:is(.talentTree *)),
+.april-fools section section h6:not(:is(.talentTree *)) {
+  font-family: var(--af-heading-font);
+  color: var(--af-header-color);
+  margin-bottom: 10px;
+}
+
+.april-fools .toChange h1:not(:is(.talentTree *)),
+.april-fools .toChange h2:not(:is(.talentTree *)),
+.april-fools .toChange h3:not(:is(.talentTree *)),
+.april-fools .toChange h4:not(:is(.talentTree *)),
+.april-fools .toChange h5:not(:is(.talentTree *)),
+.april-fools .toChange h6:not(:is(.talentTree *)) {
+  font-family: var(--af-heading-font);
+  color: var(--af-header-color);
+  margin-bottom: 10px;
+}
+
+.april-fools .toChange p:not(.markdown-alert-title),
+.april-fools section section p {
+  font-family: var(--af-body-font);
+  color: var(--af-text);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.april-fools .roleSelector span {
+  color: var(--af-text);
+}
+
+.april-fools section section article li {
+  font-family: var(--af-body-font);
+}
+
+.april-fools section section article td {
+  font-family: var(--af-body-font);
+}
+
+.april-fools section section article strong {
+  color: var(--af-pink-dark);
+}
+
+.april-fools nav {
+  background-color: var(--af-pink-light);
+  border-bottom: 3px solid var(--af-pink-primary);
+  padding-left: 10px;
+}
+
+.april-fools header h1,
+.april-fools header h2,
+.april-fools header h3:not(:is(.talents *)),
+.april-fools header h4,
+.april-fools header h5,
+.april-fools header h6 {
+  font-family: var(--af-heading-font);
+  color: var(--af-header-color);
+  text-shadow: 2px 2px 0px var(--af-accent-purple);
+}
+
+.april-fools header a {
+  color: var(--af-pink-dark);
+  text-decoration: none;
+}
+
+.april-fools footer a,
+.april-fools footer p {
+  color: var(--af-pink-dark);
+}
+
+.april-fools nav li a {
+  color: var(--af-text);
+  font-family: var(--af-body-font);
+  font-weight: bold;
+}
+
+.april-fools nav li a:hover {
+  color: var(--af-pink-dark);
+}
+
+.april-fools .home a {
+  color: var(--af-pink-dark);
+}
+
+.april-fools button:not(:is(article *, .talentTree *, header *)) {
+  background-color: var(--af-pink-primary);
+  color: var(--af-text);
+  border: 2px solid var(--af-pink-dark);
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-family: var(--af-body-font);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.april-fools header button svg {
+  color: var(--af-pink-dark);
+}
+
+.april-fools button:not(:is(article *, header *)):hover {
+  background-color: var(--af-pink-dark);
+  color: white;
+  transform: scale(1.05);
+}
+
+.april-fools article button:not(:is(.talentTree *)) {
+  background-color: var(--af-pink-primary);
+}
+
+.april-fools article .talentTree .talentName {
+  font-family: var(--af-body-font);
+}
+
+.april-fools .card,
+.april-fools .card:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--af-pink-primary);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.april-fools ::-webkit-scrollbar {
+  width: 15px;
+}
+
+.april-fools ::-webkit-scrollbar-track {
+  background: var(--af-pink-light);
+  border: 2px solid var(--af-pink-primary);
+}
+
+.april-fools ::-webkit-scrollbar-thumb {
+  background: var(--af-pink-primary);
+  border: 2px solid var(--af-pink-dark);
+  border-radius: 10px;
+}
+
+.april-fools ::selection {
+  background-color: var(--af-accent-purple);
+  color: var(--af-text);
+}
+
+.april-fools body {
+  background-color: transparent;
+}
+
+.april-fools header {
+  background-color: transparent;
+}
+
+.april-fools button {
+  text-decoration: none;
+}

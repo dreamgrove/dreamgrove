@@ -1,4 +1,5 @@
 import 'css/tailwind.css'
+import 'css/april-fools.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
@@ -10,6 +11,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
+import WelcomePopover from '@/components/WelcomePopover'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -67,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} dark`}
+      className={`${space_grotesk.variable}`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
@@ -83,6 +85,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
           <ThemeProviders>
             <Analytics />
+            <WelcomePopover />
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <main className="mb-auto">{children}</main>
               <Footer />

@@ -1,12 +1,8 @@
-import Main from './Main'
-import { Metadata } from 'next'
-import siteMetadata from '@/data/siteMetadata'
 import PageWrapper from '@/components/PageWrapper'
+import Main from './Main'
 
-export const metadata: Metadata = {
-  title: 'Home',
-  description: siteMetadata.description,
-}
+// Force static generation
+export const dynamic = 'force-static'
 
 export default function Page() {
   return (

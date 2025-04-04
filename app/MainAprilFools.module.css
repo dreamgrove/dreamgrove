@@ -1,0 +1,135 @@
+.marqueeContainer {
+  margin: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.marqueeText {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  transition: transform 0.2s;
+}
+
+.navLink:hover {
+  transform: scale(1.02);
+}
+
+.navLinkContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  color: #ff7aad;
+}
+
+.navIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.navText {
+  font-family: 'Pixel', sans-serif;
+  margin-bottom: -3px;
+  margin-left: -3px;
+  font-size: 0.875rem;
+}
+
+.navigationMenu {
+  height: 100%;
+  width: 100%;
+}
+
+.navigationContent {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0.5rem 0.75rem;
+  border-style: solid;
+  border-width: 7px;
+  background-color: white;
+}
+
+.navigationTitle {
+  font-family: 'Pixel', sans-serif;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ff7aad;
+  text-align: center;
+}
+
+.navigationLinks {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* Additional styles from styled-jsx */
+@keyframes sparkle {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes walkingCat {
+  0% {
+    transform: translateX(-100px) scaleX(-1);
+  }
+  45% {
+    transform: translateX(calc(100vw - 100px)) scaleX(-1);
+  }
+  50% {
+    transform: translateX(calc(100vw - 100px)) scaleX(1);
+  }
+  95% {
+    transform: translateX(-100px) scaleX(1);
+  }
+  100% {
+    transform: translateX(-100px) scaleX(-1);
+  }
+}
+
+.sparkle {
+  animation: sparkle 2s infinite;
+  font-size: 1.5rem;
+}
+
+.walkingCat {
+  animation: walkingCat 45s linear infinite;
+}
+
+.pixelFont {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
