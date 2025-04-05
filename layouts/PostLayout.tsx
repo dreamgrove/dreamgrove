@@ -73,6 +73,16 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                       <FaHistory className="mr-2 inline" />
                       <span className="inline">Changelog</span>
                     </a>
+
+                    {isCompendium && (
+                      <Link
+                        href={`/blog/${specSlug}/compendium/edit`}
+                        className="ml-4 mt-[-2px] text-base text-main underline decoration-2 underline-offset-4"
+                      >
+                        <FaEdit className="mr-2 inline" />
+                        <span className="inline">Edit</span>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
