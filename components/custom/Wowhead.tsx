@@ -58,21 +58,29 @@ export default async function Wowhead({
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  const res = await fetch(whUrl)
+  try {
+    const res = await fetch(whUrl, { timeout: 5000 })
 
-  if (type == 'item') {
-    const text = await res.text()
-    const qualityRegex = /<b class=\\"q(\d+)\\">/
-    const qualityMatch = text.match(qualityRegex)
+    if (type == 'item') {
+      const text = await res.text()
+      const qualityRegex = /<b class=\\"q(\d+)\\">/
+      const qualityMatch = text.match(qualityRegex)
 
-    if (qualityMatch && qualityMatch[1]) {
-      linkColor = qualityToColor[qualityMatch[1]]
-      quality = qualityMatch[1]
+      if (qualityMatch && qualityMatch[1]) {
+        linkColor = qualityToColor[qualityMatch[1]]
+        quality = qualityMatch[1]
+      }
     }
-  }
 
-  if (!name) {
-    display = formatUrl(res.url)
+    if (!name) {
+      display = formatUrl(res.url)
+    }
+  } catch (error: any) {
+    console.warn(
+      `Failed to fetch from Wowhead for ${type}=${displayId}: ${error.message || 'Unknown error'}`
+    )
+    // Use provided name or displayId as fallback
+    display = name || `${type}-${displayId}`
   }
 
   const icon = noIcon ? null : (

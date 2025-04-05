@@ -24,8 +24,17 @@ export default async function WowheadIcon({
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
+  // Create a fallback image element
+  const fallbackImage = (
+    <span
+      className={`inline-block rounded-sm bg-gray-200 ${!noMargin && 'mr-1'}`}
+      style={{ width: `${size}px`, height: `${size}px` }}
+      title={`${name} (icon unavailable)`}
+    />
+  )
+
   try {
-    const res = await fetch(whUrl)
+    const res = await fetch(whUrl, { timeout: 5000 })
     const text = await res.text()
     const regex = new RegExp(`"${id}":\\{"name_enus":"[^"]+".*?,"icon":"([^"]+)"`)
     const match = regex.exec(text)
@@ -52,9 +61,16 @@ export default async function WowheadIcon({
         </a>
       )
     }
-  } catch (error) {
-    console.error('Error fetching icon for ' + id, error)
+  } catch (error: any) {
+    console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
   }
 
-  return null
+  // Return fallback if fetch fails or no icon is found
+  return noLink ? (
+    fallbackImage
+  ) : (
+    <a href={whUrl} className="inline">
+      {fallbackImage}
+    </a>
+  )
 }
