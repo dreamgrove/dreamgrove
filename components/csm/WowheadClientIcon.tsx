@@ -1,5 +1,6 @@
 import { memo, useState, useEffect } from 'react'
 import Image from 'next/image'
+import { getWowheadInfo } from 'lib/wowhead-api'
 
 interface WowheadIconProps {
   id: string
@@ -59,22 +60,14 @@ function WowheadClientIcon({
       setError(false)
 
       try {
-        // Use our dedicated API for fetching Wowhead data
-        const apiUrl = `/api/wowhead-data?${new URLSearchParams({
+        // Use our new API client instead of direct server function
+        const data = await getWowheadInfo({
           id: id || '',
           type,
           name: name || '',
-          beta: beta ? 'true' : 'false',
+          beta,
           url: url || '',
-        })}`
-
-        const res = await fetch(apiUrl)
-
-        if (!res.ok) {
-          throw new Error(`Failed to fetch icon data: ${res.status}`)
-        }
-
-        const data = await res.json()
+        })
 
         if (data.icon) {
           // Cache the result

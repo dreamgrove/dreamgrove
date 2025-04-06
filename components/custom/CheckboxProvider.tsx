@@ -22,17 +22,15 @@ export { CheckboxContext }
 export default function CheckboxProvider({ children }) {
   const [checkboxMap, setCheckboxMap] = useState<Record<string, CheckboxItem>>({})
 
+  // Optimize updateCheckbox with better memoization
   const updateCheckbox = useCallback((id: string, checked: boolean, radioGroup: string | null) => {
     setCheckboxMap((prevMap) => {
-      // If nothing would change, return the same object reference to prevent re-renders
-      if (
-        prevMap[id]?.checked === checked &&
-        prevMap[id]?.radioGroup === radioGroup &&
-        (!radioGroup || !checked)
-      ) {
-        return prevMap
+      // Fast equality check to prevent unnecessary updates
+      if (prevMap[id]?.checked === checked && prevMap[id]?.radioGroup === radioGroup) {
+        return prevMap // Return the same reference to prevent re-renders
       }
 
+      // Create a new map object for the update
       const newMap = { ...prevMap }
 
       // If the element doesn't exist, insert it
@@ -40,20 +38,28 @@ export default function CheckboxProvider({ children }) {
         newMap[id] = { checked, radioGroup }
       } else {
         // Update the checked state
-        newMap[id].checked = checked
-
-        // If radioGroup is provided, update it
-        if (radioGroup !== undefined) {
-          newMap[id].radioGroup = radioGroup
+        newMap[id] = {
+          ...newMap[id],
+          checked,
+          // Only update radioGroup if it's provided
+          ...(radioGroup !== undefined && { radioGroup }),
         }
       }
 
       // If this is a radio button and it's being checked
       if (newMap[id].radioGroup && checked) {
         // Set all other elements with the same radioGroup to false
+        // Only update those that are currently checked to minimize changes
         Object.keys(newMap).forEach((key) => {
-          if (key !== id && newMap[key].radioGroup === newMap[id].radioGroup) {
-            newMap[key].checked = false
+          if (
+            key !== id &&
+            newMap[key].radioGroup === newMap[id].radioGroup &&
+            newMap[key].checked === true
+          ) {
+            newMap[key] = {
+              ...newMap[key],
+              checked: false,
+            }
           }
         })
       }
@@ -62,6 +68,7 @@ export default function CheckboxProvider({ children }) {
     })
   }, [])
 
+  // Memoize context value to prevent unnecessary re-renders
   const contextValue = useMemo(
     () => ({
       checkboxMap,

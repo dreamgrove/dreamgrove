@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState, memo, useCallback, useMemo } from 'react'
 import { wowheadCache } from './wowheadCache'
 import WowheadClientIcon from './WowheadClientIcon'
+import { getWowheadInfo, qualityToColor } from 'lib/wowhead-api'
 
 function formatUrl(url) {
   const parts = url.split('/')
@@ -18,14 +19,6 @@ function extractIdFromUrl(url) {
   const lastPart = parts[parts.length - 1]
   const id = lastPart.split('-')[0]
   return id
-}
-
-const qualityToColor = {
-  1: '#ffffff',
-  2: '#1eff00',
-  3: '#0070dd',
-  4: '#a335ee',
-  5: '#ff8000',
 }
 
 // A minimal version of the Wowhead component that uses client-side fetching
@@ -65,7 +58,7 @@ function WowheadClientVersion({
   const whUrl =
     url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  const fetchWowheadData = useCallback(async () => {
+  const fetchWowhead = useCallback(async () => {
     if (typeof window === 'undefined') return
 
     // First check our client-side cache
@@ -90,22 +83,14 @@ function WowheadClientVersion({
     setIsLoading(true)
 
     try {
-      // Use our dedicated API for fetching Wowhead data
-      const apiUrl = `/api/wowhead-data?${new URLSearchParams({
-        id: displayId || '',
+      // Use our new API client instead of direct server function
+      const data = await getWowheadInfo({
+        id: id || '',
         type,
         name: name || '',
-        beta: beta ? 'true' : 'false',
+        beta,
         url: url || '',
-      })}`
-
-      const res = await fetch(apiUrl)
-
-      if (!res.ok) {
-        throw new Error(`API returned status ${res.status}`)
-      }
-
-      const data = await res.json()
+      })
 
       // Prepare the processed data for caching
       const processedData: {
@@ -156,7 +141,7 @@ function WowheadClientVersion({
   useEffect(() => {
     // Only run fetch if we're in the browser
     if (typeof window !== 'undefined') {
-      fetchWowheadData()
+      fetchWowhead()
     }
 
     // Clean up expired cache entries occasionally
@@ -164,7 +149,7 @@ function WowheadClientVersion({
       // 10% chance on each mount
       wowheadCache.cleanup()
     }
-  }, [fetchWowheadData])
+  }, [fetchWowhead])
 
   const icon = noIcon ? null : (
     <WowheadClientIcon

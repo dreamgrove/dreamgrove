@@ -6,9 +6,9 @@ import {
 } from './TalentTreeUtils'
 
 import { ClassTreeLayout, SpecTreeLayout, HeroTreeLayout } from './TalentTreeLayout'
-import TalentTreeClientTest from './TalentTreeClient'
 import { Suspense } from 'react'
 import TalentsDropdown from './TalentsDropdown'
+import TalentTreeClient from './TalentTreeClient'
 
 // Loading component for the talent tree
 function TalentTreeLoading() {
@@ -580,7 +580,7 @@ export default function Talents({
   return (
     <TalentsDropdown name={name}>
       <div className="flex flex-col gap-4">
-        <TalentTreeClientTest
+        <TalentTreeClient
           classTree={classTree}
           specTree={specTree}
           heroTree={heroTree}

@@ -15,6 +15,7 @@ import { useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
 interface HeaderProps {
+  toc?: string
   title?: string
   showTitle?: boolean
   isBlog?: boolean
@@ -32,7 +33,7 @@ const Header = (props: HeaderProps) => {
     return <HeaderAprilFools {...props} />
   }
 
-  const { title, showTitle = true, isBlog = false } = props
+  const { toc, title, showTitle = true, isBlog = false } = props
   const isMainPage = title === 'Main'
 
   return (
@@ -100,7 +101,7 @@ const Header = (props: HeaderProps) => {
               )}
               <div className="ml-2 flex h-[31px] items-center sm:ml-6 sm:hidden">
                 {false && <ThemeSwitch />}
-                <MobileNav />
+                <MobileNav toc={toc} />
               </div>
             </div>
           </div>

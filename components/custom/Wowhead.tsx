@@ -1,10 +1,7 @@
 import spellData from '../../spellData.json'
 import WowheadIcon from './WowheadIcon'
-import {
-  fetchWowheadData,
-  qualityToColor,
-  extractIdFromUrl,
-} from '../../app/api/wowhead-data/utils'
+import { qualityToColor, extractIdFromUrl } from '../../app/api/wowhead-data/utils'
+import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 
 /*This whole component is retarded because wowhead is retarded*/
 
@@ -25,7 +22,8 @@ export default async function Wowhead({
 
   if (!id) {
     if (type == 'spell') {
-      const spellId = spellData[name]
+      const spellDataModule = await import('../../spellData.json')
+      const spellId = spellDataModule[name]
       if (spellId) {
         displayId = spellId
       }

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 import Image from 'next/image'
-import { fetchWowheadData } from '../../../app/api/wowhead-data/utils'
 
 export default async function BossCard({ title, image, id, children }) {
   let imageUrl = ''

@@ -99,7 +99,7 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       : `Blog Post: ${slug}`
 
   return (
-    <PageWrapper title={pageTitle} isBlog={true}>
+    <PageWrapper toc={post.toc} title={pageTitle} isBlog={true}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

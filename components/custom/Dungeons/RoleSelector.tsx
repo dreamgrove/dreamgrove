@@ -10,49 +10,6 @@ import { useEffect, useState, Suspense, useContext } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { CheckboxContext } from '../CheckboxProvider'
 
-const toggleText = (state, id, selected) => {
-  // Handle elements with logical operators (&&)
-  const logicalElements = document.querySelectorAll<HTMLElement>(`[id*="&&"]`)
-  logicalElements.forEach((element) => {
-    // Strip any suffixes (numbers after hyphens) from the ID before splitting
-    const baseId = element.id.replace(/-\d+$/, '')
-    const conditions = baseId.split('&&')
-    const shouldShow = conditions.every((condition) => {
-      const trimmed = condition.trim()
-      return selected.includes(trimmed)
-    })
-    element.style.display = shouldShow ? 'list-item' : 'none'
-  })
-
-  // Handle elements with OR operator (||)
-  const orElements = document.querySelectorAll<HTMLElement>(`[id*="||"]`)
-  orElements.forEach((element) => {
-    // Strip any suffixes (numbers after hyphens) from the ID before splitting
-    const baseId = element.id.replace(/-\d+$/, '')
-    const conditions = baseId.split('||')
-    const shouldShow = conditions.some((condition) => {
-      const trimmed = condition.trim()
-      return selected.includes(trimmed)
-    })
-    element.style.display = shouldShow ? 'list-item' : 'none'
-  })
-
-  // Handle regular elements
-  const elements = document.querySelectorAll<HTMLElement>(`[id^="${id}"]`)
-  const negativeElements = document.querySelectorAll<HTMLElement>(`[id^="~${id}"]`)
-
-  elements.forEach((element) => {
-    if (!element.id.includes('&&') && !element.id.includes('||')) {
-      element.style.display = state ? 'list-item' : 'none'
-    }
-  })
-  negativeElements.forEach((element) => {
-    if (!element.id.includes('&&') && !element.id.includes('||')) {
-      element.style.display = state ? 'none' : 'list-item'
-    }
-  })
-}
-
 const IconDisplay = ({ text }) => {
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
   const isChecked = checkboxMap[text]?.checked || false
@@ -82,7 +39,7 @@ const IconDisplay = ({ text }) => {
 
   return (
     <div
-      className={`cursor-pointer select-none rounded-md border-2 ${isChecked ? 'border-main' : 'border-main/20'} flex w-full items-center p-1`}
+      className={`cursor-pointer select-none rounded-md border-2 ${isChecked ? 'border-main' : 'border-main/20'} flex items-center p-1`}
       onClick={handleClick}
     >
       <div className="flex-shrink-0">
@@ -95,8 +52,7 @@ const IconDisplay = ({ text }) => {
         />
       </div>
       <span
-        className={`ml-2 overflow-hidden truncate align-middle text-base sm:text-lg md:text-xl ${isChecked ? 'text-white' : 'text-white/20'}`}
-        title={text}
+        className={`ml-2 align-middle text-base sm:text-lg md:text-xl ${isChecked ? 'text-white' : 'text-white/20'}`}
       >
         {text}
       </span>
@@ -108,7 +64,6 @@ const specs = ['Guardian', 'Feral', 'Resto', 'Balance']
 
 function RoleSelectorContent({ isPreview = false }) {
   const searchParams = useSearchParams()
-  const router = useRouter()
   const pathname = usePathname()
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
 
@@ -134,7 +89,7 @@ function RoleSelectorContent({ isPreview = false }) {
         updateCheckbox('DPS', true, null)
       }
     }
-  }, [searchParams, updateCheckbox])
+  }, [])
 
   // Update URL when selected roles change
   useEffect(() => {
@@ -160,21 +115,6 @@ function RoleSelectorContent({ isPreview = false }) {
     const newUrl = `${pathname}${params.toString() ? `?${params.toString()}` : ''}`
     window.history.replaceState({}, '', newUrl)
   }, [checkboxMap, pathname, searchParams, updateCheckbox])
-
-  // Toggle text visibility based on checkbox states
-  useEffect(() => {
-    const selected = getSelectedRoles()
-
-    // Add DPS if Balance or Feral is selected
-    if (selected.includes('Balance') || selected.includes('Feral')) {
-      selected.push('DPS')
-    }
-
-    const allSpecs = [...specs, 'DPS']
-    allSpecs.forEach((spec) => {
-      toggleText(selected.includes(spec), spec, selected)
-    })
-  }, [checkboxMap])
 
   return (
     <div className="roleSelector mt-4 flex flex-col items-center">
@@ -203,14 +143,11 @@ export default function RoleSelector({ isPreview = false }) {
           >
             {specs.map((spec) => (
               <div key={spec} className="w-full flex-1">
-                <div className="flex w-full cursor-pointer select-none items-center rounded-md border-2 border-main/20 p-1">
+                <div className="flex cursor-pointer select-none items-center rounded-md border-2 border-main/20 p-1">
                   <div className="flex-shrink-0">
                     <div className="inline-block h-7 w-7 rounded-md bg-gray-700 opacity-20 sm:w-8 md:w-9 lg:w-10" />
                   </div>
-                  <span
-                    className="ml-2 overflow-hidden truncate align-middle text-base text-white/20 sm:text-lg md:text-xl"
-                    title={spec}
-                  >
+                  <span className="ml-2 align-middle text-base text-white/20 sm:text-lg md:text-xl">
                     {spec}
                   </span>
                 </div>

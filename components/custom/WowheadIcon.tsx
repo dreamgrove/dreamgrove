@@ -1,5 +1,5 @@
+import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 import Image from 'next/image'
-import { fetchWowheadData } from '../../app/api/wowhead-data/utils'
 
 interface WowheadIconProps {
   id: string
