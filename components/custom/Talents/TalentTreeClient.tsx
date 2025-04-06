@@ -79,26 +79,9 @@ const TalentTreeClient = ({
   const setSpecTree = useCallback(() => setActiveTree('spec'), [])
   const setHeroTree = useCallback(() => setActiveTree('hero'), [])
 
-  // Calculate the width classes based on which trees are visible
-  const widthClasses = useMemo(() => {
-    if (activeTree === 'full') {
-      // Class and Spec get 40% each, Hero gets 20%
-      return {
-        classWidth: 'w-[9/19]',
-        specWidth: 'w-[3/19]',
-        heroWidth: 'w-[7/19]',
-      }
-    } else {
-      // 100% for a single tree
-      return {
-        classWidth: 'w-full',
-        specWidth: 'w-full',
-        heroWidth: 'w-full',
-      }
-    }
-  }, [activeTree])
-
-  const { classWidth, specWidth, heroWidth } = widthClasses
+  const classWidth = activeTree === 'full' ? 'w-full' : 'w-[9/19]'
+  const specWidth = activeTree === 'full' ? 'w-full' : 'w-[3/19]'
+  const heroWidth = activeTree === 'full' ? 'w-full' : 'w-[7/19]'
 
   const fullTreeView = useMemo(
     () => (

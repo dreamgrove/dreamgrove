@@ -21,19 +21,19 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
   const onToggleNav = useCallback(() => {
     setNavShow((status) => {
       if (status) {
-        document.body.style.overflow = 'auto'
+        document.documentElement.classList.remove('overflow-hidden')
       } else {
         // Prevent scrolling
-        document.body.style.overflow = 'hidden'
+        document.documentElement.classList.add('overflow-hidden')
       }
       return !status
     })
   }, [])
 
-  // Reset body overflow when component unmounts
+  // Reset overflow class when component unmounts
   useEffect(() => {
     return () => {
-      document.body.style.overflow = 'auto'
+      document.documentElement.classList.remove('overflow-hidden')
     }
   }, [])
 

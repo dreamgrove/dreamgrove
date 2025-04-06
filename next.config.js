@@ -79,6 +79,7 @@ module.exports = () => {
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
+    productionBrowserSourceMaps: true,
     images: {
       remotePatterns: [
         {
@@ -103,6 +104,7 @@ module.exports = () => {
       GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
     },
     experimental: {
+      serverSourceMaps: true,
       serverComponentsHmrCache: true,
 
       turbo: {

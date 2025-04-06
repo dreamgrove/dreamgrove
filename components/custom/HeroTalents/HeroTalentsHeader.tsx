@@ -15,9 +15,8 @@ const DynamicHeroTalentsHeader = dynamic(() => import('./HeroTalent'), {
 })
 
 export default function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
-  return (
-    <DynamicHeroTalentsHeader title={title} id={id}>
-      {children}
-    </DynamicHeroTalentsHeader>
-  )
+  // Pre-render the content to avoid detachment
+  const content = useMemo(() => <div>{children}</div>, [children])
+
+  return <DynamicHeroTalentsHeader title={title} id={id} content={content} />
 }

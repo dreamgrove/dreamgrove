@@ -5,11 +5,12 @@ import styles from './HeroTalents.module.css'
 interface HeroTalentsHeaderProps {
   title: string
   id: string
-  children: React.ReactNode
+  content?: React.ReactNode
+  children?: React.ReactNode
   titleClassName?: string
 }
 
-export default function HeroTalent({ title, id, children }: HeroTalentsHeaderProps) {
+export default function HeroTalent({ title, id, content, children }: HeroTalentsHeaderProps) {
   const [isCollapsed, setIsCollapsed] = useState(true)
 
   // Memoize the arrow to prevent recreating it on each render
@@ -59,8 +60,8 @@ export default function HeroTalent({ title, id, children }: HeroTalentsHeaderPro
         }`}
       >
         <div className="overflow-hidden">
-          {/* Wrap content in our special wrapper that preserves component references */}
-          <div className="px-2 md:px-6">{children}</div>
+          {/* Use content if provided, otherwise use children */}
+          <div className="px-2 md:px-6">{content || children}</div>
         </div>
       </div>
     </div>
