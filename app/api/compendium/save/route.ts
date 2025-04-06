@@ -24,11 +24,16 @@ export async function POST(request: Request) {
 
   try {
     // Parse the request body
-    const { filePath, content } = await request.json()
+    const { filePath, content, commitTitle, commitMessage, createPr = false } = await request.json()
 
     if (!filePath || !content) {
       return NextResponse.json({ error: 'Missing required parameters' }, { status: 400 })
     }
+
+    // Use provided commit message or fallback to default
+    const fileName = path.basename(filePath, '.mdx')
+    const commitTitleToUse = commitTitle || `Update ${fileName}`
+    const commitMessageToUse = commitMessage || ''
 
     // Construct the file path
     const fullFilePath = path.join(PROJECT_ROOT, 'data', filePath)
@@ -49,9 +54,13 @@ export async function POST(request: Request) {
         // Git operations
         await execPromise(`git checkout -b ${branchName}`)
         await execPromise(`git add data/${filePath}`)
-        await execPromise(`git commit -m "Update ${path.basename(filePath)}"`)
 
-        console.log(`Changes committed locally to branch: ${branchName}`)
+        // Use the provided commit message if available
+        const fullCommitMessage = commitMessageToUse
+          ? `${commitTitleToUse}\n\n${commitMessageToUse}`
+          : commitTitleToUse
+
+        await execPromise(`git commit -m "${fullCommitMessage.replace(/"/g, '\\"')}"`)
 
         return NextResponse.json({
           success: true,
@@ -80,8 +89,6 @@ export async function POST(request: Request) {
           username: username,
         })
 
-        console.log('User repository permission:', repoPermission.permission)
-
         // Allow access for users with push (write) or admin permissions
         if (!['admin', 'write', 'maintain'].includes(repoPermission.permission)) {
           return NextResponse.json(
@@ -98,7 +105,6 @@ export async function POST(request: Request) {
       }
 
       // Create a unique branch name for this edit
-      const fileName = path.basename(filePath, '.mdx')
       const newBranchName = `${username}-${fileName}-${Date.now()}`
 
       try {
@@ -136,7 +142,7 @@ export async function POST(request: Request) {
             owner: REPO_OWNER,
             repo: REPO_NAME,
             path: `data/${filePath}`,
-            message: `Update ${fileName}`,
+            message: commitTitleToUse,
             content: Buffer.from(content).toString('base64'),
             sha: fileSha,
             branch: newBranchName,
@@ -147,16 +153,35 @@ export async function POST(request: Request) {
             owner: REPO_OWNER,
             repo: REPO_NAME,
             path: `data/${filePath}`,
-            message: `Create ${fileName}`,
+            message: commitTitleToUse,
             content: Buffer.from(content).toString('base64'),
             branch: newBranchName,
           })
+        }
+
+        let prUrl = null
+
+        // Create a PR if requested
+        if (createPr) {
+          const prBody = commitMessageToUse || `Updates to ${fileName}`
+
+          const { data: pullRequest } = await octokit.rest.pulls.create({
+            owner: REPO_OWNER,
+            repo: REPO_NAME,
+            title: commitTitleToUse,
+            body: prBody,
+            head: newBranchName,
+            base: BRANCH,
+          })
+
+          prUrl = pullRequest.html_url
         }
 
         return NextResponse.json({
           success: true,
           message: `Changes committed to branch: ${newBranchName}`,
           branch: newBranchName,
+          prUrl,
         })
       } catch (error) {
         console.error('Error creating branch or committing to GitHub:', error)

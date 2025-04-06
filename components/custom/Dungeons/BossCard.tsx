@@ -12,8 +12,6 @@ export default async function BossCard({ title, image, id, children }) {
 
   if (match && match[1]) {
     imageUrl = match[1]
-  } else {
-    if (id) console.log('Icon not found for ' + id)
   }
 
   if (image) imageUrl = `/static/images/${image}`

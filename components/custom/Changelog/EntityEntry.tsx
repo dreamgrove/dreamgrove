@@ -154,7 +154,6 @@ const EffectDisplay = ({ effect }) => {
 }
 
 const EffectDiff = ({ effect }) => {
-  //console.log(effect)
   if (effect.status == 'added') {
     return <EffectDisplay effect={effect} />
   }

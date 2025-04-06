@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { useEffect, useState, memo, useCallback, useMemo } from 'react'
+import { wowheadCache } from './wowheadCache'
+import WowheadClientIcon from './WowheadClientIcon'
 
 function formatUrl(url) {
   const parts = url.split('/')
@@ -17,46 +20,16 @@ function extractIdFromUrl(url) {
   return id
 }
 
-interface WowheadIconProps {
-  id: string
-  type: string
-  name: string
-  beta?: boolean
-  url?: string
-  size?: number
-  noLink?: boolean
-  noMargin?: boolean
+const qualityToColor = {
+  1: '#ffffff',
+  2: '#1eff00',
+  3: '#0070dd',
+  4: '#a335ee',
+  5: '#ff8000',
 }
 
-export const WowheadClientIcon = ({
-  id,
-  type,
-  name,
-  beta = false,
-  url = '',
-  size = 16,
-  noLink = false,
-  noMargin = false,
-}: WowheadIconProps) => {
-  const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
-
-  const image = (
-    <span
-      style={{ width: size - 1, height: size - 1 }}
-      className="mx-1 my-0 mb-[-3px] inline-block bg-main/50"
-    />
-  )
-
-  return noLink ? (
-    image
-  ) : (
-    <a href={whUrl} className="inline">
-      {image}
-    </a>
-  )
-}
-// A minimal version of the Wowhead component that doesn't require server-side rendering
-export default function WowheadClientVersion({
+// A minimal version of the Wowhead component that uses client-side fetching
+function WowheadClientVersion({
   id,
   name,
   type,
@@ -66,25 +39,132 @@ export default function WowheadClientVersion({
   url = '',
   showLabel = true,
 }) {
-  let display = name
-  let displayId = id
-  const linkColor = '#d57f43'
-  const quality = 1
+  // Use a cache key that's stable across component rerenders
+  const cacheKey = useMemo(() => {
+    const whUrl =
+      url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id || ''}`
+    return wowheadCache.generateKey(whUrl)
+  }, [id, type, beta, url])
 
-  if (url) {
-    displayId = extractIdFromUrl(url)
+  const [display, setDisplay] = useState(name || '')
+  const [linkColor, setLinkColor] = useState('#d57f43')
+  const [quality, setQuality] = useState(-1)
+  const [isLoading, setIsLoading] = useState(false)
+
+  let displayId = id
+
+  // Handle case when id is not provided
+  if (!id && type === 'spell' && typeof window !== 'undefined') {
+    // This would need to be adapted to client-side access of spellData
+    // For now, just use the URL if provided
+    if (url) {
+      displayId = extractIdFromUrl(url)
+    }
   }
 
   const whUrl =
-    url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
+    url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  if (!name) {
-    if (url) {
-      display = formatUrl(url)
-    } else {
-      display = 'name placeholder'
+  const fetchWowheadData = useCallback(async () => {
+    if (typeof window === 'undefined') return
+
+    // First check our client-side cache
+    const cachedData = wowheadCache.get(cacheKey)
+    if (cachedData) {
+      // Use cached data
+      if (cachedData.quality !== undefined) {
+        setQuality(cachedData.quality)
+      }
+
+      if (cachedData.linkColor) {
+        setLinkColor(cachedData.linkColor)
+      }
+
+      if (!name && cachedData.display) {
+        setDisplay(cachedData.display)
+      }
+
+      return // Skip the fetch if we have cached data
     }
-  }
+
+    setIsLoading(true)
+
+    try {
+      // Use our dedicated API for fetching Wowhead data
+      const apiUrl = `/api/wowhead-data?${new URLSearchParams({
+        id: displayId || '',
+        type,
+        name: name || '',
+        beta: beta ? 'true' : 'false',
+        url: url || '',
+      })}`
+
+      const res = await fetch(apiUrl)
+
+      if (!res.ok) {
+        throw new Error(`API returned status ${res.status}`)
+      }
+
+      const data = await res.json()
+
+      // Prepare the processed data for caching
+      const processedData: {
+        url: string
+        timestamp: number
+        display: string
+        quality?: number
+        linkColor?: string
+        icon?: string
+      } = {
+        url: whUrl,
+        timestamp: Date.now(),
+        display: data.display || name,
+      }
+
+      // Set display name from API
+      if (!name && data.display) {
+        setDisplay(data.display)
+      }
+
+      // Set quality and link color for items
+      if (data.quality !== undefined) {
+        processedData.quality = data.quality
+        processedData.linkColor = qualityToColor[data.quality] || '#d57f43'
+
+        setQuality(data.quality)
+        setLinkColor(qualityToColor[data.quality] || '#d57f43')
+      }
+
+      // Store icon if available
+      if (data.icon) {
+        processedData.icon = data.icon
+      }
+
+      // Store in our client-side cache
+      wowheadCache.set(cacheKey, processedData)
+    } catch (error: any) {
+      console.warn(
+        `Failed to fetch from Wowhead for ${type}=${displayId}: ${error.message || 'Unknown error'}`
+      )
+      // Use provided name or displayId as fallback
+      setDisplay(name || `${type}-${displayId}`)
+    } finally {
+      setIsLoading(false)
+    }
+  }, [whUrl, type, displayId, name, cacheKey, beta, url])
+
+  useEffect(() => {
+    // Only run fetch if we're in the browser
+    if (typeof window !== 'undefined') {
+      fetchWowheadData()
+    }
+
+    // Clean up expired cache entries occasionally
+    if (Math.random() < 0.1) {
+      // 10% chance on each mount
+      wowheadCache.cleanup()
+    }
+  }, [fetchWowheadData])
 
   const icon = noIcon ? null : (
     <WowheadClientIcon
@@ -100,7 +180,11 @@ export default function WowheadClientVersion({
   return disabled ? (
     <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
       {icon}
-      {showLabel && <span className="text-wrap break-words align-middle">{display}</span>}
+      {showLabel && (
+        <span className="text-wrap break-words align-middle">
+          {isLoading ? '(loading...)' : display}
+        </span>
+      )}
     </div>
   ) : (
     <a
@@ -108,8 +192,17 @@ export default function WowheadClientVersion({
       className={`inline decoration-2 q${quality}`}
       style={{ color: linkColor, textWrap: 'nowrap' }}
     >
-      {icon}
-      {showLabel && <span className="text-wrap break-words align-middle">{display}</span>}
+      {type != 'npc' && icon}
+      {showLabel && (
+        <span className="text-wrap break-words align-middle">
+          {isLoading ? '(loading...)' : display}
+        </span>
+      )}
     </a>
   )
 }
+
+export default memo(WowheadClientVersion, (prevProps, nextProps) => {
+  // Only re-render if id changes
+  return prevProps.id === nextProps.id
+})

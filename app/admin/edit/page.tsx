@@ -12,12 +12,14 @@ import CodeMirror from '@uiw/react-codemirror'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { javascript } from '@codemirror/lang-javascript'
 import { languages } from '@codemirror/language-data'
-import { EditorView } from '@codemirror/view'
+import { EditorView, Decoration, DecorationSet } from '@codemirror/view'
 import { darcula, darculaInit } from '@uiw/codemirror-theme-darcula'
+import { StateField, StateEffect, RangeSet } from '@codemirror/state'
 
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { tags } from '@lezer/highlight'
 import customMarkdownExtension from './customMarkdownExtension'
+import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
 
 // Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
@@ -30,6 +32,64 @@ function debounce<T extends (...args: any[]) => any>(
     timer = setTimeout(() => {
       func(...args)
     }, timeout)
+  }
+}
+
+// Add this function after the debounce function and before the main component
+function createErrorLineHighlighter() {
+  // Effect to add or remove error line highlight
+  const addErrorLine = StateEffect.define<{ line: number }>()
+  const clearErrorLines = StateEffect.define<null>()
+
+  // Create a decoration that will highlight the error line with a red background
+  const errorLineDecoration = Decoration.line({
+    attributes: { class: 'bg-red-100 dark:bg-red-900/40' },
+  })
+
+  // Define a state field that will track our error line decorations
+  const errorLineField = StateField.define<DecorationSet>({
+    create() {
+      return RangeSet.empty
+    },
+    update(decorations, tr) {
+      // Update decorations based on transaction effects
+      decorations = decorations.map(tr.changes)
+
+      for (const effect of tr.effects) {
+        if (effect.is(addErrorLine)) {
+          // Convert 1-indexed line to 0-indexed for internal use
+          const line = effect.value.line - 1
+          const pos = tr.state.doc.line(Math.max(1, Math.min(line + 1, tr.state.doc.lines)))
+          decorations = decorations.update({
+            add: [errorLineDecoration.range(pos.from)],
+          })
+        } else if (effect.is(clearErrorLines)) {
+          decorations = RangeSet.empty
+        }
+      }
+      return decorations
+    },
+    provide(field) {
+      return EditorView.decorations.from(field)
+    },
+  })
+
+  return {
+    field: errorLineField,
+    extension: errorLineField,
+    highlightLine: (view: EditorView, line: number) => {
+      view.dispatch({
+        effects: clearErrorLines.of(null),
+      })
+      view.dispatch({
+        effects: addErrorLine.of({ line }),
+      })
+    },
+    clearHighlights: (view: EditorView) => {
+      view.dispatch({
+        effects: clearErrorLines.of(null),
+      })
+    },
   }
 }
 
@@ -72,6 +132,7 @@ function FileEditor({ filePath }: { filePath: string }) {
   const { data: session, status } = useSession()
   const [rawContent, setRawContent] = useState<string>('')
   const [bodyContent, setBodyContent] = useState<string>('')
+  const [frontmatter, setFrontmatter] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState<boolean>(true)
   const [saving, setSaving] = useState<boolean>(false)
   const [viewMode, setViewMode] = useState<'edit' | 'preview' | 'split'>('edit')
@@ -81,9 +142,18 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const [splitPosition, setSplitPosition] = useState<number>(50) // Default 50% split
   const [isDragging, setIsDragging] = useState<boolean>(false)
+  // Add state for commit information and modals
+  const [commitTitle, setCommitTitle] = useState<string>('')
+  const [commitMessage, setCommitMessage] = useState<string>('')
+  const [showCommitModal, setShowCommitModal] = useState<boolean>(false)
+  const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false)
+  const [prUrl, setPrUrl] = useState<string | null>(null)
   const router = useRouter()
   const workerRef = useRef<Worker | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const [errorLine, setErrorLine] = useState<number | null>(null)
+  const editorRef = useRef<EditorView | null>(null)
+  const errorHighlighterRef = useRef<ReturnType<typeof createErrorLineHighlighter> | null>(null)
 
   // Extract filename from path for display
   const fileName = filePath.split('/').pop() || 'Unknown'
@@ -162,6 +232,7 @@ function FileEditor({ filePath }: { filePath: string }) {
       workerRef.current.onmessage = (event) => {
         if (event.data.type === 'parseResult') {
           setBodyContent(event.data.content)
+          setFrontmatter(event.data.data)
         } else if (event.data.type === 'error') {
           console.error('Error in worker:', event.data.message)
         }
@@ -197,8 +268,9 @@ function FileEditor({ filePath }: { filePath: string }) {
           } else {
             // Fallback if worker isn't available
             try {
-              const { content: body } = matter(content)
+              const { content: body, data } = matter(content)
               setBodyContent(body)
+              setFrontmatter(data)
             } catch (err) {
               console.error('Error parsing markdown content:', err)
             }
@@ -236,8 +308,32 @@ function FileEditor({ filePath }: { filePath: string }) {
   const handleRawContentChange = (newContent: string) => {
     setRawContent(newContent)
 
+    // Clear error line when content changes
+    setErrorLine(null)
+
     // Use the debounced function to update the preview
     debouncedUpdateContent(newContent)
+  }
+
+  // Modify the handleSaveClick function to open the commit modal
+  const handleSaveClick = () => {
+    // Generate a default commit title based on the file path
+    const fileNameWithoutExt = fileName.replace(/\.[^/.]+$/, '')
+    const defaultTitle = `Update ${fileNameWithoutExt} content`
+    setCommitTitle(defaultTitle)
+    setCommitMessage('')
+    setShowCommitModal(true)
+  }
+
+  // Handle the continue action from commit modal
+  const handleCommitSubmit = () => {
+    setShowCommitModal(false)
+    setShowConfirmModal(true)
+  }
+
+  // Handle the final confirmation
+  const handleConfirmSubmit = () => {
+    saveChanges()
   }
 
   const saveChanges = async () => {
@@ -255,6 +351,9 @@ function FileEditor({ filePath }: { filePath: string }) {
         body: JSON.stringify({
           filePath,
           content: rawContent,
+          commitTitle,
+          commitMessage,
+          createPr: true, // Indicate we want to create a PR
         }),
       })
 
@@ -269,17 +368,25 @@ function FileEditor({ filePath }: { filePath: string }) {
 
       const data = await res.json()
 
-      if (data.message) {
-        setSaveMessage(data.message)
+      if (data.prUrl) {
+        // If we got a PR URL, show the success modal and redirect
+        setPrUrl(data.prUrl)
+        setShowConfirmModal(false)
 
-        // Determine the proper return URL
-        // For compendium files, redirect to the compendium view
+        // Redirect to the PR after a short delay
+        setTimeout(() => {
+          window.location.href = data.prUrl
+        }, 2000)
+      } else if (data.message) {
+        setSaveMessage(data.message)
+        setShowConfirmModal(false)
+
+        // Legacy redirect logic
         const isCompendium =
           fileName.toLowerCase() === 'compendium.mdx' && filePath.includes('blog/')
 
         setTimeout(() => {
           if (isCompendium) {
-            // Extract the blog slug from the path (e.g., blog/balance/compendium.mdx -> balance)
             const blogSlug = filePath.split('/').slice(1, -1).join('/')
             router.push(`/blog/${blogSlug}/compendium`)
           } else {
@@ -287,10 +394,12 @@ function FileEditor({ filePath }: { filePath: string }) {
           }
         }, 2000)
       } else {
+        setShowConfirmModal(false)
         router.push('/admin/select')
       }
     } catch (err: Error | unknown) {
       setError(err instanceof Error ? err.message : 'Unknown error occurred')
+      setShowConfirmModal(false)
     } finally {
       setSaving(false)
     }
@@ -366,6 +475,25 @@ function FileEditor({ filePath }: { filePath: string }) {
       }
     }
   }, [])
+
+  // Initialize the error line highlighter only once
+  useEffect(() => {
+    errorHighlighterRef.current = createErrorLineHighlighter()
+  }, [])
+
+  // Apply or clear error line highlight when errorLine changes
+  useEffect(() => {
+    if (!editorRef.current || !errorHighlighterRef.current) return
+
+    if (errorLine !== null) {
+      errorHighlighterRef.current.highlightLine(
+        editorRef.current,
+        errorLine + Object.keys(frontmatter).length + 2 // +2 for the frontmatter delimiters
+      )
+    } else {
+      errorHighlighterRef.current.clearHighlights(editorRef.current)
+    }
+  }, [errorLine, frontmatter])
 
   if (status === 'loading') {
     return <div className="flex min-h-screen items-center justify-center">Loading...</div>
@@ -464,7 +592,7 @@ function FileEditor({ filePath }: { filePath: string }) {
             </button>
           </div>
           <button
-            onClick={saveChanges}
+            onClick={handleSaveClick}
             disabled={saving}
             className="rounded-md bg-blue-600 px-4 py-2 text-white disabled:opacity-50"
           >
@@ -535,7 +663,10 @@ function FileEditor({ filePath }: { filePath: string }) {
                   { tag: t.operator, color: '#989898' },
                 ],
               })}
-              extensions={mixedLanguageSupport}
+              extensions={[
+                ...mixedLanguageSupport,
+                ...(errorHighlighterRef.current ? [errorHighlighterRef.current.extension] : []),
+              ]}
               placeholder="Enter content with frontmatter and MDX..."
               basicSetup={{
                 lineNumbers: true,
@@ -545,6 +676,9 @@ function FileEditor({ filePath }: { filePath: string }) {
                 autocompletion: true,
                 closeBrackets: true,
                 searchKeymap: true,
+              }}
+              onCreateEditor={(view) => {
+                editorRef.current = view
               }}
             />
           </div>
@@ -561,19 +695,212 @@ function FileEditor({ filePath }: { filePath: string }) {
 
         {(viewMode === 'preview' || viewMode === 'split') && (
           <div
-            className={`${viewMode === 'split' ? '' : 'w-full'} min-h-[70vh] max-w-none overflow-auto rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
+            className={`${viewMode === 'split' ? 'px-10' : 'px:20 w-full lg:px-[20rem]'} min-h-[70vh] max-w-none overflow-auto rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
             style={viewMode === 'split' ? { width: `${100 - splitPosition}%` } : undefined}
             suppressHydrationWarning
           >
             <div className="mb-4 italic text-gray-500 dark:text-gray-400">
-              Live Preview - Custom components appear below. Server components may differ.
+              Live Preview - Some components may differ from the final version.
             </div>
             <Suspense fallback={<div className="italic text-gray-500">Loading preview...</div>}>
-              <MDXPreview content={bodyContent} />
+              {filePath.includes('raids') || filePath.includes('dungeons') ? (
+                <MDXPreview
+                  setErrorLine={setErrorLine}
+                  content={'<RoleSelector isPreview={true}/>' + bodyContent}
+                />
+              ) : (
+                <MDXPreview setErrorLine={setErrorLine} content={bodyContent} />
+              )}
             </Suspense>
           </div>
         )}
       </div>
+
+      <CommitModal
+        isOpen={showCommitModal}
+        onClose={() => setShowCommitModal(false)}
+        title={commitTitle}
+        setTitle={setCommitTitle}
+        message={commitMessage}
+        setMessage={setCommitMessage}
+        onSubmit={handleCommitSubmit}
+      />
+
+      <ConfirmModal
+        isOpen={showConfirmModal}
+        onClose={() => setShowConfirmModal(false)}
+        title={commitTitle}
+        message={commitMessage}
+        onConfirm={handleConfirmSubmit}
+        isLoading={saving}
+      />
+
+      <PrSuccessModal isOpen={!!prUrl} prUrl={prUrl} />
     </div>
+  )
+}
+
+// Modal backdrop component
+function ModalBackdrop({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <div
+        className="max-h-[90vh] w-full max-w-md overflow-auto rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {children}
+      </div>
+      <div className="absolute inset-0 -z-10" onClick={onClose}></div>
+    </div>
+  )
+}
+
+// Commit modal component
+function CommitModal({
+  isOpen,
+  onClose,
+  title,
+  setTitle,
+  message,
+  setMessage,
+  onSubmit,
+}: {
+  isOpen: boolean
+  onClose: () => void
+  title: string
+  setTitle: (title: string) => void
+  message: string
+  setMessage: (message: string) => void
+  onSubmit: () => void
+}) {
+  if (!isOpen) return null
+
+  return (
+    <ModalBackdrop onClose={onClose}>
+      <h2 className="mb-4 text-2xl font-bold">Create Pull Request</h2>
+      <div className="mb-4">
+        <label htmlFor="commit-title" className="mb-2 block text-sm font-medium">
+          Title (required)
+        </label>
+        <input
+          id="commit-title"
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="Brief description of changes"
+          required
+        />
+      </div>
+      <div className="mb-6">
+        <label htmlFor="commit-message" className="mb-2 block text-sm font-medium">
+          Description (optional)
+        </label>
+        <textarea
+          id="commit-message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700"
+          placeholder="More detailed explanation of changes"
+          rows={4}
+        />
+      </div>
+      <div className="flex justify-end space-x-3">
+        <button
+          onClick={onClose}
+          className="rounded-md border border-gray-300 px-4 py-2 dark:border-gray-600"
+        >
+          Cancel
+        </button>
+        <button
+          onClick={onSubmit}
+          disabled={!title.trim()}
+          className="rounded-md bg-blue-600 px-4 py-2 text-white disabled:opacity-50"
+        >
+          Continue
+        </button>
+      </div>
+    </ModalBackdrop>
+  )
+}
+
+// Confirmation modal component
+function ConfirmModal({
+  isOpen,
+  onClose,
+  title,
+  message,
+  onConfirm,
+  isLoading,
+}: {
+  isOpen: boolean
+  onClose: () => void
+  title: string
+  message: string
+  onConfirm: () => void
+  isLoading: boolean
+}) {
+  if (!isOpen) return null
+
+  return (
+    <ModalBackdrop onClose={onClose}>
+      <h2 className="mb-4 text-2xl font-bold">Confirm Changes</h2>
+      <div className="mb-4">
+        <p className="mb-2 font-medium">Title:</p>
+        <p className="rounded-md bg-gray-100 p-2 dark:bg-gray-700">{title}</p>
+      </div>
+      {message && (
+        <div className="mb-4">
+          <p className="mb-2 font-medium">Description:</p>
+          <p className="whitespace-pre-wrap rounded-md bg-gray-100 p-2 dark:bg-gray-700">
+            {message}
+          </p>
+        </div>
+      )}
+      <p className="mb-6">
+        This will create a pull request with your changes. Are you sure you want to proceed?
+      </p>
+      <div className="flex justify-end space-x-3">
+        <button
+          onClick={onClose}
+          className="rounded-md border border-gray-300 px-4 py-2 dark:border-gray-600"
+          disabled={isLoading}
+        >
+          Cancel
+        </button>
+        <button
+          onClick={onConfirm}
+          disabled={isLoading}
+          className="rounded-md bg-blue-600 px-4 py-2 text-white disabled:opacity-50"
+        >
+          {isLoading ? 'Creating PR...' : 'Create PR'}
+        </button>
+      </div>
+    </ModalBackdrop>
+  )
+}
+
+// PR success modal
+function PrSuccessModal({ isOpen, prUrl }: { isOpen: boolean; prUrl: string | null }) {
+  if (!isOpen || !prUrl) return null
+
+  return (
+    <ModalBackdrop onClose={() => {}}>
+      <h2 className="mb-4 text-2xl font-bold text-green-600">Pull Request Created!</h2>
+      <p className="mb-6">
+        Your changes have been successfully submitted as a pull request. You'll be redirected to
+        GitHub in a moment.
+      </p>
+      <div className="flex justify-center">
+        <a
+          href={prUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-md bg-blue-600 px-4 py-2 text-white"
+        >
+          View Pull Request
+        </a>
+      </div>
+    </ModalBackdrop>
   )
 }

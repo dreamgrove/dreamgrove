@@ -93,16 +93,6 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                   <FaHistory className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>
                 </a>
-
-                {isCompendium && (
-                  <Link
-                    href={`/blog/${specSlug}/compendium/edit`}
-                    className="ml-4 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:text-base"
-                  >
-                    <FaEdit className="mr-2 inline" />
-                    <span className="inline align-top">Edit</span>
-                  </Link>
-                )}
               </div>
               <div
                 style={{ counterReset: 'heading' }}

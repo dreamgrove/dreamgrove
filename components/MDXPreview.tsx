@@ -24,9 +24,11 @@ import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
 import YouTube from './custom/YouTube'
 import Image from 'next/image'
 import TalentsClientVersion from './csm/TalentsClientVersion'
-
+import RoleSelector from './custom/Dungeons/RoleSelector'
+import BossCardClientVersion from './csm/BossCardClientVersion'
 interface MDXPreviewProps {
   content: string
+  setErrorLine?: (line: number | null) => void
 }
 
 interface MdxModule {
@@ -68,6 +70,7 @@ const components: MDXComponents = {
       wrappedImage
     )
   },
+  RoleSelector: RoleSelector,
   div: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
@@ -103,6 +106,7 @@ const components: MDXComponents = {
     )
   },
   Talents: TalentsClientVersion,
+  BossCard: BossCardClientVersion,
   Collapsible,
   YouTube: YouTube,
   Checkbox: CheckboxClientVersion,
@@ -196,7 +200,7 @@ const components: MDXComponents = {
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 
-const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
+const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPreviewProps) {
   const [mdxModule, setMdxModule] = useState<MdxModule | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [isEvaluating, setIsEvaluating] = useState<boolean>(false)
@@ -220,11 +224,47 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
         const evaluated = await evaluate(mdxContent, evaluateOptions)
         setMdxModule(evaluated as MdxModule)
       } catch (err: unknown) {
-        console.error('MDX Evaluation Error:', err)
         const message =
           err instanceof Error
             ? err.message
             : 'An unknown error occurred during preview generation.'
+
+        if (err instanceof Error && setErrorLine) {
+          // Parse error message to extract line number
+          const lineMatch = err.message.match(/(?:at line (\d+)|^Line (\d+))/i)
+          const lineNumber = lineMatch ? parseInt(lineMatch[1] || lineMatch[2]) : null
+
+          // If there's a stack trace, try to extract filename and line information
+          const stackMatch = err.stack?.match(/(?:\(|\s)([^)]+):(\d+):(\d+)/)
+          const fileLineNumber = stackMatch ? parseInt(stackMatch[2]) : null
+
+          // For syntax errors in MDX content
+          const syntaxMatch = err.message.match(/position\s+\{[\s\S]*?line:\s*(\d+)/)
+          const syntaxLine = syntaxMatch ? parseInt(syntaxMatch[1]) : null
+
+          // Try to find any numbers that look like line numbers
+          const numberMatch = err.message.match(/\b(\d+)(?::\d+)?\b/)
+          const possibleLine = numberMatch ? parseInt(numberMatch[1]) : null
+
+          // Choose the most likely line number
+          const extractedLine = lineNumber || syntaxLine || fileLineNumber || possibleLine
+
+          // Debug information
+          console.debug('MDX Error Details:', {
+            message: err.message,
+            extractedLine,
+            lineMatch,
+            stackMatch,
+            syntaxMatch,
+          })
+
+          if (extractedLine) {
+            setErrorLine(extractedLine)
+          } else {
+            setErrorLine(null)
+          }
+        }
+
         setError(`Preview Error: ${message}`)
         setMdxModule(null)
       } finally {
@@ -246,7 +286,7 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
   const LiveComponent = mdxModule ? mdxModule.default : null
 
   return (
-    <div className="mdx-preview bg-transparent text-gray-900 dark:text-gray-100">
+    <div className="mdx-preview divide-gray-200 bg-transparent pb-8 text-gray-900 dark:divide-gray-700 dark:text-gray-100">
       {error && (
         <div className="my-2 rounded-md border border-red-400 bg-red-50 p-3 text-red-700 dark:border-red-600 dark:bg-red-900 dark:text-red-300">
           {error}
@@ -256,7 +296,7 @@ const MDXPreview = memo(function MDXPreview({ content }: MDXPreviewProps) {
         <div className="italic text-gray-500 dark:text-gray-400">Generating preview...</div>
       )}
       <div
-        className={`${LiveComponent && !error ? 'prose max-w-none px-16 pb-8 pt-4 text-base dark:prose-invert sm:pt-0' : ''}`}
+        className={`${LiveComponent && !error ? 'prose mx-0 max-w-none pb-8 pt-4 text-base dark:prose-invert sm:pt-0 lg:mx-8' : ''}`}
       >
         {LiveComponent && !isEvaluating ? (
           <LiveComponent />

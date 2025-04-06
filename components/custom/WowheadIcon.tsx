@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import fetch from 'node-fetch'
+import { fetchWowheadData } from '../../app/api/wowhead-data/utils'
 
 interface WowheadIconProps {
   id: string
@@ -34,14 +34,17 @@ export default async function WowheadIcon({
   )
 
   try {
-    const res = await fetch(whUrl, { timeout: 5000 })
-    const text = await res.text()
-    const regex = new RegExp(`"${id}":\\{"name_enus":"[^"]+".*?,"icon":"([^"]+)"`)
-    const match = regex.exec(text)
+    // Use the shared function directly
+    const data = await fetchWowheadData({
+      id,
+      type,
+      name,
+      beta,
+      url,
+    })
 
-    if (match && match[1]) {
-      const iconFilename = match[1]
-      const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`
+    if (data.icon) {
+      const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${data.icon}.jpg`
 
       const image = (
         <Image

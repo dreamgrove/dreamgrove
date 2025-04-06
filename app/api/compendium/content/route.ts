@@ -25,8 +25,6 @@ export async function GET(request: Request) {
     const { data: userData } = await octokit.rest.users.getAuthenticated()
     const username = userData.login
 
-    console.log('Authenticated user:', username)
-
     // Check repository permissions directly instead of organization membership
     try {
       // This checks if the user has permissions on the repository
@@ -35,8 +33,6 @@ export async function GET(request: Request) {
         repo: REPO_NAME,
         username: username,
       })
-
-      console.log('User repository permission:', repoPermission.permission)
 
       // Allow access for users with push (write) or admin permissions
       if (!['admin', 'write', 'maintain'].includes(repoPermission.permission)) {
