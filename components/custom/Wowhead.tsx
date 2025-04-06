@@ -1,31 +1,10 @@
-import fetch from 'node-fetch'
 import spellData from '../../spellData.json'
 import WowheadIcon from './WowheadIcon'
-
-function formatUrl(url) {
-  const parts = url.split('/')
-  const lastPart = parts.pop()
-  const formatted = lastPart
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
-  return formatted
-}
-
-function extractIdFromUrl(url) {
-  const parts = url.split('/')
-  const lastPart = parts[parts.length - 1]
-  const id = lastPart.split('-')[0]
-  return id
-}
-
-const qualityToColor = {
-  1: '#ffffff',
-  2: '#1eff00',
-  3: '#0070dd',
-  4: '#a335ee',
-  5: '#ff8000',
-}
+import {
+  fetchWowheadData,
+  qualityToColor,
+  extractIdFromUrl,
+} from '../../app/api/wowhead-data/utils'
 
 /*This whole component is retarded because wowhead is retarded*/
 
@@ -46,9 +25,9 @@ export default async function Wowhead({
 
   if (!id) {
     if (type == 'spell') {
-      const url = spellData[name]
-      if (url) {
-        displayId = extractIdFromUrl(url)
+      const spellId = spellData[name]
+      if (spellId) {
+        displayId = spellId
       }
     } else {
       throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
@@ -58,26 +37,36 @@ export default async function Wowhead({
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  const res = await fetch(whUrl)
+  try {
+    // Use the shared function directly
+    const data = await fetchWowheadData({
+      id: displayId,
+      type,
+      name,
+      beta,
+      url,
+    })
 
-  if (type == 'item') {
-    const text = await res.text()
-    const qualityRegex = /<b class=\\"q(\d+)\\">/
-    const qualityMatch = text.match(qualityRegex)
-
-    if (qualityMatch && qualityMatch[1]) {
-      linkColor = qualityToColor[qualityMatch[1]]
-      quality = qualityMatch[1]
+    if (data.quality !== undefined) {
+      quality = data.quality
+      linkColor = qualityToColor[data.quality] || linkColor
     }
+
+    if (!name && data.display) {
+      display = data.display
+    }
+  } catch (error: any) {
+    console.warn(
+      `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
+    )
+    // Use provided name or displayId as fallback
+    display = name || `${type}-${displayId}`
   }
 
-  if (!name) {
-    display = formatUrl(res.url)
-  }
-
-  const icon = noIcon ? null : (
-    <WowheadIcon id={displayId} type={type} name={display} beta={beta} url={url} noLink={true} />
-  )
+  const icon =
+    noIcon || type === 'npc' ? null : (
+      <WowheadIcon id={displayId} type={type} name={display} beta={beta} url={url} noLink={true} />
+    )
 
   return disabled ? (
     <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>

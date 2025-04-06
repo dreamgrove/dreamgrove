@@ -37,8 +37,6 @@ const customInlineParser: InlineParser = {
     // If we didn't find a closing bracket, this isn't our syntax
     if (end == cx.end) return -1
 
-    console.log('Parsing custom inline syntax:', cx.text.slice(pos, end + 1))
-
     // Add the opening [* mark
     const elements: any[] = [cx.elt(CustomInlineMark, pos, pos + 2)]
 
@@ -58,13 +56,11 @@ const customInlineParser: InlineParser = {
           // If we have accumulated text before this operator, add it as an element
           if (tokenStart < current) {
             const element = cx.text.slice(tokenStart, current)
-            console.log('Adding element:', element, 'from', tokenStart, 'to', current)
             elements.push(cx.elt(CustomInlineElement, tokenStart, current))
           }
 
           // Add the operator
           const operator = cx.text.slice(current, current + 2)
-          console.log('Adding operator:', operator, 'from', current, 'to', current + 2)
           elements.push(cx.elt(CustomInlineOperator, current, current + 2))
 
           current += 2
@@ -79,7 +75,6 @@ const customInlineParser: InlineParser = {
     // Add any remaining text as an element
     if (tokenStart < current) {
       const finalElement = cx.text.slice(tokenStart, current)
-      console.log('Adding final element:', finalElement, 'from', tokenStart, 'to', current)
       elements.push(cx.elt(CustomInlineElement, tokenStart, current))
     }
 

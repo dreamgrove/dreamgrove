@@ -1,4 +1,4 @@
-import { WowheadClientIcon } from './WowheadClientVersion'
+import WowheadClientIcon from './WowheadClientIcon'
 import React, { ReactNode } from 'react'
 import { useLogger } from '@/components/hooks/useLogger'
 

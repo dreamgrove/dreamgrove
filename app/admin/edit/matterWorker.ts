@@ -7,12 +7,13 @@ const ctx: Worker = self as any
 ctx.addEventListener('message', (event) => {
   if (event.data.type === 'parse') {
     try {
-      const { content } = matter(event.data.content || '')
+      const { data, content } = matter(event.data.content || '')
 
       // Send the parsed content back to the main thread
       ctx.postMessage({
         type: 'parseResult',
         content,
+        data,
       })
     } catch (err) {
       // If parsing fails, send back an error

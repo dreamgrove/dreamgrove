@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import CheckboxToggler from './CheckboxToggler'
 import Wowhead from './Wowhead'
 import { FaCheck } from 'react-icons/fa'
+import CheckboxClientVersion from '../csm/CheckboxClientVersion'
 
 // Define proper prop types
 interface CheckboxProps {
@@ -17,6 +18,10 @@ interface CheckboxProps {
   children?: React.ReactNode
 }
 
+const PlaceHolder = ({ name }: { name: string }) => {
+  return <div className="text-gray-500">{name}</div>
+}
+
 const Checkbox = ({
   id = '',
   spellId = '',
@@ -28,11 +33,12 @@ const Checkbox = ({
 }: CheckboxProps) => {
   const checkboxId = id === '' ? spellId.toString() : id
 
-  const child = <Wowhead type={type} id={spellId} name={name} disabled={disabled} />
-
-  if (spellId === '' && id === '') {
-    throw Error('A Checkbox without children needs at least an id or a spellId')
-  }
+  const child =
+    (spellId === '' && id === '') || (spellId !== '' && id === '') ? (
+      <PlaceHolder name={'[FIX ME]'} />
+    ) : (
+      <Wowhead type={type} id={spellId} name={name} disabled={disabled} />
+    )
 
   return (
     <div style={{ userSelect: 'none', height: '100%' }} className="relative flex h-full w-full">

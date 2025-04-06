@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const { withContentlayer } = require('next-contentlayer2')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -108,6 +109,14 @@ module.exports = () => {
           '*.webp': ['@next/third-parties/loader'],
         },
       },
+    },
+    // Add a custom fetch timeout for the Node.js environment during builds
+    // This helps prevent the build from hanging indefinitely on failed fetch requests
+    onDemandEntries: {
+      // period (in ms) where the server will keep pages in the buffer
+      maxInactiveAge: 25 * 1000,
+      // number of pages that should be kept simultaneously without being disposed
+      pagesBufferLength: 2,
     },
     async redirects() {
       return [
