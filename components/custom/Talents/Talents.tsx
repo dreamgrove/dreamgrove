@@ -8,6 +8,7 @@ import {
 import { ClassTreeLayout, SpecTreeLayout, HeroTreeLayout } from './TalentTreeLayout'
 import TalentsDropdown from './TalentsDropdown'
 import TalentTreeClient from './TalentTreeClient'
+import dynamic from 'next/dynamic'
 
 // Loading component for the talent tree
 function TalentTreeLoading() {
@@ -522,6 +523,10 @@ function parseTalentString(talentString: string) {
   }
 }
 
+const DynamicTalentTree = dynamic(() => import('./TalentTreeClient'), {
+  loading: () => <TalentTreeLoading />,
+})
+
 export default function Talents({
   talents = '',
   viewOnly = false,
@@ -573,7 +578,7 @@ export default function Talents({
   return (
     <TalentsDropdown name={name}>
       <div className="flex flex-col gap-4">
-        <TalentTreeClient
+        <DynamicTalentTree
           classTree={classTree}
           specTree={specTree}
           heroTree={heroTree}
