@@ -26,7 +26,7 @@ export default async function WowheadIcon({
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
-  if (iconId === '') {
+  if (iconId === undefined) {
     try {
       const data = await fetchWowheadData({
         id,
