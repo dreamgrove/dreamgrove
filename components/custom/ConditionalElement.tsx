@@ -98,8 +98,7 @@ const ConditionalElement: React.FC<ConditionalElementProps> = ({
   if (type === 'li') {
     return <li className={`${shouldRender ? 'list-item' : 'hidden'}`}>{children}</li>
   }
-
-  return shouldRender ? children : null
+  return <div className={`${shouldRender ? 'block' : 'hidden'}`}>{children}</div>
 }
 
 export default React.memo(ConditionalElement)
