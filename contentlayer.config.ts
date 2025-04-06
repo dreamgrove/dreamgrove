@@ -322,6 +322,7 @@ export default makeSource({
       remarkCodeTitles,
       remarkMath,
       remarkImgToJsx,
+      remarkSpell,
     ],
     rehypePlugins: [
       rehypeSlug,
