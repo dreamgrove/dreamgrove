@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo, memo, useCallback } from 'react'
 
 interface TalentTreeClientProps {
   classTree: React.ReactNode
@@ -10,13 +10,13 @@ interface TalentTreeClientProps {
   viewOnly?: boolean
 }
 
-export default function TalentTreeClient({
+const TalentTreeClient = ({
   classTree,
   specTree,
   heroTree,
   talentString,
   viewOnly = false,
-}: TalentTreeClientProps) {
+}: TalentTreeClientProps) => {
   const [activeTree, setActiveTree] = useState('full')
   const [copyButtonText, setCopyButtonText] = useState('Copy Talent String')
   const [isMobile, setIsMobile] = useState(false)
@@ -54,7 +54,7 @@ export default function TalentTreeClient({
     }
   }, [isMobile, activeTree])
 
-  const handleCopyTalentString = async () => {
+  const handleCopyTalentString = useCallback(async () => {
     try {
       setCopyError(null)
       await navigator.clipboard.writeText(talentString)
@@ -71,10 +71,16 @@ export default function TalentTreeClient({
         setCopyError(null)
       }, 3000)
     }
-  }
+  }, [talentString])
+
+  // Memoize tree change handlers
+  const setFullTree = useCallback(() => setActiveTree('full'), [])
+  const setClassTree = useCallback(() => setActiveTree('class'), [])
+  const setSpecTree = useCallback(() => setActiveTree('spec'), [])
+  const setHeroTree = useCallback(() => setActiveTree('hero'), [])
 
   // Calculate the width classes based on which trees are visible
-  const getWidthClass = () => {
+  const widthClasses = useMemo(() => {
     if (activeTree === 'full') {
       // Class and Spec get 40% each, Hero gets 20%
       return {
@@ -90,15 +96,31 @@ export default function TalentTreeClient({
         heroWidth: 'w-full',
       }
     }
-  }
+  }, [activeTree])
 
-  const { classWidth, specWidth, heroWidth } = getWidthClass()
+  const { classWidth, specWidth, heroWidth } = widthClasses
+
+  const fullTreeView = useMemo(
+    () => (
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
+        <div className={`${isMobile ? 'w-full' : classWidth}`}>{classTree}</div>
+        <div className={`${isMobile ? 'w-full' : heroWidth}`}>{heroTree}</div>
+        <div className={`${isMobile ? 'w-full' : specWidth}`}>{specTree}</div>
+      </div>
+    ),
+    [isMobile, classWidth, heroWidth, specWidth, classTree, heroTree, specTree]
+  )
+
+  // Memoize individual tree views
+  const classTreeView = useMemo(() => <div className="w-full">{classTree}</div>, [classTree])
+  const specTreeView = useMemo(() => <div className="w-full">{specTree}</div>, [specTree])
+  const heroTreeView = useMemo(() => <div className="w-full">{heroTree}</div>, [heroTree])
 
   return (
     <div className="grid-co flex flex-col gap-4">
       <div className="flex flex-wrap gap-2">
         <button
-          onClick={() => setActiveTree('full')}
+          onClick={setFullTree}
           className={`rounded px-3 py-1 ${
             activeTree === 'full'
               ? 'bg-yellow-600 text-white'
@@ -108,7 +130,7 @@ export default function TalentTreeClient({
           Full
         </button>
         <button
-          onClick={() => setActiveTree('class')}
+          onClick={setClassTree}
           className={`rounded px-3 py-1 ${
             activeTree === 'class'
               ? 'bg-yellow-600 text-white'
@@ -118,7 +140,7 @@ export default function TalentTreeClient({
           Class
         </button>
         <button
-          onClick={() => setActiveTree('spec')}
+          onClick={setSpecTree}
           className={`rounded px-3 py-1 ${
             activeTree === 'spec'
               ? 'bg-yellow-600 text-white'
@@ -128,7 +150,7 @@ export default function TalentTreeClient({
           Spec
         </button>
         <button
-          onClick={() => setActiveTree('hero')}
+          onClick={setHeroTree}
           className={`rounded px-3 py-1 ${
             activeTree === 'hero'
               ? 'bg-yellow-600 text-white'
@@ -146,16 +168,10 @@ export default function TalentTreeClient({
       )}
 
       <div className="relative">
-        {activeTree === 'full' && (
-          <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
-            <div className={`${isMobile ? 'w-full' : classWidth}`}>{classTree}</div>
-            <div className={`${isMobile ? 'w-full' : heroWidth}`}>{heroTree}</div>
-            <div className={`${isMobile ? 'w-full' : specWidth}`}>{specTree}</div>
-          </div>
-        )}
-        {activeTree === 'class' && <div className="w-full">{classTree}</div>}
-        {activeTree === 'spec' && <div className="w-full">{specTree}</div>}
-        {activeTree === 'hero' && <div className="w-full">{heroTree}</div>}
+        {activeTree === 'full' && fullTreeView}
+        {activeTree === 'class' && classTreeView}
+        {activeTree === 'spec' && specTreeView}
+        {activeTree === 'hero' && heroTreeView}
       </div>
 
       {/* Add button to copy talent string at the bottom */}
@@ -176,3 +192,5 @@ export default function TalentTreeClient({
     </div>
   )
 }
+
+export default memo(TalentTreeClient)

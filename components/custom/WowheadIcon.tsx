@@ -10,6 +10,7 @@ interface WowheadIconProps {
   size?: number
   noLink?: boolean
   noMargin?: boolean
+  iconId?: string
 }
 
 export default async function WowheadIcon({
@@ -21,59 +22,42 @@ export default async function WowheadIcon({
   size = 16,
   noLink = false,
   noMargin = false,
+  iconId,
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
-  // Create a fallback image element
-  const fallbackImage = (
-    <span
-      className={`inline-block rounded-sm bg-gray-200 ${!noMargin && 'mr-1'}`}
-      style={{ width: `${size}px`, height: `${size}px` }}
-      title={`${name} (icon unavailable)`}
+  if (iconId === '') {
+    try {
+      const data = await fetchWowheadData({
+        id,
+        type,
+        name,
+        beta,
+        url,
+      })
+      iconId = data.icon
+    } catch (error: any) {
+      console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
+    }
+  }
+
+  const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg`
+  const image = (
+    <Image
+      src={imageUrl}
+      alt={`${name} icon`}
+      width={size}
+      height={size}
+      className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
     />
   )
 
-  try {
-    // Use the shared function directly
-    const data = await fetchWowheadData({
-      id,
-      type,
-      name,
-      beta,
-      url,
-    })
-
-    if (data.icon) {
-      const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${data.icon}.jpg`
-
-      const image = (
-        <Image
-          src={imageUrl}
-          alt={`${name} icon`}
-          width={size}
-          height={size}
-          className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
-        />
-      )
-
-      return noLink ? (
-        image
-      ) : (
-        <a href={whUrl} className="inline">
-          {image}
-        </a>
-      )
-    }
-  } catch (error: any) {
-    console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
-  }
-
   // Return fallback if fetch fails or no icon is found
   return noLink ? (
-    fallbackImage
+    image
   ) : (
     <a href={whUrl} className="inline">
-      {fallbackImage}
+      {image}
     </a>
   )
 }

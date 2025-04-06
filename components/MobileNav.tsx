@@ -4,12 +4,17 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState, useCallback, useEffect } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
-import WrapperTest from './WrapperTest'
 import { usePathname } from 'next/navigation'
-import TableOfContents from './custom/TableOfContents'
+import TableOfContents from './custom/TableOfContents/TableOfContents'
 import ErrorBoundary from './custom/ErrorBoundary'
 
-const MobileNav = ({ toc }: { toc?: string }) => {
+interface Chapter {
+  value: string
+  depth: number
+  url: string
+}
+
+const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
   const [navShow, setNavShow] = useState(false)
   const path = usePathname()
 
@@ -94,7 +99,7 @@ const MobileNav = ({ toc }: { toc?: string }) => {
                         </div>
                       ))}
                       <div className="pb-8">
-                        <TableOfContents chapters={toc} inSidebar toggleNav={onToggleNav} />
+                        <TableOfContents chapters={toc || []} inSidebar toggleNav={onToggleNav} />
                       </div>
                     </nav>
 

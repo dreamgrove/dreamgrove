@@ -12,7 +12,6 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import WelcomePopover from '@/components/WelcomePopover'
-import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import { Providers } from './providers'
 
 const space_grotesk = Space_Grotesk({
@@ -90,14 +89,12 @@ export default function RootLayout({ children }: LayoutProps) {
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
           <Providers>
             <ThemeProviders>
-              <CheckboxProvider>
-                <Analytics />
-                <WelcomePopover />
-                <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                  <main className="mb-auto">{children}</main>
-                  <Footer />
-                </SearchProvider>
-              </CheckboxProvider>
+              <Analytics />
+              <WelcomePopover />
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <main className="mb-auto">{children}</main>
+                <Footer />
+              </SearchProvider>
             </ThemeProviders>
           </Providers>
         </div>

@@ -2,9 +2,15 @@ import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import { ReactNode } from 'react'
 
+interface Chapter {
+  value: string
+  depth: number
+  url: string
+}
+
 interface PageWrapperProps {
   title?: string
-  toc?: string
+  toc?: Chapter[]
   children: ReactNode
   showTitle?: boolean
   isBlog?: boolean

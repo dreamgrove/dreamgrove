@@ -6,7 +6,6 @@ import {
 } from './TalentTreeUtils'
 
 import { ClassTreeLayout, SpecTreeLayout, HeroTreeLayout } from './TalentTreeLayout'
-import { Suspense } from 'react'
 import TalentsDropdown from './TalentsDropdown'
 import TalentTreeClient from './TalentTreeClient'
 
@@ -542,39 +541,33 @@ export default function Talents({
 
   // Generate the HTML structure for the three trees
   const classTree = (
-    <Suspense fallback={<TalentTreeLoading />}>
-      <ClassTreeLayout
-        nodes={activeData.classNodes}
-        selectedNodes={activeData.selectedClassNodes}
-        nodeChoices={activeData.nodeChoices}
-        nodeRanks={activeData.nodeRanks}
-        viewOnly={viewOnly}
-      />
-    </Suspense>
+    <ClassTreeLayout
+      nodes={activeData.classNodes}
+      selectedNodes={activeData.selectedClassNodes}
+      nodeChoices={activeData.nodeChoices}
+      nodeRanks={activeData.nodeRanks}
+      viewOnly={viewOnly}
+    />
   )
 
   const specTree = (
-    <Suspense fallback={<TalentTreeLoading />}>
-      <SpecTreeLayout
-        nodes={activeData.specNodes}
-        selectedNodes={activeData.selectedSpecNodes}
-        nodeChoices={activeData.nodeChoices}
-        nodeRanks={activeData.nodeRanks}
-        viewOnly={viewOnly}
-      />
-    </Suspense>
+    <SpecTreeLayout
+      nodes={activeData.specNodes}
+      selectedNodes={activeData.selectedSpecNodes}
+      nodeChoices={activeData.nodeChoices}
+      nodeRanks={activeData.nodeRanks}
+      viewOnly={viewOnly}
+    />
   )
 
   const heroTree = (
-    <Suspense fallback={<TalentTreeLoading />}>
-      <HeroTreeLayout
-        nodes={activeData.heroNodes}
-        selectedNodes={activeData.selectedHeroNodes}
-        nodeChoices={activeData.nodeChoices}
-        nodeRanks={activeData.nodeRanks}
-        viewOnly={viewOnly}
-      />
-    </Suspense>
+    <HeroTreeLayout
+      nodes={activeData.heroNodes}
+      selectedNodes={activeData.selectedHeroNodes}
+      nodeChoices={activeData.nodeChoices}
+      nodeRanks={activeData.nodeRanks}
+      viewOnly={viewOnly}
+    />
   )
 
   return (

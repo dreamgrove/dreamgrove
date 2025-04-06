@@ -77,11 +77,5 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
 
 // Use memo with deps array to prevent unnecessary re-renders
 export default React.memo(CheckboxToggler, (prevProps, nextProps) => {
-  return (
-    prevProps.id === nextProps.id &&
-    prevProps.radio === nextProps.radio &&
-    prevProps.isIcon === nextProps.isIcon &&
-    prevProps.className === nextProps.className &&
-    prevProps.defaultCheck === nextProps.defaultCheck
-  )
+  return true
 })

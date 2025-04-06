@@ -1,5 +1,5 @@
 'use client'
-import React, { useContext } from 'react'
+import React, { useContext, useMemo } from 'react'
 import { CheckboxContext } from './CheckboxProvider'
 
 interface ConditionalElementProps {
@@ -30,35 +30,70 @@ const ConditionalElement: React.FC<ConditionalElementProps> = ({
    * @param checkboxId - The ID of the checkbox to check
    * @returns boolean indicating if the checkbox is checked
    */
-  const evaluateCheckbox = (checkboxId: string): boolean => {
-    if (checkboxId.startsWith('~')) {
-      return !checkboxMap[checkboxId.slice(1)]?.checked
-    }
-    return checkboxMap[checkboxId]?.checked || false
-  }
+  const evaluateCheckbox = useMemo(
+    () =>
+      (checkboxId: string): boolean => {
+        if (checkboxId.startsWith('~')) {
+          return !checkboxMap[checkboxId.slice(1)]?.checked
+        }
+        return checkboxMap[checkboxId]?.checked || false
+      },
+    [checkboxMap]
+  )
 
   /**
    * Evaluates an expression with OR operators (||)
    * @param expression - Expression with OR operators
    * @returns boolean result of the OR expression
    */
-  const evaluateOrExpression = (expression: string): boolean => {
-    const parts = expression.split('||').map((part) => part.trim())
-    return parts.some((part) => evaluateCheckbox(part))
-  }
+  const evaluateOrExpression = useMemo(
+    () =>
+      (expression: string): boolean => {
+        const parts = expression.split('||').map((part) => part.trim())
+        return parts.some((part) => evaluateCheckbox(part))
+      },
+    [evaluateCheckbox]
+  )
 
   /**
    * Evaluates the full expression with AND operators (&&)
    * @param expression - Full expression with AND and OR operators
    * @returns boolean result of the expression
    */
-  const evaluateExpression = (expression: string): boolean => {
-    const andParts = expression.split('&&').map((part) => part.trim())
-    return andParts.every((part) => evaluateOrExpression(part))
-  }
+  const evaluateExpression = useMemo(
+    () =>
+      (expression: string): boolean => {
+        const andParts = expression.split('&&').map((part) => part.trim())
+        return andParts.every((part) => evaluateOrExpression(part))
+      },
+    [evaluateOrExpression]
+  )
 
-  // Evaluate the expression
-  const shouldRender = evaluateExpression(id)
+  // Extract all checkbox IDs from the expression to determine dependencies
+  const checkboxDependencies = useMemo(() => {
+    const deps = new Set<string>()
+    const normalizedId = id.replace(/\s+/g, '')
+
+    // Extract all checkbox IDs (with or without ~ prefix)
+    const allIds = normalizedId.split(/&&|\|\|/).map((part) => part.trim())
+
+    allIds.forEach((checkboxId) => {
+      // Remove ~ prefix if present
+      deps.add(checkboxId.startsWith('~') ? checkboxId.slice(1) : checkboxId)
+    })
+
+    return deps
+  }, [id])
+
+  // Only re-evaluate when relevant checkboxes change
+  const shouldRender = useMemo(() => {
+    return evaluateExpression(id)
+  }, [
+    id,
+    evaluateExpression,
+    // Only include the specific checkboxes this component depends on
+    ...Array.from(checkboxDependencies).map((depId) => checkboxMap[depId]?.checked),
+  ])
 
   if (type === 'li') {
     return <li className={`${shouldRender ? 'list-item' : 'hidden'}`}>{children}</li>
@@ -67,4 +102,4 @@ const ConditionalElement: React.FC<ConditionalElementProps> = ({
   return shouldRender ? children : null
 }
 
-export default ConditionalElement
+export default React.memo(ConditionalElement)

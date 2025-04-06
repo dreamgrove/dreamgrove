@@ -1,6 +1,6 @@
 'use client'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, memo } from 'react'
 import styles from './HeroTalents.module.css'
 import MDXContentWrapper from '../MDXContentWrapper'
 
@@ -11,64 +11,72 @@ interface HeroTalentsHeaderProps {
   titleClassName?: string
 }
 
-function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+// Changed to use memo around the function
+export default memo(
+  function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
+    const [isCollapsed, setIsCollapsed] = useState(true)
 
-  // Memoize the arrow to prevent recreating it on each render
-  const arrow = useMemo(
-    () =>
-      isCollapsed ? (
-        <IoIosArrowDown className="block h-10 w-10 text-lg" />
-      ) : (
-        <IoIosArrowUp className="block h-10 w-10 text-lg" />
-      ),
-    [isCollapsed]
-  )
+    // Memoize the arrow to prevent recreating it on each render
+    const arrow = useMemo(
+      () =>
+        isCollapsed ? (
+          <IoIosArrowDown className="block h-10 w-10 text-lg" />
+        ) : (
+          <IoIosArrowUp className="block h-10 w-10 text-lg" />
+        ),
+      [isCollapsed]
+    )
 
-  // Memoize style computation to prevent recalculation on every render
-  const borderStyle = useMemo(() => {
-    if (id === 'kotg') return styles['border-balance']
-    if (id === 'ec') return styles['border-resto']
-    if (id === 'dotc') return styles['border-dotc']
-    return styles['border-generic']
-  }, [id])
+    // Memoize style computation to prevent recalculation on every render
+    const borderStyle = useMemo(() => {
+      if (id === 'kotg') return styles['border-balance']
+      if (id === 'ec') return styles['border-resto']
+      if (id === 'dotc') return styles['border-dotc']
+      return styles['border-generic']
+    }, [id])
 
-  const backgroundColorStyle = useMemo(() => {
-    if (id === 'kotg') return 'bg-[#184118] bg-opacity-10'
-    if (id === 'ec') return 'bg-[#4b62be] bg-opacity-10'
-    if (id === 'dotc') return 'bg-[#c41e3a] bg-opacity-10'
-    return 'bg-[#d57f43] bg-opacity-10'
-  }, [id])
+    const backgroundColorStyle = useMemo(() => {
+      if (id === 'kotg') return 'bg-[#184118] bg-opacity-10'
+      if (id === 'ec') return 'bg-[#4b62be] bg-opacity-10'
+      if (id === 'dotc') return 'bg-[#c41e3a] bg-opacity-10'
+      return 'bg-[#d57f43] bg-opacity-10'
+    }, [id])
 
-  return (
-    <div
-      className={`talentTree mb-2 mt-2 grid rounded-md border-2 ${borderStyle} ${backgroundColorStyle}`}
-    >
+    return (
       <div
-        className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"
-        onClick={() => setIsCollapsed((prev) => !prev)}
+        className={`talentTree mb-2 mt-2 grid rounded-md border-2 ${borderStyle} ${backgroundColorStyle}`}
       >
-        <h3
-          className={`mb-2 mt-2 select-none pl-0 text-left align-baseline text-xl font-bold sm:pl-2`}
+        <div
+          className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"
+          onClick={() => setIsCollapsed((prev) => !prev)}
         >
-          {title}
-        </h3>
-        {arrow}
-      </div>
-      <div
-        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-          isCollapsed ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'
-        }`}
-      >
-        <div className="overflow-hidden">
-          {/* Wrap content in our special wrapper that preserves component references */}
-          <div className="px-2 md:px-6">
-            <MDXContentWrapper>{children}</MDXContentWrapper>
+          <h3
+            className={`mb-2 mt-2 select-none pl-0 text-left align-baseline text-xl font-bold sm:pl-2`}
+          >
+            {title}
+          </h3>
+          {arrow}
+        </div>
+        <div
+          className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+            isCollapsed ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'
+          }`}
+        >
+          <div className="overflow-hidden">
+            {/* Wrap content in our special wrapper that preserves component references */}
+            <div className="px-2 md:px-6">{children}</div>
           </div>
         </div>
       </div>
-    </div>
-  )
-}
-
-export default HeroTalentsHeader
+    )
+  },
+  // Modified comparison function to exclude children from comparison
+  (prevProps, nextProps) => {
+    return (
+      prevProps.title === nextProps.title &&
+      prevProps.id === nextProps.id &&
+      prevProps.titleClassName === nextProps.titleClassName
+      // Removed children comparison - React.memo doesn't work well with children equality checks
+    )
+  }
+)

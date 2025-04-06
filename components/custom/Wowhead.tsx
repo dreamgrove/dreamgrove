@@ -1,4 +1,3 @@
-import spellData from '../../spellData.json'
 import WowheadIcon from './WowheadIcon'
 import { qualityToColor, extractIdFromUrl } from '../../app/api/wowhead-data/utils'
 import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
@@ -19,6 +18,7 @@ export default async function Wowhead({
   let displayId = id
   let linkColor = '#d57f43'
   let quality = -1
+  let icon: React.ReactNode = null
 
   if (!id) {
     if (type == 'spell') {
@@ -53,6 +53,19 @@ export default async function Wowhead({
     if (!name && data.display) {
       display = data.display
     }
+
+    icon =
+      noIcon || type === 'npc' ? null : (
+        <WowheadIcon
+          id={displayId}
+          type={type}
+          name={display}
+          beta={beta}
+          url={url}
+          noLink={true}
+          iconId={data.icon}
+        />
+      )
   } catch (error: any) {
     console.warn(
       `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
@@ -60,11 +73,6 @@ export default async function Wowhead({
     // Use provided name or displayId as fallback
     display = name || `${type}-${displayId}`
   }
-
-  const icon =
-    noIcon || type === 'npc' ? null : (
-      <WowheadIcon id={displayId} type={type} name={display} beta={beta} url={url} noLink={true} />
-    )
 
   return disabled ? (
     <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>

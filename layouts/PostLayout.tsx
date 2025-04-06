@@ -5,9 +5,10 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import TableOfContents from '@/components/custom/TableOfContents'
+import TableOfContents from '@/components/custom/TableOfContents/TableOfContents'
 import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
+import CheckboxProvider from '@/components/custom/CheckboxProvider'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -15,11 +16,12 @@ interface LayoutProps {
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
-  translator: string
+  translator?: string
+  toc: any
 }
 
-export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
-  const { patch, slug, title, tags, toc, lastModified, changelogUrl, translator } = content
+export default function PostLayout({ content, authorDetails, children, toc }: LayoutProps) {
+  const { patch, slug, title, tags, lastModified, changelogUrl, translator } = content
 
   // Check if this is a compendium page
   const isCompendium = slug?.endsWith('/compendium')
@@ -81,7 +83,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
           <div className="mb-5 h-[1px] bg-gray-600 opacity-35"></div>
           <div className="grid-rows-[auto_1fr] pb-8 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:divide-y-0 lg:divide-gray-200 lg:dark:divide-gray-700">
             <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:block lg:h-svh lg:pt-5">
-              <TableOfContents chapters={toc} />
+              {toc && Array.isArray(toc) ? <TableOfContents chapters={toc} /> : null}
             </aside>
 
             <div id="main" className="relative pt-4 lg:col-span-9 lg:pb-0 lg:pl-6 lg:pt-5">
@@ -98,7 +100,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                 style={{ counterReset: 'heading' }}
                 className="prose max-w-none pb-8 pt-4 text-base dark:prose-invert sm:pt-0"
               >
-                {children}
+                <CheckboxProvider>{children}</CheckboxProvider>
               </div>
             </div>
 

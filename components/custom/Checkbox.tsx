@@ -3,6 +3,7 @@ import CheckboxToggler from './CheckboxToggler'
 import Wowhead from './Wowhead'
 import { FaCheck } from 'react-icons/fa'
 import CheckboxClientVersion from '../csm/CheckboxClientVersion'
+import ProfiledCheckboxToggler from 'cursor/ProfiledCheckboxToggler'
 
 // Define proper prop types
 interface CheckboxProps {

@@ -16,6 +16,12 @@ const layouts: Record<string, React.ComponentType<any>> = {
   PostLayout,
 }
 
+interface Chapter {
+  value: string
+  depth: number
+  url: string
+}
+
 type Params = Promise<{ slug: string[] }>
 
 export async function generateMetadata({
@@ -99,12 +105,19 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       : `Blog Post: ${slug}`
 
   return (
-    <PageWrapper toc={post.toc} title={pageTitle} isBlog={true}>
+    <PageWrapper toc={post.toc as unknown as Chapter[]} title={pageTitle} isBlog={true}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
+      <Layout
+        content={mainContent}
+        toc={post.toc}
+        authorDetails={authorDetails}
+        next={next}
+        prev={prev}
+        translator={post.translator}
+      >
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </PageWrapper>

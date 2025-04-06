@@ -103,6 +103,8 @@ module.exports = () => {
       GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'next-15',
     },
     experimental: {
+      serverComponentsHmrCache: true,
+
       turbo: {
         rules: {
           // Configure Turbopack to handle WebP images
