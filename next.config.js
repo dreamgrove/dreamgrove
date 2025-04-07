@@ -104,7 +104,6 @@ module.exports = () => {
       GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
     },
     experimental: {
-      ppr: 'incremental',
       turbo: {
         rules: {
           // Configure Turbopack to handle WebP images

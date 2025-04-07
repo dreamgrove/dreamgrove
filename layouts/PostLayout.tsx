@@ -10,8 +10,6 @@ import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 
-export const experimental_ppr = true
-
 interface LayoutProps {
   content: CoreContent<Blog>
   authorDetails: string[]

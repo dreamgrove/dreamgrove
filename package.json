@@ -45,7 +45,7 @@
     "jsondiffpatch": "^0.6.0",
     "marked": "^13.0.1",
     "negotiator": "^1.0.0",
-    "next": "^15.3.0-canary.40",
+    "next": "^15.2.4",
     "next-auth": "^4.24.11",
     "next-contentlayer2": "0.5.4",
     "next-themes": "^0.4.6",
