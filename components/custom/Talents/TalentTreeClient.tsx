@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo, memo, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 
 interface TalentTreeClientProps {
   classTree: React.ReactNode
@@ -54,7 +54,7 @@ const TalentTreeClient = ({
     }
   }, [isMobile, activeTree])
 
-  const handleCopyTalentString = useCallback(async () => {
+  const handleCopyTalentString = async () => {
     try {
       setCopyError(null)
       await navigator.clipboard.writeText(talentString)
@@ -71,33 +71,28 @@ const TalentTreeClient = ({
         setCopyError(null)
       }, 3000)
     }
-  }, [talentString])
+  }
 
-  // Memoize tree change handlers
-  const setFullTree = useCallback(() => setActiveTree('full'), [])
-  const setClassTree = useCallback(() => setActiveTree('class'), [])
-  const setSpecTree = useCallback(() => setActiveTree('spec'), [])
-  const setHeroTree = useCallback(() => setActiveTree('hero'), [])
+  const setFullTree = () => setActiveTree('full')
+  const setClassTree = () => setActiveTree('class')
+  const setSpecTree = () => setActiveTree('spec')
+  const setHeroTree = () => setActiveTree('hero')
 
   const classWidth = activeTree === 'full' ? 'w-full' : 'w-[9/19]'
   const specWidth = activeTree === 'full' ? 'w-full' : 'w-[3/19]'
   const heroWidth = activeTree === 'full' ? 'w-full' : 'w-[7/19]'
 
-  const fullTreeView = useMemo(
-    () => (
-      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
-        <div className={`${isMobile ? 'w-full' : classWidth}`}>{classTree}</div>
-        <div className={`${isMobile ? 'w-full' : heroWidth}`}>{heroTree}</div>
-        <div className={`${isMobile ? 'w-full' : specWidth}`}>{specTree}</div>
-      </div>
-    ),
-    [isMobile, classWidth, heroWidth, specWidth, classTree, heroTree, specTree]
+  const fullTreeView = (
+    <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
+      <div className={`${isMobile ? 'w-full' : classWidth}`}>{classTree}</div>
+      <div className={`${isMobile ? 'w-full' : heroWidth}`}>{heroTree}</div>
+      <div className={`${isMobile ? 'w-full' : specWidth}`}>{specTree}</div>
+    </div>
   )
 
-  // Memoize individual tree views
-  const classTreeView = useMemo(() => <div className="w-full">{classTree}</div>, [classTree])
-  const specTreeView = useMemo(() => <div className="w-full">{specTree}</div>, [specTree])
-  const heroTreeView = useMemo(() => <div className="w-full">{heroTree}</div>, [heroTree])
+  const classTreeView = <div className="w-full">{classTree}</div>
+  const specTreeView = <div className="w-full">{specTree}</div>
+  const heroTreeView = <div className="w-full">{heroTree}</div>
 
   return (
     <div className="grid-co flex flex-col gap-4">
@@ -176,4 +171,4 @@ const TalentTreeClient = ({
   )
 }
 
-export default memo(TalentTreeClient)
+export default TalentTreeClient

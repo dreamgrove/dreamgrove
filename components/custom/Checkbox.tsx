@@ -1,8 +1,6 @@
-import React from 'react'
 import CheckboxToggler from './CheckboxToggler'
 import Wowhead from './Wowhead'
 
-// Define proper prop types
 interface CheckboxProps {
   id?: string
   spellId?: string | number
@@ -53,4 +51,4 @@ const Checkbox = ({
   )
 }
 
-export default React.memo(Checkbox)
+export default Checkbox

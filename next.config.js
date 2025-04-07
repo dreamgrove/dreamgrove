@@ -104,7 +104,6 @@ module.exports = () => {
       GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
     },
     experimental: {
-      serverSourceMaps: true,
       serverComponentsHmrCache: true,
 
       turbo: {

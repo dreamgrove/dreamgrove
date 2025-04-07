@@ -1,7 +1,7 @@
 'use client'
 
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState, useCallback, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
 import { usePathname } from 'next/navigation'
@@ -18,7 +18,7 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
   const [navShow, setNavShow] = useState(false)
   const path = usePathname()
 
-  const onToggleNav = useCallback(() => {
+  const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
         document.documentElement.classList.remove('overflow-hidden')
@@ -28,7 +28,7 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
       }
       return !status
     })
-  }, [])
+  }
 
   // Reset overflow class when component unmounts
   useEffect(() => {
@@ -134,4 +134,4 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
   )
 }
 
-export default MobileNav
+export default React.memo(MobileNav)

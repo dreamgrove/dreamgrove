@@ -10,7 +10,7 @@ import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
 import HeaderAprilFools from '../app/components/HeaderAprilFools'
 import styles from './Header.module.css'
-import { memo } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 interface Chapter {
@@ -107,36 +107,25 @@ const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
 // April Fools component is also memoized
 const MemoizedAprilFools = memo(HeaderAprilFools)
 
-// ThemeOnly wrapper - only rerenders when theme changes
-const ThemeOnly = memo(function ThemeOnly({
-  children,
-  theme,
-}: {
-  children: React.ReactNode
-  theme: string | undefined
-}) {
-  return <>{children}</>
-})
-
 // Main Header component
 function Header(props: HeaderProps) {
   const { theme } = useTheme()
 
-  // Don't render April Fools on the server (theme will be undefined)
-  if (theme === 'april-fools') {
-    return (
-      <ThemeOnly theme={theme}>
-        <MemoizedAprilFools {...props} />
-      </ThemeOnly>
-    )
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <BaseHeader {...props} />
   }
 
-  // Regular header with theme-only dependency
-  return (
-    <ThemeOnly theme={theme}>
-      <BaseHeader {...props} />
-    </ThemeOnly>
-  )
+  if (theme === 'april-fools') {
+    return <MemoizedAprilFools {...props} />
+  }
+
+  return <BaseHeader {...props} />
 }
 
 export default Header

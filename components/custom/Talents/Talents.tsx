@@ -7,7 +7,6 @@ import {
 
 import { ClassTreeLayout, SpecTreeLayout, HeroTreeLayout } from './TalentTreeLayout'
 import TalentsDropdown from './TalentsDropdown'
-import TalentTreeClient from './TalentTreeClient'
 import dynamic from 'next/dynamic'
 
 // Loading component for the talent tree

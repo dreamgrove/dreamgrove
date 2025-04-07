@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useContext, useCallback, useMemo } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { CheckboxContext } from './CheckboxProvider'
 import clsx from 'clsx'
 import { FaCheck } from 'react-icons/fa'
@@ -33,15 +33,12 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
     }
   }, [id, defaultCheck, radio, updateCheckbox, checkboxMap])
 
-  const handleToggle = useCallback(() => {
+  const handleToggle = () => {
     const isCurrentlyChecked = checkboxMap[id]?.checked || false
     updateCheckbox(id, !isCurrentlyChecked, radio || null)
-  }, [id, radio, updateCheckbox, checkboxMap])
+  }
 
-  // Memoize the checked state from context
-  const isChecked = useMemo(() => {
-    return checkboxMap[id]?.checked || false
-  }, [checkboxMap, id])
+  const isChecked = checkboxMap[id]?.checked || false
 
   return (
     <label
@@ -75,7 +72,4 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
   )
 }
 
-// Use memo with deps array to prevent unnecessary re-renders
-export default React.memo(CheckboxToggler, (prevProps, nextProps) => {
-  return true
-})
+export default CheckboxToggler
