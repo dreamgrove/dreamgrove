@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic'
+import HeroTalents from './HeroTalents'
 interface HeroTalentsHeaderProps {
   title: string
   id: string
@@ -6,14 +6,10 @@ interface HeroTalentsHeaderProps {
   titleClassName?: string
 }
 
-const DynamicHeroTalentsHeader = dynamic(() => import('./HeroTalents'), {
-  loading: () => <div>Loading...</div>,
-})
-
 export default function HeroTalentsHeader({ title, id, children }: HeroTalentsHeaderProps) {
   return (
-    <DynamicHeroTalentsHeader title={title} id={id}>
+    <HeroTalents title={title} id={id}>
       {children}
-    </DynamicHeroTalentsHeader>
+    </HeroTalents>
   )
 }
