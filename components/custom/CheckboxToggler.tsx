@@ -1,8 +1,8 @@
 'use client'
-import React, { useState, useEffect, useContext } from 'react'
-import useToggleText from '../hooks/useToggleText'
+import React, { useEffect, useContext } from 'react'
 import { CheckboxContext } from './CheckboxProvider'
 import clsx from 'clsx'
+import { FaCheck } from 'react-icons/fa'
 
 // Define the prop types to make renderChecked optional
 interface CheckboxTogglerProps {
@@ -12,8 +12,6 @@ interface CheckboxTogglerProps {
   children: React.ReactNode
   className?: string
   isIcon?: boolean
-  checkedContent?: React.ReactNode
-  uncheckedContent?: React.ReactNode
 }
 
 const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
@@ -23,62 +21,52 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
   children,
   className = '',
   isIcon = false,
-  checkedContent,
-  uncheckedContent,
 }) => {
-  const [checked, setChecked] = useState(defaultCheck)
-  const { radioGroup, checkRadio, registerCheckbox, toggleCheckbox, checkboxStates } =
-    useContext(CheckboxContext)
-  const toggleText = useToggleText()
+  // Remove local state and rely only on context
+  const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
 
+  // Initialize checkbox if it doesn't exist yet
   useEffect(() => {
-    if (radio) {
-      registerCheckbox(radio, id, defaultCheck)
-    } else {
-      toggleCheckbox(id, defaultCheck)
+    // Only set if not already in context to avoid redundant updates
+    if (checkboxMap[id] === undefined) {
+      updateCheckbox(id, defaultCheck, radio || null)
     }
-  }, [radio, id, defaultCheck, registerCheckbox, toggleCheckbox])
+  }, [id, defaultCheck, radio, updateCheckbox, checkboxMap])
 
   const handleToggle = () => {
-    const newValue = !checked
-    if (radio) {
-      checkRadio(radio, newValue ? id : '')
-    } else {
-      toggleCheckbox(id, newValue)
-    }
-    setChecked(newValue)
-    toggleText(newValue, id)
+    const isCurrentlyChecked = checkboxMap[id]?.checked || false
+    updateCheckbox(id, !isCurrentlyChecked, radio || null)
   }
 
-  useEffect(() => {
-    if (radio && radioGroup[radio] !== id) {
-      setChecked(false)
-    } else if (radio && radioGroup[radio] === id) {
-      setChecked(true)
-    }
-  }, [radioGroup, radio, id])
-
-  useEffect(() => {
-    if (checkboxStates[id] !== undefined) {
-      setChecked(checkboxStates[id])
-      toggleText(checkboxStates[id], id)
-    }
-  }, [checkboxStates, id, toggleText])
+  const isChecked = checkboxMap[id]?.checked || false
 
   return (
-    <label className={clsx('flex h-full', isIcon ? 'h-full w-full' : 'items-start')}>
+    <label
+      className={clsx('flex h-full', isIcon ? 'h-full w-full' : 'items-start')}
+      aria-label={`Toggle ${id}`}
+    >
       <input
         className={`mr-2 mt-2 focus:outline-none ${className}`}
         type="checkbox"
-        checked={checked}
+        checked={isChecked}
         onChange={handleToggle}
       />
       <div className={clsx('flex-1', isIcon && 'h-full w-full')}>
-        {checkedContent && uncheckedContent
-          ? checked
-            ? checkedContent
-            : uncheckedContent
-          : children}
+        <div
+          className={`relative flex h-full w-full items-center rounded border-[1px] border-main px-2 py-1.5 sm:px-3 ${
+            isChecked ? 'border-main' : 'border-main/20'
+          }`}
+        >
+          <div className="break-words text-left normal-case leading-tight">{children}</div>
+
+          <div
+            className={`absolute bottom-1 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-main/20 md:bottom-auto md:right-2 md:top-1/2 md:-translate-y-1/2 ${
+              isChecked ? 'block' : 'hidden'
+            }`}
+          >
+            <FaCheck className="text-main" size={12} />
+          </div>
+        </div>
       </div>
     </label>
   )

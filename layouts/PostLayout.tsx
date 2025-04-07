@@ -1,14 +1,14 @@
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
-import Comments from '@/components/Comments'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import TableOfContents from '@/components/custom/TableOfContents'
-import { FaHistory } from 'react-icons/fa'
+import TableOfContents from '@/components/custom/TableOfContents/TableOfContents'
+import { FaHistory, FaEdit } from 'react-icons/fa'
+import Link from 'next/link'
+import CheckboxProvider from '@/components/custom/CheckboxProvider'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -16,11 +16,17 @@ interface LayoutProps {
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
   children: ReactNode
-  translator: string
+  translator?: string
+  toc: any
 }
 
-export default function PostLayout({ content, authorDetails, children }: LayoutProps) {
-  const { patch, slug, title, tags, toc, lastModified, changelogUrl, translator } = content
+export default function PostLayout({ content, authorDetails, children, toc }: LayoutProps) {
+  const { patch, slug, title, tags, lastModified, changelogUrl, translator } = content
+
+  // Check if this is a compendium page
+  const isCompendium = slug?.endsWith('/compendium')
+  // Extract the spec from the slug for the edit link
+  const specSlug = isCompendium ? slug.split('/')[0] : ''
 
   return (
     <SectionContainer>
@@ -33,7 +39,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                 <PageTitle>{title}</PageTitle>
               </div>
 
-              <div className="flex h-full flex-col lg:flex-row lg:items-center lg:justify-between ">
+              <div className="flex h-full flex-col lg:flex-row lg:items-center lg:justify-between">
                 <div className="pt-4 lg:h-full lg:content-around lg:self-end lg:pt-0">
                   <div className="flex flex-col space-y-0">
                     <p
@@ -64,7 +70,7 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                   <div className="hidden lg:inline">
                     <a
                       href={changelogUrl}
-                      className="mt-[-2px] text-base text-main underline decoration-2 underline-offset-4 "
+                      className="mt-[-2px] text-base text-main underline decoration-2 underline-offset-4"
                     >
                       <FaHistory className="mr-2 inline" />
                       <span className="inline">Changelog</span>
@@ -77,14 +83,14 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
           <div className="mb-5 h-[1px] bg-gray-600 opacity-35"></div>
           <div className="grid-rows-[auto_1fr] pb-8 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:divide-y-0 lg:divide-gray-200 lg:dark:divide-gray-700">
             <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:block lg:h-svh lg:pt-5">
-              <TableOfContents chapters={toc} />
+              {toc && Array.isArray(toc) ? <TableOfContents chapters={toc} /> : null}
             </aside>
 
             <div id="main" className="relative pt-4 lg:col-span-9 lg:pb-0 lg:pl-6 lg:pt-5">
-              <div className="absolute right-0 top-[-5px] sm:left-auto sm:right-[0px] sm:top-[-50px] lg:hidden ">
+              <div className="absolute right-0 top-[-5px] sm:left-auto sm:right-[0px] sm:top-[-50px] lg:hidden">
                 <a
                   href={changelogUrl}
-                  className="ml-0 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem] sm:text-base "
+                  className="ml-0 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:ml-[-1.5rem] sm:text-base"
                 >
                   <FaHistory className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>
@@ -94,16 +100,8 @@ export default function PostLayout({ content, authorDetails, children }: LayoutP
                 style={{ counterReset: 'heading' }}
                 className="prose max-w-none pb-8 pt-4 text-base dark:prose-invert sm:pt-0"
               >
-                {children}
+                <CheckboxProvider>{children}</CheckboxProvider>
               </div>
-              {siteMetadata.comments && (
-                <div
-                  className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300"
-                  id="comment"
-                >
-                  <Comments slug={slug} />
-                </div>
-              )}
             </div>
 
             <footer className="xl:col-span-12">

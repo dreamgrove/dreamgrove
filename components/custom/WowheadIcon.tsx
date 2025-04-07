@@ -1,5 +1,5 @@
+import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 import Image from 'next/image'
-import fetch from 'node-fetch'
 
 interface WowheadIconProps {
   id: string
@@ -10,6 +10,7 @@ interface WowheadIconProps {
   size?: number
   noLink?: boolean
   noMargin?: boolean
+  iconId?: string
 }
 
 export default async function WowheadIcon({
@@ -21,40 +22,42 @@ export default async function WowheadIcon({
   size = 16,
   noLink = false,
   noMargin = false,
+  iconId,
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
-  try {
-    const res = await fetch(whUrl)
-    const text = await res.text()
-    const regex = new RegExp(`"${id}":\\{"name_enus":"[^"]+".*?,"icon":"([^"]+)"`)
-    const match = regex.exec(text)
-
-    if (match && match[1]) {
-      const iconFilename = match[1]
-      const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`
-
-      const image = (
-        <Image
-          src={imageUrl}
-          alt={`${name} icon`}
-          width={size}
-          height={size}
-          className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
-        />
-      )
-
-      return noLink ? (
-        image
-      ) : (
-        <a href={whUrl} className="inline">
-          {image}
-        </a>
-      )
+  if (iconId === undefined) {
+    try {
+      const data = await fetchWowheadData({
+        id,
+        type,
+        name,
+        beta,
+        url,
+      })
+      iconId = data.icon
+    } catch (error: any) {
+      console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
     }
-  } catch (error) {
-    console.error('Error fetching icon for ' + id, error)
   }
 
-  return null
+  const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg`
+  const image = (
+    <Image
+      src={imageUrl}
+      alt={`${name} icon`}
+      width={size}
+      height={size}
+      className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
+    />
+  )
+
+  // Return fallback if fetch fails or no icon is found
+  return noLink ? (
+    image
+  ) : (
+    <a href={whUrl} className="inline">
+      {image}
+    </a>
+  )
 }

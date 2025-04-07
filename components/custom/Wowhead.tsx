@@ -1,37 +1,6 @@
-import fetch from 'node-fetch'
-import spellData from '../../spellData.json'
 import WowheadIcon from './WowheadIcon'
-
-import Image from 'next/image'
-
-function formatUrl(url) {
-  const parts = url.split('/')
-  const lastPart = parts.pop()
-  const formatted = lastPart
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
-  return formatted
-}
-
-function extractIdFromUrl(url) {
-  const parts = url.split('/')
-  const lastPart = parts[parts.length - 1]
-  const id = lastPart.split('-')[0]
-  return id
-}
-
-const qualityToColor = {
-  1: '#ffffff',
-  2: '#1eff00',
-  3: '#0070dd',
-  4: '#a335ee',
-  5: '#ff8000',
-}
-
-function WowheadWrapper({ children }) {
-  return <span className="text-wrap break-words align-middle">{children}</span>
-}
+import { qualityToColor, extractIdFromUrl } from '../../app/api/wowhead-data/utils'
+import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 
 /*This whole component is retarded because wowhead is retarded*/
 
@@ -49,14 +18,14 @@ export default async function Wowhead({
   let displayId = id
   let linkColor = '#d57f43'
   let quality = -1
+  let icon: React.ReactNode = null
 
   if (!id) {
     if (type == 'spell') {
-      const url = spellData[name]
-      if (url) {
-        displayId = extractIdFromUrl(url)
-      } else {
-        console.log(`${name} not found in local spelldata`)
+      const spellDataModule = await import('../../spellData.json')
+      const spellId = spellDataModule[name]
+      if (spellId) {
+        displayId = spellId
       }
     } else {
       throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
@@ -66,31 +35,49 @@ export default async function Wowhead({
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  if (type == 'item') {
-    const res = await fetch(whUrl)
-    const text = await res.text()
-    const qualityRegex = /<b class=\\"q(\d+)\\">/
-    const qualityMatch = text.match(qualityRegex)
+  try {
+    // Use the shared function directly
+    const data = await fetchWowheadData({
+      id: displayId,
+      type,
+      name,
+      beta,
+      url,
+    })
 
-    if (qualityMatch && qualityMatch[1]) {
-      linkColor = qualityToColor[qualityMatch[1]]
-      quality = qualityMatch[1]
+    if (data.quality !== undefined) {
+      quality = data.quality
+      linkColor = qualityToColor[data.quality] || linkColor
     }
-  }
 
-  if (!name) {
-    const res = await fetch(whUrl)
-    display = formatUrl(res.url)
-  }
+    if (!name && data.display) {
+      display = data.display
+    }
 
-  const icon = noIcon ? null : (
-    <WowheadIcon id={displayId} type={type} name={display} beta={beta} url={url} noLink={true} />
-  )
+    icon =
+      noIcon || type === 'npc' ? null : (
+        <WowheadIcon
+          id={displayId}
+          type={type}
+          name={display}
+          beta={beta}
+          url={url}
+          noLink={true}
+          iconId={data.icon}
+        />
+      )
+  } catch (error: any) {
+    console.warn(
+      `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
+    )
+    // Use provided name or displayId as fallback
+    display = name || `${type}-${displayId}`
+  }
 
   return disabled ? (
     <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
       {icon}
-      {showLabel && <span className="text-wrap break-words align-middle">{display}</span>}
+      {showLabel && <span className="text-wrap break-words">{display}</span>}
     </div>
   ) : (
     <a
@@ -99,7 +86,7 @@ export default async function Wowhead({
       style={{ color: linkColor, textWrap: 'nowrap' }}
     >
       {icon}
-      {showLabel && <span className="text-wrap break-words align-middle">{display}</span>}
+      {showLabel && <span className="text-wrap break-words">{display}</span>}
     </a>
   )
 }

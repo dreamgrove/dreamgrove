@@ -1,4 +1,4 @@
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { allCoreContent } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import DungeonListLayout from '@/layouts/DungeonListLayout'
 
@@ -11,7 +11,8 @@ export const generateStaticParams = async () => {
   return paths
 }
 
-export default function Page({ params }: { params: { page: string } }) {
+export default async function Page(props: { params: Promise<{ page: string }> }) {
+  const params = await props.params
   const posts = allCoreContent(allDungeons)
   const pageNumber = parseInt(params.page as string)
   const initialDisplayPosts = posts.slice(

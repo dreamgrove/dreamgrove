@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const { withContentlayer } = require('next-contentlayer2')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -13,7 +14,7 @@ const ContentSecurityPolicy = `
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app github.com
 `
 
 const securityHeaders = [
@@ -78,13 +79,45 @@ module.exports = () => {
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
+    productionBrowserSourceMaps: true,
     images: {
       remotePatterns: [
         {
           protocol: 'https',
           hostname: 'wow.zamimg.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'avatars.githubusercontent.com',
+        },
       ],
+      formats: ['image/webp'],
+      deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+      imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+      minimumCacheTTL: 60,
+    },
+    env: {
+      GITHUB_ID: process.env.GITHUB_ID,
+      GITHUB_SECRET: process.env.GITHUB_SECRET,
+      GITHUB_REPO_OWNER: process.env.GITHUB_REPO_OWNER || 'dreamgrove',
+      GITHUB_REPO_NAME: process.env.GITHUB_REPO_NAME || 'dreamgrove',
+      GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
+    },
+    experimental: {
+      turbo: {
+        rules: {
+          // Configure Turbopack to handle WebP images
+          '*.webp': ['@next/third-parties/loader'],
+        },
+      },
+    },
+    // Add a custom fetch timeout for the Node.js environment during builds
+    // This helps prevent the build from hanging indefinitely on failed fetch requests
+    onDemandEntries: {
+      // period (in ms) where the server will keep pages in the buffer
+      maxInactiveAge: 25 * 1000,
+      // number of pages that should be kept simultaneously without being disposed
+      pagesBufferLength: 2,
     },
     async redirects() {
       return [

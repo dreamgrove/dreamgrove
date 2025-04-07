@@ -28,8 +28,8 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
   return (
     <div>
       {children && <div className="mb-1 mt-4 text-center text-lg font-medium">{children}</div>}
-      <div className="h-auto  w-full overflow-x-auto overflow-y-hidden sm:h-[120px] md:h-[130px] lg:h-[150px]">
-        <div className="flex h-full w-max flex-row items-center justify-start  pt-1 ">
+      <div className="h-auto w-full overflow-x-auto overflow-y-hidden sm:h-[120px] md:h-[130px] lg:h-[150px]">
+        <div className="flex h-full w-max flex-row items-center justify-start pt-1">
           {processedSpells.map((spell, index) => (
             <React.Fragment key={`${spell.id}-${index}`}>
               {/* Icon */}

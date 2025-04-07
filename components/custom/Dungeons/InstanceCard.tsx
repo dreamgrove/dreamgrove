@@ -13,7 +13,7 @@ const InstanceCard = async ({ title, headerImage, path }) => {
 
   return (
     <Link
-      className="relative block cursor-pointer overflow-hidden rounded-lg shadow-md  transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl"
+      className="relative block cursor-pointer overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl"
       href={`/${path}`}
     >
       <div className="relative h-48 w-full">

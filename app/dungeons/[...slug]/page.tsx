@@ -6,9 +6,6 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import type { Dungeons } from 'contentlayer/generated'
-import PostSimple from '@/layouts/PostSimple'
-import PostLayout from '@/layouts/PostLayout'
-import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
@@ -17,17 +14,19 @@ import PageWrapper from '@/components/PageWrapper'
 
 const defaultLayout = 'DungeonLayout'
 const layouts = {
-  PostSimple,
-  PostLayout,
-  PostBanner,
   DungeonLayout,
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string[] }
+// Define a type for our layout keys
+type LayoutKey = keyof typeof layouts
+
+// Add static generation option with ISR to prevent build failures
+export const dynamic = 'force-static'
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string[] }>
 }): Promise<Metadata | undefined> {
+  const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allDungeons.find((p) => p.slug === slug)
 
@@ -64,36 +63,54 @@ export async function generateMetadata({
 }
 
 export const generateStaticParams = async () => {
-  return allDungeons.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
-}
-export default async function Page({ params }: { params: { slug: string[] } }) {
-  const slug = decodeURI(params.slug.join('/'))
-  const sortedCoreContents = allCoreContent(allDungeons)
-  const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
-
-  if (postIndex === -1) {
-    return notFound()
+  try {
+    return allDungeons.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
+  } catch (error) {
+    console.error('Error generating static params for dungeons:', error)
+    return []
   }
+}
 
-  const prev = sortedCoreContents[postIndex + 1]
-  const next = sortedCoreContents[postIndex - 1]
-  const post = allDungeons.find((p) => p.slug === slug) as Dungeons
+export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
+  try {
+    const params = await props.params
+    const slug = decodeURI(params.slug.join('/'))
+    const sortedCoreContents = allCoreContent(allDungeons)
+    const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
 
-  const mainContent = coreContent(post)
-  const jsonLd = post.structuredData
+    if (postIndex === -1) {
+      return notFound()
+    }
 
-  const Layout = layouts[post.layout || defaultLayout]
-  const pageTitle = post.title || `Dungeon: ${slug}`
+    const prev = sortedCoreContents[postIndex + 1]
+    const next = sortedCoreContents[postIndex - 1]
+    const post = allDungeons.find((p) => p.slug === slug) as Dungeons
 
-  return (
-    <PageWrapper title={pageTitle} showTitle={false}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Layout content={mainContent} next={next} prev={prev}>
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
-      </Layout>
-    </PageWrapper>
-  )
+    const mainContent = coreContent(post)
+    const jsonLd = post.structuredData
+
+    const Layout = layouts[(post.layout || defaultLayout) as LayoutKey]
+    const pageTitle = post.title || `Dungeon: ${slug}`
+
+    return (
+      <PageWrapper title={pageTitle} showTitle={false}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Layout content={mainContent} next={next} prev={prev} authorDetails={[]}>
+          <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+        </Layout>
+      </PageWrapper>
+    )
+  } catch (error) {
+    console.error(`Error rendering dungeon page for slug: ${props.params}`, error)
+    return (
+      <PageWrapper title="Error Loading Dungeon Page" showTitle={true}>
+        <div className="prose max-w-none pb-8 pt-8 dark:prose-invert">
+          <p>There was an error loading this dungeon page. Please try again later.</p>
+        </div>
+      </PageWrapper>
+    )
+  }
 }
