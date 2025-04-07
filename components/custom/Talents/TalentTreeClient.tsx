@@ -78,9 +78,9 @@ const TalentTreeClient = ({
   const setSpecTree = () => setActiveTree('spec')
   const setHeroTree = () => setActiveTree('hero')
 
-  const classWidth = activeTree === 'full' ? 'w-full' : 'w-[9/19]'
-  const specWidth = activeTree === 'full' ? 'w-full' : 'w-[7/19]'
-  const heroWidth = activeTree === 'full' ? 'w-full' : 'w-[3/19]'
+  const classWidth = 'w-[9/19]'
+  const specWidth = 'w-[7/19]'
+  const heroWidth = 'w-[3/19]'
 
   const fullTreeView = (
     <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
