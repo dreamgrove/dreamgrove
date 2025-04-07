@@ -397,12 +397,14 @@ export const TalentNode = ({
   choiceIndex = 0,
   rank = 0,
   disableInteraction = false,
+  borderColor,
 }: {
   node: TalentNode
   selected: boolean
   choiceIndex?: number
   rank?: number
   disableInteraction?: boolean
+  borderColor?: string
 }) => {
   // Check if this is a choice node and which choice is selected
   const isChoiceNode = node.entries.length > 1
@@ -420,10 +422,11 @@ export const TalentNode = ({
   return (
     <div
       className={`absolute flex h-[70%] w-[70%] items-center justify-center rounded-full border-2 opacity-80 ${
-        selected ? 'border-green-500' : 'border-yellow-400'
-      } ${!disableInteraction ? 'cursor-pointer hover:scale-110 hover:border-white' : ''} transition-all duration-200`}
+        !disableInteraction ? 'cursor-pointer hover:scale-110 hover:border-white' : ''
+      } transition-all duration-200`}
       style={{
         zIndex: 10, // Ensure nodes appear above connection lines
+        borderColor: borderColor || (selected ? '#00ff00' : '#ffd700'),
       }}
       title={displayName}
     >

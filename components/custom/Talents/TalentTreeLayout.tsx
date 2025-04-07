@@ -115,6 +115,7 @@ export function TalentTreeGrid({
   nodeRanks,
   disableInteraction,
   treeType,
+  nodeColors = {},
 }: {
   nodes: TalentNode[]
   grid: GridCell[][]
@@ -124,6 +125,7 @@ export function TalentTreeGrid({
   nodeRanks: Record<number, number>
   disableInteraction: boolean
   treeType: 'class' | 'spec' | 'hero'
+  nodeColors?: Record<string, string>
 }) {
   // Calculate the grid ratio for aspect ratio
   const gridRatio = grid[0]?.length / grid.length || 1
@@ -184,6 +186,7 @@ export function TalentTreeGrid({
               const selected = selectedNodes.includes(node.id)
               const choiceIndex = nodeChoices[node.id] || 0
               const rank = nodeRanks[node.id] || 0
+              const borderColor = nodeColors[node.name.toLowerCase()]
 
               return (
                 <div
@@ -201,6 +204,7 @@ export function TalentTreeGrid({
                     choiceIndex={choiceIndex}
                     rank={rank}
                     disableInteraction={disableInteraction}
+                    borderColor={borderColor}
                   />
                 </div>
               )
@@ -219,12 +223,14 @@ export function ClassTreeLayout({
   nodeChoices,
   nodeRanks,
   viewOnly = false,
+  nodeColors = {},
 }: {
   nodes: TalentNode[]
   selectedNodes: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   viewOnly?: boolean
+  nodeColors?: Record<string, string>
 }) {
   // Build the grid from the nodes
   const grid = buildTalentGrid(nodes)
@@ -256,6 +262,7 @@ export function ClassTreeLayout({
           nodeRanks={nodeRanks}
           disableInteraction={viewOnly}
           treeType="class"
+          nodeColors={nodeColors}
         />
       </div>
     </div>
@@ -269,12 +276,14 @@ export function SpecTreeLayout({
   nodeChoices,
   nodeRanks,
   viewOnly = false,
+  nodeColors = {},
 }: {
   nodes: TalentNode[]
   selectedNodes: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   viewOnly?: boolean
+  nodeColors?: Record<string, string>
 }) {
   // Build the grid from the nodes
   const grid = buildTalentGrid(nodes)
@@ -306,6 +315,7 @@ export function SpecTreeLayout({
           nodeRanks={nodeRanks}
           disableInteraction={viewOnly}
           treeType="spec"
+          nodeColors={nodeColors}
         />
       </div>
     </div>
@@ -319,12 +329,14 @@ export function HeroTreeLayout({
   nodeChoices,
   nodeRanks,
   viewOnly = false,
+  nodeColors = {},
 }: {
   nodes: TalentNode[]
   selectedNodes: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   viewOnly?: boolean
+  nodeColors?: Record<string, string>
 }) {
   // Group nodes by subTreeId
   const subTreeCounts = new Map<number, { total: number; selected: number }>()
@@ -387,6 +399,7 @@ export function HeroTreeLayout({
                 nodeRanks={nodeRanks}
                 disableInteraction={viewOnly}
                 treeType="hero"
+                nodeColors={nodeColors}
               />
             ) : (
               <div className="flex flex-1 items-center justify-center">

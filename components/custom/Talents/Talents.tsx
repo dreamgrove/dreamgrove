@@ -9,6 +9,12 @@ import { ClassTreeLayout, SpecTreeLayout, HeroTreeLayout } from './TalentTreeLay
 import TalentsDropdown from './TalentsDropdown'
 import TalentTreeClient from './TalentTreeClient'
 
+// Add type definition at the top
+interface ColorConfig {
+  color: string
+  nodes: string[]
+}
+
 // Loading component for the talent tree
 function TalentTreeLoading() {
   return (
@@ -526,13 +532,27 @@ export default function Talents({
   talents = '',
   viewOnly = false,
   name = '',
+  comment = '',
+  children,
+  colors = [],
 }: {
   talents?: string
   viewOnly?: boolean
   name?: string
+  comment?: string
+  children?: React.ReactNode
+  colors?: ColorConfig[]
 }) {
   // Parse the talent string and get the active data
   const activeData = parseTalentString(talents)
+
+  // Process color configurations
+  const nodeColors = colors.reduce<Record<string, string>>((acc, config) => {
+    config.nodes.forEach((nodeName) => {
+      acc[nodeName.toLowerCase()] = config.color
+    })
+    return acc
+  }, {})
 
   // If there's an error, display the error component
   if (activeData.error) {
@@ -547,6 +567,7 @@ export default function Talents({
       nodeChoices={activeData.nodeChoices}
       nodeRanks={activeData.nodeRanks}
       viewOnly={viewOnly}
+      nodeColors={nodeColors}
     />
   )
 
@@ -557,6 +578,7 @@ export default function Talents({
       nodeChoices={activeData.nodeChoices}
       nodeRanks={activeData.nodeRanks}
       viewOnly={viewOnly}
+      nodeColors={nodeColors}
     />
   )
 
@@ -567,6 +589,7 @@ export default function Talents({
       nodeChoices={activeData.nodeChoices}
       nodeRanks={activeData.nodeRanks}
       viewOnly={viewOnly}
+      nodeColors={nodeColors}
     />
   )
 
@@ -574,12 +597,15 @@ export default function Talents({
     <TalentsDropdown name={name}>
       <div className="flex flex-col gap-4">
         <TalentTreeClient
+          comment={comment}
           classTree={classTree}
           specTree={specTree}
           heroTree={heroTree}
           talentString={talents}
           viewOnly={viewOnly}
-        />
+        >
+          {children}
+        </TalentTreeClient>
       </div>
     </TalentsDropdown>
   )

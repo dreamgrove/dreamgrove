@@ -8,6 +8,8 @@ interface TalentTreeClientProps {
   heroTree: React.ReactNode
   talentString: string
   viewOnly?: boolean
+  comment?: string
+  children?: React.ReactNode
 }
 
 const TalentTreeClient = ({
@@ -16,6 +18,8 @@ const TalentTreeClient = ({
   heroTree,
   talentString,
   viewOnly = false,
+  comment,
+  children,
 }: TalentTreeClientProps) => {
   const [activeTree, setActiveTree] = useState('full')
   const [copyButtonText, setCopyButtonText] = useState('Copy Talent String')
@@ -142,6 +146,13 @@ const TalentTreeClient = ({
       {copyError && (
         <div className="rounded border border-red-400 bg-red-100 px-4 py-2 text-red-700">
           {copyError}
+        </div>
+      )}
+
+      {(comment || children) && (
+        <div className="not-prose text-md my-0 py-0">
+          {comment}
+          {children}
         </div>
       )}
 
