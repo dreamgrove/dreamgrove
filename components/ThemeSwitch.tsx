@@ -1,10 +1,7 @@
 'use client'
 
-import { Fragment, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { Menu, RadioGroup, Transition } from '@headlessui/react'
-import { useRouter } from 'next/navigation'
-import { setCookie } from 'app/utils/serverDateUtils'
 
 const NormalIcon = () => (
   <svg
@@ -68,10 +65,8 @@ const CuteButton = ({ setTheme }: { setTheme: () => void }) => (
 const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  console.log(theme)
 
   const setAprilFoolsTheme = (enabled: boolean) => {
-    console.log('setAprilFoolsTheme', enabled)
     setTheme(enabled ? 'april-fools' : 'dark')
   }
 

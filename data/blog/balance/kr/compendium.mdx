@@ -5,7 +5,6 @@ draft: false
 authors: ["Gamz, Vinter, Dsune(Oi)"]
 summary: '조화 드루이드 가이드'
 translator: 'NeruTe'
-locale: 'kr'
 ---
 
 # 새소식
@@ -39,13 +38,13 @@ locale: 'kr'
 # 로테이션
 
 <HeroTalentsHeader id="generic" title="오프너">
-<CheckboxProvider>
+
   <Checkbox isIcon id="KEEPER" spellId={205636} name="숲의 수호자" defaultCheck radio="Keeper of the Grove" /> 
   <Checkbox isIcon id="EC" spellId={202770} name="엘룬의 대행자" radio="Keeper of the Grove" />
   <Checkbox isIcon id="OPENFLARE" spellId={202347} name="항성의 섬광" defaultCheck radio="Stellar Flare" />
   <Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="영혼 소집" defaultCheck radio="Convoke the Spirits" />
   <Checkbox isIcon id="MEDITATION" spellId={474728} name="리카라의 명상" defaultCheck />
-</CheckboxProvider>
+
 
 [*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164815, 164812, 194223, 197626, 197626, 197626]} > 최대 사거리 기준 전투 시작 4초 전부터 시전 시작할 것. </Timeline>
 
@@ -134,7 +133,7 @@ locale: 'kr'
 아래의 시전 우선순위는 순서대로 따라하기 위한 '단계' 개념이 아니다. 전투 중의 매 순간, 목록에서 지금 사용할 수 있는 것 중 가장 위에 있는 것을 쓰는 식으로 적용해야 한다.
 
 <HeroTalentsHeader id="kotg" title="숲의 수호자 - 단일 대상">
-<CheckboxProvider>
+
     <Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="영혼 소집" defaultCheck radio="Convoke the Spirits" />
     <Checkbox isIcon id="Control of the Dream" spellId={434249} name="꿈의 통제" defaultCheck radio="Control of the Dream" />
     <Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="별재봉사" />
@@ -143,7 +142,7 @@ locale: 'kr'
     <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="엘룬의 분노" radio="New Moon" />
     <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="항성의 섬광" defaultCheck radio="Stellar Flare" />
     <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="야생 버섯" />
- </CheckboxProvider> 
+  
 
 - !164815|태양섬광! 유지. Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
 - !164812|달빛섬광! 유지. Pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
@@ -183,7 +182,7 @@ locale: 'kr'
 
 <HeroTalentsHeader id="ec" title="엘룬의 대행자 - 단일 대상">
 
-<CheckboxProvider>
+
   
     <Checkbox isIcon id="Lunar CallingST" spellId={429523} name="달의 부름" defaultCheck radio="Lunar Calling" /> 
     <Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="엘룬의 전사" defaultCheck radio="Warrior of Elune" />
@@ -196,7 +195,7 @@ locale: 'kr'
     <Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="야생 버섯" />
     <Checkbox isIcon id="Force of NatureEC" spellId={205636} name="자연의 군대" radio="Warrior of Elune" />
  
-</CheckboxProvider>
+
 
 - [*Lunar CallingST&&Warrior of EluneEC] !202425|엘룬의 전사!.
 - !164812|달빛섬광! & !164815|태양섬광! 유지. 각각 pandemic 구간 내 (기본 지속시간의 30% 이하) 에 갱신.
@@ -237,7 +236,7 @@ locale: 'kr'
 
 
 <HeroTalentsHeader id="kotg" title="숲의 수호자 - 다중 대상">
-<CheckboxProvider>
+
 <Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="엘룬의 분노" defaultCheck radio="New Moon" />
 <Checkbox isIcon id="New MoonKAOE" spellId={274281} name="초승달" radio="New Moon" />
 <Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="항성의 섬광" />
@@ -245,7 +244,7 @@ locale: 'kr'
 <Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="별재봉사" />
 <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="영혼 소집" />
 <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
-</CheckboxProvider>
+
 
 - 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 대상이 한 곳에 모인 뒤에 시전할 것.
 - 대상이 6초 내로 죽지 않으며, 현재 !164812|달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, !164812|달빛섬광!. !205636|자연의 군대!가 자동으로 시전하는 !164812|달빛섬광!을 항상 고려할 것.
@@ -280,7 +279,7 @@ locale: 'kr'
 
 
 <HeroTalentsHeader id="ec" title="엘룬의 대행자 - 다중 대상">
-<CheckboxProvider>
+
 <Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="엘룬의 전사" defaultCheck radio="Force of Nature"/>
 <Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="엘룬의 분노" defaultCheck radio="FoE"/>
 <Checkbox isIcon id="New MoonECAoE" spellId={274281} name="초승달" radio="FoE"/>
@@ -290,7 +289,7 @@ locale: 'kr'
 <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="영혼 소집"/>
 <Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="자연의 군대" radio="Force of Nature"/>
 <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="야생 버섯"/>
-</CheckboxProvider>
+
 
 - 대상이 5.5초 내로 죽지 않는다면, !164815|태양섬광!. 추가 대상의 수에 따라 이 조건을 0.5초씩 줄일 것. (예를 들어, 5개 대상에서는 3.5초가 기준이 됨.) 모든 대상이 한 곳에 모인 뒤에 시전할 것.
 - 대상이 6초 내로 죽지 않으며, 현재 !164812|달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, !164812|달빛섬광!.
@@ -382,10 +381,10 @@ locale: 'kr'
 
 ![ClassTree](/static/images/classtreebalance%2B.png)
 
-<CheckboxProvider>
+
   <Checkbox isIcon id="Keeper Image" spellId={205636} name="Keeper" defaultCheck radio="image"/>
   <Checkbox isIcon id="EC Image" spellId={202770} name="EC" radio="image" />
-</CheckboxProvider>
+
 
 [*Keeper Image]
 ![KeeperTalents](/static/images/talentboxkotg%2B.png)

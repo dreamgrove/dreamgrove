@@ -1,37 +1,62 @@
 'use client'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useState } from 'react'
-import HeroTalentsPicker from './HeroTalentsPicker'
+import styles from './HeroTalents.module.css'
+interface HeroTalentsHeaderProps {
+  title: string
+  id: string
+  children?: React.ReactNode
+  titleClassName?: string
+}
 
-export default function HeroTalents() {
-  const [isOn, setIsOn] = useState(false)
+export default function HeroTalents({ title, id, children }: HeroTalentsHeaderProps) {
+  const [isCollapsed, setIsCollapsed] = useState(true)
+
+  const arrow = isCollapsed ? (
+    <IoIosArrowDown className="block h-10 w-10 text-lg" />
+  ) : (
+    <IoIosArrowUp className="block h-10 w-10 text-lg" />
+  )
+
+  const borderStyle = () => {
+    if (id === 'kotg') return styles['border-balance']
+    if (id === 'ec') return styles['border-resto']
+    if (id === 'dotc') return styles['border-dotc']
+    return styles['border-generic']
+  }
+
+  const backgroundColorStyle = () => {
+    if (id === 'kotg') return 'bg-[#184118] bg-opacity-10'
+    if (id === 'ec') return 'bg-[#4b62be] bg-opacity-10'
+    if (id === 'dotc') return 'bg-[#c41e3a] bg-opacity-10'
+    return 'bg-[#d57f43] bg-opacity-10'
+  }
 
   return (
-    <div className="talents flex w-full flex-col items-center">
-      <div className="mb-4 flex w-full items-center justify-center space-x-4">
-        <span
-          className={`flex-1 text-right text-lg font-bold ${isOn ? 'text-gray-500' : 'text-[#4b62be]'}`}
+    <div
+      className={`talentTree mb-2 mt-2 grid rounded-md border-2 ${borderStyle()} ${backgroundColorStyle()}`}
+    >
+      <div
+        className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"
+        onClick={() => setIsCollapsed((prev) => !prev)}
+      >
+        <h3
+          className={`mb-2 mt-2 select-none pl-0 text-left align-baseline text-xl font-bold sm:pl-2`}
         >
-          Elune's Chosen
-        </span>
-        <button
-          className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 focus:outline-none ${
-            isOn ? 'bg-[#184118]' : 'bg-[#4b62be]'
-          }`}
-          onClick={() => setIsOn(!isOn)}
-        >
-          <span
-            className={`transform transition-transform duration-300 ease-in-out ${
-              isOn ? 'translate-x-6' : 'translate-x-1'
-            } inline-block h-4 w-4 rounded-full bg-white`}
-          />
-        </button>
-        <span
-          className={`flex-1 text-left text-lg font-bold ${isOn ? 'text-[#9ee02d]' : 'text-gray-500'}`}
-        >
-          Keeper of The Grove
-        </span>
+          {title}
+        </h3>
+        {arrow}
       </div>
-      <HeroTalentsPicker selection={isOn} />
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+          isCollapsed ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'
+        }`}
+      >
+        <div className="overflow-hidden">
+          {/* Use content if provided, otherwise use children */}
+          <div className="px-2 md:px-6">{children}</div>
+        </div>
+      </div>
     </div>
   )
 }

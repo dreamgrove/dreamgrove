@@ -1,19 +1,19 @@
 ---
-title: 'Balance Druid Compendium'
+title: Balance Druid Compendium
 patch: '11.1'
 draft: false
 authors: ["Gamz, Vinter, Dsune(Oi)"]
-summary: 'A guide to Balance Druid'
+summary: A guide to Balance Druid
 ---
 # News
 
 ## 25th of March tuning notes
-  > [!NOTE]
-  > !Wrath! damage increased by 30%.
-  >
-  > !Starsurge! damage increased by 5%.
-  >
-  > Elune’s Chosen: !Lunar Calling! increases !Starfire!’s damage to its primary target by 160% (was 100%).
+> [!NOTE]
+> !Wrath! damage increased by 30%.
+>
+> !Starsurge! damage increased by 5%.
+>
+> Elune’s Chosen: !Lunar Calling! increases !Starfire!’s damage to its primary target by 160% (was 100%).
 
 This is around a 7% buff on ST for both hero talents. The buff to !Wrath! has resulted in some talent changes for ST and builds in the talent section has been updated. This buff also changes some stuff regarding target count conditions for when to enter Solar Eclipse, so the Eclipses & Fillers section has been changed.
 
@@ -35,28 +35,25 @@ This is approximately ~6% dmg increase from having no set.
 
 This is approximately ~11% dmg increase from having no set.
 
-[Sim for tier set](https://www.raidbots.com/simbot/report/8x93eG6Z8Fk3zfVCowwd4h/simc)
+[Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersim.html)
 
 ## Current Bugs
+
+- !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
 
 - Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA!/!102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
 
 - If you spell-queue a free spender through a !Starweaver! or !Touch the Cosmos! proc as your first global in an !Eclipse!, you will gain no value from !Hail of Stars!.
 
-<Collapsible title="Balance Druid 11.1 Video Guide">
-  <YouTube id="KgOQUvbz9Ms"/>
-</Collapsible>
-
 # Rotation
 
 <HeroTalentsHeader id="generic" title="Openers">
-<CheckboxProvider>
-  <Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
-  <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
-  <Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" radio="Stellar Flare" />
-  <Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-  <Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" />
-</CheckboxProvider>
+
+<Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
+<Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
+<Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" />
+<Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck  />
+<Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" />
 
 [*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
@@ -145,16 +142,15 @@ This is approximately ~11% dmg increase from having no set.
 When reading the priority lists below, you should not think of these as steps to be followed in a specific order. At any given point in combat, you should cast the first ability on the list that you are able to cast, provided the conditions for its use are met.
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
-<CheckboxProvider>
-    <Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-    <Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
-    <Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
-    <Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" defaultCheck />
-    <Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon" />
-    <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon" />
-    <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" />
-    <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
- </CheckboxProvider>
+
+<Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck />
+<Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
+<Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
+<Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" defaultCheck />
+<Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon-KOTG" />
+<Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
+<Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" defaultCheck />
+<Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -197,18 +193,16 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
 
-<CheckboxProvider>
-  <Checkbox isIcon id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck radio="Lunar Calling" /> 
-  <Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of Elune" />
-  <Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" /> 
-  <Checkbox isIcon id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck radio="Convoke the Spirits" />
-  <Checkbox isIcon id="New MoonEC" spellId={274281} name="New Moon" radio="New Moon" /> 
-  <Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
-  <Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" /> 
-  <Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck radio="Stellar Flare" /> 
-  <Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
-  <Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of Elune" />
-</CheckboxProvider>
+<Checkbox isIcon id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck /> 
+<Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of EluneEC" />
+<Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonEC" /> 
+<Checkbox isIcon id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck  />
+<Checkbox isIcon id="New MoonEC" spellId={274281} name="New Moon" radio="New MoonEC" /> 
+<Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
+<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" /> 
+<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck  /> 
+<Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
+<Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of EluneEC" />
 
 - [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
 - Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -249,15 +243,13 @@ When reading the priority lists below, you should not think of these as steps to
 
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
-<CheckboxProvider>
-  <Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New Moon" />
-  <Checkbox isIcon id="New MoonKAOE" spellId={274281} name="New Moon" radio="New Moon" />
-  <Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
-  <Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
-  <Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
-  <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="Convoke the Spirits" />
-  <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
-</CheckboxProvider>
+<Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonKAOE" />
+<Checkbox isIcon id="New MoonKAOE" spellId={274281} name="New Moon" radio="New MoonKAOE" />
+<Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
+<Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
+<Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
+<Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="Convoke the Spirits" />
+<Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
@@ -291,17 +283,15 @@ When reading the priority lists below, you should not think of these as steps to
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
-<CheckboxProvider>
-  <Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of Nature"/>
-  <Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoE"/>
-  <Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoE"/>
-  <Checkbox isIcon id="Stellar FlareECAoE" spellId={202347} name="Stellar Flare"/>
-  <Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
-  <Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
-  <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
-  <Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of Nature"/>
-  <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
-</CheckboxProvider>
+<Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of NatureEC"/>
+<Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoEEC"/>
+<Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoEE"/>
+<Checkbox isIcon id="Stellar FlareECAoE" spellId={202347} name="Stellar Flare"/>
+<Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
+<Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
+<Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
+<Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of NatureEC"/>
+<Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP.
@@ -336,10 +326,8 @@ When reading the priority lists below, you should not think of these as steps to
 
 ### Eclipses and Fillers
 
-<CheckboxProvider>
-  <Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
-  <Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
-</CheckboxProvider>
+<Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
+<Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
 
 - [*Keeper Fillers] Enter !Solar Eclipse! and cast !Wrath! on 1 and 2 targets.
 - [*Keeper Fillers] If you enter !Lunar Eclipse! by mistake on 1 target, cast !Wrath!.
@@ -399,7 +387,7 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
 
 <Talents name={"Keeper of the Grove build"} talents={"CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzwsMzyMzyYmZmZWmxYYG2wCAGgttxCmmZWGFAACgNmxYgNjhB"}/>
 
-<Talents name={"Elune's Chosen build"} talents={"CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzsYWmZZmZbmZGzMLzsMGGshFAMW2mZbbbmlZbmmZWmpAAQAswMGgNjhB"}/>
+<Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzsYWmZZmZbmZmZmZxsMGGshFAMW2mZDjZbEYCAAAwCzYA2MGG"}/>
 
 ## Talent Explanations
 
@@ -407,10 +395,8 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
 
 ![ClassTree](/static/images/classtreebalance%2B.png)
 
-<CheckboxProvider>
-  <Checkbox isIcon id="Keeper Image" spellId={205636} name="Keeper" defaultCheck radio="image"/>
-  <Checkbox isIcon id="EC Image" spellId={202770} name="Elune's Chosen" radio="image" />
-</CheckboxProvider>
+<Checkbox isIcon id="Keeper Image" spellId={205636} name="Keeper" defaultCheck radio="image"/>
+<Checkbox isIcon id="EC Image" spellId={202770} name="Elune's Chosen" radio="image" />
 
 [*Keeper Image] ![KeeperTalents](/static/images/talentboxkotg.png)
 
@@ -452,7 +438,7 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
   !Ursine Vigor! is a solid defensive node that increases your health and armor by 15% for the first 4 seconds of entering !Bear Form!. This talent is a solid choice in general. 
 
 </Collapsible>
-    <Collapsible title="Spec Tree ">
+<Collapsible title="Spec Tree ">
 
 - For the Balance Druid spec tree there are currently a solid number of talent iterations to choose from that don't provide a meaningful increase to your damage. Talents like !114107|Soul of the Forest!, !Crashing Star!, !Touch the Cosmos!, !Hail of Stars!, !Umbral Inspiration! and !Sundered Firmament! are mostly interchangeable in ST with Keeper of the Grove, which is the recommended hero talent for raid encounters. Below there will be short explanations for each talent. Keep in mind that most of these options don't provide any changes in your rotation or decision making.
 
@@ -521,7 +507,7 @@ Depending on the fight timer, this talent is stronger than !Power of the Dream! 
 
 | Slot |  |
 |------|---------|
-| **Gems** | 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) mixed with whatever gems sim the highest for your character |
+| **Gems** | 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) mixed with whatever gems sim the highest for your character. |
 | **Weapon** | [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) for single target and raid, [Authority of Radiant Power](https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power) for AoE and m+ |
 | **Chest** | [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) |
 | **Cloak** | [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace) |
@@ -575,12 +561,12 @@ These are part of a set that has a chance to drop an orb close to your target, g
 |------|-----|-----|
 | **S Tier** | [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=4795&class=11&ilvl=678&spec=102) | 1:30 CD use effect trinket. Easy to line up with [CA/Inc](https://www.wowhead.com/spell=194223/celestial-alignment) |
 |  | [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102) | |
-|  | [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=6652:10356:11996:1527:10255&ilvl=678&spec=102) | Good for longer raid fights, loses value in m+. |
+|  | [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=6652:10356:11996:1527:10255&ilvl=678&spec=102) | Good for longer raid fights, loses value in m+. Very good for One-Armed Bandit or Mugzee prog where damage in execute phase is important.|
 | **A Tier** | [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102)  | |
 |  | [Carved Blazikon Wax](https://www.wowhead.com/item=219305/carved-blazikon-wax?bonus=4795&class=11&ilvl=678&spec=102) | Solid m+ trinket, good passive versatility effect. |
-|  | [Reverb Radio](https://www.wowhead.com/item=230194/reverb-radio?bonus=6652:10356:11996:1527:10255&class=11&ilvl=678&spec=102) | Good haste proc, drops early in the raid. |
 |  | [Suspicious Energy Drink](https://www.wowhead.com/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=102) | Best trinket from delve. |
 | **B Tier** | [Spymaster's Web(639)](https://www.wowhead.com/item=220202/spymasters-web?bonus=1540:11978:11964&ilvl=639&spec=102) | This trinket is from last tier, but is still pretty solid early in the tier. |
+|  | [Reverb Radio](https://www.wowhead.com/item=230194/reverb-radio?bonus=6652:10356:11996:1527:10255&class=11&ilvl=678&spec=102) | Good haste proc, drops early in the raid. |
 |  | [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) | Sims well, requires using a global [or macro](https://www.dreamgrove.gg/blog/balance/compendium#macros) to kill the barrel. |
 |  | [Shadow-Binding Ritual Knife](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife?bonus=9838:11992:11964&ilvl=665&spec=102) | Delve trinket, good option if you can get it. |
 |  | [Soulletting Ruby](https://www.wowhead.com/item=178809/soulletting-ruby?bonus=4795&class=11&ilvl=678&spec=102) | |
@@ -593,7 +579,7 @@ These are part of a set that has a chance to drop an orb close to your target, g
 |  | [Geargrinder's Spare Keys](https://www.wowhead.com/item=230197/geargrinders-spare-keys?bonus=4795&class=11&ilvl=678&spec=102) | |
 |  | [Flarendo's Pilot Light](https://www.wowhead.com/item=230191/flarendos-pilot-light?bonus=4795&ilvl=678&spec=102) | |
 
-[Trinket Sim](https://www.raidbots.com/simbot/report/cNTVA9quPTRLeVhiw772dF)
+[Trinket Sim](https://www.raidbots.com/simbot/report/sNct8EeZwQtGF89tuJFSS2)
 
 ## Weapons
 
@@ -658,6 +644,14 @@ Keep in mind that class buffs only affect class spells so if a trinket does natu
 ### Q: I have read through the Compendium and I have some questions that are not outlined in this FAQ?
 
 **A:**  If you have any questions, you can go to the [Dreamgrove discord server](https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to receive the answer you would like.
+
+## Balance Druid Video Guide
+
+For 11.1, the Balance Compendium writer decided to make a video guide in addition to the written guide. Be aware that some things can change depending on tuning, like talents or trinkets, and you should always double check the written guide. You can find the video by opening the collapsible below.
+
+<Collapsible title="Balance Druid 11.1 Video Guide">
+  <YouTube id="KgOQUvbz9Ms"/>
+</Collapsible>
 
 # Additional Resources
 ## Macros
@@ -724,7 +718,7 @@ The following links lead to various Balance Druid WeakAura packs. These contain 
 - [Afenar The War Within](https://wago.io/HkrSdHFMG)
 - [Shrom's AP Bar - Standalone](https://wago.io/J5V9sTM0F)
 
-### Jundies Plater Profile
+### **Jundies Plater Profile**
 
 [This profile for Plater](https://wago.io/ak3iS95aa) is among the most used and asked about public nameplate profiles for Moonkins, having customized colors for each NPC identity. 
 
@@ -741,9 +735,12 @@ See the description of the WA for more details. This is not a required WA but wi
 
 [This weakaura](https://wago.io/rIj_5wU8P) will play a sound and show a timer whenever the trinket [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) procs. The timer shows the latest barrel spawned.
 
----
-[Item Strings for Simming](https://pastebin.com/eChnxnGY)
+## Simc Code Directory 
+[Item Strings for Simming](https://www.dreamgrove.gg/static/sims/itemstrings.txt)
 
-[Race Sim](https://www.raidbots.com/simbot/report/s5YtbqmvZBzqfV8VH4ZCKK)
+[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt)
+
+[Race Sim](https://www.dreamgrove.gg/static/sims/racesim.htm)
 
 [Current APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
+

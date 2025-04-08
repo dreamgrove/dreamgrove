@@ -20,7 +20,7 @@ Not proud of this whole mess but it is what it is
 
 export default function EntityEntry({ entity }) {
   return (
-    <div className="mb-4 flex flex-col p-4 ">
+    <div className="mb-4 flex flex-col p-4">
       <div className="text-xl font-bold">
         <Wowhead type="spell" name={entity.name} id={entity.id} />
         {entity.talent_entry && (
@@ -69,7 +69,7 @@ const FieldDiff = ({ field }) => {
   return (
     <div>
       <span>{field.field || field.key}: </span>
-      <span className="text-red-500 ">{field.prev}</span>
+      <span className="text-red-500">{field.prev}</span>
       <span>
         <FaLongArrowAltRight className="ml-1 inline-block" />
       </span>
@@ -115,10 +115,9 @@ const EffectDisplay = ({ effect }) => {
   return (
     <Collapsible
       title={`# ${effect.idx}: ${effect.type} ${effect.subtype ? '- ' + effect.subtype : ''}`}
-      type="added"
     >
       <div className="mt-1 pl-4 text-green-900">
-        <span className="text-xl font-bold ">Added</span>
+        <span className="text-xl font-bold">Added</span>
       </div>
       <div className="mb-4 px-4 py-2">
         <div className="text-sm text-gray-600">
@@ -155,7 +154,6 @@ const EffectDisplay = ({ effect }) => {
 }
 
 const EffectDiff = ({ effect }) => {
-  //console.log(effect)
   if (effect.status == 'added') {
     return <EffectDisplay effect={effect} />
   }
@@ -166,7 +164,7 @@ const EffectDiff = ({ effect }) => {
     <Collapsible
       title={`Effect # ${effect.idx}: ${effect.type} ${effect.subtype ? '- ' + effect.subtype : ''}`}
     >
-      <div className="mb-4  px-4 py-2">
+      <div className="mb-4 px-4 py-2">
         <div className="text-sm text-gray-600">
           <span className="font-bold">ID:</span> {effect.id}
         </div>

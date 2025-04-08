@@ -2,19 +2,10 @@ import Link from '@/components/Link'
 import { Poll } from './components/Poll'
 import { AsciiArt } from './components/AsciiArt'
 import { ChatBox } from './components/ChatBox'
-import balance from 'public/static/images/cards/balance-card.png'
-import feral from 'public/static/images/cards/feral-card.png'
-import resto from 'public/static/images/cards/resto-card.png'
-import guardian from 'public/static/images/cards/guardian-card.png'
 import dungeons from 'public/static/images/cards/dungeons-card.png'
 import raids from 'public/static/images/cards/raids-card.png'
-import balanceGif from 'public/static/images/april/balance.webp'
-import feralGif from 'public/static/images/april/feral.webp'
-import restoGif from 'public/static/images/april/resto.webp'
-import guardianGif from 'public/static/images/april/bear.webp'
 import separator from 'public/static/images/april/separator.gif'
 import usuhana from 'public/static/images/april/usuhana.gif'
-import clouds from 'public/static/images/april/clouds.png'
 import checks from 'public/static/images/april/checks.jpg'
 import border from 'public/static/images/april/border.png'
 import dot from 'public/static/images/april/dot.jpg'
@@ -52,23 +43,25 @@ const MarqueeText = ({ text }: { text: string }) => (
   </div>
 )
 
-const NavLink = ({ href, icon, text }: { href: string; icon: StaticImageData; text: string }) => (
-  <Link href={href}>
-    <div className={styles.navLink}>
-      <div
-        className={styles.navLinkContent}
-        style={{
-          backgroundImage: `url(${buttonBg.src})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '22px 22px',
-        }}
-      >
-        <div className={styles.navIcon}>
-          <Image src={icon} alt="" className="h-full w-full object-contain" />
-        </div>
-        <span className={styles.navText}>{text}</span>
-      </div>
-    </div>
+const NavLink = ({
+  href,
+  icon,
+  text,
+}: {
+  href: string
+  icon: string | StaticImageData
+  text: string
+}) => (
+  <Link
+    href={href}
+    className="flex items-center gap-2 rounded-lg p-2 transition-colors hover:bg-[#FF7AAD] hover:text-white"
+  >
+    {typeof icon === 'string' ? (
+      <Image src={icon} alt={text} width={24} height={24} className="h-6 w-6" />
+    ) : (
+      <Image src={icon} alt={text} width={24} height={24} className="h-6 w-6" />
+    )}
+    <span className="text-sm">{text}</span>
   </Link>
 )
 
@@ -84,10 +77,26 @@ const NavigationMenu = () => (
         <h2 className={styles.navigationTitle}>✧ 𝓃𝒶𝓋𝒾ℊ𝒶𝓉𝒾ℴ𝓃 ✧</h2>
       </div>
       <div className={styles.navigationLinks}>
-        <NavLink href="/blog/balance/compendium" icon={balanceGif} text="𝕓𝕒𝕝𝕒𝕟𝕔𝕖 𝕘𝕦𝕚𝕕𝕖" />
-        <NavLink href="/blog/feral/compendium" icon={feralGif} text="𝕗𝕖𝕣𝕒𝕝 𝕘𝕦𝕚𝕕𝕖" />
-        <NavLink href="/blog/resto/compendium" icon={restoGif} text="𝕣𝕖𝕤𝕥𝕠 𝕘𝕦𝕚𝕕𝕖" />
-        <NavLink href="/blog/guardian/compendium" icon={guardianGif} text="𝕓𝕖𝕒𝕣 𝕘𝕦𝕚𝕕𝕖" />
+        <NavLink
+          href="/blog/balance/compendium"
+          icon="/static/images/april/balance.webp"
+          text="𝕓𝕒𝕝𝕒𝕟𝕔𝕖 𝕘𝕦𝕚𝕕𝕖"
+        />
+        <NavLink
+          href="/blog/feral/compendium"
+          icon="/static/images/april/feral.webp"
+          text="𝕗𝕖𝕣𝕒𝕝 𝕘𝕦𝕚𝕕𝕖"
+        />
+        <NavLink
+          href="/blog/resto/compendium"
+          icon="/static/images/april/resto.webp"
+          text="𝕣𝕖𝕤𝕥𝕠 𝕘𝕦𝕚𝕕𝕖"
+        />
+        <NavLink
+          href="/blog/guardian/compendium"
+          icon="/static/images/april/bear.webp"
+          text="𝕓𝕖𝕒𝕣 𝕘𝕦𝕚𝕕𝕖"
+        />
       </div>
     </div>
   </div>
@@ -157,8 +166,6 @@ const WalkingCat = () => (
 )
 
 export default function HomeAprilFools() {
-  const ENABLE_EXTRA_GUIDES = false
-
   const badges = [
     strawberry,
     chillPill,
@@ -173,38 +180,18 @@ export default function HomeAprilFools() {
   ]
 
   const content = [
-    { src: dungeons, href: '/dungeons', alt: '𝕕𝕦𝕟𝕘𝕖𝕠𝕟 𝕘𝕦𝕚𝕕𝕖𝕤', decorativeGif: balanceGif },
-    { src: raids, href: '/raids', alt: '𝕣𝕒𝕚𝕕 𝕘𝕦𝕚𝕕𝕖𝕤', active: false, decorativeGif: guardianGif },
-  ]
-
-  const images = [
     {
-      src: balance,
-      href: '/blog/balance/compendium',
-      alt: 'Balance guide',
-      active: true,
-      decorativeGif: balanceGif,
+      src: dungeons,
+      href: '/dungeons',
+      alt: '𝕕𝕦𝕟𝕘𝕖𝕠𝕟 𝕘𝕦𝕚𝕕��𝕤',
+      decorativeGif: '/static/images/april/balance.webp',
     },
     {
-      src: feral,
-      href: '/blog/feral/compendium',
-      alt: 'Feral guide',
-      active: true,
-      decorativeGif: feralGif,
-    },
-    {
-      src: resto,
-      href: '/blog/resto/compendium',
-      alt: 'Resto guide',
-      active: true,
-      decorativeGif: restoGif,
-    },
-    {
-      src: guardian,
-      href: '/blog/guardian/compendium',
-      alt: 'Guardian guide',
-      active: true,
-      decorativeGif: guardianGif,
+      src: raids,
+      href: '/raids',
+      alt: '𝕣𝕒𝕚𝕕 𝕘𝕦𝕚𝕕𝕖𝕤',
+      active: false,
+      decorativeGif: '/static/images/april/bear.webp',
     },
   ]
 
@@ -251,8 +238,8 @@ export default function HomeAprilFools() {
 
         <Separator />
 
-        <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px] ">
-          <div className=" md:w-[400px] lg:w-[720px]">
+        <div className="flex w-full flex-col justify-center gap-4 px-4 md:h-[300px] md:flex-row lg:h-[300px]">
+          <div className="md:w-[400px] lg:w-[720px]">
             <AboutMeSection />
           </div>
           <div className="flex-1">
@@ -345,7 +332,7 @@ export default function HomeAprilFools() {
                       backgroundSize: '22px 22px',
                     }}
                   >
-                    <span className={styles.navText}> (˘³ ˘) 𝕔𝕞𝕚��𝕘 𝕤𝕠𝕠𝕟</span>
+                    <span className={styles.navText}> (˘³ ˘) 𝕔𝕞𝕚𝕘 𝕤𝕠𝕠𝕟</span>
                   </div>
                 </div>
               </div>

@@ -1,12 +1,8 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import png from '../../public/static/images/logo.png'
-import border from '../../public/static/images/april/border.png'
 import buttonCute from '../../public/static/images/april/button_cute.gif'
-import Image from 'next/image'
 import Link from '@/components/Link'
 import MobileNav from '@/components/MobileNav'
-import PageTitle from '@/components/PageTitle'
 import styles from './HeaderAprilFools.module.css'
 
 interface HeaderProps {
@@ -15,7 +11,7 @@ interface HeaderProps {
   isBlog?: boolean
 }
 
-const HeaderAprilFools = ({ title, showTitle = true, isBlog = false }: HeaderProps) => {
+const HeaderAprilFools = ({ title }: HeaderProps) => {
   const isMainPage = title === 'Main'
 
   return (
@@ -33,7 +29,7 @@ const HeaderAprilFools = ({ title, showTitle = true, isBlog = false }: HeaderPro
                   {typeof siteMetadata.headerTitle === 'string' ? (
                     <div className="font-pixel mb-[-5px] flex items-center text-[2rem] font-bold text-[#ffd4e4] sm:mb-0 sm:text-4xl md:text-4xl lg:text-5xl">
                       <div className="title-effect self-end">
-                        <h1 className="title-effect-front  text-[#ffd4e4]">✩☽⋆𝕯𝖗𝖊𝖆𝖒𝖌𝖗𝖔𝖛𝖊⋆☾⁺₊✩</h1>
+                        <h1 className="title-effect-front text-[#ffd4e4]">✩☽⋆𝕯𝖗𝖊𝖆𝖒𝖌𝖗𝖔𝖛𝖊⋆☾⁺₊✩</h1>
                       </div>
                     </div>
                   ) : (

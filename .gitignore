@@ -46,6 +46,7 @@ yarn-error.log*
 # Contentlayer
 .contentlayer
 /.vs
+app/tag-data.json
 
 # Cursor specific folder
 cursor
