@@ -111,6 +111,7 @@ export function TalentTreeGrid({
   grid,
   nodeIdToCell,
   selectedNodes,
+  activeSelectedNodes,
   nodeChoices,
   nodeRanks,
   disableInteraction,
@@ -121,6 +122,7 @@ export function TalentTreeGrid({
   grid: GridCell[][]
   nodeIdToCell: Map<number, GridCell>
   selectedNodes: number[]
+  activeSelectedNodes?: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   disableInteraction: boolean
@@ -130,9 +132,12 @@ export function TalentTreeGrid({
   // Calculate the grid ratio for aspect ratio
   const gridRatio = grid[0]?.length / grid.length || 1
 
+  // Use activeSelectedNodes for connections if provided, otherwise use selectedNodes
+  const nodesForConnections = activeSelectedNodes || selectedNodes
+
   // Function to determine if a connection is active based on tree type
   const isConnectionActive = (fromNodeId: number, toNodeId: number) => {
-    return selectedNodes.includes(fromNodeId) && selectedNodes.includes(toNodeId)
+    return nodesForConnections.includes(fromNodeId) && nodesForConnections.includes(toNodeId)
   }
 
   return (
@@ -222,6 +227,7 @@ export function TalentTreeGrid({
 export function ClassTreeLayout({
   nodes,
   selectedNodes,
+  activeSelectedNodes,
   nodeChoices,
   nodeRanks,
   viewOnly = false,
@@ -229,6 +235,7 @@ export function ClassTreeLayout({
 }: {
   nodes: TalentNode[]
   selectedNodes: number[]
+  activeSelectedNodes?: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   viewOnly?: boolean
@@ -260,6 +267,7 @@ export function ClassTreeLayout({
           grid={grid}
           nodeIdToCell={nodeIdToCell}
           selectedNodes={selectedNodes}
+          activeSelectedNodes={activeSelectedNodes}
           nodeChoices={nodeChoices}
           nodeRanks={nodeRanks}
           disableInteraction={viewOnly}
@@ -275,6 +283,7 @@ export function ClassTreeLayout({
 export function SpecTreeLayout({
   nodes,
   selectedNodes,
+  activeSelectedNodes,
   nodeChoices,
   nodeRanks,
   viewOnly = false,
@@ -282,6 +291,7 @@ export function SpecTreeLayout({
 }: {
   nodes: TalentNode[]
   selectedNodes: number[]
+  activeSelectedNodes?: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   viewOnly?: boolean
@@ -313,6 +323,7 @@ export function SpecTreeLayout({
           grid={grid}
           nodeIdToCell={nodeIdToCell}
           selectedNodes={selectedNodes}
+          activeSelectedNodes={activeSelectedNodes}
           nodeChoices={nodeChoices}
           nodeRanks={nodeRanks}
           disableInteraction={viewOnly}
@@ -328,6 +339,7 @@ export function SpecTreeLayout({
 export function HeroTreeLayout({
   nodes,
   selectedNodes,
+  activeSelectedNodes,
   nodeChoices,
   nodeRanks,
   viewOnly = false,
@@ -335,6 +347,7 @@ export function HeroTreeLayout({
 }: {
   nodes: TalentNode[]
   selectedNodes: number[]
+  activeSelectedNodes?: number[]
   nodeChoices: Record<number, number>
   nodeRanks: Record<number, number>
   viewOnly?: boolean
@@ -397,6 +410,7 @@ export function HeroTreeLayout({
                 grid={grid}
                 nodeIdToCell={nodeIdToCell}
                 selectedNodes={selectedNodes}
+                activeSelectedNodes={activeSelectedNodes}
                 nodeChoices={nodeChoices}
                 nodeRanks={nodeRanks}
                 disableInteraction={viewOnly}
