@@ -186,7 +186,9 @@ export function TalentTreeGrid({
               const selected = selectedNodes.includes(node.id)
               const choiceIndex = nodeChoices[node.id] || 0
               const rank = nodeRanks[node.id] || 0
-              const borderColor = nodeColors[node.name.toLowerCase()]
+              const borderColor = Object.entries(nodeColors).find(([nodeName]) =>
+                node.name.toLowerCase().includes(nodeName.toLowerCase())
+              )?.[1]
 
               return (
                 <div
