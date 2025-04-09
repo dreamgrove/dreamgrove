@@ -535,6 +535,7 @@ export default function Talents({
   comment = '',
   children,
   colors = [],
+  extra = [],
 }: {
   talents?: string
   viewOnly?: boolean
@@ -542,6 +543,7 @@ export default function Talents({
   comment?: string
   children?: React.ReactNode
   colors?: ColorConfig[]
+  extra?: string[]
 }) {
   // Parse the talent string and get the active data
   const activeData = parseTalentString(talents)
@@ -554,16 +556,43 @@ export default function Talents({
     return acc
   }, {})
 
+  // Create a set of extra node names for quick lookup (case-insensitive)
+  const extraNodeNames = new Set(extra.map((name) => name.toLowerCase()))
+
+  // Mark extra nodes as "selected" for highlighting
+  const markExtraNodes = (nodes: TalentNode[], selectedNodes: number[]) => {
+    const extraSelectedNodes = [...selectedNodes]
+
+    nodes.forEach((node) => {
+      if (
+        extraNodeNames.size > 0 &&
+        [...extraNodeNames].some((name) => node.name.toLowerCase().includes(name))
+      ) {
+        if (!extraSelectedNodes.includes(node.id)) {
+          extraSelectedNodes.push(node.id)
+        }
+      }
+    })
+
+    return extraSelectedNodes
+  }
+
   // If there's an error, display the error component
   if (activeData.error) {
     return <TalentTreeError error={activeData.error} />
   }
 
+  // Mark extra nodes as selected for highlighting
+  const extraClassNodes = markExtraNodes(activeData.classNodes, activeData.selectedClassNodes)
+  const extraSpecNodes = markExtraNodes(activeData.specNodes, activeData.selectedSpecNodes)
+  const extraHeroNodes = markExtraNodes(activeData.heroNodes, activeData.selectedHeroNodes)
+
   // Generate the HTML structure for the three trees
   const classTree = (
     <ClassTreeLayout
       nodes={activeData.classNodes}
-      selectedNodes={activeData.selectedClassNodes}
+      selectedNodes={extraClassNodes}
+      activeSelectedNodes={activeData.selectedClassNodes}
       nodeChoices={activeData.nodeChoices}
       nodeRanks={activeData.nodeRanks}
       viewOnly={viewOnly}
@@ -574,7 +603,8 @@ export default function Talents({
   const specTree = (
     <SpecTreeLayout
       nodes={activeData.specNodes}
-      selectedNodes={activeData.selectedSpecNodes}
+      selectedNodes={extraSpecNodes}
+      activeSelectedNodes={activeData.selectedSpecNodes}
       nodeChoices={activeData.nodeChoices}
       nodeRanks={activeData.nodeRanks}
       viewOnly={viewOnly}
@@ -585,7 +615,8 @@ export default function Talents({
   const heroTree = (
     <HeroTreeLayout
       nodes={activeData.heroNodes}
-      selectedNodes={activeData.selectedHeroNodes}
+      selectedNodes={extraHeroNodes}
+      activeSelectedNodes={activeData.selectedHeroNodes}
       nodeChoices={activeData.nodeChoices}
       nodeRanks={activeData.nodeRanks}
       viewOnly={viewOnly}
