@@ -26,6 +26,8 @@ export default async function Wowhead({
       const spellId = spellDataModule[name]
       if (spellId) {
         displayId = spellId
+      } else {
+        noIcon = true
       }
     } else {
       throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
@@ -55,7 +57,9 @@ export default async function Wowhead({
     }
 
     icon =
-      noIcon || type === 'npc' ? null : (
+      noIcon || type === 'npc' ? (
+        <></>
+      ) : (
         <WowheadIcon
           id={displayId}
           type={type}
