@@ -7,15 +7,19 @@ summary: A guide to Balance Druid
 ---
 # News
 
-## 25th of March tuning notes
+## 15th of April tuning notes
 > [!NOTE]
-> !Wrath! damage increased by 30%.
->
-> !Starsurge! damage increased by 5%.
->
-> Elune’s Chosen: !Lunar Calling! increases !Starfire!’s damage to its primary target by 160% (was 100%).
+> All spell damage increased by 3%.
+> 
+> !Starfall! damage reduced by 10%.
+> 
+> !Starsurge! damage increased by 3%.
+> 
+> !Power of Goldrinn! damage increased by 3%.
+> 
+> **Elune’s Chosen:** !Boundless Moonlight! - !Fury of Elune! final flash of Energy damage reduced by 10%. !424588|Minor Moon! damage reduced by 10%.
 
-This is around a 7% buff on ST for both hero talents. The buff to !Wrath! has resulted in some talent changes for ST and builds in the talent section has been updated. This buff also changes some stuff regarding target count conditions for when to enter Solar Eclipse, so the Eclipses & Fillers section has been changed.
+This is around a 4% buff on ST in raid builds. For !Elune's Chosen! in m+ it's a small nerf to AoE, but overall a buff in mythic+ builds when including the buff to !Starsurge! and the Balance spec aura.
 
 ## Raid Guide 
 
@@ -149,7 +153,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" defaultCheck />
 <Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon-KOTG" />
 <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
-<Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" defaultCheck />
+<Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
 <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
@@ -200,7 +204,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="New MoonEC" spellId={274281} name="New Moon" radio="New MoonEC" /> 
 <Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
 <Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" /> 
-<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" defaultCheck  /> 
+<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" /> 
 <Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
 <Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of EluneEC" />
 
@@ -248,7 +252,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
 <Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
 <Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
-<Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} defaultCheck name="Convoke the Spirits" />
+<Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} name="Convoke the Spirits" />
 <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
@@ -294,7 +298,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
-- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP.
+- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Start spreading !Moonfire! while the tank is gathering mobs.
 - [*Stellar FlareECAoE] Use !Stellar Flare! if all of the following conditions is met:
   - The target will live for at least 8s+1s per target that !Starfire! can hit.
   - You will not overcap on AP.
@@ -339,6 +343,7 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !Starsurge! on 1 target.
 - Use !Starfall! on 2+ targets.
 
+
 <Collapsible title="How to Use Warrior of Elune">
 
 !Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
@@ -360,6 +365,21 @@ In a raid scenario where you pull a boss with both charges up, you want to use y
 In an M+ scenario, if you're talented into !Incarnation: Chosen of Elune! instead of !391528|Convoke!, you want to use your !Whirling Stars! charges at any time where you can overlap with !248280|Force of Nature!.
 
 When using !Elune's Chosen! and not talented into !391528|Convoke!, you can use !Whirling Stars! right after entering an !Eclipse! that procs !Sundered Firmament!, but this is not a major gain. If you're using !Elune's Chosen! and you're talented into !391528|Convoke!, you want to overlap your !Whirling Stars! charge with your !391528|Convoke! cooldown.
+</Collapsible>
+
+<Collapsible title="How to Use Nature's Grace">
+
+When using !Nature's Grace! you should make sure to start casting your !Wrath!/!Starfire! when the duration of your active !Eclipse! is shorter than the cast time of your !Wrath!/!Starfire!. This will make sure that you always keep 1 stack of !Nature's Grace! when entering your new !Eclipse!. This can be tricky to pull off consistently when cycling between !Lunar Eclipse!. Try to bank some AP for the end of !Eclipse! if you need to fill a GCD to time your !Wrath! cast correctly.
+
+If you are approaching a pack in mythic+ you can cancelaura your !Nature's Grace! and spell-queue 2 !Wrath! casts while the tank is walking towards the pack before you've entered combat, this will make it so you are in !Lunar Eclipse! and have 2 stacks of !Nature's Grace! up for faster !Starfire! casts whenever you've finished spreading your dots. This can be tricky to pull off, especially if your tank is chaining a lot of packs. Keep in mind that the moment you enter combat, spreading !Sunfire! and !Moonfire! becomes the highest priority.
+
+You can use the macro below and replace your existing !Wrath! keybind with it to cancel !Nature's Grace! when you're out of combat to help with this.
+
+```
+#showtooltip
+/cast Wrath
+/cancelaura [nocombat] dreamstate
+```
 </Collapsible>
 
 # Talents
@@ -579,7 +599,6 @@ These are part of a set that has a chance to drop an orb close to your target, g
 |  | [Mister Lock-N-Stalk](https://www.wowhead.com/item=230193/mister-lock-n-stalk?bonus=4795&ilvl=678&spec=102) | |
 |  | [Geargrinder's Spare Keys](https://www.wowhead.com/item=230197/geargrinders-spare-keys?bonus=4795&class=11&ilvl=678&spec=102) | |
 
-
 [Trinket Sim](https://www.raidbots.com/simbot/report/sNct8EeZwQtGF89tuJFSS2)
 
 ## Weapons
@@ -705,6 +724,14 @@ If you want to engage in this entirely optional method without incurring a DPS l
 ```
 #showtooltip
 /cancelaura Starlord
+```
+
+### **Cancelling Dreamstate**
+
+```
+#showtooltip
+/cast Wrath
+/cancelaura [nocombat] dreamstate
 ```
 
 ## Useful WeakAuras and Other Profiles
