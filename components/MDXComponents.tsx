@@ -18,8 +18,11 @@ import YouTube from './custom/YouTube'
 import ConditionalElement from './custom/ConditionalElement'
 import CheckboxProvider from './custom/CheckboxProvider'
 import React from 'react'
-
+import TimelinePlannerServer from './TimelinePlanner/TimelinePlannerServer'
+import TimelinePlannerServerReference from './TimelinePlannerReference/TimelinePlannerServerReference'
 export const components: MDXComponents = {
+  TimelinePlannerServer,
+  TimelinePlannerServerReference,
   Image: ({ src, alt, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]

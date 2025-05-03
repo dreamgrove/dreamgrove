@@ -13,6 +13,7 @@ export default async function Wowhead({
   beta = false,
   url = '',
   showLabel = true,
+  ellipsis = false,
 }) {
   let display = name
   let displayId = id
@@ -81,7 +82,9 @@ export default async function Wowhead({
   return disabled ? (
     <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
       {icon}
-      {showLabel && <span className="text-wrap break-words">{display}</span>}
+      {showLabel && (
+        <span className={`text-wrap break-words ${ellipsis ? 'truncate' : ''}`}>{display}</span>
+      )}
     </div>
   ) : (
     <a
@@ -90,7 +93,9 @@ export default async function Wowhead({
       style={{ color: linkColor, textWrap: 'nowrap' }}
     >
       {icon}
-      {showLabel && <span className="text-wrap break-words">{display}</span>}
+      {showLabel && (
+        <span className={`text-wrap break-words ${ellipsis ? 'truncate' : ''}`}>{display}</span>
+      )}
     </a>
   )
 }
