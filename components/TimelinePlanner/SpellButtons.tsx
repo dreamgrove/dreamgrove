@@ -1,35 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { CastInfo } from './Cast'
-
-interface Spell {
-  id: string
-  spellId: number
-  name: string
-  channel_duration: number
-  effect_duration: number
-  cooldown: number
-  channeled?: boolean
-}
+import { SpellInfo, CastInfo, SpellCasts } from './types'
 
 interface SpellButtonsProps {
-  currentSpells: {
-    spellName: string
-    spellId: string | number
-    casts: (CastInfo & { id: string })[]
-  }[]
-  setCurrentSpells: React.Dispatch<
-    React.SetStateAction<
-      {
-        spellName: string
-        spellId: string | number
-        casts: (CastInfo & { id: string })[]
-      }[]
-    >
-  >
+  currentSpells: SpellCasts[]
+  setCurrentSpells: React.Dispatch<React.SetStateAction<SpellCasts[]>>
   timeline_total_length_px: number
   total_length_s: number
-  spells: Spell[]
+  spells: SpellInfo[]
 }
 
 export default function SpellButtons({
@@ -52,29 +30,20 @@ export default function SpellButtons({
     }
   }, [errorMessage])
 
-  const handleSpellClick = (spell: Spell) => {
-    // Convert spell to the format expected by the component
-    const spellInfo = {
-      spellName: spell.name,
-      spellId: spell.id,
-      channel_duration_s: spell.channeled ? spell.channel_duration : 0,
-      effect_duration_s: spell.effect_duration,
-      spell_cooldown_s: spell.cooldown,
-    }
-
+  const handleSpellClick = (spell: SpellInfo) => {
     // Check if the spell is already in currentSpells
-    const spellIndex = currentSpells.findIndex((s) => s.spellId === spellInfo.spellId)
+    const spellIndex = currentSpells.findIndex((s) => s.spell.id === spell.id)
 
     if (spellIndex >= 0) {
       // Spell exists, add a new cast
-      const newCastId = `${spellInfo.spellId}-cast-${uuidv4()}`
+      const newCastId = `${spell.id}-cast-${uuidv4()}`
 
       // Sort casts by start time to ensure we find the true last cast
       const sortedCasts = [...currentSpells[spellIndex].casts].sort((a, b) => a.start_s - b.start_s)
 
       // Find the end time of the last cast to position the new cast
       const lastCastEndTime = sortedCasts.length > 0 ? sortedCasts[sortedCasts.length - 1].end_s : 0
-      const newCastEndTime = lastCastEndTime + spellInfo.spell_cooldown_s
+      const newCastEndTime = lastCastEndTime + spell.cooldown
 
       // Check if the new cast would exceed the timeline length
       if (newCastEndTime > total_length_s) {
@@ -88,18 +57,12 @@ export default function SpellButtons({
       setCurrentSpells((prevSpells) => {
         const updatedSpells = [...prevSpells]
 
-        const newCast = {
+        const newCast: CastInfo = {
           id: newCastId,
           start_s: lastCastEndTime, // Start after the last cast ends
           end_s: newCastEndTime, // End = start + cooldown
-          channel_duration_s: spellInfo.channel_duration_s,
-          effect_duration_s: spellInfo.effect_duration_s,
-          spell_cooldown_s: spellInfo.spell_cooldown_s,
-          timeline_total_length_px,
-          total_length_s,
         }
 
-        console.log('Adding new cast', newCast)
         updatedSpells[spellIndex] = {
           ...updatedSpells[spellIndex],
           casts: [...updatedSpells[spellIndex].casts, newCast],
@@ -111,33 +74,27 @@ export default function SpellButtons({
       // Spell doesn't exist, add it with one cast
 
       // Check if the spell cooldown exceeds the timeline length
-      if (spellInfo.spell_cooldown_s > total_length_s) {
+      if (spell.cooldown > total_length_s) {
         setErrorMessage(
-          `Cannot add ${spell.name}: cooldown (${spellInfo.spell_cooldown_s}s) exceeds timeline length (${total_length_s}s)`
+          `Cannot add ${spell.name}: cooldown (${spell.cooldown}s) exceeds timeline length (${total_length_s}s)`
         )
         return
       }
 
       setErrorMessage(null)
-      const newCastId = `${spellInfo.spellId}-cast-${uuidv4()}`
+      const newCastId = `${spell.id}-cast-${uuidv4()}`
+
+      const newCast: CastInfo = {
+        id: newCastId,
+        start_s: 0, // Start at the beginning of the timeline
+        end_s: spell.cooldown, // End = start + cooldown
+      }
 
       setCurrentSpells((prevSpells) => [
         ...prevSpells,
         {
-          spellName: spellInfo.spellName,
-          spellId: spellInfo.spellId,
-          casts: [
-            {
-              id: newCastId,
-              start_s: 0, // Start at the beginning of the timeline
-              end_s: spellInfo.spell_cooldown_s, // End = start + cooldown
-              channel_duration_s: spellInfo.channel_duration_s,
-              effect_duration_s: spellInfo.effect_duration_s,
-              spell_cooldown_s: spellInfo.spell_cooldown_s,
-              timeline_total_length_px,
-              total_length_s,
-            },
-          ],
+          spell,
+          casts: [newCast],
         },
       ])
     }

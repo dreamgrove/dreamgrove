@@ -1,10 +1,12 @@
 import React from 'react'
 import { CastInfo } from './Cast'
+import { SpellInfo } from './types'
 
 interface DebugProps {
   currentSpells: {
     spellName: string
     spellId: string | number
+    spell: SpellInfo
     casts: (CastInfo & { id: string })[]
   }[]
   timelineSettings: {
@@ -24,6 +26,9 @@ interface WarningInfo {
   message: string
 }
 
+/**
+ * Debug: A collapsible panel showing debug information about the timeline and casts
+ */
 export default function Debug({
   currentSpells,
   timelineSettings,
@@ -31,152 +36,49 @@ export default function Debug({
   showDebug = false,
   toggleDebug,
 }: DebugProps) {
-  if (!showDebug) {
-    return (
-      <div className="mt-4 flex justify-end">
-        <button
-          onClick={toggleDebug}
-          className="rounded bg-gray-700 px-3 py-1 text-sm text-white hover:bg-gray-600"
-        >
-          Show Debug Info
-        </button>
-      </div>
-    )
-  }
-
-  // Count total casts
-  const totalCasts = currentSpells.reduce((total, spell) => total + spell.casts.length, 0)
-
-  // Find earliest and latest cast times
-  let earliestCast = Number.MAX_SAFE_INTEGER
-  let latestCast = 0
-
-  if (totalCasts > 0) {
-    currentSpells.forEach((spell) => {
-      spell.casts.forEach((cast) => {
-        earliestCast = Math.min(earliestCast, cast.start_s)
-        latestCast = Math.max(latestCast, cast.end_s)
-      })
-    })
-  } else {
-    earliestCast = 0
-  }
+  // Calculate total cast count
+  const totalCasts = currentSpells.reduce((acc, spell) => acc + spell.casts.length, 0)
 
   return (
-    <div className="mt-6 rounded-lg border border-gray-700 bg-gray-800 p-4 text-white">
-      <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-lg font-medium">Timeline Debug Info</h3>
+    <div className="mt-4 rounded-lg bg-gray-800 p-4 text-white shadow-lg">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold">Debug Panel</h3>
         <button
           onClick={toggleDebug}
-          className="rounded bg-gray-700 px-3 py-1 text-sm text-white hover:bg-gray-600"
+          className="rounded bg-blue-600 px-2 py-1 text-sm text-white transition hover:bg-blue-700"
         >
-          Hide Debug Info
+          {showDebug ? 'Hide Details' : 'Show Details'}
         </button>
       </div>
 
-      <div className="mb-4 grid grid-cols-3 gap-4">
-        <div className="rounded bg-gray-700 p-3">
-          <h4 className="mb-2 font-medium">Timeline Settings</h4>
-          <div className="text-sm">
-            <p>Total Length: {timelineSettings.totalLength}s</p>
-            <p>Timeline Width: {timelineSettings.timelineWidth}px</p>
-            <p>Gap Distance: {timelineSettings.gapDistance}px</p>
-            <p>
-              Pixels per Second:{' '}
-              {(timelineSettings.timelineWidth / timelineSettings.totalLength).toFixed(2)}
-            </p>
-          </div>
-        </div>
-
-        <div className="rounded bg-gray-700 p-3">
-          <h4 className="mb-2 font-medium">Spell Summary</h4>
-          <div className="text-sm">
-            <p>Total Spells: {currentSpells.length}</p>
-            <p>Total Casts: {totalCasts}</p>
-            <p>
-              Cast Range: {earliestCast.toFixed(1)}s - {latestCast.toFixed(1)}s
-            </p>
-          </div>
-        </div>
-
-        <div className="rounded bg-gray-700 p-3">
-          <h4 className="mb-2 font-medium">Warnings</h4>
-          <div className="text-sm">
-            <p>Total Warnings: {warnings.length}</p>
-            {warnings.length > 0 && (
-              <p>Types: {Array.from(new Set(warnings.map((w) => w.type))).join(', ')}</p>
-            )}
-          </div>
-        </div>
+      <div className="mt-2 text-sm">
+        <span className="mr-4">
+          Timeline Length: <strong>{timelineSettings.totalLength}s</strong>
+        </span>
+        <span className="mr-4">
+          Timeline Width: <strong>{Math.round(timelineSettings.timelineWidth)}px</strong>
+        </span>
+        <span className="mr-4">
+          Gap Distance: <strong>{Math.round(timelineSettings.gapDistance)}px</strong>
+        </span>
+        <span>
+          Total Casts: <strong>{totalCasts}</strong>
+        </span>
+        {warnings.length > 0 && (
+          <span className="ml-4 rounded bg-yellow-400 px-2 py-0.5 text-xs font-bold text-black">
+            {warnings.length} Warning{warnings.length !== 1 ? 's' : ''}
+          </span>
+        )}
       </div>
 
-      {/* Detailed Spell Information */}
-      {currentSpells.length > 0 && (
-        <div className="mb-4">
-          <h4 className="mb-2 font-medium">Spell Details</h4>
-          <div className="max-h-60 overflow-y-auto rounded bg-gray-700 p-3">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-600 text-left">
-                  <th className="pb-2 pr-4">Spell</th>
-                  <th className="pb-2 pr-4">ID</th>
-                  <th className="pb-2 pr-4">Casts</th>
-                  <th className="pb-2 pr-4">Coverage</th>
-                  <th className="pb-2">Cast Times</th>
-                </tr>
-              </thead>
-              <tbody>
-                {currentSpells.map((spell) => {
-                  // Calculate coverage percentage if timeline total length > 0
-                  let coveragePercent = 0
-                  if (timelineSettings.totalLength > 0 && spell.casts.length > 0) {
-                    const totalCoverage = spell.casts.reduce((total, cast) => {
-                      return total + (cast.spell_cooldown_s || 0)
-                    }, 0)
-                    coveragePercent = Math.min(
-                      100,
-                      Math.round((totalCoverage / timelineSettings.totalLength) * 100)
-                    )
-                  }
-
-                  return (
-                    <tr key={spell.spellId} className="border-b border-gray-600">
-                      <td className="py-2 pr-4">{spell.spellName}</td>
-                      <td className="py-2 pr-4">{spell.spellId}</td>
-                      <td className="py-2 pr-4">{spell.casts.length}</td>
-                      <td className="py-2 pr-4">
-                        <div className="h-2 w-28 rounded bg-gray-600">
-                          <div
-                            className="h-2 rounded bg-green-500"
-                            style={{ width: `${coveragePercent}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-xs">{coveragePercent}%</span>
-                      </td>
-                      <td className="py-2">
-                        <div className="max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
-                          {spell.casts.length > 0
-                            ? spell.casts.map((cast) => `${cast.start_s.toFixed(1)}s`).join(', ')
-                            : '-'}
-                        </div>
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* Cast Timing Details */}
-      {totalCasts > 0 && (
-        <div className="mb-4">
-          <h4 className="mb-2 font-medium">Cast Timing Details</h4>
-          <div className="max-h-60 overflow-y-auto rounded bg-gray-700 p-3">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-600 text-left">
+      {/* Collapsible details */}
+      {showDebug && (
+        <div className="mt-4 space-y-4">
+          <div>
+            <h4 className="mb-2 font-medium">Cast Details</h4>
+            <table className="min-w-full divide-y divide-gray-600 overflow-hidden rounded-lg bg-gray-700 text-sm">
+              <thead className="bg-gray-600">
+                <tr>
                   <th className="pb-2 pr-4">Spell</th>
                   <th className="pb-2 pr-4">Start</th>
                   <th className="pb-2 pr-4">End</th>
@@ -186,15 +88,15 @@ export default function Debug({
                 </tr>
               </thead>
               <tbody>
-                {currentSpells.flatMap((spell) =>
-                  spell.casts.map((cast) => (
+                {currentSpells.flatMap((spellCast) =>
+                  spellCast.casts.map((cast) => (
                     <tr key={cast.id} className="border-b border-gray-600">
-                      <td className="py-2 pr-4">{spell.spellName}</td>
+                      <td className="py-2 pr-4">{spellCast.spellName}</td>
                       <td className="py-2 pr-4">{cast.start_s.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{cast.end_s.toFixed(1)}s</td>
-                      <td className="py-2 pr-4">{cast.channel_duration_s.toFixed(1)}s</td>
-                      <td className="py-2 pr-4">{cast.effect_duration_s.toFixed(1)}s</td>
-                      <td className="py-2">{cast.spell_cooldown_s.toFixed(1)}s</td>
+                      <td className="py-2 pr-4">{spellCast.spell.channel_duration.toFixed(1)}s</td>
+                      <td className="py-2 pr-4">{spellCast.spell.effect_duration.toFixed(1)}s</td>
+                      <td className="py-2">{spellCast.spell.cooldown.toFixed(1)}s</td>
                     </tr>
                   ))
                 )}

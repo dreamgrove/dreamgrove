@@ -1,34 +1,20 @@
 import React, { useRef, useState, useEffect } from 'react'
-import Cast, { CastInfo } from './Cast'
+import Cast from './Cast'
 import Markers from './Markers'
 import SpellCastsRow from './SpellCastsRow'
 import SpellButtons from './SpellButtons'
 import Debug from './Debug'
-
-interface Spell {
-  id: string
-  spellId: number
-  name: string
-  channel_duration: number
-  effect_duration: number
-  cooldown: number
-  channeled?: boolean
-}
+import Checkboxes from './Checkboxes'
+import { timelineEffects } from './TimelineEffects'
+import { SpellInfo, CastInfo, SpellCasts } from './types'
 
 interface TimelineViewProps {
   total_length_s: number
   view_length_s: number // seconds shown per 100% width
   n_markers_per_view: number // number of markers to show per window
-  spells: Spell[]
+  spells: SpellInfo[]
   wowheadMap: Record<string, React.ReactNode>
   wowheadNameMap: Record<string, React.ReactNode>
-}
-
-// Extended CastInfo with name and id for demo purposes
-interface SpellCastData {
-  spellName: string
-  spellId: string | number
-  casts: (CastInfo & { id: string })[]
 }
 
 export default function TimelineView({
@@ -42,6 +28,12 @@ export default function TimelineView({
   // Ref and state for rightSide (scrollable area) width and scroll
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [scrollContainerWidth, setScrollContainerWidth] = useState(0)
+
+  // State for active effects
+  const [activeEffects, setActiveEffects] = useState<string[]>([])
+
+  // State for casts in the timeline
+  const [currentSpells, setCurrentSpells] = useState<SpellCasts[]>([])
 
   // Update width on mount and resize
   useEffect(() => {
@@ -66,35 +58,42 @@ export default function TimelineView({
   const marker_spacing_px = scrollContainerWidth / n_markers_per_view
   const marker_spacing_s = view_length_s / n_markers_per_view
 
-  const [currentSpells, setCurrentSpells] = useState<SpellCastData[]>([])
-
-  // Update timeline_total_length_px and total_length_s in casts when they change
-  useEffect(() => {
-    setCurrentSpells((prevSpells) =>
-      prevSpells.map((spell) => ({
-        ...spell,
-        casts: spell.casts.map((cast) => ({
-          ...cast,
-          timeline_total_length_px,
-          total_length_s,
-        })),
-      }))
-    )
-  }, [timeline_total_length_px, total_length_s])
-
-  const handleCastClick = (castId: string) => {
-    console.log('Cast clicked:', castId)
-  }
-
-  const handleCastDragStart = (castId: string, event: React.MouseEvent) => {
-    console.log('Cast drag started:', castId)
+  // Handle effect application
+  const handleEffectsApplied = (updatedSpells: SpellCasts[]) => {
+    // Safety check before updating state
+    if (Array.isArray(updatedSpells) && updatedSpells.length > 0) {
+      console.log('Setting updated spells from effects:', updatedSpells)
+      setCurrentSpells([...updatedSpells])
+    } else if (updatedSpells.length === 0 && currentSpells.length > 0) {
+      console.error('Warning: Effects would remove all spells, keeping original spells instead')
+    }
   }
 
   const handleCastDelete = (castId: string) => {
+    // Update currentSpells state
     setCurrentSpells((prevSpells) =>
-      prevSpells.map((spell) => ({
-        ...spell,
-        casts: spell.casts.filter((cast) => cast.id !== castId),
+      prevSpells.map((spellCast) => ({
+        ...spellCast,
+        casts: spellCast.casts.filter((cast) => cast.id !== castId),
+      }))
+    )
+  }
+
+  const handleCastMove = (castId: string, newStartTime: number) => {
+    setCurrentSpells((prevSpells) =>
+      prevSpells.map((spellCast) => ({
+        ...spellCast,
+        casts: spellCast.casts.map((cast) => {
+          if (cast.id === castId) {
+            const duration = cast.end_s - cast.start_s
+            return {
+              ...cast,
+              start_s: newStartTime,
+              end_s: newStartTime + duration,
+            }
+          }
+          return cast
+        }),
       }))
     )
   }
@@ -110,10 +109,28 @@ export default function TimelineView({
 
   return (
     <div className="flex w-full flex-col">
+      {/* Checkboxes for effects */}
+      <Checkboxes
+        effects={timelineEffects}
+        activeEffects={activeEffects}
+        currentSpells={currentSpells}
+        spells={spells}
+        timeline_total_length_px={timeline_total_length_px}
+        total_length_s={total_length_s}
+        onEffectsApplied={handleEffectsApplied}
+        onEffectToggle={(effectId, isActive) => {
+          if (isActive) {
+            setActiveEffects((prev) => [...prev, effectId])
+          } else {
+            setActiveEffects((prev) => prev.filter((id) => id !== effectId))
+          }
+        }}
+      />
+
       {/* Spell Buttons at the top */}
       <SpellButtons
-        currentSpells={currentSpells}
-        setCurrentSpells={setCurrentSpells}
+        currentSpells={currentSpells as any} // Type assertion to avoid complex type reconciliation
+        setCurrentSpells={setCurrentSpells as any}
         timeline_total_length_px={timeline_total_length_px}
         total_length_s={total_length_s}
         spells={spells}
@@ -125,12 +142,12 @@ export default function TimelineView({
         <div className="w-[250px] min-w-[120px] shrink-0">
           <div className="mt-10">
             <div className="flex flex-col items-end justify-start pr-2">
-              {currentSpells.map((spell) => (
+              {currentSpells.map((spellCast) => (
                 <div
-                  key={`spell-name-${spell.spellId}`}
+                  key={`spell-name-${spellCast.spell.id}`}
                   className="mb-2 flex h-10 items-center pb-2"
                 >
-                  {wowheadNameMap[spell.spellId as string] || spell.spellName}
+                  {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
                 </div>
               ))}
             </div>
@@ -155,17 +172,19 @@ export default function TimelineView({
             }}
           >
             {/* Render a SpellCastsRow for each spell */}
-            {currentSpells.map((spell, index) => (
+            {currentSpells.map((spellCast, index) => (
               <SpellCastsRow
-                key={`spell-row-${spell.spellId}`}
-                spellName={spell.spellName}
-                casts={spell.casts}
+                key={`spell-row-${spellCast.spell.id}`}
+                spellName={spellCast.spell.name}
+                casts={spellCast.casts as CastInfo[]} // Type assertion to avoid complex type reconciliation
+                spellInfo={spellCast.spell}
+                timeline_total_length_px={timeline_total_length_px}
+                total_length_s={total_length_s}
                 wowheadComponent={
-                  wowheadMap[spell.spellId as string] || <span>{spell.spellName}</span>
+                  wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
                 }
-                onCastClick={handleCastClick}
-                onCastDragStart={handleCastDragStart}
                 onCastDelete={handleCastDelete}
+                onCastMove={handleCastMove}
                 className="mb-2 h-10"
               />
             ))}
@@ -175,7 +194,7 @@ export default function TimelineView({
 
       {/* Debug */}
       <Debug
-        currentSpells={currentSpells}
+        currentSpells={currentSpells as any} // Type assertion for compatibility
         timelineSettings={{
           totalLength: total_length_s,
           timelineWidth: timeline_total_length_px,

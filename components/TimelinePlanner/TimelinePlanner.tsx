@@ -1,8 +1,7 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './TimelinePlanner.module.css'
-import Checkboxes from './Checkboxes'
 import LengthControls from './LengthControls'
 import TimelineView from './TimelineView'
 import Warnings from './Warnings'
@@ -28,14 +27,12 @@ export default function TimelinePlanner({
   wowheadMap = {},
   wowheadNameMap = {},
 }: TimelinePlannerProps) {
-  // Example customization values
   const total_length_s = 240
-  const view_length_s = 90 // Show 40 seconds per view width
-  const n_markers_per_view = 5 // Show 4 markers evenly spread
+  const view_length_s = 100 // Show 40 seconds per view width
+  const n_markers_per_view = 4 // Show 4 markers evenly spread
 
   return (
     <div className={styles.timeline}>
-      <Checkboxes />
       <LengthControls />
       <TimelineView
         total_length_s={total_length_s}

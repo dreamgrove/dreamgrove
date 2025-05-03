@@ -178,3 +178,13 @@ nav:focus {
 html {
   scrollbar-gutter: stable;
 }
+
+/* Disable focus styles on cast elements */
+.timeline [role='button'],
+.timeline *:focus-visible,
+.timeline button:focus-visible,
+.timeline div:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}

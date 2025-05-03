@@ -8,9 +8,9 @@ const Marker: React.FC<MarkerProps> = ({ label }) => {
   return (
     <div className="pointer-events-none relative top-0 z-10 flex h-full flex-row items-start">
       {/* Vertical marker line */}
-      <div className="h-full w-[1px] bg-gray-400" />
+      <div className="h-full w-[1px] bg-gray-400/30" />
       {/* Seconds label to the right of the marker, at the top */}
-      <span className="absolute left-[1px] top-0 z-20 whitespace-nowrap rounded bg-white/70 py-0 text-xs text-gray-500">
+      <span className="absolute left-[1px] top-0 z-20 whitespace-nowrap py-0 pl-1 text-xs text-gray-500">
         {label % 1 === 0 ? label : label.toFixed(2)}s
       </span>
     </div>
@@ -37,7 +37,7 @@ const Markers: React.FC<MarkersProps> = ({
   total_length_s,
   className = '',
 }) => {
-  const isDebug = true
+  const isDebug = false
   if (isDebug) {
     console.log('total_markers', total_markers)
     console.log('marker_spacing_px', marker_spacing_px)
