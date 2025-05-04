@@ -16,6 +16,7 @@ interface CastProps {
   onDelete?: () => void
   isDragging?: boolean
   hasCollision?: boolean
+  isChargeRow?: boolean
 }
 
 export default function Cast({
@@ -26,6 +27,7 @@ export default function Cast({
   onDelete,
   isDragging,
   hasCollision,
+  isChargeRow = false,
 }: CastProps) {
   const { start_s, end_s } = castInfo
   const { channel_duration, effect_duration, cooldown } = spell
@@ -46,9 +48,9 @@ export default function Cast({
   const showWowheadInRemaining =
     !showWowheadInChannel && !showWowheadInEffect && remainingCdWidthPct === maxWidthPct
 
-  const wowheadWrapper = <div className="px-2">{Wowhead}</div>
+  const wowheadWrapper = <div className="flex items-center justify-center px-1">{Wowhead}</div>
 
-  const bgColor = isDragging ? 'bg-[#1d1c1c]' : 'bg-black/30'
+  const bgColor = isDragging ? 'bg-[#1d1c1c]' : isChargeRow ? 'bg-gray-700/30' : 'bg-black/30'
 
   return (
     <div
@@ -57,7 +59,9 @@ export default function Cast({
           ? 'border-red-500 shadow-md'
           : isDragging
             ? 'border-blue-500 shadow-lg'
-            : 'border-white/20'
+            : isChargeRow
+              ? 'border-gray-500/40'
+              : 'border-white/20'
       } ${bgColor} ${className || ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
@@ -77,7 +81,11 @@ export default function Cast({
         className="h-full rounded-l-md focus-visible:outline-none focus-visible:ring-0"
         style={{
           width: `${channelWidthPct}%`,
-          backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.5)' : 'rgba(255, 152, 0, 0.5)',
+          backgroundColor: hasCollision
+            ? 'rgba(239, 68, 68, 0.5)'
+            : isChargeRow
+              ? 'rgba(107, 114, 128, 0.5)'
+              : 'rgba(255, 152, 0, 0.5)',
         }}
       >
         {showWowheadInChannel && wowheadWrapper}
@@ -87,7 +95,11 @@ export default function Cast({
         className="flex h-full items-center focus-visible:outline-none focus-visible:ring-0"
         style={{
           width: `${effectWidthPct}%`,
-          backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.2)' : 'rgba(255, 152, 0, 0.2)',
+          backgroundColor: hasCollision
+            ? 'rgba(239, 68, 68, 0.2)'
+            : isChargeRow
+              ? 'rgba(107, 114, 128, 0.2)'
+              : 'rgba(255, 152, 0, 0.2)',
         }}
       >
         {showWowheadInEffect && wowheadWrapper}

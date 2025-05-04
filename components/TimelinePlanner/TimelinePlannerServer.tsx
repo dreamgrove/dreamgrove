@@ -12,6 +12,7 @@ export default function TimelinePlannerServer() {
         name={spell.name}
         disabled={true}
         ellipsis={true}
+        showLabel={false}
       />
     )
     return [spell.id, component] as const

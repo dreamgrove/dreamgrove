@@ -27,17 +27,18 @@ export default function TimelinePlanner({
   wowheadMap = {},
   wowheadNameMap = {},
 }: TimelinePlannerProps) {
-  const total_length_s = 240
-  const view_length_s = 100 // Show 40 seconds per view width
-  const n_markers_per_view = 4 // Show 4 markers evenly spread
+  // State for timeline length and markers per view
+  const [total_length_s, setTotalLength] = useState(240)
+  const [view_length_s, setViewLength] = useState(60) // Show 60 seconds per view width by default
+  const marker_spacing_s = 10 // seconds between markers
 
   return (
     <div className={styles.timeline}>
-      <LengthControls />
       <TimelineView
         total_length_s={total_length_s}
         view_length_s={view_length_s}
-        n_markers_per_view={n_markers_per_view}
+        setViewLength={setViewLength}
+        marker_spacing_s={marker_spacing_s}
         spells={spells}
         wowheadMap={wowheadMap}
         wowheadNameMap={wowheadNameMap}

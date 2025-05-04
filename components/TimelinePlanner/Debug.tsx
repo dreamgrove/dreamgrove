@@ -1,18 +1,13 @@
 import React from 'react'
 import { CastInfo } from './Cast'
-import { SpellInfo } from './types'
+import { SpellCasts, SpellInfo } from './types'
 
 interface DebugProps {
-  currentSpells: {
-    spellName: string
-    spellId: string | number
-    spell: SpellInfo
-    casts: (CastInfo & { id: string })[]
-  }[]
+  currentSpells: SpellCasts[]
   timelineSettings: {
     totalLength: number
     timelineWidth: number
-    gapDistance: number
+    markerSpacing: number
   }
   warnings: WarningInfo[]
   showDebug: boolean
@@ -59,7 +54,7 @@ export default function Debug({
           Timeline Width: <strong>{Math.round(timelineSettings.timelineWidth)}px</strong>
         </span>
         <span className="mr-4">
-          Gap Distance: <strong>{Math.round(timelineSettings.gapDistance)}px</strong>
+          Marker Spacing: <strong>{timelineSettings.markerSpacing}s</strong>
         </span>
         <span>
           Total Casts: <strong>{totalCasts}</strong>
@@ -91,7 +86,7 @@ export default function Debug({
                 {currentSpells.flatMap((spellCast) =>
                   spellCast.casts.map((cast) => (
                     <tr key={cast.id} className="border-b border-gray-600">
-                      <td className="py-2 pr-4">{spellCast.spellName}</td>
+                      <td className="py-2 pr-4">{spellCast.spell.name}</td>
                       <td className="py-2 pr-4">{cast.start_s.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{cast.end_s.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{spellCast.spell.channel_duration.toFixed(1)}s</td>
@@ -136,8 +131,8 @@ export default function Debug({
               {
                 timelineSettings,
                 spells: currentSpells.map((spell) => ({
-                  name: spell.spellName,
-                  id: spell.spellId,
+                  name: spell.spell.name,
+                  id: spell.spell.id,
                   castCount: spell.casts.length,
                 })),
                 castCount: totalCasts,

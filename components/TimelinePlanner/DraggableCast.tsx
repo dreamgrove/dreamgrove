@@ -14,6 +14,7 @@ interface DraggableCastProps {
   onClick?: () => void
   onDelete?: () => void
   otherCasts?: (CastInfo & { id?: string })[]
+  isChargeRow?: boolean
 }
 
 export default function DraggableCast({
@@ -26,6 +27,7 @@ export default function DraggableCast({
   onClick,
   onDelete,
   otherCasts = [],
+  isChargeRow = false,
 }: DraggableCastProps) {
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id,
@@ -133,7 +135,7 @@ export default function DraggableCast({
     left: `${(castInfo.start_s / total_length_s) * timeline_total_length_px}px`,
     width: `${cast_width_px}px`,
     top: 0,
-    zIndex: isDragging ? 10 : 1,
+    zIndex: isDragging ? 100 : 50,
     opacity: isDragging ? 0.2 : 1,
   }
 
@@ -154,6 +156,7 @@ export default function DraggableCast({
         className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'} ${hasCollision ? '' : ''}`}
         isDragging={isDragging}
         hasCollision={hasCollision}
+        isChargeRow={isChargeRow}
       />
     </div>
   )

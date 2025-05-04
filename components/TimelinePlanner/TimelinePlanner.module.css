@@ -22,7 +22,7 @@
   cursor: pointer;
   transition: background 0.2s;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
 }
@@ -204,6 +204,31 @@
   margin-bottom: 16px;
 }
 
+.lengthSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.controlLabel {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.divider {
+  height: 36px;
+  width: 1px;
+  background-color: #e5e7eb;
+  margin: 0 8px;
+}
+
 .timelineLengthControls label {
   color: #111;
   font-weight: 500;
@@ -242,29 +267,43 @@
 .zoomControls {
   display: flex;
   align-items: center;
-  gap: 4px;
-  margin-left: 16px;
+  gap: 8px;
+  margin-left: 8px;
+  color: #111;
+}
+
+.zoomControls span {
+  display: inline-block;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .zoomButton {
   background: #e5e7eb;
-  color: #222;
-  border: 1px solid #bbb;
+  color: #111;
+  border: 1px solid #d1d5db;
   border-radius: 4px;
-  padding: 4px 12px;
-  font-size: 1.2rem;
-  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition:
-    background 0.15s,
-    border 0.15s;
+  transition: background 0.15s;
 }
 
-.zoomButton:hover,
-.zoomButton:focus {
+.zoomButton:hover:not(:disabled),
+.zoomButton:focus:not(:disabled) {
   background: #d1d5db;
-  border-color: #2563eb;
-  color: #2563eb;
+}
+
+.zoomButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .invalidCastDrag {
