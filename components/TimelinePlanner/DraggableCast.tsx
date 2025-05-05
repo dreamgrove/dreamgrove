@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef, useCallback, useLayoutEffect } from 'react'
 import { useDraggable } from '@dnd-kit/core'
 import { CSS } from '@dnd-kit/utilities'
-import Cast, { CastInfo } from './Cast'
-import { SpellInfo } from './types'
+import Cast from './Cast'
+import { CastInfo, SpellInfo } from './types'
+import { useTimelineControls } from './TimelineContext'
 
 interface DraggableCastProps {
   id: string
@@ -29,6 +30,9 @@ export default function DraggableCast({
   otherCasts = [],
   isChargeRow = false,
 }: DraggableCastProps) {
+  // Get timeToPixels and pixelsToTime helpers from context
+  const { timeToPixels, pixelsToTime } = useTimelineControls()
+
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id,
   })
@@ -45,7 +49,7 @@ export default function DraggableCast({
   const totalLengthSRef = useRef(total_length_s)
 
   const cast_duration_s = castInfo.end_s - castInfo.start_s
-  const cast_width_px = (cast_duration_s / total_length_s) * timeline_total_length_px
+  const cast_width_px = timeToPixels(cast_duration_s)
 
   // Keep refs updated with latest props
   useEffect(() => {
@@ -78,8 +82,7 @@ export default function DraggableCast({
     const currentCastInfo = castInfoRef.current
 
     // Calculate the dragged position in seconds
-    const pixelsPerSecond = timelineTotalLengthPxRef.current / totalLengthSRef.current
-    const deltaSeconds = currentTransform.x / pixelsPerSecond
+    const deltaSeconds = pixelsToTime(currentTransform.x)
 
     // Current position in seconds
     const currentStartS = Math.max(
@@ -102,7 +105,7 @@ export default function DraggableCast({
     }
 
     return false
-  }, [id])
+  }, [id, pixelsToTime])
 
   // Update state based on refs - uses useLayoutEffect for synchronous update before paint
   useLayoutEffect(() => {
@@ -132,9 +135,9 @@ export default function DraggableCast({
 
   const style = {
     position: 'absolute' as const,
-    left: `${(castInfo.start_s / total_length_s) * timeline_total_length_px}px`,
+    left: `${timeToPixels(castInfo.start_s)}px`,
     width: `${cast_width_px}px`,
-    top: 0,
+    top: 8,
     zIndex: isDragging ? 100 : 50,
     opacity: isDragging ? 0.2 : 1,
   }

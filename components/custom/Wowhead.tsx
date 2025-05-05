@@ -12,6 +12,7 @@ export default async function Wowhead({
   noIcon = false,
   beta = false,
   url = '',
+  iconSize = 16,
   showLabel = true,
   ellipsis = false,
 }) {
@@ -69,6 +70,7 @@ export default async function Wowhead({
           url={url}
           noLink={true}
           iconId={data.icon}
+          iconSize={iconSize}
         />
       )
   } catch (error: any) {

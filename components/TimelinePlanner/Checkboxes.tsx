@@ -16,12 +16,9 @@ interface CheckboxesProps {
 export default function Checkboxes({
   effects = timelineEffects, // Default to imported effects
   activeEffects = [],
-  currentSpells = [],
-  spells = [],
   onEffectToggle,
 }: CheckboxesProps) {
   const handleCheckboxChange = (effectId: string, checked: boolean) => {
-    // Directly call parent callback without any local state management
     if (onEffectToggle) {
       onEffectToggle(effectId, checked)
     }

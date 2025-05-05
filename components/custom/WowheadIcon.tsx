@@ -7,10 +7,10 @@ interface WowheadIconProps {
   name: string
   beta?: boolean
   url?: string
-  size?: number
   noLink?: boolean
   noMargin?: boolean
   iconId?: string
+  iconSize?: number
 }
 
 export default async function WowheadIcon({
@@ -19,7 +19,7 @@ export default async function WowheadIcon({
   name,
   beta = false,
   url = '',
-  size = 16,
+  iconSize = 16,
   noLink = false,
   noMargin = false,
   iconId,
@@ -46,8 +46,8 @@ export default async function WowheadIcon({
     <Image
       src={imageUrl}
       alt={`${name} icon`}
-      width={size}
-      height={size}
+      width={iconSize}
+      height={iconSize}
       className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
     />
   )

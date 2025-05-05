@@ -3,10 +3,13 @@ import Cast from './Cast'
 import Markers from './Markers'
 import SpellCastsRow from './SpellCastsRow'
 import SpellButtons from './SpellButtons'
+import CustomElement from './CustomElement'
 import Debug from './Debug'
 import Checkboxes from './Checkboxes'
 import { applyTimelineEffects, timelineEffects } from './TimelineEffects'
 import { SpellInfo, CastInfo, SpellCasts, SpellChargeCasts, ChargeIndex } from './types'
+import SpellMarkers from './SpellMarkers'
+import { useTimeline, useTimelineControls } from './TimelineContext'
 
 interface TimelineViewProps {
   total_length_s: number
@@ -16,6 +19,9 @@ interface TimelineViewProps {
   spells: SpellInfo[]
   wowheadMap: Record<string, React.ReactNode>
   wowheadNameMap: Record<string, React.ReactNode>
+  wowheadMarkerMap?: Record<string, React.ReactNode>
+  averageTimestamps?: Record<string, number[]>
+  currentEncounterId?: string
 }
 
 export default function TimelineView({
@@ -26,16 +32,33 @@ export default function TimelineView({
   spells = [],
   wowheadMap = {},
   wowheadNameMap = {},
+  wowheadMarkerMap = {},
+  averageTimestamps = {},
+  currentEncounterId = 'empty',
 }: TimelineViewProps) {
-  // Ref and state for rightSide (scrollable area) width and scroll
+  // Get timeline context and controls
+  const {
+    effective_view_length_s,
+    effective_num_windows,
+    effective_total_length_px,
+    total_length_px,
+    pixelsPerSecond,
+    isAltKeyPressed,
+    registerScrollContainer,
+    zoomIn,
+    zoomOut,
+    resetZoom,
+  } = useTimelineControls()
+
+  // Ref for the right side (scrollable area)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const [scrollContainerWidth, setScrollContainerWidth] = useState(0)
 
-  // Add effective view length state instead of zoom level
-  const [effectiveViewLength, setEffectiveViewLength] = useState(view_length_s)
-
-  // Track Alt key state
-  const [isAltKeyPressed, setIsAltKeyPressed] = useState(false)
+  // Register scroll container with context when it's available
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      registerScrollContainer(scrollContainerRef.current)
+    }
+  }, [registerScrollContainer])
 
   // State for active effects
   const [activeEffects, setActiveEffects] = useState<string[]>([])
@@ -46,6 +69,14 @@ export default function TimelineView({
 
   // Add state to track which spell charges are collapsed (inverse of expanded, since default is now expanded)
   const [collapsedChargeSpells, setCollapsedChargeSpells] = useState<string[]>([])
+
+  // Local state for spells to allow adding custom spells
+  const [localSpells, setLocalSpells] = useState<SpellInfo[]>(spells)
+
+  // Update localSpells when the spells prop changes
+  useEffect(() => {
+    setLocalSpells(spells)
+  }, [spells])
 
   // Toggle function for expanding/collapsing charge rows
   const toggleChargeExpansion = (spellId: string) => {
@@ -69,6 +100,11 @@ export default function TimelineView({
     })
   }
 
+  // Add an effect to log when the collapsedChargeSpells state changes
+  useEffect(() => {
+    console.log('collapsedChargeSpells changed:', collapsedChargeSpells)
+  }, [collapsedChargeSpells])
+
   // Watch for changes to currentSpells to auto-expand new multi-charge spells
   useEffect(() => {
     // Look for new multi-charge spells
@@ -89,49 +125,11 @@ export default function TimelineView({
 
       // If we have spells to expand, update the collapsedChargeSpells state
       if (spellIdsToExpand.length > 0) {
-        // console.log(`Auto-expanding newly added spell charges:`, spellIdsToExpand)
+        console.log(`Auto-expanding newly added spell charges:`, spellIdsToExpand)
         setCollapsedChargeSpells((prev) => prev.filter((id) => !spellIdsToExpand.includes(id)))
       }
     }
-  }, [currentSpells, collapsedChargeSpells])
-
-  // Update width on mount and resize
-  useEffect(() => {
-    function updateWidth() {
-      if (scrollContainerRef.current) {
-        setScrollContainerWidth(scrollContainerRef.current.offsetWidth)
-      }
-    }
-    updateWidth()
-    window.addEventListener('resize', updateWidth)
-    return () => window.removeEventListener('resize', updateWidth)
-  }, [])
-
-  // Track Alt key state
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Alt') {
-        e.preventDefault()
-        // console.log('Alt key down')
-        setIsAltKeyPressed(true)
-      }
-    }
-
-    const handleKeyUp = (e: KeyboardEvent) => {
-      if (e.key === 'Alt') {
-        // console.log('Alt key up')
-        setIsAltKeyPressed(false)
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-    window.addEventListener('keyup', handleKeyUp)
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-      window.removeEventListener('keyup', handleKeyUp)
-    }
-  }, [])
+  }, [currentSpells]) // Remove collapsedChargeSpells from dependencies
 
   // Add wheel event handler for horizontal scrolling
   useEffect(() => {
@@ -141,24 +139,18 @@ export default function TimelineView({
       if (scrollContainer) {
         e.preventDefault()
 
-        // Use the tracked Alt key state
+        // Use the tracked Alt key state from context
         if (isAltKeyPressed || e.altKey) {
           // console.log('ALT zoom activated', e.deltaY, isAltKeyPressed)
 
-          // Change view length by 5 seconds based on wheel direction
-          const step = 5 // 5 seconds per scroll step
-          const direction = e.deltaY > 0 ? 1 : -1 // 1 for zoom out (more time), -1 for zoom in (less time)
-
-          // Calculate new effective view length, ensuring minimum of 10s and maximum of 300s
-          const newEffectiveViewLength = Math.max(
-            10,
-            Math.min(300, effectiveViewLength + direction * step)
-          )
-
-          // console.log('Setting new effective view length:', newEffectiveViewLength)
-
-          // Set new effective view length
-          setEffectiveViewLength(newEffectiveViewLength)
+          // Zoom in or out based on wheel direction
+          if (e.deltaY > 0) {
+            // Zoom out (more time)
+            zoomOut(5)
+          } else {
+            // Zoom in (less time)
+            zoomIn(5)
+          }
         } else {
           // Regular horizontal scrolling
           scrollContainer.scrollLeft += e.deltaY
@@ -175,7 +167,7 @@ export default function TimelineView({
         scrollContainer.removeEventListener('wheel', handleWheel)
       }
     }
-  }, [effectiveViewLength, isAltKeyPressed])
+  }, [isAltKeyPressed, zoomIn, zoomOut])
 
   // Helper function to convert SpellChargeCasts to legacy SpellCasts for effects system
   const convertToLegacySpellCasts = (chargeSpells: SpellChargeCasts[]): SpellCasts[] => {
@@ -269,7 +261,7 @@ export default function TimelineView({
       const legacySpells = convertToLegacySpellCasts(currentSpells)
 
       // Apply effects
-      const patchedLegacySpells = applyTimelineEffects(legacySpells, activeEffects, spells)
+      const patchedLegacySpells = applyTimelineEffects(legacySpells, activeEffects, localSpells)
 
       // Convert back to charge-based format
       const patchedChargeSpells = convertToChargeSpellCasts(patchedLegacySpells)
@@ -281,42 +273,56 @@ export default function TimelineView({
       // Reset patched spells when there are no current spells
       setPatchedSpells([])
     }
-  }, [currentSpells, activeEffects, spells])
-
-  // We calculate the effective view length in seconds
-  const effective_view_length_s = effectiveViewLength
-
-  // Using the effective view length in seconds we can calculate the effective view length in pixels
-  const effective_num_windows = total_length_s / effective_view_length_s
-
-  //Using the effective view length in pixels we can calculate the effective total length in pixels
-  const effective_total_length_px = scrollContainerWidth * effective_num_windows
-
-  const total_length_px = (scrollContainerWidth * total_length_s) / view_length_s
-
-  //using the effective number of windows we can calculate the effective_view_length_px
-  const effective_view_length_px = total_length_px / effective_num_windows
-
-  const pixelsPerSecond = effective_total_length_px / total_length_s
-
-  // The marker system uses two measurements:
-  // 1. marker_spacing_px: Visual spacing between markers on screen (doesn't change with zoom)
-  // 2. marker_spacing_s: Time value displayed on each marker (adjusts with zoom via effective_view_length_s)
-  //
-  // When zooming, the timeline adjusts by showing more/less time in the same visual space,
-  // so the marker_spacing_s changes while marker_spacing_px remains constant.
-
-  // Pixel spacing depends only on the container width and marker count
-  // Time spacing depends on the effective view length (adjusted by zoom)
+  }, [currentSpells, activeEffects, localSpells])
 
   const handleCastDelete = (castId: string) => {
-    // Update currentSpells state
-    setCurrentSpells((prevSpells) =>
-      prevSpells.map((spellCast) => ({
-        ...spellCast,
-        casts: spellCast.casts.filter((cast) => cast.id !== castId),
-      }))
-    )
+    setCurrentSpells((prevSpells) => {
+      // First find the spell and cast that was deleted
+      const allSpellIds = new Set(prevSpells.map((spellCast) => spellCast.spell.id))
+
+      // Find which row contains the deleted cast
+      const rowWithDeletedCast = prevSpells.find((row) =>
+        row.casts.some((cast) => cast.id === castId)
+      )
+
+      // If we can't find the cast, just return the current state
+      if (!rowWithDeletedCast) return prevSpells
+
+      // Get the charge index of the deleted cast
+      const deletedChargeIndex = rowWithDeletedCast.chargeIndex
+
+      // Get the index position of the cast within its row
+      const castPositionIndex = rowWithDeletedCast.casts.findIndex((cast) => cast.id === castId)
+
+      // For each spell ID
+      return prevSpells.map((spellCast) => {
+        // Check if this is a spell with charges
+        const hasCharges = spellCast.spell.charges && spellCast.spell.charges > 1
+
+        // If this spell doesn't have charges, just filter out the cast by ID as before
+        if (!hasCharges) {
+          return {
+            ...spellCast,
+            casts: spellCast.casts.filter((cast) => cast.id !== castId),
+          }
+        }
+
+        // If this is a row for the same spell as the deleted cast
+        if (spellCast.spell.id === rowWithDeletedCast.spell.id) {
+          // Only modify rows with chargeIndex >= the deleted charge index
+          if (spellCast.chargeIndex >= deletedChargeIndex) {
+            // Delete the cast at the same index position
+            return {
+              ...spellCast,
+              casts: spellCast.casts.filter((_, index) => index !== castPositionIndex),
+            }
+          }
+        }
+
+        // For other spells or charge rows that shouldn't be modified
+        return spellCast
+      })
+    })
   }
 
   const handleCastMove = (castId: string, newStartTime: number, chargeIndex: number) => {
@@ -334,12 +340,53 @@ export default function TimelineView({
       if (spellCastIndex === -1) return prevSpells // Cast not found
 
       const spellCast = updatedSpells[spellCastIndex]
+
       const castIndex = spellCast.casts.findIndex((cast) => cast.id === castId)
       if (castIndex === -1) return prevSpells // Cast not found
 
-      // Get the cast and its duration
+      // Get the cast and the spell
       const cast = spellCast.casts[castIndex]
-      const duration = cast.end_s - cast.start_s
+      const spell = spellCast.spell
+
+      // Calculate end time based on spell cooldown
+      let endTime = newStartTime + spell.cooldown
+      let cdDelay
+
+      // For casts after the first, recalculate end time based on the previous charge's cooldown
+      if (updatedSpells.length > 0 && spell.charges && spell.charges > 1) {
+        // Find the matching cast in the previous charge row
+        const charges = spellCast.spell.charges || 1
+        const prevChargeIndex = chargeIndex === 0 ? charges - 1 : chargeIndex - 1
+        const prevChargeRows = updatedSpells.filter(
+          (row) => row.spell.id === spell.id && row.chargeIndex === prevChargeIndex
+        )
+
+        const prevChargeRowsPatched = patchedSpells.filter(
+          (row) => row.spell.id === spell.id && row.chargeIndex === prevChargeIndex
+        )
+
+        if (prevChargeRows.length > 0) {
+          const prevChargeRow = prevChargeRows[0]
+          const prevChargeRowPatched = prevChargeRowsPatched[0]
+
+          // NB: Here we start working with the patched version of the spells since the end timestamp
+          // might be patched. This is a terrible hack and we should fix this at one point.
+          if (prevChargeRow.casts.length > 0) {
+            // Find a cast in the previous charge that overlaps with this cast's time period
+            // (where cast.start < this.start && cast.end > this.start)
+            const overlappingCastPatched = prevChargeRowPatched.casts.find(
+              (cast) => cast.start_s < newStartTime && cast.end_s > newStartTime
+            )
+
+            if (overlappingCastPatched) {
+              // Use the overlapping cast's end time to calculate this cast's end time
+              endTime = overlappingCastPatched.end_s + spell.cooldown
+              console.log('overlappingCastPatched', overlappingCastPatched)
+              cdDelay = [newStartTime + spell.effect_duration, overlappingCastPatched.end_s]
+            }
+          }
+        }
+      }
 
       // Create an updated spell cast with the moved cast
       const updatedSpellCast = {
@@ -347,11 +394,12 @@ export default function TimelineView({
         casts: [...spellCast.casts],
       }
 
-      // Update the cast with its new position
+      // Update the cast with its new position and calculated end time
       updatedSpellCast.casts[castIndex] = {
         ...cast,
         start_s: newStartTime,
-        end_s: newStartTime + duration,
+        end_s: endTime,
+        delay_s: cdDelay,
       }
 
       // Replace the spell cast in our updated spells
@@ -373,18 +421,17 @@ export default function TimelineView({
   // Filter rows to show only visible ones based on charge collapse state
   const filteredSpells = patchedSpells.filter((spellCast) => {
     // Always show the first row (chargeIndex 0)
-    if (spellCast.chargeIndex === 0) return true
+    if (spellCast.chargeIndex === 0) {
+      return true
+    }
 
     // For charge rows (index > 0), only show if the spell is NOT in collapsedChargeSpells
-    const result = !collapsedChargeSpells.includes(spellCast.spell.id)
-
-    return result
+    const isCollapsed = collapsedChargeSpells.includes(spellCast.spell.id)
+    console.log(
+      `Spell ${spellCast.spell.id} with chargeIndex ${spellCast.chargeIndex} is ${isCollapsed ? 'hidden' : 'shown'}`
+    )
+    return !isCollapsed
   })
-
-  // Debug the filtered results
-  // console.log('Final filteredSpells:', filteredSpells)
-  // console.log('All patchedSpells before filtering:', patchedSpells)
-  // console.log('All currentSpells:', currentSpells)
 
   return (
     <div className="flex w-full flex-col">
@@ -392,8 +439,6 @@ export default function TimelineView({
       <Checkboxes
         effects={timelineEffects}
         activeEffects={activeEffects}
-        currentSpells={convertToLegacySpellCasts(currentSpells)} // Convert to legacy format for compatibility
-        spells={spells}
         onEffectToggle={(effectId, isActive) => {
           // console.log(`TimelineView onEffectToggle: effectId=${effectId}, isActive=${isActive}`)
           // console.log(`Current activeEffects before update:`, activeEffects)
@@ -411,112 +456,117 @@ export default function TimelineView({
       />
 
       {/* Debug info showing current view length */}
-      <div className="mb-2 flex items-center space-x-2 text-xs text-gray-400">
-        <span>View length: {Math.round(effective_view_length_s)}s</span>
-        <button
-          className="rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
-          onClick={() => {
-            const newViewLength = Math.max(10, effectiveViewLength - 5)
-            setEffectiveViewLength(newViewLength)
-          }}
-          title="Zoom in (decrease view length)"
-        >
-          +
-        </button>
-        <button
-          className="rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
-          onClick={() => {
-            const newViewLength = Math.min(300, effectiveViewLength + 5)
-            setEffectiveViewLength(newViewLength)
-          }}
-          title="Zoom out (increase view length)"
-        >
-          -
-        </button>
-        <button
-          className="rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
-          onClick={() => {
-            setEffectiveViewLength(view_length_s)
-          }}
-          title="Reset view length"
-        >
-          Reset
-        </button>
+      <div className="mb-2 flex items-center justify-between space-x-2 text-xs text-gray-400">
+        <div className="flex items-center space-x-2">
+          <span>View length: {Math.round(effective_view_length_s)}s</span>
+          <button
+            className="rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
+            onClick={() => zoomIn(5)}
+            title="Zoom in (decrease view length)"
+          >
+            +
+          </button>
+          <button
+            className="rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
+            onClick={() => zoomOut(5)}
+            title="Zoom out (increase view length)"
+          >
+            -
+          </button>
+          <button
+            className="rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
+            onClick={resetZoom}
+            title="Reset view length"
+          >
+            Reset
+          </button>
 
-        {/* Debug button to force create a second charge row */}
-        <button
-          className="ml-4 rounded bg-red-700 px-2 py-0.5 text-white hover:bg-red-600"
-          onClick={() => {
-            // Find the first multi-charge spell
-            const multiChargeSpell = currentSpells.find(
-              (s) => s.spell.charges && s.spell.charges > 1 && s.chargeIndex === 0
-            )
+          {/* Debug button to force create a second charge row */}
+          <button
+            className="ml-4 rounded bg-red-700 px-2 py-0.5 text-white hover:bg-red-600"
+            onClick={() => {
+              // Find the first multi-charge spell
+              const multiChargeSpell = currentSpells.find(
+                (s) => s.spell.charges && s.spell.charges > 1 && s.chargeIndex === 0
+              )
 
-            if (multiChargeSpell) {
-              // console.log('Found multi-charge spell:', multiChargeSpell)
+              if (multiChargeSpell) {
+                // console.log('Found multi-charge spell:', multiChargeSpell)
 
-              // Create a second charge row
-              const secondChargeRow: SpellChargeCasts = {
-                spell: multiChargeSpell.spell,
-                chargeIndex: 1,
-                casts: multiChargeSpell.casts.map((cast) => ({
-                  ...cast,
-                  id: `${cast.id}-charge-1`,
+                // Create a second charge row
+                const secondChargeRow: SpellChargeCasts = {
+                  spell: multiChargeSpell.spell,
                   chargeIndex: 1,
-                  start_s: cast.start_s + 20, // Offset by 20 seconds for visibility
-                  end_s: cast.end_s + 20,
-                })),
+                  casts: multiChargeSpell.casts.map((cast) => ({
+                    ...cast,
+                    id: `${cast.id}-charge-1`,
+                    chargeIndex: 1,
+                    start_s: cast.start_s + 20, // Offset by 20 seconds for visibility
+                    end_s: cast.end_s + 20,
+                  })),
+                }
+
+                // console.log('Created second charge row:', secondChargeRow)
+
+                // Add to current spells
+                setCurrentSpells((prev) => [...prev, secondChargeRow])
+              } else {
+                // console.log('No multi-charge spell found with chargeIndex 0')
+                // console.log('Current spells:', currentSpells)
               }
+            }}
+            title="DEBUG: Force add charge row"
+          >
+            DEBUG Add Charge
+          </button>
 
-              // console.log('Created second charge row:', secondChargeRow)
+          {/* Debug button to force toggle collapse */}
+          <button
+            className="ml-2 rounded bg-blue-700 px-2 py-0.5 text-white hover:bg-blue-600"
+            onClick={() => {
+              // Find the first multi-charge spell
+              const multiChargeSpells = currentSpells.filter(
+                (s) => s.spell.charges && s.spell.charges > 1 && s.chargeIndex === 0
+              )
 
-              // Add to current spells
-              setCurrentSpells((prev) => [...prev, secondChargeRow])
-            } else {
-              // console.log('No multi-charge spell found with chargeIndex 0')
-              // console.log('Current spells:', currentSpells)
-            }
-          }}
-          title="DEBUG: Force add charge row"
-        >
-          DEBUG Add Charge
-        </button>
+              if (multiChargeSpells.length > 0) {
+                // Toggle the collapse state of all multi-charge spells
+                multiChargeSpells.forEach((spellRow) => {
+                  // console.log(`DEBUG: Forcing toggle of ${spellRow.spell.id}`)
+                  toggleChargeExpansion(spellRow.spell.id)
+                })
+              } else {
+                // console.log('No multi-charge spells found')
+              }
+            }}
+            title="DEBUG: Toggle collapse"
+          >
+            DEBUG Toggle
+          </button>
+        </div>
 
-        {/* Debug button to force toggle collapse */}
-        <button
-          className="ml-2 rounded bg-blue-700 px-2 py-0.5 text-white hover:bg-blue-600"
-          onClick={() => {
-            // Find the first multi-charge spell
-            const multiChargeSpells = currentSpells.filter(
-              (s) => s.spell.charges && s.spell.charges > 1 && s.chargeIndex === 0
-            )
-
-            if (multiChargeSpells.length > 0) {
-              // Toggle the collapse state of all multi-charge spells
-              multiChargeSpells.forEach((spellRow) => {
-                // console.log(`DEBUG: Forcing toggle of ${spellRow.spell.id}`)
-                toggleChargeExpansion(spellRow.spell.id)
-              })
-            } else {
-              // console.log('No multi-charge spells found')
-            }
-          }}
-          title="DEBUG: Toggle collapse"
-        >
-          DEBUG Toggle
-        </button>
+        {/* Add the CustomElement component to the right side */}
+        <div className="relative">
+          <CustomElement
+            currentSpells={currentSpells}
+            setCurrentSpells={setCurrentSpells}
+            total_length_s={total_length_s}
+            spells={localSpells}
+            setSpells={setLocalSpells}
+          />
+        </div>
       </div>
 
       {/* Spell Buttons at the top */}
       <SpellButtons
-        currentSpells={currentSpells}
+        currentSpells={patchedSpells}
         setCurrentSpells={setCurrentSpells}
         total_length_s={total_length_s}
-        spells={spells}
+        spells={localSpells}
       />
 
       {/* Timeline view */}
-      <div className="flex w-full flex-row">
+      <div className="flex min-h-[200px] w-full flex-row">
         {/* Left side: spell names, vertically offset */}
         <div className="w-[200px] min-w-[120px] shrink-0">
           <div className="mt-10">
@@ -524,14 +574,19 @@ export default function TimelineView({
               {filteredSpells.map((spellCast) => (
                 <div
                   key={`spell-name-${spellCast.spell.id}-charge-${spellCast.chargeIndex}`}
-                  className="mb-2 flex h-10 w-full items-center pb-2"
+                  className={`flex h-12 w-full items-center pr-2 ${spellCast.spell.charges && !collapsedChargeSpells.includes(spellCast.spell.id) ? 'border-r-2 border-orange-500/30' : ''}`}
                 >
-                  <div className="w-full truncate text-left">
+                  <div className="w-full truncate text-right">
                     {spellCast.spell.charges &&
                       spellCast.spell.charges > 1 &&
                       spellCast.chargeIndex === 0 && (
                         <button
-                          onClick={() => toggleChargeExpansion(spellCast.spell.id)}
+                          onClick={(e) => {
+                            // Prevent event bubbling
+                            e.stopPropagation()
+                            // Toggle charge expansion
+                            toggleChargeExpansion(spellCast.spell.id)
+                          }}
                           className="mr-1 font-bold text-yellow-500 hover:text-yellow-300 focus:outline-none"
                           title={
                             collapsedChargeSpells.includes(spellCast.spell.id)
@@ -565,8 +620,8 @@ export default function TimelineView({
             marker_spacing_s={marker_spacing_s}
             total_length_s={total_length_s}
             pixelsPerSecond={pixelsPerSecond}
-            className="z-10"
           />
+          <SpellMarkers spellInfo={averageTimestamps} wowheadMap={wowheadMarkerMap} />
           {/* Casts/timeline rows */}
           <div
             className="relative mt-10 flex flex-col"
@@ -594,8 +649,8 @@ export default function TimelineView({
                 }
                 onCastDelete={handleCastDelete}
                 onCastMove={handleCastMove}
-                className="mb-2 h-10"
-                allSpellRows={currentSpells} // Pass all rows for charge validation
+                className="mb-2 flex h-10 items-center"
+                patchedSpellRows={patchedSpells} // Pass patched spell rows for timeline effects
               />
             ))}
           </div>

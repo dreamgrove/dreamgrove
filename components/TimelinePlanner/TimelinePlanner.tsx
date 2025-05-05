@@ -1,10 +1,13 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './TimelinePlanner.module.css'
 import LengthControls from './LengthControls'
 import TimelineView from './TimelineView'
 import Warnings from './Warnings'
+import Link from 'next/link'
+import FightSelector from './FightSelector'
+import { TimelineProvider } from './TimelineContext'
 
 interface Spell {
   id: string
@@ -20,29 +23,73 @@ interface TimelinePlannerProps {
   spells: Spell[]
   wowheadMap: Record<string, React.ReactNode>
   wowheadNameMap: Record<string, React.ReactNode>
+  wowheadMarkerMap?: Record<string, React.ReactNode>
+  averageTimestamps?: Record<string, number[]>
 }
 
 export default function TimelinePlanner({
   spells = [],
   wowheadMap = {},
   wowheadNameMap = {},
+  wowheadMarkerMap = {},
+  averageTimestamps = {},
 }: TimelinePlannerProps) {
-  // State for timeline length and markers per view
-  const [total_length_s, setTotalLength] = useState(240)
-  const [view_length_s, setViewLength] = useState(60) // Show 60 seconds per view width by default
-  const marker_spacing_s = 10 // seconds between markers
+  // Default timeline settings - passed to provider
+  const initialTotalLength = 240
+  const initialViewLength = 60
+  const initialMarkerSpacing = 10
+
+  // State for current encounter
+  const [currentEncounterId, setCurrentEncounterId] = useState('empty')
+
+  // Effect to handle encounter changes
+  useEffect(() => {
+    console.log(`Selected encounter changed to: ${currentEncounterId}`)
+
+    // In the future, you could implement loading encounter-specific data here
+    // For example:
+    // if (currentEncounterId !== 'empty') {
+    //   loadEncounterData(currentEncounterId);
+    // }
+  }, [currentEncounterId])
 
   return (
     <div className={styles.timeline}>
-      <TimelineView
-        total_length_s={total_length_s}
-        view_length_s={view_length_s}
-        setViewLength={setViewLength}
-        marker_spacing_s={marker_spacing_s}
-        spells={spells}
-        wowheadMap={wowheadMap}
-        wowheadNameMap={wowheadNameMap}
-      />
+      <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
+        <FightSelector
+          currentEncounterId={currentEncounterId}
+          onEncounterChange={setCurrentEncounterId}
+        />
+
+        <div className={styles.warcraftLogsIntegration}>
+          <Link
+            href="/warcraft-logs"
+            className="inline-flex items-center rounded bg-gray-200 px-3 py-1 text-sm transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+          >
+            <span className="mr-1">📊</span> WarcraftLogs Integration (Coming Soon)
+          </Link>
+        </div>
+      </div>
+
+      {/* The TimelineProvider now fully manages timeline state */}
+      <TimelineProvider
+        initialTotalLength={initialTotalLength}
+        initialViewLength={initialViewLength}
+        initialMarkerSpacing={initialMarkerSpacing}
+      >
+        <TimelineView
+          total_length_s={initialTotalLength}
+          view_length_s={initialViewLength}
+          setViewLength={() => {}} // This is now handled by context
+          marker_spacing_s={initialMarkerSpacing}
+          spells={spells}
+          wowheadMap={wowheadMap}
+          wowheadNameMap={wowheadNameMap}
+          wowheadMarkerMap={wowheadMarkerMap}
+          averageTimestamps={averageTimestamps}
+          currentEncounterId={currentEncounterId}
+        />
+      </TimelineProvider>
       <Warnings />
     </div>
   )

@@ -47,13 +47,10 @@ export function applyPatch(spellCasts: SpellCasts[], patch: Patch): SpellCasts[]
 
   // Apply spell patches - these affect all casts of a specific spell
   if (patch.spellPatches.length > 0) {
-    console.log(`Applying ${patch.spellPatches.length} spell patches from effect ${patch.effectId}`)
     patch.spellPatches.forEach((spellPatch) => {
       // Find spells that match the spellId
       result.forEach((spellCast) => {
         if (spellCast.spell.spellId === spellPatch.spellId) {
-          console.log(`  Patching spell: ${spellCast.spell.name} (${spellCast.spell.spellId})`)
-          // Apply patch to all casts of this spell
           spellCast.casts = spellCast.casts.map((cast) => {
             return applyEffectToCast(cast, spellPatch.effect)
           })
@@ -64,15 +61,11 @@ export function applyPatch(spellCasts: SpellCasts[], patch: Patch): SpellCasts[]
 
   // Apply cast patches - these affect specific cast instances
   if (patch.castPatches.length > 0) {
-    console.log(`Applying ${patch.castPatches.length} cast patches from effect ${patch.effectId}`)
     patch.castPatches.forEach((castPatch) => {
       // Find the specific cast by ID
       result.forEach((spellCast) => {
         const castIndex = spellCast.casts.findIndex((cast) => cast.id === castPatch.castId)
         if (castIndex !== -1) {
-          console.log(
-            `  Patching specific cast: ${castPatch.castId} of spell ${spellCast.spell.name}`
-          )
           // Apply patch to this specific cast
           spellCast.casts[castIndex] = applyEffectToCast(
             spellCast.casts[castIndex],
@@ -92,14 +85,11 @@ export function applyPatch(spellCasts: SpellCasts[], patch: Patch): SpellCasts[]
 export function applyPatches(spellCasts: SpellCasts[], patches: Patch[]): SpellCasts[] {
   // If there are no patches, return a deep copy of the input to avoid mutation
   if (patches.length === 0) {
-    console.log('No patches to apply, returning copy of input spells')
     return JSON.parse(JSON.stringify(spellCasts))
   }
 
   // Sort patches by effectId to ensure consistent application order
   const sortedPatches = [...patches].sort((a, b) => a.effectId.localeCompare(b.effectId))
-
-  console.log(`Applying ${patches.length} patches in sequence`)
 
   // Start with a deep copy of the input spells to avoid mutation
   let result = JSON.parse(JSON.stringify(spellCasts))
@@ -126,9 +116,6 @@ function applyEffectToCast(cast: CastInfo, effect: Effect): CastInfo {
     if (result.start_s > result.end_s) {
       result.start_s = result.end_s
     }
-    console.log(
-      `    Adjusted cast start time: ${oldStart} -> ${result.start_s} (${effect.value > 0 ? '+' : ''}${effect.value}s)`
-    )
   } else if (effect.direction === 'end') {
     // Modify the end time
     const oldEnd = result.end_s
@@ -137,9 +124,6 @@ function applyEffectToCast(cast: CastInfo, effect: Effect): CastInfo {
     if (result.end_s < result.start_s) {
       result.end_s = result.start_s
     }
-    console.log(
-      `    Adjusted cast end time: ${oldEnd} -> ${result.end_s} (${effect.value > 0 ? '+' : ''}${effect.value}s)`
-    )
   }
 
   return result

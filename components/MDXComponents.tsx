@@ -20,9 +20,11 @@ import CheckboxProvider from './custom/CheckboxProvider'
 import React from 'react'
 import TimelinePlannerServer from './TimelinePlanner/TimelinePlannerServer'
 import TimelinePlannerServerReference from './TimelinePlannerReference/TimelinePlannerServerReference'
+import WarcraftLogs from './WarcraftLogs'
 export const components: MDXComponents = {
   TimelinePlannerServer,
   TimelinePlannerServerReference,
+  WarcraftLogs,
   Image: ({ src, alt, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]

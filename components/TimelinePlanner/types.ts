@@ -1,5 +1,7 @@
 import { Patch } from './PatchSystem'
 
+export const SPELL_GCD = 1.5
+
 // SpellInfo matches the structure in spells.json
 export interface SpellInfo {
   id: string
@@ -12,6 +14,12 @@ export interface SpellInfo {
   channeled?: boolean
 }
 
+export interface AverageCastInfo {
+  ca: number[]
+  convoke: number[]
+  fon: number[]
+}
+
 // Define a type for charge index (0-based)
 export type ChargeIndex = number
 
@@ -21,6 +29,7 @@ export interface CastInfo {
   chargeIndex: ChargeIndex // Which charge this cast belongs to (0, 1, etc.)
   start_s: number
   end_s: number
+  delay_s?: number[]
   // These are added by the timeline view for rendering
 }
 

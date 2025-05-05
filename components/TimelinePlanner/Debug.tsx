@@ -77,6 +77,7 @@ export default function Debug({
                   <th className="pb-2 pr-4">Spell</th>
                   <th className="pb-2 pr-4">Start</th>
                   <th className="pb-2 pr-4">End</th>
+                  <th className="pb-2 pr-4">Duration</th>
                   <th className="pb-2 pr-4">Channel</th>
                   <th className="pb-2 pr-4">Effect</th>
                   <th className="pb-2">Cooldown</th>
@@ -89,6 +90,7 @@ export default function Debug({
                       <td className="py-2 pr-4">{spellCast.spell.name}</td>
                       <td className="py-2 pr-4">{cast.start_s.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{cast.end_s.toFixed(1)}s</td>
+                      <td className="py-2 pr-4">{(cast.end_s - cast.start_s).toFixed(1)}s</td>
                       <td className="py-2 pr-4">{spellCast.spell.channel_duration.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{spellCast.spell.effect_duration.toFixed(1)}s</td>
                       <td className="py-2">{spellCast.spell.cooldown.toFixed(1)}s</td>

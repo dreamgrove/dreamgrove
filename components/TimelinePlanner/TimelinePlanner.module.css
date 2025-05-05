@@ -6,6 +6,12 @@
   border-radius: 8px;
 }
 
+.warcraftLogsIntegration {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
 .spellButtons {
   display: flex;
   gap: 10px;

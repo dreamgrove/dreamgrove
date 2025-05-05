@@ -1,12 +1,6 @@
 import React from 'react'
-import { SpellInfo } from './types'
-
-// TypeScript interface for cast info
-export interface CastInfo {
-  id: string
-  start_s: number
-  end_s: number
-}
+import { CastInfo, SpellInfo } from './types'
+import { useTimelineControls } from './TimelineContext'
 
 interface CastProps {
   castInfo: CastInfo
@@ -27,8 +21,10 @@ export default function Cast({
   onDelete,
   isDragging,
   hasCollision,
-  isChargeRow = false,
 }: CastProps) {
+  // Get pixelsPerSecond from the timeline context
+  const { pixelsPerSecond } = useTimelineControls()
+
   const { start_s, end_s } = castInfo
   const { channel_duration, effect_duration, cooldown } = spell
 
@@ -50,7 +46,7 @@ export default function Cast({
 
   const wowheadWrapper = <div className="flex items-center justify-center px-1">{Wowhead}</div>
 
-  const bgColor = isDragging ? 'bg-[#1d1c1c]' : isChargeRow ? 'bg-gray-700/30' : 'bg-black/30'
+  const bgColor = isDragging ? 'bg-[#1d1c1c]' : 'bg-black/30'
 
   return (
     <div
@@ -59,12 +55,20 @@ export default function Cast({
           ? 'border-red-500 shadow-md'
           : isDragging
             ? 'border-blue-500 shadow-lg'
-            : isChargeRow
-              ? 'border-gray-500/40'
-              : 'border-white/20'
+            : 'border-white/20'
       } ${bgColor} ${className || ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
+      {/* Red Overlay for CastInfo.delay_s */}
+      {false && (
+        <div
+          className="absolute top-0 h-full bg-red-500"
+          style={{
+            left: (castInfo.delay_s[0] - start_s) * pixelsPerSecond,
+            width: (castInfo.delay_s[1] - castInfo.delay_s[0]) * pixelsPerSecond,
+          }}
+        ></div>
+      )}
       {/* Delete button */}
       {onDelete && (
         <button
@@ -81,11 +85,7 @@ export default function Cast({
         className="h-full rounded-l-md focus-visible:outline-none focus-visible:ring-0"
         style={{
           width: `${channelWidthPct}%`,
-          backgroundColor: hasCollision
-            ? 'rgba(239, 68, 68, 0.5)'
-            : isChargeRow
-              ? 'rgba(107, 114, 128, 0.5)'
-              : 'rgba(255, 152, 0, 0.5)',
+          backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.5)' : 'rgba(255, 152, 0, 0.5)',
         }}
       >
         {showWowheadInChannel && wowheadWrapper}
@@ -95,11 +95,7 @@ export default function Cast({
         className="flex h-full items-center focus-visible:outline-none focus-visible:ring-0"
         style={{
           width: `${effectWidthPct}%`,
-          backgroundColor: hasCollision
-            ? 'rgba(239, 68, 68, 0.2)'
-            : isChargeRow
-              ? 'rgba(107, 114, 128, 0.2)'
-              : 'rgba(255, 152, 0, 0.2)',
+          backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.2)' : 'rgba(255, 152, 0, 0.2)',
         }}
       >
         {showWowheadInEffect && wowheadWrapper}

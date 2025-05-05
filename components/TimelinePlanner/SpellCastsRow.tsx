@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   DndContext,
   useSensor,
@@ -9,10 +9,10 @@ import {
   DragOverlay,
   DndContextProps,
 } from '@dnd-kit/core'
-import { CSS } from '@dnd-kit/utilities'
-import Cast, { CastInfo } from './Cast'
+import Cast from './Cast'
 import DraggableCast from './DraggableCast'
-import { SpellInfo, ChargeIndex, SpellChargeCasts } from './types'
+import { SpellInfo, ChargeIndex, SpellChargeCasts, SPELL_GCD, CastInfo } from './types'
+import { useTimelineControls } from './TimelineContext'
 
 interface SpellCastsRowProps {
   spellName: string
@@ -25,7 +25,7 @@ interface SpellCastsRowProps {
   onCastMove?: (castId: string, newStartTime: number, chargeIndex: number) => void
   className?: string
   chargeIndex: ChargeIndex
-  allSpellRows?: SpellChargeCasts[] // All rows for all spells, needed for charge validation
+  patchedSpellRows?: SpellChargeCasts[] // All rows with patches applied from timeline effects
 }
 
 // Interface for candidate position with distance info
@@ -46,11 +46,14 @@ export default function SpellCastsRow({
   onCastMove,
   className,
   chargeIndex = 0,
-  allSpellRows = [],
+  patchedSpellRows = [],
 }: SpellCastsRowProps) {
   // State to track active drag
   const [activeDragId, setActiveDragId] = useState<string | null>(null)
   const activeCast = activeDragId ? casts.find((cast) => cast.id === activeDragId) : null
+
+  // Get timeline conversion functions from context
+  const { timeToPixels, pixelsToTime } = useTimelineControls()
 
   // Configure sensors for drag detection
   const sensors = useSensors(
@@ -101,8 +104,31 @@ export default function SpellCastsRow({
     let hasOverlap = false
     let overlappingCast: (CastInfo & { id?: string }) | undefined = undefined
 
+    // Use patched cast end times for overlap detection when available
     for (const otherCast of otherCasts) {
-      if (checkOverlap(proposedStart, proposedEnd, otherCast.start_s, otherCast.end_s)) {
+      // Try to find the patched version of this cast
+      let otherCastEndTime = otherCast.end_s
+      let otherCastStartTime = otherCast.start_s
+
+      // Look for this cast in patchedSpellRows if they exist
+      if (patchedSpellRows && patchedSpellRows.length > 0) {
+        // Find the row that contains this cast
+        const patchedRow = patchedSpellRows.find(
+          (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+        )
+
+        if (patchedRow) {
+          // Find the patched cast
+          const patchedCast = patchedRow.casts.find((cast) => cast.id === otherCast.id)
+          if (patchedCast) {
+            // Use the patched end time
+            otherCastEndTime = patchedCast.end_s
+            otherCastStartTime = patchedCast.start_s
+          }
+        }
+      }
+
+      if (checkOverlap(proposedStart, proposedEnd, otherCastStartTime, otherCastEndTime)) {
         hasOverlap = true
         overlappingCast = otherCast
         break
@@ -142,15 +168,31 @@ export default function SpellCastsRow({
       const currentCast = otherCasts[i]
       const nextCast = i < otherCasts.length - 1 ? otherCasts[i + 1] : null
 
+      // Get patched end time for current cast if available
+      let currentCastEndTime = currentCast.end_s
+
+      if (patchedSpellRows && patchedSpellRows.length > 0) {
+        const patchedRow = patchedSpellRows.find(
+          (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+        )
+
+        if (patchedRow) {
+          const patchedCast = patchedRow.casts.find((cast) => cast.id === currentCast.id)
+          if (patchedCast) {
+            currentCastEndTime = patchedCast.end_s
+          }
+        }
+      }
+
       if (nextCast) {
         // Space between casts
-        const gapBetweenCasts = nextCast.start_s - currentCast.end_s
+        const gapBetweenCasts = nextCast.start_s - currentCastEndTime
 
         if (gapBetweenCasts >= castDuration) {
           // We can fit in this gap
 
           // If moving forward, prioritize position where end aligns with next cast start
-          if (isMovingForward && currentCast.end_s < proposedStart) {
+          if (isMovingForward && currentCastEndTime < proposedStart) {
             // Position where cast ends exactly at next cast start
             const alignEndPosition = nextCast.start_s - castDuration
 
@@ -163,8 +205,8 @@ export default function SpellCastsRow({
 
             // Also consider start of gap
             validPositions.push({
-              position: currentCast.end_s,
-              distance: Math.abs(currentCast.end_s - proposedStart),
+              position: currentCastEndTime,
+              distance: Math.abs(currentCastEndTime - proposedStart),
               priority: 5,
               description: 'After current cast',
             })
@@ -172,7 +214,7 @@ export default function SpellCastsRow({
           // If moving backward, prioritize position where start aligns with previous cast end
           else if (!isMovingForward && nextCast.start_s > proposedStart) {
             // Position where cast starts exactly at current cast end
-            const alignStartPosition = currentCast.end_s
+            const alignStartPosition = currentCastEndTime
 
             validPositions.push({
               position: alignStartPosition,
@@ -191,8 +233,8 @@ export default function SpellCastsRow({
           } else {
             // Regular gap filling without direction preference
             validPositions.push({
-              position: currentCast.end_s,
-              distance: Math.abs(currentCast.end_s - proposedStart),
+              position: currentCastEndTime,
+              distance: Math.abs(currentCastEndTime - proposedStart),
               priority: 5,
               description: 'Start of gap',
             })
@@ -211,12 +253,29 @@ export default function SpellCastsRow({
     // 4. Consider position at the end of the timeline if there's room
     if (otherCasts.length > 0) {
       const lastCast = otherCasts[otherCasts.length - 1]
+
+      // Get patched end time for last cast if available
+      let lastCastEndTime = lastCast.end_s
+
+      if (patchedSpellRows && patchedSpellRows.length > 0) {
+        const patchedRow = patchedSpellRows.find(
+          (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+        )
+
+        if (patchedRow) {
+          const patchedCast = patchedRow.casts.find((cast) => cast.id === lastCast.id)
+          if (patchedCast) {
+            lastCastEndTime = patchedCast.end_s
+          }
+        }
+      }
+
       const maxPosition = total_length_s - castDuration
 
-      if (lastCast.end_s <= maxPosition) {
+      if (lastCastEndTime <= maxPosition) {
         validPositions.push({
-          position: lastCast.end_s,
-          distance: Math.abs(lastCast.end_s - proposedStart),
+          position: lastCastEndTime,
+          distance: Math.abs(lastCastEndTime - proposedStart),
           priority: 2,
           description: 'After last cast',
         })
@@ -238,13 +297,29 @@ export default function SpellCastsRow({
         // Check if this position doesn't overlap with other casts
         let isValid = true
         for (const otherCast of otherCasts) {
+          // Get patched end time for otherCast if available
+          let otherCastEndTime = otherCast.end_s
+
+          if (patchedSpellRows && patchedSpellRows.length > 0) {
+            const patchedRow = patchedSpellRows.find(
+              (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+            )
+
+            if (patchedRow) {
+              const patchedCast = patchedRow.casts.find((cast) => cast.id === otherCast.id)
+              if (patchedCast) {
+                otherCastEndTime = patchedCast.end_s
+              }
+            }
+          }
+
           if (
             otherCast !== overlappingCast &&
             checkOverlap(
               posBeforeOverlap,
               overlappingCast.start_s,
               otherCast.start_s,
-              otherCast.end_s
+              otherCastEndTime
             )
           ) {
             isValid = false
@@ -266,18 +341,50 @@ export default function SpellCastsRow({
     // If we have overlapping position and we're moving backward,
     // try to place it right after the overlapping cast
     if (overlappingCast && !isMovingForward) {
-      const posAfterOverlap = overlappingCast.end_s
+      // Get patched end time for overlappingCast if available
+      let overlappingCastEndTime = overlappingCast.end_s
+
+      if (patchedSpellRows && patchedSpellRows.length > 0) {
+        const patchedRow = patchedSpellRows.find(
+          (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+        )
+
+        if (patchedRow) {
+          const patchedCast = patchedRow.casts.find((cast) => cast.id === overlappingCast.id)
+          if (patchedCast) {
+            overlappingCastEndTime = patchedCast.end_s
+          }
+        }
+      }
+
+      const posAfterOverlap = overlappingCastEndTime
       if (posAfterOverlap + castDuration <= total_length_s) {
         // Check if this position doesn't overlap with other casts
         let isValid = true
         for (const otherCast of otherCasts) {
+          // Get patched end time for otherCast if available
+          let otherCastEndTime = otherCast.end_s
+
+          if (patchedSpellRows && patchedSpellRows.length > 0) {
+            const patchedRow = patchedSpellRows.find(
+              (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+            )
+
+            if (patchedRow) {
+              const patchedCast = patchedRow.casts.find((cast) => cast.id === otherCast.id)
+              if (patchedCast) {
+                otherCastEndTime = patchedCast.end_s
+              }
+            }
+          }
+
           if (
             otherCast !== overlappingCast &&
             checkOverlap(
               posAfterOverlap,
               posAfterOverlap + castDuration,
               otherCast.start_s,
-              otherCast.end_s
+              otherCastEndTime
             )
           ) {
             isValid = false
@@ -311,25 +418,31 @@ export default function SpellCastsRow({
 
   // Get the charge constraints for the currently dragged cast
   const getChargeConstraints = () => {
-    if (!activeDragId) return { min: 0, max: total_length_s }
+    if (!activeDragId) return { min: 0, max: total_length_s - SPELL_GCD }
 
     const activeCast = casts.find((c) => c.id === activeDragId)
-    if (!activeCast) return { min: 0, max: total_length_s }
+    if (!activeCast) return { min: 0, max: total_length_s - SPELL_GCD }
 
     const castDuration = activeCast.end_s - activeCast.start_s
     let minAllowedStart = 0
-    let maxAllowedStart = total_length_s - castDuration
+    if (spellInfo.id === 'reforestation') {
+      minAllowedStart = spellInfo.cooldown
+    }
+    let maxAllowedStart = total_length_s - SPELL_GCD
 
     // Only apply constraints for multi-charge spells
     if (spellInfo.charges && spellInfo.charges > 1) {
+      // Decide which spell rows to use for constraints based on availability
+      const spellRows = patchedSpellRows.length > 0 ? patchedSpellRows : []
+
       // Find all rows for this spell
-      const spellRows = allSpellRows.filter((row) => row.spell.id === spellInfo.id)
+      const spellRowsForThisSpell = spellRows.filter((row) => row.spell.id === spellInfo.id)
 
       // Organize casts by charge and position in sequence
       const castsByCharge: Record<number, CastInfo[]> = {}
 
       // Group and sort casts for each charge
-      spellRows.forEach((row) => {
+      spellRowsForThisSpell.forEach((row) => {
         const chargeIdx = row.chargeIndex
         if (!castsByCharge[chargeIdx]) {
           castsByCharge[chargeIdx] = []
@@ -344,95 +457,94 @@ export default function SpellCastsRow({
       // When determining sequence position, we need to handle both:
       // 1. The cast that's currently being dragged (using activeDragId)
       // 2. The position of the cast in the sorted order
-      let activeCastSequencePosition = currentChargeCasts.findIndex((c) => c.id === activeDragId)
-
-      // If we couldn't find position by ID (which can happen in some edge cases),
-      // try to find it by matching properties
-      if (activeCastSequencePosition === -1 && activeCast) {
-        // Try to match by start/end times or other properties
-        activeCastSequencePosition = currentChargeCasts.findIndex(
-          (c) => c.start_s === activeCast.start_s && c.end_s === activeCast.end_s
-        )
-      }
+      const activeCastSequencePosition = currentChargeCasts.findIndex((c) => c.id === activeDragId)
 
       if (chargeIndex === 0) {
-        // For first charge (index 0), set max based on next charge
-        const nextChargeRow = spellRows.find((row) => row.chargeIndex === 1)
+        // For first charge (index 0), set start constraints based on next charge
+        const nextChargeRow = spellRowsForThisSpell.find((row) => row.chargeIndex === 1)
         if (nextChargeRow && nextChargeRow.casts.length > 0) {
-          // Default constraint - earliest start time of any cast in the next charge
-          const earliestNextChargeStart = Math.min(
-            ...nextChargeRow.casts.map((cast) => cast.start_s)
-          )
-          maxAllowedStart = earliestNextChargeStart - castDuration
-
           // If we can identify position in sequence, use corresponding cast in next charge
           if (activeCastSequencePosition !== -1) {
             const nextChargeCasts = castsByCharge[1] || []
+
+            /* If we already have a cast in the next charge */
             if (activeCastSequencePosition < nextChargeCasts.length) {
               // Get the corresponding cast in the next charge
-              const correspondingNextCast = nextChargeCasts[activeCastSequencePosition]
+              const correspondingNextChargeCast = nextChargeCasts[activeCastSequencePosition]
+              const startOfNextChargeCast = correspondingNextChargeCast.start_s
 
-              // Make sure we don't move after the corresponding cast in the next charge
-              // (first charge cast can't start after its corresponding next charge cast)
-              const correspondingMaxStart = correspondingNextCast.start_s
+              // The first charge start time can't be smaller than the start of the next charge cast - cast duration
+              minAllowedStart = Math.max(
+                minAllowedStart,
+                startOfNextChargeCast - castDuration + SPELL_GCD
+              )
+              // And it can't be greater than the start of the next charge cast
+              maxAllowedStart = Math.min(maxAllowedStart, startOfNextChargeCast - SPELL_GCD)
 
-              // Use the stricter constraint (min of default and sequence-based)
-              maxAllowedStart = Math.min(maxAllowedStart, correspondingMaxStart)
+              /* If we don't have other sub-charges yet */
+            } else if (activeCastSequencePosition === nextChargeCasts.length) {
+              // Get the last previous cast in the current charge
+              const currentPreviousChargeCast = currentChargeCasts[activeCastSequencePosition - 1]
+
+              let endOfPrevChargeCast = currentPreviousChargeCast.end_s
+
+              if (patchedSpellRows.length > 0) {
+                const patchedRow = patchedSpellRows.find(
+                  (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex
+                )
+
+                if (patchedRow) {
+                  const patchedPrevCast = patchedRow.casts.find(
+                    (cast) => cast.id === currentPreviousChargeCast.id
+                  )
+                  if (patchedPrevCast) {
+                    endOfPrevChargeCast = patchedPrevCast.end_s
+                  }
+                }
+              }
+              // Cant be smaller than the end of the previous charge cast
+              minAllowedStart = Math.max(minAllowedStart, endOfPrevChargeCast)
+              maxAllowedStart = Math.min(maxAllowedStart)
             }
           }
         }
       } else {
-        // For charges after the first, set min based on previous charge
-        const prevChargeRow = spellRows.find((row) => row.chargeIndex === chargeIndex - 1)
+        // For charges after the first, set start constraints based on previous charge
+        const prevChargeRow = spellRowsForThisSpell.find(
+          (row) => row.chargeIndex === chargeIndex - 1
+        )
         if (prevChargeRow && prevChargeRow.casts.length > 0) {
-          // Default constraint - use the latest end time of any cast in previous charge
-          const latestPrevChargeStart = Math.max(...prevChargeRow.casts.map((cast) => cast.start_s))
-          const latestPrevChargeEnd = Math.max(...prevChargeRow.casts.map((cast) => cast.end_s))
-          minAllowedStart = latestPrevChargeStart
-          maxAllowedStart = latestPrevChargeEnd
-
           // If we can identify position in sequence, use corresponding cast in previous charge
           if (activeCastSequencePosition !== -1) {
             const prevChargeCasts = castsByCharge[chargeIndex - 1] || []
             if (activeCastSequencePosition < prevChargeCasts.length) {
               // Get the corresponding cast in the previous charge
-              const correspondingPrevCast = prevChargeCasts[activeCastSequencePosition]
+              const correspondingPrevChargeCast = prevChargeCasts[activeCastSequencePosition]
 
-              // Make sure we don't move before the corresponding cast in the previous charge
-              const correspondingMinEnd = correspondingPrevCast.end_s
-              const correspondingMinStart = correspondingPrevCast.start_s
+              // Get patched end time for previous charge cast if available
+              let endOfPrevChargeCast = correspondingPrevChargeCast.end_s
 
-              // Use the stricter constraint (max of default and sequence-based)
-              minAllowedStart = correspondingMinStart
-              maxAllowedStart = correspondingMinEnd
-            }
-          }
-        }
+              if (patchedSpellRows.length > 0) {
+                const patchedPrevRow = patchedSpellRows.find(
+                  (row) => row.spell.id === spellInfo.id && row.chargeIndex === chargeIndex - 1
+                )
 
-        // Also set max based on next charge if not the last charge
-        if (chargeIndex < spellInfo.charges - 1) {
-          const nextChargeRow = spellRows.find((row) => row.chargeIndex === chargeIndex + 1)
-          if (nextChargeRow && nextChargeRow.casts.length > 0) {
-            // Default constraint - earliest start time of any cast in the next charge
-            const earliestMaxChargeEnd = Math.min(...nextChargeRow.casts.map((cast) => cast.end_s))
-            const nextChargeMaxAllowed = earliestMaxChargeEnd - castDuration
-
-            // Use the stricter constraint
-            maxAllowedStart = Math.min(maxAllowedStart, nextChargeMaxAllowed)
-
-            // If we can identify position in sequence, use corresponding cast in next charge
-            if (activeCastSequencePosition !== -1) {
-              const nextChargeCasts = castsByCharge[chargeIndex + 1] || []
-              if (activeCastSequencePosition < nextChargeCasts.length) {
-                // Get the corresponding cast in the next charge
-                const correspondingNextCast = nextChargeCasts[activeCastSequencePosition]
-
-                // Make sure we don't move after the corresponding cast in the next charge
-                const correspondingMaxStart = correspondingNextCast.end_s
-
-                // Use the stricter constraint
-                maxAllowedStart = Math.min(maxAllowedStart, correspondingMaxStart)
+                if (patchedPrevRow) {
+                  const patchedPrevCast = patchedPrevRow.casts.find(
+                    (cast) => cast.id === correspondingPrevChargeCast.id
+                  )
+                  if (patchedPrevCast) {
+                    endOfPrevChargeCast = patchedPrevCast.end_s
+                  }
+                }
               }
+
+              const startOfPrevChargeCast = correspondingPrevChargeCast.start_s
+
+              // Any non first charge cast can't start before the start of the previous charge cast
+              minAllowedStart = Math.max(minAllowedStart, startOfPrevChargeCast + SPELL_GCD)
+              // Any non first charge cast can't end after the end of the previous charge cooldown
+              maxAllowedStart = Math.min(maxAllowedStart, endOfPrevChargeCast - SPELL_GCD)
             }
           }
         }
@@ -462,14 +574,22 @@ export default function SpellCastsRow({
         // Calculate proposed new start time, ensuring it doesn't go below 0 or beyond timeline length
         const proposedStartTime = Math.max(
           0,
-          Math.min(total_length_s - (cast.end_s - cast.start_s), cast.start_s + deltaSeconds)
+          Math.min(total_length_s - SPELL_GCD, cast.start_s + deltaSeconds)
         )
 
-        // Calculate the proposed end time
-        const proposedEndTime = proposedStartTime + (cast.end_s - cast.start_s)
+        // Apply charge-based constraints to the proposed start time
+        const { min, max } = getChargeConstraints()
+        let constrainedStartTime = proposedStartTime
+        if (constrainedStartTime < min) constrainedStartTime = min
+        if (constrainedStartTime > max) constrainedStartTime = max
 
         // Check for collisions and find the closest valid position
-        const validStartTime = findValidPosition(castId, proposedStartTime, proposedEndTime, casts)
+        const validStartTime = findValidPosition(
+          castId,
+          constrainedStartTime,
+          constrainedStartTime + (cast.end_s - cast.start_s),
+          casts
+        )
 
         // Only update if position changed
         if (validStartTime !== cast.start_s) {
@@ -502,26 +622,21 @@ export default function SpellCastsRow({
       // Get the constraints for this cast based on charge relationships
       const { min, max } = getChargeConstraints()
 
-      // Convert current position to seconds
-      const pixelsPerSecond = timeline_total_length_px / total_length_s
+      // Convert current position to seconds - use context helpers
       const currentPositionSeconds = activeCast.start_s
-      const dragDeltaSeconds = transform.x / pixelsPerSecond
+      const dragDeltaSeconds = pixelsToTime(transform.x)
 
       // Calculate proposed new position in seconds
       const proposedPositionSeconds = currentPositionSeconds + dragDeltaSeconds
 
-      console.log('proposedPositionSeconds', proposedPositionSeconds)
-      console.log('min', min)
-      console.log('max', max)
       // Apply constraints and convert back to pixels
       let constrainedPositionSeconds = proposedPositionSeconds
       if (constrainedPositionSeconds < min) constrainedPositionSeconds = min
       if (constrainedPositionSeconds > max) constrainedPositionSeconds = max
 
-      const adjustedDeltaPixels =
-        (constrainedPositionSeconds - currentPositionSeconds) * pixelsPerSecond
+      // Use timeToPixels to convert back to pixels
+      const adjustedDeltaPixels = timeToPixels(constrainedPositionSeconds - currentPositionSeconds)
 
-      console.log('adjustedDeltaPixels', adjustedDeltaPixels)
       return {
         ...transform,
         x: adjustedDeltaPixels,
