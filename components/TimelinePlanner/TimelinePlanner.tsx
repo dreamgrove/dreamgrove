@@ -60,15 +60,6 @@ export default function TimelinePlanner({
           currentEncounterId={currentEncounterId}
           onEncounterChange={setCurrentEncounterId}
         />
-
-        <div className={styles.warcraftLogsIntegration}>
-          <Link
-            href="/warcraft-logs"
-            className="inline-flex items-center rounded bg-gray-200 px-3 py-1 text-sm transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
-          >
-            <span className="mr-1">📊</span> WarcraftLogs Integration (Coming Soon)
-          </Link>
-        </div>
       </div>
 
       {/* The TimelineProvider now fully manages timeline state */}

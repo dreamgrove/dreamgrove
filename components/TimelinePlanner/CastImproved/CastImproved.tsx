@@ -1,11 +1,12 @@
 import React from 'react'
-import { CastInfo, SpellInfo } from './types'
-import { useTimelineControls } from './TimelineContext'
+import { useTimelineControls } from '../TimelineContext'
+import { SpellInfo } from '../types'
+import CastImproved from './castTypes'
 
 interface CastProps {
-  castInfo: CastInfo
+  castInfo: CastImproved
   spell: SpellInfo
-  Wowhead: React.ReactNode
+  icon: React.ReactNode
   className?: string
   onDelete?: () => void
   isDragging?: boolean
@@ -13,10 +14,10 @@ interface CastProps {
   isChargeRow?: boolean
 }
 
-export default function Cast({
+export default function CastInterval({
   castInfo,
   spell,
-  Wowhead,
+  icon,
   className,
   onDelete,
   isDragging,
@@ -25,26 +26,26 @@ export default function Cast({
   // Get pixelsPerSecond from the timeline context
   const { pixelsPerSecond } = useTimelineControls()
 
-  const { start_s, end_s } = castInfo
-  const { channel_duration, effect_duration, cooldown } = spell
+  const { effect_duration_s, channel_duration_s, total_cooldown_s } = castInfo
 
-  const total_duration_s = end_s - start_s
+  const total_duration_s = effect_duration_s + channel_duration_s
 
-  const channelWidthPct = (channel_duration / total_duration_s) * 100
-  const effectWidthPct = (effect_duration / total_duration_s) * 100
-  const remainingCdWidthPct =
-    ((cooldown - effect_duration - channel_duration) / total_duration_s) * 100
+  const channel_width_px = (channel_duration_s / total_duration_s) * pixelsPerSecond
+  const effect_width_px = (effect_duration_s / total_duration_s) * pixelsPerSecond
+  const remaining_cd_width_px = (total_cooldown_s - total_duration_s) * pixelsPerSecond
 
   // Find the maximum width percentage
-  const maxWidthPct = Math.max(channelWidthPct, effectWidthPct, remainingCdWidthPct)
+  const maxWidth = Math.max(channel_width_px, effect_width_px)
 
   // Determine which section should show Wowhead (first one in case of ties)
-  const showWowheadInChannel = channelWidthPct === maxWidthPct
-  const showWowheadInEffect = !showWowheadInChannel && effectWidthPct === maxWidthPct
-  const showWowheadInRemaining =
-    !showWowheadInChannel && !showWowheadInEffect && remainingCdWidthPct === maxWidthPct
+  const showWowheadInChannel = channel_width_px === maxWidth
 
-  const wowheadWrapper = <div className="flex items-center justify-center px-1">{Wowhead}</div>
+  const showWowheadInEffect = !showWowheadInChannel && effect_width_px === maxWidth
+
+  const showWowheadInRemaining =
+    !showWowheadInChannel && !showWowheadInEffect && remaining_cd_width_px === maxWidth
+
+  const wowheadWrapper = <div className="flex items-center justify-center px-1">{icon}</div>
 
   const bgColor = isDragging ? 'bg-[#1d1c1c]' : 'bg-black/30'
 
@@ -74,7 +75,7 @@ export default function Cast({
       <div
         className="h-full rounded-l-md focus-visible:outline-none focus-visible:ring-0"
         style={{
-          width: `${channelWidthPct}%`,
+          width: `${channel_width_px}px`,
           backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.5)' : 'rgba(255, 152, 0, 0.5)',
         }}
       >
@@ -84,7 +85,7 @@ export default function Cast({
       <div
         className="flex h-full items-center focus-visible:outline-none focus-visible:ring-0"
         style={{
-          width: `${effectWidthPct}%`,
+          width: `${effect_width_px - channel_width_px}px`,
           backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.2)' : 'rgba(255, 152, 0, 0.2)',
         }}
       >
@@ -94,7 +95,7 @@ export default function Cast({
       <div
         className="flex h-full items-center focus-visible:outline-none focus-visible:ring-0"
         style={{
-          width: `${remainingCdWidthPct}%`,
+          width: `${remaining_cd_width_px}px`,
           backgroundColor: hasCollision ? 'rgba(239, 68, 68, 0.1)' : 'transparent',
         }}
       >
