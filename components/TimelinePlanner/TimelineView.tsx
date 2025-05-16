@@ -6,7 +6,15 @@ import CustomElement from './CustomElement'
 import Debug from './Debug'
 import Checkboxes from './Checkboxes'
 import { applyTimelineEffects, timelineEffects } from './TimelineEffects'
-import { Cast, SpellInfo, SpellTimeline, PlayerAction, Event, TimelineToRender } from './types'
+import {
+  Cast,
+  SpellInfo,
+  SpellTimeline,
+  PlayerAction,
+  Event,
+  TimelineToRender,
+  SpellToRender,
+} from './types'
 import SpellMarkers from './SpellMarkers'
 import { useTimeline, useTimelineControls } from './TimelineContext'
 import { generateBaseQueue, processEventQueue, processPlayerActions } from './TimelineEvents'
@@ -103,6 +111,7 @@ export default function TimelineView({
   useEffect(() => {
     const queue = generateBaseQueue(inputActions)
     setBaseQueue(queue)
+    console.log(queue)
 
     const timeline = processEventQueue(queue, localSpells)
     setProcessedState(timeline)
@@ -170,7 +179,6 @@ export default function TimelineView({
       }
     })
   }
-  // State for custom elements
   const [customElements, setCustomElements] = useState<Record<string, React.ReactNode>>({})
 
   const handleCreateCustomElement = (params: SpellInfo) => {
@@ -188,8 +196,6 @@ export default function TimelineView({
     setLocalSpells([...localSpells, newSpell])
     console.log('Create custom element:', params)
   }
-
-  console.log(localSpells)
 
   return (
     <div className="timeline flex w-full flex-col gap-2">
@@ -245,7 +251,7 @@ export default function TimelineView({
       <div className="flex min-h-[200px] w-full flex-row">
         {/* Left side: spell names, vertically offset */}
         <div className="w-[200px] min-w-[120px] shrink-0">
-          <div className="mt-[24px]">
+          <div className="mt-[23px]">
             <div className="flex flex-col items-start justify-start pl-2">
               {processedState.spells.map((spellCast) => (
                 <div
@@ -260,7 +266,7 @@ export default function TimelineView({
                     <div className="mt-[2px] text-sm text-sky-300 transition-opacity">Charges</div>
                   )}
                   <div
-                    className={`flex h-[40px] w-full flex-col justify-center truncate text-right ${spellCast.chargesUsed > 1 ? '' : ''}`}
+                    className={`flex h-[38px] w-full flex-col justify-center truncate text-right ${spellCast.chargesUsed > 1 ? '' : ''}`}
                   >
                     {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
                   </div>
@@ -316,6 +322,50 @@ export default function TimelineView({
         showDebug={showDebug}
         toggleDebug={toggleDebug}
       />
+    </div>
+  )
+}
+
+const SpellName = ({
+  spellCast,
+  wowheadNameMap,
+}: {
+  spellCast: SpellToRender
+  wowheadNameMap: Record<string, React.ReactNode>
+}) => {
+  return (
+    <div
+      key={`spell-name-${spellCast.spell.id}`}
+      style={{
+        height: 56,
+      }}
+      className={`flex w-full flex-col items-center justify-end border-r-2 border-orange-500/30 pr-2`}
+    >
+      <div className={`flex h-[38px] w-full flex-col justify-center truncate text-right`}>
+        {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
+      </div>
+    </div>
+  )
+}
+const SpellNameWithCharges = ({
+  spellCast,
+  wowheadNameMap,
+}: {
+  spellCast: SpellToRender
+  wowheadNameMap: Record<string, React.ReactNode>
+}) => {
+  return (
+    <div
+      key={`spell-name-${spellCast.spell.id}`}
+      style={{
+        height: 56 * spellCast.chargesUsed,
+      }}
+      className={`flex w-full flex-col items-end border-r-2 border-orange-500/30 pr-2`}
+    >
+      <div className="mt-[2px] text-sm text-sky-300 transition-opacity">Charges</div>
+      <div className={`flex h-[38px] w-full flex-col justify-center truncate text-right`}>
+        {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
+      </div>
     </div>
   )
 }

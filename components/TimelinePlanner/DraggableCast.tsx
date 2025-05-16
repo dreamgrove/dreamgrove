@@ -66,9 +66,10 @@ export default function DraggableCast({
       return
     }
   }, [isDragging, modifiedTransform])
+  console.log(castInfo)
 
   const style = {
-    position: 'relative' as const,
+    position: 'absolute' as const,
     left: `${timeToPixels(castInfo.start_s)}px`,
     width: `${cast_width_px}px`,
     zIndex: isDragging ? 100 : 50,

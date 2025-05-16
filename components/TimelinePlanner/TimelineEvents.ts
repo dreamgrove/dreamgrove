@@ -126,8 +126,9 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
     switch (event.type) {
       case EventType.CastStart:
         // Check if we can cast
+
         if (spellState.usedCharges < spellState.totalCharges) {
-          //console.log('Successful Cast Start At: ', event.time)
+          console.log('Successful Cast Start At: ', event.time)
           spellState.useCharge(event.time)
           //console.log('available charges', spellState.totalCharges - spellState.usedCharges)
           if (spellState.currentCast && event.time - SPELL_GCD < spellState.currentCast.start_s) {
@@ -135,9 +136,10 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
           }
 
           const latestChargeTime = eventQueue.findLatestCharge(event.spellId, event.time)
-          //console.log('latest charge time', latestChargeTime)
+          console.log('latest charge time', latestChargeTime)
           const cooldown_delay = Math.max(0, latestChargeTime - event.time)
           //console.log('cooldown delay', cooldown_delay)
+          console.log(spellInfo.cooldown)
 
           eventQueue.push({
             type: EventType.GainCharge,
