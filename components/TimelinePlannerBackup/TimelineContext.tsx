@@ -69,20 +69,25 @@ export function TimelineProvider({
   const [effective_view_length_s, setEffectiveViewLength] = useState(initialViewLength)
   const [marker_spacing_s] = useState(initialMarkerSpacing)
 
+  // Ref for the scroll container
   const [scrollContainer, setScrollContainer] = useState<HTMLDivElement | null>(null)
   const [scrollContainerWidth, setScrollContainerWidth] = useState(0)
 
+  // Function to register the scroll container
   const registerScrollContainer = (element: HTMLDivElement | null) => {
     setScrollContainer(element)
   }
 
+  // Alt key state for zooming
   const [isAltKeyPressed, setIsAltKeyPressed] = useState(false)
 
+  // Calculate derived values
   const effective_num_windows = total_length_s / effective_view_length_s
   const effective_total_length_px = scrollContainerWidth * effective_num_windows
   const total_length_px = (scrollContainerWidth * total_length_s) / view_length_s
   const pixelsPerSecond = effective_total_length_px / total_length_s
 
+  // Update container width when the container changes or on resize
   useEffect(() => {
     function updateWidth() {
       if (scrollContainer) {
@@ -95,6 +100,7 @@ export function TimelineProvider({
     return () => window.removeEventListener('resize', updateWidth)
   }, [scrollContainer])
 
+  // Track Alt key state
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Alt') {
@@ -118,7 +124,9 @@ export function TimelineProvider({
     }
   }, [])
 
+  // Context value
   const value: TimelineContextType = {
+    // Timeline dimensions
     total_length_s,
     view_length_s,
     effective_view_length_s,
@@ -131,44 +139,54 @@ export function TimelineProvider({
     total_length_px,
     pixelsPerSecond,
 
+    // Controls
     setTotalLength,
     setViewLength,
     setEffectiveViewLength,
 
+    // Alt key state
     isAltKeyPressed,
 
+    // Register container
     registerScrollContainer,
   }
 
   return <TimelineContext.Provider value={value}>{children}</TimelineContext.Provider>
 }
 
+// Custom hook to use the timeline context
 export function useTimeline() {
   const context = useContext(TimelineContext)
   return context
 }
 
+// Custom hook for common timeline operations
 export function useTimelineControls() {
   const context = useTimeline()
 
+  // Zoom in (decrease view length)
   const zoomIn = (amount = 5) => {
     const newViewLength = Math.max(10, context.effective_view_length_s - amount)
     context.setEffectiveViewLength(newViewLength)
   }
 
+  // Zoom out (increase view length)
   const zoomOut = (amount = 5) => {
     const newViewLength = Math.min(300, context.effective_view_length_s + amount)
     context.setEffectiveViewLength(newViewLength)
   }
 
+  // Reset zoom to default
   const resetZoom = () => {
     context.setEffectiveViewLength(context.view_length_s)
   }
 
+  // Calculate position in pixels from time
   const timeToPixels = (timeInSeconds: number) => {
     return timeInSeconds * context.pixelsPerSecond
   }
 
+  // Calculate time from pixel position
   const pixelsToTime = (pixelPosition: number) => {
     return pixelPosition / context.pixelsPerSecond
   }
@@ -183,6 +201,7 @@ export function useTimelineControls() {
   }
 }
 
+// Props for TimelineScaler component
 interface TimelineScalerProps {
   children: (props: {
     pixelsPerSecond: number
@@ -194,6 +213,7 @@ interface TimelineScalerProps {
   style?: React.CSSProperties
 }
 
+// Component that provides timeline scaling functionality to its children
 export function TimelineScaler({ children, className, style }: TimelineScalerProps) {
   const { pixelsPerSecond, effective_total_length_px } = useTimeline()
 

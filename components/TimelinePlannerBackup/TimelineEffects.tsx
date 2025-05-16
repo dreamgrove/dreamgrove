@@ -1,4 +1,4 @@
-import { SpellInfo, TimelineEffect, SpellTimeline } from './types'
+import { SpellInfo, CastInfo, SpellCasts, TimelineEffect } from './types'
 import { Patch, applyPatches, logPatchInfo } from './PatchSystem'
 
 // Force of Nature IDs - for use in effects
@@ -7,10 +7,29 @@ const FORCE_OF_NATURE_IDS = [205636, 'force_of_nature']
 // Export the collection of timeline effects
 export const timelineEffects: TimelineEffect[] = [
   {
+    id: 'stack_cds',
+    name: 'Stack Cooldowns',
+    description: 'Move cooldowns to align with major CDs',
+    applyEffect: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]) => {
+      // Legacy implementation - kept for backward compatibility
+      return currentSpells
+    },
+    generatePatch: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]): Patch | null => {
+      // This would involve more complex logic to identify major CDs and align others
+      // For now, returning null to indicate no modifications
+      return null
+    },
+  },
+  {
     id: 'early_spring',
     name: 'Early Spring',
     description: 'Reduces cooldown of Force of Nature by 15s',
-    generatePatch: (currentSpells: SpellTimeline[]): Patch | null => {
+    applyEffect: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]) => {
+      // Legacy implementation - just return currentSpells without modification
+      // This is now handled by generatePatch and applied through the patch system
+      return currentSpells
+    },
+    generatePatch: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]): Patch | null => {
       // Don't generate patch if no spells
       if (currentSpells.length === 0) return null
 
@@ -46,7 +65,11 @@ export const timelineEffects: TimelineEffect[] = [
     id: 'control_of_dream',
     name: 'Control of the Dream',
     description: 'Reduces cooldown of Celestial Alignment/Incarnation by 15s',
-    generatePatch: (currentSpells: SpellTimeline[]): Patch | null => {
+    applyEffect: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]) => {
+      // Legacy implementation - kept for backward compatibility
+      return currentSpells
+    },
+    generatePatch: (currentSpells: SpellCasts[]): Patch | null => {
       // Don't generate patch if no spells
       if (currentSpells.length === 0) return null
 
@@ -99,6 +122,7 @@ export const timelineEffects: TimelineEffect[] = [
 
           // Use the adjusted end time for the previous cast if available
           const previousEndTime = adjustedEndTimes.get(previousCast.id) ?? previousCast.end_s
+          console.log(previousEndTime)
 
           // Calculate reduction value - the minimum of 15s or the time between this cast's start and previous cast's adjusted end
           const reductionValue = Math.min(15, thisCast.start_s - previousEndTime)
@@ -183,8 +207,12 @@ export const timelineEffects: TimelineEffect[] = [
     id: 'dreamstate',
     name: 'Dreamstate',
     description: 'After Tranquility channel, reduces all current spell cooldowns by 20s',
-
-    generatePatch: (currentSpells: SpellTimeline[]): Patch | null => {
+    applyEffect: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]) => {
+      // Legacy implementation - just return currentSpells without modification
+      // This is now handled by generatePatch and applied through the patch system
+      return currentSpells
+    },
+    generatePatch: (currentSpells: SpellCasts[]): Patch | null => {
       if (currentSpells.length === 0) return null
 
       const patch: Patch = {
@@ -267,8 +295,11 @@ export const timelineEffects: TimelineEffect[] = [
     name: "Cenarius' Guidance",
     description:
       'The cooldown of Incarnation: Tree of Life is reduced by 5.0 sec when Grove Guardians fade.',
-
-    generatePatch: (currentSpells: SpellTimeline[]): Patch | null => {
+    applyEffect: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]) => {
+      // Legacy implementation - just return currentSpells without modification
+      return currentSpells
+    },
+    generatePatch: (currentSpells: SpellCasts[], availableSpells: SpellInfo[]): Patch | null => {
       if (currentSpells.length === 0) return null
 
       const patch: Patch = {
@@ -308,6 +339,7 @@ export const timelineEffects: TimelineEffect[] = [
           merged[merged.length - 1].end = Math.max(merged[merged.length - 1].end, interval.end)
         }
       }
+      console.log(merged)
 
       // Find all Incarnation casts, sorted by start time
       const allIncarnationCasts = incarnationSpells
@@ -367,7 +399,8 @@ export const isForceOfNature = (spellId: string | number): boolean => {
 // Generate patches from active effects
 export const generatePatches = (
   activeEffects: string[],
-  currentSpells: SpellTimeline[]
+  currentSpells: SpellCasts[],
+  spells: SpellInfo[]
 ): Patch[] => {
   const patches: Patch[] = []
   // Keep track of the intermediate state after each patch
@@ -378,7 +411,7 @@ export const generatePatches = (
     const effect = timelineEffects.find((e) => e.id === effectId)
     if (effect && effect.generatePatch) {
       // Pass the currently modified spells to the effect
-      const patch = effect.generatePatch(modifiedSpells)
+      const patch = effect.generatePatch(modifiedSpells, spells)
       if (patch) {
         patches.push(patch)
         // Apply this patch to update the state for the next effect
@@ -397,16 +430,14 @@ export const generatePatches = (
 
 // Helper function to apply multiple effects to spells
 export const applyTimelineEffects = (
-  currentSpells: SpellTimeline[],
-  activeEffects: string[]
-): SpellTimeline[] => {
+  currentSpells: SpellCasts[],
+  activeEffects: string[],
+  spells: SpellInfo[]
+): SpellCasts[] => {
   // Generate patches from active effects
-  const patches = generatePatches(activeEffects, currentSpells)
-  // let currentState = currentSpells
-  // for effect in activeEffects:
-  //   currentState = effect(currentState)
-  // return currentState
+  const patches = generatePatches(activeEffects, currentSpells, spells)
 
+  // Apply patches to get the modified spells - always pass through applyPatches
   // This ensures a consistent non-destructive approach
   return applyPatches(currentSpells, patches)
 }

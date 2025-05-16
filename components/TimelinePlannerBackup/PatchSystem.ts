@@ -1,4 +1,4 @@
-import { SpellInfo, Cast, SpellTimeline } from './types'
+import { SpellInfo, CastInfo, SpellCasts } from './types'
 
 /**
  * Direction of the effect - either modifying the start or end time
@@ -41,9 +41,9 @@ export interface Patch {
 /**
  * Apply a single effect's patches to a collection of spell casts
  */
-export function applyPatch(spellCasts: SpellTimeline[], patch: Patch): SpellTimeline[] {
+export function applyPatch(spellCasts: SpellCasts[], patch: Patch): SpellCasts[] {
   // Create a deep copy to avoid mutating the original
-  const result = JSON.parse(JSON.stringify(spellCasts)) as SpellTimeline[]
+  const result = JSON.parse(JSON.stringify(spellCasts)) as SpellCasts[]
 
   // Apply spell patches - these affect all casts of a specific spell
   if (patch.spellPatches.length > 0) {
@@ -82,17 +82,19 @@ export function applyPatch(spellCasts: SpellTimeline[], patch: Patch): SpellTime
 /**
  * Apply multiple patches in sequence to a collection of spell casts
  */
-export function applyPatches(spellCasts: SpellTimeline[], patches: Patch[]): SpellTimeline[] {
+export function applyPatches(spellCasts: SpellCasts[], patches: Patch[]): SpellCasts[] {
+  // If there are no patches, return a deep copy of the input to avoid mutation
   if (patches.length === 0) {
-    return spellCasts
+    return JSON.parse(JSON.stringify(spellCasts))
   }
 
   // Sort patches by effectId to ensure consistent application order
   const sortedPatches = [...patches].sort((a, b) => a.effectId.localeCompare(b.effectId))
 
   // Start with a deep copy of the input spells to avoid mutation
-  let result = spellCasts
+  let result = JSON.parse(JSON.stringify(spellCasts))
 
+  // Apply each patch in sequence
   for (const patch of sortedPatches) {
     result = applyPatch(result, patch)
   }
@@ -103,20 +105,25 @@ export function applyPatches(spellCasts: SpellTimeline[], patches: Patch[]): Spe
 /**
  * Apply an effect to a single cast
  */
-function applyEffectToCast(cast: Cast, effect: Effect): Cast {
-  const result = { ...cast } as Cast
+function applyEffectToCast(cast: CastInfo, effect: Effect): CastInfo {
+  const result = { ...cast }
 
   if (effect.direction === 'start') {
     // Modify the start time
+    const oldStart = result.start_s
     result.start_s = cast.start_s + effect.value
-    // Ensure start time doesn't go below 0
-    if (result.start_s < 0) {
-      result.start_s = 0
+    // Ensure start time doesn't exceed end time
+    if (result.start_s > result.end_s) {
+      result.start_s = result.end_s
     }
   } else if (effect.direction === 'end') {
-    // For the end time, we need to modify the underlying value that affects end_s
-    // Since end_s is calculated as start_s + channel_duration_s, we need to modify channel_duration_s
-    // result.channel_duration_s = Math.max(0, cast.channel_duration_s + effect.value)
+    // Modify the end time
+    const oldEnd = result.end_s
+    result.end_s = cast.end_s + effect.value
+    // Ensure end time isn't before start time
+    if (result.end_s < result.start_s) {
+      result.end_s = result.start_s
+    }
   }
 
   return result
@@ -125,4 +132,26 @@ function applyEffectToCast(cast: Cast, effect: Effect): Cast {
 /**
  * Debug utility to print information about patches
  */
-export function logPatchInfo(patches: Patch[]): void {}
+export function logPatchInfo(patches: Patch[]): void {
+  console.log(`----- Patch Debug Information -----`)
+  console.log(`Total Patches: ${patches.length}`)
+
+  patches.forEach((patch, index) => {
+    console.log(`Patch #${index + 1}: ${patch.effectId}`)
+    console.log(`  Spell Patches: ${patch.spellPatches.length}`)
+    patch.spellPatches.forEach((spellPatch) => {
+      console.log(
+        `    SpellID: ${spellPatch.spellId}, Direction: ${spellPatch.effect.direction}, Value: ${spellPatch.effect.value}`
+      )
+    })
+
+    console.log(`  Cast Patches: ${patch.castPatches.length}`)
+    patch.castPatches.forEach((castPatch) => {
+      console.log(
+        `    CastID: ${castPatch.castId}, Direction: ${castPatch.effect.direction}, Value: ${castPatch.effect.value}`
+      )
+    })
+  })
+
+  console.log(`----- End Patch Debug Information -----`)
+}

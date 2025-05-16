@@ -243,12 +243,10 @@ export default async function TimelinePlannerServer() {
   const wowheadNameMap = Object.fromEntries(prerenderedWowheadNames)
   const wowheadMarkerMap = Object.fromEntries(prerenderedWowheadMarkers)
 
+  // Pass spells data, Wowhead maps, and average timestamps to TimelinePlanner
   return (
     <TimelinePlanner
-      spells={spellsData.spells.map((spell) => ({
-        ...spell,
-        charges: spell.charges || 1,
-      }))}
+      spells={spellsData.spells}
       wowheadMap={wowheadMap}
       wowheadNameMap={wowheadNameMap}
       wowheadMarkerMap={wowheadMarkerMap}

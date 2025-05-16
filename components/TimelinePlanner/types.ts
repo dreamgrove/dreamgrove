@@ -2,58 +2,241 @@ import { Patch } from './PatchSystem'
 
 export const SPELL_GCD = 1.5
 
-// SpellInfo matches the structure in spells.json
+export interface SpellTimeline {
+  spell: SpellInfo
+  casts: Cast[]
+}
+
+//Enum for the type of event that can happen on the timeline
+export enum EventType {
+  CastStart = 'cast_start',
+  ChannelStart = 'channel_start ',
+  ChannelEnd = 'channel_end',
+  CooldownEnd = 'cooldown_end',
+  EffectEnd = 'effect_end',
+  ChannelInterrupted = 'channel_interrupted',
+  GainCharge = 'gain_charge',
+}
+
+// Event type for the event queue
+export interface Event {
+  type: EventType
+  time: number
+  spellId: number
+  castId: string
+}
+
+// PlayerAction represents an input action from the user
+export interface PlayerAction {
+  spell: SpellInfo
+  instant: number
+  id: string
+}
+
+// SpellState represents the state of a spell at a specific point in time
+export class SpellState {
+  spellId: number
+  usedCharges: number
+  totalCharges: number
+  isChanneling: boolean
+  previousCast: Cast | null
+  currentCast: Cast | null
+  chargeIntervals: ChargeInterval[]
+
+  restoreCharge(instant: number) {
+    this.usedCharges--
+    this.chargeIntervals.push({ instant, change: +1 })
+  }
+
+  useCharge(instant: number) {
+    this.usedCharges++
+    this.chargeIntervals.push({ instant, change: -1 })
+  }
+
+  constructor(spellId: number, totalCharges: number) {
+    this.spellId = spellId
+    this.totalCharges = totalCharges
+    this.usedCharges = 0
+    this.isChanneling = false
+    this.previousCast = null
+    this.currentCast = null
+    this.chargeIntervals = []
+  }
+}
+
+// TimelineState represents the global state of all spells while processing events
+export class TimelineState {
+  spells: SpellState[]
+  channeledSpell: SpellInfo | null
+
+  constructor() {
+    this.spells = []
+    this.channeledSpell = null
+  }
+
+  findOrCreateSpellState(spellId: number, totalCharges: number): SpellState {
+    const spell = this.spells.find((s) => s.spellId === spellId)
+    if (spell) {
+      return spell
+    }
+
+    const newSpell = new SpellState(spellId, totalCharges)
+    this.spells.push(newSpell)
+    return newSpell
+  }
+}
+
+// The final processed timeline ready for rendering
+export interface TimelineToRender {
+  spells: SpellToRender[]
+}
+
+// A spell with its casts ready for rendering
+export interface SpellToRender {
+  spell: SpellInfo
+  casts: Cast[]
+  chargeIntervals?: ChargeInterval[]
+  chargesUsed: number
+}
+
+// ChargeInterval represents a time interval with a specific number of charges
+export interface ChargeInterval {
+  instant: number
+  change: number
+}
+
 export interface SpellInfo {
   id: string
   spellId: number
   name: string
   channel_duration: number
   effect_duration: number
-  cooldown: number // cooldown of a single charge
-  charges?: number // ≥1 (1 means the spell behaves like today)
+  cooldown: number
+  charges: number
   channeled?: boolean
 }
+// Parameters for creating a Cast
+export interface CastParams {
+  id: string
+  spell: SpellInfo
+  start_s: number
+  interrupting_cast?: Cast | null
+  current_charge?: number
+  cooldown_delay_s?: number
+}
 
+/*
+ * |<--  channel_visual  -->|<-- effect_visual -->|<-- cooldown_delay_s -->|<-- cooldown_visual -->|
+ *  <-- channel_duration -->
+ *  <--             effect_duration            -->
+ *  <--                                        total_cooldown                                    -->
+ */
+export class Cast {
+  id: string
+  spell: SpellInfo
+  start_s: number
+
+  interrupting_cast: Cast | null
+
+  interrupt(interrupting_cast: Cast) {
+    this.interrupting_cast = interrupting_cast
+  }
+
+  current_charge: number
+
+  /* Channel */
+  _channel_duration: number
+  get channel_start_s(): number {
+    return this.start_s
+  }
+  get channel_visual_duration(): number {
+    return this._channel_duration
+  }
+  get channel_duration(): number {
+    return this._channel_duration
+  }
+  set channel_duration(value: number) {
+    this._channel_duration = value
+  }
+
+  /* Effect */
+  _effect_duration: number
+  get effect_start_s(): number {
+    return this.start_s
+  }
+  get effect_visual_duration(): number {
+    return Math.max(0, this._effect_duration - this._channel_duration)
+  }
+  get effect_duration(): number {
+    return this._effect_duration
+  }
+  set effect_duration(value: number) {
+    this._effect_duration = value
+  }
+
+  /* Cooldown */
+  _cooldown_duration: number
+  cooldown_delay_s: number
+  get cooldown_start_s(): number {
+    return this.start_s + this.cooldown_delay_s
+  }
+  get cooldown_visual_duration(): number {
+    return this.cooldown_delay_s > 0
+      ? this.cooldown_duration
+      : this.cooldown_duration - Math.max(this.effect_duration, this.channel_duration)
+  }
+  get cooldown_visual_start_s(): number {
+    return this.start_s + Math.max(this.effect_duration, this.channel_duration)
+  }
+  get cooldown_delay_visual_duration(): number {
+    return this.cooldown_delay_s > 0
+      ? Math.max(0, this.cooldown_delay_s - Math.max(this.effect_duration, this.channel_duration))
+      : 0
+  }
+  get cooldown_duration(): number {
+    return this._cooldown_duration
+  }
+  set cooldown_duration(value: number) {
+    this._cooldown_duration = value
+  }
+
+  get delayed_cooldown_duration(): number {
+    return this.spell.cooldown + this.cooldown_delay_s
+  }
+
+  get end_s(): number {
+    return this.start_s + this.cooldown_duration + this.cooldown_delay_s
+  }
+
+  get duration_s(): number {
+    return this.cooldown_duration + this.cooldown_delay_s
+  }
+
+  constructor(params: CastParams) {
+    const { id, spell, start_s, interrupting_cast, current_charge, cooldown_delay_s } = params
+    this.id = id
+    this.spell = spell
+    this.start_s = start_s
+
+    this.interrupting_cast = interrupting_cast ?? null
+    this.current_charge = current_charge ?? 0
+
+    this._cooldown_duration = spell.cooldown
+    this.cooldown_delay_s = cooldown_delay_s ?? 0
+
+    this._effect_duration = spell.effect_duration
+    this._channel_duration = spell.channel_duration
+  }
+}
 export interface AverageCastInfo {
   ca: number[]
   convoke: number[]
   fon: number[]
 }
 
-// Define a type for charge index (0-based)
-export type ChargeIndex = number
-
-// Basic cast information
-export interface CastInfo {
-  id: string
-  chargeIndex: ChargeIndex // Which charge this cast belongs to (0, 1, etc.)
-  start_s: number
-  end_s: number
-  delay_s?: number[]
-  // These are added by the timeline view for rendering
-}
-
-// Grouped casts for each spell charge
-export interface SpellChargeCasts {
-  spell: SpellInfo
-  chargeIndex: ChargeIndex // Which charge this row represents
-  casts: CastInfo[] // All casts for this specific charge
-}
-
-// Legacy SpellCasts interface for backward compatibility during transition
-export interface SpellCasts {
-  spell: SpellInfo
-  casts: CastInfo[]
-  chargeIndex?: number
-}
-
-// Timeline effect interface
 export interface TimelineEffect {
   id: string
   name: string
   description?: string
-  // Legacy method - will be deprecated in favor of generatePatch
-  applyEffect: (currentSpells: SpellCasts[], spells: SpellInfo[]) => SpellCasts[]
-  // New method to generate patches instead of directly modifying spells
-  generatePatch?: (currentSpells: SpellCasts[], spells: SpellInfo[]) => Patch | null
+  generatePatch?: (currentSpells: SpellTimeline[]) => Patch | null
 }

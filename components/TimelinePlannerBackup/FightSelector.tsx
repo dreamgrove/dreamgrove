@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Define the encounter options structure
 export interface EncounterOption {
   id: string
   name: string

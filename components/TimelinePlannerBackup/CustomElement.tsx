@@ -1,63 +1,93 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { SpellInfo, SpellTimeline, PlayerAction } from './types'
+import { SpellInfo } from './types'
 
 interface CustomElementProps {
-  onCreate?: (params: SpellInfo) => void
+  currentSpells: any[]
+  setCurrentSpells: React.Dispatch<React.SetStateAction<any[]>>
+  total_length_s: number
+  spells: SpellInfo[]
+  setSpells: React.Dispatch<React.SetStateAction<SpellInfo[]>>
 }
 
-export default function CustomElement({ onCreate }: CustomElementProps) {
+export default function CustomElement({ total_length_s, spells, setSpells }: CustomElementProps) {
   // State for the custom element form
-  const [isFormVisible, setIsFormVisible] = useState(false)
   const [name, setName] = useState('')
-  const [cooldown, setCooldown] = useState(60)
-  const [effectDuration, setEffectDuration] = useState(10)
+  const [cooldown, setCooldown] = useState(0)
+  const [effectDuration, setEffectDuration] = useState(0)
+  const [channelDuration, setChannelDuration] = useState(0)
   const [charges, setCharges] = useState(1)
   const [isChanneled, setIsChanneled] = useState(false)
-  const [channelDuration, setChannelDuration] = useState(2)
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [isFormVisible, setIsFormVisible] = useState(false)
 
+  // Toggle form visibility
   const toggleFormVisibility = () => {
     setIsFormVisible(!isFormVisible)
-    setErrorMessage('')
   }
 
+  // Validate the form
+  const validateForm = () => {
+    if (!name.trim()) {
+      setErrorMessage('Spell name is required')
+      return false
+    }
+    if (cooldown <= 0) {
+      setErrorMessage('Cooldown must be greater than 0')
+      return false
+    }
+    if (effectDuration < 0) {
+      setErrorMessage('Effect duration cannot be negative')
+      return false
+    }
+    if (isChanneled && channelDuration <= 0) {
+      setErrorMessage('Channel duration must be greater than 0 for channeled spells')
+      return false
+    }
+    if (charges < 1) {
+      setErrorMessage('Charges must be at least 1')
+      return false
+    }
+    return true
+  }
+
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!name.trim()) {
-      setErrorMessage('Please enter a spell name')
+    if (!validateForm()) {
       return
     }
 
-    if (cooldown <= 0) {
-      setErrorMessage('Cooldown must be greater than 0')
-      return
-    }
+    // Create a unique ID for the custom spell
+    const customId = `custom-${uuidv4()}`
 
-    const newSpell: SpellInfo = {
-      id: uuidv4(),
-      spellId: Math.floor(Math.random() * 100000), // Generate a random spell ID
-      name: name.trim(),
-      cooldown: cooldown,
-      effect_duration: effectDuration,
-      charges: charges,
+    // Create a custom spell that matches the SpellInfo interface
+    const customSpell: SpellInfo = {
+      id: customId,
+      spellId: Math.floor(Math.random() * 1000000), // Random spellId for uniqueness
+      name: name,
       channel_duration: isChanneled ? channelDuration : 0,
+      effect_duration: effectDuration,
+      cooldown: cooldown,
+      charges: charges > 1 ? charges : undefined, // Only set charges if > 1
       channeled: isChanneled,
     }
 
-    if (onCreate) {
-      onCreate(newSpell)
-    }
+    // Add the custom spell to the spells array
+    setSpells((prevSpells) => [...prevSpells, customSpell])
 
+    // Reset form
     setName('')
-    setCooldown(60)
-    setEffectDuration(10)
+    setCooldown(0)
+    setEffectDuration(0)
+    setChannelDuration(0)
     setCharges(1)
     setIsChanneled(false)
-    setChannelDuration(2)
+    setErrorMessage(null)
+
+    // Hide form after successful submission
     setIsFormVisible(false)
-    setErrorMessage('')
   }
 
   return (

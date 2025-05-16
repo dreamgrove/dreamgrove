@@ -1,8 +1,9 @@
 import React from 'react'
-import { SpellTimeline, SpellInfo, TimelineToRender, Cast } from './types'
+import { CastInfo } from './Cast'
+import { SpellCasts, SpellInfo } from './types'
 
 interface DebugProps {
-  processedTimeline: TimelineToRender
+  currentSpells: SpellCasts[]
   timelineSettings: {
     totalLength: number
     timelineWidth: number
@@ -24,18 +25,14 @@ interface WarningInfo {
  * Debug: A collapsible panel showing debug information about the timeline and casts
  */
 export default function Debug({
-  processedTimeline,
+  currentSpells,
   timelineSettings,
   warnings = [],
   showDebug = false,
   toggleDebug,
 }: DebugProps) {
-  const totalCasts = processedTimeline.spells.reduce((acc, spell) => acc + spell.casts.length, 0)
-
-  const totalChargeIntervals = processedTimeline.spells.reduce(
-    (acc, spell) => acc + (spell.chargeIntervals?.length || 0),
-    0
-  )
+  // Calculate total cast count
+  const totalCasts = currentSpells.reduce((acc, spell) => acc + spell.casts.length, 0)
 
   return (
     <div className="mt-4 rounded-lg bg-gray-800 p-4 text-white shadow-lg">
@@ -59,11 +56,8 @@ export default function Debug({
         <span className="mr-4">
           Marker Spacing: <strong>{timelineSettings.markerSpacing}s</strong>
         </span>
-        <span className="mr-4">
-          Total Casts: <strong>{totalCasts}</strong>
-        </span>
         <span>
-          Charge Events: <strong>{totalChargeIntervals}</strong>
+          Total Casts: <strong>{totalCasts}</strong>
         </span>
         {warnings.length > 0 && (
           <span className="ml-4 rounded bg-yellow-400 px-2 py-0.5 text-xs font-bold text-black">
@@ -90,62 +84,22 @@ export default function Debug({
                 </tr>
               </thead>
               <tbody>
-                {processedTimeline.spells.flatMap((spellInfo) =>
-                  spellInfo.casts.map((cast) => (
+                {currentSpells.flatMap((spellCast) =>
+                  spellCast.casts.map((cast) => (
                     <tr key={cast.id} className="border-b border-gray-600">
-                      <td className="py-2 pr-4">{spellInfo.spell.name}</td>
+                      <td className="py-2 pr-4">{spellCast.spell.name}</td>
                       <td className="py-2 pr-4">{cast.start_s.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{cast.end_s.toFixed(1)}s</td>
                       <td className="py-2 pr-4">{(cast.end_s - cast.start_s).toFixed(1)}s</td>
-                      <td className="py-2 pr-4">{cast.channel_duration.toFixed(1)}s</td>
-                      <td className="py-2 pr-4">{cast.effect_duration.toFixed(1)}s</td>
-                      <td className="py-2">{cast.cooldown_duration.toFixed(1)}s</td>
+                      <td className="py-2 pr-4">{spellCast.spell.channel_duration.toFixed(1)}s</td>
+                      <td className="py-2 pr-4">{spellCast.spell.effect_duration.toFixed(1)}s</td>
+                      <td className="py-2">{spellCast.spell.cooldown.toFixed(1)}s</td>
                     </tr>
                   ))
                 )}
               </tbody>
             </table>
           </div>
-
-          {/* Charge Intervals Section */}
-          {totalChargeIntervals > 0 && (
-            <div>
-              <h4 className="mb-2 font-medium">Charge Details</h4>
-              <table className="min-w-full divide-y divide-gray-600 overflow-hidden rounded-lg bg-gray-700 text-sm">
-                <thead className="bg-gray-600">
-                  <tr>
-                    <th className="pb-2 pr-4">Spell</th>
-                    <th className="pb-2 pr-4">Time</th>
-                    <th className="pb-2">Change</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {processedTimeline.spells
-                    .filter(
-                      (spellInfo) =>
-                        spellInfo.chargeIntervals && spellInfo.chargeIntervals.length > 0
-                    )
-                    .flatMap((spellInfo) =>
-                      (spellInfo.chargeIntervals || []).map((interval, idx) => (
-                        <tr
-                          key={`${spellInfo.spell.id}-charge-${idx}`}
-                          className="border-b border-gray-600"
-                        >
-                          <td className="py-2 pr-4">{spellInfo.spell.name}</td>
-                          <td className="py-2 pr-4">{interval.instant.toFixed(1)}s</td>
-                          <td
-                            className={`py-2 ${interval.change > 0 ? 'text-green-400' : 'text-red-400'}`}
-                          >
-                            {interval.change > 0 ? '+' : ''}
-                            {interval.change}
-                          </td>
-                        </tr>
-                      ))
-                    )}
-                </tbody>
-              </table>
-            </div>
-          )}
         </div>
       )}
 
@@ -178,14 +132,12 @@ export default function Debug({
             {JSON.stringify(
               {
                 timelineSettings,
-                spells: processedTimeline.spells.map((spell) => ({
+                spells: currentSpells.map((spell) => ({
                   name: spell.spell.name,
                   id: spell.spell.id,
                   castCount: spell.casts.length,
-                  charges: spell.chargeIntervals?.length || 0,
                 })),
                 castCount: totalCasts,
-                chargeEvents: totalChargeIntervals,
                 warnings: warnings.length,
               },
               null,
