@@ -11,7 +11,6 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
-import WelcomePopover from '@/components/WelcomePopover'
 import { Providers } from './providers'
 
 const space_grotesk = Space_Grotesk({
@@ -90,7 +89,6 @@ export default function RootLayout({ children }: LayoutProps) {
           <Providers>
             <ThemeProviders>
               <Analytics />
-              <WelcomePopover />
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <main className="mb-auto">{children}</main>
                 <Footer />
