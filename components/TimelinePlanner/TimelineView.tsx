@@ -245,15 +245,23 @@ export default function TimelineView({
       <div className="flex min-h-[200px] w-full flex-row">
         {/* Left side: spell names, vertically offset */}
         <div className="w-[200px] min-w-[120px] shrink-0">
-          <div className="mt-10">
+          <div className="mt-[24px]">
             <div className="flex flex-col items-start justify-start pl-2">
               {processedState.spells.map((spellCast) => (
                 <div
                   key={`spell-name-${spellCast.spell.id}`}
-                  style={{ height: 67 * spellCast.chargesUsed }}
-                  className={`flex h-20 w-full items-center pr-2 ${spellCast.spell.charges && !collapsedChargeSpells.includes(spellCast.spell.id) ? 'border-r-2 border-orange-500/30' : ''}`}
+                  style={{
+                    height: 56 * spellCast.chargesUsed,
+                    marginTop: spellCast.chargesUsed === 1 ? '16px' : '16px',
+                  }}
+                  className={`flex w-full flex-col items-end items-${spellCast.chargesUsed === 1 ? 'center justify-end' : 'start'} pr-2 ${spellCast.spell.charges && !collapsedChargeSpells.includes(spellCast.spell.id) ? 'border-r-2 border-orange-500/30' : ''}`}
                 >
-                  <div className="mb-[-20px] w-full truncate text-right">
+                  {spellCast.chargesUsed > 1 && (
+                    <div className="mt-[2px] text-sm text-sky-300 transition-opacity">Charges</div>
+                  )}
+                  <div
+                    className={`flex h-[40px] w-full flex-col justify-center truncate text-right ${spellCast.chargesUsed > 1 ? '' : ''}`}
+                  >
                     {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
                   </div>
                 </div>
@@ -289,7 +297,7 @@ export default function TimelineView({
                 }
                 onCastDelete={handleCastDelete}
                 onCastMove={handleCastMove}
-                className="mb-2 flex h-12 items-center"
+                className="my-2 flex h-10 items-center"
               />
             ))}
           </div>

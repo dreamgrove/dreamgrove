@@ -65,7 +65,7 @@ function DroppableChargeRow({
     <div
       ref={setNodeRef}
       id={id}
-      className={`relative w-full ${className || ''} charge-row ${isOver ? 'bg-blue-100' : ''}`}
+      className={`relative w-full ${className || ''} charge-row ${isOver ? 'bg-blue-100/10' : ''}`}
     >
       {children}
     </div>
@@ -193,7 +193,7 @@ export default function SpellCastsRow({
       onDragEnd={handleDragEnd}
       modifiers={modifiers}
     >
-      <div className="relative mt-4">
+      <div className="relative pt-4">
         {spellTimeline.spell.charges > 1 && (
           <CooldownIndicator
             maxCharges={spellTimeline.spell.charges}

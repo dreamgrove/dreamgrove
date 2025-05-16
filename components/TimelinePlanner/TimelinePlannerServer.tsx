@@ -8,7 +8,6 @@ async function fetchDruidCasts() {
   const raidId = 42
   const vexieEncounterId = 3009 // Vexie and the Geargrinders
   const mythicDifficulty = 5
-  const rankingsPage = 1 // First page of results
   const maxReportsToProcess = 3
 
   try {
@@ -202,6 +201,7 @@ export default async function TimelinePlannerServer() {
         disabled={true}
         ellipsis={true}
         showLabel={false}
+        iconSize={23}
       />
     )
     return [spell.id, component] as const

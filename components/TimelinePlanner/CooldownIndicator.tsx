@@ -56,9 +56,20 @@ export default function CooldownIndicator({
       .map(([instant, change]) => ({ instant, change }))
       .sort((a, b) => a.instant - b.instant)
 
+    // Initialize segments array
+    const processedSegments: ProcessedSegment[] = []
+
+    // Add initial segment from 0 to first interval if there are any intervals
+    if (groupedIntervals.length > 0) {
+      processedSegments.push({
+        start: -20,
+        end: groupedIntervals[0].instant,
+        charges: maxCharges,
+      })
+    }
+
     // Convert change-based intervals to segments with absolute charge counts
     let currentCharges = maxCharges
-    const processedSegments: ProcessedSegment[] = []
 
     for (let i = 0; i < groupedIntervals.length; i++) {
       const interval = groupedIntervals[i]
@@ -120,11 +131,11 @@ export default function CooldownIndicator({
   }
 
   return (
-    <div className={`absolute top-[-10px] h-4 w-full ${className || ''}`}>
+    <div className={`absolute top-[-4px] h-4 w-full ${className || ''}`}>
       {renderSegments.map((segment, index) => (
         <React.Fragment key={index}>
           <div
-            className="absolute h-full bg-orange-500 transition-opacity"
+            className="absolute h-full bg-sky-500 transition-opacity"
             style={{
               left: `${segment.start}px`,
               width: `${segment.width}px`,

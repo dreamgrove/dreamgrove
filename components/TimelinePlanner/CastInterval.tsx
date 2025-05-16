@@ -39,27 +39,27 @@ export default function CastInterval({
   //console.log('cooldown delay', cooldown_delay_s)
 
   // Find the maximum width percentage
-  const maxWidth = Math.max(channel_width_px, effect_width_px)
+  const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
 
   // Determine which section should show Wowhead (first one in case of ties)
   const showWowheadInChannel = channel_width_px === maxWidth
-
   const showWowheadInEffect = !showWowheadInChannel && effect_width_px === maxWidth
-
   const showWowheadInRemaining = !showWowheadInChannel && !showWowheadInEffect
 
-  const wowheadWrapper = <div className="flex items-center justify-center px-1">{icon}</div>
+  const wowheadWrapper = (
+    <div className="flex h-full w-full items-center justify-start pl-4">{icon}</div>
+  )
 
-  const bgColor = isDragging ? 'transparent' : 'transparent'
+  const bgColor = 'bg-slate-500/10'
 
   return (
     <div
-      className={`relative flex h-10 rounded-md border border-red-600 outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+      className={`relative flex h-10 items-center rounded-md border outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
         hasCollision
-          ? 'border-red-500 shadow-md'
+          ? 'border-blue-500 shadow-md'
           : isDragging
-            ? 'border-blue-500 shadow-lg'
-            : 'border-white/0'
+            ? 'border-zinc-400/40 shadow-lg'
+            : 'border-gray-900/40'
       } ${bgColor} ${className || ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
@@ -76,7 +76,7 @@ export default function CastInterval({
 
       {/* Channel Duration Bar */}
       <div
-        className="h-full rounded-l-md bg-red-600/50 focus-visible:outline-none focus-visible:ring-0"
+        className="flex h-full items-center justify-center rounded-l-md bg-violet-500/40 focus-visible:outline-none focus-visible:ring-0"
         style={{
           width: `${channel_width_px}px`,
         }}
@@ -85,7 +85,7 @@ export default function CastInterval({
       </div>
       {/* Effect Duration Bar */}
       <div
-        className="flex h-full items-center rounded-md bg-orange-400/50 focus-visible:outline-none focus-visible:ring-0"
+        className="flex h-full items-center justify-start rounded-s-md bg-emerald-500/40 focus-visible:outline-none focus-visible:ring-0"
         style={{
           width: `${effect_width_px - channel_width_px}px`,
         }}
@@ -94,22 +94,22 @@ export default function CastInterval({
       </div>
       {/* Cooldown Delay Bar */}
       <div
-        className="flex h-full items-center bg-black/20 focus-visible:outline-none focus-visible:ring-0"
+        className="pattern-diagonal-lines pattern-blue-500 pattern-bg-white pattern-size-6 pattern-opacity-20 flex h-full items-center"
         style={{
           width: `${cooldown_delay_width_px}px`,
         }}
       >
-        {showWowheadInRemaining && wowheadWrapper}
+        {showWowheadInRemaining && cooldown_delay_width_px > 100 && wowheadWrapper}
       </div>
       {/* Remaining Cooldown Bar */}
       {true && (
         <div
-          className="flex h-full w-max items-center bg-green-700 focus-visible:outline-none focus-visible:ring-0"
+          className="flex h-full items-center justify-center rounded-r-md bg-orange-400/20 focus-visible:outline-none focus-visible:ring-0"
           style={{
             width: `${cooldown_width_px}px`,
           }}
         >
-          {showWowheadInRemaining && wowheadWrapper}
+          {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}
         </div>
       )}
     </div>
