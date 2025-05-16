@@ -1,4 +1,4 @@
-import spellsData from '../../cursor/spells.json'
+import spellsData from '../../other/timelineSpells.json'
 import TimelinePlanner from './TimelinePlanner'
 import Wowhead from '../custom/Wowhead'
 import { GET } from '../../app/api/warcraft-logs/druid-casts/route'

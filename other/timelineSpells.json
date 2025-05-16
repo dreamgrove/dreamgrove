@@ -1,0 +1,74 @@
+{
+  "spells": [
+    {
+      "id": "fon",
+      "name": "Force of Nature",
+      "spellId": 205636,
+      "channel_duration": 0,
+      "effect_duration": 10,
+      "cooldown": 60
+    },
+    {
+      "id": "ca",
+      "spellId": 194223,
+      "name": "Celestial Alignment",
+      "channel_duration": 0,
+      "effect_duration": 15,
+      "cooldown": 100,
+      "charges": 2
+    },
+
+    {
+      "id": "convoke",
+      "spellId": 391528,
+      "name": "Convoke the Spirits",
+      "channel_duration": 4,
+      "effect_duration": 4,
+      "cooldown": 120,
+      "channeled": true
+    },
+    {
+      "id": "flourish",
+      "spellId": 197721,
+      "name": "Flourish",
+      "channel_duration": 0,
+      "effect_duration": 8,
+      "cooldown": 60,
+      "charges": 1
+    },
+    {
+      "id": "gg",
+      "name": "Grove Guardians",
+      "spellId": 102693,
+      "channel_duration": 0,
+      "effect_duration": 15,
+      "cooldown": 30,
+      "charges": 3
+    },
+    {
+      "id": "tranq",
+      "spellId": 740,
+      "name": "Tranquility",
+      "channel_duration": 5,
+      "effect_duration": 0,
+      "cooldown": 180,
+      "channeled": true
+    },
+    {
+      "id": "incarn",
+      "spellId": 33891,
+      "name": "Incarnation: Tree of Life",
+      "channel_duration": 0,
+      "effect_duration": 30,
+      "cooldown": 180
+    },
+    {
+      "id": "reforestation",
+      "spellId": 392356,
+      "name": "Reforestation",
+      "channel_duration": 0,
+      "effect_duration": 10,
+      "cooldown": 45
+    }
+  ]
+}

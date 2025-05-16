@@ -40,7 +40,7 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
                     type="spell"
                     name={`Spell ${spell.id}`}
                     beta={beta}
-                    size={50}
+                    iconSize={50}
                     noMargin
                   />
                   {spell.count > 1 && (
