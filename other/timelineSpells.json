@@ -22,8 +22,8 @@
       "id": "convoke",
       "spellId": 391528,
       "name": "Convoke the Spirits",
-      "channel_duration": 4,
-      "effect_duration": 4,
+      "channel_duration": 5,
+      "effect_duration": 5,
       "cooldown": 120,
       "channeled": true
     },

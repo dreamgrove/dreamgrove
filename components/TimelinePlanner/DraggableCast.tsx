@@ -9,7 +9,7 @@ interface DraggableCastProps {
   castInfo: Cast
   icon: React.ReactNode
   onClick?: () => void
-  onDelete?: () => void
+  onDelete?: (castId: string) => void
 }
 
 export default function DraggableCast({
@@ -66,29 +66,26 @@ export default function DraggableCast({
       return
     }
   }, [isDragging, modifiedTransform])
-  console.log(castInfo)
-
-  const style = {
-    position: 'absolute' as const,
-    left: `${timeToPixels(castInfo.start_s)}px`,
-    width: `${cast_width_px}px`,
-    zIndex: isDragging ? 100 : 50,
-    opacity: isDragging ? 0.2 : 1,
-  }
 
   return (
     <div
       ref={setNodeRef}
-      style={style}
+      style={{
+        left: `${timeToPixels(castInfo.start_s)}px`,
+        width: `${cast_width_px + 1}px`, //I think the +1 is because of the border but who knows
+        zIndex: isDragging ? 100 : 50,
+        opacity: isDragging ? 0.2 : 1,
+      }}
       onClick={onClick}
       {...listeners}
       {...attributes}
-      className="focus:outline-none focus-visible:outline-none focus-visible:ring-0"
+      className="absolute focus:outline-none"
     >
       <CastInterval
         cast={castInfo}
         icon={icon}
-        className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'} ${hasCollision ? '' : ''}`}
+        onDelete={onDelete}
+        className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         isDragging={isDragging}
         hasCollision={hasCollision}
       />

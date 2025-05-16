@@ -6,7 +6,7 @@ interface CastProps {
   cast: Cast
   icon: React.ReactNode
   className?: string
-  onDelete?: () => void
+  onDelete?: (castId: string) => void
   isDragging?: boolean
   hasCollision?: boolean
 }
@@ -26,18 +26,23 @@ export default function CastInterval({
   const cooldown_delay_width_px = cast.cooldown_delay_visual_duration * pixelsPerSecond
   const cooldown_width_px = cast.cooldown_visual_duration * pixelsPerSecond
 
-  //console.log('channel visual duration', cast.channel_visual_duration)
-  //console.log('effect visual duration', cast.effect_visual_duration)
-  //console.log('cooldown visual duration', cast.cooldown_visual_duration)
-  //console.log('cooldown delay visual duration', cast.cooldown_delay_visual_duration)
-  //console.log('cooldown delay', cast.cooldown_delay_s)
-  //console.log('total duration', cast.duration_s)
+  const duration_s_px = cast.duration_s * pixelsPerSecond
 
-  //console.log('total cooldown', total_cooldown_s)
-  //console.log('remaining cd', total_cooldown_s - total_duration_s)
-  //console.log('actual delay', actual_delay)
-  //console.log('cooldown delay', cooldown_delay_s)
+  const onetwenty_px = 120 * pixelsPerSecond
 
+  const isLogging = true
+
+  if (isLogging) {
+    console.log('channel visual duration', cast.channel_visual_duration)
+    console.log('effect visual duration', cast.effect_visual_duration)
+    console.log('cooldown visual duration', cast.cooldown_visual_duration)
+    console.log('cooldown delay visual duration', cast.cooldown_delay_visual_duration)
+    console.log('cooldown delay', cast.cooldown_delay_s)
+    console.log('total duration', cast.duration_s)
+    console.log('duration s px', duration_s_px)
+    console.log('cooldown delay', cast.cooldown_delay_s)
+    console.log('onetwenty px', onetwenty_px)
+  }
   // Find the maximum width percentage
   const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
 
@@ -51,6 +56,7 @@ export default function CastInterval({
   )
 
   const bgColor = 'bg-slate-500/10'
+  console.log('onDelete', onDelete)
 
   return (
     <div
@@ -66,7 +72,7 @@ export default function CastInterval({
       {/* Delete button */}
       {onDelete && (
         <button
-          onClick={onDelete}
+          onClick={() => onDelete(cast.id)}
           className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white hover:bg-red-600 focus:outline-none focus-visible:outline-none focus-visible:ring-0"
           title="Remove cast"
         >

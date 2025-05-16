@@ -42,39 +42,39 @@ const SpellMarkers: React.FC<SpellMarkerProps> = ({ spellInfo, wowheadMap = {} }
   // Get timeToPixels function from context
   const { timeToPixels } = useTimelineControls()
 
-  const gg_timestamps = spellInfo['gg'] || []
-  const convoke_timestamps = spellInfo['flourish'] || []
-  const fon_timestamps = spellInfo['tranq'] || []
+  const ca_timestamps = spellInfo['ca'] || []
+  const convoke_timestamps = spellInfo['convoke'] || []
+  const fon_timestamps = spellInfo['fon'] || []
 
   return (
     <div
-      className={`pointer-events-none absolute left-0 top-0 z-10 ml-6 flex h-full`}
+      className={`pointer-events-none absolute left-0 top-0 z-10 flex h-full pl-6`}
       style={{ width: 6000 }}
     >
-      {gg_timestamps.map((timestamp, i) => (
+      {ca_timestamps.map((timestamp, i) => (
         <Marker
-          key={`gg-${i}`}
+          key={`ca-${i}`}
           position={timeToPixels(timestamp)}
           label={timestamp}
-          wowheadComponent={wowheadMap['gg']}
+          wowheadComponent={wowheadMap['ca']}
           height={21}
         />
       ))}
       {convoke_timestamps.map((timestamp, i) => (
         <Marker
-          key={`flourish-${i}`}
+          key={`convoke-${i}`}
           position={timeToPixels(timestamp)}
           label={timestamp}
-          wowheadComponent={wowheadMap['flourish']}
+          wowheadComponent={wowheadMap['convoke']}
           height={21}
         />
       ))}
       {fon_timestamps.map((timestamp, i) => (
         <Marker
-          key={`tranq-${i}`}
+          key={`fon-${i}`}
           position={timeToPixels(timestamp)}
           label={timestamp}
-          wowheadComponent={wowheadMap['tranq']}
+          wowheadComponent={wowheadMap['fon']}
           height={21}
         />
       ))}

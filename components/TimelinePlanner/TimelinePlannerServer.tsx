@@ -84,8 +84,9 @@ function calculateAverageTimestamps(spellCastsData: any) {
 
 export default async function TimelinePlannerServer() {
   // Fetch druid casts data
-  const druidCastsData = false
-    ? {
+  const druidCastsData = true
+    ? {}
+    : {
         encounter: {
           id: 3009,
           name: 'Vexie and the Geargrinders',
@@ -187,7 +188,6 @@ export default async function TimelinePlannerServer() {
           },
         ],
       }
-    : {}
   // Calculate average timestamps
   const averageTimestampsBySpell = druidCastsData ? calculateAverageTimestamps(druidCastsData) : {}
 
@@ -206,6 +206,7 @@ export default async function TimelinePlannerServer() {
     )
     return [spell.id, component] as const
   })
+  console.log('averageTimestampsBySpell', averageTimestampsBySpell)
 
   // Prerender Wowhead for spell name column (no icon, disabled)
   const prerenderedWowheadNames = spellsData.spells.map((spell) => {

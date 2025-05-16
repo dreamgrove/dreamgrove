@@ -48,7 +48,7 @@ export default function TimelineView({
     effective_view_length_s,
     effective_total_length_px,
     pixelsPerSecond,
-    isAltKeyPressed,
+    isControlKeyPressed,
     registerScrollContainer,
     zoomIn,
     zoomOut,
@@ -85,7 +85,7 @@ export default function TimelineView({
     const handleWheel = (e: WheelEvent) => {
       if (scrollContainer) {
         e.preventDefault()
-        if (isAltKeyPressed || e.altKey) {
+        if (isControlKeyPressed || e.ctrlKey) {
           if (e.deltaY > 0) {
             zoomOut(5)
           } else {
@@ -106,7 +106,7 @@ export default function TimelineView({
         scrollContainer.removeEventListener('wheel', handleWheel)
       }
     }
-  }, [isAltKeyPressed, zoomIn, zoomOut])
+  }, [isControlKeyPressed, zoomIn, zoomOut])
 
   useEffect(() => {
     const queue = generateBaseQueue(inputActions)
@@ -130,26 +130,17 @@ export default function TimelineView({
 
   // Function to remove a player cast
   const handleRemoveAction = (castId: string) => {
-    const cast = findCastById(castId, processedState)
+    const cast = findCastById(castId, inputActions)
     if (!cast) return
 
-    setInputActions((prev) =>
-      prev.filter(
-        (action) =>
-          !(
-            action.spell.spellId === cast.spell.spellId &&
-            Math.abs(action.instant - cast.start_s) < 0.001
-          )
-      )
-    )
+    setInputActions((prev) => prev.filter((action) => action.id !== castId))
   }
 
   // Helper function to find a cast by ID in the processed state
-  const findCastById = (castId: string, timeline: TimelineToRender): Cast | null => {
-    for (const spell of timeline.spells) {
-      const cast = spell.casts.find((c) => c.id === castId)
-      if (cast) return cast
-    }
+  const findCastById = (castId: string, timeline: PlayerAction[]): PlayerAction | null => {
+    const cast = timeline.find((c) => c.id === castId)
+    console.log('findCastById', cast)
+    if (cast) return cast
     return null
   }
 
@@ -251,27 +242,23 @@ export default function TimelineView({
       <div className="flex min-h-[200px] w-full flex-row">
         {/* Left side: spell names, vertically offset */}
         <div className="w-[200px] min-w-[120px] shrink-0">
-          <div className="mt-[23px]">
+          <div className="mt-5">
             <div className="flex flex-col items-start justify-start pl-2">
-              {processedState.spells.map((spellCast) => (
-                <div
-                  key={`spell-name-${spellCast.spell.id}`}
-                  style={{
-                    height: 56 * spellCast.chargesUsed,
-                    marginTop: spellCast.chargesUsed === 1 ? '16px' : '16px',
-                  }}
-                  className={`flex w-full flex-col items-end items-${spellCast.chargesUsed === 1 ? 'center justify-end' : 'start'} pr-2 ${spellCast.spell.charges && !collapsedChargeSpells.includes(spellCast.spell.id) ? 'border-r-2 border-orange-500/30' : ''}`}
-                >
-                  {spellCast.chargesUsed > 1 && (
-                    <div className="mt-[2px] text-sm text-sky-300 transition-opacity">Charges</div>
-                  )}
-                  <div
-                    className={`flex h-[38px] w-full flex-col justify-center truncate text-right ${spellCast.chargesUsed > 1 ? '' : ''}`}
-                  >
-                    {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
-                  </div>
-                </div>
-              ))}
+              {processedState.spells.map((spellCast) =>
+                spellCast.spell.charges > 1 ? (
+                  <SpellNameWithCharges
+                    key={`spell-name-${spellCast.spell.id}`}
+                    spellCast={spellCast}
+                    wowheadNameMap={wowheadNameMap}
+                  />
+                ) : (
+                  <SpellName
+                    key={`spell-name-${spellCast.spell.id}`}
+                    spellCast={spellCast}
+                    wowheadNameMap={wowheadNameMap}
+                  />
+                )
+              )}
             </div>
           </div>
         </div>
@@ -286,13 +273,13 @@ export default function TimelineView({
           <SpellMarkers spellInfo={averageTimestamps} wowheadMap={wowheadMarkerMap} />
           {/* Casts/timeline rows */}
           <div
-            className="relative mt-10 flex flex-col"
+            className="relative mt-5 flex flex-col"
             style={{
               width: `${effective_total_length_px}px`,
               minHeight: `${currentSpells.length * 40}px`, // Height based on visible rows
             }}
           >
-            {/* Render a SpellCastsRow for each spell and charge */}
+            {/* Render a SpellCastsRow for each spell */}
             {processedState.spells.map((spellCast) => (
               <SpellCastsRow
                 key={`spell-row-${spellCast.spell.id}`}
@@ -303,14 +290,12 @@ export default function TimelineView({
                 }
                 onCastDelete={handleCastDelete}
                 onCastMove={handleCastMove}
-                className="my-2 flex h-10 items-center"
               />
             ))}
           </div>
         </div>
       </div>
 
-      {/* Debug when enabled */}
       <Debug
         processedTimeline={processedState}
         timelineSettings={{
@@ -336,12 +321,9 @@ const SpellName = ({
   return (
     <div
       key={`spell-name-${spellCast.spell.id}`}
-      style={{
-        height: 56,
-      }}
-      className={`flex w-full flex-col items-center justify-end border-r-2 border-orange-500/30 pr-2`}
+      className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/30 pr-2`}
     >
-      <div className={`flex h-[38px] w-full flex-col justify-center truncate text-right`}>
+      <div className={`flex h-[40px] w-full flex-col justify-center truncate text-right`}>
         {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
       </div>
     </div>
@@ -357,15 +339,15 @@ const SpellNameWithCharges = ({
   return (
     <div
       key={`spell-name-${spellCast.spell.id}`}
-      style={{
-        height: 56 * spellCast.chargesUsed,
-      }}
       className={`flex w-full flex-col items-end border-r-2 border-orange-500/30 pr-2`}
     >
-      <div className="mt-[2px] text-sm text-sky-300 transition-opacity">Charges</div>
-      <div className={`flex h-[38px] w-full flex-col justify-center truncate text-right`}>
+      <div className="h-5 text-sm text-sky-300 transition-opacity">Charges</div>
+      <div className={`my-2 flex h-10 w-full flex-col justify-center truncate text-right`}>
         {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
       </div>
+      {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
+        <div key={`charge-${index}`} className="my-2 h-10 w-full" />
+      ))}
     </div>
   )
 }

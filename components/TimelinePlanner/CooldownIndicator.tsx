@@ -131,11 +131,11 @@ export default function CooldownIndicator({
   }
 
   return (
-    <div className={`absolute top-[-4px] h-4 w-full ${className || ''}`}>
+    <div className={`relative h-5 w-full ${className || ''}`}>
       {renderSegments.map((segment, index) => (
         <React.Fragment key={index}>
           <div
-            className="absolute h-full bg-sky-500 transition-opacity"
+            className="absolute h-[18px] bg-sky-500 transition-opacity"
             style={{
               left: `${segment.start}px`,
               width: `${segment.width}px`,
@@ -144,7 +144,7 @@ export default function CooldownIndicator({
           />
           {labelSegments.some((labelSegment) => labelSegment.start === segment.start) && (
             <div
-              className="absolute top-1/2 -translate-y-1/2 text-xs text-white"
+              className="absolute top-[2px] text-xs text-white"
               style={{
                 left: `${segment.start + 3}px`,
                 zIndex: 10,

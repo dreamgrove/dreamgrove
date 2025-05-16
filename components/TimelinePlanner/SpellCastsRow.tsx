@@ -55,7 +55,7 @@ function DroppableChargeRow({
 }: {
   id: string
   children: React.ReactNode
-  className?: string
+  className: string
 }) {
   const { setNodeRef, isOver } = useDroppable({
     id: id,
@@ -65,7 +65,7 @@ function DroppableChargeRow({
     <div
       ref={setNodeRef}
       id={id}
-      className={`w-full ${className || ''} charge-row ${isOver ? 'bg-blue-100/10' : ''}`}
+      className={`w-full ${className} charge-row ${isOver ? 'bg-blue-100/10' : ''}`}
     >
       {children}
     </div>
@@ -77,13 +77,14 @@ export default function SpellCastsRow({
   wowheadComponent,
   onCastDelete,
   onCastMove,
-  className,
 }: SpellCastsRowProps) {
   const { pixelsPerSecond } = useTimelineControls()
   const [activeDragId, setActiveDragId] = useState<string | null>(null)
   const activeDraggedCast = activeDragId
     ? spellTimeline.casts.find((cast) => cast.id === activeDragId)
     : null
+
+  const className = 'my-2 flex h-10 items-center'
 
   const { timeToPixels, pixelsToTime, total_length_s, total_length_px } = useTimelineControls()
 
@@ -98,10 +99,6 @@ export default function SpellCastsRow({
   const handleDragStart = (event: DragStartEvent) => {
     const { active } = event
     setActiveDragId(active.id as string)
-  }
-
-  const checkOverlap = (current: Cast, other: Cast): boolean => {
-    return current.start_s < other.end_s && current.end_s > other.start_s
   }
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -165,26 +162,7 @@ export default function SpellCastsRow({
     },
   ]
 
-  const splitCastsByCharges = (casts: Cast[], charges: number): Cast[][] => {
-    if (!charges || charges <= 1) {
-      return [casts]
-    }
-
-    const castsByCharge: Cast[][] = Array.from({ length: charges }, () => [])
-    const sortedCasts = [...casts].sort((a, b) => a.start_s - b.start_s)
-
-    // Distribute casts in round-robin fashion
-    sortedCasts.forEach((cast, index) => {
-      const chargeIndex = index % charges
-      castsByCharge[chargeIndex].push(cast)
-    })
-
-    return castsByCharge
-  }
-
-  const maxUsedCharges = spellTimeline.chargesUsed
-
-  const castsByCharge = splitCastsByCharges(spellTimeline.casts, maxUsedCharges)
+  console.log('onCastDeletesss', onCastDelete)
 
   return (
     <DndContext
@@ -193,60 +171,119 @@ export default function SpellCastsRow({
       onDragEnd={handleDragEnd}
       modifiers={modifiers}
     >
-      <div className="pt-4">
-        {spellTimeline.spell.charges > 1 && (
-          <CooldownIndicator
-            maxCharges={spellTimeline.spell.charges}
-            chargeIntervals={spellTimeline.chargeIntervals}
-            className={className}
+      {spellTimeline.spell.charges > 1 ? (
+        <RowMultipleCharges
+          spellTimeline={spellTimeline}
+          wowheadComponent={wowheadComponent}
+          onCastDelete={onCastDelete}
+          className={className}
+        />
+      ) : (
+        <RowSingleCharge
+          spellTimeline={spellTimeline}
+          wowheadComponent={wowheadComponent}
+          onCastDelete={onCastDelete}
+          className={className}
+        />
+      )}
+      <DragOverlay dropAnimation={null}>
+        {activeDragId && activeDraggedCast && (
+          <CastInterval
+            cast={activeDraggedCast}
+            icon={wowheadComponent}
+            isDragging={true}
+            className="cursor-grabbing"
+            hasCollision={false}
           />
         )}
-        {spellTimeline.spell.charges > 1 ? (
-          castsByCharge.map((chargeCasts, chargeIndex) => (
-            <DroppableChargeRow
-              key={`charge-${chargeIndex}`}
-              id={`charge-${chargeIndex}`}
-              className={className}
-            >
-              {chargeCasts.map((cast, index) => (
-                <DraggableCast
-                  key={cast.id || `cast-${chargeIndex}-${index}`}
-                  id={cast.id || `cast-${chargeIndex}-${index}`}
-                  castInfo={cast}
-                  icon={wowheadComponent}
-                  onDelete={cast.id && onCastDelete ? () => onCastDelete(cast.id!) : undefined}
-                />
-              ))}
-            </DroppableChargeRow>
-          ))
-        ) : (
-          <>
-            <div className={`w-full ${className || ''} charge-row`}>
-              {spellTimeline.casts.map((cast, index) => (
-                <DraggableCast
-                  key={cast.id || `cast-${index}`}
-                  id={cast.id || `cast-${index}`}
-                  castInfo={cast}
-                  icon={wowheadComponent}
-                  onDelete={cast.id && onCastDelete ? () => onCastDelete(cast.id!) : undefined}
-                />
-              ))}
-            </div>
-          </>
-        )}
-
-        <DragOverlay dropAnimation={null}>
-          {activeDragId && activeDraggedCast && (
-            <CastInterval
-              cast={activeDraggedCast}
-              icon={wowheadComponent}
-              isDragging={true}
-              className="cursor-grabbing focus:outline-none focus-visible:outline-none focus-visible:ring-0"
-              hasCollision={false}
-            />
-          )}
-        </DragOverlay>
-      </div>
+      </DragOverlay>
     </DndContext>
   )
+}
+
+const RowSingleCharge = ({
+  spellTimeline,
+  wowheadComponent,
+  onCastDelete,
+  className,
+}: {
+  spellTimeline: SpellToRender
+  wowheadComponent: React.ReactNode
+  onCastDelete?: (castId: string) => void
+  className: string
+}) => {
+  console.log('flourish onCastDelete', onCastDelete)
+  return (
+    <div className={`w-full ${className}`}>
+      {spellTimeline.casts.map((cast, index) => (
+        <DraggableCast
+          key={cast.id || `cast-${index}`}
+          id={cast.id || `cast-${index}`}
+          castInfo={cast}
+          icon={wowheadComponent}
+          onDelete={onCastDelete}
+        />
+      ))}
+    </div>
+  )
+}
+
+const RowMultipleCharges = ({
+  spellTimeline,
+  wowheadComponent,
+  onCastDelete,
+  className,
+}: {
+  spellTimeline: SpellToRender
+  wowheadComponent: React.ReactNode
+  onCastDelete?: (castId: string) => void
+  className: string
+}) => {
+  const maxUsedCharges = spellTimeline.chargesUsed
+
+  const castsByCharge = splitCastsByCharges(spellTimeline.casts, maxUsedCharges)
+
+  const chargeRows = castsByCharge.map((chargeCasts, chargeIndex) => (
+    <DroppableChargeRow
+      key={`charge-${chargeIndex}`}
+      id={`charge-${chargeIndex}`}
+      className={className}
+    >
+      {chargeCasts.map((cast, index) => (
+        <DraggableCast
+          key={cast.id || `cast-${chargeIndex}-${index}`}
+          id={cast.id || `cast-${chargeIndex}-${index}`}
+          castInfo={cast}
+          icon={wowheadComponent}
+          onDelete={cast.id && onCastDelete ? () => onCastDelete(cast.id!) : undefined}
+        />
+      ))}
+    </DroppableChargeRow>
+  ))
+  return (
+    <>
+      <CooldownIndicator
+        maxCharges={spellTimeline.spell.charges}
+        chargeIntervals={spellTimeline.chargeIntervals}
+      />
+      {chargeRows}
+    </>
+  )
+}
+
+const splitCastsByCharges = (casts: Cast[], charges: number): Cast[][] => {
+  if (!charges || charges <= 1) {
+    return [casts]
+  }
+
+  const castsByCharge: Cast[][] = Array.from({ length: charges }, () => [])
+  const sortedCasts = [...casts].sort((a, b) => a.start_s - b.start_s)
+
+  // Distribute casts in round-robin fashion
+  sortedCasts.forEach((cast, index) => {
+    const chargeIndex = index % charges
+    castsByCharge[chargeIndex].push(cast)
+  })
+
+  return castsByCharge
 }

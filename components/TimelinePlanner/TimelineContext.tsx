@@ -20,8 +20,8 @@ interface TimelineContextType {
   setViewLength: (length: number) => void
   setEffectiveViewLength: (length: number) => void
 
-  // Alt key state for zooming
-  isAltKeyPressed: boolean
+  // Control key state for zooming
+  isControlKeyPressed: boolean
 
   // Register container for width calculations
   registerScrollContainer: (element: HTMLDivElement | null) => void
@@ -41,7 +41,7 @@ const initialContext: TimelineContextType = {
   setTotalLength: () => {},
   setViewLength: () => {},
   setEffectiveViewLength: () => {},
-  isAltKeyPressed: false,
+  isControlKeyPressed: false,
   registerScrollContainer: () => {},
 }
 
@@ -76,7 +76,7 @@ export function TimelineProvider({
     setScrollContainer(element)
   }
 
-  const [isAltKeyPressed, setIsAltKeyPressed] = useState(false)
+  const [isControlKeyPressed, setIsControlKeyPressed] = useState(false)
 
   const effective_num_windows = total_length_s / effective_view_length_s
   const effective_total_length_px = scrollContainerWidth * effective_num_windows
@@ -97,15 +97,15 @@ export function TimelineProvider({
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Alt') {
+      if (e.key === 'Control') {
         e.preventDefault()
-        setIsAltKeyPressed(true)
+        setIsControlKeyPressed(true)
       }
     }
 
     const handleKeyUp = (e: KeyboardEvent) => {
-      if (e.key === 'Alt') {
-        setIsAltKeyPressed(false)
+      if (e.key === 'Control') {
+        setIsControlKeyPressed(false)
       }
     }
 
@@ -135,7 +135,7 @@ export function TimelineProvider({
     setViewLength,
     setEffectiveViewLength,
 
-    isAltKeyPressed,
+    isControlKeyPressed,
 
     registerScrollContainer,
   }
