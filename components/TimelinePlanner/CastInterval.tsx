@@ -23,6 +23,7 @@ export default function CastInterval({
 
   const channel_width_px = cast.channel_visual_duration * pixelsPerSecond
   const effect_width_px = cast.effect_visual_duration * pixelsPerSecond
+  console.log(cast.effect_visual_duration)
   const cooldown_delay_width_px = cast.cooldown_delay_visual_duration * pixelsPerSecond
   const cooldown_width_px = cast.cooldown_visual_duration * pixelsPerSecond
 
@@ -76,7 +77,6 @@ export default function CastInterval({
           ×
         </button>
       )}
-
       {/* Channel Duration Bar */}
       <div
         className="flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
@@ -90,7 +90,7 @@ export default function CastInterval({
       <div
         className="flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
         style={{
-          width: `${effect_width_px - channel_width_px}px`,
+          width: `${effect_width_px}px`,
         }}
       >
         {showWowheadInEffect && wowheadWrapper}
@@ -105,16 +105,14 @@ export default function CastInterval({
         {showWowheadInRemaining && cooldown_delay_width_px > 100 && wowheadWrapper}
       </div>
       {/* Remaining Cooldown Bar */}
-      {true && (
-        <div
-          className="flex h-full items-center justify-center bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
-          style={{
-            width: `${cooldown_width_px + 1}px`,
-          }}
-        >
-          {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}
-        </div>
-      )}
+      <div
+        className="flex h-full items-center justify-center bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
+        style={{
+          width: `${cooldown_width_px + 1}px`,
+        }}
+      >
+        {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}
+      </div>
     </div>
   )
 }
