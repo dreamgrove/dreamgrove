@@ -15,10 +15,9 @@
       "name": "Celestial Alignment",
       "channel_duration": 0,
       "effect_duration": 15,
-      "cooldown": 100,
-      "charges": 2
+      "cooldown": 180,
+      "charges": 1
     },
-
     {
       "id": "convoke",
       "spellId": 391528,

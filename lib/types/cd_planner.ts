@@ -22,6 +22,9 @@ export enum EventType {
 export enum Talents {
   EarlySpring = 'early_spring',
   ControlOfTheDream = 'control_of_the_dream',
+  WhirlingStars = 'whirling_stars',
+  PotentEnchantments = 'potent_enchantments',
+  Incarnation = 'incarnation',
 }
 // Event type for the event queue
 export interface TimelineEvent {
