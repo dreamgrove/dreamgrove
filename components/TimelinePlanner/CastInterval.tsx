@@ -23,7 +23,6 @@ export default function CastInterval({
 
   const channel_width_px = cast.channel_visual_duration * pixelsPerSecond
   const effect_width_px = cast.effect_visual_duration * pixelsPerSecond
-  console.log(cast.effect_visual_duration)
   const cooldown_delay_width_px = cast.cooldown_delay_visual_duration * pixelsPerSecond
   const cooldown_width_px = cast.cooldown_visual_duration * pixelsPerSecond
 
