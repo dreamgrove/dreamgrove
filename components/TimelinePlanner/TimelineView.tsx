@@ -404,21 +404,23 @@ export default function TimelineView({
         <div className="w-[200px] min-w-[120px] shrink-0">
           <div className="mt-5">
             <div className="flex flex-col items-start justify-start pl-2">
-              {processedState.spells.map((spellCast) =>
-                spellCast.spell.charges > 1 ? (
-                  <SpellNameWithCharges
-                    key={`spell-name-${spellCast.spell.id}`}
-                    spellCast={spellCast}
-                    wowheadNameMap={wowheadNameMap}
-                  />
-                ) : (
-                  <SpellName
-                    key={`spell-name-${spellCast.spell.id}`}
-                    spellCast={spellCast}
-                    wowheadNameMap={wowheadNameMap}
-                  />
-                )
-              )}
+              {processedState.spells
+                .sort((a, b) => a.spell.spellId - b.spell.spellId)
+                .map((spellCast) =>
+                  spellCast.spell.charges > 1 ? (
+                    <SpellNameWithCharges
+                      key={`spell-name-${spellCast.spell.id}`}
+                      spellCast={spellCast}
+                      wowheadNameMap={wowheadNameMap}
+                    />
+                  ) : (
+                    <SpellName
+                      key={`spell-name-${spellCast.spell.id}`}
+                      spellCast={spellCast}
+                      wowheadNameMap={wowheadNameMap}
+                    />
+                  )
+                )}
             </div>
           </div>
         </div>
