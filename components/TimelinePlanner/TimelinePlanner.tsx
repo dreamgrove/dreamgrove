@@ -25,7 +25,7 @@ export default function TimelinePlanner({
   wowheadMarkerMap = {},
   averageTimestamps = {},
 }: TimelinePlannerProps) {
-  const initialTotalLength = 240
+  const [initialTotalLength, setInitialTotalLength] = useState(240)
   const initialViewLength = 60
   const initialMarkerSpacing = 10
 
@@ -41,14 +41,14 @@ export default function TimelinePlanner({
 
   return (
     <div className={styles.timeline}>
-      <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
-        {true && (
+      {false && (
+        <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
           <FightSelector
             currentEncounterId={currentEncounterId}
             onEncounterChange={setCurrentEncounterId}
           />
-        )}
-      </div>
+        </div>
+      )}
 
       <TimelineProvider
         initialTotalLength={initialTotalLength}
@@ -58,7 +58,7 @@ export default function TimelinePlanner({
         <TimelineView
           total_length_s={initialTotalLength}
           view_length_s={initialViewLength}
-          setViewLength={() => {}} /*TODO REMOVE */
+          setViewLength={setInitialTotalLength}
           marker_spacing_s={initialMarkerSpacing}
           spells={spells}
           wowheadMap={wowheadMap}

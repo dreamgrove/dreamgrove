@@ -64,7 +64,7 @@ export default function SpellButtons({
         {spells.map((spell) => (
           <button
             key={`spell-button-${spell.id}`}
-            className="rounded bg-purple-600 px-4 py-2 text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="rounded bg-orange-400/40 px-4 py-2 text-white hover:bg-orange-500/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
             onClick={() => handleSpellAdd(spell)}
           >
             {spell.charges && spell.charges > 1 ? `${spell.name} (${spell.charges})` : spell.name}
@@ -72,16 +72,11 @@ export default function SpellButtons({
         ))}
         <button
           key={`spell-reset`}
-          className="rounded bg-purple-600 px-4 py-2 text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="rounded bg-red-700/50 px-4 py-2 text-white hover:bg-red-700/70 focus:outline-none focus:ring-2 focus:ring-red-500"
           onClick={() => setCurrentSpells([])}
         >
           Reset
         </button>
-      </div>
-      <div className="mt-2 h-10">
-        {errorMessage && (
-          <div className="rounded-md bg-red-100 p-2 text-red-800">{errorMessage}</div>
-        )}
       </div>
     </div>
   )

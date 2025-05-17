@@ -7,7 +7,8 @@
       "channel_duration": 0,
       "effect_duration": 10,
       "cooldown": 60,
-      "charges": 1
+      "charges": 1,
+      "specs": ["balance"]
     },
     {
       "id": "ca",
@@ -16,7 +17,8 @@
       "channel_duration": 0,
       "effect_duration": 15,
       "cooldown": 180,
-      "charges": 1
+      "charges": 1,
+      "specs": ["balance"]
     },
     {
       "id": "convoke",
@@ -25,7 +27,8 @@
       "channel_duration": 5,
       "effect_duration": 5,
       "cooldown": 120,
-      "channeled": true
+      "channeled": true,
+      "specs": ["balance"]
     },
     {
       "id": "flourish",
@@ -34,7 +37,8 @@
       "channel_duration": 0,
       "effect_duration": 8,
       "cooldown": 60,
-      "charges": 1
+      "charges": 1,
+      "specs": ["resto"]
     },
     {
       "id": "gg",
@@ -43,7 +47,8 @@
       "channel_duration": 0,
       "effect_duration": 15,
       "cooldown": 30,
-      "charges": 3
+      "charges": 3,
+      "specs": ["resto"]
     },
     {
       "id": "tranq",
@@ -52,7 +57,8 @@
       "channel_duration": 5,
       "effect_duration": 0,
       "cooldown": 180,
-      "channeled": true
+      "channeled": true,
+      "specs": ["resto"]
     },
     {
       "id": "incarn",
@@ -60,7 +66,8 @@
       "name": "Incarnation: Tree of Life",
       "channel_duration": 0,
       "effect_duration": 30,
-      "cooldown": 180
+      "cooldown": 180,
+      "specs": ["resto"]
     },
     {
       "id": "reforestation",
@@ -68,7 +75,8 @@
       "name": "Reforestation",
       "channel_duration": 0,
       "effect_duration": 10,
-      "cooldown": 45
+      "cooldown": 45,
+      "specs": ["resto"]
     }
   ]
 }

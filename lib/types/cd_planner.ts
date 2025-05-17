@@ -101,6 +101,7 @@ export class TimelineState {
 // The final processed timeline ready for rendering
 export interface TimelineToRender {
   spells: SpellToRender[]
+  timeline_length_s: number
 }
 
 // A spell with its casts ready for rendering
@@ -126,6 +127,7 @@ export interface SpellInfo {
   cooldown: number
   charges: number
   channeled?: boolean
+  specs?: string[]
 }
 // Parameters for creating a Cast
 export interface CastParams {

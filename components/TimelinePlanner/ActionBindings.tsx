@@ -17,8 +17,8 @@ export default function ActionBindings({
   onToggle,
 }: ActionBindingsProps) {
   return (
-    <div className="mb-4">
-      <h3 className="mb-2 text-sm font-semibold text-gray-300">Action Bindings</h3>
+    <div className="mb-4 select-none">
+      <h1 className="mb-2 text-xl font-semibold text-gray-300">Talents:</h1>
       <Checkboxes items={bindings} selectedItems={activeBindings} onToggle={onToggle} />
     </div>
   )

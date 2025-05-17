@@ -32,13 +32,18 @@ const Marker = ({
 interface SpellMarkerProps {
   spellInfo: Record<string, number[]>
   wowheadMap?: Record<string, React.ReactNode>
+  total_length_s: number
 }
 
 /**
  * Markers: evenly spaced vertical lines and labels across the timeline.
  * Markers are generated dynamically based on marker_spacing_s until reaching total_length_s.
  */
-const SpellMarkers: React.FC<SpellMarkerProps> = ({ spellInfo, wowheadMap = {} }) => {
+const SpellMarkers: React.FC<SpellMarkerProps> = ({
+  spellInfo,
+  wowheadMap = {},
+  total_length_s,
+}) => {
   // Get timeToPixels function from context
   const { timeToPixels } = useTimelineControls()
 
@@ -49,7 +54,7 @@ const SpellMarkers: React.FC<SpellMarkerProps> = ({ spellInfo, wowheadMap = {} }
   return (
     <div
       className={`pointer-events-none absolute left-0 top-0 z-10 flex h-full pl-6`}
-      style={{ width: 6000 }}
+      style={{ width: timeToPixels(total_length_s) }}
     >
       {ca_timestamps.map((timestamp, i) => (
         <Marker

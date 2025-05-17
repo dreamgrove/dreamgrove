@@ -28,6 +28,10 @@ import EventMarkers from './EventMarkers'
 import { whirlingStars } from './GlobalHandlers/whirlingStars'
 import { potentEnchantments } from './GlobalHandlers/potentEnchantements'
 import { incarnation } from './GlobalHandlers/incarnation'
+import { bindings } from './GlobalHandlers/bindings'
+// Define spec type for dropdown selection
+type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
+
 interface TimelineViewProps {
   total_length_s: number
   view_length_s: number // seconds shown per 100% width
@@ -65,6 +69,9 @@ export default function TimelineView({
 
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
+  // Add state for the selected spec
+  const [selectedSpec, setSelectedSpec] = useState<DruidSpec>('balance')
+
   useEffect(() => {
     if (scrollContainerRef.current) {
       registerScrollContainer(scrollContainerRef.current)
@@ -74,50 +81,31 @@ export default function TimelineView({
   const [activeEffects, setActiveEffects] = useState<string[]>([])
 
   const [inputActions, setInputActions] = useState<PlayerAction[]>([])
-  const [baseQueue, setBaseQueue] = useState<EventQueue>(new EventQueue())
-  const [processedState, setProcessedState] = useState<TimelineToRender>({ spells: [] })
+
+  const [processedState, setProcessedState] = useState<TimelineToRender>({
+    spells: [],
+    timeline_length_s: total_length_s,
+  })
+
   const [processedEvents, setProcessedEvents] = useState<TimelineEvent[]>([])
+
   const [currentSpells, setCurrentSpells] = useState<SpellTimeline[]>([])
-  const [patchedSpells, setPatchedSpells] = useState<SpellTimeline[]>([])
 
   const [collapsedChargeSpells, setCollapsedChargeSpells] = useState<string[]>([])
 
   const [localSpells, setLocalSpells] = useState<SpellInfo[]>(spells)
 
+  // Filter spells based on selected spec
+  const filteredSpells = React.useMemo(() => {
+    if (selectedSpec === 'all') {
+      return localSpells
+    }
+    return localSpells.filter((spell) => spell.specs && spell.specs.includes(selectedSpec))
+  }, [localSpells, selectedSpec])
+
   const [activeBindings, setActiveBindings] = useState<string[]>([])
+
   const [keysToActions, setKeysToActions] = useState<Map<string, Set<GlobalAction>>>(new Map())
-
-  console.log('processedEvents', processedEvents)
-
-  const availableBindings = [
-    {
-      id: Talents.EarlySpring,
-      label: 'Early Spring',
-      description: 'Force of Nature cooldown reduced by 15 sec.',
-    },
-    {
-      id: Talents.ControlOfTheDream,
-      label: 'Control of the Dream',
-      description:
-        "Time elapsed while your major abilities are available to be used or at maximum charges is subtracted from that ability's cooldown after the next time you use it, up to 15 seconds.",
-    },
-    {
-      id: Talents.Incarnation,
-      label: 'Incarnation',
-      description: 'Celestial Alignment effect duration increased by 5 sec.',
-    },
-    {
-      id: Talents.WhirlingStars,
-      label: 'Whirling Stars',
-      description: 'Celestial Alignment cooldown reduced by 100 sec. and gains 2 charges.',
-    },
-    {
-      id: Talents.PotentEnchantments,
-      label: 'Potent Enchantments',
-      description:
-        'Whirling Stars reduces the cooldown of Celestial Alignment by an additional 10 sec.',
-    },
-  ]
 
   function bindGlobalAction(keys: string[], action: GlobalAction) {
     setKeysToActions((prev) => {
@@ -133,10 +121,12 @@ export default function TimelineView({
   }
 
   useEffect(() => {
-    // Clear existing bindings
+    setViewLength(processedState.timeline_length_s > 240 ? processedState.timeline_length_s : 240)
+  }, [processedState])
+
+  useEffect(() => {
     setKeysToActions(new Map())
 
-    // Add new bindings based on activeBindings
     activeBindings.forEach((bindingId) => {
       if (bindingId === Talents.EarlySpring) {
         bindGlobalAction(['205636'], earlySpring)
@@ -188,27 +178,77 @@ export default function TimelineView({
     }
   }, [isControlKeyPressed, zoomIn, zoomOut])
 
+  // Add a ref to track already processed reschedulings to prevent cyclical re-renders
+  // This keeps track of which cast reschedulings we've already processed to avoid
+  // infinite update loops when processEventQueue suggests rescheduling a cast
+  const processedReschedulingsRef = useRef<Set<string>>(new Set())
+
   useEffect(() => {
     const queue = generateBaseQueue(inputActions)
-    setBaseQueue(queue)
 
-    const { processedState, processedEvents } = processEventQueue(
+    const { processedState, processedEvents, rescheduledCasts } = processEventQueue(
       queue,
       localSpells,
       keysToActions,
       activeBindings
     )
+
     setProcessedState(processedState)
     setProcessedEvents(processedEvents)
+
+    // Handle any casts that need to be rescheduled due to insufficient charges
+    // We need to update inputActions when a spell can't be cast at the specified time
+    // but must avoid creating an infinite re-render loop when we update inputActions
+    if (rescheduledCasts.length > 0) {
+      // Filter out already processed reschedulings using our ref to track state across renders
+      const unprocessedReschedulings = rescheduledCasts.filter(({ castId, newTime }) => {
+        const action = inputActions.find((a) => a.id === castId)
+        // Create a unique key for this specific rescheduling
+        const key = `${castId}:${newTime.toFixed(2)}`
+        const alreadyProcessed = processedReschedulingsRef.current.has(key)
+        const needsUpdate = action && Math.abs(action.instant - newTime) > 0.001
+
+        return !alreadyProcessed && needsUpdate
+      })
+
+      if (unprocessedReschedulings.length > 0) {
+        // Mark these reschedulings as processed to prevent processing them again
+        unprocessedReschedulings.forEach(({ castId, newTime }) => {
+          const key = `${castId}:${newTime.toFixed(2)}`
+          processedReschedulingsRef.current.add(key)
+        })
+
+        // Build a map of castIds to new times for all unprocessed reschedulings
+        const castsToReschedule = new Map<string, number>()
+        unprocessedReschedulings.forEach(({ castId, newTime }) => {
+          castsToReschedule.set(castId, newTime)
+        })
+
+        // Update all casts at once in a batched update to minimize rerenders
+        setInputActions((prev) =>
+          prev.map((action) => {
+            const newTime = castsToReschedule.get(action.id)
+            if (newTime !== undefined) {
+              return { ...action, instant: newTime }
+            }
+            return action
+          })
+        )
+      }
+    }
   }, [inputActions, localSpells, keysToActions, activeBindings])
+  console.log('inputActions', inputActions)
 
   // Function to modify a cast
   const handleModifyAction = (castId: string, newTime: number) => {
+    console.log('old inputActions', inputActions)
     const actionIndex = inputActions.findIndex((a) => a.id === castId)
 
     if (actionIndex >= 0) {
-      const newActions = [...inputActions]
-      newActions[actionIndex].instant = newTime
+      const newActions = inputActions.map((action, index) =>
+        index === actionIndex ? { ...action, instant: newTime } : action
+      )
+      console.log('newActions', newActions)
       setInputActions(newActions)
     }
   }
@@ -259,13 +299,14 @@ export default function TimelineView({
   const handleCreateCustomElement = (params: SpellInfo) => {
     const newSpell: SpellInfo = {
       id: `custom-${Date.now()}`,
-      spellId: Math.floor(Math.random() * 1000000) + 900000,
+      spellId: Math.floor(Math.random() * 1000000) + 900000, //this shouldnt be done like this but w/e
       name: params.name,
       channel_duration: params.channel_duration,
       effect_duration: params.effect_duration,
       cooldown: params.cooldown,
       charges: params.charges,
       channeled: params.channeled,
+      specs: params.specs || [],
     }
 
     setLocalSpells([...localSpells, newSpell])
@@ -282,14 +323,83 @@ export default function TimelineView({
     })
   }
 
+  // Handle spec change
+  const handleSpecChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newSpec = e.target.value as DruidSpec
+    setSelectedSpec(newSpec)
+    setInputActions([])
+
+    // If we're not showing all specs, filter out bindings that don't match the new spec
+    if (newSpec !== 'all') {
+      setActiveBindings((prev) =>
+        prev.filter((bindingId) => {
+          const binding = bindings.find((b) => b.id === bindingId)
+          return binding && binding.specs && binding.specs.includes(newSpec)
+        })
+      )
+    }
+  }
+
   return (
     <div className="timeline flex w-full flex-col gap-2">
-      <div className="flex flex-row items-center gap-2">
-        <h2 className="flex-grow text-lg font-semibold">{currentEncounterId}</h2>
+      {/* Spec selector dropdown */}
+      <div className="my-2 ml-2 flex items-center gap-2">
+        <label htmlFor="spec-selector" className="text-lg font-medium">
+          Select your spec:
+        </label>
+        <select
+          id="spec-selector"
+          value={selectedSpec}
+          onChange={handleSpecChange}
+          className="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-lg"
+        >
+          <option value="all">All Specs</option>
+          <option value="balance">Balance</option>
+          <option value="resto">Restoration</option>
+          <option value="feral">Feral</option>
+          <option value="guardian">Guardian</option>
+        </select>
+      </div>
+      {/* divider */}
+      <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
 
-        {/* Custom element button */}
+      <div className="my-2 ml-2">
+        <ActionBindings
+          bindings={
+            selectedSpec === 'all'
+              ? bindings
+              : bindings.filter((binding) => binding.specs && binding.specs.includes(selectedSpec))
+          }
+          activeBindings={activeBindings}
+          onToggle={handleBindingToggle}
+        />
+      </div>
+
+      {false && (
+        <Checkboxes
+          effects={timelineEffects}
+          activeEffects={activeEffects}
+          onEffectToggle={handleEffectToggle}
+          items={timelineEffects.map((effect) => ({
+            id: effect.id,
+            label: effect.name,
+            description: effect.description,
+          }))}
+          selectedItems={activeEffects}
+          onToggle={handleEffectToggle}
+        />
+      )}
+
+      <SpellButtons
+        currentSpells={processedState}
+        setCurrentSpells={setInputActions}
+        spells={filteredSpells}
+      />
+      <div className="pl-2">
         <CustomElement onCreate={handleCreateCustomElement} />
+      </div>
 
+      <div className="mb-4 flex flex-row items-center justify-end gap-2">
         {/* Zoom controls */}
         <button
           onClick={() => resetZoom()}
@@ -310,33 +420,6 @@ export default function TimelineView({
           +
         </button>
       </div>
-
-      <ActionBindings
-        bindings={availableBindings}
-        activeBindings={activeBindings}
-        onToggle={handleBindingToggle}
-      />
-
-      {false && (
-        <Checkboxes
-          effects={timelineEffects}
-          activeEffects={activeEffects}
-          onEffectToggle={handleEffectToggle}
-          items={timelineEffects.map((effect) => ({
-            id: effect.id,
-            label: effect.name,
-            description: effect.description,
-          }))}
-          selectedItems={activeEffects}
-          onToggle={handleEffectToggle}
-        />
-      )}
-
-      <SpellButtons
-        currentSpells={processedState}
-        setCurrentSpells={setInputActions}
-        spells={localSpells}
-      />
 
       {/* Timeline view */}
       <div className="flex min-h-[200px] w-full flex-row">
@@ -370,7 +453,11 @@ export default function TimelineView({
             total_length_s={total_length_s}
             pixelsPerSecond={pixelsPerSecond}
           />
-          <SpellMarkers spellInfo={averageTimestamps} wowheadMap={wowheadMarkerMap} />
+          <SpellMarkers
+            spellInfo={averageTimestamps}
+            wowheadMap={wowheadMarkerMap}
+            total_length_s={total_length_s}
+          />
           {false && <EventMarkers eventInfo={processedEvents} />}
           {/* Casts/timeline rows */}
           <div
@@ -380,22 +467,27 @@ export default function TimelineView({
               minHeight: `${currentSpells.length * 40}px`, // Height based on visible rows
             }}
           >
-            {/* Render a SpellCastsRow for each spell */}
+            {/* Render a SpellCastsRow for each spell, sorted by spell.id*/}
             {processedState.spells.length > 0 ? (
-              processedState.spells.map((spellCast) => (
-                <SpellCastsRow
-                  key={`spell-row-${spellCast.spell.id}`}
-                  spellTimeline={spellCast}
-                  wowheadComponent={
-                    customElements[spellCast.spell.id] ||
-                    wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
-                  }
-                  onCastDelete={handleCastDelete}
-                  onCastMove={handleCastMove}
-                />
-              ))
+              processedState.spells
+                .sort((a, b) => a.spell.spellId - b.spell.spellId)
+                .map((spellCast) => (
+                  <SpellCastsRow
+                    key={`spell-row-${spellCast.spell.id}`}
+                    spellTimeline={spellCast}
+                    wowheadComponent={
+                      customElements[spellCast.spell.id] ||
+                      wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
+                    }
+                    onCastDelete={handleCastDelete}
+                    onCastMove={handleCastMove}
+                  />
+                ))
             ) : (
-              <div className="mt-16 text-center text-sm text-gray-500">
+              <div
+                style={{ width: `${effective_view_length_s * pixelsPerSecond}px` }}
+                className="sticky left-0 top-0 mt-16 text-center text-sm text-gray-500"
+              >
                 Add a spell to get started
               </div>
             )}

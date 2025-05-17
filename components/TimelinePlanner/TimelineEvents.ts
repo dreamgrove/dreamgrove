@@ -113,19 +113,31 @@ function getMatchingActions(
  * Process an event queue and generate a timeline for rendering
  * @param eventQueue - The queue of events to process
  * @param spells - The available spells information
- * @returns TimelineToRender - A timeline ready for rendering
+ * @param keysToActions - Map of spell IDs to associated global actions
+ * @param activeBindings - List of active talent bindings
+ * @returns {object} Object containing:
+ *   - processedState: TimelineToRender - A timeline ready for rendering
+ *   - processedEvents: TimelineEvent[] - All events that were processed
+ *   - rescheduledCasts: Array of {castId, newTime} - Casts that had to be rescheduled due to insufficient charges
  */
 export function processEventQueue(
   eventQueue: EventQueue,
   spells: SpellInfo[],
   keysToActions: Map<string, Set<GlobalAction>>,
   activeBindings: string[]
-): { processedState: TimelineToRender; processedEvents: TimelineEvent[] } {
+): {
+  processedState: TimelineToRender
+  processedEvents: TimelineEvent[]
+  rescheduledCasts: Array<{ castId: string; newTime: number }>
+} {
   let timelineState = new TimelineState()
-  const processedState: TimelineToRender = { spells: [] }
+  const processedState: TimelineToRender = { spells: [], timeline_length_s: 0 }
   const processedEvents: TimelineEvent[] = []
+  const rescheduledCasts: Array<{ castId: string; newTime: number }> = []
   // Create a deep copy of the spells array to prevent state preservation between calls
   let currentSpells = JSON.parse(JSON.stringify(spells))
+
+  /* Control of The Dream */
   if (activeBindings.includes(Talents.ControlOfTheDream)) {
     // Initialize an empty Map for Control of the Dream effects
     timelineState.activeEffects.set(
@@ -137,15 +149,14 @@ export function processEventQueue(
       ])
     )
   }
+
   while (!eventQueue.isEmpty()) {
     let event = eventQueue.pop()
     if (!event) break
     processedEvents.push(event)
 
-    console.log('COTD: keysToActions', keysToActions)
     const bucket = getMatchingActions(event, keysToActions)
     for (const action of bucket) {
-      console.log('COTD: Processing action', action)
       const { changedEvent, eventsToAdd, newState, newSpells } = action(
         event,
         eventQueue,
@@ -157,7 +168,6 @@ export function processEventQueue(
       currentSpells = newSpells
 
       for (const e of eventsToAdd) {
-        console.log('COTD: Adding event', e)
         eventQueue.push(e)
       }
     }
@@ -187,10 +197,6 @@ export function processEventQueue(
 
           /* Control of the Dream */
           if (timelineState.activeEffects.has(Talents.ControlOfTheDream)) {
-            console.log(
-              'COTD: active effects',
-              timelineState.activeEffects.get(Talents.ControlOfTheDream)
-            )
             const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
             if (cotdEffects && cotdEffects.has(event.spellId)) {
               const cotdTime = cotdEffects.get(event.spellId)
@@ -263,6 +269,13 @@ export function processEventQueue(
 
           // Find the earliest time when a charge will be available
           const nextChargeTime = eventQueue.findEarliestCharge(event.spellId, event.time)
+
+          // Track this cast as needing to be rescheduled in the inputActions
+          rescheduledCasts.push({
+            castId: event.castId,
+            newTime: nextChargeTime,
+          })
+
           // Create a new cast event at the time when a charge will be available
           eventQueue.push({
             type: EventType.CastStart,
@@ -313,12 +326,12 @@ export function processEventQueue(
 
       case EventType.CooldownEnd:
         if (timelineState.activeCasts.has(event.castId)) {
+          if (event.time > processedState.timeline_length_s) {
+            processedState.timeline_length_s = event.time
+          }
           const cast = timelineState.activeCasts.get(event.castId)
           if (cast) {
-            console.log('COTD: cooldown end for cast', event.castId, 'at', event.time)
             cast.cooldown_duration = event.time - cast.start_s - cast.cooldown_delay_s
-            console.log('COTD: cast', cast)
-            console.log('cast', cast)
 
             let spellToRender = processedState.spells.find((s) => s.spell.spellId === event.spellId)
             if (!spellToRender) {
@@ -350,5 +363,5 @@ export function processEventQueue(
     spell.chargesUsed = findMaxUsedCharges(spell.chargeIntervals, spell.spell.charges)
   })
 
-  return { processedState, processedEvents }
+  return { processedState, processedEvents, rescheduledCasts }
 }

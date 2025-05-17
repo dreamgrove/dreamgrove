@@ -97,7 +97,7 @@ export default function SpellCastsRow({
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
-        distance: 5, // 5px of movement required before activating
+        distance: 1, // 1px of movement required before activating
       },
     })
   )
@@ -122,18 +122,8 @@ export default function SpellCastsRow({
           Math.min(total_length_s - SPELL_GCD, cast.start_s + deltaSeconds)
         )
 
-        // If we have a valid over target and it's a charge row, update the row
-        // This will change the order of casts in the sorted array, effectively changing its row
-        let newChargeRow: number | undefined
-        if (over && over.id.toString().startsWith('charge-')) {
-          const targetRow = parseInt(over.id.toString().split('-')[1])
-          if (!isNaN(targetRow) && targetRow >= 0 && targetRow < spellTimeline.spell.charges) {
-            newChargeRow = targetRow
-          }
-        }
-
-        if (proposedStartTime !== cast.start_s || newChargeRow !== undefined) {
-          onCastMove(castId, proposedStartTime, newChargeRow)
+        if (proposedStartTime !== cast.start_s) {
+          onCastMove(castId, proposedStartTime)
         }
       }
     }
