@@ -53,11 +53,11 @@ export default function CastInterval({
     <div className="flex h-full w-full items-center justify-start pl-4">{icon}</div>
   )
 
-  const bgColor = 'bg-slate-500/10'
+  const bgColor = ''
 
   return (
     <div
-      className={`relative flex h-10 items-center rounded-md border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
+      className={`relative flex h-10 items-center border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
         hasCollision
           ? 'border-blue-500 shadow-md'
           : isDragging
@@ -79,7 +79,7 @@ export default function CastInterval({
 
       {/* Channel Duration Bar */}
       <div
-        className="flex h-full items-center justify-center rounded-l-md bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
+        className="flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
         style={{
           width: `${channel_width_px}px`,
         }}
@@ -88,7 +88,7 @@ export default function CastInterval({
       </div>
       {/* Effect Duration Bar */}
       <div
-        className="flex h-full items-center justify-start rounded-l-md bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
+        className="flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
         style={{
           width: `${effect_width_px - channel_width_px}px`,
         }}
@@ -97,7 +97,7 @@ export default function CastInterval({
       </div>
       {/* Cooldown Delay Bar */}
       <div
-        className="pattern-diagonal-lines pattern-blue-500 pattern-bg-white pattern-size-6 pattern-opacity-20 flex h-full items-center"
+        className="flex h-full items-center bg-neutral-600/10"
         style={{
           width: `${cooldown_delay_width_px}px`,
         }}
@@ -107,9 +107,9 @@ export default function CastInterval({
       {/* Remaining Cooldown Bar */}
       {true && (
         <div
-          className="flex h-full items-center justify-center rounded-r-md bg-orange-400/20 focus-visible:ring-0 focus-visible:outline-hidden"
+          className="flex h-full items-center justify-center bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
           style={{
-            width: `${cooldown_width_px}px`,
+            width: `${cooldown_width_px + 1}px`,
           }}
         >
           {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}

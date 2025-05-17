@@ -72,7 +72,7 @@ export default function DraggableCast({
       ref={setNodeRef}
       style={{
         left: `${timeToPixels(castInfo.start_s)}px`,
-        width: `${cast_width_px + 1}px`, //I think the +1 is because of the border but who knows
+        width: `${cast_width_px + 2}px`, //I think the +1 is because of the border but who knows
         zIndex: isDragging ? 20 : 10,
         opacity: isDragging ? 0.2 : 1,
       }}
