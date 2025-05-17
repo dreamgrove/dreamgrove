@@ -266,7 +266,7 @@ export default function WarcraftLogs() {
             type="text"
             value={reportCode}
             onChange={(e) => setReportCode(e.target.value)}
-            className="w-full max-w-md rounded border bg-white px-3 py-2 dark:bg-gray-700"
+            className="w-full max-w-md rounded-sm border bg-white px-3 py-2 dark:bg-gray-700"
             placeholder="Enter report code"
           />
         </div>
@@ -278,7 +278,7 @@ export default function WarcraftLogs() {
             className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
             role="status"
           >
-            <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+            <span className="!absolute -m-px! h-px! w-px! overflow-hidden! border-0! p-0! whitespace-nowrap! [clip:rect(0,0,0,0)]!">
               Loading...
             </span>
           </div>
@@ -312,7 +312,7 @@ export default function WarcraftLogs() {
       )}
 
       {queryType === 'worldData' && matchingZone && (
-        <div className="mt-4 rounded-lg border bg-white p-4 shadow-sm dark:bg-gray-700">
+        <div className="mt-4 rounded-lg border bg-white p-4 shadow-xs dark:bg-gray-700">
           <h3 className="mb-2 text-lg font-semibold">Matching Zone (ID: {raidId})</h3>
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -353,11 +353,11 @@ export default function WarcraftLogs() {
       )}
 
       {queryType === 'druidRankings' && rankings && (
-        <div className="mt-4 rounded-lg border bg-white p-4 shadow-sm dark:bg-gray-700">
+        <div className="mt-4 rounded-lg border bg-white p-4 shadow-xs dark:bg-gray-700">
           <h3 className="mb-2 text-lg font-semibold">
             Balance Druid Rankings for {rankings.name} (Page {rankingsPage})
           </h3>
-          <div className="mb-4 rounded bg-blue-50 p-3 dark:bg-blue-900/30">
+          <div className="mb-4 rounded-sm bg-blue-50 p-3 dark:bg-blue-900/30">
             <p className="text-sm">
               <span className="font-medium">Encounter ID:</span> {vexieEncounterId}
             </p>
@@ -379,37 +379,37 @@ export default function WarcraftLogs() {
                     <tr>
                       <th
                         scope="col"
-                        className="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400"
+                        className="px-3 py-2 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
                       >
                         Rank
                       </th>
                       <th
                         scope="col"
-                        className="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400"
+                        className="px-3 py-2 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
                       >
                         Character
                       </th>
                       <th
                         scope="col"
-                        className="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400"
+                        className="px-3 py-2 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
                       >
                         Server
                       </th>
                       <th
                         scope="col"
-                        className="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400"
+                        className="px-3 py-2 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
                       >
                         DPS
                       </th>
                       <th
                         scope="col"
-                        className="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400"
+                        className="px-3 py-2 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
                       >
                         iLvl
                       </th>
                       <th
                         scope="col"
-                        className="px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400"
+                        className="px-3 py-2 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
                       >
                         Date
                       </th>
@@ -425,26 +425,26 @@ export default function WarcraftLogs() {
                             : 'bg-gray-50 dark:bg-gray-800'
                         }
                       >
-                        <td className="whitespace-nowrap px-3 py-2 text-sm text-gray-900 dark:text-white">
+                        <td className="px-3 py-2 text-sm whitespace-nowrap text-gray-900 dark:text-white">
                           {rank.rank}
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2 text-sm">
+                        <td className="px-3 py-2 text-sm whitespace-nowrap">
                           <span className="font-medium text-blue-600 dark:text-blue-400">
                             {rank.name}
                           </span>
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
+                        <td className="px-3 py-2 text-sm whitespace-nowrap text-gray-700 dark:text-gray-300">
                           {rank.server && typeof rank.server === 'object'
                             ? rank.server.name
                             : rank.server || 'N/A'}
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2 text-sm font-medium text-green-600 dark:text-green-400">
+                        <td className="px-3 py-2 text-sm font-medium whitespace-nowrap text-green-600 dark:text-green-400">
                           {Math.round(rank.amount).toLocaleString()}
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
+                        <td className="px-3 py-2 text-sm whitespace-nowrap text-gray-700 dark:text-gray-300">
                           {rank.ilvl || 'N/A'}
                         </td>
-                        <td className="whitespace-nowrap px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
+                        <td className="px-3 py-2 text-sm whitespace-nowrap text-gray-700 dark:text-gray-300">
                           {rank.startTime ? new Date(rank.startTime).toLocaleDateString() : 'N/A'}
                         </td>
                       </tr>
@@ -460,11 +460,11 @@ export default function WarcraftLogs() {
       )}
 
       {queryType === 'druidCasts' && castsData.length > 0 && (
-        <div className="mt-4 rounded-lg border bg-white p-4 shadow-sm dark:bg-gray-700">
+        <div className="mt-4 rounded-lg border bg-white p-4 shadow-xs dark:bg-gray-700">
           <h3 className="mb-2 text-lg font-semibold">
             Balance Druid Spell Casts for {rankings?.name}
           </h3>
-          <div className="mb-4 rounded bg-blue-50 p-3 dark:bg-blue-900/30">
+          <div className="mb-4 rounded-sm bg-blue-50 p-3 dark:bg-blue-900/30">
             <p className="text-sm">
               <span className="font-medium">Encounter ID:</span> {vexieEncounterId}
             </p>
@@ -498,7 +498,7 @@ export default function WarcraftLogs() {
                             {spellCast.timestamps.map((timestamp: number, castIndex: number) => (
                               <span
                                 key={castIndex}
-                                className="inline-block rounded bg-blue-100 px-2 py-1 text-xs dark:bg-blue-900"
+                                className="inline-block rounded-sm bg-blue-100 px-2 py-1 text-xs dark:bg-blue-900"
                               >
                                 Cast {castIndex + 1}: {timestamp}s
                               </span>
@@ -513,7 +513,7 @@ export default function WarcraftLogs() {
             ))}
           </div>
 
-          <div className="mt-6 rounded border bg-gray-50 p-4 dark:bg-gray-800">
+          <div className="mt-6 rounded-sm border bg-gray-50 p-4 dark:bg-gray-800">
             <h4 className="mb-3 font-medium">Summary Statistics</h4>
 
             <div className="grid gap-4 md:grid-cols-3">
@@ -527,7 +527,7 @@ export default function WarcraftLogs() {
                 const averageCasts = (totalCasts / castsData.length).toFixed(2)
 
                 return (
-                  <div key={index} className="rounded bg-white p-3 shadow-sm dark:bg-gray-700">
+                  <div key={index} className="rounded bg-white p-3 shadow-xs dark:bg-gray-700">
                     <h5 className="font-medium">{spell.name}</h5>
                     <div className="mt-2 space-y-1 text-sm">
                       <p>
@@ -548,7 +548,7 @@ export default function WarcraftLogs() {
       {data && (
         <div className="mt-4">
           <h3 className="mb-2 font-semibold">Full Data Received:</h3>
-          <pre className="max-h-96 overflow-auto rounded bg-gray-100 p-3 dark:bg-gray-700">
+          <pre className="max-h-96 overflow-auto rounded-sm bg-gray-100 p-3 dark:bg-gray-700">
             {JSON.stringify(data, null, 2)}
           </pre>
         </div>

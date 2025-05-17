@@ -444,7 +444,7 @@ export const TalentNode = ({
               width={56}
               height={56}
               className={`rounded-full ${
-                selected ? 'brightness-125' : 'opacity-70 brightness-50 grayscale-[50%]'
+                selected ? 'brightness-125' : 'opacity-70 brightness-50 grayscale-50'
               }`}
               unoptimized={true}
               priority={false}
@@ -452,7 +452,7 @@ export const TalentNode = ({
           </a>
           {node.maxRanks && node.maxRanks > 1 && (
             <div
-              className={`absolute bottom-0 right-0 rounded-full bg-black bg-opacity-70 px-1 text-xs font-bold ${selected ? 'text-white' : 'text-gray-400'}`}
+              className={`bg-opacity-70 absolute right-0 bottom-0 rounded-full bg-black px-1 text-xs font-bold ${selected ? 'text-white' : 'text-gray-400'}`}
               style={{
                 zIndex: 11,
                 border: selected ? '1px solid #ffcc00' : '1px solid #666',

@@ -46,21 +46,21 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
       aria-label={`Toggle ${id}`}
     >
       <input
-        className={`mr-2 mt-2 focus:outline-none ${className}`}
+        className={`mt-2 mr-2 focus:outline-hidden ${className}`}
         type="checkbox"
         checked={isChecked}
         onChange={handleToggle}
       />
       <div className={clsx('flex-1', isIcon && 'h-full w-full')}>
         <div
-          className={`relative flex h-full w-full items-center rounded border-[1px] border-main px-2 py-1.5 sm:px-3 ${
+          className={`border-main relative flex h-full w-full items-center rounded border px-2 py-1.5 sm:px-3 ${
             isChecked ? 'border-main' : 'border-main/20'
           }`}
         >
-          <div className="break-words text-left normal-case leading-tight">{children}</div>
+          <div className="text-left leading-tight break-words normal-case">{children}</div>
 
           <div
-            className={`absolute bottom-1 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-main/20 md:bottom-auto md:right-2 md:top-1/2 md:-translate-y-1/2 ${
+            className={`bg-main/20 absolute right-1 bottom-1 flex h-5 w-5 items-center justify-center rounded-full md:top-1/2 md:right-2 md:bottom-auto md:-translate-y-1/2 ${
               isChecked ? 'block' : 'hidden'
             }`}
           >

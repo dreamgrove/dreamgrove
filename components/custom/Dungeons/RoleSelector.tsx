@@ -1,5 +1,3 @@
- 
- 
 'use client'
 import balanceIcon from '../../../public/static/images/icons/balance.jpg'
 import restoIcon from '../../../public/static/images/icons/resto.jpg'
@@ -39,10 +37,10 @@ const IconDisplay = ({ text }) => {
 
   return (
     <div
-      className={`cursor-pointer select-none rounded-md border-2 ${isChecked ? 'border-main' : 'border-main/20'} flex items-center p-1`}
+      className={`cursor-pointer rounded-md border-2 select-none ${isChecked ? 'border-main' : 'border-main/20'} flex items-center p-1`}
       onClick={handleClick}
     >
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <Image
           className={`my-0 inline-block h-auto w-7 rounded-md sm:w-8 md:w-9 lg:w-10 ${isChecked ? 'opacity-100' : 'opacity-20'}`}
           src={imgSrc}
@@ -120,7 +118,7 @@ function RoleSelectorContent({ isPreview = false }) {
     <div className="roleSelector mt-4 flex flex-col items-center">
       <div className="text-xl">Choose your roles:</div>
       <div
-        className={`buttons flex w-full flex-col items-center justify-center space-y-3 py-4 lg:flex-row lg:space-x-3 lg:space-y-0 lg:py-0 ${isPreview ? 'md:flex-col md:space-x-0 md:space-y-3 md:py-4' : 'md:h-24 md:flex-row md:space-x-3 md:space-y-0 md:py-0'}`}
+        className={`buttons flex w-full flex-col items-center justify-center space-y-3 py-4 lg:flex-row lg:space-y-0 lg:space-x-3 lg:py-0 ${isPreview ? 'md:flex-col md:space-y-3 md:space-x-0 md:py-4' : 'md:h-24 md:flex-row md:space-y-0 md:space-x-3 md:py-0'}`}
       >
         {specs.map((spec) => (
           <div key={spec} className="w-full flex-1">
@@ -139,12 +137,12 @@ export default function RoleSelector({ isPreview = false }) {
         <div className="mt-4 flex flex-col items-center">
           <div className="text-xl">Choose your roles:</div>
           <div
-            className={`buttons flex w-full flex-col items-center justify-center space-y-3 py-4 lg:flex-row lg:space-x-3 lg:space-y-0 lg:py-0 ${isPreview ? 'md:flex-col md:space-x-0 md:space-y-3 md:py-4' : 'md:h-24 md:flex-row md:space-x-3 md:space-y-0 md:py-0'}`}
+            className={`buttons flex w-full flex-col items-center justify-center space-y-3 py-4 lg:flex-row lg:space-y-0 lg:space-x-3 lg:py-0 ${isPreview ? 'md:flex-col md:space-y-3 md:space-x-0 md:py-4' : 'md:h-24 md:flex-row md:space-y-0 md:space-x-3 md:py-0'}`}
           >
             {specs.map((spec) => (
               <div key={spec} className="w-full flex-1">
-                <div className="flex cursor-pointer select-none items-center rounded-md border-2 border-main/20 p-1">
-                  <div className="flex-shrink-0">
+                <div className="border-main/20 flex cursor-pointer items-center rounded-md border-2 p-1 select-none">
+                  <div className="shrink-0">
                     <div className="inline-block h-7 w-7 rounded-md bg-gray-700 opacity-20 sm:w-8 md:w-9 lg:w-10" />
                   </div>
                   <span className="ml-2 align-middle text-base text-white/20 sm:text-lg md:text-xl">

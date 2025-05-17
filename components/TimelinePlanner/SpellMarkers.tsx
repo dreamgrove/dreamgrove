@@ -22,7 +22,7 @@ const Marker = ({
 
       {/* Wowhead icon below the time label */}
       {wowheadComponent && (
-        <span className="absolute left-[0px] z-20 h-10 w-10 transform" style={{ top: height }}>
+        <span className="absolute -left-[0px] z-20 h-10 w-10 transform" style={{ top: height }}>
           {wowheadComponent}
         </span>
       )}
@@ -53,7 +53,7 @@ const SpellMarkers: React.FC<SpellMarkerProps> = ({
 
   return (
     <div
-      className={`pointer-events-none absolute left-0 top-0 z-10 flex h-full pl-6`}
+      className={`pointer-events-none absolute top-0 left-0 z-10 flex h-full pl-6`}
       style={{ width: timeToPixels(total_length_s) }}
     >
       {ca_timestamps.map((timestamp, i) => (

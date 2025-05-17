@@ -158,7 +158,7 @@ a.tooltip {
 .talent-icon-wrapper {
   width: 3.6rem;
   overflow: hidden;
-  flex-shrink: 0; }
+  shrink: 0; }
 
 .talent-icon {
   vertical-align: middle;
@@ -168,7 +168,7 @@ a.tooltip {
 .talent-name {
   padding-left: 1rem;
   text-align: center;
-  flex-grow: 1; }
+  grow: 1; }
 
 .non-selectable {
   user-select: none;

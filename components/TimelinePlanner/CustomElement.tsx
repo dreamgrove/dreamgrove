@@ -73,14 +73,14 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
     <div>
       <button
         onClick={toggleFormVisibility}
-        className="relative rounded bg-gray-700 px-2 py-0.5 text-white hover:bg-gray-600"
+        className="relative rounded-sm bg-neutral-900/50 px-2 py-1.5 text-white hover:bg-neutral-800"
         title={isFormVisible ? 'Hide custom spell form' : 'Add custom spell'}
       >
         {isFormVisible ? 'Hide' : 'Add Custom Element'}
       </button>
       <div className="relative">
         {isFormVisible && (
-          <div className="absolute left-0 top-4 z-50 w-96 rounded-md bg-neutral-900 p-4 shadow-lg">
+          <div className="absolute top-2 left-0 z-50 w-96 rounded-md bg-neutral-900 p-4 shadow-lg">
             <div className="mb-2 flex items-center justify-between">
               <h3 className="text-sm font-semibold text-white">Add Custom Spell</h3>
               <button onClick={toggleFormVisibility} className="text-gray-400 hover:text-white">
@@ -147,6 +147,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                     className="mt-1 w-full rounded-md border-neutral-700 bg-neutral-200/40 px-2 py-1 text-sm text-white placeholder:text-neutral-200"
                   />
                 </div>
+                <div className="col-span-2"></div>
 
                 <div className="flex flex-col">
                   <div className="mb-1 flex items-center">
@@ -155,9 +156,9 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                       id="isChanneled"
                       checked={isChanneled}
                       onChange={(e) => setIsChanneled(e.target.checked)}
-                      className="mr-2 h-3.5 w-3.5 rounded accent-orange-300"
+                      className="mr-2 h-3.5 w-3.5 rounded-sm border-0 bg-gray-700 ring-transparent focus:ring-transparent focus:ring-offset-0"
                     />
-                    <label htmlFor="isChanneled" className="text-xs text-gray-300">
+                    <label htmlFor="isChanneled" className="text-xs text-gray-300 select-none">
                       Channeled Spell
                     </label>
                   </div>
@@ -190,11 +191,11 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                           id={`spec-${spec}`}
                           checked={selectedSpecs.includes(spec)}
                           onChange={() => handleSpecToggle(spec)}
-                          className="mr-1 h-3.5 w-3.5 rounded border-gray-700 bg-gray-700 text-purple-600"
+                          className="mr-1 h-3.5 w-3.5 rounded-sm border-gray-700 bg-gray-700 text-purple-600"
                         />
                         <label
                           htmlFor={`spec-${spec}`}
-                          className="text-xs capitalize text-gray-300"
+                          className="text-xs text-gray-300 capitalize"
                         >
                           {spec}
                         </label>
@@ -207,7 +208,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
               <div className="mt-3 flex justify-between">
                 <button
                   type="submit"
-                  className="rounded-md bg-purple-600 px-3 py-1 text-sm text-white hover:bg-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-500"
+                  className="rounded-md bg-emerald-600 px-3 py-1 text-sm text-white hover:bg-emerald-700 focus:ring-1 focus:outline-hidden"
                 >
                   Add Spell
                 </button>
@@ -215,7 +216,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                 <button
                   type="button"
                   onClick={toggleFormVisibility}
-                  className="rounded-md bg-gray-700 px-3 py-1 text-sm text-white hover:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-gray-500"
+                  className="rounded-md bg-gray-700 px-3 py-1 text-sm text-white hover:bg-gray-600 focus:ring-1 focus:ring-gray-500 focus:outline-hidden"
                 >
                   Cancel
                 </button>

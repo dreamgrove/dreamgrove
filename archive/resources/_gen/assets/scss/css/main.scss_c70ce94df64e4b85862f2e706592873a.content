@@ -91,7 +91,7 @@ body.article-body .header {
   font-weight: 700;
   font-size: 2rem;
   line-height: 5rem;
-  flex-grow: 1; }
+  grow: 1; }
 
 .header-nav > a:hover {
   background-color: #1a9c82;

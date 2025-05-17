@@ -36,7 +36,7 @@ function WowheadClientIcon({
   // Create a fallback element
   const fallbackImage = (
     <span
-      className={`inline-block rounded-sm bg-gray-200 ${!noMargin && 'mr-1'}`}
+      className={`inline-block rounded-xs bg-gray-200 ${!noMargin && 'mr-1'}`}
       style={{ width: `${size}px`, height: `${size}px` }}
       title={`${name} (icon unavailable)`}
     />
@@ -99,7 +99,7 @@ function WowheadClientIcon({
   ) : isLoading ? (
     // Loading state
     <span
-      className={`inline-block rounded-sm bg-gray-700 ${!noMargin && 'mr-1'}`}
+      className={`inline-block rounded-xs bg-gray-700 ${!noMargin && 'mr-1'}`}
       style={{ width: `${size}px`, height: `${size}px` }}
     />
   ) : (

@@ -14,7 +14,7 @@ export const Poll = () => {
       <div className="mb-2 text-center">
         <h2 className="font-pixel mb-1 text-2xl font-bold text-[#FF7AAD]">✧ 𝒸𝓊𝓉ℯ 𝓅ℴ𝓁𝓁 ✧</h2>
       </div>
-      <div className="flex flex-1 flex-col gap-3 rounded border border-pink-200 bg-white/80 px-3 py-2 text-[#513e58]">
+      <div className="flex flex-1 flex-col gap-3 rounded-sm border border-pink-200 bg-white/80 px-3 py-2 text-[#513e58]">
         <form
           method="post"
           action="https://poll.pollcode.com/66746461"
@@ -43,13 +43,13 @@ export const Poll = () => {
             <input
               type="submit"
               value=" Vote "
-              className="font-pixel cursor-pointer rounded border border-pink-200 bg-white/80 px-4 py-1 text-sm text-[#FF7AAD] hover:bg-pink-50"
+              className="font-pixel cursor-pointer rounded-sm border border-pink-200 bg-white/80 px-4 py-1 text-sm text-[#FF7AAD] hover:bg-pink-50"
             />
             <input
               type="submit"
               name="view"
               value=" View "
-              className="font-pixel cursor-pointer rounded border border-pink-200 bg-white/80 px-4 py-1 text-sm text-[#FF7AAD] hover:bg-pink-50"
+              className="font-pixel cursor-pointer rounded-sm border border-pink-200 bg-white/80 px-4 py-1 text-sm text-[#FF7AAD] hover:bg-pink-50"
             />
           </div>
         </form>

@@ -6705,7 +6705,7 @@
       {
         "id": 265,
         "name": "Affliction",
-        "description": "A master of shadow magic who specializes in drains and damage-over-time spells.",
+        "description": "A master of shadow-sm magic who specializes in drains and damage-over-time spells.",
         "order": 0,
         "role": "DPS",
         "backgroundImage": "",

@@ -14,19 +14,19 @@ const Marker: React.FC<MarkerProps> = ({ label, width }) => {
       {label != 0 && (
         <>
           <div
-            className="absolute h-[85%] w-[1px] bg-gray-400/10 opacity-50"
+            className="absolute h-[85%] w-px bg-gray-400/10 opacity-50"
             style={{ left: -(width / 2), bottom: 0 }}
           />
           <span
-            className="absolute top-1 z-20 whitespace-nowrap py-0 text-[0.5rem] text-gray-500"
+            className="absolute top-1 z-20 py-0 text-[0.5rem] whitespace-nowrap text-gray-500"
             style={{ left: -(width / 2) - 4 }}
           ></span>
         </>
       )}
       {/* Vertical marker line */}
-      <div className="absolute bottom-0 left-0 h-[90%] w-[1px] bg-gray-400/30 opacity-30" />
+      <div className="absolute bottom-0 left-0 h-[90%] w-px bg-gray-400/30 opacity-30" />
       {/* Seconds label to the right of the marker, at the top */}
-      <span className="absolute left-[-6px] top-0 z-20 whitespace-nowrap py-0 text-xs text-gray-200">
+      <span className="absolute top-0 left-[-6px] z-20 py-0 text-xs whitespace-nowrap text-gray-200">
         {label % 1 === 0 ? label : label.toFixed(2)}s
       </span>
     </div>
@@ -91,7 +91,7 @@ const Markers: React.FC<MarkersProps> = ({
 
   return (
     <div
-      className={`pointer-events-none absolute left-0 top-0 z-10 ml-6 flex h-full ${className}`}
+      className={`pointer-events-none absolute top-0 left-0 z-10 ml-6 flex h-full ${className}`}
       style={{ width: `${(numberOfMarkers + 1) * effective_marker_spacing_s * pixelsPerSecond}px` }}
     >
       {markerPositions.map((position, i) => (

@@ -60,23 +60,26 @@ export default function SpellButtons({
 
   return (
     <div className="flex flex-col gap-2 p-2">
-      <div className="flex flex-row gap-2">
-        {spells.map((spell) => (
+      <div className="flex flex-row flex-wrap justify-between gap-2">
+        <div className="flex w-full flex-row flex-wrap gap-2">
+          {spells.map((spell) => (
+            <button
+              key={`spell-button-${spell.id}`}
+              className="rounded bg-orange-400/40 px-4 py-2 text-white hover:bg-orange-400/50 focus:outline-hidden"
+              onClick={() => handleSpellAdd(spell)}
+            >
+              {spell.charges && spell.charges > 1 ? `${spell.name} (${spell.charges})` : spell.name}
+            </button>
+          ))}
+          <div className="flex-1" />
           <button
-            key={`spell-button-${spell.id}`}
-            className="rounded bg-orange-400/40 px-4 py-2 text-white hover:bg-orange-500/50 focus:outline-none focus:ring-2 focus:ring-orange-500"
-            onClick={() => handleSpellAdd(spell)}
+            key={`spell-reset`}
+            className="rounded bg-red-600/50 px-4 py-2 text-white hover:bg-red-700/50 focus:outline-hidden"
+            onClick={() => setCurrentSpells([])}
           >
-            {spell.charges && spell.charges > 1 ? `${spell.name} (${spell.charges})` : spell.name}
+            Reset All Spells
           </button>
-        ))}
-        <button
-          key={`spell-reset`}
-          className="rounded bg-red-700/50 px-4 py-2 text-white hover:bg-red-700/70 focus:outline-none focus:ring-2 focus:ring-red-500"
-          onClick={() => setCurrentSpells([])}
-        >
-          Reset
-        </button>
+        </div>
       </div>
     </div>
   )

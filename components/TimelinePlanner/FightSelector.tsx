@@ -36,7 +36,7 @@ export default function FightSelector({
         id="encounter-select"
         value={currentEncounterId}
         onChange={(e) => onEncounterChange(e.target.value)}
-        className="rounded border border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-400"
+        className="rounded border border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-hidden dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-400"
       >
         {encounterOptions.map((encounter) => (
           <option key={encounter.id} value={encounter.id}>

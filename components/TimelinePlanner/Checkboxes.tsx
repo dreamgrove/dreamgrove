@@ -38,7 +38,7 @@ export default function Checkboxes({
 
   if (useNewInterface && items) {
     if (items.length === 0) {
-      return <div className={styles.checkboxContainer}>[No items defined]</div>
+      return <div className={styles.checkboxContainer}>There's nothing to show here</div>
     }
 
     return (

@@ -116,7 +116,7 @@ body.article-body .header {
   font-weight: 700;
   font-size: 2rem;
   line-height: 5rem;
-  flex-grow: 1; }
+  grow: 1; }
   @media screen and (min-width: 1200px) {
     .header-nav > a {
       font-size: 2rem;

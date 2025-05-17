@@ -6564,7 +6564,7 @@
       {
         "id": 265,
         "name": "Affliction",
-        "description": "A master of shadow magic who specializes in drains and damage-over-time spells.\r\n\r\nPreferred Weapon: Staff, Wand, Dagger, Sword",
+        "description": "A master of shadow-sm magic who specializes in drains and damage-over-time spells.\r\n\r\nPreferred Weapon: Staff, Wand, Dagger, Sword",
         "order": 0,
         "role": "DPS",
         "backgroundImage": "",

@@ -25,7 +25,7 @@ export default async function BossCard({ title, image, id, children }) {
   }
 
   return (
-    <div className={`mb-16 mt-4 ${!children || children.length === 0 ? 'hidden' : ''}`}>
+    <div className={`mt-4 mb-16 ${!children || children.length === 0 ? 'hidden' : ''}`}>
       <div className="items-bottom flex min-h-[64px]">
         {imageUrl !== '' && (
           <div className="mr-2 flex h-[50px] w-[50px] justify-center overflow-hidden rounded-md border-4 border-[#524C42] align-middle">
@@ -33,7 +33,7 @@ export default async function BossCard({ title, image, id, children }) {
           </div>
         )}
         <h2
-          className={`bossTitle mb-4 flex-grow self-center border-b-4 border-main pb-2 text-3xl font-semibold text-white`}
+          className={`bossTitle border-main mb-4 grow self-center border-b-4 pb-2 text-3xl font-semibold text-white`}
         >
           {title}
         </h2>

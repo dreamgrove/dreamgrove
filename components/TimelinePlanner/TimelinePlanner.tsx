@@ -42,7 +42,7 @@ export default function TimelinePlanner({
   return (
     <div className={styles.timeline}>
       {false && (
-        <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-x-4 md:space-y-0">
+        <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 md:space-x-4">
           <FightSelector
             currentEncounterId={currentEncounterId}
             onEncounterChange={setCurrentEncounterId}
@@ -68,7 +68,7 @@ export default function TimelinePlanner({
           currentEncounterId={currentEncounterId}
         />
       </TimelineProvider>
-      <Warnings />
+      {false && <Warnings />}
     </div>
   )
 }

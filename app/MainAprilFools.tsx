@@ -211,7 +211,7 @@ export default function HomeAprilFools() {
           backgroundSize: '346px 113px',
           backgroundAttachment: 'fixed',
         }}
-        className="absolute left-0 top-0 h-[30px] w-full"
+        className="absolute top-0 left-0 h-[30px] w-full"
       ></div>
       <div
         style={{
@@ -257,7 +257,7 @@ export default function HomeAprilFools() {
               <Image
                 src={pepe}
                 alt="Dancing Pepe"
-                className="h-[100%] w-full object-contain md:h-[300px]"
+                className="h-full w-full object-contain md:h-[300px]"
               />
               <div className="absolute bottom-0 mt-2 h-[10%] text-xl font-bold text-[#FF7AAD] md:text-sm lg:text-lg">
                 say hiii to my best friend uwu
@@ -265,13 +265,13 @@ export default function HomeAprilFools() {
               <Image
                 src={curtain}
                 alt="left curtain"
-                className="absolute left-0 top-0 h-full w-auto"
+                className="absolute top-0 left-0 h-full w-auto"
                 style={{ objectFit: 'cover' }}
               />
               <Image
                 src={curtain}
                 alt="right curtain"
-                className="absolute right-0 top-0 h-full w-auto scale-x-[-1]"
+                className="absolute top-0 right-0 h-full w-auto scale-x-[-1]"
                 style={{ objectFit: 'cover' }}
               />
             </div>
@@ -351,7 +351,7 @@ export default function HomeAprilFools() {
                 .padStart(6, '0')}
             </div>
           </div>
-          <div className="flex-1 overflow-hidden whitespace-nowrap border border-black bg-white/80 p-4">
+          <div className="flex-1 overflow-hidden border border-black bg-white/80 p-4 whitespace-nowrap">
             <div className={styles.marqueeText}>
               {Array(2)
                 .fill(badges)

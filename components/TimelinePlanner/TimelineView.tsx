@@ -345,19 +345,29 @@ export default function TimelineView({
       {/* Spec selector dropdown */}
       <div className="my-2 ml-2 flex items-center gap-2">
         <label htmlFor="spec-selector" className="text-lg font-medium">
-          Select your spec:
+          Specialization:
         </label>
         <select
           id="spec-selector"
           value={selectedSpec}
           onChange={handleSpecChange}
-          className="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-lg"
+          className="rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg"
         >
-          <option value="all">All Specs</option>
-          <option value="balance">Balance</option>
-          <option value="resto">Restoration</option>
-          <option value="feral">Feral</option>
-          <option value="guardian">Guardian</option>
+          <option className="bg-neutral-900/50" value="all">
+            All Specs
+          </option>
+          <option className="bg-neutral-900/50" value="balance">
+            Balance
+          </option>
+          <option className="bg-neutral-900/50" value="resto">
+            Restoration
+          </option>
+          <option className="bg-neutral-900/50" value="feral">
+            Feral
+          </option>
+          <option className="bg-neutral-900/50" value="guardian">
+            Guardian
+          </option>
         </select>
       </div>
       {/* divider */}
@@ -375,20 +385,7 @@ export default function TimelineView({
         />
       </div>
 
-      {false && (
-        <Checkboxes
-          effects={timelineEffects}
-          activeEffects={activeEffects}
-          onEffectToggle={handleEffectToggle}
-          items={timelineEffects.map((effect) => ({
-            id: effect.id,
-            label: effect.name,
-            description: effect.description,
-          }))}
-          selectedItems={activeEffects}
-          onToggle={handleEffectToggle}
-        />
-      )}
+      <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
 
       <SpellButtons
         currentSpells={processedState}
@@ -401,21 +398,24 @@ export default function TimelineView({
 
       <div className="mb-4 flex flex-row items-center justify-end gap-2">
         {/* Zoom controls */}
+        <span className="text-sm text-gray-500">
+          (You can also use Ctrl + Scroll Wheel to zoom)
+        </span>
         <button
           onClick={() => resetZoom()}
-          className="rounded bg-gray-800 px-2 py-1 text-sm hover:bg-gray-700"
+          className="rounded bg-neutral-900/50 px-2 py-1 text-sm hover:bg-neutral-700"
         >
-          Reset
+          Reset Zoom
         </button>
         <button
           onClick={() => zoomOut(10)}
-          className="rounded bg-gray-800 px-2 py-1 text-sm hover:bg-gray-700"
+          className="rounded bg-neutral-900/50 px-2 py-1 text-sm hover:bg-neutral-700"
         >
           -
         </button>
         <button
           onClick={() => zoomIn(10)}
-          className="rounded bg-gray-800 px-2 py-1 text-sm hover:bg-gray-700"
+          className="rounded bg-neutral-900/50 px-2 py-1 text-sm hover:bg-neutral-700"
         >
           +
         </button>
@@ -486,7 +486,7 @@ export default function TimelineView({
             ) : (
               <div
                 style={{ width: `${effective_view_length_s * pixelsPerSecond}px` }}
-                className="sticky left-0 top-0 mt-16 text-center text-sm text-gray-500"
+                className="sticky top-0 left-0 mt-16 text-center text-sm text-gray-500"
               >
                 Add a spell to get started
               </div>

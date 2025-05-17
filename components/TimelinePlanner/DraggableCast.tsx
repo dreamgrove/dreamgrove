@@ -73,13 +73,13 @@ export default function DraggableCast({
       style={{
         left: `${timeToPixels(castInfo.start_s)}px`,
         width: `${cast_width_px + 1}px`, //I think the +1 is because of the border but who knows
-        zIndex: isDragging ? 100 : 50,
+        zIndex: isDragging ? 20 : 10,
         opacity: isDragging ? 0.2 : 1,
       }}
       onClick={onClick}
       {...listeners}
       {...attributes}
-      className="absolute focus:outline-none"
+      className="absolute focus:outline-hidden"
     >
       <CastInterval
         cast={castInfo}

@@ -686,23 +686,23 @@ function FileEditor({ filePath }: { filePath: string }) {
 
         {viewMode === 'split' && (
           <div
-            className={`w-[6px] ${isDragging ? 'bg-blue-500 dark:bg-blue-400' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500'} relative z-10 flex-shrink-0 cursor-col-resize`}
+            className={`w-[6px] ${isDragging ? 'bg-blue-500 dark:bg-blue-400' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500'} relative z-10 shrink-0 cursor-col-resize`}
             onMouseDown={handleDragStart}
           >
-            <div className="absolute left-1/2 top-1/2 h-8 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current"></div>
+            <div className="absolute top-1/2 left-1/2 h-8 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current"></div>
           </div>
         )}
 
         {(viewMode === 'preview' || viewMode === 'split') && (
           <div
-            className={`${viewMode === 'split' ? 'px-10' : 'px:20 w-full lg:px-[20rem]'} min-h-[70vh] max-w-none overflow-auto rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
+            className={`${viewMode === 'split' ? 'px-10' : 'px:20 w-full lg:px-80'} min-h-[70vh] max-w-none overflow-auto rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
             style={viewMode === 'split' ? { width: `${100 - splitPosition}%` } : undefined}
             suppressHydrationWarning
           >
-            <div className="mb-4 italic text-gray-500 dark:text-gray-400">
+            <div className="mb-4 text-gray-500 italic dark:text-gray-400">
               Live Preview - Some components may differ from the final version.
             </div>
-            <Suspense fallback={<div className="italic text-gray-500">Loading preview...</div>}>
+            <Suspense fallback={<div className="text-gray-500 italic">Loading preview...</div>}>
               {filePath.includes('raids') || filePath.includes('dungeons') ? (
                 <MDXPreview
                   setErrorLine={setErrorLine}
@@ -852,7 +852,7 @@ function ConfirmModal({
       {message && (
         <div className="mb-4">
           <p className="mb-2 font-medium">Description:</p>
-          <p className="whitespace-pre-wrap rounded-md bg-gray-100 p-2 dark:bg-gray-700">
+          <p className="rounded-md bg-gray-100 p-2 whitespace-pre-wrap dark:bg-gray-700">
             {message}
           </p>
         </div>

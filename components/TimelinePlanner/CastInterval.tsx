@@ -57,7 +57,7 @@ export default function CastInterval({
 
   return (
     <div
-      className={`relative flex h-10 items-center rounded-md border outline-none focus:outline-none focus-visible:outline-none focus-visible:ring-0 ${
+      className={`relative flex h-10 items-center rounded-md border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
         hasCollision
           ? 'border-blue-500 shadow-md'
           : isDragging
@@ -70,7 +70,7 @@ export default function CastInterval({
       {onDelete && (
         <button
           onClick={() => onDelete(cast.id)}
-          className="absolute right-0 top-0 z-[100] flex h-10 w-10 items-center justify-center rounded-full text-2xl text-rose-500 opacity-100 hover:font-bold hover:text-red-200 focus:outline-none focus-visible:outline-none focus-visible:ring-0"
+          className="absolute top-0 right-0 z-100 flex h-10 w-10 items-center justify-center rounded-full text-3xl text-[#ff6a37AA] opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
           title="Remove cast"
         >
           ×
@@ -79,7 +79,7 @@ export default function CastInterval({
 
       {/* Channel Duration Bar */}
       <div
-        className="flex h-full items-center justify-center rounded-l-md bg-violet-500/40 focus-visible:outline-none focus-visible:ring-0"
+        className="flex h-full items-center justify-center rounded-l-md bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
         style={{
           width: `${channel_width_px}px`,
         }}
@@ -88,7 +88,7 @@ export default function CastInterval({
       </div>
       {/* Effect Duration Bar */}
       <div
-        className="flex h-full items-center justify-start rounded-s-md bg-emerald-500/40 focus-visible:outline-none focus-visible:ring-0"
+        className="flex h-full items-center justify-start rounded-l-md bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
         style={{
           width: `${effect_width_px - channel_width_px}px`,
         }}
@@ -107,7 +107,7 @@ export default function CastInterval({
       {/* Remaining Cooldown Bar */}
       {true && (
         <div
-          className="flex h-full items-center justify-center rounded-r-md bg-orange-400/20 focus-visible:outline-none focus-visible:ring-0"
+          className="flex h-full items-center justify-center rounded-r-md bg-orange-400/20 focus-visible:ring-0 focus-visible:outline-hidden"
           style={{
             width: `${cooldown_width_px}px`,
           }}
