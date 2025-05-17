@@ -56,7 +56,6 @@ export default function TimelinePlanner({
         initialMarkerSpacing={initialMarkerSpacing}
       >
         <TimelineView
-          total_length_s={initialTotalLength}
           view_length_s={initialViewLength}
           marker_spacing_s={initialMarkerSpacing}
           spells={spells}
