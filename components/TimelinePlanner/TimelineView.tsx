@@ -69,7 +69,6 @@ export default function TimelineView({
 
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
-  // Add state for the selected spec
   const [selectedSpec, setSelectedSpec] = useState<DruidSpec>('balance')
 
   useEffect(() => {
@@ -77,8 +76,6 @@ export default function TimelineView({
       registerScrollContainer(scrollContainerRef.current)
     }
   }, [registerScrollContainer])
-
-  const [activeEffects, setActiveEffects] = useState<string[]>([])
 
   const [inputActions, setInputActions] = useState<PlayerAction[]>([])
 
@@ -95,7 +92,6 @@ export default function TimelineView({
 
   const [localSpells, setLocalSpells] = useState<SpellInfo[]>(spells)
 
-  // Filter spells based on selected spec
   const filteredSpells = React.useMemo(() => {
     if (selectedSpec === 'all') {
       return localSpells
@@ -237,24 +233,21 @@ export default function TimelineView({
       }
     }
   }, [inputActions, localSpells, keysToActions, activeBindings])
-  console.log('inputActions', inputActions)
 
   // Function to modify a cast
   const handleModifyAction = (castId: string, newTime: number) => {
-    console.log('old inputActions', inputActions)
     const actionIndex = inputActions.findIndex((a) => a.id === castId)
 
     if (actionIndex >= 0) {
       const newActions = inputActions.map((action, index) =>
         index === actionIndex ? { ...action, instant: newTime } : action
       )
-      console.log('newActions', newActions)
       setInputActions(newActions)
     }
   }
 
   // Function to remove a player cast
-  const handleRemoveAction = (castId: string) => {
+  const handleCastDelete = (castId: string) => {
     const cast = findCastById(castId, inputActions)
     if (!cast) return
 
@@ -268,33 +261,17 @@ export default function TimelineView({
     return null
   }
 
-  // For compatibility with the existing UI
-  const handleCastDelete = (castId: string) => {
-    handleRemoveAction(castId)
-  }
-
   const handleCastMove = (castId: string, newStartTime: number) => {
     handleModifyAction(castId, newStartTime)
   }
 
-  const [showDebug, setShowDebug] = useState(true)
+  const [showDebug, setShowDebug] = useState(false)
   const toggleDebug = () => setShowDebug((prev) => !prev)
 
   // Mock warnings for demo
   const [warnings] = useState<Array<{ id: string; castId: string; type: string; message: string }>>(
     []
   )
-
-  const handleEffectToggle = (effectId: string, isSelected: boolean) => {
-    setActiveEffects((prev) => {
-      if (isSelected) {
-        return [...prev, effectId]
-      } else {
-        return prev.filter((id) => id !== effectId)
-      }
-    })
-  }
-  const [customElements, setCustomElements] = useState<Record<string, React.ReactNode>>({})
 
   const handleCreateCustomElement = (params: SpellInfo) => {
     const newSpell: SpellInfo = {
@@ -476,7 +453,6 @@ export default function TimelineView({
                     key={`spell-row-${spellCast.spell.id}`}
                     spellTimeline={spellCast}
                     wowheadComponent={
-                      customElements[spellCast.spell.id] ||
                       wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
                     }
                     onCastDelete={handleCastDelete}
