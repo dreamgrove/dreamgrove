@@ -1,4 +1,4 @@
-import { SpellInfo, TimelineEffect, SpellTimeline } from './types'
+import { SpellInfo, TimelineEffect, SpellTimeline } from '../../lib/types/cd_planner'
 import { Patch, applyPatches, logPatchInfo } from './PatchSystem'
 
 // Force of Nature IDs - for use in effects

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { Cast, PlayerAction, SPELL_GCD, SpellInfo, SpellTimeline, TimelineToRender } from './types'
-import { CastParams } from './types'
+import {
+  Cast,
+  PlayerAction,
+  SPELL_GCD,
+  SpellInfo,
+  SpellTimeline,
+  TimelineToRender,
+} from '../../lib/types/cd_planner'
+import { CastParams } from '../../lib/types/cd_planner'
 
 interface SpellButtonsProps {
   currentSpells: TimelineToRender

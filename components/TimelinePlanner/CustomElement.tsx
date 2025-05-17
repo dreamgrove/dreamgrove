@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { SpellInfo, SpellTimeline, PlayerAction } from './types'
+import { SpellInfo, SpellTimeline, PlayerAction } from '../../lib/types/cd_planner'
 
 interface CustomElementProps {
   onCreate?: (params: SpellInfo) => void

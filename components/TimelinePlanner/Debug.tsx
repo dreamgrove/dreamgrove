@@ -1,5 +1,5 @@
 import React from 'react'
-import { SpellTimeline, SpellInfo, TimelineToRender, Cast } from './types'
+import { SpellTimeline, SpellInfo, TimelineToRender, Cast } from '../../lib/types/cd_planner'
 
 interface DebugProps {
   processedTimeline: TimelineToRender

@@ -8,7 +8,7 @@ import Warnings from './Warnings'
 import Link from 'next/link'
 import FightSelector from './FightSelector'
 import { TimelineProvider } from './TimelineContext'
-import { SpellInfo } from './types'
+import { SpellInfo } from '../../lib/types/cd_planner'
 
 interface TimelinePlannerProps {
   spells: SpellInfo[]

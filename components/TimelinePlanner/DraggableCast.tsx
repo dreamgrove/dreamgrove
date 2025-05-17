@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import { useDraggable } from '@dnd-kit/core'
-import { Cast, SpellInfo } from './types'
+import { Cast, SpellInfo } from '../../lib/types/cd_planner'
 import { useTimelineControls } from './TimelineContext'
 import CastInterval from './CastInterval'
 

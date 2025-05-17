@@ -6,7 +6,8 @@
       "spellId": 205636,
       "channel_duration": 0,
       "effect_duration": 10,
-      "cooldown": 60
+      "cooldown": 60,
+      "charges": 1
     },
     {
       "id": "ca",

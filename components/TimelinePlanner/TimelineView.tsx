@@ -5,21 +5,26 @@ import SpellButtons from './SpellButtons'
 import CustomElement from './CustomElement'
 import Debug from './Debug'
 import Checkboxes from './Checkboxes'
+import ActionBindings from './ActionBindings'
 import { applyTimelineEffects, timelineEffects } from './TimelineEffects'
 import {
   Cast,
   SpellInfo,
   SpellTimeline,
   PlayerAction,
-  Event,
   TimelineToRender,
   SpellToRender,
-} from './types'
+  Talents,
+  TimelineEvent,
+} from '../../lib/types/cd_planner'
 import SpellMarkers from './SpellMarkers'
 import { useTimeline, useTimelineControls } from './TimelineContext'
-import { generateBaseQueue, processEventQueue, processPlayerActions } from './TimelineEvents'
+import { generateBaseQueue, processEventQueue } from './TimelineEvents'
 import { EventQueue } from './TimelineEvents'
-
+import { GlobalAction } from '../../lib/types/global_handler'
+import { earlySpring } from './GlobalHandlers/earlySpring'
+import { controlOfTheDream } from './GlobalHandlers/controlOfTheDream'
+import EventMarkers from './EventMarkers'
 interface TimelineViewProps {
   total_length_s: number
   view_length_s: number // seconds shown per 100% width
@@ -68,13 +73,60 @@ export default function TimelineView({
   const [inputActions, setInputActions] = useState<PlayerAction[]>([])
   const [baseQueue, setBaseQueue] = useState<EventQueue>(new EventQueue())
   const [processedState, setProcessedState] = useState<TimelineToRender>({ spells: [] })
-
+  const [processedEvents, setProcessedEvents] = useState<TimelineEvent[]>([])
   const [currentSpells, setCurrentSpells] = useState<SpellTimeline[]>([])
   const [patchedSpells, setPatchedSpells] = useState<SpellTimeline[]>([])
 
   const [collapsedChargeSpells, setCollapsedChargeSpells] = useState<string[]>([])
 
   const [localSpells, setLocalSpells] = useState<SpellInfo[]>(spells)
+
+  const [activeBindings, setActiveBindings] = useState<string[]>([])
+  const [keysToActions, setKeysToActions] = useState<Map<string, Set<GlobalAction>>>(new Map())
+
+  console.log('processedEvents', processedEvents)
+
+  const availableBindings = [
+    {
+      id: Talents.EarlySpring,
+      label: 'Early Spring',
+      description: 'Force of Nature cooldown reduced by 15 sec.',
+    },
+    {
+      id: Talents.ControlOfTheDream,
+      label: 'Control of the Dream',
+      description:
+        "Time elapsed while your major abilities are available to be used or at maximum charges is subtracted from that ability's cooldown after the next time you use it, up to 15 seconds.",
+    },
+  ]
+
+  function bindGlobalAction(keys: string[], action: GlobalAction) {
+    setKeysToActions((prev) => {
+      const newMap = new Map(prev)
+      for (const key of keys) {
+        if (!newMap.has(key)) {
+          newMap.set(key, new Set())
+        }
+        newMap.get(key)!.add(action)
+      }
+      return newMap
+    })
+  }
+
+  useEffect(() => {
+    // Clear existing bindings
+    setKeysToActions(new Map())
+
+    // Add new bindings based on activeBindings
+    activeBindings.forEach((bindingId) => {
+      if (bindingId === Talents.EarlySpring) {
+        bindGlobalAction(['205636'], earlySpring)
+      }
+      if (bindingId === Talents.ControlOfTheDream) {
+        bindGlobalAction(['194223', '391528', '205636'], controlOfTheDream)
+      }
+    })
+  }, [activeBindings])
 
   useEffect(() => {
     setLocalSpells(spells)
@@ -111,11 +163,16 @@ export default function TimelineView({
   useEffect(() => {
     const queue = generateBaseQueue(inputActions)
     setBaseQueue(queue)
-    console.log(queue)
 
-    const timeline = processEventQueue(queue, localSpells)
-    setProcessedState(timeline)
-  }, [inputActions, localSpells])
+    const { processedState, processedEvents } = processEventQueue(
+      queue,
+      localSpells,
+      keysToActions,
+      activeBindings
+    )
+    setProcessedState(processedState)
+    setProcessedEvents(processedEvents)
+  }, [inputActions, localSpells, keysToActions, activeBindings])
 
   // Function to modify a cast
   const handleModifyAction = (castId: string, newTime: number) => {
@@ -139,7 +196,6 @@ export default function TimelineView({
   // Helper function to find a cast by ID in the processed state
   const findCastById = (castId: string, timeline: PlayerAction[]): PlayerAction | null => {
     const cast = timeline.find((c) => c.id === castId)
-    console.log('findCastById', cast)
     if (cast) return cast
     return null
   }
@@ -188,6 +244,16 @@ export default function TimelineView({
     console.log('Create custom element:', params)
   }
 
+  const handleBindingToggle = (id: string, isSelected: boolean) => {
+    setActiveBindings((prev) => {
+      if (isSelected) {
+        return [...prev, id]
+      } else {
+        return prev.filter((bindingId) => bindingId !== id)
+      }
+    })
+  }
+
   return (
     <div className="timeline flex w-full flex-col gap-2">
       <div className="flex flex-row items-center gap-2">
@@ -216,6 +282,12 @@ export default function TimelineView({
           +
         </button>
       </div>
+
+      <ActionBindings
+        bindings={availableBindings}
+        activeBindings={activeBindings}
+        onToggle={handleBindingToggle}
+      />
 
       {false && (
         <Checkboxes
@@ -271,6 +343,7 @@ export default function TimelineView({
             pixelsPerSecond={pixelsPerSecond}
           />
           <SpellMarkers spellInfo={averageTimestamps} wowheadMap={wowheadMarkerMap} />
+          {false && <EventMarkers eventInfo={processedEvents} />}
           {/* Casts/timeline rows */}
           <div
             className="relative mt-5 flex flex-col"
@@ -280,18 +353,24 @@ export default function TimelineView({
             }}
           >
             {/* Render a SpellCastsRow for each spell */}
-            {processedState.spells.map((spellCast) => (
-              <SpellCastsRow
-                key={`spell-row-${spellCast.spell.id}`}
-                spellTimeline={spellCast}
-                wowheadComponent={
-                  customElements[spellCast.spell.id] ||
-                  wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
-                }
-                onCastDelete={handleCastDelete}
-                onCastMove={handleCastMove}
-              />
-            ))}
+            {processedState.spells.length > 0 ? (
+              processedState.spells.map((spellCast) => (
+                <SpellCastsRow
+                  key={`spell-row-${spellCast.spell.id}`}
+                  spellTimeline={spellCast}
+                  wowheadComponent={
+                    customElements[spellCast.spell.id] ||
+                    wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
+                  }
+                  onCastDelete={handleCastDelete}
+                  onCastMove={handleCastMove}
+                />
+              ))
+            ) : (
+              <div className="mt-16 text-center text-sm text-gray-500">
+                Add a spell to get started
+              </div>
+            )}
           </div>
         </div>
       </div>

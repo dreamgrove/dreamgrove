@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './TimelinePlanner.module.css'
-import { SpellInfo, SpellTimeline, TimelineEffect } from './types'
+import { SpellInfo, SpellTimeline, TimelineEffect } from '../../lib/types/cd_planner'
 import { timelineEffects } from './TimelineEffects'
 
 interface CheckboxesProps {

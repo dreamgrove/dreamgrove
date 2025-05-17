@@ -1,4 +1,4 @@
-import { SpellInfo, Cast, SpellTimeline } from './types'
+import { SpellInfo, Cast, SpellTimeline } from '../../lib/types/cd_planner'
 
 /**
  * Direction of the effect - either modifying the start or end time

@@ -1,4 +1,4 @@
-import { Patch } from './PatchSystem'
+import { Patch } from '../../components/TimelinePlanner/PatchSystem'
 
 export const SPELL_GCD = 1.5
 
@@ -16,10 +16,15 @@ export enum EventType {
   EffectEnd = 'effect_end',
   ChannelInterrupted = 'channel_interrupted',
   GainCharge = 'gain_charge',
+  ControlOfTheDream = 'control_of_the_dream',
 }
 
+export enum Talents {
+  EarlySpring = 'early_spring',
+  ControlOfTheDream = 'control_of_the_dream',
+}
 // Event type for the event queue
-export interface Event {
+export interface TimelineEvent {
   type: EventType
   time: number
   spellId: number
@@ -67,11 +72,15 @@ export class SpellState {
 // TimelineState represents the global state of all spells while processing events
 export class TimelineState {
   spells: SpellState[]
+  activeCasts: Map<string, Cast>
   channeledSpell: SpellInfo | null
+  activeEffects: Map<Talents, Map<number, number>>
 
   constructor() {
     this.spells = []
     this.channeledSpell = null
+    this.activeCasts = new Map()
+    this.activeEffects = new Map()
   }
 
   findOrCreateSpellState(spellId: number, totalCharges: number): SpellState {

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { ChargeInterval } from './types'
+import { ChargeInterval } from '../../lib/types/cd_planner'
 import { useTimelineControls } from './TimelineContext'
 
 interface CooldownIndicatorProps {

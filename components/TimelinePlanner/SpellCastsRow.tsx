@@ -11,7 +11,13 @@ import {
   useDroppable,
 } from '@dnd-kit/core'
 import DraggableCast from './DraggableCast'
-import { Cast, SPELL_GCD, SpellToRender, TimelineToRender, ChargeInterval } from './types'
+import {
+  Cast,
+  SPELL_GCD,
+  SpellToRender,
+  TimelineToRender,
+  ChargeInterval,
+} from '../../lib/types/cd_planner'
 import { useTimelineControls } from './TimelineContext'
 import CastInterval from './CastInterval'
 import CooldownIndicator from './CooldownIndicator'
@@ -162,8 +168,6 @@ export default function SpellCastsRow({
     },
   ]
 
-  console.log('onCastDeletesss', onCastDelete)
-
   return (
     <DndContext
       sensors={sensors}
@@ -212,7 +216,6 @@ const RowSingleCharge = ({
   onCastDelete?: (castId: string) => void
   className: string
 }) => {
-  console.log('flourish onCastDelete', onCastDelete)
   return (
     <div className={`w-full ${className}`}>
       {spellTimeline.casts.map((cast, index) => (

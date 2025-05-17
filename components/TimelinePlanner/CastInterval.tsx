@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTimelineControls } from './TimelineContext'
-import { Cast } from './types'
+import { Cast } from '../../lib/types/cd_planner'
 
 interface CastProps {
   cast: Cast
@@ -28,9 +28,7 @@ export default function CastInterval({
 
   const duration_s_px = cast.duration_s * pixelsPerSecond
 
-  const onetwenty_px = 120 * pixelsPerSecond
-
-  const isLogging = true
+  const isLogging = false
 
   if (isLogging) {
     console.log('channel visual duration', cast.channel_visual_duration)
@@ -41,7 +39,7 @@ export default function CastInterval({
     console.log('total duration', cast.duration_s)
     console.log('duration s px', duration_s_px)
     console.log('cooldown delay', cast.cooldown_delay_s)
-    console.log('onetwenty px', onetwenty_px)
+    console.log('effect_duration', cast.effect_duration)
   }
   // Find the maximum width percentage
   const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
@@ -56,7 +54,6 @@ export default function CastInterval({
   )
 
   const bgColor = 'bg-slate-500/10'
-  console.log('onDelete', onDelete)
 
   return (
     <div

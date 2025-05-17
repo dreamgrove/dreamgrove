@@ -177,8 +177,6 @@ async function getSpellCasts(
 
     const response = await executeWarcraftLogsQuery(query)
 
-    console.log('response', response)
-
     // Check if we have valid data
     if (!response?.data?.reportData?.report?.events?.data) {
       console.error('Invalid response structure:', response)
@@ -301,7 +299,6 @@ export async function GET(request: NextRequest) {
       }
     `
 
-    console.log('Fetching Balance Druid rankings for encounter:', encounterId)
     const response = await executeWarcraftLogsQuery(rankingsQuery)
 
     // Extract and process the rankings data
@@ -319,8 +316,6 @@ export async function GET(request: NextRequest) {
     const rankings = response.data.worldData.encounter.characterRankings.rankings
     const encounterName = response.data.worldData.encounter.name
     const reportsToProcess = rankings.slice(0, maxReports)
-
-    console.log(`Found ${rankings.length} rankings, processing up to ${maxReports}`)
 
     // Fetch casts for each report
     const castsResults: ReportCastData[] = []
@@ -364,15 +359,10 @@ export async function GET(request: NextRequest) {
         // If still can't find actorID, try to fetch it from the report
         if (!actorID) {
           try {
-            console.log(
-              `Attempting to fetch actor ID for ${ranking.name} from report ${ranking.report.code}`
-            )
-
             // Fetch the actorID directly from the report
             const fetchedActorID = await getActorIDFromReport(ranking.report.code, ranking.name)
 
             if (fetchedActorID) {
-              console.log(`Successfully retrieved actorID ${fetchedActorID} for ${ranking.name}`)
               // Continue processing with the fetched actorID
               const castsData = await getSpellCasts(
                 ranking.report.code,
@@ -415,10 +405,6 @@ export async function GET(request: NextRequest) {
         }
 
         const reportCode = ranking.report.code
-        // Use the detected fightID and actorID
-        console.log(
-          `Processing report ${i + 1}/${reportsToProcess.length}: ${reportCode}, fight: ${fightID}, actor: ${actorID}`
-        )
 
         // Get spell casts for this player in this fight
         const castsData = await getSpellCasts(reportCode, fightID, actorID, spellsToTrack)

@@ -1,4 +1,4 @@
-import { Cast, SpellInfo, CastParams } from '../../../components/TimelinePlanner/types'
+import { Cast, SpellInfo, CastParams } from '../../../lib/types/cd_planner'
 import { describe, test, expect, beforeEach } from '@jest/globals'
 
 // Celestial Alignment spell data from spells.json

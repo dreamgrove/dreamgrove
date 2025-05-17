@@ -1,26 +1,24 @@
-import { v4 as uuidv4 } from 'uuid'
 import {
   PlayerAction,
-  Event,
+  TimelineEvent,
   EventType,
   TimelineState,
   SpellInfo,
-  CastParams,
   TimelineToRender,
-  SpellToRender,
   Cast,
   SPELL_GCD,
-  SpellState,
-} from './types'
+  Talents,
+} from '../../lib/types/cd_planner'
 import { findMaxUsedCharges } from './SpellCastsRow'
+import { GlobalAction } from '../../lib/types/global_handler'
 
 /**
  * Priority Queue implementation for Event objects
  */
 export class EventQueue {
-  private events: Event[] = []
+  private events: TimelineEvent[] = []
 
-  push(event: Event): void {
+  push(event: TimelineEvent): void {
     // add +0.01 and round to 2 decimal places
     event.time = Math.round((event.time + 0.01) * 100) / 100
     this.events.push(event)
@@ -30,7 +28,7 @@ export class EventQueue {
   /**
    * Remove and return the highest priority (earliest time) event
    */
-  pop(): Event | undefined {
+  pop(): TimelineEvent | undefined {
     return this.events.shift()
   }
 
@@ -100,46 +98,108 @@ export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   return eventQueue
 }
 
+function getMatchingActions(
+  event: TimelineEvent,
+  keyToActions: Map<string, Set<GlobalAction>>
+): Set<GlobalAction> {
+  const matched = new Set<GlobalAction>()
+  for (const action of keyToActions.get(event.spellId.toString()) ?? []) {
+    matched.add(action)
+  }
+  return matched
+}
+
 /**
  * Process an event queue and generate a timeline for rendering
  * @param eventQueue - The queue of events to process
  * @param spells - The available spells information
  * @returns TimelineToRender - A timeline ready for rendering
  */
-export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): TimelineToRender {
-  const timelineState = new TimelineState()
-  const casts = new Map<string, Cast>()
-
+export function processEventQueue(
+  eventQueue: EventQueue,
+  spells: SpellInfo[],
+  keysToActions: Map<string, Set<GlobalAction>>,
+  activeBindings: string[]
+): { processedState: TimelineToRender; processedEvents: TimelineEvent[] } {
+  let timelineState = new TimelineState()
   const processedState: TimelineToRender = { spells: [] }
-
+  const processedEvents: TimelineEvent[] = []
+  // Create a deep copy of the spells array to prevent state preservation between calls
+  let currentSpells = JSON.parse(JSON.stringify(spells))
+  if (activeBindings.includes(Talents.ControlOfTheDream)) {
+    // Initialize an empty Map for Control of the Dream effects
+    timelineState.activeEffects.set(
+      Talents.ControlOfTheDream,
+      new Map([
+        [391528, -15],
+        [205636, -15],
+        [194223, -15],
+      ])
+    )
+  }
   while (!eventQueue.isEmpty()) {
-    const event = eventQueue.pop()
+    let event = eventQueue.pop()
     if (!event) break
+    processedEvents.push(event)
 
-    const spellInfo = spells.find((s) => s.spellId === event.spellId)
+    console.log('COTD: keysToActions', keysToActions)
+    const bucket = getMatchingActions(event, keysToActions)
+    for (const action of bucket) {
+      console.log('COTD: Processing action', action)
+      const { changedEvent, eventsToAdd, newState, newSpells } = action(
+        event,
+        eventQueue,
+        timelineState,
+        currentSpells
+      )
+      event = changedEvent
+      timelineState = newState
+      currentSpells = newSpells
+
+      for (const e of eventsToAdd) {
+        console.log('COTD: Adding event', e)
+        eventQueue.push(e)
+      }
+    }
+
+    // make a copy of the spellInfo to avoid state preservation between calls
+    const spellInfo = { ...currentSpells.find((s) => s.spellId === event.spellId) }
+
     if (!spellInfo) continue
 
     const spellState = timelineState.findOrCreateSpellState(event.spellId, spellInfo.charges || 1)
 
-    event.time = Math.round(event.time * 100) / 100
+    const canCast = () => spellState.usedCharges < spellState.totalCharges
+
+    event.time = Math.round(event.time * 10) / 10
 
     switch (event.type) {
       case EventType.CastStart:
-        // Check if we can cast
-
-        if (spellState.usedCharges < spellState.totalCharges) {
-          console.log('Successful Cast Start At: ', event.time)
+        if (canCast()) {
           spellState.useCharge(event.time)
-          //console.log('available charges', spellState.totalCharges - spellState.usedCharges)
+
           if (spellState.currentCast && event.time - SPELL_GCD < spellState.currentCast.start_s) {
             event.time = event.time + SPELL_GCD
           }
 
           const latestChargeTime = eventQueue.findLatestCharge(event.spellId, event.time)
-          console.log('latest charge time', latestChargeTime)
           const cooldown_delay = Math.max(0, latestChargeTime - event.time)
-          //console.log('cooldown delay', cooldown_delay)
-          console.log(spellInfo.cooldown)
+
+          /* Control of the Dream */
+          if (timelineState.activeEffects.has(Talents.ControlOfTheDream)) {
+            console.log(
+              'COTD: active effects',
+              timelineState.activeEffects.get(Talents.ControlOfTheDream)
+            )
+            const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
+            if (cotdEffects && cotdEffects.has(event.spellId)) {
+              const cotdTime = cotdEffects.get(event.spellId)
+              if (cotdTime !== undefined && event.time > cotdTime) {
+                spellInfo.cooldown -= Math.min(15, event.time - cotdTime)
+                cotdEffects.delete(event.spellId)
+              }
+            }
+          }
 
           eventQueue.push({
             type: EventType.GainCharge,
@@ -181,7 +241,7 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
 
           eventQueue.push({
             type: EventType.CooldownEnd,
-            time: event.time + spellInfo.cooldown,
+            time: event.time + spellInfo.cooldown + cooldown_delay,
             spellId: event.spellId,
             castId: event.castId,
           })
@@ -195,8 +255,8 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
           })
           //console.log('cd delay', cooldown_delay)
 
-          casts.set(event.castId, cast)
-          spellState.currentCast = cast
+          //casts.set(event.castId, cast)
+          timelineState.activeCasts.set(cast.id, cast)
         } else {
           // if we don't have enough charges we need to find the first instant
           // where we have one charge available
@@ -220,49 +280,46 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
         break
 
       case EventType.ChannelEnd:
-        //console.log('successful channel end')
-        // Clear channeling state
-        if (casts.has(event.castId)) {
-          const cast = casts.get(event.castId)
-          if (cast) {
-            cast.channel_duration = event.time - cast.start_s
-            casts.set(cast.id, cast)
-          }
+        const cast = timelineState.activeCasts.get(event.castId)
+        if (cast) {
+          cast.channel_duration = event.time - cast.start_s
+          timelineState.activeCasts.set(cast.id, cast)
         }
         spellState.isChanneling = false
         timelineState.channeledSpell = null
         break
 
       case EventType.EffectEnd:
-        //console.log('successful effect end')
-        // Effect ended, nothing to do for now
+        break
+
+      case EventType.ControlOfTheDream:
+        if (spellState.usedCharges === 0) {
+          // Set the Control of the Dream effect for this specific spell
+          const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
+          if (cotdEffects) {
+            cotdEffects.set(event.spellId, event.time)
+            timelineState.activeEffects
+              .get(Talents.ControlOfTheDream)
+              ?.set(event.spellId, event.time)
+          }
+        }
         break
 
       case EventType.GainCharge:
-        // Gain charge, nothing to do for now
         if (spellState.usedCharges > 0) {
           spellState.restoreCharge(event.time)
-          //console.log('successfully gained charge at', event.time)
-          //console.log('available charges', spellState.totalCharges - spellState.usedCharges)
         }
         break
 
       case EventType.CooldownEnd:
-        // Cooldown ended, restore a charge
-        //console.log('successful cooldown end')
-        if (casts.has(event.castId)) {
-          const cast = casts.get(event.castId)
+        if (timelineState.activeCasts.has(event.castId)) {
+          const cast = timelineState.activeCasts.get(event.castId)
           if (cast) {
-            //console.log(
-            //  'changing cooldown duration from',
-            //  cast.cooldown_duration,
-            //  'to',
-            //  event.time - cast.start_s
-            //)
-            cast.cooldown_duration = event.time - cast.start_s
-            const castToRender = new Cast(cast)
+            console.log('COTD: cooldown end for cast', event.castId, 'at', event.time)
+            cast.cooldown_duration = event.time - cast.start_s - cast.cooldown_delay_s
+            console.log('COTD: cast', cast)
+            console.log('cast', cast)
 
-            // Find or create the spell entry in the processed state
             let spellToRender = processedState.spells.find((s) => s.spell.spellId === event.spellId)
             if (!spellToRender) {
               spellToRender = { spell: spellInfo, casts: [], chargesUsed: 0 }
@@ -270,10 +327,13 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
             }
 
             // Add the cast to the spell
-            spellToRender.casts.push(castToRender)
+            spellToRender.casts.push(cast)
             spellState.previousCast = spellState.currentCast
             spellState.currentCast = null
+            timelineState.activeCasts.delete(event.castId)
           }
+        } else {
+          console.log('no cast found for cooldown end. probably we already ended', event.castId)
         }
         break
     }
@@ -290,20 +350,5 @@ export function processEventQueue(eventQueue: EventQueue, spells: SpellInfo[]): 
     spell.chargesUsed = findMaxUsedCharges(spell.chargeIntervals, spell.spell.charges)
   })
 
-  return processedState
-}
-
-/**
- * Process player actions into a renderable timeline
- * @param inputActions - The player actions to process
- * @param spells - The available spells information
- * @returns TimelineToRender - A timeline ready for rendering
- */
-export function processPlayerActions(
-  inputActions: PlayerAction[],
-  spells: SpellInfo[]
-): TimelineToRender {
-  const eventQueue = generateBaseQueue(inputActions)
-
-  return processEventQueue(eventQueue, spells)
+  return { processedState, processedEvents }
 }
