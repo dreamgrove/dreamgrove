@@ -70,7 +70,7 @@ export default function CastInterval({
       {onDelete && (
         <button
           onClick={() => onDelete(cast.id)}
-          className="absolute top-0 right-0 z-100 flex h-10 w-10 items-center justify-center rounded-full text-3xl text-[#ff6a37AA] opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
+          className="absolute top-0 right-0 z-100 flex h-10 w-10 items-center justify-center rounded-full text-3xl text-[#ff612caa] opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
           title="Remove cast"
         >
           ×
