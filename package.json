@@ -119,7 +119,7 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "npm@11.3.0",
   "overrides": {
     "@types/react": "19.1.0"
   }
