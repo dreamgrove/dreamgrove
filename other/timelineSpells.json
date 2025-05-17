@@ -21,16 +21,6 @@
       "specs": ["balance"]
     },
     {
-      "id": "caa",
-      "spellId": 194223,
-      "name": "Celestial Alignment",
-      "channel_duration": 0,
-      "effect_duration": 15,
-      "cooldown": 180,
-      "charges": 1,
-      "specs": ["balance"]
-    },
-    {
       "id": "convoke",
       "spellId": 391528,
       "name": "Convoke the Spirits",
