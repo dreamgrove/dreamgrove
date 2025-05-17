@@ -33,9 +33,7 @@ import { bindings } from './GlobalHandlers/bindings'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface TimelineViewProps {
-  total_length_s: number
   view_length_s: number // seconds shown per 100% width
-  setViewLength: React.Dispatch<React.SetStateAction<number>>
   marker_spacing_s: number // seconds between markers
   spells: SpellInfo[]
   wowheadMap: Record<string, React.ReactNode>
@@ -46,8 +44,6 @@ interface TimelineViewProps {
 }
 
 export default function TimelineView({
-  total_length_s,
-  setViewLength,
   marker_spacing_s,
   spells = [],
   wowheadMap = {},
@@ -57,10 +53,12 @@ export default function TimelineView({
   currentEncounterId = 'empty',
 }: TimelineViewProps) {
   const {
+    total_length_s,
     effective_view_length_s,
     effective_total_length_px,
     pixelsPerSecond,
     isControlKeyPressed,
+    setTotalLength,
     registerScrollContainer,
     zoomIn,
     zoomOut,
@@ -117,7 +115,7 @@ export default function TimelineView({
   }
 
   useEffect(() => {
-    setViewLength(processedState.timeline_length_s > 240 ? processedState.timeline_length_s : 240)
+    setTotalLength(processedState.timeline_length_s > 240 ? processedState.timeline_length_s : 240)
   }, [processedState])
 
   useEffect(() => {

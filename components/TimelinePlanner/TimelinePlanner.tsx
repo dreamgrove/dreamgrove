@@ -25,7 +25,7 @@ export default function TimelinePlanner({
   wowheadMarkerMap = {},
   averageTimestamps = {},
 }: TimelinePlannerProps) {
-  const [initialTotalLength, setInitialTotalLength] = useState(240)
+  const initialTotalLength = 240
   const initialViewLength = 180
   const initialMarkerSpacing = 10
 
@@ -58,7 +58,6 @@ export default function TimelinePlanner({
         <TimelineView
           total_length_s={initialTotalLength}
           view_length_s={initialViewLength}
-          setViewLength={setInitialTotalLength}
           marker_spacing_s={initialMarkerSpacing}
           spells={spells}
           wowheadMap={wowheadMap}
