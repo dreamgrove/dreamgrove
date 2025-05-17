@@ -26,7 +26,7 @@ export default function TimelinePlanner({
   averageTimestamps = {},
 }: TimelinePlannerProps) {
   const [initialTotalLength, setInitialTotalLength] = useState(240)
-  const initialViewLength = 60
+  const initialViewLength = 180
   const initialMarkerSpacing = 10
 
   const [currentEncounterId, setCurrentEncounterId] = useState('empty')
