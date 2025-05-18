@@ -43,7 +43,6 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
     }
 
     const newSpell: SpellInfo = {
-      id: uuidv4(),
       spellId: Math.floor(Math.random() * 100000), // Generate a random spell ID
       name: name.trim(),
       cooldown: cooldown,

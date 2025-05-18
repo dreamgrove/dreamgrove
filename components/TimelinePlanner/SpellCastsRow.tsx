@@ -93,7 +93,6 @@ export default function SpellCastsRow({
   const className = 'my-2 flex h-10 items-center'
 
   const { timeToPixels, pixelsToTime, total_length_s, total_length_px } = useTimelineControls()
-  console.log(total_length_s)
 
   const sensors = useSensors(
     useSensor(PointerSensor, {

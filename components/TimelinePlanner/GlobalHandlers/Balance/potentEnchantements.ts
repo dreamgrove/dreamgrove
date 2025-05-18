@@ -1,5 +1,5 @@
-import { TimelineEvent, EventType, Talents } from '../../../lib/types/cd_planner'
-import { GlobalAction } from '../../../lib/types/global_handler'
+import { EventType, Talents } from 'lib/types/cd_planner'
+import { GlobalAction } from 'lib/types/global_handler'
 
 export const potentEnchantments: GlobalAction = (event, queue, state, spells) => {
   const spellInfo = spells.find((s) => s.spellId === event.spellId)

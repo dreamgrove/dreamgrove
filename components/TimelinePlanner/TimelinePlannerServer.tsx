@@ -196,7 +196,7 @@ export default async function TimelinePlannerServer() {
     const component = (
       <Wowhead
         type="spell"
-        id={spell.spellId || spell.id}
+        id={spell.spellId}
         name={spell.name}
         disabled={true}
         ellipsis={true}
@@ -204,23 +204,22 @@ export default async function TimelinePlannerServer() {
         iconSize={23}
       />
     )
-    return [spell.id, component] as const
+    return [spell.spellId, component] as const
   })
-  console.log('averageTimestampsBySpell', averageTimestampsBySpell)
 
   // Prerender Wowhead for spell name column (no icon, disabled)
   const prerenderedWowheadNames = spellsData.spells.map((spell) => {
     const component = (
       <Wowhead
         type="spell"
-        id={spell.spellId || spell.id}
+        id={spell.spellId}
         name={spell.name}
         noIcon={false}
         disabled={false}
         ellipsis={true}
       />
     )
-    return [spell.id, component] as const
+    return [spell.spellId, component] as const
   })
 
   // Prerender Wowhead components for spell markers
@@ -228,7 +227,7 @@ export default async function TimelinePlannerServer() {
     const component = (
       <Wowhead
         type="spell"
-        id={spell.spellId || spell.id}
+        id={spell.spellId}
         name={spell.name}
         disabled={true}
         noIcon={false}
@@ -237,7 +236,7 @@ export default async function TimelinePlannerServer() {
         iconSize={23}
       />
     )
-    return [spell.id, component] as const
+    return [spell.spellId, component] as const
   })
 
   const wowheadMap = Object.fromEntries(prerenderedWowheads)

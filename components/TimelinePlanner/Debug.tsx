@@ -129,7 +129,7 @@ export default function Debug({
                     .flatMap((spellInfo) =>
                       (spellInfo.chargeIntervals || []).map((interval, idx) => (
                         <tr
-                          key={`${spellInfo.spell.id}-charge-${idx}`}
+                          key={`${spellInfo.spell.spellId}-charge-${idx}`}
                           className="border-b border-neutral-800/50 text-center"
                         >
                           <td className="py-2 pr-4">{spellInfo.spell.name}</td>
@@ -181,7 +181,7 @@ export default function Debug({
                 timelineSettings,
                 spells: processedTimeline.spells.map((spell) => ({
                   name: spell.spell.name,
-                  id: spell.spell.id,
+                  id: spell.spell.spellId,
                   castCount: spell.casts.length,
                   charges: spell.chargeIntervals?.length || 0,
                 })),

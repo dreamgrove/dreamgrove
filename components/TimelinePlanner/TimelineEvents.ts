@@ -40,6 +40,14 @@ export class EventQueue {
     return this.events.length
   }
 
+  modifyEarliesType(spellId: number, type: EventType, delta: number) {
+    for (const event of this.events) {
+      if (event.type === type && event.spellId === spellId) {
+        event.time += delta
+      }
+    }
+  }
+
   /**
    * Find the earliest CooldownEnd event for a specific spell
    * @param spellId - The ID of the spell to find cooldown for
@@ -87,9 +95,13 @@ export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   inputActions
     .sort((a, b) => a.instant - b.instant)
     .forEach((action) => {
+      let startTime = action.instant
+      if (action.spell.name === 'Reforestation') {
+        startTime = Math.max(startTime, 15)
+      }
       eventQueue.push({
         type: EventType.CastStart,
-        time: action.instant,
+        time: startTime,
         spellId: action.spell.spellId,
         castId: action.id,
       })
@@ -140,19 +152,13 @@ export function processEventQueue(
   /* Control of The Dream */
   if (activeBindings.includes(Talents.ControlOfTheDream)) {
     // Initialize an empty Map for Control of the Dream effects
-    timelineState.activeEffects.set(
-      Talents.ControlOfTheDream,
-      new Map([
-        [391528, -15],
-        [205636, -15],
-        [194223, -15],
-      ])
-    )
+    timelineState.initializeControlOfTheDream()
   }
 
   while (!eventQueue.isEmpty()) {
     let event = eventQueue.pop()
     if (!event) break
+
     processedEvents.push(event)
 
     const bucket = getMatchingActions(event, keysToActions)
@@ -205,6 +211,20 @@ export function processEventQueue(
                 cotdEffects.delete(event.spellId)
               }
             }
+          }
+          /* Reforestation */
+          if (event.spellId === 392356) {
+            const treeOfLifeId = 33891
+            const activeCasts = timelineState.activeCasts.values()
+            // if the casts have one with id treeOfLifeId, then we need to add 15 seconds to the cooldown
+            const treeOfLifeCast = Array.from(activeCasts).find(
+              (cast) => cast.spell.spellId === treeOfLifeId
+            )
+            eventQueue.modifyEarliesType(
+              treeOfLifeId,
+              EventType.EffectEnd,
+              spellInfo.effect_duration
+            )
           }
 
           eventQueue.push({
@@ -259,7 +279,6 @@ export function processEventQueue(
             current_charge: spellState.usedCharges - 1, // 0-indexed
             cooldown_delay_s: cooldown_delay,
           })
-          //console.log('cd delay', cooldown_delay)
 
           //casts.set(event.castId, cast)
           timelineState.activeCasts.set(cast.id, cast)
@@ -287,11 +306,11 @@ export function processEventQueue(
         break
 
       case EventType.ChannelStart:
-        //console.log('successful channel start')
         spellState.isChanneling = true
         timelineState.channeledSpell = spellInfo
         break
 
+      case EventType.ChannelInterrupted:
       case EventType.ChannelEnd:
         const cast = timelineState.activeCasts.get(event.castId)
         if (cast) {
@@ -303,11 +322,41 @@ export function processEventQueue(
         break
 
       case EventType.EffectEnd:
+        /* Reforestation */
+
+        if (timelineState.activeCasts.has(event.castId)) {
+          const cast = timelineState.activeCasts.get(event.castId)
+          if (cast) {
+            cast.effect_duration = event.time - cast.start_s
+          }
+        }
+        break
+
+      case EventType.DreamstateCdr:
+        if (timelineState.channeledSpell?.name !== 'Tranquility') {
+          break
+        }
+        const currentCasts = timelineState.activeCasts.values()
+        const consideredSpells = new Set<number>()
+        for (const cast of currentCasts) {
+          if (consideredSpells.has(cast.spell.spellId)) {
+            continue
+          }
+          consideredSpells.add(cast.spell.spellId)
+          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -4)
+          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -4)
+        }
+
+        eventQueue.push({
+          type: EventType.DreamstateCdr,
+          time: event.time + 1,
+          spellId: event.spellId,
+          castId: event.castId,
+        })
         break
 
       case EventType.ControlOfTheDream:
         if (spellState.usedCharges === 0) {
-          // Set the Control of the Dream effect for this specific spell
           const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
           if (cotdEffects) {
             cotdEffects.set(event.spellId, event.time)

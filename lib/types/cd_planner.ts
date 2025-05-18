@@ -17,6 +17,7 @@ export enum EventType {
   ChannelInterrupted = 'channel_interrupted',
   GainCharge = 'gain_charge',
   ControlOfTheDream = 'control_of_the_dream',
+  DreamstateCdr = 'dreamstate_cdr',
 }
 
 export enum Talents {
@@ -25,6 +26,10 @@ export enum Talents {
   WhirlingStars = 'whirling_stars',
   PotentEnchantments = 'potent_enchantments',
   Incarnation = 'incarnation',
+  Dreamstate = 'dreamstate',
+  TearDownTheMighty = 'tear_down_the_mighty',
+  AshamanesGuidance = 'ashamanes_guidance',
+  HeartOfTheLion = 'heart_of_the_lion',
 }
 // Event type for the event queue
 export interface TimelineEvent {
@@ -86,6 +91,18 @@ export class TimelineState {
     this.activeEffects = new Map()
   }
 
+  initializeControlOfTheDream() {
+    this.activeEffects.set(
+      Talents.ControlOfTheDream,
+      new Map([
+        [391528, -15],
+        [205636, -15],
+        [194223, -15],
+        [33891, -15],
+      ])
+    )
+  }
+
   findOrCreateSpellState(spellId: number, totalCharges: number): SpellState {
     const spell = this.spells.find((s) => s.spellId === spellId)
     if (spell) {
@@ -119,7 +136,6 @@ export interface ChargeInterval {
 }
 
 export interface SpellInfo {
-  id: string
   spellId: number
   name: string
   channel_duration: number

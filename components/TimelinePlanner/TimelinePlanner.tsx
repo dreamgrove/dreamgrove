@@ -31,6 +31,8 @@ export default function TimelinePlanner({
 
   const [currentEncounterId, setCurrentEncounterId] = useState('empty')
 
+  console.log(wowheadMap)
+
   useEffect(() => {
     console.log(`Selected encounter changed to: ${currentEncounterId}`)
 

@@ -64,7 +64,7 @@ export default function SpellButtons({
         <div className="flex w-full flex-row flex-wrap gap-2">
           {spells.map((spell) => (
             <button
-              key={`spell-button-${spell.id}`}
+              key={`spell-button-${spell.spellId}`}
               className="rounded bg-orange-400/40 px-4 py-2 text-white hover:bg-orange-400/50 focus:outline-hidden"
               onClick={() => handleSpellAdd(spell)}
             >

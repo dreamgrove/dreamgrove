@@ -197,7 +197,6 @@ interface TimelineScalerProps {
 export function TimelineScaler({ children, className, style }: TimelineScalerProps) {
   const { pixelsPerSecond, effective_total_length_px } = useTimeline()
 
-  // Helper functions
   const timeToPixels = (timeInSeconds: number) => timeInSeconds * pixelsPerSecond
   const pixelsToTime = (pixelPosition: number) => pixelPosition / pixelsPerSecond
 

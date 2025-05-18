@@ -18,18 +18,20 @@ import {
   TimelineEvent,
 } from '../../lib/types/cd_planner'
 import SpellMarkers from './SpellMarkers'
-import { useTimeline, useTimelineControls } from './TimelineContext'
+import { useTimelineControls } from './TimelineContext'
 import { generateBaseQueue, processEventQueue } from './TimelineEvents'
-import { EventQueue } from './TimelineEvents'
 import { GlobalAction } from '../../lib/types/global_handler'
-import { earlySpring } from './GlobalHandlers/earlySpring'
-import { controlOfTheDream } from './GlobalHandlers/controlOfTheDream'
+import { earlySpring } from './GlobalHandlers/Balance/earlySpring'
+import { controlOfTheDream } from './GlobalHandlers/Balance/controlOfTheDream'
 import EventMarkers from './EventMarkers'
-import { whirlingStars } from './GlobalHandlers/whirlingStars'
-import { potentEnchantments } from './GlobalHandlers/potentEnchantements'
-import { incarnation } from './GlobalHandlers/incarnation'
+import { whirlingStars } from './GlobalHandlers/Balance/whirlingStars'
+import { potentEnchantments } from './GlobalHandlers/Balance/potentEnchantements'
+import { incarnation } from './GlobalHandlers/Balance/incarnation'
 import { bindings } from './GlobalHandlers/bindings'
-// Define spec type for dropdown selection
+import { dreamstate } from './GlobalHandlers/Resto/dreamstate'
+import { tearDownTheMighty } from './GlobalHandlers/Feral/tearDownTheMighty'
+import { ashamanesGuidance } from './GlobalHandlers/Feral/ashamanesGuidance'
+import { heartOfTheLion } from './GlobalHandlers/Feral/heartOfTheLion'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface TimelineViewProps {
@@ -86,8 +88,6 @@ export default function TimelineView({
 
   const [currentSpells, setCurrentSpells] = useState<SpellTimeline[]>([])
 
-  const [collapsedChargeSpells, setCollapsedChargeSpells] = useState<string[]>([])
-
   const [localSpells, setLocalSpells] = useState<SpellInfo[]>(spells)
 
   const filteredSpells = React.useMemo(() => {
@@ -126,7 +126,7 @@ export default function TimelineView({
         bindGlobalAction(['205636'], earlySpring)
       }
       if (bindingId === Talents.ControlOfTheDream) {
-        bindGlobalAction(['194223', '391528', '205636'], controlOfTheDream)
+        bindGlobalAction(['194223', '391528', '205636', '33891'], controlOfTheDream)
       }
       if (bindingId === Talents.Incarnation) {
         bindGlobalAction(['194223'], incarnation)
@@ -136,6 +136,18 @@ export default function TimelineView({
       }
       if (bindingId === Talents.PotentEnchantments) {
         bindGlobalAction(['194223'], potentEnchantments)
+      }
+      if (bindingId === Talents.Dreamstate) {
+        bindGlobalAction(['740'], dreamstate)
+      }
+      if (bindingId === Talents.TearDownTheMighty) {
+        bindGlobalAction(['274837'], tearDownTheMighty)
+      }
+      if (bindingId === Talents.AshamanesGuidance) {
+        bindGlobalAction(['391528'], ashamanesGuidance)
+      }
+      if (bindingId === Talents.HeartOfTheLion) {
+        bindGlobalAction(['106951'], heartOfTheLion)
       }
     })
   }, [activeBindings])
@@ -273,7 +285,6 @@ export default function TimelineView({
 
   const handleCreateCustomElement = (params: SpellInfo) => {
     const newSpell: SpellInfo = {
-      id: `custom-${Date.now()}`,
       spellId: Math.floor(Math.random() * 1000000) + 900000, //this shouldnt be done like this but w/e
       name: params.name,
       channel_duration: params.channel_duration,
@@ -302,9 +313,9 @@ export default function TimelineView({
   const handleSpecChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newSpec = e.target.value as DruidSpec
     setSelectedSpec(newSpec)
+    setActiveBindings([])
     setInputActions([])
 
-    // If we're not showing all specs, filter out bindings that don't match the new spec
     if (newSpec !== 'all') {
       setActiveBindings((prev) =>
         prev.filter((bindingId) => {
@@ -326,7 +337,7 @@ export default function TimelineView({
           id="spec-selector"
           value={selectedSpec}
           onChange={handleSpecChange}
-          className="rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg"
+          className="min-w-[15rem] rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg"
         >
           <option className="bg-neutral-900/50" value="all">
             All Specs
@@ -407,13 +418,13 @@ export default function TimelineView({
                 .map((spellCast) =>
                   spellCast.spell.charges > 1 ? (
                     <SpellNameWithCharges
-                      key={`spell-name-${spellCast.spell.id}`}
+                      key={`spell-name-${spellCast.spell.spellId}`}
                       spellCast={spellCast}
                       wowheadNameMap={wowheadNameMap}
                     />
                   ) : (
                     <SpellName
-                      key={`spell-name-${spellCast.spell.id}`}
+                      key={`spell-name-${spellCast.spell.spellId}`}
                       spellCast={spellCast}
                       wowheadNameMap={wowheadNameMap}
                     />
@@ -450,10 +461,10 @@ export default function TimelineView({
                 .sort((a, b) => a.spell.spellId - b.spell.spellId)
                 .map((spellCast) => (
                   <SpellCastsRow
-                    key={`spell-row-${spellCast.spell.id}`}
+                    key={`spell-row-${spellCast.spell.spellId}`}
                     spellTimeline={spellCast}
                     wowheadComponent={
-                      wowheadMap[spellCast.spell.id] || <span>{spellCast.spell.name}</span>
+                      wowheadMap[spellCast.spell.spellId] || <span>{spellCast.spell.name}</span>
                     }
                     onCastDelete={handleCastDelete}
                     onCastMove={handleCastMove}
@@ -495,11 +506,11 @@ const SpellName = ({
 }) => {
   return (
     <div
-      key={`spell-name-${spellCast.spell.id}`}
+      key={`spell-name-${spellCast.spell.spellId}`}
       className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/30 pr-2`}
     >
       <div className={`flex h-[40px] w-full flex-col justify-center truncate text-right`}>
-        {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
+        {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
       </div>
     </div>
   )
@@ -513,12 +524,12 @@ const SpellNameWithCharges = ({
 }) => {
   return (
     <div
-      key={`spell-name-${spellCast.spell.id}`}
+      key={`spell-name-${spellCast.spell.spellId}`}
       className={`flex w-full flex-col items-end border-r-2 border-orange-500/30 pr-2`}
     >
       <div className="h-5 text-sm text-sky-300 transition-opacity">Charges</div>
       <div className={`my-2 flex h-10 w-full flex-col justify-center truncate text-right`}>
-        {wowheadNameMap[spellCast.spell.id] || spellCast.spell.name}
+        {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
       </div>
       {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
         <div key={`charge-${index}`} className="my-2 h-10 w-full" />
