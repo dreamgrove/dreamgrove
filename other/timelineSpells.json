@@ -67,7 +67,7 @@
       "name": "Reforestation",
       "channel_duration": 0,
       "effect_duration": 10,
-      "cooldown": 45,
+      "cooldown": 10,
       "specs": ["resto"]
     },
     {

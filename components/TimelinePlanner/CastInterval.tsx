@@ -105,7 +105,7 @@ export default function CastInterval({
       </div>
       {/* Remaining Cooldown Bar */}
       <div
-        className="flex h-full items-center justify-center bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
+        className="flex h-full items-center justify-center border-b-[1px] border-gray-500/40 bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
         style={{
           width: `${cooldown_width_px + 1}px`,
         }}

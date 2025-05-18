@@ -105,6 +105,12 @@ export class TimelineState {
     )
   }
 
+  isSpellCastPresent(spellId: number): Cast | null {
+    return (
+      Array.from(this.activeCasts.values()).find((cast) => cast.spell.spellId === spellId) ?? null
+    )
+  }
+
   findOrCreateSpellState(spellId: number, totalCharges: number): SpellState {
     const spell = this.spells.find((s) => s.spellId === spellId)
     if (spell) {

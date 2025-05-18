@@ -72,7 +72,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
     <div>
       <button
         onClick={toggleFormVisibility}
-        className="relative rounded-sm bg-neutral-900/50 px-2 py-1.5 text-white hover:bg-neutral-800"
+        className="relative w-fit rounded-sm bg-neutral-900/50 px-4 py-2 text-white hover:bg-neutral-800 focus:outline-hidden"
         title={isFormVisible ? 'Hide custom spell form' : 'Add custom spell'}
       >
         {isFormVisible ? 'Hide' : 'Add Custom Element'}

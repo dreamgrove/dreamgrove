@@ -9,17 +9,20 @@ import {
   TimelineToRender,
 } from '../../lib/types/cd_planner'
 import { CastParams } from '../../lib/types/cd_planner'
+import CustomElement from './CustomElement'
 
 interface SpellButtonsProps {
   currentSpells: TimelineToRender
   setCurrentSpells: React.Dispatch<React.SetStateAction<PlayerAction[]>>
   spells: SpellInfo[]
+  onCreate: (spell: SpellInfo) => void
 }
 
 export default function SpellButtons({
   currentSpells,
   setCurrentSpells,
   spells = [],
+  onCreate,
 }: SpellButtonsProps) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
@@ -60,26 +63,29 @@ export default function SpellButtons({
 
   return (
     <div className="flex flex-col gap-2 p-2">
-      <div className="flex flex-row flex-wrap justify-between gap-2">
+      <div className="mb-2 flex flex-row flex-wrap justify-between gap-2">
         <div className="flex w-full flex-row flex-wrap gap-2">
           {spells.map((spell) => (
             <button
               key={`spell-button-${spell.spellId}`}
-              className="rounded bg-orange-400/40 px-4 py-2 text-white hover:bg-orange-400/50 focus:outline-hidden"
+              className="rounded-xs border-[1px] border-orange-400/40 bg-transparent px-4 py-2 text-white hover:bg-orange-400/50 focus:outline-hidden"
               onClick={() => handleSpellAdd(spell)}
             >
               {spell.charges && spell.charges > 1 ? `${spell.name} (${spell.charges})` : spell.name}
             </button>
           ))}
           <div className="flex-1" />
-          <button
-            key={`spell-reset`}
-            className="rounded bg-red-600/50 px-4 py-2 text-white hover:bg-red-700/50 focus:outline-hidden"
-            onClick={() => setCurrentSpells([])}
-          >
-            Reset All Spells
-          </button>
         </div>
+      </div>
+      <div className="flex flex-row gap-2">
+        <CustomElement onCreate={onCreate} />
+        <button
+          key={`spell-reset`}
+          className="w-fit rounded-xs bg-red-600/50 px-4 py-2 text-white hover:bg-red-700/50 focus:outline-hidden"
+          onClick={() => setCurrentSpells([])}
+        >
+          Reset All Spells
+        </button>
       </div>
     </div>
   )

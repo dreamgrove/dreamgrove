@@ -95,10 +95,12 @@ export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   inputActions
     .sort((a, b) => a.instant - b.instant)
     .forEach((action) => {
-      let startTime = action.instant
+      const startTime = action.instant
+      /*
       if (action.spell.name === 'Reforestation') {
         startTime = Math.max(startTime, 15)
       }
+      */
       eventQueue.push({
         type: EventType.CastStart,
         time: startTime,
@@ -191,12 +193,49 @@ export function processEventQueue(
 
     switch (event.type) {
       case EventType.CastStart:
-        if (canCast()) {
-          spellState.useCharge(event.time)
+        /* Special case for Tree of Life */
+        const reforestationCast = timelineState.isSpellCastPresent(392356)
+        const isOverlapping =
+          reforestationCast &&
+          event.time > reforestationCast.effect_start_s &&
+          event.time < reforestationCast.effect_start_s + reforestationCast.effect_duration
+        if (canCast() && isOverlapping && event.spellId === 33891) {
+          rescheduledCasts.push({
+            castId: event.castId,
+            newTime: reforestationCast.effect_start_s + reforestationCast.effect_duration + 0.1,
+          })
 
+          // We can't press Incarn while reforestation is active, so we need to reschedule the cast
+          eventQueue.push({
+            type: EventType.CastStart,
+            time: reforestationCast.effect_start_s + reforestationCast.effect_duration + 0.1,
+            spellId: event.spellId,
+            castId: event.castId,
+          })
+        } else if (canCast()) {
+          /* Normal Cast */
           if (spellState.currentCast && event.time - SPELL_GCD < spellState.currentCast.start_s) {
             event.time = event.time + SPELL_GCD
           }
+
+          /* Reforestation */
+          if (event.spellId === 392356) {
+            const treeOfLifeId = 33891
+            // if the casts has a cast with id treeOfLifeId, then we need to add 15 seconds to the cooldown
+            const treeOfLifeCast = timelineState.isSpellCastPresent(treeOfLifeId)
+            if (
+              treeOfLifeCast &&
+              event.time < treeOfLifeCast.effect_duration + treeOfLifeCast.effect_start_s
+            ) {
+              eventQueue.modifyEarliesType(
+                treeOfLifeId,
+                EventType.EffectEnd,
+                spellInfo.effect_duration
+              )
+            }
+          }
+
+          spellState.useCharge(event.time)
 
           const latestChargeTime = eventQueue.findLatestCharge(event.spellId, event.time)
           const cooldown_delay = Math.max(0, latestChargeTime - event.time)
@@ -211,20 +250,6 @@ export function processEventQueue(
                 cotdEffects.delete(event.spellId)
               }
             }
-          }
-          /* Reforestation */
-          if (event.spellId === 392356) {
-            const treeOfLifeId = 33891
-            const activeCasts = timelineState.activeCasts.values()
-            // if the casts have one with id treeOfLifeId, then we need to add 15 seconds to the cooldown
-            const treeOfLifeCast = Array.from(activeCasts).find(
-              (cast) => cast.spell.spellId === treeOfLifeId
-            )
-            eventQueue.modifyEarliesType(
-              treeOfLifeId,
-              EventType.EffectEnd,
-              spellInfo.effect_duration
-            )
           }
 
           eventQueue.push({

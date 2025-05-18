@@ -131,7 +131,7 @@ export default function CooldownIndicator({
   }
 
   return (
-    <div className={`relative h-5 w-full ${className || ''}`}>
+    <div className={`relative h-5 w-full pt-1 ${className || ''}`}>
       {renderSegments.map((segment, index) => (
         <React.Fragment key={index}>
           <div
@@ -144,7 +144,7 @@ export default function CooldownIndicator({
           />
           {labelSegments.some((labelSegment) => labelSegment.start === segment.start) && (
             <div
-              className="absolute top-[2px] text-xs text-white"
+              className="absolute top-[6px] text-xs text-white"
               style={{
                 left: `${segment.start + 3}px`,
                 zIndex: 10,

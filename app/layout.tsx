@@ -13,6 +13,8 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import WelcomePopover from '@/components/WelcomePopover'
 import { Providers } from './providers'
+import { NextStepProvider, NextStep, Tour } from 'nextstepjs'
+import { steps, onNextStepStepChange } from 'lib/steps'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -88,14 +90,16 @@ export default function RootLayout({ children }: LayoutProps) {
       >
         <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
           <Providers>
-            <ThemeProviders>
-              <Analytics />
-              <WelcomePopover />
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <main className="mb-auto">{children}</main>
-                <Footer />
-              </SearchProvider>
-            </ThemeProviders>
+            <NextStep steps={steps} onStepChange={onNextStepStepChange}>
+              <ThemeProviders>
+                <Analytics />
+                <WelcomePopover />
+                <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                  <main className="mb-auto">{children}</main>
+                  <Footer />
+                </SearchProvider>
+              </ThemeProviders>
+            </NextStep>
           </Providers>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
