@@ -32,6 +32,7 @@ import { dreamstate } from './GlobalHandlers/Resto/dreamstate'
 import { tearDownTheMighty } from './GlobalHandlers/Feral/tearDownTheMighty'
 import { ashamanesGuidance } from './GlobalHandlers/Feral/ashamanesGuidance'
 import { heartOfTheLion } from './GlobalHandlers/Feral/heartOfTheLion'
+import { cenariusGuidance } from './GlobalHandlers/Resto/cenariusGuidance'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface TimelineViewProps {
@@ -148,6 +149,9 @@ export default function TimelineView({
       }
       if (bindingId === Talents.HeartOfTheLion) {
         bindGlobalAction(['106951'], heartOfTheLion)
+      }
+      if (bindingId === Talents.CenariusGuidance) {
+        bindGlobalAction(['391528', '33891'], cenariusGuidance)
       }
     })
   }, [activeBindings])
@@ -446,7 +450,7 @@ export default function TimelineView({
             wowheadMap={wowheadMarkerMap}
             total_length_s={total_length_s}
           />
-          {false && <EventMarkers eventInfo={processedEvents} />}
+          {true && <EventMarkers eventInfo={processedEvents} />}
           {/* Casts/timeline rows */}
           <div
             className="relative mt-5 flex flex-col"

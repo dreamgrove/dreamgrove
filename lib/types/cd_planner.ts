@@ -18,6 +18,7 @@ export enum EventType {
   GainCharge = 'gain_charge',
   ControlOfTheDream = 'control_of_the_dream',
   DreamstateCdr = 'dreamstate_cdr',
+  CenariusGuidance = 'cenarius_guidance',
 }
 
 export enum Talents {
@@ -30,6 +31,7 @@ export enum Talents {
   TearDownTheMighty = 'tear_down_the_mighty',
   AshamanesGuidance = 'ashamanes_guidance',
   HeartOfTheLion = 'heart_of_the_lion',
+  CenariusGuidance = 'cenarius_guidance',
 }
 // Event type for the event queue
 export interface TimelineEvent {

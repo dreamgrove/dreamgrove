@@ -58,4 +58,10 @@ export const bindings = [
     description: 'Convoke the Spirits cooldown reduced by 50%.',
     specs: ['feral'],
   },
+  {
+    id: Talents.CenariusGuidance,
+    label: 'Cenarius Guidance',
+    description: 'Convoke the Spirits cooldown reduced by 50% + Tree of Life CDR',
+    specs: ['resto'],
+  },
 ]

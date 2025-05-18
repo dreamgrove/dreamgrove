@@ -332,6 +332,18 @@ export function processEventQueue(
         }
         break
 
+      case EventType.CenariusGuidance:
+        /* Reforestation */
+
+        if (timelineState.activeCasts.has(event.castId)) {
+          const cast = timelineState.activeCasts.get(event.castId)
+          if (cast) {
+            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -5)
+            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -5)
+          }
+        }
+        break
+
       case EventType.DreamstateCdr:
         if (timelineState.channeledSpell?.name !== 'Tranquility') {
           break
