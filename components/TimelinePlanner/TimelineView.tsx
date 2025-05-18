@@ -6,7 +6,6 @@ import CustomElement from './CustomElement'
 import Debug from './Debug'
 import Checkboxes from './Checkboxes'
 import ActionBindings from './ActionBindings'
-import { applyTimelineEffects, timelineEffects } from './TimelineEffects'
 import {
   Cast,
   SpellInfo,
