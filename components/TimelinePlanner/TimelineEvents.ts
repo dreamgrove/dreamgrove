@@ -333,8 +333,6 @@ export function processEventQueue(
         break
 
       case EventType.CenariusGuidance:
-        /* Reforestation */
-
         if (timelineState.activeCasts.has(event.castId)) {
           const cast = timelineState.activeCasts.get(event.castId)
           if (cast) {
@@ -345,11 +343,12 @@ export function processEventQueue(
         break
 
       case EventType.DreamstateCdr:
-        if (timelineState.channeledSpell?.name !== 'Tranquility') {
+        if (timelineState.channeledSpell?.name !== 'Tranquillity') {
           break
         }
         const currentCasts = timelineState.activeCasts.values()
         const consideredSpells = new Set<number>()
+        consideredSpells.add(740)
         for (const cast of currentCasts) {
           if (consideredSpells.has(cast.spell.spellId)) {
             continue
