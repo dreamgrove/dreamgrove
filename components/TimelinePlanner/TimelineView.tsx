@@ -450,7 +450,7 @@ export default function TimelineView({
             wowheadMap={wowheadMarkerMap}
             total_length_s={total_length_s}
           />
-          {true && <EventMarkers eventInfo={processedEvents} />}
+          {showDebug && <EventMarkers eventInfo={processedEvents} />}
           {/* Casts/timeline rows */}
           <div
             className="relative mt-5 flex flex-col"
