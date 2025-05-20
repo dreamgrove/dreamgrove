@@ -56,7 +56,6 @@ export default function CooldownIndicator({
       .map(([instant, change]) => ({ instant, change }))
       .sort((a, b) => a.instant - b.instant)
 
-    // Initialize segments array
     const processedSegments: ProcessedSegment[] = []
 
     // Add initial segment from 0 to first interval if there are any intervals

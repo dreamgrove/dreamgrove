@@ -153,7 +153,6 @@ export function processEventQueue(
 
   /* Control of The Dream */
   if (activeBindings.includes(Talents.ControlOfTheDream)) {
-    // Initialize an empty Map for Control of the Dream effects
     timelineState.initializeControlOfTheDream()
   }
 
@@ -180,7 +179,7 @@ export function processEventQueue(
       }
     }
 
-    // make a copy of the spellInfo to avoid state preservation between calls
+    // avoids state preservation between calls
     const spellInfo = { ...currentSpells.find((s) => s.spellId === event.spellId) }
 
     if (!spellInfo) continue
@@ -305,7 +304,6 @@ export function processEventQueue(
             cooldown_delay_s: cooldown_delay,
           })
 
-          //casts.set(event.castId, cast)
           timelineState.activeCasts.set(cast.id, cast)
         } else {
           // if we don't have enough charges we need to find the first instant
@@ -437,7 +435,6 @@ export function processEventQueue(
     }
   }
 
-  //console.log('Processed state:', processedState)
   processedState.spells.forEach((spell) => {
     spell.chargeIntervals = timelineState.spells.find(
       (s) => s.spellId === spell.spell.spellId

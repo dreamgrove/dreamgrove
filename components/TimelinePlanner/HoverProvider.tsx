@@ -19,6 +19,7 @@ type HoverContextValue = {
   hovering: boolean
   setDelta: (delta: number) => void
   setHovering: (state: boolean) => void
+  rectRef: React.RefObject<HTMLDivElement | null> | null
 }
 
 const HoverContext = createContext<HoverContextValue>({
@@ -29,6 +30,7 @@ const HoverContext = createContext<HoverContextValue>({
   setHovering: () => {},
   hovering: false,
   delta: 0,
+  rectRef: null,
 })
 
 export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
@@ -37,6 +39,7 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [delta, setDelta] = useState(0)
   const rafRef = useRef<number>(0)
   const pendingCastRef = useRef<Cast | null>(null)
+  const rectRef = useRef<HTMLDivElement | null>(null)
 
   const { isShiftKeyPressed } = useTimelineControls()
 
@@ -44,7 +47,6 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     (newCast: Cast) => {
       pendingCastRef.current = newCast
 
-      // Cancel any existing animation frame
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current)
       }
@@ -52,7 +54,6 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       if (!cast) {
         setCast(newCast)
       } else {
-        // Schedule a new update
         rafRef.current = requestAnimationFrame((timestamp: number) => {
           setCast((prevCast) => {
             const pendingCast = pendingCastRef.current
@@ -73,7 +74,6 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     if (!hovering && !isShiftKeyPressed) setCast(null)
   }, [hovering, isShiftKeyPressed])
 
-  // Clean up on unmount
   useEffect(() => {
     return () => {
       if (rafRef.current) {
@@ -100,6 +100,7 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         setDelta,
         hovering,
         setHovering,
+        rectRef,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import {
   DndContext,
   useSensor,
@@ -90,6 +90,12 @@ export default function SpellCastsRow({
 
   const { timeToPixels, pixelsToTime, total_length_s } = useTimelineControls()
 
+  useEffect(() => {
+    if (activeDraggedCast) {
+      changeHover(activeDraggedCast)
+    }
+  }, [activeDragId])
+
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -103,7 +109,6 @@ export default function SpellCastsRow({
   const handleDragStart = (event: DragStartEvent) => {
     const { active } = event
     setActiveDragId(active.id as string)
-    console.log('drag start', active.id)
   }
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -207,8 +212,8 @@ export default function SpellCastsRow({
           <CastInterval
             cast={activeDraggedCast}
             icon={wowheadComponent}
-            isDragging={true}
             isOverlay={true}
+            isDragging={true}
             className="cursor-grabbing"
             hasCollision={false}
           />

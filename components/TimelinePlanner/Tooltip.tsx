@@ -28,7 +28,8 @@ const Tooltip: React.FC<Props> = ({
   coordinates = { x: 0, y: 0 },
   isDragging = false,
 }) => {
-  const { scrollContainer, pixelsToTime, isShiftKeyPressed } = useTimelineControls()
+  const { scrollContainer, pixelsToTime, isShiftKeyPressed, pixelsPerSecond } =
+    useTimelineControls()
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const boundingBox = scrollContainer?.getBoundingClientRect()
 
@@ -44,7 +45,7 @@ const Tooltip: React.FC<Props> = ({
     }
   }, [])
 
-  const { cast } = useHoverContext()
+  const { cast, rectRef } = useHoverContext()
 
   const isMouseInTimeline = useMemo(() => {
     if (!boundingBox) return false
@@ -58,22 +59,31 @@ const Tooltip: React.FC<Props> = ({
 
   if (!boundingBox) return null
 
+  const c = {
+    x: Math.max(0, rectRef?.current?.getBoundingClientRect()?.left ?? 0),
+    y: Math.max(0, rectRef?.current?.getBoundingClientRect()?.top ?? 0),
+  }
+
+  const castCoordinates = {
+    x: boundingBox.left + c.x * pixelsPerSecond + 25,
+    y: boundingBox.top + c.y * pixelsPerSecond + 25,
+  }
+
   if (
-    (isDragging && isOverlay) ||
-    (isShiftKeyPressed && !isOverlay && !isDragging && isMouseInTimeline) ||
+    (isDragging && !isOverlay) ||
+    (isShiftKeyPressed && !isOverlay && !isDragging && isMouseInTimeline && rectRef?.current) ||
     (mouseTooltip && isShiftKeyPressed)
   ) {
-    const transition = !isOverlay ? '' : ''
     const pixelOffset = Math.max(mousePos.x - boundingBox.left - 25, 0)
     const time = formatTime(pixelsToTime(pixelOffset))
 
     const tooltip = (
       <div
-        className="animate-expand box-border rounded-sm bg-neutral-900 text-xs"
+        className={`${mouseTooltip ? '' : 'animate-expand'} box-border rounded-sm bg-neutral-900 text-xs`}
         style={{
           position: 'absolute',
-          top: cast ? coordinates.y + 43 : mousePos.y + 0,
-          left: cast ? coordinates.x : mousePos.x - 65,
+          top: cast ? c.y + 43 : mousePos.y + 0,
+          left: cast ? c.x : mousePos.x - 65,
           pointerEvents: 'none',
           color: 'white',
           width: !mouseTooltip ? width : 'auto',
@@ -91,11 +101,7 @@ const Tooltip: React.FC<Props> = ({
 
     if (mouseTooltip && !cast) return ReactDOM.createPortal(tooltip, document.body)
     if (cast && cast.id === id) {
-      if (isOverlay) {
-        return tooltip
-      } else {
-        return ReactDOM.createPortal(tooltip, document.body)
-      }
+      return ReactDOM.createPortal(tooltip, document.body)
     }
   }
 

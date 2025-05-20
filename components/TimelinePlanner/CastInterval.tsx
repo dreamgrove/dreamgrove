@@ -24,7 +24,7 @@ export default function CastInterval({
   hasCollision = true,
 }: CastProps) {
   const { pixelsPerSecond } = useTimelineControls()
-  const { changeHover, removeHover, cast: hoveredCast, setHovering } = useHoverContext()
+  const { changeHover, removeHover, cast: hoveredCast, setHovering, rectRef } = useHoverContext()
 
   const ref = useRef<HTMLDivElement>(null)
 
@@ -51,10 +51,8 @@ export default function CastInterval({
     console.log('cooldown delay', cast.cooldown_delay_s)
     console.log('effect_duration', cast.effect_duration)
   }
-  // Find the maximum width percentage
   const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
 
-  // Determine which section should show Wowhead (first one in case of ties)
   const showWowheadInChannel = channel_width_px === maxWidth
   const showWowheadInEffect = !showWowheadInChannel && effect_width_px === maxWidth
   const showWowheadInRemaining = !showWowheadInChannel && !showWowheadInEffect
@@ -65,15 +63,19 @@ export default function CastInterval({
 
   const bgColor = ''
 
-  const tooltip = (
+  const tooltip = !isOverlay && (
     <Tooltip
       isOverlay={isOverlay}
       isDragging={isDragging}
       id={cast.id}
       width={duration_s_px}
-      coordinates={!isOverlay ? coordinates : { x: 0, y: 0 }}
+      coordinates={coordinates}
     />
   )
+
+  useEffect(() => {
+    if (rectRef && isDragging && isOverlay) rectRef.current = ref.current
+  }, [isDragging, isOverlay])
 
   return (
     <div
@@ -94,13 +96,13 @@ export default function CastInterval({
               : 'border-gray-900/40'
         } ${bgColor} ${className || ''}`}
         onMouseEnter={(e) => {
-          console.log('entering and setting true ')
-          setHovering(true)
-          changeHover(cast)
+          if (!isDragging && !isOverlay && !hoveredCast) {
+            if (rectRef) rectRef.current = ref.current
+            changeHover(cast)
+          }
         }}
         onMouseLeave={() => {
-          setHovering(false)
-          if (!isDragging) {
+          if (!isDragging && !isOverlay && !hoveredCast) {
             removeHover()
           }
         }}

@@ -20,9 +20,6 @@ interface WarningInfo {
   message: string
 }
 
-/**
- * Debug: A collapsible panel showing debug information about the timeline and casts
- */
 export default function Debug({
   processedTimeline,
   timelineSettings,

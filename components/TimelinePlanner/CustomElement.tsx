@@ -7,7 +7,6 @@ interface CustomElementProps {
 }
 
 export default function CustomElement({ onCreate }: CustomElementProps) {
-  // State for the custom element form
   const [isFormVisible, setIsFormVisible] = useState(false)
   const [name, setName] = useState('')
   const [cooldown, setCooldown] = useState(60)

@@ -8,7 +8,6 @@ import {
   SpellTimeline,
   TimelineToRender,
 } from '../../lib/types/cd_planner'
-import { CastParams } from '../../lib/types/cd_planner'
 import CustomElement from './CustomElement'
 
 interface SpellButtonsProps {

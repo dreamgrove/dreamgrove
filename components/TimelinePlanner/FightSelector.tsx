@@ -10,7 +10,6 @@ interface FightSelectorProps {
   onEncounterChange: (encounterId: string) => void
 }
 
-// Array of encounter options
 export const encounterOptions: EncounterOption[] = [
   { id: 'empty', name: 'Empty' },
   { id: '3009', name: 'Vexie and the Geargrinders' },

@@ -14,16 +14,8 @@ interface DraggableCastProps {
   deltaSeconds?: number
 }
 
-const DraggableCast = ({
-  idx,
-  id,
-  castInfo,
-  icon,
-  onClick,
-  onDelete,
-  deltaSeconds = 0,
-}: DraggableCastProps) => {
-  const { timeToPixels, pixelsToTime, total_length_px, total_length_s } = useTimelineControls()
+const DraggableCast = ({ idx, id, castInfo, icon, onClick, onDelete }: DraggableCastProps) => {
+  const { timeToPixels, total_length_px, total_length_s } = useTimelineControls()
 
   const cssId = `cast-${castInfo.spell.spellId}-${castInfo.current_charge}-${idx}`
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
@@ -32,10 +24,7 @@ const DraggableCast = ({
 
   const [hasCollision, setHasCollision] = useState(false)
 
-  // Store values in refs to avoid dependency issues and race conditions
   const castInfoRef = useRef(castInfo)
-  const transformRef = useRef(transform)
-  const isDraggingRef = useRef(isDragging)
   const timelineTotalLengthPxRef = useRef(total_length_px)
   const totalLengthSRef = useRef(total_length_s)
 
@@ -49,7 +38,6 @@ const DraggableCast = ({
     totalLengthSRef.current = total_length_s
   }, [castInfo, total_length_px, total_length_s])
 
-  // Create a modified transform that only includes the x-coordinate
   const modifiedTransform = transform
     ? {
         ...transform,
@@ -63,7 +51,7 @@ const DraggableCast = ({
       ref={setNodeRef}
       style={{
         left: `${timeToPixels(castInfo.start_s)}px`,
-        width: `${cast_width_px + 1}px`, //I think the +1 is because of the border but who knows
+        width: `${cast_width_px + 1}px`, //I think the +1 is here because of the border but who knows
         zIndex: isDragging ? 20 : 10,
         opacity: isDragging ? 0.2 : 1,
       }}
@@ -74,7 +62,6 @@ const DraggableCast = ({
     >
       <CastInterval
         cast={castInfo}
-        deltaSeconds={deltaSeconds}
         icon={icon}
         onDelete={onDelete}
         isDragging={isDragging}

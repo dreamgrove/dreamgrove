@@ -58,7 +58,6 @@ const Markers: React.FC<MarkersProps> = ({
 
   useEffect(() => {
     if (previousSize_px === 0) {
-      // Initial setup
       setPreviousSize_px(size_px)
     } else if (size_px > previousSize_px * 1.25 && effective_marker_spacing_s > 5) {
       setMarkerSpacing((prev) => prev - 2.5)
@@ -81,7 +80,6 @@ const Markers: React.FC<MarkersProps> = ({
     console.log('previousSize_px', previousSize_px)
   }
 
-  // Generate marker positions at the computed interval
   const markerPositions: number[] = []
   for (let pos = 0; pos <= total_length_s; pos += effective_marker_spacing_s) {
     markerPositions.push(pos)

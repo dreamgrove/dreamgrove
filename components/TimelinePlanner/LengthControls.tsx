@@ -36,7 +36,6 @@ export default function LengthControls({
     setZoomLevel(calculatedZoom)
   }, [])
 
-  // Update local state when props change
   useEffect(() => {
     setMinutes(Math.floor(total_length_s / 60))
     setSeconds(total_length_s % 60)

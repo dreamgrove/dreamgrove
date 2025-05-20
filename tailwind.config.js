@@ -19,7 +19,7 @@ export const theme = {
       },
     },
     animation: {
-      expand: 'expand 0.2s ease-out forwards',
+      expand: 'expand 0.2s ease forwards',
     },
     lineHeight: {
       11: '2.75rem',
