@@ -191,9 +191,12 @@ export default async function TimelinePlannerServer() {
   // Calculate average timestamps
   const averageTimestampsBySpell = druidCastsData ? calculateAverageTimestamps(druidCastsData) : {}
 
+  const toSkipWowhead = false
   // Prerender all Wowhead components for cast blocks
   const prerenderedWowheads = spellsData.spells.map((spell) => {
-    const component = (
+    const component = toSkipWowhead ? (
+      <> </>
+    ) : (
       <Wowhead
         type="spell"
         id={spell.spellId}
@@ -209,7 +212,9 @@ export default async function TimelinePlannerServer() {
 
   // Prerender Wowhead for spell name column (no icon, disabled)
   const prerenderedWowheadNames = spellsData.spells.map((spell) => {
-    const component = (
+    const component = toSkipWowhead ? (
+      <></>
+    ) : (
       <Wowhead
         type="spell"
         id={spell.spellId}
@@ -222,26 +227,8 @@ export default async function TimelinePlannerServer() {
     return [spell.spellId, component] as const
   })
 
-  // Prerender Wowhead components for spell markers
-  const prerenderedWowheadMarkers = spellsData.spells.map((spell) => {
-    const component = (
-      <Wowhead
-        type="spell"
-        id={spell.spellId}
-        name={spell.name}
-        disabled={true}
-        noIcon={false}
-        showLabel={false}
-        ellipsis={false}
-        iconSize={23}
-      />
-    )
-    return [spell.spellId, component] as const
-  })
-
-  const wowheadMap = Object.fromEntries(prerenderedWowheads)
-  const wowheadNameMap = Object.fromEntries(prerenderedWowheadNames)
-  const wowheadMarkerMap = Object.fromEntries(prerenderedWowheadMarkers)
+  const wowheadIcons = Object.fromEntries(prerenderedWowheads)
+  const wowheadIconNames = Object.fromEntries(prerenderedWowheadNames)
 
   return (
     <TimelinePlanner
@@ -249,9 +236,9 @@ export default async function TimelinePlannerServer() {
         ...spell,
         charges: spell.charges || 1,
       }))}
-      wowheadMap={wowheadMap}
-      wowheadNameMap={wowheadNameMap}
-      wowheadMarkerMap={wowheadMarkerMap}
+      wowheadMap={wowheadIcons}
+      wowheadNameMap={wowheadIconNames}
+      wowheadMarkerMap={wowheadIcons}
       averageTimestamps={averageTimestampsBySpell}
     />
   )

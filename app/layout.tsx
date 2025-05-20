@@ -13,9 +13,6 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import WelcomePopover from '@/components/WelcomePopover'
 import { Providers } from './providers'
-import { NextStepProvider, NextStep, Tour } from 'nextstepjs'
-import { steps, onNextStepStepChange } from 'lib/steps'
-
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
@@ -85,23 +82,21 @@ export default function RootLayout({ children }: LayoutProps) {
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body
-        className="flex h-full bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white"
+        className="flex h-full min-h-screen bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white"
         suppressHydrationWarning
       >
-        <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
-          <Providers>
-            <NextStep steps={steps} onStepChange={onNextStepStepChange}>
-              <ThemeProviders>
-                <Analytics />
-                <WelcomePopover />
-                <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                  <main className="mb-auto">{children}</main>
-                  <Footer />
-                </SearchProvider>
-              </ThemeProviders>
-            </NextStep>
-          </Providers>
-        </div>
+        <Providers>
+          <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
+            <ThemeProviders>
+              <Analytics />
+              <WelcomePopover />
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <main className="mb-auto">{children}</main>
+                <Footer />
+              </SearchProvider>
+            </ThemeProviders>
+          </div>
+        </Providers>
         <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
         <Script src={scriptSrc} strategy="beforeInteractive" />
       </body>

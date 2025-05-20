@@ -39,30 +39,54 @@ export default function Checkboxes({
     }
 
     return (
-      <div className={styles.checkboxContainer}>
+      <div className="flex flex-col gap-2">
         {items.map((item) => {
           const isSelected = selectedItems?.includes(item.id) || false
 
           return (
-            <div key={item.id} style={{ marginBottom: 8 }}>
-              <label style={{ fontWeight: 500, display: 'flex', alignItems: 'center' }}>
-                <input
-                  type="checkbox"
-                  checked={isSelected}
-                  onChange={(e) => handleCheckboxChange(item.id, e.target.checked)}
-                  style={{ marginRight: 8 }}
-                />
-                {item.label}
-                {item.description && (
-                  <span style={{ marginLeft: 8, fontSize: '0.9em', color: '#666' }}>
-                    ({item.description})
-                  </span>
-                )}
-              </label>
-            </div>
+            <Item
+              key={item.id}
+              item={item}
+              isSelected={isSelected}
+              onToggle={handleCheckboxChange}
+            />
           )
         })}
       </div>
     )
   }
+}
+
+const Item = ({
+  item,
+  isSelected,
+  onToggle,
+}: {
+  item: { id: string; label: string; description?: string }
+  isSelected: boolean
+  onToggle: (id: string, isSelected: boolean) => void
+}) => {
+  return (
+    <div className="flex">
+      <div className="flex h-5 items-center">
+        <input
+          id={item.id}
+          aria-describedby={`${item.id}-text`}
+          type="checkbox"
+          checked={isSelected}
+          onChange={(e) => onToggle(item.id, e.target.checked)}
+          value=""
+          className="h-4 w-4 rounded-sm border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+        />
+      </div>
+      <div className="ms-2 text-[0.8rem]">
+        <label htmlFor={item.id} className="text-md font-bold text-gray-900 dark:text-gray-200">
+          {item.label}
+        </label>
+        <p id={`${item.id}-text`} className="text-md font-normal text-gray-500 dark:text-gray-500">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  )
 }

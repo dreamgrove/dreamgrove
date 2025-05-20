@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useTimelineControls } from './TimelineContext'
 import { Cast } from '../../lib/types/cd_planner'
+import { useHoverContext } from './HoverProvider'
+import Tooltip from './Tooltip'
 
 interface CastProps {
   cast: Cast
@@ -8,6 +10,7 @@ interface CastProps {
   className?: string
   onDelete?: (castId: string) => void
   isDragging?: boolean
+  isOverlay?: boolean
   hasCollision?: boolean
 }
 
@@ -16,10 +19,17 @@ export default function CastInterval({
   icon,
   className,
   onDelete,
-  isDragging,
-  hasCollision,
+  isOverlay = false,
+  isDragging = false,
+  hasCollision = true,
 }: CastProps) {
   const { pixelsPerSecond } = useTimelineControls()
+  const { changeHover, removeHover, cast: hoveredCast, setHovering } = useHoverContext()
+
+  const ref = useRef<HTMLDivElement>(null)
+
+  const boundingBox = ref.current?.getBoundingClientRect()
+  const coordinates = { x: boundingBox?.left || 0, y: boundingBox?.top || 0 }
 
   const channel_width_px = cast.channel_visual_duration * pixelsPerSecond
   const effect_width_px = cast.effect_visual_duration * pixelsPerSecond
@@ -55,62 +65,92 @@ export default function CastInterval({
 
   const bgColor = ''
 
+  const tooltip = (
+    <Tooltip
+      isOverlay={isOverlay}
+      isDragging={isDragging}
+      id={cast.id}
+      width={duration_s_px}
+      coordinates={!isOverlay ? coordinates : { x: 0, y: 0 }}
+    />
+  )
+
   return (
     <div
-      className={`relative flex h-10 items-center border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
-        hasCollision
-          ? 'border-blue-500 shadow-md'
-          : isDragging
-            ? 'border-zinc-400/40 shadow-lg'
-            : 'border-gray-900/40'
-      } ${bgColor} ${className || ''}`}
+      ref={ref}
+      className="relative select-none"
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
-      {/* Delete button */}
-      {onDelete && (
-        <button
-          onClick={() => onDelete(cast.id)}
-          className="absolute top-0 right-0 z-100 flex h-10 w-10 items-center justify-center rounded-full text-3xl text-[#ff612caa] opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
-          title="Remove cast"
+      {/* tooltip */}
+      {tooltip}
+
+      {/* cast interval */}
+      <div
+        className={`flex h-10 items-center border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
+          !hasCollision
+            ? 'border-blue-500 shadow-md'
+            : isDragging
+              ? 'border-zinc-400/40 shadow-lg'
+              : 'border-gray-900/40'
+        } ${bgColor} ${className || ''}`}
+        onMouseEnter={(e) => {
+          console.log('entering and setting true ')
+          setHovering(true)
+          changeHover(cast)
+        }}
+        onMouseLeave={() => {
+          setHovering(false)
+          if (!isDragging) {
+            removeHover()
+          }
+        }}
+      >
+        {/* Delete button */}
+        {onDelete && (
+          <button
+            onClick={() => onDelete(cast.id)}
+            className="text-main absolute top-0 right-0 z-100 flex h-[38px] w-10 items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
+            title="Remove cast"
+          >
+            ×
+          </button>
+        )}
+        {/* Channel Duration Bar */}
+        <div
+          className="flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
+          style={{
+            width: `${channel_width_px}px`,
+          }}
         >
-          ×
-        </button>
-      )}
-      {/* Channel Duration Bar */}
-      <div
-        className="flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
-        style={{
-          width: `${channel_width_px}px`,
-        }}
-      >
-        {showWowheadInChannel && wowheadWrapper}
-      </div>
-      {/* Effect Duration Bar */}
-      <div
-        className="flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
-        style={{
-          width: `${effect_width_px}px`,
-        }}
-      >
-        {showWowheadInEffect && wowheadWrapper}
-      </div>
-      {/* Cooldown Delay Bar */}
-      <div
-        className="flex h-full items-center bg-neutral-600/10"
-        style={{
-          width: `${cooldown_delay_width_px}px`,
-        }}
-      >
-        {showWowheadInRemaining && cooldown_delay_width_px > 100 && wowheadWrapper}
-      </div>
-      {/* Remaining Cooldown Bar */}
-      <div
-        className="flex h-full items-center justify-center border-b-[1px] border-gray-500/40 bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
-        style={{
-          width: `${cooldown_width_px + 1}px`,
-        }}
-      >
-        {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}
+          {showWowheadInChannel && wowheadWrapper}
+        </div>
+        {/* Effect Duration Bar */}
+        <div
+          className="flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
+          style={{
+            width: `${effect_width_px}px`,
+          }}
+        >
+          {showWowheadInEffect && wowheadWrapper}
+        </div>
+        {/* Cooldown Delay Bar */}
+        <div
+          className="delay flex h-full items-center bg-neutral-600/10"
+          style={{
+            width: `${cooldown_delay_width_px}px`,
+          }}
+        >
+          {showWowheadInRemaining && cooldown_delay_width_px > 100 && wowheadWrapper}
+        </div>
+        {/* Remaining Cooldown Bar */}
+        <div
+          className="flex h-full items-center justify-center border-b-[1px] border-gray-500/40 bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
+          style={{
+            width: `${cooldown_width_px + 1}px`,
+          }}
+        >
+          {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}
+        </div>
       </div>
     </div>
   )

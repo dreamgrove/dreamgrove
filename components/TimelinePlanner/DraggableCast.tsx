@@ -5,22 +5,27 @@ import { useTimelineControls } from './TimelineContext'
 import CastInterval from './CastInterval'
 
 interface DraggableCastProps {
+  idx: number
   id: string
   castInfo: Cast
   icon: React.ReactNode
   onClick?: () => void
   onDelete?: (castId: string) => void
+  deltaSeconds?: number
 }
 
-export default function DraggableCast({
+const DraggableCast = ({
+  idx,
   id,
   castInfo,
   icon,
   onClick,
   onDelete,
-}: DraggableCastProps) {
+  deltaSeconds = 0,
+}: DraggableCastProps) => {
   const { timeToPixels, pixelsToTime, total_length_px, total_length_s } = useTimelineControls()
 
+  const cssId = `cast-${castInfo.spell.spellId}-${castInfo.current_charge}-${idx}`
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id,
   })
@@ -31,7 +36,6 @@ export default function DraggableCast({
   const castInfoRef = useRef(castInfo)
   const transformRef = useRef(transform)
   const isDraggingRef = useRef(isDragging)
-  const hasCollisionRef = useRef(hasCollision)
   const timelineTotalLengthPxRef = useRef(total_length_px)
   const totalLengthSRef = useRef(total_length_s)
 
@@ -53,26 +57,13 @@ export default function DraggableCast({
       }
     : null
 
-  // Update state based on refs - uses useLayoutEffect for synchronous update before paint
-  useLayoutEffect(() => {
-    isDraggingRef.current = isDragging
-    transformRef.current = modifiedTransform
-
-    if (!isDragging) {
-      if (hasCollisionRef.current) {
-        hasCollisionRef.current = false
-        setHasCollision(false)
-      }
-      return
-    }
-  }, [isDragging, modifiedTransform])
-
   return (
     <div
+      id={cssId}
       ref={setNodeRef}
       style={{
         left: `${timeToPixels(castInfo.start_s)}px`,
-        width: `${cast_width_px + 2}px`, //I think the +1 is because of the border but who knows
+        width: `${cast_width_px + 1}px`, //I think the +1 is because of the border but who knows
         zIndex: isDragging ? 20 : 10,
         opacity: isDragging ? 0.2 : 1,
       }}
@@ -83,12 +74,15 @@ export default function DraggableCast({
     >
       <CastInterval
         cast={castInfo}
+        deltaSeconds={deltaSeconds}
         icon={icon}
         onDelete={onDelete}
-        className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         isDragging={isDragging}
-        hasCollision={hasCollision}
+        className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        hasCollision={true}
       />
     </div>
   )
 }
+
+export default DraggableCast

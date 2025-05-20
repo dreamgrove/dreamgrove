@@ -28,6 +28,7 @@ export default async function WowheadIcon({
 
   if (iconId === undefined) {
     try {
+      console.log('Fetching icon for', type, id, name)
       const data = await fetchWowheadData({
         id,
         type,

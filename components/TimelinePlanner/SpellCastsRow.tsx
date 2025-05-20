@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import {
   DndContext,
   useSensor,
@@ -11,16 +11,12 @@ import {
   useDroppable,
 } from '@dnd-kit/core'
 import DraggableCast from './DraggableCast'
-import {
-  Cast,
-  SPELL_GCD,
-  SpellToRender,
-  TimelineToRender,
-  ChargeInterval,
-} from '../../lib/types/cd_planner'
+import { Cast, SPELL_GCD, SpellToRender, ChargeInterval } from '../../lib/types/cd_planner'
 import { useTimelineControls } from './TimelineContext'
 import CastInterval from './CastInterval'
 import CooldownIndicator from './CooldownIndicator'
+import { defaultDropAnimationSideEffects } from '@dnd-kit/core'
+import { useHoverContext } from './HoverProvider'
 
 // Function to find the maximum number of charges used at the same time
 export const findMaxUsedCharges = (
@@ -92,7 +88,7 @@ export default function SpellCastsRow({
 
   const className = 'my-2 flex h-10 items-center'
 
-  const { timeToPixels, pixelsToTime, total_length_s, total_length_px } = useTimelineControls()
+  const { timeToPixels, pixelsToTime, total_length_s } = useTimelineControls()
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -102,9 +98,12 @@ export default function SpellCastsRow({
     })
   )
 
+  const { changeHover, removeHover, setDelta } = useHoverContext()
+
   const handleDragStart = (event: DragStartEvent) => {
     const { active } = event
     setActiveDragId(active.id as string)
+    console.log('drag start', active.id)
   }
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -116,7 +115,6 @@ export default function SpellCastsRow({
 
       if (cast && onCastMove) {
         const deltaSeconds = delta.x / pixelsPerSecond
-
         const proposedStartTime = Math.max(
           0,
           Math.min(total_length_s - SPELL_GCD, cast.start_s + deltaSeconds)
@@ -124,10 +122,32 @@ export default function SpellCastsRow({
 
         if (proposedStartTime !== cast.start_s) {
           onCastMove(castId, proposedStartTime)
+          const newCast = Object.assign({}, cast, {
+            start_s: proposedStartTime,
+            end_s: proposedStartTime + cast.duration_s,
+          })
+          changeHover(newCast)
         }
       }
     }
     setActiveDragId(null)
+  }
+
+  const handleDrag = (event: DragEndEvent) => {
+    const { delta: dragDelta, active } = event
+    if (active) {
+      const castId = active.id as string
+      const cast = spellTimeline.casts.find((c) => c.id === castId)
+      if (cast) {
+        const newCast = Object.assign({}, cast, {
+          start_s: cast.start_s + dragDelta.x / pixelsPerSecond,
+          end_s: cast.end_s + dragDelta.x / pixelsPerSecond,
+        })
+        if (Math.abs(dragDelta.x) >= 1) {
+          changeHover(newCast)
+        }
+      }
+    }
   }
 
   const modifiers: DndContextProps['modifiers'] = [
@@ -162,6 +182,7 @@ export default function SpellCastsRow({
     <DndContext
       sensors={sensors}
       onDragStart={handleDragStart}
+      onDragMove={handleDrag}
       onDragEnd={handleDragEnd}
       modifiers={modifiers}
     >
@@ -180,12 +201,14 @@ export default function SpellCastsRow({
           className={className}
         />
       )}
+
       <DragOverlay dropAnimation={null}>
-        {activeDragId && activeDraggedCast && (
+        {activeDraggedCast && activeDragId && (
           <CastInterval
             cast={activeDraggedCast}
             icon={wowheadComponent}
             isDragging={true}
+            isOverlay={true}
             className="cursor-grabbing"
             hasCollision={false}
           />
@@ -207,10 +230,11 @@ const RowSingleCharge = ({
   className: string
 }) => {
   return (
-    <div className={`w-full ${className}`}>
+    <div id={`timeline-row-${spellTimeline.spell.spellId}`} className={`w-full ${className}`}>
       {spellTimeline.casts.map((cast, index) => (
         <DraggableCast
           key={cast.id || `cast-${index}`}
+          idx={index}
           id={cast.id || `cast-${index}`}
           castInfo={cast}
           icon={wowheadComponent}
@@ -244,6 +268,7 @@ const RowMultipleCharges = ({
     >
       {chargeCasts.map((cast, index) => (
         <DraggableCast
+          idx={index}
           key={cast.id || `cast-${chargeIndex}-${index}`}
           id={cast.id || `cast-${chargeIndex}-${index}`}
           castInfo={cast}
@@ -254,13 +279,13 @@ const RowMultipleCharges = ({
     </DroppableChargeRow>
   ))
   return (
-    <>
+    <div id={`timeline-row-${spellTimeline.spell.spellId}`}>
       <CooldownIndicator
         maxCharges={spellTimeline.spell.charges}
         chargeIntervals={spellTimeline.chargeIntervals}
       />
       {chargeRows}
-    </>
+    </div>
   )
 }
 

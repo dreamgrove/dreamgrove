@@ -12,7 +12,7 @@ export const bindings = [
     label: 'Control of the Dream',
     description:
       "Time elapsed while your major abilities are available to be used or at maximum charges is subtracted from that ability's cooldown after the next time you use it, up to 15 seconds.",
-    specs: ['balance', 'resto'],
+    specs: ['balance', 'resto', 'guardian'],
   },
   {
     id: Talents.Incarnation,

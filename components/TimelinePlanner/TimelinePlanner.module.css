@@ -61,7 +61,7 @@
   border-radius: 4px;
   padding: 20px;
   min-height: 200px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .timeMarkers {
@@ -341,7 +341,6 @@
 
 .spellCasts {
   flex: 1 1 0%;
-  overflow-y: auto;
   min-height: 120px;
   /* Minimal padding/margins as per notes */
   padding: 0;

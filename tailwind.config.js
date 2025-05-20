@@ -12,6 +12,15 @@ export const content = [
 export const darkMode = 'class'
 export const theme = {
   extend: {
+    keyframes: {
+      expand: {
+        '0%': { transform: 'scaleX(0)', transformOrigin: 'center' },
+        '100%': { transform: 'scaleX(1)', transformOrigin: 'center' },
+      },
+    },
+    animation: {
+      expand: 'expand 0.2s ease-out forwards',
+    },
     lineHeight: {
       11: '2.75rem',
       12: '3rem',

@@ -131,11 +131,11 @@ export default function CooldownIndicator({
   }
 
   return (
-    <div className={`relative h-5 w-full pt-1 ${className || ''}`}>
+    <div className={`charges relative h-[18px] w-full ${className || ''}`}>
       {renderSegments.map((segment, index) => (
         <React.Fragment key={index}>
           <div
-            className="absolute h-[18px] bg-sky-500 transition-opacity"
+            className="absolute top-1 h-[18px] bg-sky-500 transition-opacity"
             style={{
               left: `${segment.start}px`,
               width: `${segment.width}px`,

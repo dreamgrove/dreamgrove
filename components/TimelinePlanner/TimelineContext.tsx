@@ -22,9 +22,11 @@ interface TimelineContextType {
 
   // Control key state for zooming
   isControlKeyPressed: boolean
+  isShiftKeyPressed: boolean
 
   // Register container for width calculations
   registerScrollContainer: (element: HTMLDivElement | null) => void
+  scrollContainer: HTMLDivElement | null
 }
 
 // Create initial context value
@@ -42,7 +44,9 @@ const initialContext: TimelineContextType = {
   setViewLength: () => {},
   setEffectiveViewLength: () => {},
   isControlKeyPressed: false,
+  isShiftKeyPressed: false,
   registerScrollContainer: () => {},
+  scrollContainer: null,
 }
 
 // Create the context
@@ -77,6 +81,7 @@ export function TimelineProvider({
   }
 
   const [isControlKeyPressed, setIsControlKeyPressed] = useState(false)
+  const [isShiftKeyPressed, setIsShiftKeyPressed] = useState(false)
 
   const effective_num_windows = total_length_s / effective_view_length_s
   const effective_total_length_px = scrollContainerWidth * effective_num_windows
@@ -101,11 +106,17 @@ export function TimelineProvider({
         e.preventDefault()
         setIsControlKeyPressed(true)
       }
+      if (e.key === 'Shift') {
+        setIsShiftKeyPressed(true)
+      }
     }
 
     const handleKeyUp = (e: KeyboardEvent) => {
       if (e.key === 'Control') {
         setIsControlKeyPressed(false)
+      }
+      if (e.key === 'Shift') {
+        setIsShiftKeyPressed(false)
       }
     }
 
@@ -126,6 +137,7 @@ export function TimelineProvider({
 
     // Pixel calculations
     scrollContainerWidth,
+    scrollContainer,
     effective_num_windows,
     effective_total_length_px,
     total_length_px,
@@ -136,6 +148,7 @@ export function TimelineProvider({
     setEffectiveViewLength,
 
     isControlKeyPressed,
+    isShiftKeyPressed,
 
     registerScrollContainer,
   }

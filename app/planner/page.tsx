@@ -1,5 +1,4 @@
 import TimelinePlannerServer from '@/components/TimelinePlanner/TimelinePlannerServer'
-import { NextStepProvider, NextStep, Tour } from 'nextstepjs'
 
 export const metadata = {
   title: 'Timeline Planner - Dreamgrove',

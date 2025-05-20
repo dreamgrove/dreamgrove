@@ -35,6 +35,7 @@ import { cenariusGuidance } from './GlobalHandlers/Resto/cenariusGuidance'
 import { useNextStep } from 'nextstepjs'
 
 import { NextStepViewport } from 'nextstepjs'
+import { HoverProvider } from './HoverProvider'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface TimelineViewProps {
@@ -46,11 +47,13 @@ interface TimelineViewProps {
   wowheadMarkerMap?: Record<string, React.ReactNode>
   averageTimestamps?: Record<string, number[]>
   currentEncounterId?: string
+  extraSpells?: PlayerAction[]
 }
 
 export default function TimelineView({
   marker_spacing_s,
   spells = [],
+  extraSpells = [],
   wowheadMap = {},
   wowheadNameMap = {},
   wowheadMarkerMap = {},
@@ -70,19 +73,6 @@ export default function TimelineView({
     resetZoom,
   } = useTimelineControls()
 
-  const {
-    startNextStep,
-    closeNextStep,
-    currentTour,
-    currentStep,
-    setCurrentStep,
-    isNextStepVisible,
-  } = useNextStep()
-
-  const [showTooltip, setShowTooltip] = useState(false)
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
-  const [tooltipTime, setTooltipTime] = useState(0)
-  const [isShiftKeyPressed, setIsShiftKeyPressed] = useState(false)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [showDebug, setShowDebug] = useState(false)
   const [selectedSpec, setSelectedSpec] = useState<DruidSpec>('balance')
@@ -108,22 +98,8 @@ export default function TimelineView({
   }, [localSpells, selectedSpec])
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.shiftKey) setIsShiftKeyPressed(true)
-    }
-
-    const handleKeyUp = (e: KeyboardEvent) => {
-      if (!e.shiftKey) setIsShiftKeyPressed(false)
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-    window.addEventListener('keyup', handleKeyUp)
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown)
-      window.removeEventListener('keyup', handleKeyUp)
-    }
-  }, [])
+    setInputActions(extraSpells)
+  }, [extraSpells])
 
   useEffect(() => {
     if (scrollContainerRef.current) {
@@ -143,6 +119,7 @@ export default function TimelineView({
         bindGlobalAction(['205636'], earlySpring)
       }
       if (bindingId === Talents.ControlOfTheDream) {
+        console.log('bindingId', bindingId)
         bindGlobalAction(['194223', '391528', '205636', '33891'], controlOfTheDream)
       }
       if (bindingId === Talents.Incarnation) {
@@ -203,51 +180,6 @@ export default function TimelineView({
       }
     }
   }, [isControlKeyPressed, zoomIn, zoomOut])
-
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current
-
-    if (!isShiftKeyPressed) {
-      setShowTooltip(false)
-    }
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (scrollContainer && isShiftKeyPressed) {
-        const rect = scrollContainer.getBoundingClientRect()
-        console.log(rect.left)
-        const x = e.clientX - rect.left + scrollContainer.scrollLeft - 24 //24 to account for left padding
-        const y = e.clientY - rect.top
-
-        // Calculate time based on x position
-        const time = x / pixelsPerSecond
-
-        setTooltipPosition({
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top,
-        })
-        setTooltipTime(time)
-        setShowTooltip(true)
-      } else {
-        setShowTooltip(false)
-      }
-    }
-
-    const handleMouseLeave = () => {
-      setShowTooltip(false)
-    }
-
-    if (scrollContainer) {
-      scrollContainer.addEventListener('mousemove', handleMouseMove)
-      scrollContainer.addEventListener('mouseleave', handleMouseLeave)
-    }
-
-    return () => {
-      if (scrollContainer) {
-        scrollContainer.removeEventListener('mousemove', handleMouseMove)
-        scrollContainer.removeEventListener('mouseleave', handleMouseLeave)
-      }
-    }
-  }, [isShiftKeyPressed, pixelsPerSecond])
 
   // Add a ref to track already processed reschedulings to prevent cyclical re-renders
   // This keeps track of which cast reschedulings we've already processed to avoid
@@ -368,7 +300,6 @@ export default function TimelineView({
     }
 
     setLocalSpells([...localSpells, newSpell])
-    console.log('Create custom element:', params)
   }
 
   const handleBindingToggle = (id: string, isSelected: boolean) => {
@@ -399,93 +330,89 @@ export default function TimelineView({
   }
 
   return (
-    <NextStepViewport id="timeline-view">
-      <div className="timeline flex w-full flex-col gap-2">
-        {/* Spec selector dropdown */}
-        <div className="my-2 ml-2 flex items-center gap-2">
-          <label htmlFor="spec-selector" className="text-lg font-medium">
-            Specialization:
-          </label>
-          <select
-            id="spec-selector"
-            value={selectedSpec}
-            onChange={handleSpecChange}
-            className="min-w-[15rem] rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg"
-          >
-            <option className="bg-neutral-900/50" value="all">
-              All Specs
-            </option>
-            <option className="bg-neutral-900/50" value="balance">
-              Balance
-            </option>
-            <option className="bg-neutral-900/50" value="resto">
-              Restoration
-            </option>
-            <option className="bg-neutral-900/50" value="feral">
-              Feral
-            </option>
-            <option className="bg-neutral-900/50" value="guardian">
-              Guardian
-            </option>
-          </select>
-        </div>
-        {/* divider */}
-        <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
+    <div className="timeline flex w-full flex-col gap-2">
+      {/* Spec selector dropdown */}
+      <div className="mx-2 my-2 flex items-center gap-2">
+        <label htmlFor="spec-selector" className="text-xl font-medium">
+          Specialization:
+        </label>
+        <select
+          id="spec-selector"
+          value={selectedSpec}
+          onChange={handleSpecChange}
+          className="min-w-[15rem] rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg"
+        >
+          <option className="bg-neutral-900/50" value="all">
+            All Specs
+          </option>
+          <option className="bg-neutral-900/50" value="balance">
+            Balance
+          </option>
+          <option className="bg-neutral-900/50" value="resto">
+            Restoration
+          </option>
+          <option className="bg-neutral-900/50" value="feral">
+            Feral
+          </option>
+          <option className="bg-neutral-900/50" value="guardian">
+            Guardian
+          </option>
+        </select>
+      </div>
+      {/* divider */}
+      <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
 
-        {/* Action bindings */}
-        <div id="tour-1-step-1" className="my-2 ml-2">
-          <ActionBindings
-            bindings={
-              selectedSpec === 'all'
-                ? bindings
-                : bindings.filter(
-                    (binding) => binding.specs && binding.specs.includes(selectedSpec)
-                  )
-            }
-            activeBindings={activeBindings}
-            onToggle={handleBindingToggle}
-          />
-        </div>
+      {/* Action bindings */}
+      <div id="tour-effects-selector" className="mx-2 my-2">
+        <ActionBindings
+          bindings={
+            selectedSpec === 'all'
+              ? bindings
+              : bindings.filter((binding) => binding.specs && binding.specs.includes(selectedSpec))
+          }
+          activeBindings={activeBindings}
+          onToggle={handleBindingToggle}
+        />
+      </div>
 
-        <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
+      <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
 
+      <div id="tour-buttons-selector">
         <SpellButtons
           currentSpells={processedState}
           setCurrentSpells={setInputActions}
           onCreate={handleCreateCustomElement}
           spells={filteredSpells}
         />
+      </div>
 
-        {/* Custom element */}
-        <div className="pl-2"></div>
-
-        {/* Zoom controls */}
-        <div className="mb-4 flex flex-row items-center justify-end gap-2">
-          <span className="text-sm text-gray-500">
-            (You can also use Ctrl + Scroll Wheel to zoom)
-          </span>
+      {/* Zoom controls */}
+      <div className="mb-4 flex flex-row items-center justify-end gap-2">
+        <div id="tour-zoom-selector" className="flex flex-row items-center gap-2">
           <button
             onClick={() => resetZoom()}
-            className="rounded bg-neutral-900/50 px-2 py-1 text-sm hover:bg-neutral-700"
+            className="rounded bg-neutral-900/40 px-2 py-1 text-sm hover:bg-neutral-700/70"
           >
             Reset Zoom
           </button>
           <button
             onClick={() => zoomOut(10)}
-            className="rounded bg-neutral-900/50 px-2 py-1 text-sm hover:bg-neutral-700"
+            className="rounded bg-neutral-900/40 px-2 py-1 text-sm hover:bg-neutral-700/70"
           >
             -
           </button>
           <button
             onClick={() => zoomIn(10)}
-            className="rounded bg-neutral-900/50 px-2 py-1 text-sm hover:bg-neutral-700"
+            className="rounded bg-neutral-900/40 px-2 py-1 text-sm hover:bg-neutral-700/70"
           >
             +
           </button>
         </div>
+      </div>
 
-        {/* Timeline view */}
-        <div className="flex min-h-[200px] w-full flex-row">
+      {/* Timeline view */}
+      <HoverProvider>
+        <div id="tour-timeline-selector" className="flex min-h-[200px] w-full flex-row">
           {/* Left side: spell names, vertically offset */}
           <div className="w-[200px] min-w-[120px] shrink-0">
             <div className="mt-5">
@@ -515,19 +442,6 @@ export default function TimelineView({
             className="relative min-h-[80px] flex-1 overflow-x-auto pl-6"
             ref={scrollContainerRef}
           >
-            {/* Tooltip */}
-            {showTooltip && (
-              <div
-                className="pointer-events-none absolute z-50 rounded bg-neutral-900/80 px-2 py-1 text-white shadow-lg"
-                style={{
-                  left: `${tooltipPosition.x}px`,
-                  top: `${tooltipPosition.y - 30}px`, // Position above cursor
-                }}
-              >
-                {formatTime(tooltipTime)}
-              </div>
-            )}
-
             {/* Markers overlay, scrolls with content */}
             <Markers
               marker_spacing_s={marker_spacing_s}
@@ -574,20 +488,20 @@ export default function TimelineView({
             </div>
           </div>
         </div>
+      </HoverProvider>
 
-        <Debug
-          processedTimeline={processedState}
-          timelineSettings={{
-            totalLength: total_length_s,
-            timelineWidth: effective_total_length_px,
-            markerSpacing: marker_spacing_s,
-          }}
-          warnings={warnings}
-          showDebug={showDebug}
-          toggleDebug={toggleDebug}
-        />
-      </div>
-    </NextStepViewport>
+      <Debug
+        processedTimeline={processedState}
+        timelineSettings={{
+          totalLength: total_length_s,
+          timelineWidth: effective_total_length_px,
+          markerSpacing: marker_spacing_s,
+        }}
+        warnings={warnings}
+        showDebug={showDebug}
+        toggleDebug={toggleDebug}
+      />
+    </div>
   )
 }
 
@@ -600,7 +514,7 @@ const SpellName = ({
 }) => {
   return (
     <div
-      key={`spell-name-${spellCast.spell.spellId}`}
+      id={`spell-name-${spellCast.spell.spellId}`}
       className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/30 pr-2`}
     >
       <div className={`flex h-[40px] w-full flex-col justify-center truncate text-right`}>
@@ -617,23 +531,34 @@ const SpellNameWithCharges = ({
   wowheadNameMap: Record<string, React.ReactNode>
 }) => {
   return (
-    <div
-      key={`spell-name-${spellCast.spell.spellId}`}
-      className={`flex w-full flex-col items-end border-r-2 border-orange-500/30 pr-2`}
-    >
-      <div className="h-5 pt-1 text-sm text-sky-300 transition-opacity">Charges</div>
-      <div className={`my-2 flex h-10 w-full flex-col justify-center truncate text-right`}>
-        {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
+    <div className="mb-2 w-full">
+      <div
+        id={`spell-name-${spellCast.spell.spellId}-charges`}
+        className="mb-[-2px] h-[18px] w-full pt-1 pr-[9px] text-right text-sm text-sky-300 transition-opacity"
+      >
+        Charges
       </div>
-      {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
-        <div key={`charge-${index}`} className="my-2 h-10 w-full" />
-      ))}
+      <div className="mt-[12px] flex w-full flex-col items-end gap-2 border-r-2 border-orange-500/30 pr-2">
+        <div
+          id={`spell-name-${spellCast.spell.spellId}`}
+          className={`flex h-[38px] w-full flex-col justify-center truncate text-right`}
+        >
+          {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
+        </div>
+        {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
+          <div
+            id={`spell-name-${spellCast.spell.spellId}-${index}`}
+            key={`charge-${index}`}
+            className="h-10 w-full"
+          />
+        ))}
+      </div>
     </div>
   )
 }
 
 // Helper function to format time as minutes:seconds
-function formatTime(seconds: number): string {
+export function formatTime(seconds: number): string {
   if (seconds < 0) return '0:00'
 
   const mins = Math.floor(seconds / 60)

@@ -39,11 +39,13 @@ export default function Debug({
 
   return (
     <div className="mt-4 rounded-lg py-4">
-      <div className="flex items-center justify-end">
+      <div id="tour-debug-selector" className="flex items-center justify-end">
         <button
           onClick={toggleDebug}
           className="justify-self-end rounded py-1 text-sm text-neutral-400 underline transition hover:text-neutral-300"
         >
+          <span className="mr-2 mb-[-3px] pt-1 text-2xl font-bold">{showDebug ? '-' : '+'}</span>
+
           {showDebug ? 'Hide Additional Details' : 'Show Additional Details'}
         </button>
       </div>

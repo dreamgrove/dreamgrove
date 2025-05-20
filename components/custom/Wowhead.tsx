@@ -41,6 +41,7 @@ export default async function Wowhead({
 
   try {
     // Use the shared function directly
+    console.log('Fetching icon for', type, id, name)
     const data = await fetchWowheadData({
       id: displayId,
       type,
