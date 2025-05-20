@@ -329,7 +329,7 @@ export default function TimelineView({
   }
 
   return (
-    <div className="timeline flex w-full flex-col gap-2">
+    <div className="timeline flex w-full flex-col gap-2 overflow-x-hidden">
       {/* Spec selector dropdown */}
       <div className="mx-2 my-2 flex items-center gap-2">
         <label htmlFor="spec-selector" className="text-xl font-medium">

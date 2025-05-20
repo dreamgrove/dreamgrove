@@ -16,10 +16,12 @@ type HoverContextValue = {
   removeHover: () => void
   cast: Cast | null
   delta: number
-  hovering: boolean
+  isDragging: boolean
   setDelta: (delta: number) => void
-  setHovering: (state: boolean) => void
+  setIsDragging: (state: boolean) => void
   rectRef: React.RefObject<HTMLDivElement | null> | null
+  isHovering: boolean
+  setIsHovering: (state: boolean) => void
 }
 
 const HoverContext = createContext<HoverContextValue>({
@@ -27,26 +29,26 @@ const HoverContext = createContext<HoverContextValue>({
   removeHover: () => {},
   cast: null,
   setDelta: () => {},
-  setHovering: () => {},
-  hovering: false,
+  setIsDragging: () => {},
+  isDragging: false,
   delta: 0,
   rectRef: null,
+  isHovering: false,
+  setIsHovering: () => {},
 })
 
 export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cast, setCast] = useState<Cast | null>(null)
-  const [hovering, setHovering] = useState<boolean>(false)
+  const [isDragging, setIsDragging] = useState<boolean>(false)
+  const [isHovering, setIsHovering] = useState<boolean>(false)
   const [delta, setDelta] = useState(0)
   const rafRef = useRef<number>(0)
   const pendingCastRef = useRef<Cast | null>(null)
   const rectRef = useRef<HTMLDivElement | null>(null)
 
-  const { isShiftKeyPressed } = useTimelineControls()
-
   const changeHover = useCallback(
     (newCast: Cast) => {
       pendingCastRef.current = newCast
-
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current)
       }
@@ -69,10 +71,6 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     },
     [pendingCastRef.current]
   )
-
-  useEffect(() => {
-    if (!hovering && !isShiftKeyPressed) setCast(null)
-  }, [hovering, isShiftKeyPressed])
 
   useEffect(() => {
     return () => {
@@ -98,13 +96,15 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         cast,
         delta,
         setDelta,
-        hovering,
-        setHovering,
+        isDragging,
+        setIsDragging,
         rectRef,
+        isHovering,
+        setIsHovering,
       }}
     >
       {children}
-      <Tooltip mouseTooltip={true} />
+      <Tooltip />
     </HoverContext.Provider>
   )
 }

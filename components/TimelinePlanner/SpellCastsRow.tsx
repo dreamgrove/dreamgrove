@@ -80,7 +80,7 @@ export default function SpellCastsRow({
   onCastDelete,
   onCastMove,
 }: SpellCastsRowProps) {
-  const { pixelsPerSecond } = useTimelineControls()
+  const { pixelsPerSecond, isShiftKeyPressed } = useTimelineControls()
   const [activeDragId, setActiveDragId] = useState<string | null>(null)
   const activeDraggedCast = activeDragId
     ? spellTimeline.casts.find((cast) => cast.id === activeDragId)
@@ -90,8 +90,11 @@ export default function SpellCastsRow({
 
   const { timeToPixels, pixelsToTime, total_length_s } = useTimelineControls()
 
+  const { changeHover, setIsDragging, removeHover, isHovering, isDragging, rectRef } =
+    useHoverContext()
+
   useEffect(() => {
-    if (activeDraggedCast) {
+    if (activeDraggedCast && !isDragging) {
       changeHover(activeDraggedCast)
     }
   }, [activeDragId])
@@ -104,11 +107,10 @@ export default function SpellCastsRow({
     })
   )
 
-  const { changeHover, removeHover, setDelta } = useHoverContext()
-
   const handleDragStart = (event: DragStartEvent) => {
     const { active } = event
     setActiveDragId(active.id as string)
+    setIsDragging(true)
   }
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -127,14 +129,26 @@ export default function SpellCastsRow({
 
         if (proposedStartTime !== cast.start_s) {
           onCastMove(castId, proposedStartTime)
-          const newCast = Object.assign({}, cast, {
+          const newCast = new Cast({
+            id: cast.id,
+            spell: cast.spell,
             start_s: proposedStartTime,
-            end_s: proposedStartTime + cast.duration_s,
+            interrupting_cast: cast.interrupting_cast,
+            current_charge: cast.current_charge,
+            cooldown_delay_s: cast.cooldown_delay_s,
           })
           changeHover(newCast)
         }
       }
     }
+
+    if (isHovering) {
+      removeHover()
+    }
+    if (rectRef) {
+      rectRef.current = null
+    }
+    setIsDragging(false)
     setActiveDragId(null)
   }
 
@@ -144,9 +158,13 @@ export default function SpellCastsRow({
       const castId = active.id as string
       const cast = spellTimeline.casts.find((c) => c.id === castId)
       if (cast) {
-        const newCast = Object.assign({}, cast, {
+        const newCast = new Cast({
+          id: cast.id,
+          spell: cast.spell,
           start_s: cast.start_s + dragDelta.x / pixelsPerSecond,
-          end_s: cast.end_s + dragDelta.x / pixelsPerSecond,
+          interrupting_cast: cast.interrupting_cast,
+          current_charge: cast.current_charge,
+          cooldown_delay_s: cast.cooldown_delay_s,
         })
         if (Math.abs(dragDelta.x) >= 1) {
           changeHover(newCast)

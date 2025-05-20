@@ -15,35 +15,15 @@ interface DraggableCastProps {
 }
 
 const DraggableCast = ({ idx, id, castInfo, icon, onClick, onDelete }: DraggableCastProps) => {
-  const { timeToPixels, total_length_px, total_length_s } = useTimelineControls()
+  const { timeToPixels } = useTimelineControls()
 
   const cssId = `cast-${castInfo.spell.spellId}-${castInfo.current_charge}-${idx}`
-  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id,
   })
 
-  const [hasCollision, setHasCollision] = useState(false)
-
-  const castInfoRef = useRef(castInfo)
-  const timelineTotalLengthPxRef = useRef(total_length_px)
-  const totalLengthSRef = useRef(total_length_s)
-
   const cast_duration_s = castInfo.duration_s
   const cast_width_px = timeToPixels(cast_duration_s)
-
-  // Keep refs updated with latest props
-  useEffect(() => {
-    castInfoRef.current = castInfo
-    timelineTotalLengthPxRef.current = total_length_px
-    totalLengthSRef.current = total_length_s
-  }, [castInfo, total_length_px, total_length_s])
-
-  const modifiedTransform = transform
-    ? {
-        ...transform,
-        y: 0, // Force y coordinate to always be 0
-      }
-    : null
 
   return (
     <div

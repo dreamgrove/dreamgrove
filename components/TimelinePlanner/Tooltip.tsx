@@ -5,33 +5,21 @@ import ReactDOM from 'react-dom'
 import { useHoverContext } from './HoverProvider'
 import { useTimelineControls } from './TimelineContext'
 import { formatTime } from './TimelineView'
-import { Cast, SpellInfo } from 'lib/types/cd_planner'
+import { Cast } from 'lib/types/cd_planner'
 type Props = {
-  x?: number
-  y?: number
-  portal?: boolean
-  isOverlay?: boolean
-  mouseTooltip?: boolean
   id?: string
-  width?: number
-  coordinates?: { x: number; y: number }
-  isDragging?: boolean
 }
 
-const Tooltip: React.FC<Props> = ({
-  x = 0,
-  y = 0,
-  width = 0,
-  isOverlay = false,
-  mouseTooltip = false,
-  id = '',
-  coordinates = { x: 0, y: 0 },
-  isDragging = false,
-}) => {
+const Tooltip: React.FC<Props> = ({ id = '' }) => {
   const { scrollContainer, pixelsToTime, isShiftKeyPressed, pixelsPerSecond } =
     useTimelineControls()
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const boundingBox = scrollContainer?.getBoundingClientRect()
+  const { cast, rectRef, isDragging } = useHoverContext()
+
+  const width = cast ? cast.duration_s * pixelsPerSecond : 1
+
+  //console.log(cast, width)
 
   useEffect(() => {
     const handleMouseMove = (e: globalThis.MouseEvent) => {
@@ -45,8 +33,6 @@ const Tooltip: React.FC<Props> = ({
     }
   }, [])
 
-  const { cast, rectRef } = useHoverContext()
-
   const isMouseInTimeline = useMemo(() => {
     if (!boundingBox) return false
     return (
@@ -59,57 +45,51 @@ const Tooltip: React.FC<Props> = ({
 
   if (!boundingBox) return null
 
+  const renderCast = cast !== null && (isDragging || (!isDragging && isShiftKeyPressed)) //render cast only when dragging or when not dragging and shift is pressed
+  const renderMouse = isShiftKeyPressed && isMouseInTimeline && !renderCast && !isDragging //default render mouse only we're in a timeline and we're pressing shift
+
+  const x = renderCast ? rectRef?.current?.getBoundingClientRect()?.left : mousePos.x - 70
+  const y = renderCast ? rectRef?.current?.getBoundingClientRect()?.top : mousePos.y - 45
+
   const c = {
-    x: Math.max(0, rectRef?.current?.getBoundingClientRect()?.left ?? 0),
-    y: Math.max(0, rectRef?.current?.getBoundingClientRect()?.top ?? 0),
+    x: Math.max(0, x ?? 0),
+    y: Math.max(0, y ?? 0),
   }
 
-  const castCoordinates = {
-    x: boundingBox.left + c.x * pixelsPerSecond + 25,
-    y: boundingBox.top + c.y * pixelsPerSecond + 25,
-  }
-
-  if (
-    (isDragging && !isOverlay) ||
-    (isShiftKeyPressed && !isOverlay && !isDragging && isMouseInTimeline && rectRef?.current) ||
-    (mouseTooltip && isShiftKeyPressed)
-  ) {
+  if (renderMouse || renderCast) {
     const pixelOffset = Math.max(mousePos.x - boundingBox.left - 25, 0)
     const time = formatTime(pixelsToTime(pixelOffset))
 
     const tooltip = (
       <div
-        className={`${mouseTooltip ? '' : 'animate-expand'} box-border rounded-sm bg-neutral-900 text-xs`}
+        className={`animate-expand box-border min-w-fit rounded-sm bg-neutral-900 text-xs`}
         style={{
           position: 'absolute',
-          top: cast ? c.y + 43 : mousePos.y + 0,
-          left: cast ? c.x : mousePos.x - 65,
+          top: c.y + 43,
+          left: c.x,
           pointerEvents: 'none',
           color: 'white',
-          width: !mouseTooltip ? width : 'auto',
+          width: width,
           opacity: 1,
           whiteSpace: 'nowrap',
-          zIndex: isOverlay ? 1010 : 1000,
+          zIndex: 1000,
           transform: 'translateZ(0)',
           visibility: 'visible',
         }}
       >
-        {cast && !mouseTooltip && <CastTooltip cast={cast} width={width} />}
-        {!cast && mouseTooltip && <MouseTooltip time={time} />}
+        {renderCast && <CastTooltip cast={cast} width={width} />}
+        {renderMouse && <MouseTooltip time={time} />}
       </div>
     )
 
-    if (mouseTooltip && !cast) return ReactDOM.createPortal(tooltip, document.body)
-    if (cast && cast.id === id) {
-      return ReactDOM.createPortal(tooltip, document.body)
-    }
+    return ReactDOM.createPortal(tooltip, document.body)
   }
 
   return null
 }
 
 const MouseTooltip = ({ time }: { time: string }) => {
-  return <div className="box-border bg-neutral-950/80 px-2 py-1 text-xs">{time}</div>
+  return <div className="relative box-border bg-neutral-950/80 px-2 py-1 text-xs">{time}</div>
 }
 
 const CastTooltip = ({ cast, width }: { cast: Cast; width: number }) => {
