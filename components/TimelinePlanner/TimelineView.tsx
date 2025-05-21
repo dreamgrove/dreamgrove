@@ -328,6 +328,8 @@ export default function TimelineView({
     }
   }
 
+  console.log('activeBindings', activeBindings)
+
   return (
     <div className="flex h-[calc(100vh-3rem-25px)] flex-col">
       {/* Spec selector dropdown */}

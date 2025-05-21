@@ -5,7 +5,7 @@ import WowheadClientIcon from '../csm/WowheadClientIcon'
 
 // Define proper prop types
 interface CheckboxProps {
-  id?: string
+  id: string
   spellId: number
   name?: string
   radio?: string
@@ -19,7 +19,7 @@ interface CheckboxProps {
 }
 
 const TimelineCheckbox = ({
-  id = '',
+  id,
   spellId,
   name = '',
   radio = '',

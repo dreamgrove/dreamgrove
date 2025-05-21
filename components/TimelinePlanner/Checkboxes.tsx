@@ -24,6 +24,7 @@ export default function Checkboxes({
   onToggle,
 }: CheckboxesProps) {
   const handleCheckboxChange = (id: string, checked: boolean) => {
+    console.log('handleCheckboxChange', id, checked)
     if (onToggle) {
       onToggle(id, checked)
     } else if (onEffectToggle) {
@@ -44,6 +45,7 @@ export default function Checkboxes({
           return (
             <TimelineCheckbox
               key={item.id}
+              id={item.id}
               spellId={Number(item.spellId)}
               name={item.label}
               description={item.description}
