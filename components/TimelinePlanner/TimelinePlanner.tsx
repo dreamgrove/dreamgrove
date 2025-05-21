@@ -29,7 +29,7 @@ export default function TimelinePlanner({
   averageTimestamps = {},
 }: TimelinePlannerProps) {
   const initialTotalLength = 240
-  const initialViewLength = 180
+  const initialViewLength = 250
   const initialMarkerSpacing = 10
   const [currentEncounterId, setCurrentEncounterId] = useState('empty')
   const [extraSpells, setExtraSpells] = useState<PlayerAction[]>([])
@@ -180,17 +180,19 @@ export default function TimelinePlanner({
           initialViewLength={initialViewLength}
           initialMarkerSpacing={initialMarkerSpacing}
         >
-          <TimelineView
-            view_length_s={initialViewLength}
-            marker_spacing_s={initialMarkerSpacing}
-            spells={spells}
-            wowheadMap={wowheadMap}
-            wowheadNameMap={wowheadNameMap}
-            extraSpells={extraSpells}
-            wowheadMarkerMap={wowheadMarkerMap}
-            averageTimestamps={averageTimestamps}
-            currentEncounterId={currentEncounterId}
-          />
+          <div className="flex h-full flex-1 flex-col overflow-hidden">
+            <TimelineView
+              view_length_s={initialViewLength}
+              marker_spacing_s={initialMarkerSpacing}
+              spells={spells}
+              wowheadMap={wowheadMap}
+              wowheadNameMap={wowheadNameMap}
+              extraSpells={extraSpells}
+              wowheadMarkerMap={wowheadMarkerMap}
+              averageTimestamps={averageTimestamps}
+              currentEncounterId={currentEncounterId}
+            />
+          </div>
         </TimelineProvider>
       </div>
     </NextStep>

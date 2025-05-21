@@ -329,7 +329,7 @@ export default function TimelineView({
   }
 
   return (
-    <div className="timeline flex w-full flex-col gap-2 overflow-x-hidden">
+    <div className="flex h-[calc(100vh-3rem-25px)] flex-col">
       {/* Spec selector dropdown */}
       <div className="mx-2 my-2 flex items-center gap-2">
         <label htmlFor="spec-selector" className="text-xl font-medium">
@@ -411,7 +411,7 @@ export default function TimelineView({
 
       {/* Timeline view */}
       <HoverProvider>
-        <div id="tour-timeline-selector" className="flex min-h-[200px] w-full flex-row">
+        <div id="tour-timeline-selector" className="flex flex-row overflow-x-clip">
           {/* Left side: spell names, vertically offset */}
           <div className="w-[200px] min-w-[120px] shrink-0">
             <div className="mt-5">
@@ -438,7 +438,7 @@ export default function TimelineView({
           </div>
           {/* Right side: scrollable timeline, contains markers and casts */}
           <div
-            className="relative min-h-[80px] flex-1 overflow-x-auto pl-6 [scrollbar-gutter:auto]"
+            className="relative h-full min-h-[280px] flex-1 overflow-x-scroll pl-6 [scrollbar-gutter:auto]"
             ref={scrollContainerRef}
           >
             {/* Markers overlay, scrolls with content */}
@@ -488,7 +488,7 @@ export default function TimelineView({
           </div>
         </div>
       </HoverProvider>
-
+      <div className="flex-1" />
       <Debug
         processedTimeline={processedState}
         timelineSettings={{

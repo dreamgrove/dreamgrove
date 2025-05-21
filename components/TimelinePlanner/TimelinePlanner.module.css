@@ -4,6 +4,7 @@
   background: #1a1a1a;
   color: white;
   border-radius: 8px;
+  height: 100%;
 }
 
 .warcraftLogsIntegration {
@@ -50,7 +51,7 @@
 }
 
 .timelineScrollArea {
-  overflow-x: auto;
+  overflow-x: clip;
   flex-grow: 1;
 }
 
@@ -59,9 +60,11 @@
   min-width: var(--timeline-min-width, 1200px);
   background: #2a2a2a;
   border-radius: 4px;
-  min-height: 200px;
-  overflow-x: hidden;
+  height: 100%;
+  overflow-x: clip;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .timeMarkers {

@@ -22,7 +22,7 @@ function WowheadClientIcon({
   name,
   beta = false,
   url = '',
-  size = 16,
+  size,
   noLink = false,
   noMargin = false,
 }: WowheadIconProps) {
@@ -87,14 +87,24 @@ function WowheadClientIcon({
     fetchIcon()
   }, [id, type, beta, cacheKey, whUrl, iconFilename, name, url])
 
+  if (!size)
+    return isLoading ? (
+      <div className={`h-full w-full rounded-xs bg-neutral-800`} />
+    ) : (
+      <Image
+        src={`https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`}
+        alt={`${name} icon`}
+        fill={true}
+      />
+    )
+
   // If we have an icon, render it
   const image = iconFilename ? (
     <Image
       src={`https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`}
       alt={`${name} icon`}
-      width={size}
       height={size}
-      className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
+      width={size}
     />
   ) : isLoading ? (
     // Loading state

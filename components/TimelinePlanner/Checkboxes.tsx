@@ -3,6 +3,7 @@
 import React from 'react'
 import styles from './TimelinePlanner.module.css'
 import { SpellInfo, SpellTimeline } from '../../lib/types/cd_planner'
+import TimelineCheckbox from './TimelineCheckbox'
 
 interface CheckboxesProps {
   activeEffects?: string[]
@@ -10,7 +11,7 @@ interface CheckboxesProps {
   spells?: SpellInfo[]
   onEffectToggle?: (effectId: string, isActive: boolean) => void
 
-  items?: Array<{ id: string; label: string; description?: string }>
+  items?: Array<{ id: string; spellId: number | string; label: string; description?: string }>
   selectedItems?: string[]
   onToggle?: (id: string, isSelected: boolean) => void
 }
@@ -22,31 +23,31 @@ export default function Checkboxes({
   selectedItems,
   onToggle,
 }: CheckboxesProps) {
-  const useNewInterface = Boolean(items)
-
   const handleCheckboxChange = (id: string, checked: boolean) => {
-    if (useNewInterface && onToggle) {
+    if (onToggle) {
       onToggle(id, checked)
     } else if (onEffectToggle) {
       onEffectToggle(id, checked)
     }
   }
 
-  if (useNewInterface && items) {
+  if (items) {
     if (items.length === 0) {
       return <div className={styles.checkboxContainer}>There's nothing to show here</div>
     }
 
     return (
-      <div className="flex flex-col gap-2">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
         {items.map((item) => {
           const isSelected = selectedItems?.includes(item.id) || false
 
           return (
-            <Item
+            <TimelineCheckbox
               key={item.id}
-              item={item}
-              isSelected={isSelected}
+              spellId={Number(item.spellId)}
+              name={item.label}
+              description={item.description}
+              defaultCheck={isSelected}
               onToggle={handleCheckboxChange}
             />
           )
@@ -75,7 +76,7 @@ const Item = ({
           checked={isSelected}
           onChange={(e) => onToggle(item.id, e.target.checked)}
           value=""
-          className="h-4 w-4 rounded-sm border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+          className="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
         />
       </div>
       <div className="ms-2 text-[0.8rem]">

@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function PlannerPage() {
   return (
-    <div className="h-screen w-screen max-w-screen overflow-x-hidden">
+    <div className="h-screen max-h-screen w-screen max-w-screen overflow-x-hidden">
       <TimelinePlannerServer />
     </div>
   )

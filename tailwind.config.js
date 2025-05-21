@@ -17,9 +17,19 @@ export const theme = {
         '0%': { transform: 'scaleX(0)', transformOrigin: 'center' },
         '100%': { transform: 'scaleX(1)', transformOrigin: 'center' },
       },
+      'clip-up': {
+        '0%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
+        '100%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
+      },
+      'clip-down': {
+        '0%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
+        '100%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
+      },
     },
     animation: {
       expand: 'expand 0.2s ease forwards',
+      'clip-up': 'clip-up 0.3s ease-out forwards',
+      'clip-down': 'clip-down 0.3s ease-out forwards',
     },
     lineHeight: {
       11: '2.75rem',

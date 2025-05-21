@@ -4,6 +4,7 @@ import Checkboxes from './Checkboxes'
 interface ActionBindingsProps {
   bindings: Array<{
     id: string
+    spellId: number | string
     label: string
     description?: string
   }>
