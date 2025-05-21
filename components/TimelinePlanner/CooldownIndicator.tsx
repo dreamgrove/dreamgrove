@@ -142,15 +142,27 @@ export default function CooldownIndicator({
             }}
           />
           {labelSegments.some((labelSegment) => labelSegment.start === segment.start) && (
-            <div
-              className="absolute top-[6px] text-xs text-white"
-              style={{
-                left: `${segment.start + 3}px`,
-                zIndex: 10,
-              }}
-            >
-              {segment.charges}
-            </div>
+            <>
+              <div
+                className="absolute top-[6px] text-xs text-white"
+                style={{
+                  left: `${segment.start + 3}px`,
+                  zIndex: 10,
+                }}
+              >
+                {segment.charges}
+              </div>
+              <div
+                className="absolute w-[1px]"
+                style={{
+                  left: `${segment.start + 1}px`,
+                  top: '20px',
+                  height: '68px',
+                  background: 'linear-gradient(to bottom, #008DD4, transparent)',
+                  zIndex: 10,
+                }}
+              />
+            </>
           )}
         </React.Fragment>
       ))}

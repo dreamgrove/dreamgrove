@@ -11,8 +11,13 @@ type Props = {
 }
 
 const Tooltip: React.FC<Props> = ({ id = '' }) => {
-  const { scrollContainer, pixelsToTime, isShiftKeyPressed, pixelsPerSecond } =
-    useTimelineControls()
+  const {
+    scrollContainer,
+    pixelsToTime,
+    isShiftKeyPressed,
+    pixelsPerSecond,
+    scrollContainerWidth,
+  } = useTimelineControls()
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const boundingBox = scrollContainer?.getBoundingClientRect()
   const { cast, rectRef, isDragging } = useHoverContext()
@@ -69,7 +74,7 @@ const Tooltip: React.FC<Props> = ({ id = '' }) => {
           left: c.x,
           pointerEvents: 'none',
           color: 'white',
-          width: width,
+          width: Math.min(width, boundingBox.left + scrollContainerWidth - c.x),
           opacity: 1,
           whiteSpace: 'nowrap',
           zIndex: 1000,
@@ -100,7 +105,6 @@ const CastTooltip = ({ cast, width }: { cast: Cast; width: number }) => {
     <div
       className="box-border px-2 py-1 text-xs"
       style={{
-        width: width,
         whiteSpace: 'nowrap',
         zIndex: 1000,
       }}

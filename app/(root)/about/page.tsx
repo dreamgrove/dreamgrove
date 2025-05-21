@@ -2,7 +2,7 @@ import { About, allAbouts } from 'contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AboutLayout from '@/layouts/AboutLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { genPageMetadata } from 'app/seo'
+import { genPageMetadata } from 'app/(root)/seo'
 import PageWrapper from '@/components/PageWrapper'
 import { components } from '@/components/MDXComponents'
 export const metadata = genPageMetadata({ title: 'About' })

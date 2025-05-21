@@ -7,8 +7,7 @@ export const metadata = {
 
 export default function PlannerPage() {
   return (
-    <div className="container mx-auto w-[90%] py-8">
-      <h1 className="mb-6 text-3xl font-bold">Timeline Planner</h1>
+    <div className="h-screen w-screen max-w-screen overflow-x-hidden">
       <TimelinePlannerServer />
     </div>
   )

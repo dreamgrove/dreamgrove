@@ -1,6 +1,6 @@
 import { allCoreContent } from 'pliny/utils/contentlayer'
 import { allRaids } from 'contentlayer/generated'
-import { genPageMetadata } from 'app/seo'
+import { genPageMetadata } from 'app/(root)/seo'
 import RaidListLayout from '@/layouts/RaidListLayout'
 import PageWrapper from '@/components/PageWrapper'
 

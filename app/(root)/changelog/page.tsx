@@ -2,7 +2,7 @@ import { Changelog, allChangelogs } from 'contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import ChangelogLayout from '@/layouts/ChangelogLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { genPageMetadata } from 'app/seo'
+import { genPageMetadata } from 'app/(root)/seo'
 import { components } from '@/components/MDXComponents'
 import PageWrapper from '@/components/PageWrapper'
 

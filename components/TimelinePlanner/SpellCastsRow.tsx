@@ -90,7 +90,7 @@ export default function SpellCastsRow({
 
   const { timeToPixels, pixelsToTime, total_length_s } = useTimelineControls()
 
-  const { changeHover, setIsDragging, removeHover, isHovering, isDragging, rectRef } =
+  const { changeHover, setIsDragging, removeHover, isHovering, isDragging, rectRef, setDraggedId } =
     useHoverContext()
 
   useEffect(() => {
@@ -110,6 +110,7 @@ export default function SpellCastsRow({
   const handleDragStart = (event: DragStartEvent) => {
     const { active } = event
     setActiveDragId(active.id as string)
+    setDraggedId(active.id as string)
     setIsDragging(true)
   }
 
@@ -150,6 +151,7 @@ export default function SpellCastsRow({
     }
     setIsDragging(false)
     setActiveDragId(null)
+    setDraggedId('')
   }
 
   const handleDrag = (event: DragEndEvent) => {

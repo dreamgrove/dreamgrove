@@ -20,7 +20,7 @@ export default function CastInterval({
   className,
   onDelete,
   isOverlay = false,
-  isDragging = false,
+  isDragging,
   hasCollision = true,
 }: CastProps) {
   const { pixelsPerSecond } = useTimelineControls()
@@ -31,6 +31,7 @@ export default function CastInterval({
     rectRef,
     setIsHovering,
     isHovering,
+    draggedId,
   } = useHoverContext()
 
   const ref = useRef<HTMLDivElement>(null)
@@ -60,12 +61,16 @@ export default function CastInterval({
   }
   const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
 
+  const ignored = !isOverlay && cast.id !== draggedId
+  const disabled = (isDragging && !isOverlay) || ignored
+  const notHovered = draggedId === ''
+
   const showWowheadInChannel = channel_width_px === maxWidth
   const showWowheadInEffect = !showWowheadInChannel && effect_width_px === maxWidth
   const showWowheadInRemaining = !showWowheadInChannel && !showWowheadInEffect
 
   const wowheadWrapper = (
-    <div className="flex h-full w-full items-center justify-start pl-4">{icon}</div>
+    <div className="sticky left-0 flex h-full w-full items-center justify-start pl-4">{icon}</div>
   )
 
   const bgColor = ''
@@ -92,18 +97,23 @@ export default function CastInterval({
               : 'border-gray-900/40'
         } ${bgColor} ${className || ''}`}
         onMouseEnter={(e) => {
+          console.log('dragged id', draggedId)
           if (!isHovering) {
             setIsHovering(true)
-            if (!isDragging && !isOverlay) {
-              if (rectRef && ref.current) {
-                rectRef.current = ref.current
-              }
-              changeHover(cast)
+          }
+
+          if (disabled) return
+          if (!isDragging && !isOverlay && cast.id !== draggedId) {
+            if (rectRef && ref.current) {
+              rectRef.current = ref.current
             }
+            console.log('changedHover', cast.id)
+            changeHover(cast)
           }
         }}
         onMouseLeave={() => {
-          if (!isDragging && !isOverlay) {
+          if (disabled) return
+          if (!isDragging && !isOverlay && cast.id !== draggedId) {
             setIsHovering(false)
             removeHover()
           }

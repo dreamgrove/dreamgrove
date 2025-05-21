@@ -107,7 +107,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     console.error(`Error rendering dungeon page for slug: ${props.params}`, error)
     return (
       <PageWrapper title="Error Loading Dungeon Page" showTitle={true}>
-        <div className="prose max-w-none pb-8 pt-8 dark:prose-invert">
+        <div className="prose dark:prose-invert max-w-none pt-8 pb-8">
           <p>There was an error loading this dungeon page. Please try again later.</p>
         </div>
       </PageWrapper>

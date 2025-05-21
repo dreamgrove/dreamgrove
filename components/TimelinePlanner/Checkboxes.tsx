@@ -2,10 +2,9 @@
 
 import React from 'react'
 import styles from './TimelinePlanner.module.css'
-import { SpellInfo, SpellTimeline, TimelineEffect } from '../../lib/types/cd_planner'
+import { SpellInfo, SpellTimeline } from '../../lib/types/cd_planner'
 
 interface CheckboxesProps {
-  effects?: TimelineEffect[]
   activeEffects?: string[]
   currentSpells?: SpellTimeline[]
   spells?: SpellInfo[]

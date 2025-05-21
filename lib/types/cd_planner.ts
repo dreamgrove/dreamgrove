@@ -1,5 +1,3 @@
-import { Patch } from '../../components/TimelinePlanner/PatchSystem'
-
 export const SPELL_GCD = 1.5
 
 export interface SpellTimeline {
@@ -265,16 +263,4 @@ export class Cast {
     this._effect_duration = spell.effect_duration
     this._channel_duration = spell.channel_duration
   }
-}
-export interface AverageCastInfo {
-  ca: number[]
-  convoke: number[]
-  fon: number[]
-}
-
-export interface TimelineEffect {
-  id: string
-  name: string
-  description?: string
-  generatePatch?: (currentSpells: SpellTimeline[]) => Patch | null
 }

@@ -59,9 +59,9 @@
   min-width: var(--timeline-min-width, 1200px);
   background: #2a2a2a;
   border-radius: 4px;
-  padding: 20px;
   min-height: 200px;
   overflow-x: hidden;
+  padding: 25px;
 }
 
 .timeMarkers {

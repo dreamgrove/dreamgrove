@@ -1,6 +1,6 @@
 import { allCoreContent } from 'pliny/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
-import { genPageMetadata } from 'app/seo'
+import { genPageMetadata } from 'app/(root)/seo'
 import DungeonListLayout from '@/layouts/DungeonListLayout'
 import PageWrapper from '@/components/PageWrapper'
 

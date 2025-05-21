@@ -438,7 +438,7 @@ export default function TimelineView({
           </div>
           {/* Right side: scrollable timeline, contains markers and casts */}
           <div
-            className="relative min-h-[80px] flex-1 overflow-x-auto pl-6"
+            className="relative min-h-[80px] flex-1 overflow-x-auto pl-6 [scrollbar-gutter:auto]"
             ref={scrollContainerRef}
           >
             {/* Markers overlay, scrolls with content */}
@@ -514,9 +514,9 @@ const SpellName = ({
   return (
     <div
       id={`spell-name-${spellCast.spell.spellId}`}
-      className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/30 pr-2`}
+      className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/50 border-b-orange-500/50 pr-2`}
     >
-      <div className={`flex h-[40px] w-full flex-col justify-center truncate text-right`}>
+      <div className={`flex h-[40px] w-full flex-col justify-center truncate text-right text-sm`}>
         {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
       </div>
     </div>
@@ -533,9 +533,9 @@ const SpellNameWithCharges = ({
     <div className="mb-2 w-full">
       <div
         id={`spell-name-${spellCast.spell.spellId}-charges`}
-        className="mb-[-2px] h-[18px] w-full pt-1 pr-[9px] text-right text-sm text-sky-300 transition-opacity"
+        className="mb-[-2px] h-[18px] w-full pt-1 pr-[9px] text-right text-sm text-sky-300/90 transition-opacity"
       >
-        Charges
+        #
       </div>
       <div className="mt-[12px] flex w-full flex-col items-end gap-2 border-r-2 border-orange-500/30 pr-2">
         <div

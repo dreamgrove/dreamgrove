@@ -15,6 +15,7 @@ export default async function Wowhead({
   iconSize = 16,
   showLabel = true,
   ellipsis = false,
+  textColor = '',
 }) {
   let display = name
   let displayId = id
@@ -93,7 +94,7 @@ export default async function Wowhead({
     <a
       href={whUrl}
       className={`inline decoration-2 q${quality}`}
-      style={{ color: linkColor, textWrap: 'nowrap' }}
+      style={{ color: textColor != '' ? textColor : linkColor, textWrap: 'nowrap' }}
     >
       {icon}
       {showLabel && (

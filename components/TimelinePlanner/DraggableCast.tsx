@@ -44,6 +44,7 @@ const DraggableCast = ({ idx, id, castInfo, icon, onClick, onDelete }: Draggable
         cast={castInfo}
         icon={icon}
         onDelete={onDelete}
+        isOverlay={false}
         isDragging={isDragging}
         className={`${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         hasCollision={true}

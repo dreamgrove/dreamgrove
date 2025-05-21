@@ -222,6 +222,7 @@ export default async function TimelinePlannerServer() {
         noIcon={false}
         disabled={false}
         ellipsis={true}
+        textColor="#ffffff"
       />
     )
     return [spell.spellId, component] as const

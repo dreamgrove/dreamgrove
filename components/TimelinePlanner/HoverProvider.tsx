@@ -15,6 +15,8 @@ type HoverContextValue = {
   changeHover: (cast: Cast) => void
   removeHover: () => void
   cast: Cast | null
+  draggedId: string | null
+  setDraggedId: (id: string) => void
   delta: number
   isDragging: boolean
   setDelta: (delta: number) => void
@@ -31,6 +33,8 @@ const HoverContext = createContext<HoverContextValue>({
   setDelta: () => {},
   setIsDragging: () => {},
   isDragging: false,
+  draggedId: null,
+  setDraggedId: () => {},
   delta: 0,
   rectRef: null,
   isHovering: false,
@@ -45,6 +49,7 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const rafRef = useRef<number>(0)
   const pendingCastRef = useRef<Cast | null>(null)
   const rectRef = useRef<HTMLDivElement | null>(null)
+  const [draggedId, setDraggedId] = useState<string | null>(null)
 
   const changeHover = useCallback(
     (newCast: Cast) => {
@@ -101,6 +106,8 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         rectRef,
         isHovering,
         setIsHovering,
+        draggedId,
+        setDraggedId,
       }}
     >
       {children}

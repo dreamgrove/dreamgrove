@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 
-import data from '../other/quotes.json'
+import data from '../../other/quotes.json'
 
 export default async function NotFound() {
   const quotes = data.quotes
