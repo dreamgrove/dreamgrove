@@ -40,10 +40,20 @@ export class EventQueue {
     return this.events.length
   }
 
-  modifyEarliesType(spellId: number, type: EventType, delta: number) {
-    for (const event of this.events) {
-      if (event.type === type && event.spellId === spellId) {
-        event.time += delta
+  //event = 7
+  //delta = -5
+  //cast= 10
+  //expected = 7
+  //expected reduction = 3
+  // 7 + -5 = 2
+  modifyEarliesType(spellId: number, type: EventType, delta: number, event_time: number) {
+    for (const cast of this.events) {
+      if (cast.type === type && cast.spellId === spellId) {
+        if (cast.time + delta < event_time) {
+          cast.time = event_time
+        } else {
+          cast.time += delta
+        }
       }
     }
   }
@@ -229,7 +239,8 @@ export function processEventQueue(
               eventQueue.modifyEarliesType(
                 treeOfLifeId,
                 EventType.EffectEnd,
-                spellInfo.effect_duration
+                spellInfo.effect_duration,
+                event.time
               )
             }
           }
@@ -359,8 +370,8 @@ export function processEventQueue(
         if (timelineState.activeCasts.has(event.castId)) {
           const cast = timelineState.activeCasts.get(event.castId)
           if (cast) {
-            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -5)
-            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -5)
+            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -5, event.time)
+            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -5, event.time)
           }
         }
         break
@@ -377,8 +388,8 @@ export function processEventQueue(
             continue
           }
           consideredSpells.add(cast.spell.spellId)
-          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -4)
-          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -4)
+          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -4, event.time)
+          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -4, event.time)
         }
 
         eventQueue.push({

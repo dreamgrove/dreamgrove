@@ -79,6 +79,8 @@ export default function CastInterval({
 
   const bgColor = ''
 
+  const transitionStyle = 'transition-all duration-300 ease-in-out'
+
   useEffect(() => {
     if (rectRef && isDragging && isOverlay) {
       rectRef.current = ref.current
@@ -88,18 +90,18 @@ export default function CastInterval({
   return (
     <div
       ref={ref}
-      className={`relative select-none ${isDragging ? 'z-100 shadow-lg' : ''}`}
+      className={`relative select-none ${isDragging ? 'z-100' : ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
       {/* cast interval */}
       <div
         className={`flex h-10 items-center border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
           !hasCollision
-            ? 'border-blue-500 shadow-md'
+            ? 'border-blue-500/40'
             : isDragging
-              ? 'border-zinc-400/40 shadow-lg'
+              ? 'border-zinc-400/40'
               : 'border-gray-900/40'
-        } ${bgColor} ${className || ''}`}
+        } ${bgColor} ${className || ''} ${transitionStyle}`}
         onMouseEnter={(e) => {
           console.log('dragged id', draggedId)
           if (!isHovering) {
@@ -135,7 +137,7 @@ export default function CastInterval({
         )}
         {/* Channel Duration Bar */}
         <div
-          className="flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
+          className={`flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             width: `${channel_width_px}px`,
           }}
@@ -144,7 +146,7 @@ export default function CastInterval({
         </div>
         {/* Effect Duration Bar */}
         <div
-          className="flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden"
+          className={`flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             width: `${effect_width_px}px`,
           }}
@@ -153,7 +155,7 @@ export default function CastInterval({
         </div>
         {/* Cooldown Delay Bar */}
         <div
-          className="delay flex h-full items-center bg-neutral-600/10"
+          className={`delay flex h-full items-center bg-neutral-600/10 ${transitionStyle}`}
           style={{
             width: `${cooldown_delay_width_px}px`,
           }}
@@ -162,7 +164,7 @@ export default function CastInterval({
         </div>
         {/* Remaining Cooldown Bar */}
         <div
-          className="flex h-full items-center justify-center border-b-[1px] border-gray-500/40 bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden"
+          className={`flex h-full items-center justify-center border-b-[1px] border-gray-500/40 bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             width: `${cooldown_width_px + 1}px`,
           }}

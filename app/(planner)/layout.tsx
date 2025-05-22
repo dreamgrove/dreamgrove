@@ -89,7 +89,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <div className="flex h-full flex-col" style={{ paddingLeft: 0 }}>
           <Providers>
             <ThemeProviders>
-              <main className="box-content max-h-screen">{children}</main>
+              <main className="max-h-screen">{children}</main>
             </ThemeProviders>
           </Providers>
         </div>

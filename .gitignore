@@ -51,3 +51,4 @@ app/tag-data.json
 # Cursor specific folder
 cursor
 .cursor/*
+.cursorspace
