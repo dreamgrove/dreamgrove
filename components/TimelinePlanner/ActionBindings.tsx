@@ -19,7 +19,7 @@ export default function ActionBindings({
 }: ActionBindingsProps) {
   return (
     <div className="mb-4 select-none">
-      <h1 className="mb-2 text-xl font-semibold text-gray-300">Talents:</h1>
+      <h1 className="mb-2 text-xl font-semibold text-gray-300">TALENTS:</h1>
       <Checkboxes items={bindings} selectedItems={activeBindings} onToggle={onToggle} />
     </div>
   )

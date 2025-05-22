@@ -49,28 +49,32 @@ export default function CastInterval({
   const isLogging = false
 
   if (isLogging) {
-    console.log('channel visual duration', cast.channel_visual_duration)
-    console.log('effect visual duration', cast.effect_visual_duration)
-    console.log('cooldown visual duration', cast.cooldown_visual_duration)
-    console.log('cooldown delay visual duration', cast.cooldown_delay_visual_duration)
-    console.log('cooldown delay', cast.cooldown_delay_s)
-    console.log('total duration', cast.duration_s)
-    console.log('duration s px', duration_s_px)
-    console.log('cooldown delay', cast.cooldown_delay_s)
-    console.log('effect_duration', cast.effect_duration)
+    console.log({
+      id: cast.id,
+      start_s: cast.start_s,
+      duration_s: cast.duration_s,
+      channel_end: cast.start_s + cast.channel_visual_duration,
+      effect_end: cast.start_s + cast.channel_visual_duration + cast.effect_visual_duration,
+      cast_end: cast.start_s + cast.duration_s,
+      channel_visual_duration: cast.channel_visual_duration,
+      effect_visual_duration: cast.effect_visual_duration,
+      cooldown_visual_duration: cast.cooldown_visual_duration,
+      cooldown_delay_visual_duration: cast.cooldown_delay_visual_duration,
+      cooldown_delay_s: cast.cooldown_delay_s,
+      effect_duration: cast.effect_duration,
+    })
   }
   const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
 
   const ignored = !isOverlay && cast.id !== draggedId
   const disabled = (isDragging && !isOverlay) || ignored
-  const notHovered = draggedId === ''
 
   const showWowheadInChannel = channel_width_px === maxWidth
   const showWowheadInEffect = !showWowheadInChannel && effect_width_px === maxWidth
   const showWowheadInRemaining = !showWowheadInChannel && !showWowheadInEffect
 
   const wowheadWrapper = (
-    <div className="sticky left-0 flex h-full w-full items-center justify-start pl-4">{icon}</div>
+    <div className="left-0 flex h-8 w-full items-center justify-start pl-4">{icon}</div>
   )
 
   const bgColor = ''
@@ -84,7 +88,7 @@ export default function CastInterval({
   return (
     <div
       ref={ref}
-      className={`relative select-none ${isDragging ? 'z-100' : ''}`}
+      className={`relative select-none ${isDragging ? 'z-100 shadow-lg' : ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
       {/* cast interval */}

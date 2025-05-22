@@ -27,7 +27,7 @@ export const theme = {
       },
     },
     animation: {
-      expand: 'expand 0.2s ease forwards',
+      expand: 'expand 0.17s ease forwards',
       'clip-up': 'clip-up 0.3s ease-out forwards',
       'clip-down': 'clip-down 0.3s ease-out forwards',
     },

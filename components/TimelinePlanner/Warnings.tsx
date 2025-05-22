@@ -1,6 +1,82 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { SpellToRender } from 'lib/types/cd_planner'
+import type { Warning } from 'lib/warnings/registerWarnings'
+import { registerWarnings } from 'lib/warnings/registerWarnings'
+import { useTimeline } from './TimelineContext'
 
-export default function Warnings() {
-  // TODO: Implement warnings logic
-  return <div>[Warnings]</div>
+export default function Warnings({
+  timeline,
+  current_spec,
+}: {
+  timeline: SpellToRender[]
+  current_spec: string
+}) {
+  const { total_length_s } = useTimeline()
+  const [isOpen, setIsOpen] = useState(false)
+
+  // Get all warnings from registered warning functions that apply to current spec
+  const allWarnings = registerWarnings.flatMap((warningModule) => {
+    // Skip if this warning doesn't apply to the current spec
+    if (!warningModule.spec.includes(current_spec)) {
+      return []
+    }
+
+    // Run the warning function and return its results
+    return warningModule.warning(timeline, total_length_s)
+  })
+
+  if (allWarnings.length === 0) {
+    return null
+  }
+
+  // Group warnings by spell name
+  const groupedWarnings = allWarnings.reduce<Record<string, string[]>>((acc, warning) => {
+    if (!acc[warning.spellName]) {
+      acc[warning.spellName] = []
+    }
+    acc[warning.spellName].push(warning.warning)
+    return acc
+  }, {})
+
+  return (
+    <div className="mt-8 space-y-2 pl-2">
+      <div className="flex cursor-pointer items-center" onClick={() => setIsOpen(!isOpen)}>
+        <h3 className="text-lg font-semibold">Timeline Warnings</h3>
+        <span className="ml-2 text-yellow-500/80">({allWarnings.length})</span>
+        <svg
+          className={`ml-2 h-5 w-5 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+
+      {isOpen && (
+        <div className="space-y-2">
+          {Object.entries(groupedWarnings).map(([spellName, warnings], index) => (
+            <SpellWarningItem key={index} spellName={spellName} warnings={warnings} />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+const SpellWarningItem = ({ spellName, warnings }: { spellName: string; warnings: string[] }) => {
+  return (
+    <div className="rounded border-l-4 border-yellow-500/40 bg-neutral-900/80 p-3 shadow">
+      <div className="flex flex-col">
+        <div className="text-md font-bold text-yellow-500/80">{spellName}</div>
+        <ul className="mt-1 list-disc pl-5">
+          {warnings.map((warning, idx) => (
+            <li key={idx} className="text-sm text-neutral-300">
+              {warning}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
 }

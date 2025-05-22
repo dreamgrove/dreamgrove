@@ -9,11 +9,11 @@ interface CustomElementProps {
 export default function CustomElement({ onCreate }: CustomElementProps) {
   const [isFormVisible, setIsFormVisible] = useState(false)
   const [name, setName] = useState('')
-  const [cooldown, setCooldown] = useState(60)
-  const [effectDuration, setEffectDuration] = useState(10)
-  const [charges, setCharges] = useState(1)
+  const [cooldown, setCooldown] = useState<string | number>(60)
+  const [effectDuration, setEffectDuration] = useState<string | number>(10)
+  const [charges, setCharges] = useState<string | number>(1)
   const [isChanneled, setIsChanneled] = useState(false)
-  const [channelDuration, setChannelDuration] = useState(2)
+  const [channelDuration, setChannelDuration] = useState<string | number>(2)
   const [errorMessage, setErrorMessage] = useState('')
   const [selectedSpecs, setSelectedSpecs] = useState<string[]>([])
 
@@ -36,20 +36,24 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
       return
     }
 
-    if (cooldown <= 0) {
-      setErrorMessage('Cooldown must be greater than 0')
-      return
-    }
+    // Convert empty strings to 0
+    const finalCooldown = cooldown === '' ? 0 : Number(cooldown)
+    const finalEffectDuration = effectDuration === '' ? 0 : Number(effectDuration)
+    const finalCharges = charges === '' ? 0 : Math.max(1, Number(charges))
+    const finalChannelDuration = channelDuration === '' ? 0 : Number(channelDuration)
+
+    // Either use the selected specs or set to 'all'
+    const specsList = selectedSpecs.length > 0 ? selectedSpecs : ['all']
 
     const newSpell: SpellInfo = {
       spellId: Math.floor(Math.random() * 100000), // Generate a random spell ID
       name: name.trim(),
-      cooldown: cooldown,
-      effect_duration: effectDuration,
-      charges: charges,
-      channel_duration: isChanneled ? channelDuration : 0,
+      cooldown: finalCooldown,
+      effect_duration: finalEffectDuration,
+      charges: finalCharges,
+      channel_duration: isChanneled ? finalChannelDuration : 0,
       channeled: isChanneled,
-      specs: selectedSpecs.length > 0 ? selectedSpecs : undefined,
+      specs: specsList,
     }
 
     if (onCreate) {
@@ -87,7 +91,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
               </button>
             </div>
 
-            <form onSubmit={handleSubmit}>
+            <form autoComplete="off" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-3">
                 <div className="col-span-2">
                   <label htmlFor="name" className="block text-xs text-white">
@@ -111,7 +115,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                     type="number"
                     id="cooldown"
                     value={cooldown}
-                    onChange={(e) => setCooldown(Number(e.target.value))}
+                    onChange={(e) => setCooldown(e.target.value)}
                     min={0}
                     step={1}
                     className="mt-1 w-full rounded-md border-neutral-700 bg-neutral-200/40 px-2 py-1 text-sm text-white placeholder:text-neutral-200"
@@ -126,7 +130,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                     type="number"
                     id="effectDuration"
                     value={effectDuration}
-                    onChange={(e) => setEffectDuration(Number(e.target.value))}
+                    onChange={(e) => setEffectDuration(e.target.value)}
                     min={0}
                     step={0.5}
                     className="mt-1 w-full rounded-md border-neutral-700 bg-neutral-200/40 px-2 py-1 text-sm text-white placeholder:text-neutral-200"
@@ -141,7 +145,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                     type="number"
                     id="charges"
                     value={charges}
-                    onChange={(e) => setCharges(Math.max(1, Number(e.target.value)))}
+                    onChange={(e) => setCharges(e.target.value)}
                     min={1}
                     className="mt-1 w-full rounded-md border-neutral-700 bg-neutral-200/40 px-2 py-1 text-sm text-white placeholder:text-neutral-200"
                   />
@@ -171,7 +175,7 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                         type="number"
                         id="channelDuration"
                         value={channelDuration}
-                        onChange={(e) => setChannelDuration(Number(e.target.value))}
+                        onChange={(e) => setChannelDuration(e.target.value)}
                         min={0}
                         step={0.5}
                         className="mt-1 w-full rounded-md border-neutral-700 bg-neutral-200/40 px-2 py-1 text-sm text-white placeholder:text-neutral-200"
@@ -181,7 +185,9 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
                 </div>
 
                 <div className="col-span-2 mt-2">
-                  <label className="mb-1 block text-xs text-gray-300">Specs</label>
+                  <label className="mb-1 block text-xs text-gray-300">
+                    Specs (none = all specs)
+                  </label>
                   <div className="flex flex-wrap gap-3">
                     {['balance', 'resto', 'feral', 'guardian'].map((spec) => (
                       <div key={spec} className="flex items-center">

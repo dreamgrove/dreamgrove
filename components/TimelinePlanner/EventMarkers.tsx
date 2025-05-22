@@ -79,7 +79,7 @@ interface EventMarkerProps {
  */
 const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
   // Get timeToPixels function from context
-  const { timeToPixels } = useTimelineControls()
+  const { timeToPixels, total_length_s } = useTimelineControls()
 
   // Group events by their pixel positions
   const eventsByPosition = eventInfo.reduce(
@@ -97,7 +97,7 @@ const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
   return (
     <div
       className={`pointer-events-none absolute top-0 left-0 z-10 flex h-full pl-6`}
-      style={{ width: 6000 }}
+      style={{ width: timeToPixels(total_length_s) }}
     >
       {Object.entries(eventsByPosition).flatMap(([position, events]) =>
         events.map((event, i) => (

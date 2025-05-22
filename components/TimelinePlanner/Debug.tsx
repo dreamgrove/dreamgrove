@@ -34,22 +34,37 @@ export default function Debug({
     0
   )
 
+  // Get all casts and sort them by start_s
+  const allCasts = processedTimeline.spells
+    .flatMap((spellInfo) =>
+      spellInfo.casts.map((cast) => ({
+        cast,
+        spellName: spellInfo.spell.name,
+        spellId: spellInfo.spell.spellId,
+      }))
+    )
+    .sort((a, b) => a.cast.start_s - b.cast.start_s)
+
   return (
     <div
-      className={`fixed right-0 bottom-0 left-0 z-50 bg-neutral-900/95 transition-all duration-300 ${showDebug ? 'h-[40vh]' : 'h-12'} overflow-y-scroll`}
+      className={`fixed right-0 bottom-0 left-0 z-50 bg-neutral-900 transition-all duration-500 ease-in-out ${
+        showDebug ? 'h-[45vh]' : 'h-12'
+      }`}
     >
       <div className="flex h-12 items-center justify-end border-t border-neutral-700">
         <button
           onClick={toggleDebug}
-          className="flex items-center rounded py-1 pr-4 text-sm text-neutral-400 transition hover:text-neutral-300"
+          className="flex items-center rounded py-1 pr-4 text-sm text-neutral-400 transition-colors duration-300 hover:text-neutral-300 focus:outline-none"
         >
-          <span className="mr-2 pb-1 text-2xl font-bold">{showDebug ? '-' : '+'}</span>
+          <span className="mr-2 pb-1 text-2xl font-bold transition-transform duration-300">
+            {showDebug ? '-' : '+'}
+          </span>
           {showDebug ? 'Hide Additional Details' : 'Show Additional Details'}
         </button>
       </div>
 
-      {showDebug && (
-        <div className="overflow-y-none h-[calc(80vh-3rem)] px-4">
+      <div className={`h-[calc(100%-3rem)] overflow-y-auto border-t border-neutral-700 px-24`}>
+        <div className="pb-6">
           <div className="mt-2 text-sm">
             <span className="mr-4">
               Timeline Length: <strong>{timelineSettings.totalLength}s</strong>
@@ -76,13 +91,16 @@ export default function Debug({
           {/* Collapsible details */}
           <div className="mt-4 space-y-4">
             <div>
-              <h4 className="mb-2 font-medium">Cast Details</h4>
+              <h4 className="mb-2 font-medium">Cast Details: </h4>
               <table className="min-w-full divide-y divide-neutral-800 overflow-hidden rounded-lg bg-neutral-700 text-sm shadow-md">
                 <thead className="bg-neutral-800">
                   <tr className="">
+                    <th className="py-2 pr-4 text-neutral-200">#</th>
                     <th className="py-2 pr-4 text-neutral-200">Spell</th>
                     <th className="py-2 pr-4 text-neutral-200">Start</th>
-                    <th className="py-2 pr-4 text-neutral-200">End</th>
+                    <th className="py-2 pr-4 text-neutral-200">Channel End</th>
+                    <th className="py-2 pr-4 text-neutral-200">Effect End</th>
+                    <th className="py-2 pr-4 text-neutral-200">Cast End</th>
                     <th className="py-2 pr-4 text-neutral-200">Duration</th>
                     <th className="py-2 pr-4 text-neutral-200">Channel</th>
                     <th className="py-2 pr-4 text-neutral-200">Effect</th>
@@ -90,19 +108,25 @@ export default function Debug({
                   </tr>
                 </thead>
                 <tbody>
-                  {processedTimeline.spells.flatMap((spellInfo) =>
-                    spellInfo.casts.map((cast) => (
+                  {allCasts.map(({ cast, spellName }, index) => {
+                    const channelEnd = cast.start_s + cast.channel_visual_duration
+                    const effectEnd =
+                      cast.start_s + cast.channel_visual_duration + cast.effect_visual_duration
+                    return (
                       <tr key={cast.id} className="border-b border-neutral-800/60 text-center">
-                        <td className="py-2 pr-4">{spellInfo.spell.name}</td>
+                        <td className="py-2 pr-4">{index + 1}</td>
+                        <td className="py-2 pr-4">{spellName}</td>
                         <td className="py-2 pr-4">{cast.start_s.toFixed(1)}s</td>
+                        <td className="py-2 pr-4">{channelEnd.toFixed(1)}s</td>
+                        <td className="py-2 pr-4">{effectEnd.toFixed(1)}s</td>
                         <td className="py-2 pr-4">{cast.end_s.toFixed(1)}s</td>
-                        <td className="py-2 pr-4">{(cast.end_s - cast.start_s).toFixed(1)}s</td>
+                        <td className="py-2 pr-4">{cast.duration_s.toFixed(1)}s</td>
                         <td className="py-2 pr-4">{cast.channel_duration.toFixed(1)}s</td>
                         <td className="py-2 pr-4">{cast.effect_duration.toFixed(1)}s</td>
                         <td className="py-2">{cast.cooldown_duration.toFixed(1)}s</td>
                       </tr>
-                    ))
-                  )}
+                    )
+                  })}
                 </tbody>
               </table>
             </div>
@@ -194,7 +218,7 @@ export default function Debug({
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
