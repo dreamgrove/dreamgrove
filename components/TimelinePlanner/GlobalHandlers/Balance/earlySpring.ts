@@ -18,6 +18,9 @@ export const earlySpring: GlobalAction = (event, queue, state, spells) => {
       if (spell.spellId === 205636) {
         //If Force of Nature
         spell.cooldown -= 15
+      } else {
+        //Guardians
+        spell.cooldown -= 3
       }
     })
   }

@@ -218,8 +218,8 @@ export class Cast {
   }
   get cooldown_visual_duration(): number {
     return this.cooldown_delay_s > 0
-      ? this.cooldown_duration
-      : this.cooldown_duration - Math.max(this.effect_duration, this.channel_duration)
+      ? Math.max(this.cooldown_duration, 0)
+      : Math.max(this.cooldown_duration - Math.max(this.effect_duration, this.channel_duration), 0)
   }
   get cooldown_visual_start_s(): number {
     return this.start_s + Math.max(this.effect_duration, this.channel_duration)
@@ -233,7 +233,7 @@ export class Cast {
     return this._cooldown_duration
   }
   set cooldown_duration(value: number) {
-    this._cooldown_duration = value
+    this._cooldown_duration = Math.max(value, Math.max(this.effect_duration, this.channel_duration))
   }
 
   get delayed_cooldown_duration(): number {
@@ -245,7 +245,11 @@ export class Cast {
   }
 
   get duration_s(): number {
-    return this.cooldown_duration + this.cooldown_delay_s
+    return Math.max(
+      this.cooldown_duration + this.cooldown_delay_s,
+      this.effect_duration,
+      this.channel_duration
+    )
   }
 
   constructor(params: CastParams) {

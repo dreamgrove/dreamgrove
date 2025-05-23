@@ -46,7 +46,7 @@ export default function CastInterval({
 
   const duration_s_px = cast.duration_s * pixelsPerSecond
 
-  const isLogging = false
+  const isLogging = true
 
   if (isLogging) {
     console.log({
@@ -79,7 +79,7 @@ export default function CastInterval({
 
   const bgColor = ''
 
-  const transitionStyle = 'transition-all duration-300 ease-in-out'
+  const transitionStyle = ''
 
   useEffect(() => {
     if (rectRef && isDragging && isOverlay) {

@@ -232,14 +232,21 @@ export function processEventQueue(
             const treeOfLifeId = 33891
             // if the casts has a cast with id treeOfLifeId, then we need to add 15 seconds to the cooldown
             const treeOfLifeCast = timelineState.isSpellCastPresent(treeOfLifeId)
+            const potentEnchantments = activeBindings.includes(Talents.PotentEnchantments)
+
+            const potentEnchantmentsDuration = potentEnchantments ? 3 : 0
+            console.log('potentEnchantmentsDuration', potentEnchantmentsDuration)
             if (
               treeOfLifeCast &&
-              event.time < treeOfLifeCast.effect_duration + treeOfLifeCast.effect_start_s
+              event.time <
+                treeOfLifeCast.effect_duration +
+                  treeOfLifeCast.effect_start_s +
+                  potentEnchantmentsDuration
             ) {
               eventQueue.modifyEarliesType(
                 treeOfLifeId,
                 EventType.EffectEnd,
-                spellInfo.effect_duration,
+                spellInfo.effect_duration + potentEnchantmentsDuration,
                 event.time
               )
             }
@@ -346,6 +353,9 @@ export function processEventQueue(
 
       case EventType.ChannelInterrupted:
       case EventType.ChannelEnd:
+        if (timelineState.channeledSpell?.spellId !== spellInfo.spellId) {
+          break
+        }
         const cast = timelineState.activeCasts.get(event.castId)
         if (cast) {
           cast.channel_duration = event.time - cast.start_s
@@ -356,8 +366,6 @@ export function processEventQueue(
         break
 
       case EventType.EffectEnd:
-        /* Reforestation */
-
         if (timelineState.activeCasts.has(event.castId)) {
           const cast = timelineState.activeCasts.get(event.castId)
           if (cast) {

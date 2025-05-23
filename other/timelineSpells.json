@@ -41,7 +41,7 @@
       "spellId": 102693,
       "channel_duration": 0,
       "effect_duration": 15,
-      "cooldown": 30,
+      "cooldown": 20,
       "charges": 3,
       "specs": ["resto"]
     },

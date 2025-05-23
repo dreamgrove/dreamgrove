@@ -6,28 +6,27 @@ export const bindings = [
     spellId: 428937,
     label: 'Early Spring',
     description: 'Force of Nature cooldown reduced by 15 sec.',
-    specs: ['balance'],
+    specs: ['balance', 'resto'],
   },
   {
     id: Talents.ControlOfTheDream,
     spellId: 434249,
     label: 'Control of the Dream',
-    description:
-      "Time elapsed while your major abilities are available to be used or at maximum charges is subtracted from that ability's cooldown after the next time you use it, up to 15 seconds.",
+    description: 'Up to 15s of unused ability time reduces its next cooldown after use',
     specs: ['balance', 'resto', 'guardian'],
   },
   {
     id: Talents.Incarnation,
     spellId: 102560,
     label: 'Incarnation',
-    description: 'Celestial Alignment effect duration increased by 5 sec.',
+    description: 'Celestial Alignment effect duration +5 sec.',
     specs: ['balance'],
   },
   {
     id: Talents.WhirlingStars,
     spellId: 468743,
     label: 'Whirling Stars',
-    description: 'Celestial Alignment cooldown reduced by 100 sec. and gains 2 charges.',
+    description: 'Celestial Alignment gains 2 charges and cooldown -100s.',
     specs: ['balance'],
   },
   {
@@ -35,8 +34,8 @@ export const bindings = [
     spellId: 429420,
     label: 'Potent Enchantments',
     description:
-      'Whirling Stars reduces the cooldown of Celestial Alignment by an additional 10 sec.',
-    specs: ['balance'],
+      'Whirling Stars CD reduction +10 sec. Reforestation gives 3 additional seconds of ToL',
+    specs: ['balance', 'resto'],
   },
   {
     id: Talents.Dreamstate,

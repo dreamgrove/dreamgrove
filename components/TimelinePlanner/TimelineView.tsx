@@ -119,7 +119,7 @@ export default function TimelineView({
 
     activeBindings.forEach((bindingId) => {
       if (bindingId === Talents.EarlySpring) {
-        bindGlobalAction(['205636'], earlySpring)
+        bindGlobalAction(['205636', '102693'], earlySpring)
       }
       if (bindingId === Talents.ControlOfTheDream) {
         bindGlobalAction(['194223', '391528', '205636', '33891'], controlOfTheDream)
