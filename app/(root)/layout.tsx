@@ -96,7 +96,6 @@ export default function RootLayout({ children }: LayoutProps) {
             </ThemeProviders>
           </Providers>
         </div>
-        <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
         <Script src={scriptSrc} strategy="beforeInteractive" />
       </body>
     </html>

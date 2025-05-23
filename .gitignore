@@ -52,3 +52,5 @@ app/tag-data.json
 cursor
 .cursor/*
 .cursorspace
+# Sentry Config File
+.env.sentry-build-plugin

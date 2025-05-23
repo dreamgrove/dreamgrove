@@ -84,10 +84,6 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
 
   return (
     <PageWrapper title={pageTitle} showTitle={false}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Layout content={mainContent} next={next} prev={prev} showTitle={false} authorDetails={[]}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>

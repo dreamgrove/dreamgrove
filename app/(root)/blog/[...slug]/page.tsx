@@ -106,10 +106,6 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
 
   return (
     <PageWrapper toc={post.toc as unknown as Chapter[]} title={pageTitle} isBlog={true}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Layout
         content={mainContent}
         toc={post.toc}
