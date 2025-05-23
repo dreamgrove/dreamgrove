@@ -398,6 +398,13 @@ export function processEventQueue(
           consideredSpells.add(cast.spell.spellId)
           eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -4, event.time)
           eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -4, event.time)
+          console.log('cast.cooldown_delay_s', cast.cooldown_delay_s)
+          if (cast.cooldown_delay_s - 4 > 0) {
+            cast.cooldown_delay_s -= 4
+            console.log('cast.cooldown_delay_s', cast.cooldown_delay_s)
+          } else {
+            cast.cooldown_delay_s = 0
+          }
         }
 
         eventQueue.push({
