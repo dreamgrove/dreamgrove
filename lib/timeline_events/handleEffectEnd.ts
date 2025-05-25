@@ -10,6 +10,7 @@ export const handleEffectEnd: IEffectEndHandler = (
     if (cast) {
       cast.effect_duration = event.time - cast.start_s
       cast._ef_end_s = event.time
+      console.log('modifying cast', cast.id, cast.effect_duration)
     }
   }
 }

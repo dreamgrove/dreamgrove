@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { SpellInfo, SpellTimeline, PlayerAction } from '../../lib/types/cd_planner'
+import { addCustomSpell } from '../../lib/utils/customSpellStorage'
 
 interface CustomElementProps {
   onCreate?: (params: SpellInfo) => void
+  onDelete?: (spellId: number) => void
 }
 
-export default function CustomElement({ onCreate }: CustomElementProps) {
+export default function CustomElement({ onCreate, onDelete }: CustomElementProps) {
   const [isFormVisible, setIsFormVisible] = useState(false)
   const [name, setName] = useState('')
   const [cooldown, setCooldown] = useState<string | number>(60)
@@ -45,8 +47,8 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
     // Either use the selected specs or set to 'all'
     const specsList = selectedSpecs.length > 0 ? selectedSpecs : ['all']
 
-    const newSpell: SpellInfo = {
-      spellId: Math.floor(Math.random() * 100000), // Generate a random spell ID
+    // Create the custom spell using the utility function
+    const customSpell = addCustomSpell({
       name: name.trim(),
       cooldown: finalCooldown,
       effect_duration: finalEffectDuration,
@@ -54,10 +56,10 @@ export default function CustomElement({ onCreate }: CustomElementProps) {
       channel_duration: isChanneled ? finalChannelDuration : 0,
       channeled: isChanneled,
       specs: specsList,
-    }
+    })
 
     if (onCreate) {
-      onCreate(newSpell)
+      onCreate(customSpell)
     }
 
     setName('')

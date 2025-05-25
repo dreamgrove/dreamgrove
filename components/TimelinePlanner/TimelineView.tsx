@@ -38,6 +38,13 @@ import { useNextStep } from 'nextstepjs'
 import { NextStepViewport } from 'nextstepjs'
 import { HoverProvider } from './HoverProvider'
 import Warnings from './Warnings'
+import {
+  CustomSpell,
+  loadCustomSpells,
+  removeCustomSpell,
+  isCustomSpell,
+} from '../../lib/utils/customSpellStorage'
+import CustomSpellIcon from './CustomSpellIcon'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface TimelineViewProps {
@@ -153,7 +160,9 @@ export default function TimelineView({
   }, [activeBindings])
 
   useEffect(() => {
-    setLocalSpells(spells)
+    // Combine regular spells with custom spells from localStorage
+    const customSpells = loadCustomSpells()
+    setLocalSpells([...spells, ...customSpells])
   }, [spells])
 
   useEffect(() => {
@@ -291,18 +300,20 @@ export default function TimelineView({
   }
 
   const handleCreateCustomElement = (params: SpellInfo) => {
-    const newSpell: SpellInfo = {
-      spellId: Math.floor(Math.random() * 1000000) + 900000, //this shouldnt be done like this but w/e
-      name: params.name,
-      channel_duration: params.channel_duration,
-      effect_duration: params.effect_duration,
-      cooldown: params.cooldown,
-      charges: params.charges,
-      channeled: params.channeled,
-      specs: params.specs || [],
+    // If it's already a custom spell (from localStorage), just add it to local spells
+    if (isCustomSpell(params)) {
+      setLocalSpells([...localSpells, params])
+    } else {
+      // This is a new spell being created, it should already be handled by CustomElement
+      setLocalSpells([...localSpells, params])
     }
+  }
 
-    setLocalSpells([...localSpells, newSpell])
+  const handleDeleteCustomSpell = (spellId: number) => {
+    // Remove from local spells
+    setLocalSpells((prev) => prev.filter((spell) => spell.spellId !== spellId))
+    // Remove any casts of this spell from input actions
+    setInputActions((prev) => prev.filter((action) => action.spell.spellId !== spellId))
   }
 
   const handleBindingToggle = (id: string, isSelected: boolean) => {
@@ -385,6 +396,7 @@ export default function TimelineView({
           currentSpells={processedState}
           setCurrentSpells={setInputActions}
           onCreate={handleCreateCustomElement}
+          onDelete={handleDeleteCustomSpell}
           spells={filteredSpells}
         />
       </div>
@@ -474,7 +486,11 @@ export default function TimelineView({
                       key={`spell-row-${spellCast.spell.spellId}`}
                       spellTimeline={spellCast}
                       wowheadComponent={
-                        wowheadMap[spellCast.spell.spellId] || <span>{spellCast.spell.name}</span>
+                        isCustomSpell(spellCast.spell) ? (
+                          <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="md" />
+                        ) : (
+                          wowheadMap[spellCast.spell.spellId] || <span>{spellCast.spell.name}</span>
+                        )
                       }
                       onCastDelete={handleCastDelete}
                       onCastMove={handleCastMove}
@@ -515,13 +531,18 @@ const SpellName = ({
   spellCast: SpellToRender
   wowheadNameMap: Record<string, React.ReactNode>
 }) => {
+  const isCustom = isCustomSpell(spellCast.spell)
+
   return (
     <div
       id={`spell-name-${spellCast.spell.spellId}`}
       className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/50 border-b-orange-500/50 pr-2`}
     >
-      <div className={`flex h-[40px] w-full flex-col justify-center truncate text-right text-sm`}>
-        {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
+      <div
+        className={`flex h-[40px] w-full flex-row items-center justify-end gap-2 truncate text-right text-sm`}
+      >
+        {isCustom && <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="sm" />}
+        <span>{wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}</span>
       </div>
     </div>
   )
@@ -533,6 +554,8 @@ const SpellNameWithCharges = ({
   spellCast: SpellToRender
   wowheadNameMap: Record<string, React.ReactNode>
 }) => {
+  const isCustom = isCustomSpell(spellCast.spell)
+
   return (
     <div className="mb-2 w-full">
       <div
@@ -544,9 +567,10 @@ const SpellNameWithCharges = ({
       <div className="mt-[12px] flex w-full flex-col items-end gap-2 border-r-2 border-orange-500/30 pr-2">
         <div
           id={`spell-name-${spellCast.spell.spellId}`}
-          className={`flex h-[38px] w-full flex-col justify-center truncate text-right`}
+          className={`flex h-[38px] w-full flex-row items-center justify-end gap-2 truncate text-right`}
         >
-          {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
+          {isCustom && <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="sm" />}
+          <span>{wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}</span>
         </div>
         {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
           <div

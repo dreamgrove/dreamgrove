@@ -46,7 +46,8 @@ export interface IChargeLoseHandler {
   (
     event: TimelineEvent<EventType.LoseCharge>,
     spellInfo: SpellInfo,
-    spellState: SpellState
+    spellState: SpellState,
+    timelineState: TimelineState
   ): ChargeLoseReturn
 }
 export type ChargeLoseReturn = IGetEvents & {
@@ -59,7 +60,7 @@ export interface ICenariusGuidanceHandler {
     event: TimelineEvent<EventType.CenariusGuidance>,
     timelineState: TimelineState,
     eventQueue: EventQueue
-  ): void
+  ): TimelineEvent<EventType.CenariusGuidance>[]
 }
 
 /* CHANNEL START */

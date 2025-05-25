@@ -57,16 +57,20 @@ export class SpellState {
   currentCast: Cast | null
   delayedCastIds: string[]
   chargeIntervals: ChargeInterval[]
+  currentCharge: number
 
   restoreCharge(instant: number): number {
     this.usedCharges--
     this.chargeIntervals.push({ instant, change: +1 })
+    this.currentCharge = this.usedCharges
     return this.usedCharges
   }
 
   useCharge(instant: number) {
     this.usedCharges++
     this.chargeIntervals.push({ instant, change: -1 })
+    this.currentCharge = this.usedCharges
+
     return this.usedCharges
   }
 
@@ -79,6 +83,7 @@ export class SpellState {
     this.currentCast = null
     this.chargeIntervals = []
     this.delayedCastIds = []
+    this.currentCharge = 0
   }
 }
 

@@ -58,6 +58,8 @@ export const handleCastStart: ICastStartHandler = (
             treeOfLifeCast.effect_start_s +
             potentEnchantmentsDuration
       ) {
+        treeOfLifeCast.effect_duration += spellInfo.effect_duration + potentEnchantmentsDuration
+        treeOfLifeCast._ef_end_s += spellInfo.effect_duration + potentEnchantmentsDuration
         eventQueue.modifyFirstEarliestOfType(
           treeOfLifeCast,
           EventType.EffectEnd,
@@ -69,18 +71,6 @@ export const handleCastStart: ICastStartHandler = (
 
     const latestChargeTime = eventQueue.findLatestCharge(event.spellId, event.time)
     const cooldown_delay = Math.max(0, latestChargeTime - event.time)
-
-    /* Control of the Dream */
-    if (timelineState.activeEffects.has(Talents.ControlOfTheDream)) {
-      const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
-      if (cotdEffects && cotdEffects.has(event.spellId)) {
-        const cotdTime = cotdEffects.get(event.spellId)
-        if (cotdTime !== undefined && event.time > cotdTime) {
-          spellInfo.cooldown -= Math.min(15, event.time - cotdTime)
-          cotdEffects.delete(event.spellId)
-        }
-      }
-    }
 
     const cast = new Cast({
       id: event.castId,

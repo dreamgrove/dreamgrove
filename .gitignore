@@ -43,6 +43,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+plan.md
 # Contentlayer
 .contentlayer
 /.vs

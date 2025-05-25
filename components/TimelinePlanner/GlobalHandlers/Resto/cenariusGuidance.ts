@@ -25,16 +25,15 @@ export const cenariusGuidance: GlobalAction = (event, queue, state, spells) => {
   }
   // If its Tree of Life, add the treants events
   if (event.spellId === 33891) {
-    const ticks = [0, 10, 20, 30]
-    const treantsEvents = ticks.map((tick) => ({
+    const treantsEvents = {
       type: EventType.CenariusGuidance,
-      time: event.time + tick + 15,
+      time: event.time + 15,
       spellId: 102693,
       castId: event.castId,
-    }))
+    }
     return {
       changedEvent: event,
-      eventsToAdd: treantsEvents,
+      eventsToAdd: [treantsEvents],
       newState: state,
       newSpells: spells,
     }
