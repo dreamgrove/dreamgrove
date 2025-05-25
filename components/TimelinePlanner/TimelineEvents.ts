@@ -11,16 +11,28 @@ import {
 } from '../../lib/types/cd_planner'
 import { findMaxUsedCharges } from './SpellCastsRow'
 import { GlobalAction } from '../../lib/types/global_handler'
+import {
+  handleCastStart,
+  handleChannelStart,
+  handleChargeLose,
+  handleChannelEnd,
+  handleEffectEnd,
+  handleDreamstate,
+  handleCenariusGuidance,
+  handleControlOfTheDream,
+  handleCooldownEnd,
+} from 'lib/timeline_events'
+import { handleChargeGain } from 'lib/timeline_events/handleChargeGain'
 
 /**
  * Priority Queue implementation for Event objects
  */
 export class EventQueue {
-  private events: TimelineEvent[] = []
+  private events: TimelineEvent<EventType>[] = []
+  private remainingDelta: number = 0
 
-  push(event: TimelineEvent): void {
+  push(event: TimelineEvent<EventType>): void {
     // add +0.01 and round to 2 decimal places
-    event.time = Math.round((event.time + 0.01) * 100) / 100
     this.events.push(event)
     this.events.sort((a, b) => a.time - b.time)
   }
@@ -28,7 +40,7 @@ export class EventQueue {
   /**
    * Remove and return the highest priority (earliest time) event
    */
-  pop(): TimelineEvent | undefined {
+  pop(): TimelineEvent<EventType> | undefined {
     return this.events.shift()
   }
 
@@ -40,22 +52,69 @@ export class EventQueue {
     return this.events.length
   }
 
-  //event = 7
-  //delta = -5
-  //cast= 10
-  //expected = 7
-  //expected reduction = 3
-  // 7 + -5 = 2
-  modifyEarliesType(spellId: number, type: EventType, delta: number, event_time: number) {
-    for (const cast of this.events) {
-      if (cast.type === type && cast.spellId === spellId) {
-        if (cast.time + delta < event_time) {
-          cast.time = event_time
-        } else {
-          cast.time += delta
-        }
+  modifyFirstEarliestOfType(cast: Cast, type: EventType, delta: number, event_time: number) {
+    // Find all matching events and sort by time
+    const matchingEvents = this.events
+      .filter((event) => event.type === type && event.spellId === cast.spell.spellId)
+      .sort((a, b) => a.time - b.time)
+
+    for (let i = 0; i < matchingEvents.length; i++) {
+      const event = matchingEvents[i]
+
+      const originalTime = event.time
+      const targetTime = originalTime + this.remainingDelta + delta
+
+      if (targetTime < event_time) {
+        const actualDelta = -(event_time - targetTime)
+        // This event would go below the minimum time
+        event.time = event_time
+        this.remainingDelta = actualDelta
+      } else {
+        // Apply all remaining delta to this event
+        event.time = targetTime
+        this.remainingDelta = 0
       }
     }
+  }
+
+  modifyLatestOfType(
+    cast: Cast,
+    type: EventType,
+    delta: number,
+    event_time: number
+  ): string | undefined {
+    // Find all matching events and sort by time (latest first)
+    const matchingEvents = this.events
+      .filter((event) => event.type === type && event.spellId === cast.spell.spellId)
+      .sort((a, b) => b.time - a.time)
+
+    let remainingDelta = delta
+    let modifiedCastId: string | undefined
+
+    for (let i = 0; i < matchingEvents.length; i++) {
+      const event = matchingEvents[i]
+      if (remainingDelta === 0) {
+        break
+      }
+
+      const originalTime = event.time
+      const targetTime = originalTime + remainingDelta
+
+      if (targetTime < cast.start_s) {
+        // This event would go below the minimum time
+        event.time = event_time
+        const actualDelta = event_time - originalTime
+        remainingDelta = remainingDelta - actualDelta
+        if (!modifiedCastId) modifiedCastId = event.castId
+      } else {
+        // Apply all remaining delta to this event
+        event.time = targetTime
+        remainingDelta = 0
+        if (!modifiedCastId) modifiedCastId = event.castId
+      }
+    }
+
+    return modifiedCastId
   }
 
   /**
@@ -102,10 +161,22 @@ export class EventQueue {
 export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   const eventQueue = new EventQueue()
 
+  let lastTime = -Infinity
+
   inputActions
     .sort((a, b) => a.instant - b.instant)
     .forEach((action) => {
-      const startTime = action.instant
+      let startTime = Math.round(action.instant * 10) / 10
+
+      // Ensure at least 0.01 difference from last event
+      if (startTime < lastTime + 0.01) {
+        startTime = lastTime + 0.01
+      }
+
+      // Round to avoid floating point precision issues
+      startTime = Math.round(startTime * 100) / 100
+      lastTime = startTime
+
       /*
       if (action.spell.name === 'Reforestation') {
         startTime = Math.max(startTime, 15)
@@ -122,8 +193,8 @@ export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   return eventQueue
 }
 
-function getMatchingActions(
-  event: TimelineEvent,
+function getMatchingActions<T extends EventType>(
+  event: TimelineEvent<T>,
   keyToActions: Map<string, Set<GlobalAction>>
 ): Set<GlobalAction> {
   const matched = new Set<GlobalAction>()
@@ -151,12 +222,12 @@ export function processEventQueue(
   activeBindings: string[]
 ): {
   processedState: TimelineToRender
-  processedEvents: TimelineEvent[]
+  processedEvents: TimelineEvent<EventType>[]
   rescheduledCasts: Array<{ castId: string; newTime: number }>
 } {
   let timelineState = new TimelineState()
   const processedState: TimelineToRender = { spells: [], timeline_length_s: 0 }
-  const processedEvents: TimelineEvent[] = []
+  const processedEvents: TimelineEvent<EventType>[] = []
   const rescheduledCasts: Array<{ castId: string; newTime: number }> = []
   // Create a deep copy of the spells array to prevent state preservation between calls
   let currentSpells = JSON.parse(JSON.stringify(spells))
@@ -167,8 +238,11 @@ export function processEventQueue(
   }
 
   while (!eventQueue.isEmpty()) {
-    let event = eventQueue.pop()
-    if (!event) break
+    const _el: TimelineEvent<EventType> | undefined = eventQueue.pop()
+
+    if (_el === undefined) break
+
+    let event: TimelineEvent<EventType> = _el
 
     processedEvents.push(event)
 
@@ -196,267 +270,118 @@ export function processEventQueue(
 
     const spellState = timelineState.findOrCreateSpellState(event.spellId, spellInfo.charges || 1)
 
-    const canCast = () => spellState.usedCharges < spellState.totalCharges
-
-    event.time = Math.round(event.time * 10) / 10
+    event.time = Math.round(event.time * 100) / 100
 
     switch (event.type) {
       case EventType.CastStart:
-        /* Special case for Tree of Life */
-        const reforestationCast = timelineState.isSpellCastPresent(392356)
-        const isOverlapping =
-          reforestationCast &&
-          event.time > reforestationCast.effect_start_s &&
-          event.time < reforestationCast.effect_start_s + reforestationCast.effect_duration
-        if (canCast() && isOverlapping && event.spellId === 33891) {
-          rescheduledCasts.push({
-            castId: event.castId,
-            newTime: reforestationCast.effect_start_s + reforestationCast.effect_duration + 0.1,
-          })
+        const castReturn = handleCastStart(
+          event as TimelineEvent<EventType.CastStart>,
+          timelineState,
+          rescheduledCasts,
+          eventQueue,
+          activeBindings,
+          spellInfo,
+          spellState
+        )
+        for (const e of castReturn.events()) {
+          eventQueue.push(e)
+        }
 
-          // We can't press Incarn while reforestation is active, so we need to reschedule the cast
-          eventQueue.push({
-            type: EventType.CastStart,
-            time: reforestationCast.effect_start_s + reforestationCast.effect_duration + 0.1,
-            spellId: event.spellId,
-            castId: event.castId,
-          })
-        } else if (canCast()) {
-          /* Normal Cast */
-          if (spellState.currentCast && event.time - SPELL_GCD < spellState.currentCast.start_s) {
-            event.time = event.time + SPELL_GCD
-          }
+        break
 
-          /* Reforestation */
-          if (event.spellId === 392356) {
-            const treeOfLifeId = 33891
-            // if the casts has a cast with id treeOfLifeId, then we need to add 15 seconds to the cooldown
-            const treeOfLifeCast = timelineState.isSpellCastPresent(treeOfLifeId)
-            const potentEnchantments = activeBindings.includes(Talents.PotentEnchantments)
-
-            const potentEnchantmentsDuration = potentEnchantments ? 3 : 0
-            console.log('potentEnchantmentsDuration', potentEnchantmentsDuration)
-            if (
-              treeOfLifeCast &&
-              event.time <
-                treeOfLifeCast.effect_duration +
-                  treeOfLifeCast.effect_start_s +
-                  potentEnchantmentsDuration
-            ) {
-              eventQueue.modifyEarliesType(
-                treeOfLifeId,
-                EventType.EffectEnd,
-                spellInfo.effect_duration + potentEnchantmentsDuration,
-                event.time
-              )
-            }
-          }
-
-          spellState.useCharge(event.time)
-
-          const latestChargeTime = eventQueue.findLatestCharge(event.spellId, event.time)
-          const cooldown_delay = Math.max(0, latestChargeTime - event.time)
-
-          /* Control of the Dream */
-          if (timelineState.activeEffects.has(Talents.ControlOfTheDream)) {
-            const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
-            if (cotdEffects && cotdEffects.has(event.spellId)) {
-              const cotdTime = cotdEffects.get(event.spellId)
-              if (cotdTime !== undefined && event.time > cotdTime) {
-                spellInfo.cooldown -= Math.min(15, event.time - cotdTime)
-                cotdEffects.delete(event.spellId)
-              }
-            }
-          }
-
-          eventQueue.push({
-            type: EventType.GainCharge,
-            time: latestChargeTime + spellInfo.cooldown,
-            spellId: event.spellId,
-            castId: event.castId,
-          })
-
-          if (timelineState.channeledSpell) {
-            eventQueue.push({
-              type: EventType.ChannelInterrupted,
-              time: event.time,
-              spellId: timelineState.channeledSpell.spellId,
-              castId: event.castId,
-            })
-          }
-
-          if (spellInfo.channeled) {
-            eventQueue.push({
-              type: EventType.ChannelStart,
-              time: event.time,
-              spellId: event.spellId,
-              castId: event.castId,
-            })
-            eventQueue.push({
-              type: EventType.ChannelEnd,
-              time: event.time + spellInfo.channel_duration,
-              spellId: event.spellId,
-              castId: event.castId,
-            })
-          }
-
-          eventQueue.push({
-            type: EventType.EffectEnd,
-            time: event.time + spellInfo.effect_duration,
-            spellId: event.spellId,
-            castId: event.castId,
-          })
-
-          eventQueue.push({
-            type: EventType.CooldownEnd,
-            time: event.time + spellInfo.cooldown + cooldown_delay,
-            spellId: event.spellId,
-            castId: event.castId,
-          })
-
-          const cast = new Cast({
-            id: event.castId,
-            spell: spellInfo,
-            start_s: event.time,
-            current_charge: spellState.usedCharges - 1, // 0-indexed
-            cooldown_delay_s: cooldown_delay,
-          })
-
-          timelineState.activeCasts.set(cast.id, cast)
-        } else {
-          // if we don't have enough charges we need to find the first instant
-          // where we have one charge available
-
-          // Find the earliest time when a charge will be available
-          const nextChargeTime = eventQueue.findEarliestCharge(event.spellId, event.time)
-
-          // Track this cast as needing to be rescheduled in the inputActions
-          rescheduledCasts.push({
-            castId: event.castId,
-            newTime: nextChargeTime,
-          })
-
-          // Create a new cast event at the time when a charge will be available
-          eventQueue.push({
-            type: EventType.CastStart,
-            time: nextChargeTime,
-            spellId: event.spellId,
-            castId: event.castId,
-          })
+      case EventType.LoseCharge:
+        if (!isValid(timelineState, event.castId)) break
+        const chargeLoseReturn = handleChargeLose(
+          event as TimelineEvent<EventType.LoseCharge>,
+          spellInfo,
+          spellState
+        )
+        for (const e of chargeLoseReturn.events()) {
+          eventQueue.push(e)
         }
         break
 
       case EventType.ChannelStart:
-        spellState.isChanneling = true
-        timelineState.channeledSpell = spellInfo
+        if (!isValid(timelineState, event.castId)) break
+        const channelStartReturn = handleChannelStart(
+          event as TimelineEvent<EventType.ChannelStart>,
+          timelineState,
+          spellInfo,
+          spellState
+        )
+        for (const e of channelStartReturn.events()) {
+          eventQueue.push(e)
+        }
         break
 
       case EventType.ChannelInterrupted:
       case EventType.ChannelEnd:
-        if (timelineState.channeledSpell?.spellId !== spellInfo.spellId) {
-          break
-        }
-        const cast = timelineState.activeCasts.get(event.castId)
-        if (cast) {
-          cast.channel_duration = event.time - cast.start_s
-          timelineState.activeCasts.set(cast.id, cast)
-        }
-        spellState.isChanneling = false
-        timelineState.channeledSpell = null
+        if (!isValid(timelineState, event.castId)) break
+        handleChannelEnd(
+          event as TimelineEvent<EventType.ChannelEnd>,
+          timelineState,
+          spellInfo,
+          spellState
+        )
         break
 
       case EventType.EffectEnd:
-        if (timelineState.activeCasts.has(event.castId)) {
-          const cast = timelineState.activeCasts.get(event.castId)
-          if (cast) {
-            cast.effect_duration = event.time - cast.start_s
-          }
-        }
+        if (!isValid(timelineState, event.castId)) break
+        handleEffectEnd(event as TimelineEvent<EventType.EffectEnd>, timelineState)
         break
 
       case EventType.CenariusGuidance:
-        if (timelineState.activeCasts.has(event.castId)) {
-          const cast = timelineState.activeCasts.get(event.castId)
-          if (cast) {
-            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -5, event.time)
-            eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -5, event.time)
-          }
-        }
+        if (!isValid(timelineState, event.castId)) break
+        handleCenariusGuidance(
+          event as TimelineEvent<EventType.CenariusGuidance>,
+          timelineState,
+          eventQueue
+        )
         break
 
       case EventType.DreamstateCdr:
-        if (timelineState.channeledSpell?.name !== 'Tranquillity') {
-          break
+        if (!isValid(timelineState, event.castId)) break
+        const dreamstateReturn = handleDreamstate(
+          event as TimelineEvent<EventType.DreamstateCdr>,
+          timelineState,
+          eventQueue
+        )
+        for (const e of dreamstateReturn.events()) {
+          eventQueue.push(e)
         }
-        const currentCasts = timelineState.activeCasts.values()
-        const consideredSpells = new Set<number>()
-        consideredSpells.add(740)
-        for (const cast of currentCasts) {
-          if (consideredSpells.has(cast.spell.spellId)) {
-            continue
-          }
-          consideredSpells.add(cast.spell.spellId)
-          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.CooldownEnd, -4, event.time)
-          eventQueue.modifyEarliesType(cast.spell.spellId, EventType.GainCharge, -4, event.time)
-          console.log('cast.cooldown_delay_s', cast.cooldown_delay_s)
-          if (cast.cooldown_delay_s - 4 > 0) {
-            cast.cooldown_delay_s -= 4
-            console.log('cast.cooldown_delay_s', cast.cooldown_delay_s)
-          } else {
-            cast.cooldown_delay_s = 0
-          }
-        }
-
-        eventQueue.push({
-          type: EventType.DreamstateCdr,
-          time: event.time + 1,
-          spellId: event.spellId,
-          castId: event.castId,
-        })
         break
 
       case EventType.ControlOfTheDream:
-        if (spellState.usedCharges === 0) {
-          const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
-          if (cotdEffects) {
-            cotdEffects.set(event.spellId, event.time)
-            timelineState.activeEffects
-              .get(Talents.ControlOfTheDream)
-              ?.set(event.spellId, event.time)
-          }
-        }
+        if (!isValid(timelineState, event.castId)) break
+        handleControlOfTheDream(
+          event as TimelineEvent<EventType.ControlOfTheDream>,
+          timelineState,
+          spellState
+        )
         break
 
       case EventType.GainCharge:
-        if (spellState.usedCharges > 0) {
-          spellState.restoreCharge(event.time)
+        if (!isValid(timelineState, event.castId)) break
+        const chargeGainReturn = handleChargeGain(
+          event as TimelineEvent<EventType.GainCharge>,
+          spellState,
+          spellInfo,
+          timelineState
+        )
+        for (const e of chargeGainReturn.events()) {
+          eventQueue.push(e)
         }
         break
 
       case EventType.CooldownEnd:
-        if (timelineState.activeCasts.has(event.castId)) {
-          if (event.time > processedState.timeline_length_s) {
-            processedState.timeline_length_s = event.time
-          }
-          const cast = timelineState.activeCasts.get(event.castId)
-          if (cast) {
-            cast.cooldown_duration = event.time - cast.start_s - cast.cooldown_delay_s
-
-            let spellToRender = processedState.spells.find((s) => s.spell.spellId === event.spellId)
-            if (!spellToRender) {
-              spellToRender = { spell: spellInfo, casts: [], chargesUsed: 0 }
-              processedState.spells.push(spellToRender)
-            }
-
-            // Add the cast to the spell
-            spellToRender.casts.push(cast)
-            spellState.previousCast = spellState.currentCast
-            spellState.currentCast = null
-            timelineState.activeCasts.delete(event.castId)
-          }
-        } else {
-          console.log('no cast found for cooldown end. probably we already ended', event.castId)
-        }
+        if (!isValid(timelineState, event.castId)) break
+        handleCooldownEnd(
+          event as TimelineEvent<EventType.CooldownEnd>,
+          timelineState,
+          processedState,
+          spellInfo,
+          spellState
+        )
         break
     }
   }
@@ -472,4 +397,8 @@ export function processEventQueue(
   })
 
   return { processedState, processedEvents, rescheduledCasts }
+}
+
+export function isValid(timelineState: TimelineState, castId: string): boolean {
+  return timelineState.activeCasts.has(castId)
 }

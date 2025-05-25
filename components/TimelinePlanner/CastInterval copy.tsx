@@ -39,10 +39,10 @@ export default function CastInterval({
   const boundingBox = ref.current?.getBoundingClientRect()
   const coordinates = { x: boundingBox?.left || 0, y: boundingBox?.top || 0 }
 
-  const channel_width_px = cast.channel_length * pixelsPerSecond
-  const effect_width_px = cast.effect_length * pixelsPerSecond
+  const channel_width_px = cast.channel_visual_duration * pixelsPerSecond
+  const effect_width_px = cast.effect_visual_duration * pixelsPerSecond
   const cooldown_delay_width_px = cast.cooldown_delay_visual_duration * pixelsPerSecond
-  const cooldown_width_px = cast.cooldown_length * pixelsPerSecond
+  const cooldown_width_px = cast.cooldown_visual_duration * pixelsPerSecond
 
   const duration_s_px = cast.duration_s * pixelsPerSecond
 
@@ -70,27 +70,16 @@ export default function CastInterval({
   const ignored = !isOverlay && cast.id !== draggedId
   const disabled = (isDragging && !isOverlay) || ignored
 
-  const showWowheadInChannel = false && channel_width_px === maxWidth
-  const showWowheadInEffect = false && !showWowheadInChannel && effect_width_px === maxWidth
-  const showWowheadInRemaining = false && !showWowheadInChannel && !showWowheadInEffect
-
-  /*const wowheadWrapper = (
-    <div className="top-0 left-0 flex h-5 w-full items-end justify-start pl-1">{icon}</div>
-  )*/
+  const showWowheadInChannel = channel_width_px === maxWidth
+  const showWowheadInEffect = !showWowheadInChannel && effect_width_px === maxWidth
+  const showWowheadInRemaining = !showWowheadInChannel && !showWowheadInEffect
 
   const wowheadWrapper = (
-    <div className="top-0 left-0 flex h-5 w-full items-end justify-start pl-1">{}</div>
+    <div className="left-0 flex h-8 w-full items-center justify-start pl-4">{icon}</div>
   )
+
   const bgColor = ''
 
-  const closeButtonPositon = {
-    left: cast.effect_duration * pixelsPerSecond - 38,
-    top: -2,
-  }
-  if (cast.effect_duration * pixelsPerSecond < 50) {
-    closeButtonPositon.left = cast.effect_duration + 28
-    closeButtonPositon.top = -8
-  }
   const transitionStyle = ''
 
   useEffect(() => {
@@ -107,12 +96,12 @@ export default function CastInterval({
     >
       {/* cast interval */}
       <div
-        className={`flex h-10 items-center rounded-br-lg outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
+        className={`flex h-10 items-center border outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
           !hasCollision
-            ? 'border border-blue-500/40'
+            ? 'border-blue-500/40'
             : isDragging
-              ? 'border border-zinc-400/40'
-              : 'border-main'
+              ? 'border-zinc-400/40'
+              : 'border-gray-900/40'
         } ${bgColor} ${className || ''} ${transitionStyle}`}
         onMouseEnter={(e) => {
           if (!isHovering) {
@@ -139,67 +128,47 @@ export default function CastInterval({
         {onDelete && (
           <button
             onClick={() => onDelete(cast.id)}
-            className="text-main absolute z-100 flex h-[38px] w-10 items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
-            style={closeButtonPositon}
+            className="text-main absolute top-0 right-0 z-100 flex h-[38px] w-10 items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
             title="Remove cast"
           >
             ×
           </button>
         )}
-
-        <div className="text-main absolute top-0 left-0 z-100 flex h-[38px] w-10 items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden">
-          {wowheadWrapper}
-        </div>
         {/* Channel Duration Bar */}
         <div
-          className={`bg-cyan-400/00 absolute bottom-0 left-0 z-20 h-[50%] items-center justify-center focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`flex h-full items-center justify-center bg-violet-500/40 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
-            background:
-              'repeating-linear-gradient(45deg, #1f1f1fB3 , #1f1f1fB3 4px, oklch(59.6% 0.145 163.225) 4px, oklch(59.6% 0.145 163.225) 8px)',
-            width: `${channel_width_px + 0}px`,
-            left: 3,
+            width: `${channel_width_px}px`,
           }}
         >
           {showWowheadInChannel && wowheadWrapper}
         </div>
         {/* Effect Duration Bar */}
         <div
-          className={`absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 border-[#1a1a1a] bg-emerald-800 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`flex h-full items-center justify-start bg-emerald-500/40 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             width: `${effect_width_px}px`,
           }}
         >
           {showWowheadInEffect && wowheadWrapper}
         </div>
-        {/* Delayed Cooldown Bar */}
+        {/* Cooldown Delay Bar */}
         <div
-          className={`absolute bottom-0 left-0 z-[5] flex h-[50%] items-center justify-start bg-neutral-900 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`delay flex h-full items-center bg-neutral-600/10 ${transitionStyle}`}
           style={{
-            background:
-              'repeating-linear-gradient(45deg, transparent, transparent 4px, #171717 4px, #171717 8px)',
-            width: `${(cast._cd_start_s - cast.start_s) * pixelsPerSecond}px`,
+            width: `${cooldown_delay_width_px}px`,
           }}
         >
-          {showWowheadInEffect && wowheadWrapper}
+          {showWowheadInRemaining && cooldown_delay_width_px > 100 && wowheadWrapper}
         </div>
-
-        {/* Cooldown Bar */}
+        {/* Remaining Cooldown Bar */}
         <div
-          className={`border-main absolute bottom-0 left-0 z-0 flex h-[50%] items-center justify-center bg-neutral-900 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`flex h-full items-center justify-center border-b-[1px] border-gray-500/40 bg-neutral-900/60 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
-            left: (cast._cd_start_s - cast.start_s) * pixelsPerSecond,
             width: `${cooldown_width_px + 1}px`,
           }}
         >
-          {/* Red diagonal stripes overlay 
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              background:
-                'repeating-linear-gradient(45deg, transparent, transparent 4px, #ef4444 4px, #ef4444 8px)',
-            }}
-          /> */}
-          {showWowheadInRemaining && wowheadWrapper}
+          {showWowheadInRemaining && cooldown_delay_width_px <= 100 && wowheadWrapper}
         </div>
       </div>
     </div>

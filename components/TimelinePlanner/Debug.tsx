@@ -105,6 +105,7 @@ export default function Debug({
                     <th className="py-2 pr-4 text-neutral-200">Channel</th>
                     <th className="py-2 pr-4 text-neutral-200">Effect</th>
                     <th className="py-2 text-neutral-200">Cooldown</th>
+                    <th className="py-2 text-neutral-200">CDR</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -124,6 +125,7 @@ export default function Debug({
                         <td className="py-2 pr-4">{cast.channel_duration.toFixed(1)}s</td>
                         <td className="py-2 pr-4">{cast.effect_duration.toFixed(1)}s</td>
                         <td className="py-2">{cast.cooldown_duration.toFixed(1)}s</td>
+                        <td className="py-2">{cast.cooldown_delay_s.toFixed(1)}s</td>
                       </tr>
                     )
                   })}

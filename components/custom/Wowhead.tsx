@@ -23,43 +23,10 @@ export default async function Wowhead({
   let quality = -1
   let icon: React.ReactNode = null
 
-  if (!id) {
-    if (type == 'spell') {
-      const spellDataModule = await import('../../spellData.json')
-      const spellId = spellDataModule[name]
-      if (spellId) {
-        displayId = spellId
-      } else {
-        noIcon = true
-      }
-    } else {
-      throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
-    }
-  }
-
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  try {
-    // Use the shared function directly
-    console.log('Fetching icon for', type, id, name)
-    const data = await fetchWowheadData({
-      id: displayId,
-      type,
-      name,
-      beta,
-      url,
-    })
-
-    if (data.quality !== undefined) {
-      quality = data.quality
-      linkColor = qualityToColor[data.quality] || linkColor
-    }
-
-    if (!name && data.display) {
-      display = data.display
-    }
-
+  if (process.env.NODE_ENV === 'test') {
     icon =
       noIcon || type === 'npc' ? (
         <></>
@@ -71,16 +38,66 @@ export default async function Wowhead({
           beta={beta}
           url={url}
           noLink={true}
-          iconId={data.icon}
+          iconId={undefined}
           iconSize={iconSize}
         />
       )
-  } catch (error: any) {
-    console.warn(
-      `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
-    )
-    // Use provided name or displayId as fallback
-    display = name || `${type}-${displayId}`
+  } else {
+    if (!id) {
+      if (type == 'spell') {
+        const spellDataModule = await import('../../spellData.json')
+        const spellId = spellDataModule[name]
+        if (spellId) {
+          displayId = spellId
+        } else {
+          noIcon = true
+        }
+      } else {
+        throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
+      }
+    }
+
+    try {
+      // Use the shared function directly
+      const data = await fetchWowheadData({
+        id: displayId,
+        type,
+        name,
+        beta,
+        url,
+      })
+
+      if (data.quality !== undefined) {
+        quality = data.quality
+        linkColor = qualityToColor[data.quality] || linkColor
+      }
+
+      if (!name && data.display) {
+        display = data.display
+      }
+
+      icon =
+        noIcon || type === 'npc' ? (
+          <></>
+        ) : (
+          <WowheadIcon
+            id={displayId}
+            type={type}
+            name={display}
+            beta={beta}
+            url={url}
+            noLink={true}
+            iconId={data.icon}
+            iconSize={iconSize}
+          />
+        )
+    } catch (error: any) {
+      console.warn(
+        `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
+      )
+      // Use provided name or displayId as fallback
+      display = name || `${type}-${displayId}`
+    }
   }
 
   return disabled ? (

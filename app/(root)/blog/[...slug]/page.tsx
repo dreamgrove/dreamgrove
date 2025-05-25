@@ -11,6 +11,7 @@ import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import PageWrapper from '@/components/PageWrapper'
+
 const defaultLayout = 'PostLayout'
 const layouts: Record<string, React.ComponentType<any>> = {
   PostLayout,
@@ -29,6 +30,10 @@ export async function generateMetadata({
 }: {
   params: Params
 }): Promise<Metadata | undefined> {
+  if (process.env.NODE_ENV === 'development') {
+    return undefined
+  }
+
   const props = await params
   const slug = decodeURI(props.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
@@ -76,7 +81,9 @@ export const generateStaticParams = async () => {
 export default async function Page(props: { params: Promise<Params> }): Promise<React.ReactNode> {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
+
   const sortedCoreContents = allCoreContent(allBlogs)
+
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
 
   if (postIndex === -1) {
@@ -85,7 +92,9 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
 
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
+
   const post = allBlogs.find((p) => p.slug === slug) as Blog
+
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author) => author)
 
@@ -104,7 +113,7 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       ? post.title.trim()
       : `Blog Post: ${slug}`
 
-  return (
+  const result = (
     <PageWrapper toc={post.toc as unknown as Chapter[]} title={pageTitle} isBlog={true}>
       <Layout
         content={mainContent}
@@ -118,4 +127,6 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       </Layout>
     </PageWrapper>
   )
+
+  return result
 }

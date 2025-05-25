@@ -26,23 +26,28 @@ export default async function WowheadIcon({
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
-  if (iconId === undefined) {
-    try {
-      console.log('Fetching icon for', type, id, name)
-      const data = await fetchWowheadData({
-        id,
-        type,
-        name,
-        beta,
-        url,
-      })
-      iconId = data.icon
-    } catch (error: any) {
-      console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
+  let imageUrl: string
+
+  if (process.env.NODE_ENV === 'test') {
+    imageUrl = 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_starfall.jpg'
+  } else {
+    if (iconId === undefined) {
+      try {
+        const data = await fetchWowheadData({
+          id,
+          type,
+          name,
+          beta,
+          url,
+        })
+        iconId = data.icon
+      } catch (error: any) {
+        console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
+      }
     }
+    imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg`
   }
 
-  const imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg`
   const image = (
     <Image
       src={imageUrl}

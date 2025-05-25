@@ -134,7 +134,7 @@ export default function CooldownIndicator({
       {renderSegments.map((segment, index) => (
         <React.Fragment key={index}>
           <div
-            className="absolute top-1 h-[18px] bg-sky-500 transition-opacity"
+            className="bg-main absolute top-1 h-[18px] transition-opacity"
             style={{
               left: `${segment.start}px`,
               width: `${segment.width}px`,
@@ -153,13 +153,12 @@ export default function CooldownIndicator({
                 {segment.charges}
               </div>
               <div
-                className="absolute w-[1px]"
+                className="border-main absolute w-[2px]"
                 style={{
-                  left: `${segment.start + 1}px`,
+                  left: `${segment.start - 1}px`,
                   top: '20px',
-                  height: '68px',
-                  background: 'linear-gradient(to bottom, #008DD4, transparent)',
                   zIndex: 10,
+                  height: 56 * (segment.charges - 2),
                 }}
               />
             </>

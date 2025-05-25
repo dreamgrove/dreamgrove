@@ -14,6 +14,7 @@ export enum EventType {
   EffectEnd = 'effect_end',
   ChannelInterrupted = 'channel_interrupted',
   GainCharge = 'gain_charge',
+  LoseCharge = 'lose_charge',
   ControlOfTheDream = 'control_of_the_dream',
   DreamstateCdr = 'dreamstate_cdr',
   CenariusGuidance = 'cenarius_guidance',
@@ -32,8 +33,8 @@ export enum Talents {
   CenariusGuidance = 'cenarius_guidance',
 }
 // Event type for the event queue
-export interface TimelineEvent {
-  type: EventType
+export interface TimelineEvent<T extends EventType> {
+  type: T
   time: number
   spellId: number
   castId: string
@@ -54,16 +55,19 @@ export class SpellState {
   isChanneling: boolean
   previousCast: Cast | null
   currentCast: Cast | null
+  delayedCastIds: string[]
   chargeIntervals: ChargeInterval[]
 
-  restoreCharge(instant: number) {
+  restoreCharge(instant: number): number {
     this.usedCharges--
     this.chargeIntervals.push({ instant, change: +1 })
+    return this.usedCharges
   }
 
   useCharge(instant: number) {
     this.usedCharges++
     this.chargeIntervals.push({ instant, change: -1 })
+    return this.usedCharges
   }
 
   constructor(spellId: number, totalCharges: number) {
@@ -74,6 +78,7 @@ export class SpellState {
     this.previousCast = null
     this.currentCast = null
     this.chargeIntervals = []
+    this.delayedCastIds = []
   }
 }
 
@@ -178,6 +183,11 @@ export class Cast {
     this.interrupting_cast = interrupting_cast
   }
 
+  _cd_start_s: number
+  _ef_end_s: number
+  _chann_end_s: number
+  _cd_end_s: number
+
   current_charge: number
 
   /* Channel */
@@ -219,7 +229,12 @@ export class Cast {
   get cooldown_visual_duration(): number {
     return this.cooldown_delay_s > 0
       ? Math.max(this.cooldown_duration, 0)
-      : Math.max(this.cooldown_duration - Math.max(this.effect_duration, this.channel_duration), 0)
+      : Math.max(
+          this.cooldown_duration +
+            this.cooldown_delay_s -
+            Math.max(this.effect_duration, this.channel_duration),
+          0
+        )
   }
   get cooldown_visual_start_s(): number {
     return this.start_s + Math.max(this.effect_duration, this.channel_duration)
@@ -245,18 +260,26 @@ export class Cast {
   }
 
   get duration_s(): number {
-    return Math.max(
-      this.cooldown_duration + this.cooldown_delay_s,
-      this.effect_duration,
-      this.channel_duration
-    )
+    return Math.max(this._cd_end_s - this.start_s, this.effect_duration, this.channel_duration)
+  }
+
+  get effect_length(): number {
+    return this._ef_end_s - this.start_s
+  }
+
+  get cooldown_length(): number {
+    return this._cd_end_s - this._cd_start_s
+  }
+
+  get channel_length(): number {
+    return this._chann_end_s - this.start_s
   }
 
   constructor(params: CastParams) {
     const { id, spell, start_s, interrupting_cast, current_charge, cooldown_delay_s } = params
     this.id = id
     this.spell = spell
-    this.start_s = start_s
+    this.start_s = round(start_s, 10)
 
     this.interrupting_cast = interrupting_cast ?? null
     this.current_charge = current_charge ?? 0
@@ -266,5 +289,14 @@ export class Cast {
 
     this._effect_duration = spell.effect_duration
     this._channel_duration = spell.channel_duration
+
+    this._cd_start_s = this.start_s
+    this._ef_end_s = this.start_s + this.effect_duration
+    this._chann_end_s = this.start_s + this.channel_duration
+    this._cd_end_s = this.start_s + this.cooldown_duration
   }
+}
+
+function round(value: number, precision: number) {
+  return Math.round(value * precision) / precision
 }

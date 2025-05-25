@@ -15,6 +15,7 @@ import {
   SpellToRender,
   Talents,
   TimelineEvent,
+  EventType,
 } from '../../lib/types/cd_planner'
 import SpellMarkers from './SpellMarkers'
 import { useTimelineControls } from './TimelineContext'
@@ -78,7 +79,7 @@ export default function TimelineView({
   const [showDebug, setShowDebug] = useState(false)
   const [selectedSpec, setSelectedSpec] = useState<DruidSpec>('balance')
   const [inputActions, setInputActions] = useState<PlayerAction[]>([])
-  const [processedEvents, setProcessedEvents] = useState<TimelineEvent[]>([])
+  const [processedEvents, setProcessedEvents] = useState<TimelineEvent<EventType>[]>([])
   const [currentSpells, setCurrentSpells] = useState<SpellTimeline[]>([])
   const [localSpells, setLocalSpells] = useState<SpellInfo[]>(spells)
   const [activeBindings, setActiveBindings] = useState<string[]>([])
@@ -330,8 +331,6 @@ export default function TimelineView({
       )
     }
   }
-
-  console.log('activeBindings', activeBindings)
 
   return (
     <div className="flex h-[calc(100vh-3rem-25px)] flex-col">

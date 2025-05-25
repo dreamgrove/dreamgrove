@@ -24,7 +24,6 @@ export default function Checkboxes({
   onToggle,
 }: CheckboxesProps) {
   const handleCheckboxChange = (id: string, checked: boolean) => {
-    console.log('handleCheckboxChange', id, checked)
     if (onToggle) {
       onToggle(id, checked)
     } else if (onEffectToggle) {

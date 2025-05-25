@@ -22,7 +22,7 @@ const Tooltip: React.FC<Props> = ({ id = '' }) => {
   const boundingBox = scrollContainer?.getBoundingClientRect()
   const { cast, rectRef, isDragging } = useHoverContext()
 
-  const width = cast ? cast.duration_s * pixelsPerSecond : 1
+  const width = cast ? (cast._cd_end_s - cast.start_s) * pixelsPerSecond : 1
 
   //console.log(cast, width)
 

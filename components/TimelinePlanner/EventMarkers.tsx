@@ -70,7 +70,7 @@ const Marker = ({
   )
 }
 interface EventMarkerProps {
-  eventInfo: TimelineEvent[]
+  eventInfo: TimelineEvent<EventType>[]
 }
 
 /**
@@ -91,7 +91,7 @@ const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
       acc[pixelPosition].push(event)
       return acc
     },
-    {} as Record<number, TimelineEvent[]>
+    {} as Record<number, TimelineEvent<EventType>[]>
   )
 
   return (
@@ -100,15 +100,17 @@ const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
       style={{ width: timeToPixels(total_length_s) }}
     >
       {Object.entries(eventsByPosition).flatMap(([position, events]) =>
-        events.map((event, i) => (
-          <Marker
-            key={`event-${position}-${i}`}
-            position={parseInt(position)}
-            label={event.type}
-            height={21}
-            horizontalOffset={i * 15}
-          />
-        ))
+        events
+          .filter((event) => event.type !== EventType.EffectEnd)
+          .map((event, i) => (
+            <Marker
+              key={`event-${position}-${i}`}
+              position={parseInt(position)}
+              label={event.type === EventType.DreamstateCdr ? '' : event.type}
+              height={21}
+              horizontalOffset={i * 15}
+            />
+          ))
       )}
     </div>
   )

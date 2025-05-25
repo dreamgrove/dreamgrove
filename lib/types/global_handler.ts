@@ -1,14 +1,14 @@
 import { EventQueue } from '../../components/TimelinePlanner/TimelineEvents'
-import { TimelineEvent, SpellInfo, TimelineState } from './cd_planner'
+import { TimelineEvent, SpellInfo, TimelineState, EventType } from './cd_planner'
 
-type GlobalAction = (
-  event: TimelineEvent,
+type GlobalAction = <T extends EventType>(
+  event: TimelineEvent<T>,
   queue: EventQueue,
   state: TimelineState,
   spells: SpellInfo[]
 ) => {
-  changedEvent: TimelineEvent
-  eventsToAdd: TimelineEvent[]
+  changedEvent: TimelineEvent<T>
+  eventsToAdd: TimelineEvent<EventType>[]
   newState: TimelineState
   newSpells: SpellInfo[]
 }

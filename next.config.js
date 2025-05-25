@@ -19,10 +19,10 @@ const ContentSecurityPolicy = `
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-  {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
-  },
+  //{
+  //  key: 'Content-Security-Policy',
+  //  value: ContentSecurityPolicy.replace(/\n/g, ''),
+  //},
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
     key: 'Referrer-Policy',
@@ -66,7 +66,6 @@ module.exports = () => {
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
-    productionBrowserSourceMaps: true,
     images: {
       remotePatterns: [
         {
@@ -155,6 +154,15 @@ module.exports = () => {
         {
           source: '/(.*)',
           headers: securityHeaders,
+        },
+        {
+          source: '/:path*',
+          headers: [
+            {
+              key: 'Document-Policy',
+              value: 'js-profiling',
+            },
+          ],
         },
       ]
     },

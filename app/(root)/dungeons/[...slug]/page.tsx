@@ -26,6 +26,10 @@ export const dynamic = 'force-static'
 export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>
 }): Promise<Metadata | undefined> {
+  if (process.env.NODE_ENV === 'development') {
+    return undefined
+  }
+
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allDungeons.find((p) => p.slug === slug)
