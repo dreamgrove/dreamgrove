@@ -186,7 +186,7 @@ module.exports = withSentryConfig(module.exports, {
   // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
   org: 'dreamgrove',
-  project: 'javascript-nextjs',
+  project: 'dreamgrove',
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
