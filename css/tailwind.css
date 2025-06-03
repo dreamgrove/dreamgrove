@@ -155,6 +155,37 @@ h1.content-header::before {
   transition: all 0.3s ease;
 }
 
+a[aria-label] .title-effect-front {
+  /* Fallback color for browsers that don't support background-clip */
+  color: #f2f2f2;
+  background: linear-gradient(
+    90deg,
+    #e40303 0%,
+    #e40303 13.5%,
+    #ff8c00 13.5%,
+    #ff8c00 29%,
+    #ffed00 29%,
+    #ffed00 50%,
+    #008018 50%,
+    #008018 64.66%,
+    #0066ff 64.66%,
+    #0066ff 83.33%,
+    #8b00ff 83.33%,
+    #8b00ff 100%
+  );
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  a[aria-label] .title-effect-front {
+    text-shadow: none;
+  }
+}
+
 .title-effect:hover .title-effect-back {
   left: -3px;
   top: 2px;
