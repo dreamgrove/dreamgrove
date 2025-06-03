@@ -84,14 +84,14 @@ export default function CastInterval({
   const bgColor = ''
 
   const closeButtonPositon = {
-    left: cast.effect_duration * pixelsPerSecond - 38,
-    top: -2,
+    left: cast.effect_duration * pixelsPerSecond - 36,
+    top: -3,
   }
   if (cast.effect_duration * pixelsPerSecond < 50) {
-    closeButtonPositon.left = cast.effect_duration + 28
-    closeButtonPositon.top = -8
+    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond + 2
+    closeButtonPositon.top = -5
   }
-  const transitionStyle = ''
+  const transitionStyle = 'transition-all duration-100'
 
   useEffect(() => {
     if (rectRef && isDragging && isOverlay) {
@@ -107,12 +107,12 @@ export default function CastInterval({
     >
       {/* cast interval */}
       <div
-        className={`flex h-10 items-center rounded-br-lg outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
+        className={`flex h-10 items-center outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
           !hasCollision
-            ? 'border border-blue-500/40'
+            ? 'border-main border'
             : isDragging
               ? 'border border-zinc-400/40'
-              : 'border-main'
+              : 'border-none'
         } ${bgColor} ${className || ''} ${transitionStyle}`}
         onMouseEnter={(e) => {
           if (!isHovering) {
@@ -164,7 +164,7 @@ export default function CastInterval({
         </div>
         {/* Effect Duration Bar */}
         <div
-          className={`absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 border-[#1a1a1a] bg-emerald-800 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 border-orange-600/60 bg-emerald-800 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             width: `${effect_width_px}px`,
           }}
@@ -173,10 +173,10 @@ export default function CastInterval({
         </div>
         {/* Delayed Cooldown Bar */}
         <div
-          className={`absolute bottom-0 left-0 z-[5] flex h-[50%] items-center justify-start bg-neutral-900 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`absolute bottom-0 left-0 z-[5] flex h-[100%] items-center justify-start border-l-2 border-orange-600/60 bg-neutral-900/70 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             background:
-              'repeating-linear-gradient(45deg, transparent, transparent 4px, #171717 4px, #171717 8px)',
+              'repeating-linear-gradient(45deg, transparent, transparent 5px, #17171A 4px, #17171A 10px)',
             width: `${(cast._cd_start_s - cast.start_s) * pixelsPerSecond}px`,
           }}
         >
@@ -185,7 +185,7 @@ export default function CastInterval({
 
         {/* Cooldown Bar */}
         <div
-          className={`border-main absolute bottom-0 left-0 z-0 flex h-[50%] items-center justify-center bg-neutral-900 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`absolute bottom-0 left-0 z-0 flex h-[100%] items-center justify-center bg-neutral-900/70 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             left: (cast._cd_start_s - cast.start_s) * pixelsPerSecond,
             width: `${cooldown_width_px + 1}px`,
