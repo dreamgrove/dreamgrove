@@ -41,6 +41,7 @@ yarn-error.log*
 .env.local
 .env.development.local
 .env.test.local
+.env.sentry-build-plugin
 .env.production.local
 
 # Contentlayer
