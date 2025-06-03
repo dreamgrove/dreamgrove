@@ -107,4 +107,3 @@ actions.pre_cd+=/potion,if=variable.cd_condition
 actions.pre_cd+=/use_item,slot=trinket1,if=!trinket.1.is.spymasters_web&!trinket.1.is.imperfect_ascendancy_serum&!trinket.1.is.treacherous_transmitter&!trinket.1.is.soulletting_ruby&(variable.on_use_trinket=1|variable.on_use_trinket=3)&variable.cd_condition
 actions.pre_cd+=/use_item,slot=trinket2,if=!trinket.2.is.spymasters_web&!trinket.2.is.imperfect_ascendancy_serum&!trinket.2.is.treacherous_transmitter&!trinket.2.is.soulletting_ruby&variable.on_use_trinket=2&variable.cd_condition
 actions.pre_cd+=/use_item,name=bestinslots,if=hero_tree.keeper_of_the_grove&buff.harmony_of_the_grove.up|hero_tree.elunes_chosen&(cooldown.ca_inc.full_recharge_time>20|buff.ca_inc.up)
- 
