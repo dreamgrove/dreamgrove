@@ -38,6 +38,7 @@ import { useNextStep } from 'nextstepjs'
 import { NextStepViewport } from 'nextstepjs'
 import { HoverProvider } from './HoverProvider'
 import Warnings from './Warnings'
+import MRTExport from './MRTExport'
 import {
   CustomSpell,
   loadCustomSpells,
@@ -374,7 +375,7 @@ export default function TimelineView({
         </select>
       </div>
       {/* divider */}
-      <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
+      <div className="mx-[4px] my-1 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
 
       {/* Action bindings */}
       <div id="tour-effects-selector" className="mx-2 my-2">
@@ -389,7 +390,7 @@ export default function TimelineView({
         />
       </div>
 
-      <div className="mx-[4px] my-2 h-[2px] w-full bg-gray-700/40" />
+      <div className="mx-[4px] my-2 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
 
       <div id="tour-buttons-selector">
         <SpellButtons
@@ -454,7 +455,7 @@ export default function TimelineView({
           </div>
           {/* Right side: scrollable timeline, contains markers and casts */}
           <div
-            className="relative h-full min-h-[280px] flex-1 overflow-x-scroll pl-6 [scrollbar-gutter:auto]"
+            className="relative h-full min-h-[280px] flex-1 overflow-x-scroll pl-6"
             ref={scrollContainerRef}
           >
             {/* Markers overlay, scrolls with content */}
@@ -508,6 +509,7 @@ export default function TimelineView({
           </div>
         </div>
       </HoverProvider>
+      <MRTExport timeline={processedState.spells} />
       <Warnings timeline={processedState.spells} current_spec={selectedSpec} />
       <Debug
         processedTimeline={processedState}
@@ -560,11 +562,11 @@ const SpellNameWithCharges = ({
     <div className="mb-2 w-full">
       <div
         id={`spell-name-${spellCast.spell.spellId}-charges`}
-        className="mb-[-2px] h-[18px] w-full pt-1 pr-[9px] text-right text-sm text-sky-300/90 transition-opacity"
+        className="mb-[-2px] h-[18px] w-full pt-[2px] pr-[9px] text-right text-[0.8rem] text-orange-300/80 transition-opacity"
       >
-        #
+        Charges #
       </div>
-      <div className="mt-[12px] flex w-full flex-col items-end gap-2 border-r-2 border-orange-500/30 pr-2">
+      <div className="mt-[12px] flex w-full flex-col items-end gap-2 border-r-2 border-orange-500/50 pr-2">
         <div
           id={`spell-name-${spellCast.spell.spellId}`}
           className={`flex h-[38px] w-full flex-row items-center justify-end gap-2 truncate text-right`}

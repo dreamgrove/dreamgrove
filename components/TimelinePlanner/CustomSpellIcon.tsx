@@ -8,9 +8,9 @@ interface CustomSpellIconProps {
 }
 
 const sizeMap = {
-  sm: 'w-6 h-6 text-xs',
-  md: 'w-8 h-8 text-sm',
-  lg: 'w-10 h-10 text-base',
+  sm: 'text-xs',
+  md: 'text-sm',
+  lg: 'text-base',
 }
 
 export default function CustomSpellIcon({
@@ -23,13 +23,12 @@ export default function CustomSpellIcon({
 
   return (
     <div
-      className={` ${sizeMap[size]} ${className} relative flex items-center justify-center overflow-hidden rounded-sm border border-black/20 font-bold text-white shadow-sm`}
+      className={` ${sizeMap[size]} ${className} relative flex aspect-square h-[20px] w-[20px] items-center justify-center overflow-hidden border border-white/20 font-bold text-white shadow-sm`}
       style={{ backgroundColor: spell.color }}
       title={spell.name}
     >
-      {letter}
-      {/* Add a subtle gradient overlay for depth */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
+      <div className="mb-[-3px]">{letter}</div>
+      <div className="pointer-events-none absolute inset-0" />
     </div>
   )
 }

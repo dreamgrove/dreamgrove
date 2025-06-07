@@ -102,7 +102,7 @@ export default function SpellButtons({
                     removeCustomSpell(spell.spellId)
                     onDelete?.(spell.spellId)
                   }}
-                  className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 hover:bg-red-700"
+                  className="text-md absolute -top-[5px] -right-[5px] flex h-[16px] w-[16px] items-center justify-center rounded-md bg-pink-700 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 hover:bg-red-700"
                   title="Delete custom spell"
                 >
                   ×
@@ -132,7 +132,7 @@ const SpellButton = ({ spell, onClick }: { spell: SpellInfo; onClick: () => void
 
   return (
     <button
-      className="flex flex-row items-center gap-2 rounded-xs border-[1px] border-orange-500/20 bg-neutral-900/50 px-4 py-2 text-white hover:bg-orange-400/20 focus:outline-hidden"
+      className="flex flex-row items-center gap-2 rounded-xs border-[1px] border-orange-500/20 bg-neutral-900/50 px-4 py-2 text-white hover:bg-orange-400/5 focus:outline-hidden"
       onClick={onClick}
     >
       {isCustom ? (
@@ -146,7 +146,7 @@ const SpellButton = ({ spell, onClick }: { spell: SpellInfo; onClick: () => void
           noLink
         />
       )}
-      {spell.charges && spell.charges > 1 ? `${spell.name} (${spell.charges})` : spell.name}
+      <div className="-mb-[3px] py-[2px]">{spell.name}</div>
     </button>
   )
 }

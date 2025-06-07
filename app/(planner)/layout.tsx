@@ -70,7 +70,7 @@ export default function RootLayout({ children }: LayoutProps) {
     <html
       lang={siteMetadata.language}
       className={`${space_grotesk.variable} w-screen overflow-clip`}
-      style={{ scrollbarGutter: 'auto' }}
+      style={{ paddingLeft: 0, paddingRight: 0, scrollbarGutter: 'auto' }}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />

@@ -180,7 +180,7 @@ export default function TimelinePlanner({
           initialViewLength={initialViewLength}
           initialMarkerSpacing={initialMarkerSpacing}
         >
-          <div className="flex h-full flex-1 flex-col overflow-hidden">
+          <div className="flex h-full flex-1 flex-col px-[25px]">
             <TimelineView
               view_length_s={initialViewLength}
               marker_spacing_s={initialMarkerSpacing}

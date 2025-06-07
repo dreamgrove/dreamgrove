@@ -88,7 +88,7 @@ export default function CastInterval({
     top: -3,
   }
   if (cast.effect_duration * pixelsPerSecond < 50) {
-    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond + 2
+    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond - 1
     closeButtonPositon.top = -5
   }
   const transitionStyle = 'transition-all duration-100'
@@ -102,7 +102,7 @@ export default function CastInterval({
   return (
     <div
       ref={ref}
-      className={`relative select-none ${isDragging ? 'z-100' : ''}`}
+      className={`relative cursor-move select-none ${isDragging ? 'z-100' : ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
       {/* cast interval */}
@@ -139,7 +139,7 @@ export default function CastInterval({
         {onDelete && (
           <button
             onClick={() => onDelete(cast.id)}
-            className="text-main absolute z-100 flex h-[38px] w-10 items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
+            className="text-main absolute z-100 flex h-[38px] w-10 cursor-pointer items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#b63d10] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
             style={closeButtonPositon}
             title="Remove cast"
           >
@@ -162,18 +162,18 @@ export default function CastInterval({
         >
           {showWowheadInChannel && wowheadWrapper}
         </div>
-        {/* Effect Duration Bar */}
+        {/* Effect Duration Bar. Sorry for the extra pixel */}
         <div
-          className={`absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 border-orange-600/60 bg-emerald-800 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`border-main/60 absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 bg-emerald-800 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
-            width: `${effect_width_px}px`,
+            width: `${effect_width_px + 1}px`,
           }}
         >
           {showWowheadInEffect && wowheadWrapper}
         </div>
         {/* Delayed Cooldown Bar */}
         <div
-          className={`absolute bottom-0 left-0 z-[5] flex h-[100%] items-center justify-start border-l-2 border-orange-600/60 bg-neutral-900/70 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`border-main/60 absolute bottom-0 left-0 z-[5] flex h-[100%] items-center justify-start border-l-2 bg-neutral-900/70 focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             background:
               'repeating-linear-gradient(45deg, transparent, transparent 5px, #17171A 4px, #17171A 10px)',

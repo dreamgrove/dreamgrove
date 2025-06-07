@@ -34,7 +34,7 @@ export const bindings = [
     spellId: 429420,
     label: 'Potent Enchantments',
     description:
-      'Whirling Stars CD reduction +10 sec. Reforestation gives 3 additional seconds of ToL',
+      'Whirling Stars CD reduction +10 sec. Reforestation gives 3 additional seconds of ToL Whirling Stars CD reduction +10 sec. Reforestation gives 3 additional seconds of ToL',
     specs: ['balance', 'resto'],
   },
   {

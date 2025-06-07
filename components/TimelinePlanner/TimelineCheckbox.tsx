@@ -35,9 +35,7 @@ const TimelineCheckbox = ({
   const stateIndicator = (
     <div className="relative w-7">
       <input type="checkbox" id="22" checked={checked} readOnly className="peer sr-only" />
-      <div
-        className={`block h-4 w-7 rounded-full ${checked ? 'bg-main' : 'bg-orange-400/20'}`}
-      ></div>
+      <div className={`block h-4 w-7 rounded-full ${checked ? 'bg-main' : 'bg-[#4e3b2c]'}`}></div>
       <div
         className={`dot dark:bg-dark-4 peer-checked:bg-primary absolute top-[2px] left-[2px] h-3 w-3 rounded-full bg-white transition peer-checked:translate-x-full ${
           checked ? 'opacity-100' : 'opacity-70'
@@ -80,25 +78,21 @@ const TimelineCheckbox = ({
             </h3>
             {stateIndicator}
           </div>
-          <div className="flex gap-2 p-[6px]">
+          <div className="p-[6px]">
             <div
-              className={`relative aspect-square h-[30px] w-[30px] flex-shrink-0 transition-all duration-300 ${
+              className={`float-start mr-2 mb-1 aspect-square h-[33px] w-[33px] overflow-hidden transition-all duration-300 ${
                 checked ? '' : 'grayscale'
               }`}
             >
-              {childIcon}
+              <div className="flex h-full w-full items-center justify-center">
+                <div className="max-h-[33px] max-w-[33px]">{childIcon}</div>
+              </div>
             </div>
 
             <p
-              className="flex-1 text-xs text-gray-400 transition-opacity duration-300"
+              className="text-[0.78rem] text-gray-300 transition-opacity duration-300"
               style={{
-                display: '-webkit-box',
-                lineClamp: 2,
-                opacity: checked ? 1 : 0.5,
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
+                opacity: checked ? 1 : 0.7,
               }}
             >
               {description}

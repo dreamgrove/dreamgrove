@@ -39,8 +39,11 @@ export default function Warnings({
   }, {})
 
   return (
-    <div className="mt-8 space-y-2 pl-2">
-      <div className="flex cursor-pointer items-center" onClick={() => setIsOpen(!isOpen)}>
+    <div className={`mt-8 space-y-2 pb-12 pl-2`}>
+      <div
+        className="flex cursor-pointer items-center select-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <h3 className="text-lg font-semibold">Timeline Warnings</h3>
         <span className="ml-2 text-yellow-500/80">({allWarnings.length})</span>
         <svg

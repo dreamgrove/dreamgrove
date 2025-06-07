@@ -62,7 +62,8 @@
   border-radius: 4px;
   height: 100%;
   overflow-x: clip;
-  padding: 25px;
+  overflow-y: scroll;
+  padding: 25px 0;
   display: flex;
   flex-direction: column;
 }

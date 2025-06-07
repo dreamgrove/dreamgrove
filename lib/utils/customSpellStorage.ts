@@ -11,21 +11,14 @@ export interface CustomSpell extends SpellInfo {
 // Generate a random color for custom spells
 export function generateRandomColor(): string {
   const colors = [
-    '#FF6B6B',
-    '#4ECDC4',
-    '#45B7D1',
-    '#96CEB4',
-    '#FFEAA7',
-    '#DDA0DD',
-    '#98D8C8',
-    '#F7DC6F',
-    '#BB8FCE',
-    '#85C1E9',
-    '#F8C471',
-    '#82E0AA',
-    '#F1948A',
-    '#85C1E9',
-    '#D5A6BD',
+    '#4B4376',
+    '#1A3636',
+    '#49243E',
+    '#344955',
+    '#331D2C',
+    '#27374D',
+    '#393053',
+    '#3F4E4F',
   ]
   return colors[Math.floor(Math.random() * colors.length)]
 }
