@@ -44,7 +44,7 @@ const TimelineCheckbox = ({
         readOnly
         className="peer sr-only"
       />
-      <div className={`block h-4 w-7 rounded-full ${checked ? 'bg-main' : 'bg-[#4e3b2c]'}`}></div>
+      <div className={`block h-4 w-7 rounded-full ${checked ? 'bg-main' : 'bg-[#524943]'}`}></div>
       <div
         className={`absolute top-[2px] left-[2px] h-3 w-3 rounded-full bg-white transition peer-checked:translate-x-full ${
           checked ? 'opacity-100' : 'opacity-70'

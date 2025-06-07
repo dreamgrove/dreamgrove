@@ -47,7 +47,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'Custom Element',
         content:
-          'You can also create custom elements with this button. This will allow you to define what is essentially a spell with custom values. It can be very useful for potions or trinkets!',
+          'You can also create custom elements with this button. This will allow you to define what is essentially a spell with custom values. It can be very useful for potions or trinkets! Custom spells will persist between sessions.',
         side: 'top-left',
         selector: '#tour-custom-button-selector',
         pointerRadius: 3,
@@ -135,9 +135,30 @@ export const steps: Tour[] = [
       },
       {
         icon: 'X',
+        title: 'Timeline Warnings',
+        content:
+          'The timeline will also show you warnings for missing casts and other common mistakes. Keep an eye out for this menu!',
+        side: 'top-right',
+        selector: '#timeline-warnings-selector',
+        pointerRadius: 3,
+        pointerPadding: 7,
+      },
+
+      {
+        icon: 'X',
+        title: 'MRT Export',
+        content:
+          'When you are satisfied with your cooldowns, you can export them to a MRT note. This will allow you to import them directly in-game.',
+        side: 'top-right',
+        selector: '#mrt-export-selector',
+        pointerRadius: 3,
+        pointerPadding: 7,
+      },
+      {
+        icon: 'X',
         title: 'Additional information',
         content:
-          'You can click this button to access the settings, debug information and additional details regarding the website.',
+          'Finally, you can click this button to access other settings, debug information and additional details regarding the website.',
         side: 'top-right',
         selector: '#tour-debug-selector',
         pointerRadius: 3,
@@ -147,7 +168,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'The end',
         content:
-          'This concludes the tutorial! Feel free to reach on Discord for any questions or bugs.',
+          'This concludes the tutorial! If you need to contact me, report a bug, or suggest a feature, please check the "About" section in the bottom drawer.',
         pointerRadius: 3,
         pointerPadding: 7,
       },

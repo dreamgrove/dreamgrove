@@ -6,7 +6,6 @@ interface MarkerProps {
 }
 
 const Marker: React.FC<MarkerProps> = ({ label, width }) => {
-  console.log(label)
   const label_processed = label % 1 === 0 ? label : label.toFixed(0)
   const label_length = label_processed.toString().length
   const left = label_length > 3 ? 10 : label_length > 2 ? 8 : label_length > 1 ? 6 : 4
@@ -51,59 +50,66 @@ interface MarkersProps {
  * Markers: evenly spaced vertical lines and labels across the timeline.
  * Markers are generated dynamically based on marker_spacing_s until reaching total_length_s.
  */
-const Markers: React.FC<MarkersProps> = ({
-  total_length_s,
-  marker_spacing_s,
-  pixelsPerSecond,
-  className = '',
-}) => {
-  const [effective_marker_spacing_s, setMarkerSpacing] = useState(marker_spacing_s)
-  const [previousSize_px, setPreviousSize_px] = useState(0)
+const Markers: React.FC<MarkersProps> = React.memo(
+  function Markers({ total_length_s, marker_spacing_s, pixelsPerSecond, className = '' }) {
+    const [effective_marker_spacing_s, setMarkerSpacing] = useState(marker_spacing_s)
+    const [previousSize_px, setPreviousSize_px] = useState(0)
 
-  // Calculate space between markers in pixels
-  const size_px = marker_spacing_s * pixelsPerSecond
+    // Calculate space between markers in pixels
+    const size_px = marker_spacing_s * pixelsPerSecond
 
-  useEffect(() => {
-    if (previousSize_px === 0) {
-      setPreviousSize_px(size_px)
-    } else if (size_px > previousSize_px * 1.25 && effective_marker_spacing_s > 5) {
-      setMarkerSpacing((prev) => prev - 2.5)
-      setPreviousSize_px(size_px)
-    } else if (
-      size_px < previousSize_px * 0.75 &&
-      effective_marker_spacing_s < marker_spacing_s * 2
-    ) {
-      setMarkerSpacing((prev) => prev + 2.5)
-      setPreviousSize_px(size_px)
+    useEffect(() => {
+      if (previousSize_px === 0) {
+        setPreviousSize_px(size_px)
+      } else if (size_px > previousSize_px * 1.25 && effective_marker_spacing_s > 5) {
+        setMarkerSpacing((prev) => prev - 2.5)
+        setPreviousSize_px(size_px)
+      } else if (
+        size_px < previousSize_px * 0.75 &&
+        effective_marker_spacing_s < marker_spacing_s * 2
+      ) {
+        setMarkerSpacing((prev) => prev + 2.5)
+        setPreviousSize_px(size_px)
+      }
+    }, [size_px, previousSize_px, effective_marker_spacing_s, marker_spacing_s])
+
+    const isDebug = false
+    if (isDebug) {
+      console.log('effective_marker_spacing_s', effective_marker_spacing_s)
+      console.log('marker_spacing_s', marker_spacing_s)
+      console.log('pixelsPerSecond', pixelsPerSecond)
+      console.log('size_px', size_px)
+      console.log('previousSize_px', previousSize_px)
     }
-  }, [size_px, previousSize_px, effective_marker_spacing_s, marker_spacing_s])
 
-  const isDebug = false
-  if (isDebug) {
-    console.log('effective_marker_spacing_s', effective_marker_spacing_s)
-    console.log('marker_spacing_s', marker_spacing_s)
-    console.log('pixelsPerSecond', pixelsPerSecond)
-    console.log('size_px', size_px)
-    console.log('previousSize_px', previousSize_px)
+    const markerPositions: number[] = []
+    for (let pos = 0; pos <= total_length_s; pos += effective_marker_spacing_s) {
+      markerPositions.push(pos)
+    }
+
+    const numberOfMarkers = total_length_s / effective_marker_spacing_s
+
+    return (
+      <div
+        className={`pointer-events-none absolute top-0 left-0 z-10 ml-6 flex h-full ${className}`}
+        style={{
+          width: `${(numberOfMarkers + 1) * effective_marker_spacing_s * pixelsPerSecond}px`,
+        }}
+      >
+        {markerPositions.map((position, i) => (
+          <Marker key={i} width={effective_marker_spacing_s * pixelsPerSecond} label={position} />
+        ))}
+      </div>
+    )
+  },
+  (prevProps, nextProps) => {
+    return (
+      prevProps.total_length_s === nextProps.total_length_s &&
+      prevProps.marker_spacing_s === nextProps.marker_spacing_s &&
+      prevProps.pixelsPerSecond === nextProps.pixelsPerSecond &&
+      prevProps.className === nextProps.className
+    )
   }
-
-  const markerPositions: number[] = []
-  for (let pos = 0; pos <= total_length_s; pos += effective_marker_spacing_s) {
-    markerPositions.push(pos)
-  }
-
-  const numberOfMarkers = total_length_s / effective_marker_spacing_s
-
-  return (
-    <div
-      className={`pointer-events-none absolute top-0 left-0 z-10 ml-6 flex h-full ${className}`}
-      style={{ width: `${(numberOfMarkers + 1) * effective_marker_spacing_s * pixelsPerSecond}px` }}
-    >
-      {markerPositions.map((position, i) => (
-        <Marker key={i} width={effective_marker_spacing_s * pixelsPerSecond} label={position} />
-      ))}
-    </div>
-  )
-}
+)
 
 export default Markers

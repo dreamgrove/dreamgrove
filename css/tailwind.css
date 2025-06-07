@@ -175,7 +175,7 @@ h1.content-header::before {
 
 .trim-text {
   text-box-trim: trim-both;
-  text-box-edge: ex alphabetic;
+  text-box-edge: cap alphabetic;
 }
 
 .trim-cap-alphabetic {

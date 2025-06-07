@@ -42,7 +42,7 @@ export const bindings = [
     spellId: 392162,
     label: 'Dreamstate',
     description:
-      'While channeling Tranquility, your other Druid spell cooldowns are reduced by up to 20 seconds',
+      'While channeling Tranquility,  Tranquility, your other Druid spell cooldowns are reduced by up to 20 your other Druid spell cooldowns are reduced by up to 20 seconds',
     specs: ['resto'],
   },
   {

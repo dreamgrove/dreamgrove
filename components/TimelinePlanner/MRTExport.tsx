@@ -53,9 +53,9 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
   }
 
   return (
-    <div className="mt-8 space-y-2 pl-2">
+    <div className="space-y-2">
       <div className="flex w-full items-center justify-end gap-2">
-        <div
+        {/* <div
           className="flex cursor-pointer items-center select-none"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -68,9 +68,10 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
-        </div>
+        </div> */}
         <button
           onClick={handleExportClick}
+          id="mrt-export-selector"
           className={`px-4 py-2 text-sm font-medium text-white transition-colors duration-200 focus:ring-0 focus:ring-offset-0 focus:outline-none ${
             copyStatus === 'copied'
               ? 'bg-green-600 hover:bg-green-700 focus:ring-0'
@@ -107,7 +108,7 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
         </button>
       </div>
 
-      {isOpen && (
+      {/* {isOpen && (
         <div className="space-y-2">
           <textarea
             className="focus:border-main/20 w-full rounded border border-neutral-600 bg-neutral-800 p-3 font-mono text-sm text-neutral-200 focus:ring-0 focus:outline-none"
@@ -117,7 +118,7 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
             placeholder="No casts in timeline"
           />
         </div>
-      )}
+      )} */}
     </div>
   )
 }

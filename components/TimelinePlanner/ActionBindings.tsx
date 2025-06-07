@@ -20,8 +20,8 @@ export default function ActionBindings({
   prerenderedIcons = {},
 }: ActionBindingsProps) {
   return (
-    <div className="mb-4 select-none">
-      <h1 className="mb-2 text-xl font-semibold text-gray-300">Talents:</h1>
+    <div className="">
+      <h1 className="mb-1 text-lg font-semibold">Talents:</h1>
       <Checkboxes
         items={bindings}
         selectedItems={activeBindings}

@@ -249,7 +249,6 @@ export default async function TimelinePlannerServer() {
 
   // Combine all prerendered icons
   const wowheadIcons = Object.fromEntries([...prerenderedWowheads, ...prerenderedBindings])
-  console.log(wowheadIcons)
   const wowheadIconNames = Object.fromEntries(prerenderedWowheadNames)
 
   return (
