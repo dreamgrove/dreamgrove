@@ -46,6 +46,7 @@ import {
   isCustomSpell,
 } from '../../lib/utils/customSpellStorage'
 import CustomSpellIcon from './CustomSpellIcon'
+import { SettingsProvider, useSettings } from './SettingsProvider'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface TimelineViewProps {
@@ -60,7 +61,7 @@ interface TimelineViewProps {
   extraSpells?: PlayerAction[]
 }
 
-export default function TimelineView({
+function TimelineViewInner({
   marker_spacing_s,
   spells = [],
   extraSpells = [],
@@ -70,6 +71,7 @@ export default function TimelineView({
   averageTimestamps = {},
   currentEncounterId = 'empty',
 }: TimelineViewProps) {
+  const { showEventMarkers } = useSettings()
   const {
     total_length_s,
     effective_view_length_s,
@@ -344,35 +346,58 @@ export default function TimelineView({
     }
   }
 
+  const { startNextStep } = useNextStep()
+
+  // Auto-start tour on first visit
+  useEffect(() => {
+    const hasSeenTour = sessionStorage.getItem('hasSeenFirstTour')
+    if (!hasSeenTour) {
+      startNextStep('firsttour')
+      sessionStorage.setItem('hasSeenFirstTour', 'true')
+    }
+  }, [startNextStep])
+
   return (
     <div className="flex h-[calc(100vh-3rem-25px)] flex-col">
       {/* Spec selector dropdown */}
-      <div className="mx-2 my-2 flex items-center gap-2">
-        <label htmlFor="spec-selector" className="text-xl font-semibold">
-          SPECIALIZATION:
-        </label>
-        <select
-          id="spec-selector"
-          value={selectedSpec}
-          onChange={handleSpecChange}
-          className="min-w-[15rem] rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg"
-        >
-          <option className="bg-neutral-900/50" value="all">
-            All Specs
-          </option>
-          <option className="bg-neutral-900/50" value="balance">
-            Balance
-          </option>
-          <option className="bg-neutral-900/50" value="resto">
-            Restoration
-          </option>
-          <option className="bg-neutral-900/50" value="feral">
-            Feral
-          </option>
-          <option className="bg-neutral-900/50" value="guardian">
-            Guardian
-          </option>
-        </select>
+      <div className="flex flex-row items-center justify-between">
+        <div className="mx-2 my-2 flex items-center gap-2">
+          <label htmlFor="spec-selector" className="text-xl font-semibold">
+            Specialization:
+          </label>
+          <select
+            id="spec-selector"
+            value={selectedSpec}
+            onChange={handleSpecChange}
+            className="min-w-[15rem] rounded border border-neutral-700 bg-neutral-900/50 px-2 py-1 text-lg focus:ring-orange-400/20"
+          >
+            <option className="bg-neutral-900/50" value="all">
+              All Specs
+            </option>
+            <option className="bg-neutral-900/50" value="balance">
+              Balance
+            </option>
+            <option className="bg-neutral-900/50" value="resto">
+              Restoration
+            </option>
+            <option className="bg-neutral-900/50" value="feral">
+              Feral
+            </option>
+            <option className="bg-neutral-900/50" value="guardian">
+              Guardian
+            </option>
+          </select>
+        </div>
+        <div className="inline-flex flex-row items-center gap-2 self-end text-[0.8rem] text-gray-400">
+          <span>
+            developed by{' '}
+            <a href="https://github.com/thevinter/" className="text-main">
+              thevinter
+            </a>
+          </span>
+          {' - '}
+          <span>v.0.0.1</span>
+        </div>
       </div>
       {/* divider */}
       <div className="mx-[4px] my-1 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
@@ -387,6 +412,7 @@ export default function TimelineView({
           }
           activeBindings={activeBindings}
           onToggle={handleBindingToggle}
+          prerenderedIcons={wowheadMap}
         />
       </div>
 
@@ -399,11 +425,12 @@ export default function TimelineView({
           onCreate={handleCreateCustomElement}
           onDelete={handleDeleteCustomSpell}
           spells={filteredSpells}
+          prerenderedIcons={wowheadMap}
         />
       </div>
 
       {/* Zoom controls */}
-      <div className="mb-4 flex flex-row items-center justify-end gap-2">
+      <div className="mt-2 mb-4 flex flex-row items-center justify-end gap-2">
         <div id="tour-zoom-selector" className="flex flex-row items-center gap-2">
           <button
             onClick={() => resetZoom()}
@@ -469,7 +496,7 @@ export default function TimelineView({
               wowheadMap={wowheadMarkerMap}
               total_length_s={total_length_s}
             />
-            {showDebug && <EventMarkers eventInfo={processedEvents} />}
+            {showEventMarkers && <EventMarkers eventInfo={processedEvents} />}
             {/* Casts/timeline rows */}
             <div
               className="relative mt-5 flex flex-col"
@@ -526,6 +553,14 @@ export default function TimelineView({
   )
 }
 
+export default function TimelineView(props: TimelineViewProps) {
+  return (
+    <SettingsProvider>
+      <TimelineViewInner {...props} />
+    </SettingsProvider>
+  )
+}
+
 const SpellName = ({
   spellCast,
   wowheadNameMap,
@@ -543,8 +578,14 @@ const SpellName = ({
       <div
         className={`flex h-[40px] w-full flex-row items-center justify-end gap-2 truncate text-right text-sm`}
       >
-        {isCustom && <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="sm" />}
-        <span>{wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}</span>
+        {isCustom && (
+          <CustomSpellIcon
+            spell={spellCast.spell as CustomSpell}
+            size="sm"
+            className="inline-block"
+          />
+        )}
+        {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
       </div>
     </div>
   )
@@ -572,7 +613,7 @@ const SpellNameWithCharges = ({
           className={`flex h-[38px] w-full flex-row items-center justify-end gap-2 truncate text-right`}
         >
           {isCustom && <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="sm" />}
-          <span>{wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}</span>
+          {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
         </div>
         {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
           <div

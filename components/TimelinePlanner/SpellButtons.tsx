@@ -9,7 +9,6 @@ import {
   TimelineToRender,
 } from '../../lib/types/cd_planner'
 import CustomElement from './CustomElement'
-import WowheadClientIcon from '../csm/WowheadClientIcon'
 import {
   isCustomSpell,
   removeCustomSpell,
@@ -23,6 +22,7 @@ interface SpellButtonsProps {
   spells: SpellInfo[]
   onCreate: (spell: SpellInfo) => void
   onDelete?: (spellId: number) => void
+  prerenderedIcons?: Record<string, React.ReactNode>
 }
 
 export default function SpellButtons({
@@ -31,6 +31,7 @@ export default function SpellButtons({
   spells = [],
   onCreate,
   onDelete,
+  prerenderedIcons = {},
 }: SpellButtonsProps) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
@@ -83,6 +84,7 @@ export default function SpellButtons({
               key={`spell-button-${spell.spellId}`}
               spell={spell}
               onClick={() => handleSpellAdd(spell)}
+              prerenderedIcon={prerenderedIcons[spell.spellId.toString()]}
             />
           ))}
           <div className="flex-1" />
@@ -92,11 +94,15 @@ export default function SpellButtons({
       {/* Custom spells section */}
       {customSpells.length > 0 && (
         <div className="mb-2 flex flex-row flex-wrap justify-between gap-2">
-          <div className="flex w-full flex-row flex-wrap gap-2">
-            <div className="mb-1 w-full text-sm text-gray-400">Custom Spells:</div>
+          <div className="flex w-full flex-row flex-wrap gap-1">
+            <div className="mb-0 w-full text-sm text-gray-400">Custom Spells:</div>
             {customSpells.map((spell) => (
               <div key={`spell-button-wrapper-${spell.spellId}`} className="group relative">
-                <SpellButton spell={spell} onClick={() => handleSpellAdd(spell)} />
+                <SpellButton
+                  spell={spell}
+                  onClick={() => handleSpellAdd(spell)}
+                  prerenderedIcon={prerenderedIcons[spell.spellId.toString()]}
+                />
                 <button
                   onClick={() => {
                     removeCustomSpell(spell.spellId)
@@ -109,11 +115,10 @@ export default function SpellButtons({
                 </button>
               </div>
             ))}
-            <div className="flex-1" />
           </div>
         </div>
       )}
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-2 text-sm">
         <CustomElement onCreate={onCreate} onDelete={onDelete} />
         <button
           key={`spell-reset`}
@@ -127,26 +132,36 @@ export default function SpellButtons({
   )
 }
 
-const SpellButton = ({ spell, onClick }: { spell: SpellInfo; onClick: () => void }) => {
+const SpellButton = ({
+  spell,
+  onClick,
+  prerenderedIcon,
+}: {
+  spell: SpellInfo
+  onClick: () => void
+  prerenderedIcon?: React.ReactNode
+}) => {
   const isCustom = isCustomSpell(spell)
+
+  // Use prerendered icon if available, otherwise fallback for custom spells or a placeholder
+  const iconElement = isCustom ? (
+    <CustomSpellIcon spell={spell} size="sm" />
+  ) : prerenderedIcon ? (
+    prerenderedIcon
+  ) : (
+    <span
+      className="inline-block h-[20px] w-[20px] rounded-xs bg-gray-200"
+      title={`${spell.name} (icon unavailable)`}
+    />
+  )
 
   return (
     <button
-      className="flex flex-row items-center gap-2 rounded-xs border-[1px] border-orange-500/20 bg-neutral-900/50 px-4 py-2 text-white hover:bg-orange-400/5 focus:outline-hidden"
+      className="inline-flex flex-row items-center gap-2 rounded-xs border border-orange-500/20 bg-neutral-900/50 px-4 py-2 text-white hover:bg-orange-400/5 focus:outline-hidden"
       onClick={onClick}
     >
-      {isCustom ? (
-        <CustomSpellIcon spell={spell} size="sm" />
-      ) : (
-        <WowheadClientIcon
-          id={spell.spellId.toString()}
-          type="spell"
-          name={spell.name}
-          size={20}
-          noLink
-        />
-      )}
-      <div className="-mb-[3px] py-[2px]">{spell.name}</div>
+      <div className="inline-block aspect-square h-5">{iconElement}</div>
+      <span className="trim-text text-sm">{spell.name}</span>
     </button>
   )
 }

@@ -16,6 +16,8 @@ export default async function Wowhead({
   showLabel = true,
   ellipsis = false,
   textColor = '',
+  context = 'inline',
+  fill = false,
 }) {
   let display = name
   let displayId = id
@@ -40,6 +42,7 @@ export default async function Wowhead({
           noLink={true}
           iconId={undefined}
           iconSize={iconSize}
+          fill={fill}
         />
       )
   } else {
@@ -89,6 +92,7 @@ export default async function Wowhead({
             noLink={true}
             iconId={data.icon}
             iconSize={iconSize}
+            fill={fill}
           />
         )
     } catch (error: any) {
@@ -100,8 +104,12 @@ export default async function Wowhead({
     }
   }
 
+  icon = <div className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</div>
   return disabled ? (
-    <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
+    <div
+      className={`${context} relative w-full decoration-2 q${quality} flex items-center gap-1`}
+      style={{ color: linkColor }}
+    >
       {icon}
       {showLabel && (
         <span className={`text-wrap break-words ${ellipsis ? 'truncate' : ''}`}>{display}</span>
@@ -110,12 +118,14 @@ export default async function Wowhead({
   ) : (
     <a
       href={whUrl}
-      className={`inline decoration-2 q${quality}`}
+      className={`${context} decoration-2 q${quality} inline-flex items-center gap-1`}
       style={{ color: textColor != '' ? textColor : linkColor, textWrap: 'nowrap' }}
     >
       {icon}
       {showLabel && (
-        <span className={`text-wrap break-words ${ellipsis ? 'truncate' : ''}`}>{display}</span>
+        <span className={`trim-text leading-none text-wrap break-words ${ellipsis ? '' : ''}`}>
+          {display}
+        </span>
       )}
     </a>
   )

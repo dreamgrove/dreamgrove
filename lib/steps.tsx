@@ -87,7 +87,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'Channeled Cast',
         content:
-          'If a spell is channeled, the duration of the channel will be represented by the purple area. Remember that if a spell is channeled, it can be interupted by other casts!',
+          'If a spell is channeled, the duration of the channel will be represented by the dashed green area. Remember that if a spell is channeled, it can be interupted by other casts!',
         side: 'top',
         selector: '#cast-391528-0-0',
         pointerRadius: 3,
@@ -99,7 +99,8 @@ export const steps: Tour[] = [
         content:
           'If a spell has more than 1 charge, the timeline will contain a separate row for each charge.',
         side: 'top-left',
-        selector: '#spell-name-102693',
+        selector:
+          '#tour-timeline-selector > div.shrink-0 > div > div > div.mb-2.w-full > div.flex.w-full.flex-col.items-end.gap-2.border-r-2.pr-2',
         pointerRadius: 3,
         pointerPadding: 7,
       },
@@ -108,7 +109,7 @@ export const steps: Tour[] = [
         title: 'Charges',
         content: 'The number of charges available at any given time is displayed above the spell',
         side: 'top-left',
-        selector: '#spell-name-102693-charges',
+        selector: '#timeline-row-102693 > div.charges > div:nth-child(7)',
         pointerRadius: 3,
         pointerPadding: 17,
       },
@@ -118,7 +119,7 @@ export const steps: Tour[] = [
         content:
           'If a spell has more than 1 charge, the cooldown of each charge has to wait for the previous one before starting. This duration is represented by the transparent area preceding the actual cooldown.',
         side: 'top-left',
-        selector: '#cast-102693-2-1 .delay',
+        selector: '#cast-102693-2-1',
         pointerRadius: 3,
         pointerPadding: 7,
       },
@@ -135,7 +136,8 @@ export const steps: Tour[] = [
       {
         icon: 'X',
         title: 'Additional information',
-        content: 'You can click this button to display additional information regarding the casts.',
+        content:
+          'You can click this button to access the settings, debug information and additional details regarding the website.',
         side: 'top-right',
         selector: '#tour-debug-selector',
         pointerRadius: 3,

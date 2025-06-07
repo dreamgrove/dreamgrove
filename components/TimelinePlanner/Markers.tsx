@@ -6,6 +6,10 @@ interface MarkerProps {
 }
 
 const Marker: React.FC<MarkerProps> = ({ label, width }) => {
+  console.log(label)
+  const label_processed = label % 1 === 0 ? label : label.toFixed(0)
+  const label_length = label_processed.toString().length
+  const left = label_length > 3 ? 10 : label_length > 2 ? 8 : label_length > 1 ? 6 : 4
   return (
     <div
       className="pointer-events-none relative top-0 z-10 flex h-full flex-row items-start"
@@ -26,8 +30,11 @@ const Marker: React.FC<MarkerProps> = ({ label, width }) => {
       {/* Vertical marker line */}
       <div className="absolute bottom-0 left-0 h-[90%] w-px bg-gray-400/30 opacity-30" />
       {/* Seconds label to the right of the marker, at the top */}
-      <span className="absolute top-0 left-[-6px] z-20 py-0 text-xs whitespace-nowrap text-gray-200">
-        {label % 1 === 0 ? label : label.toFixed(2)}s
+      <span
+        className="absolute top-0 z-20 py-0 text-xs whitespace-nowrap text-gray-200"
+        style={{ left: -left }}
+      >
+        {label_processed}s
       </span>
     </div>
   )

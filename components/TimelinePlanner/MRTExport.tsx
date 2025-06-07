@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { SpellToRender } from '../../lib/types/cd_planner'
+import { isCustomSpell, CustomSpell } from '../../lib/utils/customSpellStorage'
 
 export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -9,12 +10,18 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
   const mrtNote = useMemo(() => {
     // Collect all casts from all spells
     const allCasts = timeline
-      .flatMap((spellTimeline) =>
-        spellTimeline.casts.map((cast) => ({
+      .flatMap((spellTimeline) => {
+        // For custom spells, use mrtSpellId if available, otherwise use spellId
+        const effectiveSpellId =
+          isCustomSpell(spellTimeline.spell) && (spellTimeline.spell as CustomSpell).mrtSpellId
+            ? (spellTimeline.spell as CustomSpell).mrtSpellId
+            : spellTimeline.spell.spellId
+
+        return spellTimeline.casts.map((cast) => ({
           time: cast.start_s,
-          spellId: spellTimeline.spell.spellId,
+          spellId: effectiveSpellId,
         }))
-      )
+      })
       // Sort by cast time
       .sort((a, b) => a.time - b.time)
 
@@ -47,7 +54,21 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
 
   return (
     <div className="mt-8 space-y-2 pl-2">
-      <div className="flex items-center gap-2">
+      <div className="flex w-full items-center justify-end gap-2">
+        <div
+          className="flex cursor-pointer items-center select-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="text-sm text-neutral-400">show full note</span>
+          <svg
+            className={`ml-1 h-4 w-4 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
         <button
           onClick={handleExportClick}
           className={`px-4 py-2 text-sm font-medium text-white transition-colors duration-200 focus:ring-0 focus:ring-offset-0 focus:outline-none ${
@@ -59,7 +80,7 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
           }`}
         >
           {copyStatus === 'copied' ? (
-            <span className="flex items-center gap-1">
+            <span className="flex gap-1">
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
@@ -84,20 +105,6 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
             'Export MRT Note'
           )}
         </button>
-        <div
-          className="flex cursor-pointer items-center select-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className="text-sm text-neutral-400">Show</span>
-          <svg
-            className={`ml-1 h-4 w-4 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
       </div>
 
       {isOpen && (

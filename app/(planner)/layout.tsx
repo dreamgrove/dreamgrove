@@ -12,6 +12,7 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { Providers } from '../(root)/providers'
 import ThemeProviders from '../(root)/theme-providers'
+import ScreenWidthWarning from '@/components/ScreenWidthWarning'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: LayoutProps) {
           <Providers>
             <ThemeProviders>
               <main className="max-h-screen">{children}</main>
+              <ScreenWidthWarning />
             </ThemeProviders>
           </Providers>
         </div>

@@ -14,6 +14,7 @@ interface CheckboxesProps {
   items?: Array<{ id: string; spellId: number | string; label: string; description?: string }>
   selectedItems?: string[]
   onToggle?: (id: string, isSelected: boolean) => void
+  prerenderedIcons?: Record<string, React.ReactNode>
 }
 
 export default function Checkboxes({
@@ -22,6 +23,7 @@ export default function Checkboxes({
   items,
   selectedItems,
   onToggle,
+  prerenderedIcons = {},
 }: CheckboxesProps) {
   const handleCheckboxChange = (id: string, checked: boolean) => {
     if (onToggle) {
@@ -50,6 +52,7 @@ export default function Checkboxes({
               description={item.description}
               defaultCheck={isSelected}
               onToggle={handleCheckboxChange}
+              prerenderedIcon={prerenderedIcons[item.spellId.toString()]}
             />
           )
         })}

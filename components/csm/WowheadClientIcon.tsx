@@ -61,6 +61,7 @@ function WowheadClientIcon({
 
       try {
         // Use our new API client instead of direct server function
+        console.log('fetching icon', id, type, name, beta, url)
         const data = await getWowheadInfo({
           id: id || '',
           type,
@@ -68,6 +69,7 @@ function WowheadClientIcon({
           beta,
           url: url || '',
         })
+        console.log('data', data)
 
         if (data.icon) {
           // Cache the result
@@ -90,11 +92,16 @@ function WowheadClientIcon({
   if (!size)
     return isLoading ? (
       <div className={`h-full w-full rounded-xs bg-neutral-800`} />
-    ) : (
+    ) : iconFilename ? (
       <Image
         src={`https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`}
         alt={`${name} icon`}
         fill={true}
+      />
+    ) : (
+      <div
+        className={`h-full w-full rounded-xs bg-gray-200`}
+        title={`${name} (icon unavailable)`}
       />
     )
 

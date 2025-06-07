@@ -6,6 +6,7 @@ export interface CustomSpell extends SpellInfo {
   isCustom: true
   color: string // Hex color for the custom spell icon
   createdAt: number
+  mrtSpellId?: number // Optional spell ID for MRT export
 }
 
 // Generate a random color for custom spells
@@ -56,18 +57,22 @@ export function loadCustomSpells(): CustomSpell[] {
 }
 
 // Add a new custom spell
-export function addCustomSpell(spellInfo: Omit<SpellInfo, 'spellId'>): CustomSpell {
+export function addCustomSpell(
+  spellInfo: Omit<SpellInfo, 'spellId'> & { mrtSpellId?: number }
+): CustomSpell {
   const customSpells = loadCustomSpells()
 
   // Generate a unique spell ID (negative to avoid conflicts with real spell IDs)
   const newSpellId = Math.floor(Math.random() * -100000) - 1000
 
+  const { mrtSpellId, ...restSpellInfo } = spellInfo
   const customSpell: CustomSpell = {
-    ...spellInfo,
+    ...restSpellInfo,
     spellId: newSpellId,
     isCustom: true,
     color: generateRandomColor(),
     createdAt: Date.now(),
+    mrtSpellId,
   }
 
   customSpells.push(customSpell)
