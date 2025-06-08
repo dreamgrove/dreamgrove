@@ -30,6 +30,7 @@ function WowheadClientVersion({
   noIcon = false,
   beta = false,
   url = '',
+  size = 16,
   showLabel = true,
 }) {
   // Use a cache key that's stable across component rerenders
@@ -159,6 +160,7 @@ function WowheadClientVersion({
       beta={beta}
       url={url}
       noLink={true}
+      size={size}
     />
   )
 
@@ -166,7 +168,7 @@ function WowheadClientVersion({
     <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
       {icon}
       {showLabel && (
-        <span className="text-wrap break-words align-middle">
+        <span className="align-middle text-wrap break-words">
           {isLoading ? '(loading...)' : display}
         </span>
       )}
@@ -179,7 +181,7 @@ function WowheadClientVersion({
     >
       {type != 'npc' && icon}
       {showLabel && (
-        <span className="text-wrap break-words align-middle">
+        <span className="align-middle text-wrap break-words">
           {isLoading ? '(loading...)' : display}
         </span>
       )}

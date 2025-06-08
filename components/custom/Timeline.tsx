@@ -27,24 +27,24 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
 
   return (
     <div>
-      {children && <div className="mb-1 mt-4 text-center text-lg font-medium">{children}</div>}
+      {children && <div className="mt-4 mb-1 text-center text-lg font-medium">{children}</div>}
       <div className="h-auto w-full overflow-x-auto overflow-y-hidden sm:h-[120px] md:h-[130px] lg:h-[150px]">
         <div className="flex h-full w-max flex-row items-center justify-start pt-1">
           {processedSpells.map((spell, index) => (
             <React.Fragment key={`${spell.id}-${index}`}>
               {/* Icon */}
               <div className="flex items-center justify-center">
-                <div className="relative z-10 flex-shrink-0 scale-[0.6] sm:scale-[0.8] md:scale-[0.9] lg:scale-100">
+                <div className="relative z-10 shrink-0 scale-[0.6] sm:scale-[0.8] md:scale-[0.9] lg:scale-100">
                   <WowheadIcon
                     id={spell.id}
                     type="spell"
                     name={`Spell ${spell.id}`}
                     beta={beta}
-                    size={50}
+                    iconSize={50}
                     noMargin
                   />
                   {spell.count > 1 && (
-                    <div className="absolute -bottom-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-red-600 text-xs font-bold text-white shadow-md">
+                    <div className="absolute -right-2 -bottom-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-red-600 text-xs font-bold text-white shadow-md">
                       x{spell.count}
                     </div>
                   )}

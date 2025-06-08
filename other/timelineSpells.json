@@ -1,0 +1,99 @@
+{
+  "spells": [
+    {
+      "name": "Force of Nature",
+      "spellId": 205636,
+      "channel_duration": 0,
+      "effect_duration": 10,
+      "cooldown": 60,
+      "charges": 1,
+      "specs": ["balance"]
+    },
+    {
+      "spellId": 194223,
+      "name": "Celestial Alignment",
+      "channel_duration": 0,
+      "effect_duration": 15,
+      "cooldown": 180,
+      "charges": 1,
+      "specs": ["balance"]
+    },
+    {
+      "spellId": 391528,
+      "name": "Convoke the Spirits",
+      "channel_duration": 4,
+      "effect_duration": 4,
+      "cooldown": 120,
+      "channeled": true,
+      "specs": ["balance", "resto", "feral"]
+    },
+    {
+      "spellId": 197721,
+      "name": "Flourish",
+      "channel_duration": 0,
+      "effect_duration": 8,
+      "cooldown": 60,
+      "charges": 1,
+      "specs": ["resto"]
+    },
+    {
+      "name": "Grove Guardians",
+      "spellId": 102693,
+      "channel_duration": 0,
+      "effect_duration": 15,
+      "cooldown": 20,
+      "charges": 3,
+      "specs": ["resto"],
+      "can_interrupt": false
+    },
+    {
+      "spellId": 740,
+      "name": "Tranquillity",
+      "channel_duration": 5,
+      "effect_duration": 13,
+      "cooldown": 180,
+      "channeled": true,
+      "specs": ["resto"]
+    },
+    {
+      "spellId": 33891,
+      "name": "Incarnation: Tree of Life",
+      "channel_duration": 0,
+      "effect_duration": 30,
+      "cooldown": 180,
+      "specs": ["resto"]
+    },
+    {
+      "spellId": 392356,
+      "name": "Reforestation",
+      "channel_duration": 0,
+      "effect_duration": 10,
+      "cooldown": 10,
+      "specs": ["resto"]
+    },
+    {
+      "spellId": 106951,
+      "name": "Berserk",
+      "channel_duration": 0,
+      "effect_duration": 15,
+      "cooldown": 180,
+      "specs": ["feral"]
+    },
+    {
+      "spellId": 5217,
+      "name": "Tiger's Fury",
+      "channel_duration": 0,
+      "effect_duration": 10,
+      "cooldown": 30,
+      "specs": ["feral"]
+    },
+    {
+      "spellId": 274837,
+      "name": "Feral Frenzy",
+      "channel_duration": 0,
+      "effect_duration": 6,
+      "cooldown": 45,
+      "specs": ["feral"]
+    }
+  ]
+}

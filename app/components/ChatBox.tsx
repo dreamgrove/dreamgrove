@@ -109,7 +109,7 @@ export const ChatBox = () => {
       </div>
       <div
         ref={messagesContainerRef}
-        className="flex-1 overflow-y-auto rounded border border-pink-200 bg-white/80 p-3"
+        className="flex-1 overflow-y-auto rounded-sm border border-pink-200 bg-white/80 p-3"
       >
         {isLoading ? (
           <div className="flex h-full items-center justify-center">
@@ -138,7 +138,7 @@ export const ChatBox = () => {
           placeholder="Your name..."
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className="font-pixel rounded border border-pink-200 bg-white/80 px-3 py-1 text-sm"
+          className="font-pixel rounded-sm border border-pink-200 bg-white/80 px-3 py-1 text-sm"
         />
         <div className="flex flex-1 gap-2">
           <input
@@ -146,12 +146,12 @@ export const ChatBox = () => {
             placeholder="Leave a message..."
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
-            className="font-pixel flex-1 rounded border border-pink-200 bg-white/80 px-3 py-1 text-sm"
+            className="font-pixel flex-1 rounded-sm border border-pink-200 bg-white/80 px-3 py-1 text-sm"
           />
           <button
             onClick={handleSubmit}
             disabled={isSubmitting || !username.trim() || !newMessage.trim()}
-            className="font-pixel rounded border border-pink-200 bg-white/80 px-3 py-1 text-sm text-[#FF7AAD] disabled:opacity-50"
+            className="font-pixel rounded-sm border border-pink-200 bg-white/80 px-3 py-1 text-sm text-[#FF7AAD] disabled:opacity-50"
           >
             Send ✧
           </button>

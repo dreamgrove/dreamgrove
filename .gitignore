@@ -44,6 +44,7 @@ yarn-error.log*
 .env.sentry-build-plugin
 .env.production.local
 
+plan.md
 # Contentlayer
 .contentlayer
 /.vs
@@ -52,3 +53,6 @@ app/tag-data.json
 # Cursor specific folder
 cursor
 .cursor/*
+.cursorspace
+# Sentry Config File
+.env.sentry-build-plugin

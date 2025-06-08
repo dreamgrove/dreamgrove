@@ -11,7 +11,7 @@ function getColor(type) {
 }
 
 function getIcon(type) {
-  const className = 'inline text-4xl lg:text-3xl flex-shrink-0'
+  const className = 'inline text-4xl lg:text-3xl shrink-0'
   switch (type) {
     case 'warning':
       return <CiWarning className={className} />
