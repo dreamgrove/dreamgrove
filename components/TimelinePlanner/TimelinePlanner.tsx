@@ -2,14 +2,11 @@
 
 import React, { useState, useEffect } from 'react'
 import styles from './TimelinePlanner.module.css'
-import LengthControls from './LengthControls'
 import TimelineView from './TimelineView'
-import Warnings from './Warnings'
-import Link from 'next/link'
 import FightSelector from './FightSelector'
 import { TimelineProvider } from './TimelineContext'
 import { SpellInfo, PlayerAction } from '../../lib/types/cd_planner'
-import { NextStep, NextStepProvider, useNextStep } from 'nextstepjs'
+import { NextStep, useNextStep } from 'nextstepjs'
 import { steps } from 'lib/steps'
 import TutorialCard from './TutorialCard'
 
