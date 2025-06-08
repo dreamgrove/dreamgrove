@@ -7,9 +7,7 @@ export const handleControlOfTheDream: IControlOfTheDreamHandler = (
   spellState
 ) => {
   if (spellState.usedCharges === 0) {
-    console.log('COTD event: ', event)
     const cotdEffects = timelineState.activeEffects.get(Talents.ControlOfTheDream)
-    console.log('COTD effects: ', cotdEffects)
     if (cotdEffects) {
       cotdEffects.set(event.spellId, event.time)
       timelineState.activeEffects.get(Talents.ControlOfTheDream)?.set(event.spellId, event.time)

@@ -84,11 +84,11 @@ export default function CastInterval({
   const bgColor = ''
 
   const closeButtonPositon = {
-    left: cast.effect_duration * pixelsPerSecond - 36,
+    left: cast.effect_duration * pixelsPerSecond - 31,
     top: -3,
   }
   if (cast.effect_duration * pixelsPerSecond < 50) {
-    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond - 1
+    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond - 2
     closeButtonPositon.top = -5
   }
   const transitionStyle = 'transition-all duration-100'

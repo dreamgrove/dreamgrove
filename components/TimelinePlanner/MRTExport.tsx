@@ -53,8 +53,8 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
   }
 
   return (
-    <div className="space-y-2">
-      <div className="flex w-full items-center justify-end gap-2">
+    <div className="pr-2">
+      <div className="">
         {/* <div
           className="flex cursor-pointer items-center select-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -72,17 +72,17 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
         <button
           onClick={handleExportClick}
           id="mrt-export-selector"
-          className={`px-4 py-2 text-sm font-medium text-white transition-colors duration-200 focus:ring-0 focus:ring-offset-0 focus:outline-none ${
+          className={`min-w-[140px] shrink-0 rounded-sm border border-transparent px-3 py-[5px] text-sm font-medium text-white transition-colors duration-200 focus:ring-0 focus:ring-offset-0 focus:outline-none ${
             copyStatus === 'copied'
-              ? 'bg-green-600 hover:bg-green-700 focus:ring-0'
+              ? 'bg-emerald-600 hover:bg-emerald-700'
               : copyStatus === 'error'
-                ? 'bg-red-600 hover:bg-red-700 focus:ring-0'
-                : 'border-main/55 hover:bg-main/80 border bg-neutral-900/70 focus:ring-0'
+                ? 'bg-red-600 hover:bg-red-700'
+                : 'border border-emerald-700/40 bg-emerald-400/10 hover:bg-emerald-500/20'
           }`}
         >
           {copyStatus === 'copied' ? (
             <span className="flex gap-1">
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fillRule="evenodd"
                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"

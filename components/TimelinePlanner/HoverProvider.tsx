@@ -50,6 +50,20 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const pendingCastRef = useRef<Cast | null>(null)
   const rectRef = useRef<HTMLDivElement | null>(null)
   const [draggedId, setDraggedId] = useState<string | null>(null)
+  const [isShiftHeld, setIsShiftHeld] = useState<boolean>(false)
+  const clearTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  const startClearTimer = useCallback(() => {
+    if (clearTimeoutRef.current) {
+      clearTimeout(clearTimeoutRef.current)
+    }
+
+    clearTimeoutRef.current = setTimeout(() => {
+      if (!isShiftHeld) {
+        removeHover()
+      }
+    }, 3000)
+  }, [isShiftHeld])
 
   const changeHover = useCallback(
     (newCast: Cast) => {
@@ -73,21 +87,54 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
           })
         })
       }
+
+      startClearTimer()
     },
-    [pendingCastRef.current]
+    [pendingCastRef.current, startClearTimer]
   )
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Shift') {
+        setIsShiftHeld(true)
+        if (clearTimeoutRef.current) {
+          clearTimeout(clearTimeoutRef.current)
+          clearTimeoutRef.current = null
+        }
+      }
+    }
+
+    const handleKeyUp = (e: KeyboardEvent) => {
+      if (e.key === 'Shift') {
+        setIsShiftHeld(false)
+        if (cast) {
+          startClearTimer()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keyup', handleKeyUp)
+
     return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('keyup', handleKeyUp)
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current)
       }
+      if (clearTimeoutRef.current) {
+        clearTimeout(clearTimeoutRef.current)
+      }
     }
-  }, [])
+  }, [cast, startClearTimer])
 
   const removeHover = useCallback(() => {
     if (rafRef.current) {
       cancelAnimationFrame(rafRef.current)
+    }
+    if (clearTimeoutRef.current) {
+      clearTimeout(clearTimeoutRef.current)
+      clearTimeoutRef.current = null
     }
     pendingCastRef.current = null
     setCast(null)

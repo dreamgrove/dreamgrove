@@ -60,27 +60,14 @@ export class EventQueue {
 
     for (let i = 0; i < matchingEvents.length; i++) {
       const event = matchingEvents[i]
-      console.log('Modifying event at: ', event.time)
 
       const originalTime = event.time
       const targetTime = originalTime + this.remainingDelta + delta
-      console.log('Target time: ', targetTime)
-      console.log(
-        'Original time: ',
-        originalTime,
-        'remaining delta: ',
-        this.remainingDelta,
-        'delta: ',
-        delta
-      )
 
       if (targetTime < event_time) {
-        console.log('Event would go below the minimum time')
-        console.log('Setting event time to: ', event_time)
         const actualDelta = -(event_time - targetTime)
         // This event would go below the minimum time
         event.time = event_time
-        console.log('Remaining delta: ', this.remainingDelta)
         this.remainingDelta = actualDelta
       } else {
         // Apply all remaining delta to this event

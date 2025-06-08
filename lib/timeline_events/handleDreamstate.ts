@@ -45,7 +45,6 @@ const reduceCastCooldowns = (
     }
     consideredSpells.add(cast.spell.spellId)
     eventQueue.modifyFirstEarliestOfType(cast, EventType.GainCharge, time, event.time)
-    console.log('[Event] [Dreamstate]: Modified cast: ', cast.id)
     //eventQueue.modifyFirstEarliestOfType(cast, EventType.CooldownEnd, -4, event.time)
   }
 }

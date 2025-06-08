@@ -60,8 +60,6 @@ function WowheadClientIcon({
       setError(false)
 
       try {
-        // Use our new API client instead of direct server function
-        console.log('fetching icon', id, type, name, beta, url)
         const data = await getWowheadInfo({
           id: id || '',
           type,
@@ -69,7 +67,6 @@ function WowheadClientIcon({
           beta,
           url: url || '',
         })
-        console.log('data', data)
 
         if (data.icon) {
           // Cache the result

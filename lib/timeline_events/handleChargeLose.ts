@@ -23,7 +23,7 @@ export const handleChargeLose: IChargeLoseHandler = (
     spellId: event.spellId,
     castId: event.castId,
   }
-  console.log('COTD final time: ', event.time + spellInfo.cooldown - cotdReduction)
+
   if (usedCharges > 1) {
     spellState.delayedCastIds.push(event.castId)
     return {

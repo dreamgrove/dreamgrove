@@ -192,7 +192,6 @@ export default function CustomElement({ onCreate, onDelete }: CustomElementProps
                     onChange={(e) => setSpellId(e.target.value)}
                     min={1}
                     className="mt-1 w-full border-neutral-700 bg-neutral-200/40 px-2 py-1 text-sm text-white placeholder:text-neutral-200"
-                    placeholder="e.g. 319454"
                   />
                 </div>
 

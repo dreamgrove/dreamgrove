@@ -445,7 +445,7 @@ function TimelineViewInner({
             ]}
           />
         </div>
-        <div className="inline-flex flex-row items-center gap-2 self-end pb-2 text-[0.8rem] text-gray-400">
+        <div className="inline-flex flex-row items-center gap-2 self-end pb-1 text-[0.8rem] text-gray-400">
           <span>
             developed by{' '}
             <a
@@ -497,28 +497,28 @@ function TimelineViewInner({
       </div>
 
       {/* Zoom controls */}
-      <div
-        id="tour-zoom-selector"
-        className="mt-2 mb-4 flex flex-row items-center justify-end gap-2"
-      >
-        <button
-          onClick={() => resetZoom()}
-          className="rounded-sm bg-neutral-900/40 px-2 py-1 text-sm hover:bg-neutral-700/70"
-        >
-          Reset Zoom
-        </button>
-        <button
-          onClick={() => zoomOut(10)}
-          className="aspect-square h-full w-auto rounded-sm bg-neutral-900/40 px-2 py-1 text-sm hover:bg-neutral-700/70"
-        >
-          -
-        </button>
-        <button
-          onClick={() => zoomIn(10)}
-          className="aspect-square h-full w-auto rounded-sm bg-neutral-900/40 px-2 py-1 text-sm hover:bg-neutral-700/70"
-        >
-          +
-        </button>
+      <div className="flex flex-row items-center justify-end pb-2">
+        <div id="tour-zoom-selector" className="flex flex-row items-center justify-end gap-2 pr-4">
+          <button
+            onClick={() => resetZoom()}
+            className="rounded-sm bg-neutral-900/40 px-3 py-1 text-sm transition-colors duration-200 hover:bg-neutral-700/70"
+          >
+            Reset Zoom
+          </button>
+          <button
+            onClick={() => zoomOut(10)}
+            className="flex min-w-[1.5rem] items-center justify-center rounded-sm bg-neutral-900/40 px-3 py-1 text-sm transition-colors duration-200 hover:bg-neutral-700/70"
+          >
+            -
+          </button>
+          <button
+            onClick={() => zoomIn(10)}
+            className="flex min-w-[1.5rem] items-center justify-center rounded-sm bg-neutral-900/40 px-3 py-1 text-sm transition-colors duration-200 hover:bg-neutral-700/70"
+          >
+            +
+          </button>
+        </div>
+        <MRTExport timeline={processedState.spells} />
       </div>
 
       {/* Timeline view */}
@@ -604,6 +604,9 @@ function TimelineViewInner({
           </div>
         </div>
       </HoverProvider>
+
+      <div className="mx-[4px] mt-6 mb-4 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+
       <Warnings timeline={processedState.spells} current_spec={selectedSpec} />
       <Debug
         processedTimeline={processedState}
@@ -643,7 +646,7 @@ const SpellName = ({
       className={`my-2 flex w-full flex-col items-center justify-end border-r-2 border-orange-500/50 border-b-orange-500/50 pr-2`}
     >
       <div
-        className={`flex h-[40px] w-full flex-row items-center justify-end gap-2 truncate text-right text-sm`}
+        className={`flex h-[40px] w-full flex-row items-center justify-end gap-2 truncate text-center text-sm`}
       >
         {isCustom && (
           <CustomSpellIcon

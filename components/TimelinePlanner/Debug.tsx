@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { SpellTimeline, SpellInfo, TimelineToRender, Cast } from '../../lib/types/cd_planner'
 import { useSettings } from './SettingsProvider'
+import { PiCaretDoubleUpBold, PiCaretDoubleDownBold } from 'react-icons/pi'
 
 interface DebugProps {
   processedTimeline: TimelineToRender
@@ -30,7 +31,7 @@ export default function Debug({
   showDebug = false,
   toggleDebug,
 }: DebugProps) {
-  const [activeTab, setActiveTab] = useState<TabType>('debug')
+  const [activeTab, setActiveTab] = useState<TabType>('about')
   const { showEventMarkers, setShowEventMarkers } = useSettings()
   const [debugHeight, setDebugHeight] = useState(55) // vh units
   const [isDragging, setIsDragging] = useState(false)
@@ -129,9 +130,9 @@ export default function Debug({
           {showDebug && (
             <div className="flex items-center gap-1 pl-8 xl:pl-13">
               {[
-                { id: 'debug' as const, label: 'Debug' },
-                { id: 'settings' as const, label: 'Settings' },
                 { id: 'about' as const, label: 'About' },
+                { id: 'settings' as const, label: 'Settings' },
+                { id: 'debug' as const, label: 'Debug' },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -152,9 +153,17 @@ export default function Debug({
           <button
             onClick={toggleDebug}
             id="tour-debug-selector"
-            className="text-main/80 hover:text-main flex items-center rounded py-1 pr-10 text-sm transition-colors duration-300 focus:outline-none xl:pr-15"
+            className="text-main/80 hover:text-main flex items-center gap-2 rounded py-1 pr-10 text-sm transition-colors duration-300 focus:outline-none xl:pr-15"
           >
             {showDebug ? 'Hide Additional Details' : 'Show Additional Details'}
+            {showDebug ? (
+              <PiCaretDoubleDownBold
+                className="text-current transition-all duration-300"
+                size={16}
+              />
+            ) : (
+              <PiCaretDoubleUpBold className="text-current transition-all duration-300" size={16} />
+            )}
           </button>
         </div>
 
@@ -173,13 +182,7 @@ export default function Debug({
                     Timeline Width: <strong>{Math.round(timelineSettings.timelineWidth)}px</strong>
                   </span>
                   <span className="mr-4">
-                    Marker Spacing: <strong>{timelineSettings.markerSpacing}s</strong>
-                  </span>
-                  <span className="mr-4">
                     Total Casts: <strong>{totalCasts}</strong>
-                  </span>
-                  <span>
-                    Charge Events: <strong>{totalChargeIntervals}</strong>
                   </span>
                   {warnings.length > 0 && (
                     <span className="ml-4 rounded-sm bg-yellow-400 px-2 py-0.5 text-xs font-bold text-black">
@@ -202,8 +205,8 @@ export default function Debug({
                           <th className="py-2 pr-4 text-xs text-neutral-200">Effect End</th>
                           <th className="py-2 pr-4 text-xs text-neutral-200">Cast End</th>
                           <th className="py-2 pr-4 text-xs text-neutral-200">Duration</th>
-                          <th className="py-2 pr-4 text-xs text-neutral-200">Channel</th>
-                          <th className="py-2 pr-4 text-xs text-neutral-200">Effect</th>
+                          <th className="py-2 pr-4 text-xs text-neutral-200">Channel Duration</th>
+                          <th className="py-2 pr-4 text-xs text-neutral-200">Effect Duration</th>
                           <th className="py-2 text-xs text-neutral-200">Cooldown</th>
                         </tr>
                       </thead>
@@ -397,24 +400,32 @@ export default function Debug({
                     </p>
                   </div>
 
+                  {/* Support Info */}
+                  <div className="rounded-lg border border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 p-4">
+                    <h4 className="mb-2 text-sm font-medium text-orange-400/80">
+                      💝 Support Development
+                    </h4>
+                    <p className="mb-3">
+                      The Cooldown Planner is a free and ad-free tool. However, if you enjoyed it,
+                      or found it useful, please consider donating to help cover server costs and
+                      support future development!
+                    </p>
+                    <a
+                      href="https://buymeacoffee.com/vinter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-md bg-yellow-500/20 px-3 py-2 text-sm font-medium text-yellow-400 transition-colors hover:bg-yellow-500/30"
+                    >
+                      ☕ Buy me a coffee
+                    </a>
+                  </div>
+
                   {/* Developer Info */}
                   <div className="space-y-1 rounded-lg bg-neutral-800/50 p-4">
                     <p>
-                      The Cooldown Planner has been developed by{' '}
+                      This tool has been developed by{' '}
                       <a href="https://github.com/thevinter" className="text-main/80 underline">
                         vinter
-                      </a>
-                    </p>
-
-                    <p className="mb-1">
-                      The source code can be found at the following link:{' '}
-                      <a
-                        href="https://github.com/dreamgrove/dreamgrove"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-main/80 underline transition-colors hover:text-orange-300/90"
-                      >
-                        https://github.com/dreamgrove/dreamgrove
                       </a>
                     </p>
                   </div>
@@ -423,7 +434,7 @@ export default function Debug({
                   <div className="rounded-lg bg-neutral-800/50 p-4">
                     <h4 className="mb-3 font-medium text-gray-300">📝 Roadmap</h4>
                     <p className="mb-1 text-sm">
-                      There is a public roadmap for the website available here:
+                      There is a public roadmap for the website available at the following link:
                     </p>
                     <a
                       href="https://github.com/orgs/dreamgrove/projects/3"
@@ -439,34 +450,24 @@ export default function Debug({
                       see if it has already been suggested. If it has not, feel free to open a
                       github issue.
                     </p>
-                  </div>
-
-                  {/* Support Info */}
-                  <div className="rounded-lg border border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 p-4">
-                    <h4 className="mb-2 text-sm font-medium text-orange-400/80">
-                      💝 Support Development
-                    </h4>
-                    <p className="mb-3">
-                      This is a solo project and I had lots of fun making it. The planner is offered
-                      free of charge and ad free to everyone. However, if you enjoyed it, or found
-                      it useful, please consider donating to help cover server costs and support
-                      future development!
+                    <p className="pt-2">
+                      You can also find the source code on the same github repository:{' '}
+                      <a
+                        href="https://github.com/dreamgrove/dreamgrove"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-main/80 underline transition-colors hover:text-orange-300/90"
+                      >
+                        https://github.com/dreamgrove/dreamgrove
+                      </a>
                     </p>
-                    <a
-                      href="https://buymeacoffee.com/vinter"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-md bg-yellow-500/20 px-3 py-2 text-sm font-medium text-yellow-400 transition-colors hover:bg-yellow-500/30"
-                    >
-                      ☕ Buy me a coffee
-                    </a>
                   </div>
 
                   {/* Contact Info */}
                   <div className="rounded-lg bg-neutral-800/50 p-4">
                     <h4 className="mb-2 text-sm font-medium text-white">Contact Me</h4>
                     <p>
-                      Github is the preferred way to discuss topics related to the website. If
+                      GitHub is the preferred way to discuss topics related to the website. If
                       you're unable to use GitHub or have something that needs to be discussed
                       privately, you can find me as{' '}
                       <span className="text-main/80 font-medium">thevinter</span> on the dreamgrove
