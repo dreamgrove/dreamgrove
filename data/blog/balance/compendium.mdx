@@ -7,19 +7,12 @@ summary: A guide to Balance Druid
 ---
 # News
 
-## 15th of April tuning notes
-> [!NOTE]
-> All spell damage increased by 3%.
-> 
-> !Starfall! damage reduced by 10%.
-> 
-> !Starsurge! damage increased by 3%.
-> 
-> !Power of Goldrinn! damage increased by 3%.
-> 
-> **Elune’s Chosen:** !Boundless Moonlight! - !Fury of Elune! final flash of Energy damage reduced by 10%. !424588|Minor Moon! damage reduced by 10%.
+## Turbo Boost 
 
-This is around a 4% buff on ST in raid builds. For !Elune's Chosen! in m+ it's a small nerf to AoE, but overall a buff in mythic+ builds when including the buff to !Starsurge! and the Balance spec aura.
+On the reset May 13th/14th Blizzard is launching the [turbo boost event](https://www.wowhead.com/guide/the-war-within/turbo-boost-dinar-event-overview) increasing item levels for myth track and hero track items, as well as introducing the Puzzling Cartel Chip (dinar).
+There are some situations where [Cyrce's Circlet](https://www.wowhead.com/item=228411/cyrces-circlet) is worth swapping out for 684 ring in M+. Run an [MDT Sim](https://wago.io/Yya4XBbl-) or 1 target 5 minute patchwerk sim to find out what is better for you.
+
+There is a section in [Gear & Consumables](#puzzling-cartel-chip) listing the items you should look out for when spending your Puzzling Cartel Chip. Remember to sim your character.
 
 ## Raid Guide 
 
@@ -161,7 +154,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
 - Use !205636|Force of Nature! if any of the following are true:
   - [*Convoke the SpiritsKOTG] The cooldown on !194223|CA! is less than a GCD and the cooldown of !Convoke the Spirits! is less than 3 GCD's.
-  - [*~Convoke the SpiritsKOTG] The cooldown of !194223|CA!/!102560|Inc! is less than a GCD. 
+  - [*~Convoke the SpiritsKOTG] The cooldown of !194223|CA!/!102560|Inc! is less than a GCD or longer than 30 seconds.
   - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
   - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if any of the following are true:
@@ -302,11 +295,12 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Stellar FlareECAoE] Use !Stellar Flare! if all of the following conditions is met:
   - The target will live for at least 8s+1s per target that !Starfire! can hit.
   - You will not overcap on AP.
-- Use !Starfall! if you would overcap Astral Power with your next cast.
-- [*Fury of EluneECAoE] Use !Fury of Elune!.
+- Use !Starfall! if you would overcap Astral Power with your next cast and you're not casting !194223|CA!/!102560|Incarnation! next.
+- [*Fury of EluneECAoE] Use !Fury of Elune! if it's available the global before !194223|CA!/!102560|Incarnation!.
 - Use !194223|CA!/!102560|Incarnation!.
-- [*Warrior of EluneECAoE] Use !Warrior of Elune! if available.
+- [*Warrior of EluneECAoE] Use !Warrior of Elune! if you have no stacks of !450347|Dreamstate! and will not overlap the !Starfire! casts with !450347|Dreamstate! ones.
 - Use !Wrath! to enter Lunar Eclipse.
+- [*Fury of EluneECAoE] Use !Fury of Elune!.
 - [*Wild MushroomECAoE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active.
 - Use !Starfall! if one of the following conditions is met:
   - !Starlord! is below 3 stacks.
@@ -341,7 +335,8 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Keeper Fillers] Cast !Starfire! in !194223|CA!/!102560|Inc! on 3+ targets.
 - [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! and use !Starfire! on all target counts.
 - Use !Starsurge! on 1 target.
-- Use !Starfall! on 2+ targets.
+- Use !Starfall! on 2+ targets with !Aetherial Kindling!.
+- Use !Starfall! on 3+ targets.
 
 
 <Collapsible title="How to Use Warrior of Elune">
@@ -395,9 +390,9 @@ You can use the macro below and replace your existing !Wrath! keybind with it to
 
 <Talents name={"Stix Bunkjunker"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDYmZzsMzyMzCzMzYWmxYGzwGWAwAssNWw0MzyAAAAgNmZmBsZMM"}/>
 
-<Talents name={"One-Armed Bandit Rattle"} talents={"CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDYGbmlZWmZWGzMzYWmxYYM2wCAGgttxCmmZWGFAACgNzMzMgNjhB"}/>
-
-<Talents name={"One-Armed Bandit Starweaver"} talents={"CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDYGbmlZWmZWGzMzYWmxYYMWwCAGgttxCmmZWGFAACgNzMzMgNjhB"}/>
+<Talents name={"One-Armed Bandit Talents"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDYGbmlZ2mZWGzMzYWmxYYM2wCAGgttxCmmZWGBAAAYzMzMDYzYYA"}>
+     Can swap out !Convoke the Spirits! for !102560|Incarnation! if you want some more flexible cooldowns. Alternatively you can also play !Starweaver! instead of !Rattle the Stars!. Try out different talents and make a decision that fits best for you. 
+</Talents>
 
 ## Mythic+
 
@@ -545,6 +540,24 @@ Depending on the fight timer, this talent is stronger than !Power of the Dream! 
 | **Flasks** | [Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) or [Flask of Tempered Mastery](https://www.wowhead.com/item=212280/flask-of-tempered-mastery) |
 | **Weapon Rune** | [Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil)  |
 
+## Puzzling Cartel Chip 
+
+> [!WARNING]
+> This list assumes max myth ilvl (684), remember to sim your character to choose the option that is best for you. This list is not in order of importance or power and simply a list of items to look out for.
+
+Raid Chips:
+- [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102).
+- [The Jastor Diamond](https://www.wowhead.com/item=231265/the-jastor-diamond?bonus=1527).
+- [Best-In-Slots ](https://www.wowhead.com/item=232805/best-in-slots?bonus=10356:1527).
+- [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=4795&class=11&ilvl=678&spec=102).
+
+Mythic+ Chips:
+- [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102).
+- [Carved Blazikon Wax](https://www.wowhead.com/item=219305/carved-blazikon-wax?bonus=4795&class=11&ilvl=678&spec=102).
+- [Entropic Skardyn Core](https://www.wowhead.com/item=219296/entropic-skardyn-core?bonus=4795&ilvl=678&spec=102).
+
+> [!NOTE]
+> Hero track [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102) is still very good. Sim this together with the mythic+ trinkets if your character doesn't meet the requirements for buying it on myth track.
 
 ## Embellishments & Crafted Items
 
@@ -582,8 +595,9 @@ These are part of a set that has a chance to drop an orb close to your target, g
 | **S Tier** | [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=4795&class=11&ilvl=678&spec=102) | 1:30 CD use effect trinket. Easy to line up with [CA/Inc](https://www.wowhead.com/spell=194223/celestial-alignment) |
 |  | [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102) | |
 |  | [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=6652:10356:11996:1527:10255&ilvl=678&spec=102) | Good for longer raid fights, loses value in m+. Very good for One-Armed Bandit or Mugzee prog where damage in execute phase is important.|
-| **A Tier** | [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102)  | |
+| **A Tier** | [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102)  | Best active trinket from mythic+, gives your highest secondary stat.  |
 |  | [Carved Blazikon Wax](https://www.wowhead.com/item=219305/carved-blazikon-wax?bonus=4795&class=11&ilvl=678&spec=102) | Solid m+ trinket, good passive versatility effect. |
+|  | [Entropic Skardyn Core](https://www.wowhead.com/item=219296/entropic-skardyn-core?bonus=4795&ilvl=678&spec=102) | Spawns orbs you pick up for a buff, after a few seconds the orbs start moving towards you. |
 |  | [Suspicious Energy Drink](https://www.wowhead.com/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=102) | Best trinket from delve. |
 |  | [Flarendo's Pilot Light](https://www.wowhead.com/item=230191/flarendos-pilot-light?bonus=4795&ilvl=678&spec=102) | Solid 2m on-use trinket from early in the raid. Gains value if you don't have a lot of haste. |
 | **B Tier** | [Spymaster's Web(639)](https://www.wowhead.com/item=220202/spymasters-web?bonus=1540:11978:11964&ilvl=639&spec=102) | This trinket is from last tier, but is still pretty solid early in the tier. |
@@ -592,28 +606,18 @@ These are part of a set that has a chance to drop an orb close to your target, g
 |  | [Shadow-Binding Ritual Knife](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife?bonus=9838:11992:11964&ilvl=665&spec=102) | Delve trinket, good option if you can get it. |
 |  | [Soulletting Ruby](https://www.wowhead.com/item=178809/soulletting-ruby?bonus=4795&class=11&ilvl=678&spec=102) | |
 | **C Tier** | [Candle Confidant](https://www.wowhead.com/item=225648/candle-confidant?bonus=3194:11992:11964&class=11&ilvl=665&spec=102) | Another delve trinket option. Performs better than sim if you're close to target. |
-|  | [Entropic Skardyn Core](https://www.wowhead.com/item=219296/entropic-skardyn-core?bonus=4795&ilvl=678&spec=102) | Spawns an orb you need to pick up for a primary stat buff. |
 |  | [Gigazap's Zap-Cap](https://www.wowhead.com/item=232545/gigazaps-zap-cap?bonus=4795&class=11&ilvl=678&spec=102) | |
 |  | [Sigil of Algari Concordance](https://www.wowhead.com/item=219295/sigil-of-algari-concordance?bonus=4795&class=11&ilvl=678&spec=102) | |
-| **D Tier** | [Remnant of Darkness](https://www.wowhead.com/item=219307/remnant-of-darkness?bonus=4795&ilvl=678&spec=102) | |
+|  | [Remnant of Darkness](https://www.wowhead.com/item=219307/remnant-of-darkness?bonus=4795&ilvl=678&spec=102) | |
 |  | [Mister Lock-N-Stalk](https://www.wowhead.com/item=230193/mister-lock-n-stalk?bonus=4795&ilvl=678&spec=102) | |
 |  | [Geargrinder's Spare Keys](https://www.wowhead.com/item=230197/geargrinders-spare-keys?bonus=4795&class=11&ilvl=678&spec=102) | |
 
-[Trinket Sim](https://www.raidbots.com/simbot/report/sNct8EeZwQtGF89tuJFSS2)
-
-## Weapons
-
-> [!NOTE]
-> Season 2 offers some weapons with special effects. Generally, a 675 crafted staff performs better than heroic version of these weapons. These weapons share cooldown with trinkets, so you are not able to overlap them. You should aim to line up these weapons with your cooldowns whenever possible, but don't delay their use effect for a prolonged period of time. Remember to always sim your character.
-
-- [Best-In-Slots](https://www.wowhead.com/item=232805/best-in-slots?bonus=10356:1527)
-- [Big Earner's Bludgeon](https://www.wowhead.com/item=228901/big-earners-bludgeon?bonus=4795&class=11&ilvl=678&spec=102)
-- [Voltaic Stormcaller](https://www.wowhead.com/item=221032/voltaic-stormcaller?bonus=4795&class=11&ilvl=678&spec=102)
-- [Neural Synapse Enhancer](https://www.wowhead.com/item=168973/neural-synapse-enhancer?bonus=4795&class=11&ilvl=678&spec=102)
+[Trinket Sim](https://mimiron.raidbots.com/simbot/report/nhQXUUY427UUr2GobhGT8v)
 
 ## Cyrce's Circlet
 
-The [Cyrce's Circlet](https://www.wowhead.com/item=228411/cyrces-circlet) ring-3 from 11.0.7 is still very good in season 2, beating out every other alternative at 678 even after the nerf to [Legendary Skipper's](https://www.wowhead.com/item=228646/legendary-skippers-citrine). The best gems for the ring-3 are [Stormbringer's](https://www.wowhead.com/item=228638/stormbringers-runed-citrine), [Fathomdweller's](https://www.wowhead.com/item=228639/fathomdwellers-runed-citrine) and [Windsinger's](https://www.wowhead.com/item=228640/windsingers-runed-citrine).
+The [Cyrce's Circlet](https://www.wowhead.com/item=228411/cyrces-circlet) ring from 11.0.7 is still very good in season 2 and you will only swap this out with rings at 684 item level depending on your stats, sim your character to make sure it's worth equipping something else.
+The best gems for the ring are [Stormbringer's](https://www.wowhead.com/item=228638/stormbringers-runed-citrine), [Fathomdweller's](https://www.wowhead.com/item=228639/fathomdwellers-runed-citrine) and [Windsinger's](https://www.wowhead.com/item=228640/windsingers-runed-citrine).
 
 [Cyrce's Circlet Sim](https://www.raidbots.com/simbot/report/9TPEZh7u6ejkumkkonHf2n)
 
