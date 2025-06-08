@@ -73,7 +73,7 @@ export default async function WowheadIcon({
 
   // Return fallback if fetch fails or no icon is found
   return noLink ? (
-    <div className="relative aspect-square h-full w-auto shrink-0">{image}</div>
+    <span className="relative inline-block aspect-square h-full w-auto shrink-0">{image}</span>
   ) : (
     <a href={whUrl} className="relative inline-block aspect-square h-full w-auto shrink-0">
       {image}

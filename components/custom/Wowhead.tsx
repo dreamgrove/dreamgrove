@@ -104,7 +104,7 @@ export default async function Wowhead({
     }
   }
 
-  icon = <div className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</div>
+  icon = <span className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</span>
   return disabled ? (
     <div
       className={`${context} relative w-full decoration-2 q${quality} flex items-center gap-1`}

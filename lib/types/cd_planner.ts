@@ -169,6 +169,7 @@ export interface CastParams {
   interrupting_cast?: Cast | null
   current_charge?: number
   cooldown_delay_s?: number
+  cooldown_duration?: number
 }
 
 /*
@@ -182,10 +183,24 @@ export class Cast {
   spell: SpellInfo
   start_s: number
 
+  _is_interruped: boolean
+  set is_interruped(value: boolean) {
+    this._is_interruped = value
+  }
+
+  get is_interruped(): boolean {
+    return this._is_interruped
+  }
+
   interrupting_cast: Cast | null
 
   interrupt(interrupting_cast: Cast) {
+    console.log('interrupting cast', interrupting_cast)
     this.interrupting_cast = interrupting_cast
+    this._chann_end_s = interrupting_cast.start_s
+    this._ef_end_s = interrupting_cast.start_s
+    this._effect_duration = interrupting_cast.start_s - this.start_s
+    this._is_interruped = true
   }
 
   _cd_start_s: number
@@ -219,7 +234,7 @@ export class Cast {
     return Math.max(0, this._effect_duration - this._channel_duration)
   }
   get effect_duration(): number {
-    return this._effect_duration
+    return this._ef_end_s - this.start_s
   }
   set effect_duration(value: number) {
     this._effect_duration = value
@@ -281,15 +296,24 @@ export class Cast {
   }
 
   constructor(params: CastParams) {
-    const { id, spell, start_s, interrupting_cast, current_charge, cooldown_delay_s } = params
+    const {
+      id,
+      spell,
+      start_s,
+      interrupting_cast,
+      current_charge,
+      cooldown_delay_s,
+      cooldown_duration,
+    } = params
     this.id = id
     this.spell = spell
     this.start_s = round(start_s, 10)
 
     this.interrupting_cast = interrupting_cast ?? null
     this.current_charge = current_charge ?? 0
+    this._is_interruped = false
 
-    this._cooldown_duration = spell.cooldown
+    this._cooldown_duration = cooldown_duration ?? spell.cooldown
     this.cooldown_delay_s = cooldown_delay_s ?? 0
 
     this._effect_duration = spell.effect_duration

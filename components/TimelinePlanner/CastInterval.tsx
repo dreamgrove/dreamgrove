@@ -74,10 +74,6 @@ export default function CastInterval({
   const showWowheadInEffect = false && !showWowheadInChannel && effect_width_px === maxWidth
   const showWowheadInRemaining = false && !showWowheadInChannel && !showWowheadInEffect
 
-  /*const wowheadWrapper = (
-    <div className="top-0 left-0 flex h-5 w-full items-end justify-start pl-1">{icon}</div>
-  )*/
-
   const wowheadWrapper = (
     <div className="top-0 left-0 flex h-5 w-full items-end justify-start pl-1">{}</div>
   )
@@ -85,11 +81,13 @@ export default function CastInterval({
 
   const closeButtonPositon = {
     left: cast.effect_duration * pixelsPerSecond - 31,
-    top: -3,
+    top: -5,
+  }
+  if (!isDragging && !isOverlay) {
+    //console.log(cast)
   }
   if (cast.effect_duration * pixelsPerSecond < 50) {
     closeButtonPositon.left = cast.effect_duration * pixelsPerSecond - 2
-    closeButtonPositon.top = -5
   }
   const transitionStyle = 'transition-all duration-100'
 
@@ -124,6 +122,7 @@ export default function CastInterval({
             if (rectRef && ref.current) {
               rectRef.current = ref.current
             }
+            console.log('hovering', cast)
             changeHover(cast)
           }
         }}
@@ -152,7 +151,7 @@ export default function CastInterval({
         </div>
         {/* Channel Duration Bar */}
         <div
-          className={`bg-cyan-400/00 absolute bottom-0 left-0 z-20 h-[50%] items-center justify-center focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`bg-cyan-400/00 absolute bottom-0 left-0 z-20 h-[30%] items-center justify-center focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             background:
               'repeating-linear-gradient(45deg, #1f1f1fB3 , #1f1f1fB3 4px, oklch(59.6% 0.145 163.225) 4px, oklch(59.6% 0.145 163.225) 8px)',

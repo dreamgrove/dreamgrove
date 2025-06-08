@@ -21,6 +21,7 @@ export { handleDreamstate } from './handleDreamstate'
 export { handleCenariusGuidance } from './handleCenariusGuidance'
 export { handleControlOfTheDream } from './handleControlOfTheDream'
 export { handleCooldownEnd } from './handleCooldownEnd'
+export { handleChannelInterrupt } from './handleChannelInterrupt'
 
 export function isValid(timelineState: TimelineState, castId: string): boolean {
   return timelineState.activeCasts.has(castId)

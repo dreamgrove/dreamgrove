@@ -21,6 +21,7 @@ import {
   handleCenariusGuidance,
   handleControlOfTheDream,
   handleCooldownEnd,
+  handleChannelInterrupt,
 } from 'lib/timeline_events'
 import { handleChargeGain } from 'lib/timeline_events/handleChargeGain'
 
@@ -316,6 +317,15 @@ export function processEventQueue(
         break
 
       case EventType.ChannelInterrupted:
+        if (!isValid(timelineState, event.castId)) break
+        handleChannelInterrupt(
+          event as TimelineEvent<EventType.ChannelInterrupted>,
+          timelineState,
+          spellInfo,
+          spellState,
+          true
+        )
+        break
       case EventType.ChannelEnd:
         if (!isValid(timelineState, event.castId)) break
         handleChannelEnd(

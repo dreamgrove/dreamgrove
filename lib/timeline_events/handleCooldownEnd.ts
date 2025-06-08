@@ -16,6 +16,7 @@ export const handleCooldownEnd: ICooldownEndHandler = (
     if (cast) {
       //cast.cooldown_duration = event.time - cast.start_s - cast.cooldown_delay_s
       cast._cd_end_s = event.time
+      cast.cooldown_duration = event.time - cast.start_s
 
       let spellToRender = processedState.spells.find((s) => s.spell.spellId === event.spellId)
       if (!spellToRender) {

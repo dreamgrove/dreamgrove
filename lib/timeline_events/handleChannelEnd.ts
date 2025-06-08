@@ -12,6 +12,7 @@ export const handleChannelEnd: IChannelEndHandler = (
   const cast = timelineState.activeCasts.get(event.castId)
   if (cast) {
     cast.channel_duration = event.time - cast.start_s
+
     timelineState.activeCasts.set(cast.id, cast)
   }
   spellState.isChanneling = false

@@ -138,6 +138,7 @@ export default function SpellCastsRow({
             current_charge: cast.current_charge,
             cooldown_delay_s: cast.cooldown_delay_s,
           })
+          newCast.is_interruped = cast.is_interruped
           changeHover(newCast)
         }
       }
@@ -167,7 +168,12 @@ export default function SpellCastsRow({
           interrupting_cast: cast.interrupting_cast,
           current_charge: cast.current_charge,
           cooldown_delay_s: cast.cooldown_delay_s,
+          cooldown_duration: cast.cooldown_duration,
         })
+        newCast.is_interruped = cast.is_interruped
+        newCast._ef_end_s = cast._ef_end_s
+        console.log('newCast', newCast)
+        console.log('cast', cast)
         if (Math.abs(dragDelta.x) >= 1) {
           changeHover(newCast)
         }

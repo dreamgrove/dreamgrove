@@ -3,7 +3,7 @@ import Markers from './Markers'
 import SpellCastsRow from './SpellCastsRow'
 import SpellButtons from './SpellButtons'
 import CustomElement from './CustomElement'
-import Debug from './Debug'
+import Debug from './Sidebar'
 import Checkboxes from './Checkboxes'
 import ActionBindings from './ActionBindings'
 import {
@@ -47,6 +47,7 @@ import {
 } from '../../lib/utils/customSpellStorage'
 import CustomSpellIcon from './CustomSpellIcon'
 import { SettingsProvider, useSettings } from './SettingsProvider'
+import Sidebar from './Sidebar'
 type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface DropdownOption {
@@ -608,7 +609,7 @@ function TimelineViewInner({
       <div className="mx-[4px] mt-6 mb-4 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
 
       <Warnings timeline={processedState.spells} current_spec={selectedSpec} />
-      <Debug
+      <Sidebar
         processedTimeline={processedState}
         timelineSettings={{
           totalLength: total_length_s,

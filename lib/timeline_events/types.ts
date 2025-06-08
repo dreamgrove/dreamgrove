@@ -82,7 +82,19 @@ export interface IChannelEndHandler {
     event: TimelineEvent<EventType.ChannelEnd>,
     timelineState: TimelineState,
     spellInfo: SpellInfo,
-    spellState: SpellState
+    spellState: SpellState,
+    interrupted?: boolean
+  ): void
+}
+
+/* CHANNEL INTERRUPTED */
+export interface IChannelInterruptHandler {
+  (
+    event: TimelineEvent<EventType.ChannelInterrupted>,
+    timelineState: TimelineState,
+    spellInfo: SpellInfo,
+    spellState: SpellState,
+    interrupted?: boolean
   ): void
 }
 

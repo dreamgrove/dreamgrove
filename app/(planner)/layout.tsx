@@ -4,15 +4,13 @@ import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Space_Grotesk } from 'next/font/google'
-import { SearchProvider, SearchConfig } from 'pliny/search'
-import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import { Analytics } from '@vercel/analytics/react'
 import { Providers } from '../(root)/providers'
 import ThemeProviders from '../(root)/theme-providers'
 import ScreenWidthWarning from '@/components/ScreenWidthWarning'
+import TimelineHeader from '@/components/TimelinePlanner/TimelineHeader'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -84,12 +82,13 @@ export default function RootLayout({ children }: LayoutProps) {
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body
-        className="flex h-full w-screen overflow-hidden bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white"
+        className="flex h-full w-screen overflow-hidden bg-[#F2F3F4] text-black antialiased dark:bg-[#c07171] dark:text-white"
         suppressHydrationWarning
       >
         <div className="flex h-full flex-col" style={{ paddingLeft: 0 }}>
           <Providers>
             <ThemeProviders>
+              <TimelineHeader />
               <main className="max-h-screen">{children}</main>
               <ScreenWidthWarning />
             </ThemeProviders>

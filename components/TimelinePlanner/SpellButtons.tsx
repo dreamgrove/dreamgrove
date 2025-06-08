@@ -122,7 +122,7 @@ export default function SpellButtons({
         <CustomElement onCreate={onCreate} onDelete={onDelete} />
         <button
           key={`spell-reset`}
-          className="w-fit rounded-xs bg-red-600/50 px-4 py-2 text-white hover:bg-red-700/50 focus:outline-hidden"
+          className="w-fit rounded-xs bg-red-600/40 px-4 py-2 text-white hover:bg-red-500/60 focus:outline-hidden"
           onClick={() => setCurrentSpells([])}
         >
           Reset All Spells

@@ -12,21 +12,21 @@ export const bindings = [
     id: Talents.ControlOfTheDream,
     spellId: 434249,
     label: 'Control of the Dream',
-    description: 'Up to 15s of unused ability time reduces its next cooldown after use',
+    description: 'Up to 15s of unused ability time are reduced from its next cooldown after use',
     specs: ['balance', 'resto', 'guardian'],
   },
   {
     id: Talents.Incarnation,
     spellId: 102560,
     label: 'Incarnation',
-    description: 'Celestial Alignment effect duration +5 sec.',
+    description: 'Celestial Alignment effect duration increased by 5 sec.',
     specs: ['balance'],
   },
   {
     id: Talents.WhirlingStars,
     spellId: 468743,
     label: 'Whirling Stars',
-    description: 'Celestial Alignment gains 2 charges and cooldown -100s.',
+    description: 'Celestial Alignment gains 2 charges and cooldown reduced by 100s.',
     specs: ['balance'],
   },
   {
@@ -34,7 +34,7 @@ export const bindings = [
     spellId: 429420,
     label: 'Potent Enchantments',
     description:
-      'Whirling Stars CD reduction +10 sec. Reforestation gives 3 additional seconds of ToL',
+      'Whirling Stars CD reduction is increased by 10 sec. Reforestation increases the duration of Tree of Life by 3 seconds',
     specs: ['balance', 'resto'],
   },
   {
@@ -42,7 +42,7 @@ export const bindings = [
     spellId: 392162,
     label: 'Dreamstate',
     description:
-      'While channeling Tranquility,  Tranquility, your other Druid spell cooldowns are reduced by up to 20 your other Druid spell cooldowns are reduced by up to 20 seconds',
+      'While channeling Tranquility, your other Druid spell cooldowns are reduced by up to 20 seconds',
     specs: ['resto'],
   },
   {
@@ -70,7 +70,8 @@ export const bindings = [
     id: Talents.CenariusGuidance,
     spellId: 393371,
     label: 'Cenarius Guidance',
-    description: 'Convoke the Spirits cooldown reduced by 50% + Tree of Life CDR',
+    description:
+      "Convoke the Spirits cooldown reduced by 50%. Tree of Life's Guardians reduce ToL's cooldown by 5s",
     specs: ['resto'],
   },
 ]

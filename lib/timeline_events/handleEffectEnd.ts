@@ -7,7 +7,7 @@ export const handleEffectEnd: IEffectEndHandler = (
 ) => {
   if (timelineState.activeCasts.has(event.castId)) {
     const cast = timelineState.activeCasts.get(event.castId)
-    if (cast) {
+    if (cast && !cast.is_interruped) {
       cast.effect_duration = event.time - cast.start_s
       cast._ef_end_s = event.time
     }

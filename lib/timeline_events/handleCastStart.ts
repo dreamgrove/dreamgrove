@@ -81,6 +81,7 @@ export const handleCastStart: ICastStartHandler = (
     })
 
     timelineState.activeCasts.set(cast.id, cast)
+    spellState.currentCast = cast
 
     const eventsToAdd: TimelineEvent<EventType>[] = []
 
