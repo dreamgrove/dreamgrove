@@ -117,7 +117,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'Cooldown Delay',
         content:
-          'If a spell has more than 1 charge, the cooldown of each charge has to wait for the previous one before starting. This duration is represented by the transparent area preceding the actual cooldown.',
+          'If a spell has more than 1 charge, the cooldown of each charge has to wait for the previous one before starting. This duration is represented by the dashed gray area preceding the actual cooldown.',
         side: 'top-left',
         selector: '#cast-102693-2-1',
         pointerRadius: 3,
@@ -127,7 +127,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'Editing the Timeline',
         content:
-          'You can drag and drop any cast on the timeline to change its position. Casts can also be deleted by clicking the X icon.',
+          'You can drag and drop any cast on the timeline to change its position. Casts can also be deleted by clicking the X icon which appears when hovering over the cast.',
         side: 'top',
         selector: '#cast-391528-0-0',
         pointerRadius: 3,
@@ -137,7 +137,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'Timeline Warnings',
         content:
-          'The timeline will also show you warnings for missing casts and other common mistakes. Keep an eye out for this menu!',
+          'The timeline will also show you warnings for missing casts and other common mistakes. Keep an eye out for this menu as more warnings will be added in the future!',
         side: 'top-right',
         selector: '#timeline-warnings-selector',
         pointerRadius: 3,
@@ -148,7 +148,7 @@ export const steps: Tour[] = [
         icon: 'X',
         title: 'MRT Export',
         content:
-          'When you are satisfied with your cooldowns, you can export them to a MRT note. This will allow you to import them directly in-game.',
+          'When you are satisfied with your cooldowns, you can export them to an MRT note. This will allow you to import them directly in-game.',
         side: 'top-right',
         selector: '#mrt-export-selector',
         pointerRadius: 3,
