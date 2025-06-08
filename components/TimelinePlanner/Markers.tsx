@@ -87,6 +87,8 @@ const Markers: React.FC<MarkersProps> = React.memo(
       }
     }, [size_px, previousSize_px, effective_marker_spacing_s, marker_spacing_s])
 
+    if (pixelsPerSecond === 0) return null
+
     const isDebug = false
     if (isDebug) {
       console.log('effective_marker_spacing_s', effective_marker_spacing_s)

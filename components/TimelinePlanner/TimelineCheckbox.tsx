@@ -60,7 +60,7 @@ const TimelineCheckbox = ({
   }, [checked, id, onToggle])
 
   return (
-    <div className="relative w-full cursor-pointer rounded-sm bg-neutral-950/30 hover:shadow-md hover:shadow-orange-500/10">
+    <div className="relative w-full cursor-pointer bg-neutral-950/30 hover:shadow-md hover:shadow-orange-500/10">
       <label className="flex h-full w-full" aria-label={`Toggle ${id}`}>
         <input
           className="absolute top-[-9999px] left-0 z-10 opacity-0 focus:outline-hidden"
@@ -69,9 +69,9 @@ const TimelineCheckbox = ({
           checked={checked}
           onChange={handleToggle}
         />
-        <div className={`relative flex-1 cursor-pointer overflow-hidden rounded-sm`}>
+        <div className={`relative flex-1 cursor-pointer overflow-hidden`}>
           <div
-            className={`absolute inset-0 h-full w-full origin-bottom rounded-sm border transition-colors duration-300 ${
+            className={`absolute inset-0 h-full w-full origin-bottom border transition-colors duration-300 ${
               checked ? 'border-main animate-clip-up' : 'border-main/20 animate-clip-down'
             }`}
           ></div>

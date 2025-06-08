@@ -80,14 +80,15 @@ export default function CastInterval({
   const bgColor = ''
 
   const closeButtonPositon = {
-    left: cast.effect_duration * pixelsPerSecond - 31,
-    top: -5,
+    left: cast.effect_duration * pixelsPerSecond - 22,
+    top: -2,
+    cursor: 'pointer',
   }
   if (!isDragging && !isOverlay) {
     //console.log(cast)
   }
   if (cast.effect_duration * pixelsPerSecond < 50) {
-    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond - 2
+    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond + 8
   }
   const transitionStyle = 'transition-all duration-100'
 
@@ -100,7 +101,7 @@ export default function CastInterval({
   return (
     <div
       ref={ref}
-      className={`relative cursor-move select-none ${isDragging ? 'z-100' : ''}`}
+      className={`group relative cursor-move select-none ${isDragging ? 'z-100' : ''}`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
     >
       {/* cast interval */}
@@ -138,32 +139,40 @@ export default function CastInterval({
         {onDelete && (
           <button
             onClick={() => onDelete(cast.id)}
-            className="text-main absolute z-100 flex h-[38px] w-10 cursor-pointer items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#b63d10] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
+            className="absolute z-100 w-6 cursor-pointer text-2xl font-bold text-[#e34538] opacity-0 transition-all duration-100 group-hover:opacity-100 hover:scale-110 hover:cursor-pointer hover:font-bold hover:text-[#D64646] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
             style={closeButtonPositon}
-            title="Remove cast"
+            title="Delete cast"
           >
-            ×
+            ✕
           </button>
         )}
+        {/* Interrupt notification */}
+        {cast.is_interruped && (
+          <span
+            style={{ left: cast.effect_duration * pixelsPerSecond + 16, bottom: -2 }}
+            className="absolute z-20 text-[0.75rem] text-yellow-500/80 transition-all duration-100"
+          >
+            ⚠<span className="pl-2">interrupted</span>
+          </span>
+        )}
 
-        <div className="text-main absolute top-0 left-0 z-100 flex h-[38px] w-10 items-center justify-center rounded-full text-3xl opacity-100 hover:font-bold hover:text-[#ff6d3b] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden">
-          {wowheadWrapper}
-        </div>
         {/* Channel Duration Bar */}
         <div
-          className={`bg-cyan-400/00 absolute bottom-0 left-0 z-20 h-[30%] items-center justify-center focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`bg-cyan-400/00 absolute bottom-0 left-0 z-20 h-[30%] items-center justify-center border-dashed focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             background:
-              'repeating-linear-gradient(45deg, #1f1f1fB3 , #1f1f1fB3 4px, oklch(59.6% 0.145 163.225) 4px, oklch(59.6% 0.145 163.225) 8px)',
+              'repeating-linear-gradient(45deg, #1f1f1fB3, #1f1f1fB3 4px, oklch(59.6% 0.145 163.225) 4px, oklch(59.6% 0.145 163.225) 8px)',
             width: `${channel_width_px + 0}px`,
             left: 3,
+            borderColor: cast.is_interruped ? 'oklch(79.5% 0.184 86.047)' : 'transparent',
+            borderWidth: cast.is_interruped ? '0 1px 0 0 ' : '0px',
           }}
         >
           {showWowheadInChannel && wowheadWrapper}
         </div>
         {/* Effect Duration Bar. Sorry for the extra pixel */}
         <div
-          className={`border-main/60 absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 bg-emerald-800 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
+          className={`border-main/60 absolute top-0 left-0 z-10 box-content flex h-[80%] items-center justify-start border-l-2 bg-emerald-800/50 shadow-2xl focus-visible:ring-0 focus-visible:outline-hidden ${transitionStyle}`}
           style={{
             width: `${effect_width_px + 1}px`,
           }}

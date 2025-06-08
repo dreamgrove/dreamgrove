@@ -30,18 +30,18 @@ export default function ScreenWidthWarning() {
   if (!showWarning) return null
 
   return (
-    <div className="bg-opacity-50 fixed inset-0 z-50 flex items-center justify-center bg-black">
-      <div className="mx-4 max-w-md rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800">
-        <h2 className="mb-4 text-xl font-semibold text-gray-900 dark:text-white">
+    <div className="bg-opacity-50 fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+      <div className="mx-4 max-w-md rounded-sm bg-white p-6 shadow-lg dark:bg-neutral-800">
+        <h2 className="mb-4 text-xl font-bold text-neutral-900 dark:text-white">
           Desktop Optimization Notice
         </h2>
-        <p className="mb-6 text-gray-600 dark:text-gray-300">
+        <p className="mb-6 text-neutral-600 dark:text-neutral-300">
           The Planner is optimized only for desktop. It might not work as intended on smaller
           screens.
         </p>
         <button
           onClick={handleDismiss}
-          className="w-full rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:focus:ring-offset-gray-800"
+          className="bg-main w-full rounded-xs px-4 py-2 font-medium text-white hover:opacity-90 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:focus:ring-offset-neutral-800"
         >
           Proceed Anyways
         </button>

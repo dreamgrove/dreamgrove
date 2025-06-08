@@ -77,7 +77,7 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
               ? 'bg-emerald-600 hover:bg-emerald-700'
               : copyStatus === 'error'
                 ? 'bg-red-600 hover:bg-red-700'
-                : 'border border-emerald-700/40 bg-emerald-400/10 hover:bg-emerald-500/20'
+                : 'border border-emerald-700/40 bg-emerald-500/30 hover:bg-emerald-500/50'
           }`}
         >
           {copyStatus === 'copied' ? (

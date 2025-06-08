@@ -18,6 +18,7 @@ export default async function Wowhead({
   textColor = '',
   context = 'inline',
   fill = false,
+  align = 'baseline',
 }) {
   let display = name
   let displayId = id
@@ -107,7 +108,7 @@ export default async function Wowhead({
   icon = <span className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</span>
   return disabled ? (
     <div
-      className={`${context} relative w-full decoration-2 q${quality} flex items-center gap-1`}
+      className={`${context} relative w-full decoration-2 q${quality} flex items-${align} gap-1`}
       style={{ color: linkColor }}
     >
       {icon}
@@ -118,7 +119,7 @@ export default async function Wowhead({
   ) : (
     <a
       href={whUrl}
-      className={`${context} decoration-2 q${quality} inline-flex items-center gap-1`}
+      className={`${context} decoration-2 q${quality} inline-flex items-${align} gap-1`}
       style={{ color: textColor != '' ? textColor : linkColor, textWrap: 'nowrap' }}
     >
       {icon}

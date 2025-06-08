@@ -130,7 +130,7 @@ export default function CustomElement({ onCreate, onDelete }: CustomElementProps
       <button
         onClick={openForm}
         id="tour-custom-button-selector"
-        className={`relative w-fit bg-neutral-900/50 px-4 py-2 text-white hover:bg-neutral-800 focus:outline-hidden ${
+        className={`relative w-fit bg-neutral-900/50 px-4 py-2 text-white hover:bg-orange-400/5 focus:outline-hidden ${
           isFormVisible ? 'ring-main/30 ring-1' : ''
         }`}
         title="Add custom spell"

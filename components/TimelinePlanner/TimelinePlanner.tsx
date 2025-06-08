@@ -57,6 +57,7 @@ export default function TimelinePlanner({
           spell: {
             name: 'Grove Guardians',
             spellId: 102693,
+            can_interrupt: false,
             channel_duration: 0,
             effect_duration: 15,
             cooldown: 30,
@@ -98,6 +99,7 @@ export default function TimelinePlanner({
             name: 'Grove Guardians',
             spellId: 102693,
             channel_duration: 0,
+            can_interrupt: false,
             effect_duration: 15,
             cooldown: 30,
             charges: 3,
@@ -111,6 +113,7 @@ export default function TimelinePlanner({
             name: 'Grove Guardians',
             spellId: 102693,
             channel_duration: 0,
+            can_interrupt: false,
             effect_duration: 15,
             cooldown: 30,
             charges: 3,
@@ -125,6 +128,7 @@ export default function TimelinePlanner({
             spellId: 102693,
             channel_duration: 0,
             effect_duration: 15,
+            can_interrupt: false,
             cooldown: 30,
             charges: 3,
             specs: ['resto'],
@@ -180,7 +184,7 @@ export default function TimelinePlanner({
           initialViewLength={initialViewLength}
           initialMarkerSpacing={initialMarkerSpacing}
         >
-          <div className="flex h-full flex-1 flex-col px-[25px]">
+          <div className="flex h-full flex-1 flex-col pr-4 pl-8">
             <TimelineView
               view_length_s={initialViewLength}
               marker_spacing_s={initialMarkerSpacing}

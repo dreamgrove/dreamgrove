@@ -160,6 +160,7 @@ export interface SpellInfo {
   charges: number
   channeled?: boolean
   specs?: string[]
+  can_interrupt?: boolean
 }
 // Parameters for creating a Cast
 export interface CastParams {

@@ -35,16 +35,10 @@ import { heartOfTheLion } from './GlobalHandlers/Feral/heartOfTheLion'
 import { cenariusGuidance } from './GlobalHandlers/Resto/cenariusGuidance'
 import { useNextStep } from 'nextstepjs'
 
-import { NextStepViewport } from 'nextstepjs'
 import { HoverProvider } from './HoverProvider'
 import Warnings from './Warnings'
 import MRTExport from './MRTExport'
-import {
-  CustomSpell,
-  loadCustomSpells,
-  removeCustomSpell,
-  isCustomSpell,
-} from '../../lib/utils/customSpellStorage'
+import { CustomSpell, loadCustomSpells, isCustomSpell } from '../../lib/utils/customSpellStorage'
 import CustomSpellIcon from './CustomSpellIcon'
 import { SettingsProvider, useSettings } from './SettingsProvider'
 import Sidebar from './Sidebar'
@@ -173,6 +167,8 @@ function TimelineViewInner({
     spells: [],
     timeline_length_s: total_length_s,
   })
+
+  console.log(spells)
 
   const filteredSpells = React.useMemo(() => {
     if (selectedSpec === 'all') {
@@ -375,19 +371,11 @@ function TimelineViewInner({
   }
 
   const handleCreateCustomElement = (params: SpellInfo) => {
-    // If it's already a custom spell (from localStorage), just add it to local spells
-    if (isCustomSpell(params)) {
-      setLocalSpells([...localSpells, params])
-    } else {
-      // This is a new spell being created, it should already be handled by CustomElement
-      setLocalSpells([...localSpells, params])
-    }
+    setLocalSpells([...localSpells, params])
   }
 
   const handleDeleteCustomSpell = (spellId: number) => {
-    // Remove from local spells
     setLocalSpells((prev) => prev.filter((spell) => spell.spellId !== spellId))
-    // Remove any casts of this spell from input actions
     setInputActions((prev) => prev.filter((action) => action.spell.spellId !== spellId))
   }
 
@@ -401,7 +389,6 @@ function TimelineViewInner({
     })
   }
 
-  // Handle spec change
   const handleSpecChange = (newSpec: string) => {
     const spec = newSpec as DruidSpec
     setSelectedSpec(spec)
@@ -420,7 +407,6 @@ function TimelineViewInner({
 
   const { startNextStep } = useNextStep()
 
-  // Auto-start tour on first visit
   useEffect(() => {
     const hasSeenTour = sessionStorage.getItem('hasSeenFirstTour')
     if (!hasSeenTour) {
@@ -430,10 +416,10 @@ function TimelineViewInner({
   }, [startNextStep])
 
   return (
-    <div className="flex h-[calc(100vh-3rem-25px)] flex-col">
+    <div className="flex h-full flex-col">
       {/* Spec selector dropdown */}
       <div className="flex flex-row items-center justify-between">
-        <div className="mx-1 mb-2 flex items-center gap-3">
+        <div className="mb-2 flex items-center gap-3">
           <CustomDropdown
             value={selectedSpec}
             onChange={handleSpecChange}
@@ -448,7 +434,7 @@ function TimelineViewInner({
         </div>
         <div className="inline-flex flex-row items-center gap-2 self-end pb-1 text-[0.8rem] text-gray-400">
           <span>
-            developed by{' '}
+            developed by:{' '}
             <a
               href="https://github.com/thevinter/"
               target="_blank"
@@ -459,19 +445,24 @@ function TimelineViewInner({
             </a>
           </span>
           {' - '}
-          <span>v.0.0.1</span>
+          <span>v.0.1.0</span>
         </div>
       </div>
       {selectedSpec === 'all' && (
-        <div className="my-2 ml-1 rounded-sm border border-yellow-500/20 bg-yellow-500/10 p-2 text-sm">
+        <div className="my-2 rounded-sm border border-yellow-500/20 bg-yellow-500/10 p-2 text-sm">
           <p>⚠️ Mixing spells between specs might produce unexpected results. Use with caution.</p>
         </div>
       )}
+      {selectedSpec === 'guardian' && (
+        <div className="my-2 rounded-sm border border-yellow-500/20 bg-yellow-500/10 p-2 text-sm">
+          <p>⚠️ Guardian is not yet supported.</p>
+        </div>
+      )}
       {/* divider */}
-      <div className="mx-[4px] my-1 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+      <div className="my-1 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
 
       {/* Action bindings */}
-      <div id="tour-effects-selector" className="mx-2 my-2">
+      <div id="tour-effects-selector" className="my-2">
         <ActionBindings
           bindings={
             selectedSpec === 'all'
@@ -484,7 +475,7 @@ function TimelineViewInner({
         />
       </div>
 
-      <div className="mx-[4px] my-2 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+      <div className="my-2 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
 
       <div id="tour-buttons-selector">
         <SpellButtons
@@ -555,25 +546,24 @@ function TimelineViewInner({
             ref={scrollContainerRef}
           >
             {/* Markers overlay, scrolls with content */}
-            <Markers
-              marker_spacing_s={marker_spacing_s}
-              total_length_s={total_length_s}
-              pixelsPerSecond={pixelsPerSecond}
-            />
-            <SpellMarkers
-              spellInfo={averageTimestamps}
-              wowheadMap={wowheadMarkerMap}
-              total_length_s={total_length_s}
-            />
-            {showEventMarkers && <EventMarkers eventInfo={processedEvents} />}
+            {processedState.spells.length > 0 && (
+              <>
+                <Markers
+                  marker_spacing_s={marker_spacing_s}
+                  total_length_s={total_length_s}
+                  pixelsPerSecond={pixelsPerSecond}
+                />
+                <SpellMarkers
+                  spellInfo={averageTimestamps}
+                  wowheadMap={wowheadMarkerMap}
+                  total_length_s={total_length_s}
+                />
+                {showEventMarkers && <EventMarkers eventInfo={processedEvents} />}
+              </>
+            )}
+
             {/* Casts/timeline rows */}
-            <div
-              className="relative mt-5 flex flex-col"
-              style={{
-                width: `${effective_total_length_px}px`,
-                minHeight: `${currentSpells.length * 40}px`, // Height based on visible rows
-              }}
-            >
+            <div className="relative mt-5 flex flex-col">
               {/* Render a SpellCastsRow for each spell, sorted by spell.id*/}
               {processedState.spells.length > 0 ? (
                 processedState.spells
@@ -594,10 +584,7 @@ function TimelineViewInner({
                     />
                   ))
               ) : (
-                <div
-                  style={{ width: `${effective_view_length_s * pixelsPerSecond}px` }}
-                  className="sticky top-0 left-0 mt-16 text-center text-sm text-gray-500 select-none"
-                >
+                <div className="absolute top-0 left-0 mt-16 w-full text-center text-sm text-gray-500 select-none">
                   Add a spell to get started
                 </div>
               )}
@@ -605,7 +592,6 @@ function TimelineViewInner({
           </div>
         </div>
       </HoverProvider>
-
       <div className="mx-[4px] mt-6 mb-4 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
 
       <Warnings timeline={processedState.spells} current_spec={selectedSpec} />

@@ -4,7 +4,7 @@
       "name": "Force of Nature",
       "spellId": 205636,
       "channel_duration": 0,
-      "effect_duration": 15,
+      "effect_duration": 10,
       "cooldown": 60,
       "charges": 1,
       "specs": ["balance"]
@@ -43,13 +43,14 @@
       "effect_duration": 15,
       "cooldown": 20,
       "charges": 3,
-      "specs": ["resto"]
+      "specs": ["resto"],
+      "can_interrupt": false
     },
     {
       "spellId": 740,
       "name": "Tranquillity",
       "channel_duration": 5,
-      "effect_duration": 5,
+      "effect_duration": 13,
       "cooldown": 180,
       "channeled": true,
       "specs": ["resto"]

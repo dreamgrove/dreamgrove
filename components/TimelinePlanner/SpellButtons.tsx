@@ -75,7 +75,7 @@ export default function SpellButtons({
   const customSpells = spells.filter((spell) => isCustomSpell(spell))
 
   return (
-    <div className="flex flex-col gap-2 p-2">
+    <div className="flex flex-col gap-2 py-2">
       {/* Regular spells */}
       <div className="mb-2 flex flex-row flex-wrap justify-between gap-2">
         <div className="flex w-full flex-row flex-wrap gap-2">

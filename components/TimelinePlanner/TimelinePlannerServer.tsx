@@ -241,6 +241,7 @@ export default async function TimelinePlannerServer() {
         fill={true}
         disabled={false}
         ellipsis={true}
+        align="center"
         textColor="#ffffff"
       />
     )
@@ -256,6 +257,7 @@ export default async function TimelinePlannerServer() {
       spells={spellsData.spells.map((spell) => ({
         ...spell,
         charges: spell.charges || 1,
+        can_interrupt: spell.can_interrupt ?? true,
       }))}
       wowheadMap={wowheadIcons}
       wowheadNameMap={wowheadIconNames}

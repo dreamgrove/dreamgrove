@@ -82,14 +82,17 @@ export default function RootLayout({ children }: LayoutProps) {
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body
-        className="flex h-full w-screen overflow-hidden bg-[#F2F3F4] text-black antialiased dark:bg-[#c07171] dark:text-white"
+        className="bg-[#F2F3F4] text-black antialiased dark:bg-[#2a2a2a] dark:text-white"
         suppressHydrationWarning
       >
-        <div className="flex h-full flex-col" style={{ paddingLeft: 0 }}>
+        <div
+          className="flex h-screen flex-col overflow-y-auto"
+          style={{ paddingLeft: 0, scrollbarGutter: 'stable' }}
+        >
           <Providers>
             <ThemeProviders>
               <TimelineHeader />
-              <main className="max-h-screen">{children}</main>
+              <main className="flex-1">{children}</main>
               <ScreenWidthWarning />
             </ThemeProviders>
           </Providers>
