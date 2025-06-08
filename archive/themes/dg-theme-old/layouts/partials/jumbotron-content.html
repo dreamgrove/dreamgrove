@@ -1,6 +1,0 @@
-{{ $featured := index (.Scratch.Get "frontpage") 0 }}
-<hgroup class="jumbotron-content">
-  <h1 class="jumbotron-content-header">Latest Article</h1>
-  <h2 class="jumbotron-content-title"><a href="{{ $featured.Permalink }}">{{ $featured.Title }}</a></h2>
-  <a href="{{ $featured.Permalink }}" class="featured-article-readmore">Read more</a>
-</hgroup>
