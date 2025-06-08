@@ -138,20 +138,6 @@ export default function TimelinePlanner({
       setExtraSpells((prev) => (prev.length > 0 ? prev : example))
     }
   }
-
-  const {
-    startNextStep,
-    closeNextStep,
-    currentTour,
-    currentStep,
-    setCurrentStep,
-    isNextStepVisible,
-  } = useNextStep()
-
-  useEffect(() => {
-    //startNextStep('firsttour')
-  }, [])
-
   return (
     <NextStep
       shadowRgb={'0, 0, 0'}

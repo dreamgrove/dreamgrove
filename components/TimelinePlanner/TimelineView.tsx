@@ -408,10 +408,10 @@ function TimelineViewInner({
   const { startNextStep } = useNextStep()
 
   useEffect(() => {
-    const hasSeenTour = sessionStorage.getItem('hasSeenFirstTour')
+    const hasSeenTour = localStorage.getItem('hasSeenFirstTour')
     if (!hasSeenTour) {
       startNextStep('firsttour')
-      sessionStorage.setItem('hasSeenFirstTour', 'true')
+      localStorage.setItem('hasSeenFirstTour', 'true')
     }
   }, [startNextStep])
 
