@@ -4,6 +4,7 @@ import React from 'react'
 import styles from './TimelinePlanner.module.css'
 import { SpellInfo, SpellTimeline } from '../../lib/types/cd_planner'
 import TimelineCheckbox from './TimelineCheckbox'
+import { DruidSpec } from './TimelineView'
 
 interface CheckboxesProps {
   activeEffects?: string[]
@@ -11,10 +12,16 @@ interface CheckboxesProps {
   spells?: SpellInfo[]
   onEffectToggle?: (effectId: string, isActive: boolean) => void
 
-  items?: Array<{ id: string; spellId: number | string; label: string; description?: string }>
+  items?: Array<{
+    id: string
+    spellId: number | string
+    label: string
+    description?: string | Record<string, string>
+  }>
   selectedItems?: string[]
   onToggle?: (id: string, isSelected: boolean) => void
   prerenderedIcons?: Record<string, React.ReactNode>
+  currentSpec?: DruidSpec
 }
 
 export default function Checkboxes({
@@ -24,6 +31,7 @@ export default function Checkboxes({
   selectedItems,
   onToggle,
   prerenderedIcons = {},
+  currentSpec,
 }: CheckboxesProps) {
   const handleCheckboxChange = (id: string, checked: boolean) => {
     if (onToggle) {
@@ -43,13 +51,19 @@ export default function Checkboxes({
         {items.map((item) => {
           const isSelected = selectedItems?.includes(item.id) || false
 
+          let description = item.description
+          if (typeof description === 'object' && currentSpec) {
+            description = description[currentSpec] || Object.values(description)[0] || ''
+          }
+          if (typeof description !== 'string') description = ''
+
           return (
             <TimelineCheckbox
               key={item.id}
               id={item.id}
               spellId={Number(item.spellId)}
               name={item.label}
-              description={item.description}
+              description={description}
               defaultCheck={isSelected}
               onToggle={handleCheckboxChange}
               prerenderedIcon={prerenderedIcons[item.spellId.toString()]}

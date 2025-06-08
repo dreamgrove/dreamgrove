@@ -5,7 +5,7 @@ import SpellButtons from './SpellButtons'
 import CustomElement from './CustomElement'
 import Debug from './Sidebar'
 import Checkboxes from './Checkboxes'
-import ActionBindings from './ActionBindings'
+import ActionBindings, { ActionBindingsProps } from './ActionBindings'
 import {
   Cast,
   SpellInfo,
@@ -42,7 +42,7 @@ import { CustomSpell, loadCustomSpells, isCustomSpell } from '../../lib/utils/cu
 import CustomSpellIcon from './CustomSpellIcon'
 import { SettingsProvider, useSettings } from './SettingsProvider'
 import Sidebar from './Sidebar'
-type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
+export type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
 
 interface DropdownOption {
   value: string
@@ -472,6 +472,7 @@ function TimelineViewInner({
           activeBindings={activeBindings}
           onToggle={handleBindingToggle}
           prerenderedIcons={wowheadMap}
+          currentSpec={selectedSpec}
         />
       </div>
 
@@ -542,7 +543,7 @@ function TimelineViewInner({
           </div>
           {/* Right side: scrollable timeline, contains markers and casts */}
           <div
-            className="relative h-full min-h-[280px] flex-1 overflow-x-scroll pl-6"
+            className="relative h-full min-h-[280px] flex-1 overflow-x-auto pl-6"
             ref={scrollContainerRef}
           >
             {/* Markers overlay, scrolls with content */}
@@ -584,8 +585,8 @@ function TimelineViewInner({
                     />
                   ))
               ) : (
-                <div className="absolute top-0 left-0 mt-16 w-full text-center text-sm text-gray-500 select-none">
-                  Add a spell to get started
+                <div className="absolute top-0 mt-16 w-full text-center text-sm text-gray-500 select-none">
+                  <span className="-ml-[13%]">Add a spell to get started</span>
                 </div>
               )}
             </div>

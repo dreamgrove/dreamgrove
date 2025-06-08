@@ -1,16 +1,18 @@
 import React from 'react'
 import Checkboxes from './Checkboxes'
+import { DruidSpec } from './TimelineView'
 
-interface ActionBindingsProps {
+export interface ActionBindingsProps {
   bindings: Array<{
     id: string
     spellId: number | string
     label: string
-    description?: string
+    description?: Record<string, string>
   }>
   activeBindings: string[]
   onToggle: (id: string, isSelected: boolean) => void
   prerenderedIcons?: Record<string, React.ReactNode>
+  currentSpec?: DruidSpec
 }
 
 export default function ActionBindings({
@@ -18,6 +20,7 @@ export default function ActionBindings({
   activeBindings,
   onToggle,
   prerenderedIcons = {},
+  currentSpec,
 }: ActionBindingsProps) {
   return (
     <div className="">
@@ -27,6 +30,7 @@ export default function ActionBindings({
         selectedItems={activeBindings}
         onToggle={onToggle}
         prerenderedIcons={prerenderedIcons}
+        currentSpec={currentSpec}
       />
     </div>
   )
