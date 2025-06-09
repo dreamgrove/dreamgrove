@@ -196,7 +196,6 @@ export class Cast {
   interrupting_cast: Cast | null
 
   interrupt(interrupting_cast: Cast) {
-    console.log('interrupting cast', interrupting_cast)
     this.interrupting_cast = interrupting_cast
     this._chann_end_s = interrupting_cast.start_s
     this._ef_end_s = interrupting_cast.start_s

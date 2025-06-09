@@ -168,8 +168,6 @@ function TimelineViewInner({
     timeline_length_s: total_length_s,
   })
 
-  console.log(spells)
-
   const filteredSpells = React.useMemo(() => {
     if (selectedSpec === 'all') {
       return localSpells

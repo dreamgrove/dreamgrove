@@ -172,8 +172,6 @@ export default function SpellCastsRow({
         })
         newCast.is_interruped = cast.is_interruped
         newCast._ef_end_s = cast._ef_end_s
-        console.log('newCast', newCast)
-        console.log('cast', cast)
         if (Math.abs(dragDelta.x) >= 1) {
           changeHover(newCast)
         }
