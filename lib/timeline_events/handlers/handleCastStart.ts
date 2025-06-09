@@ -117,8 +117,6 @@ export const handleCastStart: ICastStartHandler = (
       eventsToAdd.push(channelStartEvent)
     }
 
-    console.log('timelineState.channeledSpell', timelineState.channeledSpell)
-    console.log('spellInfo.can_interrupt', spellInfo)
     if (timelineState.channeledSpell && spellInfo.can_interrupt) {
       const channelInterruptedEvent: TimelineEvent<EventType.ChannelInterrupted> = {
         type: EventType.ChannelInterrupted,

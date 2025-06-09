@@ -47,10 +47,6 @@ const Tooltip: React.FC = () => {
   const renderCast = cast !== null && (isDragging || (!isDragging && isShiftKeyPressed)) //render cast only when dragging or when not dragging and shift is pressed
   const renderMouse = isShiftKeyPressed && isMouseInTimeline && !renderCast && !isDragging //default render mouse only we're in a timeline and we're pressing shift
 
-  if (renderCast) {
-    console.log(cast)
-  }
-
   const x = renderCast ? rectRef?.current?.getBoundingClientRect()?.left : mousePos.x - 70
   const y = renderCast ? rectRef?.current?.getBoundingClientRect()?.top : mousePos.y - 45
 
