@@ -5,7 +5,6 @@ import { useTimelineControls } from '../../Providers/TimelineLengthProvider'
 interface DebugTabProps {
   processedTimeline: TimelineToRender
   markerSpacing: number
-  warnings: WarningInfo[]
   totalCasts: number
   totalChargeIntervals: number
   allCasts: Array<{
@@ -25,7 +24,6 @@ interface WarningInfo {
 export default function Debug({
   processedTimeline,
   markerSpacing,
-  warnings,
   totalCasts,
   totalChargeIntervals,
   allCasts,
@@ -43,11 +41,6 @@ export default function Debug({
         <span className="mr-4">
           Total Casts: <strong>{totalCasts}</strong>
         </span>
-        {warnings.length > 0 && (
-          <span className="ml-4 rounded-sm bg-yellow-400 px-2 py-0.5 text-xs font-bold text-black">
-            {warnings.length} Warning{warnings.length !== 1 ? 's' : ''}
-          </span>
-        )}
       </div>
 
       {/* Debug details */}
@@ -139,25 +132,6 @@ export default function Debug({
           </div>
         )}
 
-        {/* Warnings List */}
-        {warnings.length > 0 && (
-          <div>
-            <h4 className="mb-2 font-medium">Warning Details</h4>
-            <div className="max-h-60 overflow-y-auto rounded-sm bg-gray-700 p-3">
-              <ul className="space-y-2 text-sm">
-                {warnings.map((warning) => (
-                  <li key={warning.id} className="rounded bg-yellow-500/10 p-2">
-                    <span className="mr-2 inline-block rounded-sm bg-yellow-500/30 px-1.5 py-0.5 text-xs">
-                      {warning.type}
-                    </span>
-                    {warning.message}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
         {/* JSON Data View */}
         <div className="mt-4">
           <details>
@@ -176,7 +150,6 @@ export default function Debug({
                   })),
                   castCount: totalCasts,
                   chargeEvents: totalChargeIntervals,
-                  warnings: warnings.length,
                 },
                 null,
                 2

@@ -4,25 +4,21 @@ import { PlayerAction, SPELL_GCD, SpellInfo, TimelineToRender } from '@/types/in
 import CustomElement from './CustomSpell/CustomSpellForm'
 import { isCustomSpell, removeCustomSpell } from '@/lib/utils/customSpellStorage'
 import CustomSpellIcon from './CustomSpell/CustomSpellIcon'
+import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
 interface SpellButtonsProps {
-  currentSpells: TimelineToRender
-  setCurrentSpells: React.Dispatch<React.SetStateAction<PlayerAction[]>>
-  spells: SpellInfo[]
-  onCreate: (spell: SpellInfo) => void
-  onDelete?: (spellId: number) => void
-  prerenderedIcons?: Record<string, React.ReactNode>
+  prerenderedIcons: Record<string, React.ReactNode>
 }
 
-export default function SpellButtons({
-  currentSpells,
-  setCurrentSpells,
-  spells = [],
-  onCreate,
-  onDelete,
-  prerenderedIcons = {},
-}: SpellButtonsProps) {
+export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const {
+    processedState: currentSpells,
+    setInputEvents: setCurrentSpells,
+    handleCreateCustomElement: onCreate,
+    handleDeleteCustomSpell: onDelete,
+    filteredSpells: spells,
+  } = useTimelineContext()
 
   useEffect(() => {
     if (errorMessage) {

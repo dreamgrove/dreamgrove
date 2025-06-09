@@ -3,11 +3,14 @@ import { SpellToRender } from '@/types/index'
 import { registerWarnings } from '@/lib/warnings/registerWarnings'
 import { useTimeline } from './Providers/TimelineLengthProvider'
 import { useSettings } from './Providers/SettingsProvider'
+import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
-export default function Warnings({ timeline }: { timeline: SpellToRender[] }) {
+export default function Warnings() {
   const { currentSpec } = useSettings()
   const { total_length_s } = useTimeline()
   const [isOpen, setIsOpen] = useState(false)
+  const { processedState } = useTimelineContext()
+  const timeline = processedState.spells
 
   // Get all warnings from registered warning functions that apply to current spec
   const allWarnings = registerWarnings.flatMap((warningModule) => {

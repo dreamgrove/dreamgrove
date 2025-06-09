@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react'
-import { SpellToRender } from '@/types/index'
 import { isCustomSpell, CustomSpell } from '@/lib/utils/customSpellStorage'
+import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
-export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
-  const [isOpen, setIsOpen] = useState(false)
+export default function MRTExport() {
+  const { processedState } = useTimelineContext()
+  const timeline = processedState.spells
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle')
 
   // Generate MRT note from timeline

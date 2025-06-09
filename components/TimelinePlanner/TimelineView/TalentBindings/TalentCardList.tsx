@@ -1,61 +1,31 @@
 'use client'
 
 import React from 'react'
-import { SpellInfo, SpellTimeline } from '../../../../lib/types/cd_planner'
 import TalentCard from './TalentCard'
-import { DruidSpec } from '../TimelineView'
-import { useSettings } from '../../Providers/SettingsProvider'
+import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
 
 interface TalentCardListProps {
-  activeEffects?: string[]
-  currentSpells?: SpellTimeline[]
-  spells?: SpellInfo[]
-  onEffectToggle?: (effectId: string, isActive: boolean) => void
-
-  items?: Array<{
-    id: string
-    spellId: number | string
-    label: string
-    description?: string | Record<string, string>
-  }>
-  selectedItems?: string[]
-  onToggle?: (id: string, isSelected: boolean) => void
   prerenderedIcons?: Record<string, React.ReactNode>
-  currentSpec?: DruidSpec
 }
 
-export default function TalentCardList({
-  onEffectToggle,
-  items,
-  selectedItems,
-  onToggle,
-  prerenderedIcons = {},
-}: TalentCardListProps) {
-  const { currentSpec } = useSettings()
+export default function TalentCardList({ prerenderedIcons = {} }: TalentCardListProps) {
+  const { currentSpec, availableTalents, activeTalents } = useTimelineContext()
 
-  const handleCheckboxChange = (id: string, checked: boolean) => {
-    if (onToggle) {
-      onToggle(id, checked)
-    } else if (onEffectToggle) {
-      onEffectToggle(id, checked)
-    }
-  }
-
-  if (items) {
-    if (items.length === 0) {
+  if (availableTalents.length > 0) {
+    if (availableTalents.length === 0) {
       return <div className="text-center text-sm text-gray-500">There's nothing to show here</div>
     }
 
     return (
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-        {items.map((item) => {
-          const isSelected = selectedItems?.includes(item.id) || false
+        {availableTalents.map((item) => {
+          const isSelected = activeTalents?.includes(item.id) || false
 
-          let description = item.description
-          if (typeof description === 'object' && currentSpec) {
-            description = description[currentSpec] || Object.values(description)[0] || ''
+          const description = item.description
+          let classDescription = description['balance']
+          if (currentSpec) {
+            classDescription = description[currentSpec] || Object.values(description)[0] || ''
           }
-          if (typeof description !== 'string') description = ''
 
           return (
             <TalentCard
@@ -63,9 +33,8 @@ export default function TalentCardList({
               id={item.id}
               spellId={Number(item.spellId)}
               name={item.label}
-              description={description}
+              description={classDescription}
               defaultCheck={isSelected}
-              onToggle={handleCheckboxChange}
               prerenderedIcon={prerenderedIcons[item.spellId.toString()]}
             />
           )

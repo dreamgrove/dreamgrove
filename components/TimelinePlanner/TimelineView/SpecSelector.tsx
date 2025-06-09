@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { useSettings } from '../Providers/SettingsProvider'
 import { DruidSpec } from './TimelineView'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
 export default function SpecSelector() {
-  const { currentSpec, setCurrentSpec } = useSettings()
+  const { currentSpec, setCurrentSpec } = useTimelineContext()
   return (
     <>
       <div className="flex flex-row items-center justify-between">

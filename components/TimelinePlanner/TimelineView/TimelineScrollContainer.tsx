@@ -6,29 +6,22 @@ import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
 import CustomSpellIcon from '../CustomSpell/CustomSpellIcon'
 import { useTimelineControls } from '../Providers/TimelineLengthProvider'
 import SpellRow from './SpellRow/SpellRow'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
 export default function TimelineScrollContainer({
-  spells,
   wowheadNameMap,
   marker_spacing_s,
   averageTimestamps,
   wowheadMarkerMap,
-  showEventMarkers,
-  processedEvents,
-  handleCastDelete,
-  handleCastMove,
 }: {
-  spells: SpellToRender[]
   wowheadNameMap: Record<string, React.ReactNode>
   marker_spacing_s: number
   averageTimestamps: Record<string, number[]>
   wowheadMarkerMap: Record<string, React.ReactNode>
-  showEventMarkers: boolean
-  processedEvents: TimelineEvent<EventType>[]
-  handleCastDelete: (castId: string) => void
-  handleCastMove: (castId: string, newStartTime: number) => void
 }) {
   const { total_length_s, pixelsPerSecond } = useTimelineControls()
+  const { processedState, processedEvents, handleCastDelete, handleCastMove } = useTimelineContext()
+  const spells = processedState.spells
 
   return (
     <>
@@ -48,7 +41,7 @@ export default function TimelineScrollContainer({
             total_length_s={total_length_s}
           />
           {/* Event markers */}
-          {showEventMarkers && <EventMarkers eventInfo={processedEvents} />}
+          <EventMarkers eventInfo={processedEvents} />
         </>
       )}
 

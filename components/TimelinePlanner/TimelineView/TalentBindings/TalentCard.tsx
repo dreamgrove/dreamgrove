@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
 
 // Define proper prop types
 interface TalentCardProps {
@@ -8,7 +9,6 @@ interface TalentCardProps {
   radio?: string
   defaultCheck?: boolean
   isText?: boolean
-  onToggle: (id: string, checked: boolean) => void
   disabled?: boolean
   isIcon?: boolean
   children?: React.ReactNode
@@ -16,14 +16,8 @@ interface TalentCardProps {
   prerenderedIcon?: React.ReactNode
 }
 
-const TalentCard = ({
-  id,
-  name = '',
-  onToggle,
-  description = '',
-  prerenderedIcon,
-}: TalentCardProps) => {
-  // Use prerendered icon if provided, otherwise render a fallback
+const TalentCard = ({ id, name = '', description = '', prerenderedIcon }: TalentCardProps) => {
+  const { toggleTalent } = useTimelineContext()
   const childIcon = prerenderedIcon
 
   const [checked, setChecked] = useState(false)
@@ -48,9 +42,9 @@ const TalentCard = ({
 
   const handleToggle = useCallback(() => {
     const newValue = !checked
-    onToggle(id, newValue)
+    toggleTalent(id, newValue)
     setChecked(newValue)
-  }, [checked, id, onToggle])
+  }, [checked, id, toggleTalent])
 
   return (
     <div className="relative w-full cursor-pointer bg-neutral-950/30 hover:shadow-md hover:shadow-orange-500/10">

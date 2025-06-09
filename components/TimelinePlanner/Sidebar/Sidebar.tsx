@@ -4,23 +4,17 @@ import { PiCaretDoubleUpBold, PiCaretDoubleDownBold } from 'react-icons/pi'
 import Settings from './SidebarSections/Settings'
 import About from './SidebarSections/About'
 import DebugTab from './SidebarSections/Debug'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
 interface SidebarProps {
-  processedTimeline: TimelineToRender
   markerSpacing: number
-  warnings: WarningInfo[]
-}
-
-interface WarningInfo {
-  id: string
-  castId: string
-  type: string
-  message: string
 }
 
 type TabType = 'debug' | 'settings' | 'about'
 
-export default function Sidebar({ processedTimeline, warnings = [], markerSpacing }: SidebarProps) {
+export default function Sidebar({ markerSpacing }: SidebarProps) {
+  const { processedState } = useTimelineContext()
+  const processedTimeline = processedState
   const [activeTab, setActiveTab] = useState<TabType>('about')
   const [debugHeight, setDebugHeight] = useState(55) // vh units
   const [isDragging, setIsDragging] = useState(false)
@@ -167,7 +161,6 @@ export default function Sidebar({ processedTimeline, warnings = [], markerSpacin
               <DebugTab
                 processedTimeline={processedTimeline}
                 markerSpacing={markerSpacing}
-                warnings={warnings}
                 totalCasts={totalCasts}
                 totalChargeIntervals={totalChargeIntervals}
                 allCasts={allCasts}

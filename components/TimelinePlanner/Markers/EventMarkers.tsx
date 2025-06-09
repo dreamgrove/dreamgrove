@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTimelineControls } from '../Providers/TimelineLengthProvider'
 import { EventType, TimelineEvent } from '@/types/index'
+import { useSettings } from '../Providers/SettingsProvider'
 
 const colorFromType = (type: string) => {
   switch (type) {
@@ -80,6 +81,8 @@ const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
   // Get timeToPixels function from context
   const { timeToPixels, total_length_s } = useTimelineControls()
 
+  const { showEventMarkers } = useSettings()
+
   // Group events by their pixel positions
   const eventsByPosition = eventInfo.reduce(
     (acc, event) => {
@@ -98,17 +101,18 @@ const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
       className={`pointer-events-none absolute top-0 left-0 z-10 flex h-full pl-6`}
       style={{ width: timeToPixels(total_length_s) }}
     >
-      {Object.entries(eventsByPosition).flatMap(([position, events]) =>
-        events.map((event, i) => (
-          <Marker
-            key={`event-${position}-${i}`}
-            position={parseInt(position)}
-            label={event.type === EventType.DreamstateCdr ? '' : event.type}
-            height={21}
-            horizontalOffset={i * 15}
-          />
-        ))
-      )}
+      {showEventMarkers &&
+        Object.entries(eventsByPosition).flatMap(([position, events]) =>
+          events.map((event, i) => (
+            <Marker
+              key={`event-${position}-${i}`}
+              position={parseInt(position)}
+              label={event.type === EventType.DreamstateCdr ? '' : event.type}
+              height={21}
+              horizontalOffset={i * 15}
+            />
+          ))
+        )}
     </div>
   )
 }

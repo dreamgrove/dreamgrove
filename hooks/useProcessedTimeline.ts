@@ -8,17 +8,18 @@ import {
   TimelineEvent,
   TimelineToRender,
 } from '@/types/timeline'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function useProcessedTimeline(
   inputActions: PlayerAction[],
   localSpells: SpellInfo[],
   keysToActions: Map<string, Set<GlobalAction>>,
   activeBindings: string[],
-  processedReschedulingsRef: React.RefObject<Set<string>>,
   setInputActions: React.Dispatch<React.SetStateAction<PlayerAction[]>>
 ) {
   const { setTotalLength } = useTimelineControls()
+
+  const processedReschedulingsRef = React.useRef<Set<string>>(new Set())
 
   const [processedState, setProcessedState] = useState<TimelineToRender>({
     spells: [],
