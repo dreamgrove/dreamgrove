@@ -1,23 +1,20 @@
-import React, { useState, useMemo } from 'react'
-import { SpellToRender } from 'lib/types/cd_planner'
-import type { Warning } from 'lib/warnings/registerWarnings'
-import { registerWarnings } from 'lib/warnings/registerWarnings'
-import { useTimeline } from './TimelineContext'
+import React, { useState } from 'react'
+import { registerWarnings } from '@/lib/warnings/registerWarnings'
+import { useTimeline } from './Providers/TimelineLengthProvider'
+import { useSettings } from './Providers/SettingsProvider'
+import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
-export default function Warnings({
-  timeline,
-  current_spec,
-}: {
-  timeline: SpellToRender[]
-  current_spec: string
-}) {
+export default function Warnings() {
+  const { currentSpec } = useSettings()
   const { total_length_s } = useTimeline()
   const [isOpen, setIsOpen] = useState(false)
+  const { processedState } = useTimelineContext()
+  const timeline = processedState.spells
 
   // Get all warnings from registered warning functions that apply to current spec
   const allWarnings = registerWarnings.flatMap((warningModule) => {
     // Skip if this warning doesn't apply to the current spec
-    if (!warningModule.spec.includes(current_spec)) {
+    if (!warningModule.spec.includes(currentSpec)) {
       return []
     }
 

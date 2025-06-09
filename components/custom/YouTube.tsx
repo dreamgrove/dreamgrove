@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { useLogger } from '../hooks/useLogger'
 import YouTubePlayer from 'react-youtube'
 import type { YouTubeProps as ReactYouTubeProps, YouTubeEvent } from 'react-youtube'
 
@@ -23,7 +22,6 @@ const YouTube: React.FC<YouTubeProps> = ({
   autoplay = false,
   className = '',
 }) => {
-  const logger = useLogger('YouTube')
   const [isClient, setIsClient] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [fallbackMode, setFallbackMode] = useState(false)
@@ -32,11 +30,10 @@ const YouTube: React.FC<YouTubeProps> = ({
     setIsClient(true)
 
     if (!id) {
-      logger.error('YouTube component rendered without an ID')
       setError('Missing YouTube video ID')
       return
     }
-  }, [id, logger])
+  }, [id])
 
   const onError = (event: YouTubeEvent) => {
     setFallbackMode(true)

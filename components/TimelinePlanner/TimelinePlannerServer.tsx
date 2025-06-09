@@ -3,7 +3,7 @@ import TimelinePlanner from './TimelinePlanner'
 import Wowhead from '../custom/Wowhead'
 import { GET } from '../../app/api/warcraft-logs/druid-casts/route'
 import { NextRequest } from 'next/server'
-import { bindings } from './GlobalHandlers/bindings'
+import { bindings } from '@/lib/talent_handlers/bindings'
 import WowheadIcon from '../custom/WowheadIcon'
 
 async function fetchDruidCasts() {
@@ -190,7 +190,7 @@ export default async function TimelinePlannerServer() {
           },
         ],
       }
-  // Calculate average timestamps
+
   const averageTimestampsBySpell = druidCastsData ? calculateAverageTimestamps(druidCastsData) : {}
 
   const toSkipWowhead = false
@@ -200,7 +200,6 @@ export default async function TimelinePlannerServer() {
       <> </>
     ) : (
       <WowheadIcon
-        type="spell"
         id={spell.spellId.toString()}
         noLink
         name={spell.name}
@@ -217,7 +216,6 @@ export default async function TimelinePlannerServer() {
       <> </>
     ) : (
       <WowheadIcon
-        type="spell"
         noLink
         id={binding.spellId.toString()}
         name={binding.label}

@@ -1,6 +1,5 @@
 import WowheadClientIcon from './WowheadClientIcon'
 import React, { ReactNode } from 'react'
-import { useLogger } from '@/components/hooks/useLogger'
 
 interface TimelineProps {
   spellIds: string[]
@@ -9,8 +8,6 @@ interface TimelineProps {
 }
 
 export default function TimelineClientVersion({ spellIds, beta = false, children }: TimelineProps) {
-  const logger = useLogger('Timeline')
-
   // Process spell IDs to count occurrences
   const processedSpells = spellIds.reduce<{ id: string; count: number }[]>((acc, id) => {
     const lastSpell = acc.length > 0 ? acc[acc.length - 1] : null

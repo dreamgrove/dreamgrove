@@ -1,16 +1,12 @@
 'use client'
-// components/Tooltip.tsx
-import React, { useEffect, useRef, useState, useMemo } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import ReactDOM from 'react-dom'
-import { useHoverContext } from './HoverProvider'
-import { useTimelineControls } from './TimelineContext'
-import { formatTime } from './TimelineView'
-import { Cast } from 'lib/types/cd_planner'
-type Props = {
-  id?: string
-}
+import { useHoverContext } from './Providers/HoverProvider'
+import { useTimelineControls } from './Providers/TimelineLengthProvider'
+import { formatTime } from '../../lib/utils/utilityFunctions'
+import { Cast } from '@/models/Cast'
 
-const Tooltip: React.FC<Props> = ({ id = '' }) => {
+const Tooltip: React.FC = () => {
   const {
     scrollContainer,
     pixelsToTime,

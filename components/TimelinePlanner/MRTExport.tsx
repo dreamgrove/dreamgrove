@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react'
-import { SpellToRender } from '../../lib/types/cd_planner'
-import { isCustomSpell, CustomSpell } from '../../lib/utils/customSpellStorage'
+import { isCustomSpell, CustomSpell } from '@/lib/utils/customSpellStorage'
+import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
-export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
-  const [isOpen, setIsOpen] = useState(false)
+export default function MRTExport() {
+  const { processedState } = useTimelineContext()
+  const timeline = processedState.spells
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle')
 
   // Generate MRT note from timeline
@@ -55,20 +56,6 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
   return (
     <div className="pr-2">
       <div className="">
-        {/* <div
-          className="flex cursor-pointer items-center select-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className="text-sm text-neutral-400">show full note</span>
-          <svg
-            className={`ml-1 h-4 w-4 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div> */}
         <button
           onClick={handleExportClick}
           id="mrt-export-selector"
@@ -107,18 +94,6 @@ export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
           )}
         </button>
       </div>
-
-      {/* {isOpen && (
-        <div className="space-y-2">
-          <textarea
-            className="focus:border-main/20 w-full rounded border border-neutral-600 bg-neutral-800 p-3 font-mono text-sm text-neutral-200 focus:ring-0 focus:outline-none"
-            rows={Math.min(mrtNote.split('\n').length, 15)}
-            value={mrtNote}
-            readOnly
-            placeholder="No casts in timeline"
-          />
-        </div>
-      )} */}
     </div>
   )
 }
