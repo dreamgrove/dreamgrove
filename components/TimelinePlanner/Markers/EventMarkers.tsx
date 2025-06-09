@@ -2,6 +2,7 @@ import React from 'react'
 import { useTimelineControls } from '../Providers/TimelineLengthProvider'
 import { EventType, TimelineEvent } from '@/types/index'
 import { useSettings } from '../Providers/SettingsProvider'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
 const colorFromType = (type: string) => {
   switch (type) {
@@ -69,22 +70,20 @@ const Marker = ({
     </div>
   )
 }
-interface EventMarkerProps {
-  eventInfo: TimelineEvent<EventType>[]
-}
 
 /**
  * Markers: evenly spaced vertical lines and labels across the timeline.
  * Markers are generated dynamically based on marker_spacing_s until reaching total_length_s.
  */
-const EventMarkers: React.FC<EventMarkerProps> = ({ eventInfo }) => {
+const EventMarkers: React.FC = () => {
   // Get timeToPixels function from context
   const { timeToPixels, total_length_s } = useTimelineControls()
+  const { processedEvents } = useTimelineContext()
 
   const { showEventMarkers } = useSettings()
 
   // Group events by their pixel positions
-  const eventsByPosition = eventInfo.reduce(
+  const eventsByPosition = processedEvents.reduce(
     (acc, event) => {
       const pixelPosition = timeToPixels(event.time)
       if (!acc[pixelPosition]) {

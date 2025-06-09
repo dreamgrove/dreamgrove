@@ -1,71 +1,47 @@
 import EventMarkers from '../Markers/EventMarkers'
 import Markers from '../Markers/Markers'
 import SpellMarkers from '../Markers/SpellMarkers'
-import { EventType, SpellToRender, TimelineEvent } from '@/types/index'
-import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
-import CustomSpellIcon from '../CustomSpell/CustomSpellIcon'
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
 import SpellRow from './SpellRow/SpellRow'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
+import { useMemo } from 'react'
 
 export default function TimelineScrollContainer({
-  wowheadNameMap,
-  marker_spacing_s,
   averageTimestamps,
   wowheadMarkerMap,
 }: {
-  wowheadNameMap: Record<string, React.ReactNode>
-  marker_spacing_s: number
   averageTimestamps: Record<string, number[]>
   wowheadMarkerMap: Record<string, React.ReactNode>
 }) {
-  const { total_length_s, pixelsPerSecond } = useTimelineControls()
-  const { processedState, processedEvents, handleCastDelete, handleCastMove } = useTimelineContext()
-  const spells = processedState.spells
+  const { processedState } = useTimelineContext()
+  const sortedSpells = useMemo(
+    () => processedState.spells.sort((a, b) => a.spell.spellId - b.spell.spellId),
+    [processedState.spells]
+  )
 
   return (
     <>
       {/* Markers overlay */}
-      {spells.length > 0 && (
+      {sortedSpells.length > 0 && (
         <>
           {/* Timestamps */}
-          <Markers
-            marker_spacing_s={marker_spacing_s}
-            total_length_s={total_length_s}
-            pixelsPerSecond={pixelsPerSecond}
-          />
+          <Markers />
           {/* Wclog markers */}
-          <SpellMarkers
-            spellInfo={averageTimestamps}
-            wowheadMap={wowheadMarkerMap}
-            total_length_s={total_length_s}
-          />
+          <SpellMarkers spellInfo={averageTimestamps} wowheadMap={wowheadMarkerMap} />
           {/* Event markers */}
-          <EventMarkers eventInfo={processedEvents} />
+          <EventMarkers />
         </>
       )}
 
       {/* Casts/timeline rows */}
       <div className="relative mt-5 flex flex-col">
         {/* Render a SpellCastsRow for each spell, sorted by spell.id*/}
-        {spells.length > 0 ? (
-          spells
-            .sort((a, b) => a.spell.spellId - b.spell.spellId)
-            .map((spellCast) => (
-              <SpellRow
-                key={`spell-row-${spellCast.spell.spellId}`}
-                spellTimeline={spellCast}
-                wowheadComponent={
-                  isCustomSpell(spellCast.spell) ? (
-                    <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="md" />
-                  ) : (
-                    wowheadNameMap[spellCast.spell.spellId] || <span>{spellCast.spell.name}</span>
-                  )
-                }
-                onCastDelete={handleCastDelete}
-                onCastMove={handleCastMove}
-              />
-            ))
+        {sortedSpells.length > 0 ? (
+          sortedSpells.map((singleSpellRow) => (
+            <SpellRow
+              key={`spell-row-${singleSpellRow.spell.spellId}`}
+              spellTimeline={singleSpellRow}
+            />
+          ))
         ) : (
           <div className="absolute top-0 mt-16 w-full text-center text-sm text-gray-500 select-none">
             <span className="-ml-[13%]">Add a spell to get started</span>

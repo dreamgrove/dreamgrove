@@ -24,11 +24,6 @@ import {
   handleChargeGain,
 } from '@/lib/timeline_events/index'
 
-/**
- * Generates the base event queue from player actions
- * @param inputActions - The player actions to process
- * @returns EventQueue - A priority queue of events
- */
 export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   const eventQueue = new EventQueue()
 
@@ -44,15 +39,9 @@ export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
         startTime = lastTime + 0.01
       }
 
-      // Round to avoid floating point precision issues
       startTime = Math.round(startTime * 100) / 100
       lastTime = startTime
 
-      /*
-      if (action.spell.name === 'Reforestation') {
-        startTime = Math.max(startTime, 15)
-      }
-      */
       eventQueue.push({
         type: EventType.CastStart,
         time: startTime,
@@ -75,17 +64,6 @@ function getMatchingActions<T extends EventType>(
   return matched
 }
 
-/**
- * Process an event queue and generate a timeline for rendering
- * @param eventQueue - The queue of events to process
- * @param spells - The available spells information
- * @param keysToActions - Map of spell IDs to associated global actions
- * @param activeBindings - List of active talent bindings
- * @returns {object} Object containing:
- *   - processedState: TimelineToRender - A timeline ready for rendering
- *   - processedEvents: TimelineEvent[] - All events that were processed
- *   - rescheduledCasts: Array of {castId, newTime} - Casts that had to be rescheduled due to insufficient charges
- */
 export function processEventQueue(
   eventQueue: EventQueue,
   spells: SpellInfo[],

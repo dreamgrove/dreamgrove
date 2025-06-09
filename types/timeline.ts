@@ -18,6 +18,8 @@ export interface Warning {
 export type TalentBindings = {
   id: Talents
   spellId: number
+  affectedSpells: number[]
+  handler: import('@/types/events').GlobalAction
   label: string
   description: Record<string, string>
   specs: string[]

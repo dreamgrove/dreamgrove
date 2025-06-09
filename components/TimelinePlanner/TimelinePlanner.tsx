@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import TimelineView from './TimelineView/TimelineView'
 import FightSelector from './FightSelector'
-import { TimelineProvider } from './Providers/TimelineLengthProvider'
+import { TimelineLengthProvider } from './Providers/TimelineLengthProvider'
 import { SpellInfo, PlayerAction } from '@/types/index'
 import { NextStep } from 'nextstepjs'
 import { steps } from '@/lib/steps'
@@ -28,22 +28,18 @@ export default function TimelinePlanner({
   const initialViewLength = 250
   const initialMarkerSpacing = 10
   const [currentEncounterId, setCurrentEncounterId] = useState('empty')
-  const [extraSpells, setExtraSpells] = useState<PlayerAction[]>([])
+  const [tutorialSpells, setTutorialSpells] = useState<PlayerAction[]>([])
 
   useEffect(() => {
     console.log(`Selected encounter changed to: ${currentEncounterId}`)
-
-    // if (currentEncounterId !== 'empty') {
-    //   loadEncounterData(currentEncounterId);
-    // }
   }, [currentEncounterId])
 
   const onComplete = (tourName: string | null) => {
-    setExtraSpells([])
+    setTutorialSpells([])
   }
 
   const onSkip = (step: number, tourName: string | null) => {
-    setExtraSpells([])
+    setTutorialSpells([])
   }
 
   const onNextStepStepChange = (step: number, tourName: string | null) => {
@@ -134,7 +130,7 @@ export default function TimelinePlanner({
         },
       ]
 
-      setExtraSpells((prev) => (prev.length > 0 ? prev : example))
+      setTutorialSpells((prev) => (prev.length > 0 ? prev : example))
     }
   }
   return (
@@ -161,24 +157,23 @@ export default function TimelinePlanner({
           </div>
         )}
 
-        <TimelineProvider
+        <TimelineLengthProvider
           initialTotalLength={initialTotalLength}
           initialViewLength={initialViewLength}
           initialMarkerSpacing={initialMarkerSpacing}
         >
           <div className="flex h-full flex-1 flex-col pr-4 pl-8">
             <TimelineView
-              marker_spacing_s={initialMarkerSpacing}
               spells={spells}
               wowheadMap={wowheadMap}
               wowheadNameMap={wowheadNameMap}
-              extraSpells={extraSpells}
+              tutorialSpells={tutorialSpells}
               wowheadMarkerMap={wowheadMarkerMap}
               averageTimestamps={averageTimestamps}
               currentEncounterId={currentEncounterId}
             />
           </div>
-        </TimelineProvider>
+        </TimelineLengthProvider>
       </div>
     </NextStep>
   )

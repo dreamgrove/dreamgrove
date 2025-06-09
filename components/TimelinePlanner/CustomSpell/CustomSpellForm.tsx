@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { SpellInfo } from '@/types/index'
 import { addCustomSpell } from '@/lib/utils/customSpellStorage'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
-interface CustomSpellFormProps {
-  onCreate?: (params: SpellInfo) => void
-  onDelete?: (spellId: number) => void
-}
-
-export default function CustomSpellForm({ onCreate, onDelete }: CustomSpellFormProps) {
+export default function CustomSpellForm() {
   const [isFormVisible, setIsFormVisible] = useState(false)
   const [name, setName] = useState('')
   const [cooldown, setCooldown] = useState<string | number>(60)
@@ -18,6 +13,8 @@ export default function CustomSpellForm({ onCreate, onDelete }: CustomSpellFormP
   const [spellId, setSpellId] = useState<string | number>('')
   const [errorMessage, setErrorMessage] = useState('')
   const [selectedSpecs, setSelectedSpecs] = useState<string[]>([])
+
+  const { createCustomSpell } = useTimelineContext()
 
   const openForm = () => {
     if (!isFormVisible) {
@@ -65,7 +62,6 @@ export default function CustomSpellForm({ onCreate, onDelete }: CustomSpellFormP
       return
     }
 
-    // Convert empty strings to 0
     const finalCooldown = cooldown === '' ? 0 : Number(cooldown)
     const finalEffectDuration = effectDuration === '' ? 0 : Number(effectDuration)
     const finalCharges = charges === '' ? 0 : Math.max(1, Number(charges))
@@ -96,7 +92,6 @@ export default function CustomSpellForm({ onCreate, onDelete }: CustomSpellFormP
     // Either use the selected specs or set to 'all'
     const specsList = selectedSpecs.length > 0 ? selectedSpecs : ['all']
 
-    // Create the custom spell using the utility function
     const customSpell = addCustomSpell({
       name: name.trim(),
       cooldown: finalCooldown,
@@ -108,9 +103,7 @@ export default function CustomSpellForm({ onCreate, onDelete }: CustomSpellFormP
       mrtSpellId: finalSpellId,
     })
 
-    if (onCreate) {
-      onCreate(customSpell)
-    }
+    createCustomSpell(customSpell)
 
     setName('')
     setCooldown(60)

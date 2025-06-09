@@ -3,16 +3,6 @@ import type { CardComponentProps } from 'nextstepjs'
 
 import { Step } from 'nextstepjs'
 
-interface CustomCardProps {
-  step: Step
-  currentStep: number
-  totalSteps: number
-  nextStep: () => void
-  prevStep: () => void
-  skipTour: () => void
-  arrow: React.ReactNode
-}
-
 const TutorialCard = ({
   step,
   currentStep,

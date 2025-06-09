@@ -1,5 +1,12 @@
-import { extractIdFromUrl, formatUrl, WowheadDataParams } from './utils'
+import { extractIdFromUrl, formatUrl } from './utils'
 
+interface WowheadDataParams {
+  id: string
+  type: string
+  name: string
+  beta?: boolean
+  url?: string
+}
 export async function fetchWowheadData({
   id,
   type,

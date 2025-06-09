@@ -1,7 +1,5 @@
 import { useContext } from 'react'
-import { TimelineProvider } from './TimelineProvider'
 
-// Import the context directly from TimelineProvider
 import { TimelineContext } from './TimelineProvider'
 
 export function useTimelineContext() {

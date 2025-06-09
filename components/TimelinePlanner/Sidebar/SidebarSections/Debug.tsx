@@ -4,7 +4,6 @@ import { useTimelineControls } from '../../Providers/TimelineLengthProvider'
 
 interface DebugTabProps {
   processedTimeline: TimelineToRender
-  markerSpacing: number
   totalCasts: number
   totalChargeIntervals: number
   allCasts: Array<{
@@ -14,16 +13,8 @@ interface DebugTabProps {
   }>
 }
 
-interface WarningInfo {
-  id: string
-  castId: string
-  type: string
-  message: string
-}
-
 export default function Debug({
   processedTimeline,
-  markerSpacing,
   totalCasts,
   totalChargeIntervals,
   allCasts,
@@ -141,7 +132,6 @@ export default function Debug({
             <pre className="mt-2 max-h-60 overflow-y-auto rounded-sm bg-neutral-900 p-3 text-xs">
               {JSON.stringify(
                 {
-                  markerSpacing,
                   spells: processedTimeline.spells.map((spell) => ({
                     name: spell.spell.name,
                     id: spell.spell.spellId,

@@ -4,7 +4,6 @@ import { bindings as allBindings } from '@/lib/talent_handlers/bindings'
 export function useActiveBindings(setInputActions: (actions: any[]) => void, currentSpec: string) {
   const [activeTalents, setActiveTalents] = useState<string[]>([])
 
-  // Toggle a binding
   const toggleTalent = useCallback((id: string, isSelected: boolean) => {
     setActiveTalents((prev) => {
       if (isSelected) {
@@ -15,7 +14,7 @@ export function useActiveBindings(setInputActions: (actions: any[]) => void, cur
     })
   }, [])
 
-  // Reset bindings and inputActions on spec change
+  // Reset talents and inputActions on spec change
   useEffect(() => {
     setActiveTalents([])
     setInputActions([])

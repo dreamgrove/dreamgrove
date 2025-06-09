@@ -1,17 +1,9 @@
 import React, { useCallback, useState } from 'react'
 import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
 
-// Define proper prop types
 interface TalentCardProps {
   id: string
-  spellId: number
   name?: string
-  radio?: string
-  defaultCheck?: boolean
-  isText?: boolean
-  disabled?: boolean
-  isIcon?: boolean
-  children?: React.ReactNode
   description?: string
   prerenderedIcon?: React.ReactNode
 }
@@ -19,7 +11,6 @@ interface TalentCardProps {
 const TalentCard = ({ id, name = '', description = '', prerenderedIcon }: TalentCardProps) => {
   const { toggleTalent } = useTimelineContext()
   const childIcon = prerenderedIcon
-
   const [checked, setChecked] = useState(false)
 
   const stateIndicator = (

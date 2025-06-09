@@ -17,7 +17,7 @@ const Marker = ({
       {/* Vertical marker line */}
       <div className="absolute bottom-0 left-0 h-[87%] w-[2px] bg-red-400 opacity-30" />
 
-      {/* Wowhead icon below the time label */}
+      {/* Wowhead icon  */}
       {wowheadComponent && (
         <span className="absolute -left-[0px] z-20 h-10 w-10 transform" style={{ top: height }}>
           {wowheadComponent}
@@ -29,20 +29,15 @@ const Marker = ({
 interface SpellMarkerProps {
   spellInfo: Record<string, number[]>
   wowheadMap?: Record<string, React.ReactNode>
-  total_length_s: number
 }
 
 /**
  * Markers: evenly spaced vertical lines and labels across the timeline.
  * Markers are generated dynamically based on marker_spacing_s until reaching total_length_s.
  */
-const SpellMarkers: React.FC<SpellMarkerProps> = ({
-  spellInfo,
-  wowheadMap = {},
-  total_length_s,
-}) => {
+const SpellMarkers: React.FC<SpellMarkerProps> = ({ spellInfo, wowheadMap = {} }) => {
   // Get timeToPixels function from context
-  const { timeToPixels } = useTimelineControls()
+  const { timeToPixels, total_length_s } = useTimelineControls()
 
   const ca_timestamps = spellInfo['ca'] || []
   const convoke_timestamps = spellInfo['convoke'] || []

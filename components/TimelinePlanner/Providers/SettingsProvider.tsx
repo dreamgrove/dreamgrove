@@ -64,7 +64,6 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
   const [isInitialized, setIsInitialized] = useState(false)
   const [currentSpec, setCurrentSpec] = useState<DruidSpec>('balance')
 
-  // Load settings from localStorage on mount
   useEffect(() => {
     const settings = loadSettings()
     setShowEventMarkersState(settings.showEventMarkers)
@@ -72,7 +71,6 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
     setIsInitialized(true)
   }, [])
 
-  // Save settings to localStorage whenever they change (but not on initial load)
   useEffect(() => {
     if (isInitialized) {
       saveSettings({ showEventMarkers, timestampFormat })

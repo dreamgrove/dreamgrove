@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 interface WowheadIconProps {
   id: string
-  type: string
+  type?: string
   name: string
   beta?: boolean
   url?: string
@@ -16,7 +16,7 @@ interface WowheadIconProps {
 
 export default async function WowheadIcon({
   id,
-  type,
+  type = 'spell',
   name,
   beta = false,
   url = '',

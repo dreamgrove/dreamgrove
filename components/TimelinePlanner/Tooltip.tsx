@@ -1,6 +1,5 @@
 'use client'
-// components/Tooltip.tsx
-import React, { useEffect, useRef, useState, useMemo } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import { useHoverContext } from './Providers/HoverProvider'
 import { useTimelineControls } from './Providers/TimelineLengthProvider'

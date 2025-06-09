@@ -3,6 +3,7 @@ import { SpellToRender } from '@/types/index'
 import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
 import CustomSpellIcon from '../CustomSpell/CustomSpellIcon'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
+import { useMemo } from 'react'
 
 export default function SpellNames({
   wowheadNameMap,
@@ -10,28 +11,29 @@ export default function SpellNames({
   wowheadNameMap: Record<string, React.ReactNode>
 }) {
   const { processedState } = useTimelineContext()
-  const spells = processedState.spells
+  const sortedSpells = useMemo(
+    () => processedState.spells.sort((a, b) => a.spell.spellId - b.spell.spellId),
+    [processedState.spells]
+  )
   return (
     <div className="w-[200px] min-w-[120px] shrink-0">
       <div className="mt-5">
         <div className="flex flex-col items-start justify-start pl-2">
-          {spells
-            .sort((a, b) => a.spell.spellId - b.spell.spellId)
-            .map((spellCast) =>
-              spellCast.spell.charges > 1 ? (
-                <SpellNameWithCharges
-                  key={`spell-name-${spellCast.spell.spellId}`}
-                  spellCast={spellCast}
-                  wowheadNameMap={wowheadNameMap}
-                />
-              ) : (
-                <SpellName
-                  key={`spell-name-${spellCast.spell.spellId}`}
-                  spellCast={spellCast}
-                  wowheadNameMap={wowheadNameMap}
-                />
-              )
-            )}
+          {sortedSpells.map((singleSpellRow) =>
+            singleSpellRow.spell.charges > 1 ? (
+              <SpellNameWithCharges
+                key={`spell-name-${singleSpellRow.spell.spellId}`}
+                spellCast={singleSpellRow}
+                wowheadNameMap={wowheadNameMap}
+              />
+            ) : (
+              <SpellName
+                key={`spell-name-${singleSpellRow.spell.spellId}`}
+                spellCast={singleSpellRow}
+                wowheadNameMap={wowheadNameMap}
+              />
+            )
+          )}
         </div>
       </div>
     </div>

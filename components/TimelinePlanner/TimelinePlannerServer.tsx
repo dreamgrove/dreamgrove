@@ -190,7 +190,7 @@ export default async function TimelinePlannerServer() {
           },
         ],
       }
-  // Calculate average timestamps
+
   const averageTimestampsBySpell = druidCastsData ? calculateAverageTimestamps(druidCastsData) : {}
 
   const toSkipWowhead = false
@@ -200,7 +200,6 @@ export default async function TimelinePlannerServer() {
       <> </>
     ) : (
       <WowheadIcon
-        type="spell"
         id={spell.spellId.toString()}
         noLink
         name={spell.name}
@@ -217,7 +216,6 @@ export default async function TimelinePlannerServer() {
       <> </>
     ) : (
       <WowheadIcon
-        type="spell"
         noLink
         id={binding.spellId.toString()}
         name={binding.label}

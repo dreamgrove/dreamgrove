@@ -8,13 +8,10 @@ interface DraggableCastProps {
   idx: number
   id: string
   castInfo: Cast
-  icon: React.ReactNode
-  onClick?: () => void
-  onDelete?: (castId: string) => void
   deltaSeconds?: number
 }
 
-const DraggableCast = ({ idx, id, castInfo, icon, onClick, onDelete }: DraggableCastProps) => {
+const DraggableCast = ({ idx, id, castInfo }: DraggableCastProps) => {
   const { timeToPixels } = useTimelineControls()
 
   const cssId = `cast-${castInfo.spell.spellId}-${castInfo.current_charge}-${idx}`
@@ -35,15 +32,12 @@ const DraggableCast = ({ idx, id, castInfo, icon, onClick, onDelete }: Draggable
         zIndex: isDragging ? 20 : 10,
         opacity: isDragging ? 0.2 : 1,
       }}
-      onClick={onClick}
       {...listeners}
       {...attributes}
       className="absolute focus:outline-hidden"
     >
       <CastInterval
         cast={castInfo}
-        icon={icon}
-        onDelete={onDelete}
         isOverlay={false}
         isDragging={isDragging}
         className={`${isDragging ? 'cursor-grabbing' : 'cursor-move'}`}

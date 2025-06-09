@@ -13,8 +13,8 @@ import React, { useEffect, useState } from 'react'
 export function useProcessedTimeline(
   inputActions: PlayerAction[],
   localSpells: SpellInfo[],
-  keysToActions: Map<string, Set<GlobalAction>>,
-  activeBindings: string[],
+  keysToTalents: Map<string, Set<GlobalAction>>,
+  activeTalents: string[],
   setInputActions: React.Dispatch<React.SetStateAction<PlayerAction[]>>
 ) {
   const { setTotalLength } = useTimelineControls()
@@ -31,14 +31,15 @@ export function useProcessedTimeline(
   useEffect(() => {
     setTotalLength(processedState.timeline_length_s > 240 ? processedState.timeline_length_s : 240)
   }, [processedState])
+
   useEffect(() => {
     const queue = generateBaseQueue(inputActions)
 
     const { processedState, processedEvents, rescheduledCasts } = processEventQueue(
       queue,
       localSpells,
-      keysToActions,
-      activeBindings
+      keysToTalents,
+      activeTalents
     )
 
     setProcessedState(processedState)
@@ -84,6 +85,7 @@ export function useProcessedTimeline(
         )
       }
     }
-  }, [inputActions, localSpells, keysToActions, activeBindings])
+  }, [inputActions, localSpells, keysToTalents, activeTalents])
+
   return { processedState, processedEvents }
 }

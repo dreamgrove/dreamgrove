@@ -8,7 +8,6 @@ interface ChargeCounterProps {
   className?: string
 }
 
-// Define interfaces for our processed segments
 interface ProcessedSegment {
   start: number
   end: number

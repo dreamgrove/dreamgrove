@@ -12,13 +12,8 @@ interface SpellButtonsProps {
 
 export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
-  const {
-    processedState: currentSpells,
-    setInputEvents: setCurrentSpells,
-    handleCreateCustomElement: onCreate,
-    handleDeleteCustomSpell: onDelete,
-    filteredSpells: spells,
-  } = useTimelineContext()
+  const { processedState, setInputEvents, filteredSpells, deleteCustomSpell, createCustomSpell } =
+    useTimelineContext()
 
   useEffect(() => {
     if (errorMessage) {
@@ -31,7 +26,7 @@ export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
   }, [errorMessage])
 
   const handleSpellAdd = (spell: SpellInfo) => {
-    const matchingSpell = currentSpells.spells.find((s) => s.spell.spellId === spell.spellId)
+    const matchingSpell = processedState.spells.find((s) => s.spell.spellId === spell.spellId)
 
     let startTime = 0
 
@@ -49,15 +44,14 @@ export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
       id: uuidv4(),
     }
 
-    setCurrentSpells((prevActions) => {
-      const newActions = [...prevActions, newAction]
+    setInputEvents((prevActions: PlayerAction[]) => {
+      const newActions: PlayerAction[] = [...prevActions, newAction]
       return newActions
     })
   }
 
-  // Separate custom spells from regular spells
-  const regularSpells = spells.filter((spell) => !isCustomSpell(spell))
-  const customSpells = spells.filter((spell) => isCustomSpell(spell))
+  const regularSpells = filteredSpells.filter((spell) => !isCustomSpell(spell))
+  const customSpells = filteredSpells.filter((spell) => isCustomSpell(spell))
 
   return (
     <div className="flex flex-col gap-2 py-2">
@@ -67,8 +61,8 @@ export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
           {regularSpells.map((spell) => (
             <SpellButton
               key={`spell-button-${spell.spellId}`}
-              spell={spell}
               onClick={() => handleSpellAdd(spell)}
+              spell={spell}
               prerenderedIcon={prerenderedIcons[spell.spellId.toString()]}
             />
           ))}
@@ -90,8 +84,7 @@ export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
                 />
                 <button
                   onClick={() => {
-                    removeCustomSpell(spell.spellId)
-                    onDelete?.(spell.spellId)
+                    deleteCustomSpell(spell.spellId)
                   }}
                   className="text-md absolute -top-[5px] -right-[5px] flex h-[16px] w-[16px] items-center justify-center rounded-md bg-pink-700 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 hover:bg-red-700"
                   title="Delete custom spell"
@@ -104,11 +97,11 @@ export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
         </div>
       )}
       <div className="flex flex-row gap-2 text-sm">
-        <CustomElement onCreate={onCreate} onDelete={onDelete} />
+        <CustomElement />
         <button
           key={`spell-reset`}
           className="w-fit rounded-xs bg-red-600/40 px-4 py-2 text-white hover:bg-red-500/60 focus:outline-hidden"
-          onClick={() => setCurrentSpells([])}
+          onClick={() => setInputEvents([])}
         >
           Reset All Spells
         </button>

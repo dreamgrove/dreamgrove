@@ -6,13 +6,9 @@ import About from './SidebarSections/About'
 import DebugTab from './SidebarSections/Debug'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
-interface SidebarProps {
-  markerSpacing: number
-}
-
 type TabType = 'debug' | 'settings' | 'about'
 
-export default function Sidebar({ markerSpacing }: SidebarProps) {
+export default function Sidebar() {
   const { processedState } = useTimelineContext()
   const processedTimeline = processedState
   const [activeTab, setActiveTab] = useState<TabType>('about')
@@ -31,15 +27,19 @@ export default function Sidebar({ markerSpacing }: SidebarProps) {
   )
 
   // Get all casts and sort them by start_s
-  const allCasts = processedTimeline.spells
-    .flatMap((spellInfo) =>
-      spellInfo.casts.map((cast) => ({
-        cast,
-        spellName: spellInfo.spell.name,
-        spellId: spellInfo.spell.spellId,
-      }))
-    )
-    .sort((a, b) => a.cast.start_s - b.cast.start_s)
+  const allCasts = React.useMemo(
+    () =>
+      processedTimeline.spells
+        .flatMap((spellInfo) =>
+          spellInfo.casts.map((cast) => ({
+            cast,
+            spellName: spellInfo.spell.name,
+            spellId: spellInfo.spell.spellId,
+          }))
+        )
+        .sort((a, b) => a.cast.start_s - b.cast.start_s),
+    [processedTimeline.spells]
+  )
 
   // Drag handlers for resizing
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -58,7 +58,6 @@ export default function Sidebar({ markerSpacing }: SidebarProps) {
       const deltaVh = (deltaY / viewportHeight) * 100
       const newHeight = Math.max(15, Math.min(80, dragStartHeight + deltaVh)) // Min 15vh, max 80vh
 
-      // Use requestAnimationFrame to throttle updates
       requestAnimationFrame(() => {
         setDebugHeight(newHeight)
       })
@@ -160,7 +159,6 @@ export default function Sidebar({ markerSpacing }: SidebarProps) {
             {activeTab === 'debug' && (
               <DebugTab
                 processedTimeline={processedTimeline}
-                markerSpacing={markerSpacing}
                 totalCasts={totalCasts}
                 totalChargeIntervals={totalChargeIntervals}
                 allCasts={allCasts}

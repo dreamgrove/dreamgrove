@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react'
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
+import { useTimeline } from '../Providers/TimelineLengthProvider'
 import { useHoverContext } from '../Providers/HoverProvider'
+import { TiDelete } from 'react-icons/ti'
+import { CiWarning } from 'react-icons/ci'
 import { Cast } from '@/models/Cast'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
 interface CastProps {
   cast: Cast
-  icon: React.ReactNode
   className?: string
-  onDelete?: (castId: string) => void
   isDragging?: boolean
   isOverlay?: boolean
   hasCollision?: boolean
@@ -15,23 +16,15 @@ interface CastProps {
 
 export default function CastInterval({
   cast,
-  icon,
   className,
-  onDelete,
   isOverlay = false,
   isDragging,
   hasCollision = true,
 }: CastProps) {
-  const { pixelsPerSecond } = useTimelineControls()
-  const {
-    changeHover,
-    removeHover,
-    cast: hoveredCast,
-    rectRef,
-    setIsHovering,
-    isHovering,
-    draggedId,
-  } = useHoverContext()
+  const { pixelsPerSecond } = useTimeline()
+  const { handleCastDelete } = useTimelineContext()
+  const { changeHover, removeHover, rectRef, setIsHovering, isHovering, draggedId } =
+    useHoverContext()
 
   const ref = useRef<HTMLDivElement>(null)
 
@@ -42,22 +35,9 @@ export default function CastInterval({
   const isLogging = false
 
   if (isLogging) {
-    /*console.log({
-      id: cast.id,
-      start_s: cast.start_s,
-      duration_s: cast.duration_s,
-      channel_end: cast.start_s + cast.channel_visual_duration,
-      effect_end: cast.start_s + cast.channel_visual_duration + cast.effect_visual_duration,
-      cast_end: cast.start_s + cast.duration_s,
-      channel_visual_duration: cast.channel_visual_duration,
-      effect_visual_duration: cast.effect_visual_duration,
-      cooldown_visual_duration: cast.cooldown_visual_duration,
-      cooldown_delay_visual_duration: cast.cooldown_delay_visual_duration,
-      cooldown_delay_s: cast.cooldown_delay_s,
-      effect_duration: cast.effect_duration,
-    })*/
     console.log('[CAST]: ', cast)
   }
+
   const maxWidth = Math.max(Math.max(channel_width_px, effect_width_px), cooldown_width_px)
 
   const ignored = !isOverlay && cast.id !== draggedId
@@ -74,12 +54,12 @@ export default function CastInterval({
 
   const closeButtonPositon = {
     left: cast.effect_duration * pixelsPerSecond - 22,
-    top: -2,
+    top: 3,
     cursor: 'pointer',
   }
 
   if (cast.effect_duration * pixelsPerSecond < 50) {
-    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond + 8
+    closeButtonPositon.left = cast.effect_duration * pixelsPerSecond + 10
   }
   const transitionStyle = 'transition-all duration-100'
 
@@ -127,24 +107,25 @@ export default function CastInterval({
         }}
       >
         {/* Delete button */}
-        {onDelete && (
+        {handleCastDelete && (
           <button
-            onClick={() => onDelete(cast.id)}
-            className="absolute z-100 w-6 cursor-pointer text-2xl font-bold text-[#e34538] opacity-0 transition-all duration-100 group-hover:opacity-100 hover:scale-110 hover:cursor-pointer hover:font-bold hover:text-[#D64646] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
+            onClick={() => handleCastDelete(cast.id)}
+            className="absolute z-100 cursor-pointer text-xl font-bold text-[#e34538] opacity-0 transition-all duration-100 group-hover:opacity-100 hover:scale-110 hover:cursor-pointer hover:font-bold hover:text-[#D64646] focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden"
             style={closeButtonPositon}
             title="Delete cast"
           >
-            ✕
+            <TiDelete />
           </button>
         )}
         {/* Interrupt notification */}
         {cast.is_interruped && (
-          <span
-            style={{ left: cast.effect_duration * pixelsPerSecond + 16, bottom: -2 }}
-            className="absolute z-20 text-[0.75rem] text-yellow-500/80 transition-all duration-100"
+          <div
+            style={{ left: cast.effect_duration * pixelsPerSecond + 14, bottom: -2 }}
+            className="absolute z-20 flex items-center text-[0.75rem] text-yellow-500/80 transition-all duration-100"
           >
-            ⚠<span className="pl-2">interrupted</span>
-          </span>
+            <CiWarning className="text-yellow-500/80" />
+            <span className="pl-2">interrupted</span>
+          </div>
         )}
 
         {/* Channel Duration Bar */}

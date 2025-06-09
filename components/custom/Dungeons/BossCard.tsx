@@ -13,6 +13,7 @@ export default async function BossCard({ title, image, id, children }) {
         id,
         type: 'npc',
         beta: true,
+        name: title,
       })
 
       if (data.icon) {

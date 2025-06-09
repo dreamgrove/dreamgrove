@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import TalentCard from './TalentCard'
 import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
@@ -9,7 +7,7 @@ interface TalentCardListProps {
 }
 
 export default function TalentCardList({ prerenderedIcons = {} }: TalentCardListProps) {
-  const { currentSpec, availableTalents, activeTalents } = useTimelineContext()
+  const { currentSpec, availableTalents } = useTimelineContext()
 
   if (availableTalents.length > 0) {
     if (availableTalents.length === 0) {
@@ -19,8 +17,6 @@ export default function TalentCardList({ prerenderedIcons = {} }: TalentCardList
     return (
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
         {availableTalents.map((item) => {
-          const isSelected = activeTalents?.includes(item.id) || false
-
           const description = item.description
           let classDescription = description['balance']
           if (currentSpec) {
@@ -31,10 +27,8 @@ export default function TalentCardList({ prerenderedIcons = {} }: TalentCardList
             <TalentCard
               key={item.id}
               id={item.id}
-              spellId={Number(item.spellId)}
               name={item.label}
               description={classDescription}
-              defaultCheck={isSelected}
               prerenderedIcon={prerenderedIcons[item.spellId.toString()]}
             />
           )

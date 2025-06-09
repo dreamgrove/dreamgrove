@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { SpellInfo } from '@/types/timeline'
-import { loadCustomSpells } from '@/lib/utils/customSpellStorage'
+import { loadCustomSpells, removeCustomSpell } from '@/lib/utils/customSpellStorage'
 
 export function useLocalSpells(baseSpells: SpellInfo[]) {
   const [localSpells, setLocalSpells] = useState<SpellInfo[]>(baseSpells)
@@ -11,17 +11,16 @@ export function useLocalSpells(baseSpells: SpellInfo[]) {
     setLocalSpells([...baseSpells, ...customSpells])
   }, [baseSpells])
 
-  // Add a custom spell
-  const handleCreateCustomElement = useCallback((params: SpellInfo) => {
+  const createCustomSpell = (params: SpellInfo) => {
     setLocalSpells((prev) => [...prev, params])
-  }, [])
+  }
 
-  // Delete a custom spell
-  const handleDeleteCustomSpell = useCallback((spellId: number) => {
+  const deleteCustomSpell = useCallback((spellId: number) => {
+    removeCustomSpell(spellId)
     setLocalSpells((prev) => prev.filter((spell) => spell.spellId !== spellId))
   }, [])
 
-  // Get spells for a specific spec (like filteredSpells)
+  // Get spells for a specific spec
   const getSpellsForSpec = useCallback(
     (spec: string) => {
       if (spec === 'all') return localSpells
@@ -35,8 +34,8 @@ export function useLocalSpells(baseSpells: SpellInfo[]) {
   return {
     localSpells,
     setLocalSpells,
-    handleCreateCustomElement,
-    handleDeleteCustomSpell,
+    createCustomSpell,
+    deleteCustomSpell,
     getSpellsForSpec,
   }
 }

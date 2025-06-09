@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-// Define the structure of our timeline context
 interface TimelineContextType {
   // Timeline dimensions and scaling
   total_length_s: number
@@ -24,12 +23,11 @@ interface TimelineContextType {
   isControlKeyPressed: boolean
   isShiftKeyPressed: boolean
 
-  // Register container for width calculations
+  // container for width calculations
   registerScrollContainer: (element: HTMLDivElement | null) => void
   scrollContainer: HTMLDivElement | null
 }
 
-// Create initial context value
 const initialContext: TimelineContextType = {
   total_length_s: 240,
   view_length_s: 60,
@@ -49,10 +47,8 @@ const initialContext: TimelineContextType = {
   scrollContainer: null,
 }
 
-// Create the context
 const TimelineContext = createContext<TimelineContextType>(initialContext)
 
-// Provider props
 interface TimelineProviderProps {
   children: ReactNode
   initialTotalLength?: number
@@ -60,12 +56,11 @@ interface TimelineProviderProps {
   initialMarkerSpacing?: number
 }
 
-// Provider component
-export function TimelineProvider({
+export function TimelineLengthProvider({
   children,
-  initialTotalLength = 240, // 4 minutes default
-  initialViewLength = 60, // 1 minute default view
-  initialMarkerSpacing = 10, // 10 seconds between markers
+  initialTotalLength = 240, // 4 minutes d
+  initialViewLength = 60, // 1 minute
+  initialMarkerSpacing = 10, // 10 seconds
 }: TimelineProviderProps) {
   // Core timeline settings
   const [total_length_s, setTotalLength] = useState(initialTotalLength)
@@ -135,7 +130,6 @@ export function TimelineProvider({
     effective_view_length_s,
     marker_spacing_s,
 
-    // Pixel calculations
     scrollContainerWidth,
     scrollContainer,
     effective_num_windows,

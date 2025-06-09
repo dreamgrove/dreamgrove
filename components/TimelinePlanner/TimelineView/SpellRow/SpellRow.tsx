@@ -13,15 +13,13 @@ import {
 import DraggableCast from '../../Cast/DraggableCast'
 import { SPELL_GCD, SpellToRender } from '@/types/index'
 import { Cast } from '@/models/Cast'
-import { useTimelineControls } from '../../Providers/TimelineLengthProvider'
+import { useTimeline, useTimelineControls } from '../../Providers/TimelineLengthProvider'
 import CastInterval from '../../Cast/CastInterval'
 import ChargesCounter from './ChargeCounter'
 import { useHoverContext } from '../../Providers/HoverProvider'
+import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
 
 interface SpellRowProps {
-  wowheadComponent: React.ReactNode
-  onCastDelete?: (castId: string) => void
-  onCastMove?: (castId: string, newStartTime: number, newCharge?: number) => void
   className?: string
   spellTimeline: SpellToRender
 }
@@ -50,13 +48,9 @@ function DroppableChargeRow({
   )
 }
 
-export default function SpellRow({
-  spellTimeline,
-  wowheadComponent,
-  onCastDelete,
-  onCastMove,
-}: SpellRowProps) {
-  const { pixelsPerSecond } = useTimelineControls()
+export default function SpellRow({ spellTimeline }: SpellRowProps) {
+  const { handleCastMove } = useTimelineContext()
+  const { pixelsPerSecond } = useTimeline()
   const [activeDragId, setActiveDragId] = useState<string | null>(null)
   const activeDraggedCast = activeDragId
     ? spellTimeline.casts.find((cast) => cast.id === activeDragId)
@@ -97,7 +91,7 @@ export default function SpellRow({
       const castId = active.id as string
       const cast = spellTimeline.casts.find((c) => c.id === castId)
 
-      if (cast && onCastMove) {
+      if (cast && handleCastMove) {
         const deltaSeconds = delta.x / pixelsPerSecond
         const proposedStartTime = Math.max(
           0,
@@ -105,7 +99,7 @@ export default function SpellRow({
         )
 
         if (proposedStartTime !== cast.start_s) {
-          onCastMove(castId, proposedStartTime)
+          handleCastMove(castId, proposedStartTime)
           const newCast = new Cast({
             id: cast.id,
             spell: cast.spell,
@@ -192,26 +186,15 @@ export default function SpellRow({
       modifiers={modifiers}
     >
       {spellTimeline.spell.charges > 1 ? (
-        <RowMultipleCharges
-          spellTimeline={spellTimeline}
-          wowheadComponent={wowheadComponent}
-          onCastDelete={onCastDelete}
-          className={className}
-        />
+        <RowMultipleCharges spellTimeline={spellTimeline} className={className} />
       ) : (
-        <RowSingleCharge
-          spellTimeline={spellTimeline}
-          wowheadComponent={wowheadComponent}
-          onCastDelete={onCastDelete}
-          className={className}
-        />
+        <RowSingleCharge spellTimeline={spellTimeline} className={className} />
       )}
 
       <DragOverlay dropAnimation={null}>
         {activeDraggedCast && activeDragId && (
           <CastInterval
             cast={activeDraggedCast}
-            icon={wowheadComponent}
             isOverlay={true}
             isDragging={true}
             className="cursor-grabbing"
@@ -225,13 +208,9 @@ export default function SpellRow({
 
 const RowSingleCharge = ({
   spellTimeline,
-  wowheadComponent,
-  onCastDelete,
   className,
 }: {
   spellTimeline: SpellToRender
-  wowheadComponent: React.ReactNode
-  onCastDelete?: (castId: string) => void
   className: string
 }) => {
   return (
@@ -242,8 +221,6 @@ const RowSingleCharge = ({
           idx={index}
           id={cast.id || `cast-${index}`}
           castInfo={cast}
-          icon={wowheadComponent}
-          onDelete={onCastDelete}
         />
       ))}
     </div>
@@ -252,17 +229,12 @@ const RowSingleCharge = ({
 
 const RowMultipleCharges = ({
   spellTimeline,
-  wowheadComponent,
-  onCastDelete,
   className,
 }: {
   spellTimeline: SpellToRender
-  wowheadComponent: React.ReactNode
-  onCastDelete?: (castId: string) => void
   className: string
 }) => {
   const maxUsedCharges = spellTimeline.chargesUsed
-
   const castsByCharge = splitCastsByCharges(spellTimeline.casts, maxUsedCharges)
 
   const chargeRows = castsByCharge.map((chargeCasts, chargeIndex) => (
@@ -277,12 +249,11 @@ const RowMultipleCharges = ({
           key={cast.id || `cast-${chargeIndex}-${index}`}
           id={cast.id || `cast-${chargeIndex}-${index}`}
           castInfo={cast}
-          icon={wowheadComponent}
-          onDelete={cast.id && onCastDelete ? () => onCastDelete(cast.id!) : undefined}
         />
       ))}
     </DroppableChargeRow>
   ))
+
   return (
     <div id={`timeline-row-${spellTimeline.spell.spellId}`}>
       <ChargesCounter

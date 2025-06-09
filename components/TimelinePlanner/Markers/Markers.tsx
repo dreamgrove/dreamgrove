@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSettings } from '../Providers/SettingsProvider'
+import { useTimelineControls } from '../Providers/TimelineLengthProvider'
 
 interface MarkerProps {
   label: number
@@ -42,7 +43,7 @@ const Marker: React.FC<MarkerProps> = ({ label, width }) => {
       )}
       {/* Vertical marker line */}
       <div className="absolute bottom-0 left-0 h-[90%] w-px bg-gray-400/30 opacity-30" />
-      {/* Timestamp label to the right of the marker, at the top */}
+      {/* Timestamp label  */}
       <span
         className="absolute top-0 z-20 py-0 text-xs whitespace-nowrap text-gray-200"
         style={{ left: -left }}
@@ -54,9 +55,6 @@ const Marker: React.FC<MarkerProps> = ({ label, width }) => {
 }
 
 interface MarkersProps {
-  total_length_s: number
-  marker_spacing_s: number
-  pixelsPerSecond: number
   className?: string
 }
 
@@ -65,11 +63,12 @@ interface MarkersProps {
  * Markers are generated dynamically based on marker_spacing_s until reaching total_length_s.
  */
 const Markers: React.FC<MarkersProps> = React.memo(
-  function Markers({ total_length_s, marker_spacing_s, pixelsPerSecond, className = '' }) {
+  function Markers({ className = '' }) {
+    const { total_length_s, pixelsPerSecond, marker_spacing_s } = useTimelineControls()
+
     const [effective_marker_spacing_s, setMarkerSpacing] = useState(marker_spacing_s)
     const [previousSize_px, setPreviousSize_px] = useState(0)
 
-    // Calculate space between markers in pixels
     const size_px = marker_spacing_s * pixelsPerSecond
 
     useEffect(() => {
@@ -110,12 +109,7 @@ const Markers: React.FC<MarkersProps> = React.memo(
     )
   },
   (prevProps, nextProps) => {
-    return (
-      prevProps.total_length_s === nextProps.total_length_s &&
-      prevProps.marker_spacing_s === nextProps.marker_spacing_s &&
-      prevProps.pixelsPerSecond === nextProps.pixelsPerSecond &&
-      prevProps.className === nextProps.className
-    )
+    return prevProps.className === nextProps.className
   }
 )
 

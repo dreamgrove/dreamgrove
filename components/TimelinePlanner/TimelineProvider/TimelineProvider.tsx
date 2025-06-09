@@ -2,26 +2,34 @@ import React, { createContext, ReactNode, useState } from 'react'
 import { useTimelineEvents } from 'hooks/useTimelineActions'
 import { useLocalSpells } from 'hooks/useLocalSpells'
 import { useActiveBindings } from 'hooks/useActiveBindings'
-import { useKeysToActions } from 'hooks/useKeysToActions'
 import { useProcessedTimeline } from 'hooks/useProcessedTimeline'
-import { SpellInfo, PlayerAction, TalentBindings, TimelineToRender } from '@/types/index'
+import {
+  SpellInfo,
+  PlayerAction,
+  TalentBindings,
+  TimelineToRender,
+  GlobalAction,
+  TimelineEvent,
+  EventType,
+} from '@/types/index'
+import { useKeysToTalents } from 'hooks/useKeysToActions'
 
 export interface TimelineContextType {
-  inputEvents: any
-  setInputEvents: any
-  handleCastDelete: any
-  handleCastMove: any
-  localSpells: any
-  handleCreateCustomElement: any
-  handleDeleteCustomSpell: any
-  getSpellsForSpec: any
+  inputEvents: PlayerAction[]
+  setInputEvents: React.Dispatch<React.SetStateAction<PlayerAction[]>>
+  handleCastDelete: (id: string) => void
+  handleCastMove: (id: string, newInstant: number) => void
+  localSpells: SpellInfo[]
+  createCustomSpell: (params: SpellInfo) => void
+  deleteCustomSpell: (spellId: number) => void
+  getSpellsForSpec: (spec: string) => SpellInfo[]
   activeTalents: string[]
   toggleTalent: (id: string, isSelected: boolean) => void
   availableTalents: TalentBindings[]
-  keysToActions: any
+  keysToTalents: Map<string, Set<GlobalAction>>
   processedState: TimelineToRender
-  processedEvents: any
-  filteredSpells: any
+  processedEvents: TimelineEvent<EventType>[]
+  filteredSpells: SpellInfo[]
   currentSpec: string
   setCurrentSpec: React.Dispatch<React.SetStateAction<string>>
 }
@@ -31,28 +39,31 @@ export const TimelineContext = createContext<TimelineContextType | undefined>(un
 interface TimelineProviderProps {
   children: ReactNode
   spells?: SpellInfo[]
-  extraSpells?: PlayerAction[]
+  tutorialSpells?: PlayerAction[]
 }
 
 export function TimelineProvider({
   children,
   spells = [],
-  extraSpells = [],
+  tutorialSpells = [],
 }: TimelineProviderProps) {
   const [currentSpec, setCurrentSpec] = useState('balance')
+
   const { inputEvents, setInputEvents, handleCastDelete, handleCastMove } =
-    useTimelineEvents(extraSpells)
-  const { localSpells, handleCreateCustomElement, handleDeleteCustomSpell, getSpellsForSpec } =
+    useTimelineEvents(tutorialSpells)
+
+  const { localSpells, createCustomSpell, deleteCustomSpell, getSpellsForSpec } =
     useLocalSpells(spells)
+
   const { activeTalents, toggleTalent, availableTalents } = useActiveBindings(
     setInputEvents,
     currentSpec
   )
-  const { keysToActions } = useKeysToActions(activeTalents)
+  const { keysToTalents } = useKeysToTalents(activeTalents)
   const { processedState, processedEvents } = useProcessedTimeline(
     inputEvents,
     localSpells,
-    keysToActions,
+    keysToTalents,
     activeTalents,
     setInputEvents
   )
@@ -67,13 +78,13 @@ export function TimelineProvider({
     handleCastDelete,
     handleCastMove,
     localSpells,
-    handleCreateCustomElement,
-    handleDeleteCustomSpell,
+    createCustomSpell,
+    deleteCustomSpell,
     getSpellsForSpec,
     activeTalents,
     toggleTalent,
     availableTalents,
-    keysToActions,
+    keysToTalents,
     processedState,
     processedEvents,
     filteredSpells,

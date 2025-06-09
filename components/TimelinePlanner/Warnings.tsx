@@ -1,5 +1,4 @@
-import React, { useState, useMemo } from 'react'
-import { SpellToRender } from '@/types/index'
+import React, { useState } from 'react'
 import { registerWarnings } from '@/lib/warnings/registerWarnings'
 import { useTimeline } from './Providers/TimelineLengthProvider'
 import { useSettings } from './Providers/SettingsProvider'
