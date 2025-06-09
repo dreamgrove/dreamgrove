@@ -1,4 +1,4 @@
-import { SpellInfo } from '../types/cd_planner'
+import { SpellInfo } from '@/types/index'
 
 const CUSTOM_SPELLS_KEY = 'dreamgrove-custom-spells'
 

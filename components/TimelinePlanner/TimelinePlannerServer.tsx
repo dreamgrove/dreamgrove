@@ -3,7 +3,7 @@ import TimelinePlanner from './TimelinePlanner'
 import Wowhead from '../custom/Wowhead'
 import { GET } from '../../app/api/warcraft-logs/druid-casts/route'
 import { NextRequest } from 'next/server'
-import { bindings } from './GlobalHandlers/bindings'
+import { bindings } from '@/lib/talent_handlers/bindings'
 import WowheadIcon from '../custom/WowheadIcon'
 
 async function fetchDruidCasts() {

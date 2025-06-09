@@ -1,13 +1,12 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import styles from './TimelinePlanner.module.css'
-import TimelineView from './TimelineView'
+import TimelineView from './TimelineView/TimelineView'
 import FightSelector from './FightSelector'
-import { TimelineProvider } from './TimelineContext'
-import { SpellInfo, PlayerAction } from '../../lib/types/cd_planner'
-import { NextStep, useNextStep } from 'nextstepjs'
-import { steps } from 'lib/steps'
+import { TimelineProvider } from './Providers/TimelineLengthProvider'
+import { SpellInfo, PlayerAction } from '@/types/index'
+import { NextStep } from 'nextstepjs'
+import { steps } from '@/lib/steps'
 import TutorialCard from './TutorialCard'
 
 interface TimelinePlannerProps {
@@ -152,7 +151,7 @@ export default function TimelinePlanner({
       onStepChange={onNextStepStepChange}
       onSkip={onSkip}
     >
-      <div className={styles.timeline}>
+      <div className="border-radius-4px relative flex h-full flex-col overflow-x-clip bg-[#2a2a2a] pb-12">
         {false && (
           <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 md:space-x-4">
             <FightSelector
@@ -169,7 +168,6 @@ export default function TimelinePlanner({
         >
           <div className="flex h-full flex-1 flex-col pr-4 pl-8">
             <TimelineView
-              view_length_s={initialViewLength}
               marker_spacing_s={initialMarkerSpacing}
               spells={spells}
               wowheadMap={wowheadMap}

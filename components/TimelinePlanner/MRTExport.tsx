@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
-import { SpellToRender } from '../../lib/types/cd_planner'
-import { isCustomSpell, CustomSpell } from '../../lib/utils/customSpellStorage'
+import { SpellToRender } from '@/types/index'
+import { isCustomSpell, CustomSpell } from '@/lib/utils/customSpellStorage'
 
 export default function MRTExport({ timeline }: { timeline: SpellToRender[] }) {
   const [isOpen, setIsOpen] = useState(false)

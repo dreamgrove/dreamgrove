@@ -1,6 +1,4 @@
-import { useTimeline } from '@/components/TimelinePlanner/TimelineContext'
-import { SpellInfo, SpellToRender } from '../types/cd_planner'
-import { Warning } from './registerWarnings'
+import { SpellToRender, Warning } from '../../types'
 /**
  * Analyzes a timeline and identifies spells that have gaps between casts
  * where the sum of gaps exceeds the spell's cooldown (indicating missed cast opportunities).

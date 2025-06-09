@@ -1,6 +1,5 @@
-import { SpellToRender } from 'lib/types/cd_planner'
-import type { Warning } from './registerWarnings'
-import { Cast } from 'lib/types/cd_planner'
+import { SpellToRender, Warning } from '../../types'
+import { Cast } from '../../models/Cast'
 
 // Spell IDs for Balance Druid cooldowns
 const CONVOKE_THE_SPIRITS_ID = 391528

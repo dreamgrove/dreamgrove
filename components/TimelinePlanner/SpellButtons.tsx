@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import {
-  Cast,
-  PlayerAction,
-  SPELL_GCD,
-  SpellInfo,
-  SpellTimeline,
-  TimelineToRender,
-} from '../../lib/types/cd_planner'
-import CustomElement from './CustomElement'
-import {
-  isCustomSpell,
-  removeCustomSpell,
-  loadCustomSpells,
-} from '../../lib/utils/customSpellStorage'
-import CustomSpellIcon from './CustomSpellIcon'
+import { PlayerAction, SPELL_GCD, SpellInfo, TimelineToRender } from '@/types/index'
+import CustomElement from './CustomSpell/CustomSpellForm'
+import { isCustomSpell, removeCustomSpell } from '@/lib/utils/customSpellStorage'
+import CustomSpellIcon from './CustomSpell/CustomSpellIcon'
 
 interface SpellButtonsProps {
   currentSpells: TimelineToRender
