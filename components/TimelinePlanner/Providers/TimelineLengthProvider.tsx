@@ -71,6 +71,7 @@ export function TimelineLengthProvider({
   const [scrollContainer, setScrollContainer] = useState<HTMLDivElement | null>(null)
   const [scrollContainerWidth, setScrollContainerWidth] = useState(0)
 
+  console.log(total_length_s)
   const registerScrollContainer = (element: HTMLDivElement | null) => {
     setScrollContainer(element)
   }

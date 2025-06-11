@@ -94,7 +94,6 @@ export default function CastInterval({
             if (rectRef && ref.current) {
               rectRef.current = ref.current
             }
-            console.log('hovering', cast)
             changeHover(cast)
           }
         }}

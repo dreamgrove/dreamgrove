@@ -30,10 +30,6 @@ export default function TimelinePlanner({
   const [currentEncounterId, setCurrentEncounterId] = useState('empty')
   const [tutorialSpells, setTutorialSpells] = useState<PlayerAction[]>([])
 
-  useEffect(() => {
-    console.log(`Selected encounter changed to: ${currentEncounterId}`)
-  }, [currentEncounterId])
-
   const onComplete = (tourName: string | null) => {
     setTutorialSpells([])
   }

@@ -1,4 +1,4 @@
-import { SpellToRender, Warning } from '../../types'
+import { SpellToRender, Warning } from '@/types/index'
 /**
  * Analyzes a timeline and identifies spells that have gaps between casts
  * where the sum of gaps exceeds the spell's cooldown (indicating missed cast opportunities).
@@ -42,7 +42,7 @@ export function findMissedCastOpportunities(
 
     // Calculate gaps between consecutive casts
     for (let i = 1; i < sortedCasts.length; i++) {
-      const previousCastEnd = sortedCasts[i - 1].start_s + sortedCasts[i - 1].spell.effect_duration
+      const previousCastEnd = sortedCasts[i - 1].end_s
       const currentCastStart = sortedCasts[i].start_s
 
       // Calculate the gap between casts
@@ -50,10 +50,7 @@ export function findMissedCastOpportunities(
       totalGapTime += gap
     }
 
-    // Also check for time after the last cast
-    const lastCastEnd =
-      sortedCasts[sortedCasts.length - 1].start_s +
-      sortedCasts[sortedCasts.length - 1].spell.effect_duration
+    const lastCastEnd = sortedCasts[sortedCasts.length - 1].end_s
     const timeAfterLastCast = total_timeline_length_s - lastCastEnd
     if (timeAfterLastCast > spell.cooldown) {
       totalGapTime += timeAfterLastCast

@@ -1,13 +1,10 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { DruidSpec } from '../TimelineView/TimelineView'
 
 interface SettingsContextType {
   showEventMarkers: boolean
   setShowEventMarkers: (show: boolean) => void
   timestampFormat: 'seconds' | 'minutes'
   setTimestampFormat: (format: 'seconds' | 'minutes') => void
-  currentSpec: DruidSpec
-  setCurrentSpec: (spec: DruidSpec) => void
 }
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined)
@@ -62,7 +59,6 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
   const [showEventMarkers, setShowEventMarkersState] = useState(false)
   const [timestampFormat, setTimestampFormatState] = useState<'seconds' | 'minutes'>('seconds')
   const [isInitialized, setIsInitialized] = useState(false)
-  const [currentSpec, setCurrentSpec] = useState<DruidSpec>('balance')
 
   useEffect(() => {
     const settings = loadSettings()
@@ -92,8 +88,6 @@ export function SettingsProvider({ children }: SettingsProviderProps) {
         setShowEventMarkers,
         timestampFormat,
         setTimestampFormat,
-        currentSpec,
-        setCurrentSpec,
       }}
     >
       {children}

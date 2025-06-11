@@ -1,5 +1,5 @@
-import { SpellToRender, Warning } from '../../types'
-import { Cast } from '../../models/Cast'
+import { SpellToRender, Warning } from '@/types/index'
+import { Cast } from '@/models/Cast'
 
 // Spell IDs for Balance Druid cooldowns
 const CONVOKE_THE_SPIRITS_ID = 391528
@@ -15,10 +15,7 @@ const FORCE_OF_NATURE_ID = 205636
  * @param total_timeline_length_s The total length of the timeline in seconds
  * @returns Array of warning objects with spell names and warning messages
  */
-export function findBalanceCDEfficiency(
-  timeline: SpellToRender[],
-  total_timeline_length_s: number
-): Warning[] {
+export function findBalanceCDEfficiency(timeline: SpellToRender[]): Warning[] {
   const balanceCDEfficiencyWarnings: Warning[] = []
 
   // Find the spell timelines for each cooldown
