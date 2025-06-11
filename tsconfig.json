@@ -24,7 +24,8 @@
       "contentlayer/generated": ["./.contentlayer/generated"],
       "@/types/*": ["types/*"],
       "@/lib/*": ["lib/*"],
-      "@/models/*": ["models/*"]
+      "@/models/*": ["models/*"],
+      "hooks/*": ["hooks/*"]
     },
     "plugins": [
       {

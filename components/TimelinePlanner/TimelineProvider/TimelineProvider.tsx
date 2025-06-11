@@ -12,7 +12,6 @@ import {
   TimelineEvent,
   EventType,
 } from '@/types/index'
-import { useKeysToTalents } from 'hooks/useKeysToActions'
 
 export interface TimelineContextType {
   inputEvents: PlayerAction[]
@@ -55,11 +54,10 @@ export function TimelineProvider({
   const { localSpells, createCustomSpell, deleteCustomSpell, getSpellsForSpec } =
     useLocalSpells(spells)
 
-  const { activeTalents, toggleTalent, availableTalents } = useActiveBindings(
+  const { activeTalents, toggleTalent, availableTalents, keysToTalents } = useActiveBindings(
     setInputEvents,
     currentSpec
   )
-  const { keysToTalents } = useKeysToTalents(activeTalents)
   const { processedState, processedEvents } = useProcessedTimeline(
     inputEvents,
     localSpells,

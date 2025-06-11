@@ -1,4 +1,4 @@
-import { round } from 'lib/utils/utilityFunctions'
+import { round } from '../lib/utils/utilityFunctions'
 import { CastParams, SpellInfo } from '@/types/index'
 
 /*
@@ -43,9 +43,6 @@ export class Cast {
   get channel_start_s(): number {
     return this.start_s
   }
-  get channel_visual_duration(): number {
-    return this._channel_duration
-  }
   get channel_duration(): number {
     return this._channel_duration
   }
@@ -58,14 +55,11 @@ export class Cast {
   get effect_start_s(): number {
     return this.start_s
   }
-  get effect_visual_duration(): number {
-    return Math.max(0, this._effect_duration - this._channel_duration)
-  }
   get effect_duration(): number {
     return this._ef_end_s - this.start_s
   }
   set effect_duration(value: number) {
-    this._effect_duration = value
+    this._ef_end_s = this.start_s + value
   }
 
   /* Cooldown */
@@ -74,33 +68,13 @@ export class Cast {
   get cooldown_start_s(): number {
     return this.start_s + this.cooldown_delay_s
   }
-  get cooldown_visual_duration(): number {
-    return this.cooldown_delay_s > 0
-      ? Math.max(this.cooldown_duration, 0)
-      : Math.max(
-          this.cooldown_duration +
-            this.cooldown_delay_s -
-            Math.max(this.effect_duration, this.channel_duration),
-          0
-        )
-  }
-  get cooldown_visual_start_s(): number {
-    return this.start_s + Math.max(this.effect_duration, this.channel_duration)
-  }
-  get cooldown_delay_visual_duration(): number {
-    return this.cooldown_delay_s > 0
-      ? Math.max(0, this.cooldown_delay_s - Math.max(this.effect_duration, this.channel_duration))
-      : 0
-  }
+
   get cooldown_duration(): number {
     return this._cooldown_duration
   }
   set cooldown_duration(value: number) {
-    this._cooldown_duration = Math.max(value, Math.max(this.effect_duration, this.channel_duration))
-  }
-
-  get delayed_cooldown_duration(): number {
-    return this.spell.cooldown + this.cooldown_delay_s
+    this._cooldown_duration = value
+    this._cd_end_s = this.start_s + value
   }
 
   get end_s(): number {
@@ -148,7 +122,7 @@ export class Cast {
     this._channel_duration = spell.channel_duration
 
     this._cd_start_s = this.start_s
-    this._ef_end_s = this.start_s + this.effect_duration
+    this._ef_end_s = this.start_s + this._effect_duration
     this._chann_end_s = this.start_s + this.channel_duration
     this._cd_end_s = this.start_s + this.cooldown_duration
   }

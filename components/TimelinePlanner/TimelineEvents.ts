@@ -1,4 +1,4 @@
-import { EventQueue } from 'models/EventQueue'
+import { EventQueue } from '../../models/EventQueue'
 import {
   PlayerAction,
   TimelineEvent,

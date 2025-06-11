@@ -9,7 +9,7 @@ export function useLocalSpells(baseSpells: SpellInfo[]) {
   useEffect(() => {
     const customSpells = loadCustomSpells()
     setLocalSpells([...baseSpells, ...customSpells])
-  }, [baseSpells])
+  }, [])
 
   const createCustomSpell = (params: SpellInfo) => {
     setLocalSpells((prev) => [...prev, params])
