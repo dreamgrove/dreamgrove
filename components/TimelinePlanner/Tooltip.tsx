@@ -5,6 +5,7 @@ import { useHoverContext } from './Providers/HoverProvider'
 import { useTimelineControls } from './Providers/TimelineLengthProvider'
 import { formatTime } from '../../lib/utils/utilityFunctions'
 import { Cast } from '@/models/Cast'
+import { useSettings } from './Providers/SettingsProvider'
 
 const Tooltip: React.FC = () => {
   const {
@@ -92,9 +93,12 @@ const MouseTooltip = ({ time }: { time: string }) => {
 }
 
 const CastTooltip = ({ cast, width }: { cast: Cast; width: number }) => {
+  const { timestampFormat } = useSettings()
   //round to 1 decimal place
   const startTime = Math.max(0, Math.round(cast.start_s * 10) / 10)
   const endTime = Math.max(0, Math.round(cast.end_s * 10) / 10)
+  const startTimeFormatted = timestampFormat === 'seconds' ? startTime : formatTime(startTime)
+  const endTimeFormatted = timestampFormat === 'seconds' ? endTime : formatTime(endTime)
   return (
     <div
       className="box-border px-2 py-1 text-xs"
@@ -104,9 +108,9 @@ const CastTooltip = ({ cast, width }: { cast: Cast; width: number }) => {
       }}
     >
       <div className="flex flex-row">
-        <div className="w-12">{startTime}s</div>
+        <div className="w-12">{startTimeFormatted}s</div>
         <div className="mt-[7px] h-[3px] flex-1 bg-neutral-400/20" />
-        <div className="w-12 text-right">{endTime}s</div>
+        <div className="w-12 text-right">{endTimeFormatted}s</div>
       </div>
     </div>
   )
