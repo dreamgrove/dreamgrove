@@ -1,4 +1,4 @@
-import { SpellToRender, Warning } from '../../types'
+import { SpellToRender, Warning } from '@/types/index'
 /**
  * Analyzes a timeline and identifies spells that have gaps between casts
  * where the sum of gaps exceeds the spell's cooldown (indicating missed cast opportunities).
