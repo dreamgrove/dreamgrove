@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useState } from 'react'
+import React, { createContext, ReactNode, useEffect, useState } from 'react'
 import { useTimelineEvents } from 'hooks/useTimelineActions'
 import { useLocalSpells } from 'hooks/useLocalSpells'
 import { useActiveBindings } from 'hooks/useActiveBindings'
@@ -71,6 +71,10 @@ export function TimelineProvider({
     () => getSpellsForSpec(currentSpec),
     [getSpellsForSpec, currentSpec]
   )
+
+  useEffect(() => {
+    setInputEvents((prev) => [...prev, ...tutorialSpells])
+  }, [tutorialSpells])
 
   const value: TimelineContextType = {
     inputEvents,
