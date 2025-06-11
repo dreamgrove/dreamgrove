@@ -5,7 +5,7 @@ export const registerWarnings = [
   {
     name: 'missedCasts',
     warning: findMissedCastOpportunities,
-    spec: ['balance'],
+    spec: ['balance', 'feral', 'guardian', 'resto'],
   },
   {
     name: 'balanceCDEfficiency',

@@ -4,10 +4,9 @@ import { useTimeline } from './Providers/TimelineLengthProvider'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
 export default function Warnings() {
-  const { currentSpec } = useTimelineContext()
+  const { currentSpec, processedState } = useTimelineContext()
   const { total_length_s } = useTimeline()
   const [isOpen, setIsOpen] = useState(false)
-  const { processedState } = useTimelineContext()
   const timeline = processedState.spells
 
   // Get all warnings from registered warning functions that apply to current spec
