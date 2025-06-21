@@ -26,22 +26,22 @@ export default function HeroTalents({ title, id, children }: HeroTalentsHeaderPr
   }
 
   const backgroundColorStyle = () => {
-    if (id === 'kotg') return 'bg-[#184118] bg-opacity-10'
-    if (id === 'ec') return 'bg-[#4b62be] bg-opacity-10'
-    if (id === 'dotc') return 'bg-[#c41e3a] bg-opacity-10'
-    return 'bg-[#d57f43] bg-opacity-10'
+    if (id === 'kotg') return 'bg-[#1841181A]'
+    if (id === 'ec') return 'bg-[#4b62be1A]'
+    if (id === 'dotc') return 'bg-[#c41e3a1A]'
+    return 'bg-[#d57f431A]'
   }
 
   return (
     <div
-      className={`talentTree mb-2 mt-2 grid rounded-md border-2 ${borderStyle()} ${backgroundColorStyle()}`}
+      className={`talentTree mt-2 mb-2 grid rounded-md border-2 ${borderStyle()} ${backgroundColorStyle()}`}
     >
       <div
         className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"
         onClick={() => setIsCollapsed((prev) => !prev)}
       >
         <h3
-          className={`mb-2 mt-2 select-none pl-0 text-left align-baseline text-xl font-bold sm:pl-2`}
+          className={`mt-2 mb-2 pl-0 text-left align-baseline text-xl font-bold select-none sm:pl-2`}
         >
           {title}
         </h3>

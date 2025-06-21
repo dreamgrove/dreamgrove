@@ -1,6 +1,0 @@
-{{ $currentPatch := $.Site.Params.currentPatch }}{{ $pastPatches := split $.Site.Params.pastPatches "," }}{{ $patch := $.Page.Params.patch | default $currentPatch }}{{ $dbsrc := cond (or (in $pastPatches $patch) (eq $patch $currentPatch)) "www" "ptr" }}{{ if .IsNamedParams }}<a href="http://{{ $dbsrc }}.wowdb.com/items/{{ .Get "id" | int }}" class="tooltip item-tooltip">{{ .Get "name" }}</a>{{ else }}<a href="http://{{ $dbsrc }}.wowdb.com/items/{{ .Get 0 | int }}" class="tooltip item-tooltip">{{ .Get 1 }}</a>{{ end }}{{- "" -}}
-{{/* 
-This file is uglified as a workaround for inserting a replaced shortcode in a markdownified block. 
-The whitespace from this file will be converted into <p> and <br /> tags in the markdown engine, 
-which we don't want obviously. An annoying fix, but necessary.
-*/}}

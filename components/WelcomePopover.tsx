@@ -35,14 +35,14 @@ export default function WelcomePopover() {
         leaveTo="transform scale-95 opacity-0"
       >
         <Popover className="relative">
-          <div className="max-w-xs rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800 md:max-w-lg">
+          <div className="max-w-xs rounded-lg bg-white p-6 shadow-xl md:max-w-lg dark:bg-gray-800">
             <div className="flex items-start justify-between">
               <h2 className="mb-2 text-xl font-medium text-gray-900 dark:text-white">
                 Welcome Back {':3'}
               </h2>
               <button
                 onClick={handleDismiss}
-                className="ml-4 rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                className="ml-4 rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-hidden dark:hover:bg-gray-700 dark:hover:text-gray-300"
               >
                 <IoClose className="h-5 w-5" />
               </button>

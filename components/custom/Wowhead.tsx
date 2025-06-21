@@ -12,7 +12,13 @@ export default async function Wowhead({
   noIcon = false,
   beta = false,
   url = '',
+  iconSize = 16,
   showLabel = true,
+  ellipsis = false,
+  textColor = '',
+  context = 'inline',
+  fill = false,
+  align = 'baseline',
 }) {
   let display = name
   let displayId = id
@@ -20,42 +26,10 @@ export default async function Wowhead({
   let quality = -1
   let icon: React.ReactNode = null
 
-  if (!id) {
-    if (type == 'spell') {
-      const spellDataModule = await import('../../spellData.json')
-      const spellId = spellDataModule[name]
-      if (spellId) {
-        displayId = spellId
-      } else {
-        noIcon = true
-      }
-    } else {
-      throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
-    }
-  }
-
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  try {
-    // Use the shared function directly
-    const data = await fetchWowheadData({
-      id: displayId,
-      type,
-      name,
-      beta,
-      url,
-    })
-
-    if (data.quality !== undefined) {
-      quality = data.quality
-      linkColor = qualityToColor[data.quality] || linkColor
-    }
-
-    if (!name && data.display) {
-      display = data.display
-    }
-
+  if (process.env.NODE_ENV === 'test') {
     icon =
       noIcon || type === 'npc' ? (
         <></>
@@ -67,30 +41,93 @@ export default async function Wowhead({
           beta={beta}
           url={url}
           noLink={true}
-          iconId={data.icon}
+          iconId={undefined}
+          iconSize={iconSize}
+          fill={fill}
         />
       )
-  } catch (error: any) {
-    console.warn(
-      `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
-    )
-    // Use provided name or displayId as fallback
-    display = name || `${type}-${displayId}`
+  } else {
+    if (!id) {
+      if (type == 'spell') {
+        const spellDataModule = await import('../../spellData.json')
+        const spellId = spellDataModule[name]
+        if (spellId) {
+          displayId = spellId
+        } else {
+          noIcon = true
+        }
+      } else {
+        throw Error(`Omitting an id is possible only in a "spell" Wowhead component`)
+      }
+    }
+
+    try {
+      // Use the shared function directly
+      const data = await fetchWowheadData({
+        id: displayId,
+        type,
+        name,
+        beta,
+        url,
+      })
+
+      if (data.quality !== undefined) {
+        quality = data.quality
+        linkColor = qualityToColor[data.quality] || linkColor
+      }
+
+      if (!name && data.display) {
+        display = data.display
+      }
+
+      icon =
+        noIcon || type === 'npc' ? (
+          <></>
+        ) : (
+          <WowheadIcon
+            id={displayId}
+            type={type}
+            name={display}
+            beta={beta}
+            url={url}
+            noLink={true}
+            iconId={data.icon}
+            iconSize={iconSize}
+            fill={fill}
+          />
+        )
+    } catch (error: any) {
+      console.warn(
+        `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
+      )
+      // Use provided name or displayId as fallback
+      display = name || `${type}-${displayId}`
+    }
   }
 
+  icon = <span className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</span>
   return disabled ? (
-    <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
+    <div
+      className={`${context} relative w-full decoration-2 q${quality} flex items-${align} gap-1`}
+      style={{ color: linkColor }}
+    >
       {icon}
-      {showLabel && <span className="text-wrap break-words">{display}</span>}
+      {showLabel && (
+        <span className={`text-wrap break-words ${ellipsis ? 'truncate' : ''}`}>{display}</span>
+      )}
     </div>
   ) : (
     <a
       href={whUrl}
-      className={`inline decoration-2 q${quality}`}
-      style={{ color: linkColor, textWrap: 'nowrap' }}
+      className={`${context} decoration-2 q${quality} inline-flex items-${align} gap-1`}
+      style={{ color: textColor != '' ? textColor : linkColor, textWrap: 'nowrap' }}
     >
       {icon}
-      {showLabel && <span className="text-wrap break-words">{display}</span>}
+      {showLabel && (
+        <span className={`trim-text leading-none text-wrap break-words ${ellipsis ? '' : ''}`}>
+          {display}
+        </span>
+      )}
     </a>
   )
 }

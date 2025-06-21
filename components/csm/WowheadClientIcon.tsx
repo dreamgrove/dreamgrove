@@ -22,7 +22,7 @@ function WowheadClientIcon({
   name,
   beta = false,
   url = '',
-  size = 16,
+  size,
   noLink = false,
   noMargin = false,
 }: WowheadIconProps) {
@@ -36,7 +36,7 @@ function WowheadClientIcon({
   // Create a fallback element
   const fallbackImage = (
     <span
-      className={`inline-block rounded-sm bg-gray-200 ${!noMargin && 'mr-1'}`}
+      className={`inline-block rounded-xs bg-gray-200 ${!noMargin && 'mr-1'}`}
       style={{ width: `${size}px`, height: `${size}px` }}
       title={`${name} (icon unavailable)`}
     />
@@ -60,7 +60,6 @@ function WowheadClientIcon({
       setError(false)
 
       try {
-        // Use our new API client instead of direct server function
         const data = await getWowheadInfo({
           id: id || '',
           type,
@@ -87,19 +86,34 @@ function WowheadClientIcon({
     fetchIcon()
   }, [id, type, beta, cacheKey, whUrl, iconFilename, name, url])
 
+  if (!size)
+    return isLoading ? (
+      <div className={`h-full w-full rounded-xs bg-neutral-800`} />
+    ) : iconFilename ? (
+      <Image
+        src={`https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`}
+        alt={`${name} icon`}
+        fill={true}
+      />
+    ) : (
+      <div
+        className={`h-full w-full rounded-xs bg-gray-200`}
+        title={`${name} (icon unavailable)`}
+      />
+    )
+
   // If we have an icon, render it
   const image = iconFilename ? (
     <Image
       src={`https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`}
       alt={`${name} icon`}
-      width={size}
       height={size}
-      className={`my-0 inline-block ${!noMargin && 'mr-1'}`}
+      width={size}
     />
   ) : isLoading ? (
     // Loading state
     <span
-      className={`inline-block rounded-sm bg-gray-700 ${!noMargin && 'mr-1'}`}
+      className={`inline-block rounded-xs bg-gray-700 ${!noMargin && 'mr-1'}`}
       style={{ width: `${size}px`, height: `${size}px` }}
     />
   ) : (

@@ -19,10 +19,10 @@ const ContentSecurityPolicy = `
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-  {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
-  },
+  //{
+  //  key: 'Content-Security-Policy',
+  //  value: ContentSecurityPolicy.replace(/\n/g, ''),
+  //},
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
     key: 'Referrer-Policy',
@@ -53,19 +53,6 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
-  {
-    key: 'Content-Security-Policy',
-    value: `
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://wow.zamimg.com https://www.raidbots.com https://mimiron.raidbots.com https://www.youtube.com https://s.ytimg.com https://www.youtube-nocookie.com;
-      style-src 'self' 'unsafe-inline' 'unsafe-eval' https://wow.zamimg.com;
-      img-src 'self' data: https://wow.zamimg.com https://i.ytimg.com https://img.youtube.com;
-      connect-src 'self' https://nether.wowhead.com;
-      frame-src 'self' https://www.raidbots.com https://mimiron.raidbots.com https://www.youtube.com https://www.youtube-nocookie.com;
-    `
-      .replace(/\s{2,}/g, ' ')
-      .trim(),
-  },
 ]
 
 /**
@@ -79,7 +66,6 @@ module.exports = () => {
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
-    productionBrowserSourceMaps: true,
     images: {
       remotePatterns: [
         {
@@ -169,6 +155,15 @@ module.exports = () => {
           source: '/(.*)',
           headers: securityHeaders,
         },
+        {
+          source: '/:path*',
+          headers: [
+            {
+              key: 'Document-Policy',
+              value: 'js-profiling',
+            },
+          ],
+        },
       ]
     },
     webpack: (config, options) => {
@@ -181,3 +176,39 @@ module.exports = () => {
     },
   })
 }
+
+// Injected content via Sentry wizard below
+
+const { withSentryConfig } = require('@sentry/nextjs')
+
+module.exports = withSentryConfig(module.exports, {
+  // For all available options, see:
+  // https://www.npmjs.com/package/@sentry/webpack-plugin#options
+
+  org: 'dreamgrove',
+  project: 'dreamgrove',
+
+  // Only print logs for uploading source maps in CI
+  silent: !process.env.CI,
+
+  // For all available options, see:
+  // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+  // Upload a larger set of source maps for prettier stack traces (increases build time)
+  widenClientFileUpload: true,
+
+  // Uncomment to route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
+  // This can increase your server load as well as your hosting bill.
+  // Note: Check that the configured route will not match with your Next.js middleware, otherwise reporting of client-
+  // side errors will fail.
+  // tunnelRoute: "/monitoring",
+
+  // Automatically tree-shake Sentry logger statements to reduce bundle size
+  disableLogger: true,
+
+  // Enables automatic instrumentation of Vercel Cron Monitors. (Does not yet work with App Router route handlers.)
+  // See the following for more information:
+  // https://docs.sentry.io/product/crons/
+  // https://vercel.com/docs/cron-jobs
+  automaticVercelMonitors: true,
+})

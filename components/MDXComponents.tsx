@@ -18,7 +18,6 @@ import YouTube from './custom/YouTube'
 import ConditionalElement from './custom/ConditionalElement'
 import CheckboxProvider from './custom/CheckboxProvider'
 import React from 'react'
-
 export const components: MDXComponents = {
   Image: ({ src, alt, ...props }) => {
     let id = ''

@@ -1,5 +1,5 @@
 // @ts-nocheck
-/* eslint-disable no-irregular-whitespace */
+ 
 export const AsciiArt = () => {
   const art = `           _____
 　　　　　 /  ＞　　フ meoowowwerrr mewowowo mewurrr      
@@ -13,7 +13,7 @@ export const AsciiArt = () => {
 　＼二つ`
   return (
     <div className="relative flex h-full w-full flex-col p-3 pb-0">
-      <pre className="z-10 mb-[-1.75rem] flex flex-1 items-end justify-end font-mono text-sm text-[#4b2e39]">
+      <pre className="z-10 -mb-7 flex flex-1 items-end justify-end font-mono text-sm text-[#4b2e39]">
         <code>{art}</code>
       </pre>
     </div>

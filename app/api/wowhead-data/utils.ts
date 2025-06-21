@@ -38,11 +38,3 @@ export function extractIdFromUrl(url: string): string {
   const id = lastPart.split('-')[0]
   return id
 }
-
-export interface WowheadDataParams {
-  id?: string
-  type: string
-  name?: string
-  beta?: boolean
-  url?: string
-}

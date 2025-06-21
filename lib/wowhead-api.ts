@@ -1,21 +1,4 @@
-/**
- * Client-side utilities for fetching Wowhead information
- */
-
-interface WowheadApiParams {
-  id?: string
-  type?: string
-  name?: string
-  beta?: boolean
-  url?: string
-}
-
-interface WowheadApiResponse {
-  icon?: string
-  quality?: number
-  display: string
-  timestamp: number
-}
+import { WowheadApiParams, WowheadApiResponse } from '@/types/index'
 
 /**
  * Fetches Wowhead information via the API

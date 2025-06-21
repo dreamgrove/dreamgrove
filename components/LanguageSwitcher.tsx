@@ -126,20 +126,20 @@ const LanguageSwitcher = () => {
         aria-label="Language Menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex h-full items-center justify-center self-center rounded-md font-familiar-pro font-normal transition-all hover:opacity-80"
+        className="font-familiar-pro inline-flex h-full items-center justify-center self-center rounded-md font-normal transition-all hover:opacity-80"
       >
-        <IoLanguage className="text-3xl text-main sm:translate-y-[0px] sm:text-[1.4rem]" />
+        <IoLanguage className="text-main text-3xl sm:-translate-y-[0px] sm:text-[1.4rem]" />
       </button>
 
       <div
-        className={`absolute right-0 top-[calc(100%+2px)] z-50 mt-1 min-w-[120px] rounded-md border border-gray-200 bg-white shadow-lg transition-opacity dark:border-gray-700 dark:bg-gray-800 ${
+        className={`absolute top-[calc(100%+2px)] right-0 z-50 mt-1 min-w-[120px] rounded-md border border-gray-200 bg-white shadow-lg transition-opacity dark:border-gray-700 dark:bg-gray-800 ${
           isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
         <div className="py-1">
           <a
             href={currentLocale !== 'en-US' ? pathname.replace('/kr/', '/') : '#'}
-            className={`block w-full px-4 py-2 text-left font-familiar-pro text-sm font-normal hover:bg-gray-100 dark:hover:bg-gray-700 ${currentLocale === 'en-US' ? 'font-bold' : ''}`}
+            className={`font-familiar-pro block w-full px-4 py-2 text-left text-sm font-normal hover:bg-gray-100 dark:hover:bg-gray-700 ${currentLocale === 'en-US' ? 'font-bold' : ''}`}
             onClick={(e) => {
               if (currentLocale === 'en-US') {
                 e.preventDefault()
@@ -155,7 +155,7 @@ const LanguageSwitcher = () => {
             href={
               currentLocale !== 'ko-KR' ? pathname.replace(/\/blog\/([^/]+)/, '/blog/$1/kr') : '#'
             }
-            className={`block w-full px-4 py-2 text-left font-familiar-pro text-sm font-normal hover:bg-gray-100 dark:hover:bg-gray-700 ${currentLocale === 'ko-KR' ? 'font-bold' : ''}`}
+            className={`font-familiar-pro block w-full px-4 py-2 text-left text-sm font-normal hover:bg-gray-100 dark:hover:bg-gray-700 ${currentLocale === 'ko-KR' ? 'font-bold' : ''}`}
             onClick={(e) => {
               if (currentLocale === 'ko-KR') {
                 e.preventDefault()

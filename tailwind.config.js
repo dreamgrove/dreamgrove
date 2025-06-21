@@ -1,8 +1,5 @@
-// @ts-check
-const { fontFamily } = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
-
-/** @type {import("tailwindcss/types").Config } */
+/* eslint-disable @typescript-eslint/no-require-imports */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './node_modules/pliny/**/*.js',
@@ -16,6 +13,25 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      keyframes: {
+        expand: {
+          '0%': { transform: 'scaleX(0)', transformOrigin: 'center' },
+          '100%': { transform: 'scaleX(1)', transformOrigin: 'center' },
+        },
+        'clip-up': {
+          '0%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
+          '100%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
+        },
+        'clip-down': {
+          '0%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
+          '100%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
+        },
+      },
+      animation: {
+        expand: 'expand 0.17s ease forwards',
+        'clip-up': 'clip-up 0.3s ease-out forwards',
+        'clip-down': 'clip-down 0.3s ease-out forwards',
+      },
       lineHeight: {
         11: '2.75rem',
         12: '3rem',
@@ -28,7 +44,7 @@ module.exports = {
         lg: '1.1rem',
       },
       fontFamily: {
-        sans: ['thiccboi', 'magnificent', ...fontFamily.sans],
+        sans: ['thiccboi', 'magnificent'],
         thiccboi: ['thiccboi', 'sans-serif'],
         magnificent: ['magnificent', 'sans-serif'],
         'familiar-pro': ['familiar-pro', 'sans-serif'],
@@ -39,7 +55,6 @@ module.exports = {
           600: '#d57f43', // Optional: dark variant
           light: '#d57f43', // Optional: light variant
         },
-        gray: colors.gray,
         main: '#d57f43',
         secondary: '#1a9c82',
       },
@@ -94,14 +109,6 @@ module.exports = {
               marginBottom: '15px',
               position: 'relative',
             },
-            // 'h2::after': {
-            //   content: '""',
-            //   display: 'block',
-            //   width: '50px',
-            //   height: '3px',
-            //   backgroundColor: theme('colors.primary.500'),
-            //   marginTop: '0px',
-            // },
           },
         },
         invert: {
