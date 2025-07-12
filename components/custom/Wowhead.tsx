@@ -26,8 +26,7 @@ export default async function Wowhead({
   let quality = -1
   let icon: React.ReactNode = null
 
-  const whUrl =
-    url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
+  console.log('id', id)
 
   if (process.env.NODE_ENV === 'test') {
     icon =
@@ -104,6 +103,9 @@ export default async function Wowhead({
       display = name || `${type}-${displayId}`
     }
   }
+
+  const whUrl =
+    url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
   icon = <span className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</span>
   return disabled ? (
