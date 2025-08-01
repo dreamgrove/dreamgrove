@@ -5,6 +5,7 @@ on:
     paths:
       - 'sims/owl/balance_ptr.txt'
       - 'sims/cat/feral_ptr.txt'
+      - 'sims/bear/guardian_ptr.txt'
 
 defaults:
   run:
