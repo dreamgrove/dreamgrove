@@ -19,7 +19,7 @@ interface ColorConfig {
 function TalentTreeLoading() {
   return (
     <div className="flex flex-col items-center justify-center p-8">
-      <div className="mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-t-2 border-blue-500"></div>
+      <div className="mb-4 h-12 w-12 animate-spin rounded-full border-t-2 border-b-2 border-blue-500"></div>
       <p className="text-gray-600">Loading talent tree...</p>
     </div>
   )
@@ -536,6 +536,8 @@ export default function Talents({
   children,
   colors = [],
   extra = [],
+  defaultTree = 'Full',
+  open = false,
 }: {
   talents?: string
   viewOnly?: boolean
@@ -544,6 +546,8 @@ export default function Talents({
   children?: React.ReactNode
   colors?: ColorConfig[]
   extra?: string[]
+  defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
+  open?: boolean
 }) {
   // Parse the talent string and get the active data
   const activeData = parseTalentString(talents)
@@ -625,7 +629,7 @@ export default function Talents({
   )
 
   return (
-    <TalentsDropdown name={name}>
+    <TalentsDropdown name={name} defaultTree={defaultTree} open={open}>
       <div className="flex flex-col gap-4">
         <TalentTreeClient
           comment={comment}
@@ -634,6 +638,7 @@ export default function Talents({
           heroTree={heroTree}
           talentString={talents}
           viewOnly={viewOnly}
+          defaultTree={defaultTree}
         >
           {children}
         </TalentTreeClient>
