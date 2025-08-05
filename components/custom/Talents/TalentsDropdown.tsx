@@ -8,10 +8,16 @@ import styles from './Talents.module.css'
 interface TalentDropdownProps {
   name?: string
   open?: boolean
+  defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
   children: ReactNode
 }
 
-export default function TalentsDropdown({ name, open = false, children }: TalentDropdownProps) {
+export default function TalentsDropdown({
+  name,
+  open = false,
+  defaultTree,
+  children,
+}: TalentDropdownProps) {
   const [isVisible, setIsVisible] = useState(open)
   const arrow = !isVisible ? <FaAngleDown /> : <FaAngleUp />
 
@@ -35,7 +41,7 @@ export default function TalentsDropdown({ name, open = false, children }: Talent
         aria-label={`${name || 'Talent Tree'} dropdown`}
         className="flex h-auto cursor-pointer items-center justify-between px-2"
       >
-        <div className="talentName my-2 flex select-none items-center text-left text-lg font-bold">
+        <div className="talentName my-2 flex items-center text-left text-lg font-bold select-none">
           <LuSwords className="mr-2" />
           {name || 'Talent Tree'}
         </div>

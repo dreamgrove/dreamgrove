@@ -10,6 +10,7 @@ interface TalentTreeClientProps {
   viewOnly?: boolean
   comment?: string
   children?: React.ReactNode
+  defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
 }
 
 const TalentTreeClient = ({
@@ -20,8 +21,23 @@ const TalentTreeClient = ({
   viewOnly = false,
   comment,
   children,
+  defaultTree = 'Full',
 }: TalentTreeClientProps) => {
-  const [activeTree, setActiveTree] = useState('full')
+  const [activeTree, setActiveTree] = useState(() => {
+    // Convert the defaultTree prop to the internal state format
+    switch (defaultTree) {
+      case 'Full':
+        return 'full'
+      case 'Class':
+        return 'class'
+      case 'Spec':
+        return 'spec'
+      case 'Hero':
+        return 'hero'
+      default:
+        return 'full'
+    }
+  })
   const [copyButtonText, setCopyButtonText] = useState('Copy Talent String')
   const [isMobile, setIsMobile] = useState(false)
   const [copyError, setCopyError] = useState<string | null>(null)

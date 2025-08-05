@@ -9,6 +9,7 @@ import { tearDownTheMighty } from './Feral/tearDownTheMighty'
 import { ashamanesGuidance } from './Feral/ashamanesGuidance'
 import { heartOfTheLion } from './Feral/heartOfTheLion'
 import { cenariusGuidance } from './Resto/cenariusGuidance'
+import { elunesGuidance } from './Balance/elunesGuidance'
 
 export const bindings: TalentBindings[] = [
   {
@@ -22,6 +23,18 @@ export const bindings: TalentBindings[] = [
       resto: 'Grove Guardians cooldown reduced by 3 sec.',
     },
     specs: ['balance', 'resto'],
+  },
+  {
+    id: Talents.ElunesGuidance,
+    spellId: 393991,
+    affectedSpells: [391528],
+    handler: elunesGuidance,
+    label: "Elune's Guidance",
+    description: {
+      balance:
+        "Convoke's cooldown is reduced by 50% and its duration and number of spells cast is reduced by 25%",
+    },
+    specs: ['balance'],
   },
   {
     id: Talents.ControlOfTheDream,
