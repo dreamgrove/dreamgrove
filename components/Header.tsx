@@ -48,7 +48,7 @@ const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="font-familiar-pro mb-[-5px] flex items-center text-[2rem] font-bold sm:mb-0 sm:text-4xl md:text-4xl lg:text-3xl">
                     <div className="title-effect self-end">
-                      <span className="title-effect-front">
+                      <span>
                         {siteMetadata.headerTitle.toLowerCase()}
                         <span className="text-main">.</span>gg
                       </span>
