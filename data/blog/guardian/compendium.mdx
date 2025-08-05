@@ -1,25 +1,41 @@
 ---
 title: 'Guardian Druid Compendium'
-patch: '11.1.0'
+patch: '11.2.0'
 draft: false
 authors: ["Kitch"]
 summary: 'Everything you need to know about Guardian Druid'
 ---
 # News
 
-## Season 2 News
+## Season 3 News
+
+Blizzard are experimenting with hero tree based tier sets this tier, here's some information on both of our options.
+
+### Elune's Chosen Tier Bonus
 
 #### 2-Piece
 
->Each time you take damage you have a chance to activate Luck of the Draw! causing you to cast !Survival Instincts! for 4.0 sec. Your damage done is increased by 15% for 8 sec after Luck of the Draw! activates.
-
-Blizzard are trying something different with the new tier sets where each 2p is a standardised class-based effect. So Guardian shares the same general effect of other tanks 2p set's just with the chosen defensive spell changing (in our case !Survival Instincts!). Speaking objectively, this tier set effect is not great. This contributes around a 1.5%-2% damage increase (assuming you are taking damage 100% of the time) and has no effect on our overall rotation. The defensive side of the effect will, in many situations, be wasted due to it being triggered randomly so you're at the mercy of RNG as to whether it will line up with any particularly hard hitting abilities.
+>!Thrash! damage increased by 20%. !Thrash! has a 40% chance to launch a !Starsurge! at a victim at 65% effectiveness.
 
 #### 4-Piece
 
->After you gain Luck of the Draw! your next 10 Druid abilities cast another Druid ability at 125% effectiveness.
+>Starsurges launched by !Thrash! split to up to 3 additional targets at 20% effectiveness and grant a stack of Gathering Moonlight. Casting !Lunar Beam! consumes Gathering Moonlight to increase your damage by 4% per stack for 12 seconds.
 
-The 4p effect plays off of the 2p procs but changes nothing for Guardian rotationally. The spells that can be cast by the 4p are: !Swipe!, !Mangle!, !Maul!/!Raze!/!441605|Ravage!, !Wrath!, !Starfire!, !Starsurge!, !Shred!, !Ferocious Bite! and !Renewal! (if below 50% health). The 10 Druid abilities will be consumed naturally as a result of our standard rotation and results in an average increase of around 6% offensively. It is worth noting that there is no protection in place for multiple procs in a short window, so if you get lucky (unlucky?) and trigger the 2p again whilst already having the 4p charges active then the counter will be reset to 10, you will lose however many charges were remaining and there is absolutely nothing you can do to prevent this.
+An additional 20% buff to !Thrash! is pretty significant given it is already one of EC Guardians strongest spells, especially with regards to AoE. The 2p !Starsurge! is fairly minor for damage (in part because it is not affected by the percentage increases from !Fury of Nature! nor !Elune's Favored!) and, rather dissapointingly, no longer has any interaction with !Lunation!. 
+The 4p effect plays off of the 2p procs but unfortunately, once again, doesn't really change anything rotationally for Guardian. Like the 2p, the 3 mini-starsurges do not interact with any parts of our kit in any notable way and just provide some passive damage. The Gathering Moonlight buff could be powerful, unfortunately, Guardian largely lacks the burst damage to fully take advantage of these frequent but short damage windows - the best you could do is to try and pool a full rage bar or try to line up a high stacked !Lunar Beam! up with !Incarnation: Guardian of Ursoc! but it's unlikely to be worth holding either of these cooldowns to do this. That said, on average it will likely work out to be around a 12% Damage increase, largely due to the additional !Thrash! steroid and the frequent damage amp windows from the already very low cooldown of !Lunar Beam!. Defensively though, this is very underwhelming, the only real gain being an increase to the healing from !Elune's Favored! as a result of the overall damage increase.
+
+### Druid of the Claw Tier Bonus
+
+#### 2-Piece
+
+>!441605|Ravage! increases your haste by 10%, chance to critically strike by 10%, and the damage your bleeds deal by 30% for 5 seconds.
+
+#### 4-Piece
+
+>!441605|Ravage! has a 40% chance to make you Ravage your target again 4 seconds later at 60% of the initial power.
+
+The 2p alone has a **lot** of stats loaded into it, with haste in particular being notoriously strong offensively for Guardians in The War Within. The 30% buff to bleeds will primarily be aimed at those who Ripweave or Catweave but it will also affect your !Thrash! bleed as well as !Dreadful Wound! even if you don't. Defensively, 10% haste and 10% crit is a strong steroid with a reasonable uptime which will really help to smooth out damage curves for Drud of the Claw Guardian.
+When the 4p comes into play is when this tier set truly shines. The echo !441605|Ravage! casts massively increases your uptime on all !441605|Ravage! associated buffs (including the 2p bonus stats and bleed damage, !Ruthless Aggression! or !Killing Strikes! and the !Dreadul Wound! bleed). Offensively, this tier set should provide around a ________________________. Meanwhile defensively, this set addresses a frequent complaint about Druid of the Claw by massively upping the consistency and uptime of !441605|Ravage! and everything associated with it.
 
 # Rotation 
 
@@ -47,7 +63,7 @@ When reading the rotations below, you should not think about them as steps to fo
 
 <Checkbox isIcon id="Dotc_Wildpower Surge" spellId={411824} name="Wildpower Surge (Ripweaving)" defaultCheck />
 <Checkbox isIcon id="Dotc_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox isIcon id="Dotc_Extra Catweaving" spellId={768} name="Full Catweaving (~5% Gain)" />
+<Checkbox isIcon id="Dotc_Catweaving" spellId={768} name="Full Catweaving (~5% Gain)" />
 <Checkbox isIcon id="Dotc_Lunar Beam" spellId={204066} name="Lunar Beam" />
 <Checkbox isIcon id="Dotc_Vicious Cycle" spellId={371999} name="Vicious Cycle" defaultCheck />
 <Checkbox isIcon id="Dotc_Tooth and Claw" spellId={135288} name="Tooth and Claw" defaultCheck />
@@ -59,23 +75,22 @@ When reading the rotations below, you should not think about them as steps to fo
 
 - Press !441605|Ravage!
 - Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
-- Press !Moonfire! if the dot completely falls off
+- [*~Dotc_Catweaving] Press !Moonfire! if the dot completely falls off
 - [*Dotc_Heart of the Wild&&Dotc_Wildpower Surge] Press !Heart of the Wild! if you have 6 Feline Potential stacks
-- [*Dotc_Wildpower Surge&&Dotc_Tooth and Claw] If at 6 stacks of Feline Potential then:
-    - [*Dotc_Convoke the Spirits] If !Convoke the Spirits! **is** available and ready to use then:
+- [*Dotc_Wildpower Surge] If at 6 stacks of Feline Potential then:
+    - [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
         - !Maul! > !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits] If !Convoke the Spirits! **is not** available and ready to use then:
+    - [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
         - !Maul! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
-    - [*~Dotc_Convoke the Spirits] !Maul! > !Rake! > !Rip! > !33917|Mangle!
-        - If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
-- [*Dotc_Wildpower Surge&&~Dotc_Tooth and Claw] If at 6 stacks of Feline Potential then:
-    - [*Dotc_Convoke the Spirits] If !Convoke the Spirits! **is** available and ready to use then:
-        - Dump rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits] If !Convoke the Spirits! **is not** available and ready to use then:
-        - Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*~Dotc_Convoke the Spirits] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
+    - [*~Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] !Maul! > !Rake! > !Rip! > !33917|Mangle!
+    - [*Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*Dotc_Tooth and Claw] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+    - [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
+        - Dump any available rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+    - [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
+        - Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+    - [*~Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
     - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence
 - [*Dotc_Heart of the Wild&&~Dotc_Wildpower Surge] Press !Heart of the Wild!
 - [*Dotc_Lunar Beam] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
@@ -83,18 +98,24 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*Dotc_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
 - [*~Dotc_Incarnation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
 - [*Dotc_Wildpower Surge] Press !33917|Mangle! if at < 6 stacks of Feline Potential
-- [*Dotc_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle] Press !Maul! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw! or if !Tooth and Claw! is about to expire
+- [*Dotc_Vicious Cycle] Press !Maul! if at 3 stacks of !372015|Vicious Cycle! or if !372015|Vicious Cycle! is about to expire
 - [*Dotc_Thorns of Iron] Press !Ironfur! if above 40 rage
+- [*Dotc_Catweaving&&Dotc_Wildpower Surge] Whilst in !Cat Form! **without having Feline Potential ready to empower your next finisher**, apply the following priority list:
+	- Press !33917|Mangle! if it becomes available
+	- Press !Rip! if:
+		- You are at 3+ combo points
+		- Press !Rip! if it is not currently active on your target or a !Rip! that was not empowered by !Wildpower Surge! is in pandemic.
+			- **Never** overwrite an empowered !Rip! with a non-empowered !Rip!
+	- Press !Ferocious Bite! if you are at 4+ combo points
+	- Press !Rake! if the dot is not active or it enters pandemic
+	- Press !Shred!
+- [*Dotc_Catweaving&&Dotc_Wildpower Surge] Press !Rake! to enter !Cat Form! if:
+	- Press !Rake! if !Rake! is not currently active on the target or if it is in pandemic.
 - [*~Dotc_Wildpower Surge] Press !33917|Mangle!
 - Press !Thrash!
-- [*Dotc_Extra Catweaving] If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
-    1. If the Feline Potential !Rip! has fallen off the target AND you have 3 or fewer combo points, press !Rip!. **Never overwrite a Feline Potential empowered !Rip!**
-    2. If the Feline Potential !Rip! has not fallen off the target OR you have 4 or more combo points press !Ferocious Bite!. Make sure to press it at >50 energy
-- [*Dotc_Extra Catweaving] Press !Rake! if it not currently active on the target (or in pandemic range) and you are below 40 rage
-- [*Dotc_Extra Catweaving] Press !Shred! if:
-    - You are below 40 rage and !Rake! is already active on the target
-    - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
+- [*Dotc_Catweaving&&Dotc_Wildpower Surge] Press !Shred! to enter cat form if:
+	- Rake is currently active on the target and **not** in pandemic.
 - Press !Swipe!
 
 </Collapsible>
@@ -104,7 +125,7 @@ When reading the rotations below, you should not think about them as steps to fo
 
 <Checkbox isIcon id="Dotc_Wildpower Surge_cleave" spellId={411824} name="Wildpower Surge" defaultCheck />
 <Checkbox isIcon id="Dotc_Heart of the Wild_cleave" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox isIcon id="Dotc_Extra Catweaving_cleave" spellId={768} name="Full Catweaving" />
+<Checkbox isIcon id="Dotc_Catweaving_cleave" spellId={768} name="Full Catweaving" />
 <Checkbox isIcon id="Dotc_Lunar Beam_cleave" spellId={204066} name="Lunar Beam" />
 <Checkbox isIcon id="Dotc_Vicious Cycle_cleave" spellId={371999} name="Vicious Cycle" defaultCheck />
 <Checkbox isIcon id="Dotc_Tooth and Claw_cleave" spellId={135288} name="Tooth and Claw" defaultCheck />
@@ -143,12 +164,12 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*Dotc_Thorns of Iron_cleave] Press !Ironfur! if above 40 rage
 - Press !33917|Mangle!
 - Press !Thrash!
-- [*Dotc_Extra Catweaving_cleave] Please note, the following points (full catweaving) are only a net gain for 2 target cleave:
+- [*Dotc_Catweaving_cleave] Please note, the following points (full catweaving) are only a net gain for 2 target cleave:
     - If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
     1. Press !Rip! on the target that does not have the Feline Potential !Rip! currently active if the target will live for 80%+ of the rips duration. **Never overwrite a Feline Potential empowered !Rip!**
     2. If the target will not live for 80%+ of the duration of a !Rip! then press !Ferocious Bite! on either target. Make sure to press it at >50 energy
-- [*Dotc_Extra Catweaving_cleave] Press !Rake! on a target if rake is not already active (or it is in pandemic range) and you are below 40 rage
-- [*Dotc_Extra Catweaving_cleave] Press !Shred! if:
+- [*Dotc_Catweaving_cleave] Press !Rake! on a target if rake is not already active (or it is in pandemic range) and you are below 40 rage
+- [*Dotc_Catweaving_cleave] Press !Shred! if:
     - You are below 40 rage
     - !Rake! is already active on both targets and is not in pandemic range for either
     - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
