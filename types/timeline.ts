@@ -50,6 +50,7 @@ export enum Talents {
   TearDownTheMighty = 'tear_down_the_mighty',
   AshamanesGuidance = 'ashamanes_guidance',
   HeartOfTheLion = 'heart_of_the_lion',
+  ElunesGuidance = 'elunes_guidance',
   CenariusGuidance = 'cenarius_guidance',
 }
 // Event type for the event queue

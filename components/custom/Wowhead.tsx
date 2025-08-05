@@ -26,8 +26,6 @@ export default async function Wowhead({
   let quality = -1
   let icon: React.ReactNode = null
 
-  console.log('id', id)
-
   if (process.env.NODE_ENV === 'test') {
     icon =
       noIcon || type === 'npc' ? (
