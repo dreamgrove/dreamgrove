@@ -39,23 +39,28 @@ When the 4p comes into play is when this tier set truly shines. The echo !441605
 
 # Rotation 
 
-#### **Reminder: The rotations below are purely about damage dealing. For further information on potential nuance for the rotations with regards to survivability please read the follow-up sections (primarily Ironfur and Defensives)**
+> [!NOTE]
+> The rotations below are purely about damage dealing. For further information on potential nuance for the rotations with regards to survivability please read the follow-up sections (primarily Ironfur and Defensives)**
 
 #### **What is a priority list?**
 
 When reading the rotations below, you should not think about them as steps to follow in a specific order. At any given point in combat, you should cast the highest priority thing on the list that you are able to cast, providing any stated conditions are met.
+
+#### **What does Pandemic mean in WoW?**
+
+Pandemic is an in-game mechanic where most damage over time (DoT) or heal over time (HoT) effects can have their duration extended by up to 30% if they are refreshed with less than 30% remaining on their duration. For example, if a DoT is ten seconds long you could refresh it at 3 seconds (30% of 10 seconds) and the total duration of the debuff would increase to 13 seconds, meaning that no duration of the spell cast is wasted. If a ten second dot is refreshed at 8 seconds then the total duration of the debuff would also increase to 13 seconds, but this would mean you lose 5 seconds of the debuff compared to if you cast it in the pandemic window.
 
 <HeroTalentsHeader title="Druid of the Claw" id="dotc">
 <Collapsible title="Pre-Combat">
 
 
 <Checkbox isIcon id="Dotc_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild without Wildpower Surge" />
-
+<Checkbox isIcon id="Dotc_Catweaving_PC" spellId={768} name="Rake opening (Very minor damage gain)"
 
 - Make sure the duration of your Flask, Food and Rune buffs will last for the entire encounter
-- Enter !Bear Form! a few seconds before you pull
+- [*~Dotc_Catweaving_PC] Enter !Bear Form! a few seconds before you pull
 - [*Dotc_Heart of the Wild_PC] Press !Heart of the Wild! a second before you start combat 
-
+- [*Dotc_Catweaving_PC] Press !Prowl! a few seconds before you pull
 </Collapsible> 
 
 <Collapsible title="Single Target Rotation">
@@ -78,20 +83,20 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*~Dotc_Catweaving] Press !Moonfire! if the dot completely falls off
 - [*Dotc_Heart of the Wild&&Dotc_Wildpower Surge] Press !Heart of the Wild! if you have 6 Feline Potential stacks
 - [*Dotc_Wildpower Surge] If at 6 stacks of Feline Potential then:
-    - [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
-        - !Maul! > !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
-        - !Maul! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
-    - [*~Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] !Maul! > !Rake! > !Rip! > !33917|Mangle!
-    - [*Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
-    - [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
-        - Dump any available rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
-        - Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*~Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence
+	- [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
+        	- !Maul! > !Rake! > !Rip! > !Convoke the Spirits! > !33917|Mangle!
+	- [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
+        	- !Maul! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*~Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] !Maul! > !Rake! > !Rip! > !33917|Mangle! 
+	- [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
+	- [*~Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*Dotc_Tooth and Claw] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+	- [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
+ 		- Dump any available rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+	- [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
+		- Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*~Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence
 - [*Dotc_Heart of the Wild&&~Dotc_Wildpower Surge] Press !Heart of the Wild!
 - [*Dotc_Lunar Beam] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
 - [*Dotc_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
@@ -139,16 +144,30 @@ When reading the rotations below, you should not think about them as steps to fo
 - Press !441605|Ravage! (on your priority target if there is one)
 - Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
 - Press !Moonfire! if the dot completely falls of a target
-- [*Dotc_Wildpower Surge_cleave] Please note, the following points are only a net gain for 2 target cleave:
-    - [*Dotc_Heart of the Wild_cleave&&Dotc_Wildpower Surge_cleave] Press !Heart of the Wild! if you have 6 Feline Potential stacks
-    - [*Dotc_Wildpower Surge_cleave] If at 6 stacks of Feline Potential then:
-        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !Raze! > !Rake! > !Rip! > !33917|Mangle! 
-        - [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If you do not have rage to !Raze! after hitting 6 stacks then: !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-        - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] !Maul! > !Rake! > !Rip! > !33917|Mangle!
-        - [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If you do not have rage to !Maul! after hitting 6 stacks then: !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-        - [*~Dotc_Tooth and Claw_cleave] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-        - [*Dotc_Convoke the Spirits_cleave] Press !Convoke the Spirits! immediately before you !Rip! in this sequence
-        - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
+- [*Dotc_Heart of the Wild_cleave&&Dotc_Wildpower Surge_cleave] Press !Heart of the Wild! if you have 6 Feline Potential stacks
+- [*Dotc_Wildpower Surge_cleave] If at 6 stacks of Feline Potential then:
+	- [*Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If !Convoke the Spirits! **is** available and ready to use then:
+        	- !Maul! > !Rake! > !Rip! > !Convoke the Spirits! > !33917|Mangle!
+	- [*Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If !Convoke the Spirits! **is not** available and ready to use then:
+        	- !Maul! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*~Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] !Maul! > !Rake! > !Rip! > !33917|Mangle! 
+	- [*Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
+	- [*~Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*Dotc_Tooth and Claw_cleave&&~Dotc_Raze_cleave] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+	- [*Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If !Convoke the Spirits! **is** available and ready to use then:
+        	- !Raze! > !Rake! > !Rip! > !Convoke the Spirits! > !33917|Mangle!
+	- [*Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If !Convoke the Spirits! **is not** available and ready to use then:
+        	- !Raze! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*~Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] !Raze! > !Rake! > !Rip! > !33917|Mangle! 
+	- [*Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If you do not have the rage to cast !Raze! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
+	- [*~Dotc_Convoke the Spirits_cleave&&Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If you do not have the rage to cast !Raze! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*Dotc_Tooth and Claw_cleave&&Dotc_Raze_cleave] If you still have more than 40 rage after using the !Raze! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+	- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Tooth and Claw_cleave] If !Convoke the Spirits! **is** available and ready to use then:
+ 		- Dump any available rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
+	- [*Dotc_Convoke the Spirits_cleave&&~Dotc_Tooth and Claw_cleave] If !Convoke the Spirits! **is not** available and ready to use then:
+		- Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*~Dotc_Convoke the Spirits_cleave&&~Dotc_Tooth and Claw_cleave] Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence or cast !Rake! on an alternate target
 - [*Dotc_Heart of the Wild_cleave&&~Dotc_Wildpower Surge_cleave] Press !Heart of the Wild! if available. Ideally press this as you are running into a pull to save yourself the global during combat.
 - [*Dotc_Lunar Beam_cleave] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
 - [*Dotc_Rage of the Sleeper_cleave] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
@@ -164,15 +183,19 @@ When reading the rotations below, you should not think about them as steps to fo
 - [*Dotc_Thorns of Iron_cleave] Press !Ironfur! if above 40 rage
 - Press !33917|Mangle!
 - Press !Thrash!
-- [*Dotc_Catweaving_cleave] Please note, the following points (full catweaving) are only a net gain for 2 target cleave:
-    - If the following conditions are met then use a !Cat Form! finisher after entering cat form via the priorities below and before leaving !Cat Form! via !33917|Mangle!
-    1. Press !Rip! on the target that does not have the Feline Potential !Rip! currently active if the target will live for 80%+ of the rips duration. **Never overwrite a Feline Potential empowered !Rip!**
-    2. If the target will not live for 80%+ of the duration of a !Rip! then press !Ferocious Bite! on either target. Make sure to press it at >50 energy
-- [*Dotc_Catweaving_cleave] Press !Rake! on a target if rake is not already active (or it is in pandemic range) and you are below 40 rage
-- [*Dotc_Catweaving_cleave] Press !Shred! if:
-    - You are below 40 rage
-    - !Rake! is already active on both targets and is not in pandemic range for either
-    - You are already in cat form and are just waiting for !33917|Mangle! to come back off CD 
+- [*Dotc_Catweaving_cleave&&Dotc_Wildpower Surge_cleave] Whilst in !Cat Form! **without having Feline Potential ready to empower your next finisher**, apply the following priority list:
+	- Press !33917|Mangle! if it becomes available
+	- Press !Rip! if:
+		- You are at 3+ combo points
+		- Press !Rip! if it is not currently active on your target or a !Rip! that was not empowered by !Wildpower Surge! is in pandemic.
+			- **Never** overwrite an empowered !Rip! with a non-empowered !Rip!
+	- Press !Ferocious Bite! if you are at 4+ combo points
+	- Press !Rake! if the dot is not active or it enters pandemic
+	- Press !Shred!
+- [*Dotc_Catweaving_cleave&&Dotc_Wildpower Surge_cleave] Press !Rake! to enter !Cat Form! if:
+	- Press !Rake! if !Rake! is not currently active on the target or if it is in pandemic.
+- [*Dotc_Catweaving_cleave&&Dotc_Wildpower Surge_cleave] Press !Shred! to enter cat form if:
+	- Rake is currently active on the target and **not** in pandemic.
 - Press !Swipe!
 
 </Collapsible>
@@ -181,6 +204,7 @@ When reading the rotations below, you should not think about them as steps to fo
 
 
 <Checkbox isIcon id="Dotc_Heart of the Wild_aoe" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox isIcon id="Dotc_Wildpower Surge_aoe" spellId={411824} name="Wildpower Surge" defaultCheck />
 <Checkbox isIcon id="Dotc_Lunar Beam_aoe" spellId={204066} name="Lunar Beam" />
 <Checkbox isIcon id="Dotc_Vicious Cycle_aoe" spellId={371999} name="Vicious Cycle" defaultCheck />
 <Checkbox isIcon id="Dotc_Tooth and Claw_aoe" spellId={135288} name="Tooth and Claw" defaultCheck />
@@ -193,6 +217,15 @@ When reading the rotations below, you should not think about them as steps to fo
 
 - Press !441605|Ravage! (on your priority target if there is one)
 - Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
+- [*Dotc_Wildpower Surge_aoe] If at 6 stacks of Feline Potential then:
+	- [*Dotc_Tooth and Claw_aoe&&~Dotc_Raze_aoe] !Maul! > !Rake! > !Rip! > !33917|Mangle! 
+	- [*Dotc_Tooth and Claw_aoe&&~Dotc_Raze_aoe] If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*Dotc_Tooth and Claw_aoe&&~Dotc_Raze_aoe] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+	- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] !Raze! > !Rake! > !Rip! > !33917|Mangle! 
+	- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] If you do not have the rage to cast !Raze! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- [*Dotc_Tooth and Claw_aoe&&Dotc_Raze_aoe] If you still have more than 40 rage after using the !Raze! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
+	- [*~Dotc_Tooth and Claw_aoe] Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
+	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence or cast !Rake! on an alternate target
 - [*Dotc_Heart of the Wild_aoe] Press !Heart of the Wild! if available. Ideally press this as you are running into a pull to save yourself the global during combat.
 - [*Dotc_Lunar Beam_aoe] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
 - [*Dotc_Rage of the Sleeper_aoe] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
@@ -225,68 +258,51 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 <Checkbox isIcon id="Dotc_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
 <Checkbox isIcon id="Dotc_Thorns of Iron_incarn" spellId={400222} name="Thorns of Iron" defaultCheck />
 <Checkbox isIcon id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" defaultCheck />
-<Checkbox isIcon id="Dotc_Convoke the Spirits_incarn" spellId={391528} name="Convoke the Spirits" />
 
 
 - [*Dotc_Single Target_incarn] Press !441605|Ravage!
 - [*~Dotc_Single Target_incarn] Press !441605|Ravage! (on your priority target if there is one)
 - Press !Thrash! if not at max stacks of the debuff or if it is about to expire
-- [*Dotc_Heart of the Wild_incarn&&Dotc_Single Target_incarn] Press !Heart of the Wild!
-    - [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
-- [*Dotc_Heart of the Wild_incarn&&Dotc_Cleave_incarn] Press !Heart of the Wild!
-    - [*Dotc_Wildpower Surge_incarn] On 2T you can hold !Heart of the Wild! until you're at 6 stacks of Feline Potential for a minor gain by Ripweaving. 
-- [*Dotc_Heart of the Wild_incarn&&Dotc_AOE_incarn] Press !Heart of the Wild!
+- [*Dotc_Heart of the Wild_incarn&&Dotc_Single Target_incarn] Press !Heart of the Wild! (Ideally before pressing incarn)
+  	- [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
+- [*Dotc_Heart of the Wild_incarn&&Dotc_Cleave_incarn] Press !Heart of the Wild! (Ideally before pressing incarn)
+   	- [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you can hold !Heart of the Wild! until you're at 6 stacks of Feline Potential for a minor gain by Ripweaving. 
+- [*Dotc_Heart of the Wild_incarn&&Dotc_AOE_incarn] Press !Heart of the Wild! (Ideally before pressing incarn)
 - [*Dotc_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper!
-    - [*Dotc_Wildpower Surge_incarn] If you are above 1-2 stacks of Feline Potential when !200851|Rage of the Sleeper! becomes available, you may wish to hold it until **after** you have applied your empowered !Rip!
-    - [*Dotc_Wildpower Surge_incarn] This is because leaving !Bear Form! will cause you lose any remaining duration of RotS, which will be more costly the closer you are to achieving 6 stacks of Feline Potential 
+ 	- [*Dotc_Wildpower Surge_incarn] If you are above 1-2 stacks of Feline Potential when !200851|Rage of the Sleeper! becomes available, you may wish to hold it until **after** you have applied your empowered !Rip!
+    	- [*Dotc_Wildpower Surge_incarn] This is because leaving !Bear Form! will cause you lose any remaining duration of RotS, which will be more costly the closer you are to achieving 6 stacks of Feline Potential 
 - [*Dotc_Lunar Beam_incarn] Press !Lunar Beam! 
-    - [*Dotc_Single Target_incarn&&Dotc_Wildpower Surge_incarn] You may choose to hold this until after your !Wildpower Surge! empowered !Rip! is active on the target for a slight gain.
+    	- [*Dotc_Single Target_incarn&&Dotc_Wildpower Surge_incarn] You may choose to hold this until after your !Wildpower Surge! empowered !Rip! is active on the target for a slight gain.
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] If at 6 stacks of Feline Potential then:
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If !Convoke the Spirits! **is** available and ready to use then:
-        - !Maul! > !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If !Convoke the Spirits! **is not** available and ready to use then:
-        - !Maul! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&~Dotc_Convoke the Spirits_incarn] !Maul! > !Rake! > !Rip! > !33917|Mangle!
-        - If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
-    - [*Dotc_Tooth and Claw_incarn] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
-    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] If !Convoke the Spirits! **is** available and ready to use then:
-        - Dump rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] If !Convoke the Spirits! **is not** available and ready to use then:
-        - Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] 
-        - [*~Dotc_Convoke the Spirits_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - If an empowered !Rip! is still active on the target then replace !Rip! in the above sequences with a !Ferocious Bite! cast
-    - If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
-- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] (The following is only a gain on 2T) If at 6 stacks of Feline Potential then:
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If !Convoke the Spirits! **is** available and ready to use then:
-        - !Raze! (or !Maul!) > !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If !Convoke the Spirits! **is not** available and ready to use then:
-        - !Raze! (or !Maul!) > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&~Dotc_Convoke the Spirits_incarn] !Raze! (or !Maul!) > !Rake! > !Rip! > !33917|Mangle!
-        - If you do not have the rage to cast !Raze! or !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Tooth and Claw_incarn&&Dotc_Convoke the Spirits_incarn] If you do not have the rage to cast !Raze! or !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
-    - [*Dotc_Tooth and Claw_incarn] If you still have more than 40 rage after using the !Raze! or !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
-    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] If !Convoke the Spirits! **is** available and ready to use then:
-        - Dump rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-    - [*Dotc_Convoke the Spirits_incarn&&~Dotc_Tooth and Claw_incarn] If !Convoke the Spirits! **is not** available and ready to use then:
-        - Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] 
-        - [*~Dotc_Convoke the Spirits_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-    - If an empowered !Rip! is still active on your primary target then either:
-        - Cast !Rip! on the secondary target (more overall damage)
-        - Replace !Rip! in the above sequences with a !Ferocious Bite! cast on the primary target (more priority damage)
-    - If !Rake! is already active and not within pandemic then either:
-        - Cast !Rake! on the secondary target OR
-        - Replace !Rake! with !Shred! on the primary target in the above sequences
+    	- [*Dotc_Tooth and Claw_incarn] !Rake! > !Rip! > !33917|Mangle!
+		- If a !Ravage! becomes ready before you !Rake! then press it before you start the Ripweave cycle (!Ravage! > !Rake! > !Rip! > !Mangle!)
+   	- [*Dotc_Tooth and Claw_incarn] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
+		- Spend so much that you cannot !Ravage! immediately if you get a proc
+		- Delay the Ripweave cycle to try and spend the rage
+    	- [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
+    	- If an empowered !Rip! is still active on the target then replace !Rip! in the above sequences with a !Ferocious Bite! cast
+   	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] If at 6 stacks of Feline Potential then:
+    	- [*Dotc_Tooth and Claw_incarn] !Rake! > !Rip! > !33917|Mangle!
+		- If a !Ravage! becomes ready before you !Rake! then press it before you start the Ripweave cycle (!Ravage! > !Rake! > !Rip! > !Mangle!)
+   	- [*Dotc_Tooth and Claw_incarn] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
+		- Spend so much that you cannot !Ravage! immediately if you get a proc
+		- Delay the Ripweave cycle to try and spend the rage
+    	- [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
+  	- If an empowered !Rip! is still active on your primary target then either:
+        	- Cast !Rip! on the secondary target (more overall damage)
+       		- Replace !Rip! in the above sequences with a !Ferocious Bite! cast on the primary target (more priority damage)
+   	- If !Rake! is already active and not within pandemic then either:
+        	- Cast !Rake! on the secondary target OR
+        	- Replace !Rake! with !Shred! on the primary target in the above sequences
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential
-- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential (only a potential gain on 2 targets)
-- [*Dotc_Tooth and Claw_incarn&&Dotc_Single Target_incarn] Press !Maul! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_incarn&&Dotc_Single Target_incarn] Press !Maul! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Tooth and Claw_incarn&&Dotc_Cleave_incarn] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] Press !Raze! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] Press !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Single Target_incarn] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Single Target_incarn] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Cleave_incarn] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
 - [*Dotc_Thorns of Iron_incarn] Press !Ironfur! if you have the rage to do so 
 - Press !33917|Mangle!   
 - Press !Thrash!
