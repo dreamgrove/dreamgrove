@@ -1,0 +1,95 @@
+# Paste into advanced below the output from your SimC
+
+# Default consumables
+potion=tempered_potion_3
+flask=flask_of_alchemical_chaos_3
+food=beledars_bounty
+augmentation=crystallized
+temporary_enchant=main_hand:algari_mana_oil_3
+
+set_bonus=thewarwithin_season_2_2pc=0
+set_bonus=thewarwithin_season_2_4pc=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=0
+
+
+copy="Undermine 2pc"
+
+set_bonus=thewarwithin_season_2_2pc=1
+set_bonus=thewarwithin_season_2_4pc=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=0
+
+
+copy="Undermine 4pc"
+
+set_bonus=thewarwithin_season_2_2pc=1
+set_bonus=thewarwithin_season_2_4pc=1
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=0
+
+
+copy="TWW3 Keeper 2pc"
+
+set_bonus=thewarwithin_season_2_2pc=0
+set_bonus=thewarwithin_season_2_4pc=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=1
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=0
+
+
+copy="TWW3 Keeper 4pc"
+
+set_bonus=thewarwithin_season_2_2pc=0
+set_bonus=thewarwithin_season_2_4pc=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=1
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=1
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=0
+
+talents=CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGLzsNjFmZmZmlZMzYmZshNGgBYbbshpZmlRAAAA2MzMDwmBG
+
+
+copy="TWW3 Elune's Chosen 2pc"
+
+set_bonus=thewarwithin_season_2_2pc=0
+set_bonus=thewarwithin_season_2_4pc=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=1
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=0
+
+talents=CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMLzsMzyM2MzMmZWMLjxMzAWYAGLbzshxsNCMBAAAYxMzMAbGYA
+
+
+copy="TWW3 Elune's Chosen 4pc"
+
+set_bonus=thewarwithin_season_2_2pc=0
+set_bonus=thewarwithin_season_2_4pc=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=keeper_of_the_grove,enable=0
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=keeper_of_the_grove,enable=0
+
+set_bonus=name=thewarwithin_season_3,pc=2,hero_tree=elunes_chosen,enable=1
+set_bonus=name=thewarwithin_season_3,pc=4,hero_tree=elunes_chosen,enable=1
+
+talents=CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMLzsMzyM2MzMmZWMLjxMzAWYAGLbzshxsNCMBAAAYxMzMAbGYA

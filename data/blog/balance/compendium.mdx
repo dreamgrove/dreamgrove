@@ -1,6 +1,6 @@
 ---
 title: Balance Druid Compendium
-patch: '11.1'
+patch: '11.2'
 draft: false
 authors: ["Gamz, Vinter, Dsune(Oi)"]
 summary: A guide to Balance Druid
@@ -12,28 +12,28 @@ summary: A guide to Balance Druid
 #### [2-piece](https://www.wowhead.com/ptr-2/spell=1236332/druid-elunes-chosen-11-2-class-set-2pc)
 > !Starfire! damage increased by 25%. Gaining Astral Power with !Starfire! has a 50% chance to launch a !Starsurge! at a victim of 50% effectiveness.
 
-This is approximately ~X% dmg increase from having no set.
+This is approximately ~8.4% dmg increase from having no set.
 
 #### [4-piece](https://www.wowhead.com/ptr-2/spell=1236333/druid-elunes-chosen-11-2-class-set-4pc)
 > On impact, !197626|Starsurges! launched by !Starfire! split to up to 3 additional targets at 80% effectiveness and grand a stack of Gathering Moonlight. Casting !Fury of Elune! or !Full Moon! consumes Gathering Moonlight to increase your damage by 4% per stack for 12 sec.
 
-This is approximately ~X% dmg increase from having no set.
+This is approximately ~15.1% dmg increase from having no set.
 
-[Sim for tier set](https://www.localhost:3000/static/sims/tiersims3.htm)
+[Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims3.htm)
 
 ### Keeper of the Grove tier set
 
 #### [2-piece](https://www.wowhead.com/ptr-2/spell=1236334/druid-keeper-of-the-grove-11-2-class-set-2pc)
 > Casting !194223|CA!/!102560|Inc! calls upon the assistance of a dryad for 10 sec that casts !Starsurge! at 30% effectiveness and !Starfall! at 100% effectiveness.
 
-This is approximately ~X% dmg increase from having no set.
+This is approximately ~7.2% dmg increase from having no set.
 
 #### [4-piece](https://www.wowhead.com/ptr-2/spell=1236336/druid-keeper-of-the-grove-11-2-class-set-4pc)
 > When your Dryad fades, your next 2 !197626|Starsurges! damage for an additional amount equal to 5% of your dmage done while it was active and splash 20% of their damage onto nearby enemies, reduced beyond 5 targets.
 
-This is approximately ~X% dmg increase from having no set.
+This is approximately ~18% dmg increase from having no set.
 
-[Sim for tier set](https://www.localhost:3000/static/sims/tiersims3.htm)
+[Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims3.htm)
 
 
 # Rotation
@@ -106,24 +106,29 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
 <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
 <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
+<Checkbox isIcon id="Keeper 4pc" spellId={1236807} name="Keeper 4-set" defaultCheck />
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip).
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
 - Use !205636|Force of Nature! if any of the following are true:
-  - [*Convoke the SpiritsKOTG] The cooldown on !194223|CA! is less than a GCD and the cooldown of !Convoke the Spirits! is less than 3 GCD's.
-  - [*~Convoke the SpiritsKOTG] The cooldown of !194223|CA!/!102560|Inc! is less than a GCD or longer than 30 seconds.
+  - [*Keeper 4pc] You are 2 GCD's into your !Dryad! window.
   - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
   - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
+  - [*~Convoke the SpiritsKOTG] You will have !194223|CA!/!102560|Inc! and trinket back up before !Force of Nature! is ready again.
+- [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA!/!102560|Inc!.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if any of the following are true:
-  - You just used !205636|Force of Nature!.
-  - [*Convoke the SpiritsKOTG] The cooldown on !Convoke the Spirits! is greater than the recharge time of your next !194223|CA!. 
+  - [*~Convoke the SpiritsKOTG] The cooldown on !Force of Nature! is less than 3 GCD's.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] !Convoke the Spirits! cooldown is less than 4 GCD's and the cooldown on !Force of Nature! is less than 3 GCD's.
+  - [*Keeper 4pc&&Convoke the SpiritsKOTG] You have enough Astral Power for 2 !Starsurge! casts and the cooldown on !Convoke the Spirits! is less than 4 GCD's and !Force of Nature! is available.
+  - [*Keeper 4pc] You have the !Dryad's Favor! buff and !Force of Nature! is active. 
   - The fight will end before !205636|Force of Nature! is available again.
+- [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA!/!102560|Inc!.
 - Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! when the cast time of !Starfire! is longer than the remaining duration of !Eclipse!.
-- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when you are below 40 AP and both scenarios are true:
-  - You just used 
-!205636|Force of Nature!.
-  - !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! is more than 40 seconds away.
+- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when any of the following are true:
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You just used 
+!205636|Force of Nature! and you are in your !Dryad! window.
+  -  [*Convoke the SpiritsKOTG] !194223|CA! will last for more than 4 seconds or the fight will end before your next !194223|CA! or !Force of Nature! window.
 - [*Fury of EluneKOTG] Use !Fury of Elune!.
 - [*New MoonKOTG] Use !Starsurge! if !Starlord! has less than 3 stacks.
 - [*~New MoonKOTG] Use !Starsurge! if one of the following conditions is met:
@@ -218,6 +223,7 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if one of the following conditions is met:
   - You just used !Force of Nature!.
   - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
+- Use !Starsurge! to spend !Dryad's Favor! when in !194223|CA!/!102560|Inc!.
 - Use !Wrath! to enter Lunar Eclipse.
 - [*Fury of EluneKAOE] Use !Fury of Elune!.
 - Use !Starfall! if:
@@ -296,6 +302,19 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !Starfall! on 2+ targets with !Aetherial Kindling!.
 - Use !Starfall! on 3+ targets.
 
+<Collapsible title="How to Use Keeper of the Grove Tier Set">
+
+The !Keeper of the Grove! tier set revolves around dumping as much damage as possible into your !Dryad! window to maximize the damage of your !Dryad's Favor! buff. 
+
+The general way to play this in raid is to use !194223|CA! on pull after your !Moonfire! and !Sunfire!, then pressing !Force of Nature! 2 globals into your !194223|CA!. After pressing !Force of Nature! you immediately use !Convoke the Spirits!. 
+
+As your !Dryad! fades and you gain !Dryad's Favor!, you press !194223|CA! again to dump the empowered !Starsurge! casts into a maxed out !Balance of All Things! and !Force of Nature! window.
+
+After this opener you do the same sequence as your !Convoke the Spirits! is coming back, but without the 2nd use of !194223|CA!.
+
+Remember to pool Astral Power for when your !Dryad! fades and you gain !Dryad's Favor!, as the window to spend the buff before !Force of Nature! and !194223|CA! falls off is very tight.
+</Collapsible>
+
 <Collapsible title="How to Use Warrior of Elune">
 
 !Warrior of Elune! is an off-gcd ability, making your next 3 !Starfire! instant for 25 seconds. The ability has a 45s cooldown that starts once you've pressed it.
@@ -344,10 +363,10 @@ You can use the macro below and replace your existing !Wrath! keybind with it to
 
 <Talents 
   name="Keeper of the Grove single target"
-  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGmZbGLMzMzMLzYmxMzYDbMADw22YBTzMLjAAAAsZmZmBsZgB" 
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGLzsNjlxMjZmFjZGzMjNswAMAbbjNMNzsMCAAAwmZmZMwmBG" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Astral Communion", "Radiant Moonlight"] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Meditation", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Astronomical Impact", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Hail of Stars", "Fury of Elune", "Elune's Guidance", "Crashing Star", "Denizens of the Dream", "Stellar Flare", "Elune's Guidance"] }
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Astral Communion", "Radiant Moonlight", "Aetherial Kindling"] },
+    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Meditation", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Hail of Stars", "Fury of Elune", "Elune's Guidance", "Crashing Star", "Denizens of the Dream", "Stellar Flare", "Elune's Guidance"] }
   ]} 
 > 
 <div className="flex justify-center">
@@ -428,9 +447,9 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
 
 <Talents 
   name="Elune's Chosen M+"
-  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMLzsMzyM2MzMmZWMLjxMzAWYAGLbzshxsNCMBAAAYxMzMAbGYA" 
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzsYWmZZmZbmZmZmZxsMGGshFAMW2mZDjZbEYCAAAwCzYA2MGG" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Power of Goldrinn", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Crashing Star", "Touch the Cosmos", "Hail of Stars", "Stellar Amplification", "Astral Communion"] },
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Power of Goldrinn", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Crashing Star", "Touch the Cosmos", "Hail of Stars", "Stellar Amplification", "Denizen of the Dream", "Elune's Guidance", "Astral Communion"] },
     { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Meditation", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration"] }
   ]} 
 > 
@@ -632,6 +651,12 @@ The [Durable Information Securing Container](https://www.wowhead.com/ptr-2/item=
 
 [Static Charge](https://www.wowhead.com/spell=1241250/static-charge?ilvl=701) gives versatility, [Critical Chain](https://www.wowhead.com/spell=1241246/critical-chain?ilvl=701) gives crit, [Electric Current](https://www.wowhead.com/ptr/spell=1236961/electric-current) gives mastery and [Spark Burst](https://www.wowhead.com/ptr/spell=1236273/spark-burst) gives haste and since they all perform close to each other the choice will depend on your character. **You should sim yourself on [Top Gear](https://www.raidbots.com/simbot/topgear) to find out which one is best for you!**
 
+## Reshii Wraps
+
+In Season 3 we are getting the artifact cloak [Reshii Wraps](https://www.wowhead.com/item=235499/reshii-wraps). For information about how to unlock and upgrade the cloak check out the [WoWHead guide](https://www.wowhead.com/guide/the-war-within/reshii-wraps-artifact-cloak-unlock-upgrade).
+
+For the secondary stats gained from the Fiber items you should just sim the best one using [Top Gear on Raidbots](https://www.raidbots.com/simbot/topgear).
+
 # FAQ
 
 ### Q: Why can't I enter Solar Eclipse?
@@ -773,11 +798,13 @@ See the description of the WA for more details. This is not a required WA but wi
 ## Simc Code Directory 
 [Item Strings for Simming](https://www.dreamgrove.gg/static/sims/itemstrings.txt)
 
-[Item Strings for PTR]((https://www.dreamgrove.gg/static/sims/ptritemstrings.txt))
+[String to Sim Tier Set](https://www.dreamgrove.gg/static/sims/tiersimcode.txt) (paste in advanced below your simc addon output)
 
-[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt)
+[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt) (paste in advanced below your simc addon output)
 
-[Race Sim](https://www.dreamgrove.gg/static/sims/racesim.htm)
+[Race Sim](https://www.dreamgrove.gg/static/sims/racesims3.htm) 
+
+[String to Sim Race](https://www.dreamgrove.gg/static/sims/racesimcode.txt) (paste in advanced below your simc addon output)
 
 [Current APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
 

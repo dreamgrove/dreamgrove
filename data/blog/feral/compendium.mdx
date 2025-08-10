@@ -1,39 +1,43 @@
 ---
 title: 'Feral Druid Compendium'
-patch: '11.1'
+patch: '11.2'
 draft: false
 authors: ["Crazymeow"]
 summary: 'Everything you need to know about Feral Druid'
 ---
 # News
 
-## D.I.S.C Belt
+Feral Druid in 11.2 is mostly just more of the same. The various buffs we have received have no gameplay impact. That being said, the removal of 11.1 tier set means !Apex Predator's Craving! is no longer mandatory in raid.
 
-Use  [Static Charge](https://www.wowhead.com/spell=1241250/static-charge) (versatility buff) in all content.
+This go-around, Tier Set bonuses are based on which hero tree you have selected. Once you acquire 2 pieces, Druid of the Claw will be the hero talent of choice for all PvE Content.
 
-## Corruption/Visions Helmet Enchant
+## Druid of the Claw Tier Set
 
-Recommend using [Greater Void Ritual](https://www.wowhead.com/item=239095/greater-rune-of-the-void-ritual) in all content.
 
-## Puzzling Cartel Chips
+2 Set: 
 
-This list is the same regardless of if you do keys or raid. Always sim yourself for the best results as the list order *can* change due to gear. List is in approximate order of strength not the order you buy the dinar
+>Ravage increases your haste by 10%, chance to critically strike by 10%, and the damage your bleeds deal by 30% for 5 sec.
 
-1. Mythic [Jastors](https://www.wowhead.com/item=231265/the-jastor-diamond?bonus=1533)
-2. Heroic [Jastors](https://www.wowhead.com/item=231265/the-jastor-diamond?bonus=1520) (if you cannot acquire myth)
-3. Mythic [Best-in-Slots](https://www.wowhead.com/item=232526/best-in-slots?bonus=1533)
-4. Mythic [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=1533&class=11&spec=103) (if no mythic Signet of the priory)
-5. Mythic [Pacemaker](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=1520&class=11&spec=103)
-6. Mythic [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=684&spec=103) (if you won't kill Mythic OAB)
-8. Mythic [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=1533) (situationally good on mythic gally, or in certain dungeons if you know you'll have high uptime on stacks)
+4 Set:
 
-If you still have leftover dinar at this point buy whatever you want. For example, [Greasemonkey's Shift-Stick](https://www.wowhead.com/item=228892/greasemonkeys-shift-stick?bonus=1533&class=11&spec=103) if you can't acquire a myth track weapon. Some really good offspec items:
+>Ravage has a 40% chance to make you Ravage your target again 4 sec later at 100% of the initial power.
 
-Resto: [Mr. Pickmeup](https://www.wowhead.com/item=230186/mister-pick-me-up?bonus=1533)
 
-Balance: [Mugs Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=1533)
+2p2p results in a ~8.9% gain in single target over old 4p, switching the point from !Apex Predator's Craving! to !Carnivorous Instinct!. Getting the full 4p nets a ~14.6% gain in single target. 
 
-Guardian: [Chromebustible Bomb Suit](https://www.wowhead.com/item=230029/chromebustible-bomb-suit?bonus=1533) (defensive)/[Tome of Lights Devotion](https://www.wowhead.com/item=219309/tome-of-lights-devotion?ilvl=684) (damage)
+## Wildstalker Tier Set
+
+
+2 Set:
+
+>The rate at which Bloodseeker Vines grow is increased by 40%. Tiger's Fury causes Bloodseeker Vines to grow on up to 3 valid nearby enemies.
+
+4 Set:
+
+>Bloodseeker Vines have a 20% chance to trigger Bursting Growth every 2 sec at 100% effectiveness. Each stack of Bloodseeker Vines on an enemy increases Bursting Growth damage taken by 30%.
+
+
+Going to 2p2p results in a ~6% gain in single target, and switches your build off of !Apex Predator's Craving! back to the L-Build we played in season 1. Gaining the 4p bonus leads to roughly an 11.4% gain in single target, putting it behind Druid of the Claw even in single target.
 
 # Rotation
 
@@ -50,7 +54,7 @@ When reading the priority lists below, you should not think about these as steps
 The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
 
 **Pre-Combat:**
-1. !Bear Form! incredibly minor dps gain for the opener, you can just sit in !Bear Form! until about to pull, and then use !Prowl! to instantly shift into !Cat Form!.
+
 2. !Prowl!
 3. !Rake! from stealth.
 
@@ -59,15 +63,16 @@ The way this section is written is very formulaic and has the same structure as 
 > [!TIP]
 > Uncheck !Bloodtalons! if you want a simpler builder priority.
 
-
-<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" />
+<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents"  />
 <Checkbox isIcon id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents" defaultCheck />
+<Checkbox isIcon id="Coiled to Spring" spellId={449537} name="Coiled to Spring" />
 <Checkbox isIcon id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
 <Checkbox isIcon id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" defaultCheck />
 <Checkbox isIcon id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
 <Checkbox isIcon id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
 <Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" defaultCheck />
+<Checkbox isIcon id="Rip and Tear" spellId={391347} name="Rip and Tear" defaultCheck />
 <Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" defaultCheck />
 <Checkbox isIcon id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws" spellId={405300} name="Thrashing Claws" />
@@ -75,8 +80,6 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox isIcon id="Brutal Slash" spellId={202028} name="Brutal Slash" radio="Brutal Slash" defaultCheck />
 <Checkbox isIcon id="Wild Slashes" spellId={390864} name="Wild Slashes" radio="Brutal Slash" />
 <Checkbox isIcon id="Shadowmeld" spellId={58984} name="Shadowmeld" />
-
-
 
 **Single Target Priority List:**
 
@@ -100,15 +103,16 @@ The way this section is written is very formulaic and has the same structure as 
 9. [*Convoke the Spirits] !391528|Convoke! when:
     - !Rip! is up. AND
     - !5217|Tiger's Fury! is up. AND
-    - You have 2 or fewer combo points outside !Berserk! or 3 or fewer inside !Berserk!.
+    - You have 2 or fewer combo points outside !Berserk! or 3 or fewer inside !Berserk!. (or if you must cast it now to have the entirety of convoke within berserk.)
 10. [*Convoke the Spirits] You may also !391528|Convoke! if the fight is about to end. Usually you want to !391528|Convoke! with !Berserk! if you can do so without losing a cast.
+11. [*Bloodtalons] If you have no stacks of !Bloodtalons! and can trigger !Bloodtalons! with your next spell, then do so.
 
 </details>
 
 <details open>
 <summary>Second Priority: Finishers</summary>
 
-1. [*Wildstalker] As Wildstalker there are 2 scenarios where you can use 3+ combo point rips:
+1. [*Wildstalker&&Rip and Tear] There are 2 scenarios where you can use 3+ combo point rips:
     1. !Rip! is in pandemic range near the start of !5217|Tiger's Fury!
     2. !Rip! wont last until the next !5217|Tiger's Fury! in the last 3 seconds of !5217|Tiger's Fury!
 2. !Rip! if all of these are true:
@@ -116,10 +120,10 @@ The way this section is written is very formulaic and has the same structure as 
     - !Rip! is missing or in pandemic range.
     - !5217|Tiger's Fury! is up, or won't be up before !Rip! expires.
     - [*Bloodtalons] !Bloodtalons! is up.
+3. [*Druid of the Claw&&Coiled to Spring] Use a builder if you are inside !102543|Incarn!/!Berserk!, and you are lacking either !441583|Ravage! or !449537|Coiled to Spring!.
 4. !Ferocious Bite! when:
     - You have 5 combo points AND
-    - You have at least 50 energy **or** are inside !102543|Incarn!/!Berserk!.
-    - [*Druid of the Claw] Use another builder first if you are inside !102543|Incarn!/!Berserk!, and you do not have one of either !441583|Ravage! or !449537|Coiled to Spring!.
+    - You have at least 50 energy (25 energy during !102543|Incarn!/!Berserk!)
 
 </details>
 
@@ -150,7 +154,7 @@ The way this section is written is very formulaic and has the same structure as 
 9. [*Brutal Slash] !Brutal Slash!.
 10. !Shred!.
 11. [*Bloodtalons] If you still need !Bloodtalons! proc it with this priority:
-    1. !Rake! if it will upgrade !Rake!'s snapshot value, or if it needs reapplied. (only relevant during !102543|Incarn!/!Berserk!)
+    1. [*Druid of the Claw] !Rake! if it will upgrade !Rake!'s snapshot value, or if it needs reapplied. (only relevant during !102543|Incarn!/!Berserk!)
     2. [*~Thrashing Claws] !Thrash! if it is in pandemic range (only relevant during !102543|Incarn!/!Berserk!)
     3. [*~Brutal Slash] !Swipe!.
     4. !Rake! if it will not downgrade !Rake!'s snapshot value.
@@ -174,7 +178,7 @@ When reading the priority lists below, you should not think about these as steps
 The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
 
 **Pre-Combat:**
-1. [*Unbridled Swarm AOE] !Adaptive Swarm!
+1. [*Unbridled Swarm AOE] Stack as many !Adaptive Swarm!'s as you can.
 2. !Prowl!
 3. !Rake! from stealth.
 
@@ -182,7 +186,6 @@ The way this section is written is very formulaic and has the same structure as 
 
 > [!TIP]
 > Uncheck !Bloodtalons! if you want a simpler builder priority.
-
 
 <Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck/>
 <Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
@@ -210,7 +213,7 @@ The way this section is written is very formulaic and has the same structure as 
 <summary>Highest Priority: Cooldowns</summary>
 
 **Special Note: Use single-target spells on higher priority/higher healthed mobs**
-1. !5217|Tiger's Fury! at 5 combo points or if you're missing 35+ energy, whichever happens first.
+1. !5217|Tiger's Fury! at 5 combo points or if you run out of energy, delay a few seconds as needed for !102543|Incarnation!/!Berserk!.
 2. [*Apex Predator's Craving AOE&&Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs if it won't stop !Bloodtalons! from proccing.
 3. [*Apex Predator's Craving AOE&&~Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs.
 4. [*Adaptive Swarm AOE] !Adaptive Swarm! when all of these are true:
@@ -230,6 +233,9 @@ The way this section is written is very formulaic and has the same structure as 
     - !5217|Tiger's Fury! is up. AND
     - You have 1 or fewer combo points outside of !Berserk!, or 2 or fewer combo points during !Berserk!.
     - *note: You generally want to pair this with !Berserk! if possible without losing casts.
+
+> [!TIP]
+> Sending !Adaptive Swarm! on allies with !Unbridled Swarm! is a very minor loss, the main thing is to not overthink its use.
 
 </details>
 
@@ -290,6 +296,9 @@ The way this section is written is very formulaic and has the same structure as 
 </Collapsible>
 
 # Talents
+
+> [!WARNING]
+> This section is not yet updated. Check back on August 12th.
 
 ## Class Tree (all pve content)
 
@@ -361,6 +370,9 @@ The way this section is written is very formulaic and has the same structure as 
 
 ## Raid Talents
 
+> [!WARNING]
+> This section is not yet updated. Check back on August 12th.
+
 Our recommended default hero-tree for raiding is Wildstalker once you acquire at least the 2 piece 11.1 set bonus. That being said, Druid of the Claw can be decent on fights with AoE.
 
 ![WS](/static/images/WILDSTALKERr%2B.png)
@@ -423,6 +435,9 @@ Please note you can significantly customise the above, see the talent write-up i
 
 
 ## Dungeon Talents
+
+> [!WARNING]
+> This section is not yet updated. Check back on August 12th. That being said, not much is changing.
 
 Feral goes into 11.1 with plenty of options yet again when it comes to M+, with both Hero trees creating two distinct options on their own. Embrace these options and find what works for you, there is simply no 'best' build, especially because different talents will suit different dungeons and groups. However, listed below are some reference builds you can play around with, and the images below can help guide you to customise these builds to your liking.
 
@@ -510,27 +525,14 @@ That being said, Druid of the Claw is the better hero-tree for M+. Not that you 
 
 # Consumables
 
-## Potions
-
-[Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion) is your dps potion for every situation.
-
-[Algari Healing Potion](https://www.wowhead.com/item=211880/algari-healing-potion) is the only health potion available. That being said, if you find yourself equipped with an engineering crafted piece for whatever reason, [Heartseeking Health Injector](https://www.wowhead.com/item=221910/tinker-heartseeking-health-injector) can situationally be a superior option.
-
-## Food
-
-[Feast of the Midnight Masquerade](https://www.wowhead.com/item=222733/feast-of-the-midnight-masquerade), [Feast of the Divine Day](https://www.wowhead.com/spell=445112/feast-of-the-divine-day) and [Beledar's Bounty](https://www.wowhead.com/item=222728/beledars-bounty) are all essentially equal, with [Beledar's Bounty](https://www.wowhead.com/item=222728/beledars-bounty) being by far the cheapest option.
-
-## Phials
-
-[Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) for every situation. Rarely, with [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) and/or [Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103), [Flask of Tempered Mastery](https://www.wowhead.com/item=212280/flask-of-tempered-mastery?crafting-quality=6) can be better.
-
-## Weapon Oils/Stones
-
-[Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil) overtakes other options with 11.1 gear.
-
-## Augment Rune
-
-[Crystallized Augment Rune](https://www.wowhead.com/item=224572/crystallized-augment-rune)
+| Type | Consumable |
+|------|---------|
+| **DPS Potion** | [Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion)  |
+| **Healing Potion** | [Invigorating Healing Potion](https://www.wowhead.com/ptr-2/item=244835/invigorating-healing-potion) is the best health potion available. |
+| **Food** | [Beledar's Bounty](https://www.wowhead.com/item=222728/beledars-bounty) or any other secondary stat food. |
+| **Flask** | [Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) |
+| **Oil/Stone** | [Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil) |
+| **Augment Rune** | [Crystallized Augment Rune](https://www.wowhead.com/item=224572/crystallized-augment-rune) |
 
 # Gearing
 
@@ -544,7 +546,7 @@ That being said, Druid of the Claw is the better hero-tree for M+. Not that you 
 | Slot | Gem/Enchant |
 |------|---------|
 | **Gems** |  1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) and a mixture of the other gems based on your sims. It is not worth slotting in a Stamina gem. Personally don't think [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) is necessary as a Feral Druid, given that we already have a lot of speed, but it would be a disservice to not mention it. |
-| **Weapon** | [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths?crafting-quality=6) is our best pure-single target enchant. Sim your character to see what is best with increased targets. |
+| **Weapon** | [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths?crafting-quality=6) begins as our best single-target enchant, with increased gear or increased target count, any of the secondary-stat enchants will overtake. For example, [Stonebound Artistry](https://www.wowhead.com/item=223763/enchant-weapon-stonebound-artistry). |
 | **Chest** | [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) |
 | **Cloak** | [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace) |
 | **Legs** | [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit) |
@@ -558,86 +560,104 @@ That being said, Druid of the Claw is the better hero-tree for M+. Not that you 
 ## Crafting
 
 > [!NOTE]
-> The biggest question is whether or not to craft a weapon, or gamble on acquiring a myth track weapon early on. (for example [Greasemonkey's Shift Stick](https://www.wowhead.com/item=228892/greasemonkeys-shift-stick?bonus=4800:4786:1511:11991&class=11&ilvl=662&spec=103) from the first boss of the raid, if you'll enter Mythic quickly.) If you do get one, then skip crafting a weapon.
+> The biggest question is whether or not to craft a weapon, or gamble on acquiring a myth track weapon early on. (for example [Obliteration Beamglaive](https://www.wowhead.com/ptr-2/item=237739/obliteration-beamglaive) from the first boss of the raid, if you'll enter Mythic quickly.) If you do get one, then skip crafting a weapon.
 
 **Crafting Order:**
 
 - [Charged Halberd](https://www.wowhead.com/item=222448/charged-halberd?bonus=8791&class=11&ilvl=636&spec=103) (or any crafted 2h agi weapon) with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension). If you already have a myth track weapon, you can skip this.
-- Sim the best slot for your gear using [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) (if you have weapon with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension)) or [Dawnthread Lining](https://www.wowhead.com/item=222868/dawnthread-lining).
+- Sim the best slot for your gear using [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) (if you have weapon with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension)) or [Dawnthread Lining](https://www.wowhead.com/item=222868/dawnthread-lining)/[Duskthread Lining](https://www.wowhead.com/item=222873/duskthread-lining)
 - Can continue doing the above. Ever since the crest requirement for crafted gear got nerfed this route is equally efficient in that regard.
+
+By the end of the patch, the two embellishment items will be on Wrists and Belt.
 
 ## Trinkets
 
 These trinket lists are in rough order of strength, assuming the highest item level version of the items. You should always sim your own character to determine which trinkets you should equip. 
 
 > [!NOTE]
-> This is updated for the recent wave of buffs to trinkets that deal flat damage.
+> [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) is so dominant, that the For-Raid list assumes you have it already. If you don't, then [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) is your next best on-use. From dungeons its [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?class=11&hero=21&ilvl=723&spec=103) instead. That being said, the Normal and Heroic versions of [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) are better, so even if you're m+ only, you'll want it.
 
 **For use in Raid:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
-| **S Tier** | [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103) | 90s on-use trinket. Generally will hold this to pair with Berserk. On some fight timers where you hold Berserk, you can squeeze an extra use of this in between.
-|  | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) | 2 min on-use trinket. Pair this with Berserk. The value of this trinket is increased slightly if others in your group are running it.
-|  | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) |
-|  | [Eye of Kezan](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) | The longer the fight, the more this pulls ahead of everything else. The shorter the fight, the more this falls behind. This ranking assumes a ~5minute fight.
-| **A Tier** | [Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103) | Highly recommend doing your delve bounty/map and filling delve vault for this trinket if you don't have the above on myth track.
-|  | [Junkmaestro's Mega Magnet](https://www.wowhead.com/ptr-2/item=230189/junkmaestros-mega-magnet?class=11&ilvl=678&spec=103) | Doesn't matter when you use this for pure damage, just dont cap stacks and don't gimp other trinket cooldowns for it.
-|  | [Suspicious Energy Drink](https://www.wowhead.com/ptr-2/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=103) |
-|  | [Zee's Thug Hotline](https://www.wowhead.com/ptr-2/item=230199/zees-thug-hotline?class=11&ilvl=678&spec=103) | This trinket is incredibly good during lust. Enough so that, in very short fights (sub 2 min), it is likely our best option.
-|  | [Reverb Radio](https://www.wowhead.com/ptr-2/item=230194/reverb-radio?class=11&ilvl=678&spec=103) |
-|  | [Azerokk's Resonating Heart](https://www.wowhead.com/ptr-2/item=159612/azerokks-resonating-heart?ilvl=678&spec=103) |
-|  | [Geargrinder's Spare Keys](https://www.wowhead.com/ptr-2/item=230197/geargrinders-spare-keys?class=11&ilvl=678&spec=103) | Value decreases a bit with a stat on-use equipped.
+| **SS Tier** | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | 2 min on-use trinket. Macro to berserk, so strong that even a lower item level version of this can be better than your other options.
+| **S Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | Passive crit proc.
+| **A Tier** | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | Cyclical Crit proc.
+| | [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Damage proc trinket + execute
+| | [Ara'kara Sacbrood (WS)](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | Strong passive agility proc. Better for Wildstalker than DOTC due to the haste on the trinket.
+| | [Ticking Sac of Terror](https://www.wowhead.com/item=190652/ticking-sack-of-terror?hero=21&ilvl=723&spec=103) | Solid damage proc
+| **B Tier** | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | True stat stick, sim default is haste.
+| | [Ara'kara Sacbrood (DOTC)](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | A little bit worse for DOTC, but still a solid passive trinket.
+| | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) | Passive stat proc.
+| | [Incorporeal Warpclaw (WS)](https://www.wowhead.com/item=242495/incorporeal-warpclaw?class=11&hero=21&ilvl=723&spec=103) | Passive damage proc. Easily replaceable.
 
 **For use in Mythic+:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
-| **S Tier** | [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103) | 90s on-use trinket. Pair with Berserk
-| | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) | Pair with Berserk.
-| **A Tier** | [Eye of Kezan: High Combat Uptime](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) | Superb as long as you can maintain a high amount of average stacks.
-| | [Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103) |
-| | [Suspicious Energy Drink](https://www.wowhead.com/ptr-2/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=103) |
-| | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | This loses value relative to raid because the timers don't align as nicely in a dungeon environment. If you're consistently getting this buff for your cooldowns then its value goes up.
-| **B Tier** | [Azerokk's Resonating Heart](https://www.wowhead.com/ptr-2/item=159612/azerokks-resonating-heart?ilvl=678&spec=103) |
-| | [Reverb Radio](https://www.wowhead.com/ptr-2/item=230194/reverb-radio?class=11&ilvl=678&spec=103) |
-| | [Junkmaestro's Mega Magnet](https://www.wowhead.com/ptr-2/item=230189/junkmaestros-mega-magnet?class=11&ilvl=678&spec=103) | |
-| | [Geargrinder's Spare Keys](https://www.wowhead.com/ptr-2/item=230197/geargrinders-spare-keys?class=11&ilvl=678&spec=103) | moves up slightly if your other trinket is not an on-use |
+| **S Tier** | [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk, best in mid-count dungeons, ideally with not a lot of single-target. Dont die. If you plan to, dont use this trinket.
+| | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
+| **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) |
+| **B Tier** | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) |
+| | [Improvised Seaforium Pacemaker](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
+| | [So'leah's Secret Technique](https://www.wowhead.com/item=185818/soleahs-secret-technique?class=11&hero=21&ilvl=723&spec=103) | Sim which secondary is best, but odds are its mastery. Arguably should be rated higher for consistency + ally benefit.
+| | [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Can arguably be rated higher, as its main benefit is single target.
+| | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) |
+| | [Void-Touched Fragment](https://www.wowhead.com/item=238386/void-touched-fragment?bonus=1582:12357:12239&class=11&hero=21&ilvl=710&spec=103) | If you find things are dying fast, this moves up the list. (mostly just easier keys). Comes from Delves and is strong for its item level in this content.
+
 
 > [!WARNING]
-> [Eye of Kezan](https://www.wowhead.com/ptr-2/item=230198/eye-of-kezan?bonus=1527:11996:11964&ilvl=678&spec=103) is extremely dungeon and group dependent. I would recommend not playing this, unless you are confident in acquiring high combat uptime.
+> [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) value assumes a clean run. The more you die, the worst this trinket is.
 
 ### Trinket FAQ
 
-Q: How do I use stat on-use trinkets with [Best-in-Slots](https://www.wowhead.com/item=232526/best-in-slots?bonus=1527) equipped?
+Q: How do I select a different secondary than Haste for [Soleah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103)?
 
-A: You send your trinket with cooldowns, and then use [Best-in-Slots](https://www.wowhead.com/item=232526/best-in-slots?bonus=1527) with your next !Tiger's Fury! (with !Convoke the Spirits! instead if you are running !Ashamane's Guidance!)
+A: In the Custom APL box of your sim, paste in `shadowlands.soleahs_secret_technique_type="mastery"` or whatever stat you want. Alternatively, in quick sim you can paste the following into Expert Mode: Post-Combination Actors:
+```
+profileset."Crit"+=shadowlands.soleahs_secret_technique_type="crit"
+profileset."Mastery"+=shadowlands.soleahs_secret_technique_type="mastery"
+profileset."Versatility"+=shadowlands.soleahs_secret_technique_type="versatility"
+```
 
-Q: Should we be playing double on-use with [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) and [House of Cards](https://www.wowhead.com/ptr-2/item=230027/house-of-cards?class=11&ilvl=678&spec=103)?
+The default profile would use Haste.
 
-A: No, usually we only play 1 on-use trinket. Though you should always sim just in case.
+Q: Should we be playing double on-use trinkets?
+
+A: No, Feral will typically play just one on-use; though you should always sim just in case.
 
 Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
 
 A: By default, none. You can add the buffs yourself by pasting `thewarwithin.signet_of_the_priory_party_stats=crit/haste/mastery/versatility` into the Custom APL box of your sim. Remove whatever ally stat you dont want to sim.
 
-Q: [Mechano-Core Amplifier](https://www.wowhead.com/ptr-2/item=232485/mechano-core-amplifier?class=11&ilvl=665&spec=103)/[Suspicious Energy Drink](https://www.wowhead.com/ptr-2/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=103) is simming better than some of the higher item level stuff on this list for me, should I use it?
+Q: [Void-Touched Fragment](https://www.wowhead.com/ptr-2/item=238386/void-touched-fragment?bonus=1582:12357:12239&class=11&ilvl=710&spec=103) is simming better than some of the higher item level stuff on this list for me, should I use it?
 
-A: Absolutely. These trinkets are particularly potent for their item level.
+A: Absolutely. This trinket is particularly potent for its item level in Mythic+.
 
-Q: Why do damaging trinkets deal more damage as Wildstalker?
+Q: Why do damaging items deal more damage as Wildstalker?
 
-A: The Wildstalker Hero Talent !440119|Vigorous Creepers! buffs non-feral damage as well, including damage from trinkets.
+A: The Wildstalker Hero Talent !440119|Vigorous Creepers! also buffs the damage of non-druid effects.
+
+Q: [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) is simming much higher than [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) in dungeonslice, why is it in the same tier?
+
+A: [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) cheats a bit by not having any on-pull value. Since dungeonslice starts with a single-target boss, this means all of its uses are in AoE. To get a better idea of this trinkets value in comparison to [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103), try dungeonroute instead. But also, dying is a fact of life, and that affects this trinket a lot more than the other.
+
+## D.I.S.C Belt
+
+This belt is approximately equivalent to a fully upgraded hero-track belt (710 item level). That being said, belt is a likely craft location, and thus will be replaced by a crafted belt.
+
+Any of the secondary effects can be the best for your character. You can use top-gear's '+' menu to quickly compare all 4 of them. 
+The options:
+
+[Static Charge](https://www.wowhead.com/spell=1241250/static-charge) (versatility buff)
+[Critical Chain](https://www.wowhead.com/spell=1241246/critical-chain?ilvl=701) (crit buff)
+[Electric Current](https://www.wowhead.com/ptr/spell=1236961/electric-current) (mastery buff)
+[Spark Burst](https://www.wowhead.com/ptr/spell=1236273/spark-burst) (haste)
+
+Everything else is poorly tuned and should never be used.
 
 ## Cyrce's Circlet
 
-Yes we are still going to play this ring in 11.1, and it will be our best-in-slot. This is true even when myth track item level increases by 6. That being said, some people may find that other items outsim this ring in their current gear.
-
-### Recommended Citrines
-
-Thunder Citrine: Always play [Stormbringer's Runed Citrine](https://www.wowhead.com/item=228638/stormbringers-runed-citrine).
-
-Sea Citrine: Always play [Fathomdweller's Runed Citrine](https://www.wowhead.com/item=228639/fathomdwellers-runed-citrine).
-
-Wind Citrine: Always play [Windsinger's Runed Citrine](https://www.wowhead.com/item=228640/windsingers-runed-citrine).
+Replace this immediately upon logging in. The nerfed version is not competitive with season 2 rings.
 
 # Miscellaneous
 
@@ -773,9 +793,9 @@ You probably have it bound to a mouse button, which doesn't allow mouseover macr
 ## Useful WeakAura(s) and Addons
 
 ### **Full WeakAura Packages for Feral**
-To play feral competently, many variables must be tracked. A single WeakAura is not up to this task, so our contributors have spent many hours assembling full WA packages from individual WeakAuras.
 
 Each package contains multiple WeakAuras that work with each other to help you understand what's happening in combat. No package is superior to the others in the list. We recommend you try out several, and settle on your favorite.
+(If you want your weakaura package added, feel free to ping me in dreamgrove discord)
 
 - [by Drufearr](https://wago.io/us2RURgE6)
 - [by Chips](https://wago.io/WkTBZuH3y)
@@ -851,7 +871,7 @@ This weakaura checks for a whisper input, (ie 'innervate me') and puts a glow on
 | Roar | !Stampeding Roar! | WHI | !Well-Honed Instincts! |
 | vate | !Innervate! | incap | !Incapacitating Roar! |
 | bash | !Mighty Bash!, sometimes !Skull Bash! | vigor | !Ursine Vigor! |
-| 1min roar | !Improved Stampeding Roar! | meditation | !Lycara's Meditation! ~~please delete~~ |
+| 1min roar | !Improved Stampeding Roar! | insp/inspiration | !Lycara's Inspiration! |
 | HOTW | !Heart of the Wild! | NV | !Nature's Vigil! |
 | Roots | !Entangling Roots! | brez/cr/br | !Rebirth! |
 | Bark | !Barkskin! | cp | combo points |
