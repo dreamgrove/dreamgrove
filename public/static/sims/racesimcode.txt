@@ -1,0 +1,48 @@
+# Paste this below your SimC Addon output
+
+copy=Tauren
+race=tauren
+
+copy=Troll
+race=troll
+
+copy="Highmountain Tauren"
+race=highmountain_tauren
+
+copy="Zandalari Troll (Akunda)"
+race=zandalari_troll
+zandalari_loa=akunda
+
+copy="Zandalari Troll (Bwonsamdi)"
+race=zandalari_troll
+zandalari_loa=bwonsamdi
+
+copy="Zandalari Troll (Gonk)"
+race=zandalari_troll
+zandalari_loa=gonk
+
+copy="Zandalari Troll (Kimbul)"
+race=zandalari_troll
+zandalari_loa=kimbul
+
+copy="Zandalari Troll (Kragwa)"
+race=zandalari_troll
+zandalari_loa=kragwa
+
+copy="Zandalari Troll (Pa'ku)"
+race=zandalari_troll
+zandalari_loa=paku
+
+copy="Night Elf (Night)"
+race=night_elf
+timeofday=night
+
+copy="Night Elf (Day)"
+race=night_elf
+timeofday=day
+
+copy="Worgen"
+race=worgen
+
+copy="Kul Tiran"
+race=kul_tiran
