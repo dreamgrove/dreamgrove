@@ -24,7 +24,7 @@ This is approximately ~15.1% dmg increase from having no set.
 ### Keeper of the Grove tier set
 
 #### [2-piece](https://www.wowhead.com/spell=1236334/druid-keeper-of-the-grove-11-2-class-set-2pc)
-> Casting !194223|CA!/!102560|Inc! calls upon the assistance of a !Dryad! for 10 sec that casts !Starsurge! at 360% effectiveness and !Starfall! at 800% effectiveness.
+> Casting !194223|CA! / !102560|Inc! calls upon the assistance of a !Dryad! for 10 sec that casts !Starsurge! at 360% effectiveness and !Starfall! at 800% effectiveness.
 
 This is approximately ~7.2% dmg increase from having no set.
 
@@ -35,6 +35,9 @@ This is approximately ~18% dmg increase from having no set.
 
 [Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims3.htm)
 
+<Collapsible title="Balance Druid 11.2 Video Guide">
+  <YouTube id="g7ljpozVgsg"/>
+</Collapsible>
 
 # Rotation
 
@@ -108,26 +111,29 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
 <Checkbox isIcon id="Keeper 4pc" spellId={1236807} name="Keeper 4-set" defaultCheck />
 
-- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip).
+- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
+- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
 - Use !205636|Force of Nature! if any of the following are true:
   - [*Keeper 4pc] You are 2 GCD's into your !Dryad! window.
   - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
+  - [*~Keeper 4pc] The cooldown on !194223|CA! is less than a GCD and the cooldown of !Convoke the Spirits! is less than 3 GCD's.
   - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
-  - [*~Convoke the SpiritsKOTG] You will have !194223|CA!/!102560|Inc! and trinket back up before !Force of Nature! is ready again.
-- [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA!/!102560|Inc!.
+  - [*~Convoke the SpiritsKOTG] You will have !194223|CA! / !102560|Inc! and trinket back up before !Force of Nature! is ready again.
+- [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA! / !102560|Inc!.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if any of the following are true:
-  - [*~Convoke the SpiritsKOTG] The cooldown on !Force of Nature! is less than 3 GCD's.
-  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] !Convoke the Spirits! cooldown is less than 4 GCD's and the cooldown on !Force of Nature! is less than 3 GCD's.
-  - [*Keeper 4pc&&Convoke the SpiritsKOTG] You have enough Astral Power for 2 !Starsurge! casts and the cooldown on !Convoke the Spirits! is less than 4 GCD's and !Force of Nature! is available.
+  - [*~Convoke the SpiritsKOTG&&Keeper 4pc] The cooldown on !Force of Nature! is less than 3 GCD's.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and !Convoke the Spirits! is available.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and the cooldown on !Convoke the Spirits! is greater than the remaining recharge time of your next !194223|CA!.
+  - [*Keeper 4pc&&Convoke the SpiritsKOTG] You have enough AP for 2 !Starsurge! casts and the cooldown on !Convoke the Spirits! is less than 4 GCD's and !Force of Nature! is available.
   - [*Keeper 4pc] You have the !Dryad's Favor! buff and !Force of Nature! is active. 
   - The fight will end before !205636|Force of Nature! is available again.
-- [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA!/!102560|Inc!.
+- [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
+- [*Keeper 4pc] Use !Wrath! in your !Dryad! window if you have don't have enough AP for the 2 !Starsurge! casts needed to consume !Dryad's Favor!.
 - Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! when the cast time of !Starfire! is longer than the remaining duration of !Eclipse!.
 - [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when any of the following are true:
-  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You just used 
-!205636|Force of Nature! and you are in your !Dryad! window.
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You just used !205636|Force of Nature! and you are in your !Dryad! window.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You are below 40 AP and you just used !Force of Nature!.
   -  [*Convoke the SpiritsKOTG] !194223|CA! will last for more than 4 seconds or the fight will end before your next !194223|CA! or !Force of Nature! window.
 - [*Fury of EluneKOTG] Use !Fury of Elune!.
 - [*New MoonKOTG] Use !Starsurge! if !Starlord! has less than 3 stacks.
@@ -213,6 +219,7 @@ When reading the priority lists below, you should not think of these as steps to
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
+- Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
 - [*Stellar FlareKAOE] Use !Stellar Flare! if all of the following conditions is met:
   - The target will live for at least 8s+1s per target that !Starfire! can hit.
   - You will not overcap on AP.
@@ -223,8 +230,9 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if one of the following conditions is met:
   - You just used !Force of Nature!.
   - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
-- Use !Starsurge! to spend !Dryad's Favor! when in !194223|CA!/!102560|Inc!.
-- Use !Wrath! to enter Lunar Eclipse.
+- Use the appropriate filler to pool AP for 2 !Starsurge! casts to spend !Dryad's Favor! at the end of your !194223|CA! / !102560|Inc!.
+- Use !Starfire! to enter !Solar Eclipse! on 2 targets.
+- Use !Wrath! to enter !Lunar Eclipse! on 3 or more targets.
 - [*Fury of EluneKAOE] Use !Fury of Elune!.
 - Use !Starfall! if:
   - !Starlord! is below 3 stacks.
@@ -253,7 +261,9 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
 <Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of NatureEC"/>
 <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
+<Checkbox isIcon id="EC 4pc" spellId={1236989} name="Gathering Moonlight" defaultCheck/>
 
+- [*EC 4pc] Use !Fury of Elune! if !Gathering Moonlight! is about to expire.
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Start spreading !Moonfire! while the tank is gathering mobs.
 - [*Stellar FlareECAoE] Use !Stellar Flare! if all of the following conditions is met:
@@ -295,8 +305,8 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Keeper Fillers] If you enter !Lunar Eclipse! by mistake on 1 target, cast !Wrath!.
 - [*Keeper Fillers] If talented into !114107|Soul of the Forest! and !Umbral Intensity!, enter !Lunar Eclipse! on 3 targets. Otherwise, enter !Solar Eclipse! and cast !Wrath!.
 - [*Keeper Fillers] Enter !Lunar Eclipse! on 4+ targets.
-- [*Keeper Fillers] Cast !Wrath! in !194223|CA!/!102560|Inc! on 1 and 2 targets. 
-- [*Keeper Fillers] Cast !Starfire! in !194223|CA!/!102560|Inc! on 3+ targets.
+- [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
+- [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
 - [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! and use !Starfire! on all target counts.
 - Use !Starsurge! on 1 target.
 - Use !Starfall! on 2+ targets with !Aetherial Kindling!.
@@ -311,6 +321,8 @@ The general way to play this in raid is to use !194223|CA! on pull after your !M
 As your !Dryad! fades and you gain !Dryad's Favor!, you press !194223|CA! again to dump the empowered !Starsurge! casts into a maxed out !Balance of All Things! and !Force of Nature! window.
 
 After this opener you do the same sequence as your !Convoke the Spirits! is coming back, but without the 2nd use of !194223|CA!.
+
+If you have !Potent Enchantments! talented you can fit another double use of !194223|CA! in at the 4 minute mark with your 3rd use of !Convoke the Spirits!.
 
 Remember to pool Astral Power for when your !Dryad! fades and you gain !Dryad's Favor!, as the window to spend the buff before !Force of Nature! and !194223|CA! falls off is very tight.
 </Collapsible>
@@ -391,8 +403,8 @@ You can use the macro below and replace your existing !Wrath! keybind with it to
   name="Elune's Chosen single target" extra={["Denizen of the Dream"]}
   talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMLzsMzyM2MzMmZWMLjxMDbYhBYssNzGGz2IwEAAAgFzMzAsZgB" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Hibernate", "Aetherial Kindling", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Soul of the Forest", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Crashing Star", "Touch the Cosmos", "Hail of Stars", "Astral Communion", "Remove Corruption"] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Rattle the Stars", "Light of the Sun", "Lycara's Meditation", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Denizen of the Dream", "Elune's Guidance", "Incarnation: Chosen of Elune"] }
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Hibernate", "Aetherial Kindling", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Soul of the Forest", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Crashing Star", "Touch the Cosmos", "Hail of Stars", "Astral Communion", "Elune's Guidance", "Remove Corruption"] },
+    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Rattle the Stars", "Light of the Sun", "Lycara's Meditation", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Denizen of the Dream"] }
   ]} 
 > 
 <div className="flex justify-center">
@@ -654,7 +666,7 @@ This is a solid all-round choice for single target and mythic+. It's a random da
 |  | [Essence-Hunter's Eyeglass](https://www.wowhead.com/ptr-2/item=246939/essence-hunters-eyeglass?bonus=12355:40:1572:10255&class=11&hero=24&ilvl=710&spec=102) | |
 |  | [Miniscule Mailemental in an Envelope](https://www.wowhead.com/ptr-2/item=185846/miniscule-mailemental-in-an-envelope?bonus=4795&hero=24&ilvl=723&spec=102) | |
 
-[Trinket Sim](https://mimiron.raidbots.com/simbot/report/c5tp5HQuVQHUjatxC2dxYG) (this will expire)
+[Trinket Sim](https://mimiron.raidbots.com/simbot/report/c5tp5HQuVQHUjatxC2dxYG) (this sim will expire, contact Gamz on discord if it's currently broken)
 
 ## D.I.S.C Belt
 
@@ -716,19 +728,12 @@ Keep in mind that class buffs only affect class spells so if a trinket does natu
 
 **A:**  If you have any questions, you can go to the [Dreamgrove discord server](https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to receive the answer you would like.
 
-## Balance Druid Video Guide
-
-For 11.1, the Balance Compendium writer decided to make a video guide in addition to the written guide. Be aware that some things can change depending on tuning, like talents or trinkets, and you should always double check the written guide. You can find the video by opening the collapsible below.
-
-<Collapsible title="Balance Druid 11.1 Video Guide">
-  <YouTube id="KgOQUvbz9Ms"/>
-</Collapsible>
 
 ## Current Bugs
 
 - !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
 
-- Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA!/!102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
+- Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA! / !102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
 
 - If you spell-queue a free spender through a !Starweaver! or !Touch the Cosmos! proc as your first global in an !Eclipse!, you will gain no value from !Hail of Stars!.
 
