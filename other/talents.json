@@ -1146,7 +1146,7 @@
       },
       {
         "id": 92229,
-        "name": "Lycara's Meditation",
+        "name": "Lycara's Inspiration",
         "type": "single",
         "posX": 4500,
         "posY": 6300,
@@ -1160,8 +1160,8 @@
             "definitionId": 119305,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lycara's Meditation",
-            "spellId": 474728,
+            "name": "Lycara's Inspiration",
+            "spellId": 1232897,
             "icon": "inv_trinket_ardenweald_02_yellow",
             "index": 100
           }
@@ -4012,7 +4012,7 @@
       },
       {
         "id": 92229,
-        "name": "Lycara's Meditation",
+        "name": "Lycara's Inspiration",
         "type": "single",
         "posX": 4500,
         "posY": 6300,
@@ -4026,8 +4026,8 @@
             "definitionId": 119305,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lycara's Meditation",
-            "spellId": 474728,
+            "name": "Lycara's Inspiration",
+            "spellId": 1232897,
             "icon": "inv_trinket_ardenweald_02_yellow",
             "index": 100
           }
@@ -6863,7 +6863,7 @@
       },
       {
         "id": 92229,
-        "name": "Lycara's Meditation",
+        "name": "Lycara's Inspiration",
         "type": "single",
         "posX": 4500,
         "posY": 6300,
@@ -6877,8 +6877,8 @@
             "definitionId": 119305,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lycara's Meditation",
-            "spellId": 474728,
+            "name": "Lycara's Inspiration",
+            "spellId": 1232897,
             "icon": "inv_trinket_ardenweald_02_yellow",
             "index": 100
           }
@@ -9791,7 +9791,7 @@
       },
       {
         "id": 92229,
-        "name": "Lycara's Meditation",
+        "name": "Lycara's Inspiration",
         "type": "single",
         "posX": 4500,
         "posY": 6300,
@@ -9805,8 +9805,8 @@
             "definitionId": 119305,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lycara's Meditation",
-            "spellId": 474728,
+            "name": "Lycara's Inspiration",
+            "spellId": 1232897,
             "icon": "inv_trinket_ardenweald_02_yellow",
             "index": 100
           }
