@@ -7,8 +7,37 @@ summary: A guide to Balance Druid
 ---
 # News
 
-> [!NOTE]
-> The Balance Druid Compendium will be updated for Season 3 the day before Manaforge: Omega releases as there is still a chance of Blizzard pushing hotfixes that can change stuff.
+### Elune's Chosen tier set
+
+#### [2-piece](https://www.wowhead.com/spell=1236332/druid-elunes-chosen-11-2-class-set-2pc)
+> !Starfire! damage increased by 25%. Gaining Astral Power with !Starfire! has a 50% chance to launch a !Starsurge! at a victim of 50% effectiveness.
+
+This is approximately ~8.4% dmg increase from having no set.
+
+#### [4-piece](https://www.wowhead.com/spell=1236333/druid-elunes-chosen-11-2-class-set-4pc)
+> On impact, !197626|Starsurges! launched by !Starfire! split to up to 3 additional targets at 80% effectiveness and grand a stack of !Gathering Moonlight!. Casting !Fury of Elune! or !Full Moon! consumes Gathering Moonlight to increase your damage by 4% per stack for 12 sec.
+
+This is approximately ~15.1% dmg increase from having no set.
+
+[Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims3.htm)
+
+### Keeper of the Grove tier set
+
+#### [2-piece](https://www.wowhead.com/spell=1236334/druid-keeper-of-the-grove-11-2-class-set-2pc)
+> Casting !194223|CA! / !102560|Inc! calls upon the assistance of a !Dryad! for 10 sec that casts !Starsurge! at 360% effectiveness and !Starfall! at 800% effectiveness.
+
+This is approximately ~7.2% dmg increase from having no set.
+
+#### [4-piece](https://www.wowhead.com/spell=1236336/druid-keeper-of-the-grove-11-2-class-set-4pc)
+> When your Dryad fades, your next 2 !197626|Starsurges! damage for an additional amount equal to 2% of your dmage done while it was active and splash 15% of their damage onto nearby enemies, reduced beyond 5 targets.
+
+This is approximately ~18% dmg increase from having no set.
+
+[Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims3.htm)
+
+<Collapsible title="Balance Druid 11.2 Video Guide">
+  <YouTube id="g7ljpozVgsg"/>
+</Collapsible>
 
 # Rotation
 
@@ -18,82 +47,46 @@ summary: A guide to Balance Druid
 <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
 <Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" />
 <Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck  />
-<Checkbox isIcon id="MEDITATION" spellId={474728} name="Lycara's Meditation" />
 
-[*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+[*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
+[*~OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
+[*OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
+[*OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+[*OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 205636, 391528]} > Start casting at max range 4 seconds before pull.   </Timeline>
 
-[*OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
+[*OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 205636]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
+[*~OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 205636, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull.   </Timeline>
+[*~OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 205636]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull.   </Timeline>
+[*~OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+[*OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
+[*OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-[*~OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 197626]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626, 197626]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626, 197626, 391528]} > Be in !Bear Form! then start casting at max range 4 seconds before pull. </Timeline>
+[*~OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
 
 <div className="py-4">
   <Collapsible title="Not using cooldowns on pull ">
 
-  [*~OPENFLARE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*~OPENFLARE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-  [*OPENFLARE&&~EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-  [*~OPENFLARE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*~OPENFLARE&&~EC&&KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
 
-  [*OPENFLARE&&~EC&&KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 194153, 164812, 164815, 164812, 202347, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
+  [*OPENFLARE&&~EC&&KEEPER] <Timeline spellIds={[190984, 202347, 164812, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Stellar Flare! and apply dots before entering !Eclipse!. </Timeline>
 
-  [*OPENFLARE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+  [*OPENFLARE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-  [*~OPENFLARE&&EC&&~KEEPER&&~MEDITATION] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
+  [*~OPENFLARE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
-  [*~OPENFLARE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*OPENFLARE&&~EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*~OPENFLARE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*OPENFLARE&&~EC&&KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 194153, 164812, 164815, 202347, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*OPENFLARE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-  [*~OPENFLARE&&EC&&~KEEPER&&MEDITATION] <Timeline spellIds={[5487, 190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
 
   </Collapsible>
 </div>
@@ -116,24 +109,32 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
 <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
 <Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
+<Checkbox isIcon id="Keeper 4pc" spellId={1236807} name="Keeper 4-set" defaultCheck />
 
-- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip).
+- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
+- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
 - Use !205636|Force of Nature! if any of the following are true:
-  - [*Convoke the SpiritsKOTG] The cooldown on !194223|CA! is less than a GCD and the cooldown of !Convoke the Spirits! is less than 3 GCD's.
-  - [*~Convoke the SpiritsKOTG] The cooldown of !194223|CA!/!102560|Inc! is less than a GCD or longer than 30 seconds.
+  - [*Keeper 4pc] You are 2 GCD's into your !Dryad! window.
   - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
+  - [*~Keeper 4pc] The cooldown on !194223|CA! is less than a GCD and the cooldown of !Convoke the Spirits! is less than 3 GCD's.
   - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
+  - [*~Convoke the SpiritsKOTG] You will have !194223|CA! / !102560|Inc! and trinket back up before !Force of Nature! is ready again.
+- [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA! / !102560|Inc!.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if any of the following are true:
-  - You just used !205636|Force of Nature!.
-  - [*Convoke the SpiritsKOTG] The cooldown on !Convoke the Spirits! is greater than the recharge time of your next !194223|CA!. 
+  - [*~Convoke the SpiritsKOTG&&Keeper 4pc] The cooldown on !Force of Nature! is less than 3 GCD's.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and !Convoke the Spirits! is available.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and the cooldown on !Convoke the Spirits! is greater than the remaining recharge time of your next !194223|CA!.
+  - [*Keeper 4pc&&Convoke the SpiritsKOTG] You have enough AP for 2 !Starsurge! casts and the cooldown on !Convoke the Spirits! is less than 4 GCD's and !Force of Nature! is available.
+  - [*Keeper 4pc] You have the !Dryad's Favor! buff and !Force of Nature! is active. 
   - The fight will end before !205636|Force of Nature! is available again.
+- [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
+- [*Keeper 4pc] Use !Wrath! in your !Dryad! window if you have don't have enough AP for the 2 !Starsurge! casts needed to consume !Dryad's Favor!.
 - Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! when the cast time of !Starfire! is longer than the remaining duration of !Eclipse!.
-- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when you are below 40 AP and both scenarios are true:
-  - You just used 
-!205636|Force of Nature!.
-  - !194223|CA!/!102560|Incarnation! will last for more than 4 seconds or your next !194223|CA!/!102560|Incarnation! is more than 40 seconds away.
+- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when any of the following are true:
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You just used !205636|Force of Nature! and you are in your !Dryad! window.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You are below 40 AP and you just used !Force of Nature!.
+  -  [*Convoke the SpiritsKOTG] !194223|CA! will last for more than 4 seconds or the fight will end before your next !194223|CA! or !Force of Nature! window.
 - [*Fury of EluneKOTG] Use !Fury of Elune!.
 - [*New MoonKOTG] Use !Starsurge! if !Starlord! has less than 3 stacks.
 - [*~New MoonKOTG] Use !Starsurge! if one of the following conditions is met:
@@ -218,6 +219,7 @@ When reading the priority lists below, you should not think of these as steps to
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
+- Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
 - [*Stellar FlareKAOE] Use !Stellar Flare! if all of the following conditions is met:
   - The target will live for at least 8s+1s per target that !Starfire! can hit.
   - You will not overcap on AP.
@@ -228,7 +230,9 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if one of the following conditions is met:
   - You just used !Force of Nature!.
   - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
-- Use !Wrath! to enter Lunar Eclipse.
+- Use the appropriate filler to pool AP for 2 !Starsurge! casts to spend !Dryad's Favor! at the end of your !194223|CA! / !102560|Inc!.
+- Use !Starfire! to enter !Solar Eclipse! on 2 targets.
+- Use !Wrath! to enter !Lunar Eclipse! on 3 or more targets.
 - [*Fury of EluneKAOE] Use !Fury of Elune!.
 - Use !Starfall! if:
   - !Starlord! is below 3 stacks.
@@ -257,7 +261,9 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
 <Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of NatureEC"/>
 <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
+<Checkbox isIcon id="EC 4pc" spellId={1236989} name="Gathering Moonlight" defaultCheck/>
 
+- [*EC 4pc] Use !Fury of Elune! if !Gathering Moonlight! is about to expire.
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Start spreading !Moonfire! while the tank is gathering mobs.
 - [*Stellar FlareECAoE] Use !Stellar Flare! if all of the following conditions is met:
@@ -299,13 +305,27 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Keeper Fillers] If you enter !Lunar Eclipse! by mistake on 1 target, cast !Wrath!.
 - [*Keeper Fillers] If talented into !114107|Soul of the Forest! and !Umbral Intensity!, enter !Lunar Eclipse! on 3 targets. Otherwise, enter !Solar Eclipse! and cast !Wrath!.
 - [*Keeper Fillers] Enter !Lunar Eclipse! on 4+ targets.
-- [*Keeper Fillers] Cast !Wrath! in !194223|CA!/!102560|Inc! on 1 and 2 targets. 
-- [*Keeper Fillers] Cast !Starfire! in !194223|CA!/!102560|Inc! on 3+ targets.
+- [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
+- [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
 - [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! and use !Starfire! on all target counts.
 - Use !Starsurge! on 1 target.
 - Use !Starfall! on 2+ targets with !Aetherial Kindling!.
 - Use !Starfall! on 3+ targets.
 
+<Collapsible title="How to Use Keeper of the Grove Tier Set">
+
+The !Keeper of the Grove! tier set revolves around dumping as much damage as possible into your !Dryad! window to maximize the damage of your !Dryad's Favor! buff. 
+
+The general way to play this in raid is to use !194223|CA! on pull after your !Moonfire! and !Sunfire!, then pressing !Force of Nature! 2 globals into your !194223|CA!. After pressing !Force of Nature! you immediately use !Convoke the Spirits!. 
+
+As your !Dryad! fades and you gain !Dryad's Favor!, you press !194223|CA! again to dump the empowered !Starsurge! casts into a maxed out !Balance of All Things! and !Force of Nature! window.
+
+After this opener you do the same sequence as your !Convoke the Spirits! is coming back, but without the 2nd use of !194223|CA!.
+
+If you have !Potent Enchantments! talented you can fit another double use of !194223|CA! in at the 4 minute mark with your 3rd use of !Convoke the Spirits!.
+
+Remember to pool Astral Power for when your !Dryad! fades and you gain !Dryad's Favor!, as the window to spend the buff before !Force of Nature! and !194223|CA! falls off is very tight.
+</Collapsible>
 
 <Collapsible title="How to Use Warrior of Elune">
 
@@ -323,7 +343,7 @@ Use !Owlkin Frenzy! procs to enter Solar Eclipse, inside Lunar Eclipse or inside
 <Collapsible title="How to Use Whirling Stars">
 !Whirling Stars! is a talent that changes your !194223|CA!/!102560|Incarnation! cooldown to a charge system, with a 100s recharge. In Keeper of the Grove, you want to overlap these charges with !248280|Force of Nature! and !Convoke the Spirits! or just !248280|Force of Nature! if your !194223|CA!/!102560|Incarnation! will recharge before !391528|Convoke! comes back off cooldown. 
 
-In a raid scenario where you pull a boss with both charges up, you want to use your 1st charge on pull, and your 2nd charge together with your 2nd or 3rd set of !248280|Force of Nature! treants, and save your 3rd charge for !391528|Convoke! at 2 minutes. After this, you just aim to overlap all 3 cooldowns with the priority outlined in rotation section.
+In a raid scenario where you pull a boss with both charges up, you want to use your 1st charge on pull, and your 2nd charge when you gain [Dryad's Favor](https://www.wowhead.com/ptr-2/spell=1236807/dryads-favor) during your !Force of Nature! window.
 
 In an M+ scenario, if you're talented into !Incarnation: Chosen of Elune! instead of !391528|Convoke!, you want to use your !Whirling Stars! charges at any time where you can overlap with !248280|Force of Nature!.
 
@@ -350,16 +370,59 @@ You can use the macro below and replace your existing !Wrath! keybind with it to
 ## Raid
 
 > [!NOTE]
-> These builds are templates that will serve you well in most cases, for specific builds and explanations for each boss, check out the [raid guide](https://www.dreamgrove.gg/raids/liberation_of_undermine) and click the "Balance" checkbox.
+> These builds are templates that will serve you well in most cases. For specific builds and explanations for each boss, check out the [raid guide](https://www.dreamgrove.gg/raids/liberation_of_undermine) and click the "Balance" checkbox. These builds will be updated continously as people progress Manaforge Omega.
 
-<Talents name={"Single Target"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGLzsNjFmZmZmlZMzYmZshFGgBYbbsgpZmlRAAAA2MzMDwmBG"}/>
 
-<Talents name={"Single Target Cleave"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMmZZmtZswMzMzsMjxYmZshFGgBYbbsgpZmlRAAAA2MzMDwmBG"}/>
+<Talents 
+  name="Keeper of the Grove single target"
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGLzsNjlxMjZmFjZGzMjNswAMAbbjNMNzsMCAAAwmZmZMwmBG" 
+  colors={[
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Astral Communion", "Radiant Moonlight", "Aetherial Kindling"] },
+    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Hail of Stars", "Fury of Elune", "Elune's Guidance", "Crashing Star", "Denizens of the Dream", "Stellar Flare", "Elune's Guidance"] }
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
-<Talents name={"Stix Bunkjunker"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDYmZzsMzyMzCzMzYWmxYGzwGWAwAssNWw0MzyAAAAgNmZmBsZMM"}/>
-
-<Talents name={"One-Armed Bandit Talents"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWGLzMDYGbmlZ2mZWGzMzYWmxYYM2wCAGgttxCmmZWGBAAAYzMzMDYzYYA"}>
-     Can swap out !Convoke the Spirits! for !102560|Incarnation! if you want some more flexible cooldowns. Alternatively you can also play !Starweaver! instead of !Rattle the Stars!. Try out different talents and make a decision that fits best for you. 
+<Talents 
+  name="Elune's Chosen single target" extra={["Denizen of the Dream"]}
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMLzsMzyM2MzMmZWMLjxMDbYhBYssNzGGz2IwEAAAgFzMzAsZgB" 
+  colors={[
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Hibernate", "Aetherial Kindling", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Soul of the Forest", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Crashing Star", "Touch the Cosmos", "Hail of Stars", "Astral Communion", "Elune's Guidance", "Remove Corruption"] },
+    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Rattle the Stars", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Denizen of the Dream"] }
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
 </Talents>
 
 ## Mythic+
@@ -368,23 +431,59 @@ The following are dungeon talent builds that will always serve you well but mind
 
 Both hero trees are viable and perform very close to each other. Feel free to choose the one you prefer. For additional information on what talents you can swap out for other specific talents, check the [talent explanation section below.](https://www.dreamgrove.gg/blog/balance/compendium#talent-explanations)
 
-<Talents name={"Keeper of the Grove build"} talents={"CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzwsMzyMzyYmZmZWmxYYG2wCAGgttxCmmZWGFAACgNmxYgNjhB"}/>
+<Talents 
+  name="Keeper of the Grove M+"
+  talents="CYGAkuH5GdQpDrgY32rlVGnyqBAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzwsMzyMzyYmZmZWmxYYG2wCAGgttxCmmZWGFAACgNmxYgNjhB" 
+  colors={[
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Stellar Amplification", "Power of Goldrinn", "Astral Communion", "Radiant Moonlight", "Killer Instinct", "Denizens of the Dream"] },
+    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Early Spring", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Hail of Stars", "Fury of Elune", "Elune's Guidance", "Crashing Star"] }
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
-<Talents name={"Elune's Chosen build"} talents={"CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzsYWmZZmZbmZmZmZxsMGGshFAMW2mZDjZbEYCAAAwCzYA2MGG"}/>
+<Talents 
+  name="Elune's Chosen M+"
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtmxYmBYWYZmZWYMzsYWmZZmZbmZmZmZxsMGGshFAMW2mZDjZbEYCAAAwCzYA2MGG" 
+  colors={[
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Power of Goldrinn", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Crashing Star", "Touch the Cosmos", "Hail of Stars", "Stellar Amplification", "Killer Instinct", "Denizen of the Dream", "Elune's Guidance", "Astral Communion"] },
+    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration"] }
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
 ## Talent Explanations
-
-The Druid class tree has received a rework for 11.1 with better pathing and more freedom to take useful talents. Below, you will find a graphic outlining what talents are mandatory and what talents are optional for each section of the tree, together with explanations for the options you have.
-
-![ClassTree](/static/images/classtreebalance%2B.png)
-
-<Checkbox isIcon id="Keeper Image" spellId={205636} name="Keeper" defaultCheck radio="image"/>
-<Checkbox isIcon id="EC Image" spellId={202770} name="Elune's Chosen" radio="image" />
-
-[*Keeper Image] ![KeeperTalents](/static/images/talentboxkotg.png)
-
-[*EC Image]
-![ECTalents](/static/images/talentboxec.png)
 
 <Collapsible title="Class Tree Talents">
 ### Top Section Explained
@@ -418,6 +517,8 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
 
   !Incapacitating Roar! is a good option to make use of in Mythic+.
 
+  !Lycara's Inspiration! was reworked from previous season and now gives 3% AoE damage reduction when in Moonkin Form. This talent is okay defensively, but not mandatory.
+
   !Ursine Vigor! is a solid defensive node that increases your health and armor by 15% for the first 4 seconds of entering !Bear Form!. This talent is a solid choice in general. 
 
 </Collapsible>
@@ -427,7 +528,7 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
 
 ### Top Section
 
-- !Stellar Flare! is currently simming noticeably worse than !Wild Surges! on ST and is generally untakeable outside of niche situations where you can maintain dots on targets that are far apart, like if you stand in the middle on [Cauldron of Carnage](https://www.wowhead.com/guide/the-war-within/raids/liberation-of-undermine/cauldron-of-carnage-boss-strategy) or on [One-Armed Bandit](https://www.wowhead.com/guide/the-war-within/raids/liberation-of-undermine/one-armed-bandit-boss-strategy). !Wild Surges! is the recommended choice for most content outside of the niche scenarios where !Stellar Flare! can be useful.
+- !Stellar Flare! is currently simming noticeably worse than !Wild Surges! on ST and is generally untakeable outside of niche situations where you can maintain dots on targets that are far apart. !Wild Surges! is the recommended choice for most content outside of the niche scenarios where !Stellar Flare! can be useful.
   
   !Nature's Balance! sims around 0.6% higher than !Twin Moons! on pure single target, but loses out whenever there are more targets, where you can benefit from !Twin Moons! spreading !Moonfire!.
   
@@ -439,7 +540,7 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
   
   !Stellar Amplification! is recommended for ST scenarios where you cast Starsurge enough to keep good uptime on it, taken for most raid encounters.
   
-  !Touch the Cosmos! got a buff since 11.0 and is picked in most ST iterations. You can drop this talent for !Umbral Inspiration!. In M+ with !Elune's Chosen! your choice will generally be between !Touch the Cosmos! or !Umbral Inspiration! and the choice does not make a big difference. !Umbral Inspiration! is better on AoE, while !Touch the Cosmos! provides some needed movement globals.
+  !Touch the Cosmos! lost some power since the start of Season 2, heading into Season 3 it is an optional talent for Keeper of the Grove in ST scenarios, and a talent you never take as Elune's Chosen. The 11.2 Elune's Chosen tier set only procs when you generate Astral Power with !Starfire! which devalues any talent that increases Astral Power generation or ones that give you free spenders. 
   
   !Umbral Intensity! is a very good talent for both !Keeper of the Grove! and !Elune's Chosen!. The best build on ST that isn't taking !Umbral Intensity! is around 1% behind on ST.
   
@@ -465,7 +566,18 @@ The Druid class tree has received a rework for 11.1 with better pathing and more
   
   !Denizen of the Dream! is a strong single target node, but loses value in AoE scenarios. Recommended for all raid fights.
 
-  !Fury of Elune! and !Radiant Moonlight! are both mandatory talents for !Elune's Chosen!, but are generally not picked for !Keeper of the Grove!. You can pick !Fury of Elune! in !Keeper of the Grove! if you can consistently line up the cooldown with add spawns.
+  !Fury of Elune! is a mandatory talent for !Elune's Chosen! and optional for !Keeper of the Grove!. If you use this talent for !Keeper of the Grove! you should aim to line the cast up with your cooldowns or whenever there are more targets up.
+
+</Collapsible>
+
+<Collapsible title="Elune's Chosen vs Keeper of the Grove">
+
+The key differences between the two different hero trees lie mainly in their distinct damage profiles. !Elune's Chosen! has a very flat damage graph with solid damage over the fights duration and mainly revolves around keeping good uptime casting !Starfire!. This has been solidified in Season 3 with the [new tier set](https://www.wowhead.com/spell=1236333/druid-elunes-chosen-11-2-class-set-4pc) reducing the value of generating Astral Power since you can only proc the free !Starsurge! casts whenever you generate Astral Power with !Starfire!. In ST scenarios you forego talents like !Nature's Balance!, !Rattle the Stars!, !Touch the Cosmos! and !Convoke the Spirits! because these either help generate !Astral Power! or reduce the cost of spenders. !Elune's Chosen! is generally a stronger pick in M+ as the flat damage profile fits a dungeon scenario better than !Keeper of the Grove!'s burst oriented cooldown windows.
+
+!Keeper of the Grove! revolves around doing big damage in your !Force of Nature! window and using the window to fit all your high damaging abilities in. The [Season 3 tier set](https://www.wowhead.com/spell=1236336/druid-keeper-of-the-grove-11-2-class-set-4pc) also plays into this, spawning a !Dryad! that does solid damage during its duration. 3% of the damage you do during the window your !Dryad! is active gets pooled into a buff increasing the damage of your next 2 !Starsurge! casts whenever the !Dryad! despawns. The damage profile from !Keeper of the Grove! fits well for raid content and is not as taxing as !Elune's Chosen! when it comes to movement.
+The !Dryads Favor! buff is capped to 10x your intellect whenever the !Dryad! despawns. With 715 ilvl you will have around 120k intellect, which makes the cap be 1.2m, and means you will have to do 40m damage inside your !Dryad! window in order to hit this cap.
+
+Since !Elune's Chosen! mainly revolves around casting !Starfire! and having uptime, it is natural that this hero tree values Haste more heavily, where as !Keeper of the Grove! values direct damage stats like Crit and Versatility more, this can cause a noticeable difference in your [Top Gear](https://www.raidbots.com/simbot/topgear) when simming different talent builds.
 
 </Collapsible>
 
@@ -492,7 +604,6 @@ Depending on the fight timer, this talent is stronger than !Power of the Dream! 
 |------|---------|
 | **Gems** | 1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) mixed with whatever gems sim the highest for your character. |
 | **Weapon** | [Authority of the Depths](https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths) for single target and raid, [Authority of Radiant Power](https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power) for AoE and m+ |
-| **Head** | [Greater Rune of the Void Ritual](https://www.wowhead.com/item=239095/greater-rune-of-the-void-ritual) |
 | **Chest** | [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) |
 | **Cloak** | [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace) |
 | **Legs** | [Sunset Spellthread](https://www.wowhead.com/beta/item=222893/sunset-spellthread?crafting-quality=6) |
@@ -509,24 +620,6 @@ Depending on the fight timer, this talent is stronger than !Power of the Dream! 
 | **Flasks** | [Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) or [Flask of Tempered Mastery](https://www.wowhead.com/item=212280/flask-of-tempered-mastery) |
 | **Weapon Rune** | [Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil)  |
 
-## Puzzling Cartel Chip 
-
-> [!WARNING]
-> This list assumes max myth ilvl (684), remember to sim your character to choose the option that is best for you. This list is not in order of importance or power and simply a list of items to look out for.
-
-Raid Chips:
-- [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102).
-- [The Jastor Diamond](https://www.wowhead.com/item=231265/the-jastor-diamond?bonus=1527).
-- [Best-In-Slots ](https://www.wowhead.com/item=232805/best-in-slots?bonus=10356:1527).
-- [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=4795&class=11&ilvl=678&spec=102).
-
-Mythic+ Chips:
-- [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102).
-- [Carved Blazikon Wax](https://www.wowhead.com/item=219305/carved-blazikon-wax?bonus=4795&class=11&ilvl=678&spec=102).
-- [Entropic Skardyn Core](https://www.wowhead.com/item=219296/entropic-skardyn-core?bonus=4795&ilvl=678&spec=102).
-
-> [!NOTE]
-> Hero track [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102) is still very good. Sim this together with the mythic+ trinkets if your character doesn't meet the requirements for buying it on myth track.
 
 ## Embellishments & Crafted Items
 
@@ -551,50 +644,40 @@ This is a solid all-round choice for single target and mythic+. It's a random da
 ## Trinkets
 
 > [!WARNING]
-> Remember to always sim your character using [Top Gear on Raidbots](https://www.raidbots.com/simbot/topgear). The following list is made assuming the highest ilvl version of these trinkets. 
+> Remember to always sim your character using [Top Gear on Raidbots](https://www.raidbots.com/simbot/topgear). The following list is a rough estimate and assumes highest item level version of the trinkets and can change depending on tuning.
 
-|Tier |  |  |
-|------|-----|-----|
-| **S Tier** | [House of Cards](https://www.wowhead.com/item=230027/house-of-cards?bonus=4795&class=11&ilvl=678&spec=102) | 1:30 CD use effect trinket. Easy to line up with [CA/Inc](https://www.wowhead.com/spell=194223/celestial-alignment) |
-|  | [Mug's Moxie Jug](https://www.wowhead.com/item=230192/mugs-moxie-jug?bonus=4795&class=11&ilvl=678&spec=102) | |
-|  | [Eye of Kezan](https://www.wowhead.com/item=230198/eye-of-kezan?bonus=6652:10356:11996:1527:10255&ilvl=678&spec=102) | Good for longer raid fights, loses value in m+. Very good for One-Armed Bandit or Mugzee prog where damage in execute phase is important.|
-| **A Tier** | [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?bonus=4795&class=11&ilvl=678&spec=102)  | Best active trinket from mythic+, gives your highest secondary stat.  |
-|  | [Carved Blazikon Wax](https://www.wowhead.com/item=219305/carved-blazikon-wax?bonus=4795&class=11&ilvl=678&spec=102) | Solid m+ trinket, good passive versatility effect. |
-|  | [Entropic Skardyn Core](https://www.wowhead.com/item=219296/entropic-skardyn-core?bonus=4795&ilvl=678&spec=102) | Spawns orbs you pick up for a buff, after a few seconds the orbs start moving towards you. |
-|  | [Suspicious Energy Drink](https://www.wowhead.com/item=235363/suspicious-energy-drink?bonus=1537:11992:11964&class=11&ilvl=665&spec=102) | Best trinket from delve. |
-|  | [Flarendo's Pilot Light](https://www.wowhead.com/item=230191/flarendos-pilot-light?bonus=4795&ilvl=678&spec=102) | Solid 2m on-use trinket from early in the raid. Gains value if you don't have a lot of haste. |
-| **B Tier** | [Spymaster's Web(639)](https://www.wowhead.com/item=220202/spymasters-web?bonus=1540:11978:11964&ilvl=639&spec=102) | This trinket is from last tier, but is still pretty solid early in the tier. |
-|  | [Reverb Radio](https://www.wowhead.com/item=230194/reverb-radio?bonus=6652:10356:11996:1527:10255&class=11&ilvl=678&spec=102) | Good haste proc, drops early in the raid. |
-|  | [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) | Sims well, requires using a global [or macro](https://www.dreamgrove.gg/blog/balance/compendium#macros) to kill the barrel. |
-|  | [Shadow-Binding Ritual Knife](https://www.wowhead.com/item=215178/shadow-binding-ritual-knife?bonus=9838:11992:11964&ilvl=665&spec=102) | Delve trinket, good option if you can get it. |
-|  | [Soulletting Ruby](https://www.wowhead.com/item=178809/soulletting-ruby?bonus=4795&class=11&ilvl=678&spec=102) | |
-| **C Tier** | [Candle Confidant](https://www.wowhead.com/item=225648/candle-confidant?bonus=3194:11992:11964&class=11&ilvl=665&spec=102) | Another delve trinket option. Performs better than sim if you're close to target. |
-|  | [Gigazap's Zap-Cap](https://www.wowhead.com/item=232545/gigazaps-zap-cap?bonus=4795&class=11&ilvl=678&spec=102) | |
-|  | [Sigil of Algari Concordance](https://www.wowhead.com/item=219295/sigil-of-algari-concordance?bonus=4795&class=11&ilvl=678&spec=102) | |
-|  | [Remnant of Darkness](https://www.wowhead.com/item=219307/remnant-of-darkness?bonus=4795&ilvl=678&spec=102) | |
-|  | [Mister Lock-N-Stalk](https://www.wowhead.com/item=230193/mister-lock-n-stalk?bonus=4795&ilvl=678&spec=102) | |
-|  | [Geargrinder's Spare Keys](https://www.wowhead.com/item=230197/geargrinders-spare-keys?bonus=4795&class=11&ilvl=678&spec=102) | |
+|Tier | Trinket | Description |
+|------|-----------------------|---------|
+| **S Tier** | [Azhiccaran Parapodia](https://www.wowhead.com/ptr-2/item=242497/azhiccaran-parapodia?bonus=4795&hero=24&ilvl=723&spec=102) | Haste stat stick with passive damage and intellect effect from the new dungeon. |
+|  | [Astral Antenna](https://www.wowhead.com/ptr-2/item=242395/astral-antenna?bonus=1533:12361:12239&class=11&hero=24&ilvl=723&spec=102) | Primary stat stick with passive crit effect. Very good for both hero talents. |
+|  | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=4795&hero=24&ilvl=723&spec=102) | 2 minute on-use with crit stat stick. Gives a lot of primary stat, decaying over 30 seconds.  |
+| **A Tier** | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?bonus=4795&class=11&hero=24&ilvl=723&spec=102)  | 2 minute on-use. Gives your highest secondary stat when used. |
+|  | [Lily of the Eternal Weave](https://www.wowhead.com/ptr-2/item=242494/lily-of-the-eternal-weave?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | 1:30m on-use. Gives Mastery when used. Drops from the new dungeon. |
+|  | [Diamantine Voidcore](https://www.wowhead.com/ptr-2/item=242392/diamantine-voidcore?bonus=4795&hero=24&ilvl=723&spec=102) | Mastery stat stick. Has a 2 set effect with weapons from the raid with [Voidglass Kris](https://www.wowhead.com/ptr-2/item=237728/voidglass-kris?bonus=4795&class=11&hero=24&ilvl=723&spec=102) and [Voidglass Spire](https://www.wowhead.com/ptr-2/item=237730/voidglass-spire?bonus=4795&class=11&hero=24&ilvl=723&spec=102).  |
+|  | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | Regular stat stick trinket. Use on someone in your raid and give them some of their higher stat, and giving you a bigger amount of thier highest stat. |
+|  | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/ptr-2/item=219312/empowering-crystal-of-anubikkaj?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | Gives random secondary stat on proc. |
+| **B Tier** | [Ara-Kara Sacbrood](https://www.wowhead.com/ptr-2/item=219314/ara-kara-sacbrood?bonus=4795&hero=24&ilvl=723&spec=102) | Haste stat stick with a moderately good effect.  |
+|  | [Naazindhri's Mystic Lash](https://www.wowhead.com/ptr-2/item=242398/naazindhris-mystic-lash?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | |
+|  | [Gigazap's Zap-Cap](https://www.wowhead.com/ptr-2/item=232545/gigazaps-zap-cap?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | |
+|  | [Incorporeal Essence-Gorger](https://www.wowhead.com/ptr-2/item=246945/incorporeal-essence-gorger?bonus=12355:40:1572:10255&class=11&hero=24&ilvl=710&spec=102) | |
+| **C Tier** | [Harvester's Edict](https://www.wowhead.com/ptr-2/item=219317/harvesters-edict?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | |
+|  | [Mereldar's Toll](https://www.wowhead.com/ptr-2/item=219313/mereldars-toll?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | |
+|  | [Essence-Hunter's Eyeglass](https://www.wowhead.com/ptr-2/item=246939/essence-hunters-eyeglass?bonus=12355:40:1572:10255&class=11&hero=24&ilvl=710&spec=102) | |
+|  | [Miniscule Mailemental in an Envelope](https://www.wowhead.com/ptr-2/item=185846/miniscule-mailemental-in-an-envelope?bonus=4795&hero=24&ilvl=723&spec=102) | |
 
-[Trinket Sim](https://mimiron.raidbots.com/simbot/report/nhQXUUY427UUr2GobhGT8v)
+[Trinket Sim](https://mimiron.raidbots.com/simbot/report/c5tp5HQuVQHUjatxC2dxYG) (this sim will expire, contact Gamz on discord if it's currently broken)
 
 ## D.I.S.C Belt
 
-[Charged Bolts](https://www.wowhead.com/ptr/spell=1236109/charged-bolts) is currently ahead in most scenarios, but is getting nerfed on the June 24th weekly reset. 
-
-[Static Charge](https://www.wowhead.com/spell=1241250/static-charge?ilvl=701) and [Critical Chain](https://www.wowhead.com/spell=1241246/critical-chain?ilvl=701) are both getting buffs making them perform close to both [Electric Current](https://www.wowhead.com/ptr/spell=1236961/electric-current) and [Spark Burst](https://www.wowhead.com/ptr/spell=1236273/spark-burst). These 4 powers are all just random procs that give different stats. 
+The [Durable Information Securing Container](https://www.wowhead.com/ptr-2/item=245964/durable-information-securing-container?bonus=1472:12291:12239&class=11&hero=24&ilvl=684&spec=102) belt from 11.1.7 is still okay going into the new season. You will likely replace this with hero track alternatives, but you should always sim yourself with [Top Gear](https://www.raidbots.com/simbot/topgear) to make sure that replacing it is worth for you.
 
 [Static Charge](https://www.wowhead.com/spell=1241250/static-charge?ilvl=701) gives versatility, [Critical Chain](https://www.wowhead.com/spell=1241246/critical-chain?ilvl=701) gives crit, [Electric Current](https://www.wowhead.com/ptr/spell=1236961/electric-current) gives mastery and [Spark Burst](https://www.wowhead.com/ptr/spell=1236273/spark-burst) gives haste and since they all perform close to each other the choice will depend on your character. **You should sim yourself on [Top Gear](https://www.raidbots.com/simbot/topgear) to find out which one is best for you!**
 
-[D.I.S.C Belt Sim](https://www.raidbots.com/simbot/report/xfwjCkGykvRnuENu1krxAb)
+## Reshii Wraps
 
-## Cyrce's Circlet
+In Season 3 we are getting the artifact cloak [Reshii Wraps](https://www.wowhead.com/item=235499/reshii-wraps). For information about how to unlock and upgrade the cloak check out the [WoWHead guide](https://www.wowhead.com/guide/the-war-within/reshii-wraps-artifact-cloak-unlock-upgrade).
 
-The [Cyrce's Circlet](https://www.wowhead.com/item=228411/cyrces-circlet) ring from 11.0.7 is still very good in season 2 and you will only swap this out with rings at 684 item level depending on your stats, sim your character to make sure it's worth equipping something else.
-The best gems for the ring are [Stormbringer's](https://www.wowhead.com/item=228638/stormbringers-runed-citrine), [Fathomdweller's](https://www.wowhead.com/item=228639/fathomdwellers-runed-citrine) and [Windsinger's](https://www.wowhead.com/item=228640/windsingers-runed-citrine).
-
-[Cyrce's Circlet Sim](https://www.raidbots.com/simbot/report/9TPEZh7u6ejkumkkonHf2n)
-
-## 
+For the secondary stats gained from the Fiber items you should just sim the best one for your character using [Top Gear on Raidbots](https://www.raidbots.com/simbot/topgear). You can buy all of them from a Tailoring crafter and they do not consume when swapped around like gems.
 
 # FAQ
 
@@ -644,19 +727,12 @@ Keep in mind that class buffs only affect class spells so if a trinket does natu
 
 **A:**  If you have any questions, you can go to the [Dreamgrove discord server](https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to receive the answer you would like.
 
-## Balance Druid Video Guide
-
-For 11.1, the Balance Compendium writer decided to make a video guide in addition to the written guide. Be aware that some things can change depending on tuning, like talents or trinkets, and you should always double check the written guide. You can find the video by opening the collapsible below.
-
-<Collapsible title="Balance Druid 11.1 Video Guide">
-  <YouTube id="KgOQUvbz9Ms"/>
-</Collapsible>
 
 ## Current Bugs
 
 - !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
 
-- Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA!/!102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
+- Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA! / !102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
 
 - If you spell-queue a free spender through a !Starweaver! or !Touch the Cosmos! proc as your first global in an !Eclipse!, you will gain no value from !Hail of Stars!.
 
@@ -686,18 +762,6 @@ If you are using an on-use trinket that should go along with your cooldowns, use
 /use 13
 /use 14
 /cast [@cursor] Celestial Alignment
-```
-
-**Synergistic Brewtaliser Macro:**
-
-This macro will target the [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) barrel and use !Moonfire! to proc the damage, and then change back to your previous target.
-
-```
-#showtooltip Moonfire
-/cleartarget
-/targetexact Backfill Barrel
-/cast Moonfire
-/targetlasttarget
 ```
 
 ## Cancelaura Macros
@@ -735,7 +799,7 @@ The following links lead to various Balance Druid WeakAura packs. These contain 
 
 ### **Jundies Plater Profile**
 
-[This profile for Plater](https://wago.io/ak3iS95aa) is among the most used and asked about public nameplate profiles for Moonkins, having customized colors for each NPC identity. 
+[This profile for Plater](https://wago.io/ak3iS95aa) is among the most used and asked about public nameplate profiles for Moonkins, having customized color and priority depending on the type of mob in M+.
 
 ### **Regrowth Tracker for Blooming Infusion**
 
@@ -746,18 +810,15 @@ The following links lead to various Balance Druid WeakAura packs. These contain 
 [Starfire Alerter](https://wago.io/rrtAyRQjF):
 See the description of the WA for more details. This is not a required WA but will make it easier to not get into situations where you are wasting a Starfire cast inside Solar Eclipse.
 
-### **Synergistic Brewtaliser**
-
-[This weakaura](https://wago.io/rIj_5wU8P) will play a sound and show a timer whenever the trinket [Synergistic Brewtaliser](https://www.wowhead.com/item=219299/synergistic-brewterializer?bonus=4795&class=11&ilvl=678&spec=102) procs. The timer shows the latest barrel spawned.
-
 ## Simc Code Directory 
 [Item Strings for Simming](https://www.dreamgrove.gg/static/sims/itemstrings.txt)
 
-[Item Strings for PTR](https://www.dreamgrove.gg/static/sims/ptritemstrings.txt)
+[String to Sim Tier Set](https://www.dreamgrove.gg/static/sims/tiersimcode.txt) (paste in advanced below your simc addon output)
 
-[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt)
+[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt) (paste in advanced below your simc addon output)
 
-[Race Sim](https://www.dreamgrove.gg/static/sims/racesim.htm)
+[Race Sim](https://www.dreamgrove.gg/static/sims/racesims3.htm) 
+
+[String to Sim Race](https://www.dreamgrove.gg/static/sims/racesimcode.txt) (paste in advanced below your simc addon output)
 
 [Current APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
-
