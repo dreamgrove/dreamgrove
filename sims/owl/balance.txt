@@ -63,7 +63,8 @@ actions+=/run_action_list,name=kotg_st,if=variable.tww3_keeper_4pc&spell_targets
 
 # Make Warrior of Elune work if talented (don't talent this)
 actions.kotg_st=warrior_of_elune,if=variable.eclipse_remains<=7
-actions.kotg_st+=/wait,if=buff.dryad.up&buff.dryad.remains<gcd.max,sec=buff.dryad.remains
+# Wait line to prevent not being able to spend dryads favor before CA runs out
+actions.kotg_st+=/wait,if=!talent.incarnation_chosen_of_elune&buff.dryad.up&buff.ca_inc.remains<(cooldown.ca_inc.remains>?2*gcd.max),sec=buff.dryad.remains
 # Enter Eclipse if variable.enter_lunar is true or false
 actions.kotg_st+=/wrath,if=variable.enter_lunar&eclipse.in_eclipse&variable.eclipse_remains<cast_time|variable.kotg_ca_condition&buff.parting_skies.up&(variable.eclipse_remains<cast_time|eclipse.in_none)
 actions.kotg_st+=/starfire,if=!variable.enter_lunar&eclipse.in_eclipse&variable.eclipse_remains<cast_time&!buff.dryads_favor.up&!variable.kotg_ca_condition
