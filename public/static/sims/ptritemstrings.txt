@@ -1,9 +1,16 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7f6c91b94fbb69b796258bfe20f5eb02729992a0
 druid=Base
 level=80
 race=night_elf
 role=spell
 spec=balance
+<<<<<<< HEAD
+talents=CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGmZbGLMzMzMLzsMzYmZshNGgBYbbshpZmlRAAAA2MzMDwmBG
+=======
 talents=CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMLjlZ2mxCzMmZWMLzMmZGbYjBYAW2GbYamZZEAAAgNzMzAsZgB
 
 head=,id=237682,bonus_id=4795/1808,gem_id=213743,ilevel=723
@@ -22,6 +29,7 @@ trinket1=,id=242402,bonus_id=4795,ilevel=723
 trinket2=,id=242395,bonus_id=1533/12361/12239,ilevel=723
 main_hand=,id=237728,bonus_id=4795,enchant_id=7439,ilevel=723
 off_hand=,id=185812,bonus_id=4795,ilevel=723
+>>>>>>> 7f6c91b94fbb69b796258bfe20f5eb02729992a0
 
 head=,id=237682,bonus_id=4795/1808,gem_id=213491,ilevel=723
 neck=,id=242406,bonus_id=4795/8781,gem_id=213491/213491,ilevel=723
@@ -32,7 +40,11 @@ wrist=,id=219334,bonus_id=10421/1599/1808/11304/8960/8794,enchant_id=7385,gem_id
 hands=,id=237683,bonus_id=4795,ilevel=723
 waist=,id=237557,bonus_id=4795/1808,gem_id=213491,ilevel=723
 legs=,id=237681,bonus_id=4795,enchant_id=7534,ilevel=723
+<<<<<<< HEAD
+feet=,id=243306,bonus_id=4795,enchant_id=7424,ilevel=723
+=======
 feet=,id=243306,bonus_id=4795/13504,enchant_id=7424,ilevel=723
+>>>>>>> 7f6c91b94fbb69b796258bfe20f5eb02729992a0
 finger1=,id=237570,bonus_id=4795/8781,enchant_id=7346,gem_id=213491/213491,ilevel=723
 finger2=,id=221200,bonus_id=4795/8781,enchant_id=7346,gem_id=213491/213491,ilevel=723
 trinket1=,id=242402,bonus_id=4795,ilevel=723

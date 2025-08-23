@@ -297,33 +297,59 @@ The way this section is written is very formulaic and has the same structure as 
 
 # Talents
 
-> [!WARNING]
-> This section is not yet updated. Check back on August 12th.
+<Talents 
+  name="Class Tree"
+  defaultTree="Class"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmtHwYbmZm5BmZAAAAAAWCmNDMzM1MmFzyMzsMMGAAAAAAwAAAAA0MLzyMz2ACsAzMAswgB" 
+  colors={[
+    { color: "red", nodes: ["Starsurge", "Sunfire", "Starlight Conduit", "Astral Influence", "Rejuvenation", "Wild Growth", "Ironfur", "Matted Fur", "Lingering Healing", "Symbiotic Relationship" ] },
+    { color: "#fbff04ff", nodes: ["Maim", "Remove Corruption", "Nurturing Instinct", "Feline Swiftness", "Typhoon", "Ursol's Vortex", "Mass Entanglement", "Incapacitating Roar", "Ursine Vigor", "Fluid Form", "Perfectly-Honed Instincts", "Lore of the Grove", "Innervate", "Improved Stampeding Roar", "Lycara's Inspiration", "Forestwalk", "Nature's Vigil"] },
+    { color: "#ffffff", nodes: ["Gale Winds", "Incessant Tempest", "Heart of the Wild", "Starfire", "Moonkin Form", "Hibernate" ]}
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
-## Class Tree (all pve content)
 
-![Class Tree Talents](/static/images/FERALCLASS.png)
-
-### Talent Explanations
+### Class Talent Explanations
 
 <details>
-<summary>Purple Choice Options Explained</summary> 
+<summary>Optional Nodes Explained</summary> 
 
 !Lore of the Grove!: If you talent !Lunar Inspiration!, you should be talenting this as well.
 
 !Remove Corruption!: Always take if you need poison or curse dispel, which is not every dungeon, and isn't all that common in raid either.
 
+!Maim!: In dungeons, if you don't take !Remove Corruption!, this is the standard alternative.
+
 !Nurturing Instinct!: You put points into this if you are playing !Lunar Inspiration! (or technically !391528|Convoke!) and have nothing else to put points in. It is an extremely minor dps increase.
 
-!Feline Swiftness!: You only drop this if you need another talent point to play something else, and value the !Well-Honed Instincts! proc over movement speed
+!Feline Swiftness!: You only drop this if you need another talent point to play something else.
 
-!Well-Honed Instincts!: Strong versus rot damage in particular, its main issue is that sometimes this will trigger when you don't need it to, and because of that it is less reliable.
+!1213597|Perfectly-Honed Instincts!: Can take if there isn't anything else you want, or if the fight timers suit 90s defensive cooldowns better.
 
-!1213597|Perfectly-Honed Instincts!: Can take if there isn't anything else you want, or if the fight timers suit 90s cooldown better.
+!Incapacitating Roar!: Often picked in keys as a soft aoe-kick. In raid this is pretty niche.
 
-!Incapacitating Roar!: Often picked in keys as a soft-kick. Recently buffed so it won't break instantly. In raid this is pretty niche.
-
-!Ursine Vigor!: Mostly keys only talent for when you need a stronger !Bear Form!. Occasional use in raid as well.
+!Ursine Vigor!: Mostly keys-only talent for when you need a stronger !Bear Form!. Niche use in Raid.
 
 !Fluid Form!: Highly recommended talent to reduce global wastage from shapeshifting. If you don't find yourself shapeshifting much, this talent is much less valuable.
 
@@ -335,32 +361,26 @@ The way this section is written is very formulaic and has the same structure as 
 
 !Innervate!: If your healer told you to talent this. Well that or you want !Nature's Vigil! and/or !Forestwalk!.
 
-!Nature's Vigil!: Solid healing during your cooldown windows, especially in keys. Pair this with !Berserk! a vast majority of the time. I would pick this a vast majority of the time with the Class Tree rework.
+!Nature's Vigil!: Strong healing during your cooldown windows, particularly in keys. Pair this with !Berserk! a vast majority of the time.
 
-!Forestwalk!: Decent survivability bump, given that you're receiving healing. Stacks multiplicatively with other healing increases.
+!Forestwalk!: Decent survivability bump, given that you're receiving healing and pressing Regrowth, particularly against rot.
 
-!Improved Stampeding Roar!: Great in keys/world content for a more frequent movement cooldown between pulls; also frequently played in raids when you need !Stampeding Roar! more often than every 2 minutes.
+!Improved Stampeding Roar!: For when you want to !Stampeding Roar! more often than its 2 minute cooldown allows.
 
-!474728|Lycara's Meditation!: If you have the points to spare and you will be shapeshifting a decent amount, this is just more damage. It is best in keys, where you often enter !Bear Form!.
+!474728|Lycara's Inspiration!: A bit more stamina never hurt anyone.
 
 </details>
 
 <details>
 <summary>Niche Options Explained</summary> 
 
-!Matted Fur!: If you have nowhere else to put your talent points, this technically does something. It's extremely weak, but technically a defensive increase.
-
-!Heart of the Wild!: For cutting-edge levels of keys where you either need a stronger !Bear Form! to cover damage events, or just another charge of !Frenzied Regeneration!.
+!Heart of the Wild!: For cutting-edge levels of keys where you either need a stronger !Bear Form! to cover damage events, or just another charge of !Frenzied Regeneration!
 
 !Hibernate!: Almost exclusively used in keys, and rarely so. This is essentially a sap that only works on beasts and dragonkin, essentially you only chose this talent if you have a specific target to hibernate in mind. 
 
 !Mighty Bash!: If you don't need !Incapacitating Roar! but do need a single-target stun, and can afford to take this instead of !Maim!. In PvE, !Mighty Bash! is generally preferred over !Maim! because it doesn't cost combo points and energy to cast, and is niche enough that the cooldown difference isn't as relevant.
 
-!Maim!: In PvE, maim is generally used as an emergency soft-kick as opposed to a stun, though you can use it that way as well. It has a short cooldown, and easy to acquire. Its main issue is how much dps you lose by casting it, relegating the spell to niche-tier. It also puts mobs on stun dr, which in some groups can be inefficient.
-
-!Starfire! -> !Moonkin Form!: This is almost exclusively for access to !Moonkin Form!'s !Wild Charge! for when you cannot !Wild Charge! inside !Travel Form!. In world content, !Flap! can be nice to have as well.
-
-!Astral Influence!: Probably the most niche talent option there is for Feral Druids, this extends the range of !Adaptive Swarm! and !Lunar Inspiration! for when 40 yards isn't enough but 45 yards is.
+!Starfire! -> !Moonkin Form!: This is exclusively for access to !Moonkin Form!'s !Wild Charge! for when you cannot !Wild Charge! inside !Travel Form!. Often combined with !Flap! for more distance.
 
 !Gale Winds!: If you have the talent point to spare, !Gale Winds! makes !Typhoon!ing mobs easier when mobs are spread out.
 
@@ -370,15 +390,59 @@ The way this section is written is very formulaic and has the same structure as 
 
 ## Raid Talents
 
+Wildstalker and Druid of the Claw are similar in strength once you acquire 2 pieces of the new tier set-- with DOTC being about 1% ahead in single target, varying a bit depending on gear. This means you could play either hero tree and perform well. 
+
+So, how do you choose? Druid of the Claw is swingier, and thus has a higher capacity for high-rolling. It sims higher in single target, and its also stronger in AoE-- given that you can take advantage of its Berserk windows. 
+
+Wildstalker, on the other hand, gets more passive cleave in its full single-target build than Druid of the Claw does, and is more consistent (Lower potential for underperforming). Its AoE potency in cooldowns does not hold up to scrutiny however, especially in a raid environment where you can't properly set up your dots/vines. Lastly, Wildstalker manages forced downtime better than Druid of the Claw, particularly on fights where you can talent !Lunar Inspiration!.
+
+That being said, you should think of Druid of the Claw as the default tree for all PvE content.
+
+<HeroTalentsHeader title="Mythic Manaforge Omega Raid Builds">
+
 > [!WARNING]
-> This section is not yet updated. Check back on August 12th.
+> These builds are liable to change with more information.
 
-Our recommended default hero-tree for raiding is Wildstalker once you acquire at least the 2 piece 11.1 set bonus. That being said, Druid of the Claw can be decent on fights with AoE.
+<Talents name={"Plexus Sentinel"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAgBAAAAoZWmlZmtBEYBMzAYhBD"}/>
 
-![WS](/static/images/WILDSTALKERr%2B.png)
+<Talents name={"Loom'ithar"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAgBAAAAoZWmlZmtBEYBMzAYhBD"}/>
 
-<HeroTalentsHeader title="Mythic Liberation of Undermine Raid Builds">
- 
+<Talents name={"Soulbinder Naazindhri"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZbMzswMzMzmNGbzMzMPwMDAAAAAwSwsBjZG1MmlxyMzYMzMDAAAAAAAAAAAoZWmlZmtBEYBMDALMYA"}/>
+
+<Talents name={"Forgeweaver Araz"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MjxMzMzmNzYbmZm5BmZAAAAAAWCmFYMzomxswyMzYMzMDAAAAAAAAAAAIAY2mZpZZmlNwMAsYGM"}/>
+
+<Talents name={"The Soul Hunters"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmNzYbmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAA0MLzyMz2Mbzs0sNzyCMzAwCDG"}/>
+
+<Talents name={"Fractillus"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAgBAAAAoZWmlZmtBEYBMzAYhBD"}/>
+
+<Talents name={"Nexus-King Salhadaar"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZjxsYmxMz2s9AGbzMzMPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAgBAAAAoZWmlZmtBEYBMzAYhBD"}/>
+
+<Talents name={"Dimensius, the All-Devouring"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAgBAAAAoZWmlZmtBEYBMzAYhBD"}/>
+
+</HeroTalentsHeader>
+
+<div className="pb-2">
+</div>
+
+<Collapsible title="Generic Raid Build Archetypes">
+
+<Talents name={"WS Pure-ST L Build"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsEMM8AmZUzYWGLzMjxMzMAAAAAAAYAAAAEAMbzs0sMzyGYGAWMDG"}/>
+<Talents name={"WS Hybrid ST-AOE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMbzmZWGzYmZzmZsNzMz8AzMAAAAAALBzCMmZUzYWYZmZMmZmBAAAAAAADAAAgAgZbmlmlZW2AzAwiZwA"}/>
+<Talents name={"DOTC Pure-ST Build"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmFzMmZ2mtHwYbmZGPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAgBAAAAoZWmlZmtBEYBMzAYhBD"} />
+<Talents name={"DOTC Hybrid ST-AOE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZbMmFzMmZ2sZGbzMzMPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAAAAAAANzysMzsNgALgZGALMDD"}/>
+<Talents name={"DOTC AOE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmtBbzMzMPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAAAAAAANzysMzsNgALgZGALMDD"}/>
+
+Please note you can significantly customise the above, see the talent write-up in the following M+ section. Or take inspiration from the given Mythic Raid talents.
+
+</Collapsible>
+
+<Collapsible title="S1/S2 Mythic War Within Raid Builds">
+
+>[!WARNING]
+>These have not been updated yet, as they are low priority.
+
+## Liberation of Undermine
+
 <Talents name={"Vexie and the Geargrinder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLY2gxMjaGzyYZmZMmxMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
 
 <Talents name={"Cauldron of Carnage"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYLYWgxMjaGzyYZmZMmxMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
@@ -395,12 +459,7 @@ Our recommended default hero-tree for raiding is Wildstalker once you acquire at
 
 <Talents name={"Gallywix"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAAbBzCMmZUzYWGLzMjxMmBAAAAAAADAAAgAgZbmlmtZW2AzAwiZwA"}/>
 
-</HeroTalentsHeader>
-
-<div className="pb-2">
-</div>
-
-<Collapsible title="Mythic Neru'bar Palace Raid Builds">
+## Neru'bar Palace
 
 <Talents name={"Ulgrax"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgxMbMmlZmxY2mtHwYbmZGPwMDAAAAAwSwsBjZG1MmlxyMzYMzMDAAAAAAAAAAAoZWmlZmtBEYBMDALMYA"}/>
 
@@ -421,86 +480,103 @@ Our recommended default hero-tree for raiding is Wildstalker once you acquire at
 </Collapsible>
 
 
-<Collapsible title="Generic Raid Build Archetypes">
-
-<Talents name={"WS Pure-ST L Build"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmBmZZmZMzsNbjx2MmxMzAAAAAAsEMM8AmZUzYWGLzMjxMzMAAAAAAAYAAAAEAMbzs0sNzyGYGAWMDG"}/>
-<Talents name={"WS Pure-ST Apex Build (11.1 4p)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMjZmBAAAAAYJYY4BMzomxsMWmZGjZmZAAAAAAAwAAAAIAY2mZpZbmlNwMAsYGM"}/>
-<Talents name={"WS Hybrid ST-AOE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzYmZb2YsNzMz8AzMAAAAAALBDDPgZG1MmlxyMzYMzMDAAAAAAAGAAAABAz2MLNbzssBmBgFzgB"}/>
-<Talents name={"DOTC Hybrid ST-AOE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZbMmFzMmZ2mNGbzMzMPwMDAAAAAwSwsBMzomxsMWmZGjZmZAAAAAAAAAAAANzysMzsNgALgZGALMDD"}/>
-<Talents name={"DOTC AOE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzMzMb2GsNzMz8AzMAAAAAALBzGwMjaGzyYZmZMmZmBAAAAAAAAAAA0MLzyMz2ACsAmZAswMM"}/>
-
-Please note you can significantly customise the above, see the talent write-up in the following M+ section. Or take inspiration from the given Mythic Raid talents.
-
-</Collapsible>
-
-
 ## Dungeon Talents
 
-> [!WARNING]
-> This section is not yet updated. Check back on August 12th. That being said, not much is changing.
+Feral goes into 11.2 with much of the same talent choices as last season. Most notably, Wildstalker is more competitive in this game mode than ever before, though admittedly still a bit lacking relative to DOTC.
 
-Feral goes into 11.1 with plenty of options yet again when it comes to M+, with both Hero trees creating two distinct options on their own. Embrace these options and find what works for you, there is simply no 'best' build, especially because different talents will suit different dungeons and groups. However, listed below are some reference builds you can play around with, and the images below can help guide you to customise these builds to your liking.
+<Talents 
+  name="Druid of the Claw M+ Options"
+  defaultTree="Spec"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmtHwYbmZm5BmZAAAAAAWCmNDMzM1MmFzyMzsMMGAAAAAAwAAAAA0MLzyMz2ACsAzMAswgB" 
+  colors={[
+    { color: "red", nodes: ["Lunar Inspiration", "Starsurge", "Sunfire", "Starlight Conduit", "Astral Influence", "Rejuvenation", "Wild Growth", "Ironfur", "Matted Fur", "Lingering Healing", "Symbiotic Relationship" ] },
+    { color: "#fbff04ff", nodes: ["Adaptive Swarm", "Carnivorous Instinct", "Merciless Claws", "Tireless Energy", "Double-Clawed Rake", "Savage Fury", "Sudden Ambush", "Maim", "Remove Corruption", "Nurturing Instinct", "Feline Swiftness", "Typhoon", "Ursol's Vortex", "Mass Entanglement", "Incapacitating Roar", "Ursine Vigor", "Fluid Form", "Perfectly-Honed Instincts", "Lore of the Grove", "Innervate", "Improved Stampeding Roar", "Lycara's Inspiration", "Forestwalk", "Nature's Vigil"] },
+    { color: "#ffffff", nodes: ["Feral Frenzy", "Saber Jaws", "Moment of Clarity", "Coiled to Spring", "Ashamane's Guidance", "Gale Winds", "Incessant Tempest", "Heart of the Wild", "Starfire", "Moonkin Form", "Hibernate" ]}
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
-That being said, Druid of the Claw is the better hero-tree for M+. Not that you can't play Wildstalker if you want to, it is just worse.
-
-<Checkbox isIcon id="Druid of the Claw m+" spellId={441583} name="Druid of the Claw" radio="image" defaultCheck/>
-<Checkbox isIcon id="Wildstalker m+" spellId={439528} name="Wildstalker" radio="image"/>
-
-[*Wildstalker m+]
-![WS](/static/images/WILDSTALKERm%2B.png)
-
-[*Druid of the Claw m+]
-![DOTC](/static/images/DOTCm%2B.png)
-
-[*Druid of the Claw m+]<Talents name={"DOTC caelus-proudmoore (psst: play me if you can't decide)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzyYmxML2GsNzMz8AzMAAAAAALBzmBmZUzYWMLzMzyYGzAAAAAAAAAAAAamlZZmZbABWgZGAWYwA"}/> 
-
-[*Druid of the Claw m+]<Talents name={"DOTC All-rounder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzMzMb2MjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"}/>
-
-[*Druid of the Claw m+]<Talents name={"DOTC Burst"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMbzmZWmZmZmZz2gtZGz8AzMAAAAAALBzmBmZUzYWMLzMzyYGzAAAAAAAAAAAAamlZZmZbABWgZGAWYwA"}/>
-
-[*Druid of the Claw m+]<Talents name={"DOTC Heavy Single-Target"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZbMzswMzMzmNGbzMzMPwMDAAAAAwSwsZgZG1MmFzyMzsMmxMAAAAAAAAAAAgmZZWmZ2GQgFYmBgFGM"}/>
-
-[*Druid of the Claw m+]<Talents name={"DOTC Wild Slashes (note: worse due to single target concerns)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMLzmZWmZmZmZz2DYsNzYmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"}/>
-
-[*Wildstalker m+]<Talents name={"Wildstalker Rake-Centric"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MDzMzMzmNzYbmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAAEAMbzs0sNzyGMzAwCDG"}/>
-
-[*Wildstalker m+]<Talents name={"Wildstalker LI-centric"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMbzmZYmZmZ2sZGbzMmZmZAAAAAAWCmNDMzomxsYWmZmlxMMAAAAAAwADAAAgAgZbmlmtZW2gxAwiZwA"}/>
-
-[*Wildstalker m+]<Talents name={"Wildstalker Thrashing Claws (note: slightly inferior wildstalker build)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZbWMz2YmZmZzmZsNzYGzMAAAAAALBzmBmZUzYWMLzMzyYGGAAAAAAYgBAAAQAwsNzSz2MLbwYAYxMYA"}/>
+<Talents 
+  name="Wildstalker M+ Talent Options"
+  defaultTree="Spec"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MDzMzMzmNzYbmZm5BmZAAAAAAWCmNDMzM1MmFzyMzsMMGAAAAAAwAAAAAEAMLzs0sMzyGMzAwCDG" 
+  colors={[
+    { color: "red", nodes: ["Taste for Blood", "Coiled to Spring", "Saber Jaws", "Ashamane's Guidance", "Starsurge", "Sunfire", "Starlight Conduit", "Astral Influence", "Rejuvenation", "Wild Growth", "Ironfur", "Matted Fur", "Lingering Healing", "Symbiotic Relationship" ] },
+    { color: "#fbff04ff", nodes: ["Bond with Nature","Entangling Vortex","Resilient Flourishing","Moment of Clarity","Sudden Ambush", "Unbridled Swarm", "Tireless Energy", "Maim", "Remove Corruption", "Nurturing Instinct", "Feline Swiftness", "Typhoon", "Ursol's Vortex", "Mass Entanglement", "Incapacitating Roar", "Ursine Vigor", "Fluid Form", "Perfectly-Honed Instincts", "Lore of the Grove", "Innervate", "Improved Stampeding Roar", "Lycara's Inspiration", "Forestwalk", "Nature's Vigil"] },
+    { color: "#ffffff", nodes: ["Thrashing Claws", "Merciless Claws", "Feral Frenzy", "Gale Winds", "Incessant Tempest", "Heart of the Wild", "Starfire", "Moonkin Form", "Hibernate" ]}
+  ]}
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
 ### Talent Explanations
+
+!Root Network! for Wildstalker is good for large-aoe dungeons, I would generally default to !Resilient Flourishing!.
 
 <details>
 <summary>Section 1 Options Explained</summary> 
 
-!383352|Tireless Energy!: Less single target than !231063|Merciless Claws! but equivalently more AoE damage as well.
+!383352|Tireless Energy!: Less single target than !231063|Merciless Claws! but equivalently more AoE damage as well. Highly recommend at least the first point.
 
-!391700|Double-Clawed Rake!: Strong AoE only talent. Only reason its a choice is because this provides zero single-target value. Gains value with Wildstalker.
+!391700|Double-Clawed Rake!: Strong AoE only talent. Only reason its a choice is because this provides zero single-target value. Gains value with Wildstalker-- enough so to make it required (in my opinion)
 
-!231063|Merciless Claws!: This represents the most single target, the least AoE, and the most burst of the three options due to its synergy with !384668|Berserk: Frenzy!. Gains value with Druid of the Claw.
+!231063|Merciless Claws!: This represents the most single target, the least AoE, and the most burst of the three options (excluding the 1st point of !Tireless Energy!) due to its synergy with !384668|Berserk: Frenzy!. Gains value with Druid of the Claw.
 
-!405300|Thrashing Claws!: decent option if running Lunar Inspiration, frees up more globals to Moonfire more. Video guide [here](https://www.youtube.com/watch?v=8IwnGdWeD-k). 
+!405300|Thrashing Claws!: Niche option if running Lunar Inspiration, frees up more globals to Moonfire. Video guide [here](https://www.youtube.com/watch?v=8IwnGdWeD-k). 
 
 </details>
 
 <details>
 <summary>Section 2 Options Explained</summary> 
 
-!384665|Taste for Blood!: Strong single-target and funnel (if a particular dungeon has priority mobs you want to funnel Apex procs into). Strong synergy with !391528|Convoke!, and particularly Druid of the Claw in general. For Wildstalker this talent loses value as bite just isn't much of your damage. Usually if you want more single target, you would rather play !155580|Lunar Inspiration! instead.
+!391078|Raging Fury! vs !391872|Tiger's Tenacity!: Both are good for Druid of the Claw-- though !Raging Fury! is a niche pick for more AoE when you talent into x2 !Carnivorous Instinct!. Tiger's Tenacity is otherwise locked in.
 
-!48484|Infected Wounds!: Solid all-rounder talent, particularly good if playing !391700|Double-Clawed Rake! and Wildstalker in general. Still solid as Druid of the Claw, though if you don't talent !384665|Taste for Blood!, then !449645|Savage Fury! is often favored due to burst whilst providing similar overall value.
+!384667|Sudden Ambush!: This is a solid all-rounder talent with synergy to !391700|Double-Clawed Rake!. It's almost always preferred over !449645|Savage Fury! though, but can rarely be dropped in dungeons with significant AoE, allowing !449645|Savage Fury! to shine. Most notably Priory.
 
-!384667|Sudden Ambush!: Like !48484|Infected Wounds! this is a solid all-rounder talent with synergy to !391700|Double-Clawed Rake!. It's almost always preferred over !449645|Savage Fury! though, but can rarely be dropped in dungeons with significant AoE, allowing !449645|Savage Fury! to shine.
+!449645|Savage Fury!: Great burst and great for larger pull sizes, however a bit less effective on single-target in comparison to !Sudden Ambush!. Longer travel time between packs in some dungeons can give time for TF to reset, thereby giving talents like this higher overall uptime as well. Also of note, one of the m+ affixes this season gives cooldown reduction, which this talent greatly benefits from.
 
-!449645|Savage Fury!: Great burst and great for larger pull sizes, however a bit less effective on single-target. Longer travel time between packs in some dungeons can give time for TF to reset, thereby giving talents like this higher overall uptime as well. Also of note, one of the m+ affixes this season gives cooldown reduction, which this talent greatly benefits from.
+!236068|Moment of Clarity!: Fairly strong single-target and an excellent all-rounder, can help if you are struggling with energy too. Niche for Druid of the Claw as your points in the middle-section are pretty locked, likely replacing the last point in the bottom section if at all.
 
-!155580|Lunar Inspiration!: strong single-target and low target cleave as Wildstalker, and can help proc !Bloodtalons! more often.
-
-!236068|Moment of Clarity!: Fairly strong single-target and an excellent all-rounder, can help if you are struggling with energy too. Unlike !384665|Taste for Blood! however, it's single target strength does not extend to funnel damage. 
-
-!391078|Raging Fury! vs !391872|Tiger's Tenacity!: both are good for both Hero trees, Tiger's Tenacity is generally a bit better overall, particularly with DOT-focused builds, but Raging Fury is competitive and the added uptime can be useful depending on how long packs are living, or if you simply prefer playing with a higher uptime on !5217|Tiger's Fury!.
-
-!391078|Raging Fury!/!391872|Tiger's Tenacity! cont.: You can technically drop this node, if and only if you're playing 2x !Carnivorous Instinct! anyway as Druid of the Claw. This nets a small gain in Single Target in exchange for a small loss in AoE. I find this an odd trade-off if you're full sending !Carnivorous Instinct! though, so marked not playing this as niche.
+!155580|Lunar Inspiration!: strong single-target and low target cleave as Wildstalker, and can help proc !Bloodtalons! more often. Unplayable as Druid of the Claw.
 
 !Brutal Slash! vs !390864|Wild Slashes!: !Brutal Slash! is always better, largely due to it being a relevant dps gain in Single Target, unlike !390864|Wild Slashes!. That being said, !390864|Wild Slashes! has a straightforward way of playing, and is decent enough to comment on. Do NOT pair !390864|Wild Slashes! with !391700|Double-Clawed Rake!, these talents are anti-synergistic.
 
@@ -509,19 +585,56 @@ That being said, Druid of the Claw is the better hero-tree for M+. Not that you 
 <details>
 <summary>Section 3 Options Explained</summary> 
 
-!319439|Bloodtalons! vs !391972|Lion's Strength!: I would almost always play !319439|Bloodtalons!. Optimizing !319439|Bloodtalons! is a very small gain in single target, so even as a new player you will see ~2% more damage there. In AoE, the talents are much closer in overall value, and !Lion's Strength! even wins in burst AoE, so in that regard you can justify !Lion's Strength!, especially since it is easier to play. 
+!Incarnation: Avatar of Ashamane! vs !Convoke the Spirits!:
+This one is tricky, and the option only exists for Druid of the Claw. Essentially, !Incarnation: Avatar of Ashamane! technically never surpasses !Convoke the Spirits! on any target count (though its basically equal in large AoE). So why is it a choice? Well in dungeons, you can drop combat on trash packs making use of the in-combat !Prowl!. This generates an additional Ravage via Killing Strikes, netting a large amount of value with the tier set. Essentially, you can play !Incarnation: Avatar of Ashamane! in big AoE keys, particularly if your group is chain pulling and the single target loss is palatable. Main reason you'd consider doing so is to take advantage of the utility of !Prowl! interrupting casts/channels on you, combat drop etc. I wouldn't consider it in lower keys where things die too fast.
 
-!391888|Adaptive Swarm!: Good for both Hero trees, with the first point being one of the single best options you can take for pure single-target, and I would recommend running it almost all the time as Wildstalker. 2 points into !391951|Unbridled! 'beekeeping' is where it gets really interesting if you want more cleave and AOE value, particularly on medium size pulls. However its value drops off on really large AOE.
+!319439|Bloodtalons! vs !391972|Lion's Strength!:
+I would always play !319439|Bloodtalons!. Optimizing !319439|Bloodtalons! is a very small gain in single target, so even as a new player you will see ~2% more damage there. In AoE, the talents are much closer in overall value, and !Lion's Strength! even wins in burst AoE, so in that regard you can justify !Lion's Strength!, especially since it is easier to play. 
 
-!390902|Carnivorous Instinct!: Excellent burst option, with particular strength in large AOE, and it's one of the only talents in the bottom section that buffs Brutal Slash for example, which is stronger inside of !343223|Berserk!. Gains more value if playing !391078|Raging Fury!.
+!391888|Adaptive Swarm!: Great for both Hero trees, being one of the single best options you can take for pure single-target. I would recommend running it all the time as Wildstalker, and most of the time as Druid of the Claw.
 
-!274837|Feral Frenzy!: Solid single-target/prio option for both Hero trees, and decent in AOE as well, as it can help you weave !Ferocious Bite! with the free combo points. Generally taken if you want more single-target, but already have !391888|Adaptive Swarm! talented.
+!Unbridled Swarm!: Solid single-target with incredible low/mid cleave damage as well. It is partially due to its single-target strength that !Feral Frenzy! has seen a lot less play this expansion.
 
-!391347|Rip & Tear! vs !391978|Veinripper!: !391347|Rip & Tear! offers more overall damage, though Veinripper nets more priority damage.
+!390902|Carnivorous Instinct!: Excellent burst option, with particular strength in large AOE. Gains more value if playing !391078|Raging Fury!. The first point is stronger than the second.
 
-!421432|Saber Jaws!: A pure single-target option for Druid of the Claw, its value will vary significantly based on dungeon. Mutually exclusive with the !391347|Rip & Tear! vs !391978|Veinripper! node.
+!274837|Feral Frenzy!: Solid single-target/prio option for both Hero trees, and okay in AOE as well, as it lets you cast more !Ferocious Bite!s. Only taken if you want more single-target and already have !391888|Adaptive Swarm! talented.
+
+!391347|Rip & Tear! vs !391978|Veinripper!:
+!391347|Rip & Tear! offers more overall damage-- enough so that it should be considered the default. Nichely, Veinripper nets more priority damage.
+
+!421432|Saber Jaws!: A pure single-target option for Druid of the Claw, its value will vary significantly based on dungeon. Mutually exclusive with the !391347|Rip & Tear! vs !391978|Veinripper! node. I consider this niche, as if you want more single-target, !Adaptive Swarm! is your choice. If you want more single-target beyond that? Usually !Feral Frenzy!. Its lack of AoE value makes the talent tough, though possible, to justify.
 
 </details>
+
+### Sample Builds
+
+<div className="pb-2">
+</div>
+
+<Checkbox isIcon id="Druid of the Claw m+" spellId={441583} name="Druid of the Claw" radio="image" defaultCheck/>
+<Checkbox isIcon id="Wildstalker m+" spellId={439528} name="Wildstalker" radio="image"/>
+
+[*Druid of the Claw m+]<Talents name={"DOTC caelus-proudmoore (psst: play me if you can't decide)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzyYmxML2GsNzMz8AzMAAAAAALBzmBmZUzYWMLzMzyYGzAAAAAAAAAAAAamlZZmZbABWgZGAWYwA"}/> 
+
+[*Druid of the Claw m+]<Talents name={"DOTC All-rounder"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzMzMb2MjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"}/>
+
+[*Druid of the Claw m+]<Talents name={"DOTC Double-Clawed Rake"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmNzYbmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAA0MLzyMz2ACsAzMAswgB"}/>
+
+[*Druid of the Claw m+]<Talents name={"DOTC Max Single-Target"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZbMzswMzMzmNGbzMzMPwMDAAAAAwSwsZgZG1MmFzyMzsMmxMAAAAAAAAAAAgmZZWmZ2GQgFYmBgFGM"}/>
+
+[*Druid of the Claw m+]<Talents name={"DOTC Feral Frenzy"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzMzMbzGjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"} />
+
+[*Druid of the Claw m+]<Talents name={"DOTC Incarn"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmNzYZmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAA0MLzyMz2ACsAzMAswgB"} />
+
+[*Druid of the Claw m+]<Talents name={"DOTC Wild Slashes (note: worse due to single target concerns)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZ2MziZmZmZzGjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"}/>
+
+[*Wildstalker m+]<Talents name={"Wildstalker Rake-Centric (play me)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MjxMzMzmNzYbmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAAEAMbzs0sMzyGMzAwCDG"}/>
+
+[*Wildstalker m+]<Talents name={"Wildstalker LI"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MDmZmZ2sZGbzMzMPwMDAAAAAwSwsZgZG1MmFzyMzsMmxMAAAAAAAYAAAAEAMbzs0sMzyGMzAwCDG"}/>
+
+[*Wildstalker m+]<Talents name={"Wildstalker Thrashing Claws (note: slightly inferior wildstalker build)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZbWMzGzMzMb2MjtZmZGzMAAAAAALBzmBmZUzYWMLzMzyYGGAAAAAAYgBAAAQAwsNzSzyMLbwYAYxMYA"}/>
+
+[*Wildstalker m+]<Talents name={"Wildstalker Single-Target Focus"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MjxMzMz2sxYbmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAAEAMbzs0sMzyGMzAwCDG"} comment="Going Merciless instead of Double-Clawed Rake gains another ~2.3% in single target" />
 
 # Consumables
 
@@ -584,18 +697,17 @@ These trinket lists are in rough order of strength, assuming the highest item le
 | **S Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | Passive crit proc.
 | **A Tier** | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | Cyclical Crit proc.
 | | [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Damage proc trinket + execute
-| | [Ara'kara Sacbrood (WS)](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | Strong passive agility proc. Better for Wildstalker than DOTC due to the haste on the trinket.
-| | [Ticking Sac of Terror](https://www.wowhead.com/item=190652/ticking-sack-of-terror?hero=21&ilvl=723&spec=103) | Solid damage proc
-| **B Tier** | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | True stat stick, sim default is haste.
-| | [Ara'kara Sacbrood (DOTC)](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | A little bit worse for DOTC, but still a solid passive trinket.
+| **B Tier** | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | A little bit worse for DOTC, but still a solid passive trinket.
 | | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) | Passive stat proc.
+|  | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | True stat stick, sim default is mastery. Higher if you factor in ally buff.
+| | [Ticking Sac of Terror](https://www.wowhead.com/item=190652/ticking-sack-of-terror?hero=21&ilvl=723&spec=103) | Solid damage proc
 | | [Incorporeal Warpclaw (WS)](https://www.wowhead.com/item=242495/incorporeal-warpclaw?class=11&hero=21&ilvl=723&spec=103) | Passive damage proc. Easily replaceable.
 
 **For use in Mythic+:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
-| **S Tier** | [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk, best in mid-count dungeons, ideally with not a lot of single-target. Dont die. If you plan to, dont use this trinket.
-| | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
+| **S Tier** | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
+| | [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk, best in mid-count dungeons, ideally with not a lot of single-target. Dont die. If you plan to, dont use this trinket.
 | **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) |
 | **B Tier** | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) |
 | | [Improvised Seaforium Pacemaker](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
@@ -610,16 +722,16 @@ These trinket lists are in rough order of strength, assuming the highest item le
 
 ### Trinket FAQ
 
-Q: How do I select a different secondary than Haste for [Soleah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103)?
+Q: How do I select a secondary other than Mastery for [Soleah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103)?
 
-A: In the Custom APL box of your sim, paste in `shadowlands.soleahs_secret_technique_type="mastery"` or whatever stat you want. Alternatively, in quick sim you can paste the following into Expert Mode: Post-Combination Actors:
+A: In the Custom APL box of your sim, paste in `shadowlands.soleahs_secret_technique_type="crit"` or whatever stat you want. Alternatively, in quick sim you can paste the following into Expert Mode: Post-Combination Actors:
 ```
 profileset."Crit"+=shadowlands.soleahs_secret_technique_type="crit"
-profileset."Mastery"+=shadowlands.soleahs_secret_technique_type="mastery"
+profileset."Haste"+=shadowlands.soleahs_secret_technique_type="haste"
 profileset."Versatility"+=shadowlands.soleahs_secret_technique_type="versatility"
 ```
 
-The default profile would use Haste.
+The default profile would use Mastery.
 
 Q: Should we be playing double on-use trinkets?
 
@@ -627,7 +739,7 @@ A: No, Feral will typically play just one on-use; though you should always sim j
 
 Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
 
-A: By default, none. You can add the buffs yourself by pasting `thewarwithin.signet_of_the_priory_party_stats=crit/haste/mastery/versatility` into the Custom APL box of your sim. Remove whatever ally stat you dont want to sim.
+A: By default, none. You can add the buffs yourself by pasting `thewarwithin.signet_of_the_priory_party_stats=crit/haste/mastery/versatility` into the Custom APL box of your sim. Remove whatever ally stat you dont want to sim. You will find this is incredibly minor.
 
 Q: [Void-Touched Fragment](https://www.wowhead.com/ptr-2/item=238386/void-touched-fragment?bonus=1582:12357:12239&class=11&ilvl=710&spec=103) is simming better than some of the higher item level stuff on this list for me, should I use it?
 
