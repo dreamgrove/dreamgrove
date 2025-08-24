@@ -15,7 +15,7 @@ summary: A guide to Balance Druid
 This is approximately ~8.4% dmg increase from having no set.
 
 #### [4-piece](https://www.wowhead.com/spell=1236333/druid-elunes-chosen-11-2-class-set-4pc)
-> On impact, !197626|Starsurges! launched by !Starfire! split to up to 3 additional targets at 80% effectiveness and grand a stack of !Gathering Moonlight!. Casting !Fury of Elune! or !Full Moon! consumes Gathering Moonlight to increase your damage by 4% per stack for 12 sec.
+> On impact, !197626|Starsurges! launched by !Starfire! split to up to 3 additional targets at 80% effectiveness and grant a stack of !Gathering Moonlight!. Casting !Fury of Elune! or !Full Moon! consumes Gathering Moonlight to increase your damage by 4% per stack for 12 sec.
 
 This is approximately ~15.1% dmg increase from having no set.
 
@@ -34,6 +34,16 @@ This is approximately ~7.2% dmg increase from having no set.
 This is approximately ~18% dmg increase from having no set.
 
 [Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims3.htm)
+
+## Current Bugs
+
+- There is currently a bug with the Keeper of the Grove 4-set bonus where you don't get the Dryad's Favor buff after the Dryad dies. The only boss it is confirmed to be bugged on currently is Plexus Sentinel, but it could also be bugged elsewhere. It is most likely a bug caused by the 4-set not counting the damage done to absorbs or shields towards the pool, probably caused by whatever Blizzard did during PTR when they fixed healing and overhealing contributing towards the pool.
+
+- !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
+
+- Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA! / !102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
+
+- If you spell-queue a free spender through a !Starweaver! or !Touch the Cosmos! proc as your first global in an !Eclipse!, you will gain no value from !Hail of Stars!.
 
 <Collapsible title="Balance Druid 11.2 Video Guide">
   <YouTube id="g7ljpozVgsg"/>
@@ -73,6 +83,14 @@ This is approximately ~18% dmg increase from having no set.
 [*~OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
 
 <div className="py-4">
+  <Collapsible title="Keeper of the Grove Expanded Opener">
+
+ <Timeline spellIds={[164812, 164815, 194223, 197626, 197626, 205636, 391528, 197626, 197626, 190984, 194223, 197626, 197626, 190984, 197626 ]} > Cast !Wrath! at 4 seconds before pull from max range. Press !194223|CA! a 2nd time as your !Dryad! fades and you gain !Dryad's Favor!. Pool AP during the 2nd !194223|CA! to have enough to spend your !Dryad's Favor! inside it. </Timeline>
+
+  </Collapsible>
+</div>
+
+<div className="py-4">
   <Collapsible title="Not using cooldowns on pull ">
 
   [*~OPENFLARE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
@@ -104,7 +122,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck />
 <Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
 <Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
-<Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" defaultCheck />
+<Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
 <Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon-KOTG" />
 <Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
 <Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
@@ -370,7 +388,7 @@ You can use the macro below and replace your existing !Wrath! keybind with it to
 ## Raid
 
 > [!NOTE]
-> These builds are templates that will serve you well in most cases. For specific builds and explanations for each boss, check out the [raid guide](https://www.dreamgrove.gg/raids/liberation_of_undermine) and click the "Balance" checkbox. These builds will be updated continously as people progress Manaforge Omega.
+> These builds are templates that will serve you well in most cases. For specific builds and explanations for each boss, check out the [raid guide](https://www.dreamgrove.gg/raids/manaforge_omega) and click the "Balance" checkbox. These builds will be updated continously as people progress Manaforge Omega.
 
 
 <Talents 
@@ -536,15 +554,15 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
 
 ### Middle Section
 
-- !Sunseeker Mushroom! or !Wild Mushroom! are mandatory talents since they help saturate the [4-piece](https://www.wowhead.com/spell=1215698/druid-balance-11-1-class-set-4pc) uptime. !Sunseeker Mushroom! is by far the preferred option as the active !Wild Mushroom! ability does not do a lot of damage by itself and !Sunseeker Mushroom! is more than enough paired with the [2-piece](https://www.wowhead.com/spell=1215695/druid-balance-11-1-class-set-2pc) to get decent enough uptime.
+- !Sunseeker Mushroom! is the preferred option over !Wild Mushroom! and is taken in most builds, both for single target and AoE. 
   
   !Stellar Amplification! is recommended for ST scenarios where you cast Starsurge enough to keep good uptime on it, taken for most raid encounters.
   
   !Touch the Cosmos! lost some power since the start of Season 2, heading into Season 3 it is an optional talent for Keeper of the Grove in ST scenarios, and a talent you never take as Elune's Chosen. The 11.2 Elune's Chosen tier set only procs when you generate Astral Power with !Starfire! which devalues any talent that increases Astral Power generation or ones that give you free spenders. 
   
-  !Umbral Intensity! is a very good talent for both !Keeper of the Grove! and !Elune's Chosen!. The best build on ST that isn't taking !Umbral Intensity! is around 1% behind on ST.
+  !Umbral Intensity! is a very good talent for both !Keeper of the Grove! and !Elune's Chosen!. It also routes towards !Astronomical Impact! which is a mandatory talent for Keeper of the Grove whenever playing the 4-set.
   
-  !Astronomical Impact! is a decent talent for both ST and AoE, but requires you to route through !Umbral Intensity! to reach it.
+  !Astronomical Impact! is a mandatory talent whenever you're playing the Keeper of the Grove 4-set as a considerable amount of your damage relies on !Dryad's Favor! critting.
   
   !114107|Soul of the Forest! in itself is an okay talent in ST and the extra Astral Power generation can help you in dealing with spots in raid where there is a lot of movement. It is mandatory in AoE.
   
@@ -623,6 +641,12 @@ Depending on the fight timer, this talent is stronger than !Power of the Dream! 
 
 ## Embellishments & Crafted Items
 
+For Season 3 and Manaforge Omega, crafting a [Two-Hand Staff](https://www.wowhead.com/item=222568/vagabonds-bounding-baton?bonus=10421:9633:8902:9627:12040:11300:8960:12053:12050:8791&class=11&crafted-stats=36:40&crafting-quality=8&hero=23&ilvl=720&spec=102) with [Ascension](https://www.wowhead.com/item=226024/darkmoon-sigil-ascension) early will be a preferred option for most players. However, if you play in a decent guild and can acquire the [Voidglass Kris](https://www.wowhead.com/item=237728/voidglass-kris?bonus=1520) weapon from heroic, then crafting an [off-hand](https://www.wowhead.com/item=222566/vagabonds-torch?bonus=10421:9633:8902:9627:12050:11300:8960:8791:12053&class=11&crafted-stats=36:49&crafting-quality=8&hero=23&ilvl=720&spec=102) with [Ascension](https://www.wowhead.com/item=226024/darkmoon-sigil-ascension) and spending the free Enchanted Runed Crest on [Bracers with Writhing Armor Banding](https://www.wowhead.com/item=219334/rune-branded-armbands?bonus=10421:9633:8902:9627:11109:8960:8793:12040:12373:12052:12050&class=11&crafted-stats=32:49&crafting-quality=8&hero=23&ilvl=704&spec=102) can be a bigger upgrade. 
+
+Keep this in mind when simming your character to decide what your best option is.
+
+---
+
 Embellishments for this season don't offer a substantial gain, so it's important that you always sim your character using [Raidbots Top Gear](https://www.raidbots.com/simbot/topgear) before making any gearing decision, but here are some guidelines:
 
 [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226024/darkmoon-sigil-ascension) and [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding)
@@ -648,12 +672,12 @@ This is a solid all-round choice for single target and mythic+. It's a random da
 
 |Tier | Trinket | Description |
 |------|-----------------------|---------|
-| **S Tier** | [Azhiccaran Parapodia](https://www.wowhead.com/ptr-2/item=242497/azhiccaran-parapodia?bonus=4795&hero=24&ilvl=723&spec=102) | Haste stat stick with passive damage and intellect effect from the new dungeon. |
-|  | [Astral Antenna](https://www.wowhead.com/ptr-2/item=242395/astral-antenna?bonus=1533:12361:12239&class=11&hero=24&ilvl=723&spec=102) | Primary stat stick with passive crit effect. Very good for both hero talents. |
+| **S Tier** | [Astral Antenna](https://www.wowhead.com/ptr-2/item=242395/astral-antenna?bonus=1533:12361:12239&class=11&hero=24&ilvl=723&spec=102) | Primary stat stick with passive crit effect. Very good for both hero talents. |
 |  | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=4795&hero=24&ilvl=723&spec=102) | 2 minute on-use with crit stat stick. Gives a lot of primary stat, decaying over 30 seconds.  |
-| **A Tier** | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?bonus=4795&class=11&hero=24&ilvl=723&spec=102)  | 2 minute on-use. Gives your highest secondary stat when used. |
+| **A Tier** | [Diamantine Voidcore](https://www.wowhead.com/ptr-2/item=242392/diamantine-voidcore?bonus=4795&hero=24&ilvl=723&spec=102) | Mastery stat stick. Has a 2 set effect with weapons from the raid with [Voidglass Kris](https://www.wowhead.com/ptr-2/item=237728/voidglass-kris?bonus=4795&class=11&hero=24&ilvl=723&spec=102) and [Voidglass Spire](https://www.wowhead.com/ptr-2/item=237730/voidglass-spire?bonus=4795&class=11&hero=24&ilvl=723&spec=102).  |
+|  | [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?bonus=4795&class=11&hero=24&ilvl=723&spec=102)  | 2 minute on-use. Gives your highest secondary stat when used. |
+|  | [Azhiccaran Parapodia](https://www.wowhead.com/ptr-2/item=242497/azhiccaran-parapodia?bonus=4795&hero=24&ilvl=723&spec=102) | Haste stat stick with passive damage and intellect effect from the new dungeon. |
 |  | [Lily of the Eternal Weave](https://www.wowhead.com/ptr-2/item=242494/lily-of-the-eternal-weave?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | 1:30m on-use. Gives Mastery when used. Drops from the new dungeon. |
-|  | [Diamantine Voidcore](https://www.wowhead.com/ptr-2/item=242392/diamantine-voidcore?bonus=4795&hero=24&ilvl=723&spec=102) | Mastery stat stick. Has a 2 set effect with weapons from the raid with [Voidglass Kris](https://www.wowhead.com/ptr-2/item=237728/voidglass-kris?bonus=4795&class=11&hero=24&ilvl=723&spec=102) and [Voidglass Spire](https://www.wowhead.com/ptr-2/item=237730/voidglass-spire?bonus=4795&class=11&hero=24&ilvl=723&spec=102).  |
 |  | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | Regular stat stick trinket. Use on someone in your raid and give them some of their higher stat, and giving you a bigger amount of thier highest stat. |
 |  | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/ptr-2/item=219312/empowering-crystal-of-anubikkaj?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | Gives random secondary stat on proc. |
 | **B Tier** | [Ara-Kara Sacbrood](https://www.wowhead.com/ptr-2/item=219314/ara-kara-sacbrood?bonus=4795&hero=24&ilvl=723&spec=102) | Haste stat stick with a moderately good effect.  |
@@ -665,7 +689,7 @@ This is a solid all-round choice for single target and mythic+. It's a random da
 |  | [Essence-Hunter's Eyeglass](https://www.wowhead.com/ptr-2/item=246939/essence-hunters-eyeglass?bonus=12355:40:1572:10255&class=11&hero=24&ilvl=710&spec=102) | |
 |  | [Miniscule Mailemental in an Envelope](https://www.wowhead.com/ptr-2/item=185846/miniscule-mailemental-in-an-envelope?bonus=4795&hero=24&ilvl=723&spec=102) | |
 
-[Trinket Sim](https://mimiron.raidbots.com/simbot/report/c5tp5HQuVQHUjatxC2dxYG) (this sim will expire, contact Gamz on discord if it's currently broken)
+[Trinket Sim](https://www.raidbots.com/simbot/report/8ayaQKVpAn3N6BEQHzFXE5) (this sim will expire, contact Gamz on discord if it's currently broken)
 
 ## D.I.S.C Belt
 
@@ -709,7 +733,7 @@ Keep in mind that class buffs only affect class spells so if a trinket does natu
 
 ### Q: How do I sim for M+?
 
-**A:** It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, you can use the [MDT Sim WeakAura](https://wago.io/Yya4XBbl-) which allows you to sim dungeon routes. Please keep in mind that ST damage is still a big part of mythic+.
+**A:** It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, you can use the [MDT Sim WeakAura](https://wago.io/LTwpBiuz_) which allows you to sim dungeon routes. Alternatively you can create a route using [Keystone Guru](https://keystone.guru/) and click the "simulate" option to generate a SimC string. Please keep in mind that ST damage is still a big part of mythic+.
 
 ### Q: I've seen a lot of people running build X instead of Y in Mythic+, is X better?
 
@@ -726,15 +750,6 @@ Keep in mind that class buffs only affect class spells so if a trinket does natu
 ### Q: I have read through the Compendium and I have some questions that are not outlined in this FAQ?
 
 **A:**  If you have any questions, you can go to the [Dreamgrove discord server](https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to receive the answer you would like.
-
-
-## Current Bugs
-
-- !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
-
-- Changing talents from !Orbital Strike! to !Whirling Stars! can make macros using !194223|CA! / !102560|Inc! not work at all, giving you an error message and have your button be desaturated on your bars. This requires a relog to fix.
-
-- If you spell-queue a free spender through a !Starweaver! or !Touch the Cosmos! proc as your first global in an !Eclipse!, you will gain no value from !Hail of Stars!.
 
 # Additional Resources
 ## Macros
