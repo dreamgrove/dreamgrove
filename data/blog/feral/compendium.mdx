@@ -63,17 +63,17 @@ The way this section is written is very formulaic and has the same structure as 
 > [!TIP]
 > Uncheck !Bloodtalons! if you want a simpler builder priority.
 
-<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents"  />
-<Checkbox isIcon id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents" defaultCheck />
-<Checkbox isIcon id="Coiled to Spring" spellId={449537} name="Coiled to Spring" />
+<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="Druid of the Claw" radio="hero talents" defaultCheck />
+<Checkbox isIcon id="Wildstalker" spellId={439528} name="Wildstalker" radio="hero talents" />
+<Checkbox isIcon id="Coiled to Spring" spellId={449537} name="Coiled to Spring" defaultCheck />
 <Checkbox isIcon id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
 <Checkbox isIcon id="Adaptive Swarm" spellId={391889} name="Adaptive Swarm" radio="Adaptive Swarm" defaultCheck />
 <Checkbox isIcon id="Unbridled Swarm" spellId={391951} name="Unbridled Swarm" radio="Adaptive Swarm"/>
 <Checkbox isIcon id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
 <Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" defaultCheck />
-<Checkbox isIcon id="Rip and Tear" spellId={391347} name="Rip and Tear" defaultCheck />
-<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" defaultCheck />
+<Checkbox isIcon id="Rip and Tear" spellId={391347} name="Rip and Tear" />
+<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
 <Checkbox isIcon id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws" spellId={405300} name="Thrashing Claws" />
 <Checkbox isIcon id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
@@ -120,7 +120,7 @@ The way this section is written is very formulaic and has the same structure as 
     - !Rip! is missing or in pandemic range.
     - !5217|Tiger's Fury! is up, or won't be up before !Rip! expires.
     - [*Bloodtalons] !Bloodtalons! is up.
-3. [*Druid of the Claw&&Coiled to Spring] Use a builder if you are inside !102543|Incarn!/!Berserk!, and you are lacking either !441583|Ravage! or !449537|Coiled to Spring!.
+3. [*Druid of the Claw&&Coiled to Spring] Use a builder if you are inside !102543|Incarn!/!Berserk! until you have one or both of !441583|Ravage! or !449537|Coiled to Spring!.
 4. !Ferocious Bite! when:
     - You have 5 combo points AND
     - You have at least 50 energy (25 energy during !102543|Incarn!/!Berserk!)
@@ -913,6 +913,7 @@ Each package contains multiple WeakAuras that work with each other to help you u
 - [by Drufearr](https://wago.io/us2RURgE6)
 - [by Chips](https://wago.io/WkTBZuH3y)
 - [by Fore](https://wago.io/H1tFNCh-t)
+- [Crazymeow's edit of Fore's pack](https://wago.io/lKyAV3eZS)
 - [by Cheesey](https://wago.io/18VspFroU)
 - [variant by Cheesey](https://wago.io/H3yjY1gs1)
 - [by Guiltyas](https://wago.io/OaJQX6khW)
@@ -937,6 +938,9 @@ This WA produces a glowing icon + sound cue when !Apex Predator's Craving! procs
 
 [Adaptive Swarm Helper by KnewOne, updated by Drufearr](https://wago.io/8BW0Iyw6r)
 This WA assists with proper use of !325727|Adaptive Swarm!. It also includes Unbridled Swarm support for casting on allies. For more details, check out the WA description.
+
+[Adaptive Swarm (st) tracker by Crazymeow](https://wago.io/AfF-8yIlH)
+This WA lets you know when you can cast swarm on your current target, read the description for more details.
 
 [Bloodtalons Tracker from Fore's pack](https://wago.io/cQkL9nrAw)
 This WA tracks your progress towards crucial procs of !Bloodtalons!. !Bloodtalons! is procced when you cast three different combo point generation abilities within 4s. This WA displays the 4s timer. For more details, check out the WA description.
