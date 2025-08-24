@@ -232,50 +232,62 @@ Those of you looking into Druid of the Claw specifically will come across these 
 
 During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
 
-- [*Dotc_Single Target] Press !441605|Ravage!
-- [*~Dotc_Single Target] Press !441605|Ravage! (on your priority target if there is one)
+<Checkbox isIcon id="Dotc_Single Target_incarn" name="Single Target" radio="Dotc_Target count" defaultCheck />
+<Checkbox isIcon id="Dotc_Cleave_incarn" name="Cleave (2-3 Targets)" radio="Dotc_Target count" />
+<Checkbox isIcon id="Dotc_AOE_incarn" name="AOE (4+ Targets)" radio="Dotc_Target count" />
+<Checkbox isIcon id="Dotc_Wildpower Surge_incarn" spellId={441691} name="Wildpower Surge" defaultCheck />
+<Checkbox isIcon id="Dotc_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox isIcon id="Dotc_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" />
+<Checkbox isIcon id="Dotc_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox isIcon id="Dotc_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox isIcon id="Dotc_Thorns of Iron_incarn" spellId={400222} name="Thorns of Iron" defaultCheck />
+<Checkbox isIcon id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+
+
+- [*Dotc_Single Target_incarn] Press !441605|Ravage!
+- [*~Dotc_Single Target_incarn] Press !441605|Ravage! (on your priority target if there is one)
 - Press !Thrash! if not at max stacks of the debuff or if it is about to expire
-- [*Dotc_Heart of the Wild&&Dotc_Single Target] Press !Heart of the Wild! (Ideally before pressing incarn)
-  	- [*Dotc_Wildpower Surge] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
-- [*Dotc_Heart of the Wild&&Dotc] Press !Heart of the Wild! (Ideally before pressing incarn)
-   	- [*Dotc_Wildpower Surge] With Wildpower Surge you can hold !Heart of the Wild! until you're at 6 stacks of Feline Potential for a minor gain by Ripweaving. 
-- [*Dotc_Heart of the Wild&&Dotc] Press !Heart of the Wild! (Ideally before pressing incarn)
-- [*Dotc_Rage of the Sleeper] Press !200851|Rage of the Sleeper!
- 	- [*Dotc_Wildpower Surge] If you are above 1-2 stacks of Feline Potential when !200851|Rage of the Sleeper! becomes available, you may wish to hold it until **after** you have applied your empowered !Rip!
-    	- [*Dotc_Wildpower Surge] This is because leaving !Bear Form! will cause you lose any remaining duration of RotS, which will be more costly the closer you are to achieving 6 stacks of Feline Potential 
-- [*Dotc_Lunar Beam] Press !Lunar Beam! 
-    	- [*Dotc_Single Target&&Dotc_Wildpower Surge] You may choose to hold this until after your !Wildpower Surge! empowered !Rip! is active on the target for a slight gain.
-- [*Dotc_Wildpower Surge&&Dotc_Single Target] If at 6 stacks of Feline Potential then:
-    	- [*Dotc_Tooth and Claw] !Rake! > !Rip! > !33917|Mangle!
+- [*Dotc_Heart of the Wild_incarn&&Dotc_Single Target_incarn] Press !Heart of the Wild! (Ideally before pressing incarn)
+  	- [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you will hold !Heart of the Wild! until you have 6 stacks of Feline Potential
+- [*Dotc_Heart of the Wild_incarn&&Dotc_Cleave_incarn] Press !Heart of the Wild! (Ideally before pressing incarn)
+   	- [*Dotc_Wildpower Surge_incarn] With Wildpower Surge you can hold !Heart of the Wild! until you're at 6 stacks of Feline Potential for a minor gain by Ripweaving. 
+- [*Dotc_Heart of the Wild_incarn&&Dotc_AOE_incarn] Press !Heart of the Wild! (Ideally before pressing incarn)
+- [*Dotc_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper!
+ 	- [*Dotc_Wildpower Surge_incarn] If you are above 1-2 stacks of Feline Potential when !200851|Rage of the Sleeper! becomes available, you may wish to hold it until **after** you have applied your empowered !Rip!
+    	- [*Dotc_Wildpower Surge_incarn] This is because leaving !Bear Form! will cause you lose any remaining duration of RotS, which will be more costly the closer you are to achieving 6 stacks of Feline Potential 
+- [*Dotc_Lunar Beam_incarn] Press !Lunar Beam! 
+    	- [*Dotc_Single Target_incarn&&Dotc_Wildpower Surge_incarn] You may choose to hold this until after your !Wildpower Surge! empowered !Rip! is active on the target for a slight gain.
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] If at 6 stacks of Feline Potential then:
+    	- [*Dotc_Tooth and Claw_incarn] !Rake! > !Rip! > !33917|Mangle!
 		- If a !Ravage! becomes ready before you !Rake! then press it before you start the Ripweave cycle (!Ravage! > !Rake! > !Rip! > !Mangle!)
-   	- [*Dotc_Tooth and Claw] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
+   	- [*Dotc_Tooth and Claw_incarn] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
 		- Spend so much that you cannot !Ravage! immediately if you get a proc
 		- Delay the Ripweave cycle to try and spend the rage
-    	- [*Dotc_Thorns of Iron&&~Dotc_Tooth and Claw] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
+    	- [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
     	- If an empowered !Rip! is still active on the target then replace !Rip! in the above sequences with a !Ferocious Bite! cast
    	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
-- [*Dotc_Wildpower Surge&&Dotc] If at 6 stacks of Feline Potential then:
-    	- [*Dotc_Tooth and Claw] !Rake! > !Rip! > !33917|Mangle!
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] If at 6 stacks of Feline Potential then:
+    	- [*Dotc_Tooth and Claw_incarn] !Rake! > !Rip! > !33917|Mangle!
 		- If a !Ravage! becomes ready before you !Rake! then press it before you start the Ripweave cycle (!Ravage! > !Rake! > !Rip! > !Mangle!)
-   	- [*Dotc_Tooth and Claw] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
+   	- [*Dotc_Tooth and Claw_incarn] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
 		- Spend so much that you cannot !Ravage! immediately if you get a proc
 		- Delay the Ripweave cycle to try and spend the rage
-    	- [*Dotc_Thorns of Iron&&~Dotc_Tooth and Claw] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
+    	- [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
   	- If an empowered !Rip! is still active on your primary target then either:
         	- Cast !Rip! on the secondary target (more overall damage)
        		- Replace !Rip! in the above sequences with a !Ferocious Bite! cast on the primary target (more priority damage)
    	- If !Rake! is already active and not within pandemic then either:
         	- Cast !Rake! on the secondary target OR
         	- Replace !Rake! with !Shred! on the primary target in the above sequences
-- [*Dotc_Wildpower Surge&&Dotc_Single Target] Press !33917|Mangle! if at < 6 stacks of Feline Potential
-- [*Dotc_Wildpower Surge&&Dotc] Press !33917|Mangle! if at < 6 stacks of Feline Potential
-- [*Dotc_Tooth and Claw&&Dotc_Single Target] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle&&Dotc_Single Target] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Tooth and Claw&&Dotc] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle&&Dotc] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Tooth and Claw&&Dotc] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
-- [*Dotc_Vicious Cycle&&Dotc] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Thorns of Iron] Press !Ironfur! if you have the rage to do so 
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Single Target_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential
+- [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] Press !33917|Mangle! if at < 6 stacks of Feline Potential
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Single Target_incarn] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Single Target_incarn] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_Cleave_incarn] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_Cleave_incarn] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Tooth and Claw_incarn&&Dotc_AOE_incarn] Press !Maul! or !Raze! if at 2 stacks of !Tooth and Claw!
+- [*Dotc_Vicious Cycle_incarn&&Dotc_AOE_incarn] Press !Maul! or !Raze! if at 3 stacks of !Vicious Cycle!
+- [*Dotc_Thorns of Iron_incarn] Press !Ironfur! if you have the rage to do so 
 - Press !33917|Mangle!   
 - Press !Thrash!
 
@@ -385,27 +397,39 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 
 During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
 
+<Checkbox isIcon id="EC_Single Target_incarn" name="Single Target" radio="EC_Target count" defaultCheck />
+<Checkbox isIcon id="EC_Cleave_incarn" name="Cleave" radio="EC_Target count" />
+<Checkbox isIcon id="EC_AOE_incarn" name="AOE" radio="EC_Target count" />
+<Checkbox isIcon id="EC_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
+<Checkbox isIcon id="EC_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" defaultCheck />
+<Checkbox isIcon id="EC_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
+<Checkbox isIcon id="EC_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
+<Checkbox isIcon id="EC_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" />
+<Checkbox isIcon id="EC_Thorns of Iron style_incarn" spellId={192081} name="Thorns of Iron Playstyle" />
+<Checkbox isIcon id="EC_Raze_incarn" spellId={400254} name="Raze" />
+
+
 - Press !Thrash! if not at max stacks of the debuff or it is about to expire
-- [*EC_Thorns of Iron style] Press !Ironfur! if you have the rage
+- [*EC_Thorns of Iron style_incarn] Press !Ironfur! if you have the rage
     - Make sure you pool when Incarn/Berserk is finishing so you leave with a full rage bar
-- [*EC_Heart of the Wild] Press !Heart of the Wild! if it becomes available
-- [*EC_Lunar Beam] Press !Lunar Beam! if it becomes available
-- [*EC_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if it becomes available  
-- [*EC_Thorns of Iron style] Press !Ironfur! if you have rage to do so
-	- [*EC_Tooth and claw] You can use !Tooth and Claw! procs for a small overall damage loss if focusing on Thorns of Iron damage.
-- [*EC_Single Target&&EC_Tooth and Claw&&~EC_Thorns of Iron style] Press !Maul! if you are at 2 stacks of !Tooth and Claw!
-- [*EC_Single Target&&EC_Vicious Cycle&&~EC_Thorns of Iron style] Press !Maul! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_Single Target&&EC_Vicious Cycle&&~EC_Thorns of Iron style] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*EC&&EC_Tooth and Claw&&~EC_Thorns of Iron style&&~EC_Raze] Press !Maul! if you are at 2 stacks of !Tooth and Claw!
-- [*EC&&EC_Vicious Cycle&&~EC_Thorns of Iron style&&~EC_Raze] Press !Maul! if you are at 3 stacks of !Vicious Cycle!
-- [*EC&&EC_Vicious Cycle&&~EC_Thorns of Iron style&&~EC_Raze] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*EC&&EC_Tooth and Claw&&~EC_Thorns of Iron style&&EC_Raze] Press !Raze! if you are at 2 stacks of !Tooth and Claw!
-- [*EC&&EC_Vicious Cycle&&~EC_Thorns of Iron style&&EC_Raze] Press !Raze! if you are at 3 stacks of !Vicious Cycle!
-- [*EC&&EC_Vicious Cycle&&~EC_Thorns of Iron style&&EC_Raze] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*EC&&EC_Tooth and Claw&&~EC_Thorns of Iron style&&EC_Raze] Press !Raze! if you are at 2 stacks of !Tooth and Claw!
-- [*EC&&EC_Vicious Cycle&&~EC_Thorns of Iron style&&EC_Raze] Press !Raze! if you are at 3 stacks of !Vicious Cycle!
-- [*EC&&EC_Vicious Cycle&&~EC_Thorns of Iron style&&EC_Raze] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*~EC_Thorns of Iron style] Spend any excess rage on !Ironfur!. You should never fully cap rage.
+- [*EC_Heart of the Wild_incarn] Press !Heart of the Wild! if it becomes available
+- [*EC_Lunar Beam_incarn] Press !Lunar Beam! if it becomes available
+- [*EC_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper! if it becomes available  
+- [*EC_Thorns of Iron style_incarn] Press !Ironfur! if you have rage to do so
+	- [*EC_Tooth and claw_incarn] You can use !Tooth and Claw! procs for a small overall damage loss if focusing on Thorns of Iron damage.
+- [*EC_Single Target_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn] Press !Maul! if you are at 2 stacks of !Tooth and Claw!
+- [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn] Press !Maul! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_Cleave_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn&&~EC_Raze_incarn] Press !Maul! if you are at 2 stacks of !Tooth and Claw!
+- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&~EC_Raze_incarn] Press !Maul! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&~EC_Raze_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_Cleave_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 2 stacks of !Tooth and Claw!
+- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_AOE_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 2 stacks of !Tooth and Claw!
+- [*EC_AOE_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 3 stacks of !Vicious Cycle!
+- [*EC_AOE_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
+- [*~EC_Thorns of Iron style_incarn] Spend any excess rage on !Ironfur!. You should never fully cap rage.
 - Press !33917|Mangle!
 - Press !Thrash!
 
