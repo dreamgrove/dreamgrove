@@ -64,17 +64,17 @@ translator: 'NeruTe'
 > [!TIP]
 > 연계 점수 생성기의 우선순위가 너무 복잡하다면, !319439|피투성이 손길!을 뺄 것.
 
-<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="발톱의 드루이드" radio="hero talents"  />
-<Checkbox isIcon id="Wildstalker" spellId={439528} name="야생추적자" radio="hero talents" defaultCheck />
-<Checkbox isIcon id="Coiled to Spring" spellId={449537} name="터져 나오는 탄력" />
+<Checkbox isIcon id="Druid of the Claw" spellId={441583} name="발톱의 드루이드" radio="hero talents" defaultCheck  />
+<Checkbox isIcon id="Wildstalker" spellId={439528} name="야생추적자" radio="hero talents" />
+<Checkbox isIcon id="Coiled to Spring" spellId={449537} name="터져 나오는 탄력" defaultCheck />
 <Checkbox isIcon id="Feral Frenzy" spellId={274838} name="야성의 광기" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="영혼 소집" radio="Convoke" defaultCheck />
 <Checkbox isIcon id="Adaptive Swarm" spellId={391889} name="적응의 무리" radio="Adaptive Swarm" defaultCheck />
 <Checkbox isIcon id="Unbridled Swarm" spellId={391951} name="걷잡을 수 없는 무리" radio="Adaptive Swarm"/>
 <Checkbox isIcon id="Incarnation" spellId={102543} name="화신" radio="Convoke" />
 <Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="달 바라기" defaultCheck />
-<Checkbox isIcon id="Rip and Tear" spellId={391347} name="찢고 도려내리" defaultCheck />
-<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="최상위 포식자의 갈망" defaultCheck />
+<Checkbox isIcon id="Rip and Tear" spellId={391347} name="찢고 도려내리" />
+<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="최상위 포식자의 갈망" />
 <Checkbox isIcon id="Bloodtalons" spellId={319439} name="피투성이 손길" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws" spellId={405300} name="난타의 발톱" />
 <Checkbox isIcon id="Sudden Ambush" spellId={384667} name="기습 공격" defaultCheck />
@@ -121,7 +121,7 @@ translator: 'NeruTe'
     - 현재 대상에게 !1079|도려내기!가 걸려 있지 않거나, 남은 지속시간이 pandemic 구간 이내일 것.
     - !5217|호랑이의 분노! 효과를 받고 있거나, 현재 걸려 있는 !1079|도려내기!의 남은 지속시간이 !5217|호랑이의 분노!의 남은 재사용 대기 시간보다 짧을 것.
     - [*Bloodtalons] !319439|피투성이 손길! 효과를 받고 있을 것.
-3. [*Druid of the Claw&&Coiled to Spring] !102543|화신!/!106951|광폭화! 중 !441583|찢어발기기!나 !449537|터져 나오는 탄력! 두 강화 효과 중 하나라도 갖고 있지 않다면, 적절한 연계 점수 생성기를 시전하여 해당 효과를 발동시킬 것.
+3. [*Druid of the Claw&&Coiled to Spring] !102543|화신!/!106951|광폭화! 중 !441583|찢어발기기!나 !449537|터져 나오는 탄력! 둘 중 하나도 갖고 있지 않다면, 5점이 넘어가더라도 적절한 연계 점수 생성기를 시전하여 해당 효과를 발동시킬 것. (역주: 다시 말해, 발드로 광폭화 중 흉포를 쓸 때는 탄력이나 찢발 둘 중 적어도 하나는 있어야 합니다.)
 4. 다음의 조건을 모두 만족할 때, !22568|흉포한 이빨!.
     - 현재 보유한 연계 점수가 5점일 것.
     - 현재 보유한 기력이 50 이상일 것. (!102543|화신!/!106951|광폭화! 중에는 이 조건을 무시하고, 25기력에서 바로 사용.)
@@ -910,7 +910,8 @@ Clipping은 반대로 pandemic 구간이 되기 전에 미리 지속 피해 기�
  
 - [Drufearr 판](https://wago.io/us2RURgE6) 
 - [Chips 판](https://wago.io/WkTBZuH3y) 
-- [Fore 판](https://wago.io/H1tFNCh-t) 
+- [Fore 판](https://wago.io/H1tFNCh-t)
+- [Crazymeow의 Fore 변형판](https://wago.io/lKyAV3eZS)
 - [Cheesey 판](https://wago.io/18VspFroU)  
 - [Cheesey 변형판](https://wago.io/H3yjY1gs1)  
 - [Guiltyas 판](https://wago.io/OaJQX6khW)
@@ -935,6 +936,9 @@ Plater에서 갈퀴 발톱 상태를 확인하기 쉽게 해 주는 여러 모�
 
 [적응의 무리 도우미 - KnewOne/Drufearr](https://wago.io/8BW0Iyw6r)
 !325727|적응의 무리!를 제대로 활용할 수 있도록 도와주는 위크오라. 걷잡을 수 없는 무리 선택 시 아군 대상 시전 최적화 관련 내용도 지원된다. 자세한 설명은 자체 내용 참조.
+
+[보스 무리 도우미 - Crazymeow](https://wago.io/AfF-8yIlH)
+단일 대상에서의 무리 시전 타이밍 결정에 도움을 주는 위크오라. 자세한 설명은 자체 내용 참조.
 
 [피투성이 손길 추적기 - Fore](https://wago.io/cQkL9nrAw)
 !319439|피투성이 손길! 발동까지의 상황을 표시해 준다. 피투성이 손길은 4초 내로 3개의 서로 다른 연계 점수 생성 기술을 사용하면 획득하는 강화 효과로, 이 위크오라는 그 4초 타이머를 표시하는 식으로 동작한다. 자세한 설명은 자체 내용 참조.
