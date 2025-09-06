@@ -41,6 +41,9 @@ Going to 2p2p results in a ~6% gain in single target, and switches your build of
 
 # Rotation
 
+> [!CAUTION]
+> For Druid of the Claw, replace the moonfire cast with a !Thrash! instead. These graphics will eventually be replaced with something else.
+
 ## Single Target
 
 ![Single Target Image](/static/images/feral_st.png)
@@ -55,6 +58,7 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Pre-Combat:**
 
+1. [*Unbridled Swarm] Stack as many !Adaptive Swarm!s on allies as you can prepull.
 2. !Prowl!
 3. !Rake! from stealth.
 
@@ -74,6 +78,7 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" />
 <Checkbox isIcon id="Rip and Tear" spellId={391347} name="Rip and Tear" />
 <Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
+<Checkbox isIcon id="Saber Jaws" spellId={421432} name="Saber Jaws" defaultcheck />
 <Checkbox isIcon id="Bloodtalons" spellId={319439} name="Bloodtalons" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws" spellId={405300} name="Thrashing Claws" />
 <Checkbox isIcon id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
@@ -86,9 +91,12 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Highest Priority: Cooldowns</summary>
 
-1. !5217|Tiger's Fury! at 5 combo points or if you're missing 35+ energy, whichever happens first.
-2. [*Apex Predator's Craving&&Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs if it won't disrupt procing !Bloodtalons!.
-3. [*Apex Predator's Craving&&~Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs.
+1. [*~Wildstalker||~Rip and Tear] !5217|Tiger's Fury! at 5 combo points or if you can't cast anything else due to energy constraints.
+2. [*Wildstalker&&Rip and Tear] !5217|Tiger's Fury! at 3 combo points or if you can't cast anything else due to energy constraints.
+3. [*Bloodtalons] Proc !Bloodtalons! with the proper builder if you have no stacks of !Bloodtalons! and the next spell would trigger !Bloodtalons!
+4. [*Saber Jaws&&Apex Predator's Craving&&Incarnation] Cancel !Apex Predator's Craving! procs during !102543|Incarn!.
+4. [*Saber Jaws&&Apex Predator's Craving&&~Incarnation] Cancel !Apex Predator's Craving! procs during !Berserk!.
+3. [*Apex Predator's Craving] !Ferocious Bite! with !Apex Predator's Craving! procs.
 4. [*Adaptive Swarm] !Adaptive Swarm! when:
     1. [*Wildstalker] !Rip! is up. AND
     2. There isn't an !Adaptive Swarm! heading to your target, AND
@@ -105,7 +113,6 @@ The way this section is written is very formulaic and has the same structure as 
     - !5217|Tiger's Fury! is up. AND
     - You have 2 or fewer combo points outside !Berserk! or 3 or fewer inside !Berserk!. (or if you must cast it now to have the entirety of convoke within berserk.)
 10. [*Convoke the Spirits] You may also !391528|Convoke! if the fight is about to end. Usually you want to !391528|Convoke! with !Berserk! if you can do so without losing a cast.
-11. [*Bloodtalons] If you have no stacks of !Bloodtalons! and can trigger !Bloodtalons! with your next spell, then do so.
 
 </details>
 
@@ -132,28 +139,36 @@ The way this section is written is very formulaic and has the same structure as 
 
 [*Bloodtalons] **Skip any spells you've already casted towards !Bloodtalons!, if you have 0 or 1 stacks of !Bloodtalons! remaining.**
 
-1. [*Shadowmeld] !58984|Shadowmeld! into !Rake! if all of these are true:
+1. [*Incarnation] !Prowl! if all of these are true:
     - [*Sudden Ambush] You do not have a !Sudden Ambush! proc.
-    - !Rake! is in pandemic OR you would be upgrading !Rake!'s snapshot value.
-    - !5217|Tiger's Fury! is up.
-2. [*Wildstalker] !Rake! if any of these are true:
+    - [*Shadowmeld] You are not in !Shadowmeld!
+    - You just used a finisher
+2. [*Shadowmeld] !58984|Shadowmeld! if all of these are true:
+    - [*Sudden Ambush] You do not have a !Sudden Ambush! proc.
+    - [*Incarnation] You are not in !Prowl!
+    - You just used a finisher
+    - [*Incarnation] !102543|Incarn! is up
+    - [*~Incarnation] !Berserk! is up.
+3. [*Wildstalker] !Rake! if any of these are true:
+    - !Rake! is in pandemic and you wouldn't be downgrading its snapshot
+    - !Rake! is in pandemic and will expire before !5217|Tiger's Fury! is up. Delay as long as reasonable if you are downgrading its snapshot value.
+    - You would be upgrading the snapshot of !Rake!.
+4. [*Druid of the Claw] !Rake! if any of these are true:
     - !Rake! is in pandemic and !5217|Tiger's Fury! is up.
     - !Rake! is in pandemic and will expire before !5217|Tiger's Fury! is up. Delay as long as reasonable if you are downgrading its snapshot value.
-    - You are in stealth.
+    - [*Incarnation||Shadowmeld] You are in stealth, and you would be upgrading !Rake!'s snapshot value
     - [*Sudden Ambush] You have a !Sudden Ambush! proc, and you would be upgrading !Rake!'s snapshot value.
-3. [*Druid of the Claw] !Rake! if you are not in !102543|Incarn!/!Berserk! and any of these are true:
-    - !Rake! is in pandemic and !5217|Tiger's Fury! is up.
-    - !Rake! is in pandemic and will expire before !5217|Tiger's Fury! is up. Delay as long as reasonable if you are downgrading its snapshot value.
-    - You are in stealth.
-    - [*Sudden Ambush] You have a !Sudden Ambush! proc, and you would be upgrading !Rake!'s snapshot value.
-4. [*Sudden Ambush] Use Shred with !Sudden Ambush! procs during !102543|Incarn!/!Berserk!
-5. [*Brutal Slash] Use !Brutal Slash! if it will cap on charges within the next 4 seconds.
-8. [*Lunar Inspiration] Use Lunar Inspiration !155580|Moonfire! if it is in pandemic.
-6. [*~Thrashing Claws] Cast !Thrash! if it is in pandemic range, outside of !102543|Incarn!/!Berserk!
-7. !Shred! with !Clearcasting! procs.
-9. [*Brutal Slash] !Brutal Slash!.
-10. !Shred!.
-11. [*Bloodtalons] If you still need !Bloodtalons! proc it with this priority:
+    - [*Incarnation] You are not in !102543|Incarn! and would be upgrading !Rake!'s snapshot value.
+    - [*~Incarnation] You are not in !Berserk! and would be upgrading !Rake!'s snapshot value.
+5. [*Sudden Ambush] Use !Shred! with !Sudden Ambush! during !102543|Incarn!/!Berserk!
+5. [*Incarnation||Shadowmeld] Use !Shred! if stealthed during !102543|Incarn!/!Berserk!
+6. [*Brutal Slash] Use !Brutal Slash! if it will cap on charges within the next 4 seconds.
+7. [*Lunar Inspiration] Use Lunar Inspiration !155580|Moonfire! if it is in pandemic or you would be upgrading its snapshot.
+8. [*~Thrashing Claws] Cast !Thrash! if it is in pandemic range, outside of !102543|Incarn!/!Berserk!
+9. !Shred! with !Clearcasting! procs.
+10. [*Brutal Slash] !Brutal Slash!.
+11. !Shred!.
+12. [*Bloodtalons] If you still need !Bloodtalons! proc it with this priority:
     1. [*Druid of the Claw] !Rake! if it will upgrade !Rake!'s snapshot value, or if it needs reapplied. (only relevant during !102543|Incarn!/!Berserk!)
     2. [*~Thrashing Claws] !Thrash! if it is in pandemic range (only relevant during !102543|Incarn!/!Berserk!)
     3. [*~Brutal Slash] !Swipe!.
@@ -178,7 +193,7 @@ When reading the priority lists below, you should not think about these as steps
 The way this section is written is very formulaic and has the same structure as the Action Priority List (APL) used in sims.
 
 **Pre-Combat:**
-1. [*Unbridled Swarm AOE] Stack as many !Adaptive Swarm!'s as you can.
+1. [*Unbridled Swarm AOE] Stack as many !Adaptive Swarm!'s as you can on allies before the pull (start as early as possible)
 2. !Prowl!
 3. !Rake! from stealth.
 
@@ -197,6 +212,7 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="Incarnation" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration" />
 <Checkbox isIcon id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
+<Checkbox isIcon id="Saber Jaws AOE" spellId={421432} name="Saber Jaws" />
 <Checkbox isIcon id="Bloodtalons AOE" spellId={319439} name="Bloodtalons" defaultCheck />
 <Checkbox isIcon id="Rampant Ferocity AOE" spellId={391710} name="Rampant Ferocity" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws AOE" spellId={405300} name="Thrashing Claws" />
@@ -212,10 +228,14 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Highest Priority: Cooldowns</summary>
 
-**Special Note: Use single-target spells on higher priority/higher healthed mobs**
+> [!TIP]
+> Use your single target spells on higher healthed/priority mobs
+
 1. !5217|Tiger's Fury! at 5 combo points or if you run out of energy, delay a few seconds as needed for !102543|Incarnation!/!Berserk!.
-2. [*Apex Predator's Craving AOE&&Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs if it won't stop !Bloodtalons! from proccing.
-3. [*Apex Predator's Craving AOE&&~Bloodtalons] !Ferocious Bite! with !Apex Predator's Craving! procs.
+2. [*Bloodtalons] Proc !Bloodtalons! with the proper builder if you have no stacks of !Bloodtalons! and the next spell would trigger !Bloodtalons!
+3. [*Apex Predator's Craving AOE&&Saber Jaws AOE&&Incarnation AOE] Cancel !Apex Predator's Craving! procs during !102543|Incarnation!
+3. [*Apex Predator's Craving AOE&&Saber Jaws AOE&&~Incarnation AOE] Cancel !Apex Predator's Craving! procs during !Berserk!
+3. [*Apex Predator's Craving AOE] !Ferocious Bite! with !Apex Predator's Craving! procs.
 4. [*Adaptive Swarm AOE] !Adaptive Swarm! when all of these are true:
     - There isn't an !Adaptive Swarm! heading towards your target.
     - !Adaptive Swarm! is not on your target.
@@ -242,17 +262,21 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Second Priority: Finishers</summary>
 
-1. [*~Rampant Ferocity AOE&&Primal Wrath AOE] !Ferocious Bite! at 5 combo points and both of these are true:
-    - If inside !102543|Incarn!/!Berserk!, !Primal Wrath! is not in pandemic. Otherwise !Rip!'s from !Primal Wrath! have at least 6.5s remaining.
-    - [*Druid of the Claw AOE] You have a !441583|Ravage! proc and there are fewer than 8 targets.
-    - [*Wildstalker AOE] A target has !439531|Bloodseeker Vines! and there are fewer than 7 targets.
-2. [*Primal Wrath AOE] !Primal Wrath! with 5 combo points if any of these conditions are met:
-    - [*Rampant Ferocity AOE] !Rip!'s from !Primal Wrath! have 6.5 seconds or less remaining outside of !102543|Incarn!/!Berserk!.
-    - [*Rampant Ferocity AOE] !Rip!'s from !Primal Wrath! are missing or in pandemic range inside !102543|Incarn!/!Berserk!.
-    - [*~Rampant Ferocity AOE] There are 2 or more targets.
-3. [*~Primal Wrath AOE] !Rip! on targets without !Rip! that will live for a decent amount of time.
-    - Please, I beg you, if you are using !Rip! on multiple targets; you should seriously be talenting !Primal Wrath!. It's as close to mandatory as it gets.
-4. !Ferocious Bite! at 5 combo points with either 50 energy or inside !102543|Incarn!/!Berserk!.
+1. [*Primal Wrath AOE&&~Incarnation AOE] !Primal Wrath! at 5 combo points if !Rips!s have fewer than 6.5s remaining. During !Berserk!, wait until pandemic instead.
+1. [*Primal Wrath AOE&&Incarnation AOE] !Primal Wrath! at 5 combo points if !Rips!s have fewer than 6.5s remaining. During !102543|Incarn!, wait until pandemic instead.
+2. [*Druid of the Claw AOE&&~Incarnation AOE] During !Berserk!, continue using builders until you have a !441583|Ravage! proc. Yes, overcap if necessary. Only do this on 3 or more targets.
+2. [*Druid of the Claw AOE&&Incarnation AOE] During !102543|Incarn!, continue using builders until you have a !441583|Ravage! proc. Yes, overcap if necessary. Only do this on 3 or more targets.
+3. [*Wildstalker AOE&&~Rampant Ferocity AOE] !Ferocious Bite! a vined target, if one exists, at 5 combo points.
+3. [*Wildstalker AOE&&Rampant Ferocity AOE] !Ferocious Bite! at 5 combo points, preferring vined targets.
+4. [*Druid of the Claw AOE&&Rampant Ferocity AOE] !Ferocious Bite at 5 combo points if either:
+    - 50 energy
+    - [*Incarnation] !102543|Incarn! is up
+    - [*~Incarnation] !Berserk! is up
+4. [*Druid of the Claw AOE&&~Rampant Ferocity AOE] !441583|Ravage! at 5 combo points if either:
+    - 50 energy
+    - [*Incarnation] !102543|Incarn! is up
+    - [*~Incarnation] !Berserk! is up
+5. [*Primal Wrath AOE&&~Rampant Ferocity AOE] Clip !Primal Wrath! at 5 combo points if you've made it this far.
 
 </details>
 
@@ -262,9 +286,13 @@ The way this section is written is very formulaic and has the same structure as 
 [*Bloodtalons AOE] **Skip any spells you've already cast towards !Bloodtalons! if you have 0 or 1 stacks of !Bloodtalons!.**
 
 1. [*~Thrashing Claws AOE] !Thrash! if it's either missing or in pandemic range.
+2. [*Brutal Slash AOE&&~Bloodtalons AOE&&Druid of the Claw AOE] During !102543|Incarn!/!Berserk!, !Brutal Slash! if you have any charges.
 2. [*Brutal Slash AOE&&Bloodtalons AOE&&Druid of the Claw AOE] During !102543|Incarn!/!Berserk!, !Brutal Slash! if you have any charges. Yes ignore !Bloodtalons! for this.
+3. [*Brutal Slash AOE&&~Bloodtalons AOE&&Wildstalker AOE] During !102543|Incarn!/!Berserk!, !Brutal Slash! if you have any charges starting at 3t.
 3. [*Brutal Slash AOE&&Bloodtalons AOE&&Wildstalker AOE] During !102543|Incarn!/!Berserk!, !Brutal Slash! if you have any charges starting at 3t. Yes ignore !Bloodtalons! for this.
+4. [*Wild Slashes AOE&&~Bloodtalons AOE&&Druid of the Claw AOE] During !102543|Incarn!/!Berserk! spam !Swipe!.
 4. [*Wild Slashes AOE&&Bloodtalons AOE&&Druid of the Claw AOE] During !102543|Incarn!/!Berserk!, ignore !Bloodtalons! and !Swipe!.
+5. [*Wild Slashes AOE&&~Bloodtalons AOE&&Wildstalker AOE] During !102543|Incarn!/!Berserk!, spam !Swipe! starting at 3t.
 5. [*Wild Slashes AOE&&Bloodtalons AOE&&Wildstalker AOE] During !102543|Incarn!/!Berserk!, ignore !Bloodtalons! and !Swipe! starting at 3t.
 6. [*Brutal Slash AOE] !Brutal Slash! if it will cap on charges within the next 4 seconds, or mobs will die in the next 4 seconds.
 7. [*Wild Slashes AOE] !Swipe! if there are 5 or more targets.
@@ -276,20 +304,21 @@ The way this section is written is very formulaic and has the same structure as 
 13. [*Wild Slashes AOE] !Swipe! if there are 3 or more targets.
 14. [*Wildstalker AOE&&~Double Clawed Rake AOE] !Rake! if you have no !Rake!'s out. We want at least one !Rake! rolling for the sake of proccing !439531|Bloodseeker Vines!.
 15. [*Lunar Inspiration AOE] Refresh !Moonfire!'s that are either missing, or in pandemic range if you're not capped on !Clearcasting! stacks.
-16. [*~Double Clawed Rake AOE] !Rake! if it's either missing, or in pandemic range.
 17. [*Brutal Slash AOE] !Brutal Slash!
 18. [*Wild Slashes AOE] !Swipe!
-19. [*~Brutal Slash AOE] !Swipe!
-20. [*Sudden Ambush AOE] !Shred! if !Sudden Ambush! is not up.
-21. [*~Sudden Ambush AOE] !Shred!
+16. [*~Double Clawed Rake AOE] !Rake! if it's either missing, or in pandemic range.
+19. [*~Brutal Slash AOE&&~Wild Slashes AOE] !Swipe!
+20. Clip !Thrash! if you have 3 or more targets. 4 or more if you have low mastery.
+21. !Shred!
 22. [*~Thrashing Claws AOE] !Thrash!
 23. [*Bloodtalons AOE] If you still need !Bloodtalons!, proc it with this priority:
-    - [*Double Clawed Rake AOE&&Sudden Ambush AOE] If you have a !Sudden Ambush! proc, !Rake! the target with the lowest remaining !Rake! duration.
+    - [*Thrashing Claws AOE] !Thrash!
     - [*Lunar Inspiration AOE] Lunar Inspiration !Moonfire! on the target with the lowest remaining !Moonfire! duration.
-    - [*~Double Clawed Rake AOE&&Sudden Ambush AOE] If you have a !Sudden Ambush! proc, !Rake! the target with the lowest remaining !Rake! duration.
     - !Shred!
     - !Rake! a target without a !Pouncing Strikes! snapshot.
-    - [*Thrashing Claws AOE] !Thrash!
+
+> [!TIP]
+> In dungeons, with !Killing Strikes! and !102543|Incarn! talented, spread out the !Shadowmeld! and !Prowl! casts such that you get more !Killing Strikes! resets.
 
 </details>
 
@@ -390,7 +419,7 @@ The way this section is written is very formulaic and has the same structure as 
 
 ## Raid Talents
 
-Wildstalker and Druid of the Claw are similar in strength once you acquire 2 pieces of the new tier set-- with DOTC being about 1% ahead in single target, varying a bit depending on gear. This means you could play either hero tree and perform well. 
+Wildstalker and Druid of the Claw are similar in strength once you acquire 2 pieces of the new tier set-- with DOTC being less than 1% ahead in single target, varying a bit depending on gear. This means you could play either hero tree and perform well. 
 
 So, how do you choose? Druid of the Claw is swingier, and thus has a higher capacity for high-rolling. It sims higher in single target, and its also stronger in AoE-- given that you can take advantage of its Berserk windows. 
 
@@ -550,7 +579,7 @@ Feral goes into 11.2 with much of the same talent choices as last season. Most n
 
 ### Talent Explanations
 
-!Root Network! for Wildstalker is good for large-aoe dungeons, I would generally default to !Resilient Flourishing!.
+!Root Network! for Wildstalker is playable for large-aoe dungeons; I would default to !Resilient Flourishing!.
 
 <details>
 <summary>Section 1 Options Explained</summary> 
@@ -583,10 +612,10 @@ Feral goes into 11.2 with much of the same talent choices as last season. Most n
 </details>
 
 <details>
-<summary>Section 3 Options Explained</summary> 
+<summary>Section 3 Options Explained</summary>
 
 !Incarnation: Avatar of Ashamane! vs !Convoke the Spirits!:
-This one is tricky, and the option only exists for Druid of the Claw. Essentially, !Incarnation: Avatar of Ashamane! technically never surpasses !Convoke the Spirits! on any target count (though its basically equal in large AoE). So why is it a choice? Well in dungeons, you can drop combat on trash packs making use of the in-combat !Prowl!. This generates an additional Ravage via Killing Strikes, netting a large amount of value with the tier set. Essentially, you can play !Incarnation: Avatar of Ashamane! in big AoE keys, particularly if your group is chain pulling and the single target loss is palatable. Main reason you'd consider doing so is to take advantage of the utility of !Prowl! interrupting casts/channels on you, combat drop etc. I wouldn't consider it in lower keys where things die too fast.
+This option only exists for Druid of the Claw. Essentially, !Incarnation: Avatar of Ashamane! begins surpassing !Convoke the Spirits! at roughly 3-4 targets-- but its a significant single target loss. The idea is you can drop combat on trash packs making use of the in-combat !Prowl!. This generates an additional Ravage via Killing Strikes, netting a large amount of value with the tier set. Essentially, you can play !Incarnation: Avatar of Ashamane! in big AoE keys, particularly if your group is chain pulling and the single target loss is palatable. I wouldn't consider it in lower keys where things die too fast.
 
 !319439|Bloodtalons! vs !391972|Lion's Strength!:
 I would always play !319439|Bloodtalons!. Optimizing !319439|Bloodtalons! is a very small gain in single target, so even as a new player you will see ~2% more damage there. In AoE, the talents are much closer in overall value, and !Lion's Strength! even wins in burst AoE, so in that regard you can justify !Lion's Strength!, especially since it is easier to play. 
@@ -624,7 +653,7 @@ I would always play !319439|Bloodtalons!. Optimizing !319439|Bloodtalons! is a v
 
 [*Druid of the Claw m+]<Talents name={"DOTC Feral Frenzy"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzMzMbzGjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"} />
 
-[*Druid of the Claw m+]<Talents name={"DOTC Incarn"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmNzYZmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAA0MLzyMz2ACsAzMAswgB"} />
+[*Druid of the Claw m+]<Talents name={"DOTC Incarn"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MziZmZmZzmZsMzMzYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"} />
 
 [*Druid of the Claw m+]<Talents name={"DOTC Wild Slashes (note: worse due to single target concerns)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZ2MziZmZmZzGjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"}/>
 
@@ -687,35 +716,44 @@ By the end of the patch, the two embellishment items will be on Wrists and Belt.
 
 These trinket lists are in rough order of strength, assuming the highest item level version of the items. You should always sim your own character to determine which trinkets you should equip. 
 
-> [!NOTE]
-> [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) is so dominant, that the For-Raid list assumes you have it already. If you don't, then [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) is your next best on-use. From dungeons its [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?class=11&hero=21&ilvl=723&spec=103) instead. That being said, the Normal and Heroic versions of [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) are better, so even if you're m+ only, you'll want it.
+> [!CAUTION]
+> Double stat on-use trinkets is generally bad, your second trinket should be a passive.
+
+**On-use trinket ranking**
+1. [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)
+2. [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) arguably better than forge in m+, particularly big pulls.
+3. [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?class=11&hero=21&ilvl=723&spec=103)
+4. [Lily of the Eternal Weave](https://www.wowhead.com/item=242494/lily-of-the-eternal-weave?bonus=3215:12361:12239&class=11&hero=22&ilvl=723&spec=103&spellModifier=1244029:137011)
+5. [Cursed Stone Idol](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103)
+6. [Incorporeal Essence Gorger](https://www.wowhead.com/item=246945/incorporeal-essence-gorger?bonus=1572:12357:12239&class=11&hero=22&spec=103)
+7. [Observer's Soul Fetters](https://www.wowhead.com/item=240171/observers-soul-fetters?bonus=3207:12285:12239&hero=22&ilvl=678&spec=103)
+
+[Wrathstone](https://www.wowhead.com/item=156000/wrathstone?bonus=11415:12357:12239&hero=22&ilvl=710&spec=103) is also very good, if you happen to have it from Ulduar timewalking. Mainly in Raid.
 
 **For use in Raid:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
 | **SS Tier** | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | 2 min on-use trinket. Macro to berserk, so strong that even a lower item level version of this can be better than your other options.
-| **S Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | Passive crit proc.
-| **A Tier** | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | Cyclical Crit proc.
-| | [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Damage proc trinket + execute
-| **B Tier** | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | A little bit worse for DOTC, but still a solid passive trinket.
+| **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | Passive crit proc. Sometimes you can't get full benefit, reducing its value a bit. Can sim with higher miss chance in Raidbots options.
+| **B Tier** | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | Cyclical Crit proc.
+| **C Tier**| [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Damage proc trinket + execute
 | | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) | Passive stat proc.
-|  | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | True stat stick, sim default is mastery. Higher if you factor in ally buff.
-| | [Ticking Sac of Terror](https://www.wowhead.com/item=190652/ticking-sack-of-terror?hero=21&ilvl=723&spec=103) | Solid damage proc
-| | [Incorporeal Warpclaw (WS)](https://www.wowhead.com/item=242495/incorporeal-warpclaw?class=11&hero=21&ilvl=723&spec=103) | Passive damage proc. Easily replaceable.
+| | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | A little bit worse for DOTC, but still a solid passive trinket.
+| | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | True stat stick, sim default is mastery. Higher if you factor in ally buff.
 
 **For use in Mythic+:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
 | **S Tier** | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
-| | [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk, best in mid-count dungeons, ideally with not a lot of single-target. Dont die. If you plan to, dont use this trinket.
+| | [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk, best in large target count dungeons as its proc is true AoE, ideally with not a lot of single-target. Dont die. If you plan to, dont use this trinket.
 | **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) |
 | **B Tier** | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) |
-| | [Improvised Seaforium Pacemaker](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
 | | [So'leah's Secret Technique](https://www.wowhead.com/item=185818/soleahs-secret-technique?class=11&hero=21&ilvl=723&spec=103) | Sim which secondary is best, but odds are its mastery. Arguably should be rated higher for consistency + ally benefit.
+| | [Cursed Stone Idol](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103) | As a 2nd on-use. Particularly with [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103). Send on cooldown as long as it wont interrupt your main use. Ideally with 5+ targets.
+| | [Improvised Seaforium Pacemaker](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
 | | [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Can arguably be rated higher, as its main benefit is single target.
 | | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) |
 | | [Void-Touched Fragment](https://www.wowhead.com/item=238386/void-touched-fragment?bonus=1582:12357:12239&class=11&hero=21&ilvl=710&spec=103) | If you find things are dying fast, this moves up the list. (mostly just easier keys). Comes from Delves and is strong for its item level in this content.
-
 
 > [!WARNING]
 > [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) value assumes a clean run. The more you die, the worst this trinket is.
@@ -724,18 +762,18 @@ These trinket lists are in rough order of strength, assuming the highest item le
 
 Q: How do I select a secondary other than Mastery for [Soleah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103)?
 
-A: In the Custom APL box of your sim, paste in `shadowlands.soleahs_secret_technique_type="crit"` or whatever stat you want. Alternatively, in quick sim you can paste the following into Expert Mode: Post-Combination Actors:
+A: At the bottom of your sim in simulation options, you can select which stat you want to use. Alternatively, in quick sim you can paste the following into Expert Mode: Post-Combination Actors:
 ```
 profileset."Crit"+=shadowlands.soleahs_secret_technique_type="crit"
 profileset."Haste"+=shadowlands.soleahs_secret_technique_type="haste"
 profileset."Versatility"+=shadowlands.soleahs_secret_technique_type="versatility"
-```
+profileset."Mastery"+=shadowlands.soleahs_secret_technique_type="mastery"
 
-The default profile would use Mastery.
+```
 
 Q: Should we be playing double on-use trinkets?
 
-A: No, Feral will typically play just one on-use; though you should always sim just in case.
+A: No, Feral will typically play just one on-use; though you should always sim just in case. [Cursed Stone Idol](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103) in dungeon sims can be competitive as an example, especially paired with [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103)
 
 Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
 
