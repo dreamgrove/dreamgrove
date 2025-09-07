@@ -37,7 +37,7 @@ This is approximately ~18% dmg increase from having no set.
 
 ## Current Bugs
 
-- New Moon, Half Moon and Full Moon no longer plays an animation.
+- There is no longer an animation whenever you drop a Full Moon. This applies to all variations or procs of the spell.
 
 - !Control of the Dream! does not give the proper CDR on the first use of the affecting spells if you wipe to a boss. You need to change talents in the choice node to fix it. You can use [this weakaura](https://wago.io/ControlBug) to change the choice node around by pressing a button in the middle of your screen.
 
@@ -133,26 +133,24 @@ When reading the priority lists below, you should not think of these as steps to
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
 - Use !205636|Force of Nature! if any of the following are true:
-  - [*Keeper 4pc] You are 2 GCD's into your !Dryad! window.
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You have 2 charges of !194223|CA! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You have no charges of !194223|CA! and !Convoke the Spirits! is available.
   - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
-  - [*~Keeper 4pc] The cooldown on !194223|CA! is less than a GCD and the cooldown of !Convoke the Spirits! is less than 3 GCD's.
   - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
   - [*~Convoke the SpiritsKOTG] You will have !194223|CA! / !102560|Inc! and trinket back up before !Force of Nature! is ready again.
 - [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA! / !102560|Inc!.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! if any of the following are true:
-  - [*~Convoke the SpiritsKOTG&&Keeper 4pc] The cooldown on !Force of Nature! is less than 3 GCD's.
-  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and !Convoke the Spirits! is available.
+- Use !194223|Celestial Alignment!/!102560|Incarnation! when any of the following are true:
+  - [*Convoke the SpiritsKOTG] You have 2 charges of !194223|CA!, just used !Force of Nature! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
+  - [*Convoke the SpiritsKOTG] You have 1 charge of !194223|CA!, the cooldown of !Force of Nature! is less than 2 GCD's and the cooldown of !Convoke the Spirits! is less than 4 GCD's.
   - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and the cooldown on !Convoke the Spirits! is greater than the remaining recharge time of your next !194223|CA!.
-  - [*Keeper 4pc&&Convoke the SpiritsKOTG] You have enough AP for 2 !Starsurge! casts and the cooldown on !Convoke the Spirits! is less than 4 GCD's and !Force of Nature! is available.
-  - [*Keeper 4pc] You have the !Dryad's Favor! buff and !Force of Nature! is active. 
+  - [*Keeper 4pc] You just used !Convoke the Spirits! and you are in your !Force of Nature! window.
   - The fight will end before !205636|Force of Nature! is available again.
 - [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
 - [*Keeper 4pc] Use !Wrath! in your !Dryad! window if you have don't have enough AP for the 2 !Starsurge! casts needed to consume !Dryad's Favor!.
 - Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! when the cast time of !Starfire! is longer than the remaining duration of !Eclipse!.
 - [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when any of the following are true:
-  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You just used !205636|Force of Nature! and you are in your !Dryad! window.
-  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You are below 40 AP and you just used !Force of Nature!.
-  -  [*Convoke the SpiritsKOTG] !194223|CA! will last for more than 4 seconds or the fight will end before your next !194223|CA! or !Force of Nature! window.
+  - [*Convoke the SpiritsKOTG] You are below 40 AP and you're in !194223|CA! or !Force of Nature!.
+  - [*Convoke the SpiritsKOTG] !194223|CA! will last for more than 4 seconds or the fight will end before your next !194223|CA! or !Force of Nature! window.
 - [*Fury of EluneKOTG] Use !Fury of Elune!.
 - [*New MoonKOTG] Use !Starsurge! if !Starlord! has less than 3 stacks.
 - [*~New MoonKOTG] Use !Starsurge! if one of the following conditions is met:
@@ -334,13 +332,11 @@ When reading the priority lists below, you should not think of these as steps to
 
 The !Keeper of the Grove! tier set revolves around dumping as much damage as possible into your !Dryad! window to maximize the damage of your !Dryad's Favor! buff. 
 
-The general way to play this in raid is to use !194223|CA! on pull after your !Moonfire! and !Sunfire!, then pressing !Force of Nature! 2 globals into your !194223|CA!. After pressing !Force of Nature! you immediately use !Convoke the Spirits!. 
+The way to play around this tier set varies whether you have 1 or 2 charges of !194223|CA!.
 
-As your !Dryad! fades and you gain !Dryad's Favor!, you press !194223|CA! again to dump the empowered !Starsurge! casts into a maxed out !Balance of All Things! and !Force of Nature! window.
+With both charges of !194223|CA! available, like on pull, you will do !Force of Nature! -> !194223|CA! -> !Starsurge! till less than 40 AP -> !Convoke the Spirits! -> !194223|CA!.
 
-After this opener you do the same sequence as your !Convoke the Spirits! is coming back, but without the 2nd use of !194223|CA!.
-
-If you have !Potent Enchantments! talented you can fit another double use of !194223|CA! in at the 4 minute mark with your 3rd use of !Convoke the Spirits!.
+With 1 charge of !194223|CA!, like at around the 2 minute mark, you will do !194223|CA! -> !Starsurge! -> !Starsurge! -> !Force of Nature! -> !Starsurge! to spend excess AP -> !Convoke the Spirits!.
 
 Remember to pool Astral Power for when your !Dryad! fades and you gain !Dryad's Favor!, as the window to spend the buff before !Force of Nature! and !194223|CA! falls off is very tight.
 </Collapsible>
