@@ -42,6 +42,9 @@ translator: 'NeruTe'
 
 # 로테이션
 
+> [!CAUTION]
+> 발톱의 드루이드 사용 시, 오프너 이미지의 !달빛섬광! 대신 !난타!를 사용할 것. 이미지 업데이트 예정.
+
 ## 단일 대상
 
 ![Single Target Image](/static/images/feral_single_kr.png)
@@ -56,13 +59,14 @@ translator: 'NeruTe'
 
 **전투 시작 전:**
 
+1. [*Unbridled Swarm] 전투가 시작되기 전, 아군 플레이어들에게 최대한 !적응의 무리!를 퍼뜨릴 것.
 2. !102547|숨기!
 3. 은신 상태에서, !1822|갈퀴 발톱!
 
 **다음 중 현재 선택한 특성을 모두 체크**
 
 > [!TIP]
-> 연계 점수 생성기의 우선순위가 너무 복잡하다면, !319439|피투성이 손길!을 뺄 것.
+> 연계 점수 생성기의 우선순위가 너무 복잡하다면, !319439|피투성이 손길!을 !사자의 힘!으로 대체할 것.
 
 <Checkbox isIcon id="Druid of the Claw" spellId={441583} name="발톱의 드루이드" radio="hero talents" defaultCheck  />
 <Checkbox isIcon id="Wildstalker" spellId={439528} name="야생추적자" radio="hero talents" />
@@ -75,6 +79,7 @@ translator: 'NeruTe'
 <Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="달 바라기" />
 <Checkbox isIcon id="Rip and Tear" spellId={391347} name="찢고 도려내리" />
 <Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="최상위 포식자의 갈망" />
+<Checkbox isIcon id="Saber Jaws" spellId={421432} name="표범의 아귀" defaultcheck />
 <Checkbox isIcon id="Bloodtalons" spellId={319439} name="피투성이 손길" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws" spellId={405300} name="난타의 발톱" />
 <Checkbox isIcon id="Sudden Ambush" spellId={384667} name="기습 공격" defaultCheck />
@@ -87,9 +92,12 @@ translator: 'NeruTe'
 <details open>
 <summary>1순위: 주요 쿨다운 기술</summary>
 
-1. 연계 점수가 5점일 때, 혹은 기력이 최대치로부터 35 이상 모자랄 때, !5217|호랑이의 분노!.
-2. [*Apex Predator's Craving&&Bloodtalons] !391881|최상위 포식자의 갈망! 효과를 받고 있고, 지금 !22568|흉포한 이빨!을 시전해도 다음 !319439|피투성이 손길! 발동에 문제가 없다면, !22568|흉포한 이빨!.
-3. [*Apex Predator's Craving&&~Bloodtalons] !391881|최상위 포식자의 갈망! 효과를 받고 있다면, !22568|흉포한 이빨!.
+1. [*~Wildstalker||~Rip and Tear] 연계 점수가 5점일 때, 또는 기력이 없어 다른 기술을 쓸 수 없을 때, !5217|호랑이의 분노!.
+2. [*Wildstalker&&Rip and Tear] 연계 점수가 3점일 때, 또는 기력이 없어 다른 기술을 쓸 수 없을 때, !5217|호랑이의 분노!.
+3. [*Bloodtalons] !피투성이 손길! 중첩이 하나도 없지만 기술을 하나만 더 사용하면 발동이 가능한 상태라면, 해당 기술을 시전해 !피투성이 손길! 발동.
+4. [*Saber Jaws&&Apex Predator's Craving&&Incarnation] !102543|화신! 발동 중일 경우, !최상위 포식자의 갈망! 버프를 오라취소.
+4. [*Saber Jaws&&Apex Predator's Craving&&~Incarnation] !광폭화! 발동 중일 경우, !최상위 포식자의 갈망! 버프를 오라취소.
+3. [*Apex Predator's Craving] !최상위 포식자의 갈망! 버프가 있을 때, !흉포한 이빨!.
 4. [*Adaptive Swarm] 다음의 조건을 모두 만족할 때, !391888|적응의 무리!.
     - [*Wildstalker] 적 대상에 !1079|도려내기!가 걸려 있을 것.
     - 적 대상에게 향하고 있는 !391888|적응의 무리! 투사체가 없을 것.
@@ -106,7 +114,6 @@ translator: 'NeruTe'
     - !5217|호랑이의 분노! 효과를 받고 있을 것.
     - 현재 보유한 연계 점수가 2점 이하일 것. 단, !106951|광폭화! 발동 중일 경우, 현재 보유한 연계 점수가 3점 이하일 것. (지금 당장 시전하지 않으면 영혼 소집이 끝나기 전에 광폭화가 만료될 상황이라면, 이 조건을 무시.)
 10. [*Convoke the Spirits] 전투가 끝나기 직전이라면, !391528|영혼 소집!. 일반적으로는 전체 영혼 소집 횟수가 줄어들게 되는 것이 아닌 이상 !106951|광폭화!와 맞춰 쓰는 것이 맞음.
-11. [*Bloodtalons] !319439|피투성이 손길! 중첩이 없는 상태에서 기술을 딱 하나만 더 시전하면 !319439|피투성이 손길!이 발동되는 상황일 경우, 즉시 그렇게 할 것.
 
 </details>
 
@@ -132,29 +139,36 @@ translator: 'NeruTe'
 <summary>3순위: 연계 점수 생성기</summary>
 
 [*Bloodtalons] **현재 보유한 !319439|피투성이 손길!이 1중첩이거나 효과를 아예 받고 있지 않다면, 이하의 내용에서 최근 4초 내에 이미 시전한 기술은 무시할 것.**
-
-1. [*Shadowmeld] 다음의 조건을 모두 만족할 때, !58984|그림자 숨기! > !1822|갈퀴 발톱!.
+1. [*Incarnation] 다음의 조건을 모두 만족할 때, !숨기!.
+    - [*Sudden Ambush] !기습 공격! 효과를 받고 있지 않을 것.
+    - [*Shadowmeld] !그림자 숨기! 효과를 받고 있지 않을 것.
+    - 직전에 사용한 기술이 연계 점수 소모기일 것.
+2. [*Shadowmeld] 다음의 조건을 모두 만족할 때, !58984|그림자 숨기!.
     - [*Sudden Ambush] !384667|기습 공격! 효과를 받고 있지 않을 것.
-    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이거나, 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 더 강한 상태일 것.
-    - !5217|호랑이의 분노! 효과를 받고 있을 것.
-2. [*Wildstalker] 다음 중 하나라도 만족하면, !1822|갈퀴 발톱!.
+    - [*Incarnation] !숨기! 효과를 받고 있지 않을 것.
+    - 직전에 사용한 기술이 연계 점수 소모기일 것.
+    - [*Incarnation] !102543|화신! 발동 중일 것.
+    - [*~Incarnation] !Berserk! 발동 중일 것.
+3. [*Wildstalker] 다음 중 하나라도 만족하면, !1822|갈퀴 발톱!.
+    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, 지금 상태에서 시전하는 !갈퀴 발톱!이 기존의 것보다 강하거나 동등한 위력일 것.
+    - !갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, !5217|호랑이의 분노!의 남은 재사용 대기 시간보다 짧을 것. 이때 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 약한 상태라면, 가능한 한 만료되기 직전까지 갱신을 미룰 것.
+    - 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태일 것.
+4. [*Druid of the Claw] 다음 중 하나라도 만족하면, !1822|갈퀴 발톱!.
     - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, !5217|호랑이의 분노! 효과를 받고 있을 것.
     - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, !5217|호랑이의 분노!의 남은 재사용 대기 시간보다 짧을 것. 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 약한 상태라면, 최대한 만료되기 직전까지 미룰 것.
-    - 은신 중일 것.
+    - [*Incarnation||Shadowmeld] 현재 은신 중이고, 지금 상태에서 시전하는 !갈퀴 발톱!이 기존의 것보다 강한 상태일 것.
     - [*Sudden Ambush] !384667|기습 공격! 효과를 갖고 있으며, 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태일 것.
-3. [*Druid of the Claw] !102543|화신!/!106951|광폭화! 중이 아니고, 다음 중 하나라도 만족하면, !1822|갈퀴 발톱!.
-    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, !5217|호랑이의 분노! 효과를 받고 있을 것.
-    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, !5217|호랑이의 분노!의 남은 재사용 대기 시간보다 짧을 것. 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 약한 상태라면, 최대한 만료되기 직전까지 미룰 것.
-    - 은신 중일 것.
-    - [*Sudden Ambush] !384667|기습 공격! 효과를 갖고 있으며, 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태일 것.
-4. [*Sudden Ambush] !102543|화신!/!106951|광폭화! 중이고 !384667|기습 공격! 효과를 갖고 있다면, !5221|칼날 발톱!.
-5. [*Brutal Slash] !202028|잔혹한 베기!가 4초 내로 3개 꽉 차는 상황이라면, !202028|잔혹한 베기!.
-8. [*Lunar Inspiration] !164812|달빛섬광!의 남은 지속시간이 pandemic 구간 이내일 때, !164812|달빛섬광!.
-6. [*~Thrashing Claws] !106830|난타!의 남은 지속시간이 pandemic 구간 이내이고, !102543|화신!/!106951|광폭화! 중이 아닐 때, !106830|난타!.
-7. !236068|청명의 전조! 효과를 받고 있을 때, !5221|칼날 발톱!.
-9. [*Brutal Slash] !202028|잔혹한 베기!.
-10. !5221|칼날 발톱!.
-11. [*Bloodtalons] 아직 !319439|피투성이 손길! 효과를 얻지 못했다면, 아래의 우선순위에 따라 발동시킬 것.
+    - [*Incarnation] !102543|화신! 발동 중이 아니고, 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태일 것.
+    - [*~Incarnation] !광폭화! 발동 중이 아니고, 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태일 것.
+5. [*Sudden Ambush] !102543|화신!/!106951|광폭화! 발동 중이고 !384667|기습 공격! 효과를 갖고 있다면, !5221|칼날 발톱!.
+5. [*Incarnation||Shadowmeld] !102543|화신!/!광폭화! 발동 중이고 은신 중일 때, !칼날 발톱!.
+6. [*Brutal Slash] !202028|잔혹한 베기!가 4초 내로 3개 꽉 차는 상황이라면, !202028|잔혹한 베기!.
+7. [*Lunar Inspiration] !164812|달빛섬광!의 남은 지속시간이 pandemic 구간 이내이거나, 지금 상태에서 시전하는 것이 기존의 것보다 강한 상태일 경우, !164812|달빛섬광!.
+8. [*~Thrashing Claws] !102543|화신!/!106951|광폭화! 발동 중이 아니고, !106830|난타!의 남은 지속시간이 pandemic 구간 이내일 때, !106830|난타!.
+9. !236068|청명의 전조! 효과를 받고 있을 때, !5221|칼날 발톱!.
+10. [*Brutal Slash] !202028|잔혹한 베기!.
+11. !5221|칼날 발톱!.
+12. [*Bloodtalons] 아직 !319439|피투성이 손길! 효과를 얻지 못했다면, 아래의 우선순위에 따라 발동시킬 것.
     1. [*Druid of the Claw] !102543|화신!/!106951|광폭화! 중이고, 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태이거나, 기존의 !1822|갈퀴 발톱!이 곧 만료된다면, !1822|갈퀴 발톱!.
     2. [*~Thrashing Claws] !102543|화신!/!106951|광폭화! 중이고, !106830|난타!의 남은 지속시간이 pandemic 구간 이내일 때, !106830|난타!.
     3. [*~Brutal Slash] !213764|휘둘러치기!.
@@ -179,7 +193,7 @@ translator: 'NeruTe'
 이는 SimulationCraft에서 사용되는 APL(Action Priority List)와 구조적으로 동일하다.
 
 **전투 시작 전**
-1. [*Unbridled Swarm AOE] 아군을 대상으로 !391889|적응의 무리!를 최대한 많이 퍼뜨려 둘 것.
+1. [*Unbridled Swarm AOE] 전투가 시작되기 전, 아군 플레이어들에게 최대한 !적응의 무리!를 퍼뜨릴 것. 일찍 시작할수록 좋음.
 2. !102547|숨기!
 3. 은신 상태에서, !1822|갈퀴 발톱!
 
@@ -198,6 +212,7 @@ translator: 'NeruTe'
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="화신" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="달 바라기" />
 <Checkbox isIcon id="Apex Predator's Craving AOE" spellId={391881} name="최상위 포식자의 갈망" defaultCheck />
+<Checkbox isIcon id="Saber Jaws AOE" spellId={421432} name="Saber Jaws" />
 <Checkbox isIcon id="Bloodtalons AOE" spellId={319439} name="피투성이 손길" defaultCheck />
 <Checkbox isIcon id="Rampant Ferocity AOE" spellId={391710} name="날뛰는 야성" defaultCheck />
 <Checkbox isIcon id="Thrashing Claws AOE" spellId={405300} name="난타의 발톱" />
@@ -213,10 +228,14 @@ translator: 'NeruTe'
 <details open>
 <summary>1순위: 주요 쿨다운 기술</summary>
 
-**중요: 단일 대상 기술은 점사 대상 / 체력이 가장 높은 적에게 사용할 것**
+> [!TIP]
+> 단일 대상 기술은 점사 대상 / 체력이 가장 높은 적에게 사용할 것.
+
 1. 연계 점수가 5점이거나 기력이 모자랄 때, !5217|호랑이의 분노!. 곧 !102543|화신!/!106951|광폭화!가 준비될 경우, 이에 맞춰 몇 초 정도는 미룰 수 있음.
-2. [*Apex Predator's Craving AOE&&Bloodtalons] !391881|최상위 포식자의 갈망! 효과를 받고 있고, 지금 !22568|흉포한 이빨!을 시전해도 !319439|피투성이 발톱! 발동에 문제가 없다면, !22568|흉포한 이빨!.
-3. [*Apex Predator's Craving AOE&&~Bloodtalons] !391881|최상위 포식자의 갈망! 효과를 받고 있을 때, !22568|흉포한 이빨!.
+2. [*Bloodtalons] !피투성이 손길! 중첩이 하나도 없지만 기술을 하나만 더 사용하면 발동이 가능한 상태라면, 해당 기술을 시전해 !피투성이 손길! 발동.
+3. [*Apex Predator's Craving AOE&&Saber Jaws AOE&&Incarnation AOE]  !102543|화신! 발동 중일 경우, !최상위 포식자의 갈망! 버프를 오라취소.
+3. [*Apex Predator's Craving AOE&&Saber Jaws AOE&&~Incarnation AOE] !광폭화! 발동 중일 경우, !최상위 포식자의 갈망! 버프를 오라취소.
+3. [*Apex Predator's Craving AOE] !391881|최상위 포식자의 갈망! 효과를 받고 있을 때, !22568|흉포한 이빨!.
 4. [*Adaptive Swarm AOE] 다음의 조건을 모두 만족할 때, !391888|적응의 무리!.
     - 적 대상에게 향하고 있는 !391888|적응의 무리! 투사체가 없을 것.
     - 적 대상에게 !391888|적응의 무리!가 걸려 있지 않을 것.
@@ -243,17 +262,21 @@ translator: 'NeruTe'
 <details open>
 <summary>2순위: 마무리 일격</summary>
 
-1. [*~Rampant Ferocity AOE&&Primal Wrath AOE] 현재 보유한 연계 점수가 5점이고, 다음 두 조건을 모두 만족할 때, !22568|흉포한 이빨!.
-    - !102543|화신!/!106951|광폭화! 발동 중일 경우, !285381|원시 분노!에 의한 !1079|도려내기!의 남은 지속시간이 pandemic 구간보다 많이 남아있을 것. !102543|화신!/!106951|광폭화! 발동 중이 아닐 경우, !285381|원시 분노!에 의한 !1079|도려내기!의 남은 지속시간이 6.5초 이상일 것.
-    - [*Druid of the Claw AOE] !441583|찢어발기기! 효과를 받고 있고, 현재 전투 중인 적 대상이 7개 이하일 것.
-    - [*Wildstalker AOE] 현재 적 대상에게 !439531|피바라미 덩굴! 효과가 걸려 있고, 현재 전투 중인 적 대상이 6개 이하일 것.
-2. [*Primal Wrath AOE] 다음 중 하나라도 만족하면, 연계 점수 5점에서 !285381|원시 분노!.
-    - [*Rampant Ferocity AOE] !102543|화신!/!106951|광폭화! 발동 중이 아닐 경우, !285381|원시 분노!에 의한 !1079|도려내기!의 남은 지속시간이 6.5초 이하일 것.
-    - [*Rampant Ferocity AOE] !102543|화신!/!106951|광폭화! 발동 중일 경우, !285381|원시 분노!에 의한 !1079|도려내기!가 걸려 있지 않거나 남은 지속시간이 pandemic 구간 내일 것.
-    - [*~Rampant Ferocity AOE] 현재 전투 중인 적 대상이 2개 이상일 것.
-3. [*~Primal Wrath AOE] 현재 !1079|도려내기!가 걸려 있지 않고, 너무 금방 죽지 않을 적 대상에게 (4점 이상에서) !1079|도려내기!.
-    - 그러나 근접한 2개 이상의 대상에게 !1079|도려내기!를 유지해야 하는 상황이 온다면, 무조건 !285381|원시 분노!를 찍고 이를 통해 도려내기를 묻히는 것이 낫다.
-4. 기력이 50 이상이거나 !102543|화신!/!106951|광폭화! 발동 중일 때, 연계 점수 5점에서 !22568|흉포한 이빨!.
+1. [*Primal Wrath AOE&&~Incarnation AOE] 적 대상들에게 걸려 있는 !도려내기!의 남은 지속시간이 6.5초 이하일 때, 연계 점수 5점에서 !원시 분노!. 단, !광폭화! 발동 중일 경우, pandemic 구간까지 더 미뤘다 쓸 것.
+1. [*Primal Wrath AOE&&Incarnation AOE] 적 대상들에게 걸려 있는 !도려내기!의 남은 지속시간이 6.5초 이하일 때, 연계 점수 5점에서 !원시 분노!. 단, !102543|화신! 발동 중일 경우, pandemic 구간까지 더 미뤘다 쓸 것.
+2. [*Druid of the Claw AOE&&~Incarnation AOE] 적 대상이 3개 이상이고 !광폭화! 발동 중일 경우, 연계 점수 상한과 무관하게 !찢어발기기!가 발동될 때까지 적절한 연계 점수 생성기를 사용할 것.
+2. [*Druid of the Claw AOE&&Incarnation AOE] 적 대상이 3개 이상이고 !102543|화신! 발동 중일 경우, 연계 점수 상한과 무관하게 !찢어발기기!가 발동될 때까지 적절한 연계 점수 생성기를 사용할 것.
+3. [*Wildstalker AOE&&~Rampant Ferocity AOE] !피바라미 덩굴! 효과를 받고 있는 적 대상이 있다면, 해당 대상에게 연계 점수 5점에서 !흉포한 이빨!.
+3. [*Wildstalker AOE&&Rampant Ferocity AOE] !피바라미 덩굴! 효과를 받고 있는 적을 우선하여, !흉포한 이빨!. (역주: '우선하여'라는 표현을 쓴 것은, 덩굴이 걸린 적이 없더라도 5점이 있고 원분을 쓸 필요가 없는 상황이라면 흉포를 쓰라는 뜻입니다.)
+4. [*Druid of the Claw AOE&&Rampant Ferocity AOE] 다음 중 하나라도 만족하면, 연계 점수 5점에서 !흉포한 이빨!.
+    - 기력 50 이상
+    - [*Incarnation] !102543|화신! 발동 중
+    - [*~Incarnation] !광폭화! 발동 중
+4. [*Druid of the Claw AOE&&~Rampant Ferocity AOE] 다음 중 하나라도 만족하면, 연계 점수 5점에서 !찢어발기기!.
+    - 기력 50 이상
+    - [*Incarnation] !102543|화신! 발동 중
+    - [*~Incarnation] !광폭화! 발동 중
+5. [*Primal Wrath AOE&&~Rampant Ferocity AOE] 이런 상황에 처했다면, 남은 !도려내기! 지속시간과 무관하게 !원시 분노!. (역주: !날뛰는 야성!이 없는데 연계 점수가 남고, 화신/광폭화도, 찢어발기기도 없는 상황을 의미합니다. 현실적으로 이런 일은 극히 드뭅니다.)
 
 </details>
 
@@ -263,10 +286,14 @@ translator: 'NeruTe'
 [*Bloodtalons AOE] **현재 보유한 !319439|피투성이 손길!이 1중첩이거나 효과를 아예 받고 있지 않다면, 이하의 내용에서 최근 4초 내에 이미 시전한 기술은 무시할 것.**
 
 1. [*~Thrashing Claws AOE] !106830|난타!가 걸려 있지 않거나 남은 지속시간이 pandemic 구간 이내일 때, !106830|난타!.
-2. [*Brutal Slash AOE&&Bloodtalons AOE&&Druid of the Claw AOE] !102543|화신!/!106951|광폭화! 중일 경우, !202028|잔혹한 베기!가 하나라도 있다면, !202028|잔혹한 베기!. !319439|피투성이 손길! 발동을 방해하더라도 상관없음.
+2. [*Brutal Slash AOE&&~Bloodtalons AOE&&Druid of the Claw AOE] !102543|화신!/!106951|광폭화! 발동 중일 경우, !202028|잔혹한 베기!가 하나라도 있다면, !202028|잔혹한 베기!.
+2. [*Brutal Slash AOE&&Bloodtalons AOE&&Druid of the Claw AOE] !102543|화신!/!106951|광폭화! 발동 중일 경우, !202028|잔혹한 베기!가 하나라도 있다면, !202028|잔혹한 베기!. !319439|피투성이 손길! 발동을 방해하더라도 상관없음.
+3. [*Brutal Slash AOE&&~Bloodtalons AOE&&Wildstalker AOE] !102543|화신!/!106951|광폭화! 중이고 3개 이상의 대상과 전투 중일 경우, !202028|잔혹한 베기!가 하나라도 있다면, !202028|잔혹한 베기!.
 3. [*Brutal Slash AOE&&Bloodtalons AOE&&Wildstalker AOE] !102543|화신!/!106951|광폭화! 중이고 3개 이상의 대상과 전투 중일 경우, !202028|잔혹한 베기!가 하나라도 있다면, !202028|잔혹한 베기!. !319439|피투성이 손길! 발동을 방해하더라도 상관없음.
+4. [*Wild Slashes AOE&&~Bloodtalons AOE&&Druid of the Claw AOE] !102543|화신!/!106951|광폭화! 중일 경우, !213764|휘둘러치기!.
 4. [*Wild Slashes AOE&&Bloodtalons AOE&&Druid of the Claw AOE] !102543|화신!/!106951|광폭화! 중일 경우, !213764|휘둘러치기!. !319439|피투성이 손길! 발동을 방해하더라도 상관없음.
-5. [*Wild Slashes AOE&&Bloodtalons AOE&&Wildstalker AOE] 3개 이상의 대상과 전투 중이고 !102543|화신!/!106951|광폭화! 중일 경우, !213764|휘둘러치기!. !319439|피투성이 손길! 발동을 방해하더라도 상관없음.
+5. [*Wild Slashes AOE&&~Bloodtalons AOE&&Wildstalker AOE] !102543|화신!/!106951|광폭화! 중이고 3개 이상의 대상과 전투 중일 경우, !213764|휘둘러치기!. 
+5. [*Wild Slashes AOE&&Bloodtalons AOE&&Wildstalker AOE] !102543|화신!/!106951|광폭화! 중이고 3개 이상의 대상과 전투 중일 경우, !213764|휘둘러치기!. !319439|피투성이 손길! 발동을 방해하더라도 상관없음.
 6. [*Brutal Slash AOE] 4초 내로 적 대상이 죽거나 !202028|잔혹한 베기!가 3개 꽉 차는 상황이라면, !202028|잔혹한 베기!.
 7. [*Wild Slashes AOE] 현재 전투 중인 적 대상이 5개 이상이라면, !213764|휘둘러치기!.
 8. [*Incarnation AOE&&Sudden Ambush AOE] !384667|기습 공격! 효과를 갖고 있지 않고, 임의의 적 대상에게 !1822|갈퀴 발톱!이 걸려 있지 않거나, 남은 지속시간이 pandemic 구간 이내이거나, 지금 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 강한 상태라면, !102547|숨기! > !1822|갈퀴 발톱!. 
@@ -277,20 +304,21 @@ translator: 'NeruTe'
 13. [*Wild Slashes AOE] 현재 전투 중인 적 대상이 3개 이상이라면, !213764|휘둘러치기!.
 14. [*Wildstalker AOE&&~Double Clawed Rake AOE] 현재 !1822|갈퀴 발톱!에 걸린 적이 하나도 없다면, !439531|피바라미 덩굴! 발동을 위해 임의의 대상에게 !1822|갈퀴 발톱!.
 15. [*Lunar Inspiration AOE] 현재 보유한 !236068|청명의 전조!가 1개 이하이며, 임의의 적 대상에게 !164812|달빛섬광!이 걸려 있지 않거나, 남은 지속시간이 pandemic 구간 이내일 때, !164812|달빛섬광!.
-16. [*~Double Clawed Rake AOE] 임의의 적 대상에게 !1822|갈퀴 발톱!이 걸려 있지 않거나, 남은 지속시간이 pandemic 구간 이내일 때, !1822|갈퀴 발톱!.
 17. [*Brutal Slash AOE] !202028|잔혹한 베기!.
 18. [*Wild Slashes AOE] !213764|휘둘러치기!.
-19. [*~Brutal Slash AOE] !213764|휘둘러치기!.
-20. [*Sudden Ambush AOE] !384667|기습 공격! 효과를 갖고 있지 않을 때, !5221|칼날 발톱!.
-21. [*~Sudden Ambush AOE] !5221|칼날 발톱!.
+16. [*~Double Clawed Rake AOE] 임의의 적 대상에게 !1822|갈퀴 발톱!이 걸려 있지 않거나, 남은 지속시간이 pandemic 구간 이내일 때, !1822|갈퀴 발톱!.
+19. [*~Brutal Slash AOE&&~Wild Slashes AOE] !휘둘러치기!
+20. 3개 이상의 대상과 전투 중일 경우, 남은 지속시간과 무관하게 !난타!. 특화가 낮을 경우, 기준을 4개 이상의 대상으로 할 것.
+21. !칼날 발톱!
 22. [*~Thrashing Claws AOE] !106830|난타!.
 23. [*Bloodtalons AOE] 아직 !319439|피투성이 손길! 효과를 얻지 못했다면, 아래의 우선순위에 따라 발동시킬 것.
-    - [*Double Clawed Rake AOE&&Sudden Ambush AOE] !384667|기습 공격! 효과를 갖고 있을 때, 적 대상 중 !1822|갈퀴 발톱!의 남은 지속시간이 가장 짧은 적에게 !1822|갈퀴 발톱!.
+    - [*Thrashing Claws AOE] !난타!.
     - [*Lunar Inspiration AOE] 적 대상 중 !164812|달빛섬광!의 남은 지속시간이 가장 짧은 적에게 !164812|달빛섬광!.
-    - [*~Double Clawed Rake AOE&&Sudden Ambush AOE] !384667|기습 공격! 효과를 갖고 있을 때, 적 대상 중 !1822|갈퀴 발톱!의 남은 지속시간이 가장 짧은 적에게 !1822|갈퀴 발톱!.
     - !5221|칼날 발톱!.
     - !390772|암습의 일격! 효과를 받은 !1822|갈퀴 발톱!이 걸려 있지 않은 적 대상에게 !1822|갈퀴 발톱!.
-    - [*Thrashing Claws AOE] !106830|난타!.
+
+> [!TIP]
+> !102543|화신!을 쓰는 발톱의 드루이드 쐐기 빌드의 경우, !그림자 숨기! / !숨기!로 전투 상태를 풀 때마다 확정적으로 !목숨을 끊는 일격! 효과를 발동시킬 수 있으므로, 해당 기술들은 몰아서 쓰지 말 것.
 
 </details>
 
@@ -391,7 +419,7 @@ translator: 'NeruTe'
 
 ## 공격대 / 레이드 빌드
 
-3시즌 2세트를 확보하게 되면, 야생추적자와 발톱의 드루이드 두 영웅 특성의 성능은 거의 비등하다. 장비 구성에 따라 약간의 차이가 있지만 단일 상황 기준 발톱의 드루이드가 약 1% 앞서는데, 이에 따라 어느 쪽을 선택하더라도 좋은 퍼포먼스를 보여줄 수 있다.
+3시즌 2세트를 확보하게 되면, 야생추적자와 발톱의 드루이드 두 영웅 특성의 성능은 거의 비등하다. 장비 구성에 따라 약간의 차이가 있지만 단일 상황 기준 발톱의 드루이드가 1% 조금 안 되게 앞서는데, 이에 따라 어느 쪽을 선택하더라도 좋은 퍼포먼스를 보여줄 수 있다.
 
 그렇다면 선택의 기준은 무엇일까? 발톱의 드루이드는 화력의 변동 폭이 크기 때문에 고점을 더 높일 수 있다. 광폭화 동안의 화력을 최대한 살릴 수 있다면, 단일과 다중 대상 양쪽에서 더 높은 성능을 보여줄 수 있다.
 
@@ -551,7 +579,7 @@ translator: 'NeruTe'
 
 ### 특성별 세부 설명
 
-대규모 풀이 일어나는 던전에서는 야생추적자 트리의 !439882|뿌리 연결망!이 좋은 성능을 보여주지만, 일반적으로는 !439880|불굴의 번성!을 찍는 것을 추천한다.
+대규모 풀이 일어나는 던전에서는 야생추적자 트리의 !439882|뿌리 연결망!도 고려할 수 있지만, 일반적으로는 !439880|불굴의 번성!을 찍는 것을 추천한다.
 
 <details>
 <summary>상단 선택 구간</summary> 
@@ -584,10 +612,10 @@ translator: 'NeruTe'
 </details>
 
 <details>
-<summary>하단 선택 구간</summary> 
+<summary>하단 선택 구간</summary>
 
 !화신: 아샤메인의 화신! vs !영혼 소집!:
-발톱의 드루이드에 한해 고려 가치가 있는 미묘한 선택지. 기본적으로, 적 대상 수와 무관하게 화신이 영혼 소집을 이기는 일은 있을 수 없다(대규모 전투에서는 동등). 그럼에도 불구하고 화신이 유의미한 선택지가 될 수 있는 것은, 전투 중 !숨기!를 1회 쓸 수 있게 해 주는 효과에 있다. 이에 따라 원할 때 전투를 해제하고 또 다시 전투에 진입할 수 있는데, 이 과정에서 !441824|목숨을 끊는 일격! 효과가 발동해 확정 !찢어발기기!를 얻게 된다는 점이 티어 세트 효과 때문에 매우 강력하다. 그 결과, 적 대상의 수가 매우 많은 던전에서는 화신이 채용 가치를 얻게 된다. 이는 특히 체인 풀링이 이루어지고 영혼 소집이 빠지는 과정에서 발생하는 단일 화력 손실을 보완해 줄 다른 클래스가 있는 팀 조합에서 유효하다. 이때 화신의 가치는 원하는 시점에 나를 대상으로 잡던 주문 시전을 끊고, 전투를 해제하는 점에 있다. 적들이 빨리 죽는 저단에서는 고려 가치 없음.
+발톱의 드루이드에 한해 고려 가치가 있는 미묘한 선택지. 기본적으로, 약 3-4개 대상부터 !화신: 아샤메인의 화신!은 !영혼 소집!을 뛰어넘는다. 하지만, 이는 심각한 단일 화력 손실을 동반한다. 화신이 유의미한 선택지가 될 수 있는 것은, 전투 중 !숨기!를 1회 쓸 수 있게 해 주는 효과에 있다. 이에 따라 원할 때 전투 상태를 풀고 또 다시 전투에 진입할 수 있는데, 이 과정에서 !441824|목숨을 끊는 일격! 효과가 발동해 확정 !찢어발기기!를 얻게 된다는 점이 티어 세트 효과 때문에 매우 강력하다. 그 결과, 적 대상의 수가 매우 많은 던전에서는 화신이 채용 가치를 얻게 된다. 이는 특히 체인 풀링이 이루어지고 영혼 소집이 빠지는 과정에서 발생하는 단일 화력 손실을 보완해 줄 다른 클래스가 있는 팀 조합에서 유효하다. 이때 화신의 가치는 원하는 시점에 나를 대상으로 잡던 주문 시전을 끊고, 전투를 해제하는 점에 있다. 적들이 빨리 죽는 저단에서는 고려 가치 없음.
 
 !319439|피투성이 손길! vs !391972|사자의 힘!: 거의 항상 !319439|피투성이 손길! 선택. 정상적으로 운용할 경우 단일에서 약간 우위이기 때문에, 익숙하지 않은 플레이어라도 최소 +2%의 화력 향상 효과를 기대할 수 있다. 한편 다중 대상 전투에서는 두 특성의 실질 가치가 거의 같고, 짧은 버스트 상황에서는 !391972|사자의 힘!이 더 강력함. 또한 운용도 좀 더 쉽기 때문에, 이를 핑계로 !391972|사자의 힘!을 선택해도 무방.
 
@@ -623,7 +651,7 @@ translator: 'NeruTe'
 
 [*Druid of the Claw m+]<Talents name={"발톱의 드루이드 - 야성의 광기"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZb2MzCzMzMbzGjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"} />
 
-[*Druid of the Claw m+]<Talents name={"발톱의 드루이드 - 화신"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbzmZwMzMzmNzYZmZm5BmZAAAAAAWCmNDMzomxsYWmZmlxMmBAAAAAAAAAAA0MLzyMz2ACsAzMAswgB"} />
+[*Druid of the Claw m+]<Talents name={"발톱의 드루이드 - 화신"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZb2MziZmZmZzmZsMzMzYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"} />
 
 [*Druid of the Claw m+]<Talents name={"발톱의 드루이드 - 거친 베기 (단일 대상 화력이 상당히 뒤처짐)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmZZ2MziZmZmZzGjtZmZmHYmBAAAAAYJY2MwMjaGziZZmZWGzYGAAAAAAAAAAAQzsMLzMbDIwCMzAwCDG"}/>
 
@@ -686,35 +714,44 @@ translator: 'NeruTe'
 
 아래의 목록은 각 장신구의 가능한 최대 레벨 기준 성능을 순서대로 정렬한 것이다. 실제로 어느 장신구를 장비할지는 개인 시뮬레이션 결과를 따를 것.
 
-> [!NOTE]
-> [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)는 가히 압도적인 성능을 자랑하기 때문에, 레이드 기준 성능 순위표에서는 아예 이미 이것을 착용한 상태를 기준으로 나머지의 순위를 매겼다. 제련소를 확보하지 못했다면, 그 다음으로 좋은 사용 효과 장신구로는 [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103)이 있다. 쐐기로 파밍이 가능한 [수도원의 인장](https://www.wowhead.com/item=219308/signet-of-the-priory?class=11&hero=21&ilvl=723&spec=103) 역시 같은 역할을 할 수 있다. 하지만 일반/영웅 [제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)가 더 강하기 때문에, 쐐기만 즐기는 경우에도 제련소를 노릴 수밖에 없다.
+> [!CAUTION]
+> 사용 효과 장신구 2개를 사용하는 것은 일반적으로 나쁜 선택이다. 2번 장신구는 지속 효과 장신구를 쓰는 것이 좋다.
+
+**사용 효과 장신구 순위**
+1. [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)
+2. [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) arguably better than forge in m+, particularly big pulls.
+3. [수도원의 인장](https://www.wowhead.com/item=219308/signet-of-the-priory?class=11&hero=21&ilvl=723&spec=103)
+4. [영원한 직조의 백합](https://www.wowhead.com/item=242494/lily-of-the-eternal-weave?bonus=3215:12361:12239&class=11&hero=22&ilvl=723&spec=103&spellModifier=1244029:137011)
+5. [저주받은 돌 우상](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103)
+6. [무형의 정수 먹보](https://www.wowhead.com/item=246945/incorporeal-essence-gorger?bonus=1572:12357:12239&class=11&hero=22&spec=103)
+7. [감시자의 영혼 족쇄](https://www.wowhead.com/item=240171/observers-soul-fetters?bonus=3207:12285:12239&hero=22&ilvl=678&spec=103) (역주: 크아레쉬 은테 스타브스 / 눈 하나 깜빡 않는 익스타르에게서 확률적으로 획득할 수 있는 장신구입니다. 노련가 등급이지만, 치명타 베이스에 사용 시 대량의 민첩을 제공하는 제련소와 매우 유사한 효과를 갖고 있어, 아이템 레벨 대비 실제 효과가 매우 강력합니다. 개인 시뮬레이션 결과에 따라 충분히 파밍할 만 합니다.)
+
+[분노의 돌](https://www.wowhead.com/item=156000/wrathstone?bonus=11415:12357:12239&hero=22&ilvl=710&spec=103) 역시 (레이드 기준으로) 매우 우수하다. 시간여행 울두아르에서 획득했다면 운이 좋은 것.
 
 **레이드 기준:**
 | 등급 | 아이템 | 설명 |
 | :-: | :- | :- |
 | **SS** | [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | 2분 사용 효과 장신구로, 광폭화와 매크로로 묶어 사용. 아이템 레벨이 밀리더라도 다른 장신구를 압도할 수 있는 성능.
-| **S** | [은하수의 더듬이](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | 치명타를 제공하는 지속 효과.
-| **A** | [임시방편 시포리움 조율기](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | 순환하는 치명타를 제공하는 지속 효과.
-| | [우주적 사냥의 인장](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | 무작위 발동 피해 + 대상 체력이 낮을수록 효과 증폭.
-| **B** | [아라카라 낭충봉아](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | 민첩을 제공하는 강력한 지속 효과. 가속이 붙어 있어 발톱의 드루이드보다는 약간 성능이 떨어지지만, 여전히 준수함.
+| **A** | [은하수의 더듬이](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | 치명타를 제공하는 지속 효과.
+| **B** | [임시방편 시포리움 조율기](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | 순환하는 치명타를 제공하는 지속 효과.
+| **C** | [우주적 사냥의 인장](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | 무작위 발동 피해 + 대상 체력이 낮을수록 효과 증폭.
 | | [아눕이카즈의 강화의 수정](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) | 무작위 보조 능력치를 제공하는 지속 효과.
-| | [소레아의 은밀한 기술](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | 정직한 능력치 제공. 특화를 기준으로 평가함.
-| | [똑딱거리는 공포의 자루](https://www.wowhead.com/item=190652/ticking-sack-of-terror?hero=21&ilvl=723&spec=103) | 준수한 무작위 발동 피해 효과.
-| | [무형의 왜곡발톱 (야생추적자 기준)](https://www.wowhead.com/item=242495/incorporeal-warpclaw?class=11&hero=21&ilvl=723&spec=103) | 무작위 발동 피해 효과. 다른 것을 획득하면 넘어갈 것.
+| | [아라카라 낭충봉아](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | 민첩을 제공하는 강력한 지속 효과. 가속이 붙어 있어 발톱의 드루이드보다는 약간 성능이 떨어지지만, 여전히 준수함.
+| | [소레아의 은밀한 기술](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | 정직한 능력치 제공. 특화를 기준으로 평가함. 아군에게도 능력치를 제공한다는 것은 고평가할 여지가 있음.
 
 **신화+/쐐기 기준:**
 | 등급 | 아이템 | 설명 |
 | :-: | :- | :- |
 | **S** | [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | 광폭화와 매크로로 묶어 사용.
-| | [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | 광폭화와 매크로로 묶어 사용. 중간 규모 전투가 잦고, 단일 대상 전투가 드문 던전에서 최상의 성능 발휘. 죽어서 중첩이 날아가지 않게 주의.
+| | [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | 광폭화와 매크로로 묶어 사용. 발동 효과 특성상 대규모 전투가 잦고, 단일 대상 전투가 드문 던전에서 최상의 성능 발휘. 죽어서 중첩이 날아가지 않게 주의.
 | **A** | [은하수의 더듬이](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) |
 | **B** | [아눕이카즈의 강화의 수정](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) |
-| | [임시방편 시포리움 조율기](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
 | | [소레아의 은밀한 기술](https://www.wowhead.com/item=185818/soleahs-secret-technique?class=11&hero=21&ilvl=723&spec=103) | 어떤 능력치로 맞출지는 시뮬레이션 결과를 따르는 것이 좋지만, 대체로 특화일 가능성이 높음. 안정적인 성능을 내고 아군에게도 영향을 주기 때문에 더 좋게 평가할 여지가 있음.
+| | [저주받은 돌 우상](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103) | 2사효로, 보통 [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) 과 함께 사용. 2분 쿨기 + 1번 장신구와 꼬이지 않는 선에서, 가능하면 5타겟 이상일 때 쿨마다 사용할 것.
+| | [임시방편 시포리움 조율기](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
 | | [우주적 사냥의 인장](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | 단일 대상에서 효과가 좋기 때문에 더 좋게 평가할 여지가 있음.
 | | [아라카라 낭충봉아](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) |
 | | [공허에 물든 파편](https://www.wowhead.com/item=238386/void-touched-fragment?bonus=1582:12357:12239&class=11&hero=21&ilvl=710&spec=103) | 저단 쐐기와 같이 적들이 빠르게 죽는 상황이라면 더 좋은 성능을 낼 수 있음. 구렁 장신구 중 아이템 레벨 대비 효과가 특히 좋은 편.
-
 
 > [!WARNING]
 > [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103)의 성능은 한 번도 죽지 않고 중첩이 유지되는 상태를 기준으로 한다. 죽으면 죽을수록 성능은 급락한다.
@@ -723,18 +760,18 @@ translator: 'NeruTe'
 
 Q: [소레아](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) 능력치 바꿔서 시뮬레이션 돌리고 싶어요.
 
-A: Custom APL 박스에, `shadowlands.soleahs_secret_technique_type="crit"` 와 같이 원하는 능력치를 지정해 입력하면 된다. 또는, quick sim의 Expert Mode: Post-Combination Actors에서 다음을 입력해도 된다.
+A: Simulation options 맨 아래에서 능력치를 지정할 수 있다. 또는, quick sim의 Expert Mode: Post-Combination Actors에서 다음을 입력해도 된다.
 ```
 profileset."Crit"+=shadowlands.soleahs_secret_technique_type="crit"
 profileset."Haste"+=shadowlands.soleahs_secret_technique_type="haste"
 profileset."Versatility"+=shadowlands.soleahs_secret_technique_type="versatility"
-```
+profileset."Mastery"+=shadowlands.soleahs_secret_technique_type="mastery"
 
-추가 입력이 없을 경우, 소레아는 기본적으로 특화를 선택한 것으로 간주된다.
+```
 
 Q: 2사효를 하게 될 가능성이 있을까요?
 
-A: 대체로 그렇지 않다. 혹시 모르니 항상 시뮬레이션을 해 볼 것.
+A: 대체로 그렇지 않다. 혹시 모르니 항상 시뮬레이션을 해 볼 것. 가령 [저주받은 돌 우상](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103) 은 던전 기준 시뮬레이션에서 유의미한 채용 가치가 있다. 특히 [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) 과의 조합이 강력하다.
 
 Q: [수도원의 인장](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) 시뮬레이션은 버프 몇 개 기준인가요?
 
