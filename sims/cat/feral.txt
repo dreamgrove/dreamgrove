@@ -169,7 +169,7 @@ actions.finisher+=/call_action_list,name=aoe_builder,if=hero_tree.druid_of_the_c
 actions.finisher+=/pool_resource,for_next=1
 # low energy bite during berserk/wildstalker aoe
 actions.finisher+=/ferocious_bite,target_if=max:dot.bloodseeker_vines.ticking,if=(hero_tree.wildstalker&spell_targets>1|buff.bs_inc.up)&(spell_targets=1|!talent.primal_wrath|talent.rampant_ferocity|buff.ravage.up|dot.bloodseeker_vines.ticking&spell_targets<7)
-actions.finisher+=/pool_resource,for_next=1,extra_amount=25
+actions.finisher+=/pool_resource,for_next=1
 actions.finisher+=/ferocious_bite,max_energy=1,if=(!talent.primal_wrath|spell_targets=1|talent.rampant_ferocity|buff.ravage.up)
 # primal wrath fallback (2+ targets, no vine or 7+ targets, wildstalker, no rampant)
 actions.finisher+=/primal_wrath,if=spell_targets.primal_wrath>1
