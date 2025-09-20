@@ -119,7 +119,7 @@ actions.pre_cd+=/use_item,slot=trinket1,if=!trinket.1.is.spymasters_web&!trinket
 actions.pre_cd+=/use_item,slot=trinket2,if=!trinket.2.is.spymasters_web&!trinket.2.is.imperfect_ascendancy_serum&!trinket.2.is.treacherous_transmitter&!trinket.2.is.soulletting_ruby&variable.on_use_trinket=2&variable.cd_condition
 actions.pre_cd+=/use_item,name=bestinslots,if=hero_tree.keeper_of_the_grove&buff.harmony_of_the_grove.up|hero_tree.elunes_chosen&(cooldown.ca_inc.full_recharge_time>20|buff.ca_inc.up)
 
-actions.st=warrior_of_elune,if=talent.lunar_calling|!talent.lunar_calling&variable.eclipse_remains<=7
+actions.st=warrior_of_elune,if=hero_tree.elunes_chosen
 actions.st+=/wrath,if=variable.enter_lunar&eclipse.in_eclipse&variable.eclipse_remains<cast_time&!variable.cd_condition
 actions.st+=/starfire,if=!variable.enter_lunar&eclipse.in_eclipse&variable.eclipse_remains<cast_time&!variable.cd_condition
 actions.st+=/sunfire,target_if=remains<3|refreshable&(hero_tree.keeper_of_the_grove&cooldown.force_of_nature.ready|hero_tree.elunes_chosen&variable.cd_condition)
@@ -147,5 +147,5 @@ actions.st+=/starsurge,if=buff.starweavers_weft.up|buff.touch_the_cosmos.up
 actions.st+=/starsurge,if=astral_power.deficit<variable.passive_asp+action.wrath.energize_amount+(action.starfire.energize_amount+variable.passive_asp)*(buff.eclipse_solar.remains<(gcd.max*3))
 actions.st+=/force_of_nature,if=!hero_tree.keeper_of_the_grove
 actions.st+=/wild_mushroom,if=!prev_gcd.1.wild_mushroom&dot.fungal_growth.remains<2
-actions.st+=/starfire,if=talent.lunar_calling
+actions.st+=/starfire,if=hero_tree.elunes_chosen
 actions.st+=/wrath
