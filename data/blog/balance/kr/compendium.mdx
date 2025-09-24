@@ -52,7 +52,7 @@ translator: 'NeruTe'
 
 # 로테이션
 
-<HeroTalentsHeader id="generic" title="오프너">
+<HeroTalentsHeader id="generic" title="오프너/쿨기 활용">
 
 <Checkbox isIcon id="KEEPER" spellId={205636} name="숲의 수호자" defaultCheck radio="Keeper of the Grove" /> 
 <Checkbox isIcon id="EC" spellId={202770} name="엘룬의 대행자" radio="Keeper of the Grove" />
@@ -94,7 +94,7 @@ translator: 'NeruTe'
 <div className="py-4">
   <Collapsible title="숲의 수호자 1천체 타이밍">
 
- <Timeline spellIds={[194223, 197626, 197626, 205636, 391528, 197626, 190984, 197626, 190984, 197626 ]} > !숲의 수호자! 이후 첫 2글쿨을 !드리아드!와 맞춰 사용. !드리아드의 은총! 효과를 !천체의 정렬! + !자연의 군대! 타이밍에 쓸 수 있게 천공의 힘을 모았다 쓸 것. </Timeline>
+ <Timeline spellIds={[194223, 197626, 197626, 205636, 391528, 197626, 190984, 197626, 190984, 197626 ]} > !드리아드! 발동 2글쿨(=!별빛쇄도!*2) 이후 !자연의 군대!. !드리아드의 은총! 효과를 !천체의 정렬! + !자연의 군대! 내에 쓸 수 있도록, !천벌!과 !별빛쇄도!를 번갈아 사용. </Timeline>
 
   </Collapsible>
 </div>
@@ -120,40 +120,39 @@ translator: 'NeruTe'
 
 </HeroTalentsHeader>
 
-## Single Target Priority
+## 단일 대상
 
-### **What is a priority list?**
+### **시전 우선순위란?**
 
-When reading the priority lists below, you should not think of these as steps to be followed in a specific order. At any given point in combat, you should cast the first ability on the list that you are able to cast, provided the conditions for its use are met.
+아래의 내용은 행동 우선순위로, 그 순서대로 기술을 사용하라는 것이 아니라 말 그대로 매 순간 현재 사용할 수 있는 기술 중 가장 위에 있는 것을 써야 함을 의미한다.
 
-<HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
+<HeroTalentsHeader id="kotg" title="숲의 수호자 - 단일">
 
-<Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck />
-<Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
-<Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
-<Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon-KOTG" />
-<Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
-<Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
-<Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
-<Checkbox isIcon id="Keeper 4pc" spellId={1236807} name="Keeper 4-set" defaultCheck />
+<Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="영혼 소집" defaultCheck />
+<Checkbox isIcon id="CONTROL" spellId={434249} name="꿈의 통제" defaultCheck />
+<Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="별재봉사" />
+<Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="우주의 손길" />
+<Checkbox isIcon id="New MoonKOTG" spellId={274281} name="초승달" radio="New Moon-KOTG" />
+<Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="엘룬의 분노" radio="New Moon-KOTG" />
+<Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="항성의 섬광" />
+<Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="야생 버섯" />
+<Checkbox isIcon id="Keeper 4pc" spellId={1236807} name="3시즌 4세트 착용" defaultCheck />
 
-- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
-- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
-- [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- Use !205636|Force of Nature! if any of the following are true:
-  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You have 2 charges of !194223|CA! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
-  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You have no charges of !194223|CA! and !Convoke the Spirits! is available.
-  - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
-  - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
-  - [*~Convoke the SpiritsKOTG] You will have !194223|CA! / !102560|Inc! and trinket back up before !Force of Nature! is ready again.
-- [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA! / !102560|Inc!.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! when any of the following are true:
-  - [*Convoke the SpiritsKOTG] You have 2 charges of !194223|CA!, just used !Force of Nature! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
-  - [*Convoke the SpiritsKOTG] You have 1 charge of !194223|CA!, the cooldown of !Force of Nature! is less than 2 GCD's and the cooldown of !Convoke the Spirits! is less than 4 GCD's.
-  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and the cooldown on !Convoke the Spirits! is greater than the remaining recharge time of your next !194223|CA!.
-  - [*Keeper 4pc] You just used !Convoke the Spirits! and you are in your !Force of Nature! window.
-  - The fight will end before !205636|Force of Nature! is available again.
+- 대상에게 !태양섬광! 유지. 전체 지속시간의 30% 이하로 남았을 때 갱신. 또는, !천체의 정렬! / !102560|화신! 발동 직전이고 지금 걸려 있는 !태양섬광!이 그 지속시간이 다하기 전에 만료될 상황이라면 갱신.
+- 대상에게 !달빛섬광! 유지. 전체 지속시간의 30% 이하로 남았을 때 갱신. 또는, !천체의 정렬! / !102560|화신! 발동 직전이고 지금 걸려 있는 !달빛섬광!이 그 지속시간이 다하기 전에 만료될 상황이라면 갱신.
+- [*Stellar FlareKOTG] 대상에게 !항성의 섬광! 유지. 전체 지속시간의 30% 이하로 남았을 때, 그리고 현재 !항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 때 갱신.
+- 다음 중 하나라도 만족하면, !자연의 군대!.
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] !천체의 정렬!이 2회 충전되어 있고, 3글쿨 내에 !영혼 소집! 쿨이 돌아올 것.
+  - [*Convoke the SpiritsKOTG&&Keeper 4pc] !천체의 정렬!이 하나도 없고, !영혼 소집! 쿨이 돌아와 있을 것.
+  - [*Convoke the SpiritsKOTG&&CONTROL] !영혼 소집!의 남은 쿨이 25초 이상일 것.
+  - [*Convoke the SpiritsKOTG&&~CONTROL] !영혼 소집!의 남은 쿨이 10초 이상일 것.
+  - [*~Convoke the SpiritsKOTG] 지금 !자연의 군대!를 쓰면, 다음 !자연의 군대!가 오기 전에 !천체의 정렬! / !102560|화신! + 장신구가 먼저 돌아올 것.
+- 다음 중 하나라도 만족하면, !천체의 정렬! / !102560|화신!.
+  - [*Convoke the SpiritsKOTG] !천체의 정렬!이 2회 충전되어 있고, 방금 !자연의 군대!를 시전했으며, 3글쿨 내에 !영혼 소집! 쿨이 돌아올 것.
+  - [*Convoke the SpiritsKOTG] !천체의 정렬!이 1회 충전되어 있고, !자연의 군대!는 2글쿨 내로, !영혼 소집!은 4글쿨 내로 쿨이 돌아올 것.
+  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] 방금 !자연의 군대!를 시전했으며, !영혼 소집!의 쿨이 다음 !천체의 정렬! 재충전보다도 더 많이 남았을 것.
+  - [*Keeper 4pc] 방금 막 !영혼 소집!을 시전했고, !자연의 군대! 효과를 받고 있을 것.
+  - 다음 !자연의 군대!가 오기 전에 현재 전투가 끝날 상황일 것.
 - [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
 - [*Keeper 4pc] Use !Wrath! in your !Dryad! window if you have don't have enough AP for the 2 !Starsurge! casts needed to consume !Dryad's Favor!.
 - Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! when the cast time of !Starfire! is longer than the remaining duration of !Eclipse!.
