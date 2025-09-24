@@ -157,7 +157,7 @@ translator: 'NeruTe'
 - [*Keeper 4pc] !드리아드! 소환 상태에서, !별빛쇄도! 2회에 필요한 천공의 힘이 부족하다면, !천벌!.
 - !별빛섬광! 2회 시전하여 !일월식 (태양)! 진입. 기존 !일월식 (태양)!이 끝나갈 때, 첫 !별빛섬광! 시전을 시작하는 것이 이상적.
 - [*Convoke the SpiritsKOTG] 다음 중 하나라도 만족하면, !영혼 소집!.
-  - [*Convoke the SpiritsKOTG] 보유한 천공의 힘이 40 미만이고, !천체의 정렬! / !자연의 군대! 발동 중일 것.
+  - [*Convoke the SpiritsKOTG] 보유한 천공의 힘이 40 미만이고, !천체의 정렬! / !자연의 군대! 발동 중일 것. (역주: !자연의 군대!만 있는 경우에도 해당됩니다.)
   - [*Convoke the SpiritsKOTG] 현재 발동 중인 !천체의 정렬!의 남은 지속시간이 4초 이상이거나, 다음 !천체의 정렬! / !자연의 군대! 타이밍 전에 현재 전투가 끝날 상황일 것.
 - [*Fury of EluneKOTG] !엘룬의 분노!.
 - [*New MoonKOTG] !별의 군주! 중첩이 2개 이하라면, !별빛쇄도!.
@@ -199,47 +199,49 @@ translator: 'NeruTe'
 - [*Stellar FlareEC] 대상에게 !항성의 섬광! 유지. 전체 지속시간의 30% 이하로 남았을 때, 그리고 현재 !항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 때 갱신.
 - [*Fury of EluneEC] !천체의 정렬!/!102560|화신!에 맞추어, !엘룬의 분노!.
 - !194223|천체의 정렬!/!102560|화신!.
-- [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
+- [*~Lunar CallingST&&Warrior of EluneEC] 현재 발동 중인 일월식의 남은 지속시간이 7초 미만이고, 다음에 !일월식 (태양)!에 진입할 예정이라면, !엘룬의 전사!.
 - [*Lunar CallingST] !천벌!을 시전해 !일월식 (달)! 진입.
 - [*~Lunar CallingST] !별빛섬광!을 시전해 !일월식 (태양)! 진입.
 - [*Fury of EluneEC] !엘룬의 전사!.
-- [*Lunar CallingST&&Convoke the SpiritsEC] Use !Starfire! to spend any stacks of !Nature's Grace! before using !Convoke the Spirits!.
-- [*Convoke the SpiritsEC] Use !Convoke the Spirits! if you're below 40 AP and !194223|CA!/!102560|Incarnation! will last for more than 4 seconds, or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-- [*New MoonEC] Use !Starsurge! if !Starlord! has less than 3 stacks.
-- [*~New MoonEC] Use !Starsurge! if one of the following conditions is met:
-  - !Starlord! has less than 3 stacks.
-  - You are about to overcap on AP.
-  - You need to move.
-  - [*StarweaverEC&&~New MoonEC] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosEC&&~New MoonEC] You have a !450356|Touch the Cosmos! proc.
-- [*New MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
-- [*New MoonEC] Use !Starsurge! if one of the following conditions is met:
-  - You are about to overcap on AP.
-  - You need to move.
-  - [*StarweaverEC&&New MoonEC] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosEC&&New MoonEC] You have a !450356|Touch the Cosmos! proc.
-- [*StarweaverEC] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
-- [*Wild MushroomEC] Use !Wild Mushroom! if you will not overcap on  AP and !Fungal Growth! is not active on your target.
-- [*Force of NatureEC] Use !205636|Force of Nature! if you will not overcap on AP.
-- [*Lunar CallingST] Use !Starfire!.
-- [*~Lunar CallingST] Use !Wrath!.
+- [*Lunar CallingST&&Convoke the SpiritsEC] !자연의 은혜! 효과를 받고 있다면, !영혼 소집!을 쓰기 전에 !별빛섬광!으로 소모할 것.
+- [*Convoke the SpiritsEC] 다음의 조건을 모두 만족할 때, !영혼 소집!.
+  - 보유한 천공의 힘이 40 미만일 것.
+  - 현재 발동 중인 !천체의 정렬!/!102560|화신!의 남은 지속 시간이 4초 이상이거나, 다음 !천체의 정렬!/!102560|화신! 타이밍까지 30초 이상 남았을 것.
+  - 현재 발동 중인 !일월식!의 남은 지속시간이 4초 이상일 것.
+- [*New MoonEC] !별의 군주! 중첩이 2개 이하라면, !별빛쇄도!.
+- [*~New MoonEC] 다음 중 하나라도 만족하면, !별빛쇄도!.
+  - !별의 군주! 중첩이 2개 이하일 것.
+  - 천공의 힘이 곧 최대치를 초과할 상황일 것.
+  - 지금 즉시 움직여야 할 것. (역주: 특정 패턴을 피하거나 하는 이유로 가만히 서서 기술 시전을 할 수 없는 상황을 의미합니다.)
+  - [*StarweaverEC&&~New MoonEC] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosEC&&~New MoonEC] !우주의 손길! 효과를 받고 있을 것.
+- [*New MoonEC] 다음 조건을 모두 만족할 때, !초승달!/!반달!/!보름달!.
+  - 해당 기술을 시전하더라도 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 !일월식!이 끝나기 전에 해당 기술 시전을 마칠 수 있을 것.
+  - !천체의 정렬!/!102560|화신! 효과를 받고 있거나, 해당 기술의 남은 쿨다운이 15초 이상인 상황에서 !초승달!/!반달!/!보름달!이 곧 꽉 찰 상황일 것.
+- [*New MoonEC] 다음 중 하나라도 만족하면, !별빛쇄도!.
+  - 천공의 힘이 곧 최대치를 초과할 상황일 것.
+  - 지금 즉시 움직여야 할 것.
+  - [*StarweaverEC&&New MoonEC] !393944|별재봉사의 씨실! 효과를 받고 있을 것.
+  - [*Touch the CosmosEC&&New MoonEC] !우주의 손길! 효과를 받고 있을 것.
+- [*StarweaverEC] !393942|별재봉사의 날실! 효과를 받고 있다면, !별똥별!.
+- [*Wild MushroomEC] 지금 !야생 버섯!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 대상이 !81281|진균 번식! 효과를 받고 있지 않다면, !야생 버섯!. (역주: !81281|진균 번식!은 야생 버섯을 쓰면 걸리는 디버프입니다. 즉, 이미 대상에게 걸려 있지 않으면 쓰라는 뜻입니다.)
+- [*Force of NatureEC] 지금 !자연의 군대!를 시전하더라도 천공의 힘이 최대치를 초과하지 않는다면, !자연의 군대!.
+- [*Lunar CallingST] !별빛섬광!.
+- [*~Lunar CallingST] !천벌!.
 
 </HeroTalentsHeader>
 
-## AoE Priority (2+ targets)
+## 다중 대상
 
-
-<HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
-<Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonKAOE" />
-<Checkbox isIcon id="New MoonKAOE" spellId={274281} name="New Moon" radio="New MoonKAOE" />
-<Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="Stellar Flare" />
-<Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
-<Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} name="Convoke the Spirits" />
-<Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
+<HeroTalentsHeader id="kotg" title="숲의 수호자 - 광역">
+<Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="엘룬의 분노" defaultCheck radio="New MoonKAOE" />
+<Checkbox isIcon id="New MoonKAOE" spellId={274281} name="초승달" radio="New MoonKAOE" />
+<Checkbox isIcon id="Stellar FlareKAOE" spellId={202347} name="항성의 섬광" />
+<Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="우주의 손길" />
+<Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="별재봉사" />
+<Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} name="영혼 소집" />
+<Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
