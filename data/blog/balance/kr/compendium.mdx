@@ -30,7 +30,7 @@ translator: 'NeruTe'
 세트 미착용 대비 약 +7.2% 효과.
 
 #### [4세트](https://www.wowhead.com/spell=1236336/druid-keeper-of-the-grove-11-2-class-set-4pc)
-> !드리아드!가 사라지면 다음 2회의 !별빛쇄도!가 활성화된 동안 입힌 피해의 3%에 해당하는 피해를 추가로 입히거나 생명력을 회복시키며, 피해의 10%만큼 주위의 적을 치유하거나 피해를 입힙니다. 5명을 초과하는 대상에게는 효과가 감소합니다.
+> !드리아드!가 사라지면 다음 2회의 !별빛쇄도!가 !e활성화된 동안 입힌 피해의 3%에 해당하는 피해를 추가로 입히거나 생명력을 회복시키며, 피해의 10%만큼 주위의 적을 치유하거나 피해를 입힙니다. 5명을 초과하는 대상에게는 효과가 감소합니다.
 
 세트 미착용 대비 약 +18% 효과.
 
@@ -181,28 +181,28 @@ translator: 'NeruTe'
 - !천벌!.
 </HeroTalentsHeader>
 
-<HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
+<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 단일">
 
-<Checkbox isIcon id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck /> 
-<Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of EluneEC" />
-<Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonEC" /> 
-<Checkbox isIcon id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck  />
-<Checkbox isIcon id="New MoonEC" spellId={274281} name="New Moon" radio="New MoonEC" /> 
-<Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" /> 
-<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" /> 
-<Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
-<Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of EluneEC" />
+<Checkbox isIcon id="Lunar CallingST" spellId={429523} name="달의 부름" defaultCheck /> 
+<Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="엘룬의 전사" defaultCheck radio="Warrior of EluneEC" />
+<Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="엘룬의 분노" defaultCheck radio="New MoonEC" /> 
+<Checkbox isIcon id="Convoke the SpiritsEC" spellId={391528} name="영혼 소집" defaultCheck  />
+<Checkbox isIcon id="New MoonEC" spellId={274281} name="초승달" radio="New MoonEC" /> 
+<Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="우주의 손길" />
+<Checkbox isIcon id="StarweaverEC" spellId={393940} name="별재봉사" /> 
+<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="항성의 섬광" /> 
+<Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="야생 버섯" />
+<Checkbox isIcon id="Force of NatureEC" spellId={205636} name="자연의 군대" radio="Warrior of EluneEC" />
 
-- [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
-- Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of EluneEC] Use !Fury of Elune! together with !194223|Celestial Alignment!/!102560|Incarnation!.
-- Use !194223|Celestial Alignment!/!102560|Incarnation!.
+- [*Lunar CallingST&&Warrior of EluneEC] !엘룬의 전사!.
+- 대상에게 !달빛섬광! 및 !태양섬광! 유지. 전체 지속시간의 30% 이하로 남았을 때 갱신.
+- [*Stellar FlareEC] 대상에게 !항성의 섬광! 유지. 전체 지속시간의 30% 이하로 남았을 때, 그리고 현재 !항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 때 갱신.
+- [*Fury of EluneEC] !천체의 정렬!/!102560|화신!에 맞추어, !엘룬의 분노!.
+- !194223|천체의 정렬!/!102560|화신!.
 - [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
-- [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
-- [*~Lunar CallingST] Use !Starfire! to enter Solar Eclipse.
-- [*Fury of EluneEC] Use !Fury of Elune!.
+- [*Lunar CallingST] !천벌!을 시전해 !일월식 (달)! 진입.
+- [*~Lunar CallingST] !별빛섬광!을 시전해 !일월식 (태양)! 진입.
+- [*Fury of EluneEC] !엘룬의 전사!.
 - [*Lunar CallingST&&Convoke the SpiritsEC] Use !Starfire! to spend any stacks of !Nature's Grace! before using !Convoke the Spirits!.
 - [*Convoke the SpiritsEC] Use !Convoke the Spirits! if you're below 40 AP and !194223|CA!/!102560|Incarnation! will last for more than 4 seconds, or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
 - [*New MoonEC] Use !Starsurge! if !Starlord! has less than 3 stacks.
