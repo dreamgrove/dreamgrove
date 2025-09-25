@@ -265,11 +265,11 @@ translator: 'NeruTe'
   - [*StarweaverKAOE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
   - [*Touch the CosmosKAOE] !우주의 손길! 효과를 받고 있을 것.
 - !자연의 은혜!/!암영의 포용! 효과를 받고 있을 때, !별빛섬광!.
-- [*Wild MushroomKAOE] 지금 !야생 버섯!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 대상이 !진균 번식! 효과를 받고 있지 않다면, !야생 버섯!. (역주: !진균 번식!은 야생 버섯을 쓰면 걸리는 디버프입니다. 즉, 이미 대상에게 걸려 있지 않으면 쓰라는 뜻입니다.)
+- [*Wild MushroomKAOE] 지금 !야생 버섯!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 대상이 !81281|진균 번식! 효과를 받고 있지 않다면, !야생 버섯!. (역주: !81281|진균 번식!은 야생 버섯을 쓰면 걸리는 디버프입니다. 즉, 이미 대상에게 걸려 있지 않으면 쓰라는 뜻입니다.)
 - [*New MoonKAOE] 다음의 조건을 모두 만족할 때, !보름달!.
   - 지금 !보름달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않을 것.
   - 현재 발동 중인 !일월식!이 끝나기 전에 !보름달! 시전을 마칠 수 있을 것.
-  - !천체의 정렬!/!102560|화신! 효과를 받고 있거나, 해당 기술의 남은 쿨다운이 10초 이상인 상황에서 !초승달!/!반달!/!보름달!이 곧 꽉 찰 상황일 것.
+  - !천체의 정렬!/!102560|화신! 발동 중이거나, 해당 기술의 남은 쿨다운이 10초 이상인 상황에서 !초승달!/!반달!/!보름달!이 곧 꽉 찰 상황일 것.
 - [*New MoonKAOE] 지금 !초승달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않는다면, !초승달!.
 - [*New MoonKAOE] 지금 !반달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 발동 중인 !일월식!이 끝나기 전에 !반달! 시전을 마칠 수 있다면, !반달!.
 - [*Convoke the SpiritsKAOE] 6타겟 이하이고 !암영의 포용! 효과를 받고 있지 않을 때, !영혼 소집!.
@@ -278,68 +278,69 @@ translator: 'NeruTe'
 - !일월식 (태양)! 발동 중일 때, !천벌!.
 </HeroTalentsHeader>
 
-<HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
-<Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="Warrior of Elune" defaultCheck radio="Force of NatureEC"/>
-<Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoEEC"/>
-<Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoEE"/>
-<Checkbox isIcon id="Stellar FlareECAoE" spellId={202347} name="Stellar Flare"/>
-<Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
-<Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
-<Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of NatureEC"/>
-<Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
-<Checkbox isIcon id="EC 4pc" spellId={1236989} name="Gathering Moonlight" defaultCheck/>
+<HeroTalentsHeader id="ec" title="엘룬의 대행자 - 광역">
+<Checkbox isIcon id="Warrior of EluneECAoE" spellId={202425} name="엘룬의 전사" defaultCheck radio="Force of NatureEC"/>
+<Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="엘룬의 분노" defaultCheck radio="FoEEC"/>
+<Checkbox isIcon id="New MoonECAoE" spellId={274281} name="초승달" radio="FoEE"/>
+<Checkbox isIcon id="Stellar FlareECAoE" spellId={202347} name="항성의 섬광"/>
+<Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="별재봉사"/>
+<Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="우주의 손길" />
+<Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="영혼 소집"/>
+<Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="자연의 군대" radio="Force of NatureEC"/>
+<Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="야생 버섯"/>
+<Checkbox isIcon id="EC 4pc" spellId={1236989} name="3시즌 4세트 착용" defaultCheck/>
 
-- [*EC 4pc] Use !Fury of Elune! if !Gathering Moonlight! is about to expire.
-- Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
-- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Start spreading !Moonfire! while the tank is gathering mobs.
-- [*Stellar FlareECAoE] Use !Stellar Flare! if all of the following conditions is met:
-  - The target will live for at least 8s+1s per target that !Starfire! can hit.
-  - You will not overcap on AP.
-- Use !Starfall! if you would overcap Astral Power with your next cast and you're not casting !194223|CA!/!102560|Incarnation! next.
-- [*Fury of EluneECAoE] Use !Fury of Elune! if it's available the global before !194223|CA!/!102560|Incarnation!.
-- Use !194223|CA!/!102560|Incarnation!.
-- [*Warrior of EluneECAoE] Use !Warrior of Elune! if you have no stacks of !450347|Dreamstate! and will not overlap the !Starfire! casts with !450347|Dreamstate! ones.
-- Use !Wrath! to enter Lunar Eclipse.
-- [*Fury of EluneECAoE] Use !Fury of Elune!.
-- [*Wild MushroomECAoE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active.
-- Use !Starfall! if one of the following conditions is met:
-  - !Starlord! is below 3 stacks.
-  - [*StarweaverECAoE] You have a !393942|Starweaver's Warp! proc.
-  - [*Touch the CosmosECAoE] You have a !450356|Touch the Cosmos! proc.
-- [*New MoonECAoE] Use !Full Moon! if all of the following conditions are met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
-- [*New MoonECAoE] Use !New Moon! if you will not overcap on AP.
-- [*New MoonECAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
-- Use !Starfire! to consume any stacks of !Nature's Grace! and !Umbral Embrace!.
-- [*Convoke the SpiritsECAoE] Use !Convoke the Spirits! if you are fighting less than 7 targets and !Umbral Embrace! is not up.
-- [*StarweaverECAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
-- [*Force of NatureECAoE] Use !248280|Force of Nature! if you will not overcap on AP.
-- Use !Starfire!.
+- [*EC 4pc] !1236989|모이는 달빛! 효과가 곧 만료될 때, !엘룬의 분노!. (역주: 4세트 프록 버프입니다.)
+- (5.5-0.5*(인접한 대상 수))초 이상 생존할 적 대상에게, 뭉쳐 있을 때 !태양섬광!. (역주: 예를 들어, 3타겟이면 기준치가 4.5초가 됩니다.)
+- 지금 !달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, 6초 이상 생존할 적 대상에게 !달빛섬광!. 방어 전담이 몹을 모을 때 작업을 시작할 것.
+- [*Stellar FlareECAoE] 다음 조건을 모두 만족할 때, !항성의 섬광!.
+  - 현재 대상이 앞으로 (8+(해당 대상에게 쓰는 !별빛섬광!이 적중하는 총 대상 수))초 이상 생존할 것. (역주: 예를 들어, 인접 3타겟이면 11초 이상 생존할 대상이어야 합니다.)
+  - 지금 !항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 것.
+- 다음 기술 시전 시 천공의 힘이 넘치게 될 상황이고, 그 기술이 !천체의 정렬!/!102560|화신!이 아니라면, !별똥별!.
+- [*Fury of EluneECAoE] !천체의 정렬!/!102560|화신! 직전에, !엘룬의 분노!.
+- !천체의 정렬!/!102560|화신!.
+- [*Warrior of EluneECAoE] !자연의 은혜! 효과를 받고 있지 않고, 
+Use !Warrior of Elune! if you have no stacks of !450347|Dreamstate! and will not overlap the !Starfire! casts with !450347|Dreamstate! ones.
+- !천벌!을 시전해 !일월식 (달)! 진입.
+- [*Fury of EluneECAoE] !엘룬의 분노!.
+- [*Wild MushroomECAoE] 지금 !야생 버섯!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 대상이 !81281|진균 번식! 효과를 받고 있지 않다면, !야생 버섯!. (역주: !81281|진균 번식!은 야생 버섯을 쓰면 걸리는 디버프입니다. 즉, 이미 대상에게 걸려 있지 않으면 쓰라는 뜻입니다.)
+- 다음 중 하나라도 만족하면, !별똥별!.
+  - !별의 군주! 중첩이 2개 이하일 것.
+  - [*StarweaverECAOE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
+  - [*Touch the CosmosECAOE] !우주의 손길! 효과를 받고 있을 것.
+- [*New MoonECAoE] 다음의 조건을 모두 만족할 때, !보름달!.
+  - 지금 !보름달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 !일월식!이 끝나기 전에 !보름달! 시전을 마칠 수 있을 것.
+  - !천체의 정렬!/!102560|화신! 발동 중이거나, 해당 기술의 남은 쿨다운이 10초 이상인 상황에서 !초승달!/!반달!/!보름달!이 곧 꽉 찰 상황일 것.
+- [*New MoonECAoE] 지금 !초승달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않는다면, !초승달!.
+- [*New MoonECAoE] 지금 !반달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 발동 중인 !일월식!이 끝나기 전에 !반달! 시전을 마칠 수 있다면, !반달!.
+- !자연의 은혜!/!암영의 포용! 효과를 받고 있을 때, !별빛섬광!.
+- [*Convoke the SpiritsECAoE] 6타겟 이하이고 !암영의 포용! 효과를 받고 있지 않을 때, !영혼 소집!.
+- [*StarweaverECAoE] !393944|별재봉사의 씨실! 효과를 받고 있을 때, !별빛쇄도!.
+- [*Force of NatureECAoE] 지금 !자연의 군대!를 시전하더라도 천공의 힘이 넘치지 않는다면, !자연의 군대!.
+- !별빛섬광!.
 
 </HeroTalentsHeader>
 
-## Rotational Details
+## 로테이션 심화
 
-### Eclipses and Fillers
+### 일월식과 천공의 힘 생성기 활용
 
-<Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
-<Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
+<Checkbox isIcon id="Keeper Fillers" spellId={205636} name="숲의 수호자" defaultCheck radio="Fillers"/>
+<Checkbox isIcon id="EC Fillers" spellId={202770} name="엘룬의 대행자" radio="Fillers" />
 
-- [*Keeper Fillers] Enter !Solar Eclipse! and cast !Wrath! on 1 and 2 targets.
-- [*Keeper Fillers] If you enter !Lunar Eclipse! by mistake on 1 target, cast !Wrath!.
-- [*Keeper Fillers] If talented into !114107|Soul of the Forest! and !Umbral Intensity!, enter !Lunar Eclipse! on 3 targets. Otherwise, enter !Solar Eclipse! and cast !Wrath!.
-- [*Keeper Fillers] Enter !Lunar Eclipse! on 4+ targets.
-- [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
-- [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
-- [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! and use !Starfire! on all target counts.
-- Use !Starsurge! on 1 target.
-- Use !Starfall! on 2+ targets with !Aetherial Kindling!.
-- Use !Starfall! on 3+ targets.
+- [*Keeper Fillers] 단일/2타겟에서는 !일월식 (태양)!에 진입하여 !천벌!을 쓴다.
+- [*Keeper Fillers] 단일인데 실수로 !일월식 (달)!에 진입했더라도, !천벌!을 쓴다.
+- [*Keeper Fillers] 3타겟에서, !114107|숲의 영혼!과 !암영의 포용! 특성을 모두 선택했다면, !일월식 (달)!에 진입. 그렇지 않을 경우, !일월식 (태양)!에 진입하여 !천벌!을 쓴다.
+- [*Keeper Fillers] 4타겟부터는 !일월식 (달)!에 진입.
+- [*Keeper Fillers] 단일/2타겟에서 !천체의 정렬!/!102560|화신! 발동 중일 경우, !천벌!을 쓴다.
+- [*Keeper Fillers] 3타겟 이상에서 !천체의 정렬!/!102560|화신! 발동 중일 경우, !별빛섬광!을 쓴다.
+- [*EC Fillers] !달의 부름! 특성을 선택했다면, 대상 수와 무관하게 항상 !일월식 (달)!에 진입하여 !별빛섬광!을 쓴다.
+- 단일에서는 !별빛섬광!으로 천공의 힘을 소모한다.
+- !에테르 덧불! 특성을 선택했다면, 2타겟부터 !별똥별!로 소모한다.
+- 3타겟 이상에서는 !별똥별!로 소모한다.
 
-<Collapsible title="How to Use Keeper of the Grove Tier Set">
+<Collapsible title="숲의 수호자 3시즌 티어 효과의 활용">
 
 The !Keeper of the Grove! tier set revolves around dumping as much damage as possible into your !Dryad! window to maximize the damage of your !Dryad's Favor! buff. 
 
