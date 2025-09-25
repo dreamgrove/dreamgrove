@@ -243,39 +243,39 @@ translator: 'NeruTe'
 <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} name="영혼 소집" />
 <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
 
-- Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
-- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
-- Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
-- [*Stellar FlareKAOE] Use !Stellar Flare! if all of the following conditions is met:
-  - The target will live for at least 8s+1s per target that !Starfire! can hit.
-  - You will not overcap on AP.
-- Use !Starfall! if you would overcap Astral Power with your next cast.
-- Use !248280|Force of Nature! if one of the following conditions is met:
-  - Your current Eclipse has more than 3 seconds left.
-  - Your next GCD is !194223|CA!/!102560|Incarnation!.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! if one of the following conditions is met:
-  - You just used !Force of Nature!.
-  - The cooldown on !205636|Force of Nature! is longer than 25 seconds.
-- Use the appropriate filler to pool AP for 2 !Starsurge! casts to spend !Dryad's Favor! at the end of your !194223|CA! / !102560|Inc!.
-- Use !Starfire! to enter !Solar Eclipse! on 2 targets.
-- Use !Wrath! to enter !Lunar Eclipse! on 3 or more targets.
-- [*Fury of EluneKAOE] Use !Fury of Elune!.
-- Use !Starfall! if:
-  - !Starlord! is below 3 stacks.
-  - [*StarweaverKAOE] You have a !393942|Starweaver's Warp! proc.
-  - [*Touch the CosmosKAOE] You have a !450356|Touch the Cosmos! proc.
-- Use !Starfire! to consume any stacks of !Nature's Grace! and !Umbral Embrace!.
-- [*Wild MushroomKAOE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active on your target.
-- [*New MoonKAOE] Use !Full Moon! if all of the following conditions are met:
-  - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
-  - You are in CA/Inc or you're about to cap on charges and the cooldown of !194223|Celestial Alignment!/!102560|Incarnation! is longer than 10 seconds.
-- [*New MoonKAOE] Use !New Moon! if you will not overcap on AP.
-- [*New MoonKAOE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
-- [*Convoke the SpiritsKAOE] Use !Convoke the Spirits! if you are fighting less than 7 targets and !Umbral Embrace! is not up.
-- [*StarweaverKAOE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
-- Use !Starfire! in !Lunar Eclipse!
-- Use !Wrath! in !Solar Eclipse!
+- (5.5-0.5*(인접한 대상 수))초 이상 생존할 적 대상에게, 뭉쳐 있을 때 !태양섬광!. (역주: 예를 들어, 3타겟이면 기준치가 4.5초가 됩니다.)
+- 지금 !달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, 6초 이상 생존할 적 대상에게 !달빛섬광!. 이때, !자연의 군대!도 !달빛섬광!을 써 주는 것을 감안할 것.
+- !드리아드의 호의! + !천체의 정렬!/!102560|화신! 발동 중일 때, !별빛쇄도!.
+- [*Stellar FlareKAOE] 다음 조건을 모두 만족할 때, !항성의 섬광!.
+  - 현재 대상이 앞으로 (8+(해당 대상에게 쓰는 !별빛섬광!이 적중하는 총 대상 수))초 이상 생존할 것. (역주: 예를 들어, 인접 3타겟이면 11초 이상 생존할 대상이어야 합니다.)
+  - 지금 !항성의 섬광!을 시전해도 천공의 힘이 넘치지 않을 것.
+- 다음 기술 시전 시 천공의 힘이 넘치게 될 상황이라면, !별똥별!.
+- 다음 중 하나라도 만족하면, !자연의 군대!.
+  - 현재 발동 중인 !일월식!의 남은 지속시간이 3초 이상일 것.
+  - 바로 다음에 시전할 기술이 !천체의 정렬!/!102560|화신!일 것.
+- 다음 중 하나라도 만족하면, !천체의 정렬!/!102560|화신!.
+  - 직전에 시전한 기술이 !자연의 군대!일 것.
+  - !자연의 군대!의 남은 쿨다운이 25초를 넘을 것.
+- !천체의 정렬!/!102560|화신!이 끝나간다면, !드리아드의 호의!를 2회의 !별빛쇄도!로 소모할 수 있도록 적절한 천공의 힘 생성 기술 사용.
+- 2타겟 상황일 경우, !별빛섬광!을 시전해 !일월식 (태양)! 진입.
+- 3타겟 이상일 경우, !천벌!을 시전해 !일월식 (달)! 진입.
+- [*Fury of EluneKAOE] !엘룬의 분노!.
+- 다음 중 하나라도 만족하면, !별똥별!.
+  - !별의 군주! 중첩이 2개 이하일 것.
+  - [*StarweaverKAOE] !393942|별재봉사의 날실! 효과를 받고 있을 것.
+  - [*Touch the CosmosKAOE] !우주의 손길! 효과를 받고 있을 것.
+- !자연의 은혜!/!암영의 포용! 효과를 받고 있을 때, !별빛섬광!.
+- [*Wild MushroomKAOE] 지금 !야생 버섯!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 대상이 !진균 번식! 효과를 받고 있지 않다면, !야생 버섯!. (역주: !진균 번식!은 야생 버섯을 쓰면 걸리는 디버프입니다. 즉, 이미 대상에게 걸려 있지 않으면 쓰라는 뜻입니다.)
+- [*New MoonKAOE] 다음의 조건을 모두 만족할 때, !보름달!.
+  - 지금 !보름달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않을 것.
+  - 현재 발동 중인 !일월식!이 끝나기 전에 !보름달! 시전을 마칠 수 있을 것.
+  - !천체의 정렬!/!102560|화신! 효과를 받고 있거나, 해당 기술의 남은 쿨다운이 10초 이상인 상황에서 !초승달!/!반달!/!보름달!이 곧 꽉 찰 상황일 것.
+- [*New MoonKAOE] 지금 !초승달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않는다면, !초승달!.
+- [*New MoonKAOE] 지금 !반달!을 시전하더라도 천공의 힘이 최대치를 초과하지 않고, 현재 발동 중인 !일월식!이 끝나기 전에 !반달! 시전을 마칠 수 있다면, !반달!.
+- [*Convoke the SpiritsKAOE] 6타겟 이하이고 !암영의 포용! 효과를 받고 있지 않을 때, !영혼 소집!.
+- [*StarweaverKAOE] !393944|별재봉사의 씨실! 효과를 받고 있을 때, !별빛쇄도!.
+- !일월식 (달)! 발동 중일 때, !별빛섬광!.
+- !일월식 (태양)! 발동 중일 때, !천벌!.
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
