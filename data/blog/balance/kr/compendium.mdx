@@ -243,7 +243,7 @@ translator: 'NeruTe'
 <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} name="영혼 소집" />
 <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="야생 버섯" />
 
-- (5.5-0.5*(인접한 대상 수))초 이상 생존할 적 대상에게, 뭉쳐 있을 때 !태양섬광!. (역주: 예를 들어, 3타겟이면 기준치가 4.5초가 됩니다.)
+- (5.5-0.5*(인접한 추가 대상 수))초 이상 생존할 적 대상에게, 뭉쳐 있을 때 !태양섬광!. (역주: 예를 들어, 3타겟이면 기준치가 4.5초가 됩니다.)
 - 지금 !달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, 6초 이상 생존할 적 대상에게 !달빛섬광!. 이때, !자연의 군대!도 !달빛섬광!을 써 주는 것을 감안할 것.
 - !드리아드의 호의! + !천체의 정렬!/!102560|화신! 발동 중일 때, !별빛쇄도!.
 - [*Stellar FlareKAOE] 다음 조건을 모두 만족할 때, !항성의 섬광!.
@@ -291,7 +291,7 @@ translator: 'NeruTe'
 <Checkbox isIcon id="EC 4pc" spellId={1236989} name="3시즌 4세트 착용" defaultCheck/>
 
 - [*EC 4pc] !1236989|모이는 달빛! 효과가 곧 만료될 때, !엘룬의 분노!. (역주: 4세트 프록 버프입니다.)
-- (5.5-0.5*(인접한 대상 수))초 이상 생존할 적 대상에게, 뭉쳐 있을 때 !태양섬광!. (역주: 예를 들어, 3타겟이면 기준치가 4.5초가 됩니다.)
+- (5.5-0.5*(인접한 추가 대상 수))초 이상 생존할 적 대상에게, 뭉쳐 있을 때 !태양섬광!. (역주: 예를 들어, 3타겟이면 기준치가 4.5초가 됩니다.)
 - 지금 !달빛섬광!을 시전해도 천공의 힘이 넘치지 않는다면, 6초 이상 생존할 적 대상에게 !달빛섬광!. 방어 전담이 몹을 모을 때 작업을 시작할 것.
 - [*Stellar FlareECAoE] 다음 조건을 모두 만족할 때, !항성의 섬광!.
   - 현재 대상이 앞으로 (8+(해당 대상에게 쓰는 !별빛섬광!이 적중하는 총 대상 수))초 이상 생존할 것. (역주: 예를 들어, 인접 3타겟이면 11초 이상 생존할 대상이어야 합니다.)
@@ -575,49 +575,49 @@ translator: 'NeruTe'
 </Collapsible>
 <Collapsible title="조화 특성 설명">
 
-- For the Balance Druid spec tree there are currently a solid number of talent iterations to choose from that don't provide a meaningful increase to your damage. Talents like !114107|Soul of the Forest!, !Crashing Star!, !Touch the Cosmos!, !Hail of Stars!, !Umbral Inspiration! and !Sundered Firmament! are mostly interchangeable in ST with Keeper of the Grove, which is the recommended hero talent for raid encounters. Below there will be short explanations for each talent. Keep in mind that most of these options don't provide any changes in your rotation or decision making.
+- 현재 조화 특성 트리에는 다양한 선택지가 존재하지만, 실질적인 성능 측면에서 각 특성이 큰 차이를 보여주지는 않는다. 가령 레이드에서 기본적으로 들고 가는 숲의 수호자 단일 빌드 기준으로, !숲의 영혼!, !몰아치는 별!, !우주의 손길!, !빗발치는 별!, !암영의 강화!, !분리된 하늘! 등의 특성은 서로 바꿔 찍어도 거의 영향이 없다. 대부분의 특성들은 운용법에 영향을 끼치지 않는다.
 
 ### 상단 선택 구간
 
-- !Stellar Flare! is currently simming noticeably worse than !Wild Surges! on ST and is generally untakeable outside of niche situations where you can maintain dots on targets that are far apart. !Wild Surges! is the recommended choice for most content outside of the niche scenarios where !Stellar Flare! can be useful.
+- !항성의 섬광!은 현재 !대자연의 쇄도! 대비 단일 시뮬레이션에서 유의미하게 뒤처지는 모습을 보여주고 있다. 때문에, 멀리 떨어진 여러 대상에게 동시에 지속 피해 기술을 유지해야 하는 드문 상황을 제외하면 사실상 찍을 수 없는 특성이다. 대부분의 경우 !대자연의 쇄도!가 권장된다.
+
+  !자연의 균형!은 단일 대상 기준 !쌍둥이 달!보다 약 +0.6% 높은 시뮬레이션 결과를 보여주지만, 대상이 하나라도 더 늘어나는 순간 !쌍둥이 달!에게 자리를 내어주게 된다.
   
-  !Nature's Balance! sims around 0.6% higher than !Twin Moons! on pure single target, but loses out whenever there are more targets, where you can benefit from !Twin Moons! spreading !Moonfire!.
-  
-  !Aetherial Kindling! is a preferred choice for any sustained AoE scenario where you can benefit from your DoT effects being extended. Very good for m+.
+  !에테르 덧불!은 지속 피해 기술을 자동으로 연장시켜 주는 특성으로, 지속되는 다중 대상 전투에서 항상 선호된다. 쐐기에서 매우 유용하다.
 
 ### 중단 선택 구간
 
-- !Sunseeker Mushroom! is the preferred option over !Wild Mushroom! and is taken in most builds, both for single target and AoE. 
-  
-  !Stellar Amplification! is recommended for ST scenarios where you cast Starsurge enough to keep good uptime on it, taken for most raid encounters.
-  
-  !Touch the Cosmos! lost some power since the start of Season 2, heading into Season 3 it is an optional talent for Keeper of the Grove in ST scenarios, and a talent you never take as Elune's Chosen. The 11.2 Elune's Chosen tier set only procs when you generate Astral Power with !Starfire! which devalues any talent that increases Astral Power generation or ones that give you free spenders. 
-  
-  !Umbral Intensity! is a very good talent for both !Keeper of the Grove! and !Elune's Chosen!. It also routes towards !Astronomical Impact! which is a mandatory talent for Keeper of the Grove whenever playing the 4-set.
-  
-  !Astronomical Impact! is a mandatory talent whenever you're playing the Keeper of the Grove 4-set as a considerable amount of your damage relies on !Dryad's Favor! critting.
-  
-  !114107|Soul of the Forest! in itself is an okay talent in ST and the extra Astral Power generation can help you in dealing with spots in raid where there is a lot of movement. It is mandatory in AoE.
-  
-  !Crashing Star! is an optional talent in ST, and is good when paired with !114107|Soul of the Forest!.
-  
-  !Hail of Stars! is an optional talent in general for ST, but loses out on AoE because of diminishing returns on !Shooting Stars! when there are more targets.
+- !태양추적 버섯!은 일반적으로 단일/광역 양면에서 !야생 버섯!보다 선호되는 기본 선택지이다. 
+
+  !항성 증폭!은 대상에게 꾸준히 !별빛쇄도!를 쏠 수 있는 대부분의 단일 대상 전투에서 권장된다. 대부분의 레이드 빌드에서 들고 가게 된다.
+
+  !우주의 손길!은 2시즌 이래 힘을 잃었고, 3시즌에 들어서는 숲의 수호자 기준 단일 빌드에서 경우에 따라 찍고, 엘룬의 대행자 기준 절대 쓰지 않는 특성이 되었다. 3시즌 엘룬의 대행자 4세트 효과는 직접 시전한 !별빛쇄도!가 아니라 !별빛섬광!에 의해 자동으로 발사되는 !별빛쇄도!에 의해서만 발동하기 때문에, 이와 같이 천공의 힘 생성 및 소모 효율에 관련된 특성의 가치가 떨어지게 되는 것이다.
+
+  !맹렬한 암영!은 두 영웅 특성 모두에게 아주 좋은 특성이다. 특히 숲의 수호자의 경우, 4세트 효과 때문에 필수적으로 찍게 되는 !천문학적 충격!으로도 이어진다.
+
+  !천문학적 충격!은 !드리아드의 호의!에 의존하는 숲의 수호자 티어 세트 효과를 극대화하기 위해 필수적인 특성이다.
+
+  !숲의 영혼!은 화력 기여분만 놓고 봐도 단일 상황에서 준수한 특성이며, 천공의 힘 생성량을 늘려 주기 때문에 움직임이 많은 상황에서 대응하기 좋다. 다중 대상 전투에서는 고정적으로 들고 가게 된다.
+
+  !몰아치는 별!은 단일 빌드에서 상황에 따라 선택할 수 있다. !숲의 영혼!과의 궁합이 좋다.
+
+  !빗발치는 별!은 단일 기준으로는 상황에 따라 선택할 수 있지만, 다중 대상 전투에서는 쓰이지 않는다. 대상 수가 늘어날수록 !202342|유성!의 효율이 떨어지기 때문이다.
 
 ### 하단 선택 구간
 
-- !Power of Goldrinn! got a buff heading into 11.1 and is recommended for all ST encounters.
-  
-  !Umbral Inspiration! can be swapped out on ST for another talent, but is generally recommended for all content.
-  
-  !Sundered Firmament! is optional for !Keeper of the Grove!, but mandatory for !Elune's Chosen! since it helps provide uptime for !Atmospheric Exposure!. 
-  
-  !Orbit Breaker! is good whenever paired with !Hail of Stars!, as the increased duration on !Solstice! helps saturate !Orbit Breaker! procs. 
+- !골드린의 힘!은 11.1 상향 조정 이래 모든 단일 대상 전투에서 권장되는 특성이다.
 
-  !Sundered Firmament! and !Orbit Breaker! both benefit from the damage increase from !Radiant Moonlight!.
-  
-  !Denizen of the Dream! is a strong single target node, but loses value in AoE scenarios. Recommended for all raid fights.
+  !암영의 강화!는 단일 대상 전투에서는 다른 특성으로 바꿀 수 있지만, 일반적으로 모든 상황에서 찍고 가는 것이 권장된다.
 
-  !Fury of Elune! is a mandatory talent for !Elune's Chosen! and optional for !Keeper of the Grove!. If you use this talent for !Keeper of the Grove! you should aim to line the cast up with your cooldowns or whenever there are more targets up.
+  !분리된 하늘!은 숲의 수호자에게는 선택 특성이지만, 엘룬의 대행자에게는 필수 특성이다. !429532|기후 노출! 유지 시간을 높여 주기 때문이다.
+
+  !궤도 파괴자!는 !빗발치는 별!과 함께 찍을 때 좋은 성능을 보여준다. !지점! 유지 시간이 높아지면 !궤도 파괴자!도 그만큼 더 많이 발동되기 때문이다.
+
+  !찬란한 달빛!은 !분리된 하늘!과 !궤도 파괴자! 두 특성 모두와 시너지가 있다.
+
+  !꿈의 주민!은 단일 대상에서 강력하지만, 다중 대상 전투에서는 힘을 잃는 특성이다. 레이드 빌드에서는 항상 권장된다.
+
+  !엘룬의 분노!는 엘룬의 대행자에게는 필수, 숲의 수호자에게는 선택 특성이다. 숲의 수호자로 이 특성을 찍었을 경우, 쿨기나 쫄 소환에 맞춰 쓰면 된다.
 
 </Collapsible>
 
