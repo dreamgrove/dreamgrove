@@ -706,7 +706,7 @@ translator: 'NeruTe'
 |  | [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=4795&hero=24&ilvl=723&spec=102) | 치명타가 붙어 있는 2분 사용 효과 장신구. 발동 시 대량의 주 능력치를 제공하고, 30초에 걸쳐 효과가 서서히 줄어듬. |
 | **A** | [금강석 공허핵](https://www.wowhead.com/ptr-2/item=242392/diamantine-voidcore?bonus=4795&hero=24&ilvl=723&spec=102) | 특화가 붙어 있는 지속 효과 장신구. 레이드 무기인 [공허유리 크리스](https://www.wowhead.com/ptr-2/item=237728/voidglass-kris?bonus=4795&class=11&hero=24&ilvl=723&spec=102) 및 [공허유리 뾰족지팡이](https://www.wowhead.com/ptr-2/item=237730/voidglass-spire?bonus=4795&class=11&hero=24&ilvl=723&spec=102)와 세트 효과가 있음. |
 |  | [수도원의 인장](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?bonus=4795&class=11&hero=24&ilvl=723&spec=102)  | 2분 사용 효과 장신구. 발동 시 가장 높은 2차 능력치를 제공. |
-|  | [아즈히카르의 돌출부](https://www.wowhead.com/ptr-2/item=242497/azhiccaran-parapodia?bonus=4795&hero=24&ilvl=723&spec=102) | 가속이 붙어 있는 지속 효과 장신구.Haste stat stick with passive damage and intellect effect from the new dungeon. |
+|  | [아즈히카르의 돌출부](https://www.wowhead.com/ptr-2/item=242497/azhiccaran-parapodia?bonus=4795&hero=24&ilvl=723&spec=102) | 가속이 붙어 있는 지속 효과 장신구. 발동 시 직접 피해를 주고 지능 제공. |
 |  | [영원한 직조의 백합](https://www.wowhead.com/ptr-2/item=242494/lily-of-the-eternal-weave?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | 90초 사용 효과 장신구. 발동 시 특화 제공. 신규 던전인 생태지구 알다니에서 획득 가능. |
 |  | [소레아의 은밀한 기술](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | 기본적인 능력치 제공형 장신구. 아군 대상을 지정해서 사용하면, 대상의 가장 높은 2차 능력치를 얻고, 대상도 해당 능력치를 약간 얻음. |
 |  | [아눕이카즈의 강화의 수정](https://www.wowhead.com/ptr-2/item=219312/empowering-crystal-of-anubikkaj?bonus=4795&class=11&hero=24&ilvl=723&spec=102) | 무작위 발동에 의해 무작위 2차 능력치를 제공. |
@@ -757,117 +757,116 @@ translator: 'NeruTe'
 
 **A:** 없다. !달빛섬광!, !태양섬광!, !항성의 섬광! 등 조화 드루이드의 지속 피해 기술은 모두 실시간으로 위력이 결정된다. 다시 말해, 이 기술들의 위력은 현재 본체의 !일월식! 진입 상태를 비롯한 각종 능력치/피해 증폭 효과 여부에 따라 자동으로 위력이 강해지기도 하고 약해지기도 한다.
 
-### Q: Is there a target count where spreading Sunfire or Moonfire is not worth it?
+### Q: 타겟 늘어나면 도트 작업 안 해도 되나요?
 
-**A:** No, having your DoT effects up increases your damage done to the target. The conditions for spreading Sunfire and Moonfire are tied to how long the target will live, and not how many targets there are.
+**A:** 그렇지 않다. 특화에 의해 !달빛섬광!/!태양섬광!이 적용된 적에게 가하는 피해가 증폭되기 때문이다. 작업 여부를 결정하는 요소는 적 대상의 수가 아니라 각 대상의 남은 수명이다.
 
-### Q: How do I sim for M+?
+### Q: 쐐기는 시뮬레이션 어떻게 하나요?
 
-**A:** It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, you can create a route using [Keystone Guru](https://keystone.guru/) and click the "simulate" option to generate a SimC string. Alternatively, you can use the [MDT Sim WeakAura](https://wago.io/LTwpBiuz_) which allows you to create a route in-game using the Mythic Dungeon Tools addon. Please keep in mind that ST damage is still a big part of mythic+.
+**A:** 일반적으로 "5타겟 40초" 같은 극단적인 시뮬레이션 결과는 배제하는 것이 좋다. 조화 드루이드의 능력치 영향은 사실 타겟 수의 영향을 별로 받지 않기 때문에, 그냥 기본적인 "1타겟 5분 패치워크" 결과를 기준으로 장비를 구성해도 문제가 없다. 특정 던전을 위해 시뮬레이션을 돌리고 싶다면, [Keystone Guru](https://keystone.guru/)에 접속하여 "simulate"를 눌러 SimC 문자열을 생성할 수 있다. 또는 [MDT Sim 위크오라](https://wago.io/LTwpBiuz_)를 사용하여, 게임 내 MDT 애드온으로 짠 루트를 활용하는 것도 가능하다. 무엇보다, 쐐기에서도 단일딜은 여전히 중요한 요소임을 잊지 말 것.
 
-### Q: I've seen a lot of people running build X instead of Y in Mythic+, is X better?
+### Q: 쐐기에서 다른 빌드 쓰는 사람이 더 많던데 그 빌드가 제일 좋나요?
 
-**A:** Try them out and make an informed decision! Most differences between builds are based on variables like target count, comps, combat timer or utility needed.
+**A:** 직접 써 보고 결정하는 것이 가장 좋다. 빌드를 가르는 요소는 타겟 수, 파티 조합, 전투 시간, 유틸리티 등이다.
 
-### Q: I'm doing really low damage in Mythic+, what am I doing wrong?
+### Q: 쐐기에서 딜이 너무 안 나와요.
 
-**A:**  If you double-checked your rotation and still feel like you're underperforming you could just be playing low keys, together with classes that have very bursty damage profiles. When playing a Balance Druid, mobs need to live long enough for you to actually start doing damage, which is something that doesn't really happen in keys lower than 12+. Consider focusing a bit more on ST or trying another spec, but take into account the fact that DPS isn't everything in a key.
+**A:** 로테이션을 재차 확인해도 잘못 굴리고 있는 요소가 없다면, 그냥 다니는 단수가 너무 낮고 순간 화력이 높은 클래스와 함께 돌고 있기 때문일 가능성이 있다. 조화 드루이드가 활약하려면 적들이 충분히 오래 살 수 있도록 최소한 12단 위로 가야 한다. 단일에 좀 더 힘을 쏟거나 다른 클래스를 하는 것도 방법이지만, 쐐기에서는 단순 딜만이 중요한 것이 아니라는 점도 잊지 말자.
 
-### Q: I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
+### Q: 시전 우선순위대로 잘 하고 있는 것 같은데 딜이 안 나와요.
 
-**A:** Log one of your fights and check it with [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs) and [wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and, as close to zero as possible, cancelled casts. Another common issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders.
+**A:** 본인 플레이의 로그를 기록하고 [warcraftlogs](https://articles.warcraftlogs.com/help/how-to-navigate-through-logs)와 [wowanalyzer](https://wowanalyzer.com/)를 활용해 분석하라. 기본적으로, 조화 드루이드는 언제나 무언가를 시전하고 있어야 한다. 타임라인 상의 downtime은 없어야 하며, 주문 시전 취소도 일어나지 않아야 한다. 또 다른 주된 문제 요소는 움직일 타이밍을 잘못 잡아서 도트만 쓰는 것인데, 곧 움직임이 예상될 때는 언제나 충분한 천공의 힘을 모아 두고 움직이면서 소모기를 쓸 수 있도록 해야 한다.
 
-### Q: I have read through the Compendium and I have some questions that are not outlined in this FAQ?
+### Q: FAQ에 없는 다른 질문이 있어요.
 
-**A:**  If you have any questions, you can go to the [Dreamgrove discord server](https://discord.gg/XaZ3uXJc) and then ask in there. This guide should cover everything you need, but there could always be some things left out or not considered. Remember, you are not guaranteed to receive the answer you would like.
+**A:**  [Dreamgrove Discord 서버](https://discord.gg/XaZ3uXJc)에서 직접 문의하라. 이 가이드만으로도 필요한 내용은 모두 다루고 있지만, 미처 고려하지 못한 부분이 있을 수 있기 때문이다. 다만 언제나 원하는 답을 들을 수 있으리라는 보장은 없다.
 
-# Additional Resources
-## Macros
+# 추가 자료
+## 매크로
 
-**Orbital Strike macro:**
-
-```
-#showtooltip
-/cast [@cursor] Celestial Alignment
-```
-
-**Force of Nature macro:**
+**커서 위치에 활공의 일격 천체 매크로**
 
 ```
 #showtooltip
-/cast [@cursor] Force of Nature
+/cast [@cursor] 천체의 정렬
 ```
 
-**Trinket macro:**
+**커서 위치에 자연의 군대 매크로**
 
-If you are using an on-use trinket that should go along with your cooldowns, use the following macro (/13 for top trinket slot, and /14 for bottom trinket slot)
+```
+#showtooltip
+/cast [@cursor] 자연의 군대
+```
+
+**장신구 매크로**
+
+쿨기와 묶어 쓰는 장신구가 있다면 (/13: 위 칸, /14: 아래 칸) 다음의 매크로를 사용해 별도의 단축키 배정 없이 !천체의 정렬!과 동시에 발동시킬 수 있다.
 
 ```
 #showtooltip
 /use 13
 /use 14
-/cast [@cursor] Celestial Alignment
+/cast [@cursor] 천체의 정렬
 ```
 
-## Cancelaura Macros
+## 오라취소 매크로
 
-### **Cancelling Starlord**
+### **별의 군주 오라취소**
 
-**Cancelling Starlord is entirely optional and is neither a DPS gain nor loss.**
+**별의 군주 오라취소 그 자체는 화력에 전혀 영향을 끼치지 않는다.**
 
-If you want to engage in this entirely optional method without incurring a DPS loss, you should aim to cancel Starlord at any point in an Eclipse window where the buff is currently at less than two seconds, and you are about to use !Starsurge! to prevent overcapping.
-
-```
-#showtooltip
-/cancelaura Starlord
-```
-
-### **Cancelling Dreamstate**
+화력 손실 없이 이 매크로를 활용하려면, !일월식! 내에서 기존 !별의 군주!의 남은 지속 시간이 2초 미만이고, 천공의 힘이 거의 꽉 차 곧 !별빛쇄도!를 사용하기 직전일 때 사용하면 된다.
 
 ```
 #showtooltip
-/cast Wrath
-/cancelaura [nocombat] dreamstate
+/cancelaura 별의 군주
 ```
 
-## Useful WeakAuras and Other Profiles
+### **꿈결 오라취소**
 
-### **Balance WeakAura Packs**
+```
+#showtooltip
+/cast 천벌
+/cancelaura [nocombat] 꿈결
+```
 
-The following links lead to various Balance Druid WeakAura packs. These contain everything that's recommended to track to play at a high level. None of these are particular better or more useful than others, and which one you should use is up to your personal preference.
+## 유용한 위크오라와 Plater 프로파일
 
-- [Oi Balance pack](https://wago.io/OiBalance)
-- [Shrom's Ultimate AP Bar](https://wago.io/GzpP7i8ic)
+### **조화 드루이드 통합팩**
+
+아래에는 다양한 조화 드루이드 전용 통합 위크오라가 링크되어 있다. 최고 수준의 플레이에서 체크해야 하는 모든 사항을 추적하고 있으며, 성능 간 차이는 없으므로 개인 취향에 맞는 것을 쓰면 된다.
+
+- [Oi의 조화 드루이드 팩](https://wago.io/OiBalance)
+- [Shrom의 조화 드루이드 팩](https://wago.io/GzpP7i8ic)
 - [LuckyOneUI Druid](https://wago.io/LuckyoneUI-Druid)
-- [Afenar The War Within](https://wago.io/HkrSdHFMG)
-- [Shrom's AP Bar - Standalone](https://wago.io/J5V9sTM0F)
+- [내부 전쟁 Afenar](https://wago.io/HkrSdHFMG)
+- [Shrom의 천공의 힘 바](https://wago.io/J5V9sTM0F)
 
-### **Tier Set Tracker**
+### **티어 세트 효과 추적**
 
-You can use [this weakaura](https://wago.io/BoomkinTierSet) to track the current Moonkin tier set. Trackers like this is also included in the weakaura packs above, but these are standalone auras.
+[이 위크오라](https://wago.io/BoomkinTierSet)를 통해 !드리아드!와 !드리아드의 호의! / !모이는 달빛!을 추적할 수 있다. 위의 통합팩에도 포함되어 있지만, 이것만 따로 쓰고 싶다면 참고.
 
-### **Jundies Plater Profile**
+### **Jundies의 Plater 프로파일**
 
-[This profile for Plater](https://wago.io/ak3iS95aa) is among the most used and asked about public nameplate profiles for Moonkins, having customized color and priority depending on the type of mob in M+.
+[Jundies의 Plater 프로파일](https://wago.io/ak3iS95aa)은 가장 널리 사용되고 가장 많은 사람이 찾는 이름표 프로파일이다. 쐐기돌 던전에서 적의 종류와 우선도에 따라 적절한 색깔 표기를 지원한다.
 
-### **Regrowth Tracker for Blooming Infusion**
+### **만발하는 주입 재생 추적**
 
-[This weakaura](https://wago.io/BloomingInfusion) tracks your number of casts of Regrowth before you get the Blooming Infusion buff that increases the damage of your next Wrath/Starfire and makes them instant cast, and also tracks your number of Starsurge casts before you proc an instant Regrowth.
+[이 위크오라](https://wago.io/BloomingInfusion)는 !만발하는 주입! 발동까지 앞으로 !재생!을 몇 번 더 시전해야 하는지 표시한다. !만발하는 주입!은 다음 !천벌!/!별빛섬광!의 시전 시간을 단축시키고 피해량도 늘려 주는 강화 효과이다. 또한, 이 특성의 다른 효과인 즉발 !재생! 발동까지 필요한 !별빛쇄도! 횟수도 함께 추적하여 표시한다.
 
-### **Casts until you can cast Starfire**
+### **단일 별빛섬광 타이머**
 
-[Starfire Alerter](https://wago.io/rrtAyRQjF):
-See the description of the WA for more details. This is not a required WA but will make it easier to not get into situations where you are wasting a Starfire cast inside Solar Eclipse.
+[Starfire Alerter](https://wago.io/rrtAyRQjF)는 꼭 필요한 위크오라는 아니지만, !일월식 (태양)! 내에서 별빛섬광을 너무 일찍 시전하게 되는 일을 막아 준다.
 
-## Simc Code Directory 
-[Item Strings for Simming](https://www.dreamgrove.gg/static/sims/itemstrings.txt)
+## Simc 코드 디렉토리 
+[아이템 문자열](https://www.dreamgrove.gg/static/sims/itemstrings.txt)
 
-[String to Sim Tier Set](https://www.dreamgrove.gg/static/sims/tiersimcode.txt) (paste in advanced below your simc addon output)
+[티어 세트 시뮬레이션용 문자열](https://www.dreamgrove.gg/static/sims/tiersimcode.txt) (입력 창 아래 Advanced에 붙여넣기)
 
-[SimC String for Every Food/Flask Combination](https://www.dreamgrove.gg/static/sims/foodandflask.txt) (paste in advanced below your simc addon output)
+[모든 음식/영약 조합 문자열](https://www.dreamgrove.gg/static/sims/foodandflask.txt) (입력 창 아래 Advanced에 붙여넣기)
 
-[Race Sim](https://www.dreamgrove.gg/static/sims/racesims3.htm) 
+[종족별 성능 시뮬레이션](https://www.dreamgrove.gg/static/sims/racesims3.htm) 
 
-[String to Sim Race](https://www.dreamgrove.gg/static/sims/racesimcode.txt) (paste in advanced below your simc addon output)
+[종족 성능 시뮬레이션용 문자열](https://www.dreamgrove.gg/static/sims/racesimcode.txt) (입력 창 아래 Advanced에 붙여넣기)
 
-[Current APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
+[현행 조화 드루이드 APL](https://github.com/dreamgrove/dreamgrove/blob/master/sims/owl/balance.txt)
