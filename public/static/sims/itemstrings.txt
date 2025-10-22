@@ -1,5 +1,3 @@
-
-
 druid=Base
 level=80
 race=night_elf
@@ -7,151 +5,151 @@ role=spell
 spec=balance
 talents=CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALUmtMGzMwDYWYZmZAzMGLzsNjlxMjZmFjZGzMjNswAMAbbjNMNzsMCAAAwmZmZMwmBG
 
-head=,id=237682,bonus_id=4795/1808,gem_id=213743,ilevel=723
-neck=,id=242406,bonus_id=4795/8781,gem_id=213467/213467,ilevel=723
-shoulder=,id=237552,bonus_id=4795,ilevel=723
+head=,id=237682,bonus_id=4795/1808,gem_id=213743,ilevel=730
+neck=,id=242406,bonus_id=4795/8781,gem_id=213467/213467,ilevel=730
+shoulder=,id=237552,bonus_id=4795,ilevel=730
 back=,id=235499,bonus_id=9886/12361/12239,enchant_id=7403,gem_id=238044,ilevel=730
-chest=,id=237685,bonus_id=4795,enchant_id=7364,ilevel=723
-wrist=,id=219334,bonus_id=10421/1599/1808/11109/8960/8791,enchant_id=7385,gem_id=213467,crafted_stats=36/49
-hands=,id=237683,bonus_id=4795,ilevel=723
-waist=,id=237557,bonus_id=4795/1808,gem_id=213491,ilevel=723
-legs=,id=237681,bonus_id=4795,enchant_id=7534,ilevel=723
-feet=,id=243306,bonus_id=4795/13504,enchant_id=7424,ilevel=723
-finger1=,id=237570,bonus_id=4795/8781,enchant_id=7334,gem_id=213467/213482,ilevel=723
-finger2=,id=221200,bonus_id=4795/8781,enchant_id=7334,gem_id=213491/213458,ilevel=723
-trinket1=,id=242402,bonus_id=4795,ilevel=723
-trinket2=,id=242395,bonus_id=1533/12361/12239,ilevel=723
-main_hand=,id=237728,bonus_id=4795,enchant_id=7439,ilevel=723
-off_hand=,id=222566,bonus_id=10421/9633/8902/12053/12050/1485/11300/8960,ilevel=720,crafted_stats=49/40
+chest=,id=237685,bonus_id=4795,enchant_id=7364,ilevel=730
+wrist=,id=219334,bonus_id=10421/1599/1808/11109/8960/8791,enchant_id=7385,gem_id=213467,crafted_stats=36/49,ilevel=727
+hands=,id=237683,bonus_id=4795,ilevel=730
+waist=,id=237557,bonus_id=4795/1808,gem_id=213491,ilevel=730
+legs=,id=237681,bonus_id=4795,enchant_id=7534,ilevel=730
+feet=,id=243306,bonus_id=4795/13504,enchant_id=7424,ilevel=730
+finger1=,id=237570,bonus_id=4795/8781,enchant_id=7334,gem_id=213467/213482,ilevel=730
+finger2=,id=221200,bonus_id=4795/8781,enchant_id=7334,gem_id=213491/213458,ilevel=730
+trinket1=,id=242402,bonus_id=4795,ilevel=730
+trinket2=,id=242395,bonus_id=1533/12361/12239,ilevel=730
+main_hand=,id=237728,bonus_id=4795,enchant_id=7439,ilevel=730
+off_hand=,id=222566,bonus_id=10421/9633/8902/12053/12050/1485/11300/8960,ilevel=727,crafted_stats=49/40,ilevel=727
 
 ### Gear in Bags (Reconstructed by Top Gear, may not be perfect)
 # wrist=,id=219334,bonus_id=10421/1599/1808/11304/8960/8794,enchant_id=7385,gem_id=213467,crafted_stats=36/49
 # waist=,id=219331,bonus_id=10421/1599/1808/11303/8960/8791,gem_id=213467,crafted_stats=36/49
-# off_hand=,id=185812,bonus_id=4795,ilevel=723
-# head=,id=237682,bonus_id=4795/1808,gem_id=213491,ilevel=723
-# neck=,id=242406,bonus_id=4795/8781,gem_id=213491/213491,ilevel=723
+# off_hand=,id=185812,bonus_id=4795,ilevel=730
+# head=,id=237682,bonus_id=4795/1808,gem_id=213491,ilevel=730
+# neck=,id=242406,bonus_id=4795/8781,gem_id=213491/213491,ilevel=730
 # shoulder=,id=219330,bonus_id=10421/9633/8902/12053/12050/1485/11304/8960/8791,crafted_stats=49/40
 # back=,id=235499,bonus_id=9886/12361/12239,enchant_id=7403,gem_id=238045,ilevel=730
 # wrist=,id=219334,bonus_id=10421/1599/1808/11304/8960/8794,enchant_id=7385,gem_id=213491,crafted_stats=36/49
-# finger1=,id=237570,bonus_id=4795/8781,enchant_id=7346,gem_id=213491/213491,ilevel=723
-# finger2=,id=221200,bonus_id=4795/8781,enchant_id=7346,gem_id=213491/213491,ilevel=723
-# neck=,id=242406,bonus_id=4795/8781,gem_id=213494/213494,ilevel=723
+# finger1=,id=237570,bonus_id=4795/8781,enchant_id=7346,gem_id=213491/213491,ilevel=730
+# finger2=,id=221200,bonus_id=4795/8781,enchant_id=7346,gem_id=213491/213491,ilevel=730
+# neck=,id=242406,bonus_id=4795/8781,gem_id=213494/213494,ilevel=730
 # shoulder=,id=237680,bonus_id=4800/4786/1533/12361
-# chest=,id=242482,bonus_id=4795,enchant_id=7364,ilevel=723
+# chest=,id=242482,bonus_id=4795,enchant_id=7364,ilevel=730
 # wrist=,id=219334,bonus_id=10421/1599/1808/11304/8960/8794,enchant_id=7385,gem_id=213494,crafted_stats=36/49
 # waist=,id=219331,bonus_id=10421/1599/1808/11303/8960/8794,gem_id=213494,crafted_stats=36/49
-# finger1=,id=237570,bonus_id=4795/8781,enchant_id=7352,gem_id=213494/213494,ilevel=723
-# finger2=,id=221200,bonus_id=4795/8781,enchant_id=7352,gem_id=213494/213494,ilevel=723
-# trinket2=,id=242392,bonus_id=4795,ilevel=723
-# main_hand=,id=237730,bonus_id=4795,enchant_id=7448,ilevel=723
-# neck=,id=178827,bonus_id=4795/8781,gem_id=213470/213497,ilevel=723
+# finger1=,id=237570,bonus_id=4795/8781,enchant_id=7352,gem_id=213494/213494,ilevel=730
+# finger2=,id=221200,bonus_id=4795/8781,enchant_id=7352,gem_id=213494/213494,ilevel=730
+# trinket2=,id=242392,bonus_id=4795,ilevel=730
+# main_hand=,id=237730,bonus_id=4795,enchant_id=7448,ilevel=730
+# neck=,id=178827,bonus_id=4795/8781,gem_id=213470/213497,ilevel=730
 # wrist=,id=219334,bonus_id=10421/1599/1808/11304/8960,enchant_id=7385,gem_id=213482,crafted_stats=36/49
 # waist=,id=219331,bonus_id=10421/1599/1808/11303/8960,gem_id=213458,crafted_stats=36/49
-# finger1=,id=237570,bonus_id=4795/8781,enchant_id=7346,gem_id=213458/213458,ilevel=723
-# finger2=,id=178824,bonus_id=4795/8781,enchant_id=7346,gem_id=213458/213458,ilevel=723
-# main_hand=,id=237730,bonus_id=4795,enchant_id=7460,ilevel=723
-# back=,id=237677,bonus_id=4795,enchant_id=7403,ilevel=723
-# trinket2=,id=219314,bonus_id=4795,ilevel=723
-# head=,id=221163,bonus_id=4795,ilevel=723
-# head=,id=221125,bonus_id=4795,ilevel=723
-# head=,id=234498,bonus_id=4795,ilevel=723
-# head=,id=237682,bonus_id=4795,ilevel=723
-# head=,id=185797,bonus_id=4795,ilevel=723
-# head=,id=237525,bonus_id=4795,ilevel=723
-# neck=,id=185842,bonus_id=4795,ilevel=723
-# neck=,id=237569,bonus_id=4795,ilevel=723
-# neck=,id=237568,bonus_id=4795,ilevel=723
-# neck=,id=185820,bonus_id=4795,ilevel=723
-# neck=,id=242406,bonus_id=4795,ilevel=723
-# neck=,id=178827,bonus_id=4795,ilevel=723
-# shoulder=,id=221148,bonus_id=4795,ilevel=723
-# shoulder=,id=185802,bonus_id=4795,ilevel=723
-# shoulder=,id=234500,bonus_id=4795,ilevel=723
-# shoulder=,id=237680,bonus_id=4795,ilevel=723
-# shoulder=,id=242486,bonus_id=4795,ilevel=723
-# back=,id=250104,bonus_id=4795,ilevel=723
-# back=,id=237677,bonus_id=4795,ilevel=723
-# chest=,id=221130,bonus_id=4795,ilevel=723
-# chest=,id=185786,bonus_id=4795,ilevel=723
-# chest=,id=237541,bonus_id=4795,ilevel=723
-# wrist=,id=237546,bonus_id=4795,ilevel=723
-# wrist=,id=221142,bonus_id=4795,ilevel=723
-# wrist=,id=185817,bonus_id=4795,ilevel=723
-# wrist=,id=237546,bonus_id=4795,ilevel=723
-# wrist=,id=237678,bonus_id=4795,ilevel=723
-# wrist=,id=237562,bonus_id=4795,ilevel=723
-# wrist=,id=234499,bonus_id=4795,ilevel=723
-# wrist=,id=221157,bonus_id=4795,ilevel=723
-# hands=,id=185791,bonus_id=4795,ilevel=723
-# hands=,id=178832,bonus_id=4795,ilevel=723
-# hands=,id=237540,bonus_id=4795,ilevel=723
-# hands=,id=237540,bonus_id=4795,ilevel=723
-# waist=,id=221134,bonus_id=4795,ilevel=723
-# waist=,id=178823,bonus_id=4795,ilevel=723
-# waist=,id=237533,bonus_id=4795,ilevel=723
-# waist=,id=237679,bonus_id=4795,ilevel=723
-# waist=,id=237557,bonus_id=4795,ilevel=723
-# waist=,id=185809,bonus_id=4795,ilevel=723
-# legs=,id=221153,bonus_id=4795,ilevel=723
-# legs=,id=242473,bonus_id=4795,ilevel=723
-# legs=,id=237531,bonus_id=4795,ilevel=723
-# legs=,id=185801,bonus_id=4795,ilevel=723
-# legs=,id=178819,bonus_id=4795,ilevel=723
-# legs=,id=243040,bonus_id=4795,ilevel=723
-# feet=,id=221120,bonus_id=4795,ilevel=723
-# feet=,id=237684,bonus_id=4795,ilevel=723
-# feet=,id=246280,bonus_id=4795,ilevel=723
-# feet=,id=237553,bonus_id=4795,ilevel=723
-# feet=,id=237565,bonus_id=4795,ilevel=723
-# feet=,id=237553,bonus_id=4795,ilevel=723
-# main_hand=,id=221165,bonus_id=4795,ilevel=723
-# main_hand=,id=221122,bonus_id=4795,ilevel=723
-# main_hand=,id=178829,bonus_id=4795,ilevel=723
-# main_hand=,id=185821,bonus_id=4795,ilevel=723
-# main_hand=,id=237736,bonus_id=4795,ilevel=723
-# main_hand=,id=242484,bonus_id=4795,ilevel=723
-# main_hand=,id=185822,bonus_id=4795,ilevel=723
-# off_hand=,id=237724,bonus_id=4795,ilevel=723
-# off_hand=,id=237742,bonus_id=4795,ilevel=723
-# off_hand=,id=221132,bonus_id=4795,ilevel=723
-# finger1=,id=246281,bonus_id=4795,ilevel=723
-# finger1=,id=237570,bonus_id=4795,ilevel=723
-# finger1=,id=221136,bonus_id=4795,ilevel=723
-# finger1=,id=242491,bonus_id=4795,ilevel=723
-# finger1=,id=221141,bonus_id=4795,ilevel=723
-# finger1=,id=221200,bonus_id=4795,ilevel=723
-# finger1=,id=237567,bonus_id=4795,ilevel=723
-# finger1=,id=185813,bonus_id=4795,ilevel=723
-# finger1=,id=242405,bonus_id=4795,ilevel=723
-# finger1=,id=178824,bonus_id=4795,ilevel=723
-# trinket1=,id=219313,bonus_id=4795,ilevel=723
-# trinket1=,id=232545,bonus_id=4795,ilevel=723
-# trinket1=,id=242497,bonus_id=4795,ilevel=723
-# trinket1=,id=178826,bonus_id=4795,ilevel=723
-# trinket1=,id=219308,bonus_id=4795,ilevel=723
-# trinket1=,id=219312,bonus_id=4795,ilevel=723
-# trinket1=,id=185846,bonus_id=4795,ilevel=723
-# trinket1=,id=242399,bonus_id=4795,ilevel=723
-# trinket1=,id=242494,bonus_id=4795,ilevel=723
-# trinket1=,id=190958,bonus_id=4795,ilevel=723
-# trinket1=,id=242403,bonus_id=4795,ilevel=723
-# trinket1=,id=242398,bonus_id=4795,ilevel=723
-# trinket1=,id=219314,bonus_id=4795,ilevel=723
-# trinket1=,id=219317,bonus_id=4795,ilevel=723
+# finger1=,id=237570,bonus_id=4795/8781,enchant_id=7346,gem_id=213458/213458,ilevel=730
+# finger2=,id=178824,bonus_id=4795/8781,enchant_id=7346,gem_id=213458/213458,ilevel=730
+# main_hand=,id=237730,bonus_id=4795,enchant_id=7460,ilevel=730
+# back=,id=237677,bonus_id=4795,enchant_id=7403,ilevel=730
+# trinket2=,id=219314,bonus_id=4795,ilevel=730
+# head=,id=221163,bonus_id=4795,ilevel=730
+# head=,id=221125,bonus_id=4795,ilevel=730
+# head=,id=234498,bonus_id=4795,ilevel=730
+# head=,id=237682,bonus_id=4795,ilevel=730
+# head=,id=185797,bonus_id=4795,ilevel=730
+# head=,id=237525,bonus_id=4795,ilevel=730
+# neck=,id=185842,bonus_id=4795,ilevel=730
+# neck=,id=237569,bonus_id=4795,ilevel=730
+# neck=,id=237568,bonus_id=4795,ilevel=730
+# neck=,id=185820,bonus_id=4795,ilevel=730
+# neck=,id=242406,bonus_id=4795,ilevel=730
+# neck=,id=178827,bonus_id=4795,ilevel=730
+# shoulder=,id=221148,bonus_id=4795,ilevel=730
+# shoulder=,id=185802,bonus_id=4795,ilevel=730
+# shoulder=,id=234500,bonus_id=4795,ilevel=730
+# shoulder=,id=237680,bonus_id=4795,ilevel=730
+# shoulder=,id=242486,bonus_id=4795,ilevel=730
+# back=,id=250104,bonus_id=4795,ilevel=730
+# back=,id=237677,bonus_id=4795,ilevel=730
+# chest=,id=221130,bonus_id=4795,ilevel=730
+# chest=,id=185786,bonus_id=4795,ilevel=730
+# chest=,id=237541,bonus_id=4795,ilevel=730
+# wrist=,id=237546,bonus_id=4795,ilevel=730
+# wrist=,id=221142,bonus_id=4795,ilevel=730
+# wrist=,id=185817,bonus_id=4795,ilevel=730
+# wrist=,id=237546,bonus_id=4795,ilevel=730
+# wrist=,id=237678,bonus_id=4795,ilevel=730
+# wrist=,id=237562,bonus_id=4795,ilevel=730
+# wrist=,id=234499,bonus_id=4795,ilevel=730
+# wrist=,id=221157,bonus_id=4795,ilevel=730
+# hands=,id=185791,bonus_id=4795,ilevel=730
+# hands=,id=178832,bonus_id=4795,ilevel=730
+# hands=,id=237540,bonus_id=4795,ilevel=730
+# hands=,id=237540,bonus_id=4795,ilevel=730
+# waist=,id=221134,bonus_id=4795,ilevel=730
+# waist=,id=178823,bonus_id=4795,ilevel=730
+# waist=,id=237533,bonus_id=4795,ilevel=730
+# waist=,id=237679,bonus_id=4795,ilevel=730
+# waist=,id=237557,bonus_id=4795,ilevel=730
+# waist=,id=185809,bonus_id=4795,ilevel=730
+# legs=,id=221153,bonus_id=4795,ilevel=730
+# legs=,id=242473,bonus_id=4795,ilevel=730
+# legs=,id=237531,bonus_id=4795,ilevel=730
+# legs=,id=185801,bonus_id=4795,ilevel=730
+# legs=,id=178819,bonus_id=4795,ilevel=730
+# legs=,id=243040,bonus_id=4795,ilevel=730
+# feet=,id=221120,bonus_id=4795,ilevel=730
+# feet=,id=237684,bonus_id=4795,ilevel=730
+# feet=,id=246280,bonus_id=4795,ilevel=730
+# feet=,id=237553,bonus_id=4795,ilevel=730
+# feet=,id=237565,bonus_id=4795,ilevel=730
+# feet=,id=237553,bonus_id=4795,ilevel=730
+# main_hand=,id=221165,bonus_id=4795,ilevel=730
+# main_hand=,id=221122,bonus_id=4795,ilevel=730
+# main_hand=,id=178829,bonus_id=4795,ilevel=730
+# main_hand=,id=185821,bonus_id=4795,ilevel=730
+# main_hand=,id=237736,bonus_id=4795,ilevel=730
+# main_hand=,id=242484,bonus_id=4795,ilevel=730
+# main_hand=,id=185822,bonus_id=4795,ilevel=730
+# off_hand=,id=237724,bonus_id=4795,ilevel=730
+# off_hand=,id=237742,bonus_id=4795,ilevel=730
+# off_hand=,id=221132,bonus_id=4795,ilevel=730
+# finger1=,id=246281,bonus_id=4795,ilevel=730
+# finger1=,id=237570,bonus_id=4795,ilevel=730
+# finger1=,id=221136,bonus_id=4795,ilevel=730
+# finger1=,id=242491,bonus_id=4795,ilevel=730
+# finger1=,id=221141,bonus_id=4795,ilevel=730
+# finger1=,id=221200,bonus_id=4795,ilevel=730
+# finger1=,id=237567,bonus_id=4795,ilevel=730
+# finger1=,id=185813,bonus_id=4795,ilevel=730
+# finger1=,id=242405,bonus_id=4795,ilevel=730
+# finger1=,id=178824,bonus_id=4795,ilevel=730
+# trinket1=,id=219313,bonus_id=4795,ilevel=730
+# trinket1=,id=232545,bonus_id=4795,ilevel=730
+# trinket1=,id=242497,bonus_id=4795,ilevel=730
+# trinket1=,id=178826,bonus_id=4795,ilevel=730
+# trinket1=,id=219308,bonus_id=4795,ilevel=730
+# trinket1=,id=219312,bonus_id=4795,ilevel=730
+# trinket1=,id=185846,bonus_id=4795,ilevel=730
+# trinket1=,id=242399,bonus_id=4795,ilevel=730
+# trinket1=,id=242494,bonus_id=4795,ilevel=730
+# trinket1=,id=190958,bonus_id=4795,ilevel=730
+# trinket1=,id=242403,bonus_id=4795,ilevel=730
+# trinket1=,id=242398,bonus_id=4795,ilevel=730
+# trinket1=,id=219314,bonus_id=4795,ilevel=730
+# trinket1=,id=219317,bonus_id=4795,ilevel=730
 # trinket1=,id=235363,bonus_id=1582/12357/12239,ilevel=710
-# wrist=,id=219334,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# hands=,id=219333,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# legs=,id=219332,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# waist=,id=219331,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# shoulder=,id=219330,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# head=,id=219329,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# chest=,id=219328,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# feet=,id=219327,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# main_hand=,id=222568,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# off_hand=,id=222566,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# neck=,id=215136,bonus_id=10421/9633/8902/10878/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# finger1=,id=215135,bonus_id=10421/9633/8902/10878/12053/12050/1485,crafted_stats=49/40,ilevel=720
-# trinket1=,id=242400,bonus_id=40/10356/12361/1533/10255,ilevel=723
+# wrist=,id=219334,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# hands=,id=219333,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# legs=,id=219332,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# waist=,id=219331,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# shoulder=,id=219330,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# head=,id=219329,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# chest=,id=219328,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# feet=,id=219327,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# main_hand=,id=222568,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# off_hand=,id=222566,bonus_id=10421/9633/8902/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# neck=,id=215136,bonus_id=10421/9633/8902/10878/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# finger1=,id=215135,bonus_id=10421/9633/8902/10878/12053/12050/1485,crafted_stats=49/40,ilevel=727
+# trinket1=,id=242400,bonus_id=40/10356/12361/1533/10255,ilevel=730
 # trinket1=,id=246940,bonus_id=12355/40/1572/10255,ilevel=710
 # trinket1=,id=230198,bonus_id=6652/10356/12376/1533/10255,ilevel=684
 # trinket1=,id=230192,bonus_id=6652/10356/12376/1533/10255,ilevel=684
