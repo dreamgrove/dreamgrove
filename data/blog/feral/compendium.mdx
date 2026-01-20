@@ -102,10 +102,10 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Select which talents you have to filter the priority list:**
 
-<Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck/>
+<Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck />
 <Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
 <Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" />
-<Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" />
+<Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" radio="Convoke AOE" defaultCheck />
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="Incarnation" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration" />
@@ -154,7 +154,7 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Last Priority: Generators</summary>
 
-> [!TIP]
+> [!NOTE]
 > If you have Panther's Guile talented, it is possible that using !Shred! specifically at 0 combo points is worth doing at low (2-3) or high (10+) target counts
 
 1. [*Sudden Ambush AOE] !Swipe! if you have !Sudden Ambush! proc or a !Clearcasting! proc.
@@ -169,10 +169,15 @@ The way this section is written is very formulaic and has the same structure as 
 7. [*~Double Clawed Rake AOE] Refresh !Rake!'s that are either missing, or in pandemic range.
 8. !Swipe!
 
+<div className="pb-6">
+</div>
+
 > [!TIP]
 > In dungeons, with !Killing Strikes! and !102543|Incarn! talented, spread out the !58984|Shadowmeld! and !Prowl! casts such that you get more !Killing Strikes! resets. Even if it means you don't take advantage of !Pouncing Strikes!.
 
 </details>
+
+
 
 # Talents
 
@@ -263,7 +268,7 @@ CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMzMzsZegtx2MzMzDMzAAAAwSwsZgZmpmxswMzMLjxYA
 | **Legs** | [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit) |
 | **Wrist** | [Chant of Armored Avoidance](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance) |
 | **Boots** | [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march) |
-| **Ring** | You should always sim your own character to determine what enchant to use in this slot. They tend to be very close. If you don't want to sim, [Radiant Mastery](https://www.wowhead.com/item=223677/enchant-ring-radiant-mastery) is usually a safe choice. |
+| **Ring** | Any of the Radiant Secondaries, for example: [Radiant Critical Strike](https://www.wowhead.com/item=223662/enchant-ring-radiant-critical-strike) |
 
 > [!TIP]
 > Don't forget to add sockets to your rings and necklaces using [Magnificent Jeweler's Setting](https://www.wowhead.com/item=213777/magnificent-jewelers-setting)!
@@ -307,7 +312,7 @@ These trinket lists are in rough estimated order of strength, assuming the highe
 **For use in Mythic+:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
-| **S Tier** | [Unyielding Netherpism](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
+| **S Tier** | [Unyielding Netherpism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
 | **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) |
 | **B Tier** | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) |
 | | [So'leah's Secret Technique](https://www.wowhead.com/item=185818/soleahs-secret-technique?class=11&hero=21&ilvl=723&spec=103) | Sim which secondary is best, but odds are its mastery. Arguably should be rated higher for consistency + ally benefit.
@@ -321,17 +326,16 @@ Q: Should we be playing double on-use trinkets?
 
 A: No, Feral will typically play just one on-use
 
+
 Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
 
 A: None. The increase from other people having it is pretty small though.
+
 
 Q: Why do damaging items deal more damage as Wildstalker?
 
 A: The Wildstalker Hero Talent !440119|Vigorous Creepers! also buffs the damage of non-druid effects.
 
-Q: [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) is simming much higher than [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) in dungeonslice, why is it in the same tier?
-
-A: [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) cheats a bit by not having any on-pull value. Since dungeonslice starts with a single-target boss, this means all of its uses are in AoE. To get a better idea of this trinkets value in comparison to [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103), try dungeonroute instead. But also, dying is a fact of life, and that affects this trinket a lot more than the other.
 
 
 # Miscellaneous
@@ -371,7 +375,7 @@ Fun trivia: the name “pandemic” derives from an old warlock passive that was
 
 __What is “clipping?”__
 
-Clipping refers to refreshing a dot prior to its pandemic window. Sometimes you will want to do this with Feral because of snapshotting and/or !Bloodtalons!.
+Clipping refers to refreshing a dot prior to its pandemic window.
 
 ## Macros
 
