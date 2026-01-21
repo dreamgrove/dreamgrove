@@ -103,10 +103,10 @@ translator: 'NeruTe'
 
 **다음 중 현재 선택한 특성을 모두 체크**
 
-<Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="발톱의 드루이드" radio="hero talents AOE" defaultCheck/>
+<Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="발톱의 드루이드" radio="hero talents AOE" defaultCheck />
 <Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="야생추적자" radio="hero talents AOE"/>
 <Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="이중 발톱 갈퀴" />
-<Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="야성의 광기" />
+<Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="야성의 광기" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits AOE" spellId={391528} name="영혼 소집" radio="Convoke AOE" defaultCheck />
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="화신" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="달 바라기" />
@@ -155,7 +155,7 @@ translator: 'NeruTe'
 <details open>
 <summary>3순위: 연계 점수 생성기</summary>
 
-> [!TIP]
+> [!NOTE]
 > !1280352|표범의 기만! 특성을 선택했을 경우, 매우 적거나 (2-3개 대상) 매우 많은 (10+개 대상) 적을 상대할 때는 연계 점수가 0점일 때 !칼날 발톱!을 사용하여 도박을 해 보는 것이 합리적인 선택이 될 가능성이 있다.
 
 1. [*Sudden Ambush AOE] !기습 공격! 또는 !16864|청명의 전조! 효과를 받고 있을 경우, !휘둘러치기!.
@@ -170,10 +170,15 @@ translator: 'NeruTe'
 7. [*~Double Clawed Rake AOE] 임의의 적 대상에게 !갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !갈퀴 발톱!.
 8. !휘둘러치기!
 
+<div className="pb-6">
+</div>
+
 > [!TIP]
 > !102543|화신!을 쓰는 발톱의 드루이드 쐐기 빌드의 경우, !그림자 숨기! / !숨기!로 전투 상태를 풀 때마다 확정적으로 !목숨을 끊는 일격! 효과를 발동시킬 수 있으므로, 해당 기술들은 몰아서 쓰지 말 것. 이미 !기습 공격! 효과를 갖고 있어 !암습의 일격! 효과를 놓치게 되는 상황이더라도, 확정 !찢어발기기!가 더 강력하다.
 
 </details>
+
+
 
 # 특성 빌드
 
@@ -264,7 +269,7 @@ CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMzMzsZegtx2MzMzDMzAAAAwSwsZgZmpmxswMzMLjxYA
 | **다리** | [폭풍결속 방어구 강화도구](https://www.wowhead.com/item=219911/stormbound-armor-kit) |
 | **손목** | [갑각 광역회피의 성가](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance) |
 | **장화** | [수호자의 행진](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) 또는 [척후병의 행진](https://www.wowhead.com/item=223653/enchant-boots-scouts-march) |
-| **반지** | 스스로의 시뮬레이션 결과에 따라 적용. 격차는 크지 않으므로, 대체로 그냥 [광휘의 특화](https://www.wowhead.com/item=223677/enchant-ring-radiant-mastery)만 써도 무방함. |
+| **반지** | 2차 능력치를 올려 주는 '광휘의~' 계열. 예를 들어, [광휘의 특화](https://www.wowhead.com/item=223677/enchant-ring-radiant-mastery). |
 
 > [!TIP]
 > 반지와 목걸이에는 [격조 높은 보석세공인의 장식](https://www.wowhead.com/item=213777/magnificent-jewelers-setting)으로 보석 홈을 추가할 수 있다는 사실을 잊지 말 것!
@@ -322,17 +327,16 @@ Q: 2사효를 하게 될 가능성이 있을까요?
 
 A: 없다. 1사효로 갈 가능성이 가장 높다.
 
+
 Q: [수도원의 인장](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) 시뮬레이션은 버프 몇 개 기준인가요?
 
 A: 기본적으로는 추가 버프가 없는 상황을 기준으로 한다. 사실 파티원에 의한 추가 버프 효과는 매우 미미하다.
+
 
 Q: 야생추적자로 쓸 때 사용 효과 장신구가 더 센 것 같아요.
 
 A: 야생추적자 트리의 !440119|활력의 덩굴! 효과가 외부 피해에도 적용되기 때문이다.
 
-Q: Dungeonslice 시뮬레이션에서 [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103)이 [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)보다 훨씬 더 높게 나오는데, 왜 같은 티어에 있나요?
-
-A: [굴하지 않는 황천분광경](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103)은 전투 시작 시점에는 발동해도 효과가 거의 없기 때문에 실질 성능과는 차이가 있다. dungeonslice 시뮬레이션은 단일 보스 전투 상황으로 시작하기 때문에, 그 사용 효과를 발동할 때는 이미 다중 대상 전투 상황이라 수치가 더 높게 나오는 것이다. [아라즈의 의식용 제련소](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)와의 정확한 비교를 원한다면, dungeonroute 시뮬레이션을 진행해 보는 것을 권장한다. 한편, 분광경은 죽으면 중첩이 날아가서 크게 약화되는 점도 고려할 필요가 있다.
 
 
 # 기타
@@ -372,7 +376,7 @@ Pandemic은 원래 현재와 같은 효과를 지닌 과거 흑마법사의 지�
 
 __“Clipping”이란?__
 
-Clipping은 반대로 pandemic 구간이 되기 전에 미리 지속 피해 기술을 재적용하는 것을 의미한다. 야성 드루이드는 snapshot과 !319439|피투성이 손길! 등의 강화 효과 때문에 종종 이것이 이득인 경우가 있다. (역주: 독자의 편의를 위해, clipping 관련 내용은 '남은 지속시간을 무시하고~' 등으로 풀어 번역했습니다.)
+Clipping은 반대로 남은 지속시간이 pandemic 구간에 이르기 전에 해당 기술을 재적용하는 것을 의미한다.(역주: 독자의 편의를 위해, clipping 관련 내용은 '남은 지속시간을 무시하고~' 등으로 풀어 번역했습니다.)
 
 ## 매크로
 
