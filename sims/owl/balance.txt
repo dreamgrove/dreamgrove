@@ -6,8 +6,8 @@ actions.precombat+=/variable,name=on_use_trinket,op=add,value=(trinket.2.has_use
 actions.precombat+=/moonkin_form
 actions.precombat+=/wrath
 actions.precombat+=/wrath
-actions.precombat+=/starfire,if=!talent.stellar_flare
-actions.precombat+=/stellar_flare
+actions.precombat+=/starfire
+
 
 # Executed every time the actor is available.
 actions=variable,name=passive_asp,value=6%spell_haste+talent.natures_balance+((talent.bounteous_bloom&buff.bounteous_bloom.up)*15)+talent.orbit_breaker*dot.moonfire.ticking*(buff.orbit_breaker.stack>(27-2*buff.solstice.up))*24
@@ -46,7 +46,6 @@ actions.aoe+=/sunfire,target_if=refreshable&(target.time_to_die-remains)>6-(spel
 actions.aoe+=/moonfire,target_if=refreshable&(target.time_to_die-remains)>6&(!talent.treants_of_the_moon|spell_targets-active_dot.moonfire_dmg>6|cooldown.force_of_nature.remains>3&!buff.harmony_of_the_grove.up),if=!fight_style.dungeonroute&!fight_style.dungeonslice
 actions.aoe+=/wrath,if=variable.enter_lunar&(eclipse.in_none|variable.eclipse_remains<cast_time)&!variable.pre_cd_condition
 actions.aoe+=/starfire,if=!variable.enter_lunar&(eclipse.in_none|variable.eclipse_remains<cast_time)
-actions.aoe+=/stellar_flare,target_if=refreshable&(target.time_to_die-remains-target>7+spell_targets),if=spell_targets<(11-talent.umbral_intensity.rank-(2*talent.astral_smolder)-talent.lunar_calling)
 actions.aoe+=/force_of_nature,if=variable.pre_cd_condition|cooldown.ca_inc.full_recharge_time+5+15*talent.control_of_the_dream>cooldown&(!talent.convoke_the_spirits|cooldown.convoke_the_spirits.remains+10+15*talent.control_of_the_dream>cooldown|fight_remains<cooldown.convoke_the_spirits.remains+cooldown.convoke_the_spirits.duration+5)&(variable.on_use_trinket=0|(variable.on_use_trinket=1|variable.on_use_trinket=3)&(trinket.1.cooldown.remains>5+15*talent.control_of_the_dream|cooldown.ca_inc.remains>20|trinket.1.cooldown.ready)|variable.on_use_trinket=2&(trinket.2.cooldown.remains>5+15*talent.control_of_the_dream|cooldown.ca_inc.remains>20|trinket.2.cooldown.ready))&(fight_remains>cooldown+5|fight_remains<cooldown.ca_inc.remains+7)|talent.whirling_stars&talent.convoke_the_spirits&cooldown.convoke_the_spirits.remains>cooldown.force_of_nature.duration-10&fight_remains>cooldown.convoke_the_spirits.remains+6
 actions.aoe+=/fury_of_elune,if=eclipse.in_eclipse
 actions.aoe+=/call_action_list,name=pre_cd
@@ -86,7 +85,6 @@ actions.kotg_st+=/incarnation,if=variable.kotg_inc_condition
 actions.kotg_st+=/starsurge,if=buff.dryads_favor.up&buff.ca_inc.up
 actions.kotg_st+=/wrath,if=variable.enter_lunar&(eclipse.in_none|variable.eclipse_remains<cast_time)
 actions.kotg_st+=/starfire,if=!variable.enter_lunar&(eclipse.in_none|variable.eclipse_remains<cast_time)
-actions.kotg_st+=/stellar_flare,if=remains<=buff.ca_inc.duration&variable.pool_for_cd|remains<=buff.ca_inc.up&!buff.dryads_favor.up
 actions.kotg_st+=/force_of_nature,if=buff.dryad.up&buff.harmony_of_the_grove.duration>(buff.dryad.remains+2>?cooldown.ca_inc.remains+gcd.max*2+0.5)
 actions.kotg_st+=/force_of_nature,if=!buff.ca_inc.up&variable.boat_stacks>=8&fight_remains>=cooldown.convoke_the_spirits.duration+cooldown.convoke_the_spirits.remains+4+gcd.max&!((cooldown.force_of_nature.duration>cooldown.convoke_the_spirits.remains&fight_remains<(cooldown.convoke_the_spirits.remains+cooldown.convoke_the_spirits.duration-(cooldown.force_of_nature.duration+gcd.max*5)*talent.control_of_the_dream<?105)+cooldown.force_of_nature.duration+4+gcd.max*6)|(variable.on_use_trinket=1&fight_remains>trinket.1.cooldown.duration+trinket.1.cooldown.remains+4+buff.dryad.duration+2+gcd.max&cooldown.force_of_nature.duration>trinket.1.cooldown.remains&fight_remains<cooldown.force_of_nature.duration+trinket.1.cooldown.duration+4+buff.dryad.duration+2+gcd.max)|(variable.on_use_trinket=2&fight_remains>trinket.2.cooldown.duration+trinket.2.cooldown.remains+4+buff.dryad.duration+2+gcd.max&cooldown.force_of_nature.duration>trinket.2.cooldown.remains&fight_remains<cooldown.force_of_nature.duration+trinket.2.cooldown.duration+4+buff.dryad.duration+2+gcd.max))&!((cooldown.convoke_the_spirits.remains<?(variable.on_use_trinket=1)*trinket.1.cooldown.remains<?(variable.on_use_trinket=2)*trinket.2.cooldown.remains<?(variable.on_use_trinket=3)*(trinket.1.cooldown.remains>?trinket.2.cooldown.remains))<cooldown.force_of_nature.duration-(60-talent.early_spring*15)*0.5)
 actions.kotg_st+=/force_of_nature,if=!buff.ca_inc.up&variable.boat_stacks>=8&fight_remains<cooldown.convoke_the_spirits.duration+cooldown.convoke_the_spirits.remains+4+gcd.max&!(fight_remains>cooldown.ca_inc.remains+buff.harmony_of_the_grove.duration*0.6+gcd.max&fight_remains<cooldown.force_of_nature.duration+buff.harmony_of_the_grove.duration*0.6+gcd.max*2)&!(fight_remains>cooldown.ca_inc.full_recharge_time+buff.dryad.duration+2+gcd.max&fight_remains<cooldown.force_of_nature.duration+buff.dryad.duration+2+gcd.max*2)&!(fight_remains<cooldown.force_of_nature.duration+gcd.max*2)
@@ -100,7 +98,6 @@ actions.kotg_st+=/sunfire,target_if=refreshable&remains<fight_remains
 actions.kotg_st+=/moonfire,target_if=refreshable&(!talent.treants_of_the_moon|cooldown.force_of_nature.remains>3&!buff.harmony_of_the_grove.up)&remains<fight_remains
 actions.kotg_st+=/starsurge,if=cooldown.convoke_the_spirits.remains<gcd.max*2&variable.convoke_condition&!(cooldown.ca_inc.remains<buff.dryad.remains&(buff.dryad.remains<4+gcd.max|fight_remains>cooldown.ca_inc.remains+buff.dryad.duration+2&fight_remains<4+buff.dryad.duration+2+gcd.max))&!(buff.harmony_of_the_grove.remains<4+gcd.max)&!(cooldown.ca_inc.remains<buff.harmony_of_the_grove.remains-gcd.max&buff.harmony_of_the_grove.remains<4+gcd.max*2)&!(fight_remains<4+gcd.max)&!(buff.ca_inc.remains<4+gcd.max)
 actions.kotg_st+=/convoke_the_spirits,if=variable.convoke_condition&!(cooldown.ca_inc.remains<buff.dryad.remains&(buff.dryad.remains<4|fight_remains>cooldown.ca_inc.remains+buff.dryad.duration+2&fight_remains<4+buff.dryad.duration+2))
-actions.kotg_st+=/stellar_flare,target_if=refreshable&(target.time_to_die-remains-target>7+spell_targets)&!buff.ca_inc.up
 actions.kotg_st+=/starsurge,if=(buff.starlord.remains>4&variable.boat_stacks>=7|fight_remains<4)&!variable.pool_in_ca
 actions.kotg_st+=/new_moon,if=astral_power.deficit>variable.passive_asp+energize_amount&((buff.harmony_of_the_grove.up&!buff.ca_inc.up|buff.ca_inc.up&!cooldown.ca_inc.ready)|cooldown.new_moon.full_recharge_time<cooldown.convoke_the_spirits.remains)|fight_remains<20
 actions.kotg_st+=/half_moon,if=astral_power.deficit>variable.passive_asp+energize_amount&((buff.harmony_of_the_grove.up&!buff.ca_inc.up|buff.ca_inc.up&!cooldown.ca_inc.ready)|cooldown.new_moon.full_recharge_time<cooldown.convoke_the_spirits.remains)|fight_remains<20
@@ -138,7 +135,6 @@ actions.st+=/sunfire,target_if=refreshable
 actions.st+=/moonfire,target_if=refreshable&(!talent.treants_of_the_moon|cooldown.force_of_nature.remains>3&!buff.harmony_of_the_grove.up)
 actions.st+=/starsurge,if=cooldown.convoke_the_spirits.remains<gcd.max*2&variable.convoke_condition&astral_power.deficit<50
 actions.st+=/convoke_the_spirits,if=variable.convoke_condition
-actions.st+=/stellar_flare,target_if=refreshable&(target.time_to_die-remains-target>7+spell_targets)
 actions.st+=/starsurge,if=buff.starlord.remains>4&variable.boat_stacks>=3|fight_remains<4
 actions.st+=/new_moon,if=astral_power.deficit>variable.passive_asp+energize_amount|fight_remains<20|cooldown.ca_inc.remains>15
 actions.st+=/half_moon,if=astral_power.deficit>variable.passive_asp+energize_amount&(buff.eclipse_lunar.remains>execute_time|buff.eclipse_solar.remains>execute_time)|fight_remains<20|cooldown.ca_inc.remains>15
