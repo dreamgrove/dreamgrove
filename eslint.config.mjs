@@ -13,6 +13,8 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([{
+    ignores: ["next-env.d.ts"],
+}, {
     extends: compat.extends("next/core-web-vitals", "next/typescript"),
 
     rules: {

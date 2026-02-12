@@ -24,15 +24,15 @@
 }
 
 .code-line.inserted {
-  @apply bg-opacity-20 bg-green-500;
+  @apply bg-green-500/20;
 }
 
 .code-line.deleted {
-  @apply bg-opacity-20 bg-red-500;
+  @apply bg-red-500/20;
 }
 
 .highlight-line {
-  @apply border-primary-500 bg-opacity-50 -mx-4 border-l-4 bg-gray-700;
+  @apply border-primary-500 -mx-4 border-l-4 bg-gray-700/50;
 }
 
 .line-number::before {
