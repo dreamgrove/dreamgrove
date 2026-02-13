@@ -38,7 +38,6 @@ export default function DungeonLayout({ content, children, showTitle = true }: L
                     <Image
                       alt={title}
                       src={`/static/images/${headerImage}`}
-                      quality={100}
                       layout="fill"
                       sizes="100vw"
                       style={{

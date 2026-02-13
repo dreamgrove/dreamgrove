@@ -63,9 +63,6 @@ module.exports = () => {
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    eslint: {
-      dirs: ['app', 'components', 'layouts', 'scripts'],
-    },
     images: {
       remotePatterns: [
         {
@@ -81,6 +78,7 @@ module.exports = () => {
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
       imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
       minimumCacheTTL: 60,
+      qualities: [75, 100],
     },
     env: {
       GITHUB_ID: process.env.GITHUB_ID,
@@ -88,20 +86,6 @@ module.exports = () => {
       GITHUB_REPO_OWNER: process.env.GITHUB_REPO_OWNER || 'dreamgrove',
       GITHUB_REPO_NAME: process.env.GITHUB_REPO_NAME || 'dreamgrove',
       GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
-    },
-    turbopack: {
-      rules: {
-        // Configure Turbopack to handle WebP images
-        '*.webp': ['@next/third-parties/loader'],
-      },
-    },
-    // Add a custom fetch timeout for the Node.js environment during builds
-    // This helps prevent the build from hanging indefinitely on failed fetch requests
-    onDemandEntries: {
-      // period (in ms) where the server will keep pages in the buffer
-      maxInactiveAge: 25 * 1000,
-      // number of pages that should be kept simultaneously without being disposed
-      pagesBufferLength: 2,
     },
     async redirects() {
       return [
@@ -154,14 +138,6 @@ module.exports = () => {
           headers: securityHeaders,
         },
       ]
-    },
-    webpack: (config, options) => {
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-      })
-
-      return config
     },
   })
 }

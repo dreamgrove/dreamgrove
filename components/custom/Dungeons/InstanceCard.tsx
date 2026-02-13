@@ -20,7 +20,6 @@ const InstanceCard = async ({ title, headerImage, path }) => {
         <Image
           alt={title}
           src={`/static/images/${headerImage}`}
-          quality={100}
           layout="fill"
           sizes="100vw"
           placeholder="blur"
@@ -30,7 +29,7 @@ const InstanceCard = async ({ title, headerImage, path }) => {
           }}
         />
       </div>
-      <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-2 font-thiccboi text-xl text-white">
+      <div className="bg-opacity-50 font-thiccboi absolute bottom-0 left-0 bg-black p-2 text-xl text-white">
         {title}
       </div>
     </Link>
