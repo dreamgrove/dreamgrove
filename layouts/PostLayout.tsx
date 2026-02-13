@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { CoreContent } from 'pliny/utils/contentlayer'
+import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'

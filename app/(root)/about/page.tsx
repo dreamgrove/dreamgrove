@@ -1,10 +1,9 @@
 import { About, allAbouts } from 'contentlayer/generated'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
 import AboutLayout from '@/layouts/AboutLayout'
-import { coreContent } from 'pliny/utils/contentlayer'
+import { coreContent } from '@/lib/utils/contentlayer'
 import { genPageMetadata } from 'app/(root)/seo'
 import PageWrapper from '@/components/PageWrapper'
-import { components } from '@/components/MDXComponents'
 export const metadata = genPageMetadata({ title: 'About' })
 
 export default function Page() {
@@ -14,7 +13,7 @@ export default function Page() {
   return (
     <PageWrapper title="About" showTitle={false}>
       <AboutLayout content={mainContent}>
-        <MDXLayoutRenderer components={components} code={about.body.code} />
+        <MDXLayoutRenderer code={about.body.code} />
       </AboutLayout>
     </PageWrapper>
   )

@@ -4,9 +4,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Run npm run dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "name": "Run pnpm dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev"],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
     }

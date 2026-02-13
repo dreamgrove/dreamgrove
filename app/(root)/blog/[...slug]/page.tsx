@@ -1,8 +1,7 @@
 import 'katex/dist/katex.css'
 
-import { components } from '@/components/MDXComponents'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
+import { coreContent, allCoreContent } from '@/lib/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
 import PostLayout from '@/layouts/PostLayout'
@@ -122,7 +121,7 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
         prev={prev}
         translator={post.translator}
       >
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+        <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
       </Layout>
     </PageWrapper>
   )

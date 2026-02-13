@@ -1,4 +1,4 @@
-/** @type {import("pliny/config").PlinyConfig } */
+/** @type {Record<string, any>} */
 const siteMetadata = {
   title: 'Dreamgrove',
   author: 'thevinter',

@@ -1,9 +1,9 @@
-import { Cast, SpellInfo, CastParams } from '../../../lib/types/cd_planner'
+import { Cast } from '../../../models/Cast'
+import { SpellInfo, CastParams } from '../../../types/timeline'
 import { describe, test, expect, beforeEach } from '@jest/globals'
 
 // Celestial Alignment spell data from spells.json
 const caSpellInfo: SpellInfo = {
-  id: 'ca',
   spellId: 194223,
   name: 'Celestial Alignment',
   channel_duration: 0,

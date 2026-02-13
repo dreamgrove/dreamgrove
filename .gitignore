@@ -53,3 +53,4 @@ app/tag-data.json
 cursor
 .cursor/*
 .cursorspace
+.worktrees

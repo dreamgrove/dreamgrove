@@ -9,12 +9,10 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import { remarkAlert } from 'remark-github-blockquote-alert'
 
-import {
-  remarkExtractFrontmatter,
-  remarkCodeTitles,
-  remarkImgToJsx,
-  extractTocHeadings,
-} from 'pliny/mdx-plugins/index.js'
+import { remarkExtractFrontmatter } from './lib/mdx-plugins/remark-extract-frontmatter.js'
+import { remarkCodeTitles } from './lib/mdx-plugins/remark-code-titles.js'
+import { remarkImgToJsx } from './lib/mdx-plugins/remark-img-to-jsx.js'
+import { extractTocHeadings } from './lib/mdx-plugins/extract-toc-headings.js'
 // Rehype packages
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -22,7 +20,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import siteMetadata from './data/siteMetadata'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { allCoreContent, sortPosts } from './lib/utils/contentlayer'
 import remarkSpell from './plugins/remarkSpell.js'
 import rehypeGroupHeaders from './plugins/rehypeGroupHeaders.js'
 import remarkGroupCheckboxes from './plugins/remarkGroupCheckboxes.js'

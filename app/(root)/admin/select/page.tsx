@@ -50,7 +50,7 @@ export default function FileSelectPage() {
     const filtered: GroupedFiles = {}
 
     Object.entries(files).forEach(([group, groupFiles]) => {
-      const matchingFiles = groupFiles.filter(
+      const matchingFiles = (groupFiles as FileInfo[]).filter(
         (file) =>
           file.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           file.path.toLowerCase().includes(searchTerm.toLowerCase()) ||

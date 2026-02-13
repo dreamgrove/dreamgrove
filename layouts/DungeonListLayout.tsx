@@ -1,4 +1,4 @@
-import { CoreContent } from 'pliny/utils/contentlayer'
+import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Dungeons } from 'contentlayer/generated'
 import InstanceCard from '@/components/custom/Dungeons/InstanceCard'
 
@@ -23,9 +23,9 @@ export default function DungeonListLayout({
 
   return (
     <>
-      <div className="toChange divide-y divide-gray-200 px-3 dark:divide-gray-700 sm:px-6 md:px-6 lg:px-6 xl:px-3">
+      <div className="toChange divide-y divide-gray-200 px-3 sm:px-6 md:px-6 lg:px-6 xl:px-3 dark:divide-gray-700">
         <div className="flex flex-col items-center space-y-2 pb-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-3xl md:leading-14">
+          <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-3xl md:leading-14 dark:text-gray-100">
             {title}
           </h1>
         </div>

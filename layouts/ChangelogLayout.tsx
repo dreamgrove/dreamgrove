@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { CoreContent } from 'pliny/utils/contentlayer'
+import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Changelog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
@@ -53,10 +53,10 @@ export default function ChangelogLayout({ content, next, prev, children }: Layou
           </header>
           <div
             id="main"
-            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0"
+            className="divide-y divide-gray-200 pb-8 xl:divide-y-0 dark:divide-gray-700"
           >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0">
-              <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
+            <div className="divide-y divide-gray-200 xl:pb-0 dark:divide-gray-700">
+              <div className="prose dark:prose-invert max-w-none pt-10 pb-8">{children}</div>
             </div>
             <footer></footer>
           </div>

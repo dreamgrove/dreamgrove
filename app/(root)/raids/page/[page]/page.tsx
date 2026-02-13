@@ -1,4 +1,4 @@
-import { allCoreContent } from 'pliny/utils/contentlayer'
+import { allCoreContent } from '@/lib/utils/contentlayer'
 import { allRaids } from 'contentlayer/generated'
 import RaidListLayout from '@/layouts/RaidListLayout'
 

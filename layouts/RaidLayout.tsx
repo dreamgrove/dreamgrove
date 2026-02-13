@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react'
-import { CoreContent } from 'pliny/utils/contentlayer'
+import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Raids } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
@@ -35,13 +35,13 @@ export default function RaidLayout({ content, children, showTitle = false }: Lay
               <ContributeHeader />
             </div>
           </header>
-          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-12 xl:gap-x-6 xl:divide-y-0">
+          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:grid xl:grid-cols-12 xl:gap-x-6 xl:divide-y-0 dark:divide-gray-700">
             <CheckboxProvider>
               <div
                 id="main"
-                className="divide-y divide-gray-200 px-4 dark:divide-gray-700 xl:col-span-12"
+                className="divide-y divide-gray-200 px-4 xl:col-span-12 dark:divide-gray-700"
               >
-                <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
+                <div className="prose dark:prose-invert max-w-none pt-10 pb-8">{children}</div>
               </div>
             </CheckboxProvider>
           </div>

@@ -1,8 +1,7 @@
 import 'katex/dist/katex.css'
 
-import { components } from '@/components/MDXComponents'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { coreContent, allCoreContent } from 'pliny/utils/contentlayer'
+import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
+import { coreContent, allCoreContent } from '@/lib/utils/contentlayer'
 import { allDungeons } from 'contentlayer/generated'
 import type { Dungeons } from 'contentlayer/generated'
 import { Metadata } from 'next'
@@ -98,7 +97,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     return (
       <PageWrapper title={pageTitle} showTitle={false}>
         <Layout content={mainContent} next={next} prev={prev} authorDetails={[]}>
-          <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+          <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
         </Layout>
       </PageWrapper>
     )

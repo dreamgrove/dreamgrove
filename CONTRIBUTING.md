@@ -16,12 +16,12 @@ Welcome to the Dreamgrove contributing guide! This document will help you get st
 3. **Install dependencies:**
 
    ```
-   npm install
+   pnpm install
    ```
 
 4. **Run the development server:**
    ```
-   npm run dev
+   pnpm dev
    ```
 
 ## Project Structure
@@ -168,7 +168,7 @@ git add -A
 git commit -m "feat: description of changes"
 
 # Verify that the website builds correctly
-npm run build
+pnpm build
 
 # Push the changes
 git push origin feature/your-feature

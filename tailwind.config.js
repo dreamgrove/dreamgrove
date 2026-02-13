@@ -2,7 +2,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './node_modules/pliny/**/*.js',
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,tsx}',
     './components/**/*.{js,ts,tsx}',
@@ -93,7 +92,7 @@ module.exports = {
               display: 'flex',
               flexWrap: 'wrap',
               alignItems: 'center',
-              '@screen sm': {
+              '@media (min-width: theme("screens.sm"))': {
                 marginLeft: '-2.2rem',
               },
             },

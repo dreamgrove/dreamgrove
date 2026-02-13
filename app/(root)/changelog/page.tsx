@@ -1,9 +1,8 @@
 import { Changelog, allChangelogs } from 'contentlayer/generated'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
 import ChangelogLayout from '@/layouts/ChangelogLayout'
-import { coreContent } from 'pliny/utils/contentlayer'
+import { coreContent } from '@/lib/utils/contentlayer'
 import { genPageMetadata } from 'app/(root)/seo'
-import { components } from '@/components/MDXComponents'
 import PageWrapper from '@/components/PageWrapper'
 
 export const metadata = genPageMetadata({ title: 'Druid Changelog' })
@@ -15,7 +14,7 @@ export default function Page() {
   return (
     <PageWrapper title="Druid Changelog">
       <ChangelogLayout content={mainContent}>
-        <MDXLayoutRenderer code={about.body.code} components={components} />
+        <MDXLayoutRenderer code={about.body.code} />
       </ChangelogLayout>
     </PageWrapper>
   )
