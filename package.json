@@ -5,10 +5,10 @@
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "cross-env NODE_OPTIONS='--disable-warning=DEP0040' INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules --disable-warning=DEP0040' node ./scripts/postbuild.mjs",
+    "build": "cross-env NODE_OPTIONS='--disable-warning=DEP0040' INIT_CWD=$PWD next build --webpack && cross-env NODE_OPTIONS='--experimental-json-modules --disable-warning=DEP0040' node ./scripts/postbuild.mjs",
     "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
+    "analyze": "cross-env ANALYZE=true next build --webpack",
+    "lint": "eslint --fix app components lib layouts scripts",
     "prepare": "husky",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -31,7 +31,7 @@
     "@lezer/markdown": "^1.6.3",
     "@mdx-js/mdx": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@next/bundle-analyzer": "15.2.4",
+    "@next/bundle-analyzer": "^16.0.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/postcss": "^4.1.7",
@@ -57,7 +57,7 @@
     "mdast-util-to-string": "^4.0.0",
     "motion": "^12.12.1",
     "negotiator": "^1.0.0",
-    "next": "^15.5.9",
+    "next": "^16.0.0",
     "next-auth": "^4.24.12",
     "next-contentlayer2": "0.5.4",
     "next-themes": "^0.4.6",
@@ -69,8 +69,8 @@
     "postcss": "^8.4.24",
     "probe-image-size": "^7.2.3",
     "puppeteer": "^22.15.0",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-icons": "^5.2.1",
     "react-youtube": "^10.1.0",
     "reading-time": "1.5.0",
@@ -98,8 +98,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.23.0",
     "@jest/globals": "^30.2.0",
-    "@next/eslint-plugin-next": "^15.2.4",
-    "@svgr/webpack": "^8.0.1",
+    "@next/eslint-plugin-next": "^16.0.0",
     "@types/jest": "^29.5.0",
     "@types/mdx": "^2.0.13",
     "@types/node-telegram-bot-api": "^0.64.8",
@@ -109,7 +108,7 @@
     "@typescript-eslint/parser": "^8.29.0",
     "cross-env": "^7.0.3",
     "eslint": "^9.23.0",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "^16.0.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.0.0",
@@ -133,7 +132,7 @@
   },
   "packageManager": "pnpm@10.4.1",
   "overrides": {
-    "@types/react": "19.1.0"
+    "@types/react": "^19.2.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

@@ -1,27 +1,21 @@
-import { defineConfig } from "eslint/config";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import nextConfig from "eslint-config-next";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default defineConfig([{
-    ignores: ["next-env.d.ts"],
-}, {
-    extends: compat.extends("next/core-web-vitals", "next/typescript"),
-
-    rules: {
-        "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-unused-vars": "off",
-        "react-hooks/exhaustive-deps": "off",
-        "react/no-unescaped-entities": "off",
+export default [
+    {
+        ignores: ["next-env.d.ts"],
     },
-}]);
+    ...nextConfig,
+    ...nextCoreWebVitals,
+    ...nextTypescript,
+    {
+        rules: {
+            "@typescript-eslint/ban-ts-comment": "off",
+            "@typescript-eslint/no-explicit-any": "off",
+            "@typescript-eslint/no-unused-vars": "off",
+            "react-hooks/exhaustive-deps": "off",
+            "react/no-unescaped-entities": "off",
+        },
+    },
+];
