@@ -1,18 +1,3 @@
-import fetch from 'node-fetch'
-
-// Server-side cache to reduce Wowhead requests
-const cache = new Map<
-  string,
-  {
-    icon?: string
-    quality?: number
-    display: string
-    timestamp: number
-  }
->()
-
-const CACHE_TTL = 7 * 24 * 60 * 60 * 1000 // 7 days in milliseconds
-
 // Quality colors for reference
 export const qualityToColor = {
   1: '#ffffff',
