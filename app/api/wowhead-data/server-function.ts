@@ -1,9 +1,10 @@
+'use server'
+
+import fs from 'fs'
+import path from 'path'
 import { extractIdFromUrl, formatUrl } from './utils'
 
-// Dynamic require to avoid webpack bundling fs/path for client
 function getCacheFile(): string {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const path = require('path')
   return path.join(process.cwd(), 'data', 'wowhead-cache.json')
 }
 
@@ -25,8 +26,6 @@ function loadCache() {
   if (cacheLoaded) return
   cacheLoaded = true
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const fs = require('fs')
     const cacheFile = getCacheFile()
     if (fs.existsSync(cacheFile)) {
       const raw = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
@@ -42,8 +41,6 @@ function loadCache() {
 
 function saveCache() {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const fs = require('fs')
     const obj: Record<string, CacheEntry> = Object.fromEntries(cache)
     fs.writeFileSync(getCacheFile(), JSON.stringify(obj, null, 2))
   } catch (e) {
