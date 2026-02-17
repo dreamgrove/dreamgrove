@@ -6,6 +6,7 @@ on:
       - 'sims/owl/balance_ptr.txt'
       - 'sims/cat/feral_ptr.txt'
       - 'sims/bear/guardian_ptr.txt'
+      - 'sims/tree/restoration_ptr.txt'
 
 defaults:
   run:
@@ -30,6 +31,7 @@ jobs:
           python generate_apl.py --ptr --spec=owl "./simc"
           python generate_apl.py --ptr --spec=cat "./simc"
           python generate_apl.py --ptr --spec=bear "./simc"
+          python generate_apl.py --ptr --spec=tree "./simc"
       - name: setup commit
         run: |
           echo "COMMIT_AUTHOR=$(git log -1 --format=%aN)" >> $GITHUB_ENV
