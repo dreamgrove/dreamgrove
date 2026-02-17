@@ -1,32 +1,47 @@
-actions.precombat+=/moonkin_form
-actions.precombat+=/wrath
-actions.precombat+=/wrath
-actions.precombat+=/starfire
+# Executed before combat begins. Accepts non-harmful actions only.
+actions.precombat=snapshot_stats
+actions.precombat+=/mark_of_the_wild,if=aura.mark_of_the_wild.down
+actions.precombat+=/moonkin_form,if=buff.moonkin_form.down
 
-actions=variable,name=passive_asp,value=6%spell_haste+talent.natures_balance+((talent.bounteous_bloom&buff.bounteous_bloom.up)*15)+talent.orbit_breaker*dot.moonfire.ticking*(buff.orbit_breaker.stack>(27-2*buff.solstice.up))*24
+# Executed every time the actor is available.
+actions=call_action_list,name=cooldowns
+actions+=/call_action_list,name=assisted_combat
 
-actions+=/run_action_list,name=st
+# This is the default action priority list from the game's Assisted Combat system.
+actions.assisted_combat=sunfire,if=!dot.sunfire.ticking
+# (Overridden from 'debuff.dream_surge.up')
+actions.assisted_combat+=/force_of_nature,if=buff.dream_burst.down
+actions.assisted_combat+=/moonfire,if=!dot.moonfire.ticking&buff.harmony_of_the_grove.down
+# This is for Blizzard automation and is not included in the game's Assisted Combat system.
+actions.assisted_combat+=/celestial_alignment,if=buff.eclipse_solar.down&buff.eclipse_lunar.down
+actions.assisted_combat+=/starfire,if=buff.eclipse_solar.down&buff.eclipse_lunar.down&active_enemies>3&buff.lunar_eclipse_override.down&talent.eclipse
+actions.assisted_combat+=/wrath,if=!talent.lunar_calling&buff.eclipse_solar.down&buff.eclipse_lunar.down&active_enemies<=2&buff.lunar_eclipse_override.up&talent.eclipse
+actions.assisted_combat+=/fury_of_elune,if=buff.eclipse_solar.down&buff.eclipse_lunar.down&astral_power>=55
+actions.assisted_combat+=/solar_eclipse,if=talent.eclipse&buff.eclipse_solar.down&buff.eclipse_lunar.down&astral_power>=60
+actions.assisted_combat+=/starfall,if=active_enemies>3&astral_power>=90
+actions.assisted_combat+=/starsurge,if=active_enemies<=2&astral_power>=90
+actions.assisted_combat+=/wrath,if=buff.eclipse_solar.down&buff.eclipse_lunar.down&buff.lunar_eclipse_override.down&astral_power<=59.9
+actions.assisted_combat+=/starfire,if=buff.eclipse_solar.down&buff.eclipse_lunar.down&buff.lunar_eclipse_override.up&astral_power<=59.9
+actions.assisted_combat+=/starfall,if=buff.starweavers_warp.up
+actions.assisted_combat+=/starsurge,if=buff.starweavers_weft.up
+actions.assisted_combat+=/starfall,if=active_enemies>3
+actions.assisted_combat+=/starsurge,if=active_enemies<=2
+actions.assisted_combat+=/starsurge,if=astral_power>=50
+actions.assisted_combat+=/convoke_the_spirits,if=buff.eclipse_solar.up
+actions.assisted_combat+=/convoke_the_spirits,if=buff.eclipse_lunar.up
+actions.assisted_combat+=/fury_of_elune
+actions.assisted_combat+=/wild_mushroom,if=!dot.fungal_growth.ticking
+actions.assisted_combat+=/new_moon
+actions.assisted_combat+=/half_moon
+actions.assisted_combat+=/full_moon
+actions.assisted_combat+=/starfire,if=active_enemies>3,cooldown_allow_casting_success=1
+actions.assisted_combat+=/starfire,if=talent.lunar_calling,cooldown_allow_casting_success=1
+actions.assisted_combat+=/wrath,cooldown_allow_casting_success=1
+actions.assisted_combat+=/moonfire
 
-actions.st+=/sunfire,target_if=remains<3|refreshable
-actions.st+=/moonfire,target_if=remains<3&refreshable
-actions.st+=/fury_of_elune,if=5+variable.passive_asp<astral_power.deficit
-actions.st+=/celestial_alignment,if=!buff.ca_inc.up
-actions.st+=/incarnation,if=!buff.ca_inc.up
-actions.st+=/use_item,slot=trinket1,if=buff.ca_inc.up
-actions.st+=/use_item,slot=trinket2,if=buff.ca_inc.up
-actions.st+=/potion,if=buff.ca_inc.up
-actions.st+=/force_of_nature,if=buff.ca_inc.up|cooldown.ca_inc.remains>15
-actions.st+=/starfall,if=buff.starweavers_warp.up
-actions.st+=/starsurge,if=talent.starlord&buff.starlord.stack<3
-actions.st+=/sunfire,target_if=refreshable
-actions.st+=/moonfire,target_if=refreshable&(!talent.treants_of_the_moon|cooldown.force_of_nature.remains>3&!buff.harmony_of_the_grove.up)
-actions.st+=/convoke_the_spirits,if=buff.ca_inc.up
-actions.st+=/new_moon,if=astral_power.deficit>variable.passive_asp+energize_amount|fight_remains<20|cooldown.ca_inc.remains>15
-actions.st+=/half_moon,if=astral_power.deficit>variable.passive_asp+energize_amount&(buff.eclipse_lunar.remains>execute_time|buff.eclipse_solar.remains>execute_time)|fight_remains<20|cooldown.ca_inc.remains>15
-actions.st+=/full_moon,if=astral_power.deficit>variable.passive_asp+energize_amount&(buff.eclipse_lunar.remains>execute_time|buff.eclipse_solar.remains>execute_time)|fight_remains<20|cooldown.ca_inc.remains>15
-actions.st+=/starsurge,if=buff.starweavers_weft.up|buff.touch_the_cosmos.up
-actions.st+=/starsurge,if=astral_power.deficit<variable.passive_asp+action.wrath.energize_amount+(action.starfire.energize_amount+variable.passive_asp)*(buff.eclipse_solar.remains<(gcd.max+action.starfire.cast_time))
-actions.st+=/force_of_nature,if=!hero_tree.keeper_of_the_grove
-actions.st+=/wild_mushroom,if=!prev_gcd.1.wild_mushroom&dot.fungal_growth.remains<2
-actions.st+=/starfire,if=talent.lunar_calling
-actions.st+=/wrath
+actions.cooldowns=use_items
+actions.cooldowns+=/potion
+actions.cooldowns+=/blood_fury
+actions.cooldowns+=/berserking
+actions.cooldowns+=/fireblood
+actions.cooldowns+=/ancestral_call
