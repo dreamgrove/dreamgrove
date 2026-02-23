@@ -1,6 +1,5 @@
 # Executed before combat begins. Accepts non-harmful actions only.
 actions.precombat=snapshot_stats
-actions.precombat+=/mark_of_the_wild,if=aura.mark_of_the_wild.down
 actions.precombat+=/bear_form,if=buff.bear_form.down
 
 # Executed every time the actor is available.
@@ -25,6 +24,7 @@ actions.assisted_combat+=/swipe,if=target.distance<=8
 actions.assisted_combat+=/moonfire,if=target.distance>10
 actions.assisted_combat+=/swipe
 
+# Some cooldowns are not used by the Assisted Combat system. This simple default cooldown usage has been provided by simc.
 actions.cooldowns=use_items
 actions.cooldowns+=/potion
 actions.cooldowns+=/blood_fury
