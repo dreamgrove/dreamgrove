@@ -5,13 +5,6 @@ draft: false
 authors: ["Crazymeow"]
 summary: 'Everything you need to know about Feral Druid'
 ---
-# News
-
-Feral Druid, like many other specs, got a ton of changes going into Midnight; mostly with the goal of simplifying the spec into its core components, and removing spells or talents that require information that is impossible to track directly.
-
-This guide is currently updated for Prepatch, but beware that most of these are educated guesses based on prior prepatches and beta testing. 'Proper' theorycrafting won't be complete until somewhere in between Midnight expansion launch and the start of season 1.
-
-Happy Hunting, see you in Midnight.
 
 # Rotation
 
@@ -30,16 +23,12 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Select which talents you have to filter the priority list:**
 
-> [!WARNING]
-> This WILL CHANGE. This is a likely-simplified guess that will get you close to the future maximum performance. Sims have not yet been run.
-
 <Checkbox isIcon id="Feral Frenzy" spellId={274838} name="Feral Frenzy" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Convoke" defaultCheck />
 <Checkbox isIcon id="Incarnation" spellId={102543} name="Incarnation" radio="Convoke" />
-<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" radio="Chomp"/>
-<Checkbox isIcon id="Chomp" spellId={1244258} name="Chomp" radio="Chomp" defaultCheck />
-<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" />
-<Checkbox isIcon id="Sudden Ambush" spellId={384667} name="Sudden Ambush" defaultCheck />
+<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="Lunar Inspiration" radio="Chomp" defaultCheck />
+<Checkbox isIcon id="Chomp" spellId={1244258} name="Chomp" radio="Chomp" />
+<Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="Apex Predator's Craving" defaultCheck />
 <Checkbox isIcon id="Shadowmeld" spellId={58984} name="Shadowmeld" />
 
 **Single Target Priority List:**
@@ -47,16 +36,16 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Highest Priority: Cooldowns</summary>
 
-1. !5217|Tiger's Fury! at 5 combo points or if you can't cast anything else due to energy constraints.
-2. [*Incarnation] !102543|Incarnation! with !5217|Tiger's Fury!.
-3. [*~Incarnation] !Berserk! with !5217|Tiger's Fury!. You can hold this for !391528|Convoke! if for whatever reason they are misaligned, and you won't lose a cast doing so.
-4. [*Chomp] Use !1244258|Chomp! as soon as it is castable.
-5. [*Feral Frenzy&&Incarnation] !Feral Frenzy! with 1 or no combo points. 2 combo points is also acceptable during !102543|Incarn!.
-6. [*Feral Frenzy&&~Incarnation] !Feral Frenzy! with 1 or no combo points. 2 combo points is also acceptable during !Berserk!.
+1. !5217|Tiger's Fury! on cooldown
+2. [*Chomp] Use !1244258|Chomp! as soon as it is castable.
+3. [*Incarnation] !102543|Incarnation! with !5217|Tiger's Fury!.
+4. [*~Incarnation] !Berserk! with !5217|Tiger's Fury!. You can hold this for !391528|Convoke! if for whatever reason they are misaligned, and you won't lose a cast doing so.
+5. [*Feral Frenzy&&Incarnation] !Feral Frenzy! with 2 or fewer combo points. 4 or fewer combo points is also acceptable during !102543|Incarn!.
+6. [*Feral Frenzy&&~Incarnation] !Feral Frenzy! with 2 or no combo points. 4 or fewer combo points is also acceptable during !Berserk!.
 7. [*Convoke the Spirits] !391528|Convoke! when:
     - !Rip! is up. AND
     - !5217|Tiger's Fury! is up. AND
-    - You have 2 or fewer combo points outside !Berserk! or 3 or fewer inside !Berserk!. (or if you must cast it now to have the entirety of convoke within berserk.)
+    - You have 2 or fewer combo points outside !Berserk! or 4 or fewer inside !Berserk!. (or if you must cast it now to have the entirety of convoke within berserk.)
 8. [*Convoke the Spirits] You may also !391528|Convoke! if the fight is about to end. Usually you want to !391528|Convoke! with !Berserk! if you can do so without losing a cast.
 
 </details>
@@ -65,13 +54,14 @@ The way this section is written is very formulaic and has the same structure as 
 <summary>Second Priority: Finishers</summary>
 
 1. !Rip! if all of these are true:
-    - You have 5 combo points.
+    - You have at least 4 combo points.
     - !Rip! is missing or in pandemic range.
     - !5217|Tiger's Fury! is up, or won't be up before !Rip! expires.
 2. [*Apex Predator's Craving] !Ferocious Bite! with !Apex Predator's Craving! procs.
-3. !Ferocious Bite! when:
-    - You have 5 combo points AND
-    - You have at least 50 energy
+3. !Ferocious Bite! with at least 4 combo points, 5 during !102543|Incarn!/!Berserk!
+
+> [!WARNING]
+> You want to use !Ferocious Bite! as soon as possible, do not pool for 50 energy.
 
 </details>
 
@@ -79,22 +69,23 @@ The way this section is written is very formulaic and has the same structure as 
 <summary>Last Priority: Generators</summary>
 
 1. [*Incarnation] !Prowl! if all of these are true:
-    - [*Sudden Ambush] You have a !Sudden Ambush! proc, or !102543|Incarnation! is about to end.
     - [*Shadowmeld] You are not in !58984|Shadowmeld!
-    - You just used a finisher
+    - !Rake! is in pandemic, or you can upgrade its snapshot by entering !Prowl!.
 2. [*Shadowmeld] !58984|Shadowmeld! if all of these are true:
-    - [*Sudden Ambush&&Incarnation] You have a !Sudden Ambush! proc, or !102543|Incarnation! is nearing its end.
-    - [*Sudden Ambush&&~Incarnation] You have a !Sudden Ambush! proc, or !Berserk! is nearing its end.
     - [*Incarnation] You are not in !Prowl!
-    - You just used a finisher
-    - [*Incarnation] !102543|Incarn! is up
-    - [*~Incarnation] !Berserk! is up.
-3. [*Sudden Ambush] Use !Shred! if you have a !Sudden Ambush! proc.
+    - !Rake is in pandemic, or you can upgrade its snapshot by entering !58984|Shadowmeld!
 4. !Rake! if any of these are true:
-    - !Rake! is in pandemic and you wouldn't be downgrading its snapshot
-    - !Rake! is in pandemic and will expire before !5217|Tiger's Fury! is up. Delay as long as reasonable if you are downgrading its snapshot value.
-5. [*Lunar Inspiration] Use Lunar Inspiration !155580|Moonfire! if it is in pandemic or you would be upgrading its snapshot.
+    - You would be upgrading !Rake!'s snapshot value.
+    - !Rake! is in pandemic and !5217|Tiger's Fury! is up.
+    - !Rake! has 2 or fewer seconds remaining, and !5217|Tiger's Fury! won't be up in time.
+5. [*Lunar Inspiration] Use Lunar Inspiration !155580|Moonfire! if any of these are true:
+    - You would be upgrading !155580|Moonfire!'s snapshot value.
+    - !155580|Moonfire! is in pandemic and !5217|Tiger's Fury! is up.
+    - !155580|Moonfire! has 2 or fewer seconds remaining, and !5217|Tiger's Fury! won't be up in time.
 6. !Shred!.
+
+> [!TIP]
+> You can instead only use Lunar Inspiration !155580|Moonfire! in pandemic for a small loss in dps (~0.1-0.2%) if tracking it is too much for now. 
 
 </details>
 
@@ -102,16 +93,20 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Select which talents you have to filter the priority list:**
 
+> [!INFO]
+> !1243807|Frantic Frenzy! is considered to be !Feral Frenzy! throughout this guide.
+
 <Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="Druid of the Claw" radio="hero talents AOE" defaultCheck />
 <Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="Wildstalker" radio="hero talents AOE"/>
 <Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="Double Clawed Rake" />
+<Checkbox isIcon id="Wild Slashes AOE" spellId={390864} name="Wild Slashes" defaultCheck />
+<Checkbox isIcon id="Infected Wounds AOE" spellId={48484} name="Infected Wounds" defaultCheck />
 <Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="Feral Frenzy" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits AOE" spellId={391528} name="Convoke the Spirits" radio="Convoke AOE" defaultCheck />
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="Incarnation" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="Lunar Inspiration" />
 <Checkbox isIcon id="Apex Predator's Craving AOE" spellId={391881} name="Apex Predator's Craving" defaultCheck />
 <Checkbox isIcon id="Rampant Ferocity AOE" spellId={391710} name="Rampant Ferocity" defaultCheck />
-<Checkbox isIcon id="Sudden Ambush AOE" spellId={384667} name="Sudden Ambush" defaultCheck />
 <Checkbox isIcon id="Shadowmeld AOE" spellId={58984} name="Shadowmeld" />
 <Checkbox isIcon id="Primal Wrath AOE" spellId={285381} name="Primal Wrath" defaultCheck />
 
@@ -124,16 +119,16 @@ The way this section is written is very formulaic and has the same structure as 
 > [!TIP]
 > Use your single target spells on higher healthed/priority mobs
 
-1. !5217|Tiger's Fury! at 5 combo points or if you run out of energy, delay a few seconds as needed for !102543|Incarnation!|!Berserk!.
+1. !5217|Tiger's Fury! on cooldown. Delay a few seconds as needed for !102543|Incarnation!|!Berserk!.
 2. [*Apex Predator's Craving AOE] !Ferocious Bite! with !Apex Predator's Craving! procs.
 3. [*Incarnation AOE] !102543|Incarnation!. This should always be paired with !5217|Tiger's Fury!.
 4. [*~Incarnation AOE] !Berserk!. This should always be paired with !5217|Tiger's Fury!.
-5. [*Feral Frenzy AOE&&Incarnation AOE] !Feral Frenzy! with 1 or no combo points outside !102543|Incarn!, or 2 or fewer inside !102543|Incarn!.
-6. [*Feral Frenzy AOE&&~Incarnation AOE] !Feral Frenzy! with 1 or no combo points outside !Berserk!, or 2 or fewer inside !Berserk!.
+5. [*Feral Frenzy AOE&&Incarnation AOE] !Feral Frenzy! with 2 or fewer combo points outside !102543|Incarn!, or 4 or fewer inside !102543|Incarn!.
+6. [*Feral Frenzy AOE&&~Incarnation AOE] !Feral Frenzy! with 2 or fewer combo points outside !Berserk!, or 4 or fewer inside !Berserk!.
 7. [*Convoke the Spirits AOE] !391528|Convoke! when:
     - Your !Rip!'s will not fall off during !391528|Convoke's! channel. AND
     - !5217|Tiger's Fury! is up. AND
-    - You have 1 or fewer combo points outside of !Berserk!, or 2 or fewer combo points during !Berserk!.
+    - You have 2 or fewer combo points outside of !Berserk!, or 4 or fewer combo points during !Berserk!.
     - *note: You generally want to pair this with !Berserk! if possible without losing casts.
 
 </details>
@@ -141,12 +136,12 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Second Priority: Finishers</summary>
 
-1. [*Primal Wrath AOE&&~Incarnation AOE] !Primal Wrath! at 5 combo points if !Rip!s have fewer than 6.5s remaining. During !Berserk!, wait until pandemic instead.
-1. [*Primal Wrath AOE&&Incarnation AOE] !Primal Wrath! at 5 combo points if !Rip!s have fewer than 6.5s remaining. During !102543|Incarn!, wait until pandemic instead.
-3. [*Wildstalker AOE&&~Rampant Ferocity AOE] !Ferocious Bite! a vined target, if one exists, at 5 combo points up to ~3 targets.
-3. [*Wildstalker AOE&&Rampant Ferocity AOE] !Ferocious Bite! at 5 combo points, preferring vined targets.
-4. [*Druid of the Claw AOE&&Rampant Ferocity AOE] !Ferocious Bite! at 5 combo points and 50 energy
-4. [*Druid of the Claw AOE&&~Rampant Ferocity AOE] Specifically !441583|Ravage! (not !Ferocious Bite!) at 5 combo points and 50 energy
+1. [*Primal Wrath AOE&&~Incarnation AOE] !Primal Wrath! at 4+ combo points if !Rip!s have fewer than 6.5s remaining. During !Berserk!, wait until pandemic instead.
+1. [*Primal Wrath AOE&&Incarnation AOE] !Primal Wrath! at 4+ combo points if !Rip!s have fewer than 6.5s remaining. During !102543|Incarn!, wait until pandemic instead.
+3. [*Wildstalker AOE&&~Rampant Ferocity AOE] !Ferocious Bite! a vined target, if one exists, at 4+ combo points up to ~4 targets.
+3. [*Wildstalker AOE&&Rampant Ferocity AOE] !Ferocious Bite! at 4+ combo points, preferring vined targets.
+4. [*Druid of the Claw AOE&&Rampant Ferocity AOE] !Ferocious Bite! at 4+ combo points
+4. [*Druid of the Claw AOE&&~Rampant Ferocity AOE] Specifically !441583|Ravage! (not !Ferocious Bite!) at 4+ combo points
 5. [*Primal Wrath AOE&&~Rampant Ferocity AOE] Clip !Primal Wrath! at 5 combo points if you've made it this far.
 
 </details>
@@ -154,20 +149,20 @@ The way this section is written is very formulaic and has the same structure as 
 <details open>
 <summary>Last Priority: Generators</summary>
 
-> [!NOTE]
-> If you have Panther's Guile talented, it is possible that using !Shred! specifically at 0 combo points is worth doing at low (2-3) or high (10+) target counts
-
-1. [*Sudden Ambush AOE] !Swipe! if you have !Sudden Ambush! proc or a !Clearcasting! proc.
-2. [*~Sudden Ambush AOE] !Swipe! if you have a !Clearcasting! proc.
+1. !Swipe! if you have a !Clearcasting! proc.
 3. [*Double Clawed Rake AOE&&Shadowmeld AOE&&~Incarnation AOE] Refresh !Rake!'s that are missing or in pandemic. !58984|Shadowmeld! first if you can.
 3. [*Double Clawed Rake AOE&&~Shadowmeld AOE&&~Incarnation AOE] Refresh !Rake!'s that are missing or in pandemic
 3. [*Double Clawed Rake AOE&&Shadowmeld AOE&&Incarnation AOE] Refresh !Rake!'s that are missing or in pandemic. !58984|Shadowmeld! or !Prowl! first if you can.
 3. [*Double Clawed Rake AOE&&~Shadowmeld AOE&&Incarnation AOE] Refresh !Rake!'s that are missing or in pandemic. !Prowl first if you can.
-4. [*Wildstalker AOE&&~Double Clawed Rake AOE] !Rake! if you have no !Rake!'s out. We want at least one !Rake! rolling for the sake of proccing !439531|Bloodseeker Vines!.
-5. [*Lunar Inspiration AOE||~Double Clawed Rake AOE] !Swipe! starting at 3 or 4 targets
-6. [*Lunar Inspiration AOE] Refresh !Moonfire!'s that are either missing, or in pandemic range.
-7. [*~Double Clawed Rake AOE] Refresh !Rake!'s that are either missing, or in pandemic range.
-8. !Swipe!
+4. [*Wildstalker AOE&&~Double Clawed Rake AOE] Refresh !Rake!'s that are missing or in pandemic.
+5. [*Druid of the Claw AOE] !Swipe! during !Berserk! to try to trigger !441583|Ravage! via !441835|Claw Rampage!
+6. [*Infected Wounds AOE&&~Wild Slashes AOE] Refresh !Rake!'s that are missing or in pandemic when facing up to 8 targets.
+7. [*Infected Wounds AOE&&Wild Slashes AOE] Refresh !Rake!'s that are missing or in pandemic when facing up to 5 targets.
+8. [*~Infected Wounds AOE&&~Wild Slashes AOE] Refresh !Rake!'s that are missing or in pandemic when facing up to 5 targets.
+9. [*~Infected Wounds AOE&&Wild Slashes AOE] Refresh !Rake!'s that are missing or in pandemic when facing up to 3 targets.
+10. [*Lunar Inspiration AOE&&~Wild Slashes AOE] Refresh !155580|Moonfire!'s that are missing or in pandemic when facing up to 4 targets.
+11. [*Lunar Inspiration AOE&&Wild Slashes AOE] Refresh !155580|Moonfire!'s that are missing or in pandemic against 2 targets.
+12. !Swipe!.
 
 <div className="pb-6">
 </div>
@@ -176,8 +171,6 @@ The way this section is written is very formulaic and has the same structure as 
 > In dungeons, with !Killing Strikes! and !102543|Incarn! talented, spread out the !58984|Shadowmeld! and !Prowl! casts such that you get more !Killing Strikes! resets. Even if it means you don't take advantage of !Pouncing Strikes!.
 
 </details>
-
-
 
 # Talents
 
@@ -194,131 +187,84 @@ This section will get updated before Midnight raids release. Check back later. F
 
 ### Generic Raid Build Archetypes
 
-> [!WARNING]
-> Our talent viewers don't like non-max level builds, so these are just the import-codes for now.
+<Talents name={"Wildstalker Pure Single Target"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtFPwyMbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA"}/>
+<Talents name={"Wildstalker Hybrid ST-AoE"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlx2MbzMzMPwMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAAAAAIAY2mZpZbmlNwMDwiZwAAYmBAD"}/>
 
-WS Pure-ST Build: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtFPwyMbzYGzMDAAAALBzGMmZUzYWGzMzYMDAAAAAAAGAAAABADzSz2YZDMzAsYGMAAmZAA
-```
-
-WS Hybrid ST-AOE:
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlx2MbzMzMPwMDAAAALBzGMmZUzYWGzMzYMDAAAAAAAAAAAIAYYWa2GLbgZGgFzgBAwMDAA
-```
-
-DOTC Pure-ST Build: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZMmZmZmxshlZ2mxMmZGAAAAWCmNYMzomxsMmZmxYGAAAAAAAMAAAAyYWGzMgALgZGgFzgBAAwMLA
-```
-
-DOTC Hybrid ST-AOE: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZ8AmZmZmxsZsNz2MzMzDMzAAAAwSwsBjZG1MmlxMzMGzAAAAAAAAAAAAyY2GzMgALgZGgFzgBAAwMbA
-```
-
-DOTC AOE: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZYmZmZMzsZsNz2MzMzDMzAAAAwSwsBjZG1MmlxMzMGzAAAAAAAAAAAAyY2GzMgALgZGgFzgBAAwMbA
-```
-
-Mess around with stuff how you please, these are just sample guesses for prepatch. Things will inevitably change.
-
+More builds will be inserted here at a later time, to flesh out all the niches we see.
 
 ## Dungeon Talents
 
-This section will get fleshed out before Midnight Season 1 begins, Check back in March. For now, here are a couple builds you can play. I suspect Druid of the Claw will still be the superior option. Frantic Frenzy is very good.
+This section will get fleshed out before Midnight Season 1 begins. For now, here are a couple builds you can play. I suspect Druid of the Claw will still be the superior option. Frantic Frenzy is very good.
 
-DOTC 1: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDPgZG1MmFzMzMLjZAAAAAAAwAAAAIjZbMzACsAmZAWYwAAAYmNA
-```
-
-DOTC 2:
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDzMzMjZmNzDsN2mZmZMzAAAAwSwsZ4BMzomxsYmZmZZMDAAAAAAAAAAAIjZbMzACsAmZAWYwAAAYmNA
-``` 
+<Talents name={"DOTC"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAoZWmtZmZABWAzMALMYAAAMzGG"}/>
+<Talents name={"Wildstalker"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDzMzMjZmNjtZ2mZmZMzAAAAwSwsZ4BMzomxsYmZmZZMzYAAAAAAAAAAAIAY2mZrZZmlNwMDwCDGAAzMAYA"}/>
 
 # Consumables
 
 | Type | Consumable |
 |------|---------|
-| **DPS Potion** | [Tempered Potion](https://www.wowhead.com/spell=430599/tempered-potion)  |
-| **Healing Potion** | [Invigorating Healing Potion](https://www.wowhead.com/ptr-2/item=244835/invigorating-healing-potion) is the best health potion available. |
-| **Food** | [Beledar's Bounty](https://www.wowhead.com/item=222728/beledars-bounty) or any other secondary stat food. |
-| **Flask** | [Flask of Alchemical Chaos](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) |
-| **Oil/Stone** | [Algari Mana Oil](https://www.wowhead.com/item=224107/algari-mana-oil) |
-| **Augment Rune** | [Crystallized Augment Rune](https://www.wowhead.com/item=224572/crystallized-augment-rune) |
+| **DPS Potion** | [Light's Potential](https://www.wowhead.com/item=241308/lights-potential?crafting-quality=5) or a bit riskier: [Draught of Rampant Abandon](https://www.wowhead.com/item=241292/draught-of-rampant-abandon?crafting-quality=5) |
+| **Healing Potion** | [Silvermoon Health Potion](https://www.wowhead.com/beta/item=241304/silvermoon-health-potion) |
+| **Food** | Any main-stat feast. For example: [Harandar Celebration](https://www.wowhead.com/item=255846/harandar-celebration) |
+| **Flask** | [Flask of the Magisters](https://www.wowhead.com/item=241322/flask-of-the-magisters) |
+| **Oil/Stone** | [Thalassian Phoenix Oil](https://www.wowhead.com/item=243733/thalassian-phoenix-oil) |
+| **Augment Rune** | [Void-Touched Augment Rune](https://www.wowhead.com/item=259085/void-touched-augment-rune) |
 
 # Gearing
 
 ## Stat Priority
 
 > [!WARNING]
-> Don't overthink secondary stats too much, main goal of prepatch is just to get your item level as high as you can get it.
+> Don't follow any Stat Priority you find. You should always sim your character to decide what gear to equip.
 
 ## Gems and Enchants
 
+> [!TIP]
+> Listed are the Leech enchants. You can optionally use the Speed or Avoidance variations if you prefer.
+
 | Slot | Gem/Enchant |
 |------|---------|
-| **Gems** |  1x [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) or [Culminating Blasphemite](https://www.wowhead.com/item=213743/culminating-blasphemite) and a mixture of the other gems based on your sims. It is not worth slotting in a Stamina gem. Personally don't think [Elusive Blasphemite](https://www.wowhead.com/item=213746/elusive-blasphemite) is necessary as a Feral Druid, given that we already have a lot of speed, but it would be a disservice to not mention it. |
-| **Weapon** | Any of the secondary-stat weapon enchants; for example: [Stonebound Artistry](https://www.wowhead.com/item=223763/enchant-weapon-stonebound-artistry). |
-| **Chest** | [Crystalline Radiance](https://www.wowhead.com/item=223692/enchant-chest-crystalline-radiance) |
-| **Cloak** | [Chant of Winged Grace](https://www.wowhead.com/item=223731/enchant-cloak-chant-of-winged-grace) |
-| **Legs** | [Stormbound Armor Kit](https://www.wowhead.com/item=219911/stormbound-armor-kit) |
-| **Wrist** | [Chant of Armored Avoidance](https://www.wowhead.com/item=223713/enchant-bracer-chant-of-armored-avoidance) |
-| **Boots** | [Defender's March](https://www.wowhead.com/item=223656/enchant-boots-defenders-march) or [Scout's March](https://www.wowhead.com/item=223653/enchant-boots-scouts-march) |
-| **Ring** | Any of the Radiant Secondaries, for example: [Radiant Critical Strike](https://www.wowhead.com/item=223662/enchant-ring-radiant-critical-strike) |
-
-> [!TIP]
-> Don't forget to add sockets to your rings and necklaces using [Magnificent Jeweler's Setting](https://www.wowhead.com/item=213777/magnificent-jewelers-setting)!
+| **Gems** |  1x [Indecipherable Eversong Diamond](https://www.wowhead.com/item=240983/indecipherable-eversong-diamond) This meta gem gives more main stat than the crit effect one this expansion.|
+| **Weapon** | [Acuity of the Ren'dorei](https://www.wowhead.com/item=244029/enchant-weapon-acuity-of-the-rendorei) |
+| **Helmet** | [Empowered Hex of Leeching](https://www.wowhead.com/item=243951/enchant-helm-empowered-hex-of-leeching?crafting-quality=5) |
+| **Shoulder** | [Silvermoon's Mending](https://www.wowhead.com/item=244021/enchant-shoulders-silvermoons-mending?crafting-quality=5) |
+| **Chest** | [Mark of the Worldsoul](https://www.wowhead.com/item=243977/enchant-chest-mark-of-the-worldsoul?crafting-quality=5) |
+| **Legs** | [Forest Hunter's Armor Kit](https://www.wowhead.com/item=244641/forest-hunters-armor-kit?crafting-quality=5) |
+| **Boots** | [Shaladrassil's Roots](https://www.wowhead.com/item=243983/enchant-boots-shaladrassils-roots?crafting-quality=5) |
+| **Ring** | [Eyes of the Eagle](https://www.wowhead.com/item=243957/enchant-ring-eyes-of-the-eagle?crafting-quality=5) |
 
 ## Crafting
 
-
 **Crafting Order:**
 
-- [Charged Halberd](https://www.wowhead.com/item=222448/charged-halberd?bonus=8791&class=11&ilvl=636&spec=103) (or any crafted 2h agi weapon) with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension). If you already have a myth track weapon, you can skip this.
-- Sim the best slot for your gear using [Writhing Armor Banding](https://www.wowhead.com/item=219506/writhing-armor-banding) (if you have weapon with [Darkmoon Sigil: Ascension](https://www.wowhead.com/item=226022/darkmoon-sigil-ascension)) or [Dawnthread Lining](https://www.wowhead.com/item=222868/dawnthread-lining)/[Duskthread Lining](https://www.wowhead.com/item=222873/duskthread-lining) if you do not.
-- Can continue doing the above. Ever since the crest requirement for crafted gear got nerfed this route is equally efficient in that regard.
+- [Blood Knight's Impetus]() (or any crafted 2h agi weapon) with [Darkmoon Sigil: Hunt](https://www.wowhead.com/item=245875/darkmoon-sigil-hunt). If you already have a myth track weapon, you can skip this.
+- Sim the best slots for your gear using [Arcanoweave Lining](https://www.wowhead.com/item=240166/arcanoweave-lining)
 
-Ideal is on Wrists and Belt, but you should try to get your item level as high as you can in all slots.
+If you're a mythic raider, you can choose to gamble on acquiring a myth track weapon early (2h polearm drops from 2nd boss: [Inescapable Reach](https://www.wowhead.com/item=249302/inescapable-reach?bonus=13335:12806)), and instead upgrade a hero track weapon to 6/6 for now. This is more efficient crest wise in the long run, but can lead to slower progression by missing out on the early power boost if your gamble fails.
+
+Endgame ideal is on Wrists + Cloak/Boots, but you should try to get your item level as high as you can in all slots.
 
 ## Trinkets
 
-These trinket lists are in rough estimated order of strength, assuming the highest item level version of the items. Prepatch and scaling is always weird though, so this may be off.
+These trinket lists are in rough estimated order of strength, assuming the highest item level version of the items. This will likely change with tuning. Delve trinkets are currently missing.
 
 > [!CAUTION]
 > Double stat on-use trinkets is generally bad, your second trinket should be a passive.
 
-**On-use trinket ranking**
-1. [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103)
-2. [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103)
-3. [Signet of the Priory](https://www.wowhead.com/item=219308/signet-of-the-priory?class=11&hero=21&ilvl=723&spec=103)
-4. [Lily of the Eternal Weave](https://www.wowhead.com/item=242494/lily-of-the-eternal-weave?bonus=3215:12361:12239&class=11&hero=22&ilvl=723&spec=103&spellModifier=1244029:137011)
-5. [Cursed Stone Idol](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103)
-
 **For use in Raid:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
-| **S Tier** | [Araz's Ritual Forge](https://www.wowhead.com/ptr-2/item=242402/arazs-ritual-forge?bonus=1533:12361:12239&ilvl=723&spec=103) | 2 min on-use trinket. Macro to berserk, so strong that even a lower item level version of this can be better than your other options.
-| **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) | Passive crit proc. Sometimes you can't get full benefit, reducing its value a bit. Can sim with higher miss chance in Raidbots options.
-| **B Tier** | [Improvised Seaforium Pacemaker](https://www.wowhead.com/ptr-2/item=232541/improvised-seaforium-pacemaker?class=11&ilvl=678&spec=103) | Cyclical Crit proc.
-| **C Tier**| [Sigil of the Cosmic Hunt](https://www.wowhead.com/item=242397/sigil-of-the-cosmic-hunt?class=11&hero=21&ilvl=723&spec=103) | Damage proc trinket + execute
-| | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) | Passive stat proc.
-| | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) | A little bit worse for DOTC, but still a solid passive trinket.
-| | [So'leah's Secret Technique](https://www.wowhead.com/ptr-2/item=190958/soleahs-secret-technique?bonus=10035:12361:12239&class=11&spec=103) | True stat stick, sim default is mastery. Higher if you factor in ally buff.
+| **S Tier** | [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103) | 2 min on-use trinket. Cast right before you use Berserk/Tiger's Fury
+| | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?hero=22&ilvl=289&spec=103)
+| **A Tier** | [Radiant/Umbral Plume](https://www.wowhead.com/item=249806/radiant-plume?bonus=4795&class=11&hero=22&ilvl=289&spec=103) Usually want to see this to Radiant | 
+| **B Tier** | [Ranger-Captain's Iridescent Insignia](https://www.wowhead.com/item=249345/ranger-captains-iridescent-insignia?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
+| | [Emberwing Feather](https://www.wowhead.com/item=250144/emberwing-feather?bonus=4795&class=11&hero=22&ilvl=289&spec=103&spellModifier=1250508:137011) This is much worse if you already have another on use like [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103)
+| | [Light Company Guidon](https://www.wowhead.com/item=249344/light-company-guidon?bonus=4795&class=11&hero=22&ilvl=289&spec=103) Pair with Berserk. This is much worse if you already have another on use like [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103)
+| **C Tier**| [Undreamt God's Oozing Vestige](https://www.wowhead.com/item=249805/undreamt-gods-oozing-vestige?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
+| | [Vessel of Tortured Souls](https://www.wowhead.com/item=250258/vessel-of-tortured-souls?bonus=4795&hero=22&ilvl=289&spec=103) |
+| | [Kroluk's Warbanner](https://www.wowhead.com/item=250227/kroluks-warbanner?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
 
-**For use in Mythic+:**
-| Tier | Trinket | Notes |
-| :-: | :- | :- |
-| **S Tier** | [Unyielding Netherpism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103) | Macro to Berserk
-| **A Tier** | [Astral Antenna](https://www.wowhead.com/item=242395/astral-antenna?class=11&hero=21&ilvl=723&spec=103) |
-| **B Tier** | [Empowering Crystal of Anub'ikkaj](https://www.wowhead.com/item=219312/empowering-crystal-of-anubikkaj?class=11&hero=21&ilvl=723&spec=103) |
-| | [So'leah's Secret Technique](https://www.wowhead.com/item=185818/soleahs-secret-technique?class=11&hero=21&ilvl=723&spec=103) | Sim which secondary is best, but odds are its mastery. Arguably should be rated higher for consistency + ally benefit.
-| | [Cursed Stone Idol](https://www.wowhead.com/item=246344/cursed-stone-idol?bonus=1595:12361:12239&class=11&hero=22&ilvl=723&spec=103) | As a 2nd on-use. Particularly with [Unyielding Netherprism](https://www.wowhead.com/ptr-2/item=242396/unyielding-netherprism?bonus=1533:12361:12239&ilvl=723&spec=103). Send on cooldown as long as it wont interrupt your main use. Ideally with 5+ targets.
-| | [Improvised Seaforium Pacemaker](https://www.wowhead.com/item=232541/improvised-seaforium-pacemaker?bonus=12361:10390:40:1559:10255&class=11&hero=21&ilvl=723&spec=103) |
-| | [Ara'kara Sacbrood](https://www.wowhead.com/item=219314/ara-kara-sacbrood?hero=21&ilvl=723&spec=103) |
+** M+ version of this list will be out before the release of the M+ season so check back later **
 
 ### Trinket FAQ
 
@@ -326,11 +272,9 @@ Q: Should we be playing double on-use trinkets?
 
 A: No, Feral will typically play just one on-use
 
+Q: Why are Radiant Plume and Umbral Plume listed together?
 
-Q: How many buffs does [Signet of the Priory](https://www.wowhead.com/ptr-2/item=219308/signet-of-the-priory?class=11&ilvl=678&spec=103) assume?
-
-A: None. The increase from other people having it is pretty small though.
-
+A: Because you can switch between them by activating its on-use effect and cannot wear one of each.
 
 Q: Why do damaging items deal more damage as Wildstalker?
 
