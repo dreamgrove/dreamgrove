@@ -6,13 +6,6 @@ authors: ["Crazymeow"]
 summary: '야성 드루이드의 모든 것'
 translator: 'NeruTe'
 ---
-# 새소식
-
-야성 드루이드는 한밤을 맞이하며 다른 여러 전문화와 마찬가지로 많은 변화를 겪게 된다. 이는 대부분 각 전문화를 핵심 요소 중심으로 단순화하기 위한 것으로, 일반적으로는 추적이 불가능하여 별도의 지식을 요구하는 기술과 특성을 제거하는 경우가 많다.
-
-본 가이드는 사전 패치에 맞게 수정되었으나, 그 내용 대부분이 아직은 과거의 사전 패치와 베타 테스트 경험을 기반으로 한 합리적인 추론 수준을 넘을 수 없음에 유의하기 바란다. '제대로 된' 연구가 정립되는 것은 한밤 정식 출시 후, 1시즌 시작 이전의 시점이 될 것이다.
-
-즐거운 사냥을 기원한다. 한밤에서 다시 만나자.
 
 # 로테이션
 
@@ -31,16 +24,12 @@ translator: 'NeruTe'
 
 **다음 중 현재 선택한 특성을 모두 체크**
 
-> [!WARNING]
-> 한밤 버전의 시전 우선순위는 정립된 것이 아니다. 다음의 내용은 향후 최대 성능을 내기 위한 운용에 대한 합리적 추론의 결과로, 이에 대한 시뮬레이션은 아직 이루어지지 않았다.
-
 <Checkbox isIcon id="Feral Frenzy" spellId={274838} name="야성의 광기" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits" spellId={391528} name="영혼 소집" radio="Convoke" defaultCheck />
 <Checkbox isIcon id="Incarnation" spellId={102543} name="화신" radio="Convoke" />
-<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="달 바라기" radio="Chomp"/>
-<Checkbox isIcon id="Chomp" spellId={1244258} name="물어뜯기" radio="Chomp" defaultCheck />
+<Checkbox isIcon id="Lunar Inspiration" spellId={155580} name="달 바라기" radio="Chomp" defaultCheck />
+<Checkbox isIcon id="Chomp" spellId={1244258} name="물어뜯기" radio="Chomp" />
 <Checkbox isIcon id="Apex Predator's Craving" spellId={391881} name="최상위 포식자의 갈망" />
-<Checkbox isIcon id="Sudden Ambush" spellId={384667} name="기습 공격" defaultCheck />
 <Checkbox isIcon id="Shadowmeld" spellId={58984} name="그림자 숨기" />
 
 **단일 대상 시전 우선순위**
@@ -48,16 +37,16 @@ translator: 'NeruTe'
 <details open>
 <summary>1순위: 주요 쿨다운 기술</summary>
 
-1. 연계 점수가 5점일 때, 또는 기력이 없어 다른 기술을 쓸 수 없을 때, !5217|호랑이의 분노!.
-2. [*Incarnation] !5217|호랑이의 분노!에 맞춰, !102543|화신!.
-3. [*~Incarnation] !5217|호랑이의 분노!에 맞춰, !106951|광폭화!. 어떤 이유로 !391528|영혼 소집!과 재사용 대기 시간이 어긋났다면, 전체 광폭화 횟수가 줄어들게 되는 것이 아닌 이상 미뤘다가 영혼 소집에 맞춰 쓸 것.
-4. [*Chomp] !1244258|물어뜯기!를 쓸 수 있게 될 때, 즉시 !1244258|물어뜯기!.
-5. [*Feral Frenzy&&Incarnation] 연계 점수 1점 이하에서, !274837|야성의 광기!. !102543|화신! 발동 중일 경우, 2점에서 사용해도 무방함.
-6. [*Feral Frenzy&&~Incarnation] 연계 점수 1점 이하에서, !274837|야성의 광기!. !106951|광폭화! 발동 중일 경우, 2점에서 사용해도 무방함.
+1. 쿨마다 !5217|호랑이의 분노!.
+2. [*Chomp] !1244258|물어뜯기!를 쓸 수 있게 될 때, 즉시 !1244258|물어뜯기!.
+3. [*Incarnation] !5217|호랑이의 분노!에 맞춰, !102543|화신!.
+4. [*~Incarnation] !5217|호랑이의 분노!에 맞춰, !106951|광폭화!. 어떤 이유로 !391528|영혼 소집!과 재사용 대기 시간이 어긋났다면, 전체 광폭화 횟수가 줄어들게 되는 것이 아닌 이상 미뤘다가 영혼 소집에 맞춰 쓸 것.
+5. [*Feral Frenzy&&Incarnation] 연계 점수 2점 이하에서, !274837|야성의 광기!. !102543|화신! 발동 중일 경우, 4점에서 사용해도 무방함.
+6. [*Feral Frenzy&&~Incarnation] 연계 점수 2점 이하에서, !274837|야성의 광기!. !106951|광폭화! 발동 중일 경우, 4점에서 사용해도 무방함.
 7. [*Convoke the Spirits] 다음의 조건을 모두 만족할 때, !391528|영혼 소집!.
     - 대상에게 !1079|도려내기!가 활성화되어 있을 것.
     - !5217|호랑이의 분노! 효과를 받고 있을 것.
-    - 현재 보유한 연계 점수가 2점 이하일 것. 단, !106951|광폭화! 발동 중일 경우, 현재 보유한 연계 점수가 3점 이하일 것. (지금 당장 시전하지 않으면 영혼 소집이 끝나기 전에 광폭화가 만료될 상황이라면, 이 조건을 무시.)
+    - 현재 보유한 연계 점수가 2점 이하일 것. 단, !106951|광폭화! 발동 중일 경우, 현재 보유한 연계 점수가 4점 이하일 것. (지금 당장 시전하지 않으면 영혼 소집이 끝나기 전에 광폭화가 만료될 상황이라면, 이 조건을 무시.)
 8. [*Convoke the Spirits] 전투가 끝나기 직전이라면, !391528|영혼 소집!. 일반적으로는 전체 영혼 소집 횟수가 줄어들게 되는 것이 아닌 이상 !106951|광폭화!와 맞춰 쓰는 것이 맞음.
 
 </details>
@@ -66,13 +55,14 @@ translator: 'NeruTe'
 <summary>2순위: 마무리 일격</summary>
 
 1. 다음의 조건을 모두 만족할 때, !1079|도려내기!.
-    - 현재 보유한 연계 점수가 5점일 것.
+    - 현재 보유한 연계 점수가 4점 이상일 것.
     - 현재 대상에게 !1079|도려내기!가 걸려 있지 않거나, 남은 지속시간이 pandemic 구간 이내일 것.
     - !5217|호랑이의 분노! 효과를 받고 있거나, 현재 걸려 있는 !1079|도려내기!의 남은 지속시간이 !5217|호랑이의 분노!의 남은 재사용 대기 시간보다 짧을 것.
 2. [*Apex Predator's Craving] !최상위 포식자의 갈망! 효과를 받고 있을 때, !흉포한 이빨!.
-3. 다음의 조건을 모두 만족할 때, !22568|흉포한 이빨!.
-    - 현재 보유한 연계 점수가 5점일 것.
-    - 현재 보유한 기력이 50 이상일 것.
+3. 연계 점수 4점 이상에서 !22568|흉포한 이빨! 단, !102543|화신!/!광폭화! 중에는 5점을 꽉 채워서 쓸 것.
+
+> [!WARNING]
+> !흉포한 이빨!은 이제 기력 50을 맞춰서 쓰지 않는다. 연계 점수에만 맞게 쓰면 된다. (역주: 정점 특성 발동 최대화를 위함입니다.)
 
 </details>
 
@@ -80,22 +70,23 @@ translator: 'NeruTe'
 <summary>3순위: 연계 점수 생성기</summary>
 
 1. [*Incarnation] 다음의 조건을 모두 만족할 때, !숨기!.
-    - [*Sudden Ambush] !기습 공격! 효과를 받고 있거나, 현재 활성화된 !102543|화신!이 끝나기 직전일 것.
     - [*Shadowmeld] !그림자 숨기! 효과를 받고 있지 않을 것.
-    - 직전에 사용한 기술이 연계 점수 소모기일 것.
+    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이거나, 지금 상태에서 시전하는 !갈퀴 발톱!이 기존의 것보다 더 강할 것.
 2. [*Shadowmeld] 다음의 조건을 모두 만족할 때, !58984|그림자 숨기!.
-    - [*Sudden Ambush&&Incarnation] !384667|기습 공격! 효과를 받고 있거나, 현재 활성화된 !102543|화신!이 끝나기 직전일 것.
-    - [*Sudden Ambush&&~Incarnation] !384667|기습 공격! 효과를 받고 있거나, 현재 활성화된 !광폭화!가 끝나기 직전일 것.
     - [*Incarnation] !숨기! 효과를 받고 있지 않을 것.
-    - 직전에 사용한 기술이 연계 점수 소모기일 것.
-    - [*Incarnation] !102543|화신! 발동 중일 것.
-    - [*~Incarnation] !광폭화! 발동 중일 것.
-3. [*Sudden Ambush] !기습 공격! 효과를 받고 있을 때, !칼날 발톱!.
+    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이거나, 지금 상태에서 시전하는 !갈퀴 발톱!이 기존의 것보다 더 강할 것.
 4. 다음 중 하나라도 만족하면, !1822|갈퀴 발톱!.
-    - !1822|갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, 지금 상태에서 시전하는 !갈퀴 발톱!이 기존의 것과 동등한 위력이거나 보다 강할 것.
-    - !갈퀴 발톱!의 남은 지속시간이 pandemic 구간 이내이며, !5217|호랑이의 분노!의 남은 재사용 대기 시간보다 짧을 것. 이때 지금 상태에서 시전하는 !1822|갈퀴 발톱!이 기존의 것보다 약한 상태라면, 가능한 한 만료되기 직전까지 갱신을 미룰 것.
-5. [*Lunar Inspiration] !달빛섬광!의 남은 지속시간이 pandemic 구간 이내이거나, (지속시간과 무관하게) 지금 상태에서 시전하는 !달빛섬광!이 기존의 것보다 강한 위력일 경우, !달빛섬광!.
+    - 지금 상태에서 시전하는 !갈퀴 발톱!이 기존의 것보다 더 강할 것.
+    - !갈퀴 발톱!이 pandemic 구간 이내이고 !호랑이의 분노! 효과를 받고 있을 것.
+    - !갈퀴 발톱!의 남은 지속시간이 2초 이하이고, 그 안으로 !호랑이의 분노! 재사용 대기 시간이 돌아오지 않을 것.
+5. [*Lunar Inspiration] 다음 중 하나라도 만족하면, !155580|달빛섬광!.
+    - 지금 상태에서 시전하는 !155580|달빛섬광!이 기존의 것보다 더 강할 것.
+    - !155580|달빛섬광!의 남은 지속시간이 pandemic 구간 이내이고, 현재 !5217|호랑이의 분노! 효과를 받고 있을 것.
+    - !155580|달빛섬광!의 남은 지속시간이 2초 이하이고, 그 안으로 !호랑이의 분노! 재사용 대기 시간이 돌아오지 않을 것.
 6. !칼날 발톱!.
+
+> [!TIP]
+> !155580|달빛섬광!의 복잡한 시전 조건을 단순화하여, 단순히 남은 지속시간이 pandemic 구간 이내일 때 시전하더라도 화력 손실은 ~0.1-0.2% 정도에 그치기 때문에 위 조건을 곧이곧대로 지킬 필요는 없다.
 
 </details>
 
@@ -103,16 +94,20 @@ translator: 'NeruTe'
 
 **다음 중 현재 선택한 특성을 모두 체크**
 
+> [!INFO]
+> 본 가이드를 통틀어, !1243807|날뛰는 광란!은 !야성의 광기!와 동일하게 취급한다.
+
 <Checkbox isIcon id="Druid of the Claw AOE" spellId={441583} name="발톱의 드루이드" radio="hero talents AOE" defaultCheck />
 <Checkbox isIcon id="Wildstalker AOE" spellId={439528} name="야생추적자" radio="hero talents AOE"/>
 <Checkbox isIcon id="Double Clawed Rake AOE" spellId={391700} name="이중 발톱 갈퀴" />
+<Checkbox isIcon id="Wild Slashes AOE" spellId={390864} name="거친 베기" defaultCheck />
+<Checkbox isIcon id="Infected Wounds AOE" spellId={48484} name="감염된 상처" defaultCheck />
 <Checkbox isIcon id="Feral Frenzy AOE" spellId={274838} name="야성의 광기" defaultCheck />
 <Checkbox isIcon id="Convoke the Spirits AOE" spellId={391528} name="영혼 소집" radio="Convoke AOE" defaultCheck />
 <Checkbox isIcon id="Incarnation AOE" spellId={102543} name="화신" radio="Convoke AOE"/>
 <Checkbox isIcon id="Lunar Inspiration AOE" spellId={155580} name="달 바라기" />
 <Checkbox isIcon id="Apex Predator's Craving AOE" spellId={391881} name="최상위 포식자의 갈망" defaultCheck />
 <Checkbox isIcon id="Rampant Ferocity AOE" spellId={391710} name="날뛰는 야성" defaultCheck />
-<Checkbox isIcon id="Sudden Ambush AOE" spellId={384667} name="기습 공격" defaultCheck />
 <Checkbox isIcon id="Shadowmeld AOE" spellId={58984} name="그림자 숨기" />
 <Checkbox isIcon id="Primal Wrath AOE" spellId={285381} name="원시 분노" defaultCheck />
 
@@ -125,16 +120,16 @@ translator: 'NeruTe'
 > [!TIP]
 > 단일 대상 기술은 점사 대상 / 체력이 가장 높은 적에게 사용할 것.
 
-1. 연계 점수가 5점이거나 기력이 모자랄 때, !5217|호랑이의 분노!. 곧 !102543|화신!/!106951|광폭화!가 준비될 경우, 이에 맞춰 몇 초 정도는 미룰 수 있음.
+1. 쿨마다 !5217|호랑이의 분노!. 곧 !102543|화신!/!106951|광폭화!가 준비될 경우, 이에 맞춰 몇 초 정도는 미룰 수 있음.
 2. [*Apex Predator's Craving AOE] !최상위 포식자의 갈망! 효과를 받고 있을 때, !흉포한 이빨!.
 3. [*Incarnation AOE] !102543|화신!. 항상 !5217|호랑이의 분노!와 맞춰 쓸 것.
 4. [*~Incarnation AOE] !106951|광폭화!. 항상 !5217|호랑이의 분노!와 맞춰 쓸 것.
-5. [*Feral Frenzy AOE&&Incarnation AOE] 연계 점수 1점 이하에서, !274837|야성의 광기!. !102543|화신!/!106951|광폭화! 발동 중일 경우, 2점에서 사용해도 무방함.
-6. [*Feral Frenzy AOE&&~Incarnation AOE] 연계 점수 1점 이하에서, !274837|야성의 광기!. !102543|화신!/!106951|광폭화! 발동 중일 경우, 2점에서 사용해도 무방함.
+5. [*Feral Frenzy AOE&&Incarnation AOE] 연계 점수 2점 이하에서, !274837|야성의 광기!. !102543|화신!/!106951|광폭화! 발동 중일 경우, 4점 이하에서 사용.
+6. [*Feral Frenzy AOE&&~Incarnation AOE] 연계 점수 2점 이하에서, !274837|야성의 광기!. !102543|화신!/!106951|광폭화! 발동 중일 경우, 4점에서 이하에서 사용.
 7. [*Convoke the Spirits AOE] 다음의 조건을 모두 만족할 때, !391528|영혼 소집!.
     - 대상에게 걸려 있는 !1079|도려내기!의 남은 지속시간이 !391528|영혼 소집!의 시전이 끝날 때까지 만료되지 않을 만큼 충분할 것.
     - !5217|호랑이의 분노! 효과를 받고 있을 것.
-    - 현재 보유한 연계 점수가 1점 이하일 것. 단, !106951|광폭화! 발동 중일 경우, 현재 보유한 연계 점수가 2점 이하일 것.
+    - 현재 보유한 연계 점수가 2점 이하일 것. 단, !106951|광폭화! 발동 중일 경우, 현재 보유한 연계 점수가 4점 이하일 것.
     - *참고: 일반적으로는 전체 영혼 소집 횟수가 줄어들게 되는 것이 아닌 이상 !106951|광폭화!와 맞춰 쓰는 것이 맞음.
 
 </details>
@@ -142,33 +137,33 @@ translator: 'NeruTe'
 <details open>
 <summary>2순위: 마무리 일격</summary>
 
-1. [*Primal Wrath AOE&&~Incarnation AOE] 적 대상들에게 걸려 있는 !도려내기!의 남은 지속시간이 6.5초 이하일 때, 연계 점수 5점에서 !원시 분노!. 단, !광폭화! 발동 중일 경우, pandemic 구간까지 더 미뤘다 쓸 것.
-2. [*Primal Wrath AOE&&Incarnation AOE] 적 대상들에게 걸려 있는 !도려내기!의 남은 지속시간이 6.5초 이하일 때, 연계 점수 5점에서 !원시 분노!. 단, !102543|화신! 발동 중일 경우, pandemic 구간까지 더 미뤘다 쓸 것.
-3. [*Wildstalker AOE&&Rampant Ferocity AOE] 적 대상이 3개 이내일 경우, !피바라미 덩굴! 효과를 받고 있는 적이 있다면, 연계 점수 5점에서 해당 대상에게 !흉포한 이빨!.
-3. [*Wildstalker AOE&&Rampant Ferocity AOE] !피바라미 덩굴! 효과를 받고 있는 적을 우선하여, 연계 점수 5점에서 !흉포한 이빨!.
-4. [*Druid of the Claw AOE&&Rampant Ferocity AOE] 연계 점수 5점, 기력 50 이상에서 !흉포한 이빨!.
-4. [*Druid of the Claw AOE&&~Rampant Ferocity AOE] !찢어발기기!를 사용 가능할 경우, 반드시 연계 점수 5점, 기력 50 이상이 준비된 상황에서 !찢어발기기!.
-5. [*Primal Wrath AOE&&~Rampant Ferocity AOE] 이런 상황에 처했다면, 남은 !도려내기! 지속시간과 무관하게 연계 점수 5점에서 !원시 분노!. (역주: !날뛰는 야성!도 안 찍고 와서 연계 점수는 남고, 화신/광폭화도, 찢어발기기도 없이 광딜을 하는 상황을 의미합니다. 현실적으로 이런 일은 극히 드뭅니다.)
+1. [*Primal Wrath AOE&&~Incarnation AOE] 적 대상들에게 걸려 있는 !도려내기!의 남은 지속시간이 6.5초 이하일 때, 연계 점수 4점 이상에서 !원시 분노!. 단, !광폭화! 발동 중일 경우, pandemic 구간까지 더 미뤘다 쓸 것.
+2. [*Primal Wrath AOE&&Incarnation AOE] 적 대상들에게 걸려 있는 !도려내기!의 남은 지속시간이 6.5초 이하일 때, 연계 점수 4점 이상에서 !원시 분노!. 단, !102543|화신! 발동 중일 경우, pandemic 구간까지 더 미뤘다 쓸 것.
+3. [*Wildstalker AOE&&Rampant Ferocity AOE] 적 대상이 4개 이내일 경우, !피바라미 덩굴! 효과를 받고 있는 적이 있다면, 연계 점수 4점 이상에서 해당 대상에게 !흉포한 이빨!.
+3. [*Wildstalker AOE&&Rampant Ferocity AOE] !피바라미 덩굴! 효과를 받고 있는 적을 우선하여, 연계 점수 4점 이상에서 !흉포한 이빨!.
+4. [*Druid of the Claw AOE&&Rampant Ferocity AOE] 연계 점수 4점 이상에서 !흉포한 이빨!.
+4. [*Druid of the Claw AOE&&~Rampant Ferocity AOE] !찢어발기기!를 사용 가능할 경우, 반드시 연계 점수 4점 이상이 준비된 상황에서 !찢어발기기!.
+5. [*Primal Wrath AOE&&~Rampant Ferocity AOE] 아직도 달리 할 일이 없다면, 남은 !도려내기! 지속시간과 무관하게 연계 점수 5점에서 !원시 분노!.
 
 </details>
 
 <details open>
 <summary>3순위: 연계 점수 생성기</summary>
 
-> [!NOTE]
-> !1280352|표범의 기만! 특성을 선택했을 경우, 매우 적거나 (2-3개 대상) 매우 많은 (10+개 대상) 적을 상대할 때는 연계 점수가 0점일 때 !칼날 발톱!을 사용하여 도박을 해 보는 것이 합리적인 선택이 될 가능성이 있다.
-
-1. [*Sudden Ambush AOE] !기습 공격! 또는 !16864|청명의 전조! 효과를 받고 있을 경우, !휘둘러치기!.
-2. [*~Sudden Ambush AOE] !16864|청명의 전조! 효과를 받고 있을 경우, !휘둘러치기!.
+1. !청명의 전조! 효과를 받고 있을 경우, !휘둘러치기!.
 3. [*Double Clawed Rake AOE&&Shadowmeld AOE&&~Incarnation AOE] 임의의 적 대상에게 !갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !갈퀴 발톱!. 가능할 경우, !그림자 숨기!를 먼저 쓰고 이어서 쓸 것.
 3. [*Double Clawed Rake AOE&&~Shadowmeld AOE&&~Incarnation AOE] 임의의 적 대상에게 !갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !갈퀴 발톱!.
 3. [*Double Clawed Rake AOE&&Shadowmeld AOE&&Incarnation AOE] 임의의 적 대상에게 !갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !갈퀴 발톱!. 가능할 경우, !그림자 숨기! 내지는 !숨기!를 먼저 쓰고 이어서 쓸 것.
 3. [*Double Clawed Rake AOE&&~Shadowmeld AOE&&Incarnation AOE] 임의의 적 대상에게 !갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !갈퀴 발톱!. 가능할 경우, !숨기!를 먼저 쓰고 이어서 쓸 것.
-4. [*Wildstalker AOE&&~Double Clawed Rake AOE] 주변 적들에게 걸려 있는 !갈퀴 발톱! 효과가 하나도 없다면, !갈퀴 발톱!. 이는 !439531|피바라미 덩굴! 발동을 위함이다.
-5. [*Lunar Inspiration AOE||~Double Clawed Rake AOE] 현재 전투 중인 주변 적 대상이 3-4개 이상일 경우, !휘둘러치기!. 
-6. [*Lunar Inspiration AOE] 임의의 적 대상에게 !달빛섬광!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !달빛섬광!.
-7. [*~Double Clawed Rake AOE] 임의의 적 대상에게 !갈퀴 발톱!이 걸려 있지 않거나 그 남은 지속시간이 pandemic 구간 이내일 때, !갈퀴 발톱!.
-8. !휘둘러치기!
+4. [*Wildstalker AOE&&~Double Clawed Rake AOE] !갈퀴 발톱!이 걸려 있는 적 대상이 하나도 없거나, 남은 지속시간이 pandemic 구간 이내인 것이 있다면, !갈퀴 발톱!.
+5. [*Druid of the Claw AOE] !광폭화! 중일 경우, !441835|발톱 광란! 발동을 위해 !휘둘러치기!.
+6. [*Infected Wounds AOE&&~Wild Slashes AOE] 최대 8개 대상까지 !갈퀴 발톱! 유지.
+7. [*Infected Wounds AOE&&Wild Slashes AOE] 최대 5개 대상까지 !갈퀴 발톱! 유지.
+8. [*~Infected Wounds AOE&&~Wild Slashes AOE] 최대 5개 대상까지 !갈퀴 발톱! 유지.
+9. [*~Infected Wounds AOE&&Wild Slashes AOE] 최대 3개 대상까지 !갈퀴 발톱! 유지.
+10. [*Lunar Inspiration AOE&&~Wild Slashes AOE] 최대 4개 대상까지 !155580|달빛섬광! 유지.
+11. [*Lunar Inspiration AOE&&Wild Slashes AOE] 최대 2개 대상까지 !155580|달빛섬광! 유지.
+12. !휘둘러치기!.
 
 <div className="pb-6">
 </div>
@@ -177,8 +172,6 @@ translator: 'NeruTe'
 > !102543|화신!을 쓰는 발톱의 드루이드 쐐기 빌드의 경우, !그림자 숨기! / !숨기!로 전투 상태를 풀 때마다 확정적으로 !목숨을 끊는 일격! 효과를 발동시킬 수 있으므로, 해당 기술들은 몰아서 쓰지 말 것. 이미 !기습 공격! 효과를 갖고 있어 !암습의 일격! 효과를 놓치게 되는 상황이더라도, 확정 !찢어발기기!가 더 강력하다.
 
 </details>
-
-
 
 # 특성 빌드
 
@@ -195,68 +188,35 @@ translator: 'NeruTe'
 
 ### 일반적인 유형별 레이드 빌드
 
-> [!WARNING]
-> 웹사이트의 기술적 문제로, 모든 특성 포인트를 소모하지 않은, 즉 90레벨이 아닌 상태의 한밤 특성 빌드에 대해서는 미리보기를 제공할 수 없다. 이에 따라, 아래에는 특성 코드만을 첨부한다.
+<Talents name={"야생추적자 쌩단일"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtFPwyMbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA"}/>
+<Talents name={"야생추적자 단일 / 광 혼합"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlx2MbzMzMPwMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAAAAAIAY2mZpZbmlNwMDwiZwAAYmBAD"}/>
 
-야생추적자 순수 단일: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZMmZmZmxshlZ2mxMmZGAAAAWCmNDMzomxswMzMLjZGDAAAAAgBGAAAABADzSz2YZDMDgFGMAAmZAA
-```
-
-야생추적자 단일/다중 대상 혼합형:
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZ8AmZmZmxsZsNz2MzMzDMzAAAAwSwsZgZG1MmFmZmZZMzYAAAAAAMAAAAABADzSz2YZDMDgFGMAAmZAA
-```
-
-발톱의 드루이드 순수 단일: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjhxMzMzMmNeglZ2mxMmZGAAAAWCmNDMzomxswMzMLjZGDAAAAAgBGAAAAZMbzYGQgFwMAWYwAAAYmF
-```
-
-발톱의 드루이드 단일/다중 대상 혼합형: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMMmZmZmxsZsNz2MzMzDMzAAAAwSwsZgZG1MmFmZmZZMzYAAAAAAMwAAAAIjZbGzACsAmBwCDGAAAzsA
-```
-
-발톱의 드루이드 다중 대상: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDMzomxswMzMLjZGDAAAAAgBGAAAAZMbzYGQgFwMAWYwAAAYmF
-```
-
-이는 모두 임의 추정에 불과하기 때문에 변화는 반드시 일어날 것이다. 자유롭게 수정하며 시험해 보기 바란다.
-
++ 향후 특정 상황에 맞는 빌드 등장 시 추가 예정.
 
 ## 신화+/쐐기돌 던전 빌드
 
-한밤 1시즌 시작 전 업데이트 예정이니 3월에 다시 찾아오기 바란다. 현재 시점에서 정립된 몇 가지 빌드를 다음과 같이 소개한다. 발톱의 드루이드가 여전히 앞설 것으로 추정된다. 신규 특성 !1244079|날뛰는 광란!이 매우 강력한 모습을 보여주고 있다.
+한밤 1시즌 시작 전 업데이트 예정이니 나중에 다시 찾아오기 바란다. 현재 시점에서 정립된 몇 가지 빌드를 다음과 같이 소개한다. 발톱의 드루이드가 여전히 앞설 것으로 추정된다. 신규 특성 !1244079|날뛰는 광란!이 매우 강력한 모습을 보여주고 있다.
 
-발톱의 드루이드 1: 
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDMzM1MmFmZGLjZGDAAAAAgBGAAAAZMbzYGQgFwMAWYwAAAYmN
-```
-
-발톱의 드루이드 2:
-```
-CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMzMzsZegtx2MzMzDMzAAAAwSwsZgZmpmxswMzYZMzYAAAAAAMAAAAAZMbzYGQgFwMAWYwAAAYmN
-``` 
+<Talents name={"발톱의 드루이드"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAoZWmtZmZABWAzMALMYAAAMzGG"}/>
+<Talents name={"야생추적자"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDzMzMjZmNjtZ2mZmZMzAAAAwSwsZ4BMzomxsYmZmZZMzYAAAAAAAAAAAIAY2mZrZZmlNwMDwCDGAAzMAYA"}/>
 
 # 소모품
 
 | 유형 | 아이템 |
 |------|---------|
-| **전투 물약** | [절제된 물약](https://www.wowhead.com/spell=430599/tempered-potion)  |
-| **치유 물약** | [활력의 치유 물약](https://www.wowhead.com/ptr-2/item=244835/invigorating-healing-potion)  |
-| **음식** | [벨렌다르의 은총](https://www.wowhead.com/item=222728/beledars-bounty) 또는 임의의 2차 능력치 음식. |
-| **영약** | [연금술적 혼돈 영약](https://www.wowhead.com/item=212283/flask-of-alchemical-chaos) |
-| **기름/숫돌** | [알가르 마나 기름](https://www.wowhead.com/item=224107/algari-mana-oil) |
-| **증강의 룬** | [결정화된 증강의 룬](https://www.wowhead.com/item=224572/crystallized-augment-rune) |
+| **전투 물약** | [Light's Potential](https://www.wowhead.com/item=241308/lights-potential?crafting-quality=5), 또는 리스크를 감수할 의향이 있다면 [Draught of Rampant Abandon](https://www.wowhead.com/item=241292/draught-of-rampant-abandon?crafting-quality=5) |
+| **치유 물약** | [Silvermoon Health Potion](https://www.wowhead.com/beta/item=241304/silvermoon-health-potion) |
+| **음식** | 주 능력치를 제공하는 음식 아무 것이나 가능. 예시: [Harandar Celebration](https://www.wowhead.com/item=255846/harandar-celebration) |
+| **영약** | [Flask of the Magisters](https://www.wowhead.com/item=241322/flask-of-the-magisters) |
+| **기름/숫돌** | [Thalassian Phoenix Oil](https://www.wowhead.com/item=243733/thalassian-phoenix-oil) |
+| **증강의 룬** | [Void-Touched Augment Rune](https://www.wowhead.com/item=259085/void-touched-augment-rune) |
 
 # 장비 구성
  
 ## 능력치 우선순위
 
 > [!WARNING]
-> 2차 능력치에 대해 너무 깊게 생각하지 않는 것이 좋다. 사전 패치 기간 동안에는 아이템 레벨을 최대한 높게 올리는 것이 중요하다.
+> 2차 능력치 우선순위는 잘못된 개념이다. 장비 구성은 항상 시뮬레이션 결과에 기초해 이루어져야 한다.
 
 ## 보석과 마법부여
 
