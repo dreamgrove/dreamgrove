@@ -36,7 +36,7 @@ actions+=/call_action_list,name=cooldown
 actions+=/ferocious_bite,if=buff.apex_predators_craving.up
 actions+=/call_action_list,name=finisher,if=spell_targets=1
 actions+=/call_action_list,name=aoe_finisher,if=combo_points>=4&spell_targets>=2
-actions+=/call_action_list,name=builder,if=spell_targets=1&combo_points<4
+actions+=/call_action_list,name=builder,if=spell_targets=1&combo_points<=4
 actions+=/call_action_list,name=aoe_builder,if=spell_targets>1&combo_points<=4
 actions+=/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
 
@@ -57,11 +57,25 @@ actions.aoe_finisher+=/primal_wrath
 
 actions.builder=prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
 actions.builder+=/shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+# prioritizing sudden ambush shred here is ~0.1% gain for dotc, cc shred is equal
 # freely upgrade rakes
 actions.builder+=/rake,if=(buff.tigers_fury.up|remains<variable.tfRemains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
 # freely upgrade li
 actions.builder+=/moonfire_cat,if=(buff.tigers_fury.up|remains<variable.tfRemains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
 actions.builder+=/shred
+
+# maintain rip in single-target. 5cp rips is a ~0.3% loss for dotc
+actions.finisher=rip,if=combo_points>=4&refreshable&(buff.tigers_fury.up|dot.rip.remains<variable.tfRemains)
+actions.finisher+=/pool_resource,for_next=1
+## for non sj-dotc, sending at 5 combo points is ~0.2% dps loss, only ravages at 5cp is equal
+## non-sj non-panthers guile dotc gains ~0.1% without panthers guile, 4cp ravage only: ~+0.2%
+## sj panthers guile ~0.1% gain to pool outside zerk, but for simplicity we can say to always pool outside berserk with sj
+# ferocious bite asap, dont pool
+actions.finisher+=/ferocious_bite,if=combo_points>=4+buff.bs_inc.up&(!talent.saber_jaws|buff.bs_inc.up)
+#&(!talent.saber_jaws|!buff.ravage.up)
+actions.finisher+=/pool_resource,for_next=1
+# with sj + without panthers guile, its a sizable increase to do 5cp bite
+actions.finisher+=/ferocious_bite,max_energy=1,if=combo_points>=5-talent.panthers_guile&!buff.bs_inc.up
 
 # Can these lines be simplified now that you cant have 3min zerk + convoke at the same time? yes. But I dont wanna
 # TLDR, maximize number of cooldown overlaps whilst minimizing number of casts lost.
@@ -109,14 +123,6 @@ actions.cooldown+=/feral_frenzy,if=combo_points<=2+(2*buff.bs_inc.up)
 actions.cooldown+=/frantic_frenzy,if=combo_points<=2+(2*buff.bs_inc.up)
 # always line up convoke with berserk if you can. If we are using jank tigers fury timings, send naked convoke
 actions.cooldown+=/convoke_the_spirits,if=fight_remains<5|buff.bs_inc.up&buff.bs_inc.remains<5-talent.ashamanes_guidance|buff.tigers_fury.up&!variable.holdConvoke&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite)|variable.use_custom_timers&variable.nextTFTimer+cooldown.convoke_the_spirits.duration-10>variable.nextBSTimer&combo_points<=2
-
-# maintain rip in single-target
-actions.finisher=rip,if=combo_points>=4&refreshable&(buff.tigers_fury.up|dot.rip.remains<variable.tfRemains)
-actions.finisher+=/pool_resource,for_next=1
-# ferocious bite asap, dont pool
-actions.finisher+=/ferocious_bite,if=combo_points>=4&(!talent.saber_jaws|!buff.ravage.up)
-actions.finisher+=/pool_resource,for_next=1
-actions.finisher+=/ferocious_bite,max_energy=1,if=combo_points>=4
 
 ## This section allows the user to hard-code in timers for tf/zerk without ruining the rest of the logic in the sim. Make to sure to enable variable.use_custom_timers in the precombat list.
 ## APL cannot store and compare lists in a variable, so youll need to duplicate this line for as many timers as you want to set. Defaulted to enough to fill 9 minutes.
