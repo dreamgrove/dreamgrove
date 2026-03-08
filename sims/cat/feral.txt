@@ -3,7 +3,7 @@ actions.precombat=snapshot_stats
 # optional variable that sends regrowth casts. Turned off by default
 actions.precombat+=/variable,name=regrowth,op=reset
 # toggle this to 1 if you are setting static timers for tigers fury/berserk. Convoke will automatically be paired with berserk.
-actions.precombat+=/variable,name=use_custom_timers,op=set,value=1
+actions.precombat+=/variable,name=use_custom_timers,op=set,value=0
 ## set timer for the very first cast of each (value=) if using custom timers
 actions.precombat+=/variable,name=nextTFTimer,op=set,value=0
 actions.precombat+=/variable,name=nextBSTimer,op=set,value=1
