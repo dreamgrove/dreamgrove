@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "next dev",
-    "dev": "cross-env INIT_CWD=$PWD next dev",
+    "dev": "cross-env INIT_CWD=$PWD next dev --webpack",
     "build": "cross-env NODE_OPTIONS='--disable-warning=DEP0040' INIT_CWD=$PWD next build --webpack && cross-env NODE_OPTIONS='--experimental-json-modules --disable-warning=DEP0040' node ./scripts/postbuild.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build --webpack",
@@ -52,6 +52,7 @@
     "image-size": "1.0.0",
     "js-yaml": "^4.1.0",
     "jsondiffpatch": "^0.7.2",
+    "katex": "^0.16.38",
     "kbar": "0.1.0-beta.48",
     "marked": "^13.0.1",
     "mdast-util-to-string": "^4.0.0",

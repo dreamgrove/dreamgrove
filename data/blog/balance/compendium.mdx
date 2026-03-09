@@ -5,108 +5,32 @@ draft: false
 authors: ["Gamz, Vinter"]
 summary: A guide to Balance Druid
 ---
+
+> [!WARNING]
+> The Dreamgrove Compendium is currently being updated for Midnight. It might contain incorrect/incomplete information. Expect the full update sometime before the start of Season 1.
+
 # News
+## Midnight Changes
+Below is a summary of the changes introduced in 12.0: 
 
-### THE DREAMGROVE COMPENDIUM WILL BE UPDATED FOR SEASON 1 OF MIDNIGHT. EXPECT THE UPDATE SOMETIME BETWEEN EXPANSION RELEASE AND SEASON 1 RELEASE.
-
-<Collapsible title="Midnight News ">
-### Midnight Changes
-
-The beta build for the Midnight expansion is in full swing and the Dreamgrove community has spent some time posting feedback about the upcoming changes [in this forum post](https://us.forums.blizzard.com/en/wow/t/balance-druid-feedback-midnight-alpha/2183828). The thoughts in the post are gathered from the community after testing the updates. If you care, then please engage with the post and voice your opinion as well in a respectful manner!
-
-Below will be a short summary of the upcoming changes.
-
-- !Sunfire! / !Moonfire! requirement for our Mastery !Astral Invocation! is removed and is now just flat damage increase.
-- !Stellar Flare!, !Waning Twilight!, !Umbral Inspiration!, !Astronomical Impact! and !Warrior of Elune! are all gone.
-- !Eclipse! is now a single button on a shorter 0.5s GCD - The button changes depending on your last builder used. 15 second duration, 30 second cooldown. There is a talent (mandatory) that makes it 2 charges and another talent (optional) that makes it 28 second cooldown.
-- You can not press !Eclipse! while already in the same !Eclipse!, this also means you can not cancel CA early by pressing !Eclipse!.
-- You can cancel a current !Eclipse! by casting the opposite !Eclipse!.
-- !Astral Smolder! remade into an Apex Talent interacting with all crits and not just !Wrath! / !Starfire!.
-- !Renewal! removed, [Aessina's Renewal](https://www.wowhead.com/beta/spell=474678/aessinas-renewal) still in.
+- !Eclipse! is now a single button on a shorter 0.5s GCD - The button changes depending on your last builder used. 15 second duration, 30 second cooldown. There is a talent (mandatory) that makes it 2 charges and another talent (optional) that makes it a 28 second cooldown.
+- !393014|Astral Invocation! has been simplified by removing its interaction with !Sunfire! and !Moonfire!, and making it just a flat damage increase.
+- !Stellar Flare!, !393956|Waning Twilight!, !Umbral Inspiration!, !468960|Astronomical Impact! and !Warrior of Elune! have been removed.
+- You can cancel your current !Eclipse! by casting the opposite one.
+- !1263250|Astral Smolder! has been reworked into an Apex Talent that interacts with all crits and not just !Wrath! / !Starfire!.
+- !Renewal! has been removed.
 - !Heart of the Wild! has been reworked to a 2 minute cooldown that uses a spell based on your current off-role form. For Balance this means you either have a 30% increased HP buff while used in !Bear Form! or cast a powerful !Wild Growth! if used without a form.
-- !Nature's Vigil! removed, replaced by a better !Mark of the Wild! on yourself.
-- !Starlord! is 20 second buff up from 15 seconds, refreshes on !Eclipse! entry.
-- !Starlord! is no longer cancellable. 
-- !Dryad! tier set baked into !Keeper of the Grove! hero talent, without the 4pc, and spawning on !Eclipse! instead of !194223|CA!. Pressing !194223|CA! does not spawn 2 Dryads.
-
-</Collapsible>
-
-## Current Bugs
-
-- There are no widely known current bugs. If you find any, message Gamz through the Dreamgrove discord and let him know and it'll be put in here! 
+- !124974|Nature's Vigil! has been replaced with !Gift of the Wild!.
+- !Starlord! is now 20 a second buff and is no longer cancellable.
+- The !1236556|Dryad! tier set has been baked into the 2pc !Keeper of the Grove! hero talent, and spawning on !Eclipse! instead of !194223|CA!. Pressing !194223|CA! does not spawn 2 Dryads.
 
 # Rotation
 
-### THE ROTATION SECTION IS NOT YET UPDATED FOR THE MIDNIGHT REWORK. CHECK BACK BEFORE THE START OF SEASON 1!
+## Opener
 
+<Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233346, 78674, 5176, 93402, 205636, 102560, 191034]}/> 
 
-<HeroTalentsHeader id="generic" title="Openers">
-
-<Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
-<Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
-<Checkbox isIcon id="OPENFLARE" spellId={202347} name="Stellar Flare" />
-<Checkbox isIcon id="OPENCONVOKE" spellId={391528} name="Convoke the Spirits" defaultCheck  />
-
-[*~OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&~OPENCONVOKE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626, 391528, 194223, 197626, 197626]} > Start casting at max range 4 seconds before pull.   </Timeline>
-
-[*OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 205636, 194223, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 391528, 194223, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&~OPENCONVOKE&&~EC&&KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 205636]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&~OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-[*~OPENFLARE&&OPENCONVOKE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 194223, 197626, 197626, 197626, 391528]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-<div className="py-4">
-  <Collapsible title="Keeper of the Grove Double CA Cooldown Window">
-
- <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 205636, 194223, 197626, 197626, 391528, 194223, 197626, 197626]} > Press !Force of Nature! into !194223|CA!. Spend AP so you're below 40 before using !Convoke the Spirits!. Immediately press !194223|CA! again after the channel ends and spend !Dryad's Favor!. </Timeline>
-
-  </Collapsible>
-</div>
-
-<div className="py-4">
-  <Collapsible title="Keeper of the Grove Single CA Cooldown Window">
-
- <Timeline spellIds={[194223, 197626, 197626, 205636, 391528, 197626, 190984, 197626, 190984, 197626 ]} > Press !Force of Nature! 2 globals into your !Dryad! window. Pool AP to spend !Dryad's Favor! inside your !194223|CA! and !Force of Nature! window. </Timeline>
-
-  </Collapsible>
-</div>
-
-<div className="py-4">
-  <Collapsible title="Not using cooldowns on pull ">
-
-  [*~OPENFLARE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*OPENFLARE&&~EC&&~KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 202347, 194153, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*~OPENFLARE&&~EC&&KEEPER] <Timeline spellIds={[190984, 194153, 164812, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Starfire! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*OPENFLARE&&~EC&&KEEPER] <Timeline spellIds={[190984, 202347, 164812, 164815, 194153, 205636, 197626, 197626]} > Cast !Wrath! 2 seconds before pull, then pull the boss with !Stellar Flare! and apply dots before entering !Eclipse!. </Timeline>
-
-  [*OPENFLARE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 202347, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-  [*~OPENFLARE&&EC&&~KEEPER] <Timeline spellIds={[190984, 190984, 194153, 164812, 164815, 202770, 197626, 197626]} > Start casting at max range 4 seconds before pull. </Timeline>
-
-
-  </Collapsible>
-</div>
-
-</HeroTalentsHeader>
+Remember to spend all your !Ascendant Eclipses! and !Starweaver! procs as soon as you get them.
 
 ## Single Target Priority
 
@@ -116,105 +40,86 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
 
-<Checkbox isIcon id="Convoke the SpiritsKOTG" spellId={391528} name="Convoke the Spirits" defaultCheck />
+<Checkbox isIcon id="ConvokeKOTG" spellId={391528} name="Convoke the Spirits" />
 <Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
-<Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" />
-<Checkbox isIcon id="Touch the CosmosKOTG" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="New MoonKOTG" spellId={274281} name="New Moon" radio="New Moon-KOTG" />
-<Checkbox isIcon id="Fury of EluneKOTG" spellId={202770} name="Fury of Elune" radio="New Moon-KOTG" />
-<Checkbox isIcon id="Stellar FlareKOTG" spellId={202347} name="Stellar Flare" />
-<Checkbox isIcon id="Wild MushroomKOTG" spellId={88747} name="Wild Mushroom" />
-<Checkbox isIcon id="Keeper 4pc" spellId={1236807} name="Keeper 4-set" defaultCheck />
+<Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" radio="RattleKOTG" defaultCheck />
+<Checkbox isIcon id="RattleKOTG" spellId={393954} name="Rattle the Stars" radio="RattleKOTG" />
+<Checkbox isIcon id="CosmosKOTG" spellId={450356} name="Touch the Cosmos" defaultCheck />
+<Checkbox isIcon id="MoonKOTG" spellId={274281} name="New Moon" radio="MoonKOTG" />
+<Checkbox isIcon id="FoEKOTG" spellId={202770} name="Fury of Elune" radio="MoonKOTG" />
 
-- Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
-- Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
-- [*Stellar FlareKOTG] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- Use !205636|Force of Nature! if any of the following are true:
-  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You have 2 charges of !194223|CA! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
-  - [*Convoke the SpiritsKOTG&&Keeper 4pc] You have no charges of !194223|CA! and !Convoke the Spirits! is available.
-  - [*Convoke the SpiritsKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
-  - [*Convoke the SpiritsKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
-  - [*~Convoke the SpiritsKOTG] You will have !194223|CA! / !102560|Inc! and trinket back up before !Force of Nature! is ready again.
-- [*Fury of EluneKOTG] Use !Fury of Elune! before using !194223|CA! / !102560|Inc!.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! when any of the following are true:
-  - [*Convoke the SpiritsKOTG] You have 2 charges of !194223|CA!, just used !Force of Nature! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
-  - [*Convoke the SpiritsKOTG] You have 1 charge of !194223|CA!, the cooldown of !Force of Nature! is less than 2 GCD's and the cooldown of !Convoke the Spirits! is less than 4 GCD's.
-  - [*Convoke the SpiritsKOTG&&~Keeper 4pc] You just used !Force of Nature! and the cooldown on !Convoke the Spirits! is greater than the remaining recharge time of your next !194223|CA!.
-  - [*Keeper 4pc] You just used !Convoke the Spirits! and you are in your !Force of Nature! window.
-  - The fight will end before !205636|Force of Nature! is available again.
-- [*Keeper 4pc] Use !Starsurge! if you have !Dryad's Favor! and you are in !194223|CA! / !102560|Inc!.
-- [*Keeper 4pc] Use !Wrath! in your !Dryad! window if you have don't have enough AP for the 2 !Starsurge! casts needed to consume !Dryad's Favor!.
-- Cast 2 !Starfire! to enter Solar Eclipse. It is optimal to start casting !Starfire! when the cast time of !Starfire! is longer than the remaining duration of !Eclipse!.
-- [*Convoke the SpiritsKOTG] Use !Convoke the Spirits! when any of the following are true:
-  - [*Convoke the SpiritsKOTG] You are below 40 AP and you're in !194223|CA! or !Force of Nature!.
-  - [*Convoke the SpiritsKOTG] !194223|CA! will last for more than 4 seconds or the fight will end before your next !194223|CA! or !Force of Nature! window.
-- [*Fury of EluneKOTG] Use !Fury of Elune!.
-- [*New MoonKOTG] Use !Starsurge! if !Starlord! has less than 3 stacks.
-- [*~New MoonKOTG] Use !Starsurge! if one of the following conditions is met:
-  - !Starlord! has less than 3 stacks.
-  - You are about to overcap on AP.
-  - You need to move.
-  - [*StarweaverKOTG&&~New MoonKOTG] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosKOTG&&~New MoonKOTG] You have a !450356|Touch the Cosmos! proc.
-- [*New MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
+- Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
+- Use !Moonfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
+- Use !205636|Force of Nature! if any of the following conditions is true:
+  - [*ConvokeKOTG] You have 2 charges of !194223|CA! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
+  - [*ConvokeKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
+  - [*ConvokeKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
+  - [*~ConvokeKOTG] !Solar Eclipse! or !102560|Inc! are available and you're currently not in an !Eclipse!.
+- [*FoEKOTG] Use !Fury of Elune! if !194223|CA!/!102560|Inc! is not on cooldown.
+- Use !194223|Celestial Alignment!/!102560|Incarnation! if any of the following are true:
+  - [*ConvokeKOTG] You just used !Force of Nature! and the cooldown of !Convoke the Spirits! is less than 2 GCD's.
+  - [*~ConvokeKOTG] You just used !Force of Nature!.
+  - The fight will end before !Force of Nature! is available again.
+- [*ConvokeKOTG] Use !Convoke the Spirits! if you are below 40AP and you just pressed !194223|CA!/!102560|Incarnation! and !Force of Nature!
+- Use !Starfire! if you have an !Ascendant Fires! proc.
+- [*StarweaverKOTG] Use !Solar Eclipse! if any of the following conditions is true:
+  - [*CosmosKOTG] !Starlord! has just expired and you have one or more procs of !Touch the Cosmos!.
+  - [*StarweaverKOTG] !Starlord! has just expired and you have one or more procs of !Starweaver!.
+  - You are not in an !Eclipse! and !Force of Nature! is not on CD.
+- [*RattleKOTG] Use !Solar Eclipse! if you have more than 90 AP and **all** of the following conditions are true:
+  - You have more than 90 AP.
+  - You are not in !Eclipse!
+  - !Force of Nature! is not on CD or you're about to overcap on !Eclipse! charges.
+- [*StarweaverKOTG] Cast !Starfall! if you have a !Touch the Cosmos! or !Starweaver! proc.
+- [*MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are true:
   - You will not overcap on AP.
   - You can finish the cast before your current Eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
-- [*New MoonKOTG] Use !Starsurge! if one of the following conditions is met:
+- Use !Starsurge! if any of the following conditions is true:
   - You are about to overcap on AP.
   - You need to move.
-  - [*StarweaverKOTG&&New MoonKOTG] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosKOTG&&New MoonKOTG] You have a !450356|Touch the Cosmos! proc.
-- [*StarweaverKOTG] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
-- [*Wild MushroomKOTG] Use !Wild Mushroom! if you will not overcap on  AP and !Fungal Growth! is not active on your target.
+  - You have a !Ascendant Eclipses! proc.
+  - [*CosmosKOTG&&RattleKOTG] You have a !Touch the Cosmos! proc.
 - Use !Wrath!.
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - ST">
 
-<Checkbox isIcon id="Lunar CallingST" spellId={429523} name="Lunar Calling" defaultCheck /> 
-<Checkbox isIcon id="Warrior of EluneEC" spellId={202425} name="Warrior of Elune" defaultCheck radio="Warrior of EluneEC" />
-<Checkbox isIcon id="Fury of EluneEC" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonEC" /> 
-<Checkbox isIcon id="Convoke the SpiritsEC" spellId={391528} name="Convoke the Spirits" defaultCheck  />
-<Checkbox isIcon id="New MoonEC" spellId={274281} name="New Moon" radio="New MoonEC" /> 
-<Checkbox isIcon id="Touch the CosmosEC" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" /> 
-<Checkbox isIcon id="Stellar FlareEC" spellId={202347} name="Stellar Flare" /> 
-<Checkbox isIcon id="Wild MushroomEC" spellId={88747} name="Wild Mushroom" />
-<Checkbox isIcon id="Force of NatureEC" spellId={205636} name="Force of Nature" radio="Warrior of EluneEC" />
+<Checkbox isIcon id="MoonEC" spellId={274281} name="New Moon" radio="MoonEC" /> 
+<Checkbox isIcon id="FoEEC" spellId={202770} name="Fury of Elune" defaultCheck radio="MoonEC" /> 
+<Checkbox isIcon id="ConvokeEC" spellId={391528} name="Convoke the Spirits" />
+<Checkbox isIcon id="CosmosEC" spellId={450356} name="Touch the Cosmos" defaultCheck />
+<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" radio="StarweaverEC" defaultCheck /> 
+<Checkbox isIcon id="RattleEC" spellId={393954} name="Rattle the Stars" radio="RattleEC" /> 
 
-- [*Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune!.
-- Keep up !Moonfire! and !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip).
-- [*Stellar FlareEC] Keep up !Stellar Flare! and refresh within pandemic (30% of base duration shown in the tooltip) if you will not overcap on AP.
-- [*Fury of EluneEC] Use !Fury of Elune! together with !194223|Celestial Alignment!/!102560|Incarnation!.
-- Use !194223|Celestial Alignment!/!102560|Incarnation!.
-- [*~Lunar CallingST&&Warrior of EluneEC] Use !Warrior of Elune! if your eclipse has less than 7 seconds left and you will enter Solar Eclipse next.
-- [*Lunar CallingST] Use !Wrath! to enter Lunar Eclipse.
-- [*~Lunar CallingST] Use !Starfire! to enter Solar Eclipse.
-- [*Fury of EluneEC] Use !Fury of Elune!.
-- [*Lunar CallingST&&Convoke the SpiritsEC] Use !Starfire! to spend any stacks of !Nature's Grace! before using !Convoke the Spirits!.
-- [*Convoke the SpiritsEC] Use !Convoke the Spirits! if you're below 40 AP and !194223|CA!/!102560|Incarnation! will last for more than 4 seconds, or your next !194223|CA!/!102560|Incarnation! window is more than 30s away and your Eclipse will last for more than 4s.
-- [*New MoonEC] Use !Starsurge! if !Starlord! has less than 3 stacks.
-- [*~New MoonEC] Use !Starsurge! if one of the following conditions is met:
-  - !Starlord! has less than 3 stacks.
-  - You are about to overcap on AP.
-  - You need to move.
-  - [*StarweaverEC&&~New MoonEC] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosEC&&~New MoonEC] You have a !450356|Touch the Cosmos! proc.
-- [*New MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are met:
+- Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
+- Use !Moonfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
+- Use !194223|Celestial Alignment!/!102560|Incarnation! if all the following conditions are true:
+  - You're not in !Eclipse!
+  - [*FoEEC] !Fury of Elune! is not on cooldown.
+- Use !Starfire! if you have an !Ascendant Fires! proc.
+- [*StarweaverEC] Use !Lunar Eclipse! if any of the following conditions is true:
+  - [*CosmosEC] !Starlord! has just expired and you have one or more procs of !Touch the Cosmos!.
+  - [*StarweaverEC] !Starlord! has just expired and you have one or more procs of !Starweaver!.
+  - You are not in an !Eclipse! and !Force of Nature! is not on CD.
+- [*RattleEC] Use !Lunar Eclipse! if you have more than 90 AP and **all** of the following conditions are true:
+  - You have more than 90 AP.
+  - You are not in !Eclipse!
+  - [*FoEEC] !Fury of Elune! is not on CD or you're about to overcap on !Eclipse! charges.
+  - [*~FoEEC] You're about to overcap on !Eclipse! charges.
+- [*FoEEC] Use !Fury of Elune!.
+- [*ConvokeEC] Use !Convoke the Spirits! if you are below 40AP and you just pressed !194223|CA!/!102560|Incarnation! 
+- [*StarweaverEC] Cast !Starfall! if you have a !Touch the Cosmos! or !Starweaver! proc.
+- [*MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are true:
   - You will not overcap on AP.
-  - You can finish the cast before your current eclipse ends.
+  - You can finish the cast before your current Eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
-- [*New MoonEC] Use !Starsurge! if one of the following conditions is met:
+- Use !Starsurge! if any of the following conditions is true:
   - You are about to overcap on AP.
   - You need to move.
-  - [*StarweaverEC&&New MoonEC] You have a !393944|Starweaver's Weft! proc.
-  - [*Touch the CosmosEC&&New MoonEC] You have a !450356|Touch the Cosmos! proc.
-- [*StarweaverEC] Use !Starfall! if you have a !393942|Starweaver's Warp! proc.
-- [*Wild MushroomEC] Use !Wild Mushroom! if you will not overcap on  AP and !Fungal Growth! is not active on your target.
-- [*Force of NatureEC] Use !205636|Force of Nature! if you will not overcap on AP.
-- [*Lunar CallingST] Use !Starfire!.
-- [*~Lunar CallingST] Use !Wrath!.
+  - You have a !Ascendant Eclipses! proc.
+  - [*CosmosEC&&RattleEC] You have a !Touch the Cosmos! proc.
+- Use !Starfire!
 
 </HeroTalentsHeader>
 
