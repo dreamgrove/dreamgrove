@@ -123,7 +123,7 @@
       },
       {
         "id": 82223,
-        "name": "Thrash",
+        "name": "Swipe",
         "type": "single",
         "posX": 2700,
         "posY": 2100,
@@ -136,9 +136,9 @@
             "definitionId": 108306,
             "maxRanks": 1,
             "type": "active",
-            "name": "Thrash",
-            "spellId": 106832,
-            "icon": "spell_druid_thrash",
+            "name": "Swipe",
+            "spellId": 213764,
+            "icon": "inv_misc_monsterclaw_03",
             "index": 100
           }
         ]
@@ -636,8 +636,8 @@
       },
       {
         "id": 82232,
-        "name": "Renewal / Aessina's Renewal",
-        "type": "choice",
+        "name": "Aessina's Renewal",
+        "type": "single",
         "posX": 5100,
         "posY": 4500,
         "reqPoints": 8,
@@ -645,16 +645,6 @@
         "next": [82240, 82209, 82207],
         "prev": [82214, 82206],
         "entries": [
-          {
-            "id": 103310,
-            "definitionId": 108315,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Renewal",
-            "spellId": 108238,
-            "icon": "spell_nature_natureblessing",
-            "index": 100
-          },
           {
             "id": 128581,
             "definitionId": 133384,
@@ -743,14 +733,14 @@
         "posX": 3300,
         "posY": 5100,
         "reqPoints": 8,
-        "maxRanks": 1,
+        "maxRanks": 2,
         "next": [],
         "prev": [82228, 82198],
         "entries": [
           {
             "id": 123796,
             "definitionId": 128634,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Matted Fur",
             "spellId": 385786,
@@ -867,7 +857,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82237, 100174, 82246],
         "prev": [82235, 82236],
@@ -890,7 +880,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82235],
@@ -913,7 +903,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -936,7 +926,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 2,
         "next": [82230, 104078, 92229],
         "prev": [82234],
@@ -959,7 +949,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -982,7 +972,7 @@
         "type": "choice",
         "posX": 5100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82209],
@@ -1011,11 +1001,11 @@
       },
       {
         "id": 100175,
-        "name": "Innervate",
+        "name": "Gift of the Wild",
         "type": "single",
         "posX": 5700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [100173, 82243, 82244],
         "prev": [82207, 82209],
@@ -1024,10 +1014,10 @@
             "id": 123794,
             "definitionId": 128632,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Innervate",
-            "spellId": 29166,
-            "icon": "spell_nature_lightning",
+            "type": "passive",
+            "name": "Gift of the Wild",
+            "spellId": 1262034,
+            "icon": "spell_nature_giftofthewild",
             "index": 100
           }
         ]
@@ -1038,7 +1028,7 @@
         "type": "choice",
         "posX": 1500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -1071,7 +1061,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -1094,7 +1084,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -1117,7 +1107,7 @@
         "type": "choice",
         "posX": 3900,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -1150,7 +1140,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -1173,7 +1163,7 @@
         "type": "single",
         "posX": 5100,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -1196,15 +1186,15 @@
         "type": "single",
         "posX": 6300,
         "posY": 6300,
-        "reqPoints": 20,
-        "maxRanks": 1,
+        "reqPoints": 23,
+        "maxRanks": 2,
         "next": [],
         "prev": [100175],
         "entries": [
           {
             "id": 103323,
             "definitionId": 108328,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Forestwalk",
             "spellId": 400129,
@@ -1219,7 +1209,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -1242,7 +1232,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82230, 92229, 104078],
@@ -1253,7 +1243,7 @@
             "maxRanks": 1,
             "type": "active",
             "name": "Heart of the Wild",
-            "spellId": 319454,
+            "spellId": 1261867,
             "icon": "spell_holy_blessingofagility",
             "index": 100
           }
@@ -1261,11 +1251,11 @@
       },
       {
         "id": 82244,
-        "name": "Nature's Vigil",
+        "name": "Innervate",
         "type": "single",
         "posX": 5700,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -1275,9 +1265,9 @@
             "definitionId": 108329,
             "maxRanks": 1,
             "type": "active",
-            "name": "Nature's Vigil",
-            "spellId": 124974,
-            "icon": "achievement_zone_feralas",
+            "name": "Innervate",
+            "spellId": 29166,
+            "icon": "spell_nature_lightning",
             "index": 100
           }
         ]
@@ -1301,7 +1291,7 @@
             "maxRanks": 1,
             "type": "passive",
             "name": "Eclipse",
-            "spellId": 79577,
+            "spellId": 1239669,
             "icon": "ability_druid_eclipseorange",
             "index": 100
           }
@@ -1375,8 +1365,8 @@
       },
       {
         "id": 88210,
-        "name": "Force of Nature / Warrior of Elune",
-        "type": "choice",
+        "name": "Force of Nature",
+        "type": "single",
         "posX": 12300,
         "posY": 2700,
         "maxRanks": 1,
@@ -1392,16 +1382,6 @@
             "spellId": 205636,
             "icon": "ability_druid_forceofnature",
             "index": 100
-          },
-          {
-            "id": 114648,
-            "definitionId": 119654,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Warrior of Elune",
-            "spellId": 202425,
-            "icon": "spell_holy_elunesgrace",
-            "index": 200
           }
         ]
       },
@@ -1429,8 +1409,8 @@
       },
       {
         "id": 91048,
-        "name": "Wild Surges / Stellar Flare",
-        "type": "choice",
+        "name": "Improved Eclipse",
+        "type": "single",
         "posX": 10500,
         "posY": 3300,
         "maxRanks": 1,
@@ -1442,20 +1422,10 @@
             "definitionId": 120470,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Wild Surges",
-            "spellId": 406890,
-            "icon": "ability_skyreach_lens_flare",
+            "name": "Improved Eclipse",
+            "spellId": 1240906,
+            "icon": "ability_druid_eclipseorange",
             "index": 100
-          },
-          {
-            "id": 109841,
-            "definitionId": 114846,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Stellar Flare",
-            "spellId": 202347,
-            "icon": "ability_druid_stellarflare",
-            "index": 200
           }
         ]
       },
@@ -1483,7 +1453,7 @@
       },
       {
         "id": 88208,
-        "name": "Nature's Grace",
+        "name": "Umbral Intensity",
         "type": "single",
         "posX": 12900,
         "posY": 3300,
@@ -1496,17 +1466,17 @@
             "definitionId": 114847,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Nature's Grace",
-            "spellId": 450347,
-            "icon": "ability_druid_lunarguidance",
+            "name": "Umbral Intensity",
+            "spellId": 383195,
+            "icon": "ability_druid_eclipse",
             "index": 100
           }
         ]
       },
       {
         "id": 88209,
-        "name": "Aetherial Kindling",
-        "type": "single",
+        "name": "Aetherial Kindling / Meteor Storm",
+        "type": "choice",
         "posX": 14100,
         "posY": 3300,
         "maxRanks": 1,
@@ -1522,18 +1492,28 @@
             "spellId": 327541,
             "icon": "ability_druid_starfall",
             "index": 100
+          },
+          {
+            "id": 133406,
+            "definitionId": 138192,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Meteor Storm",
+            "spellId": 1240262,
+            "icon": "spell_arcane_starfire",
+            "index": 200
           }
         ]
       },
       {
         "id": 88204,
-        "name": "Astral Smolder",
+        "name": "Wild Surges",
         "type": "single",
         "posX": 11100,
         "posY": 3900,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [88212, 88202, 88229],
+        "next": [88212, 88202, 110279],
         "prev": [91048, 88226],
         "entries": [
           {
@@ -1541,9 +1521,9 @@
             "definitionId": 114841,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Astral Smolder",
-            "spellId": 394058,
-            "icon": "spell_fire_bluefire",
+            "name": "Wild Surges",
+            "spellId": 406890,
+            "icon": "ability_skyreach_lens_flare",
             "index": 0
           }
         ]
@@ -1574,7 +1554,7 @@
       },
       {
         "id": 88219,
-        "name": "Umbral Intensity",
+        "name": "Soul of the Forest",
         "type": "single",
         "posX": 13500,
         "posY": 3900,
@@ -1588,9 +1568,9 @@
             "definitionId": 114858,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Umbral Intensity",
-            "spellId": 383195,
-            "icon": "ability_druid_eclipse",
+            "name": "Soul of the Forest",
+            "spellId": 114107,
+            "icon": "ability_druid_manatree",
             "index": 100
           }
         ]
@@ -1629,9 +1609,9 @@
         ]
       },
       {
-        "id": 88229,
-        "name": "Stellar Amplification",
-        "type": "single",
+        "id": 110279,
+        "name": "Nature's Grace / Elune's Challenge",
+        "type": "choice",
         "posX": 11100,
         "posY": 4500,
         "reqPoints": 8,
@@ -1640,26 +1620,36 @@
         "prev": [88204],
         "entries": [
           {
-            "id": 109865,
-            "definitionId": 114870,
+            "id": 136832,
+            "definitionId": 141595,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Stellar Amplification",
-            "spellId": 450212,
-            "icon": "spell_arcane_arcane04",
+            "name": "Nature's Grace",
+            "spellId": 450347,
+            "icon": "ability_druid_lunarguidance",
             "index": 100
+          },
+          {
+            "id": 136831,
+            "definitionId": 141594,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Elune's Challenge",
+            "spellId": 1240283,
+            "icon": "spell_nature_moonglow",
+            "index": 200
           }
         ]
       },
       {
         "id": 88212,
-        "name": "Soul of the Forest",
+        "name": "Stellar Amplification",
         "type": "single",
         "posX": 11700,
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [88227, 103847, 88216],
+        "next": [88227],
         "prev": [88204, 88215],
         "entries": [
           {
@@ -1667,9 +1657,9 @@
             "definitionId": 114851,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Soul of the Forest",
-            "spellId": 114107,
-            "icon": "ability_druid_manatree",
+            "name": "Stellar Amplification",
+            "spellId": 450212,
+            "icon": "spell_arcane_arcane04",
             "index": 100
           }
         ]
@@ -1682,7 +1672,7 @@
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [88216],
+        "next": [103847, 88216],
         "prev": [88215],
         "entries": [
           {
@@ -1715,7 +1705,7 @@
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [88216, 103846, 88207],
+        "next": [103846, 88207],
         "prev": [88219, 88215],
         "entries": [
           {
@@ -1732,7 +1722,7 @@
       },
       {
         "id": 88232,
-        "name": "Astronomical Impact",
+        "name": "Meteorites",
         "type": "single",
         "posX": 14100,
         "posY": 4500,
@@ -1746,9 +1736,9 @@
             "definitionId": 114873,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Astronomical Impact",
-            "spellId": 468960,
-            "icon": "spell_nature_starfall",
+            "name": "Meteorites",
+            "spellId": 1240907,
+            "icon": "ability_druid_starfall",
             "index": 100
           }
         ]
@@ -1761,8 +1751,8 @@
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 2,
-        "next": [88220, 88199, 88214],
-        "prev": [88229, 88212, 88202],
+        "next": [88220, 88214],
+        "prev": [88212, 88202, 110279],
         "entries": [
           {
             "id": 109863,
@@ -1778,46 +1768,46 @@
       },
       {
         "id": 103847,
-        "name": "Crashing Star",
+        "name": "Celestial Fire",
         "type": "single",
         "posX": 11700,
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
         "next": [],
-        "prev": [88212],
+        "prev": [88221],
         "entries": [
           {
             "id": 128231,
             "definitionId": 133038,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Crashing Star",
-            "spellId": 468978,
-            "icon": "spell_priest_divinestar_shadow2",
+            "name": "Celestial Fire",
+            "spellId": 1240185,
+            "icon": "ability_mage_firestarter",
             "index": 100
           }
         ]
       },
       {
         "id": 88216,
-        "name": "Umbral Embrace",
+        "name": "Astral Communion",
         "type": "single",
         "posX": 12300,
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [88214, 88217, 88200],
-        "prev": [88221, 88212, 88222],
+        "next": [88214, 88200],
+        "prev": [88221],
         "entries": [
           {
             "id": 109850,
             "definitionId": 114855,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Umbral Embrace",
-            "spellId": 393760,
-            "icon": "ability_druid_improvedmoonkinform",
+            "name": "Astral Communion",
+            "spellId": 450598,
+            "icon": "talentspec_druid_balance",
             "index": 0
           }
         ]
@@ -1870,7 +1860,7 @@
       },
       {
         "id": 88220,
-        "name": "Waning Twilight",
+        "name": "Sculpt the Stars",
         "type": "single",
         "posX": 10500,
         "posY": 5700,
@@ -1884,43 +1874,10 @@
             "definitionId": 122112,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Waning Twilight",
-            "spellId": 393956,
-            "icon": "spell_shadow_twilight",
+            "name": "Sculpt the Stars",
+            "spellId": 1240188,
+            "icon": "ability_druid_eclipseorange",
             "index": 0
-          }
-        ]
-      },
-      {
-        "id": 88199,
-        "name": "Sundered Firmament / Orbit Breaker",
-        "type": "choice",
-        "posX": 11100,
-        "posY": 5700,
-        "reqPoints": 20,
-        "maxRanks": 1,
-        "next": [88218],
-        "prev": [88227],
-        "entries": [
-          {
-            "id": 109831,
-            "definitionId": 114836,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Sundered Firmament",
-            "spellId": 394094,
-            "icon": "spell_druid_equinox",
-            "index": 100
-          },
-          {
-            "id": 123860,
-            "definitionId": 128698,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Orbit Breaker",
-            "spellId": 383197,
-            "icon": "artifactability_balancedruid_moonandstars",
-            "index": 200
           }
         ]
       },
@@ -1948,47 +1905,24 @@
         ]
       },
       {
-        "id": 88217,
-        "name": "Umbral Inspiration",
-        "type": "single",
-        "posX": 12300,
-        "posY": 5700,
-        "reqPoints": 20,
-        "maxRanks": 1,
-        "next": [88206],
-        "prev": [88216],
-        "entries": [
-          {
-            "id": 109851,
-            "definitionId": 114856,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Umbral Inspiration",
-            "spellId": 450418,
-            "icon": "ability_eyeoftheowl",
-            "index": 100
-          }
-        ]
-      },
-      {
         "id": 88200,
-        "name": "Power of Goldrinn",
+        "name": "Total Eclipse",
         "type": "single",
         "posX": 12900,
         "posY": 5700,
         "reqPoints": 20,
-        "maxRanks": 1,
+        "maxRanks": 2,
         "next": [88206, 88224],
         "prev": [88207, 88216],
         "entries": [
           {
             "id": 109832,
             "definitionId": 114837,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
-            "name": "Power of Goldrinn",
-            "spellId": 394046,
-            "icon": "inv_mount_spectralwolf",
+            "name": "Total Eclipse",
+            "spellId": 1240206,
+            "icon": "inv12_ability_druid_totaleclipse",
             "index": 100
           }
         ]
@@ -2028,7 +1962,7 @@
       },
       {
         "id": 88235,
-        "name": "Astral Communion",
+        "name": "Power of Goldrinn",
         "type": "single",
         "posX": 14100,
         "posY": 5700,
@@ -2042,33 +1976,43 @@
             "definitionId": 114876,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Astral Communion",
-            "spellId": 450598,
-            "icon": "talentspec_druid_balance",
+            "name": "Power of Goldrinn",
+            "spellId": 394046,
+            "icon": "inv_mount_spectralwolf",
             "index": 0
           }
         ]
       },
       {
         "id": 88218,
-        "name": "Harmony of the Heavens",
-        "type": "single",
+        "name": "Sundered Firmament / Orbit Breaker",
+        "type": "choice",
         "posX": 11100,
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [88234],
-        "prev": [88214, 88199, 88220],
+        "next": [88234, 108032],
+        "prev": [88214, 88220],
         "entries": [
           {
             "id": 109852,
             "definitionId": 114857,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Harmony of the Heavens",
-            "spellId": 450558,
-            "icon": "spell_arcane_massdispel",
+            "name": "Sundered Firmament",
+            "spellId": 394094,
+            "icon": "spell_druid_equinox",
             "index": 0
+          },
+          {
+            "id": 133403,
+            "definitionId": 138189,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Orbit Breaker",
+            "spellId": 383197,
+            "icon": "artifactability_balancedruid_moonandstars",
+            "index": 100
           }
         ]
       },
@@ -2080,8 +2024,8 @@
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [88228],
-        "prev": [88214, 88200, 88217],
+        "next": [108032, 108033, 88228],
+        "prev": [88214, 88200],
         "entries": [
           {
             "id": 109839,
@@ -2114,7 +2058,7 @@
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [88213],
+        "next": [108033, 88213],
         "prev": [88200, 88236, 88235],
         "entries": [
           {
@@ -2141,7 +2085,7 @@
       },
       {
         "id": 88234,
-        "name": "Denizen of the Dream",
+        "name": "Umbral Embrace",
         "type": "single",
         "posX": 11100,
         "posY": 6900,
@@ -2155,9 +2099,32 @@
             "definitionId": 114875,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Denizen of the Dream",
-            "spellId": 394065,
-            "icon": "inv_faeriedragon2_orange",
+            "name": "Umbral Embrace",
+            "spellId": 393760,
+            "icon": "ability_druid_improvedmoonkinform",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 108032,
+        "name": "Harmony of the Heavens",
+        "type": "single",
+        "posX": 11700,
+        "posY": 6900,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [],
+        "prev": [88206, 88218],
+        "entries": [
+          {
+            "id": 133404,
+            "definitionId": 138190,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Harmony of the Heavens",
+            "spellId": 450558,
+            "icon": "spell_arcane_massdispel",
             "index": 0
           }
         ]
@@ -2186,6 +2153,29 @@
         ]
       },
       {
+        "id": 108033,
+        "name": "Denizen of the Dream",
+        "type": "single",
+        "posX": 12900,
+        "posY": 6900,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [],
+        "prev": [88224, 88206],
+        "entries": [
+          {
+            "id": 133405,
+            "definitionId": 138191,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Denizen of the Dream",
+            "spellId": 394065,
+            "icon": "inv_faeriedragon2_orange",
+            "index": 0
+          }
+        ]
+      },
+      {
         "id": 88213,
         "name": "Radiant Moonlight",
         "type": "single",
@@ -2207,6 +2197,50 @@
             "index": 100
           }
         ]
+      },
+      {
+        "id": 110421,
+        "name": "Ascendant Eclipses / Ascendant Eclipses / Ascendant Eclipses",
+        "type": "tiered",
+        "posX": 12300,
+        "posY": 7650,
+        "reqPoints": 20,
+        "maxRanks": 4,
+        "entryNode": true,
+        "next": [],
+        "prev": [],
+        "entries": [
+          {
+            "id": 137031,
+            "definitionId": 141794,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Ascendant Eclipses",
+            "spellId": 1261564,
+            "icon": "inv12_apextalent_druid_ascendanceeclipses",
+            "index": 0
+          },
+          {
+            "id": 137030,
+            "definitionId": 141793,
+            "maxRanks": 2,
+            "type": "tierrank",
+            "name": "Ascendant Eclipses",
+            "spellId": 1261565,
+            "icon": "inv12_apextalent_druid_ascendanceeclipses",
+            "index": 100
+          },
+          {
+            "id": 137029,
+            "definitionId": 141792,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Ascendant Eclipses",
+            "spellId": 1261566,
+            "icon": "inv12_apextalent_druid_ascendanceeclipses",
+            "index": 200
+          }
+        ]
       }
     ],
     "heroNodes": [
@@ -2214,13 +2248,13 @@
         "id": 94608,
         "name": "Boundless Moonlight",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 1500,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 24,
         "requiresNode": 92587,
-        "next": [94598, 94588, 94594],
+        "next": [94598, 94588, 94594, 109720],
         "prev": [],
         "entries": [
           {
@@ -2307,8 +2341,31 @@
         ]
       },
       {
+        "id": 109720,
+        "name": "Star Cascade",
+        "type": "single",
+        "posX": 9000,
+        "posY": 2100,
+        "maxRanks": 1,
+        "subTreeId": 24,
+        "next": [109719],
+        "prev": [94608],
+        "entries": [
+          {
+            "id": 135978,
+            "definitionId": 140733,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Star Cascade",
+            "spellId": 1271206,
+            "icon": "spell_arcane_arcane03",
+            "index": 200
+          }
+        ]
+      },
+      {
         "id": 94596,
-        "name": "Lunar Amplification",
+        "name": "Stellar Command",
         "type": "single",
         "posX": 7200,
         "posY": 2700,
@@ -2322,9 +2379,9 @@
             "definitionId": 122202,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lunar Amplification",
-            "spellId": 429529,
-            "icon": "spell_druid_lunarinspiration",
+            "name": "Stellar Command",
+            "spellId": 429668,
+            "icon": "artifactability_balancedruid_moonandstars",
             "index": 200
           }
         ]
@@ -2387,9 +2444,32 @@
         ]
       },
       {
+        "id": 109719,
+        "name": "Penumbral Swell",
+        "type": "single",
+        "posX": 9000,
+        "posY": 2700,
+        "maxRanks": 1,
+        "subTreeId": 24,
+        "next": [109718],
+        "prev": [109720],
+        "entries": [
+          {
+            "id": 135977,
+            "definitionId": 140732,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Penumbral Swell",
+            "spellId": 1271261,
+            "icon": "ability_druid_eclipse",
+            "index": 200
+          }
+        ]
+      },
+      {
         "id": 94590,
-        "name": "Stellar Command / Lunar Calling",
-        "type": "choice",
+        "name": "Lunar Calling",
+        "type": "single",
         "posX": 7200,
         "posY": 3300,
         "maxRanks": 1,
@@ -2402,20 +2482,10 @@
             "definitionId": 122195,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Stellar Command",
-            "spellId": 429668,
-            "icon": "artifactability_balancedruid_moonandstars",
-            "index": 100
-          },
-          {
-            "id": 117770,
-            "definitionId": 122782,
-            "maxRanks": 1,
-            "type": "passive",
             "name": "Lunar Calling",
             "spellId": 429523,
             "icon": "ability_druid_cresentburn",
-            "index": 200
+            "index": 100
           }
         ]
       },
@@ -2486,16 +2556,39 @@
         ]
       },
       {
+        "id": 109718,
+        "name": "Bask in Moonlight",
+        "type": "single",
+        "posX": 9000,
+        "posY": 3300,
+        "maxRanks": 1,
+        "subTreeId": 24,
+        "next": [94587],
+        "prev": [109719],
+        "entries": [
+          {
+            "id": 135976,
+            "definitionId": 140731,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Bask in Moonlight",
+            "spellId": 1271305,
+            "icon": "spell_holy_elunesgrace",
+            "index": 200
+          }
+        ]
+      },
+      {
         "id": 94587,
         "name": "The Eternal Moon",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 3900,
         "maxRanks": 1,
         "subTreeId": 24,
         "requiresNode": 92587,
         "next": [],
-        "prev": [94590, 94585, 94586],
+        "prev": [94590, 94585, 94586, 109718],
         "entries": [
           {
             "id": 117179,
@@ -2513,13 +2606,13 @@
         "id": 94600,
         "name": "Dream Surge",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 4500,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 23,
         "requiresNode": 0,
-        "next": [94599, 94602, 94593],
+        "next": [94599, 94602, 109714, 94593],
         "prev": [],
         "entries": [
           {
@@ -2601,6 +2694,29 @@
             "name": "Protective Growth",
             "spellId": 433748,
             "icon": "spell_nature_resistnature",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109714,
+        "name": "Sylvan Beckoning",
+        "type": "single",
+        "posX": 9000,
+        "posY": 5100,
+        "maxRanks": 1,
+        "subTreeId": 23,
+        "next": [109713],
+        "prev": [94600],
+        "entries": [
+          {
+            "id": 135972,
+            "definitionId": 140727,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Sylvan Beckoning",
+            "spellId": 1264614,
+            "icon": "ui_darkshore_warfront_alliance_dryad",
             "index": 100
           }
         ]
@@ -2695,6 +2811,29 @@
         ]
       },
       {
+        "id": 109713,
+        "name": "Dryad's Dance",
+        "type": "single",
+        "posX": 9000,
+        "posY": 5700,
+        "maxRanks": 1,
+        "subTreeId": 23,
+        "next": [109712],
+        "prev": [109714],
+        "entries": [
+          {
+            "id": 135971,
+            "definitionId": 140726,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Dryad's Dance",
+            "spellId": 1264776,
+            "icon": "inv_stave_2h_druid_a_01",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94591,
         "name": "Bounteous Bloom / Early Spring",
         "type": "choice",
@@ -2785,16 +2924,39 @@
         ]
       },
       {
+        "id": 109712,
+        "name": "Spirit of the Thicket",
+        "type": "single",
+        "posX": 9000,
+        "posY": 6300,
+        "maxRanks": 1,
+        "subTreeId": 23,
+        "next": [94606],
+        "prev": [109713],
+        "entries": [
+          {
+            "id": 135970,
+            "definitionId": 140725,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Spirit of the Thicket",
+            "spellId": 1264899,
+            "icon": "ability_druid_naturalperfection",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94606,
         "name": "Harmony of the Grove",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 6900,
         "maxRanks": 1,
         "subTreeId": 23,
         "requiresNode": 0,
         "next": [],
-        "prev": [94601, 94592, 94591],
+        "prev": [94601, 94592, 94591, 109712],
         "entries": [
           {
             "id": 117203,
@@ -2827,7 +2989,10 @@
             "traitSubTreeId": 24,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-eluneschosen",
-            "nodes": [94608, 94598, 94588, 94594, 94596, 94607, 94597, 94590, 94585, 94586, 94587]
+            "nodes": [
+              94608, 94598, 94588, 94594, 109720, 94596, 94607, 94597, 109719, 94590, 94585, 94586,
+              109718, 94587
+            ]
           },
           {
             "id": 123300,
@@ -2836,33 +3001,38 @@
             "traitSubTreeId": 23,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-keeperofthegrove",
-            "nodes": [94600, 94599, 94602, 94593, 94605, 94604, 94595, 94591, 94592, 94601, 94606]
+            "nodes": [
+              94600, 94599, 94602, 94593, 109714, 94605, 94604, 94595, 109713, 94591, 94592, 94601,
+              109712, 94606
+            ]
           }
         ]
       }
     ],
     "fullNodeOrder": [
       82043, 82045, 82046, 82047, 82048, 82049, 82050, 82051, 82052, 82053, 82054, 82055, 82056,
-      82057, 82058, 82059, 82060, 82061, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069,
-      82070, 82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083,
-      82085, 82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100,
-      82101, 82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113,
-      82114, 82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127,
-      82128, 82129, 82130, 82131, 82132, 82133, 82134, 82135, 82136, 82137, 82138, 82139, 82140,
-      82141, 82142, 82143, 82144, 82145, 82146, 82147, 82148, 82149, 82151, 82152, 82153, 82154,
-      82155, 82156, 82157, 82158, 82159, 82160, 82161, 82162, 82198, 82199, 82200, 82201, 82202,
-      82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219, 82220, 82221,
-      82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233, 82234, 82235,
-      82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88199, 88200, 88201, 88202,
-      88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216, 88217,
-      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88229, 88231,
-      88232, 88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586,
-      92587, 92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592,
-      94593, 94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606,
-      94607, 94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620,
-      94621, 94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806,
-      99807, 99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874,
-      103875, 103876, 104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085
+      82057, 82058, 82059, 82060, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069, 82070,
+      82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083, 82085,
+      82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100, 82101,
+      82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113, 82114,
+      82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127, 82129,
+      82131, 82134, 82135, 82136, 82137, 82138, 82140, 82142, 82143, 82144, 82145, 82146, 82147,
+      82148, 82149, 82152, 82153, 82154, 82156, 82157, 82159, 82160, 82161, 82198, 82199, 82200,
+      82201, 82202, 82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219,
+      82220, 82221, 82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233,
+      82234, 82235, 82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88200, 88201,
+      88202, 88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216,
+      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88231, 88232,
+      88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586, 92587,
+      92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592, 94593,
+      94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606, 94607,
+      94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620, 94621,
+      94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806, 99807,
+      99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874, 103876,
+      104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085, 104125, 108032, 108033,
+      109275, 109302, 109375, 109376, 109377, 109378, 109379, 109712, 109713, 109714, 109715,
+      109716, 109717, 109718, 109719, 109720, 109721, 109722, 109723, 110279, 110421, 110424,
+      110426, 110431
     ]
   },
   {
@@ -2989,7 +3159,7 @@
       },
       {
         "id": 82223,
-        "name": "Thrash",
+        "name": "Swipe",
         "type": "single",
         "posX": 2700,
         "posY": 2100,
@@ -3002,9 +3172,9 @@
             "definitionId": 108306,
             "maxRanks": 1,
             "type": "active",
-            "name": "Thrash",
-            "spellId": 106832,
-            "icon": "spell_druid_thrash",
+            "name": "Swipe",
+            "spellId": 213764,
+            "icon": "inv_misc_monsterclaw_03",
             "index": 100
           }
         ],
@@ -3502,8 +3672,8 @@
       },
       {
         "id": 82232,
-        "name": "Renewal / Aessina's Renewal",
-        "type": "choice",
+        "name": "Aessina's Renewal",
+        "type": "single",
         "posX": 5100,
         "posY": 4500,
         "reqPoints": 8,
@@ -3511,16 +3681,6 @@
         "next": [82240, 82209, 82207],
         "prev": [82214, 82206],
         "entries": [
-          {
-            "id": 103310,
-            "definitionId": 108315,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Renewal",
-            "spellId": 108238,
-            "icon": "spell_nature_natureblessing",
-            "index": 100
-          },
           {
             "id": 128581,
             "definitionId": 133384,
@@ -3609,14 +3769,14 @@
         "posX": 3300,
         "posY": 5100,
         "reqPoints": 8,
-        "maxRanks": 1,
+        "maxRanks": 2,
         "next": [],
         "prev": [82228, 82198],
         "entries": [
           {
             "id": 123796,
             "definitionId": 128634,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Matted Fur",
             "spellId": 385786,
@@ -3733,7 +3893,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82237, 100174, 82246],
         "prev": [82235, 82236],
@@ -3756,7 +3916,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82235],
@@ -3779,7 +3939,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -3802,7 +3962,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 2,
         "next": [82230, 104078, 92229],
         "prev": [82234],
@@ -3825,7 +3985,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -3848,7 +4008,7 @@
         "type": "choice",
         "posX": 5100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82209],
@@ -3877,11 +4037,11 @@
       },
       {
         "id": 100175,
-        "name": "Innervate",
+        "name": "Gift of the Wild",
         "type": "single",
         "posX": 5700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [100173, 82243, 82244],
         "prev": [82207, 82209],
@@ -3890,10 +4050,10 @@
             "id": 123794,
             "definitionId": 128632,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Innervate",
-            "spellId": 29166,
-            "icon": "spell_nature_lightning",
+            "type": "passive",
+            "name": "Gift of the Wild",
+            "spellId": 1262034,
+            "icon": "spell_nature_giftofthewild",
             "index": 100
           }
         ]
@@ -3904,7 +4064,7 @@
         "type": "choice",
         "posX": 1500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -3937,7 +4097,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -3960,7 +4120,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -3983,7 +4143,7 @@
         "type": "choice",
         "posX": 3900,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -4016,7 +4176,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -4039,7 +4199,7 @@
         "type": "single",
         "posX": 5100,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -4062,15 +4222,15 @@
         "type": "single",
         "posX": 6300,
         "posY": 6300,
-        "reqPoints": 20,
-        "maxRanks": 1,
+        "reqPoints": 23,
+        "maxRanks": 2,
         "next": [],
         "prev": [100175],
         "entries": [
           {
             "id": 103323,
             "definitionId": 108328,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Forestwalk",
             "spellId": 400129,
@@ -4085,7 +4245,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -4108,7 +4268,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82230, 92229, 104078],
@@ -4119,7 +4279,7 @@
             "maxRanks": 1,
             "type": "active",
             "name": "Heart of the Wild",
-            "spellId": 319454,
+            "spellId": 1261867,
             "icon": "spell_holy_blessingofagility",
             "index": 100
           }
@@ -4127,11 +4287,11 @@
       },
       {
         "id": 82244,
-        "name": "Nature's Vigil",
+        "name": "Innervate",
         "type": "single",
         "posX": 5700,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -4141,9 +4301,9 @@
             "definitionId": 108329,
             "maxRanks": 1,
             "type": "active",
-            "name": "Nature's Vigil",
-            "spellId": 124974,
-            "icon": "achievement_zone_feralas",
+            "name": "Innervate",
+            "spellId": 29166,
+            "icon": "spell_nature_lightning",
             "index": 100
           }
         ]
@@ -4241,8 +4401,8 @@
       },
       {
         "id": 82098,
-        "name": "Merciless Claws / Thrashing Claws",
-        "type": "choice",
+        "name": "Merciless Claws",
+        "type": "single",
         "posX": 11100,
         "posY": 2700,
         "maxRanks": 1,
@@ -4258,16 +4418,6 @@
             "spellId": 231063,
             "icon": "inv_misc_monsterclaw_03",
             "index": 100
-          },
-          {
-            "id": 114823,
-            "definitionId": 119830,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Thrashing Claws",
-            "spellId": 405300,
-            "icon": "spell_druid_thrash",
-            "index": 200
           }
         ]
       },
@@ -4322,7 +4472,7 @@
         "posX": 11700,
         "posY": 3300,
         "maxRanks": 1,
-        "next": [82104, 82099, 82116],
+        "next": [82104, 82116],
         "prev": [82098, 82122, 82123],
         "entries": [
           {
@@ -4366,7 +4516,7 @@
         "posX": 12900,
         "posY": 3300,
         "maxRanks": 1,
-        "next": [82116, 82103, 82118],
+        "next": [82116, 82118],
         "prev": [82086, 82122, 82120],
         "entries": [
           {
@@ -4383,13 +4533,13 @@
       },
       {
         "id": 82104,
-        "name": "Sudden Ambush",
+        "name": "Taste for Blood",
         "type": "single",
         "posX": 11100,
         "posY": 3900,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [92641, 82106],
+        "next": [92641, 82106, 82099],
         "prev": [82102],
         "entries": [
           {
@@ -4397,32 +4547,9 @@
             "definitionId": 108170,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Sudden Ambush",
-            "spellId": 384667,
-            "icon": "ability_hunter_catlikereflexes",
-            "index": 100
-          }
-        ]
-      },
-      {
-        "id": 82099,
-        "name": "Savage Fury",
-        "type": "single",
-        "posX": 11700,
-        "posY": 3900,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82106],
-        "prev": [82102],
-        "entries": [
-          {
-            "id": 103160,
-            "definitionId": 108165,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Savage Fury",
-            "spellId": 449645,
-            "icon": "ability_druid_kingofthejungle",
+            "name": "Taste for Blood",
+            "spellId": 384665,
+            "icon": "ability_druid_ferociousbite",
             "index": 100
           }
         ]
@@ -4451,37 +4578,14 @@
         ]
       },
       {
-        "id": 82103,
-        "name": "Rampant Ferocity",
-        "type": "single",
-        "posX": 12900,
-        "posY": 3900,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82117],
-        "prev": [82119],
-        "entries": [
-          {
-            "id": 103164,
-            "definitionId": 108169,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Rampant Ferocity",
-            "spellId": 391709,
-            "icon": "ability_druid_primaltenacity",
-            "index": 100
-          }
-        ]
-      },
-      {
         "id": 82118,
-        "name": "Infected Wounds",
+        "name": "Dreadful Bleeding",
         "type": "single",
         "posX": 13500,
         "posY": 3900,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82117, 82088],
+        "next": [82117, 82103, 82088],
         "prev": [82119],
         "entries": [
           {
@@ -4489,22 +4593,22 @@
             "definitionId": 108187,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Infected Wounds",
-            "spellId": 48484,
-            "icon": "ability_druid_infectedwound",
+            "name": "Dreadful Bleeding",
+            "spellId": 391045,
+            "icon": "ability_ghoulfrenzy",
             "index": 100
           }
         ]
       },
       {
         "id": 92641,
-        "name": "Lunar Inspiration",
+        "name": "Sudden Ambush",
         "type": "single",
         "posX": 10500,
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [],
+        "next": [82107],
         "prev": [82104],
         "entries": [
           {
@@ -4512,32 +4616,55 @@
             "definitionId": 119778,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lunar Inspiration",
-            "spellId": 155580,
-            "icon": "spell_druid_lunarinspiration",
+            "name": "Sudden Ambush",
+            "spellId": 384667,
+            "icon": "ability_hunter_catlikereflexes",
             "index": 100
           }
         ]
       },
       {
         "id": 82106,
-        "name": "Predatory Swiftness",
+        "name": "Moment of Clarity",
         "type": "single",
         "posX": 11100,
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82107, 82110],
-        "prev": [82104, 82099],
+        "next": [82107, 82105, 82110],
+        "prev": [82104],
         "entries": [
           {
             "id": 103167,
             "definitionId": 108172,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Predatory Swiftness",
-            "spellId": 16974,
-            "icon": "ability_hunter_pet_cat",
+            "name": "Moment of Clarity",
+            "spellId": 236068,
+            "icon": "spell_druid_momentofclarity",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 82099,
+        "name": "Savage Fury",
+        "type": "single",
+        "posX": 11700,
+        "posY": 4500,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82105],
+        "prev": [82104],
+        "entries": [
+          {
+            "id": 103160,
+            "definitionId": 108165,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Savage Fury",
+            "spellId": 449645,
+            "icon": "ability_druid_kingofthejungle",
             "index": 100
           }
         ]
@@ -4567,37 +4694,60 @@
         ]
       },
       {
+        "id": 82103,
+        "name": "Panther's Guile",
+        "type": "single",
+        "posX": 12900,
+        "posY": 4500,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82090],
+        "prev": [82118],
+        "entries": [
+          {
+            "id": 103164,
+            "definitionId": 108169,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Panther's Guile",
+            "spellId": 1280316,
+            "icon": "ability_mount_blackpanther",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 82117,
-        "name": "Dreadful Bleeding",
+        "name": "Rampant Ferocity",
         "type": "single",
         "posX": 13500,
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82091, 82094],
-        "prev": [82118, 82103],
+        "next": [82090, 82091, 82094],
+        "prev": [82118],
         "entries": [
           {
             "id": 103181,
             "definitionId": 108186,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Dreadful Bleeding",
-            "spellId": 391045,
-            "icon": "ability_ghoulfrenzy",
+            "name": "Rampant Ferocity",
+            "spellId": 391709,
+            "icon": "ability_druid_primaltenacity",
             "index": 100
           }
         ]
       },
       {
         "id": 82088,
-        "name": "Taste for Blood",
+        "name": "Infected Wounds",
         "type": "single",
         "posX": 14100,
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [],
+        "next": [82091],
         "prev": [82118],
         "entries": [
           {
@@ -4605,9 +4755,9 @@
             "definitionId": 108152,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Taste for Blood",
-            "spellId": 384665,
-            "icon": "ability_druid_ferociousbite",
+            "name": "Infected Wounds",
+            "spellId": 48484,
+            "icon": "ability_druid_infectedwound",
             "index": 100
           }
         ]
@@ -4621,7 +4771,7 @@
         "reqPoints": 8,
         "maxRanks": 1,
         "next": [82110, 82109],
-        "prev": [82106],
+        "prev": [82106, 92641],
         "entries": [
           {
             "id": 103169,
@@ -4647,30 +4797,30 @@
       },
       {
         "id": 82105,
-        "name": "Berserk: Heart of the Lion",
+        "name": "Wild Slashes",
         "type": "single",
         "posX": 11700,
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82115],
-        "prev": [82101],
+        "next": [82110],
+        "prev": [82099, 82106, 82101],
         "entries": [
           {
             "id": 103166,
             "definitionId": 108171,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Berserk: Heart of the Lion",
-            "spellId": 391174,
-            "icon": "ability_druid_berserk",
+            "name": "Wild Slashes",
+            "spellId": 390864,
+            "icon": "ability_xavius_tormentingswipe",
             "index": 100
           }
         ]
       },
       {
         "id": 82100,
-        "name": "Moment of Clarity",
+        "name": "Berserk: Heart of the Lion",
         "type": "single",
         "posX": 12300,
         "posY": 5100,
@@ -4684,66 +4834,56 @@
             "definitionId": 108166,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Moment of Clarity",
-            "spellId": 236068,
-            "icon": "spell_druid_momentofclarity",
+            "name": "Berserk: Heart of the Lion",
+            "spellId": 391174,
+            "icon": "ability_druid_primalprecision",
             "index": 100
           }
         ]
       },
       {
         "id": 82090,
-        "name": "Berserk: Frenzy",
+        "name": "Blood Spattered",
         "type": "single",
         "posX": 12900,
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82115],
-        "prev": [82101],
+        "next": [82094],
+        "prev": [82101, 82103, 82117],
         "entries": [
           {
             "id": 103149,
             "definitionId": 108154,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Berserk: Frenzy",
-            "spellId": 384668,
-            "icon": "ability_druid_berserk",
+            "name": "Blood Spattered",
+            "spellId": 1244532,
+            "icon": "ability_druid_ferociousbite",
             "index": 100
           }
         ]
       },
       {
         "id": 82091,
-        "name": "Wild Slashes / Brutal Slash",
-        "type": "choice",
+        "name": "Soul of the Forest",
+        "type": "single",
         "posX": 14100,
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
         "next": [82094, 82093],
-        "prev": [82117],
+        "prev": [82117, 82088],
         "entries": [
           {
             "id": 103150,
             "definitionId": 108155,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Wild Slashes",
-            "spellId": 390864,
-            "icon": "ability_xavius_tormentingswipe",
+            "name": "Soul of the Forest",
+            "spellId": 158476,
+            "icon": "ability_druid_manatree",
             "index": 100
-          },
-          {
-            "id": 103151,
-            "definitionId": 108156,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Brutal Slash",
-            "spellId": 202028,
-            "icon": "ability_druid_ravage",
-            "index": 200
           }
         ]
       },
@@ -4756,7 +4896,7 @@
         "reqPoints": 20,
         "maxRanks": 2,
         "next": [82112, 82109, 82108],
-        "prev": [82107, 82106],
+        "prev": [82107, 82106, 82105],
         "entries": [
           {
             "id": 103173,
@@ -4779,7 +4919,7 @@
         "reqPoints": 20,
         "maxRanks": 2,
         "next": [82112, 82114, 82096],
-        "prev": [82090, 82100, 82105],
+        "prev": [82100],
         "entries": [
           {
             "id": 103179,
@@ -4802,7 +4942,7 @@
         "reqPoints": 20,
         "maxRanks": 2,
         "next": [82096, 82093, 82092],
-        "prev": [82091, 82117],
+        "prev": [82091, 82117, 82090],
         "entries": [
           {
             "id": 103155,
@@ -4818,8 +4958,8 @@
       },
       {
         "id": 82109,
-        "name": "Lion's Strength / Bloodtalons",
-        "type": "choice",
+        "name": "Apex Predator's Craving",
+        "type": "single",
         "posX": 10500,
         "posY": 6300,
         "reqPoints": 20,
@@ -4832,32 +4972,22 @@
             "definitionId": 108177,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lion's Strength",
-            "spellId": 391972,
-            "icon": "ability_hunter_masterscall",
+            "name": "Apex Predator's Craving",
+            "spellId": 391881,
+            "icon": "ability_druid_primaltenacity",
             "index": 100
-          },
-          {
-            "id": 103171,
-            "definitionId": 108176,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Bloodtalons",
-            "spellId": 319439,
-            "icon": "spell_druid_bloodythrash",
-            "index": 200
           }
         ]
       },
       {
         "id": 82112,
-        "name": "Adaptive Swarm",
+        "name": "Feral Frenzy",
         "type": "single",
         "posX": 11700,
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [82111],
+        "next": [82108, 82111],
         "prev": [82110, 82115],
         "entries": [
           {
@@ -4865,9 +4995,9 @@
             "definitionId": 108180,
             "maxRanks": 1,
             "type": "active",
-            "name": "Adaptive Swarm",
-            "spellId": 391888,
-            "icon": "inv_ability_druid_adaptiveswarm",
+            "name": "Feral Frenzy",
+            "spellId": 274837,
+            "icon": "ability_druid_rake",
             "index": 100
           }
         ]
@@ -4907,13 +5037,13 @@
       },
       {
         "id": 82096,
-        "name": "Soul of the Forest",
+        "name": "Lacerating Claws",
         "type": "single",
         "posX": 12900,
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [82095],
+        "next": [82095, 82092],
         "prev": [82094, 82115],
         "entries": [
           {
@@ -4921,9 +5051,9 @@
             "definitionId": 108162,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Soul of the Forest",
-            "spellId": 158476,
-            "icon": "ability_druid_manatree",
+            "name": "Lacerating Claws",
+            "spellId": 1244632,
+            "icon": "spell_druid_bloodythrash",
             "index": 100
           }
         ]
@@ -4963,31 +5093,41 @@
       },
       {
         "id": 82108,
-        "name": "Feral Frenzy",
-        "type": "single",
+        "name": "Lunar Inspiration / Chomp",
+        "type": "choice",
         "posX": 11100,
         "posY": 6900,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82109, 82110],
+        "prev": [82109, 82110, 82112],
         "entries": [
           {
             "id": 103170,
             "definitionId": 108175,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Feral Frenzy",
-            "spellId": 274837,
-            "icon": "ability_druid_rake",
+            "type": "passive",
+            "name": "Lunar Inspiration",
+            "spellId": 155580,
+            "icon": "spell_druid_lunarinspiration",
             "index": 100
+          },
+          {
+            "id": 134212,
+            "definitionId": 138990,
+            "maxRanks": 1,
+            "type": "active",
+            "name": "Chomp",
+            "spellId": 1244258,
+            "icon": "inv_1115_druid_jaguar",
+            "index": 200
           }
         ]
       },
       {
         "id": 82111,
-        "name": "Unbridled Swarm",
-        "type": "single",
+        "name": "Focused Frenzy / Frantic Frenzy",
+        "type": "choice",
         "posX": 11700,
         "posY": 6900,
         "reqPoints": 20,
@@ -5000,10 +5140,20 @@
             "definitionId": 108179,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Unbridled Swarm",
-            "spellId": 391951,
-            "icon": "inv_ability_druid_adaptiveswarm",
+            "name": "Focused Frenzy",
+            "spellId": 1244544,
+            "icon": "ability_druid_ravage",
             "index": 100
+          },
+          {
+            "id": 134211,
+            "definitionId": 138989,
+            "maxRanks": 1,
+            "type": "active",
+            "name": "Frantic Frenzy",
+            "spellId": 1243807,
+            "icon": "ability_xavius_nightmareblades",
+            "index": 200
           }
         ]
       },
@@ -5032,7 +5182,7 @@
       },
       {
         "id": 82095,
-        "name": "Circle of Life and Death",
+        "name": "Hunger for Battle",
         "type": "single",
         "posX": 12900,
         "posY": 6900,
@@ -5046,6 +5196,29 @@
             "definitionId": 108161,
             "maxRanks": 1,
             "type": "passive",
+            "name": "Hunger for Battle",
+            "spellId": 1244547,
+            "icon": "ability_druid_predatoryinstincts",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 82092,
+        "name": "Circle of Life and Death",
+        "type": "single",
+        "posX": 13500,
+        "posY": 6900,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [],
+        "prev": [82093, 82094, 82096],
+        "entries": [
+          {
+            "id": 103152,
+            "definitionId": 108157,
+            "maxRanks": 1,
+            "type": "passive",
             "name": "Circle of Life and Death",
             "spellId": 400320,
             "icon": "ability_druid_cyclone",
@@ -5054,25 +5227,46 @@
         ]
       },
       {
-        "id": 82092,
-        "name": "Apex Predator's Craving",
-        "type": "single",
-        "posX": 13500,
-        "posY": 6900,
+        "id": 110426,
+        "name": "Unseen Predator / Unseen Predator / Unseen Predator",
+        "type": "tiered",
+        "posX": 12300,
+        "posY": 7650,
         "reqPoints": 20,
-        "maxRanks": 1,
+        "maxRanks": 4,
+        "entryNode": true,
         "next": [],
-        "prev": [82093, 82094],
+        "prev": [],
         "entries": [
           {
-            "id": 103152,
-            "definitionId": 108157,
+            "id": 137046,
+            "definitionId": 141809,
             "maxRanks": 1,
-            "type": "passive",
-            "name": "Apex Predator's Craving",
-            "spellId": 391881,
-            "icon": "ability_druid_primaltenacity",
+            "type": "tierrank",
+            "name": "Unseen Predator",
+            "spellId": 1263657,
+            "icon": "inv12_apextalent_druid_unseenpredator",
             "index": 100
+          },
+          {
+            "id": 137045,
+            "definitionId": 141808,
+            "maxRanks": 2,
+            "type": "tierrank",
+            "name": "Unseen Predator",
+            "spellId": 1263658,
+            "icon": "inv12_apextalent_druid_unseenpredator",
+            "index": 200
+          },
+          {
+            "id": 137044,
+            "definitionId": 141807,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Unseen Predator",
+            "spellId": 1263660,
+            "icon": "inv12_apextalent_druid_unseenpredator",
+            "index": 300
           }
         ]
       }
@@ -5082,12 +5276,12 @@
         "id": 94626,
         "name": "Thriving Growth",
         "type": "single",
-        "posX": 15300,
+        "posX": 15600,
         "posY": 1500,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 22,
-        "next": [94629, 94621, 94623],
+        "next": [94629, 94621, 109717, 94623],
         "prev": [],
         "entries": [
           {
@@ -5168,6 +5362,29 @@
             "name": "Wildstalker's Power",
             "spellId": 439926,
             "icon": "ability_druid_skinteeth",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109717,
+        "name": "Green Thumb",
+        "type": "single",
+        "posX": 16500,
+        "posY": 2100,
+        "maxRanks": 1,
+        "subTreeId": 22,
+        "next": [109716],
+        "prev": [94626],
+        "entries": [
+          {
+            "id": 135975,
+            "definitionId": 140730,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Green Thumb",
+            "spellId": 1270565,
+            "icon": "spell_lifegivingseed",
             "index": 100
           }
         ]
@@ -5262,6 +5479,29 @@
         ]
       },
       {
+        "id": 109716,
+        "name": "Bursting Growth",
+        "type": "single",
+        "posX": 16500,
+        "posY": 2700,
+        "maxRanks": 1,
+        "subTreeId": 22,
+        "next": [109715],
+        "prev": [109717],
+        "entries": [
+          {
+            "id": 135974,
+            "definitionId": 140729,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Bursting Growth",
+            "spellId": 440120,
+            "icon": "inv_collections_armor_flowerbracelet_b_01",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94631,
         "name": "Resilient Flourishing / Root Network",
         "type": "choice",
@@ -5296,7 +5536,7 @@
       },
       {
         "id": 94630,
-        "name": "Bursting Growth",
+        "name": "Patient Custodian",
         "type": "single",
         "posX": 15300,
         "posY": 3300,
@@ -5310,9 +5550,9 @@
             "definitionId": 122244,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Bursting Growth",
-            "spellId": 440120,
-            "icon": "inv_collections_armor_flowerbracelet_b_01",
+            "name": "Patient Custodian",
+            "spellId": 1270592,
+            "icon": "inv_helm_misc_rose_a_01_red",
             "index": 100
           }
         ]
@@ -5351,15 +5591,38 @@
         ]
       },
       {
+        "id": 109715,
+        "name": "Rampancy",
+        "type": "single",
+        "posX": 16500,
+        "posY": 3300,
+        "maxRanks": 1,
+        "subTreeId": 22,
+        "next": [94627],
+        "prev": [109716],
+        "entries": [
+          {
+            "id": 135973,
+            "definitionId": 140728,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Rampancy",
+            "spellId": 1270586,
+            "icon": "inv_misc_thornnecklace",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94627,
         "name": "Vigorous Creepers",
         "type": "single",
-        "posX": 15300,
+        "posX": 15600,
         "posY": 3900,
         "maxRanks": 1,
         "subTreeId": 22,
         "next": [],
-        "prev": [94630, 94628, 94631],
+        "prev": [94630, 94628, 94631, 109715],
         "entries": [
           {
             "id": 117227,
@@ -5377,12 +5640,12 @@
         "id": 94609,
         "name": "Ravage",
         "type": "single",
-        "posX": 1200,
-        "posY": 5110,
+        "posX": 1500,
+        "posY": 5100,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 21,
-        "next": [94620, 94611, 94618],
+        "next": [94620, 94611, 109722, 94618],
         "prev": [],
         "entries": [
           {
@@ -5468,6 +5731,29 @@
         ]
       },
       {
+        "id": 109722,
+        "name": "Limb from Limb",
+        "type": "single",
+        "posX": 2400,
+        "posY": 5700,
+        "maxRanks": 1,
+        "subTreeId": 21,
+        "next": [109723],
+        "prev": [94609],
+        "entries": [
+          {
+            "id": 135980,
+            "definitionId": 140735,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Limb from Limb",
+            "spellId": 1271540,
+            "icon": "artifactability_feraldruid_ashamanesbite",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94610,
         "name": "Wildshape Mastery",
         "type": "single",
@@ -5492,8 +5778,8 @@
       },
       {
         "id": 94619,
-        "name": "Ruthless Aggression / Killing Strikes",
-        "type": "choice",
+        "name": "Exacerbating Wounds",
+        "type": "single",
         "posX": 1200,
         "posY": 6300,
         "maxRanks": 1,
@@ -5506,20 +5792,10 @@
             "definitionId": 122231,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Ruthless Aggression",
-            "spellId": 441814,
-            "icon": "ability_druid_rake",
+            "name": "Exacerbating Wounds",
+            "spellId": 1271839,
+            "icon": "inv_artifact_bloodoftheassassinated",
             "index": 100
-          },
-          {
-            "id": 123048,
-            "definitionId": 127929,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Killing Strikes",
-            "spellId": 441824,
-            "icon": "ability_druid_kingofthejungle",
-            "index": 200
           }
         ]
       },
@@ -5544,6 +5820,39 @@
             "spellId": 441844,
             "icon": "spell_druid_stampedingroar_cat",
             "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109723,
+        "name": "Ruthless Aggression / Killing Strikes",
+        "type": "choice",
+        "posX": 2400,
+        "posY": 6300,
+        "maxRanks": 1,
+        "subTreeId": 21,
+        "next": [109721],
+        "prev": [109722],
+        "entries": [
+          {
+            "id": 135981,
+            "definitionId": 140736,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Ruthless Aggression",
+            "spellId": 441814,
+            "icon": "ability_druid_rake",
+            "index": 100
+          },
+          {
+            "id": 136624,
+            "definitionId": 141396,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Killing Strikes",
+            "spellId": 441824,
+            "icon": "ability_druid_kingofthejungle",
+            "index": 200
           }
         ]
       },
@@ -5631,8 +5940,31 @@
             "type": "passive",
             "name": "Tear Down the Mighty",
             "spellId": 441846,
-            "icon": "spell_druid_malfurionstenacity",
+            "icon": "inv_1115_druid_jaguar",
             "index": 200
+          }
+        ]
+      },
+      {
+        "id": 109721,
+        "name": "Twin Claw",
+        "type": "single",
+        "posX": 2400,
+        "posY": 6900,
+        "maxRanks": 1,
+        "subTreeId": 21,
+        "next": [94613],
+        "prev": [109723],
+        "entries": [
+          {
+            "id": 135979,
+            "definitionId": 140734,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Twin Claw",
+            "spellId": 1271635,
+            "icon": "ability_druid_swipe",
+            "index": 100
           }
         ]
       },
@@ -5640,12 +5972,12 @@
         "id": 94613,
         "name": "Claw Rampage",
         "type": "single",
-        "posX": 1200,
-        "posY": 7510,
+        "posX": 1500,
+        "posY": 7500,
         "maxRanks": 1,
         "subTreeId": 21,
         "next": [],
-        "prev": [94614, 94616, 94612],
+        "prev": [94614, 94616, 94612, 109721],
         "entries": [
           {
             "id": 117211,
@@ -5678,7 +6010,10 @@
             "traitSubTreeId": 21,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-druidoftheclaw",
-            "nodes": [94609, 94618, 94620, 94611, 94610, 94619, 94615, 94612, 94616, 94614, 94613]
+            "nodes": [
+              94609, 94618, 94620, 94611, 109722, 94610, 94619, 94615, 109723, 94612, 94616, 94614,
+              109721, 94613
+            ]
           },
           {
             "id": 123296,
@@ -5687,33 +6022,38 @@
             "traitSubTreeId": 22,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-wildstalker",
-            "nodes": [94626, 94629, 94623, 94621, 94624, 94622, 94625, 94631, 94630, 94628, 94627]
+            "nodes": [
+              94626, 94629, 94623, 94621, 109717, 94624, 94622, 94625, 109716, 94631, 94630, 94628,
+              109715, 94627
+            ]
           }
         ]
       }
     ],
     "fullNodeOrder": [
       82043, 82045, 82046, 82047, 82048, 82049, 82050, 82051, 82052, 82053, 82054, 82055, 82056,
-      82057, 82058, 82059, 82060, 82061, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069,
-      82070, 82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083,
-      82085, 82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100,
-      82101, 82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113,
-      82114, 82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127,
-      82128, 82129, 82130, 82131, 82132, 82133, 82134, 82135, 82136, 82137, 82138, 82139, 82140,
-      82141, 82142, 82143, 82144, 82145, 82146, 82147, 82148, 82149, 82151, 82152, 82153, 82154,
-      82155, 82156, 82157, 82158, 82159, 82160, 82161, 82162, 82198, 82199, 82200, 82201, 82202,
-      82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219, 82220, 82221,
-      82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233, 82234, 82235,
-      82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88199, 88200, 88201, 88202,
-      88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216, 88217,
-      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88229, 88231,
-      88232, 88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586,
-      92587, 92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592,
-      94593, 94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606,
-      94607, 94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620,
-      94621, 94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806,
-      99807, 99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874,
-      103875, 103876, 104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085
+      82057, 82058, 82059, 82060, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069, 82070,
+      82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083, 82085,
+      82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100, 82101,
+      82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113, 82114,
+      82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127, 82129,
+      82131, 82134, 82135, 82136, 82137, 82138, 82140, 82142, 82143, 82144, 82145, 82146, 82147,
+      82148, 82149, 82152, 82153, 82154, 82156, 82157, 82159, 82160, 82161, 82198, 82199, 82200,
+      82201, 82202, 82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219,
+      82220, 82221, 82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233,
+      82234, 82235, 82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88200, 88201,
+      88202, 88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216,
+      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88231, 88232,
+      88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586, 92587,
+      92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592, 94593,
+      94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606, 94607,
+      94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620, 94621,
+      94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806, 99807,
+      99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874, 103876,
+      104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085, 104125, 108032, 108033,
+      109275, 109302, 109375, 109376, 109377, 109378, 109379, 109712, 109713, 109714, 109715,
+      109716, 109717, 109718, 109719, 109720, 109721, 109722, 109723, 110279, 110421, 110424,
+      110426, 110431
     ]
   },
   {
@@ -5840,7 +6180,7 @@
       },
       {
         "id": 82223,
-        "name": "Thrash",
+        "name": "Swipe",
         "type": "single",
         "posX": 2700,
         "posY": 2100,
@@ -5853,9 +6193,9 @@
             "definitionId": 108306,
             "maxRanks": 1,
             "type": "active",
-            "name": "Thrash",
-            "spellId": 106832,
-            "icon": "spell_druid_thrash",
+            "name": "Swipe",
+            "spellId": 213764,
+            "icon": "inv_misc_monsterclaw_03",
             "index": 100
           }
         ],
@@ -6353,8 +6693,8 @@
       },
       {
         "id": 82232,
-        "name": "Renewal / Aessina's Renewal",
-        "type": "choice",
+        "name": "Aessina's Renewal",
+        "type": "single",
         "posX": 5100,
         "posY": 4500,
         "reqPoints": 8,
@@ -6362,16 +6702,6 @@
         "next": [82240, 82209, 82207],
         "prev": [82214, 82206],
         "entries": [
-          {
-            "id": 103310,
-            "definitionId": 108315,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Renewal",
-            "spellId": 108238,
-            "icon": "spell_nature_natureblessing",
-            "index": 100
-          },
           {
             "id": 128581,
             "definitionId": 133384,
@@ -6460,14 +6790,14 @@
         "posX": 3300,
         "posY": 5100,
         "reqPoints": 8,
-        "maxRanks": 1,
+        "maxRanks": 2,
         "next": [],
         "prev": [82228, 82198],
         "entries": [
           {
             "id": 123796,
             "definitionId": 128634,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Matted Fur",
             "spellId": 385786,
@@ -6584,7 +6914,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82237, 100174, 82246],
         "prev": [82235, 82236],
@@ -6607,7 +6937,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82235],
@@ -6630,7 +6960,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -6653,7 +6983,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 2,
         "next": [82230, 104078, 92229],
         "prev": [82234],
@@ -6676,7 +7006,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -6699,7 +7029,7 @@
         "type": "choice",
         "posX": 5100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82209],
@@ -6728,11 +7058,11 @@
       },
       {
         "id": 100175,
-        "name": "Innervate",
+        "name": "Gift of the Wild",
         "type": "single",
         "posX": 5700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [100173, 82243, 82244],
         "prev": [82207, 82209],
@@ -6741,10 +7071,10 @@
             "id": 123794,
             "definitionId": 128632,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Innervate",
-            "spellId": 29166,
-            "icon": "spell_nature_lightning",
+            "type": "passive",
+            "name": "Gift of the Wild",
+            "spellId": 1262034,
+            "icon": "spell_nature_giftofthewild",
             "index": 100
           }
         ]
@@ -6755,7 +7085,7 @@
         "type": "choice",
         "posX": 1500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -6788,7 +7118,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -6811,7 +7141,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -6834,7 +7164,7 @@
         "type": "choice",
         "posX": 3900,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -6867,7 +7197,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -6890,7 +7220,7 @@
         "type": "single",
         "posX": 5100,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -6913,15 +7243,15 @@
         "type": "single",
         "posX": 6300,
         "posY": 6300,
-        "reqPoints": 20,
-        "maxRanks": 1,
+        "reqPoints": 23,
+        "maxRanks": 2,
         "next": [],
         "prev": [100175],
         "entries": [
           {
             "id": 103323,
             "definitionId": 108328,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Forestwalk",
             "spellId": 400129,
@@ -6936,7 +7266,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -6959,7 +7289,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82230, 92229, 104078],
@@ -6970,7 +7300,7 @@
             "maxRanks": 1,
             "type": "active",
             "name": "Heart of the Wild",
-            "spellId": 319454,
+            "spellId": 1261867,
             "icon": "spell_holy_blessingofagility",
             "index": 100
           }
@@ -6978,11 +7308,11 @@
       },
       {
         "id": 82244,
-        "name": "Nature's Vigil",
+        "name": "Innervate",
         "type": "single",
         "posX": 5700,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -6992,9 +7322,9 @@
             "definitionId": 108329,
             "maxRanks": 1,
             "type": "active",
-            "name": "Nature's Vigil",
-            "spellId": 124974,
-            "icon": "achievement_zone_feralas",
+            "name": "Innervate",
+            "spellId": 29166,
+            "icon": "spell_nature_lightning",
             "index": 100
           }
         ]
@@ -7031,7 +7361,7 @@
         "posX": 11700,
         "posY": 2100,
         "maxRanks": 1,
-        "next": [92227, 82161],
+        "next": [109275, 92227],
         "prev": [82127],
         "entries": [
           {
@@ -7053,7 +7383,7 @@
         "posX": 12900,
         "posY": 2100,
         "maxRanks": 1,
-        "next": [82131, 82128],
+        "next": [92585, 109376],
         "prev": [82127],
         "entries": [
           {
@@ -7069,8 +7399,8 @@
         ]
       },
       {
-        "id": 92227,
-        "name": "Dream of Cenarius",
+        "id": 109275,
+        "name": "Front of the Pack",
         "type": "single",
         "posX": 11100,
         "posY": 2700,
@@ -7079,35 +7409,372 @@
         "prev": [82126],
         "entries": [
           {
-            "id": 103218,
-            "definitionId": 108223,
+            "id": 103205,
+            "definitionId": 108210,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Dream of Cenarius",
-            "spellId": 372119,
-            "icon": "ability_druid_dreamstate",
+            "name": "Front of the Pack",
+            "spellId": 377835,
+            "icon": "spell_druid_stampedingroar_cat",
             "index": 100
           }
         ]
       },
       {
-        "id": 82161,
-        "name": "Brambles / Bristling Fur",
-        "type": "choice",
+        "id": 92227,
+        "name": "Persistence",
+        "type": "single",
         "posX": 11700,
         "posY": 2700,
         "maxRanks": 1,
-        "next": [82160, 82162, 82149],
+        "next": [82160, 82149],
         "prev": [82126],
+        "entries": [
+          {
+            "id": 103218,
+            "definitionId": 108223,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Persistence",
+            "spellId": 1251406,
+            "icon": "inv_1115_druid_bearstanding",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 92585,
+        "name": "Dream of Cenarius / Dream Guide",
+        "type": "choice",
+        "posX": 12900,
+        "posY": 2700,
+        "maxRanks": 1,
+        "next": [82149, 82131],
+        "prev": [82129],
+        "entries": [
+          {
+            "id": 114698,
+            "definitionId": 119704,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Dream of Cenarius",
+            "spellId": 372119,
+            "icon": "ability_druid_dreamstate",
+            "index": 0
+          },
+          {
+            "id": 136806,
+            "definitionId": 141569,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Dream Guide",
+            "spellId": 1278886,
+            "icon": "achievement_reputation_guardiansofcenarius",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109376,
+        "name": "Infected Wounds",
+        "type": "single",
+        "posX": 13500,
+        "posY": 2700,
+        "maxRanks": 1,
+        "next": [82131],
+        "prev": [82129],
+        "entries": [
+          {
+            "id": 135567,
+            "definitionId": 140323,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Infected Wounds",
+            "spellId": 345208,
+            "icon": "ability_druid_infectedwound",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 82160,
+        "name": "Innate Resolve",
+        "type": "single",
+        "posX": 11100,
+        "posY": 3300,
+        "maxRanks": 1,
+        "next": [82143, 82157],
+        "prev": [109275, 92227],
+        "entries": [
+          {
+            "id": 103229,
+            "definitionId": 108234,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Innate Resolve",
+            "spellId": 377811,
+            "icon": "spell_nature_healingway",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82149,
+        "name": "Berserk",
+        "type": "single",
+        "posX": 12300,
+        "posY": 3300,
+        "maxRanks": 1,
+        "next": [82157, 82140, 82144],
+        "prev": [92227, 92585],
+        "entries": [
+          {
+            "id": 103216,
+            "definitionId": 108221,
+            "maxRanks": 1,
+            "type": "active",
+            "name": "Berserk",
+            "spellId": 50334,
+            "icon": "ability_druid_berserk",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82131,
+        "name": "Vulnerable Flesh",
+        "type": "single",
+        "posX": 13500,
+        "posY": 3300,
+        "maxRanks": 1,
+        "next": [82144, 82146],
+        "prev": [92585, 109376],
+        "entries": [
+          {
+            "id": 103195,
+            "definitionId": 108200,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Vulnerable Flesh",
+            "spellId": 372618,
+            "icon": "ability_druid_primalagression",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82143,
+        "name": "Survival of the Fittest",
+        "type": "single",
+        "posX": 10500,
+        "posY": 3900,
+        "reqPoints": 8,
+        "maxRanks": 2,
+        "next": [109378, 92226],
+        "prev": [82160],
+        "entries": [
+          {
+            "id": 103210,
+            "definitionId": 108215,
+            "maxRanks": 2,
+            "type": "passive",
+            "name": "Survival of the Fittest",
+            "spellId": 203965,
+            "icon": "ability_druid_enrage",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82157,
+        "name": "Reinvigoration",
+        "type": "single",
+        "posX": 11700,
+        "posY": 3900,
+        "reqPoints": 8,
+        "maxRanks": 2,
+        "next": [92226, 82156],
+        "prev": [82149, 82160],
+        "entries": [
+          {
+            "id": 103226,
+            "definitionId": 108231,
+            "maxRanks": 2,
+            "type": "passive",
+            "name": "Reinvigoration",
+            "spellId": 372945,
+            "icon": "ability_druid_overgrowth",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82140,
+        "name": "After the Wildfire",
+        "type": "single",
+        "posX": 12300,
+        "posY": 3900,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82156, 82161, 109377],
+        "prev": [82149],
+        "entries": [
+          {
+            "id": 103206,
+            "definitionId": 108211,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "After the Wildfire",
+            "spellId": 371905,
+            "icon": "inv12_ability_druid_afterthewildfire",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82144,
+        "name": "Memory of Ysera",
+        "type": "single",
+        "posX": 12900,
+        "posY": 3900,
+        "reqPoints": 8,
+        "maxRanks": 2,
+        "next": [109377, 109375],
+        "prev": [82149, 82131],
+        "entries": [
+          {
+            "id": 103211,
+            "definitionId": 108216,
+            "maxRanks": 2,
+            "type": "passive",
+            "name": "Memory of Ysera",
+            "spellId": 1250906,
+            "icon": "spell_nature_regeneration_02",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82146,
+        "name": "Scintillating Moonlight",
+        "type": "single",
+        "posX": 14100,
+        "posY": 3900,
+        "reqPoints": 8,
+        "maxRanks": 2,
+        "next": [109375, 82148],
+        "prev": [82131],
+        "entries": [
+          {
+            "id": 103213,
+            "definitionId": 108218,
+            "maxRanks": 2,
+            "type": "passive",
+            "name": "Scintillating Moonlight",
+            "spellId": 238049,
+            "icon": "spell_fire_twilightfireward",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 109378,
+        "name": "Ward of the Forest / Brambles",
+        "type": "choice",
+        "posX": 10500,
+        "posY": 4500,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82152, 82159],
+        "prev": [82143],
+        "entries": [
+          {
+            "id": 135337,
+            "definitionId": 140104,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Ward of the Forest",
+            "spellId": 1250923,
+            "icon": "achievement_zone_grizzlyhills_01",
+            "index": 100
+          },
+          {
+            "id": 135570,
+            "definitionId": 140326,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Brambles",
+            "spellId": 203953,
+            "icon": "inv_misc_thornnecklace",
+            "index": 200
+          }
+        ]
+      },
+      {
+        "id": 92226,
+        "name": "Soul of the Forest",
+        "type": "single",
+        "posX": 11100,
+        "posY": 4500,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82152],
+        "prev": [82157, 82143],
+        "entries": [
+          {
+            "id": 103208,
+            "definitionId": 108213,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Soul of the Forest",
+            "spellId": 158477,
+            "icon": "ability_druid_manatree",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 82156,
+        "name": "Natural Resilience",
+        "type": "single",
+        "posX": 11700,
+        "posY": 4500,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82152, 82137],
+        "prev": [82140, 82157],
+        "entries": [
+          {
+            "id": 103225,
+            "definitionId": 108230,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Natural Resilience",
+            "spellId": 1278789,
+            "icon": "spell_lfieblood",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82161,
+        "name": "Reinforced Fur / Bristling Fur",
+        "type": "choice",
+        "posX": 12300,
+        "posY": 4500,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82137],
+        "prev": [82140],
         "entries": [
           {
             "id": 103231,
             "definitionId": 108236,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Brambles",
-            "spellId": 203953,
-            "icon": "inv_misc_thornnecklace",
+            "name": "Reinforced Fur",
+            "spellId": 393618,
+            "icon": "spell_nature_spiritarmor",
             "index": 0
           },
           {
@@ -7123,203 +7790,68 @@
         ]
       },
       {
-        "id": 82131,
-        "name": "Mangle",
-        "type": "single",
+        "id": 109377,
+        "name": "Gift of an Ancient Guardian / Guardian of Elune",
+        "type": "choice",
         "posX": 12900,
-        "posY": 2700,
+        "posY": 4500,
+        "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82149, 82130, 82132],
-        "prev": [82129],
+        "next": [82137, 92587],
+        "prev": [82140, 82144],
         "entries": [
           {
-            "id": 103195,
-            "definitionId": 108200,
+            "id": 135491,
+            "definitionId": 140248,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Mangle",
-            "spellId": 231064,
-            "icon": "ability_druid_mangle2",
-            "index": 0
+            "name": "Gift of an Ancient Guardian",
+            "spellId": 1251876,
+            "icon": "inv_relics_idolofhealth",
+            "index": 100
+          },
+          {
+            "id": 135569,
+            "definitionId": 140325,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Guardian of Elune",
+            "spellId": 155578,
+            "icon": "spell_druid_guardianofelune",
+            "index": 200
           }
         ]
       },
       {
-        "id": 82128,
-        "name": "Improved Survival Instincts",
-        "type": "single",
+        "id": 109375,
+        "name": "Ursoc's Endurance / Gory Fur",
+        "type": "choice",
         "posX": 13500,
-        "posY": 2700,
+        "posY": 4500,
+        "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82132],
-        "prev": [82129],
+        "next": [92587],
+        "prev": [82146, 82144],
         "entries": [
           {
-            "id": 103192,
-            "definitionId": 108197,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Improved Survival Instincts",
-            "spellId": 328767,
-            "icon": "ability_druid_tigersroar",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82160,
-        "name": "Innate Resolve",
-        "type": "single",
-        "posX": 11100,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [82157, 82159],
-        "prev": [82161, 92227],
-        "entries": [
-          {
-            "id": 103229,
-            "definitionId": 108234,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Innate Resolve",
-            "spellId": 377811,
-            "icon": "spell_nature_healingway",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82162,
-        "name": "Infected Wounds",
-        "type": "single",
-        "posX": 11700,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [82159],
-        "prev": [82161],
-        "entries": [
-          {
-            "id": 103232,
-            "definitionId": 108237,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Infected Wounds",
-            "spellId": 345208,
-            "icon": "ability_druid_infectedwound",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82149,
-        "name": "Berserk: Ravage",
-        "type": "single",
-        "posX": 12300,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [82159, 82148],
-        "prev": [82161, 82131],
-        "entries": [
-          {
-            "id": 103216,
-            "definitionId": 108221,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Berserk: Ravage",
-            "spellId": 343240,
-            "visibleSpellId": 50334,
-            "icon": "ability_druid_berserk",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82130,
-        "name": "Ursoc's Endurance",
-        "type": "single",
-        "posX": 12900,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [82148],
-        "prev": [82131],
-        "entries": [
-          {
-            "id": 103194,
-            "definitionId": 108199,
+            "id": 135568,
+            "definitionId": 140324,
             "maxRanks": 1,
             "type": "passive",
             "name": "Ursoc's Endurance",
             "spellId": 393611,
             "icon": "ability_hunter_pet_bear",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82132,
-        "name": "Gory Fur",
-        "type": "single",
-        "posX": 13500,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [82148, 82143],
-        "prev": [82131, 82128],
-        "entries": [
+            "index": 100
+          },
           {
-            "id": 103196,
-            "definitionId": 108201,
+            "id": 135566,
+            "definitionId": 140322,
             "maxRanks": 1,
             "type": "passive",
             "name": "Gory Fur",
             "spellId": 200854,
             "icon": "artifactability_guardiandruid_goryfur",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82157,
-        "name": "Reinvigoration",
-        "type": "single",
-        "posX": 10500,
-        "posY": 3900,
-        "reqPoints": 8,
-        "maxRanks": 2,
-        "next": [82156, 82158],
-        "prev": [82160],
-        "entries": [
-          {
-            "id": 103226,
-            "definitionId": 108231,
-            "maxRanks": 2,
-            "type": "passive",
-            "name": "Reinvigoration",
-            "spellId": 372945,
-            "icon": "ability_druid_overgrowth",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82159,
-        "name": "Vulnerable Flesh",
-        "type": "single",
-        "posX": 11700,
-        "posY": 3900,
-        "reqPoints": 8,
-        "maxRanks": 2,
-        "next": [92226, 82158, 82133],
-        "prev": [82149, 82160, 82162],
-        "entries": [
-          {
-            "id": 103228,
-            "definitionId": 108233,
-            "maxRanks": 2,
-            "type": "passive",
-            "name": "Vulnerable Flesh",
-            "spellId": 372618,
-            "icon": "ability_druid_primalagression",
-            "index": 0
+            "index": 200
           }
         ]
       },
@@ -7327,17 +7859,17 @@
         "id": 82148,
         "name": "Ursol's Warding",
         "type": "single",
-        "posX": 12900,
-        "posY": 3900,
+        "posX": 14100,
+        "posY": 4500,
         "reqPoints": 8,
-        "maxRanks": 2,
-        "next": [92226, 92585, 82139],
-        "prev": [82149, 82132, 82130],
+        "maxRanks": 1,
+        "next": [92587, 82147],
+        "prev": [82146],
         "entries": [
           {
             "id": 103215,
             "definitionId": 108220,
-            "maxRanks": 2,
+            "maxRanks": 1,
             "type": "passive",
             "name": "Ursol's Warding",
             "spellId": 471492,
@@ -7347,280 +7879,15 @@
         ]
       },
       {
-        "id": 82143,
-        "name": "Survival of the Fittest",
-        "type": "single",
-        "posX": 14100,
-        "posY": 3900,
-        "reqPoints": 8,
-        "maxRanks": 2,
-        "next": [92585, 82140],
-        "prev": [82132],
-        "entries": [
-          {
-            "id": 103210,
-            "definitionId": 108215,
-            "maxRanks": 2,
-            "type": "passive",
-            "name": "Survival of the Fittest",
-            "spellId": 203965,
-            "icon": "ability_druid_enrage",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82156,
-        "name": "Earthwarden",
-        "type": "single",
-        "posX": 10500,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82155, 82152],
-        "prev": [82157],
-        "entries": [
-          {
-            "id": 103225,
-            "definitionId": 108230,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Earthwarden",
-            "spellId": 203974,
-            "icon": "spell_shaman_blessingofeternals",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82158,
-        "name": "Vicious Cycle",
-        "type": "single",
-        "posX": 11100,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82155],
-        "prev": [82157, 82159],
-        "entries": [
-          {
-            "id": 103227,
-            "definitionId": 108232,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Vicious Cycle",
-            "spellId": 371999,
-            "icon": "ability_druid_rake",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82133,
-        "name": "Tooth and Claw",
-        "type": "single",
-        "posX": 11700,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82155, 82138, 82137],
-        "prev": [82159],
-        "entries": [
-          {
-            "id": 103197,
-            "definitionId": 108202,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Tooth and Claw",
-            "spellId": 135288,
-            "icon": "inv_misc_monsterfang_01",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 92226,
-        "name": "Soul of the Forest",
-        "type": "single",
-        "posX": 12300,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82138],
-        "prev": [82148, 82159],
-        "entries": [
-          {
-            "id": 103208,
-            "definitionId": 108213,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Soul of the Forest",
-            "spellId": 158477,
-            "icon": "ability_druid_manatree",
-            "index": 100
-          }
-        ]
-      },
-      {
-        "id": 82139,
-        "name": "Reinforced Fur",
-        "type": "single",
-        "posX": 12900,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82138, 82144, 82134],
-        "prev": [82148],
-        "entries": [
-          {
-            "id": 103204,
-            "definitionId": 108209,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Reinforced Fur",
-            "spellId": 393618,
-            "icon": "spell_nature_spiritarmor",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 92585,
-        "name": "Thorns of Iron",
-        "type": "single",
-        "posX": 13500,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82144],
-        "prev": [82143, 82148],
-        "entries": [
-          {
-            "id": 114698,
-            "definitionId": 119704,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Thorns of Iron",
-            "spellId": 400222,
-            "icon": "spell_nature_thorns_iron",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82140,
-        "name": "After the Wildfire / Guardian of Elune",
-        "type": "choice",
-        "posX": 14100,
-        "posY": 4500,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82144, 82145],
-        "prev": [82143],
-        "entries": [
-          {
-            "id": 103206,
-            "definitionId": 108211,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "After the Wildfire",
-            "spellId": 371905,
-            "icon": "spell_nature_naturetouchgrow",
-            "index": 0
-          },
-          {
-            "id": 103205,
-            "definitionId": 108210,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Guardian of Elune",
-            "spellId": 155578,
-            "icon": "spell_druid_guardianofelune",
-            "index": 1
-          }
-        ]
-      },
-      {
-        "id": 82155,
-        "name": "Berserk: Unchecked Aggression",
-        "type": "single",
-        "posX": 11100,
-        "posY": 5100,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82152, 82137, 82154],
-        "prev": [82133, 82156, 82158],
-        "entries": [
-          {
-            "id": 103224,
-            "definitionId": 108229,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Berserk: Unchecked Aggression",
-            "spellId": 377623,
-            "visibleSpellId": 50334,
-            "icon": "ability_druid_berserk",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82138,
-        "name": "Fury of Nature",
-        "type": "single",
-        "posX": 12300,
-        "posY": 5100,
-        "reqPoints": 8,
-        "maxRanks": 2,
-        "next": [82137, 82134],
-        "prev": [82133, 82139, 92226],
-        "entries": [
-          {
-            "id": 103203,
-            "definitionId": 108208,
-            "maxRanks": 2,
-            "type": "passive",
-            "name": "Fury of Nature",
-            "spellId": 370695,
-            "icon": "ability_druid_cresentburn",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82144,
-        "name": "Berserk: Persistence",
-        "type": "single",
-        "posX": 13500,
-        "posY": 5100,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [82134, 82145, 82146],
-        "prev": [82139, 82140, 92585],
-        "entries": [
-          {
-            "id": 103211,
-            "definitionId": 108216,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Berserk: Persistence",
-            "spellId": 377779,
-            "visibleSpellId": 50334,
-            "icon": "ability_druid_berserk",
-            "index": 0
-          }
-        ]
-      },
-      {
         "id": 82152,
         "name": "Rend and Tear / Untamed Savagery",
         "type": "choice",
-        "posX": 10500,
-        "posY": 5700,
-        "reqPoints": 20,
+        "posX": 11100,
+        "posY": 5100,
+        "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82151, 82154],
-        "prev": [82155, 82156],
+        "next": [82159, 82154, 82142],
+        "prev": [92226, 82156, 109378],
         "entries": [
           {
             "id": 103221,
@@ -7646,87 +7913,64 @@
       },
       {
         "id": 82137,
-        "name": "Circle of Life and Death",
+        "name": "Raze",
         "type": "single",
-        "posX": 11700,
-        "posY": 5700,
-        "reqPoints": 20,
+        "posX": 12300,
+        "posY": 5100,
+        "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82142, 82136, 82154],
-        "prev": [82155, 82133, 82138],
+        "next": [82142, 92586, 82136],
+        "prev": [82156, 82161, 109377],
         "entries": [
           {
             "id": 103202,
             "definitionId": 108207,
             "maxRanks": 1,
-            "type": "passive",
-            "name": "Circle of Life and Death",
-            "spellId": 391969,
-            "icon": "ability_druid_cyclone",
+            "type": "active",
+            "name": "Raze",
+            "spellId": 400254,
+            "icon": "ability_druid_lacerate",
             "index": 0
           }
         ]
       },
       {
-        "id": 82134,
-        "name": "Elune's Favored",
+        "id": 92587,
+        "name": "Lunar Beam",
         "type": "single",
-        "posX": 12900,
-        "posY": 5700,
-        "reqPoints": 20,
+        "posX": 13500,
+        "posY": 5100,
+        "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82136, 92586, 82146],
-        "prev": [82139, 82144, 82138],
+        "next": [92586, 82138, 82147],
+        "prev": [82148, 109377, 109375],
         "entries": [
           {
-            "id": 103198,
-            "definitionId": 108203,
+            "id": 114700,
+            "definitionId": 119706,
             "maxRanks": 1,
-            "type": "passive",
-            "name": "Elune's Favored",
-            "spellId": 370586,
-            "icon": "spell_holy_elunesgrace",
+            "type": "active",
+            "name": "Lunar Beam",
+            "spellId": 204066,
+            "icon": "spell_nature_moonglow",
             "index": 0
           }
         ]
       },
       {
-        "id": 82145,
-        "name": "Galactic Guardian",
-        "type": "single",
-        "posX": 14100,
-        "posY": 5700,
-        "reqPoints": 20,
-        "maxRanks": 1,
-        "next": [82147, 82146],
-        "prev": [82140, 82144],
-        "entries": [
-          {
-            "id": 103212,
-            "definitionId": 108217,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Galactic Guardian",
-            "spellId": 203964,
-            "icon": "spell_frost_iceclaw",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82151,
+        "id": 82159,
         "name": "Ursoc's Fury",
         "type": "single",
         "posX": 10500,
-        "posY": 6300,
+        "posY": 5700,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [82153],
-        "prev": [82152],
+        "next": [109379, 82153],
+        "prev": [82152, 109378],
         "entries": [
           {
-            "id": 103219,
-            "definitionId": 108224,
+            "id": 103228,
+            "definitionId": 108233,
             "maxRanks": 1,
             "type": "passive",
             "name": "Ursoc's Fury",
@@ -7741,11 +7985,11 @@
         "name": "Flashing Claws",
         "type": "single",
         "posX": 11100,
-        "posY": 6300,
+        "posY": 5700,
         "reqPoints": 20,
         "maxRanks": 2,
-        "next": [82153, 92588],
-        "prev": [82155, 82137, 82152],
+        "next": [109379],
+        "prev": [82152],
         "entries": [
           {
             "id": 103223,
@@ -7764,11 +8008,11 @@
         "name": "Blood Frenzy",
         "type": "single",
         "posX": 11700,
-        "posY": 6300,
+        "posY": 5700,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [92588],
-        "prev": [82137],
+        "next": [82136, 109379],
+        "prev": [82137, 82152],
         "entries": [
           {
             "id": 103209,
@@ -7783,6 +8027,108 @@
         ]
       },
       {
+        "id": 92586,
+        "name": "Moonless Night",
+        "type": "single",
+        "posX": 12900,
+        "posY": 5700,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [82136, 82134],
+        "prev": [92587, 82137],
+        "entries": [
+          {
+            "id": 114699,
+            "definitionId": 119705,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Moonless Night",
+            "spellId": 400278,
+            "icon": "artifactability_balancedruid_newmoon",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82138,
+        "name": "Fury of Nature",
+        "type": "single",
+        "posX": 13500,
+        "posY": 5700,
+        "reqPoints": 20,
+        "maxRanks": 2,
+        "next": [82134],
+        "prev": [92587],
+        "entries": [
+          {
+            "id": 103203,
+            "definitionId": 108208,
+            "maxRanks": 2,
+            "type": "passive",
+            "name": "Fury of Nature",
+            "spellId": 370695,
+            "icon": "ability_druid_cresentburn",
+            "index": 0
+          }
+        ]
+      },
+      {
+        "id": 82147,
+        "name": "Twin Moonfire / Red Moon",
+        "type": "choice",
+        "posX": 14100,
+        "posY": 5700,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [82134, 82145],
+        "prev": [82148, 92587],
+        "entries": [
+          {
+            "id": 103214,
+            "definitionId": 108219,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Twin Moonfire",
+            "spellId": 372567,
+            "icon": "spell_nature_starfall",
+            "index": 0
+          },
+          {
+            "id": 135336,
+            "definitionId": 140103,
+            "maxRanks": 1,
+            "type": "active",
+            "name": "Red Moon",
+            "spellId": 1252871,
+            "icon": "sha_ability_mage_firestarter_nightmare",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109379,
+        "name": "Harnessed Rage",
+        "type": "single",
+        "posX": 11100,
+        "posY": 6300,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [82153, 92588],
+        "prev": [82154, 82142, 82159],
+        "entries": [
+          {
+            "id": 135490,
+            "definitionId": 140247,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Harnessed Rage",
+            "spellId": 1253035,
+            "icon": "inv_misc_bearclaw_nightmare",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 82136,
         "name": "Incarnation: Guardian of Ursoc / Convoke the Spirits",
         "type": "choice",
@@ -7790,8 +8136,8 @@
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [82135, 92588, 82141],
-        "prev": [82137, 82134],
+        "next": [82135, 109302, 92588],
+        "prev": [82142, 92586, 82137],
         "entries": [
           {
             "id": 103201,
@@ -7799,8 +8145,7 @@
             "maxRanks": 1,
             "type": "active",
             "name": "Incarnation: Guardian of Ursoc",
-            "spellId": 394786,
-            "visibleSpellId": 102558,
+            "spellId": 102558,
             "icon": "spell_druid_incarnation",
             "index": 0
           },
@@ -7817,116 +8162,70 @@
         ]
       },
       {
-        "id": 92586,
-        "name": "Moonless Night",
-        "type": "single",
-        "posX": 12900,
-        "posY": 6300,
-        "reqPoints": 20,
-        "maxRanks": 1,
-        "next": [82141],
-        "prev": [82134],
-        "entries": [
-          {
-            "id": 114699,
-            "definitionId": 119705,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Moonless Night",
-            "spellId": 400278,
-            "icon": "artifactability_balancedruid_newmoon",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82146,
-        "name": "Scintillating Moonlight",
+        "id": 82134,
+        "name": "Elune's Favored",
         "type": "single",
         "posX": 13500,
         "posY": 6300,
         "reqPoints": 20,
-        "maxRanks": 2,
-        "next": [92587, 82141],
-        "prev": [82144, 82145, 82134],
-        "entries": [
-          {
-            "id": 103213,
-            "definitionId": 108218,
-            "maxRanks": 2,
-            "type": "passive",
-            "name": "Scintillating Moonlight",
-            "spellId": 238049,
-            "icon": "spell_fire_twilightfireward",
-            "index": 0
-          }
-        ]
-      },
-      {
-        "id": 82147,
-        "name": "Twin Moonfire",
-        "type": "single",
-        "posX": 14100,
-        "posY": 6300,
-        "reqPoints": 20,
         "maxRanks": 1,
-        "next": [92587],
-        "prev": [82145],
+        "next": [109302, 82145],
+        "prev": [82138, 82147, 92586],
         "entries": [
           {
-            "id": 103214,
-            "definitionId": 108219,
+            "id": 103198,
+            "definitionId": 108203,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Twin Moonfire",
-            "spellId": 372567,
-            "icon": "spell_nature_starfall",
+            "name": "Elune's Favored",
+            "spellId": 370586,
+            "icon": "spell_holy_elunesgrace",
             "index": 0
           }
         ]
       },
       {
         "id": 82153,
-        "name": "Pulverize",
+        "name": "Killing Blow",
         "type": "single",
         "posX": 10500,
         "posY": 6900,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82151, 82154],
+        "prev": [82159, 109379],
         "entries": [
           {
             "id": 103222,
             "definitionId": 108227,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Pulverize",
-            "spellId": 80313,
-            "icon": "spell_druid_malfurionstenacity",
+            "type": "passive",
+            "name": "Killing Blow",
+            "spellId": 1252994,
+            "icon": "artifactability_feraldruid_ashamanesbite",
             "index": 0
           }
         ]
       },
       {
         "id": 92588,
-        "name": "Raze",
+        "name": "Sundering Roar",
         "type": "single",
         "posX": 11700,
         "posY": 6900,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82142, 82154, 82136],
+        "prev": [82136, 109379],
         "entries": [
           {
             "id": 114701,
             "definitionId": 119707,
             "maxRanks": 1,
             "type": "active",
-            "name": "Raze",
-            "spellId": 400254,
-            "icon": "ability_druid_lacerate",
+            "name": "Sundering Roar",
+            "spellId": 1253799,
+            "icon": "artifactability_feraldruid_openwounds",
             "index": 0
           }
         ]
@@ -7955,48 +8254,92 @@
         ]
       },
       {
-        "id": 82141,
-        "name": "Rage of the Sleeper",
+        "id": 109302,
+        "name": "Waking Nightmare",
         "type": "single",
         "posX": 12900,
         "posY": 6900,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82146, 92586, 82136],
+        "prev": [82134, 82136],
         "entries": [
           {
-            "id": 103207,
-            "definitionId": 108212,
+            "id": 135488,
+            "definitionId": 140245,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Rage of the Sleeper",
-            "spellId": 200851,
-            "icon": "inv_hand_1h_artifactursoc_d_01",
+            "type": "passive",
+            "name": "Waking Nightmare",
+            "spellId": 1253461,
+            "icon": "sha_spell_shadow_shadesofdarkness_nightmare",
             "index": 0
           }
         ]
       },
       {
-        "id": 92587,
-        "name": "Lunar Beam",
+        "id": 82145,
+        "name": "Galactic Guardian",
         "type": "single",
         "posX": 14100,
         "posY": 6900,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82146, 82147],
+        "prev": [82147, 82134],
         "entries": [
           {
-            "id": 114700,
-            "definitionId": 119706,
+            "id": 103212,
+            "definitionId": 108217,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Lunar Beam",
-            "spellId": 204066,
-            "icon": "spell_nature_moonglow",
+            "type": "passive",
+            "name": "Galactic Guardian",
+            "spellId": 203964,
+            "icon": "spell_frost_iceclaw",
             "index": 0
+          }
+        ]
+      },
+      {
+        "id": 110431,
+        "name": "Wild Guardian / Wild Guardian / Wild Guardian",
+        "type": "tiered",
+        "posX": 12300,
+        "posY": 7650,
+        "reqPoints": 20,
+        "maxRanks": 4,
+        "entryNode": true,
+        "next": [],
+        "prev": [],
+        "entries": [
+          {
+            "id": 137061,
+            "definitionId": 141824,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Wild Guardian",
+            "spellId": 1269614,
+            "icon": "inv12_apextalent_druid_wildguardian",
+            "index": 0
+          },
+          {
+            "id": 137060,
+            "definitionId": 141823,
+            "maxRanks": 2,
+            "type": "tierrank",
+            "name": "Wild Guardian",
+            "spellId": 1269617,
+            "icon": "inv12_apextalent_druid_wildguardian",
+            "index": 100
+          },
+          {
+            "id": 137059,
+            "definitionId": 141822,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Wild Guardian",
+            "spellId": 1269619,
+            "icon": "inv12_apextalent_druid_wildguardian",
+            "index": 200
           }
         ]
       }
@@ -8006,13 +8349,13 @@
         "id": 94608,
         "name": "Boundless Moonlight",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 1500,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 24,
         "requiresNode": 92587,
-        "next": [94598, 94588, 94594],
+        "next": [94598, 94588, 94594, 109720],
         "prev": [],
         "entries": [
           {
@@ -8099,8 +8442,31 @@
         ]
       },
       {
+        "id": 109720,
+        "name": "Star Cascade",
+        "type": "single",
+        "posX": 9000,
+        "posY": 2100,
+        "maxRanks": 1,
+        "subTreeId": 24,
+        "next": [109719],
+        "prev": [94608],
+        "entries": [
+          {
+            "id": 135978,
+            "definitionId": 140733,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Star Cascade",
+            "spellId": 1271206,
+            "icon": "spell_arcane_arcane03",
+            "index": 200
+          }
+        ]
+      },
+      {
         "id": 94596,
-        "name": "Lunar Amplification",
+        "name": "Stellar Command",
         "type": "single",
         "posX": 7200,
         "posY": 2700,
@@ -8114,9 +8480,9 @@
             "definitionId": 122202,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Lunar Amplification",
-            "spellId": 429529,
-            "icon": "spell_druid_lunarinspiration",
+            "name": "Stellar Command",
+            "spellId": 429668,
+            "icon": "artifactability_balancedruid_moonandstars",
             "index": 200
           }
         ]
@@ -8179,9 +8545,32 @@
         ]
       },
       {
+        "id": 109719,
+        "name": "Penumbral Swell",
+        "type": "single",
+        "posX": 9000,
+        "posY": 2700,
+        "maxRanks": 1,
+        "subTreeId": 24,
+        "next": [109718],
+        "prev": [109720],
+        "entries": [
+          {
+            "id": 135977,
+            "definitionId": 140732,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Penumbral Swell",
+            "spellId": 1271261,
+            "icon": "ability_druid_eclipse",
+            "index": 200
+          }
+        ]
+      },
+      {
         "id": 94590,
-        "name": "Stellar Command / Lunar Calling",
-        "type": "choice",
+        "name": "Lunar Calling",
+        "type": "single",
         "posX": 7200,
         "posY": 3300,
         "maxRanks": 1,
@@ -8194,20 +8583,10 @@
             "definitionId": 122195,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Stellar Command",
-            "spellId": 429668,
-            "icon": "artifactability_balancedruid_moonandstars",
-            "index": 100
-          },
-          {
-            "id": 117770,
-            "definitionId": 122782,
-            "maxRanks": 1,
-            "type": "passive",
             "name": "Lunar Calling",
             "spellId": 429523,
             "icon": "ability_druid_cresentburn",
-            "index": 200
+            "index": 100
           }
         ]
       },
@@ -8278,16 +8657,39 @@
         ]
       },
       {
+        "id": 109718,
+        "name": "Bask in Moonlight",
+        "type": "single",
+        "posX": 9000,
+        "posY": 3300,
+        "maxRanks": 1,
+        "subTreeId": 24,
+        "next": [94587],
+        "prev": [109719],
+        "entries": [
+          {
+            "id": 135976,
+            "definitionId": 140731,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Bask in Moonlight",
+            "spellId": 1271305,
+            "icon": "spell_holy_elunesgrace",
+            "index": 200
+          }
+        ]
+      },
+      {
         "id": 94587,
         "name": "The Eternal Moon",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 3900,
         "maxRanks": 1,
         "subTreeId": 24,
         "requiresNode": 92587,
         "next": [],
-        "prev": [94590, 94585, 94586],
+        "prev": [94590, 94585, 94586, 109718],
         "entries": [
           {
             "id": 117179,
@@ -8305,12 +8707,12 @@
         "id": 94609,
         "name": "Ravage",
         "type": "single",
-        "posX": 1200,
-        "posY": 5110,
+        "posX": 1500,
+        "posY": 5100,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 21,
-        "next": [94620, 94611, 94618],
+        "next": [94620, 94611, 109722, 94618],
         "prev": [],
         "entries": [
           {
@@ -8396,6 +8798,29 @@
         ]
       },
       {
+        "id": 109722,
+        "name": "Limb from Limb",
+        "type": "single",
+        "posX": 2400,
+        "posY": 5700,
+        "maxRanks": 1,
+        "subTreeId": 21,
+        "next": [109723],
+        "prev": [94609],
+        "entries": [
+          {
+            "id": 135980,
+            "definitionId": 140735,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Limb from Limb",
+            "spellId": 1271540,
+            "icon": "artifactability_feraldruid_ashamanesbite",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94610,
         "name": "Wildshape Mastery",
         "type": "single",
@@ -8420,8 +8845,8 @@
       },
       {
         "id": 94619,
-        "name": "Ruthless Aggression / Killing Strikes",
-        "type": "choice",
+        "name": "Exacerbating Wounds",
+        "type": "single",
         "posX": 1200,
         "posY": 6300,
         "maxRanks": 1,
@@ -8434,20 +8859,10 @@
             "definitionId": 122231,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Ruthless Aggression",
-            "spellId": 441814,
-            "icon": "ability_druid_rake",
+            "name": "Exacerbating Wounds",
+            "spellId": 1271839,
+            "icon": "inv_artifact_bloodoftheassassinated",
             "index": 100
-          },
-          {
-            "id": 123048,
-            "definitionId": 127929,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Killing Strikes",
-            "spellId": 441824,
-            "icon": "ability_druid_kingofthejungle",
-            "index": 200
           }
         ]
       },
@@ -8472,6 +8887,39 @@
             "spellId": 441844,
             "icon": "spell_druid_stampedingroar_cat",
             "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109723,
+        "name": "Ruthless Aggression / Killing Strikes",
+        "type": "choice",
+        "posX": 2400,
+        "posY": 6300,
+        "maxRanks": 1,
+        "subTreeId": 21,
+        "next": [109721],
+        "prev": [109722],
+        "entries": [
+          {
+            "id": 135981,
+            "definitionId": 140736,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Ruthless Aggression",
+            "spellId": 441814,
+            "icon": "ability_druid_rake",
+            "index": 100
+          },
+          {
+            "id": 136624,
+            "definitionId": 141396,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Killing Strikes",
+            "spellId": 441824,
+            "icon": "ability_druid_kingofthejungle",
+            "index": 200
           }
         ]
       },
@@ -8559,8 +9007,31 @@
             "type": "passive",
             "name": "Tear Down the Mighty",
             "spellId": 441846,
-            "icon": "spell_druid_malfurionstenacity",
+            "icon": "inv_1115_druid_jaguar",
             "index": 200
+          }
+        ]
+      },
+      {
+        "id": 109721,
+        "name": "Twin Claw",
+        "type": "single",
+        "posX": 2400,
+        "posY": 6900,
+        "maxRanks": 1,
+        "subTreeId": 21,
+        "next": [94613],
+        "prev": [109723],
+        "entries": [
+          {
+            "id": 135979,
+            "definitionId": 140734,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Twin Claw",
+            "spellId": 1271635,
+            "icon": "ability_druid_swipe",
+            "index": 100
           }
         ]
       },
@@ -8568,12 +9039,12 @@
         "id": 94613,
         "name": "Claw Rampage",
         "type": "single",
-        "posX": 1200,
-        "posY": 7510,
+        "posX": 1500,
+        "posY": 7500,
         "maxRanks": 1,
         "subTreeId": 21,
         "next": [],
-        "prev": [94614, 94616, 94612],
+        "prev": [94614, 94616, 94612, 109721],
         "entries": [
           {
             "id": 117211,
@@ -8606,7 +9077,10 @@
             "traitSubTreeId": 21,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-druidoftheclaw",
-            "nodes": [94609, 94618, 94620, 94611, 94610, 94619, 94615, 94612, 94616, 94614, 94613]
+            "nodes": [
+              94609, 94618, 94620, 94611, 109722, 94610, 94619, 94615, 109723, 94612, 94616, 94614,
+              109721, 94613
+            ]
           },
           {
             "id": 123295,
@@ -8615,33 +9089,38 @@
             "traitSubTreeId": 24,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-eluneschosen",
-            "nodes": [94608, 94598, 94588, 94594, 94596, 94607, 94597, 94590, 94585, 94586, 94587]
+            "nodes": [
+              94608, 94598, 94588, 94594, 109720, 94596, 94607, 94597, 109719, 94590, 94585, 94586,
+              109718, 94587
+            ]
           }
         ]
       }
     ],
     "fullNodeOrder": [
       82043, 82045, 82046, 82047, 82048, 82049, 82050, 82051, 82052, 82053, 82054, 82055, 82056,
-      82057, 82058, 82059, 82060, 82061, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069,
-      82070, 82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083,
-      82085, 82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100,
-      82101, 82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113,
-      82114, 82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127,
-      82128, 82129, 82130, 82131, 82132, 82133, 82134, 82135, 82136, 82137, 82138, 82139, 82140,
-      82141, 82142, 82143, 82144, 82145, 82146, 82147, 82148, 82149, 82151, 82152, 82153, 82154,
-      82155, 82156, 82157, 82158, 82159, 82160, 82161, 82162, 82198, 82199, 82200, 82201, 82202,
-      82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219, 82220, 82221,
-      82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233, 82234, 82235,
-      82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88199, 88200, 88201, 88202,
-      88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216, 88217,
-      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88229, 88231,
-      88232, 88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586,
-      92587, 92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592,
-      94593, 94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606,
-      94607, 94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620,
-      94621, 94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806,
-      99807, 99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874,
-      103875, 103876, 104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085
+      82057, 82058, 82059, 82060, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069, 82070,
+      82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083, 82085,
+      82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100, 82101,
+      82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113, 82114,
+      82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127, 82129,
+      82131, 82134, 82135, 82136, 82137, 82138, 82140, 82142, 82143, 82144, 82145, 82146, 82147,
+      82148, 82149, 82152, 82153, 82154, 82156, 82157, 82159, 82160, 82161, 82198, 82199, 82200,
+      82201, 82202, 82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219,
+      82220, 82221, 82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233,
+      82234, 82235, 82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88200, 88201,
+      88202, 88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216,
+      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88231, 88232,
+      88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586, 92587,
+      92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592, 94593,
+      94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606, 94607,
+      94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620, 94621,
+      94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806, 99807,
+      99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874, 103876,
+      104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085, 104125, 108032, 108033,
+      109275, 109302, 109375, 109376, 109377, 109378, 109379, 109712, 109713, 109714, 109715,
+      109716, 109717, 109718, 109719, 109720, 109721, 109722, 109723, 110279, 110421, 110424,
+      110426, 110431
     ]
   },
   {
@@ -8768,7 +9247,7 @@
       },
       {
         "id": 82223,
-        "name": "Thrash",
+        "name": "Swipe",
         "type": "single",
         "posX": 2700,
         "posY": 2100,
@@ -8781,9 +9260,9 @@
             "definitionId": 108306,
             "maxRanks": 1,
             "type": "active",
-            "name": "Thrash",
-            "spellId": 106832,
-            "icon": "spell_druid_thrash",
+            "name": "Swipe",
+            "spellId": 213764,
+            "icon": "inv_misc_monsterclaw_03",
             "index": 100
           }
         ]
@@ -9017,7 +9496,7 @@
         "posX": 3900,
         "posY": 3300,
         "maxRanks": 1,
-        "next": [82228, 82242, 82206],
+        "next": [82228, 82206],
         "prev": [82219, 82218, 104084],
         "entries": [
           {
@@ -9145,29 +9624,6 @@
         ]
       },
       {
-        "id": 82242,
-        "name": "Skull Bash",
-        "type": "single",
-        "posX": 3900,
-        "posY": 3900,
-        "reqPoints": 8,
-        "maxRanks": 1,
-        "next": [],
-        "prev": [104085],
-        "entries": [
-          {
-            "id": 103322,
-            "definitionId": 108327,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Skull Bash",
-            "spellId": 106839,
-            "icon": "inv_bone_skull_04",
-            "index": 100
-          }
-        ]
-      },
-      {
         "id": 82206,
         "name": "Natural Recovery",
         "type": "single",
@@ -9281,8 +9737,8 @@
       },
       {
         "id": 82232,
-        "name": "Renewal / Aessina's Renewal",
-        "type": "choice",
+        "name": "Aessina's Renewal",
+        "type": "single",
         "posX": 5100,
         "posY": 4500,
         "reqPoints": 8,
@@ -9290,16 +9746,6 @@
         "next": [82240, 82209, 82207],
         "prev": [82214, 82206],
         "entries": [
-          {
-            "id": 103310,
-            "definitionId": 108315,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Renewal",
-            "spellId": 108238,
-            "icon": "spell_nature_natureblessing",
-            "index": 100
-          },
           {
             "id": 128581,
             "definitionId": 133384,
@@ -9388,14 +9834,14 @@
         "posX": 3300,
         "posY": 5100,
         "reqPoints": 8,
-        "maxRanks": 1,
+        "maxRanks": 2,
         "next": [],
         "prev": [82228, 82198],
         "entries": [
           {
             "id": 123796,
             "definitionId": 128634,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Matted Fur",
             "spellId": 385786,
@@ -9512,7 +9958,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82237, 100174, 82246],
         "prev": [82235, 82236],
@@ -9535,7 +9981,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82235],
@@ -9558,7 +10004,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -9581,7 +10027,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 2,
         "next": [82230, 104078, 92229],
         "prev": [82234],
@@ -9604,7 +10050,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82234],
@@ -9627,7 +10073,7 @@
         "type": "choice",
         "posX": 5100,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82209],
@@ -9656,11 +10102,11 @@
       },
       {
         "id": 100175,
-        "name": "Innervate",
+        "name": "Gift of the Wild",
         "type": "single",
         "posX": 5700,
         "posY": 5700,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [100173, 82243, 82244],
         "prev": [82207, 82209],
@@ -9669,10 +10115,10 @@
             "id": 123794,
             "definitionId": 128632,
             "maxRanks": 1,
-            "type": "active",
-            "name": "Innervate",
-            "spellId": 29166,
-            "icon": "spell_nature_lightning",
+            "type": "passive",
+            "name": "Gift of the Wild",
+            "spellId": 1262034,
+            "icon": "spell_nature_giftofthewild",
             "index": 100
           }
         ]
@@ -9683,7 +10129,7 @@
         "type": "choice",
         "posX": 1500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -9716,7 +10162,7 @@
         "type": "single",
         "posX": 2700,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -9739,7 +10185,7 @@
         "type": "single",
         "posX": 3300,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -9762,7 +10208,7 @@
         "type": "choice",
         "posX": 3900,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -9795,7 +10241,7 @@
         "type": "single",
         "posX": 4500,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [82231],
         "prev": [82233],
@@ -9818,7 +10264,7 @@
         "type": "single",
         "posX": 5100,
         "posY": 6300,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -9841,15 +10287,15 @@
         "type": "single",
         "posX": 6300,
         "posY": 6300,
-        "reqPoints": 20,
-        "maxRanks": 1,
+        "reqPoints": 23,
+        "maxRanks": 2,
         "next": [],
         "prev": [100175],
         "entries": [
           {
             "id": 103323,
             "definitionId": 108328,
-            "maxRanks": 1,
+            "maxRanks": 2,
             "type": "passive",
             "name": "Forestwalk",
             "spellId": 400129,
@@ -9864,7 +10310,7 @@
         "type": "single",
         "posX": 2100,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100176],
@@ -9887,7 +10333,7 @@
         "type": "single",
         "posX": 3900,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [82230, 92229, 104078],
@@ -9898,7 +10344,7 @@
             "maxRanks": 1,
             "type": "active",
             "name": "Heart of the Wild",
-            "spellId": 319454,
+            "spellId": 1261867,
             "icon": "spell_holy_blessingofagility",
             "index": 100
           }
@@ -9906,11 +10352,11 @@
       },
       {
         "id": 82244,
-        "name": "Nature's Vigil",
+        "name": "Innervate",
         "type": "single",
         "posX": 5700,
         "posY": 6900,
-        "reqPoints": 20,
+        "reqPoints": 23,
         "maxRanks": 1,
         "next": [],
         "prev": [100175],
@@ -9920,9 +10366,9 @@
             "definitionId": 108329,
             "maxRanks": 1,
             "type": "active",
-            "name": "Nature's Vigil",
-            "spellId": 124974,
-            "icon": "achievement_zone_feralas",
+            "name": "Innervate",
+            "spellId": 29166,
+            "icon": "spell_nature_lightning",
             "index": 100
           }
         ]
@@ -9937,7 +10383,7 @@
         "posY": 1500,
         "maxRanks": 1,
         "entryNode": true,
-        "next": [82048, 82050, 82083],
+        "next": [82047, 82050, 104125],
         "prev": [],
         "entries": [
           {
@@ -9953,23 +10399,23 @@
         ]
       },
       {
-        "id": 82048,
-        "name": "Ysera's Gift",
+        "id": 82047,
+        "name": "Swiftmend",
         "type": "single",
         "posX": 11700,
         "posY": 2100,
         "maxRanks": 1,
-        "next": [82047],
+        "next": [82079],
         "prev": [82049],
         "entries": [
           {
-            "id": 103099,
-            "definitionId": 108104,
+            "id": 103098,
+            "definitionId": 108103,
             "maxRanks": 1,
-            "type": "passive",
-            "name": "Ysera's Gift",
-            "spellId": 145108,
-            "icon": "inv_misc_head_dragon_green",
+            "type": "active",
+            "name": "Swiftmend",
+            "spellId": 18562,
+            "icon": "inv_relics_idolofrejuvenation",
             "index": 100
           }
         ]
@@ -9981,7 +10427,7 @@
         "posX": 12300,
         "posY": 2100,
         "maxRanks": 1,
-        "next": [82051, 103875],
+        "next": [82051],
         "prev": [82049],
         "entries": [
           {
@@ -9997,46 +10443,56 @@
         ]
       },
       {
-        "id": 82083,
-        "name": "Flash of Clarity",
+        "id": 104125,
+        "name": "Omen of Clarity",
         "type": "single",
         "posX": 12900,
         "posY": 2100,
         "maxRanks": 1,
-        "next": [82052],
+        "next": [82083],
         "prev": [82049],
         "entries": [
           {
-            "id": 103142,
-            "definitionId": 108147,
+            "id": 128707,
+            "definitionId": 133509,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Flash of Clarity",
-            "spellId": 392220,
+            "name": "Omen of Clarity",
+            "spellId": 113043,
             "icon": "spell_nature_crystalball",
             "index": 100
           }
         ]
       },
       {
-        "id": 82047,
-        "name": "Grove Tending",
-        "type": "single",
+        "id": 82079,
+        "name": "Verdant Infusion / Prosperity",
+        "type": "choice",
         "posX": 11100,
         "posY": 2700,
         "maxRanks": 1,
-        "next": [82046, 82055, 82057],
-        "prev": [82048],
+        "next": [82055, 82057],
+        "prev": [82047],
         "entries": [
           {
-            "id": 103098,
-            "definitionId": 108103,
+            "id": 103137,
+            "definitionId": 108142,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Grove Tending",
-            "spellId": 383192,
-            "icon": "inv_relics_idolofrejuvenation",
+            "name": "Verdant Infusion",
+            "spellId": 392410,
+            "icon": "inv_relics_totemoflife",
             "index": 100
+          },
+          {
+            "id": 103136,
+            "definitionId": 108141,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Prosperity",
+            "spellId": 200383,
+            "icon": "ability_druid_giftoftheearthmother",
+            "index": 200
           }
         ]
       },
@@ -10044,10 +10500,10 @@
         "id": 82051,
         "name": "Nature's Splendor / Passing Seasons",
         "type": "choice",
-        "posX": 11700,
+        "posX": 12300,
         "posY": 2700,
         "maxRanks": 1,
-        "next": [82055],
+        "next": [82055, 92674],
         "prev": [82050],
         "entries": [
           {
@@ -10073,99 +10529,45 @@
         ]
       },
       {
-        "id": 103875,
-        "name": "Twinleaf",
+        "id": 82083,
+        "name": "Improved Regrowth",
         "type": "single",
-        "posX": 12300,
-        "posY": 2700,
-        "maxRanks": 1,
-        "next": [82055, 92674, 82054],
-        "prev": [82050],
-        "entries": [
-          {
-            "id": 128276,
-            "definitionId": 133083,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Twinleaf",
-            "spellId": 470540,
-            "icon": "inv_misc_plant_02",
-            "index": 100
-          }
-        ]
-      },
-      {
-        "id": 82052,
-        "name": "Abundance / Cenarion Ward",
-        "type": "choice",
         "posX": 13500,
         "posY": 2700,
         "maxRanks": 1,
-        "next": [92674, 103876, 82082],
-        "prev": [82083],
+        "next": [92674, 82082],
+        "prev": [104125],
         "entries": [
           {
-            "id": 103105,
-            "definitionId": 108110,
+            "id": 103142,
+            "definitionId": 108147,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Abundance",
-            "spellId": 207383,
-            "icon": "ability_druid_empoweredrejuvination",
-            "index": 100
-          },
-          {
-            "id": 103104,
-            "definitionId": 108109,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Cenarion Ward",
-            "spellId": 102351,
-            "icon": "ability_druid_naturalperfection",
-            "index": 200
-          }
-        ]
-      },
-      {
-        "id": 82046,
-        "name": "Waking Dream",
-        "type": "single",
-        "posX": 10500,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [],
-        "prev": [82047],
-        "entries": [
-          {
-            "id": 103097,
-            "definitionId": 108102,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Waking Dream",
-            "spellId": 392221,
-            "icon": "inv_misc_head_dragon_green",
+            "name": "Improved Regrowth",
+            "spellId": 231032,
+            "icon": "spell_nature_resistnature",
             "index": 100
           }
         ]
       },
       {
         "id": 82055,
-        "name": "Improved Regrowth",
+        "name": "Soul of the Forest",
         "type": "single",
         "posX": 11700,
         "posY": 3300,
         "maxRanks": 1,
         "next": [82057, 82054],
-        "prev": [82047, 103875, 82051],
+        "prev": [82051, 82079],
         "entries": [
           {
             "id": 103109,
             "definitionId": 108114,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Improved Regrowth",
-            "spellId": 231032,
-            "icon": "spell_nature_resistnature",
+            "name": "Soul of the Forest",
+            "spellId": 158478,
+            "icon": "ability_druid_manatree",
             "index": 100
           }
         ]
@@ -10178,7 +10580,7 @@
         "posY": 3300,
         "maxRanks": 1,
         "next": [82054, 82082],
-        "prev": [82052, 103875],
+        "prev": [82083, 82051],
         "entries": [
           {
             "id": 114808,
@@ -10193,28 +10595,6 @@
         ]
       },
       {
-        "id": 103876,
-        "name": "Wildwood Roots",
-        "type": "single",
-        "posX": 14100,
-        "posY": 3300,
-        "maxRanks": 1,
-        "next": [],
-        "prev": [82052],
-        "entries": [
-          {
-            "id": 128277,
-            "definitionId": 133084,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Wildwood Roots",
-            "spellId": 470549,
-            "icon": "inv_misc_herb_liferoot_stem",
-            "index": 100
-          }
-        ]
-      },
-      {
         "id": 82057,
         "name": "Efflorescence",
         "type": "single",
@@ -10223,7 +10603,7 @@
         "reqPoints": 8,
         "maxRanks": 1,
         "next": [82043, 82059, 103874],
-        "prev": [82047, 82055],
+        "prev": [82055, 82079],
         "entries": [
           {
             "id": 103111,
@@ -10246,7 +10626,7 @@
         "reqPoints": 8,
         "maxRanks": 1,
         "next": [82053],
-        "prev": [82055, 103875, 92674],
+        "prev": [82055, 92674],
         "entries": [
           {
             "id": 103108,
@@ -10269,7 +10649,7 @@
         "reqPoints": 8,
         "maxRanks": 1,
         "next": [82045, 82056, 82081],
-        "prev": [92674, 82052],
+        "prev": [92674, 82083],
         "entries": [
           {
             "id": 103141,
@@ -10285,7 +10665,7 @@
       },
       {
         "id": 82059,
-        "name": "Soul of the Forest",
+        "name": "Verdancy",
         "type": "single",
         "posX": 10500,
         "posY": 4500,
@@ -10299,16 +10679,16 @@
             "definitionId": 108118,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Soul of the Forest",
-            "spellId": 158478,
-            "icon": "ability_druid_manatree",
+            "name": "Verdancy",
+            "spellId": 392325,
+            "icon": "inv_10_herb_seed_magiccolor5",
             "index": 100
           }
         ]
       },
       {
         "id": 103874,
-        "name": "Renewing Surge",
+        "name": "Lifetreading",
         "type": "single",
         "posX": 11100,
         "posY": 4500,
@@ -10318,21 +10698,21 @@
         "prev": [82057],
         "entries": [
           {
-            "id": 128275,
-            "definitionId": 133082,
+            "id": 128708,
+            "definitionId": 133510,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Renewing Surge",
-            "spellId": 470562,
-            "icon": "inv_relics_idolofhealth",
-            "index": 100
+            "name": "Lifetreading",
+            "spellId": 1217941,
+            "icon": "inv12_ability_druid_lifetreading",
+            "index": 200
           }
         ]
       },
       {
         "id": 82043,
-        "name": "Nourish / Grove Guardians",
-        "type": "choice",
+        "name": "Grove Guardians",
+        "type": "single",
         "posX": 11700,
         "posY": 4500,
         "reqPoints": 8,
@@ -10341,22 +10721,12 @@
         "prev": [82057],
         "entries": [
           {
-            "id": 103094,
-            "definitionId": 108099,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Nourish",
-            "spellId": 50464,
-            "icon": "ability_druid_nourish",
-            "index": 100
-          },
-          {
             "id": 117104,
             "definitionId": 122116,
             "maxRanks": 1,
-            "type": "active",
+            "type": "passive",
             "name": "Grove Guardians",
-            "spellId": 102693,
+            "spellId": 1226140,
             "icon": "ability_druid_forceofnature",
             "index": 200
           }
@@ -10364,7 +10734,7 @@
       },
       {
         "id": 82053,
-        "name": "Inner Peace / Dreamstate",
+        "name": "Inner Peace / Flourish",
         "type": "choice",
         "posX": 12300,
         "posY": 4500,
@@ -10388,9 +10758,9 @@
             "definitionId": 108111,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Dreamstate",
-            "spellId": 392162,
-            "icon": "spell_unused",
+            "name": "Flourish",
+            "spellId": 197721,
+            "icon": "spell_druid_wildburst",
             "index": 300
           }
         ]
@@ -10426,7 +10796,7 @@
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82080],
+        "next": [103873, 82080],
         "prev": [82082],
         "entries": [
           {
@@ -10449,7 +10819,7 @@
         "posY": 4500,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82075, 82080, 82079],
+        "next": [103873, 82075],
         "prev": [82082],
         "entries": [
           {
@@ -10476,13 +10846,13 @@
       },
       {
         "id": 82060,
-        "name": "Verdancy",
+        "name": "Renewing Surge",
         "type": "single",
         "posX": 9900,
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82061, 82074],
+        "next": [82048, 82074],
         "prev": [82059],
         "entries": [
           {
@@ -10490,9 +10860,9 @@
             "definitionId": 108119,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Verdancy",
-            "spellId": 392325,
-            "icon": "inv_10_herb_seed_magiccolor5",
+            "name": "Renewing Surge",
+            "spellId": 470562,
+            "icon": "inv_relics_idolofhealth",
             "index": 100
           }
         ]
@@ -10505,7 +10875,7 @@
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82061],
+        "next": [82048],
         "prev": [82059],
         "entries": [
           {
@@ -10528,7 +10898,7 @@
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 2,
-        "next": [82061, 82064],
+        "next": [82048, 82064],
         "prev": [82059, 82043, 103874],
         "entries": [
           {
@@ -10568,7 +10938,7 @@
       },
       {
         "id": 82065,
-        "name": "Harmonious Blooming",
+        "name": "Power of the Archdruid",
         "type": "single",
         "posX": 12300,
         "posY": 5100,
@@ -10582,9 +10952,9 @@
             "definitionId": 108126,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Harmonious Blooming",
-            "spellId": 392256,
-            "icon": "inv_misc_herb_felblossom",
+            "name": "Power of the Archdruid",
+            "spellId": 392302,
+            "icon": "spell_druid_rampantgrowth",
             "index": 100
           }
         ]
@@ -10597,8 +10967,8 @@
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 2,
-        "next": [82067, 82079],
-        "prev": [82081, 82045, 82056],
+        "next": [82067, 82052],
+        "prev": [82045, 82056],
         "entries": [
           {
             "id": 103138,
@@ -10613,6 +10983,29 @@
         ]
       },
       {
+        "id": 103873,
+        "name": "Improved Swiftmend",
+        "type": "single",
+        "posX": 14100,
+        "posY": 5100,
+        "reqPoints": 8,
+        "maxRanks": 1,
+        "next": [82052],
+        "prev": [82081, 82045],
+        "entries": [
+          {
+            "id": 128274,
+            "definitionId": 133081,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Improved Swiftmend",
+            "spellId": 470549,
+            "icon": "ability_druid_empoweredtouch",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 82075,
         "name": "Regenerative Heartwood",
         "type": "single",
@@ -10620,7 +11013,7 @@
         "posY": 5100,
         "reqPoints": 8,
         "maxRanks": 1,
-        "next": [82079, 82076],
+        "next": [82052, 82076],
         "prev": [82081],
         "entries": [
           {
@@ -10636,35 +11029,25 @@
         ]
       },
       {
-        "id": 82061,
-        "name": "Spring Blossoms / Overgrowth",
-        "type": "choice",
+        "id": 82048,
+        "name": "Ysera's Gift",
+        "type": "single",
         "posX": 10500,
         "posY": 5700,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [82070, 82074, 82073],
-        "prev": [82058, 82060, 82062],
+        "next": [82070, 82046, 82074],
+        "prev": [82062, 82060, 82058],
         "entries": [
           {
-            "id": 103116,
-            "definitionId": 108121,
+            "id": 103099,
+            "definitionId": 108104,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Spring Blossoms",
-            "spellId": 207385,
-            "icon": "inv_misc_trailofflowers",
+            "name": "Ysera's Gift",
+            "spellId": 145108,
+            "icon": "inv_misc_head_dragon_green",
             "index": 100
-          },
-          {
-            "id": 103115,
-            "definitionId": 108120,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Overgrowth",
-            "spellId": 203651,
-            "icon": "ability_druid_overgrowth",
-            "index": 200
           }
         ]
       },
@@ -10719,41 +11102,31 @@
             "type": "passive",
             "name": "Call of the Elder Druid",
             "spellId": 426784,
-            "icon": "spell_holy_blessingofagility",
+            "icon": "spell_unused2",
             "index": 100
           }
         ]
       },
       {
-        "id": 82079,
-        "name": "Verdant Infusion / Prosperity",
-        "type": "choice",
+        "id": 82052,
+        "name": "Intensity",
+        "type": "single",
         "posX": 14100,
         "posY": 5700,
         "reqPoints": 20,
         "maxRanks": 1,
-        "next": [82068, 82076, 103873],
-        "prev": [82075, 82080, 82081],
+        "next": [82068, 82076, 103876],
+        "prev": [103873, 82075, 82080],
         "entries": [
           {
-            "id": 103137,
-            "definitionId": 108142,
+            "id": 103105,
+            "definitionId": 108110,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Verdant Infusion",
-            "spellId": 392410,
-            "icon": "inv_relics_totemoflife",
+            "name": "Intensity",
+            "spellId": 1264649,
+            "icon": "spell_frost_windwalkon",
             "index": 100
-          },
-          {
-            "id": 103136,
-            "definitionId": 108141,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Prosperity",
-            "spellId": 200383,
-            "icon": "ability_druid_giftoftheearthmother",
-            "index": 200
           }
         ]
       },
@@ -10766,7 +11139,7 @@
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [82073],
-        "prev": [82060, 82061],
+        "prev": [82060, 82048],
         "entries": [
           {
             "id": 103130,
@@ -10791,15 +11164,38 @@
         ]
       },
       {
+        "id": 82046,
+        "name": "Waking Dream",
+        "type": "single",
+        "posX": 10500,
+        "posY": 6300,
+        "reqPoints": 20,
+        "maxRanks": 1,
+        "next": [82073],
+        "prev": [82048],
+        "entries": [
+          {
+            "id": 103097,
+            "definitionId": 108102,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Waking Dream",
+            "spellId": 392221,
+            "icon": "inv_misc_head_dragon_green",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 82070,
-        "name": "Embrace of the Dream / Invigorate",
-        "type": "choice",
+        "name": "Embrace of the Dream",
+        "type": "single",
         "posX": 11100,
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [82073, 82077],
-        "prev": [82061, 82064],
+        "prev": [82064, 82048],
         "entries": [
           {
             "id": 103126,
@@ -10810,16 +11206,6 @@
             "spellId": 392124,
             "icon": "ability_druid_healinginstincts",
             "index": 100
-          },
-          {
-            "id": 123777,
-            "definitionId": 128615,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Invigorate",
-            "spellId": 392160,
-            "icon": "spell_nature_preservation",
-            "index": 200
           }
         ]
       },
@@ -10848,23 +11234,23 @@
       },
       {
         "id": 82072,
-        "name": "Budding Leaves",
+        "name": "Nature's Bounty",
         "type": "single",
         "posX": 12300,
         "posY": 6300,
         "reqPoints": 20,
-        "maxRanks": 2,
+        "maxRanks": 1,
         "next": [82077, 82069],
         "prev": [82064, 82067],
         "entries": [
           {
             "id": 103128,
             "definitionId": 108133,
-            "maxRanks": 2,
+            "maxRanks": 1,
             "type": "passive",
-            "name": "Budding Leaves",
-            "spellId": 392167,
-            "icon": "inv_misc_herb_fellotus",
+            "name": "Nature's Bounty",
+            "spellId": 1263879,
+            "icon": "talentspec_druid_restoration",
             "index": 100
           }
         ]
@@ -10901,7 +11287,7 @@
         "reqPoints": 20,
         "maxRanks": 2,
         "next": [82069, 82071],
-        "prev": [82079, 82067],
+        "prev": [82067, 82052],
         "entries": [
           {
             "id": 103124,
@@ -10916,24 +11302,24 @@
         ]
       },
       {
-        "id": 103873,
-        "name": "Forest's Flow",
+        "id": 103876,
+        "name": "Abundance",
         "type": "single",
         "posX": 14100,
         "posY": 6300,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [82071],
-        "prev": [82079],
+        "prev": [82052],
         "entries": [
           {
-            "id": 128274,
-            "definitionId": 133081,
+            "id": 128277,
+            "definitionId": 133084,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Forest's Flow",
-            "spellId": 470581,
-            "icon": "ability_monk_explodingjadeblossom",
+            "name": "Abundance",
+            "spellId": 207383,
+            "icon": "ability_druid_empoweredrejuvination",
             "index": 100
           }
         ]
@@ -10947,7 +11333,7 @@
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [82071],
-        "prev": [82079, 82075],
+        "prev": [82075, 82052],
         "entries": [
           {
             "id": 103132,
@@ -10963,14 +11349,14 @@
       },
       {
         "id": 82073,
-        "name": "Photosynthesis / Flourish",
-        "type": "choice",
+        "name": "Photosynthesis",
+        "type": "single",
         "posX": 10500,
         "posY": 6900,
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82074, 82070, 82061],
+        "prev": [82074, 82070, 82046],
         "entries": [
           {
             "id": 103129,
@@ -10981,23 +11367,13 @@
             "spellId": 274902,
             "icon": "spell_lifegivingseed",
             "index": 200
-          },
-          {
-            "id": 123776,
-            "definitionId": 128614,
-            "maxRanks": 1,
-            "type": "active",
-            "name": "Flourish",
-            "spellId": 197721,
-            "icon": "spell_druid_wildburst",
-            "index": 300
           }
         ]
       },
       {
         "id": 82077,
-        "name": "Power of the Archdruid / Undergrowth",
-        "type": "choice",
+        "name": "Harmonious Blooming",
+        "type": "single",
         "posX": 11700,
         "posY": 6900,
         "reqPoints": 20,
@@ -11010,20 +11386,10 @@
             "definitionId": 108139,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Power of the Archdruid",
-            "spellId": 392302,
-            "icon": "spell_druid_rampantgrowth",
+            "name": "Harmonious Blooming",
+            "spellId": 392256,
+            "icon": "inv_misc_herb_felblossom",
             "index": 100
-          },
-          {
-            "id": 103133,
-            "definitionId": 108138,
-            "maxRanks": 1,
-            "type": "passive",
-            "name": "Undergrowth",
-            "spellId": 392301,
-            "icon": "spell_druid_germination_rejuvenation",
-            "index": 200
           }
         ]
       },
@@ -11059,7 +11425,7 @@
         "reqPoints": 20,
         "maxRanks": 1,
         "next": [],
-        "prev": [82076, 82068, 103873],
+        "prev": [82076, 82068, 103876],
         "entries": [
           {
             "id": 103127,
@@ -11072,6 +11438,50 @@
             "index": 100
           }
         ]
+      },
+      {
+        "id": 110424,
+        "name": "Everbloom / Everbloom / Everbloom",
+        "type": "tiered",
+        "posX": 12300,
+        "posY": 7650,
+        "reqPoints": 20,
+        "maxRanks": 4,
+        "entryNode": true,
+        "next": [],
+        "prev": [],
+        "entries": [
+          {
+            "id": 137040,
+            "definitionId": 141803,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Everbloom",
+            "spellId": 392167,
+            "icon": "inv12_apextalent_druid_everbloom",
+            "index": 100
+          },
+          {
+            "id": 137039,
+            "definitionId": 141802,
+            "maxRanks": 2,
+            "type": "tierrank",
+            "name": "Everbloom",
+            "spellId": 1244331,
+            "icon": "inv12_apextalent_druid_everbloom",
+            "index": 200
+          },
+          {
+            "id": 137038,
+            "definitionId": 141801,
+            "maxRanks": 1,
+            "type": "tierrank",
+            "name": "Everbloom",
+            "spellId": 1244470,
+            "icon": "inv12_apextalent_druid_everbloom",
+            "index": 300
+          }
+        ]
       }
     ],
     "heroNodes": [
@@ -11079,12 +11489,12 @@
         "id": 94626,
         "name": "Thriving Growth",
         "type": "single",
-        "posX": 15300,
+        "posX": 15600,
         "posY": 1500,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 22,
-        "next": [94629, 94621, 94623],
+        "next": [94629, 94621, 109717, 94623],
         "prev": [],
         "entries": [
           {
@@ -11165,6 +11575,29 @@
             "name": "Wildstalker's Power",
             "spellId": 439926,
             "icon": "ability_druid_skinteeth",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109717,
+        "name": "Green Thumb",
+        "type": "single",
+        "posX": 16500,
+        "posY": 2100,
+        "maxRanks": 1,
+        "subTreeId": 22,
+        "next": [109716],
+        "prev": [94626],
+        "entries": [
+          {
+            "id": 135975,
+            "definitionId": 140730,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Green Thumb",
+            "spellId": 1270565,
+            "icon": "spell_lifegivingseed",
             "index": 100
           }
         ]
@@ -11259,6 +11692,29 @@
         ]
       },
       {
+        "id": 109716,
+        "name": "Bursting Growth",
+        "type": "single",
+        "posX": 16500,
+        "posY": 2700,
+        "maxRanks": 1,
+        "subTreeId": 22,
+        "next": [109715],
+        "prev": [109717],
+        "entries": [
+          {
+            "id": 135974,
+            "definitionId": 140729,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Bursting Growth",
+            "spellId": 440120,
+            "icon": "inv_collections_armor_flowerbracelet_b_01",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94631,
         "name": "Resilient Flourishing / Root Network",
         "type": "choice",
@@ -11293,7 +11749,7 @@
       },
       {
         "id": 94630,
-        "name": "Bursting Growth",
+        "name": "Patient Custodian",
         "type": "single",
         "posX": 15300,
         "posY": 3300,
@@ -11307,9 +11763,9 @@
             "definitionId": 122244,
             "maxRanks": 1,
             "type": "passive",
-            "name": "Bursting Growth",
-            "spellId": 440120,
-            "icon": "inv_collections_armor_flowerbracelet_b_01",
+            "name": "Patient Custodian",
+            "spellId": 1270592,
+            "icon": "inv_helm_misc_rose_a_01_red",
             "index": 100
           }
         ]
@@ -11348,15 +11804,38 @@
         ]
       },
       {
+        "id": 109715,
+        "name": "Rampancy",
+        "type": "single",
+        "posX": 16500,
+        "posY": 3300,
+        "maxRanks": 1,
+        "subTreeId": 22,
+        "next": [94627],
+        "prev": [109716],
+        "entries": [
+          {
+            "id": 135973,
+            "definitionId": 140728,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Rampancy",
+            "spellId": 1270586,
+            "icon": "inv_misc_thornnecklace",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94627,
         "name": "Vigorous Creepers",
         "type": "single",
-        "posX": 15290,
+        "posX": 15600,
         "posY": 3900,
         "maxRanks": 1,
         "subTreeId": 22,
         "next": [],
-        "prev": [94630, 94628, 94631],
+        "prev": [94630, 94628, 94631, 109715],
         "entries": [
           {
             "id": 117227,
@@ -11374,13 +11853,13 @@
         "id": 94600,
         "name": "Dream Surge",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 4500,
         "maxRanks": 1,
         "entryNode": true,
         "subTreeId": 23,
         "requiresNode": 0,
-        "next": [94599, 94602, 94593],
+        "next": [94599, 94602, 109714, 94593],
         "prev": [],
         "entries": [
           {
@@ -11462,6 +11941,29 @@
             "name": "Protective Growth",
             "spellId": 433748,
             "icon": "spell_nature_resistnature",
+            "index": 100
+          }
+        ]
+      },
+      {
+        "id": 109714,
+        "name": "Sylvan Beckoning",
+        "type": "single",
+        "posX": 9000,
+        "posY": 5100,
+        "maxRanks": 1,
+        "subTreeId": 23,
+        "next": [109713],
+        "prev": [94600],
+        "entries": [
+          {
+            "id": 135972,
+            "definitionId": 140727,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Sylvan Beckoning",
+            "spellId": 1264614,
+            "icon": "ui_darkshore_warfront_alliance_dryad",
             "index": 100
           }
         ]
@@ -11556,6 +12058,29 @@
         ]
       },
       {
+        "id": 109713,
+        "name": "Dryad's Dance",
+        "type": "single",
+        "posX": 9000,
+        "posY": 5700,
+        "maxRanks": 1,
+        "subTreeId": 23,
+        "next": [109712],
+        "prev": [109714],
+        "entries": [
+          {
+            "id": 135971,
+            "definitionId": 140726,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Dryad's Dance",
+            "spellId": 1264776,
+            "icon": "inv_stave_2h_druid_a_01",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94591,
         "name": "Bounteous Bloom / Early Spring",
         "type": "choice",
@@ -11646,16 +12171,39 @@
         ]
       },
       {
+        "id": 109712,
+        "name": "Spirit of the Thicket",
+        "type": "single",
+        "posX": 9000,
+        "posY": 6300,
+        "maxRanks": 1,
+        "subTreeId": 23,
+        "next": [94606],
+        "prev": [109713],
+        "entries": [
+          {
+            "id": 135970,
+            "definitionId": 140725,
+            "maxRanks": 1,
+            "type": "passive",
+            "name": "Spirit of the Thicket",
+            "spellId": 1264899,
+            "icon": "ability_druid_naturalperfection",
+            "index": 100
+          }
+        ]
+      },
+      {
         "id": 94606,
         "name": "Harmony of the Grove",
         "type": "single",
-        "posX": 7800,
+        "posX": 8100,
         "posY": 6900,
         "maxRanks": 1,
         "subTreeId": 23,
         "requiresNode": 0,
         "next": [],
-        "prev": [94601, 94592, 94591],
+        "prev": [94601, 94592, 94591, 109712],
         "entries": [
           {
             "id": 117203,
@@ -11688,7 +12236,10 @@
             "traitSubTreeId": 23,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-keeperofthegrove",
-            "nodes": [94600, 94599, 94602, 94593, 94605, 94604, 94595, 94591, 94592, 94601, 94606]
+            "nodes": [
+              94600, 94599, 94602, 94593, 109714, 94605, 94604, 94595, 109713, 94591, 94592, 94601,
+              109712, 94606
+            ]
           },
           {
             "id": 123298,
@@ -11697,33 +12248,38 @@
             "traitSubTreeId": 22,
             "traitTreeId": 793,
             "atlasMemberName": "talents-heroclass-druid-wildstalker",
-            "nodes": [94626, 94629, 94623, 94621, 94624, 94622, 94625, 94631, 94630, 94628, 94627]
+            "nodes": [
+              94626, 94629, 94623, 94621, 109717, 94624, 94622, 94625, 109716, 94631, 94630, 94628,
+              109715, 94627
+            ]
           }
         ]
       }
     ],
     "fullNodeOrder": [
       82043, 82045, 82046, 82047, 82048, 82049, 82050, 82051, 82052, 82053, 82054, 82055, 82056,
-      82057, 82058, 82059, 82060, 82061, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069,
-      82070, 82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083,
-      82085, 82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100,
-      82101, 82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113,
-      82114, 82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127,
-      82128, 82129, 82130, 82131, 82132, 82133, 82134, 82135, 82136, 82137, 82138, 82139, 82140,
-      82141, 82142, 82143, 82144, 82145, 82146, 82147, 82148, 82149, 82151, 82152, 82153, 82154,
-      82155, 82156, 82157, 82158, 82159, 82160, 82161, 82162, 82198, 82199, 82200, 82201, 82202,
-      82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219, 82220, 82221,
-      82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233, 82234, 82235,
-      82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88199, 88200, 88201, 88202,
-      88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216, 88217,
-      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88229, 88231,
-      88232, 88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586,
-      92587, 92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592,
-      94593, 94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606,
-      94607, 94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620,
-      94621, 94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806,
-      99807, 99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874,
-      103875, 103876, 104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085
+      82057, 82058, 82059, 82060, 82062, 82063, 82064, 82065, 82066, 82067, 82068, 82069, 82070,
+      82071, 82072, 82073, 82074, 82075, 82076, 82077, 82079, 82080, 82081, 82082, 82083, 82085,
+      82086, 82088, 82090, 82091, 82092, 82093, 82094, 82095, 82096, 82098, 82099, 82100, 82101,
+      82102, 82103, 82104, 82105, 82106, 82107, 82108, 82109, 82110, 82111, 82112, 82113, 82114,
+      82115, 82116, 82117, 82118, 82119, 82120, 82121, 82122, 82123, 82124, 82126, 82127, 82129,
+      82131, 82134, 82135, 82136, 82137, 82138, 82140, 82142, 82143, 82144, 82145, 82146, 82147,
+      82148, 82149, 82152, 82153, 82154, 82156, 82157, 82159, 82160, 82161, 82198, 82199, 82200,
+      82201, 82202, 82205, 82206, 82207, 82208, 82209, 82210, 82211, 82214, 82217, 82218, 82219,
+      82220, 82221, 82222, 82223, 82224, 82225, 82227, 82228, 82229, 82230, 82231, 82232, 82233,
+      82234, 82235, 82236, 82237, 82239, 82240, 82241, 82242, 82243, 82244, 82246, 88200, 88201,
+      88202, 88203, 88204, 88206, 88207, 88208, 88209, 88210, 88212, 88213, 88214, 88215, 88216,
+      88218, 88219, 88220, 88221, 88222, 88223, 88224, 88225, 88226, 88227, 88228, 88231, 88232,
+      88234, 88235, 88236, 91044, 91046, 91047, 91048, 92226, 92227, 92229, 92585, 92586, 92587,
+      92588, 92641, 92674, 93714, 94535, 94585, 94586, 94587, 94588, 94590, 94591, 94592, 94593,
+      94594, 94595, 94596, 94597, 94598, 94599, 94600, 94601, 94602, 94604, 94605, 94606, 94607,
+      94608, 94609, 94610, 94611, 94612, 94613, 94614, 94615, 94616, 94618, 94619, 94620, 94621,
+      94622, 94623, 94624, 94625, 94626, 94627, 94628, 94629, 94630, 94631, 99805, 99806, 99807,
+      99808, 100173, 100174, 100175, 100176, 100177, 100223, 103846, 103847, 103873, 103874, 103876,
+      104078, 104079, 104080, 104081, 104082, 104083, 104084, 104085, 104125, 108032, 108033,
+      109275, 109302, 109375, 109376, 109377, 109378, 109379, 109712, 109713, 109714, 109715,
+      109716, 109717, 109718, 109719, 109720, 109721, 109722, 109723, 110279, 110421, 110424,
+      110426, 110431
     ]
   }
 ]
