@@ -3128,5 +3128,10 @@
     "timestamp": 1773380175824,
     "icon": "inv_12_profession_jewelcrafting_ring3_silver",
     "quality": 4
+  },
+  "spell-1263363": {
+    "display": "Ascendant Fires",
+    "timestamp": 1773083258631,
+    "icon": "spell_druid_equinox"
   }
 }
