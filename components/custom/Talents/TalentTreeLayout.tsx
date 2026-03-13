@@ -178,7 +178,7 @@ export function TalentTreeGrid({
                 return (
                   <div
                     key={`empty-${cell.row}-${cell.col}`}
-                    className="w-max-[70px] h-max-[70px] relative flex aspect-1 w-full items-center justify-center"
+                    className="w-max-[70px] h-max-[70px] aspect-1 relative flex w-full items-center justify-center"
                     style={{
                       gridRow: cell.row + 1,
                       gridColumn: cell.col + 1,
@@ -198,7 +198,7 @@ export function TalentTreeGrid({
               return (
                 <div
                   key={`node-${node.id}`}
-                  className="w-max-[70px] h-max-[70px] relative flex aspect-1 w-full items-center justify-center"
+                  className="w-max-[70px] h-max-[70px] aspect-1 relative flex w-full items-center justify-center"
                   style={{
                     gridRow: cell.row + 1,
                     gridColumn: cell.col + 1,
@@ -260,7 +260,7 @@ export function ClassTreeLayout({
 
   return (
     <div className="flex w-full flex-col">
-      <h2 className="mb-2 mt-0 text-xl font-bold text-yellow-400">Class Tree</h2>
+      <h2 className="mt-0 mb-2 text-center text-xl font-bold text-yellow-400">Class Tree</h2>
       <div className="flex-1 overflow-hidden">
         <TalentTreeGrid
           nodes={nodes}
@@ -316,7 +316,9 @@ export function SpecTreeLayout({
 
   return (
     <div className="flex h-full w-full flex-col">
-      <h2 className="mb-2 mt-0 text-xl font-bold text-yellow-400">Specialization Tree</h2>
+      <h2 className="mt-0 mb-2 text-center text-xl font-bold text-yellow-400">
+        Specialization Tree
+      </h2>
       <div className="flex-1 overflow-hidden">
         <TalentTreeGrid
           nodes={nodes}
@@ -400,7 +402,7 @@ export function HeroTreeLayout({
 
   return (
     <div className="flex h-full w-full flex-col">
-      <h2 className="mb-2 mt-0 text-xl font-bold text-yellow-400">Hero Tree</h2>
+      <h2 className="mt-0 mb-2 text-center text-xl font-bold text-yellow-400">Hero Tree</h2>
       {nodes.length > 0 ? (
         selectedNodes.length > 0 ? (
           <div className="flex-1 overflow-hidden">
