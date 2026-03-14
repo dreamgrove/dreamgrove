@@ -1,4 +1,4 @@
---------------- SET UP ---------------
+#--------------- SET UP ---------------
 
 # Executed before combat begins. Accepts non-harmful actions only.
 actions.precombat=snapshot_stats
@@ -39,7 +39,7 @@ actions+=/run_action_list,name=ec_st,if=hero_tree.elunes_chosen&spell_targets=1
 actions+=/run_action_list,name=kotg_st,if=spell_targets=1
 actions+=/run_action_list,name=aoe,if=spell_targets>1
 
---------------- AOE ---------------
+#--------------- AOE ---------------
 
 # Cooldowns
 actions.aoe=celestial_alignment,if=prev_gcd.1.force_of_nature&!variable.ec|variable.ec&prev_gcd.1.fury_of_elune&buff.ca_inc.down&buff.ascendant_stars.down&(trinket.1.cooldown.remains>60|trinket.1.cooldown.ready|fight_remains<trinket.1.cooldown.remains|trinket.2.cooldown.remains>60|trinket.2.cooldown.ready|fight_remains<trinket.2.cooldown.remains)|fight_remains<20
@@ -82,7 +82,7 @@ actions.aoe+=/wild_mushroom,if=buff.eclipse_solar.up|cooldown.wild_mushroom.full
 actions.aoe+=/starfire,if=variable.ec|variable.eclipse_down&spell_targets.starfire>6|buff.eclipse_lunar.up&(spell_targets.starfire>2&buff.ca_inc.up|spell_targets.starfire<=2&!buff.ca_inc.up)
 actions.aoe+=/wrath
 
----------------  ELUNE'S CHOSEN ST ---------------
+#---------------  ELUNE'S CHOSEN ST ---------------
 
 # Cooldowns
 actions.ec_st=celestial_alignment,if=buff.ca_inc.down&cooldown.eclipse.charges_fractional<1.5&buff.ascendant_stars.down
@@ -112,7 +112,7 @@ actions.ec_st+=/full_moon,if=astral_power.deficit>energize_amount
 actions.ec_st+=/wild_mushroom,if=buff.eclipse_solar.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains
 actions.ec_st+=/starfire
 
----------------  KEEPER OF THE GROVE ST ---------------
+#---------------  KEEPER OF THE GROVE ST ---------------
 
 # Cooldowns
 actions.kotg_st=celestial_alignment,if=prev_gcd.1.force_of_nature|fight_remains<20
