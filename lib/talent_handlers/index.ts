@@ -1,7 +1,6 @@
 export { earlySpring } from './Balance/earlySpring'
 export { controlOfTheDream } from './Balance/controlOfTheDream'
 export { whirlingStars } from './Balance/whirlingStars'
-export { potentEnchantments } from './Balance/potentEnchantements'
 export { incarnation } from './Balance/incarnation'
 export { bindings } from './bindings'
 export { dreamstate } from './Resto/dreamstate'

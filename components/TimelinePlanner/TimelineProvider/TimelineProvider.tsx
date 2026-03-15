@@ -59,7 +59,7 @@ export function TimelineProvider({
     setInputEvents,
     currentSpec
   )
-  const { keysToTalents } = useKeysToTalents(activeTalents)
+  const { keysToTalents } = useKeysToTalents(activeTalents, localSpells)
   const { processedState, processedEvents } = useProcessedTimeline(
     inputEvents,
     localSpells,

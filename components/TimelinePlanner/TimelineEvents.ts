@@ -83,7 +83,7 @@ export function processEventQueue(
 
   /* Control of The Dream */
   if (activeBindings.includes(Talents.ControlOfTheDream)) {
-    timelineState.initializeControlOfTheDream()
+    timelineState.initializeControlOfTheDream(currentSpells)
   }
 
   while (!eventQueue.isEmpty()) {

@@ -1,37 +1,34 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useMemo } from 'react'
 import { GlobalAction } from '@/types/events'
+import { SpellInfo, Talents } from '@/types/timeline'
 import { bindings } from '@/lib/talent_handlers'
 
-export function useKeysToTalents(activeTalents: string[]) {
-  const [keysToTalents, setKeysToTalents] = useState<Map<string, Set<GlobalAction>>>(new Map())
-
-  // Bind a talent handler to a specific key
-  const bindGlobalAction = useCallback((keys: string[], action: GlobalAction) => {
-    setKeysToTalents((prev) => {
-      const newMap = new Map(prev)
-      for (const key of keys) {
-        if (!newMap.has(key)) {
-          newMap.set(key, new Set())
-        }
-        newMap.get(key)!.add(action)
-      }
-      return newMap
-    })
-  }, [])
-
-  // Update keysToActions when activeTalents changes
-  useEffect(() => {
-    setKeysToTalents(new Map())
+export function useKeysToTalents(activeTalents: string[], spells: SpellInfo[]) {
+  const keysToTalents = useMemo(() => {
+    const map = new Map<string, Set<GlobalAction>>()
     bindings.forEach((binding) => {
       if (activeTalents.includes(binding.id)) {
-        bindGlobalAction(binding.affectedSpells.map(String), binding.handler)
+        const affectedKeys = binding.affectedSpells.map(String)
+        // For CotD, also include custom spells that opted in
+        if (binding.id === Talents.ControlOfTheDream) {
+          for (const spell of spells) {
+            if (spell.cotdAffected && !affectedKeys.includes(String(spell.spellId))) {
+              affectedKeys.push(String(spell.spellId))
+            }
+          }
+        }
+        for (const key of affectedKeys) {
+          if (!map.has(key)) {
+            map.set(key, new Set())
+          }
+          map.get(key)!.add(binding.handler)
+        }
       }
     })
-  }, [activeTalents, bindGlobalAction])
+    return map
+  }, [activeTalents, spells])
 
   return {
     keysToTalents,
-    setKeysToTalents,
-    bindGlobalAction,
   }
 }

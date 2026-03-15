@@ -3133,5 +3133,10 @@
     "display": "Ascendant Fires",
     "timestamp": 1773083258631,
     "icon": "spell_druid_equinox"
+  },
+  "spell-1240188": {
+    "display": "Sculpt the Stars",
+    "timestamp": 1773538293734,
+    "icon": "ability_druid_eclipseorange"
   }
 }
