@@ -14,7 +14,7 @@ The [initial pre-heroic tuning pass](https://us.forums.blizzard.com/en/wow/t/cla
 - DotC single target roughly a 35% nerf. Going from around 120k sim dps in max gear to 75k.
 - EC single target roughly a 15% nerf. Going from around 100k sim dps in max gear to 85k.
 
-In AoE both of the nerfs are less significant than they are for single target.
+- In AoE both of the nerfs are less significant than they are for single target.
 
 
 ## Midnight Season 1 Tier Set
@@ -50,35 +50,49 @@ Pandemic is an in-game mechanic where most damage over time (DoT) or heal over t
 
 #### **What is Ripweaving and Catweaving?**
 
-Those of you looking into Druid of the Claw specifically will come across these terms. Catweaving is a fairly old term in WoW but with the introduction of some key talents in The War Within it has evolved into something very different from what it used to be. The current meaning of these terms roughly boil down to:
-- **Ripweaving** - This is the simplified form of Catweaving. It involves using a very standard Guardian rotation the vast majority of the timne but when you reach six stacks of Feline Potential (from the DotC node !Wildpower Surge!) you will quickly enter !Cat Form! (ideally, using !Fluid Form!), use the empowered finisher and then quickly return to !Bear Form!.
-- **Catweaving** This is the more advanced and modernised version of Catweaving and no longer does it involve "just using cat stuff when offtanking". Modern Catweaving abuses !Fluid Form! and !Empowered Shapeshifting! to frequently shift in and out of !Cat Form! whilst both tanking and offtanking, allowing us to replace our weak filler spells (primarily Swipe) with stronger Cat abilities (!Rake!, !Shred!, !Rip! and !Ferocious Bite!).
+>[!NOTE]
+> Currently neither Ripweaving nor Catweaving are a dps gain so they're not really worth doing unless you just enjoy the rotation more.
+> It is always assumed that if you're Ripweaving or Catweaving that you have !Fluid Form! talented and are using it as your method to change forms.
+
+Those of you looking into Druid of the Claw specifically will come across these terms. Catweaving is a fairly old term in WoW but with the introduction of some key hero talents in The War Within it has evolved into something very different from what it used to be. The current meaning of these terms roughly boil down to:
+- **Ripweaving** - This is a simplified form of Catweaving. It involves using a very standard Guardian rotation the vast majority of the timne but when you reach six stacks of Feline Potential (from the DotC node !Wildpower Surge!) you will quickly enter !Cat Form! (ideally, using !Fluid Form!), use the empowered finisher and then quickly return to !Bear Form!.
+- **Catweaving** This is the more advanced and modernised version of Catweaving and no longer does it involve "just using cat stuff when offtanking". Modern Catweaving abuses !Fluid Form!, !Persistence! and !Empowered Shapeshifting! to frequently shift in and out of !Cat Form! whilst both tanking and offtanking, allowing us to replace our weak filler spells (primarily Swipe) with stronger Cat abilities (!Rake!, !Shred!, !Rip! and !Ferocious Bite!).
 
 <HeroTalentsHeader title="Druid of the Claw" id="dotc">
 
-<Checkbox isIcon id="Dotc_Wildpower Surge" spellId={441691} name="Wildpower Surge (Ripweaving)" defaultCheck />
 <Checkbox isIcon id="Dotc_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox isIcon id="Dotc_Catweaving" spellId={768} name="Full Catweaving (~5% Gain)" />
-<Checkbox isIcon id="Dotc_Lunar Beam" spellId={204066} name="Lunar Beam" />
-<Checkbox isIcon id="Dotc_Vicious Cycle" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox isIcon id="Dotc_Tooth and Claw" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox isIcon id="Dotc_Thorns of Iron" spellId={400222} name="Thorns of Iron" defaultCheck />
+<Checkbox isIcon id="Dotc_Lunar Beam" spellId={204066} name="Lunar Beam" defaultCheck />
+<Checkbox isIcon id="Dotc_Red Moon" spellId={1252871} name="Red Moon" defaultCheck />
+<Checkbox isIcon id="Dotc_Incarnation: Guardian of Ursoc" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="Dotc" defaultCheck />
 <Checkbox isIcon id="Dotc_Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Dotc" />
-<Checkbox isIcon id="Dotcation: Guardian of Ursoc" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="Dotc" defaultCheck />
-<Checkbox isIcon id="Dotc_Rage of the Sleeper" spellId={200851} name="Rage of the Sleeper" defaultCheck />
+<Checkbox isIcon id="Dotc_Harnessed Rage" spellId={1253035} name="Harnessed Rage" defaultCheck />
+<Checkbox isIcon id="Dotc_Killing Blow" spellId={1252994} name="Killing Blow" defaultCheck />
+<Checkbox isIcon id="Dotc_Sundering Roar" spellId={1253799} name="Sundering Roar" />
+<Checkbox isIcon id="Dotc_Wildpower Surge" spellId={441691} name="Wildpower Surge (Ripweaving)" />
+<Checkbox isIcon id="Dotc_Catweaving" spellId={768} name="Full Catweaving" />
 
 <Collapsible title="Pre-Combat">
 
+<Checkbox isIcon id="Dotc_Tanking" spellId={5487} name="Tanking on Pull" defaultCheck />
 
-<Checkbox isIcon id="Dotc_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild without Wildpower Surge" />
-<Checkbox isIcon id="Dotc_Catweaving_PC" spellId={768} name="Rake opening (Very minor damage gain)"/>
-
-- Make sure the duration of your Flask, Food and Rune buffs will last for the entire encounter
-- [*~Dotc_Catweaving_PC] Enter !Bear Form! a few seconds before you pull
-- [*Dotc_Heart of the Wild_PC&&~Dotc_Heart of the Wild_PC] Press !Heart of the Wild! a second before you start combat 
-- [*Dotc_Catweaving_PC] Press !Prowl! a few seconds before you pull
-- [*Dotc_Heart of the Wild_PC&&Dotc_Heart of the Wild_PC] Press !Heart of the Wild! and then immediately !Prowl! a couple just before the boss is pulled 
-</Collapsible> 
+- Make sure the duration of your Flask, Food and Rune buffs will last for the entire encounter.
+- Enter !Bear Form! a few seconds before you pull
+- [*Dotc_Lunar Beam] Press !Growl! and !Lunar Beam! to pull
+- [*~Dotc_Lunar Beam&&~Dotc_Red Moon] Press !Growl! and !Moonfire! to pull
+- [*Dotc_Heart of the Wild] Press !Rake! to enter !Cat Form!
+- [*Dotc_Heart of the Wild] Press !Heart of the Wild!
+- [*Dotc_Heart of the Wild&&Dotc_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc!
+- [*Dotc_Heart of the Wild&&~Dotc_Incarnation: Guardian of Ursoc] Immediately press !Berserk!
+- [*~Dotc_Heart of the Wild&&Dotc_Sundering Roar] Press !Thrash!
+- [*~Dotc_Heart of the Wild&&Dotc_Sundering Roar] Press !Sundering Roar!
+- [*~Dotc_Heart of the Wild] Press !Thrash!
+- [*~Dotc_Heart of the Wild&&Dotc_Sundering Roar] Press !Sundering Roar!
+- [*~Dotc_Heart of the Wild&&Dotc_Sundering Roar] Press !Thrash!
+- [*~Dotc_Heart of the Wild&&Dotc_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc!
+- [*~Dotc_Heart of the Wild&&~Dotc_Incarnation: Guardian of Ursoc] Immediately press !Berserk!
+- Press !Thrash!
+- [*Dotc_Heart of the Wild&&Dotc_Incarnation: Guardian of Ursoc&&Dotc_Red Moon] Presss !Red Moon!
+- Proceed with normal rotation
 
 <Collapsible title="Single Target Rotation">
 
@@ -110,7 +124,6 @@ Those of you looking into Druid of the Claw specifically will come across these 
 - [*Dotc_Wildpower Surge] Press !33917|Mangle! if at < 6 stacks of Feline Potential
 - [*Dotc_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw! or if !Tooth and Claw! is about to expire
 - [*Dotc_Vicious Cycle] Press !Maul! if at 3 stacks of !372015|Vicious Cycle! or if !372015|Vicious Cycle! is about to expire
-- [*Dotc_Thorns of Iron] Press !Ironfur! if above 40 rage
 - [*Dotc_Catweaving] Whilst in !Cat Form! **without having Feline Potential (if talented) ready to empower your next finisher**, apply the following priority list:
 	- Press !33917|Mangle! if it becomes available
 	- Press !Rip! if:
@@ -172,7 +185,6 @@ Those of you looking into Druid of the Claw specifically will come across these 
 - [*Dotc_Vicious Cycle&&Dotc_Raze] Press !Raze! if at 3 stacks of !Vicious Cycle!
 - [*Dotc_Tooth and Claw&&~Dotc_Raze] Press !Maul! if at 2 stacks of !Tooth and Claw!
 - [*Dotc_Vicious Cycle&&~Dotc_Raze] Press !Maul! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Thorns of Iron] Press !Ironfur! if above 40 rage
 - Press !33917|Mangle!
 - Press !Thrash!
 - [*Dotc_Catweaving] Whilst in !Cat Form! **without having Feline Potential ready to empower your next finisher**, apply the following priority list:
@@ -215,7 +227,6 @@ Those of you looking into Druid of the Claw specifically will come across these 
     - You have < 40 rage
 - [*Dotc_Tooth and Claw&&Dotc_Raze] Press !Raze! if at 2 stacks of !Tooth and Claw!
 - [*Dotc_Vicious Cycle&&Dotc_Raze] Press !Raze! if at 3 stacks of !Vicious Cycle!
-- [*Dotc_Thorns of Iron] Press !Ironfur! if above 40 rage
 - Press !33917|Mangle!
 - Press !Thrash!
 - [*Dotc_Catweaving] Press !Rake! on an enemy target if it is not currently active or if it is in pandemic.
@@ -235,7 +246,6 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 <Checkbox isIcon id="Dotc_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" />
 <Checkbox isIcon id="Dotc_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
 <Checkbox isIcon id="Dotc_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox isIcon id="Dotc_Thorns of Iron_incarn" spellId={400222} name="Thorns of Iron" defaultCheck />
 <Checkbox isIcon id="Dotc_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" defaultCheck />
 
 
@@ -258,8 +268,6 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
    	- [*Dotc_Tooth and Claw_incarn] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
 		- Spend so much that you cannot !Ravage! immediately if you get a proc
 		- Delay the Ripweave cycle to try and spend the rage
-    	- [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
-    	- If an empowered !Rip! is still active on the target then replace !Rip! in the above sequences with a !Ferocious Bite! cast
    	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above sequences
 - [*Dotc_Wildpower Surge_incarn&&Dotc_Cleave_incarn] If at 6 stacks of Feline Potential then:
     	- [*Dotc_Tooth and Claw_incarn] !Rake! > !Rip! > !33917|Mangle!
@@ -267,7 +275,6 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
    	- [*Dotc_Tooth and Claw_incarn] Before you start a Ripweave cycle you want to have spent as much rage as possible but do not:
 		- Spend so much that you cannot !Ravage! immediately if you get a proc
 		- Delay the Ripweave cycle to try and spend the rage
-    	- [*Dotc_Thorns of Iron_incarn&&~Dotc_Tooth and Claw_incarn] Dump rage into !Ironfur! then !Rake! > !Rip! > !33917|Mangle!
   	- If an empowered !Rip! is still active on your primary target then either:
         	- Cast !Rip! on the secondary target (more overall damage)
        		- Replace !Rip! in the above sequences with a !Ferocious Bite! cast on the primary target (more priority damage)
@@ -292,25 +299,38 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 <HeroTalentsHeader title="Elune's Chosen" id="ec"> 
 
 <Checkbox isIcon id="EC_Heart of the Wild" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox isIcon id="EC_Lunation" spellId={429539} name="Lunation" defaultCheck />
 <Checkbox isIcon id="EC_Lunar Beam" spellId={204066} name="Lunar Beam" defaultCheck />
-<Checkbox isIcon id="EC_Vicious Cycle" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox isIcon id="EC_Tooth and Claw" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox isIcon id="EC_Galactic Guardian" spellId={203964} name="Galactic Guardian" defaultCheck />
+<Checkbox isIcon id="EC_Red Moon" spellId={1252871} name="Red Moon" defaultCheck />
+<Checkbox isIcon id="EC_Incarnation: Guardian of Ursoc" spellId={102558} name="Incarnation: Guardian of Ursoc" radio="EC" defaultCheck />
 <Checkbox isIcon id="EC_Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="EC" />
-<Checkbox isIcon id="ECation: Guardian of Ursoc" spellId={102558} name="Incarnation: Guardian of Ursoc" defaultCheck radio="EC" />
-<Checkbox isIcon id="EC_Rage of the Sleeper" spellId={200851} name="Rage of the Sleeper" />
-<Checkbox isIcon id="EC_Thorns of Iron style" spellId={192081} name="Thorns of Iron Playstyle" />
+<Checkbox isIcon id="EC_Harnessed Rage" spellId={1253035} name="Harnessed Rage" defaultCheck />
+<Checkbox isIcon id="EC_Killing Blow" spellId={1252994} name="Killing Blow" defaultCheck />
+<Checkbox isIcon id="EC_Sundering Roar" spellId={1253799} name="Sundering Roar" />
+<Checkbox isIcon id="EC_Wildpower Surge" spellId={441691} name="Wildpower Surge (Ripweaving)" />
+<Checkbox isIcon id="EC_Catweaving" spellId={768} name="Full Catweaving" />
 
 <Collapsible title="Pre-Combat">
 
+<Checkbox isIcon id="EC_Tanking" spellId={5487} name="Tanking on Pull" defaultCheck />
 
-<Checkbox isIcon id="EC_Heart of the Wild_PC" spellId={319454} name="Heart of the Wild" defaultCheck />
-
-
-- Make sure the duration of your Flask, Food, Oil/Stone and Rune buffs will last for the entire encounter
+- Make sure the duration of your Flask, Food and Rune buffs will last for the entire encounter.
 - Enter !Bear Form! a few seconds before you pull
-- [*EC_Heart of the Wild_PC] Press !Heart of the Wild! a second before you start combat 
+- [*EC_Lunar Beam] Press !Growl! and !Lunar Beam! to pull
+- [*~EC_Lunar Beam&&~EC_Red Moon] Press !Growl! and !Moonfire! to pull
+- [*EC_Heart of the Wild] Press !Rake! to enter !Cat Form!
+- [*EC_Heart of the Wild] Press !Heart of the Wild!
+- [*EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc!
+- [*EC_Heart of the Wild&&~EC_Incarnation: Guardian of Ursoc] Immediately press !Berserk!
+- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Thrash!
+- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Sundering Roar!
+- [*~EC_Heart of the Wild] Press !Thrash!
+- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Sundering Roar!
+- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Thrash!
+- [*~EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc!
+- [*~EC_Heart of the Wild&&~EC_Incarnation: Guardian of Ursoc] Immediately press !Berserk!
+- Press !Thrash!
+- [*EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc&&EC_Red Moon] Presss !Red Moon!
+- Proceed with normal rotation
 
 </Collapsible>
 
