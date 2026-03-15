@@ -98,8 +98,8 @@ actions.ec_st+=/convoke_the_spirits,if=buff.ca_inc.up&astral_power<40|cooldown.c
 actions.ec_st+=/lunar_eclipse,if=cooldown.ca_inc.full_recharge_time>15|variable.opener
 
 # Spenders
-actions.ec_st+=/starfall,if=buff.starweavers_warp.react|buff.touch_the_cosmos.react&talent.starweaver|buff.eclipse_lunar.remains>3
-actions.ec_st+=/starsurge,if=astral_power>80|!variable.eclipse_down|buff.starweavers_weft.react
+actions.ec_st+=/starfall,if=buff.starweavers_warp.react|buff.touch_the_cosmos.react&talent.starweaver&buff.ascendant_stars.down
+actions.ec_st+=/starsurge,if=astral_power>80|!variable.eclipse_down|buff.starweavers_weft.react|buff.touch_the_cosmos.react&buff.ascendant_stars.up
 
 # Fury of Elune
 actions.ec_st+=/fury_of_elune
