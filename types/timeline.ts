@@ -44,7 +44,6 @@ export enum Talents {
   EarlySpring = 'early_spring',
   ControlOfTheDream = 'control_of_the_dream',
   WhirlingStars = 'whirling_stars',
-  PotentEnchantments = 'potent_enchantments',
   Incarnation = 'incarnation',
   Dreamstate = 'dreamstate',
   TearDownTheMighty = 'tear_down_the_mighty',
@@ -52,6 +51,7 @@ export enum Talents {
   HeartOfTheLion = 'heart_of_the_lion',
   ElunesGuidance = 'elunes_guidance',
   CenariusGuidance = 'cenarius_guidance',
+  SculptTheStars = 'sculpt_the_stars',
 }
 // Event type for the event queue
 export interface TimelineEvent<T extends EventType> {
@@ -122,16 +122,19 @@ export class TimelineState {
     this.activeEffects = new Map()
   }
 
-  initializeControlOfTheDream() {
-    this.activeEffects.set(
-      Talents.ControlOfTheDream,
-      new Map([
-        [391528, -15],
-        [205636, -15],
-        [194223, -15],
-        [33891, -15],
-      ])
-    )
+  initializeControlOfTheDream(spells: SpellInfo[]) {
+    const cotdMap = new Map<number, number>([
+      [391528, -15],
+      [205636, -15],
+      [194223, -15],
+      [33891, -15],
+    ])
+    for (const spell of spells) {
+      if (spell.cotdAffected && !cotdMap.has(spell.spellId)) {
+        cotdMap.set(spell.spellId, -15)
+      }
+    }
+    this.activeEffects.set(Talents.ControlOfTheDream, cotdMap)
   }
 
   isSpellCastPresent(spellId: number): Cast | null {
@@ -182,6 +185,7 @@ export interface SpellInfo {
   channeled?: boolean
   specs?: string[]
   can_interrupt?: boolean
+  cotdAffected?: boolean
 }
 // Parameters for creating a Cast
 export interface CastParams {

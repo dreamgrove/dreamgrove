@@ -13,6 +13,7 @@ export default function CustomSpellForm() {
   const [spellId, setSpellId] = useState<string | number>('')
   const [errorMessage, setErrorMessage] = useState('')
   const [selectedSpecs, setSelectedSpecs] = useState<string[]>([])
+  const [cotdAffected, setCotdAffected] = useState(false)
 
   const { createCustomSpell } = useTimelineContext()
 
@@ -101,6 +102,7 @@ export default function CustomSpellForm() {
       channeled: isChanneled,
       specs: specsList,
       mrtSpellId: finalSpellId,
+      cotdAffected,
     })
 
     createCustomSpell(customSpell)
@@ -113,6 +115,7 @@ export default function CustomSpellForm() {
     setChannelDuration(2)
     setSpellId('')
     setSelectedSpecs([])
+    setCotdAffected(false)
     setIsFormVisible(false)
     setErrorMessage('')
   }
@@ -252,6 +255,19 @@ export default function CustomSpellForm() {
                     />
                   </div>
                 )}
+              </div>
+
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="cotdAffected"
+                  checked={cotdAffected}
+                  onChange={(e) => setCotdAffected(e.target.checked)}
+                  className="mr-2 h-3.5 w-3.5 border-0 bg-gray-700 ring-transparent focus:ring-transparent focus:ring-offset-0"
+                />
+                <label htmlFor="cotdAffected" className="text-xs text-gray-300 select-none">
+                  Affected by Control of the Dream
+                </label>
               </div>
 
               <div className="col-span-2 mt-2">

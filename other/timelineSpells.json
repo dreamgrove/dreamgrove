@@ -10,6 +10,15 @@
       "specs": ["balance"]
     },
     {
+      "spellId": 1239669,
+      "name": "Eclipse",
+      "channel_duration": 0,
+      "effect_duration": 15,
+      "cooldown": 32,
+      "charges": 2,
+      "specs": ["balance"]
+    },
+    {
       "spellId": 194223,
       "name": "Celestial Alignment",
       "channel_duration": 0,

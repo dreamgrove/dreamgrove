@@ -2,7 +2,6 @@ import { Talents, TalentBindings } from '@/types/index'
 import { earlySpring } from './Balance/earlySpring'
 import { controlOfTheDream } from './Balance/controlOfTheDream'
 import { whirlingStars } from './Balance/whirlingStars'
-import { potentEnchantments } from './Balance/potentEnchantements'
 import { incarnation } from './Balance/incarnation'
 import { dreamstate } from './Resto/dreamstate'
 import { tearDownTheMighty } from './Feral/tearDownTheMighty'
@@ -10,6 +9,7 @@ import { ashamanesGuidance } from './Feral/ashamanesGuidance'
 import { heartOfTheLion } from './Feral/heartOfTheLion'
 import { cenariusGuidance } from './Resto/cenariusGuidance'
 import { elunesGuidance } from './Balance/elunesGuidance'
+import { sculptTheStars } from './Balance/sculptTheStars'
 
 export const bindings: TalentBindings[] = [
   {
@@ -68,21 +68,20 @@ export const bindings: TalentBindings[] = [
     handler: whirlingStars,
     label: 'Whirling Stars',
     description: {
-      balance: 'Celestial Alignment gains 2 charges and its cooldown is reduced by 100 seconds.',
+      balance: 'Celestial Alignment gains 2 charges and its cooldown is reduced by 60 seconds.',
     },
     specs: ['balance'],
   },
   {
-    id: Talents.PotentEnchantments,
-    spellId: 429420,
-    affectedSpells: [194223],
-    handler: potentEnchantments,
-    label: 'Potent Enchantments',
+    id: Talents.SculptTheStars,
+    spellId: 1240188,
+    affectedSpells: [1239669],
+    handler: sculptTheStars,
+    label: 'Sculpt the Stars',
     description: {
-      balance: 'Whirling Stars CD reduction is increased by 10 sec.',
-      resto: 'Reforestation increases the duration of Tree of Life by 3 seconds',
+      balance: 'Eclipse cooldown reduced by 2 sec.',
     },
-    specs: ['balance', 'resto'],
+    specs: ['balance'],
   },
   {
     id: Talents.Dreamstate,

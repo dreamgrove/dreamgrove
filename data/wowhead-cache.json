@@ -3176,5 +3176,10 @@
     "display": "Perfectly-Honed Instincts",
     "timestamp": 1773702515606,
     "icon": "ability_druid_tigersroar"
+  },
+  "spell-1240188": {
+    "display": "Sculpt the Stars",
+    "timestamp": 1773538293734,
+    "icon": "ability_druid_eclipseorange"
   }
 }

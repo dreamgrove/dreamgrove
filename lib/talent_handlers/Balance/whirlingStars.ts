@@ -16,7 +16,7 @@ export const whirlingStars: GlobalAction = (event, queue, state, spells) => {
     spells.forEach((spell) => {
       if (spell.spellId === 194223) {
         //If Celestial Alignment
-        spell.cooldown = 100
+        spell.cooldown -= 60
         spell.charges = 2
         spell.effect_duration *= 0.8
       }
