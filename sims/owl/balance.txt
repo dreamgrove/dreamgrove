@@ -110,7 +110,8 @@ actions.ec_st+=/new_moon,if=astral_power.deficit>energize_amount
 actions.ec_st+=/half_moon,if=astral_power.deficit>energize_amount
 actions.ec_st+=/full_moon,if=astral_power.deficit>energize_amount
 actions.ec_st+=/wild_mushroom,if=buff.eclipse_solar.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains
-actions.ec_st+=/starfire
+actions.ec_st+=/starfire,if=!variable.eclipse_down
+actions.ec_st+=/wrath,if=variable.eclipse_down
 
 #---------------  KEEPER OF THE GROVE ST ---------------
 
