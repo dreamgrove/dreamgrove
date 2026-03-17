@@ -71,13 +71,12 @@ When reading the priority lists below, you should not think of these as steps to
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - [*FoEKOTG] Use !Fury of Elune! before using !Force of Nature!.
+- Use !Eclipse! if you are currently sitting on 2 charges.
 - Use !Force of Nature! if any of the following conditions is true:
-  - [*ConvokeKOTG] You have 2 charges of !194223|CA! and the cooldown on !Convoke the Spirits! is less than 3 GCD's.
-  - [*ConvokeKOTG&&CONTROL] The cooldown of !Convoke the Spirits! is longer than 25 seconds.
-  - [*ConvokeKOTG&&~CONTROL] The cooldown of !Convoke the Spirits! is longer than 10 seconds.
-  - [*~ConvokeKOTG] You have less than 2 charges on !Eclipse! and the !Ascendant Stars! buff is not up.
+  - You have 2 charges of !194223|CA!/!102560|Incarnation! and !Ascendant Stars! is down.
+  - Your next cast would be !Eclipse! or you are currently in !Eclipse! and the remaining duration is more than 10 seconds.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if your previous cast was !Force of Nature!.
-- [*ConvokeKOTG] Use !Convoke the Spirits! if you are below 40 !Astral Power! and any of the following are true:
+- [*ConvokeKOTG] Use !Convoke the Spirits! if you are below 40 Astral Power and any of the following are true:
   - You just used !194223|CA!/!102560|Incarnation!.
   - !Convoke the Spirits! will be available before !194223|CA!/!102560|Incarnation! comes off cooldown.
 - Enter !Solar Eclipse! if any of the following conditions is true:
@@ -90,7 +89,7 @@ When reading the priority lists below, you should not think of these as steps to
   - You can finish the cast before your current Eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
 - Use !Starsurge! if any of the following conditions is true:
-  - You are about to overcap on !Astral Power!.
+  - You are about to overcap on Astral Power.
   - You need to move.
   - The !Ascendant Stars! buff is up.
   - [*CosmosKOTG&&RattleKOTG] You have a !Touch the Cosmos! proc.
@@ -109,7 +108,7 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Use !Moonfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if all the following conditions are true:
-  - You're not in !Eclipse!
+  - You're not in !Eclipse!.
   - [*FoEEC] !Fury of Elune! is not on cooldown.
 - Use !Starfire! if you have an !Ascendant Fires! proc.
 - Use !Lunar Eclipse! if you are currently not in an !Eclipse!.
@@ -158,7 +157,7 @@ When reading the priority lists below, you should not think of these as steps to
   - You just used !Force of Nature! and !194223|CA!/!102560|Incarnation! is not available.
 - [*Fury of EluneKAOE] Use !Fury of Elune!.
 - Use !Starfall! if one of the following conditions is met:
-  - You are about to overcap on !Astral Power!.
+  - You are about to overcap on Astral Power.
   - [*StarweaverKAOE] You have a !393942|Starweaver's Warp! proc.
   - [*Touch the CosmosKAOE] You have a !450356|Touch the Cosmos! proc.
 - [*Wild MushroomKAOE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active on your target.
@@ -172,6 +171,41 @@ When reading the priority lists below, you should not think of these as steps to
 - [*StarweaverKAOE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
 - Use !Starfire! to spend the !Ascendant Fires! buff or when you are in !Lunar Eclipse!.
 - Use !Wrath! in !Solar Eclipse!.
+</HeroTalentsHeader>
+
+<HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
+<Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoEEC"/>
+<Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoEE"/>
+<Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
+<Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
+<Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
+<Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of NatureEC"/>
+<Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
+<Checkbox isIcon id="EC 4pc" spellId={1236989} name="Gathering Moonlight" defaultCheck/>
+
+- Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
+- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Start spreading !Moonfire! while the tank is gathering mobs.
+- Use !Starfall! if you would overcap Astral Power with your next cast and you're not casting !194223|CA!/!102560|Incarnation! next.
+- [*Fury of EluneECAoE] Use !Fury of Elune! if it's available the global before !194223|CA!/!102560|Incarnation!.
+- Use !194223|CA!/!102560|Incarnation!.
+- Enter !Lunar Eclipse! if you are currently not in an !Eclipse!.
+- [*Fury of EluneECAoE] Use !Fury of Elune!.
+- [*Wild MushroomECAoE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active.
+- Use !Starfall! if one of the following conditions is met:
+  - !Starlord! is below 3 stacks.
+  - [*StarweaverECAoE] You have a !393942|Starweaver's Warp! proc.
+  - [*Touch the CosmosECAoE] You have a !450356|Touch the Cosmos! proc.
+- [*New MoonECAoE] Use !Full Moon! if all of the following conditions are met:
+  - You will not overcap on AP.
+  - You can finish the cast before your current eclipse ends.
+  - You are in CA/Inc or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 10 seconds.
+- [*New MoonECAoE] Use !New Moon! if you will not overcap on AP.
+- [*New MoonECAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
+- [*Convoke the SpiritsECAoE] Use !Convoke the Spirits! if you are fighting less than 7 targets and !Umbral Embrace! is not up.
+- [*StarweaverECAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
+- [*Force of NatureECAoE] Use !248280|Force of Nature! if you will not overcap on AP.
+- Use !Starfire!.
+
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
