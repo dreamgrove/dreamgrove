@@ -46,3 +46,6 @@ race=worgen
 
 copy="Kul Tiran"
 race=kul_tiran
+
+copy="haranir"
+race=haranir
