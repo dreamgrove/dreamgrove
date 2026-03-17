@@ -67,9 +67,9 @@ Those of you looking into Druid of the Claw specifically will come across these 
 <Checkbox isIcon id="Dotc_Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="Dotc" />
 <Checkbox isIcon id="Dotc_Harnessed Rage" spellId={1253035} name="Harnessed Rage" defaultCheck />
 <Checkbox isIcon id="Dotc_Killing Blow" spellId={1252994} name="Killing Blow" defaultCheck />
+<Checkbox isIcon id="Dotc_Bristling Fur" spellId={155835} name="Bristling Fur" defaultCheck />
 <Checkbox isIcon id="Dotc_Sundering Roar" spellId={1253799} name="Sundering Roar" />
 <Checkbox isIcon id="Dotc_Wildpower Surge" spellId={441691} name="Wildpower Surge (Ripweaving)" />
-<Checkbox isIcon id="Dotc_Catweaving" spellId={768} name="Full Catweaving" />
 
 <Collapsible title="Pre-Combat">
 
@@ -103,51 +103,32 @@ Those of you looking into Druid of the Claw specifically will come across these 
 
 <Collapsible title="Single Target Rotation">
 
-- Press !441605|Ravage!
-- Press !Thrash! if not at max stacks of the debuff or if it is about to expire 
-- [*~Dotc_Catweaving] Press !Moonfire! if the dot completely falls off
-- [*Dotc_Heart of the Wild&&Dotc_Wildpower Surge] Press !Heart of the Wild! if you have 6 Feline Potential stacks
-- [*Dotc_Wildpower Surge] If at 6 stacks of Feline Potential then:
-	- [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
-        	- !Maul! > !Rake! > !Rip! > !Convoke the Spirits! > !33917|Mangle!
-	- [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
-        	- !Maul! > !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-	- [*~Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] !Maul! > !Rake! > !Rip! > !33917|Mangle! 
-	- [*Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then simply skip it and start the appropriate sequence from the !Rake! cast
-	- [*~Dotc_Convoke the Spirits&&Dotc_Tooth and Claw] If you do not have the rage to cast !Maul! at the start of this sequence then cast !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-	- [*Dotc_Tooth and Claw] If you still have more than 40 rage after using the !Maul! in this sequence then try to dump rage via ironfur before using !Rake! since ironfur is off the GCD.
-	- [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is** available and ready to use then:
- 		- Dump any available rage into !Ironfur! then !Rake! > !Convoke the Spirits! > !Rip! > !33917|Mangle!
-	- [*Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] If !Convoke the Spirits! **is not** available and ready to use then:
-		- Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-	- [*~Dotc_Convoke the Spirits&&~Dotc_Tooth and Claw] Dump any available rage into !Ironfur! then !Rake! > !Rip! > !Shred! (until !33917|Mangle! is available) > !33917|Mangle!
-	- If !Rake! is already active and not within pandemic then replace !Rake! with !Shred! in the above cast sequence
-- [*Dotc_Heart of the Wild&&~Dotc_Wildpower Surge] Press !Heart of the Wild!
-- [*Dotc_Lunar Beam] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*Dotc_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*Dotc_Convoke the Spirits&&~Dotc_Wildpower Surge] Press !Convoke the Spirits! if available
-- [*Dotcation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
-- [*~Dotcation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
-- [*Dotc_Wildpower Surge] Press !33917|Mangle! if at < 6 stacks of Feline Potential
-- [*Dotc_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw! or if !Tooth and Claw! is about to expire
-- [*Dotc_Vicious Cycle] Press !Maul! if at 3 stacks of !372015|Vicious Cycle! or if !372015|Vicious Cycle! is about to expire
-- [*Dotc_Catweaving] Whilst in !Cat Form! **without having Feline Potential (if talented) ready to empower your next finisher**, apply the following priority list:
-	- Press !33917|Mangle! if it becomes available
-	- Press !Rip! if:
-		- You are at 3+ combo points
-		- [*~Dotc_Wildpower Surge] if !Rip! is not currently active on your target or a !Rip! is in pandemic.
-		- [*Dotc_Wildpower Surge] if !Rip! is not currently active on your target or a !Rip! that was not empowered by !Wildpower Surge! is in pandemic.
-			- [*Dotc_Wildpower Surge] **Never** overwrite an empowered !Rip! with a non-empowered !Rip!
-	- Press !Ferocious Bite! if you are at 4+ combo points and !Rip! is already active on your target
-	- Press !Rake! if the dot is not active or it enters pandemic
-	- Press !Shred!
-- [*Dotc_Catweaving&&Dotc_Wildpower Surge] Press !Rake! to enter !Cat Form! if:
-	- Press !Rake! if !Rake! is not currently active on the target or if it is in pandemic.
-- [*~Dotc_Wildpower Surge] Press !33917|Mangle!
-- Press !Thrash!
-- [*Dotc_Catweaving&&Dotc_Wildpower Surge] Press !Shred! to enter cat form if:
-	- !Rake! is currently active on the target and **not** in pandemic.
-- Press !Swipe!
+- [*Dotc_Killing Blow] Press !441605|Ravage! if available and above 60 rage
+- [*~Dotc_Killing Blow] Press !441605|Ravage! if available
+- [*Dotc_Red Moon] Press !Mangle! if available and !Red Moon! is on the target
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire
+- [*~Dotc_Red Moon] Press !Moonfire! if the dot completely falls off
+- Press !Maul! if you're above 100 rage to not overcap
+- [*Dotc_Lunar Beam] Press !Lunar Beam!
+	- [*Dotc_Incarnation: Guardian of Ursoc] You can hold every second use of this to sync with !Incarnation: Guardian of Ursoc!
+	- [*~Dotc_Incarnation: Guardian of Ursoc] You will want to sync every third use of this to sync with !Berserk!
+- [*Dotc_Heart of the Wild] Press !Rake! to shift into !Cat Form! 
+- [*Dotc_Heart of the Wild] Press !Heart of the Wild! and then immediately !Mangle! to get back to !Bear Form!
+	- If you have no !Mangle! charges it is a dps gain to manually switch back to !Bear Form!
+- [*Dotc_Sundering Roar] Press !Sundering Roar!
+- [*Dotc_Convoke the Spirits] Press !Convoke the Spirits!
+- [*Dotc_Bristling Fur] Cast !Bristling Fur! if the following are true:
+	- Both !Mangle! and !Thrash! are on cooldown
+	- !Ravage! is not available
+	- You are taking damage and will be for the 8 second duration
+- [*Dotc_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*~Dotc_Incarnation: Guardian of Ursoc] Press !Berserk!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- Press !Mangle! if available
+- Press !Thrash! if available
+- [*~Dotc_Red Moon] Press !Moonfire! if you have a !Galactic Guardian! proc
+- Press !Swipe! if you have nothing else to press
 
 </Collapsible>
 
