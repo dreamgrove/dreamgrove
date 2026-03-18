@@ -74,6 +74,10 @@ module.exports = {
               },
               code: { color: theme('colors.primary.400') },
             },
+            /* Wowhead inline links should inherit flow */
+            'a.inline': {
+              textDecoration: 'none',
+            },
             'h1,h2': {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
@@ -107,6 +111,27 @@ module.exports = {
               fontSize: '1.4rem',
               marginBottom: '15px',
               position: 'relative',
+            },
+            /* Consistent list spacing */
+            'ul > li': {
+              paddingLeft: '0.25em',
+            },
+            'ul > li::marker': {
+              color: theme('colors.primary.500'),
+            },
+            'ol > li::marker': {
+              color: theme('colors.primary.500'),
+            },
+            /* Consistent paragraph spacing inside list items */
+            'li > p': {
+              marginTop: '0.25em',
+              marginBottom: '0.25em',
+            },
+            /* Blockquote styling */
+            blockquote: {
+              borderLeftColor: theme('colors.primary.500'),
+              borderLeftWidth: '3px',
+              fontStyle: 'normal',
             },
           },
         },

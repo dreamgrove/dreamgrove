@@ -34,10 +34,10 @@ export default function HeroTalents({ title, id, children }: HeroTalentsHeaderPr
 
   return (
     <div
-      className={`talentTree mt-2 mb-2 grid rounded-md border-2 ${borderStyle()} ${backgroundColorStyle()}`}
+      className={`talentTree mt-3 mb-3 grid rounded-lg border-2 ${borderStyle()} ${backgroundColorStyle()}`}
     >
       <div
-        className="flex cursor-pointer justify-between p-3 transition-colors duration-500 md:p-4"
+        className="group flex cursor-pointer items-center justify-between p-3 transition-colors duration-200 md:p-4"
         onClick={() => setIsCollapsed((prev) => !prev)}
       >
         <h3
@@ -45,7 +45,9 @@ export default function HeroTalents({ title, id, children }: HeroTalentsHeaderPr
         >
           {title}
         </h3>
-        {arrow}
+        <span className="opacity-60 transition-opacity duration-200 group-hover:opacity-100">
+          {arrow}
+        </span>
       </div>
       <div
         className={`grid transition-[grid-template-rows] duration-300 ease-out ${
@@ -53,7 +55,6 @@ export default function HeroTalents({ title, id, children }: HeroTalentsHeaderPr
         }`}
       >
         <div className="overflow-hidden">
-          {/* Use content if provided, otherwise use children */}
           <div className="px-2 md:px-6">{children}</div>
         </div>
       </div>
