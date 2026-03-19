@@ -60,6 +60,10 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
+            fontFamily: 'var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif',
+            fontSize: '1.05rem',
+            letterSpacing: 'normal',
+            fontOpticalSizing: 'auto',
             hr: {
               marginTop: '2rem',
               marginBottom: '2rem',
@@ -79,11 +83,16 @@ module.exports = {
               textDecoration: 'none',
             },
             'h1,h2': {
+              fontFamily: 'var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif',
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
             },
             h3: {
+              fontFamily: 'var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif',
               fontWeight: '600',
+            },
+            'td, th': {
+              fontVariantNumeric: 'tabular-nums',
             },
             code: {
               color: theme('colors.indigo.500'),
