@@ -1,51 +1,131 @@
 # Paste this below your SimC Addon output
 
-copy=Tauren
-race=tauren
+copy="human"
+race="human"
 
-copy=Troll
-race=troll
+copy="gnome"
+race="gnome"
 
-copy="Highmountain Tauren"
-race=highmountain_tauren
+copy="dwarf"
+race="dwarf"
 
-copy="Zandalari Troll (Akunda)"
-race=zandalari_troll
-zandalari_loa=akunda
+copy="draenei"
+race="draenei"
 
-copy="Zandalari Troll (Bwonsamdi)"
-race=zandalari_troll
-zandalari_loa=bwonsamdi
+copy="worgen"
+race="worgen"
 
-copy="Zandalari Troll (Gonk)"
-race=zandalari_troll
-zandalari_loa=gonk
+copy="orc"
+race="orc"
 
-copy="Zandalari Troll (Kimbul)"
-race=zandalari_troll
-zandalari_loa=kimbul
+copy="troll"
+race="troll"
 
-copy="Zandalari Troll (Kragwa)"
-race=zandalari_troll
-zandalari_loa=kragwa
+copy="blood_elf"
+race="blood_elf"
 
-copy="Zandalari Troll (Pa'ku)"
-race=zandalari_troll
-zandalari_loa=paku
+copy="tauren"
+race="tauren"
 
-copy="Night Elf (Night)"
-race=night_elf
-timeofday=night
+copy="goblin"
+race="goblin"
 
-copy="Night Elf (Day)"
-race=night_elf
-timeofday=day
+copy="undead"
+race="undead"
 
-copy="Worgen"
-race=worgen
+copy="pandaren"
+race="pandaren"
 
-copy="Kul Tiran"
-race=kul_tiran
+copy="void_elf"
+race="void_elf"
+
+copy=lightforged_draenei"
+race="lightforged_draenei"
+
+copy="hightmountain_tauren"
+race="highmountain_tauren"
+
+copy="nightborne"
+race="nightborne"
+
+copy="dark_iron_dwarf"
+race="dark_iron_dwarf"
+
+copy="maghar_orc"
+race="maghar_orc"
+
+copy="zandalari troll akunda"
+race="zandalari_troll"
+zandalari_loa="akunda"
+
+copy="zandalari troll bwonsamdi"
+race="zandalari_troll"
+zandalari_loa="bwonsamdi"
+
+copy="zandalari troll gonk"
+race="zandalari_troll"
+zandalari_loa="gonk"
+
+copy="zandalari troll kimbul"
+race="zandalari_troll"
+zandalari_loa="kimbul"
+
+copy="zandalari troll kragwa"
+race="zandalari_troll"
+zandalari_loa="kragwa"
+
+copy="zandalari troll paku"
+race="zandalari_troll"
+zandalari_loa="paku"
+
+copy="kultiran"
+race="kul_tiran"
+
+copy="vulpera corrosive"
+race="vulpera"
+vulpera_tricks="corrosive"
+
+copy="vulpera flames"
+race="vulpera"
+vulpera_tricks="flames"
+
+copy="vulpera shadows"
+race="vulpera"
+vulpera_tricks="shadows"
+
+copy="vulpera healing"
+race="vulpera"
+vulpera_tricks="healing"
+
+copy="vulpera holy"
+race="vulpera"
+vulpera_tricks="holy"
+
+copy="mechagnome"
+race="mechagnome"
+
+copy="dracthyr"
+race="dracthyr"
+
+copy="earthen amber"
+race="earthen"
+earthen_mineral="amber"
+
+copy="earthen onyx"
+race="earthen"
+earthen_mineral="onyx"
+
+copy="earthen emerald"
+race="earthen"
+earthen_mineral="emerald"
+
+copy="earthen ruby"
+race="earthen"
+earthen_mineral="ruby"
+
+copy="earthen sapphire"
+race="earthen"
+earthen_mineral="sapphire"
 
 copy="haranir"
-race=haranir
+race="haranir_alliance"
