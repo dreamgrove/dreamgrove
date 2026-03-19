@@ -35,22 +35,6 @@
   background-size: cover;
 }
 
-.border-balance {
-  border-color: #184118;
-}
-
-.border-resto {
-  border-color: #4b62be;
-}
-
-.border-generic {
-  border-color: #d57f43;
-}
-
-.border-dotc {
-  border-color: #c41e3a;
-}
-
 .bg-fade-generic {
   background:
     linear-gradient(rgba(73, 44, 23, 0.1), rgba(117, 70, 37, 0.7)),
