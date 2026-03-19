@@ -2,7 +2,7 @@
 title: Balance Druid Compendium
 patch: '12.0'
 draft: false
-authors: ["Gamz, Vinter"]
+authors: ["Gamz", "Vinter"]
 summary: A guide to Balance Druid
 ---
 
@@ -72,7 +72,7 @@ When reading the priority lists below, you should not think of these as steps to
 - Enter !Solar Eclipse! if any of the following conditions is true:
   - You are currently not in an !Eclipse! and you have enough resources to spend all !Ascendant Stars! procs in 3 GCD's.
   - You are not in an !Eclipse! and you just used !Force of Nature! and !194223|CA!/!102560|Incarnation! is not available.
-- Use !Starfire! if you have an !Ascendant Fires! proc and you are insice !194223|CA!/!102560|Incarnation!.
+- Use !Starfire! if you have an !Ascendant Fires! proc and you are inside !194223|CA!/!102560|Incarnation!.
 - [*StarweaverKOTG] Cast !Starfall! if you have a !Starweaver's Warp! proc.
 - [*MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are true:
   - You will not overcap on AP.
@@ -92,7 +92,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="FoEEC" spellId={202770} name="Fury of Elune" defaultCheck radio="MoonEC" /> 
 <Checkbox isIcon id="ConvokeEC" spellId={391528} name="Convoke the Spirits" />
 <Checkbox isIcon id="CosmosEC" spellId={450356} name="Touch the Cosmos" defaultCheck />
-<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" radio="StarweaverEC" defaultCheck /> 
+<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" radio="RattleEC" defaultCheck />
 <Checkbox isIcon id="RattleEC" spellId={393954} name="Rattle the Stars" radio="RattleEC" /> 
 
 - Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
@@ -131,7 +131,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
-- Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Remember !205636|Force of Nature! also spreads !Moonfire!
+- Use !Moonfire! if all of the following conditions are met. Remember !205636|Force of Nature! also spreads !Moonfire!
   - The target will live for at least 8s+1s per target that !Starfire! can hit.
   - You will not overcap on AP.
 - Use !248280|Force of Nature! if one of the following conditions is met:
@@ -164,7 +164,7 @@ When reading the priority lists below, you should not think of these as steps to
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
 <Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoEEC"/>
-<Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoEE"/>
+<Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoEEC"/>
 <Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
 <Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
 <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
@@ -203,8 +203,8 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="Keeper Fillers" spellId={205636} name="Keeper" defaultCheck radio="Fillers"/>
 <Checkbox isIcon id="EC Fillers" spellId={202770} name="Elune's Chosen" radio="Fillers" />
 
-- [*Keeper Fillers] Enter !Solar Eclipse! up to 3 targets.
-- [*Keeper Fillers] Enter !Lunar Eclipse! on 3+ targets.
+- [*Keeper Fillers] Enter !Solar Eclipse! on less than 4 targets.
+- [*Keeper Fillers] Enter !Lunar Eclipse! on 4+ targets.
 - [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
 - [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
 - [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! on all target counts.
@@ -228,7 +228,7 @@ When playing !Elune's Chosen! you gain more freedom in using your cooldowns and 
 > [!NOTE]
 > These builds are templates that will serve you well in most cases. Keep in mind that talent choices can be situational and there are some optional talents that can be taken based on the fight or your personal preference.
 
-Going into Season 1, there are multiple builds all simming close to each other, and which one you choose will mostly come down to what damage profile fits the best. The builds involving !Starweaver! are generally better on fights with multiple targets, and the ones with !Rattle the Stars! is better on single target.
+Going into Season 1, there are multiple builds all simming close to each other, and which one you choose will mostly come down to what damage profile fits the best. The builds involving !Starweaver! are generally better on fights with multiple targets, and the ones with !Rattle the Stars! are better on single target.
 
 Keep in mind it is still very early in the season and recommended builds will change depending on tuning. The builds below will be updated as people progress the raid and there is more data.
 
@@ -452,7 +452,7 @@ Later on in the season you should have this crafted on either a Belt or a Wrist 
 |  | [Locus-Walker's Ribbon](https://www.wowhead.com/item=249809/locus-walkers-ribbon?hero=23&ilvl=289&spec=102) | Similar to Eye of Kezan from Liberation of Undermine. Stacking Intellect buff that gets stronger later in the fight.|
 | **A Tier** | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?bonus=40:13335:12806&hero=23&ilvl=289&spec=102) | Mastery stat stick with a Primary Stat proc.  |
 |  | [Wraps of Cosmic Madness](https://www.wowhead.com/item=249340/wraps-of-cosmic-madness?class=11&hero=23&ilvl=289&spec=102)  | 2 minute cooldown, 2 second channel scaling with haste. Use this before entering your cooldowns to not waste GCDs inside them. Cooldown reduced by 1 minute whenever someone in your raid dies. |
-|  | [Shadow of the Empyrean Realm](https://www.wowhead.com/item=249810/shadow-of-the-empyrean-requiem?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick with a random damage proc. Gives a Haste buff whenever it procs on someone below 35% health.|
+|  | [Shadow of the Empyrean Requiem](https://www.wowhead.com/item=249810/shadow-of-the-empyrean-requiem?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick with a random damage proc. Gives a Haste buff whenever it procs on someone below 35% health.|
 |  | [Soulcatcher's Charm](https://www.wowhead.com/item=250223/soulcatchers-charm?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick with a random damage proc. |
 |  | [Heart of Wind](https://www.wowhead.com/item=250256/heart-of-wind?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick. Random haste proc. |
 | **B Tier** | [Emberwing Feather](https://www.wowhead.com/item=250144/emberwing-feather?class=11&hero=23&ilvl=289&spec=102)  |

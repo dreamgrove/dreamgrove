@@ -45,13 +45,7 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                     <p
                       className={`${translator ? '' : 'lg:flex lg:flex-col lg:items-start'} text-lg font-medium text-gray-900 lg:justify-self-start dark:text-gray-100`}
                     >
-                      Written by:{' '}
-                      {authorDetails.map((author, index) => (
-                        <span key={author} className="text-[#1a9c82]">
-                          {index > 0 && ', '}
-                          {author}
-                        </span>
-                      ))}
+                      Written by: <span className="text-[#1a9c82]">{authorDetails.join(', ')}</span>
                     </p>
                     {translator && translator !== '' && (
                       <p className="text-lg font-medium text-gray-900 lg:text-left dark:text-gray-100">
