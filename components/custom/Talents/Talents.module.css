@@ -29,7 +29,7 @@
   opacity: 1;
 }
 
-/* Fading border container */
+/* Fading border container — matches Collapsible's neutral lines */
 .borderContainer {
   position: relative;
   border-top: none !important;
@@ -42,9 +42,15 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  height: 1px;
   z-index: 1;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(120, 120, 120, 0.35) 8%,
+    rgba(120, 120, 120, 0.35) 92%,
+    transparent
+  );
 }
 
 .borderContainer::before {
@@ -58,5 +64,11 @@
 /* Dark mode support */
 :global(.dark) .borderContainer::before,
 :global(.dark) .borderContainer::after {
-  background: linear-gradient(to right, transparent, #636363 5%, #636363 95%, transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(140, 140, 140, 0.3) 8%,
+    rgba(140, 140, 140, 0.3) 92%,
+    transparent
+  );
 }

@@ -41,7 +41,7 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
                     noMargin
                   />
                   {spell.count > 1 && (
-                    <div className="absolute -right-2 -bottom-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-red-600 text-xs font-bold text-white shadow-md">
+                    <div className="absolute -right-2 -bottom-2 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-gray-700 text-xs font-bold text-white shadow-md dark:border-gray-900 dark:bg-gray-600">
                       x{spell.count}
                     </div>
                   )}
@@ -49,7 +49,9 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
               </div>
 
               {index < processedSpells.length - 1 && (
-                <div className="mx-[-7px] h-[2px] w-[10px] bg-gray-400 sm:mx-[-8px] sm:w-[25px] md:mx-[-10px] md:w-[70px] lg:mx-[-12px] lg:w-[55px]" />
+                <div className="mx-[-7px] sm:mx-[-8px] md:mx-[-10px] lg:mx-[-12px]">
+                  <div className="h-[2px] w-[10px] bg-gray-400/50 sm:w-[25px] md:w-[70px] lg:w-[55px] dark:bg-gray-500/40" />
+                </div>
               )}
             </React.Fragment>
           ))}
