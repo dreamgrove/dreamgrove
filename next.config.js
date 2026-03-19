@@ -73,6 +73,10 @@ module.exports = () => {
           protocol: 'https',
           hostname: 'avatars.githubusercontent.com',
         },
+        {
+          protocol: 'https',
+          hostname: 'pub-d2aa50c9211b48688cd59b52dc89ab42.r2.dev',
+        },
       ],
       formats: ['image/webp'],
       deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
