@@ -220,7 +220,7 @@ div.markdown-alert-caution {
 
 td .wowhead-icon-wrap,
 th .wowhead-icon-wrap {
-  transform: translateY(-0.05em);
+  transform: translateY(-0.1em);
 }
 
 /* Wowhead inline link styling */
