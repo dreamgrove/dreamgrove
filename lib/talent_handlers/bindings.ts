@@ -3,10 +3,13 @@ import { earlySpring } from './Balance/earlySpring'
 import { controlOfTheDream } from './Balance/controlOfTheDream'
 import { whirlingStars } from './Balance/whirlingStars'
 import { incarnation } from './Balance/incarnation'
+import { orbitalStrike } from './Balance/orbitalStrike'
+import { improvedEclipse } from './Balance/improvedEclipse'
 import { dreamstate } from './Resto/dreamstate'
-import { tearDownTheMighty } from './Feral/tearDownTheMighty'
 import { ashamanesGuidance } from './Feral/ashamanesGuidance'
 import { heartOfTheLion } from './Feral/heartOfTheLion'
+import { predator } from './Feral/predator'
+import { focusedFrenzy } from './Feral/focusedFrenzy'
 import { cenariusGuidance } from './Resto/cenariusGuidance'
 import { elunesGuidance } from './Balance/elunesGuidance'
 import { sculptTheStars } from './Balance/sculptTheStars'
@@ -71,6 +74,7 @@ export const bindings: TalentBindings[] = [
       balance: 'Celestial Alignment gains 2 charges and its cooldown is reduced by 60 seconds.',
     },
     specs: ['balance'],
+    onByDefault: true,
   },
   {
     id: Talents.SculptTheStars,
@@ -82,6 +86,30 @@ export const bindings: TalentBindings[] = [
       balance: 'Eclipse cooldown reduced by 2 sec.',
     },
     specs: ['balance'],
+  },
+  {
+    id: Talents.OrbitalStrike,
+    spellId: 390378,
+    affectedSpells: [194223],
+    handler: orbitalStrike,
+    label: 'Orbital Strike',
+    description: {
+      balance:
+        'Reduces the cooldown of Incarnation: Chosen of Elune / Celestial Alignment by 60 sec.',
+    },
+    specs: ['balance'],
+  },
+  {
+    id: Talents.ImprovedEclipse,
+    spellId: 1240906,
+    affectedSpells: [1239669],
+    handler: improvedEclipse,
+    label: 'Improved Eclipse',
+    description: {
+      balance: 'Eclipse has one additional charge.',
+    },
+    specs: ['balance'],
+    onByDefault: true,
   },
   {
     id: Talents.Dreamstate,
@@ -107,13 +135,25 @@ export const bindings: TalentBindings[] = [
     specs: ['feral'],
   },
   {
-    id: Talents.TearDownTheMighty,
-    spellId: 441846,
-    affectedSpells: [274837],
-    handler: tearDownTheMighty,
-    label: 'Tear Down the Mighty',
+    id: Talents.Predator,
+    spellId: 202021,
+    affectedSpells: [5217],
+    handler: predator,
+    label: 'Predator',
     description: {
-      feral: 'Feral Frenzy cooldown reduced by 10 sec.',
+      feral: "Tiger's Fury lasts 5 additional seconds.",
+    },
+    specs: ['feral'],
+    onByDefault: true,
+  },
+  {
+    id: Talents.FocusedFrenzy,
+    spellId: 1244544,
+    affectedSpells: [274837],
+    handler: focusedFrenzy,
+    label: 'Focused Frenzy',
+    description: {
+      feral: "Feral Frenzy's cooldown reduced by 15 sec and its damage is increased by 20%.",
     },
     specs: ['feral'],
   },

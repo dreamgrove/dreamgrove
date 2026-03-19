@@ -23,6 +23,7 @@ export type TalentBindings = {
   label: string
   description: Record<string, string>
   specs: string[]
+  onByDefault?: boolean
 }
 
 //Enum for the type of event that can happen on the timeline
@@ -46,12 +47,15 @@ export enum Talents {
   WhirlingStars = 'whirling_stars',
   Incarnation = 'incarnation',
   Dreamstate = 'dreamstate',
-  TearDownTheMighty = 'tear_down_the_mighty',
   AshamanesGuidance = 'ashamanes_guidance',
   HeartOfTheLion = 'heart_of_the_lion',
   ElunesGuidance = 'elunes_guidance',
   CenariusGuidance = 'cenarius_guidance',
   SculptTheStars = 'sculpt_the_stars',
+  OrbitalStrike = 'orbital_strike',
+  ImprovedEclipse = 'improved_eclipse',
+  Predator = 'predator',
+  FocusedFrenzy = 'focused_frenzy',
 }
 // Event type for the event queue
 export interface TimelineEvent<T extends EventType> {

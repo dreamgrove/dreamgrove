@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
 
 interface TalentCardProps {
@@ -9,9 +9,9 @@ interface TalentCardProps {
 }
 
 const TalentCard = ({ id, name = '', description = '', prerenderedIcon }: TalentCardProps) => {
-  const { toggleTalent } = useTimelineContext()
+  const { toggleTalent, activeTalents } = useTimelineContext()
   const childIcon = prerenderedIcon
-  const [checked, setChecked] = useState(false)
+  const checked = activeTalents.includes(id)
 
   const stateIndicator = (
     <div className="relative w-7">
@@ -32,9 +32,7 @@ const TalentCard = ({ id, name = '', description = '', prerenderedIcon }: Talent
   )
 
   const handleToggle = useCallback(() => {
-    const newValue = !checked
-    toggleTalent(id, newValue)
-    setChecked(newValue)
+    toggleTalent(id, !checked)
   }, [checked, id, toggleTalent])
 
   return (

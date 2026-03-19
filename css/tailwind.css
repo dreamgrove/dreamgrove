@@ -223,6 +223,11 @@ th .wowhead-icon-wrap {
   transform: translateY(-0.1em);
 }
 
+/* In timeline planner, icons are flex-centered — no vertical nudge needed */
+.timeline .wowhead-icon-wrap {
+  transform: none;
+}
+
 /* Wowhead inline link styling */
 .wowhead-link {
   line-height: inherit;

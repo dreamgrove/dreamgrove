@@ -24,6 +24,7 @@ export interface TimelineContextType {
   deleteCustomSpell: (spellId: number) => void
   getSpellsForSpec: (spec: string) => SpellInfo[]
   activeTalents: string[]
+  setActiveTalents: React.Dispatch<React.SetStateAction<string[]>>
   toggleTalent: (id: string, isSelected: boolean) => void
   availableTalents: TalentBindings[]
   keysToTalents: Map<string, Set<GlobalAction>>
@@ -55,7 +56,7 @@ export function TimelineProvider({
   const { localSpells, createCustomSpell, deleteCustomSpell, getSpellsForSpec } =
     useLocalSpells(spells)
 
-  const { activeTalents, toggleTalent, availableTalents } = useActiveBindings(
+  const { activeTalents, setActiveTalents, toggleTalent, availableTalents } = useActiveBindings(
     setInputEvents,
     currentSpec
   )
@@ -86,6 +87,7 @@ export function TimelineProvider({
     deleteCustomSpell,
     getSpellsForSpec,
     activeTalents,
+    setActiveTalents,
     toggleTalent,
     availableTalents,
     keysToTalents,

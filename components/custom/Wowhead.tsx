@@ -119,7 +119,7 @@ export default async function Wowhead({
   ) : (
     <a
       href={whUrl}
-      className={`${context} wowhead-link decoration-2 q${quality} inline-flex items-baseline gap-0.5`}
+      className={`${context} wowhead-link decoration-2 q${quality} inline-flex items-${align} gap-0.5`}
       style={{ color: textColor != '' ? textColor : linkColor }}
     >
       {icon}
