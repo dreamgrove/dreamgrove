@@ -54,7 +54,7 @@ Pandemic is an in-game mechanic where most damage over time (DoT) or heal over t
 > Currently neither Ripweaving nor Catweaving are a dps gain so they're not really worth doing unless you just enjoy the rotation more.
 > It is always assumed that if you're Ripweaving or Catweaving that you have !Fluid Form! talented and are using it as your method to change forms.
 
-Those of you looking into Druid of the Claw specifically will come across these terms. Catweaving is a fairly old term in WoW but with the introduction of some key hero talents in The War Within it has evolved into something very different from what it used to be. The current meaning of these terms roughly boil down to:
+Those of you looking into Druid of the Claw specifically may come across these terms. Catweaving is a fairly old term in WoW but with the introduction of some key hero talents in The War Within it has evolved into something different from what it used to be. The current meaning of these terms roughly boil down to:
 - **Ripweaving** - This is a simplified form of Catweaving. It involves using a very standard Guardian rotation the vast majority of the timne but when you reach six stacks of Feline Potential (from the DotC node !Wildpower Surge!) you will quickly enter !Cat Form! (ideally, using !Fluid Form!), use the empowered finisher and then quickly return to !Bear Form!.
 - **Catweaving** This is the more advanced and modernised version of Catweaving and no longer does it involve "just using cat stuff when offtanking". Modern Catweaving abuses !Fluid Form!, !Persistence! and !Empowered Shapeshifting! to frequently shift in and out of !Cat Form! whilst both tanking and offtanking, allowing us to replace our weak filler spells (primarily Swipe) with stronger Cat abilities (!Rake!, !Shred!, !Rip! and !Ferocious Bite!).
 
@@ -68,6 +68,7 @@ Those of you looking into Druid of the Claw specifically will come across these 
 <Checkbox isIcon id="Dotc_Harnessed Rage" spellId={1253035} name="Harnessed Rage" defaultCheck />
 <Checkbox isIcon id="Dotc_Killing Blow" spellId={1252994} name="Killing Blow" defaultCheck />
 <Checkbox isIcon id="Dotc_Bristling Fur" spellId={155835} name="Bristling Fur" defaultCheck />
+<Checkbox isIcon id="Dotc_Galactic Guardian" spellId={203964} name="Galactic Guardian" defaultCheck />
 <Checkbox isIcon id="Dotc_Raze" spellId={400254} name="Raze" defaultCheck />
 <Checkbox isIcon id="Dotc_Sundering Roar" spellId={1253799} name="Sundering Roar" />
 <Checkbox isIcon id="Dotc_Wildpower Surge" spellId={441691} name="Wildpower Surge (Ripweaving)" />
@@ -78,6 +79,9 @@ Those of you looking into Druid of the Claw specifically will come across these 
 
 - Make sure the duration of your Flask, Food and Rune buffs will last for the entire encounter.
 - Enter !Bear Form! a few seconds before you pull
+- [*~Dotc_Tanking] Enter !Prowl! a few seconds before pull
+- [*~Dotc_Tanking] !Rake! the boss from stealth as your co-tank pulls
+- [*~Dotc_Tanking] Use !Mangle! to return to !Bear Form!
 - [*Dotc_Lunar Beam] Press !Growl! and !Lunar Beam! to pull
 - [*~Dotc_Lunar Beam&&~Dotc_Red Moon] Press !Growl! and !Moonfire! to pull
 - [*Dotc_Heart of the Wild] Press !Rake! to enter !Cat Form!
@@ -118,6 +122,11 @@ Those of you looking into Druid of the Claw specifically will come across these 
 - [*Dotc_Heart of the Wild] Press !Rake! to shift into !Cat Form! 
 - [*Dotc_Heart of the Wild] Press !Heart of the Wild! and then immediately !Mangle! to get back to !Bear Form!
 	- If you have no !Mangle! charges it is a dps gain to manually switch back to !Bear Form!
+- [*Dotc_Wildpower Surge] When you reach six stacks of !Feline Potential! then follow this sequence:
+	- Press !Maul! to dump your rage. If you have 40+ left over then you can also !Ironfur!
+	- Press !Rake! to shift into !Cat Form!
+	- Press !Rip! to consume the combo points granted by !Wildpower Surge! and put an empowered !Rip! on the target
+	- Press !Mangle! to return to !Bear Form! and resume your rotation
 - [*Dotc_Sundering Roar] Press !Sundering Roar!
 - [*Dotc_Convoke the Spirits] Press !Convoke the Spirits!
 - [*Dotc_Bristling Fur] Cast !Bristling Fur! if the following are true:
@@ -131,7 +140,7 @@ Those of you looking into Druid of the Claw specifically will come across these 
 - [*Dotc_Red Moon] Cast !Red Moon!
 - Press !Mangle! if available
 - Press !Thrash! if available
-- [*~Dotc_Red Moon] Press !Moonfire! if you have a !Galactic Guardian! proc
+- [*~Dotc_Red Moon&&Dotc_Galactic Guardian] Press !Moonfire! if you have a !Galactic Guardian! proc
 - Press !Swipe! if you have nothing else to press
 
 </Collapsible>
@@ -165,7 +174,7 @@ Those of you looking into Druid of the Claw specifically will come across these 
 - [*Dotc_Red Moon] Cast !Red Moon!
 - Press !Mangle! if available
 - Press !Thrash! if available
-- [*~Dotc_Red Moon] Press !Moonfire! if you have a !Galactic Guardian! proc
+- [*~Dotc_Red Moon&&Dotc_Galactic Guardian] Press !Moonfire! if you have a !Galactic Guardian! proc
 - Press !Swipe! if you have nothing else to press
 
 </Collapsible>
@@ -201,7 +210,6 @@ Those of you looking into Druid of the Claw specifically will come across these 
 - [*Dotc_Red Moon] Cast !Red Moon!
 - Press !Mangle! if available
 - Press !Thrash! if available
-- [*~Dotc_Red Moon] Press !Moonfire! if you have a !Galactic Guardian! proc
 - Press !Swipe! if you have nothing else to press
 
 </Collapsible>
@@ -221,7 +229,6 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 - [*~Dotc_Killing Blow&&Dotc_Cleave||Dotc_AOE] Press !441605|Ravage! at your priority target if available
 - [*Dotc_Red Moon&&Dotc_ST] Cast !Mangle! if !Red Moon! is on your target
 - [*Dotc_Red Moon&&Dotc_Cleave||Dotc_AOE] Cast !Mangle! if !Red Moon! is on your priority target
-
 - [*Dotc_Lunar Beam&&Dotc_ST] Cast !Lunar Beam! if it becomes available 
 	- [*Dotc_Incarnation: Guardian of Ursoc] Ideally, this would've been pressed before you use !Incarnation: Guartdian of Ursoc! but if it is desyned, it is still worth pressing immediately.
 	- [*~Dotc_Incarnation: Guardian of Ursoc] Ideally, this would've been pressed before you use !Berserk! but if it is desyned, it is still worth pressing immediately.
@@ -293,9 +300,10 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 <Checkbox isIcon id="EC_Convoke the Spirits" spellId={391528} name="Convoke the Spirits" radio="EC" />
 <Checkbox isIcon id="EC_Harnessed Rage" spellId={1253035} name="Harnessed Rage" defaultCheck />
 <Checkbox isIcon id="EC_Killing Blow" spellId={1252994} name="Killing Blow" defaultCheck />
+<Checkbox isIcon id="EC_Bristling Fur" spellId={155835} name="Bristling Fur" defaultCheck />
+<Checkbox isIcon id="EC_Galactic Guardian" spellId={203964} name="Galactic Guardian" defaultCheck />
+<Checkbox isIcon id="EC_Raze" spellId={400254} name="Raze" defaultCheck />
 <Checkbox isIcon id="EC_Sundering Roar" spellId={1253799} name="Sundering Roar" />
-<Checkbox isIcon id="EC_Wildpower Surge" spellId={441691} name="Wildpower Surge (Ripweaving)" />
-<Checkbox isIcon id="EC_Catweaving" spellId={768} name="Full Catweaving" />
 
 <Collapsible title="Pre-Combat">
 
@@ -303,19 +311,29 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 
 - Make sure the duration of your Flask, Food and Rune buffs will last for the entire encounter.
 - Enter !Bear Form! a few seconds before you pull
+- [*~EC_Tanking] Enter !Prowl! a few seconds before pull
+- [*~EC_Tanking] !Rake! the boss from stealth as your co-tank pulls
+- [*~EC_Tanking] Use !Mangle! to return to !Bear Form!
 - [*EC_Lunar Beam] Press !Growl! and !Lunar Beam! to pull
 - [*~EC_Lunar Beam&&~EC_Red Moon] Press !Growl! and !Moonfire! to pull
 - [*EC_Heart of the Wild] Press !Rake! to enter !Cat Form!
+- [*EC_Heart of the Wild] Use your combat potion (usually [Light's Potential](https://www.wowhead.com/item=241308/lights-potential)
 - [*EC_Heart of the Wild] Press !Heart of the Wild!
 - [*EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc!
+	- !Incarnation: Guardian of Ursoc! isn't on the GCD so you can do instantly after !Heart of the Wild! goes on cooldown with no delay
+	- You can freely recast !Wild Guardians! whenever, but lining it up with increased damage windows is always a strong option.
 - [*EC_Heart of the Wild&&~EC_Incarnation: Guardian of Ursoc] Immediately press !Berserk!
-- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Thrash!
+	- !Berserk! isn't on the GCD so you can do instantly after !Heart of the Wild! goes on cooldown with no delay
+	- You can freely recast !Wild Guardians! whenever, but lining it up with increased damage windows is always a strong option.
+- [*~EC_Heart of the Wild] Press !Thrash! to take advantage of the cooldown reset to reach higher !Thrash! stacks faster
 - [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Sundering Roar!
-- [*~EC_Heart of the Wild] Press !Thrash!
-- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Sundering Roar!
-- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Thrash!
-- [*~EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc!
-- [*~EC_Heart of the Wild&&~EC_Incarnation: Guardian of Ursoc] Immediately press !Berserk!
+- [*~EC_Heart of the Wild&&EC_Sundering Roar] Press !Thrash! to take advantage of the cooldown reset to reach higher !Thrash! stacks faster
+- [*~EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc] Immediately press !Incarnation: Guardian of Ursoc! and use your combat potion (usually [Light's Potential](https://www.wowhead.com/item=241308/lights-potential)
+	- !Incarnation: Guardian of Ursoc! isn't on the GCD so you can do instantly after !Heart of the Wild! goes on cooldown with no delay
+	- You can freely recast !Wild Guardians! whenever, but holding lining it up with increased damage windows is always a strong option.
+- [*~EC_Heart of the Wild&&~EC_Incarnation: Guardian of Ursoc] Immediately press !Berserk! and use your combat potion (usually [Light's Potential](https://www.wowhead.com/item=241308/lights-potential)
+	- !Berserk! isn't on the GCD so you can do instantly after !Heart of the Wild! goes on cooldown with no delay
+	- You can freely recast !Wild Guardians! whenever, but lining it up with increased damage windows is always a strong option.
 - Press !Thrash!
 - [*EC_Heart of the Wild&&EC_Incarnation: Guardian of Ursoc&&EC_Red Moon] Presss !Red Moon!
 - Proceed with normal rotation
@@ -324,75 +342,105 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 
 <Collapsible title="Single Target Rotation">
 
-- [*~EC_Thorns of Iron style] Press !Maul! if you will overcap rage
-- [*EC_Thorns of Iron style] Press !Ironfur! if you will overcap rage
-- Press !Moonfire! if the dot completely falls off
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
-- [*EC_Heart of the Wild] Press !Heart of the Wild! if available
-- [*EC_Lunar Beam&&EC_Lunation] Press !Lunar Beam! if available
-- [*EC_Lunar Beam&&~EC_Lunation] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*EC_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*ECation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
-- [*~ECation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
-- [*EC_Convoke the Spirits] Press !Convoke the Spirits! if the following conditions are met:
-    - You are not in !Berserk!
-    - You have < 40 rage
-- [*EC_Tooth and Claw] Press !Maul! if at 2 stacks of !Tooth and Claw!
-- [*EC_Vicious Cycle] Press !Maul! if at 3 stacks of !Vicious Cycle!
-- Press !33917|Mangle!
-- Press !Thrash!
-- [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
-- Press !Moonfire!
+- [*EC_Red Moon] Press !Mangle! if available and !Red Moon! is on the target
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire
+- [*~EC_Red Moon] Press !Moonfire! if the dot completely falls off
+- [*~EC_Raze] Press !Maul! if you're above 100 rage to not overcap
+	- [*~EC_Harnessed Rage] Ideally with !Thrash! and !Mangle! already on CD
+	- [*EC_Harnessed Rage] Ideally with !Thrash! and at least one charge of !Mangle! already on CD
+- [*EC_Raze] Press !Raze! if you're above 100 rage to not overcap
+	- [*~EC_Harnessed Rage] Ideally with !Thrash! and !Mangle! already on CD
+	- [*EC_Harnessed Rage] Ideally with !Thrash! and at least one charge of !Mangle! already on CD
+- [*EC_Lunar Beam] Press !Lunar Beam!. It is worth holding this for a few seconds to sync it with !Red Moon! if possible
+	- [*EC_Incarnation: Guardian of Ursoc] Your aim is to sync this with as many !Red Moon!s as possible and then line up every ~4th with !Incarnation: Guardian of Ursoc!
+	- [*~EC_Incarnation: Guardian of Ursoc] Your aim is to sync this with as many !Red Moon!s as possible and then line up every ~6th with !Berserk!
+- [*EC_Heart of the Wild] Press !Rake! to shift into !Cat Form! 
+- [*EC_Heart of the Wild] Press !Heart of the Wild! and then immediately !Mangle! to get back to !Bear Form!
+	- If you have no !Mangle! charges it is a dps gain to manually switch back to !Bear Form!
+- [*EC_Sundering Roar] Press !Sundering Roar!
+- [*EC_Convoke the Spirits] Press !Convoke the Spirits!
+- [*EC_Bristling Fur] Cast !Bristling Fur! if the following are true:
+	- Both !Mangle! and !Thrash! are on cooldown
+	- You are taking damage and will be for the 8 second duration
+- [*EC_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*~EC_Incarnation: Guardian of Ursoc] Press !Berserk!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*EC_Red Moon] Cast !Red Moon!
+- Press !Mangle! if available
+- Press !Thrash! if available
+- [*~EC_Red Moon&&EC_Galactic Guardian] Press !Moonfire! if you have a !Galactic Guardian! proc
+- Press !Swipe! if you have nothing else to press
 
 </Collapsible>
 
 <Collapsible title="Cleave Rotation (2-3 Targets)">
 
-- [*~EC_Thorns of Iron style&&EC_Raze] Press !Raze! if you will overcap rage
-- [*~EC_Thorns of Iron style&&~EC_Raze] Press !Maul! if you will overcap rage
-- [*EC_Thorns of Iron style] Press !Ironfur! if you have the rage to do so
-- Press !Moonfire! if the dot completely falls off
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
-- [*EC_Heart of the Wild] Press !Heart of the Wild! if available
-- [*EC_Lunar Beam&&EC_Lunation] Press !Lunar Beam! if available
-- [*EC_Lunar Beam&&~EC_Lunation] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*EC_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*ECation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
-- [*~ECation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
-- [*EC_Convoke the Spirits] Press !Convoke the Spirits! if the following conditions are met:
-    - You are not in !Berserk!
-    - You have < 40 rage
-- [*EC_Tooth and Claw&&EC_Raze] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*EC_Vicious Cycle&&EC_Raze] Press !Raze! if at 3 stacks of !Vicious Cycle!
-- [*EC_Tooth and Claw&&~EC_Raze] Press !Maul! if at 2 stacks of !Tooth and Claw!
-- [*EC_Vicious Cycle&&~EC_Raze] Press !Maul! if at 3 stacks of !Vicious Cycle!
-- Press !33917|Mangle!
-- Press !Thrash!
-- [*EC_Galactic Guardian] Press !Moonfire! if you have a Galactic Guardian buff
-- Press !Moonfire!
+- [*EC_Red Moon] Press !Mangle! if available and !Red Moon! is on the target
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire
+- [*~EC_Red Moon] Press !Moonfire! if the dot completely falls off
+- [*~EC_Raze] Cast !Maul! at your priority target if you're above 100 rage to not overcap
+	- [*~EC_Harnessed Rage] Ideally with !Thrash! and !Mangle! already on CD
+	- [*EC_Harnessed Rage] Ideally with !Thrash! and at least one charge of !Mangle! already on CD
+- [*EC_Raze] Cast !Raze! at your priority target if you're above 100 rage to not overcap
+	- [*~EC_Harnessed Rage] Ideally with !Thrash! and !Mangle! already on CD
+	- [*EC_Harnessed Rage] Ideally with !Thrash! and at least one charge of !Mangle! already on CD
+- [*EC_Lunar Beam] Press !Lunar Beam!. It is worth holding this for a few seconds to sync it with !Red Moon! if possible
+	- [*EC_Incarnation: Guardian of Ursoc] Your aim is to sync this with as many !Red Moon!s as possible and then line up every ~4th with !Incarnation: Guardian of Ursoc!
+	- [*~EC_Incarnation: Guardian of Ursoc] Your aim is to sync this with as many !Red Moon!s as possible and then line up every ~6th with !Berserk!
+- [*EC_Heart of the Wild] Press !Rake! to shift into !Cat Form! 
+- [*EC_Heart of the Wild] Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- If you have no !Mangle! charges it is a dps gain to manually switch back to !Bear Form!
+- [*EC_Sundering Roar] Press !Sundering Roar!
+- [*EC_Convoke the Spirits] Press !Convoke the Spirits!
+- [*EC_Bristling Fur] Cast !Bristling Fur! if the following are true:
+	- Both !Mangle! and !Thrash! are on cooldown
+	- You are taking damage and will be for the 8 second duration
+- [*EC_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*~EC_Incarnation: Guardian of Ursoc] Press !Berserk!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*EC_Red Moon] Cast !Red Moon!
+- Press !Mangle! if available
+- Press !Thrash! if available
+- [*~EC_Red Moon&&EC_Galactic Guardian] Press !Moonfire! if you have a !Galactic Guardian! proc
+- Press !Swipe! if you have nothing else to press
 
 </Collapsible>
 
 <Collapsible title="AOE Rotation">
 
-- [*~EC_Thorns of Iron style&&EC_Raze] Press !Raze! if you will overcap rage
-- [*EC_Thorns of Iron style] Press !Ironfur! if you have the rage to do so
-- Press !Moonfire! if the dot completely falls off
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
-- [*EC_Heart of the Wild] Press !Heart of the Wild! if available
-- [*EC_Lunar Beam&&EC_Lunation] Press !Lunar Beam! if available
-- [*EC_Lunar Beam&&~EC_Lunation] Press !Lunar Beam! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*EC_Rage of the Sleeper] Press !200851|Rage of the Sleeper! if available, hold to sync with Incarn/Berserk if it will be available in the next 10 seconds
-- [*ECation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc! if available (see the dedicated Berserk/Incarn rotation section below)
-- [*~ECation: Guardian of Ursoc] Press !Berserk! if available (See the dedicated Berserk/Incarn rotation section below)
-- [*EC_Convoke the Spirits] Press !Convoke the Spirits! if the following conditions are met:
-    - You are not in !Berserk!
-    - You have < 40 rage
-- [*EC_Tooth and Claw&&EC_Raze] Press !Raze! if at 2 stacks of !Tooth and Claw!
-- [*EC_Vicious Cycle&&EC_Raze] Press !Raze! if at 3 stacks of !Vicious Cycle!
-- Press !33917|Mangle!
-- Press !Thrash!
-- Press !Swipe!
+- [*EC_Red Moon] Press !Mangle! if available and !Red Moon! is on the target
+- Press !Thrash! if not at max stacks of the debuff or if it is about to expire
+- [*~EC_Red Moon] Press !Moonfire! if the dot completely falls off
+- [*~EC_Raze] Cast !Maul! at your priority target if you're above 100 rage to not overcap
+	- [*~EC_Harnessed Rage] Ideally with !Thrash! and !Mangle! already on CD
+	- [*EC_Harnessed Rage] Ideally with !Thrash! and at least one charge of !Mangle! already on CD
+- [*EC_Raze] Cast !Raze! at your priority target if you're above 100 rage to not overcap
+	- [*~EC_Harnessed Rage] Ideally with !Thrash! and !Mangle! already on CD
+	- [*EC_Harnessed Rage] Ideally with !Thrash! and at least one charge of !Mangle! already on CD
+- [*EC_Lunar Beam] Press !Lunar Beam!. It is worth holding this for a few seconds to sync it with !Red Moon! if possible
+	- [*EC_Incarnation: Guardian of Ursoc] Your aim is to sync this with as many !Red Moon!s as possible and then line up every ~4th with !Incarnation: Guardian of Ursoc!
+	- [*~EC_Incarnation: Guardian of Ursoc] Your aim is to sync this with as many !Red Moon!s as possible and then line up every ~6th with !Berserk!
+- [*EC_Heart of the Wild] There are two options in how you use !Heart of the Wild! in aoe scenarios.
+- [*EC_Heart of the Wild] For significant priority damage at any target count, you would:
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! them to get back to !Bear Form!
+	- If you have no !Mangle! charges it is a dps gain to manually switch back to !Bear Form!
+- [*EC_Heart of the Wild] If at 6+ target, for maximum aoe damage you would:
+	- Manually shift into !Moonkin Form!
+	- Press !Heart of the Wild! immediately !Mangle! your priority target to get back to !Bear Form!
+	- If you have no !Mangle! charges or if no target is in range to mangle, it is a dps gain to manually switch back to !Bear Form!
+- [*EC_Sundering Roar] Press !Sundering Roar!
+- [*EC_Convoke the Spirits] Press !Convoke the Spirits!
+- [*EC_Incarnation: Guardian of Ursoc] Press !Incarnation: Guardian of Ursoc!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*~EC_Incarnation: Guardian of Ursoc] Press !Berserk!
+	- Take a look at the Incarn/Berserk Rotation section to see any rotational changes and when to use !Wild Guardians!
+- [*EC_Red Moon] Cast !Red Moon!
+- Press !Mangle! if available
+- Press !Thrash! if available
+- Press !Swipe! if you have nothing else to press
 
 </Collapsible>
 
@@ -400,41 +448,72 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 
 During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different priority system which is described below. 
 
-<Checkbox isIcon id="EC_Single Target_incarn" name="Single Target" radio="EC_Target count" defaultCheck />
-<Checkbox isIcon id="EC_Cleave_incarn" name="Cleave" radio="EC_Target count" />
-<Checkbox isIcon id="EC_AOE_incarn" name="AOE" radio="EC_Target count" />
-<Checkbox isIcon id="EC_Heart of the Wild_incarn" spellId={319454} name="Heart of the Wild" defaultCheck />
-<Checkbox isIcon id="EC_Lunar Beam_incarn" spellId={204066} name="Lunar Beam" defaultCheck />
-<Checkbox isIcon id="EC_Vicious Cycle_incarn" spellId={371999} name="Vicious Cycle" defaultCheck />
-<Checkbox isIcon id="EC_Tooth and Claw_incarn" spellId={135288} name="Tooth and Claw" defaultCheck />
-<Checkbox isIcon id="EC_Rage of the Sleeper_incarn" spellId={200851} name="Rage of the Sleeper" />
-<Checkbox isIcon id="EC_Thorns of Iron style_incarn" spellId={192081} name="Thorns of Iron Playstyle" />
-<Checkbox isIcon id="EC_Raze_incarn" spellId={400254} name="Raze" />
+<Checkbox isIcon id="EC_ST" name="Single Target" radio="EC_Target count" defaultCheck />
+<Checkbox isIcon id="EC_Cleave" name="Cleave" radio="EC_Target count" />
+<Checkbox isIcon id="EC_AOE" name="AOE" radio="EC_Target count" />
 
+- If a damage amp is coming up you will want to hold your !Wild Guardians! recast until it happens - buffing this is a significant damage gain.
+- [*EC_Red Moon&&EC_ST] Cast !Mangle! if !Red Moon! is on your target
+- [*EC_Red Moon&&EC_Cleave||EC_AOE] Cast !Mangle! if !Red Moon! is on your priority target
+- [*EC_Lunar Beam&&EC_ST] Cast !Lunar Beam! if it becomes available 
+	- [*EC_Incarnation: Guardian of Ursoc] Ideally, this would've been pressed before you use !Incarnation: Guartdian of Ursoc! but if it is desyned, it is still worth pressing immediately.
+	- [*~EC_Incarnation: Guardian of Ursoc] Ideally, this would've been pressed before you use !Berserk! but if it is desyned, it is still worth pressing immediately.
+- [*EC_Lunar Beam&&EC_Cleave||EC_AOE] Cast !Lunar Beam! on your priority target if it becomes available
+	- [*EC_Incarnation: Guardian of Ursoc] Ideally, this would've been pressed before you use !Incarnation: Guartdian of Ursoc! but if it is desyned, it is still worth pressing immediately.
+	- [*~EC_Incarnation: Guardian of Ursoc] Ideally, this would've been pressed before you use !Berserk! but if it is desyned, it is still worth pressing immediately.
+- [*EC_Heart of the Wild&&EC_ST&&~EC_Raze] If !Heart of the Wild! becomes available, wait for all of your !Maul! charges for !Wild Guardians! to be consumed, then follow this sequence:
+	- Cast !Maul! regardless of rage
+		- If enough rage remains after this, consume it with an !Ironfur!
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- [*EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Incarnation: Guardian of Ursoc! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+	- [*~EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Berserk! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+- [*EC_Heart of the Wild&&EC_ST&&EC_Raze] If !Heart of the Wild! becomes available, wait for all of your !Raze! charges for !Wild Guardians! to be consumed, then follow this sequence:
+	- Cast !Raze! regardless of rage
+		- If enough rage remains after this, consume it with an !Ironfur!
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- [*EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Incarnation: Guardian of Ursoc! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+	- [*~EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Berserk! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+- [*EC_Heart of the Wild&&EC_Cleave&&~EC_Raze] If !Heart of the Wild! becomes available, wait for all of your !Maul! charges for !Wild Guardians! to be consumed, then follow this sequence:
+	- Cast !Maul! on your priority target, regardless of rage
+		- If enough rage remains after this, consume it with an !Ironfur!
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- [*EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Incarnation: Guardian of Ursoc! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+	- [*~EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Berserk! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+- [*EC_Heart of the Wild&&EC_Cleave&&EC_Raze] If !Heart of the Wild! becomes available, wait for all of your !Raze! charges for !Wild Guardians! to be consumed, then follow this sequence:
+	- Press !Raze! on your priority target, regardless of rage
+		- If enough rage remains after this, consume it with an !Ironfur!
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- [*EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Incarnation: Guardian of Ursoc! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+	- [*~EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Berserk! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+- [*EC_Heart of the Wild&&EC_AOE&&~EC_Raze] If !Heart of the Wild! becomes available, it is only worth using if you need further priority damage. 
+- [*EC_Heart of the Wild&&EC_AOE&&~EC_Raze] Wait for all of your !Maul! charges for !Wild Guardians! to be consumed, then follow this sequence:
+	- Cast !Maul! on your priority target, regardless of rage
+		- If enough rage remains after this, consume it with an !Ironfur!
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- [*EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Incarnation: Guardian of Ursoc! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+	- [*~EC_Incarnation: Guardian of Ursoc] (This sequence would ideally be done before !Berserk! but !Heart of the Wild! is too powerful to significantly delay if a desync occurs)
+- [*EC_Heart of the Wild&&EC_AOE&&EC_Raze] If !Heart of the Wild! becomes available, it is only worth using if you need further priority damage. 
+- [*EC_Heart of the Wild&&EC_AOE&&EC_Raze] Wait for all of your !Raze! charges for !Wild Guardians! to be consumed, then follow this sequence:
+	- Press !Raze! on your priority target, regardless of rage
+		- If enough rage remains after this, consume it with an !Ironfur!
+	- Press !Rake! to shift into !Cat Form! 
+	- Press !Heart of the Wild! on your priority target and then immediately !Mangle! to get back to !Bear Form!
+	- [*EC_Incarnation: Guardian of Ursoc] (This !Heart of the Wild! sequence would ideally be done before !Incarnation: Guardian of Ursoc!)
+	- [*~EC_Incarnation: Guardian of Ursoc] (This !Heart of the Wild! sequence would ideally be done before !Berserk!)
+- [*EC_Red Moon&&EC_ST] Cast !Red Moon!
+- [*EC_Red Moon&&EC_Cleave||EC_AOE] Cast !Red Moon! on your priority target
+- [*~EC_Raze&&EC_ST] Cast !Maul! if above 100 rage
+- [*~EC_Raze&&EC_Cleave||EC_AOE] Cast !Maul! on your priortity target if above 100 rage
+- [*EC_Raze&&EC_ST] Cast !Raze! if above 100 rage
+- [*EC_Raze&&EC_Cleave||EC_AOE] Cast !Raze! on your priority target if above 100 rage
+- Cast !Mangle!
+- Cast !Thrash!
 
-- Press !Thrash! if not at max stacks of the debuff or it is about to expire
-- [*EC_Thorns of Iron style_incarn] Press !Ironfur! if you have the rage
-    - Make sure you pool when Incarn/Berserk is finishing so you leave with a full rage bar
-- [*EC_Heart of the Wild_incarn] Press !Heart of the Wild! if it becomes available
-- [*EC_Lunar Beam_incarn] Press !Lunar Beam! if it becomes available
-- [*EC_Rage of the Sleeper_incarn] Press !200851|Rage of the Sleeper! if it becomes available  
-- [*EC_Thorns of Iron style_incarn] Press !Ironfur! if you have rage to do so
-	- [*EC_Tooth and claw_incarn] You can use !Tooth and Claw! procs for a small overall damage loss if focusing on Thorns of Iron damage.
-- [*EC_Single Target_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn] Press !Maul! if you are at 2 stacks of !Tooth and Claw!
-- [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn] Press !Maul! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_Single Target_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_Cleave_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn&&~EC_Raze_incarn] Press !Maul! if you are at 2 stacks of !Tooth and Claw!
-- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&~EC_Raze_incarn] Press !Maul! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&~EC_Raze_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_Cleave_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 2 stacks of !Tooth and Claw!
-- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_Cleave_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_AOE_incarn&&EC_Tooth and Claw_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 2 stacks of !Tooth and Claw!
-- [*EC_AOE_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !Raze! if you are at 3 stacks of !Vicious Cycle!
-- [*EC_AOE_incarn&&EC_Vicious Cycle_incarn&&~EC_Thorns of Iron style_incarn&&EC_Raze_incarn] Press !33917|Mangle! if you are at 3 stacks of !Vicious Cycle!
-- [*~EC_Thorns of Iron style_incarn] Spend any excess rage on !Ironfur!. You should never fully cap rage.
-- Press !33917|Mangle!
-- Press !Thrash!
 
 </Collapsible>
 </HeroTalentsHeader>
@@ -443,14 +522,19 @@ During !Incarnation: Guardian of Ursoc!/!Berserk! we follow a slightly different
 
 !Ironfur! is your active mitigation as a Guardian Druid. !Ironfur! costs 40 rage, and each application of !Ironfur! increases your armour by 112% of your agility. 
 
-You hit the armour cap at 85% physical mitigation, so roughly 5-6 stacks (4-5 with an augmentation evoker) will reach the armour cap.
+You hit the armour cap at 85% physical mitigation, so roughly 5-6 stacks (4-5 with an augmentation evoker) will allow you to reach the armour cap, after which, more !Ironfur! does nothing except effectively refresh the duration.
 
 #### How To Use Ironfur
 
-The general aim with !Ironfur! is to: 
-- Maintain at least one !Ironfur! whilst tanking.
-- Use more !Ironfur!s if you're ever in a scenario where you're taking heavy physical damage and have limited/no defensive cooldowns available (a large pull in a key, taking a tank buster etc).
-- Use additional !Ironfur!s if you're ever going to overcap on Rage. This is for some (very minimal) ToI damage, and to dip into Incarn cooldown reduction if you're specced into it.
+Frequently people ask "how many !Ironfur! stacks should I have for X" which whilst simple to grasp, isn't the best way to think about !Ironfur! / our spenders. The general aim with !Ironfur! is to use as much or as little as you need to smooth out the damage of whatever physical damage you're taking - it's a dynamic mitigation system, needing more investment at some points and less (or even none) at others.  
+
+A simple analogy to help with this idea is to follow the Goldilocks principle:
+
+- Too much !Ironfur! means you'll smooth out any physical damage really well, but comes with the downside that you won't have much to spend offensively. The most common issue this could lead to is threat issues as mobs keep getting ripped off of you by your dps or co-tank.
+- Too little !Ironfur! means you'll have a significant amount of rage that could be spent offensively via !Maul! / !Raze! / !Ravage! but can also cause issues in that any physical damage you do take, may not be smoothed out very well; leading to a spiky hp bar, overcommitting defensives to compensate or just drop dieing to damage you weren't expecting.
+- Having enough !Ironfur! to smooth out your damage intake, whilst still having rage to spend offensively gives you the best of both of these situations.
+
+It's about finding a balance, something that's relatively simple in concept but takes a fair amount of experience and knowledge with different encounters damage patterns to really figure out. 
 
 ## Defensive Usage
 
@@ -461,7 +545,6 @@ Cooldowns for Guardian work in two primary ways but both fulfil the criteria of 
     - !Survival Instincts!
     - !Berserk!/!Incarnation: Guardian of Ursoc!
     - !Lunar Beam!
-    - !Pulverize!
 
 These defensive's should primarily be used in a way that enables us to survive through an encounter but as mentioned, several do come with additional benefits. For example, !200851|Rage of the Sleeper! will reduce our damage taken by 20% and also grant 20% leech for its 8 second duration, both of which aiding our survivability. However, it will also increase our damage done by 15% and reflect damage back at our attackers. 
 
@@ -495,44 +578,82 @@ To further clarify, because there is a lot of overlap in the talent choices betw
 Below you will find the most optimal builds for **DAMAGE** in a raid setting, with additional notes mentioning what to change for a more mixed/defensive style build.
 
 <HeroTalentsHeader title="Druid of the Claw - Raid Talents" id="dotc">
-<Talents name={"ToI-Centric with Full Catweaving"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzYmZmZWmBzMDGLmhZsYZAYMay0MzsY2mxYMDDAAAAAAjZGAAAAUzsNLzMLDAgFGjBYxMYA"}/>
+<Talents name={""} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsYmZMzmZZgZbZgxMMaimZmlZmZmxYGGAAAAAzwMzyMAAAAUzsMLzMzAAYBzAYxMYALW2GAMzGM"}/>
 
-Despite being a "ToI-Centric" build, the primary focus of this build is !441605|Ravage!. For a detailed overview of the rotation refer to the Rotation section above but in general the goals of this build are to spend as many !Maul! modifiers (!Tooth and Claw!, !Vicious Cycle!) on !441605|Ravage! as possible without delaying ravages or wasting stacks of the buffs. It also aims to maintain as high an uptime on !Wildpower Surge! empowered !Rip!s. As a consequence of the first point, we actively press !Maul! less because those mauls would consume the buffs that we ideally use to get massive !441605|Ravage! casts. Because we can only press !441605|Ravage! when it procs and we press !Maul! infrequently to save the modifiers our last remaining option is to spend rage on !Ironfur! for damage - hence this being a (technically) "ToI" build.
+#### General Playstyle
+>[!NOTE] This is a very general idea of how the build wants to play. For a detailed overview of the rotation refer to the Rotation section above
+
+The primary focus of this build is !441605|Ravage!, which hits incredibly hard baseline, but has a plethora of modifiers such as !Vulnerable Flesh!, !Bestial Strength!, !Killing Blow!, our Tier set and Apex talent. Whilst we want to spend as much rage as possible on our offensive spenders, we pool our rage as high as possible - only pressing base !Maul! / !Raze! just before we cap rage, since this maximises our chances of getting a !Ravage! proc and also generally keeps us above the !Killing Blow! threshold. We also have a fairly frequent damage window via !Red Moon! and a significantly larger window every 2 minutes through !Incarnation: Guardian of Ursoc! our incredibly powerful Apex talent !Wild Guardians!'s synergy with !Ravage!
 
 #### Druid of the Claw Notes
 
-- For more sustain across an encounter you can opt to pick up !Ursoc's Fury! instead of a point in !Flashing Claws!.
-- If you are concerned or in need of some more self-sustain you may opt to drop !Ursoc's Endurance!, sacrificing a small amount of damage from !Thorns of Iron! in favour of picking up !Innate Resolve!.
-- If you're still lacking DR cooldown coverage on a boss then you have two main options:
-    - Moving two points to pick up !Pulverize!. The most likely points to move for this would be a point from !Flashing Claws! and !Blood Frenzy! which would be a noticable damage loss as a consequence.
-    - !Improved Survival Instincts! is also an option if you've planned out your cooldown usage and know that the flexibility of the second charge will allow you to cover everything. Dropping !Ursoc's Endurance! or !Brambles! to enable this is probably your best option, both of which being a small damage loss.
-- For a decent increase to group survivability you could drop a point in !Fury of Nature! in favour of !After the Wildfire!. This would be a decent damage loss to !Moonfire! specifically but would be a notable increase to self healing as well as the healing cleave onto any stacked raid group.
-- In our Class tree the points in !Lycara's Inspiration! is fairly inconsequential on most encounters. This is particularly useful if an encounter required something like !Incapacitating Roar!/!Mighty Bash!, !Typhoon!, !Ursol's Vortex!, !Mass entanglement! or even !Innervate!.
-- !Ursine Vigor! is another optional point in the bottom area of our class tree. It is a nice quality of life improvement for those playing !Wildpower Surge! but outside of that it is far better to spend this point elsewhere.
-- On that topic, the suggested build was made with the idea of Rip/Catweaving. If you are not planning on doing this aspect of the rotation then you have no need for !Rip! or !449193|Fluid Form! either which opens up those points. !Rake! should still be talented as it our only method of talenting !Grievous Wounds!.
-- Because of the introduction of !Wildshape Mastery!, !Tiger Dash! actually becomes a very potent burst movement speed cooldown that is usable in almost any situation without fear of getting one shot. Very useful if you need cover a distance quickly and are unable to !Wild Charge! to a target.
-- In certain fights it may be worth swapping !Renewal! to !Aessina's Renewal!. This would mostly be for encounters with few to no threatening bursts of tank damage but plenty of rot damage taking place across the fight where you may otherwise just be sitting on !Renewal! for an extended period of time, but be aware, !Aessina's Renewal! has been very buggy through the expansion so far, resulting in a lot of inconsistency on whether it will even proc on a fight. Be sure to check logs of a specific fight to see if it is actually doing anything!
+- For more sustain across an encounter take !Ursoc's Fury! instead of a point in !Fury of Nature!, both of which will be a nice bump to your survivability over an encounter.
+- For increased self sustain your best option would be to drop !Bristling Fur! for an incredibly minor damage loss, to pick up !Natural Resilience!.
+- Another self sustain option that synergises well with !Natural Resilience! would be to drop !Brambles! and put one point into !Reinvigoration! - I would only really consider this if you're also running !Dream of Cenarius! however, due to their synergy.
+- Depending on the encounter, some cleave talents may be preferable to pure single target. 
+	- Taking one of the previously mentioned points and putting it into !Raze! will help with this.
+	- Swapping !Red Moon! to !Twin Moonfire! may also be an option depending on mob count, how spread the targets are and how long they live for.
+- For survivability increases against tankbusters and predictable damage patterns your best options would be:
+	- Swapping !Bristling Fur! to !Reinforced Fur! for an additional 10% damage reduction on !Barkskin!, as well as some more armour to reduce any physical hits further.
+	- For particularly hard hitting busters where !Barkskin! alone is risky and your two charges of !Survival Instincts! are not enough to cover the entire encounter, swapping !Brambles! to !Ward of the Forest! is an option. This talent lets !Barkskin! provide a significant amount more EHP per use, albeit over a much shorter time frame. It's a very niche talent, but it's incredibly good at fulfilling that niche.
+
+- For our class tree, firstly, !Circle of the Wild! and !Circle of the Heavens! have very deceptive tooltips. You should **always** be running !Circle of the Wild!.
+	- !Circle of the Wild! actually buffs Guardian (and Feral) abilities - not just all physical
+	- !Circle of the Heavens! actually buffs Moonkin and Restoration abilities - not just magical.
+	- For DotC, this means only !Moonfire! and Resto healing spells are affected by Heavens, so Wilds makes up a significantly larger portion of our damage.
+- The point in !Lycara's Inspiration! is fairly inconsequential on most encounters. This is particularly useful if an encounter required something like !Incapacitating Roar!/!Mighty Bash!, !Symbiotic Relationship! or !Innervate!.
+	- !Natural Recovery! is also a largely irrelevant point, so something to consider if you wanted to keep !Lycara's Inspiration! but needed both !Typhoon! and !Ursol's Vortex! / !Mass Entanglement!
+- !Typhoon! is completely swappable with the choice node of !Ursol's Vortex! and !Mass Entanglement! so feel free to swap them depending on what an encounter needs. But you should always have at least one of these two paths as a way to path to !Gift of the Wild!
+- With how weak !Ripweaving! and !Catweaving! are compared to The War Within after the !Wildpower Surge! nerf, it's really not worth it to ever waste a point on !Rip! unless you really want to !Ripweave! for the fun of it.
+- !Rake! however, is basically always taken as it is our only method of pathing to !Grievous Wounds! for the !Thrash! damage and is also better method of form switching than !Shred! with !Fluid Form!
+- !Heart of the Wild! is an incredible powerful talent that does still have some flexibility in raids.
+	- It does incredible high single target damage if used in !Cat Form! in the form of an empowered !Feral Frenzy! (this will make up the vast majority of your uses in raid)
+	- It does strong aoe in !Moonkin Form! by casting an empowered !Starfall!
+	- It does a pretty potent group heal if used in caster form, which may be useful on occasions where your raid is struggling to meet a tough HPS check.
+- !Starfire! and !Moonkin Form! are largely just filler points that can be moved anywhere. The only exception to this is if you're planning to use Moonkin !Heart of the Wild! at some point.
+- The !Soothe! / !Cyclone! choice node will always be taken as it is our only option for pathing to the central part of the bottom section of class tree. This nearly always means soothe is chosen.
+	- !Cyclone! does occasionally have some niche uses in raid however, usually something to do with preventing a target from gaining a buff but the most recent example was to save players who got mind controlled at the end of phase 1 of Nexus King Saladhar in Manaforge Omega, so do keep it in mind.
+- With both !Persistence! and !Wildshape Mastery!, the option to use !Tiger Dash! as a way to get from point A to B in a hurry is not only fast but also incredibly safe since we retain our a significant amount of our !Bear Form! armour and health. 
+
 </HeroTalentsHeader>
 
 <HeroTalentsHeader title="Elune's Chosen - Raid Talents" id="ec">
-<Talents name={"Maul-Centric EC"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzYmZmZWMwMjxYxMMjFLDMYMaimZmFzyMzYMDDAAAAAAjZmBssNzGGzyAYKAAAwGMGgFzgB"}/>
+<Talents name={"Maul-Centric EC"} talents={"CgGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmxsYmZMzmZZgZbZAmZMaimZmFzMzMLjZYAAAAAMDzYZGwy2MDGzyAYKAAAwGmxAWMDGwiltBYmBwA"}/>
 
-Important to note that Elune's chosen (at least the build presented here) is noticably easier to play. There is no form of catweaving to worry about and generally less attention will be focused on tracking buffs like !Vicious Cycle!/!Tooth and Claw!. Worth baring in mind if you're looking for a simpler rotation and playstyle, albeit at the cost of a significant amount of damage - around 25-30% compared to that of the highest performing Druid of the Claw build on single target.
+Much like our other hero talent, EC build continues to largely work around the power of !Maul! / !Raze! and their modifiers. More so than Dotc though, it can really abuse the power of !Red Moon! because of the number of arcane damage amps as well as the increased potency and frequency of !Lunar Beam!, which will line up with the vast majority of casts. It also still has a large burst window every two minutes from !Wild Guardians!, whilst also lining up !Lunar Beam!, !Red Moon! and the !Mangle! resets from !Incarnation: Guardian of Ursoc!.
 
 #### Elune's Chosen Notes
-- Elune's Chosen offers fantastic defensive cooldown coverage. Between !Barkskin!, !Survival Instincts! and !Lunar Beam!, along with the option to add on !200851|Rage of the Sleeper!, you'll basically always have something rolling.
-- If you feel that an additional defensive is required then your two best options would be:
-    - To access !Rage of the Sleeper! by dropping a point in !Flashing Claws! for it 
-    - If you've planned out your cooldown usage and know that the flexibility of !Improved Survival Instincts! will allow you to cover everything then you could look to talent it by dropping !Ursoc's Endurance! or even !Brambles! for a slight damage loss as the potential trade-off.
-- If some additional self sustain is required then dropping !Ursoc's Endurance! for !Innate Resolve! is an excellent pick up, for only a small damage loss from !Thorns of Iron!
-- Swapping one point of !Fury of Nature! for !After the Wildfire! is another potential increase to personal survivability whilst also being a big increase to your group healing utility. Especially on encounters with heavy raid stacking. 
-- If even more group healing utility is wanted then looking to pick up either !Dream of Cenarius! by either dropping !Ursoc's Endurance! or switching out !Brambles! for a small damage loss is an option.
-- In our class tree, EC has a bit more freedom with its point allocation compared to that of Druid of the Claw.
-    - Worth pointing out that you should **never** be talenting !Circle of the Heavens! and always talent !Circle of the Wild! in its place.
-    - This is because the tooltips are misleading and the talents actually work based on which spells are considered to be Feral/Guardian vs Resto/Balance. As such, the only Guardian spells that would be buffed by !Circle of the Heavens! are !Moonfire! and !Fury of Elune! procs from our hero tree, which together will make up a smaller % of our damage profile than all of our other spells combined.
-- !Matted Fur!, !Natural Recovery!, !Starlight Conduit! and !Astral Influence! are all very minor talents which can be talented out of for incredibly small survivability or damage gains. This allows picking up other utility options like !Incapacitating Roar!, !Mighty Bash!, !Improved Stampeding Roar!, !Typhoon! and !Innervate! depending on what a particular encounter calls for.
-- In certain fights it may be worth swapping !Renewal! to !Aessina's Renewal!. This would mostly be for encounters with few to no threatening bursts of tank damage but plenty of rot damage taking place across the fight where you may otherwise just be sitting on !Renewal! for an extended period of time, but be aware, !Aessina's Renewal! has been very buggy through the expansion so far, resulting in a lot of inconsistency on whether it will even proc on a fight. Be sure to check logs of a specific fight to see if it is actually doing anything!
+- For more sustain across an encounter take !Ursoc's Fury! instead of a point in !Fury of Nature!, both of which will be a nice bump to your survivability over an encounter.
+	- If dealing with encounters with a good number of targets that are spread around an arena !Elune's Favored! may end up being a better option for trickle healing, simple because !Moonfire! will continue to contribute even if you're not in melee range of most of the targets.
+- For increased self sustain your best option would be to drop !Bristling Fur! for an incredibly minor damage loss, to pick up !Natural Resilience!.
+- Another self sustain option that synergises well with !Natural Resilience! would be to drop !Brambles! and put one point into !Reinvigoration! - I would only really consider this if you're also running !Dream of Cenarius! however, due to their synergy.
+- Depending on the encounter, some cleave talents may be preferable to pure single target. 
+	- Taking one of the previously mentioned points and putting it into !Raze! will help with this.
+	- Swapping !Red Moon! to !Twin Moonfire! may also be an option depending on mob count, how spread the targets are and how long they live for.
+- Whilst generally having more available cooldowns than DotC because of the potency of !Lunar Beam!, for survivability increases against tankbusters and predictable damage patterns your best options would be:
+	- Swapping !Bristling Fur! to !Reinforced Fur! for an additional 10% damage reduction on !Barkskin!, as well as some more armour to reduce any physical hits further.
+	- For particularly hard hitting busters where !Barkskin! alone is risky and your two charges of !Survival Instincts! are not enough to cover the entire encounter, swapping !Brambles! to !Ward of the Forest! is an option. This talent lets !Barkskin! provide a significant amount more EHP per use, albeit over a much shorter time frame. It's a very niche talent, but it's incredibly good at fulfilling that niche.
+
 - Whilst very uncommon, swapping !Moondust! for !Elune's Grace! is a potentially useful swap. This will mainly be a benefit on fights with frequent knockbacks to allow you to potentially prevent more of them or potentially on encoutners with lots of frequent movement between groups of adds.
+
+- For our class tree, firstly, !Circle of the Wild! and !Circle of the Heavens! have very deceptive tooltips. You should **always** be running !Circle of the Wild!.
+	- !Circle of the Wild! actually buffs Guardian (and Feral) abilities - not just all physical
+	- !Circle of the Heavens! actually buffs Moonkin and Restoration abilities - not just magical.
+	- For EC, this means only !Moonfire!, !Starsurge! and Resto healing spells are affected by Heavens, so Wilds still makes up a larger portion of our damage.
+- The point in !Lycara's Inspiration! is fairly inconsequential on most encounters. This is particularly useful if an encounter required something like !Incapacitating Roar!/!Mighty Bash!, !Symbiotic Relationship! or !Innervate!.
+	- !Natural Recovery! is also a largely irrelevant point, so something to consider if you wanted to keep !Lycara's Inspiration! but needed both !Typhoon! and !Ursol's Vortex! / !Mass Entanglement!
+- !Typhoon! is completely swappable with the choice node of !Ursol's Vortex! and !Mass Entanglement! so feel free to swap them depending on what an encounter needs. But you should always have at least one of these two paths as a way to path to !Gift of the Wild!
+- With how weak !Ripweaving! and !Catweaving! are compared to The War Within after the !Wildpower Surge! nerf, it's really not worth it to ever waste a point on !Rip! unless you really want to !Ripweave! for the fun of it.
+- !Rake! however, is basically always taken as it is our only method of pathing to !Grievous Wounds! for the !Thrash! damage and is also better method of form switching than !Shred! with !Fluid Form!
+- !Heart of the Wild! is an incredible powerful talent that does still have some flexibility in raids.
+	- It does incredible high single target damage if used in !Cat Form! in the form of an empowered !Feral Frenzy! (this will make up the vast majority of your uses in raid)
+	- It does strong aoe in !Moonkin Form! by casting an empowered !Starfall!
+	- It does a pretty potent group heal if used in caster form, which may be useful on occasions where your raid is struggling to meet a tough HPS check.
+- !Starfire! and !Moonkin Form! are largely just filler points that can be moved anywhere. The only exception to this is if you're planning to use Moonkin !Heart of the Wild! at some point.
+- The !Soothe! / !Cyclone! choice node will always be taken as it is our only option for pathing to the central part of the bottom section of class tree. This nearly always means soothe is chosen.
+	- !Cyclone! does occasionally have some niche uses in raid however, usually something to do with preventing a target from gaining a buff but the most recent example was to save players who got mind controlled at the end of phase 1 of Nexus King Saladhar in Manaforge Omega, so do keep it in mind.
+- Now with !Persistence! in the class tree, the option to use !Tiger Dash! as a way to get from point A to B in a hurry is not only fast but also incredibly safe since we retain our a significant amount of our !Bear Form! armour and health. 
+
 </HeroTalentsHeader>
 
 ## Mythic+ Talents
