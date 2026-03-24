@@ -18,9 +18,11 @@ The way this section is written is very formulaic and has the same structure as 
 
 **Pre-Combat:**
 
-1. If you have it, precast [Algethar Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103)
-2. !Prowl!
-3. !Rake! from stealth.
+1. [*Chomp] Precast !Swipe! until you're tapped on energy
+2. If you have it, precast [Algethar Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103)
+3. !Prowl!
+4. !Tiger's Fury! immediately before !Rake!
+5. !Rake! from stealth.
 
 **Select which talents you have to filter the priority list:**
 
@@ -36,6 +38,15 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox isIcon id="Panthers Guile" spellId={1280316} name="Panther's Guile" />
 <Checkbox isIcon id="Shadowmeld" spellId={58984} name="Shadowmeld" />
 
+<div className="pb-2">
+</div>
+
+<Timeline spellIds={[ 383781, 5215, 5217, 1822, 106951, 1236616, 274838, 1079, 391528, 22568 ]}> Sample Single-Target Opener </Timeline>
+
+[*Chomp] Pre-cast swipe as often as you need to start the fight at low energy. !5217|Tiger's Fury! generates enough energy to last you until !Convoke!.
+
+Puzzlebox use is prepull. Main idea of the opener is to get into your cooldowns as quickly as possible. If you know you will hold later, or that you wont lose any cooldown uptime, you can opt to delay by getting a 4+ combo point Rip up and then using Berserk/Feral Frenzy. Probably want to delay [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103) until after you !Rip! if so. You must do delayed opener without !Feral Frenzy! talented. Skip !Convoke the Spirits! and the ensuing !Ferocious Bite! in the listed order if you do not have it talented.
+
 **Single Target Priority List:**
 
 <details open>
@@ -46,7 +57,7 @@ The way this section is written is very formulaic and has the same structure as 
 3. [*Incarnation] !102543|Incarnation! with !5217|Tiger's Fury!.
 4. [*~Incarnation] !Berserk! with !5217|Tiger's Fury!. You can hold this for !391528|Convoke! if for whatever reason they are misaligned, and you won't lose a cast doing so.
 5. [*Feral Frenzy&&Incarnation] !Feral Frenzy! with 2 or fewer combo points. 4 or fewer combo points is also acceptable during !102543|Incarn!.
-6. [*Feral Frenzy&&~Incarnation] !Feral Frenzy! with 2 or no combo points. 4 or fewer combo points is also acceptable during !Berserk!.
+6. [*Feral Frenzy&&~Incarnation] !Feral Frenzy! with 2 or fewer combo points. 4 or fewer combo points is also acceptable during !Berserk!.
 7. [*Convoke the Spirits] !391528|Convoke! if all of these are true:
     - !Rip! is up.
     - !5217|Tiger's Fury! is up.
@@ -115,6 +126,13 @@ The way this section is written is very formulaic and has the same structure as 
 <Checkbox isIcon id="Primal Wrath AOE" spellId={285381} name="Primal Wrath" defaultCheck />
 <Checkbox isIcon id="Panthers Guile AOE" spellId={1280316} name="Panther's Guile" />
 <Checkbox isIcon id="Sudden Ambush AOE" spellId={384667} name="Sudden Ambush" />
+
+<div className="pb-2">
+</div>
+
+<Timeline spellIds={[ 1822, 1822, 1822, 383781, 5217, 285381, 106951, 1236616, 1243807, 22568, 391528 ]}> Sample m+ Opener </Timeline>
+
+The exact opener you should choose will have a ton of variables. The !Rake! casts are dual-purpose: They generate combo points, and they delay you going into cooldowns instantly (which risks you dying from threat). You can prepull !Prowl! if the !Rake! stun won't be problematic. You may need to cast more !Rake!s in order to reach 5 combo point in opener. Replace !Rake! with !Swipe! if target count is high enough to justify. If you already have combo points from a previous pull, You may even open with !Primal Wrath! directly. Always cast [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103) before using cooldowns. Do not use !Frantic Frenzy! until the group is stacked. You may want to wait anyways so the tank can get aggro.
 
 **AoE priority list (2+ targets):**
 
@@ -194,11 +212,10 @@ The way this section is written is very formulaic and has the same structure as 
 
 ### Class Talent Explanations
 
-This section will be updated before the beginning of Midnight Season 1. Check back later.
-
 <Talents
   open
-  defaultTree="Class"
+  hideCopy 
+  forceTree="class"
   name="Class Tree Choices"
   talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtl5BWGbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA" 
   colors={[
@@ -206,8 +223,8 @@ This section will be updated before the beginning of Midnight Season 1. Check ba
     { color: "white", nodes: ["Starfire", "Moonkin Form", "Astral Influence", "Maim", "Hibernate", "Gale Winds", "Ursine Vigor"] },
     { color: "yellow", nodes: ["Remove Corruption", "Nurturing Instinct", "Matted Fur", "Typhoon", "Ursol's Vortex", "Lore of the Grove", "Perfectly-Honed Instincs", "Incapacitating Roar", "Fluid Form", "Improved Stampeding Roar", "Lycaras Inspiration", "Forestwalk", "Innervate", "Heart of the Wild"]},
     { color: "green", nodes: ["Rake", "Frenzied Regeneration", "Ursocs Spirit", "Swipe", "Feline Swiftness", "Grievous Wounds", "Rip", "Verdant Heart", "Improved Barkskin", "Killer Instinct", "Primal Fury", "Thick Hide", "Skull Bash", "Natural Recovery", "Aessina's Renewal", "Soothe", "Wild Charge", "Well-Honed Instincts", "Stampeding Roar", "Gift of the Wild", "Lycara's Teachings", "Instincts of the Claw", "Oakskin", "Circle of the Wild"]}
-  ]} 
-> 
+  ]}
+>
 <div className="flex justify-center">
   <div className="flex space-x-4 items-center">
     <div className="flex items-center space-x-1">
@@ -308,23 +325,152 @@ This section will be updated before the beginning of Midnight Season 1. Check ba
 
 
 
-<Talents comment="These bosses are effectively single target. Midnight Falls: If crystals turn out to be a lot more frequent than I thought, you may want to grab Primal Wrath" name={"Vorasius / Bel'oren / Midnight Falls (single target)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtl5BWGbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA"} />
-<Talents comment="On Salhadaar you can maybe play Twin Sprouts instead. If you want more AoE, remove Panther's Guile for Rampant Ferocity. The idea is you dump your load (frantic frenzy+primal wrath) on small adds and then move to the big adds. Note: Crown of the Cosmos might be a Focused Frenzy angle instead, it depends how many void dropling adds spawn and at what frequency." name={"Salhadaar / Crown of the Cosmos"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlx2MbzYm5BmZAAAAYJY2YMmZUzYWYmZGjZmBAAAAAAwAAAAIAYWmZpZbmlNwMDwiZwAAYmBAD"} />
-<Talents comment="Averzian: You can remove Rampant Ferocity for Panther's Guile if you aren't able to sufficiently pad. If you are extremely able to pad, you could remove Tireless Energy for Double-Clawed Rake. Dragons: You can instead play Twin Sprouts/Root Network if youre able to maintain rake/rip uptime on both dragons the entire time. To Primal Wrath both dragons, stand in between them and jump. Maybe talent Innervate." name={"Averzian / Vaelgor & Ezzorak"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMjxstM2mZbmZm5BmZAAAAYJY2YMmZUzYWGzMzYMzAAAAAAAwAAAAIAYWmZpZbmlNwMDwiZwAAYmBAD"} />
-<Talents comment="If you need 1 minute roar, remove a point from Forestwalk or Innervate." name={"Lightblinded Vanguard"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDGzMjxstM2mZbmZm5BmZAAAAYJY2YMmZUzYWYmZGjZmBAAAAAAwAAAAIAYWmZpZZmtNwMDwiZwAAYmBAD"} />
+<Talents comment="These bosses are effectively single target. Crown: Dropling adds have very little hp, not enough to warrant pad. If p1 ends up being a painful prog point, you can consider Primal Wrath and Hunger for Battle, as Hunger for Battle is extremely good in phase 1 (though useless after). Midnight Falls: If crystals turn out to be a lot more frequent than I thought, you may want to grab Primal Wrath" name={"Vorasius / Heroic Salhadaar / Bel'oren / Crown of the Cosmos / Midnight Falls (single target)"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtl5BWGbzYGzMDAAAALBzGMmZUzYWYmZGjZmZAAAAAAAGAAAABAz2MLNbzssBmZAWMDGAAzMAYA"} />
+<Talents comment="On Salhadaar you can maybe play Twin Sprouts instead. If you want more AoE, remove Panther's Guile for Rampant Ferocity. The idea is you dump your load (frantic frenzy+primal wrath) on small adds and then move to the big adds." name={"Mythic Salhadaar"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMzMmtlx2MbzYm5BmZAAAAYJY2YMmZUzYWYmZGjZmBAAAAAAwAAAAIAYWmZpZbmlNwMDwiZwAAYmBAD"} />
+<Talents comment="You can use Hunger for Battle instead of Ashamane's Guidance if you want. Make sure to hold your 4min set of cds for the 4:30 set of adds if you do. You can remove Rampant Ferocity for Panther's Guile if you aren't able to sufficiently pad. Remove Tireless Energy for double-clawed rake if you're severely able to pad." name={"Averzian"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMjxstM2mZbmZm5BmZAAAAYJY2YMmZUzYWGzMzYMzAAAAAAAwAAAAIAYWmZpZbmlNwMDwiZwAAYmBAD"} />
+<Talents comment="Your first Frantic Frenzy should be in your 2nd tigers fury, during the first orb set. You can play Focused Frenzy instead for more dragon/intermission damage and significantly lower orb damage. You can instead play Twin Sprouts if you can maintain strong rake/rip uptime on both dragons the entire time they're up. Maybe talent Innervate." name={"Vaelgor & Ezzorak"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMjxstM2mZbmZm5BmZAAAAYJY2YMmZUzYWGzMzYMzAAAAAAAwAAAAIAYWmZpZbmlNwMDwiZwAAYmBAD"} />
 
-<Talents comment="Note: On beta testing the timings were very poor for Frantic Frenzy. If things line up better once its live, then definitely switch Focused Frenzy to Frantic Frenzy." name={"Chimaerus"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMjxstMWmZbmZm5BmZAAAAYJY2YMmZUzYWYmZGjZmBAAAAAAwAAAAIAYWmZpZZmlNwMDwiZwAAYmBAD"} />
+<Talents comment="If you need 1 minute roar, remove a point from Forestwalk or Innervate." name={"Lightblinded Vanguard"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMzGjZmxY2WGbjtZmZmHYmBAAAglgZjxYmRNjZhZmZMmZGAAAAAAADAAAgAgZZmlmlZ22AzMALmBDAgZGAMA"} />
+
+<Talents comment="Note: On beta testing the timers were very poor for Frantic Frenzy. If things line up better once its live, then definitely switch Focused Frenzy to Frantic Frenzy." name={"Chimaerus"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjZwMzMjxstMPwyYbmZm5BmZAAAAYJY2YMmZUzYWYmZGjZmBAAAAAAwAAAAIAYWmZpZbmlNwMDwiZwAAYmBAD"} />
 
 <div className="pb-6">
 </div>
 
 ## Dungeon Talents
 
-This section will get fleshed out before Midnight Season 1 begins. For now, here are a couple builds you can play. The two hero trees are closer than ever and you can really select either one. In lower keys you should definitely trend towards Druid of the Claw as Wildstalker ramp up time is longer.
+Our official recommendation will continue to be Druid of the Claw for mythic+. That being said, Wildstalker is more competitive than its ever been, and is extremely playable. Especially if you feel you need more single target. The main downside of Wildstalker is your ramp-up time is a bit longer (and its arguably more punishing as Rake uptime is more relevant). Due to this, I'd highly recommend Druid of the Claw in lower keys especially.
 
-<Talents name={"DOTC m+"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAoZWmtZmZABWAzMALMYAAAMzGG"} />
+<Talents
+  defaultTree="Spec"
+  name="DOTC m+ (Rake)"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDzMzMjxsZsNz2MzMjZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAoZWmtZmZABWAzMALMYAAAMzGG" 
+  colors={[
+    { color: "red", nodes: ["Coiled to Spring", "Panther's Guile", "Lunar Inspiration", "Saber Jaws", "Starfire", "Moonkin Form", "Astral Influence", "Rejuvenation", "Wild Growth", "Starsurge", "Sunfire", "Starlight Conduit", "Ironfur", "Lingering Healing", "Symbiotic Relationship"] },
+    { color: "white", nodes: ["Blood Spattered", "Maim", "Hibernate", "Gale Winds", "Ursine Vigor"] },
+    { color: "yellow", nodes: ["Double-Clawed Rake", "Tireless Energy", "Wild Slashes", "Infected Wounds", "Carnivorous Instinct", "Rip and Tear", "Hunger for Battle", "Ashamane's Guidance", "Remove Corruption", "Nurturing Instinct", "Matted Fur", "Typhoon", "Ursol's Vortex", "Lore of the Grove", "Perfectly-Honed Instincs", "Fluid Form", "Improved Stampeding Roar", "Lycaras Inspiration", "Forestwalk", "Innervate", "Heart of the Wild"]},
+    { color: "green", nodes: ["Incapacitating Roar", "Rake", "Frenzied Regeneration", "Ursocs Spirit", "Swipe", "Feline Swiftness", "Grievous Wounds", "Rip", "Verdant Heart", "Improved Barkskin", "Killer Instinct", "Primal Fury", "Thick Hide", "Skull Bash", "Natural Recovery", "Aessina's Renewal", "Soothe", "Wild Charge", "Well-Honed Instincts", "Stampeding Roar", "Gift of the Wild", "Lycara's Teachings", "Instincts of the Claw", "Oakskin", "Circle of the Wild"]}
+  ]} 
+> 
 
-<Talents name={"Wildstalker m+"} talents={"CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDzMzMjxsZsNz2MzMjZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAIAY2mZrZZmlNwMDwCDGAAzMAYA"} />
+  With these selected talents, in AoE, you will be spamming !Rake! on targets without it to generate combo points; !106785|Swiping! with !Sudden Ambush! procs. 
+  
+  <br />
+
+  If you're not getting good uptime on !Hunger for Battle! stacks/need more boss damage and aren't pulling mobs onto the boss; then you can remove it for something else. !Rip and Tear! is the pure AoE choice, whereas !Carnivorous Instinct! and !Ashamane's Guidance! do both things fairly well.
+
+  <br />
+
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
+
+<Talents
+  defaultTree="Spec"
+  name="DOTC m+ (Swipe) -- If you're unsure pick me"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDzMzMjZmNjtZ2mZmZegZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAoZWmtZmZABWAzMALMYAAAMzGG" 
+  colors={[
+    { color: "red", nodes: ["Coiled to Spring", "Panther's Guile", "Lunar Inspiration", "Saber Jaws", "Starfire", "Moonkin Form", "Astral Influence", "Rejuvenation", "Wild Growth", "Starsurge", "Sunfire", "Starlight Conduit", "Ironfur", "Lingering Healing", "Symbiotic Relationship"] },
+    { color: "white", nodes: ["Blood Spattered", "Maim", "Hibernate", "Gale Winds", "Ursine Vigor"] },
+    { color: "yellow", nodes: ["Double-Clawed Rake", "Tireless Energy", "Wild Slashes", "Infected Wounds", "Carnivorous Instinct", "Rip and Tear", "Hunger for Battle", "Ashamane's Guidance", "Remove Corruption", "Nurturing Instinct", "Matted Fur", "Typhoon", "Ursol's Vortex", "Lore of the Grove", "Perfectly-Honed Instincs", "Fluid Form", "Improved Stampeding Roar", "Lycaras Inspiration", "Forestwalk", "Innervate", "Heart of the Wild"]},
+    { color: "green", nodes: ["Incapacitating Roar", "Rake", "Frenzied Regeneration", "Ursocs Spirit", "Swipe", "Feline Swiftness", "Grievous Wounds", "Rip", "Verdant Heart", "Improved Barkskin", "Killer Instinct", "Primal Fury", "Thick Hide", "Skull Bash", "Natural Recovery", "Aessina's Renewal", "Soothe", "Wild Charge", "Well-Honed Instincts", "Stampeding Roar", "Gift of the Wild", "Lycara's Teachings", "Instincts of the Claw", "Oakskin", "Circle of the Wild"]}
+  ]} 
+> 
+
+  With these selected talents, you begin swiping at 4 targets. Less thinking, more playing. 
+  
+  <br />
+
+  If you're not getting good uptime on !Hunger for Battle! stacks/need more boss damage and aren't pulling mobs onto the boss; then you can remove it for something else. !Rip and Tear! is the pure AoE choice, whereas !Carnivorous Instinct! and !Ashamane's Guidance! are fairly good at both.
+
+<br />
+
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
+
+<Talents
+  defaultTree="Spec"
+  name="Wildstalker m+"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZMDzMzMjxsZsNz2MzMjZGAAAAWCmNDPgZG1MmFzMzMLjZGDAAAAAAwAAAAIAY2mZrZZmlNwMDwCDGAAzMAYA" 
+  colors={[
+    { color: "red", nodes: ["Coiled to Spring", "Panther's Guile", "Blood Spattered", "Saber Jaws", "Starfire", "Moonkin Form", "Astral Influence", "Rejuvenation", "Wild Growth", "Starsurge", "Sunfire", "Starlight Conduit", "Ironfur", "Lingering Healing", "Symbiotic Relationship"] },
+    { color: "white", nodes: ["Lunar Inspiration", "Wild Slashes", "Tireless Energy", "Maim", "Hibernate", "Gale Winds", "Ursine Vigor"] },
+    { color: "yellow", nodes: ["Sudden Ambush", "Merciless Claws", "Carnivorous Instinct", "Rip and Tear", "Hunger for Battle", "Ashamane's Guidance", "Remove Corruption", "Nurturing Instinct", "Matted Fur", "Typhoon", "Ursol's Vortex", "Lore of the Grove", "Perfectly-Honed Instincs", "Fluid Form", "Improved Stampeding Roar", "Lycaras Inspiration", "Forestwalk", "Innervate", "Heart of the Wild"]},
+    { color: "green", nodes: ["Infected Wounds", "Double-Clawed Rake", "Incapacitating Roar", "Rake", "Frenzied Regeneration", "Ursocs Spirit", "Swipe", "Feline Swiftness", "Grievous Wounds", "Rip", "Verdant Heart", "Improved Barkskin", "Killer Instinct", "Primal Fury", "Thick Hide", "Skull Bash", "Natural Recovery", "Aessina's Renewal", "Soothe", "Wild Charge", "Well-Honed Instincts", "Stampeding Roar", "Gift of the Wild", "Lycara's Teachings", "Instincts of the Claw", "Oakskin", "Circle of the Wild"]}
+  ]} 
+> 
+
+  As Wildstalker you will be raking. A lot. !Tireless Energy! is generally not recommended, as !Merciless Claws! is much better in single target, whereas !Tireless Energy! is pretty low-power everywhere-- even if it is better in AoE than !Merciless Claws!. Due to the focus on !Rake! in this build, !Double-Clawed Rake! should be considered mandatory. It is far and away your best AoE node in the top tree, so much so that it providing 0 single target isn't a compelling enough reason to drop it. 
+  
+  <br />
+  
+  In the bottom, If you're not getting good uptime on !Hunger for Battle! stacks/need more boss damage and aren't pulling mobs onto the boss; then you can remove it for something else. !Rip and Tear! is the pure AoE option, whereas !Carnivorous Instinct! and !Ashamane's Guidance! are fairly good at both. !Lunar Inspiration! is a niche pick if target counts are low, but realistically its unlikely to be worth choosing, unless you want to just for the dot-centric gameplay.
+
+  <br />
+
+  For the hero talents you should always play !Twin Sprouts!. !Root Network! can be selected over !Resilient Flourishing! for AoE, though it costs quite a bit of single target damage so its generally not recommended you do so.
+
+  <br />
+
+  <div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
+
 
 
 # Consumables
@@ -380,38 +526,51 @@ Endgame ideal is on Wrists + Cloak/Loa Worshipers Band, but you should try to ge
 
 These trinket lists are in rough estimated order of strength, assuming the highest item level version of the items. This will likely change with tuning. Delve trinkets are currently missing.
 
-> [!CAUTION]
-> Double stat on-use trinkets is generally bad, your second trinket should be a passive.
-
 **For use in Raid:**
 | Tier | Trinket | Notes |
 | :-: | :- | :- |
 | **S Tier** | [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103) | 2 min on-use trinket. Cast right before you use Berserk/Tiger's Fury
 | **A Tier** | [Radiant/Umbral Plume](https://www.wowhead.com/item=249806/radiant-plume?bonus=4795&class=11&hero=22&ilvl=289&spec=103) | Usually want to see this to Radiant 
-| **B Tier** | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?hero=22&ilvl=289&spec=103)
-| | [Ranger-Captain's Iridescent Insignia](https://www.wowhead.com/item=249345/ranger-captains-iridescent-insignia?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
+| | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?hero=22&ilvl=289&spec=103) |
+| **B Tier** | [Ranger-Captain's Iridescent Insignia](https://www.wowhead.com/item=249345/ranger-captains-iridescent-insignia?bonus=4795&class=11&hero=22&ilvl=289&spec=103) | Best-in-Slot in pure 2t and 2t only.
 | | [Emberwing Feather](https://www.wowhead.com/item=250144/emberwing-feather?bonus=4795&class=11&hero=22&ilvl=289&spec=103&spellModifier=1250508:137011) | This is much worse if you already have another on use like [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103)
 | | [Light Company Guidon](https://www.wowhead.com/item=249344/light-company-guidon?bonus=4795&class=11&hero=22&ilvl=289&spec=103) | Pair with Berserk. This is much worse if you already have another on use like [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103)
-| **C Tier** | [Vessel of Tortured Souls](https://www.wowhead.com/item=250258/vessel-of-tortured-souls?bonus=4795&hero=22&ilvl=289&spec=103) |
+| **C Tier** | [Heart of Wind](https://www.wowhead.com/item=250256/heart-of-wind?ilvl=289) |
+| | [Solarflare Prism](https://www.wowhead.com/item=252420/solarflare-prism?ilvl=289) |
 | | [Undreamt God's Oozing Vestige](https://www.wowhead.com/item=249805/undreamt-gods-oozing-vestige?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
 | | [Kroluk's Warbanner](https://www.wowhead.com/item=250227/kroluks-warbanner?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
 
-** M+ version of this list will be out before the release of the M+ season so check back later **
+> [!CAUTION]
+> [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103) is likely undersimming in dungeons for now. Fix is imminent. 
+
+**For use in M+:**
+| Tier | Trinket | Notes |
+| :-: | :- | :- |
+| **S Tier** | [Algethar's Puzzle Box](https://www.wowhead.com/item=193701/algethar-puzzle-box?class=11&hero=22&ilvl=289&spec=103) | Cast time is a bit annoying, but use before berserk
+| | [Radiant/Umbral Plume](https://www.wowhead.com/item=249806/radiant-plume?bonus=4795&class=11&hero=22&ilvl=289&spec=103) |
+| | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?hero=22&ilvl=289&spec=103) |
+| **B Tier** | [Solarflare Prism](https://www.wowhead.com/item=252420/solarflare-prism?ilvl=289) | Best alternative passive trinket.
+| | [Heart of Wind](https://www.wowhead.com/item=250256/heart-of-wind?ilvl=289) | A decent stat stick
+| | [Ranger-Captain's Iridescent Insignia](https://www.wowhead.com/item=249345/ranger-captains-iridescent-insignia?bonus=4795&class=11&hero=22&ilvl=289&spec=103) | Excellent for low-target/single target in dungeons. Bad with increased targets.
+| | [Undreamt God's Oozing Vestige](https://www.wowhead.com/item=249805/undreamt-gods-oozing-vestige?bonus=4795&class=11&hero=22&ilvl=289&spec=103) | Fine in mid target counts, but its value is delayed towards the end of pulls, which isnt ideal.
 
 ### Trinket FAQ
 
 Q: Should we be playing double on-use trinkets?
 
-A: No, Feral will typically play just one on-use
+A: No, Feral will typically play just one on-use. [Ranger-Captain's Iridescent Insignia](https://www.wowhead.com/item=249345/ranger-captains-iridescent-insignia?bonus=4795&class=11&hero=22&ilvl=289&spec=103) is fine if you don't have better alternatives.
 
 Q: Why are Radiant Plume and Umbral Plume listed together?
 
 A: Because you can switch between them by activating its on-use effect and cannot wear both at the same time.
 
+Q: Are any of the delve trinkets good?
+
+A: Not really. [Drum of Renewed Bonds](https://www.wowhead.com/item=248583/drum-of-renewed-bonds?ilvl=276) is fine for its item level. You can treat it as a slightly better [Heart of Wind](https://www.wowhead.com/item=250256/heart-of-wind?ilvl=289), except its item level doesn't go up to Myth track. (hence why it is not in the trinket list)
+
 Q: Why do damaging items deal more damage as Wildstalker?
 
 A: The Wildstalker Hero Talent !440119|Vigorous Creepers! also buffs the damage of non-druid effects.
-
 
 
 # Miscellaneous
