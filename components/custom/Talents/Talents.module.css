@@ -10,7 +10,7 @@
 
 .show {
   opacity: 1;
-  max-height: 1000px; /* Adjust this value if needed */
+  max-height: 1500px; /* Adjust this value if needed */
   overflow-x: hidden;
 }
 
