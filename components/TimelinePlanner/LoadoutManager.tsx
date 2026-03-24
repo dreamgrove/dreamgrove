@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 import { useLoadouts, Loadout } from 'hooks/useLoadouts'
+import { encodeLoadout, decodeLoadout } from '@/lib/utils/loadoutCode'
+import { PlayerAction } from '@/types/timeline'
 
 export default function LoadoutManager() {
   const {
@@ -12,6 +14,8 @@ export default function LoadoutManager() {
     setCurrentSpec,
     activeTalents,
     setActiveTalents,
+    localSpells,
+    getSpellsForSpec,
   } = useTimelineContext()
 
   const { loadouts, saveLoadout, deleteLoadout, renameLoadout } = useLoadouts()
@@ -22,10 +26,15 @@ export default function LoadoutManager() {
   const [editingId, setEditingId] = useState<string | null>(null)
   const [editName, setEditName] = useState('')
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
+  const [isImporting, setIsImporting] = useState(false)
+  const [importCode, setImportCode] = useState('')
+  const [importError, setImportError] = useState('')
+  const [exportCopied, setExportCopied] = useState(false)
 
   const panelRef = useRef<HTMLDivElement>(null)
   const saveInputRef = useRef<HTMLInputElement>(null)
   const editInputRef = useRef<HTMLInputElement>(null)
+  const importInputRef = useRef<HTMLInputElement>(null)
 
   // Close on outside click
   useEffect(() => {
@@ -33,6 +42,9 @@ export default function LoadoutManager() {
       if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
         setIsOpen(false)
         setIsSaving(false)
+        setIsImporting(false)
+        setImportCode('')
+        setImportError('')
         setEditingId(null)
         setConfirmDeleteId(null)
       }
@@ -92,6 +104,66 @@ export default function LoadoutManager() {
     }
   }
 
+  // Focus import input
+  useEffect(() => {
+    if (isImporting) importInputRef.current?.focus()
+  }, [isImporting])
+
+  const handleExport = () => {
+    try {
+      const code = encodeLoadout(currentSpec, activeTalents, inputEvents)
+      navigator.clipboard.writeText(code)
+      setExportCopied(true)
+      setTimeout(() => setExportCopied(false), 2000)
+    } catch {
+      // Silently fail
+    }
+  }
+
+  const handleImport = () => {
+    const code = importCode.trim()
+    if (!code) return
+    setImportError('')
+
+    try {
+      const decoded = decodeLoadout(code)
+
+      // Build a spell lookup from all known spells + decoded custom spells
+      const allSpells = [...localSpells, ...decoded.customSpells]
+      const spellMap = new Map(allSpells.map((s) => [s.spellId, s]))
+
+      // Reconstruct PlayerAction array
+      const events: PlayerAction[] = []
+      for (const e of decoded.events) {
+        const spell = spellMap.get(e.spellId)
+        if (!spell) continue // Skip unknown spells
+        events.push({
+          spell,
+          instant: e.instant,
+          id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+        })
+      }
+
+      // Apply the loadout
+      if (decoded.spec !== currentSpec) {
+        setCurrentSpec(decoded.spec)
+        setTimeout(() => {
+          setInputEvents(events)
+          setActiveTalents(decoded.activeTalents)
+        }, 0)
+      } else {
+        setInputEvents(events)
+        setActiveTalents(decoded.activeTalents)
+      }
+
+      setIsImporting(false)
+      setImportCode('')
+      setIsOpen(false)
+    } catch {
+      setImportError('Invalid code')
+    }
+  }
+
   const specLabels: Record<string, string> = {
     balance: 'Bal',
     resto: 'Resto',
@@ -115,6 +187,9 @@ export default function LoadoutManager() {
         onClick={() => {
           setIsOpen((p) => !p)
           setIsSaving(false)
+          setIsImporting(false)
+          setImportCode('')
+          setImportError('')
           setEditingId(null)
           setConfirmDeleteId(null)
         }}
@@ -149,17 +224,117 @@ export default function LoadoutManager() {
             <span className="text-xs font-medium tracking-wide text-neutral-400 uppercase">
               Saved Loadouts
             </span>
-            <button
-              onClick={() => {
-                setIsSaving(true)
-                setEditingId(null)
-                setConfirmDeleteId(null)
-              }}
-              className="rounded-sm bg-orange-500/20 px-2 py-0.5 text-xs font-medium text-orange-300 transition-colors hover:bg-orange-500/30 hover:text-orange-200"
-            >
-              + Save Current
-            </button>
+            <div className="flex items-center gap-1.5">
+              {/* Import */}
+              <button
+                onClick={() => {
+                  setIsImporting(true)
+                  setIsSaving(false)
+                  setEditingId(null)
+                  setConfirmDeleteId(null)
+                }}
+                title="Import"
+                className="rounded-sm p-1 text-neutral-500 transition-colors hover:bg-neutral-700/50 hover:text-neutral-300"
+              >
+                <svg
+                  className="h-3.5 w-3.5"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M8 2v8M5 7l3 3 3-3M3 12h10" />
+                </svg>
+              </button>
+              {/* Export */}
+              <button
+                onClick={handleExport}
+                title={exportCopied ? 'Copied!' : 'Export to clipboard'}
+                className={`rounded-sm p-1 transition-colors ${
+                  exportCopied
+                    ? 'text-green-400'
+                    : 'text-neutral-500 hover:bg-neutral-700/50 hover:text-neutral-300'
+                }`}
+              >
+                {exportCopied ? (
+                  <svg
+                    className="h-3.5 w-3.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M3 8.5l3 3 7-7" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="h-3.5 w-3.5"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M8 14V6M5 9l3-3 3 3M3 4h10" />
+                  </svg>
+                )}
+              </button>
+              <button
+                onClick={() => {
+                  setIsSaving(true)
+                  setIsImporting(false)
+                  setEditingId(null)
+                  setConfirmDeleteId(null)
+                }}
+                className="rounded-sm bg-orange-500/20 px-2 py-0.5 text-xs font-medium text-orange-300 transition-colors hover:bg-orange-500/30 hover:text-orange-200"
+              >
+                + Save Current
+              </button>
+            </div>
           </div>
+
+          {/* Import input */}
+          {isImporting && (
+            <div className="border-b border-neutral-700/50 px-3 py-2">
+              <div className="flex gap-1.5">
+                <input
+                  ref={importInputRef}
+                  type="text"
+                  value={importCode}
+                  onChange={(e) => {
+                    setImportCode(e.target.value)
+                    setImportError('')
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') handleImport()
+                    if (e.key === 'Escape') {
+                      setIsImporting(false)
+                      setImportCode('')
+                      setImportError('')
+                    }
+                  }}
+                  placeholder="Paste loadout code..."
+                  className="flex-1 rounded-sm border border-neutral-600/50 bg-neutral-800/80 px-2 py-1 text-xs text-white placeholder-neutral-500 focus:border-orange-500/50 focus:outline-none"
+                />
+                <button
+                  onClick={handleImport}
+                  disabled={!importCode.trim()}
+                  className="rounded-sm bg-orange-500/30 px-2.5 py-1 text-xs font-medium text-orange-300 transition-colors hover:bg-orange-500/40 disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Load
+                </button>
+              </div>
+              {importError && <p className="mt-1 text-[0.6rem] text-red-400">{importError}</p>}
+              <p className="mt-1 text-[0.6rem] text-neutral-500">
+                Paste a code from someone else to load their setup
+              </p>
+            </div>
+          )}
 
           {/* Save input */}
           {isSaving && (

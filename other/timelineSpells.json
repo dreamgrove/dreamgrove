@@ -15,7 +15,7 @@
       "channel_duration": 0,
       "effect_duration": 15,
       "cooldown": 32,
-      "charges": 2,
+      "charges": 1,
       "specs": ["balance"]
     },
     {
