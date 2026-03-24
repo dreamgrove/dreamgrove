@@ -33,7 +33,7 @@ export default async function WowheadIcon({
   if (process.env.NODE_ENV === 'test') {
     imageUrl = 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_starfall.jpg'
   } else if (type === 'spell') {
-    imageUrl = `https://pub-d2aa50c9211b48688cd59b52dc89ab42.r2.dev/${id}.jpg`
+    imageUrl = `https://cdn.simcode.dev/${id}.jpg`
   } else {
     if (!iconId) {
       try {
