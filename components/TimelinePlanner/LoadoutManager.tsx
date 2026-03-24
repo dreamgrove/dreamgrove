@@ -15,6 +15,7 @@ export default function LoadoutManager() {
     activeTalents,
     setActiveTalents,
     localSpells,
+    createCustomSpell,
     getSpellsForSpec,
   } = useTimelineContext()
 
@@ -144,16 +145,31 @@ export default function LoadoutManager() {
         })
       }
 
-      // Apply the loadout
-      if (decoded.spec !== currentSpec) {
-        setCurrentSpec(decoded.spec)
-        setTimeout(() => {
-          setInputEvents(events)
-          setActiveTalents(decoded.activeTalents)
-        }, 0)
-      } else {
+      // Register custom spells so processEventQueue can find them
+      const hasNewCustomSpells = decoded.customSpells.some(
+        (cs) => !localSpells.some((s) => s.spellId === cs.spellId)
+      )
+      for (const cs of decoded.customSpells) {
+        if (!localSpells.some((s) => s.spellId === cs.spellId)) {
+          createCustomSpell(cs)
+        }
+      }
+
+      // Apply the loadout — defer to next tick so custom spell state updates
+      // have flushed before processEventQueue runs
+      const applyLoadout = () => {
         setInputEvents(events)
         setActiveTalents(decoded.activeTalents)
+      }
+
+      if (decoded.spec !== currentSpec) {
+        setCurrentSpec(decoded.spec)
+      }
+
+      if (decoded.spec !== currentSpec || hasNewCustomSpells) {
+        setTimeout(applyLoadout, 0)
+      } else {
+        applyLoadout()
       }
 
       setIsImporting(false)
