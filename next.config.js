@@ -75,7 +75,7 @@ module.exports = () => {
         },
         {
           protocol: 'https',
-          hostname: 'pub-d2aa50c9211b48688cd59b52dc89ab42.r2.dev',
+          hostname: 'cdn.simcode.dev',
         },
       ],
       formats: ['image/webp'],
