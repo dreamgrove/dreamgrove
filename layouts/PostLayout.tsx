@@ -45,13 +45,7 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                     <p
                       className={`${translator ? '' : 'lg:flex lg:flex-col lg:items-start'} text-lg font-medium text-gray-900 lg:justify-self-start dark:text-gray-100`}
                     >
-                      Written by:{' '}
-                      {authorDetails.map((author, index) => (
-                        <span key={author} className="text-[#1a9c82]">
-                          {index > 0 && ', '}
-                          {author}
-                        </span>
-                      ))}
+                      Written by: <span className="text-[#1a9c82]">{authorDetails.join(', ')}</span>
                     </p>
                     {translator && translator !== '' && (
                       <p className="text-lg font-medium text-gray-900 lg:text-left dark:text-gray-100">
@@ -80,7 +74,7 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
               </div>
             </div>
           </header>
-          <div className="mb-5 h-px bg-gray-600 opacity-35"></div>
+          <div className="mb-5 h-px bg-gradient-to-r from-transparent via-gray-400/40 to-transparent dark:via-gray-600/40"></div>
           <div className="grid-rows-[auto_1fr] pb-8 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:divide-y-0 lg:divide-gray-200 lg:dark:divide-gray-700">
             <aside className="hidden overflow-y-auto lg:sticky lg:top-0 lg:col-span-3 lg:block lg:h-svh lg:pt-5">
               {toc && Array.isArray(toc) ? <TableOfContents chapters={toc} /> : null}

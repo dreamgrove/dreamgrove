@@ -2,7 +2,7 @@ import 'css/tailwind.css'
 import 'css/april-fools.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Space_Grotesk } from 'next/font/google'
+import { Space_Grotesk, Source_Sans_3, IBM_Plex_Sans, DM_Sans } from 'next/font/google'
 import { KBarSearchProvider } from '@/components/search/KBarSearchProvider'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
@@ -16,6 +16,25 @@ const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-space-grotesk',
+})
+
+const source_sans = Source_Sans_3({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-source-sans',
+})
+
+const ibm_plex = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  variable: '--font-ibm-plex',
+})
+
+const dm_sans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-sans',
 })
 
 export const metadata: Metadata = {
@@ -68,7 +87,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable}`}
+      className={`${space_grotesk.variable} ${source_sans.variable} ${ibm_plex.variable} ${dm_sans.variable}`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />

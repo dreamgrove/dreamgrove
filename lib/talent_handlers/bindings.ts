@@ -2,14 +2,17 @@ import { Talents, TalentBindings } from '@/types/index'
 import { earlySpring } from './Balance/earlySpring'
 import { controlOfTheDream } from './Balance/controlOfTheDream'
 import { whirlingStars } from './Balance/whirlingStars'
-import { potentEnchantments } from './Balance/potentEnchantements'
 import { incarnation } from './Balance/incarnation'
+import { orbitalStrike } from './Balance/orbitalStrike'
+import { improvedEclipse } from './Balance/improvedEclipse'
 import { dreamstate } from './Resto/dreamstate'
-import { tearDownTheMighty } from './Feral/tearDownTheMighty'
 import { ashamanesGuidance } from './Feral/ashamanesGuidance'
 import { heartOfTheLion } from './Feral/heartOfTheLion'
+import { predator } from './Feral/predator'
+import { focusedFrenzy } from './Feral/focusedFrenzy'
 import { cenariusGuidance } from './Resto/cenariusGuidance'
 import { elunesGuidance } from './Balance/elunesGuidance'
+import { sculptTheStars } from './Balance/sculptTheStars'
 
 export const bindings: TalentBindings[] = [
   {
@@ -68,21 +71,45 @@ export const bindings: TalentBindings[] = [
     handler: whirlingStars,
     label: 'Whirling Stars',
     description: {
-      balance: 'Celestial Alignment gains 2 charges and its cooldown is reduced by 100 seconds.',
+      balance: 'Celestial Alignment gains 2 charges and its cooldown is reduced by 60 seconds.',
+    },
+    specs: ['balance'],
+    onByDefault: true,
+  },
+  {
+    id: Talents.SculptTheStars,
+    spellId: 1240188,
+    affectedSpells: [1239669],
+    handler: sculptTheStars,
+    label: 'Sculpt the Stars',
+    description: {
+      balance: 'Eclipse cooldown reduced by 2 sec.',
     },
     specs: ['balance'],
   },
   {
-    id: Talents.PotentEnchantments,
-    spellId: 429420,
+    id: Talents.OrbitalStrike,
+    spellId: 390378,
     affectedSpells: [194223],
-    handler: potentEnchantments,
-    label: 'Potent Enchantments',
+    handler: orbitalStrike,
+    label: 'Orbital Strike',
     description: {
-      balance: 'Whirling Stars CD reduction is increased by 10 sec.',
-      resto: 'Reforestation increases the duration of Tree of Life by 3 seconds',
+      balance:
+        'Reduces the cooldown of Incarnation: Chosen of Elune / Celestial Alignment by 60 sec.',
     },
-    specs: ['balance', 'resto'],
+    specs: ['balance'],
+  },
+  {
+    id: Talents.ImprovedEclipse,
+    spellId: 1240906,
+    affectedSpells: [1239669],
+    handler: improvedEclipse,
+    label: 'Improved Eclipse',
+    description: {
+      balance: 'Eclipse has one additional charge.',
+    },
+    specs: ['balance'],
+    onByDefault: true,
   },
   {
     id: Talents.Dreamstate,
@@ -108,13 +135,25 @@ export const bindings: TalentBindings[] = [
     specs: ['feral'],
   },
   {
-    id: Talents.TearDownTheMighty,
-    spellId: 441846,
-    affectedSpells: [274837],
-    handler: tearDownTheMighty,
-    label: 'Tear Down the Mighty',
+    id: Talents.Predator,
+    spellId: 202021,
+    affectedSpells: [5217],
+    handler: predator,
+    label: 'Predator',
     description: {
-      feral: 'Feral Frenzy cooldown reduced by 10 sec.',
+      feral: "Tiger's Fury lasts 5 additional seconds.",
+    },
+    specs: ['feral'],
+    onByDefault: true,
+  },
+  {
+    id: Talents.FocusedFrenzy,
+    spellId: 1244544,
+    affectedSpells: [274837],
+    handler: focusedFrenzy,
+    label: 'Focused Frenzy',
+    description: {
+      feral: "Feral Frenzy's cooldown reduced by 15 sec and its damage is increased by 20%.",
     },
     specs: ['feral'],
   },

@@ -1,66 +1,106 @@
-copy="beledar and crit"
+copy="potential mast food mast flask"
 
-flask=flask_of_tempered_aggression_3
-food=beledars_bounty
+flask=flask_of_the_magisters_2
+food=blooming_feast
+potion=lights_potential_2
 
-copy="beledar and mastery"
-
-food=beledars_bounty
-flask=flask_of_tempered_mastery_3
-
-copy="beledar and alch chaos"
-
-food=beledars_bounty
-flask=flask_of_alchemical_chaos_3
-
-copy="beledar and haste"
-
-food=beledars_bounty
-flask=flask_of_tempered_swiftness_3
-
-copy="beledar and vers"
-
-food=beledars_bounty
-flask=flask_of_tempered_versatility_3
+copy="potential int food mast flask"
 
 
-copy="feast and crit"
+flask=flask_of_the_magisters_2
+food=harandar_celebration
+potion=lights_potential_2
 
-flask=flask_of_tempered_aggression_3
-food=feast_of_the_midnight_masquerade
 
-copy="feast and vers"
-flask=flask_of_tempered_versatility_3
-food=feast_of_the_midnight_masquerade
+copy="potential mast food crit flask"
 
-copy="feast and haste"
-flask=flask_of_tempered_swiftness_3
-food=feast_of_the_midnight_masquerade
+potion=lights_potential_2
+food=blooming_feast
+flask=flask_of_the_shattered_sun_2
 
-copy="feast and mast"
-flask=flask_of_tempered_mastery_3
-food=feast_of_the_midnight_masquerade
+copy="potential mast food vers flask"
 
-copy="feast and chaos"
-flask=flask_of_alchemical_chaos_3
-food=feast_of_the_midnight_masquerade
+potion=lights_potential_2
+food=blooming_feast
+flask=flask_of_thalassian_resistance_2
 
-copy="lowest secondary and crit"
-flask=flask_of_tempered_aggression_3
-food=everything_stew
+copy="potential mast food haste flask"
 
-copy="lowest secondary and vers"
-flask=flask_of_tempered_versatility_3
-food=everything_stew
+flask=flask_of_the_blood_knights_2
+potion=lights_potential_2
+food=blooming_feast
 
-copy="lowest secondary and haste"
-flask=flask_of_tempered_swiftness_3
-food=everything_stew
+copy="potential int food crit flask"
 
-copy="lowest secondary and mast"
-flask=flask_of_tempered_mastery_3
-food=everything_stew
+flask=flask_of_the_shattered_sun_2
+food=harandar_celebration
+potion=lights_potential_2
 
-copy"lowest secondary and chaos"
-flask=flask_of_alchemical_chaos_3
-food=everything_stew
+copy="potential int food vers flask"
+
+food=harandar_celebration
+potion=lights_potential_2
+flask=flask_of_thalassian_resistance_2
+
+
+copy="potential int food haste flask"
+
+food=harandar_celebration
+potion=lights_potential_2
+flask=flask_of_the_blood_knights_2
+
+
+copy="drought mast food mast flask"
+
+potion=draught_of_rampant_abandon_2
+food=blooming_feast
+flask=flask_of_the_magisters_2
+
+
+copy="drought int food mast flask"
+
+food=harandar_celebration
+potion=draught_of_rampant_abandon_2
+flask=flask_of_the_magisters_2
+
+
+copy="drought mast food crit flask"
+
+potion=draught_of_rampant_abandon_2
+food=blooming_feast
+flask=flask_of_the_shattered_sun_2
+
+
+copy="drought mast food vers flask"
+
+flask=flask_of_thalassian_resistance_2
+potion=raught_of_rampant_abandon_2
+food=blooming_feast
+
+
+copy="drought mask food haste flask"
+
+flask=flask_of_the_blood_knights_2
+potion=draught_of_rampant_abandon_2
+food=blooming_feast
+
+
+copy="drought int food crit flask"
+
+food=harandar_celebration
+potion=draught_of_rampant_abandon_2
+flask=flask_of_the_shattered_sun_2
+
+
+copy="drought int food vers flask"
+
+food=harandar_celebration
+flask=flask_of_thalassian_resistance_2
+potion=draught_of_rampant_abandon_2
+
+
+copy="drought int food haste flask"
+
+food=harandar_celebration
+flask=flask_of_the_blood_knights_2
+potion=draught_of_rampant_abandon_2

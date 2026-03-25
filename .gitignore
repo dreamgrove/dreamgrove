@@ -44,6 +44,9 @@ yarn-error.log*
 .env.production.local
 
 plan.md
+next-env.d.ts
+tsconfig.tsbuildinfo
+
 # Contentlayer
 .contentlayer
 /.vs
@@ -54,3 +57,4 @@ cursor
 .cursor/*
 .cursorspace
 .worktrees
+knowledge

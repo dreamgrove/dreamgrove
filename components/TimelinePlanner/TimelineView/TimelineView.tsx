@@ -7,6 +7,7 @@ import { HoverProvider } from '../Providers/HoverProvider'
 import Warnings from '../Warnings'
 import MRTExport from '../MRTExport'
 import Sidebar from '../Sidebar/Sidebar'
+import LoadoutManager from '../LoadoutManager'
 import SpecSelector from './SpecSelector'
 import ZoomControls from './ZoomControls'
 import SpellNames from './SpellNames'
@@ -64,7 +65,8 @@ function TimelineViewInner({
         <SpellButtons prerenderedIcons={wowheadMap} />
       </div>
 
-      <div className="flex flex-row items-center justify-end pb-2">
+      <div className="flex flex-row items-center justify-end gap-1 pb-2">
+        <LoadoutManager />
         <ZoomControls />
         <MRTExport />
       </div>
