@@ -19,7 +19,7 @@ actions.precombat+=/starfire,if=hero_tree.elunes_chosen|enemies>1
 
 # Executed every time the actor is available.
 # Items, Racials & PI
-actions=use_items,if=(!trinket.1.is.wraps_of_cosmic_madness|!trinket.2.is.wraps_of_cosmic_madness)&(buff.ca_inc.up|(trinket.1.cooldown.duration=60|trinket.2.cooldown.duration=60)&buff.harmony_of_the_grove.up)|variable.ec|fight_remains<cooldown.ca_inc.remains
+actions=use_items,if=(!trinket.1.is.wraps_of_cosmic_madness|!trinket.2.is.wraps_of_cosmic_madness)&(buff.ca_inc.up|(trinket.1.cooldown.duration=60|trinket.2.cooldown.duration=60)&(buff.harmony_of_the_grove.up|variable.ec))|fight_remains<cooldown.ca_inc.remains
 actions+=/use_item,name=wraps_of_cosmic_madness,if=!buff.eclipse.up
 actions+=/potion,if=buff.harmony_of_the_grove.up&buff.ca_inc.up&!variable.ec|buff.ca_inc.up&variable.ec|variable.opener&prev_gcd.1.solar_eclipse|fight_remains<=30
 actions+=/berserking,if=buff.ca_inc.up&(buff.harmony_of_the_grove.up|!talent.dream_surge)|fight_remains<cooldown.ca_inc.remains
