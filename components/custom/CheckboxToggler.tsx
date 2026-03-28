@@ -53,18 +53,20 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
       />
       <div className={clsx('flex-1', isIcon && 'h-full w-full')}>
         <div
-          className={`border-main relative flex h-full w-full items-center rounded border px-2 py-1.5 sm:px-3 ${
-            isChecked ? 'border-main' : 'border-main/20'
+          className={`relative flex h-full w-full items-center rounded-lg border px-2 py-1.5 transition-all duration-250 ease-out sm:px-3 ${
+            isChecked
+              ? 'border-main/70 bg-main/[0.07] dark:border-main/50 dark:bg-main/[0.1] shadow-sm'
+              : 'border-gray-200 hover:border-gray-300 dark:border-gray-700 dark:hover:border-gray-600'
           }`}
         >
           <div className="text-left leading-tight break-words normal-case">{children}</div>
 
           <div
-            className={`bg-main/20 absolute right-1 bottom-1 flex h-5 w-5 items-center justify-center rounded-full md:top-1/2 md:right-2 md:bottom-auto md:-translate-y-1/2 ${
-              isChecked ? 'block' : 'hidden'
+            className={`absolute right-1.5 bottom-1.5 flex h-4.5 w-4.5 items-center justify-center rounded-full transition-all duration-250 ease-out md:top-1/2 md:right-2 md:bottom-auto md:-translate-y-1/2 ${
+              isChecked ? 'bg-main/20 scale-100 opacity-100' : 'scale-50 opacity-0'
             }`}
           >
-            <FaCheck className="text-main" size={12} />
+            <FaCheck className="text-main" size={10} />
           </div>
         </div>
       </div>

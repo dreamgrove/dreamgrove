@@ -538,6 +538,8 @@ export default function Talents({
   extra = [],
   defaultTree = 'Full',
   open = false,
+  hideCopy = false,
+  forceTree,
 }: {
   talents?: string
   viewOnly?: boolean
@@ -548,6 +550,8 @@ export default function Talents({
   extra?: string[]
   defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
   open?: boolean
+  hideCopy?: boolean
+  forceTree?: 'full' | 'class' | 'spec' | 'hero'
 }) {
   // Parse the talent string and get the active data
   const activeData = parseTalentString(talents)
@@ -639,6 +643,8 @@ export default function Talents({
           talentString={talents}
           viewOnly={viewOnly}
           defaultTree={defaultTree}
+          hideCopy={hideCopy}
+          forceTree={forceTree}
         >
           {children}
         </TalentTreeClient>

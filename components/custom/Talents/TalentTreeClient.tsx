@@ -11,6 +11,8 @@ interface TalentTreeClientProps {
   comment?: string
   children?: React.ReactNode
   defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
+  hideCopy?: boolean
+  forceTree?: 'full' | 'class' | 'spec' | 'hero'
 }
 
 const TalentTreeClient = ({
@@ -22,8 +24,11 @@ const TalentTreeClient = ({
   comment,
   children,
   defaultTree = 'Full',
+  hideCopy = false,
+  forceTree,
 }: TalentTreeClientProps) => {
   const [activeTree, setActiveTree] = useState(() => {
+    if (forceTree) return forceTree
     // Convert the defaultTree prop to the internal state format
     switch (defaultTree) {
       case 'Full':
@@ -42,37 +47,24 @@ const TalentTreeClient = ({
   const [isMobile, setIsMobile] = useState(false)
   const [copyError, setCopyError] = useState<string | null>(null)
 
-  // Handle mobile detection
+  // Handle mobile detection and default to 'class' view on mobile
   useEffect(() => {
     const checkIfMobile = () => {
       const mobile = window.innerWidth < 768
       setIsMobile(mobile)
-
-      // If mobile, set active tree to 'class' on initial load
-      if (mobile) {
-        setActiveTree('class')
+      if (mobile && !forceTree) {
+        setActiveTree((prev) => (prev === 'full' ? 'class' : prev))
       }
     }
 
-    // Check on mount
     checkIfMobile()
 
-    // Add event listener for window resize
     window.addEventListener('resize', checkIfMobile, { passive: true } as AddEventListenerOptions)
-
-    // Cleanup
     return () =>
       window.removeEventListener('resize', checkIfMobile, {
         passive: true,
       } as AddEventListenerOptions)
-  }, [])
-
-  // Set default view to 'class' on mobile
-  useEffect(() => {
-    if (isMobile && activeTree === 'full') {
-      setActiveTree('class')
-    }
-  }, [isMobile, activeTree])
+  }, [forceTree])
 
   const handleCopyTalentString = async () => {
     try {
@@ -116,48 +108,50 @@ const TalentTreeClient = ({
 
   return (
     <div className="grid-co flex flex-col gap-4">
-      <div className="flex flex-wrap gap-2">
-        <button
-          onClick={setFullTree}
-          className={`rounded px-3 py-1 ${
-            activeTree === 'full'
-              ? 'bg-yellow-600 text-white'
-              : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-          } ${isMobile ? 'hidden' : ''}`}
-        >
-          Full
-        </button>
-        <button
-          onClick={setClassTree}
-          className={`rounded px-3 py-1 ${
-            activeTree === 'class'
-              ? 'bg-yellow-600 text-white'
-              : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-          }`}
-        >
-          Class
-        </button>
-        <button
-          onClick={setSpecTree}
-          className={`rounded px-3 py-1 ${
-            activeTree === 'spec'
-              ? 'bg-yellow-600 text-white'
-              : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-          }`}
-        >
-          Spec
-        </button>
-        <button
-          onClick={setHeroTree}
-          className={`rounded px-3 py-1 ${
-            activeTree === 'hero'
-              ? 'bg-yellow-600 text-white'
-              : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
-          }`}
-        >
-          Hero
-        </button>
-      </div>
+      {!forceTree && (
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={setFullTree}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'full'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            } ${isMobile ? 'hidden' : ''}`}
+          >
+            Full
+          </button>
+          <button
+            onClick={setClassTree}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'class'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Class
+          </button>
+          <button
+            onClick={setSpecTree}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'spec'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Spec
+          </button>
+          <button
+            onClick={setHeroTree}
+            className={`rounded px-3 py-1 ${
+              activeTree === 'hero'
+                ? 'bg-yellow-600 text-white'
+                : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+            }`}
+          >
+            Hero
+          </button>
+        </div>
+      )}
 
       {copyError && (
         <div className="rounded border border-red-400 bg-red-100 px-4 py-2 text-red-700">
@@ -180,7 +174,7 @@ const TalentTreeClient = ({
       </div>
 
       {/* Add button to copy talent string at the bottom */}
-      {!viewOnly && talentString && (
+      {!hideCopy && !viewOnly && talentString && (
         <div className="mt-4 flex justify-center">
           <button
             onClick={handleCopyTalentString}

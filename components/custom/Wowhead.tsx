@@ -105,7 +105,7 @@ export default async function Wowhead({
   const whUrl =
     url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
 
-  icon = <span className="inline-block h-[1.25em] w-[1.25em] shrink-0">{icon}</span>
+  icon = <span className="wowhead-icon-wrap">{icon}</span>
   return disabled ? (
     <div
       className={`${context} relative w-full decoration-2 q${quality} flex items-${align} gap-1`}
@@ -119,12 +119,12 @@ export default async function Wowhead({
   ) : (
     <a
       href={whUrl}
-      className={`${context} decoration-2 q${quality} inline-flex items-${align} gap-1`}
-      style={{ color: textColor != '' ? textColor : linkColor, textWrap: 'nowrap' }}
+      className={`${context} wowhead-link decoration-2 q${quality} inline-flex items-${align} gap-0.5`}
+      style={{ color: textColor != '' ? textColor : linkColor }}
     >
       {icon}
       {showLabel && (
-        <span className={`trim-text leading-none text-wrap break-words ${ellipsis ? '' : ''}`}>
+        <span className={`leading-[inherit] text-wrap break-words ${ellipsis ? '' : ''}`}>
           {display}
         </span>
       )}

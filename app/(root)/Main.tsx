@@ -7,17 +7,17 @@ import guardian from 'public/static/images/cards/guardian-card.png'
 import dungeons from 'public/static/images/cards/dungeons-card.png'
 import raids from 'public/static/images/cards/raids-card.png'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import Image from 'next/image'
 import MainAprilFools from './MainAprilFools'
 
 export default function Home() {
   const { theme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
 
   if (theme === 'april-fools' && mounted) {
     return <MainAprilFools />
@@ -31,8 +31,8 @@ export default function Home() {
   const images = [
     { src: balance, href: '/blog/balance/compendium', alt: 'Balance guide', active: true },
     { src: feral, href: '/blog/feral/compendium', alt: 'Feral guide', active: true },
-    { src: resto, href: '/blog/resto/compendium', alt: 'Resto guide', active: true },
     { src: guardian, href: '/blog/guardian/compendium', alt: 'Guardian guide', active: true },
+    { src: resto, href: '/blog/resto/compendium', alt: 'Resto guide', active: true },
   ]
 
   return (

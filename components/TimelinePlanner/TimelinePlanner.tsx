@@ -143,7 +143,7 @@ export default function TimelinePlanner({
       onStepChange={onNextStepStepChange}
       onSkip={onSkip}
     >
-      <div className="border-radius-4px relative flex h-full flex-col overflow-x-clip bg-[#2a2a2a] pb-12">
+      <div className="timeline border-radius-4px relative flex h-full flex-col overflow-x-clip bg-[#2a2a2a] pb-12">
         {false && (
           <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 md:space-x-4">
             <FightSelector

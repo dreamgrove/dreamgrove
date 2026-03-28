@@ -52,24 +52,17 @@ export const handleCastStart: ICastStartHandler = (
     /* Reforestation */
     if (event.spellId === 392356) {
       const treeOfLifeId = 33891
-      // if the casts has a cast with id treeOfLifeId, then we need to add 15 seconds to the cooldown
       const treeOfLifeCast = timelineState.isSpellCastPresent(treeOfLifeId)
-      const potentEnchantments = activeBindings.includes(Talents.PotentEnchantments)
-
-      const potentEnchantmentsDuration = potentEnchantments ? 3 : 0
       if (
         treeOfLifeCast &&
-        event.time <
-          treeOfLifeCast.effect_duration +
-            treeOfLifeCast.effect_start_s +
-            potentEnchantmentsDuration
+        event.time < treeOfLifeCast.effect_duration + treeOfLifeCast.effect_start_s
       ) {
-        treeOfLifeCast.effect_duration += spellInfo.effect_duration + potentEnchantmentsDuration
-        treeOfLifeCast._ef_end_s += spellInfo.effect_duration + potentEnchantmentsDuration
+        treeOfLifeCast.effect_duration += spellInfo.effect_duration
+        treeOfLifeCast._ef_end_s += spellInfo.effect_duration
         eventQueue.modifyFirstEarliestOfType(
           treeOfLifeCast,
           EventType.EffectEnd,
-          spellInfo.effect_duration + potentEnchantmentsDuration,
+          spellInfo.effect_duration,
           event.time
         )
       }
