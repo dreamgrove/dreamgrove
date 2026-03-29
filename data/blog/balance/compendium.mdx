@@ -1,6 +1,6 @@
 ---
 title: Balance Druid Compendium
-patch: '12.0'
+patch: '12.0.1'
 draft: false
 authors: ["Gamz", "Vinter"]
 summary: A guide to Balance Druid
@@ -29,17 +29,25 @@ This is approximately ~11% dmg increase from having no set, depending on how man
 
 
 <Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
-<Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" defaultCheck radio="Keeper of the Grove" />
+<Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
 <Checkbox isIcon id="OpCon" spellId={391528} name="Convoke the Spirits" radio="Coninc" />
 <Checkbox isIcon id="OpInc" spellId={102560} name="Incarnation: Chosen of Elune" defaultCheck radio="Coninc" />
 
-[*KEEPER&&OpInc] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233346, 78674, 78674, 78674, 5176, 5176, 5176, 93402, 202770, 205636, 102560]}> The core idea behind the opener is to get into !Eclipse! as soon as possible to get the ability on cooldown before spending your !Ascendant Stars! buffs and using your cooldowns. It is optimal to reapply !Sunfire! right before using your cooldowns to avoid having to reapply the dot during your cooldowns.  </Timeline>
+[*KEEPER&&OpInc] <Timeline spellIds={[5176, 5176, 5176, 93402, 202770, 205636, 102560]}/>
 
-[*EC&&OpInc] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233272, 202770, 78674, 78674, 78674, 194153, 93402, 102560]}> The idea behind the !Elune's Chosen! opener is to get into !Eclipse! as soon as possible to get the ability on cooldown before spending your !Ascendant Stars! buffs and using your cooldowns. </Timeline>
+[*EC&&OpInc] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 202770, 194153, 102560]}/> 
 
-[*EC&&OpCon] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233272, 202770, 78674, 78674, 78674, 194153, 93402, 194223, 391528 ]}> The idea behind the !Elune's Chosen! opener is to get into !Eclipse! as soon as possible to get the ability on cooldown before spending your !Ascendant Stars! buffs and using your cooldowns. </Timeline>
+[*EC&&OpCon] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 202770, 194153, 194223, 78674, 78674, 78674, 391528 ]}/> 
 
-[*KEEPER&&OpCon] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233346, 78674, 78674, 78674, 93402, 202770, 205636, 194223, 391528 ]}> The core idea behind the opener is to get into !Eclipse! as soon as possible to get the ability on cooldown before spending your !Ascendant Stars! buffs and using your cooldowns. It is optimal to reapply !Sunfire! right before using your cooldowns to avoid having to reapply the dot during your cooldowns. </Timeline>
+[*KEEPER&&OpCon] <Timeline spellIds={[5176, 5176, 5176, 93402, 202770, 194223, 78674, 78674, 78674, 391528 ]}/> 
+
+<Collapsible title="Opener explained">
+
+The main idea behind the opener aims to start casting at ~4 seconds left on the pull timer. These 3 !Wrath! casts don't serve any purpose outside of being free damage and being a chance to proc !Touch the Cosmos!. After this you want to apply your !Sunfire! and !Moonfire! and send your cooldown.
+
+The opener can change depending on the specifics of the fight and whether there are specific spots you need to have cooldowns for. You want to keep in mind that with both !Eclipse! and !194223|CA!/!102560|Incarnation! having 2 charges, using one while the other is active will hurt your total uptime on !Eclipse!.
+
+</Collapsible>
 
 </HeroTalentsHeader>
 ## Single Target Priority
@@ -51,10 +59,6 @@ When reading the priority lists below, you should not think of these as steps to
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - ST">
 
 <Checkbox isIcon id="ConvokeKOTG" spellId={391528} name="Convoke the Spirits" />
-<Checkbox isIcon id="CONTROL" spellId={434249} name="Control of the Dream" defaultCheck />
-<Checkbox isIcon id="StarweaverKOTG" spellId={393940} name="Starweaver" radio="RattleKOTG" defaultCheck />
-<Checkbox isIcon id="RattleKOTG" spellId={393954} name="Rattle the Stars" radio="RattleKOTG" />
-<Checkbox isIcon id="CosmosKOTG" spellId={450356} name="Touch the Cosmos" defaultCheck />
 <Checkbox isIcon id="MoonKOTG" spellId={274281} name="New Moon" radio="MoonKOTG" />
 <Checkbox isIcon id="FoEKOTG" spellId={202770} name="Fury of Elune" radio="MoonKOTG" />
 
@@ -62,18 +66,17 @@ When reading the priority lists below, you should not think of these as steps to
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - [*FoEKOTG] Use !Fury of Elune! before using !Force of Nature!.
 - Use !Force of Nature! if any of the following conditions is true:
-  - !194223|Celestial Alignment!/!102560|Incarnation! is available and you do not have an active !Eclipse!.
-  - !Solar Eclipse! is available.
+ - !194223|Celestial Alignment!/!102560|Incarnation! is available and you do not have an active !Eclipse!.
+ - !Solar Eclipse! is available.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if your previous cast was !Force of Nature!.
 - [*ConvokeKOTG] Use !Convoke the Spirits! if you are below 40 Astral Power and any of the following are true:
   - You just used !194223|CA!/!102560|Incarnation!.
   - !Convoke the Spirits! will be available before !194223|CA!/!102560|Incarnation! comes off cooldown.
-- Enter !Solar Eclipse! if any of the following conditions is true:
+- Enter !Solar Eclipse! if any of the following conditions are true:
   - You are sitting on 2 charges of !Eclipse!.
-  - You have enough Astral Power or !Starweaver!/!Touch the Cosmos! procs to spend all 3 !Ascendant Stars! stacks and !Force of Nature! is not available.
-  - You are not in an !Eclipse! and you just used !Force of Nature! and !194223|CA!/!102560|Incarnation! is not available.
-- Use !Starfire! if you have an !Ascendant Fires! proc and you are inside !194223|CA!/!102560|Incarnation!.
-- [*StarweaverKOTG] Cast !Starfall! if you have a !Starweaver's Warp! proc.
+  - You have enough Astral Power or !Starweaver!/!Touch the Cosmos! procs to spend all 3 !Ascendant Stars! stacks from your Apex Talent and !Force of Nature! is not available.
+- Use !Starfire! if you have an !Ascendant Fires! proc from your Apex Talent and you are inside !194223|CA!/!102560|Incarnation!.
+- Cast !Starfall! if you have a !Starweaver's Warp! proc.
 - [*MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are true:
   - You will not overcap on AP.
   - You can finish the cast before your current Eclipse ends.
@@ -81,7 +84,7 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !Starsurge! if any of the following conditions is true:
   - You are about to overcap on Astral Power.
   - You need to move.
-  - The !Ascendant Stars! buff is up.
+  - The !Ascendant Stars! buff from your Apex Talent is up.
   - You have a !Touch the Cosmos! or !Starweaver's Weft! proc.
 - Use !Wrath!.
 </HeroTalentsHeader>
@@ -91,33 +94,28 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="MoonEC" spellId={274281} name="New Moon" radio="MoonEC" /> 
 <Checkbox isIcon id="FoEEC" spellId={202770} name="Fury of Elune" defaultCheck radio="MoonEC" /> 
 <Checkbox isIcon id="ConvokeEC" spellId={391528} name="Convoke the Spirits" />
-<Checkbox isIcon id="CosmosEC" spellId={450356} name="Touch the Cosmos" defaultCheck />
-<Checkbox isIcon id="StarweaverEC" spellId={393940} name="Starweaver" radio="RattleEC" defaultCheck />
-<Checkbox isIcon id="RattleEC" spellId={393954} name="Rattle the Stars" radio="RattleEC" /> 
 
 - Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Use !Moonfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
-- Use !Lunar Eclipse! if you are sitting at 2 charges.
-- [*FoEEC] Use !Fury of Elune! off cooldown.
-- Use !194223|Celestial Alignment!/!102560|Incarnation! if any the following conditions are true:
+- Use !194223|Celestial Alignment!/!102560|Incarnation! if all the following conditions are true:
   - You're not in !Eclipse!.
-  - [*FoEEC] !Fury of Elune! is not on cooldown.
-  - !194223|Celestial Alignment!/!102560|Incarnation! has 2 charges, you are in Eclipse and !Ascendant Stars! is down
+  - [*FoEEC] Your previous cast was !Fury of Elune!.
 - Use !Lunar Eclipse! if you are currently not in an !Eclipse!.
-- Use !Starfire! if you have an !Ascendant Fires! proc.
+- [*FoEEC] Use !Fury of Elune!.
 - [*ConvokeEC] Use !Convoke the Spirits! if you are below 40AP and you just pressed !194223|CA!/!102560|Incarnation! 
 - [*MoonEC] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are true:
   - You will not overcap on AP.
   - You can finish the cast before your current Eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
-- [*StarweaverEC] Cast !Starfall! if you have a !Starweaver's Warp! proc.
+  - You are sitting on 3 charges.
+- Cast !Starfall! if you have a !Starweaver's Warp! proc.
 - Use !Starsurge! if any of the following conditions is true:
+  - You are about to overcap on AP.
   - You need to move.
-  - You are in !Eclipse!.
-  - The !Ascendant Stars! buff is up.
-  - [*CosmosEC&&RattleEC] You have a !Touch the Cosmos! proc.
-- Use !Starfire! inside !Lunar Eclipse! and !194223|Celestial Alignment!/!102560|Incarnation!.
-- Use !Wrath! if you are not currently in an !Eclipse! or !194223|Celestial Alignment!/!102560|Incarnation!.
+  - The !Ascendant Stars! buff from your Apex Talent is up.
+  - You have a !Touch the Cosmos! or !Starweaver's Weft! proc.
+- Use !Starfire! inside !Lunar Eclipse!.
+- Use !Wrath! if you are not currently in an !Eclipse!.
 
 </HeroTalentsHeader>
 
@@ -127,8 +125,6 @@ When reading the priority lists below, you should not think of these as steps to
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
 <Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonKAOE" />
 <Checkbox isIcon id="New MoonKAOE" spellId={274281} name="New Moon" radio="New MoonKAOE" />
-<Checkbox isIcon id="Touch the CosmosKAOE" spellId={450356} name="Touch the Cosmos" />
-<Checkbox isIcon id="StarweaverKAOE" spellId={393940} name="Starweaver" />
 <Checkbox isIcon id="Convoke the SpiritsKAOE" spellId={391528} name="Convoke the Spirits" />
 <Checkbox isIcon id="Wild MushroomKAOE" spellId={88747} name="Wild Mushroom" />
 
@@ -143,14 +139,18 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if one of the following conditions are met:
   - You just used !Force of Nature!.
   - The fight will end before !Force of Nature! is available again.
-- Enter !Solar Eclipse! on less than 4 targets and !Lunar Eclipse! on 4 targets and more if any of the following conditions are met:
+- Enter !Solar Eclipse! up to 3 targets and !Lunar Eclipse! on 3+ targets and more if any of the following conditions are met:
   - You are currently not in an !Eclipse!.
   - You just used !Force of Nature! and !194223|CA!/!102560|Incarnation! is not available.
 - [*Fury of EluneKAOE] Use !Fury of Elune!.
 - Use !Starfall! if one of the following conditions are met:
+  - You are fighting 3+ targets and you are about to overcap on Astral Power.
+  - You have a !393942|Starweaver's Warp! proc.
+  - You have a !450356|Touch the Cosmos! proc.
+- Use !Starsurge! on 2 targets if one of the following conditions are met:
   - You are about to overcap on Astral Power.
-  - [*StarweaverKAOE] You have a !393942|Starweaver's Warp! proc.
-  - [*Touch the CosmosKAOE] You have a !450356|Touch the Cosmos! proc.
+  - You have a !Starweaver's Weft proc!
+  - You have a !Touch the Cosmos proc!
 - [*Wild MushroomKAOE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active on your target.
 - [*New MoonKAOE] Use !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
@@ -159,32 +159,31 @@ When reading the priority lists below, you should not think of these as steps to
 - [*New MoonKAOE] Use !New Moon! if you will not overcap on AP.
 - [*New MoonKAOE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current !Eclipse! ends.
 - [*Convoke the SpiritsKAOE] Use !Convoke the Spirits! if you are fighting less than 7 targets and !Umbral Embrace! is not up.
-- [*StarweaverKAOE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
-- Use !Starfire! to spend the !Ascendant Fires! buff or when you are in !Lunar Eclipse!.
+- Use !Starfire! to spend the !Ascendant Fires! buff from your Apex Talent inside !194223|CA!/!102560|Incarnation! or when you are in !Lunar Eclipse!.
 - Use !Wrath! in !Solar Eclipse!.
 </HeroTalentsHeader>
 
 <HeroTalentsHeader id="ec" title="Elune's Chosen - AoE">
 <Checkbox isIcon id="Fury of EluneECAoE" spellId={202770} name="Fury of Elune" defaultCheck radio="FoEEC"/>
 <Checkbox isIcon id="New MoonECAoE" spellId={274281} name="New Moon" radio="FoEEC"/>
-<Checkbox isIcon id="StarweaverECAoE" spellId={393940} name="Starweaver"/>
-<Checkbox isIcon id="Touch the CosmosECAoE" spellId={450356} name="Touch the Cosmos" />
 <Checkbox isIcon id="Convoke the SpiritsECAoE" spellId={391528} name="Convoke the Spirits"/>
-<Checkbox isIcon id="Force of NatureECAoE" spellId={205636} name="Force of Nature" radio="Force of NatureEC"/>
 <Checkbox isIcon id="Wild MushroomECAoE" spellId={88747} name="Wild Mushroom"/>
 
 - Use !Sunfire! if the target will live for at least 5.5 seconds. Subtract 0.5 seconds for each additional target beyond the first. Wait until all targets are gathered.
 - Use !Moonfire! if the targets will live for 6 or more seconds and you will not overcap on AP. Start spreading !Moonfire! while the tank is gathering mobs.
-- Use !Starfall! if you would overcap Astral Power with your next cast and you're not casting !194223|CA!/!102560|Incarnation! next.
 - [*Fury of EluneECAoE] Use !Fury of Elune! if it's available the global before !194223|CA!/!102560|Incarnation!.
 - Use !194223|CA!/!102560|Incarnation!.
 - Enter !Lunar Eclipse! if you are currently not in an !Eclipse!.
 - [*Fury of EluneECAoE] Use !Fury of Elune!.
 - [*Wild MushroomECAoE] Use !Wild Mushroom! if you will not overcap on AP and !Fungal Growth! is not active.
 - Use !Starfall! if one of the following conditions are met:
-  - !Starlord! is below 3 stacks.
-  - [*StarweaverECAoE] You have a !393942|Starweaver's Warp! proc.
-  - [*Touch the CosmosECAoE] You have a !450356|Touch the Cosmos! proc.
+  - You are fighting 3+ targets and you are about to overcap on Astral Power.
+  - You have a !393942|Starweaver's Warp! proc.
+  - You have a !450356|Touch the Cosmos! proc.
+- Use !Starsurge! on 2 targets if one of the following conditions are met:
+  - You are about to overcap on Astral Power.
+  - You have a !Starweaver's Weft! proc.
+  - You have a !Touch the Cosmos! proc
 - [*New MoonECAoE] Use !Full Moon! if all of the following conditions are met:
   - You will not overcap on AP.
   - You can finish the cast before your current eclipse ends.
@@ -192,8 +191,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*New MoonECAoE] Use !New Moon! if you will not overcap on AP.
 - [*New MoonECAoE] Use !Half Moon! if you will not overcap on AP and you can finish the cast before your current eclipse ends.
 - [*Convoke the SpiritsECAoE] Use !Convoke the Spirits! if you are fighting less than 7 targets and !Umbral Embrace! is not up.
-- [*StarweaverECAoE] Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
-- [*Force of NatureECAoE] Use !248280|Force of Nature! if you will not overcap on AP.
+- Use !Starsurge! if you have a !393944|Starweaver's Weft! proc.
 - Use !Starfire!.
 
 </HeroTalentsHeader>
@@ -209,11 +207,12 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Keeper Fillers] Enter !Lunar Eclipse! on 3+ targets.
 - [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
 - [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
-- [*EC Fillers] Enter !Lunar Eclipse! on all target counts.
-- [*EC Fillers] Cast !Wrath! outside of !Eclipse!.
+- [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! on all target counts.
+- [*EC Fillers] Cast !Wrath! if you are outside of !Eclipse!.
+- Cast !Wrath! in !Solar Eclipse!.
 - Cast !Starfire! in !Lunar Eclipse!.
-- Use !Starsurge! on 1 and 2 targets.
-- Use !Starfall! on 3+ targets unless talented into !Starweaver!.
+- Use !Starsurge! as your main spenderon 1 and 2 targets.
+- Use !Starfall! as your main spender on 3+ targets regardless of talents.
 
 
 <Collapsible title="How to Use Whirling Stars">
@@ -222,6 +221,12 @@ When reading the priority lists below, you should not think of these as steps to
 In an M+ scenario, if you're talented into !Incarnation: Chosen of Elune! instead of !391528|Convoke!, you want to use your !Whirling Stars! charges at any time where you can overlap with !248280|Force of Nature!.
 
 When playing !Elune's Chosen! you gain more freedom in using your cooldowns and can send them on spots in the fight where it's beneficial. Usually this means you use your !194223|CA!/!102560|Incarnation! with an on-use trinket, or if the remaining recharge on !194223|CA!/!102560|Incarnation! is shorter than the trinket cooldown.
+</Collapsible>
+
+<Collapsible title="How to Play on 2 Targets">
+
+In the Midnight Season 1 raids, there are a few spots where you are consistently fighting 2 targets. Because of the rise of builds using !Starweaver!, your natural instinct would be to press !Starfall! as your main spender, but that is not always your best option. Spending Astral Power on !Starfall! with !Aetherial Kindling! talented does serve to make the fights easier, with less reliance on having to reapply your DoT effects. However, the optimal way to play these fights is to use !Starsurge! as your main spender and using !Starfall! for when there are add phases or you have a !Starweaver's Warp! proc. You should also aim to maintain the !Stellar Amplification! debuff on both targets, by swapping target between your !Starsurge! casts. This increases the overall damage the targets take from both !Shooting Stars! and your !Starfall! casts.
+
 </Collapsible>
 
 # Talents
@@ -486,8 +491,7 @@ Later on in the season you should have this crafted on either a Belt or a Wrist 
 **A:** Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also apply to Astral spells, and effects that buff Arcane spells likewise also apply to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 * 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
 
 ### Q: How do I sim for Mythic+?
-**A:** It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, you 
-can create a route using [Keystone Guru](https://keystone.guru/) and click the "simulate" option to generate a SimC string. For a guide on how to set this up, you can look at this video from [Shadarek](https://www.youtube.com/watch?v=4gGeBPuwIjo). The video explains how to do it for Demon Hunter, but the difference to Balance Druid is only in which raid buff to choose. 
+**A:** Simming for mythic+ through dungeonroute sims or dungeonslice is currently not well supported in the Balance Druid APL and you're better off simming the regular 1 target 5 minute sim. It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" option. 
 
 ### Q: I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
 **A:** Log one of your fights and check it with [Warcraftlogs](https://www.warcraftlogs.com/) and [Wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and close to zero cancelled casts. Another common issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders. Balance Druid is a proactive spec, and you should have a plan for how you're going to deal with incoming mechanics without sacrificing uptime or being forced into suboptimal casts. You can also share your log in Balance channel in Dreamgrove and usually someone will see it and give some tips. Remember that the answer you need is not always the answer you want.
