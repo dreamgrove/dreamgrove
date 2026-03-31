@@ -208,8 +208,8 @@ export function AprilFoolsPopup() {
   const handleClose = useCallback(() => {
     setActive(false)
 
-    // Schedule another popup after 30-90 seconds
-    const nextDelay = 30000 + Math.random() * 60000
+    // Schedule another popup after 2.5-7.5 minutes
+    const nextDelay = 150000 + Math.random() * 300000
     setTimeout(() => {
       setSite(pickRandom(FAKE_SITES))
       setPopupKey((k) => k + 1)
