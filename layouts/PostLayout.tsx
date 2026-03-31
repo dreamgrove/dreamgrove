@@ -32,6 +32,7 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
   return (
     <SectionContainer>
       <ScrollTopAndComment />
+      {isCompendium && <AprilFoolsBanner />}
       <article>
         <div>
           <header className="h-auto pt-4 pb-12 lg:h-28 lg:py-0">
@@ -91,15 +92,12 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                   <span className="inline align-top">Changelog</span>
                 </a>
               </div>
-              {isCompendium && <AprilFoolsBanner />}
               <div
                 style={{ counterReset: 'heading' }}
                 className="prose dark:prose-invert max-w-none pt-4 pb-8 text-base sm:pt-0"
               >
                 <CheckboxProvider>{children}</CheckboxProvider>
               </div>
-              {isCompendium && <AprilFoolsBanner />}
-              {isCompendium && <AprilFoolsAds bannerCount={0} />}
             </div>
 
             <footer className="xl:col-span-12">
@@ -121,6 +119,8 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
           </div>
         </div>
       </article>
+      {isCompendium && <AprilFoolsBanner />}
+      {isCompendium && <AprilFoolsAds bannerCount={0} />}
     </SectionContainer>
   )
 }
