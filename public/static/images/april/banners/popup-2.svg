@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1a1a2e" rx="8"/>
+  <rect x="3" y="3" width="394" height="294" fill="none" stroke="#e6c200" stroke-width="2" rx="6" stroke-dasharray="8 4"/>
+  <text x="200" y="130" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e6c200">POPUP AD</text>
+  <text x="200" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#e6c200">SITE 2</text>
+  <text x="200" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#888">400 × 300</text>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#666">Replace with real image</text>
+</svg>

@@ -9,6 +9,7 @@ import TableOfContents from '@/components/custom/TableOfContents/TableOfContents
 import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
+import AprilFoolsAds, { AprilFoolsBanner } from '@/components/AprilFools/AprilFoolsAds'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -90,12 +91,15 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                   <span className="inline align-top">Changelog</span>
                 </a>
               </div>
+              {isCompendium && <AprilFoolsBanner />}
               <div
                 style={{ counterReset: 'heading' }}
                 className="prose dark:prose-invert max-w-none pt-4 pb-8 text-base sm:pt-0"
               >
                 <CheckboxProvider>{children}</CheckboxProvider>
               </div>
+              {isCompendium && <AprilFoolsBanner />}
+              {isCompendium && <AprilFoolsAds bannerCount={0} />}
             </div>
 
             <footer className="xl:col-span-12">
