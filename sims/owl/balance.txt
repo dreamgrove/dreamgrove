@@ -131,8 +131,8 @@ actions.ec_st+=/new_moon,if=astral_power.deficit>energize_amount&debuff.atmosphe
 actions.ec_st+=/half_moon,if=astral_power.deficit>energize_amount&debuff.atmospheric_exposure.remains<execute_time+0.5
 actions.ec_st+=/full_moon,if=astral_power.deficit>energize_amount&debuff.atmospheric_exposure.remains<execute_time+0.5
 actions.ec_st+=/wild_mushroom,if=buff.eclipse_solar.up|cooldown.wild_mushroom.full_recharge_time<cooldown.ca_inc.remains
-actions.ec_st+=/starfire,if=!variable.eclipse_down
-actions.ec_st+=/wrath,if=variable.eclipse_down
+actions.ec_st+=/starfire,if=action.starfire.execute_time<buff.eclipse.remains
+actions.ec_st+=/wrath
 
 
 actions.kotg_st=celestial_alignment,if=prev_gcd.1.force_of_nature&buff.ca_inc.down|fight_remains<20
