@@ -202,7 +202,7 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
 - [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
 - [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! on all target counts.
-- [*EC Fillers] Cast !Wrath! if you are outside of !Eclipse!.
+- [*EC Fillers] Cast !Wrath! if you are outside of !Eclipse! on Single Target.
 - [*Keeper Fillers] Cast !Wrath! in !Solar Eclipse!.
 - Cast !Starfire! in !Lunar Eclipse!.
 - Use !Starsurge! as your main spender on 2 targets if not talented into !Aetherial Kindling!.
@@ -233,14 +233,38 @@ Going into Season 1, there are multiple builds all simming close to each other, 
 
 For pure single target builds with !Rattle the Stars! you have the choice between taking !Elune's Guidance! or !Fury of Elune!. These two options sim very close, with !Elune's Guidance! reducing the cooldown on !Convoke the Spirits! down to 1 minute, making it line up with every cast of !Force of Nature!. This can be an easier alternative over !Fury of Elune! if you struggle with cooldowns being desynced.
 
-Keep in mind it is still very early in the season and recommended builds will change depending on tuning. The builds below will be updated as people progress the raid and there is more data.
+<Talents 
+  name="Keeper - Incarnation"
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsYmZmBDDzyMLDzYGbsMzyMzMMLYYAGgltxGmmZWGBAAAYzMzMzgNjZMmBwMDAMA" 
+  colors={[
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Total Eclipse", "Sculpt the Stars", "Nature's Grace", "Soul of the Forest", "Swipe" ] },
+    { color: "#fbff04ff", nodes: ["Hibernate", "Remove Corruption", "Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Radiant Moonlight", "Denizens of the Dream", "Elune's Guidance", "Aetherial Kindling", "Power of Goldrinn"] }
+  ]} 
+> 
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
 <Talents 
   name="Keeper - Convoke the Spirits"
   talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMgHAWmZbGzYGbsMjZmZMzGGAMALbjNMNzsMCAAAwmZmZmBbGzYMDgZGAYA" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Total Eclipse", "Sculpt the Stars", "Nature's Grace", "Soul of the Forest", "Radiant Moonlight" ] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Radiant Moonlight", "Elune's Guidance", "Crashing Star", "Denizens of the Dream", "Stellar Flare", "Elune's Guidance", "Aetherial Kindling", "Power of Goldrinn", "Fury of Elune" ] }
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Total Eclipse", "Sculpt the Stars", "Nature's Grace", "Soul of the Forest", "Radiant Moonlight", "Swipe" ] },
+    { color: "#fbff04ff", nodes: ["Hibernate", "Remove Corruption", "Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Umbral Intensity", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Radiant Moonlight", "Elune's Guidance", "Denizens of the Dream", "Aetherial Kindling", "Fury of Elune", "Umbral Embrace", "Starweaver" ] }
   ]} 
 > 
 <div className="flex justify-center">
@@ -261,39 +285,13 @@ Keep in mind it is still very early in the season and recommended builds will ch
 </div>
 </Talents>
 
-
-<Talents 
-  name="Keeper - Incarnation"
-  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsYmZmBDDzyMLDzYGbsMzyMzMMLYYAGgltxGmmZWGBAAAYzMzMzgNjZMmBwMDAMA" 
-  colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Total Eclipse", "Sculpt the Stars", "Nature's Grace", "Soul of the Forest" ] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Radiant Moonlight", "Elune's Guidance", "Crashing Star", "Denizens of the Dream", "Stellar Flare", "Elune's Guidance", "Aetherial Kindling", "Power of Goldrinn"] }
-  ]} 
-> 
-<div className="flex justify-center">
-  <div className="flex space-x-4 items-center">
-    <div className="flex items-center space-x-1">
-      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
-      <span className="text-sm">Never Take</span>
-    </div>
-    <div className="flex items-center space-x-1">
-      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
-      <span className="text-sm">Optional</span>
-    </div>
-    <div className="flex items-center space-x-1">
-      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
-      <span className="text-sm">Take</span>
-    </div>
-  </div>
-</div>
-</Talents>
 
 <Talents 
   name="Elune's Chosen - Convoke"
   talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsYmZmBDDzyMbzwMzYhlZWmZMmZDDDwYZbmBjZbEYCAAAwiZmZmBbGzYMAAMzADA" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Total Eclipse", "Sculpt the Stars", "Nature's Grace", "Soul of the Forest" ] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Umbral Inspiration", "Touch the Cosmos", "Radiant Moonlight", "Elune's Guidance", "Crashing Star", "Denizens of the Dream", "Stellar Flare", "Elune's Guidance", "Aetherial Kindling", "Power of Goldrinn"] }
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Remove Corruption", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Total Eclipse", "Sculpt the Stars", "Soul of the Forest", "Swipe", "Force of Nature" ] },
+    { color: "#fbff04ff", nodes: ["Hibernate", "Remove Corruption", "Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Nature's Balance", "Twin Moons", "Sunseeker Mushroom", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Radiant Moonlight", "Elune's Guidance", "Denizens of the Dream", "Aetherial Kindling", "Power of Goldrinn"] }
   ]} 
 > 
 <div className="flex justify-center">
@@ -324,8 +322,8 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
   name="Keeper of the Grove M+"
   talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgZZmlxyMzMzGLzsMmZwCGAMALbjNMNzsMCAAAwmZmHYmBbGzYMAMzAADA" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Power of Goldrinn", "Total Eclipse"] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun",  "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Fury of Elune", "Elune's Guidance", "Denizens of the Dream"] }
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Primal Fury", "Sculpt the Stars", "Soul of the Forest", "Umbral Intensity", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance", "Power of Goldrinn", "Swipe"] },
+    { color: "#fbff04ff", nodes: ["Hibernate", "Remove Corruption", "Killer Instinct", "Astral Influence", "Light of the Sun", "Early Spring", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Fury of Elune", "Denizens of the Dream", "Starweaver", "Radiant Moonlight"] }
   ]} 
 > 
 <div className="flex justify-center">
@@ -348,10 +346,10 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
 
 <Talents 
   name="Elune's Chosen M+"
-  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNMmZgxsMzMzMLMgxMLzsYmZmlxyMLjZGshBAjltZGMmtRgJAAAALMzMzgNjZMGAAmZgB" 
+  talents="CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMDwsMzMzMLMYMLzsMziZmxGLzsMmZMWwwAM22mZwY2GATAAAAWYmZmBbGGjBAgZGYA" 
   colors={[
-    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Thrash", "Ironfur", "Nature's Balance"] },
-    { color: "#fbff04ff", nodes: ["Hibernate, Remove Corruption, Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Power of Goldrinn"] }
+    { color: "red", nodes: ["Rake", "Rip", "Maim", "Grievous Wounds", "Primal Fury", "Rejuvenation", "Wild Growth", "Instincts of the Claw", "Symbiotic Relationship", "Lingering Healing", "Ironfur", "Nature's Balance", "Swipe", "Sculpt the Stars", "Soul of the Forest", "Force of Nature", "Total Eclipse"] },
+    { color: "#fbff04ff", nodes: ["Hibernate", "Remove Corruption", "Killer Instinct", "Astral Influence", "Light of the Sun", "Lycara's Inspiration", "Forestwalk", "Incapacitating Roar", "Improved Stampeding Roar", "Ursine Vigor", "Perfectly Honed Instincts", "Matted Fur", "Fluid Form", "Gale Tempest", "Power of Goldrinn", "Starweaver", "Sunseeker Mushroom"] }
   ]} 
 > 
 <div className="flex justify-center">
