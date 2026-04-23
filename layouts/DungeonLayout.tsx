@@ -7,7 +7,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { FaArrowLeft } from 'react-icons/fa'
 import ContributeHeader from '@/components/custom/ContributeHeader'
 import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import Image from 'next/image'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 
@@ -21,8 +21,8 @@ interface LayoutProps {
 }
 
 export default function DungeonLayout({ content, children, showTitle = true }: LayoutProps) {
-  const { title, headerImage } = content
-  const router = useRouter()
+  const { title, headerImage, path } = content
+  const parentPath = `/${path.split('/')[0]}`
 
   return (
     <SectionContainer>
@@ -44,19 +44,19 @@ export default function DungeonLayout({ content, children, showTitle = true }: L
                         objectFit: 'cover',
                       }}
                     />
-                    <div className="bg-opacity-50 font-thiccboi absolute inset-0 flex items-center justify-center bg-black p-2 text-[50px] text-white">
+                    <div className="font-thiccboi absolute inset-0 flex items-center justify-center bg-black/50 p-2 text-[50px] text-white">
                       {title}
                     </div>
                   </div>
                 </div>
               )}
               <ContributeHeader />
-              <div className="cursor-pointer" onClick={() => router.back()}>
+              <Link href={parentPath} className="cursor-pointer">
                 <div className="flex items-center pt-0 text-left underline md:text-xl">
                   <FaArrowLeft className="inline" />
                   <span className="ml-2">Go Back</span>
                 </div>
-              </div>
+              </Link>
             </div>
           </header>
           <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:grid xl:gap-x-6 xl:divide-y-0 dark:divide-gray-700">

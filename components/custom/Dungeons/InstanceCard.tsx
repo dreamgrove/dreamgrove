@@ -29,7 +29,7 @@ const InstanceCard = async ({ title, headerImage, path }) => {
           }}
         />
       </div>
-      <div className="bg-opacity-50 font-thiccboi absolute bottom-0 left-0 bg-black p-2 text-xl text-white">
+      <div className="font-thiccboi absolute bottom-0 left-0 bg-black/50 p-2 text-xl text-white">
         {title}
       </div>
     </Link>

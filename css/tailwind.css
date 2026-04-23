@@ -218,6 +218,10 @@ div.markdown-alert-caution {
   transform: translateY(-0.16em);
 }
 
+.wowhead-icon-wrap:empty {
+  display: none;
+}
+
 td .wowhead-icon-wrap,
 th .wowhead-icon-wrap {
   transform: translateY(-0.1em);
