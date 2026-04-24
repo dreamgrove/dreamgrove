@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import TimelineView from './TimelineView/TimelineView'
-import FightSelector from './FightSelector'
 import { TimelineLengthProvider } from './Providers/TimelineLengthProvider'
 import { SpellInfo, PlayerAction } from '@/types/index'
+import type { BossAbilitiesResponse } from '@/types/bossAbilities'
 import { NextStep } from 'nextstepjs'
 import { steps } from '@/lib/steps'
 import TutorialCard from './TutorialCard'
@@ -29,6 +29,37 @@ export default function TimelinePlanner({
   const initialMarkerSpacing = 10
   const [currentEncounterId, setCurrentEncounterId] = useState('empty')
   const [tutorialSpells, setTutorialSpells] = useState<PlayerAction[]>([])
+  const [bossAbilitiesByEncounter, setBossAbilitiesByEncounter] = useState<
+    Record<string, BossAbilitiesResponse | null>
+  >({})
+
+  const bossAbilities =
+    currentEncounterId === 'empty' ? null : (bossAbilitiesByEncounter[currentEncounterId] ?? null)
+
+  useEffect(() => {
+    if (currentEncounterId === 'empty') return
+    if (bossAbilitiesByEncounter[currentEncounterId] !== undefined) return
+    let cancelled = false
+    ;(async () => {
+      try {
+        const res = await fetch(
+          `/api/warcraft-logs/boss-abilities?encounterId=${encodeURIComponent(currentEncounterId)}`
+        )
+        const data = res.ok ? ((await res.json()) as BossAbilitiesResponse) : null
+        if (!cancelled) {
+          setBossAbilitiesByEncounter((prev) => ({ ...prev, [currentEncounterId]: data }))
+        }
+      } catch (e) {
+        console.warn('Boss abilities fetch failed', e)
+        if (!cancelled) {
+          setBossAbilitiesByEncounter((prev) => ({ ...prev, [currentEncounterId]: null }))
+        }
+      }
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [currentEncounterId])
 
   const onComplete = (tourName: string | null) => {
     setTutorialSpells([])
@@ -144,15 +175,6 @@ export default function TimelinePlanner({
       onSkip={onSkip}
     >
       <div className="timeline border-radius-4px relative flex h-full flex-col overflow-x-clip bg-[#2a2a2a] pb-12">
-        {false && (
-          <div className="mb-4 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0 md:space-x-4">
-            <FightSelector
-              currentEncounterId={currentEncounterId}
-              onEncounterChange={setCurrentEncounterId}
-            />
-          </div>
-        )}
-
         <TimelineLengthProvider
           initialTotalLength={initialTotalLength}
           initialViewLength={initialViewLength}
@@ -167,6 +189,8 @@ export default function TimelinePlanner({
               wowheadMarkerMap={wowheadMarkerMap}
               averageTimestamps={averageTimestamps}
               currentEncounterId={currentEncounterId}
+              onEncounterChange={setCurrentEncounterId}
+              bossAbilities={bossAbilities}
             />
           </div>
         </TimelineLengthProvider>

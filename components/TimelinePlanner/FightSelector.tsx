@@ -12,14 +12,15 @@ interface FightSelectorProps {
 
 export const encounterOptions: EncounterOption[] = [
   { id: 'empty', name: 'Empty' },
-  { id: '3009', name: 'Vexie and the Geargrinders' },
-  { id: '3010', name: 'Cauldron of Carnage' },
-  { id: '3011', name: 'Rik Reverb' },
-  { id: '3012', name: 'Stix Bunkjunker' },
-  { id: '3013', name: 'Sprocketmonger Lockenstock' },
-  { id: '3014', name: 'One-Armed Bandit' },
-  { id: '3015', name: "Mug'Zee, Heads of Security" },
-  { id: '3016', name: 'Chrome King Gallywix' },
+  { id: '3176', name: 'Imperator Averzian' },
+  { id: '3177', name: 'Vorasius' },
+  { id: '3179', name: 'Fallen King Salhadaar' },
+  { id: '3178', name: 'Vaelgor & Ezzorak' },
+  { id: '3180', name: 'Lightblinded Vanguard' },
+  { id: '3181', name: 'Crown of The Cosmos' },
+  { id: '3306', name: 'Chimaerus' },
+  { id: '3182', name: "Bel'oren" },
+  { id: '3183', name: 'Midnight Falls' },
 ]
 
 export default function FightSelector({
@@ -27,22 +28,39 @@ export default function FightSelector({
   onEncounterChange,
 }: FightSelectorProps) {
   return (
-    <div className="mb-4">
-      <label htmlFor="encounter-select" className="mr-2 font-medium">
-        Select Encounter:
-      </label>
-      <select
-        id="encounter-select"
-        value={currentEncounterId}
-        onChange={(e) => onEncounterChange(e.target.value)}
-        className="rounded border border-gray-300 bg-white px-3 py-2 shadow-xs focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-hidden dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-400"
+    <div className="flex items-center gap-3">
+      <label
+        htmlFor="encounter-select"
+        className="text-[10px] tracking-[0.18em] text-neutral-400 uppercase"
       >
-        {encounterOptions.map((encounter) => (
-          <option key={encounter.id} value={encounter.id}>
-            {encounter.name}
-          </option>
-        ))}
-      </select>
+        Encounter
+      </label>
+      <div className="relative flex-1 sm:max-w-xs">
+        <select
+          id="encounter-select"
+          value={currentEncounterId}
+          onChange={(e) => onEncounterChange(e.target.value)}
+          className="w-full appearance-none rounded-sm border border-neutral-700/70 bg-black/40 py-1.5 pr-8 pl-3 text-sm text-neutral-100 transition-colors hover:border-orange-500/60 focus:border-orange-500/80 focus:ring-1 focus:ring-orange-500/30 focus:outline-none"
+        >
+          {encounterOptions.map((encounter) => (
+            <option key={encounter.id} value={encounter.id} className="bg-neutral-900">
+              {encounter.name}
+            </option>
+          ))}
+        </select>
+        <svg
+          className="pointer-events-none absolute top-1/2 right-2.5 h-3 w-3 -translate-y-1/2 text-neutral-500"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.24 4.38a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div>
     </div>
   )
 }

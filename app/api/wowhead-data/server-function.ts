@@ -100,10 +100,12 @@ export async function fetchWowheadData({
 
   const promise = (async (): Promise<CacheEntry> => {
     try {
-      const response = await fetch(wowheadUrl, {
+      const tooltipUrl = `https://nether.wowhead.com/tooltip/${type}/${displayId}`
+      const response = await fetch(tooltipUrl, {
         headers: {
           'User-Agent':
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+          Accept: 'application/json',
         },
       })
 
@@ -111,30 +113,25 @@ export async function fetchWowheadData({
         throw new Error(`Wowhead returned status ${response.status}`)
       }
 
-      const html = await response.text()
+      const data = (await response.json()) as {
+        name?: string | null
+        icon?: string | null
+        quality?: number | null
+      }
 
       const result: CacheEntry = {
-        display: name || formatUrl(response.url),
+        display: name || data.name || formatUrl(wowheadUrl),
         timestamp: Date.now(),
       }
 
-      // Extract icon
-      const iconRegex = new RegExp(`"${displayId}":\\{"name_enus":"[^"]+".*?,"icon":"([^"]+)"`)
-      const iconMatch = iconRegex.exec(html)
-      if (iconMatch && iconMatch[1]) {
-        result.icon = iconMatch[1]
+      if (data.icon) {
+        result.icon = data.icon
       }
 
-      // Extract quality for items
-      if (type === 'item') {
-        const qualityRegex = /<b class=\\"q(\d+)\\"/
-        const qualityMatch = html.match(qualityRegex)
-        if (qualityMatch && qualityMatch[1]) {
-          result.quality = parseInt(qualityMatch[1])
-        }
+      if (type === 'item' && typeof data.quality === 'number' && data.quality >= 0) {
+        result.quality = data.quality
       }
 
-      // Store in cache and persist
       cache.set(cacheKey, result)
       saveCache()
       console.log(`[wowhead-cache] Fetched and cached: ${cacheKey}`)

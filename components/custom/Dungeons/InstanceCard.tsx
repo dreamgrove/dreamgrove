@@ -61,12 +61,6 @@ const InstanceCard = async ({
       {/* Bottom fade for legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0b0906] via-[#0b0906]/55 to-transparent" />
 
-      {/* Type tag */}
-      <div className="absolute top-4 left-5 flex items-center gap-2 text-[10px] font-semibold tracking-[0.35em] text-[#e6b16a]/90 uppercase">
-        <span className="h-[5px] w-[5px] rounded-full bg-[#e6b16a]" />
-        {isRaid ? 'Raid' : 'Dungeon'}
-      </div>
-
       {/* Content block */}
       <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 px-5 pb-5 md:px-6 md:pb-6">
         <div className="max-w-[80%]">

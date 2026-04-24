@@ -1,5 +1,27 @@
 import { WowheadApiParams, WowheadApiResponse } from '@/types/index'
 
+const resultCache = new Map<string, WowheadApiResponse>()
+const inflight = new Map<string, Promise<WowheadApiResponse>>()
+
+function cacheKey({
+  id,
+  type,
+  beta,
+  url,
+}: {
+  id: string
+  type: string
+  beta: boolean
+  url: string
+}) {
+  if (id) return `${type}-${id}${beta ? '-beta' : ''}`
+  return `url:${url}${beta ? '-beta' : ''}`
+}
+
+function applyName(data: WowheadApiResponse, name: string): WowheadApiResponse {
+  return name ? { ...data, display: name } : data
+}
+
 /**
  * Fetches Wowhead information via the API
  */
@@ -10,7 +32,14 @@ export async function getWowheadInfo({
   beta = false,
   url = '',
 }: WowheadApiParams): Promise<WowheadApiResponse> {
-  // Build query parameters
+  const key = cacheKey({ id, type, beta, url })
+
+  const cached = resultCache.get(key)
+  if (cached) return applyName(cached, name)
+
+  const existing = inflight.get(key)
+  if (existing) return applyName(await existing, name)
+
   const params = new URLSearchParams()
   if (id) params.append('id', id)
   if (type) params.append('type', type)
@@ -18,15 +47,23 @@ export async function getWowheadInfo({
   if (beta) params.append('beta', 'true')
   if (url) params.append('url', url)
 
-  // Make the API request
-  const response = await fetch(`/api/get-wowhead-info?${params.toString()}`)
+  const promise = (async (): Promise<WowheadApiResponse> => {
+    try {
+      const response = await fetch(`/api/get-wowhead-info?${params.toString()}`)
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        throw new Error(errorData.error || `API returned status ${response.status}`)
+      }
+      const data = (await response.json()) as WowheadApiResponse
+      resultCache.set(key, data)
+      return data
+    } finally {
+      inflight.delete(key)
+    }
+  })()
 
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}))
-    throw new Error(errorData.error || `API returned status ${response.status}`)
-  }
-
-  return response.json()
+  inflight.set(key, promise)
+  return applyName(await promise, name)
 }
 
 // Quality colors mapping for convenience

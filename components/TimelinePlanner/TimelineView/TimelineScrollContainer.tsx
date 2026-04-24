@@ -1,16 +1,22 @@
+import BossAbilityMarkers from '../Markers/BossAbilityMarkers'
 import EventMarkers from '../Markers/EventMarkers'
 import Markers from '../Markers/Markers'
 import SpellMarkers from '../Markers/SpellMarkers'
 import SpellRow from './SpellRow/SpellRow'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 import { useMemo } from 'react'
+import type { BossAbilitiesResponse } from '@/types/bossAbilities'
 
 export default function TimelineScrollContainer({
   averageTimestamps,
   wowheadMarkerMap,
+  bossAbilities,
+  visibleBossAbilityKeys,
 }: {
   averageTimestamps: Record<string, number[]>
   wowheadMarkerMap: Record<string, React.ReactNode>
+  bossAbilities?: BossAbilitiesResponse | null
+  visibleBossAbilityKeys: Set<string>
 }) {
   const { processedState } = useTimelineContext()
   const sortedSpells = useMemo(
@@ -31,9 +37,14 @@ export default function TimelineScrollContainer({
           <EventMarkers />
         </>
       )}
+      {/* Boss ability markers from WCL, shown regardless of user spell rows */}
+      <BossAbilityMarkers
+        abilities={bossAbilities?.abilities ?? []}
+        visibleKeys={visibleBossAbilityKeys}
+      />
 
       {/* Casts/timeline rows */}
-      <div className="relative mt-5 flex flex-col">
+      <div className="relative mt-12 flex flex-col">
         {/* Render a SpellCastsRow for each spell, sorted by spell.id*/}
         {sortedSpells.length > 0 ? (
           sortedSpells.map((singleSpellRow) => (
