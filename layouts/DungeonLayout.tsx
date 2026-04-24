@@ -29,8 +29,8 @@ export default function DungeonLayout({ content, children, showTitle = true }: L
       <ScrollTopAndComment />
 
       <article>
-        <div className="toChange xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-0 xl:pb-6">
+        <div className="toChange">
+          <header className="pt-0 pb-6">
             <div className="space-y-6 text-center">
               {headerImage && (
                 <div className="relative block overflow-hidden rounded-lg">
@@ -61,12 +61,9 @@ export default function DungeonLayout({ content, children, showTitle = true }: L
           </header>
           <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:grid xl:gap-x-6 xl:divide-y-0 dark:divide-gray-700">
             <CheckboxProvider>
-              <div
-                id="main"
-                className="divide-y divide-gray-200 xl:col-span-12 xl:pb-0 dark:divide-gray-700"
-              >
+              <div id="main" className="xl:col-span-12 xl:pb-0">
                 <RoleSelector />
-                <div className="prose dark:prose-invert max-w-none pt-10 pb-8">{children}</div>
+                <div className="prose dark:prose-invert max-w-none pt-0 pb-8">{children}</div>
               </div>
             </CheckboxProvider>
           </div>

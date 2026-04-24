@@ -208,6 +208,475 @@ div.markdown-alert-caution {
   transition: all 0.3s ease;
 }
 
+/* ────────────────────────────────────────────────────────── */
+/*  Instance cards (dungeon & raid) — "illuminated grimoire"  */
+/* ────────────────────────────────────────────────────────── */
+.instance-card {
+  background: #0b0906;
+  box-shadow:
+    0 1px 0 rgba(230, 177, 106, 0.08) inset,
+    0 0 0 1px rgba(230, 177, 106, 0.12),
+    0 20px 40px -20px rgba(0, 0, 0, 0.8);
+  transition:
+    box-shadow 0.6s ease,
+    transform 0.6s ease;
+}
+
+.instance-card:hover {
+  box-shadow:
+    0 1px 0 rgba(230, 177, 106, 0.2) inset,
+    0 0 0 1px rgba(230, 177, 106, 0.35),
+    0 0 28px -4px rgba(213, 127, 67, 0.25),
+    0 30px 60px -20px rgba(0, 0, 0, 0.9);
+}
+
+.instance-card__sheen {
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255, 230, 180, 0.16) 45%,
+    rgba(255, 230, 180, 0.28) 50%,
+    rgba(255, 230, 180, 0.16) 55%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  mix-blend-mode: overlay;
+}
+
+.instance-card:hover .instance-card__sheen {
+  transform: translateX(120%);
+}
+
+/* Ember: a thread of amber that races the inner frame */
+.instance-card__ember {
+  --ember: rgba(230, 177, 106, 0.85);
+  padding: 1px;
+  background: conic-gradient(
+    from var(--ember-angle, 0deg),
+    transparent 0deg,
+    transparent 320deg,
+    var(--ember) 345deg,
+    #fff3d8 358deg,
+    var(--ember) 370deg,
+    transparent 395deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instance-card:hover .instance-card__ember {
+  opacity: 1;
+  animation: instance-ember-spin 2.6s linear infinite;
+}
+
+@property --ember-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes instance-ember-spin {
+  from {
+    --ember-angle: 0deg;
+  }
+  to {
+    --ember-angle: 360deg;
+  }
+}
+
+/* Fallback for browsers without @property — full trace at lower opacity */
+@supports not (background: conic-gradient(from var(--x), #000, #000)) {
+  .instance-card__ember {
+    background: linear-gradient(
+      115deg,
+      transparent 40%,
+      rgba(230, 177, 106, 0.6) 50%,
+      transparent 60%
+    );
+    opacity: 0;
+  }
+  .instance-card:hover .instance-card__ember {
+    opacity: 1;
+  }
+}
+
+/* ────────────────────────────────────────────────────────── */
+/*  Page header for /raids and /dungeons indices              */
+/* ────────────────────────────────────────────────────────── */
+.instance-index__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #d57f43;
+}
+
+.instance-index__eyebrow::before,
+.instance-index__eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 2.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d57f43);
+}
+
+.instance-index__eyebrow::after {
+  background: linear-gradient(90deg, #d57f43, transparent);
+}
+
+.instance-index__title {
+  font-family: 'thiccboi', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.instance-index__rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: rgba(213, 127, 67, 0.55);
+}
+
+.instance-index__rule .line {
+  height: 1px;
+  width: min(12rem, 28vw);
+  background: linear-gradient(90deg, transparent, rgba(213, 127, 67, 0.5), transparent);
+}
+
+.instance-index__rule .diamond {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: rgba(213, 127, 67, 0.8);
+  box-shadow: 0 0 10px rgba(213, 127, 67, 0.6);
+}
+
+/* ────────────────────────────────────────────────────────── */
+/*  Boss card header (inside /dungeons/* and /raids/* pages)  */
+/*  Circular portrait with the title partially overlapping    */
+/* ────────────────────────────────────────────────────────── */
+.boss-card__header {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  padding: 0.5rem 0 0;
+  position: relative;
+  min-height: 72px;
+}
+
+.boss-card__header--overlay {
+  min-height: 86px;
+}
+
+.boss-card__header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 127, 67, 0.55) 0%,
+    rgba(213, 127, 67, 0.2) 55%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+.boss-card__titleblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0.75rem;
+}
+
+/* Keep the title clear of the image on the right */
+.boss-card__header--overlay .boss-card__titleblock {
+  padding-right: 1rem;
+}
+
+/* Image — flushed to bottom-right, original aspect ratio */
+.boss-card__portrait {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  width: auto;
+  max-width: 45%;
+  overflow: hidden;
+  z-index: 1;
+  line-height: 0;
+}
+
+@media (min-width: 768px) {
+  .boss-card__portrait {
+    height: 74px;
+  }
+}
+
+.boss-card__image {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+  display: block;
+  margin: 0;
+}
+
+.boss-card__title {
+  font-family: 'thiccboi', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: inherit;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .boss-card__title {
+    font-size: 1.7rem;
+  }
+}
+
+.boss-card__titleblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.55rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.boss-card__title {
+  font-family: 'thiccboi', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: inherit;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .boss-card__title {
+    font-size: 1.7rem;
+  }
+}
+
+:root:not(.dark) .boss-card__title {
+  color: #1a1613;
+}
+.dark .boss-card__title {
+  color: #ffffff;
+}
+
+/* ────────────────────────────────────────────────────────── */
+/*  Role Selector — Spec Bar (segmented control)              */
+/* ────────────────────────────────────────────────────────── */
+.role-selector {
+  margin: 0;
+  width: 100%;
+}
+
+.spec-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  border: 1px solid rgba(230, 177, 106, 0.22);
+  background: rgba(11, 9, 6, 0.35);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .spec-bar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .spec-bar--preview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Segment */
+.spec-seg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  transition: background-color 0.18s ease;
+  min-height: 64px;
+}
+
+/* Dividers between segments */
+.spec-bar .spec-seg + .spec-seg {
+  border-top: 1px solid rgba(230, 177, 106, 0.15);
+}
+
+@media (min-width: 768px) {
+  .spec-bar:not(.spec-bar--preview) .spec-seg + .spec-seg {
+    border-top: 0;
+    border-left: 1px solid rgba(230, 177, 106, 0.15);
+  }
+}
+
+.spec-seg:hover {
+  background: rgba(230, 177, 106, 0.04);
+}
+
+.spec-seg--active {
+  background: color-mix(in srgb, var(--spec-accent, #d57f43) 14%, transparent);
+}
+
+.spec-seg--active:hover {
+  background: color-mix(in srgb, var(--spec-accent, #d57f43) 18%, transparent);
+}
+
+/* Icon */
+.spec-seg__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #0b0906;
+  outline: 1px solid rgba(230, 177, 106, 0.18);
+}
+
+.spec-seg__icon img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(1) brightness(0.55);
+  transition: filter 0.18s ease;
+}
+
+.spec-seg:hover .spec-seg__icon img {
+  filter: grayscale(0.3) brightness(0.85);
+}
+
+.spec-seg--active .spec-seg__icon {
+  outline-color: var(--spec-accent, #d57f43);
+}
+
+.spec-seg--active .spec-seg__icon img {
+  filter: none;
+}
+
+/* Name */
+.spec-seg__name {
+  font-family: 'thiccboi', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.42);
+  transition: color 0.18s ease;
+  white-space: nowrap;
+}
+
+:root:not(.dark) .spec-seg__name {
+  color: rgba(20, 17, 14, 0.45);
+}
+
+.spec-seg:hover .spec-seg__name {
+  color: rgba(255, 255, 255, 0.8);
+}
+:root:not(.dark) .spec-seg:hover .spec-seg__name {
+  color: rgba(20, 17, 14, 0.85);
+}
+
+.spec-seg--active .spec-seg__name {
+  color: #ffffff;
+}
+:root:not(.dark) .spec-seg--active .spec-seg__name {
+  color: #1a1613;
+}
+
+/* Bottom accent bar that appears on active */
+.spec-seg__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--spec-accent, #d57f43);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.spec-seg--active .spec-seg__bar {
+  transform: scaleX(1);
+}
+
+/* Accent bar goes on left edge when stacked vertically */
+@media (max-width: 767px) {
+  .spec-seg__bar {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    width: 2px;
+    height: auto;
+    transform: scaleY(0);
+    transform-origin: center;
+  }
+  .spec-seg--active .spec-seg__bar {
+    transform: scaleY(1);
+  }
+}
+
+.spec-bar--preview .spec-seg__bar {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  width: 2px;
+  height: auto;
+  transform: scaleY(0);
+}
+.spec-bar--preview .spec-seg--active .spec-seg__bar {
+  transform: scaleY(1);
+}
+
+.spec-seg:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--spec-accent, #d57f43);
+}
+
+.spec-seg--loading {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 /* Wowhead icon wrapper — consistent alignment across paragraphs and tables */
 .wowhead-icon-wrap {
   display: inline-block;
