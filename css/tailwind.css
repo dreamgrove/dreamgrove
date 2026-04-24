@@ -209,43 +209,10 @@ div.markdown-alert-caution {
 }
 
 /* ────────────────────────────────────────────────────────── */
-/*  Instance cards (dungeon & raid) — "illuminated grimoire"  */
+/*  Instance cards (dungeon & raid)                           */
 /* ────────────────────────────────────────────────────────── */
 .instance-card {
   background: #0b0906;
-  box-shadow:
-    0 1px 0 rgba(230, 177, 106, 0.08) inset,
-    0 0 0 1px rgba(230, 177, 106, 0.12),
-    0 20px 40px -20px rgba(0, 0, 0, 0.8);
-  transition:
-    box-shadow 0.6s ease,
-    transform 0.6s ease;
-}
-
-.instance-card:hover {
-  box-shadow:
-    0 1px 0 rgba(230, 177, 106, 0.2) inset,
-    0 0 0 1px rgba(230, 177, 106, 0.35),
-    0 0 28px -4px rgba(213, 127, 67, 0.25),
-    0 30px 60px -20px rgba(0, 0, 0, 0.9);
-}
-
-.instance-card__sheen {
-  background: linear-gradient(
-    115deg,
-    transparent 30%,
-    rgba(255, 230, 180, 0.16) 45%,
-    rgba(255, 230, 180, 0.28) 50%,
-    rgba(255, 230, 180, 0.16) 55%,
-    transparent 70%
-  );
-  transform: translateX(-120%);
-  transition: transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1);
-  mix-blend-mode: overlay;
-}
-
-.instance-card:hover .instance-card__sheen {
-  transform: translateX(120%);
 }
 
 /* ────────────────────────────────────────────────────────── */
