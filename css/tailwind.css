@@ -248,64 +248,6 @@ div.markdown-alert-caution {
   transform: translateX(120%);
 }
 
-/* Ember: a thread of amber that races the inner frame */
-.instance-card__ember {
-  --ember: rgba(230, 177, 106, 0.85);
-  padding: 1px;
-  background: conic-gradient(
-    from var(--ember-angle, 0deg),
-    transparent 0deg,
-    transparent 320deg,
-    var(--ember) 345deg,
-    #fff3d8 358deg,
-    var(--ember) 370deg,
-    transparent 395deg
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.instance-card:hover .instance-card__ember {
-  opacity: 1;
-  animation: instance-ember-spin 2.6s linear infinite;
-}
-
-@property --ember-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes instance-ember-spin {
-  from {
-    --ember-angle: 0deg;
-  }
-  to {
-    --ember-angle: 360deg;
-  }
-}
-
-/* Fallback for browsers without @property — full trace at lower opacity */
-@supports not (background: conic-gradient(from var(--x), #000, #000)) {
-  .instance-card__ember {
-    background: linear-gradient(
-      115deg,
-      transparent 40%,
-      rgba(230, 177, 106, 0.6) 50%,
-      transparent 60%
-    );
-    opacity: 0;
-  }
-  .instance-card:hover .instance-card__ember {
-    opacity: 1;
-  }
-}
-
 /* ────────────────────────────────────────────────────────── */
 /*  Page header for /raids and /dungeons indices              */
 /* ────────────────────────────────────────────────────────── */

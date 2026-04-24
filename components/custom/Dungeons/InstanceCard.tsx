@@ -126,12 +126,6 @@ const InstanceCard = async ({
       <div className="pointer-events-none absolute inset-[10px] rounded-[1px] border border-[#e6b16a]/25 transition-colors duration-500 group-hover:border-[#e6b16a]/55" />
       <div className="pointer-events-none absolute inset-[13px] rounded-[1px] border border-[#e6b16a]/10" />
 
-      {/* Ember sweep — thread-of-fire on hover */}
-      <span
-        className="instance-card__ember pointer-events-none absolute inset-[10px] rounded-[1px]"
-        aria-hidden
-      />
-
       {/* Grain overlay */}
       <div className="[background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22 stitchTiles=%22stitch%22/></filter><rect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%220.55%22/></svg>')] pointer-events-none absolute inset-0 opacity-[0.14] mix-blend-overlay" />
 
@@ -170,20 +164,20 @@ const InstanceCard = async ({
           </h2>
 
           <div className="mt-3 flex items-center gap-3 text-[11px] tracking-[0.3em] text-white/65 uppercase">
-            {bossCount > 0 ? (
-              <span className="flex items-center gap-2">
-                <svg viewBox="0 0 12 12" className="h-3 w-3 text-[#1a9c82]" aria-hidden>
-                  <path
-                    d="M6 0 L7.3 4.7 L12 6 L7.3 7.3 L6 12 L4.7 7.3 L0 6 L4.7 4.7 Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                {bossCount} {bossCount === 1 ? 'Encounter' : 'Encounters'}
-              </span>
-            ) : (
-              <span className="text-white/55">Preview</span>
+            {bossCount > 0 && (
+              <>
+                <span className="flex items-center gap-2">
+                  <svg viewBox="0 0 12 12" className="h-3 w-3 text-[#1a9c82]" aria-hidden>
+                    <path
+                      d="M6 0 L7.3 4.7 L12 6 L7.3 7.3 L6 12 L4.7 7.3 L0 6 L4.7 4.7 Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  {bossCount} {bossCount === 1 ? 'Encounter' : 'Encounters'}
+                </span>
+                <span className="h-[3px] w-[3px] rounded-full bg-[#e6b16a]/70" />
+              </>
             )}
-            <span className="h-[3px] w-[3px] rounded-full bg-[#e6b16a]/70" />
             <span className="text-[#e6b16a]/85">Guide</span>
           </div>
         </div>
@@ -191,7 +185,7 @@ const InstanceCard = async ({
         {/* Enter sigil */}
         <div className="flex shrink-0 translate-y-[2px] items-center gap-2 pb-1 text-[11px] tracking-[0.35em] text-[#e6b16a] uppercase">
           <span className="hidden opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100 md:inline-block md:-translate-x-2">
-            Enter
+            Read
           </span>
           <svg
             viewBox="0 0 28 28"
