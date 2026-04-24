@@ -67,7 +67,7 @@
     "node-telegram-bot-api": "^0.64.0",
     "octokit": "^4.1.2",
     "plaiceholder": "^3.0.0",
-    "postcss": "^8.4.24",
+    "postcss": "^8.5.10",
     "probe-image-size": "^7.2.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
