@@ -4,75 +4,54 @@ import restoIcon from '../../../public/static/images/icons/resto.jpg'
 import feralIcon from '../../../public/static/images/icons/feral.jpg'
 import guardianIcon from '../../../public/static/images/icons/guardian.jpg'
 import Image, { StaticImageData } from 'next/image'
-import { useEffect, useState, Suspense, useContext } from 'react'
-import { useSearchParams, useRouter, usePathname } from 'next/navigation'
+import { useEffect, useRef, Suspense, useContext } from 'react'
+import { useSearchParams, usePathname } from 'next/navigation'
 import { CheckboxContext } from '../CheckboxProvider'
 
-const IconDisplay = ({ text }) => {
+type SpecName = 'Guardian' | 'Feral' | 'Resto' | 'Balance'
+
+const SPEC_META: Record<SpecName, { icon: StaticImageData; accent: string; role: string }> = {
+  Guardian: { icon: guardianIcon, accent: '#d97a3b', role: 'Tank' },
+  Feral: { icon: feralIcon, accent: '#e6b16a', role: 'DPS' },
+  Resto: { icon: restoIcon, accent: '#1a9c82', role: 'Healer' },
+  Balance: { icon: balanceIcon, accent: '#8a6fd6', role: 'DPS' },
+}
+
+const SegmentButton = ({ text }: { text: SpecName }) => {
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
   const isChecked = checkboxMap[text]?.checked || false
-
-  const handleClick = () => {
-    // Toggle the checkbox state
-    updateCheckbox(text, !isChecked, null)
-  }
-
-  let imgSrc: StaticImageData
-  switch (text) {
-    case 'Feral':
-      imgSrc = feralIcon
-      break
-    case 'Guardian':
-      imgSrc = guardianIcon
-      break
-    case 'Resto':
-      imgSrc = restoIcon
-      break
-    case 'Balance':
-      imgSrc = balanceIcon
-      break
-    default:
-      throw Error('Invalid type of Icon provided')
-  }
+  const meta = SPEC_META[text]
 
   return (
-    <div
-      className={`cursor-pointer rounded-md border-2 select-none ${isChecked ? 'border-main' : 'border-main/20'} flex items-center p-1`}
-      onClick={handleClick}
+    <button
+      type="button"
+      onClick={() => updateCheckbox(text, !isChecked, null)}
+      className={`spec-seg ${isChecked ? 'spec-seg--active' : ''}`}
+      style={{ ['--spec-accent' as string]: meta.accent }}
+      aria-pressed={isChecked}
     >
-      <div className="shrink-0">
-        <Image
-          className={`my-0 inline-block h-auto w-7 rounded-md sm:w-8 md:w-9 lg:w-10 ${isChecked ? 'opacity-100' : 'opacity-20'}`}
-          src={imgSrc}
-          alt={`${text} icon`}
-          width={40}
-          height={40}
-        />
-      </div>
-      <span
-        className={`ml-2 align-middle text-base sm:text-lg md:text-xl ${isChecked ? 'text-white' : 'text-white/20'}`}
-      >
-        {text}
+      <span className="spec-seg__icon">
+        <Image src={meta.icon} alt="" width={40} height={40} />
       </span>
-    </div>
+      <span className="spec-seg__name">{text}</span>
+      <span className="spec-seg__bar" aria-hidden />
+    </button>
   )
 }
 
-const specs = ['Guardian', 'Feral', 'Resto', 'Balance']
+const specs: SpecName[] = ['Guardian', 'Feral', 'Resto', 'Balance']
 
 function RoleSelectorContent({ isPreview = false }) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
+  const initialized = useRef(false)
 
-  // Get selected roles based on checkbox states
-  const getSelectedRoles = () => {
-    return Object.entries(checkboxMap)
-      .filter(([id, item]) => item.checked && specs.includes(id))
+  const getSelectedRoles = () =>
+    Object.entries(checkboxMap)
+      .filter(([id, item]) => item.checked && specs.includes(id as SpecName))
       .map(([id]) => id)
-  }
 
-  // Initialize checkboxes from URL parameters
   useEffect(() => {
     const roles = searchParams.get('roles')
     if (roles) {
@@ -80,20 +59,18 @@ function RoleSelectorContent({ isPreview = false }) {
       specs.forEach((spec) => {
         updateCheckbox(spec, selectedRoles.includes(spec), null)
       })
-
-      // Handle DPS state
       const hasDPS = selectedRoles.includes('Balance') || selectedRoles.includes('Feral')
       if (hasDPS && !selectedRoles.includes('DPS')) {
         updateCheckbox('DPS', true, null)
       }
     }
+    initialized.current = true
   }, [])
 
-  // Update URL when selected roles change
   useEffect(() => {
-    const selected = getSelectedRoles()
+    if (!initialized.current) return
 
-    // Add DPS if Balance or Feral is selected
+    const selected = getSelectedRoles()
     const hasDPS = selected.includes('Balance') || selected.includes('Feral')
     if (hasDPS && !checkboxMap['DPS']?.checked) {
       updateCheckbox('DPS', true, null)
@@ -115,15 +92,14 @@ function RoleSelectorContent({ isPreview = false }) {
   }, [checkboxMap, pathname, searchParams, updateCheckbox])
 
   return (
-    <div className="roleSelector mt-4 flex flex-col items-center">
-      <div className="text-xl">Choose your roles:</div>
+    <div className="role-selector">
       <div
-        className={`buttons flex w-full flex-col items-center justify-center space-y-3 py-4 lg:flex-row lg:space-y-0 lg:space-x-3 lg:py-0 ${isPreview ? 'md:flex-col md:space-y-3 md:space-x-0 md:py-4' : 'md:h-24 md:flex-row md:space-y-0 md:space-x-3 md:py-0'}`}
+        className={`spec-bar ${isPreview ? 'spec-bar--preview' : ''}`}
+        role="group"
+        aria-label="Choose your roles"
       >
         {specs.map((spec) => (
-          <div key={spec} className="w-full flex-1">
-            <IconDisplay text={spec} />
-          </div>
+          <SegmentButton key={spec} text={spec} />
         ))}
       </div>
     </div>
@@ -134,21 +110,13 @@ export default function RoleSelector({ isPreview = false }) {
   return (
     <Suspense
       fallback={
-        <div className="mt-4 flex flex-col items-center">
-          <div className="text-xl">Choose your roles:</div>
-          <div
-            className={`buttons flex w-full flex-col items-center justify-center space-y-3 py-4 lg:flex-row lg:space-y-0 lg:space-x-3 lg:py-0 ${isPreview ? 'md:flex-col md:space-y-3 md:space-x-0 md:py-4' : 'md:h-24 md:flex-row md:space-y-0 md:space-x-3 md:py-0'}`}
-          >
+        <div className="role-selector">
+          <div className={`spec-bar ${isPreview ? 'spec-bar--preview' : ''}`} aria-hidden>
             {specs.map((spec) => (
-              <div key={spec} className="w-full flex-1">
-                <div className="border-main/20 flex cursor-pointer items-center rounded-md border-2 p-1 select-none">
-                  <div className="shrink-0">
-                    <div className="inline-block h-7 w-7 rounded-md bg-gray-700 opacity-20 sm:w-8 md:w-9 lg:w-10" />
-                  </div>
-                  <span className="ml-2 align-middle text-base text-white/20 sm:text-lg md:text-xl">
-                    {spec}
-                  </span>
-                </div>
+              <div key={spec} className="spec-seg spec-seg--loading">
+                <span className="spec-seg__icon" />
+                <span className="spec-seg__name">{spec}</span>
+                <span className="spec-seg__bar" />
               </div>
             ))}
           </div>

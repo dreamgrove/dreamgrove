@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useSettings } from '../Providers/SettingsProvider'
 import { useTimelineControls } from '../Providers/TimelineLengthProvider'
 
@@ -45,7 +45,7 @@ const Marker: React.FC<MarkerProps> = ({ label, width }) => {
       <div className="absolute bottom-0 left-0 h-[90%] w-px bg-gray-400/30 opacity-30" />
       {/* Timestamp label  */}
       <span
-        className="absolute top-0 z-20 py-0 text-xs whitespace-nowrap text-gray-200"
+        className="absolute top-8 z-20 py-0 text-xs whitespace-nowrap text-gray-200"
         style={{ left: -left }}
       >
         {label_processed}
@@ -71,20 +71,18 @@ const Markers: React.FC<MarkersProps> = React.memo(
 
     const size_px = marker_spacing_s * pixelsPerSecond
 
-    useEffect(() => {
-      if (previousSize_px === 0) {
-        setPreviousSize_px(size_px)
-      } else if (size_px > previousSize_px * 1.25 && effective_marker_spacing_s > 5) {
-        setMarkerSpacing((prev) => prev - 2.5)
-        setPreviousSize_px(size_px)
-      } else if (
-        size_px < previousSize_px * 0.75 &&
-        effective_marker_spacing_s < marker_spacing_s * 2
-      ) {
-        setMarkerSpacing((prev) => prev + 2.5)
-        setPreviousSize_px(size_px)
-      }
-    }, [size_px, previousSize_px, effective_marker_spacing_s, marker_spacing_s])
+    if (previousSize_px === 0) {
+      setPreviousSize_px(size_px)
+    } else if (size_px > previousSize_px * 1.25 && effective_marker_spacing_s > 5) {
+      setMarkerSpacing((prev) => prev - 2.5)
+      setPreviousSize_px(size_px)
+    } else if (
+      size_px < previousSize_px * 0.75 &&
+      effective_marker_spacing_s < marker_spacing_s * 2
+    ) {
+      setMarkerSpacing((prev) => prev + 2.5)
+      setPreviousSize_px(size_px)
+    }
 
     if (pixelsPerSecond === 0) return null
 

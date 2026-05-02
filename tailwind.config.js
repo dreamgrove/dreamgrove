@@ -25,11 +25,18 @@ module.exports = {
           '0%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
           '100%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
         },
+        'bounce-once': {
+          '0%': { transform: 'scale(0.3)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)', opacity: '1' },
+          '70%': { transform: 'scale(0.95)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       animation: {
         expand: 'expand 0.17s ease forwards',
         'clip-up': 'clip-up 0.3s ease-out forwards',
         'clip-down': 'clip-down 0.3s ease-out forwards',
+        'bounce-once': 'bounce-once 0.4s ease-out forwards',
       },
       lineHeight: {
         11: '2.75rem',

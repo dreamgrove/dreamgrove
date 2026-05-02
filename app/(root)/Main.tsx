@@ -10,6 +10,7 @@ import { useTheme } from 'next-themes'
 import { useSyncExternalStore } from 'react'
 import Image from 'next/image'
 import MainAprilFools from './MainAprilFools'
+import AprilFoolsAds, { AprilFoolsBanner } from '@/components/AprilFools/AprilFoolsAds'
 
 export default function Home() {
   const { theme } = useTheme()
@@ -66,6 +67,7 @@ export default function Home() {
           </Link>
         ))}
       </div>
+      <AprilFoolsBanner className="pt-2" />
       {
         <div className="grid grid-cols-1 gap-4 pt-4 md:pt-4">
           {content.map((image, index) => (
@@ -97,6 +99,8 @@ export default function Home() {
           ))}
         </div>
       }
+      <AprilFoolsBanner className="pt-2" />
+      <AprilFoolsAds bannerCount={0} />
     </div>
   )
 }

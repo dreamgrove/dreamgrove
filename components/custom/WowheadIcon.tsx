@@ -14,6 +14,18 @@ interface WowheadIconProps {
   fill?: boolean
 }
 
+async function iconExists(url: string): Promise<boolean> {
+  try {
+    const res = await fetch(url, {
+      method: 'HEAD',
+      next: { revalidate: 86400 },
+    })
+    return res.ok
+  } catch {
+    return false
+  }
+}
+
 export default async function WowheadIcon({
   id,
   type = 'spell',
@@ -28,12 +40,15 @@ export default async function WowheadIcon({
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
-  let imageUrl: string
+  let imageUrl = ''
+  let hasImage = false
 
   if (process.env.NODE_ENV === 'test') {
     imageUrl = 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_starfall.jpg'
+    hasImage = true
   } else if (type === 'spell') {
     imageUrl = `https://cdn.simcode.dev/${id}.jpg`
+    hasImage = await iconExists(imageUrl)
   } else {
     if (!iconId) {
       try {
@@ -49,11 +64,16 @@ export default async function WowheadIcon({
         console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
       }
     }
-    imageUrl = iconId ? `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg` : ''
+    if (iconId) {
+      imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg`
+      hasImage = await iconExists(imageUrl)
+    }
+  }
+  if (!hasImage) {
+    return null
   }
 
-  const hasImage = type === 'spell' || !!iconId
-  const image = hasImage ? (
+  const image = (
     <Image
       src={imageUrl}
       alt={`${name} icon`}
@@ -62,19 +82,8 @@ export default async function WowheadIcon({
       fill={fill}
       className={fill ? 'object-contain' : `my-0 inline-block ${!noMargin && 'mr-1'}`}
     />
-  ) : (
-    <span
-      className={
-        fill
-          ? 'flex h-full w-full items-center justify-center rounded-xs bg-gray-200'
-          : `my-0 inline-block rounded-xs bg-gray-200 ${!noMargin && 'mr-1'}`
-      }
-      style={fill ? {} : { width: `${iconSize}px`, height: `${iconSize}px` }}
-      title={`${name} (icon unavailable)`}
-    />
   )
 
-  // Return fallback if fetch fails or no icon is found
   return noLink ? (
     <span className="relative inline-block aspect-square h-full w-auto shrink-0">{image}</span>
   ) : (

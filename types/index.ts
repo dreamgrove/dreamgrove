@@ -1,6 +1,7 @@
 export * from './timeline'
 export * from './events'
 export * from './api'
+export * from './bossAbilities'
 
 // Re-export all timeline event handlers
 export { handleChargeLose } from '../lib/timeline_events/handlers/handleChargeLose'

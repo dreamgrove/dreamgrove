@@ -1,58 +1,16 @@
 # Paste this below your SimC Addon output
 
-copy="human"
-race="human"
-
-copy="gnome"
-race="gnome"
-
-copy="dwarf"
-race="dwarf"
-
-copy="draenei"
-race="draenei"
-
 copy="worgen"
 race="worgen"
-
-copy="orc"
-race="orc"
 
 copy="troll"
 race="troll"
 
-copy="blood_elf"
-race="blood_elf"
-
 copy="tauren"
 race="tauren"
 
-copy="goblin"
-race="goblin"
-
-copy="undead"
-race="undead"
-
-copy="pandaren"
-race="pandaren"
-
-copy="void_elf"
-race="void_elf"
-
-copy=lightforged_draenei"
-race="lightforged_draenei"
-
 copy="hightmountain_tauren"
 race="highmountain_tauren"
-
-copy="nightborne"
-race="nightborne"
-
-copy="dark_iron_dwarf"
-race="dark_iron_dwarf"
-
-copy="maghar_orc"
-race="maghar_orc"
 
 copy="zandalari troll akunda"
 race="zandalari_troll"
@@ -81,51 +39,13 @@ zandalari_loa="paku"
 copy="kultiran"
 race="kul_tiran"
 
-copy="vulpera corrosive"
-race="vulpera"
-vulpera_tricks="corrosive"
-
-copy="vulpera flames"
-race="vulpera"
-vulpera_tricks="flames"
-
-copy="vulpera shadows"
-race="vulpera"
-vulpera_tricks="shadows"
-
-copy="vulpera healing"
-race="vulpera"
-vulpera_tricks="healing"
-
-copy="vulpera holy"
-race="vulpera"
-vulpera_tricks="holy"
-
-copy="mechagnome"
-race="mechagnome"
-
-copy="dracthyr"
-race="dracthyr"
-
-copy="earthen amber"
-race="earthen"
-earthen_mineral="amber"
-
-copy="earthen onyx"
-race="earthen"
-earthen_mineral="onyx"
-
-copy="earthen emerald"
-race="earthen"
-earthen_mineral="emerald"
-
-copy="earthen ruby"
-race="earthen"
-earthen_mineral="ruby"
-
-copy="earthen sapphire"
-race="earthen"
-earthen_mineral="sapphire"
-
 copy="haranir"
 race="haranir_alliance"
+
+copy="night elf (day)"
+race="night_elf"
+timeofday=day
+
+copy="night elf (night)"
+race="night_elf"
+timeofday=night
