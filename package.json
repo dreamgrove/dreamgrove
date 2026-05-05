@@ -143,6 +143,10 @@
       "sharp",
       "unrs-resolver"
     ],
+    "overrides": {
+      "@codemirror/state": "6.6.0",
+      "@codemirror/view": "6.41.0"
+    },
     "peerDependencyRules": {
       "allowedVersions": {
         "react-virtual>react": "19"
