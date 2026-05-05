@@ -109,6 +109,7 @@ function WowheadClientIcon({
       alt={`${name} icon`}
       height={size}
       width={size}
+      className="my-0 inline-block"
     />
   ) : isLoading ? (
     // Loading state
