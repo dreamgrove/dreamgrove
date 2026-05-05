@@ -92,7 +92,7 @@
     "tailwindcss": "^4.1.7",
     "turndown": "^7.2.0",
     "unist-util-visit": "^5.0.0",
-    "uuid": "^11.1.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
