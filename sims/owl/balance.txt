@@ -87,7 +87,7 @@ actions.kotg_st+=/convoke_the_spirits,if=(buff.ca_inc.up&astral_power<40|cooldow
 actions.kotg_st+=/sunfire,target_if=dot.sunfire.remains<10&variable.ca_soon&cooldown.force_of_nature.remains<3&target.time_to_die>10,line_cd=10
 actions.kotg_st+=/starfall,if=buff.starweavers_warp.react
 actions.kotg_st+=/starfall,if=(talent.starweaver&(talent.meteorites&(talent.incarnation_chosen_of_elune&talent.meteor_storm&!talent.power_of_goldrinn|buff.ca_inc.down&(talent.incarnation_chosen_of_elune|talent.stellar_amplification|!talent.power_of_goldrinn))|buff.eclipse.down&(talent.meteorites|talent.aetherial_kindling|talent.stellar_amplification&!talent.power_of_goldrinn))|buff.ca_inc.down&talent.meteorites&talent.aetherial_kindling&talent.stellar_amplification&!talent.power_of_goldrinn|buff.eclipse.down&talent.meteorites&(talent.aetherial_kindling|talent.stellar_amplification|!talent.power_of_goldrinn))&buff.touch_the_cosmos.react&!buff.starweavers_weft.react
-actions.kotg_st+=/starsurge,if=buff.eclipse.down&astral_power.deficit<20|buff.eclipse.up&action.starsurge.cost>1&(astral_power.deficit<10|cooldown.force_of_nature.remains>20|buff.ascendant_stars.up)|(!talent.meteorites|!talent.aetherial_kindling)&buff.touch_the_cosmos.react|buff.starweavers_weft.react
+actions.kotg_st+=/starsurge,if=buff.eclipse.down&astral_power.deficit<20|buff.eclipse.up&action.starsurge.cost>1&(astral_power.deficit<10|cooldown.force_of_nature.remains>20|buff.ascendant_stars.up)|buff.touch_the_cosmos.react|buff.starweavers_weft.react
 actions.kotg_st+=/starfire,if=buff.ascendant_fires.up&buff.eclipse_lunar.up
 actions.kotg_st+=/new_moon,if=astral_power.deficit>energize_amount
 actions.kotg_st+=/half_moon,if=astral_power.deficit>energize_amount
