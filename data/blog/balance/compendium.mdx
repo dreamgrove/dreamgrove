@@ -32,56 +32,38 @@ This is approximately ~11% dmg increase from having no set, depending on how man
 <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
 <Checkbox isIcon id="OpCon" spellId={391528} name="Convoke the Spirits" radio="Coninc" />
 <Checkbox isIcon id="OpInc" spellId={102560} name="Incarnation: Chosen of Elune" defaultCheck radio="Coninc" />
+<Checkbox isIcon id="LOP" spellId={450212} name="Long Opener"/>
 
-[*KEEPER&&OpInc] <Timeline spellIds={[5176, 5176, 5176, 93402, 202770, 205636, 102560]}/>
+[*KEEPER&&OpInc&&~LOP] <Timeline spellIds={[5176, 5176, 5176, 93402, 202770, 205636, 102560 ]}/>
 
-[*EC&&OpInc] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 202770, 194153, 102560]}/> 
+[*EC&&OpInc&&~LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 202770, 102560 ]}/> 
 
-[*EC&&OpCon] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 202770, 194153, 194223, 78674, 78674, 78674, 391528 ]}/> 
+[*EC&&OpCon&&~LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 202770, 194223, 78674, 78674, 78674, 391528 ]}/> 
 
-[*KEEPER&&OpCon] <Timeline spellIds={[5176, 5176, 5176, 93402, 205636, 194223, 78674, 78674, 78674, 391528 ]}/> 
+[*KEEPER&&OpCon&&~LOP] <Timeline spellIds={[5176, 5176, 5176, 93402, 205636, 194223, 78674, 78674, 78674, 391528 ]}/> 
 
-<Collapsible title="Opener explained">
 
-The main idea behind the opener aims to start casting at ~4 seconds left on the pull timer. These 3 !Wrath! casts don't serve any purpose outside of being free damage and being a chance to proc !Touch the Cosmos!. After this you want to apply your !Sunfire! and !Moonfire! and send your cooldown.
+[*KEEPER&&OpInc&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1239669, 78674, 78674, 78674, 5176, 202770, 205636, 102560, 78674, 78674, 78674, 194153 ]}/>
 
-The opener can change depending on the specifics of the fight and whether there are specific spots you need to have cooldowns for. You want to keep in mind that with both !Eclipse! and !194223|CA!/!102560|Incarnation! having 2 charges, using one while the other is active will hurt your total uptime on !Eclipse!.
+[*EC&&OpInc&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233272, 78674, 78674, 78674, 194153, 202770, 102560 ]}/> 
 
+[*EC&&OpCon&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233272, 78674, 78674, 78674, 194153, 202770, 194223, 391528 ]}/> 
+
+[*KEEPER&&OpCon&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 12339669, 78674, 78674, 78674, 5176, 205636, 194223, 78674, 391528 ]}/> 
+
+<Collapsible title= "Opener Explained">
+
+The opener for Balance Druid can change depending on the encounter and your choice of talents. You can opt into taking more active damaging cooldowns like !Fury of Elune!, !Convoke the Spirits! or !Wild Mushroom! and would have to fit them into your opener. 
+In an isolated scenario, it is generally optimal to enter !Eclipse! at the very start of combat to get the ability on cooldown. However much of that !Eclipse! window you actually play will depend on the fight and overall talent choices. You should look up other Balance Druids on Warcraftlogs for the specific fight you're preparing for and see what they do in their openers to get a general idea of what works best for that encounter. 
+
+The main idea behind the opener aims to start casting at ~4 seconds left on the pull timer. These 3 !Wrath! casts don't serve any purpose outside of being free damage and being a chance to proc !Touch the Cosmos!.
+
+Below you can choose which opener you want to follow by toggling the checkboxes. "Long Opener" assumes you are not sending your cooldowns directly on pull, but rather waiting a little to help line them up better.
 </Collapsible>
-  
+
 </HeroTalentsHeader>
 
 ## Single Target Priority
-
-<Collapsible title="Easy Mode">
-The Balance Compendium is meant to be a comprehensive guide that puts a lot of effort into providing accurate information. While this information is very valuable for people trying to master the class, it is also true that reading through many conditionals can be intimidating for new players (and sometimes not worth it - considering that they often provide minimal DPS gains)
-
-What follows is a general overview of the class' playstyle that should serve as a baseline reference when starting to play. Once the fundamental mechanics are understood, we encourage you to improve your rotation by following the detailed priority lists.
-
-### Fundamentals
-- Always keep !Moonfire! and !Sunfire! on your targets. Refresh both of them when they're about to expire
-- The rotational loop consists in building Astral Power with your builders, and spending it with your spenders.
-- You should build Astral Power with !Wrath! in Single Target or !Starfire! in AOE. (Use !Starfire! in both situations if you're playing Elune's Chosen and have !Lunar Calling! talented)
-- And then spend your Astral Power with !Starsurge! in Single Target or !Starfall! in AOE.
-- Remember to never overcap Astral Power! (But try leaving a bit of it so you can use it for instant casts when moving).
-- Being in !Eclipse! will empower most of your spells: Solar Eclipse buffs !Wrath! + all Nature spells. Lunar Eclipse buffs !Starfire! + Arcane spells. !Starsurge! and !Starfall! are Astral damage and therefore will be empowered by either (see FAQ).
-- This means that you want to be in !Eclipse! as much as possible.
-- You can enter !Eclipse! by using your main cooldown - !194223|Celestial Alignment!/!102560|Incarnation! which will grant you both eclipses at the same time, empowering your Astral spells twice!
-- Or you can enter it by pressing !Solar Eclipse! or !Lunar Eclipse!. (The !Eclipse! spell will change to the specific version based on the builder you use, but this happens automatically so you shouldn't worry about it too much)
-- !Convoke the Spirits! is a major cooldown that you can talent into. It's a channel that will generate AP and cast many strong damaging spells over its duration.
-- !Fury of Elune! is a minor cooldown that you can talent into. It does damage and generares Astral Power so you should be using it on cooldown.
-- !Force of Nature! is another minor cooldown that is used mainly when playing Keeper of The Grove because of !Harmony of the Grove!. Pressing it will increase your DPS by 12%/16% (depending on hero talents) for 10s - which means that you want to do as much DPS as soon as you press it.
-
-**Important:** A big portion of your DPS comes from properly aligning your cooldowns. How to do it is not immediately obvious, and the timings are made even worse if !Control of The Dream! is talented. Here are some simple rules to hopefully make this clear:
-(NB: Not all builds take all these talents so just ignore the ones you dont have)
-- You should always cast your cooldowns together to maximize their damage.
-- !194223|Celestial Alignment!/!102560|Incarnation! should **always** be used with !Convoke the Spirits! and !Force of Nature!
-- If for some reason you can't do that then you should delay your CDs until you have all of them. 
-- !Fury of Elune! should be pressed on cooldown and aligned with an !Eclipse! (remember, !194223|Celestial Alignment!/!102560|Incarnation! will grant you both, so it counts).
-- !Force of Nature! should also be pressed on cooldown and aligned with an !Eclipse!.
-- !Eclipse! should be used on cooldown and to cover those moments where you should be pressing !Force of Nature! but you don't have any charges of !194223|Celestial Alignment!/!102560|Incarnation!
-- The order for the coolowns is the following: !Fury of Elune! (to do damage and generate Astral Power) -> !Force of Nature! (to buff your damage) -> !194223|Celestial Alignment!/!102560|Incarnation! (to buff your damage even further) -> !Starsurge! /!Starfall! (to spend your AP on buffed spells) -> !Convoke the Spirits! (to cast many empowered spells which are now buffed) -> !Starsurge! /!Starfall! (to spend your AP on buffed spells)
-</Collapsible>
 
 ### **What is a priority list?**
 
@@ -92,6 +74,7 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="ConvokeKOTG" spellId={391528} name="Convoke the Spirits" />
 <Checkbox isIcon id="MoonKOTG" spellId={274281} name="New Moon" radio="MoonKOTG" />
 <Checkbox isIcon id="FoEKOTG" spellId={202770} name="Fury of Elune" radio="MoonKOTG" />
+<Checkbox isIcon id="WeaverKOTG" spellId={393940} name="Starweaver" defaultCheck />
 
 - Keep up !Sunfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Keep up !Moonfire!, refresh within pandemic (30% of base duration shown in the tooltip) or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
@@ -107,7 +90,7 @@ When reading the priority lists below, you should not think of these as steps to
   - You are sitting on 2 charges of !Eclipse!.
   - You have enough Astral Power or !Starweaver!/!Touch the Cosmos! procs to spend all 3 !Ascendant Stars! stacks from your Apex Talent and !Force of Nature! is not available.
 - Use !Starfire! if you have an !Ascendant Fires! proc from your Apex Talent and you are inside !194223|CA!/!102560|Incarnation!.
-- Cast !Starfall! if you have a !Starweaver's Warp! or a !Touch the Cosmos! proc.
+- [*WeaverKOTG] Cast !Starfall! if you have a !Starweaver's Warp! or a !Touch the Cosmos! proc.
 - [*MoonKOTG] Use !274281|New-!,!274282|Half-! and !Full Moon! if all of the following conditions are true:
   - You will not overcap on AP.
   - You can finish the cast before your current Eclipse ends.
@@ -116,7 +99,8 @@ When reading the priority lists below, you should not think of these as steps to
   - You are about to overcap on Astral Power.
   - You need to move.
   - The !Ascendant Stars! buff from your Apex Talent is up.
-  - You have a !Starweaver's Weft! proc.
+  - [*~WeaverKOTG] You have a !Touch the Cosmos! proc.
+  - [*WeaverKOTG] You have a !Starweaver's Weft! proc.
 - Use !Wrath!.
 </HeroTalentsHeader>
 
@@ -125,6 +109,8 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="MoonEC" spellId={274281} name="New Moon" radio="MoonEC" /> 
 <Checkbox isIcon id="FoEEC" spellId={202770} name="Fury of Elune" defaultCheck radio="MoonEC" /> 
 <Checkbox isIcon id="ConvokeEC" spellId={391528} name="Convoke the Spirits" />
+<Checkbox isIcon id="WeaverEC" spellId={393940} name="Starweaver" />
+
 
 - Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Use !Moonfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
@@ -139,12 +125,14 @@ When reading the priority lists below, you should not think of these as steps to
   - You can finish the cast before your current Eclipse ends.
   - You are in !194223|CA!/!102560|Incarnation! or you're about to cap on charges and the cooldown of !194223|CA!/!102560|Incarnation! is longer than 15 seconds.
   - You are sitting on 3 charges.
-- Cast !Starfall! if you have a !Starweaver's Warp! proc.
+- [*WeaverEC] Cast !Starfall! if you have a !Starweaver's Warp! or a !Touch the Cosmos! proc.
 - Use !Starsurge! if any of the following conditions is true:
   - You are about to overcap on AP.
   - You need to move.
+  - Your !Eclipse! window is running out and you have time to pool Astral Power for your next !Eclipse!.
   - The !Ascendant Stars! buff from your Apex Talent is up.
-  - You have a !Touch the Cosmos! or !Starweaver's Weft! proc.
+  - [*~WeaverEC] You have a !Touch the Cosmos! proc.
+  - [*WeaverEC] You have a !Starweaver's Weft! proc.
 - Use !Starfire! inside !Lunar Eclipse!.
 - Use !Wrath! if you are not currently in an !Eclipse!.
 
@@ -239,6 +227,68 @@ When reading the priority lists below, you should not think of these as steps to
 - Use !Starsurge! as your main spender on 2 targets if not talented into !Aetherial Kindling!.
 - Use !Starfall! as your main spender on 2+ targets if talented into !Aetherial Kindling!, and 3+ targets if not.
 
+## Talent Interactions & Tips
+> [!NOTE]
+> This section is intended to provide more of an in-depth look into specific mechanics and interactions that are not immediately obvious, as opposed to providing a bullet list of points like in the rotation priority list. If you're new to the spec, we recommend that you read through the "Easy Mode" collapsible below. 
+
+<Collapsible title="Easy Mode">
+The Balance Compendium is meant to be a comprehensive guide that puts effort into providing in-depth information. While this information is very valuable for people trying to master the class, it is also true that reading through many conditionals can be intimidating for new players (and sometimes not worth it - considering that they often provide minimal DPS gains).
+
+Below you can find a general overview of the Balance Druid playstyle aimed at providing you with a baseline understanding of the spec. Once the fundamental mechanics are understood, we encourage you to improve your rotation by following the detailed priority lists.
+
+### Fundamentals
+- Always keep !Moonfire! and !Sunfire! on your targets. Refresh both of them when they're about to expire or before using your main cooldown (!194223|CA!/!102560|Incarnation!).
+- The rotational loop consists of building Astral Power and spending it with either !Starsurge! or !Starfall!. 
+- You spend your Astral Power with !Starsurge! in Single Target or !Starfall! in AoE. (The rules around Starfall can change depending on talent builds, see priority list for details)
+- You build Astral Power with !Wrath! in Single Target or !Starfire! in AoE. (Use !Starfire! in both situations if you're playing Elune's Chosen and have !Lunar Calling! talented)
+- Remember to never overcap Astral Power! (But don't spend too much to the point where you don't have casts available for movement).
+- !Eclipse! is your most important cooldown and effect, and a large part of your damage. Generally you want to make sure you spend your time in !Eclipse! casting high value spells, like !Starsurge! or !Starfall!, and not spells like !Sunfire! or !Moonfire!.
+- Using !Celestial Alignment!/!Incarnation: Chosen of Elune! grants you both !Solar Eclipse! and !Lunar Eclipse!, and will cancel and reset any duration left on either buff.
+- Or you can enter it by pressing !Solar Eclipse! or !Lunar Eclipse!. (The !Eclipse! spell will change to the specific version based on the builder you use, but this happens automatically so you shouldn't worry about it too much)
+
+### Cooldowns
+**Important:** A big portion of your DPS comes from properly aligning your cooldowns. How to do it is not immediately obvious, and the timings become more confusing if !Control of the Dream! is talented. Here are some rules you can follow:
+- !Convoke the Spirits! is a major cooldown that you can talent into. It's a channel that will generate AP and cast a flurry of damaging spells over its duration. You want to use this during your main damage cooldowns, like !194223|CA!/!102560|Incarnation!.
+- !Fury of Elune! is a minor cooldown that you can talent into. It does some damage, but it's biggest value is as an AP generator. You should ideally be using this __before__ your main cooldowns to help you cast as many spenders as possible.
+- When you play **Keeper of the Grove**, !Force of Nature! becomes a major cooldown due to !Harmony of the Grove!. Pressing it will increase your damage by 12%/16% (depending on hero talents) for 10s. It is important to note that !Force of Nature! does not inherently do any damage on its own, which means that you should be using it __before__ using other cooldowns like !194223|CA!/!102560|Incarnation! or !Eclipse!.
+- You should always pair your cooldowns together to maximize their damage, if for some reason you can't, then you should delay them until they line up.
+- You want to use !Eclipse! as soon as it's available, or hold it for a !Force of Nature! cast that would be cast without !194223|CA!/!102560|Incarnation!. If you can't do either of those, then you should delay it until you can.
+</Collapsible>
+
+<Collapsible title="How to play around Eclipse" >
+
+By far the biggest change going into the Midnight expansion has been the complete rework of !Eclipse!, turning it from a maintenance buff into a 32 second cooldown with 2 charges. A very common mistake that players make is getting stuck on old and antiquated ways of thinking about !Eclipse!, and not fully utilizing the effect of the cooldown.
+
+Eclipse has 2 charges, and does not benefit from any CDR effect, meaning that any moment spent **__sitting at 2 charges__** is wasted damage. 
+The most important thing to note about !Eclipse! is that it is **a damage cooldown**, meaning that you want to line it up with moments where you have access to high value spells. This usually ends up in moments where you have to pool Astral Power and delay using your cooldowns for a few seconds, which can feel unintuitive at first, but will result in higher damage overall.
+
+The distinction between what is a **good spell** and what is a **bad spell** to cast during cooldowns can sound confusing, but is not that complicated.
+Generally speaking, **bad spells** to use during cooldowns include spells that don't inherently do much damage on their own, but aim to either buff or enhance your damage in other ways. This includes spells like !Sunfire!, !Moonfire!, !Force of Nature! and !Fury of Elune!. It is optimal to press these buttons **before** starting your cooldowns. As for !Sunfire! and !Moonfire! it will depend on their remaining duration, but generally you want to refresh before starting a cooldown sequence. Getting into the habit of reapplying your DoTs during your !Eclipse! downtime ensures that you won't need to spend any globals doing it during your damage window, while also providing some quick Astral Power generation to help in pooling for a new cooldown window.
+
+A **good spell** to use during your cooldown window is a spell that has a high base damage and therefore benefits more from the damage increase provided by !Eclipse!. This includes spells like !Starsurge!, !Starfall!, !Convoke the Spirits! and any !Wrath!/!Starfire! cast that consumes the instant cast from your !Ascendant Fires! apex talent or generates Astral Power to further increase your spender casts.
+
+Lastly, it is important to note that !194223|CA!/!102560|Incarnation! grants you both !Solar Eclipse! and !Lunar Eclipse!, and will cancel and reset any duration left on either buff. This means that if you use it while having an active !Eclipse!, you will reset the duration of that !Eclipse! while gaining the other one. You then generally want to avoid using !194223|CA!/!102560|Incarnation! while having an active !Eclipse!, unless there is a specific reason to do so. 
+It's worth to keep in mind that !Celestial Alignment! lasts 15 seconds while !102560|Incarnation! lasts 20 seconds, and that you are unable to press any !Eclipse! during this window; so you should enter an !Eclipse! before using !194223|CA!/!102560|Incarnation! if the cooldown would cap at 2 charges during the duration of your !194223|CA!/!102560|Incarnation!.
+</Collapsible>
+
+<Collapsible title="Starfall on Single Target">
+
+Whenever you're playing builds with !Starweaver!, there are some situations where you want to press !Starfall! on single target, even without a !Starweaver's Warp! proc. This is because !Starfall! has a higher chance of incurring a free !Starsurge! proc from !Starweaver!, and can overall earn you more casts of your spenders. Usually it would still be a damage loss to press !Starfall! like this, but because of talents like !Hail of Stars!, !Stellar Amplification!, !Meteorites! and the !Meteor Storm!/!Aetherial Kindling! choice node, there are some combinations of talents where it is a direct increase to spend your !Touch the Cosmos! procs on !Starfall!. Which talent combinations this is true for can get complicated fast due to the number of variables involved. The general rule of thumb is that if you have at least 1 of either !Meteorites! or !Meteor Storm!/!Aetherial Kindling! effects with !Stellar Amplification! then you should be spending your !Touch the Cosmos! procs on !Starfall! even on single target.
+
+</Collapsible>
+
+<Collapsible title="How to Play on 2 Targets">
+
+In the Midnight Season 1 raids, there are a few spots where you are consistently fighting 2 targets. Because of the rise of builds using !Starweaver!, your natural instinct would be to press !Starfall! as your main spender, but that is not always your best option. Spending Astral Power on !Starfall! with !Aetherial Kindling! talented does serve to make the fights easier, with less reliance on having to reapply your DoT effects. However, the optimal way to play these fights is to use !Starsurge! as your main spender and using !Starfall! for when there are add phases or you have a !Starweaver's Warp! proc. You should also aim to maintain the !Stellar Amplification! debuff on both targets, by swapping target between your !Starsurge! casts. This increases the overall damage the targets take from both !Shooting Stars! and your !Starfall! casts.
+</Collapsible>
+
+<Collapsible title="Elune's Chosen vs Keeper of the Grove">
+
+The choice between !Elune's Chosen! and !Keeper of the Grove! mostly comes down to personal preference. With the changes coming from last expansion, the spec has access to more instant casts, making the movement tax from playing !Elune's Chosen! less punishing. The highest simming builds for !Elune's Chosen! also pick up !Rattle the Stars!, making the potential value in big AoE pulls in m+ higher compared to !Starweaver! builds.
+
+The damage profiles of both hero trees are very similar now. In the previous expansion !Elune's Chosen! would provide a flat and static damage graph, while !Keeper of the Grove! played around powerful burst. With the nerf to !Harmony of the Grove! and the change to !Bounteous Bloom!, this is no longer the case, and both hero trees provide close to the same damage profile. That being said, !Keeper of the Grove! is likely to remain as the preferred choice for raid encounters and !Elune's Chosen! for mythic+.
+
+</Collapsible>
 
 <Collapsible title="How to Use Whirling Stars">
 !Whirling Stars! is a talent that changes your !194223|CA!/!102560|Incarnation! cooldown to a charge system, with a 120s recharge. In Keeper of the Grove, you want to overlap these charges with !248280|Force of Nature! and !Convoke the Spirits! or just !248280|Force of Nature! if your !194223|CA!/!102560|Incarnation! will recharge before !391528|Convoke! comes back off cooldown. 
@@ -248,11 +298,16 @@ In an M+ scenario, if you're talented into !Incarnation: Chosen of Elune! instea
 When playing !Elune's Chosen! you gain more freedom in using your cooldowns and can send them on spots in the fight where it's beneficial. Usually this means you use your !194223|CA!/!102560|Incarnation! with an on-use trinket, or if the remaining recharge on !194223|CA!/!102560|Incarnation! is shorter than the trinket cooldown.
 </Collapsible>
 
-<Collapsible title="How to Play on 2 Targets">
-
-In the Midnight Season 1 raids, there are a few spots where you are consistently fighting 2 targets. Because of the rise of builds using !Starweaver!, your natural instinct would be to press !Starfall! as your main spender, but that is not always your best option. Spending Astral Power on !Starfall! with !Aetherial Kindling! talented does serve to make the fights easier, with less reliance on having to reapply your DoT effects. However, the optimal way to play these fights is to use !Starsurge! as your main spender and using !Starfall! for when there are add phases or you have a !Starweaver's Warp! proc. You should also aim to maintain the !Stellar Amplification! debuff on both targets, by swapping target between your !Starsurge! casts. This increases the overall damage the targets take from both !Shooting Stars! and your !Starfall! casts.
-
+<Collapsible title="Convoke the Spirits vs Incarnation: Chosen of Elune">
+!Keeper of the Grove! compliments !391528|Convoke! pretty well when you use it with the dmg increase from !Harmony of the Grove! and !Celestial Alignment!. !391528|Convoke! is also good for priority damage and boss fights in M+. !Incarnation: Chosen of Elune! is good for AoE scenarios, or in situations where !391528|Convoke! would use spells on targets you don't want to hit.  !Incarnation: Chosen of Elune! also pairs well with !Whirling Stars! in M+, giving you very consistent cooldowns on most packs, and allows for more flexibility in when your damage spikes, as opposed to !391528|Convoke!. If you're playing !391528|Convoke! in M+, you should use it in AoE with the conditions outlined in the "Rotation" section.
 </Collapsible>
+
+<Collapsible title="Control of the Dream vs. Power of the Dream">
+!Control of the Dream! lets you hold on to either !194223|Celestial Alignment!/!102560|Incarnation!, !391528|Convoke! or !205636|Force of Nature! for up to 15 seconds without losing a use, subtracting the amount of time you held the ability from its cooldown.
+
+Depending on the fight timer, this talent is stronger than !Power of the Dream! which it shares a choice node with. As always, you should research the fight you are preparing for on [warcraftlogs](https://www.warcraftlogs.com/) or sim your character to make an educated guess.
+</Collapsible>
+
 
 # Talents
 
@@ -403,24 +458,7 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
 </div>
 </Talents>
 
-# Interactions
-<Collapsible title="Elune's Chosen vs Keeper of the Grove">
 
-The choice between !Elune's Chosen! and !Keeper of the Grove! mostly comes down to personal preference. With the changes coming from last expansion, the spec has access to more instant casts, making the movement tax from playing !Elune's Chosen! less punishing. The best builds for !Elune's Chosen! also pick up !Rattle the Stars!, making the potential value in big AoE pulls in m+ higher compared to !Starweaver! builds.
-
-The damage profiles of both hero trees are very similar now. In the previous expansion !Elune's Chosen! would provide a flat and static damage graph, while !Keeper of the Grove! played around powerful burst. With the nerf to !Harmony of the Grove! and the change to !Bounteous Bloom!, this is no longer the case, and both hero trees provide close to the same damage profile. That being said, !Keeper of the Grove! is likely to remain as the preferred choice for raid encounters and !Elune's Chosen! for mythic+.
-
-</Collapsible>
-
-<Collapsible title="Convoke the Spirits vs Incarnation: Chosen of Elune">
-!Keeper of the Grove! compliments !391528|Convoke! pretty well when you use it with the dmg increase from !Harmony of the Grove! and !Celestial Alignment!. !391528|Convoke! is also good for priority damage and boss fights in M+. !Incarnation: Chosen of Elune! is good for AoE scenarios, or in situations where !391528|Convoke! would use spells on targets you don't want to hit.  !Incarnation: Chosen of Elune! also pairs well with !Whirling Stars! in M+, giving you very consistent cooldowns on most packs, and allows for more flexibility in when your damage spikes, as opposed to !391528|Convoke!. If you're playing !391528|Convoke! in M+, you should use it in AoE with the conditions outlined in the "Rotation" section.
-</Collapsible>
-
-<Collapsible title="Control of the Dream vs. Power of the Dream">
-!Control of the Dream! lets you hold on to either !194223|Celestial Alignment!/!102560|Incarnation!, !391528|Convoke! or !205636|Force of Nature! for up to 15 seconds without losing a use, subtracting the amount of time you held the ability from its cooldown.
-
-Depending on the fight timer, this talent is stronger than !Power of the Dream! which it shares a choice node with. As always, you should research the fight you are preparing for on [warcraftlogs](https://www.warcraftlogs.com/) or sim your character to make an educated guess.
-</Collapsible>
 
 # Gearing & Consumables
  
@@ -435,14 +473,14 @@ Keep in mind that the meta gem [Indecipherable Eversong Diamond](https://www.wow
 
 | Slot |  |
 |------|---------|
-| **Gems** | 1x [Indecipherable Eversong Diamond](https://www.wowhead.com/item=240983/indecipherable-eversong-diamond) mixed with whatever gems sim the best for your character.  |
+| **Gems** | 1x [Indecipherable Eversong Diamond](https://www.wowhead.com/item=240983/indecipherable-eversong-diamond) is good early on in the season, but [Powerful Eversong Diamond](www.wowhead.com/item=240967/powerful-eversong-diamond) can overtake when you have 5 or more sockets.  |
 | **Weapon** | [Acuity of the Ren'dorei](https://www.wowhead.com/item=244029/enchant-weapon-acuity-of-the-rendorei) |
 | **Head** | [Empowered Rune of Avoidance](https://www.wowhead.com/item=244007/enchant-helm-empowered-rune-of-avoidance) |
 | **Shoulders** | [Amirdrassil's Grace](https://www.wowhead.com/item=243991/enchant-shoulders-amirdrassils-grace) |
 | **Chest** | [Mark of the Worldsoul](https://www.wowhead.com/item=243977/enchant-chest-mark-of-the-worldsoul) |
 | **Legs** | [Sunfire Silk Spellthread](https://www.wowhead.com/item=240133/sunfire-silk-spellthread) |
 | **Boots** | [Lynx's Dexterity](https://www.wowhead.com/item=243953/enchant-boots-lynxs-dexterity) |
-| **Ring** | You should always sim your own character to determine what enchant to use in this slot |
+| **Ring** | [Eyes of the Eagle](https://www.wowhead.com/spell=1236059/enchant-ring-eyes-of-the-eagle) |
 
 ## Consumables
 
@@ -462,6 +500,9 @@ Remember that you should always sim your character using [Raidbots Top Gear](htt
 
 [Darkmoon Sigil: Hunt](https://www.wowhead.com/item=245875/darkmoon-sigil-hunt)
 
+> [!NOTE]
+> If you are progressing L'ura on mythic difficulty you should be aware that this embellishment will permanently proc the Versatility buff. You should sim your character to find out if this is actually worth it for you over playing other embellishment.
+
 This embellishment is crafted onto your Weapon slot, making it a really strong option early on in the season. Weapons are the highest stat budget slot, so crafting this early on is a significant damage increase. 
 
 Generally you want to craft this on an [Aln'hara Cane](https://www.wowhead.com/item=245770/alnhara-cane) staff. However, if you manage to get a mythic staff early you can skip to the next craft instead.
@@ -470,7 +511,7 @@ Generally you want to craft this on an [Aln'hara Cane](https://www.wowhead.com/i
 
 [Arcanoweave Lining](https://www.wowhead.com/item=240166/arcanoweave-lining)
 
-This is a buff that has a chance to increase both yours and a teammates primary stat. This embellishment is performing well in sims, even without factoring in the buff it provides to teammates. 
+This is a buff that has a chance to increase both yours and a teammates primary stat. This embellishment is performing well in sims, even without factoring in the buff it provides to teammates. This embellishment also stacks, meaning that you can craft 2 of them.
 
 Early on in the season you want to craft this on any slot you have open, likely to be on your off-tier slot. The [Arcanoweave Lining](https://www.wowhead.com/item=240166/arcanoweave-lining) also scales with item level so you ideally want to use Myth crests on this if possible.
 Later on in the season you should have this crafted on either a Belt or a Wrist slot as those have low stat budgets.
@@ -484,13 +525,13 @@ Later on in the season you should have this crafted on either a Belt or a Wrist 
 |Tier | Trinket | Description |
 |------|-----------------------|---------|
 | **S Tier** | [Vaelgor's Final Stare](https://www.wowhead.com/item=249346/vaelgors-final-stare?class=11&hero=23&ilvl=289&spec=102) | 90 second on-use. Pair this with your !Celestial Alignment!/!Incarnation: Chosen of Elune! cast. |
-|  | [Locus-Walker's Ribbon](https://www.wowhead.com/item=249809/locus-walkers-ribbon?hero=23&ilvl=289&spec=102) | Similar to Eye of Kezan from Liberation of Undermine. Stacking Intellect buff that gets stronger later in the fight.|
-| **A Tier** | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?bonus=40:13335:12806&hero=23&ilvl=289&spec=102) | Mastery stat stick with a Primary Stat proc.  |
+|  | [Gaze of the Alnseer](https://www.wowhead.com/item=249343/gaze-of-the-alnseer?bonus=40:13335:12806&hero=23&ilvl=289&spec=102) | Mastery stat stick with a Primary Stat proc. |
+| **A Tier** |  [Locus-Walker's Ribbon](https://www.wowhead.com/item=249809/locus-walkers-ribbon?hero=23&ilvl=289&spec=102) | Similar to Eye of Kezan from Liberation of Undermine. Stacking Intellect buff that gets stronger later in the fight. |
 |  | [Wraps of Cosmic Madness](https://www.wowhead.com/item=249340/wraps-of-cosmic-madness?class=11&hero=23&ilvl=289&spec=102)  | 2 minute cooldown, 2 second channel scaling with haste. Use this before entering your cooldowns to not waste GCDs inside them. Cooldown reduced by 1 minute whenever someone in your raid dies. |
 |  | [Shadow of the Empyrean Requiem](https://www.wowhead.com/item=249810/shadow-of-the-empyrean-requiem?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick with a random damage proc. Gives a Haste buff whenever it procs on someone below 35% health.|
 |  | [Soulcatcher's Charm](https://www.wowhead.com/item=250223/soulcatchers-charm?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick with a random damage proc. |
 |  | [Heart of Wind](https://www.wowhead.com/item=250256/heart-of-wind?class=11&hero=23&ilvl=289&spec=102) | Intellect stat stick. Random haste proc. |
-| **B Tier** | [Emberwing Feather](https://www.wowhead.com/item=250144/emberwing-feather?class=11&hero=23&ilvl=289&spec=102)  |
+| **B Tier** | [Emberwing Feather](https://www.wowhead.com/item=250144/emberwing-feather?class=11&hero=23&ilvl=289&spec=102)  | This trinket is outclassed as an On-Use by the Vaelgor's Final Stare trinket. It is not bad when playing Elune's Chosen, but for KOTG it leaves a lot to be desired. |
 |  | [Glorious Crusader's Keepsake](https://www.wowhead.com/item=251792/glorious-crusaders-keepsake?bonus=12802:13577&class=11&hero=23&ilvl=276&spec=102) | |
 |  | [Eye of the Drowning Void](https://www.wowhead.com/item=250257/eye-of-the-drowning-void?class=11&hero=23&ilvl=289&spec=102) | |
 |  | [Reality Breacher](https://www.wowhead.com/item=151310/reality-breacher?class=11&hero=23&ilvl=289&spec=102) | |
@@ -510,13 +551,13 @@ Later on in the season you should have this crafted on either a Belt or a Wrist 
 **A:** !Starlord! was changed heading into Midnight to make it non-cancellable, have a 20s duration and resetting whenever you enter !Eclipse!.
 
 ### Q: When do I enter !Eclipse!?
-**A:** Enter !Eclipse! to overlap with minor cooldowns like !Force of Nature! and !Fury of Elune! or to prevent capping on charges. Additionally you want to make sure you enter !Eclipse! with as much resource as possible. 
+**A:** Enter !Eclipse! to overlap with minor cooldowns like !Force of Nature! and !Fury of Elune! or to prevent capping on charges. Additionally you want to make sure you enter !Eclipse! with as many resources as possible. After !Eclipse! was made into a cooldown, some players still think of it as a maintenance buff that should be close to 100% uptime; this is no longer correct. Having 100% uptime in encounters over 1 minute is bound to incur some downtime. So instead of thinking about !Eclipse! as a static maintenance buff, your priority should always be to maximize your use of **good spells** like !Starsurge!, !Starfall! and !Wrath!/!Starfire! to build back AP.
 
 ### Q: What is Astral damage?
 **A:** Astral damage is both Arcane and Nature damage. Effects that buff Nature spells also apply to Astral spells, and effects that buff Arcane spells likewise also apply to Astral spells. For example, Solar Eclipse multiplies the damage of all Nature & Astral spells by 1.15x, and Lunar Eclipse multiplies the damage of all Arcane & Astral spells by 1.15x. If you have both eclipses, Astral spells get 1.15 * 1.15 = 1.3225x multiplier, while Nature & Arcane spells get 1.15x.
 
 ### Q: How do I sim for Mythic+?
-**A:** Simming for mythic+ through dungeonroute sims or dungeonslice is currently not well supported in the Balance Druid APL and you're better off simming the regular 1 target 5 minute sim. It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" option. 
+**A:** It is generally recommended that you steer away from simming unrealistic scenarios like "5 target 40 seconds" as they are likely to give skewed results. Balance Druid stats don't really change much depending on target count either, so you will be perfectly fine just using the default "1 target 5 minute patchwerk" options. If your intention is to sim for mythic+, and you're adamant that sticking to 1 target 5 minute won't cut it, then you can create a route using [Keystone Guru](https://keystone.guru/) and click the "simulate" option to generate a SimC string. For a guide on how to set this up, you can look at [this video from Shadarek](https://www.youtube.com/watch?v=4gGeBPuwIjo). The video explains how to do it for Demon Hunter, but the difference to Balance Druid is only in which raid buff to choose.  Keep in mind that ST damage is still a big part of mythic+!
 
 ### Q: I've read the priority list and I think my rotation looks correct but I'm still doing very low damage. What could be the reason?
 **A:** Log one of your fights and check it with [Warcraftlogs](https://www.warcraftlogs.com/) and [Wowanalyzer](https://wowanalyzer.com/). The main thing to check is if you're always casting: the timeline should have no downtime and close to zero cancelled casts. Another common issue is incorrectly planning your movement and wasting casts on dots: you should always have enough AP to cover some distance just by using spenders. Balance Druid is a proactive spec, and you should have a plan for how you're going to deal with incoming mechanics without sacrificing uptime or being forced into suboptimal casts. You can also share your log in Balance channel in Dreamgrove and usually someone will see it and give some tips. Remember that the answer you need is not always the answer you want.
