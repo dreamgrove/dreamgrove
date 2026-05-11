@@ -16,6 +16,7 @@ import Timeline from './custom/Timeline'
 import YouTube from './custom/YouTube'
 import ConditionalElement from './custom/ConditionalElement'
 import CheckboxProvider from './custom/CheckboxProvider'
+import Color from './custom/Color'
 import React from 'react'
 export const components: MDXComponents = {
   Image: ({ src, alt, ...props }) => {
@@ -138,6 +139,7 @@ export const components: MDXComponents = {
   Collapsible,
   Timeline,
   YouTube,
+  Color,
   p: ({ children, ...props }) => {
     let id = ''
     const regex = /^\[\*(.*?)\]/ //Matches [*text]
