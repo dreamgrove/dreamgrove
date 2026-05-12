@@ -1,4 +1,6 @@
-import { buildTalentGrid, TalentNode, GridCell } from './TalentTreeUtils'
+import { buildTalentGrid, collapseGapColumns, TalentNode, GridCell } from './TalentTreeUtils'
+
+const cellCenterCol = (cell: GridCell) => cell.col + (cell.colSpan ?? 1) / 2
 
 // Server Component to render the connection lines between nodes
 export function ConnectionLines({
@@ -32,9 +34,9 @@ export function ConnectionLines({
         if (treeType === 'spec' || treeType === 'hero') {
           // Calculate the grid-based positions
           const startRow = fromCell.row
-          const startCol = fromCell.col
+          const startCol = cellCenterCol(fromCell)
           const endRow = toCell.row
-          const endCol = toCell.col
+          const endCol = cellCenterCol(toCell)
 
           // Create a unique key for this connection
           const lineKey = `line-${node.id}-${nextNodeId}`
@@ -46,9 +48,9 @@ export function ConnectionLines({
               style={{ zIndex: 1, pointerEvents: 'none' }}
             >
               <line
-                x1={`${((startCol + 0.5) / grid[0].length) * 100}%`}
+                x1={`${(startCol / grid[0].length) * 100}%`}
                 y1={`${((startRow + 0.5) / grid.length) * 100}%`}
-                x2={`${((endCol + 0.5) / grid[0].length) * 100}%`}
+                x2={`${(endCol / grid[0].length) * 100}%`}
                 y2={`${((endRow + 0.5) / grid.length) * 100}%`}
                 stroke={isActive ? '#00ff00' : '#ffd700'}
                 strokeWidth={isActive ? 1 : 1}
@@ -194,6 +196,9 @@ export function TalentTreeGrid({
               const borderColor = Object.entries(nodeColors).find(([nodeName]) =>
                 node.name.toLowerCase().includes(nodeName.toLowerCase())
               )?.[1]
+              const span = cell.colSpan ?? 1
+              const spanStyle =
+                span > 1 ? { justifySelf: 'center' as const, width: `${100 / span}%` } : null
 
               return (
                 <div
@@ -201,7 +206,8 @@ export function TalentTreeGrid({
                   className="w-max-[70px] h-max-[70px] aspect-1 relative flex w-full items-center justify-center"
                   style={{
                     gridRow: cell.row + 1,
-                    gridColumn: cell.col + 1,
+                    gridColumn: `${cell.col + 1} / span ${span}`,
+                    ...spanStyle,
                   }}
                   data-node-id={node.id}
                 >
@@ -387,8 +393,9 @@ export function HeroTreeLayout({
     return allNodesSelected
   })
 
-  // Build the grid from the filtered nodes
-  const grid = buildTalentGrid(filteredNodes)
+  // Build the grid from the filtered nodes, then collapse any purely-decorative
+  // middle columns so the hero tree doesn't have an empty gap between halves.
+  const grid = collapseGapColumns(buildTalentGrid(filteredNodes))
 
   // Create a node ID to grid cell mapping for quick lookup
   const nodeIdToCell = new Map<number, GridCell>()

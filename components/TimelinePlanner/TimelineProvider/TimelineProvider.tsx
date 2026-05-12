@@ -65,8 +65,7 @@ export function TimelineProvider({
     inputEvents,
     localSpells,
     keysToTalents,
-    activeTalents,
-    setInputEvents
+    activeTalents
   )
   const filteredSpells = React.useMemo(
     () => getSpellsForSpec(currentSpec),

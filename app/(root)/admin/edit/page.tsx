@@ -153,7 +153,7 @@ function FileEditor({ filePath }: { filePath: string }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [errorLine, setErrorLine] = useState<number | null>(null)
   const editorRef = useRef<EditorView | null>(null)
-  const errorHighlighterRef = useRef<ReturnType<typeof createErrorLineHighlighter> | null>(null)
+  const errorHighlighter = useMemo(() => createErrorLineHighlighter(), [])
 
   // Extract filename from path for display
   const fileName = filePath.split('/').pop() || 'Unknown'
@@ -223,6 +223,37 @@ function FileEditor({ filePath }: { filePath: string }) {
     ],
     [customHighlightStyle]
   ) // Only depends on the highlight style
+
+  const editorTheme = useMemo(
+    () =>
+      darculaInit({
+        styles: [
+          { tag: t.tagName, color: '#B0DAF1' },
+          { tag: t.attributeName, color: '#C5E6A6' },
+          { tag: t.attributeValue, color: '#ffb86c' },
+          { tag: t.operator, color: '#989898' },
+        ],
+      }),
+    []
+  )
+
+  const editorExtensions = useMemo(
+    () => [...mixedLanguageSupport, errorHighlighter.extension],
+    [mixedLanguageSupport, errorHighlighter]
+  )
+
+  const editorBasicSetup = useMemo(
+    () => ({
+      lineNumbers: true,
+      highlightActiveLine: true,
+      highlightActiveLineGutter: true,
+      foldGutter: true,
+      autocompletion: true,
+      closeBrackets: true,
+      searchKeymap: true,
+    }),
+    []
+  )
 
   // Set up the worker when the component mounts
   useEffect(() => {
@@ -476,24 +507,19 @@ function FileEditor({ filePath }: { filePath: string }) {
     }
   }, [])
 
-  // Initialize the error line highlighter only once
-  useEffect(() => {
-    errorHighlighterRef.current = createErrorLineHighlighter()
-  }, [])
-
   // Apply or clear error line highlight when errorLine changes
   useEffect(() => {
-    if (!editorRef.current || !errorHighlighterRef.current) return
+    if (!editorRef.current) return
 
     if (errorLine !== null) {
-      errorHighlighterRef.current.highlightLine(
+      errorHighlighter.highlightLine(
         editorRef.current,
         errorLine + Object.keys(frontmatter).length + 2 // +2 for the frontmatter delimiters
       )
     } else {
-      errorHighlighterRef.current.clearHighlights(editorRef.current)
+      errorHighlighter.clearHighlights(editorRef.current)
     }
-  }, [errorLine, frontmatter])
+  }, [errorLine, frontmatter, errorHighlighter])
 
   if (status === 'loading') {
     return <div className="flex min-h-screen items-center justify-center">Loading...</div>
@@ -655,28 +681,10 @@ function FileEditor({ filePath }: { filePath: string }) {
               value={rawContent}
               onChange={handleRawContentChange}
               className="overflow-auto rounded-md border border-gray-300 dark:border-gray-600"
-              theme={darculaInit({
-                styles: [
-                  { tag: t.tagName, color: '#B0DAF1' },
-                  { tag: t.attributeName, color: '#C5E6A6' },
-                  { tag: t.attributeValue, color: '#ffb86c' },
-                  { tag: t.operator, color: '#989898' },
-                ],
-              })}
-              extensions={[
-                ...mixedLanguageSupport,
-                ...(errorHighlighterRef.current ? [errorHighlighterRef.current.extension] : []),
-              ]}
+              theme={editorTheme}
+              extensions={editorExtensions}
               placeholder="Enter content with frontmatter and MDX..."
-              basicSetup={{
-                lineNumbers: true,
-                highlightActiveLine: true,
-                highlightActiveLineGutter: true,
-                foldGutter: true,
-                autocompletion: true,
-                closeBrackets: true,
-                searchKeymap: true,
-              }}
+              basicSetup={editorBasicSetup}
               onCreateEditor={(view) => {
                 editorRef.current = view
               }}

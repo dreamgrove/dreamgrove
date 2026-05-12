@@ -33,7 +33,7 @@ export default function SpecSelector() {
             </a>
           </span>
           {' - '}
-          <span>v.0.1.0</span>
+          <span>v.0.2.0</span>
         </div>
       </div>
       {currentSpec === 'all' && (

@@ -16,8 +16,8 @@ export default function SpellNames({
     [processedState.spells]
   )
   return (
-    <div className="w-[200px] min-w-[120px] shrink-0">
-      <div className="mt-5">
+    <div className="mt-8 w-[200px] min-w-[120px] shrink-0">
+      <div className="mt-12">
         <div className="flex flex-col items-start justify-start pl-2">
           {sortedSpells.map((singleSpellRow) =>
             singleSpellRow.spell.charges > 1 ? (

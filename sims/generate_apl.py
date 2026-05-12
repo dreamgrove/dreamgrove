@@ -48,7 +48,7 @@ with open(txt_file, 'r') as apl_file:
             apl_lists[apl].append((suf, temp_comment))
             temp_comment = ""
 
-with open(os.path.join(args.simcpath, 'engine', 'class_modules', 'apl', inc_file), 'w') as inc:
+with open(os.path.join(args.simcpath, 'engine', 'class_modules', 'apl', 'druid', inc_file), 'w') as inc:
     for apl in apl_lists.keys():
         apl_var = apl
         if apl_var == 'default':

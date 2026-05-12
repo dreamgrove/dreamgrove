@@ -153,30 +153,35 @@ function WowheadClientVersion({
   }, [fetchWowhead])
 
   const icon = noIcon ? null : (
-    <WowheadClientIcon
-      id={displayId}
-      type={type}
-      name={display}
-      beta={beta}
-      url={url}
-      noLink={true}
-      size={size}
-    />
+    <span className="wowhead-icon-wrap">
+      <WowheadClientIcon
+        id={displayId}
+        type={type}
+        name={display}
+        beta={beta}
+        url={url}
+        noLink={true}
+        size={size}
+      />
+    </span>
   )
 
   return disabled ? (
-    <div className={`inline decoration-2 q${quality}`} style={{ color: linkColor }}>
+    <span
+      className={`inline-flex items-baseline gap-1 decoration-2 q${quality}`}
+      style={{ color: linkColor }}
+    >
       {icon}
       {showLabel && (
         <span className="align-middle text-wrap break-words">
           {isLoading ? '(loading...)' : display}
         </span>
       )}
-    </div>
+    </span>
   ) : (
     <a
       href={whUrl}
-      className={`inline decoration-2 q${quality}`}
+      className={`inline-flex items-baseline gap-1 decoration-2 q${quality}`}
       style={{ color: linkColor, textWrap: 'nowrap' }}
     >
       {type != 'npc' && icon}

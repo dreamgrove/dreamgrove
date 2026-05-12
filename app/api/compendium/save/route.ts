@@ -159,7 +159,7 @@ export async function POST(request: Request) {
           })
         }
 
-        let prUrl = null
+        let prUrl: string | null = null
 
         // Create a PR if requested
         if (createPr) {

@@ -9,6 +9,7 @@ import TableOfContents from '@/components/custom/TableOfContents/TableOfContents
 import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
+import AprilFoolsAds, { AprilFoolsBanner } from '@/components/AprilFools/AprilFoolsAds'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -31,6 +32,7 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
   return (
     <SectionContainer>
       <ScrollTopAndComment />
+      {isCompendium && <AprilFoolsBanner />}
       <article>
         <div>
           <header className="h-auto pt-4 pb-12 lg:h-28 lg:py-0">
@@ -117,6 +119,8 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
           </div>
         </div>
       </article>
+      {isCompendium && <AprilFoolsBanner />}
+      {isCompendium && <AprilFoolsAds bannerCount={0} />}
     </SectionContainer>
   )
 }

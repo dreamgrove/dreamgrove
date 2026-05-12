@@ -14,6 +14,7 @@ import WowheadClientVersion from './csm/WowheadClientVersion'
 import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 
 import remarkSpell from '../plugins/remarkSpell.js'
+import remarkColor from '../plugins/remarkColor.js'
 import remarkGroupCheckboxes from '../plugins/remarkGroupCheckboxes.js'
 import ConditionalElement from './custom/ConditionalElement'
 import TimelineClientVersion from './csm/TimelineClientVersion'
@@ -217,7 +218,7 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
           Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
           useMDXComponents: () => components,
           development: isDevelopment,
-          remarkPlugins: [remarkAlert, remarkGfm, remarkSpell, remarkGroupCheckboxes],
+          remarkPlugins: [remarkAlert, remarkGfm, remarkSpell, remarkColor, remarkGroupCheckboxes],
           rehypePlugins: [rehypeGroupHeaders],
         }
 
@@ -293,17 +294,17 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
         </div>
       )}
       {isEvaluating && (
-        <div className="italic text-gray-500 dark:text-gray-400">Generating preview...</div>
+        <div className="text-gray-500 italic dark:text-gray-400">Generating preview...</div>
       )}
       <div
-        className={`${LiveComponent && !error ? 'prose mx-0 max-w-none pb-8 pt-4 text-base dark:prose-invert sm:pt-0 lg:mx-8' : ''}`}
+        className={`${LiveComponent && !error ? 'prose dark:prose-invert mx-0 max-w-none pt-4 pb-8 text-base sm:pt-0 lg:mx-8' : ''}`}
       >
         {LiveComponent && !isEvaluating ? (
           <LiveComponent />
         ) : (
           !error &&
           !isEvaluating && (
-            <p className="italic text-gray-500 dark:text-gray-400">
+            <p className="text-gray-500 italic dark:text-gray-400">
               Start typing to see preview...
             </p>
           )
