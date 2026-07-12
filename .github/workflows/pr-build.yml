@@ -1,0 +1,38 @@
+name: PR Build Check
+
+# Validation build for pull requests, run on free GitHub-hosted runners (never on
+# the VPS, so untrusted fork code can't touch the server). Surfaces a pass/fail
+# status check + full logs on the PR, mirroring Vercel's preview build check.
+# Deploy previews are intentionally out of scope for now.
+on:
+  pull_request:
+    branches: [master]
+
+concurrency:
+  group: pr-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.4.1
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096

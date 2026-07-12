@@ -1,0 +1,54 @@
+name: Deploy to VPS
+
+# Production deploy: on every push to master, the self-hosted runner on the VPS
+# rebuilds the image and restarts the container. Status + logs show up in the
+# Actions tab, and the `production` environment records a per-commit deployment
+# (the closest mirror of Vercel's deployment status).
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: {} # allow manual redeploys from the Actions tab
+
+# Never run two production deploys at once; let an in-flight one finish.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, dreamgrove]
+    environment:
+      name: production
+      url: https://dg.thevinter.com
+    steps:
+      - name: Sync deploy checkout to the pushed commit
+        run: |
+          set -euo pipefail
+          cd /mnt/HC_Volume_104662744/dreamgrove/repo
+          # Public repo -> unauthenticated fetch. GitHub allows fetching a bare SHA.
+          git fetch --depth 1 origin "${GITHUB_SHA}"
+          git reset --hard "${GITHUB_SHA}"   # untracked .env.production survives this
+          echo "Deploying commit:"; git log -1 --oneline
+
+      - name: Build image and (re)start containers
+        run: |
+          set -euo pipefail
+          cd /mnt/HC_Volume_104662744/dreamgrove
+          docker compose up -d --build
+
+      - name: Health check
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 40); do
+            if docker exec dreamgrove-app node -e "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"; then
+              echo "App healthy after attempt ${i}"; exit 0
+            fi
+            sleep 3
+          done
+          echo "::error::App did not become healthy within ~2 minutes"
+          docker logs --tail 100 dreamgrove-app || true
+          exit 1
+
+      - name: Prune dangling images
+        if: always()
+        run: docker image prune -f >/dev/null 2>&1 || true
