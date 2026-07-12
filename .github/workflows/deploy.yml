@@ -19,7 +19,7 @@ jobs:
     runs-on: [self-hosted, dreamgrove]
     environment:
       name: production
-      url: https://dg.thevinter.com
+      url: https://www.dreamgrove.gg
     steps:
       - name: Sync deploy checkout to the pushed commit
         run: |
