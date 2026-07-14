@@ -1,5 +1,5 @@
 import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
-import Image from 'next/image'
+import WowheadIconImage from './WowheadIconImage'
 
 interface WowheadIconProps {
   id: string
@@ -12,18 +12,6 @@ interface WowheadIconProps {
   iconId?: string
   iconSize?: number
   fill?: boolean
-}
-
-async function iconExists(url: string): Promise<boolean> {
-  try {
-    const res = await fetch(url, {
-      method: 'HEAD',
-      next: { revalidate: 86400 },
-    })
-    return res.ok
-  } catch {
-    return false
-  }
 }
 
 export default async function WowheadIcon({
@@ -41,24 +29,15 @@ export default async function WowheadIcon({
   const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
 
   let imageUrl = ''
-  let hasImage = false
 
   if (process.env.NODE_ENV === 'test') {
     imageUrl = 'https://wow.zamimg.com/images/wow/icons/large/ability_druid_starfall.jpg'
-    hasImage = true
   } else if (type === 'spell') {
     imageUrl = `https://cdn.simcode.dev/${id}.jpg`
-    hasImage = await iconExists(imageUrl)
   } else {
     if (!iconId) {
       try {
-        const data = await fetchWowheadData({
-          id,
-          type,
-          name,
-          beta,
-          url,
-        })
+        const data = await fetchWowheadData({ id, type, name, beta, url })
         iconId = data.icon
       } catch (error: any) {
         console.warn(`Error fetching icon for ${type}=${id}: ${error.message || 'Unknown error'}`)
@@ -66,21 +45,21 @@ export default async function WowheadIcon({
     }
     if (iconId) {
       imageUrl = `https://wow.zamimg.com/images/wow/icons/large/${iconId}.jpg`
-      hasImage = await iconExists(imageUrl)
     }
   }
-  if (!hasImage) {
+
+  // No resolvable icon (e.g. an item/talent Wowhead returned no icon for) -> render nothing.
+  if (!imageUrl) {
     return null
   }
 
   const image = (
-    <Image
+    <WowheadIconImage
       src={imageUrl}
       alt={`${name} icon`}
-      width={fill ? undefined : iconSize}
-      height={fill ? undefined : iconSize}
+      iconSize={iconSize}
       fill={fill}
-      className={fill ? 'object-contain' : `my-0 inline-block ${!noMargin && 'mr-1'}`}
+      noMargin={noMargin}
     />
   )
 
