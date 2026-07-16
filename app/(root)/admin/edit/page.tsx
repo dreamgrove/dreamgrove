@@ -20,7 +20,7 @@ import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { tags } from '@lezer/highlight'
 import { autocompletion } from '@codemirror/autocomplete'
 import customMarkdownExtension from './customMarkdownExtension'
-import SpellPicker, { type Spell, type PickerPosition } from './SpellPicker'
+import SpellPicker, { useSpellSearch, type Spell, type PickerPosition } from './SpellPicker'
 import { spellTokenExtension } from './spellWidget'
 import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
 
@@ -198,34 +198,67 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [editorReady, setEditorReady] = useState<boolean>(false)
   const errorHighlighter = useMemo(() => createErrorLineHighlighter(), [])
 
-  // Ctrl+Space spell picker state.
-  const [pickerOpen, setPickerOpen] = useState<boolean>(false)
-  const [pickerPos, setPickerPos] = useState<PickerPosition>({ left: 0, top: 0 })
-  // Document range to replace when a spell is chosen (the selection at open time).
-  const insertRangeRef = useRef<{ from: number; to: number }>({ from: 0, to: 0 })
-  // Called by the (stable) Ctrl+Space keymap; reassigned each render so it always
-  // sees the latest setters while editorExtensions stays referentially stable.
-  const openPickerRef = useRef<(view: EditorView) => void>(() => {})
-  openPickerRef.current = (view: EditorView) => {
-    const sel = view.state.selection.main
-    insertRangeRef.current = { from: sel.from, to: sel.to }
-    const coords = view.coordsAtPos(sel.head)
-    if (coords) setPickerPos({ left: coords.left, top: coords.bottom })
-    setPickerOpen(true)
+  // --- Ctrl+Space inline spell search ---
+  // A "session" runs while the user types a query inline: sessionStartRef holds
+  // the doc position where typing began; the query is the text from there to the
+  // caret. The dropdown floats under that start position.
+  const [acOpen, setAcOpen] = useState<boolean>(false)
+  const [acQuery, setAcQuery] = useState<string>('')
+  const [acPos, setAcPos] = useState<PickerPosition>({ left: 0, top: 0 })
+  const [acHighlighted, setAcHighlighted] = useState<number>(0)
+  const sessionStartRef = useRef<number | null>(null)
+  // Mirrors of state/results read by the (stable) editor keymap at event time.
+  const resultsRef = useRef<Spell[]>([])
+  const highlightedRef = useRef<number>(0)
+  highlightedRef.current = acHighlighted
+
+  // Reassigned each render so the stable keymap/updateListener always call the
+  // latest closures while editorExtensions stays referentially stable.
+  const closeSessionRef = useRef<() => void>(() => {})
+  const updateSessionRef = useRef<(view: EditorView) => void>(() => {})
+  const selectSpellRef = useRef<(spell: Spell) => void>(() => {})
+
+  closeSessionRef.current = () => {
+    sessionStartRef.current = null
+    setAcOpen(false)
   }
 
-  const handleSpellSelect = (spell: Spell) => {
+  updateSessionRef.current = (view: EditorView) => {
+    const start = sessionStartRef.current
+    if (start == null) return
+    const head = view.state.selection.main.head
+    if (head < start) {
+      closeSessionRef.current()
+      return
+    }
+    const query = view.state.doc.sliceString(start, head)
+    // A leading space cancels the search (e.g. hitting space right after
+    // Ctrl+Space); interior spaces are kept for multi-word names.
+    if (query.startsWith(' ')) {
+      closeSessionRef.current()
+      return
+    }
+    const coords = view.coordsAtPos(start)
+    if (coords) setAcPos({ left: coords.left, top: coords.bottom })
+    setAcQuery(query)
+    setAcHighlighted(0)
+    setAcOpen(true)
+  }
+
+  selectSpellRef.current = (spell: Spell) => {
     const view = editorRef.current
-    if (view) {
-      const { from, to } = insertRangeRef.current
+    const start = sessionStartRef.current
+    sessionStartRef.current = null // end the session before mutating the doc
+    if (view && start != null) {
+      const head = view.state.selection.main.head
       const insert = `!${spell.id}|${spell.name}!`
       view.dispatch({
-        changes: { from, to, insert },
-        selection: { anchor: from + insert.length },
+        changes: { from: start, to: Math.max(start, head), insert },
+        selection: { anchor: start + insert.length },
       })
       view.focus()
     }
-    setPickerOpen(false)
+    setAcOpen(false)
   }
 
   // Extract filename from path for display
@@ -243,6 +276,9 @@ function FileEditor({ filePath }: { filePath: string }) {
       .find((s) => SPEC_FOLDERS[s])
     return seg ? SPEC_FOLDERS[seg] : null
   }, [filePath])
+
+  const acResults = useSpellSearch(acQuery, currentSpec, acOpen)
+  resultsRef.current = acResults
 
   // Custom highlight style for frontmatter and MDX
 
@@ -296,7 +332,7 @@ function FileEditor({ filePath }: { filePath: string }) {
         },
         '.cm-spell-token': {
           color: '#ffb86c',
-          fontWeight: 'bold',
+          fontWeight: 'normal',
           fontSize: '0.85em',
           border: '1px solid rgba(255,184,108,0.5)',
           borderRadius: '3px',
@@ -339,18 +375,75 @@ function FileEditor({ filePath }: { filePath: string }) {
       // Ctrl-Space (it binds that at Prec.highest too — see basicSetup below,
       // which disables the built-in completion keymaps to avoid the collision).
       autocompletion({ defaultKeymap: false }),
-      // Ctrl+Space opens the spell picker. Now the only binding on this key.
+      // Ctrl+Space starts an inline spell search; while a session is active the
+      // nav keys drive the dropdown instead of the editor. Prec.highest so these
+      // win over the default keymaps (newline on Enter, caret moves on arrows).
       Prec.highest(
         keymap.of([
           {
             key: 'Ctrl-Space',
             run: (view) => {
-              openPickerRef.current(view)
+              sessionStartRef.current = view.state.selection.main.head
+              updateSessionRef.current(view)
+              return true
+            },
+          },
+          {
+            key: 'ArrowDown',
+            run: () => {
+              if (sessionStartRef.current == null) return false
+              setAcHighlighted((h) => Math.min(h + 1, Math.max(0, resultsRef.current.length - 1)))
+              return true
+            },
+          },
+          {
+            key: 'ArrowUp',
+            run: () => {
+              if (sessionStartRef.current == null) return false
+              setAcHighlighted((h) => Math.max(0, h - 1))
+              return true
+            },
+          },
+          {
+            key: 'Enter',
+            run: () => {
+              if (sessionStartRef.current == null) return false
+              const spell = resultsRef.current[highlightedRef.current]
+              if (spell) selectSpellRef.current(spell)
+              else closeSessionRef.current()
+              return true
+            },
+          },
+          {
+            key: 'Escape',
+            run: () => {
+              if (sessionStartRef.current == null) return false
+              closeSessionRef.current()
               return true
             },
           },
         ])
       ),
+      // Track the typed query: recompute from the session start to the caret,
+      // reposition, and end the session on caret moves or edits before the start.
+      EditorView.updateListener.of((update) => {
+        const start = sessionStartRef.current
+        if (start == null) return
+        if (update.docChanged) {
+          let touchedBefore = false
+          update.changes.iterChangedRanges((fromA) => {
+            if (fromA < start) touchedBefore = true
+          })
+          if (touchedBefore) {
+            closeSessionRef.current()
+            return
+          }
+          sessionStartRef.current = update.changes.mapPos(start, -1)
+          updateSessionRef.current(update.view)
+        } else if (update.selectionSet) {
+          closeSessionRef.current()
+        }
+      }),
     ],
     [mixedLanguageSupport, errorHighlighter]
   )
@@ -880,11 +973,15 @@ function FileEditor({ filePath }: { filePath: string }) {
                 }}
               />
               <SpellPicker
-                open={pickerOpen}
-                position={pickerPos}
+                open={acOpen}
+                position={acPos}
+                results={acResults}
+                highlighted={acHighlighted}
+                hasQuery={acQuery.trim().length > 0}
                 currentSpec={currentSpec}
-                onSelect={handleSpellSelect}
-                onClose={() => setPickerOpen(false)}
+                onHover={setAcHighlighted}
+                onSelect={(spell) => selectSpellRef.current(spell)}
+                onClose={() => closeSessionRef.current()}
               />
             </div>
           )}
@@ -910,9 +1007,6 @@ function FileEditor({ filePath }: { filePath: string }) {
               className={`${viewMode === 'split' ? 'h-[85vh] min-w-0 flex-1 px-10' : 'px:20 min-h-[70vh] w-full lg:px-80'} max-w-none overflow-auto rounded-lg border border-neutral-300 bg-white p-6 dark:border-neutral-700 dark:bg-[#323232]`}
               suppressHydrationWarning
             >
-              <div className="mb-4 border-b border-neutral-100 pb-3 text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
-                Live preview — some components may differ from the final version.
-              </div>
               <Suspense
                 fallback={<div className="text-sm text-neutral-500 italic">Loading preview...</div>}
               >

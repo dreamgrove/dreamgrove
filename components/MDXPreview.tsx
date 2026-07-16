@@ -23,6 +23,28 @@ import TimelineClientVersion from './csm/TimelineClientVersion'
 import { remarkAlert } from 'remark-github-blockquote-alert'
 import remarkGfm from 'remark-gfm'
 import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
+import { visit } from 'unist-util-visit'
+
+// The real /compendium pages number their h1 sections via `h1.content-header::before`
+// (css/tailwind.css). Contentlayer adds that class with rehype-autolink-headings at
+// build time; the live preview doesn't run that plugin, so replicate just the class
+// here to restore the "1. ", "2. " enumeration (and its left offset).
+function rehypeContentHeader() {
+  return (tree: unknown) => {
+    visit(
+      tree as never,
+      'element',
+      (node: { tagName?: string; properties?: Record<string, unknown> }) => {
+        if (!node.tagName || !/^h[1-6]$/.test(node.tagName)) return
+        node.properties = node.properties || {}
+        const existing = node.properties.className
+        const list = Array.isArray(existing) ? existing : existing ? [existing] : []
+        if (!list.includes('content-header')) list.push('content-header')
+        node.properties.className = list
+      }
+    )
+  }
+}
 import YouTube from './custom/YouTube'
 import Image from 'next/image'
 import RoleSelector from './custom/Dungeons/RoleSelector'
@@ -219,7 +241,7 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
           useMDXComponents: () => components,
           development: isDevelopment,
           remarkPlugins: [remarkAlert, remarkGfm, remarkSpell, remarkColor, remarkGroupCheckboxes],
-          rehypePlugins: [rehypeGroupHeaders],
+          rehypePlugins: [rehypeContentHeader, rehypeGroupHeaders],
         }
 
         const evaluated = await evaluate(mdxContent, evaluateOptions)
@@ -297,6 +319,10 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
         <div className="text-gray-500 italic dark:text-gray-400">Generating preview...</div>
       )}
       <div
+        // Reset the heading counter here (as PostLayout does for real pages) so
+        // h1.content-header::before numbers 1, 2, 3… instead of restarting each
+        // header-group and always showing "1.".
+        style={{ counterReset: 'heading' }}
         className={`${LiveComponent && !error ? 'prose dark:prose-invert mx-0 max-w-none pt-4 pb-8 text-base sm:pt-0 lg:mx-8' : ''}`}
       >
         {LiveComponent && !isEvaluating ? (

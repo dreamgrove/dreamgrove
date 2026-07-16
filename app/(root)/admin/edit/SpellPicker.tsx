@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Fuse from 'fuse.js'
 
@@ -44,7 +44,6 @@ const PICKER_CSS = `
   border: 3px solid #2b2b2b;
 }
 .spell-picker-list::-webkit-scrollbar-thumb:hover { background: #5c6064; }
-.spell-picker input::placeholder { color: #6a6d70; }
 `
 
 // icon | name | spec | id — fixed side columns so specs and ids line up in a
@@ -92,11 +91,18 @@ function loadSpells(): Promise<IndexedSpell[]> {
   return spellPromise
 }
 
-function useSpells(open: boolean) {
+// Fuzzy-search the spell list by name or id, with on-spec spells lightly boosted
+// so the current file's spec surfaces first among equally-relevant matches.
+// Returns [] until a query is typed. `enabled` defers the fetch until first use.
+export function useSpellSearch(
+  query: string,
+  currentSpec: string | null | undefined,
+  enabled: boolean
+): Spell[] {
   const [spells, setSpells] = useState<IndexedSpell[]>(spellCache ?? [])
 
   useEffect(() => {
-    if (!open || spellCache) return
+    if (!enabled || spellCache) return
     let active = true
     loadSpells().then((s) => {
       if (active) setSpells(s)
@@ -104,7 +110,7 @@ function useSpells(open: boolean) {
     return () => {
       active = false
     }
-  }, [open])
+  }, [enabled])
 
   const fuse = useMemo(
     () =>
@@ -117,81 +123,54 @@ function useSpells(open: boolean) {
     [spells]
   )
 
-  return { spells, fuse }
+  return useMemo(() => {
+    const q = query.trim()
+    if (!q) return []
+    const SPEC_BOOST = 0.1
+    const onSpec = (s: Spell) => !!currentSpec && !!s.spec && s.spec.includes(currentSpec)
+    return fuse
+      .search(q)
+      .sort(
+        (a, b) =>
+          (a.score ?? 0) -
+          (onSpec(a.item) ? SPEC_BOOST : 0) -
+          ((b.score ?? 0) - (onSpec(b.item) ? SPEC_BOOST : 0))
+      )
+      .slice(0, MAX_RESULTS)
+      .map((r) => r.item)
+  }, [query, fuse, currentSpec])
 }
 
+// Presentational dropdown. The query is typed inline in the editor; this only
+// renders the results and reports hover/click. Keyboard navigation (↑↓ ⏎ esc)
+// is handled by the editor keymap while a search session is active, so this
+// component never takes focus.
 export default function SpellPicker({
   open,
   position,
+  results,
+  highlighted,
+  hasQuery,
   currentSpec,
+  onHover,
   onSelect,
   onClose,
 }: {
   open: boolean
   position: PickerPosition
-  // Spec of the file being edited (e.g. "Balance"), used to surface spells for
-  // that spec when several share a name. Null when the path has no spec folder.
+  results: Spell[]
+  highlighted: number
+  hasQuery: boolean
   currentSpec?: string | null
+  onHover: (index: number) => void
   onSelect: (spell: Spell) => void
   onClose: () => void
 }) {
-  const { spells, fuse } = useSpells(open)
-  const [query, setQuery] = useState('')
-  const [highlighted, setHighlighted] = useState(0)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const listRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
   const rowRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
-  // A spell is "on-spec" when its (possibly multi-spec) spec label names the
-  // current spec, e.g. currentSpec "Balance" matches spec "Balance, Feral,
-  // Guardian". Generic/null spells are not treated as on-spec.
-  const matchesSpec = useCallback(
-    (spell: Spell) => !!currentSpec && !!spell.spec && spell.spec.includes(currentSpec),
-    [currentSpec]
-  )
-
-  const results = useMemo(() => {
-    // Boost applied to a Fuse score (lower = better) for on-spec spells. Small
-    // enough that it mainly breaks ties between equally-relevant matches — e.g.
-    // two spells with the same name — surfacing the current spec's first.
-    const SPEC_BOOST = 0.1
-
-    // Nothing is shown until at least one character is typed.
-    if (!query.trim()) return []
-
-    return fuse
-      .search(query.trim())
-      .sort(
-        (a, b) =>
-          (a.score ?? 0) -
-          (matchesSpec(a.item) ? SPEC_BOOST : 0) -
-          ((b.score ?? 0) - (matchesSpec(b.item) ? SPEC_BOOST : 0))
-      )
-      .slice(0, MAX_RESULTS)
-      .map((r) => r.item)
-  }, [query, spells, fuse, currentSpec, matchesSpec])
-
-  // Reset transient state each time the picker opens and focus the search box.
-  useEffect(() => {
-    if (!open) return
-    setQuery('')
-    setHighlighted(0)
-    // Focus after the portal has mounted.
-    const id = requestAnimationFrame(() => inputRef.current?.focus())
-    return () => cancelAnimationFrame(id)
-  }, [open])
-
-  // Keep the highlighted index in range and scrolled into view.
-  useEffect(() => {
-    if (highlighted >= results.length) setHighlighted(results.length ? results.length - 1 : 0)
-  }, [results, highlighted])
-
-  useEffect(() => {
-    rowRefs.current[highlighted]?.scrollIntoView({ block: 'nearest' })
-  }, [highlighted])
-
-  // Close when clicking anywhere outside the picker.
+  // Close when clicking anywhere outside the picker (including in the editor).
   useEffect(() => {
     if (!open) return
     const onDocMouseDown = (e: MouseEvent) => {
@@ -203,43 +182,27 @@ export default function SpellPicker({
     return () => document.removeEventListener('mousedown', onDocMouseDown)
   }, [open, onClose])
 
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
-      if (e.key === 'ArrowDown') {
-        e.preventDefault()
-        setHighlighted((h) => Math.min(h + 1, results.length - 1))
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault()
-        setHighlighted((h) => Math.max(h - 1, 0))
-      } else if (e.key === 'Enter') {
-        e.preventDefault()
-        const spell = results[highlighted]
-        if (spell) onSelect(spell)
-      } else if (e.key === 'Escape') {
-        e.preventDefault()
-        onClose()
-      }
-    },
-    [results, highlighted, onSelect, onClose]
-  )
+  // Keep the highlighted row scrolled into view as it moves.
+  useEffect(() => {
+    rowRefs.current[highlighted]?.scrollIntoView({ block: 'nearest' })
+  }, [highlighted])
 
   if (!open || typeof document === 'undefined') return null
 
   // Clamp within the viewport; flip above the cursor if it would overflow below.
   const width = 360
-  const estHeight = 340
+  const estHeight = 320
   const left = Math.max(8, Math.min(position.left, window.innerWidth - width - 8))
   const flipUp = position.top + estHeight + 24 > window.innerHeight
   const top = flipUp ? undefined : position.top + 4
   const bottom = flipUp ? window.innerHeight - position.top + 4 : undefined
 
-  const hasQuery = query.trim().length > 0
-
   return createPortal(
     <div
       ref={containerRef}
       className="spell-picker"
-      onKeyDown={handleKeyDown}
+      // Don't steal focus from the editor on click.
+      onMouseDown={(e) => e.preventDefault()}
       style={{
         position: 'fixed',
         left,
@@ -259,27 +222,6 @@ export default function SpellPicker({
       }}
     >
       <style>{PICKER_CSS}</style>
-      <input
-        ref={inputRef}
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search spell name or id"
-        spellCheck={false}
-        style={{
-          boxSizing: 'border-box',
-          width: '100%',
-          border: 'none',
-          borderBottom: `1px solid ${C.border}`,
-          background: C.input,
-          color: C.text,
-          caretColor: C.accent,
-          padding: '9px 12px',
-          outline: 'none',
-          fontFamily: MONO,
-          fontSize: 13,
-          letterSpacing: '0.01em',
-        }}
-      />
 
       {!hasQuery ? (
         <div style={{ padding: '10px 12px', color: C.faint }}>Type to search spells</div>
@@ -306,7 +248,7 @@ export default function SpellPicker({
                       e.preventDefault()
                       onSelect(spell)
                     }}
-                    onMouseEnter={() => setHighlighted(i)}
+                    onMouseEnter={() => onHover(i)}
                     style={{
                       boxSizing: 'border-box',
                       display: 'grid',

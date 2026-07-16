@@ -84,6 +84,12 @@ h1.content-header::before {
   text-align: left;
 }
 
+/* The collapsible already pads its content, so drop the top margin the first
+   element (usually a heading) would otherwise add on top of that padding. */
+.collapsible-content > :first-child {
+  margin-top: 0;
+}
+
 /* Alert component styles */
 .alert-content > p:first-child {
   @apply mt-0;

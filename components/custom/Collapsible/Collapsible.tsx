@@ -34,7 +34,7 @@ const Collapsible = ({ title, children }) => {
       >
         <div className="overflow-hidden">
           <div className="h-px bg-gray-200/50 dark:bg-gray-700/30" />
-          <div className="p-4">{children}</div>
+          <div className="collapsible-content p-4">{children}</div>
         </div>
       </div>
     </div>
