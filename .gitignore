@@ -28,6 +28,9 @@ public/sitemap.xml
 # search
 /public/search.json
 
+# generated spell database
+/data/spells.db
+
 # misc
 .DS_Store
 
