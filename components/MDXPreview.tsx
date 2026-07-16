@@ -10,6 +10,7 @@ import Talents from '@/components/custom/Talents/Talents'
 import Collapsible from '@/components/custom/Collapsible/Collapsible'
 
 import CheckboxClientVersion from './csm/CheckboxClientVersion'
+import CheckboxProvider from './custom/CheckboxProvider'
 import WowheadClientVersion from './csm/WowheadClientVersion'
 import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 
@@ -24,7 +25,6 @@ import remarkGfm from 'remark-gfm'
 import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
 import YouTube from './custom/YouTube'
 import Image from 'next/image'
-import TalentsClientVersion from './csm/TalentsClientVersion'
 import RoleSelector from './custom/Dungeons/RoleSelector'
 import BossCardClientVersion from './csm/BossCardClientVersion'
 interface MDXPreviewProps {
@@ -106,7 +106,7 @@ const components: MDXComponents = {
       <div {...props}>{children}</div>
     )
   },
-  Talents: TalentsClientVersion,
+  Talents: Talents,
   BossCard: BossCardClientVersion,
   Collapsible,
   YouTube: YouTube,
@@ -300,7 +300,9 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
         className={`${LiveComponent && !error ? 'prose dark:prose-invert mx-0 max-w-none pt-4 pb-8 text-base sm:pt-0 lg:mx-8' : ''}`}
       >
         {LiveComponent && !isEvaluating ? (
-          <LiveComponent />
+          <CheckboxProvider>
+            <LiveComponent />
+          </CheckboxProvider>
         ) : (
           !error &&
           !isEvaluating && (
