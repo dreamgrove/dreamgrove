@@ -3,6 +3,7 @@ import { useEffect, useState, memo, useCallback, useMemo } from 'react'
 import { wowheadCache } from './wowheadCache'
 import WowheadClientIcon from './WowheadClientIcon'
 import { getWowheadInfo, qualityToColor } from 'lib/wowhead-api'
+import spellData from '../../spellData.json'
 
 function formatUrl(url) {
   const parts = url.split('/')
@@ -47,11 +48,13 @@ function WowheadClientVersion({
 
   let displayId = id
 
-  // Handle case when id is not provided
-  if (!id && type === 'spell' && typeof window !== 'undefined') {
-    // This would need to be adapted to client-side access of spellData
-    // For now, just use the URL if provided
-    if (url) {
+  // Handle case when id is not provided: resolve the spell id from the name map
+  // (mirrors the server Wowhead component) so `!SpellName!` still shows a real icon,
+  // falling back to parsing the id out of an explicit url.
+  if (!id && type === 'spell') {
+    if (spellData[name]) {
+      displayId = spellData[name]
+    } else if (url) {
       displayId = extractIdFromUrl(url)
     }
   }

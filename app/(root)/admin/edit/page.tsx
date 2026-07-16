@@ -95,13 +95,35 @@ function createErrorLineHighlighter() {
 
 export default function GenericEditPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="flex min-h-screen items-center justify-center">Loading parameters...</div>
-      }
-    >
+    <Suspense fallback={<CenteredMessage>Loading…</CenteredMessage>}>
       <EditPageWithParams />
     </Suspense>
+  )
+}
+
+function Centered({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4 dark:bg-neutral-950">
+      <div className="w-full max-w-md rounded-lg border border-neutral-200 bg-white p-8 text-center dark:border-neutral-800 dark:bg-[#323232]">
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function CenteredMessage({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-neutral-50 text-sm text-neutral-500 dark:bg-neutral-950 dark:text-neutral-400">
+      {children}
+    </div>
+  )
+}
+
+function GithubGlyph() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7 0-.7 0-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" />
+    </svg>
   )
 }
 
@@ -118,13 +140,20 @@ function EditPageWithParams() {
 
 function MissingPathError() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="mb-6 text-3xl font-bold">Error</h1>
-      <p className="mb-6 text-red-500">No file path specified.</p>
-      <Link href="/admin/select" className="text-blue-500 hover:underline">
-        Select a file to edit
+    <Centered>
+      <h1 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+        No file selected
+      </h1>
+      <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
+        This editor needs a file path to work on.
+      </p>
+      <Link
+        href="/admin/select"
+        className="mt-5 inline-flex rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+      >
+        Select a file
       </Link>
-    </div>
+    </Centered>
   )
 }
 
@@ -151,8 +180,10 @@ function FileEditor({ filePath }: { filePath: string }) {
   const router = useRouter()
   const workerRef = useRef<Worker | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const previewRef = useRef<HTMLDivElement>(null)
   const [errorLine, setErrorLine] = useState<number | null>(null)
   const editorRef = useRef<EditorView | null>(null)
+  const [editorReady, setEditorReady] = useState<boolean>(false)
   const errorHighlighter = useMemo(() => createErrorLineHighlighter(), [])
 
   // Extract filename from path for display
@@ -521,207 +552,289 @@ function FileEditor({ filePath }: { filePath: string }) {
     }
   }, [errorLine, frontmatter, errorHighlighter])
 
+  // In split mode, keep the editor and preview scrolled to the same position
+  useEffect(() => {
+    if (viewMode !== 'split') return
+
+    const editorScroller = editorRef.current?.scrollDOM
+    const previewEl = previewRef.current
+    if (!editorScroller || !previewEl) return
+
+    let locked = false
+    const sync = (source: HTMLElement, target: HTMLElement) => () => {
+      if (locked) return
+      locked = true
+      const sourceMax = source.scrollHeight - source.clientHeight
+      const targetMax = target.scrollHeight - target.clientHeight
+      const ratio = sourceMax > 0 ? source.scrollTop / sourceMax : 0
+      target.scrollTop = ratio * targetMax
+      requestAnimationFrame(() => {
+        locked = false
+      })
+    }
+
+    const onEditorScroll = sync(editorScroller, previewEl)
+    const onPreviewScroll = sync(previewEl, editorScroller)
+    editorScroller.addEventListener('scroll', onEditorScroll, { passive: true })
+    previewEl.addEventListener('scroll', onPreviewScroll, { passive: true })
+
+    return () => {
+      editorScroller.removeEventListener('scroll', onEditorScroll)
+      previewEl.removeEventListener('scroll', onPreviewScroll)
+    }
+  }, [viewMode, editorReady])
+
   if (status === 'loading') {
-    return <div className="flex min-h-screen items-center justify-center">Loading...</div>
+    return <CenteredMessage>Loading…</CenteredMessage>
   }
 
   if (status === 'unauthenticated') {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="mb-6 text-3xl font-bold">GitHub Authentication Required</h1>
-        <p className="mb-6">You need to authenticate with GitHub to edit this page.</p>
+      <Centered>
+        <h1 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+          Authentication required
+        </h1>
+        <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
+          Sign in with GitHub to edit this page.
+        </p>
         <button
           onClick={() => signIn('github')}
-          className="rounded-md bg-gray-800 px-4 py-2 text-white"
+          className="mt-5 inline-flex items-center gap-2 rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white"
         >
+          <GithubGlyph />
           Sign in with GitHub
         </button>
-      </div>
+      </Centered>
     )
   }
 
   if (!hasPermission) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="mb-6 text-3xl font-bold">Access Denied</h1>
-        <p className="mb-6 text-red-500">
-          You do not have write permission to the dreamgrove repository.
-          <br />
-          Only contributors with write access to the repository can edit files.
+      <Centered>
+        <h1 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+          Access denied
+        </h1>
+        <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
+          You don’t have write permission to the dreamgrove repository. Only contributors with write
+          access can edit files.
         </p>
-        <Link href="/admin/select" className="text-blue-500 hover:underline">
-          Return to File Selection
+        <Link
+          href="/admin/select"
+          className="mt-5 inline-flex rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+        >
+          Back to file selection
         </Link>
-      </div>
+      </Centered>
     )
   }
 
   if (loading) {
-    return <div className="flex min-h-screen items-center justify-center">Loading content...</div>
+    return <CenteredMessage>Loading content…</CenteredMessage>
   }
 
   if (error) {
     return (
-      <div className="mx-auto flex min-h-screen w-full max-w-[85vw] flex-col items-center justify-center">
-        <h1 className="mb-6 text-3xl font-bold">Error</h1>
-        <p className="mb-6 text-red-500">{error}</p>
-        <Link href="/admin/select" className="text-blue-500 hover:underline">
-          Return to File Selection
+      <Centered>
+        <h1 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+          Couldn’t load file
+        </h1>
+        <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>
+        <Link
+          href="/admin/select"
+          className="mt-5 inline-flex rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+        >
+          Back to file selection
         </Link>
-      </div>
+      </Centered>
     )
   }
 
   return (
-    <div className="container mx-auto min-h-screen w-full max-w-[90vw] px-4 py-8">
-      <div className="mb-6 flex items-center justify-between">
-        <div className="flex items-center">
-          <div>
-            <h1 className="text-3xl font-bold">Edit {fileName}</h1>
-            <p className="text-sm text-gray-500">
-              <span className="capitalize">{group}</span> / {filePath}
-            </p>
-          </div>
-          <button
-            onClick={() => setShowHelp(!showHelp)}
-            className="ml-4 p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-            title="Help"
-          >
-            <FaQuestion />
-          </button>
-        </div>
-        <div className="flex space-x-4">
-          <div className="flex overflow-hidden rounded-md">
+    <div className="min-h-screen bg-[#F2F3F4] dark:bg-[#282828]">
+      <div className="sticky top-0 z-20 border-b border-neutral-200 bg-white/95 backdrop-blur dark:border-neutral-800 dark:bg-[#323232]/95">
+        <div className="flex w-full flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
+          <div className="flex min-w-0 items-center gap-2">
+            <div className="min-w-0">
+              <div className="flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400">
+                <Link
+                  href="/admin/select"
+                  className="hover:text-neutral-900 dark:hover:text-neutral-200"
+                >
+                  Pages
+                </Link>
+                <span>/</span>
+                <span className="capitalize">{group}</span>
+              </div>
+              <h1 className="truncate text-base font-semibold text-neutral-900 dark:text-neutral-100">
+                {fileName}
+              </h1>
+            </div>
             <button
-              onClick={() => setViewMode('edit')}
-              className={`px-4 py-2 ${
-                viewMode === 'edit' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
-              }`}
+              onClick={() => setShowHelp(!showHelp)}
+              className="ml-1 flex h-8 w-8 items-center justify-center rounded-md text-neutral-400 hover:bg-neutral-100 hover:text-neutral-600 dark:hover:bg-neutral-800 dark:hover:text-neutral-300"
+              title="Help"
+              aria-label="Toggle help"
             >
-              Edit
-            </button>
-            <button
-              onClick={() => setViewMode('split')}
-              className={`px-4 py-2 ${
-                viewMode === 'split' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
-              }`}
-            >
-              Split
-            </button>
-            <button
-              onClick={() => setViewMode('preview')}
-              className={`px-4 py-2 ${
-                viewMode === 'preview' ? 'bg-gray-800 text-white' : 'bg-gray-200 text-gray-800'
-              }`}
-            >
-              Preview
+              <FaQuestion size={13} />
             </button>
           </div>
-          <button
-            onClick={handleSaveClick}
-            disabled={saving}
-            className="rounded-md bg-blue-600 px-4 py-2 text-white disabled:opacity-50"
-          >
-            {saving ? 'Saving...' : 'Save Changes'}
-          </button>
-          <Link href="/admin/select" className="rounded-md bg-gray-800 px-4 py-2 text-white">
-            Cancel
-          </Link>
+          <div className="flex items-center gap-2">
+            <div
+              className="inline-flex rounded-md border border-neutral-200 p-0.5 dark:border-neutral-700"
+              role="group"
+              aria-label="View mode"
+            >
+              {(['edit', 'split', 'preview'] as const).map((mode) => (
+                <button
+                  key={mode}
+                  onClick={() => setViewMode(mode)}
+                  aria-pressed={viewMode === mode}
+                  className={`rounded px-3 py-1 text-sm font-medium capitalize transition-colors ${
+                    viewMode === mode
+                      ? 'bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900'
+                      : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100'
+                  }`}
+                >
+                  {mode}
+                </button>
+              ))}
+            </div>
+            <Link
+              href="/admin/select"
+              className="rounded-md border border-neutral-300 px-3 py-1.5 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+            >
+              Cancel
+            </Link>
+            <button
+              onClick={handleSaveClick}
+              disabled={saving}
+              className="rounded-md bg-[#d57f43] px-3.5 py-1.5 text-sm font-medium text-white hover:bg-[#c06f37] disabled:opacity-50"
+            >
+              {saving ? 'Saving…' : 'Save changes'}
+            </button>
+          </div>
         </div>
       </div>
 
-      {showHelp && (
-        <div className="mb-6 rounded-md bg-gray-100 p-4 dark:bg-gray-800">
-          <h2 className="mb-2 text-xl font-bold">Quick Help</h2>
-          <ul className="mb-2 list-disc pl-5">
-            <li>Edit the content using Markdown and MDX syntax</li>
-            <li>
-              Frontmatter can be edited directly at the top of the file between <code>---</code>{' '}
-              delimiters
-            </li>
-            <li>
-              Use <code>!47032|Spell!</code> for Wowhead links
-            </li>
-            <li>
-              Use <code>&lt;Talents talent="A1B2C3..."/&gt;</code> for talent trees
-            </li>
-            <li>
-              Use <code>&lt;Collapsible title="Title"&gt;Content&lt;/Collapsible&gt;</code> for
-              collapsible sections
-            </li>
-          </ul>
-          <Link
-            href="/admin/edit/README.md"
-            target="_blank"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
-            View full documentation
-          </Link>
-        </div>
-      )}
-
-      {saveMessage && (
-        <div className="mb-6 rounded-md bg-green-100 p-4 text-green-800 dark:bg-green-800 dark:text-green-100">
-          <p>{saveMessage}</p>
-        </div>
-      )}
-
-      <div
-        ref={containerRef}
-        className={`${viewMode === 'split' ? 'relative flex gap-0' : ''}`}
-        onMouseMove={viewMode === 'split' ? handleDragMove : undefined}
-        onMouseUp={viewMode === 'split' ? handleDragEnd : undefined}
-      >
-        {(viewMode === 'edit' || viewMode === 'split') && (
-          <div
-            className={`${viewMode === 'split' ? '' : 'w-full'} sticky top-0 h-[85vh]`}
-            style={viewMode === 'split' ? { width: `${splitPosition}%` } : undefined}
-          >
-            <CodeMirror
-              value={rawContent}
-              onChange={handleRawContentChange}
-              className="overflow-auto rounded-md border border-gray-300 dark:border-gray-600"
-              theme={editorTheme}
-              extensions={editorExtensions}
-              placeholder="Enter content with frontmatter and MDX..."
-              basicSetup={editorBasicSetup}
-              onCreateEditor={(view) => {
-                editorRef.current = view
-              }}
-            />
+      <div className="w-full px-4 py-5 sm:px-6">
+        {showHelp && (
+          <div className="mb-5 rounded-lg border border-neutral-200 bg-white p-4 text-sm dark:border-neutral-800 dark:bg-[#323232]">
+            <h2 className="mb-2 font-semibold text-neutral-900 dark:text-neutral-100">
+              Quick help
+            </h2>
+            <ul className="list-disc space-y-1 pl-5 text-neutral-600 dark:text-neutral-300">
+              <li>Edit the content using Markdown and MDX syntax</li>
+              <li>
+                Frontmatter can be edited directly at the top of the file between{' '}
+                <code className="rounded bg-neutral-100 px-1 py-0.5 font-mono text-xs dark:bg-neutral-800">
+                  ---
+                </code>{' '}
+                delimiters
+              </li>
+              <li>
+                Use{' '}
+                <code className="rounded bg-neutral-100 px-1 py-0.5 font-mono text-xs dark:bg-neutral-800">
+                  !47032|Spell!
+                </code>{' '}
+                for Wowhead links
+              </li>
+              <li>
+                Use{' '}
+                <code className="rounded bg-neutral-100 px-1 py-0.5 font-mono text-xs dark:bg-neutral-800">
+                  &lt;Talents talent="A1B2C3..."/&gt;
+                </code>{' '}
+                for talent trees
+              </li>
+              <li>
+                Use{' '}
+                <code className="rounded bg-neutral-100 px-1 py-0.5 font-mono text-xs dark:bg-neutral-800">
+                  &lt;Collapsible title="Title"&gt;Content&lt;/Collapsible&gt;
+                </code>{' '}
+                for collapsible sections
+              </li>
+            </ul>
+            <Link
+              href="/admin/edit/README.md"
+              target="_blank"
+              className="mt-2 inline-block font-medium text-[#d57f43] hover:underline"
+            >
+              View full documentation
+            </Link>
           </div>
         )}
 
-        {viewMode === 'split' && (
-          <div
-            className={`w-[6px] ${isDragging ? 'bg-blue-500 dark:bg-blue-400' : 'bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 dark:hover:bg-gray-500'} relative z-10 shrink-0 cursor-col-resize`}
-            onMouseDown={handleDragStart}
-          >
-            <div className="absolute top-1/2 left-1/2 h-8 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current"></div>
+        {saveMessage && (
+          <div className="mb-5 rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-800 dark:border-green-900 dark:bg-green-950 dark:text-green-200">
+            {saveMessage}
           </div>
         )}
 
-        {(viewMode === 'preview' || viewMode === 'split') && (
-          <div
-            className={`${viewMode === 'split' ? 'px-10' : 'px:20 w-full lg:px-80'} min-h-[70vh] max-w-none overflow-auto rounded-md border border-gray-300 p-6 dark:border-gray-600 dark:bg-transparent`}
-            style={viewMode === 'split' ? { width: `${100 - splitPosition}%` } : undefined}
-            suppressHydrationWarning
-          >
-            <div className="mb-4 text-gray-500 italic dark:text-gray-400">
-              Live Preview - Some components may differ from the final version.
+        <div
+          ref={containerRef}
+          className={`${viewMode === 'split' ? 'relative flex gap-0' : ''}`}
+          onMouseMove={viewMode === 'split' ? handleDragMove : undefined}
+          onMouseUp={viewMode === 'split' ? handleDragEnd : undefined}
+        >
+          {(viewMode === 'edit' || viewMode === 'split') && (
+            <div
+              className={`${viewMode === 'split' ? 'h-[85vh] shrink-0' : 'sticky top-0 h-[85vh] w-full'}`}
+              style={viewMode === 'split' ? { width: `${splitPosition}%` } : undefined}
+            >
+              <CodeMirror
+                value={rawContent}
+                onChange={handleRawContentChange}
+                className="h-full overflow-auto rounded-lg border border-neutral-300 dark:border-neutral-700"
+                theme={editorTheme}
+                extensions={editorExtensions}
+                placeholder="Enter content with frontmatter and MDX..."
+                basicSetup={editorBasicSetup}
+                onCreateEditor={(view) => {
+                  editorRef.current = view
+                  setEditorReady(true)
+                }}
+              />
             </div>
-            <Suspense fallback={<div className="text-gray-500 italic">Loading preview...</div>}>
-              {filePath.includes('raids') || filePath.includes('dungeons') ? (
-                <MDXPreview
-                  setErrorLine={setErrorLine}
-                  content={'<RoleSelector isPreview={true}/>' + bodyContent}
-                />
-              ) : (
-                <MDXPreview setErrorLine={setErrorLine} content={bodyContent} />
-              )}
-            </Suspense>
-          </div>
-        )}
+          )}
+
+          {viewMode === 'split' && (
+            <div
+              className="group relative z-10 flex w-3 shrink-0 cursor-col-resize items-center justify-center"
+              onMouseDown={handleDragStart}
+            >
+              <div
+                className={`h-10 w-1 rounded-full transition-colors ${
+                  isDragging
+                    ? 'bg-[#d57f43]'
+                    : 'bg-neutral-300 group-hover:bg-neutral-400 dark:bg-neutral-600 dark:group-hover:bg-neutral-500'
+                }`}
+              />
+            </div>
+          )}
+
+          {(viewMode === 'preview' || viewMode === 'split') && (
+            <div
+              ref={previewRef}
+              className={`${viewMode === 'split' ? 'h-[85vh] min-w-0 flex-1 px-10' : 'px:20 min-h-[70vh] w-full lg:px-80'} max-w-none overflow-auto rounded-lg border border-neutral-300 bg-white p-6 dark:border-neutral-700 dark:bg-[#323232]`}
+              suppressHydrationWarning
+            >
+              <div className="mb-4 border-b border-neutral-100 pb-3 text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+                Live preview — some components may differ from the final version.
+              </div>
+              <Suspense
+                fallback={<div className="text-sm text-neutral-500 italic">Loading preview...</div>}
+              >
+                {filePath.includes('raids') || filePath.includes('dungeons') ? (
+                  <MDXPreview
+                    setErrorLine={setErrorLine}
+                    content={'<RoleSelector isPreview={true}/>' + bodyContent}
+                  />
+                ) : (
+                  <MDXPreview setErrorLine={setErrorLine} content={bodyContent} />
+                )}
+              </Suspense>
+            </div>
+          )}
+        </div>
       </div>
 
       <CommitModal
@@ -751,9 +864,9 @@ function FileEditor({ filePath }: { filePath: string }) {
 // Modal backdrop component
 function ModalBackdrop({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
       <div
-        className="max-h-[90vh] w-full max-w-md overflow-auto rounded-lg bg-white p-6 shadow-xl dark:bg-gray-800"
+        className="max-h-[90vh] w-full max-w-md overflow-auto rounded-lg border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-700 dark:bg-[#323232]"
         onClick={(e) => e.stopPropagation()}
       >
         {children}
@@ -785,9 +898,14 @@ function CommitModal({
 
   return (
     <ModalBackdrop onClose={onClose}>
-      <h2 className="mb-4 text-2xl font-bold">Create Pull Request</h2>
+      <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        Create pull request
+      </h2>
       <div className="mb-4">
-        <label htmlFor="commit-title" className="mb-2 block text-sm font-medium">
+        <label
+          htmlFor="commit-title"
+          className="mb-1.5 block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+        >
           Title (required)
         </label>
         <input
@@ -795,35 +913,38 @@ function CommitModal({
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700"
+          className="w-full rounded-md border border-neutral-300 bg-white p-2 text-sm text-neutral-900 focus:border-neutral-400 focus:ring-1 focus:ring-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100"
           placeholder="Brief description of changes"
           required
         />
       </div>
       <div className="mb-6">
-        <label htmlFor="commit-message" className="mb-2 block text-sm font-medium">
+        <label
+          htmlFor="commit-message"
+          className="mb-1.5 block text-sm font-medium text-neutral-700 dark:text-neutral-300"
+        >
           Description (optional)
         </label>
         <textarea
           id="commit-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded-md border border-gray-300 p-2 dark:border-gray-600 dark:bg-gray-700"
+          className="w-full rounded-md border border-neutral-300 bg-white p-2 text-sm text-neutral-900 focus:border-neutral-400 focus:ring-1 focus:ring-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100"
           placeholder="More detailed explanation of changes"
           rows={4}
         />
       </div>
-      <div className="flex justify-end space-x-3">
+      <div className="flex justify-end gap-3">
         <button
           onClick={onClose}
-          className="rounded-md border border-gray-300 px-4 py-2 dark:border-gray-600"
+          className="rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-800"
         >
           Cancel
         </button>
         <button
           onClick={onSubmit}
           disabled={!title.trim()}
-          className="rounded-md bg-blue-600 px-4 py-2 text-white disabled:opacity-50"
+          className="rounded-md bg-[#d57f43] px-4 py-2 text-sm font-medium text-white hover:bg-[#c06f37] disabled:opacity-50"
         >
           Continue
         </button>
@@ -852,26 +973,32 @@ function ConfirmModal({
 
   return (
     <ModalBackdrop onClose={onClose}>
-      <h2 className="mb-4 text-2xl font-bold">Confirm Changes</h2>
+      <h2 className="mb-4 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        Confirm changes
+      </h2>
       <div className="mb-4">
-        <p className="mb-2 font-medium">Title:</p>
-        <p className="rounded-md bg-gray-100 p-2 dark:bg-gray-700">{title}</p>
+        <p className="mb-1.5 text-sm font-medium text-neutral-700 dark:text-neutral-300">Title</p>
+        <p className="rounded-md bg-neutral-50 p-2 text-sm text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100">
+          {title}
+        </p>
       </div>
       {message && (
         <div className="mb-4">
-          <p className="mb-2 font-medium">Description:</p>
-          <p className="rounded-md bg-gray-100 p-2 whitespace-pre-wrap dark:bg-gray-700">
+          <p className="mb-1.5 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            Description
+          </p>
+          <p className="rounded-md bg-neutral-50 p-2 text-sm whitespace-pre-wrap text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100">
             {message}
           </p>
         </div>
       )}
-      <p className="mb-6">
+      <p className="mb-6 text-sm text-neutral-600 dark:text-neutral-400">
         This will create a pull request with your changes. Are you sure you want to proceed?
       </p>
-      <div className="flex justify-end space-x-3">
+      <div className="flex justify-end gap-3">
         <button
           onClick={onClose}
-          className="rounded-md border border-gray-300 px-4 py-2 dark:border-gray-600"
+          className="rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 disabled:opacity-50 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-800"
           disabled={isLoading}
         >
           Cancel
@@ -879,9 +1006,9 @@ function ConfirmModal({
         <button
           onClick={onConfirm}
           disabled={isLoading}
-          className="rounded-md bg-blue-600 px-4 py-2 text-white disabled:opacity-50"
+          className="rounded-md bg-[#d57f43] px-4 py-2 text-sm font-medium text-white hover:bg-[#c06f37] disabled:opacity-50"
         >
-          {isLoading ? 'Creating PR...' : 'Create PR'}
+          {isLoading ? 'Creating PR…' : 'Create PR'}
         </button>
       </div>
     </ModalBackdrop>
@@ -894,19 +1021,21 @@ function PrSuccessModal({ isOpen, prUrl }: { isOpen: boolean; prUrl: string | nu
 
   return (
     <ModalBackdrop onClose={() => {}}>
-      <h2 className="mb-4 text-2xl font-bold text-green-600">Pull Request Created!</h2>
-      <p className="mb-6">
-        Your changes have been successfully submitted as a pull request. You'll be redirected to
-        GitHub in a moment.
+      <h2 className="mb-3 text-lg font-semibold text-green-600 dark:text-green-400">
+        Pull request created
+      </h2>
+      <p className="mb-6 text-sm text-neutral-600 dark:text-neutral-400">
+        Your changes have been submitted as a pull request. You'll be redirected to GitHub in a
+        moment.
       </p>
-      <div className="flex justify-center">
+      <div className="flex justify-end">
         <a
           href={prUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md bg-blue-600 px-4 py-2 text-white"
+          className="rounded-md bg-[#d57f43] px-4 py-2 text-sm font-medium text-white hover:bg-[#c06f37]"
         >
-          View Pull Request
+          View pull request
         </a>
       </div>
     </ModalBackdrop>
