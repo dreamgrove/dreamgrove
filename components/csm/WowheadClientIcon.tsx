@@ -43,10 +43,8 @@ function WowheadClientIcon({
   // Load icon filename on mount for non-spell types (items/npcs return a Wowhead icon slug).
   useEffect(() => {
     if (isHostedSpell) return
-    // Skip if icon already loaded
     if (iconFilename) return
 
-    // Check cache first
     if (iconCache.has(cacheKey)) {
       setIconFilename(iconCache.get(cacheKey) || null)
       return
@@ -67,7 +65,6 @@ function WowheadClientIcon({
         })
 
         if (data.icon) {
-          // Cache the result
           iconCache.set(cacheKey, data.icon)
           setIconFilename(data.icon)
         }
@@ -109,7 +106,6 @@ function WowheadClientIcon({
     )
   }
 
-  // Fallback element shown while loading or when no icon resolves
   const fallbackImage = (
     <span
       className={`inline-block rounded-xs bg-gray-200 ${!noMargin && 'mr-1'}`}
@@ -147,9 +143,7 @@ function WowheadClientIcon({
   )
 }
 
-// Memoize the icon component for better performance
 export default memo(WowheadClientIcon, (prevProps, nextProps) => {
-  // Only re-render if important props change
   return (
     prevProps.id === nextProps.id &&
     prevProps.type === nextProps.type &&

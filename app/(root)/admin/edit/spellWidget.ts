@@ -78,7 +78,6 @@ class SpellWidget extends WidgetType {
         e.stopPropagation()
       })
     }
-    // Click to dissolve: reveal the underlying text and drop the caret inside.
     el.addEventListener('mousedown', (e) => {
       e.preventDefault()
       e.stopPropagation()
@@ -109,7 +108,8 @@ function buildDecorations(doc: Text, editing: EditRange): DecorationSet {
     // Alternation: groups 1/2 are the id|name form; group 3 is the id-less name.
     const name = m[2] ?? m[3]
     const explicitId = m[1] ?? null
-    const resolved = explicitId ?? (spellNameToId[name] != null ? String(spellNameToId[name]) : null)
+    const resolved =
+      explicitId ?? (spellNameToId[name] != null ? String(spellNameToId[name]) : null)
     const from = m.index
     const to = from + m[0].length
     // Skip the token the user is editing so its raw text stays visible/editable.

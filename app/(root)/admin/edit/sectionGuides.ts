@@ -15,7 +15,7 @@ import { StateField, Range, Text } from '@codemirror/state'
 //     slightly stronger wash to mark the boundaries).
 // It's purely rendering — the underlying text/whitespace is untouched.
 
-// Rail + wash colors cycle by nesting depth. Tuned for the dark darcula editor.
+// Rail + wash colors cycle by nesting depth.
 const PALETTE = [
   { rail: '#d57f43', tint: 'rgba(213,127,67,0.07)', edge: 'rgba(213,127,67,0.16)' },
   { rail: '#5b9bd5', tint: 'rgba(91,155,213,0.07)', edge: 'rgba(91,155,213,0.16)' },
@@ -47,8 +47,7 @@ function lineStyle(depth: number, boundary: boolean): string {
   const inner = PALETTE[(depth - 1) % PALETTE.length]
   const wash = boundary ? inner.edge : inner.tint
   layers.push(`linear-gradient(${wash}, ${wash})`)
-  // Indent the text past the rails so they never overlap it; the indent grows
-  // with nesting, which itself reinforces the structure.
+  // Indent the text past the rails so they never overlap it.
   const pad = X0 + depth * STEP + 4
   return `background-image:${layers.join(',')};background-repeat:no-repeat;padding-left:${pad}px;`
 }
@@ -89,8 +88,6 @@ function buildDecorations(doc: Text): DecorationSet {
   return Decoration.set(ranges, true)
 }
 
-// Rebuilds on every doc change (documents are a few hundred lines at most);
-// non-doc transactions keep the current set.
 const sectionGuideField = StateField.define<DecorationSet>({
   create(state) {
     return buildDecorations(state.doc)

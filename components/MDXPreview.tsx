@@ -176,13 +176,12 @@ const components: MDXComponents = {
         const regex = /^\[\*(.*?)\]/
         const match = children.match(regex)
         if (match) {
-          id = match[1] // This will now hold the entire logical expression
+          id = match[1]
           // Remove only leading space after the tag, keep the rest
           const afterSelector = children.slice(match[0].length)
           return afterSelector.charAt(0) === ' ' ? afterSelector.slice(1) : afterSelector
         }
       } else if (Array.isArray(children)) {
-        // Find the first text node that contains the selector
         const selectorIndex = children.findIndex(
           (child) => typeof child === 'string' && child.match(/^\[\*(.*?)\]/)
         )
@@ -197,7 +196,6 @@ const components: MDXComponents = {
             remainingText = remainingText.slice(1)
           }
 
-          // Create a new array with the remaining text and everything after
           const newChildren = [
             ...(remainingText ? [remainingText] : []),
             ...children.slice(selectorIndex + 1),
@@ -205,7 +203,6 @@ const components: MDXComponents = {
 
           return newChildren
         }
-        // If no match, return the children array exactly as is
         return children
       }
       return children
@@ -269,10 +266,8 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
           const numberMatch = err.message.match(/\b(\d+)(?::\d+)?\b/)
           const possibleLine = numberMatch ? parseInt(numberMatch[1]) : null
 
-          // Choose the most likely line number
           const extractedLine = lineNumber || syntaxLine || fileLineNumber || possibleLine
 
-          // Debug information
           console.debug('MDX Error Details:', {
             message: err.message,
             extractedLine,

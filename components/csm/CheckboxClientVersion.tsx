@@ -3,7 +3,6 @@ import WowheadClientVersion from './WowheadClientVersion'
 import { FaCheck } from 'react-icons/fa'
 import { CheckboxContext } from '../custom/CheckboxProvider'
 
-// Define proper prop types
 interface CheckboxProps {
   id?: string
   spellId?: string | number
@@ -38,7 +37,6 @@ const Checkbox = ({
   // so no local state can drift from checkboxMap and radio-group toggles stay in sync.
   const checked = checkboxMap[checkboxId]?.checked || false
 
-  // Register this checkbox in the provider once, only if it isn't already present.
   useEffect(() => {
     if (checkboxMap[checkboxId] === undefined) {
       updateCheckbox(checkboxId, defaultCheck, radio || null)

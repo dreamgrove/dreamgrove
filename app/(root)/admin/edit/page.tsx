@@ -35,7 +35,6 @@ const SPEC_FOLDERS: Record<string, string> = {
   restoration: 'Restoration',
 }
 
-// Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
   func: T,
   timeout = 300
@@ -49,13 +48,10 @@ function debounce<T extends (...args: any[]) => any>(
   }
 }
 
-// Add this function after the debounce function and before the main component
 function createErrorLineHighlighter() {
-  // Effect to add or remove error line highlight
   const addErrorLine = StateEffect.define<{ line: number }>()
   const clearErrorLines = StateEffect.define<null>()
 
-  // decoration that will highlight the error line with a red background
   const errorLineDecoration = Decoration.line({
     attributes: { class: 'bg-red-100 dark:bg-red-900/40' },
   })
@@ -183,10 +179,9 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [error, setError] = useState<string | null>(null)
   const [hasPermission, setHasPermission] = useState<boolean>(true)
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
-  const [splitPosition, setSplitPosition] = useState<number>(50) // Default 50% split
+  const [splitPosition, setSplitPosition] = useState<number>(50)
   const [isDragging, setIsDragging] = useState<boolean>(false)
   const [wordWrap, setWordWrap] = useState<boolean>(true)
-  // Add state for commit information and modals
   const [commitTitle, setCommitTitle] = useState<string>('')
   const [commitMessage, setCommitMessage] = useState<string>('')
   const [showCommitModal, setShowCommitModal] = useState<boolean>(false)
@@ -202,8 +197,7 @@ function FileEditor({ filePath }: { filePath: string }) {
 
   // --- Ctrl+Space inline spell search ---
   // A "session" runs while the user types a query inline: sessionStartRef holds
-  // the doc position where typing began; the query is the text from there to the
-  // caret. The dropdown floats under that start position.
+  // the doc position where typing began;
   const [acOpen, setAcOpen] = useState<boolean>(false)
   const [acQuery, setAcQuery] = useState<string>('')
   const [acPos, setAcPos] = useState<PickerPosition>({ left: 0, top: 0 })
@@ -235,7 +229,7 @@ function FileEditor({ filePath }: { filePath: string }) {
     }
     const query = view.state.doc.sliceString(start, head)
     // A leading space cancels the search (e.g. hitting space right after
-    // Ctrl+Space); interior spaces are kept for multi-word names.
+    // Ctrl+Space)
     if (query.startsWith(' ')) {
       closeSessionRef.current()
       return
@@ -263,14 +257,10 @@ function FileEditor({ filePath }: { filePath: string }) {
     setAcOpen(false)
   }
 
-  // Extract filename from path for display
   const fileName = filePath.split('/').pop() || 'Unknown'
-  // Extract group from path (last directory name)
   const pathParts = filePath.split('/')
   const group = pathParts.length > 1 ? pathParts[pathParts.length - 2] : 'root'
 
-  // Spec of the file being edited, from its path (e.g. blog/balance/... →
-  // "Balance"), used to prioritize on-spec spells in the picker.
   const currentSpec = useMemo(() => {
     const seg = filePath
       .toLowerCase()
@@ -282,8 +272,6 @@ function FileEditor({ filePath }: { filePath: string }) {
   const acResults = useSpellSearch(acQuery, currentSpec, acOpen)
   resultsRef.current = acResults
 
-  // Custom highlight style for frontmatter and MDX
-
   const customHighlightStyle = useMemo(
     () =>
       HighlightStyle.define([
@@ -293,17 +281,16 @@ function FileEditor({ filePath }: { filePath: string }) {
         { tag: tags.bool, fontStyle: 'italic' },
         { tag: tags.strong, fontWeight: 'bold' },
         { tag: tags.comment, fontStyle: 'italic' },
-        // Add specific tag highlighting for our custom syntax
-        { tag: t.processingInstruction, color: '#FFFFFF', fontWeight: 'bold' }, // For CustomInlineMark
-        { tag: t.bool, color: '#d79a59' }, // For CustomInlineElement
-        { tag: t.operator, color: '#C5E6A6' }, // For CustomInlineOperator
-        { tag: t.special(t.content), color: '#ffb86c', fontWeight: 'bold' }, // For ExclamationMark
-        { tag: t.emphasis, color: '#cc8800' }, // For ExclamationMarkPrimary
-        { tag: t.strong, color: '#ffb86c', fontWeight: 'bold' }, // For ExclamationMarkSecondary
-        { tag: t.separator, color: '#AAAAAA' }, // For ExclamationMarkSeparator
+        { tag: t.processingInstruction, color: '#FFFFFF', fontWeight: 'bold' }, // CustomInlineMark
+        { tag: t.bool, color: '#d79a59' }, // CustomInlineElement
+        { tag: t.operator, color: '#C5E6A6' }, // CustomInlineOperator
+        { tag: t.special(t.content), color: '#ffb86c', fontWeight: 'bold' }, // ExclamationMark
+        { tag: t.emphasis, color: '#cc8800' }, // ExclamationMarkPrimary
+        { tag: t.strong, color: '#ffb86c', fontWeight: 'bold' }, // ExclamationMarkSecondary
+        { tag: t.separator, color: '#AAAAAA' }, // ExclamationMarkSeparator
       ]),
     []
-  ) // Empty dependency array ensures this is only created once
+  )
 
   const mixedLanguageSupport = useMemo(
     () => [
@@ -352,7 +339,7 @@ function FileEditor({ filePath }: { filePath: string }) {
       }),
     ],
     [customHighlightStyle]
-  ) // Only depends on the highlight style
+  )
 
   const editorTheme = useMemo(
     () =>
@@ -374,13 +361,7 @@ function FileEditor({ filePath }: { filePath: string }) {
       ...spellTokenExtension,
       ...sectionGuideExtension,
       ...(wordWrap ? [EditorView.lineWrapping] : []),
-      // Keep autocomplete, but drop its default keymap so it no longer claims
-      // Ctrl-Space (it binds that at Prec.highest too — see basicSetup below,
-      // which disables the built-in completion keymaps to avoid the collision).
       autocompletion({ defaultKeymap: false }),
-      // Ctrl+Space starts an inline spell search; while a session is active the
-      // nav keys drive the dropdown instead of the editor. Prec.highest so these
-      // win over the default keymaps (newline on Enter, caret moves on arrows).
       Prec.highest(
         keymap.of([
           {
@@ -427,8 +408,6 @@ function FileEditor({ filePath }: { filePath: string }) {
           },
         ])
       ),
-      // Track the typed query: recompute from the session start to the caret,
-      // reposition, and end the session on caret moves or edits before the start.
       EditorView.updateListener.of((update) => {
         const start = sessionStartRef.current
         if (start == null) return
@@ -457,9 +436,6 @@ function FileEditor({ filePath }: { filePath: string }) {
       highlightActiveLine: true,
       highlightActiveLineGutter: true,
       foldGutter: true,
-      // Disable basicSetup's autocomplete + its completion keymap; we add our
-      // own autocompletion({ defaultKeymap: false }) so Ctrl-Space is free for
-      // the spell picker. (Both built-in bindings register at Prec.highest.)
       autocompletion: false,
       completionKeymap: false,
       closeBrackets: true,
@@ -481,13 +457,8 @@ function FileEditor({ filePath }: { filePath: string }) {
         })
         .then((data) => {
           const content = data.content || ''
-          // Split frontmatter from body: the body is what the editor shows, the
-          // frontmatter drives the metadata fields, and both are stitched back
-          // together on save (see buildDocument).
           try {
             const { content: body, data: fm } = matter(content)
-            // gray-matter leaves the blank line after the closing `---` as a
-            // leading newline; drop one so the body doesn't start empty.
             setBodyContent(body.replace(/^\n/, ''))
             setFrontmatter(fm)
             setAuthorsInput(Array.isArray(fm.authors) ? fm.authors.join(', ') : (fm.authors ?? ''))
@@ -506,19 +477,13 @@ function FileEditor({ filePath }: { filePath: string }) {
 
   const handleBodyChange = (newBody: string) => {
     setBodyContent(newBody)
-    // Clear error line when content changes
     setErrorLine(null)
   }
 
-  // Metadata form updates. Only keys the user actually touches get written, so a
-  // file that never had a given field doesn't gain an empty one on save.
   const setField = (key: string, value: any) => {
     setFrontmatter((prev) => ({ ...prev, [key]: value }))
   }
 
-  // Reassemble frontmatter + body into the file we send in the PR. Authors are
-  // re-parsed from the raw input here; an empty list drops the key entirely, and
-  // a document with no frontmatter at all is left as plain body (no empty ---).
   const buildDocument = () => {
     const data: Record<string, any> = { ...frontmatter }
     const authors = authorsInput
@@ -531,9 +496,7 @@ function FileEditor({ filePath }: { filePath: string }) {
     return matter.stringify(bodyContent, data)
   }
 
-  // Modify the handleSaveClick function to open the commit modal
   const handleSaveClick = () => {
-    // Generate a default commit title based on the file path
     const fileNameWithoutExt = fileName.replace(/\.[^/.]+$/, '')
     const defaultTitle = `Update ${fileNameWithoutExt} content`
     setCommitTitle(defaultTitle)
@@ -541,13 +504,11 @@ function FileEditor({ filePath }: { filePath: string }) {
     setShowCommitModal(true)
   }
 
-  // Handle the continue action from commit modal
   const handleCommitSubmit = () => {
     setShowCommitModal(false)
     setShowConfirmModal(true)
   }
 
-  // Handle the final confirmation
   const handleConfirmSubmit = () => {
     saveChanges()
   }
@@ -569,7 +530,7 @@ function FileEditor({ filePath }: { filePath: string }) {
           content: buildDocument(),
           commitTitle,
           commitMessage,
-          createPr: true, // Indicate we want to create a PR
+          createPr: true,
         }),
       })
 
@@ -585,11 +546,9 @@ function FileEditor({ filePath }: { filePath: string }) {
       const data = await res.json()
 
       if (data.prUrl) {
-        // If we got a PR URL, show the success modal and redirect
         setPrUrl(data.prUrl)
         setShowConfirmModal(false)
 
-        // Redirect to the PR after a short delay
         setTimeout(() => {
           window.location.href = data.prUrl
         }, 2000)
@@ -630,7 +589,6 @@ function FileEditor({ filePath }: { filePath: string }) {
     if (isDragging && containerRef.current) {
       const containerRect = containerRef.current.getBoundingClientRect()
       const newPosition = ((e.clientX - containerRect.left) / containerRect.width) * 100
-      // Limit the range between 20% and 80%
       const limitedPosition = Math.min(Math.max(newPosition, 20), 80)
       setSplitPosition(limitedPosition)
     }
@@ -640,7 +598,6 @@ function FileEditor({ filePath }: { filePath: string }) {
     setIsDragging(false)
   }
 
-  // Debounced function to update split position in localStorage
   const debouncedSavePosition = useRef(
     debounce((position: number) => {
       if (typeof window !== 'undefined') {
@@ -649,13 +606,11 @@ function FileEditor({ filePath }: { filePath: string }) {
     }, 500)
   ).current
 
-  // Set up event listeners for dragging outside the divider
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (isDragging && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect()
         const newPosition = ((e.clientX - containerRect.left) / containerRect.width) * 100
-        // Limit the range between 20% and 80%
         const limitedPosition = Math.min(Math.max(newPosition, 20), 80)
         setSplitPosition(limitedPosition)
       }
@@ -663,26 +618,22 @@ function FileEditor({ filePath }: { filePath: string }) {
 
     const handleMouseUp = () => {
       setIsDragging(false)
-      // When dragging ends, save the final position
       debouncedSavePosition(splitPosition)
     }
 
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove)
       document.addEventListener('mouseup', handleMouseUp)
-      // Apply a cursor style to the entire document while dragging
       document.body.style.cursor = 'col-resize'
     }
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseup', handleMouseUp)
-      // Reset cursor style
       document.body.style.cursor = ''
     }
   }, [isDragging, splitPosition, debouncedSavePosition])
 
-  // Load saved split position from localStorage on component mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const savedPosition = localStorage.getItem('editor-split-position')
@@ -706,9 +657,8 @@ function FileEditor({ filePath }: { filePath: string }) {
     })
   }
 
-  // Apply or clear error line highlight when errorLine changes. The editor now
-  // holds only the body, so the preview's line numbers map straight across (no
-  // frontmatter offset needed).
+  // The editor now holds only the body, so the preview's line numbers map
+  // straight across (no frontmatter offset needed).
   useEffect(() => {
     if (!editorRef.current) return
 
@@ -724,10 +674,9 @@ function FileEditor({ filePath }: { filePath: string }) {
   // The two panes have unrelated heights: the editor shows raw source (incl.
   // frontmatter) while the preview renders collapsibles, talent trees, etc.
   // whose height has nothing to do with their source length. So a plain
-  // scrollTop ratio drifts badly. Instead we anchor on landmarks that exist in
-  // both panes — markdown headings and <Collapsible> titles — pairing them by
-  // text in source order, so a landmark that doesn't render (e.g. a heading
-  // inside a collapsed Collapsible) is skipped rather than shifting everything
+  // scrollTop ratio drifts badly. Instead we anchor on markdown headings
+  // and <Collapsible> titles pairing them by text in source order, so smth
+  // that doesn't render is skipped rather than shifting everything
   // after it. Between two matched anchors we interpolate linearly, so any drift
   // is bounded to a single section. With no matched anchors it degrades to the
   // old whole-pane ratio.
@@ -750,7 +699,7 @@ function FileEditor({ filePath }: { filePath: string }) {
     // height (grid-rows-[0fr] + overflow-hidden) rather than unmounted, so it
     // still reports a bogus getBoundingClientRect. Those bogus tops run past the
     // next visible anchor and would make the anchor list non-monotonic (which
-    // inverts the mapping). Detect them by an ancestor collapsed to 0 height.
+    // inverts the mapping).
     const isClipped = (node: HTMLElement) => {
       let p = node.parentElement
       while (p && p !== previewEl) {
@@ -761,9 +710,7 @@ function FileEditor({ filePath }: { filePath: string }) {
     }
 
     // Scroll offsets (in each pane's own scroll space) of landmarks that appear
-    // in BOTH panes — markdown headings and <Collapsible> titles — matched by
-    // text in source order. Collapsible titles subdivide the long collapsed
-    // sections (tall in the editor, short in the preview) so drift stays local.
+    // in BOTH panes: markdown headings and <Collapsible> titles
     const buildAnchors = () => {
       const doc = view.state.doc
       const editorHeads: { top: number; text: string }[] = []
@@ -830,7 +777,7 @@ function FileEditor({ filePath }: { filePath: string }) {
         return fromMax > 0 ? (value / fromMax) * toMax : 0
       }
       // Build the piecewise-linear map, padding with the pane edges. Clamp every
-      // anchor into [0, max] — a landmark near the bottom can report a top past
+      // anchor into [0, max] since a landmark near the bottom can report a top past
       // the scrollable range, which would otherwise make a segment run backwards.
       const fromPts = [0]
       const toPts = [0]
@@ -1196,8 +1143,6 @@ function FileEditor({ filePath }: { filePath: string }) {
   )
 }
 
-// Editable frontmatter fields, shown above the editor. The editor itself only
-// holds the body; these drive the metadata that buildDocument() writes back.
 function MetadataPanel({
   frontmatter,
   authorsInput,
@@ -1278,7 +1223,6 @@ function MetadataPanel({
   )
 }
 
-// Modal backdrop component
 function ModalBackdrop({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
@@ -1293,7 +1237,6 @@ function ModalBackdrop({ children, onClose }: { children: React.ReactNode; onClo
   )
 }
 
-// Commit modal component
 function CommitModal({
   isOpen,
   onClose,
@@ -1370,7 +1313,6 @@ function CommitModal({
   )
 }
 
-// Confirmation modal component
 function ConfirmModal({
   isOpen,
   onClose,
@@ -1432,7 +1374,6 @@ function ConfirmModal({
   )
 }
 
-// PR success modal
 function PrSuccessModal({ isOpen, prUrl }: { isOpen: boolean; prUrl: string | null }) {
   if (!isOpen || !prUrl) return null
 

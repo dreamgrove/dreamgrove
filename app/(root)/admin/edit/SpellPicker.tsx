@@ -16,9 +16,6 @@ export type PickerPosition = { left: number; top: number }
 
 const MAX_RESULTS = 50
 
-// Palette tuned to sit inside the darcula editor: near-black panel, hairline
-// borders, muted metadata, with the token orange reserved as a functional
-// accent (active row + on-spec signal).
 const C = {
   panel: '#2b2b2b',
   input: '#232323',
@@ -32,8 +29,6 @@ const C = {
 
 const MONO = 'Consolas, ui-monospace, SFMono-Regular, Menlo, Monaco, monospace'
 
-// Scoped CSS for the bits inline styles can't reach: a slim, muted scrollbar
-// (the native one is chunky/ugly) and the placeholder color.
 const PICKER_CSS = `
 .spell-picker-list { scrollbar-width: thin; scrollbar-color: #55585c transparent; }
 .spell-picker-list::-webkit-scrollbar { width: 11px; }
@@ -46,11 +41,8 @@ const PICKER_CSS = `
 .spell-picker-list::-webkit-scrollbar-thumb:hover { background: #5c6064; }
 `
 
-// icon | name | spec | id — fixed side columns so specs and ids line up in a
-// clean vertical rule across every row; the name flexes and truncates.
 const ROW_GRID = '16px minmax(0,1fr) 52px 56px'
 
-// Druid spec → its specialization icon on the Wowhead CDN.
 const SPEC_ICON: Record<string, string> = {
   Balance: 'spell_nature_starfall',
   Feral: 'ability_druid_catform',
@@ -58,8 +50,6 @@ const SPEC_ICON: Record<string, string> = {
   Restoration: 'spell_nature_healingtouch',
 }
 
-// Specs from a label ("Balance, Feral, Guardian") that have an icon; drops
-// "Generic"/unknown so those rows simply show no spec icon.
 function specParts(spec: string): string[] {
   return spec
     .split(',')
@@ -67,8 +57,6 @@ function specParts(spec: string): string[] {
     .filter((s) => SPEC_ICON[s])
 }
 
-// Module-level cache + in-flight promise so the ~1100-row spell list is fetched
-// from /api/spells only once per session, no matter how often the picker opens.
 let spellCache: IndexedSpell[] | null = null
 let spellPromise: Promise<IndexedSpell[]> | null = null
 
@@ -170,7 +158,6 @@ export default function SpellPicker({
   const listRef = useRef<HTMLDivElement>(null)
   const rowRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
-  // Close when clicking anywhere outside the picker (including in the editor).
   useEffect(() => {
     if (!open) return
     const onDocMouseDown = (e: MouseEvent) => {
@@ -182,7 +169,6 @@ export default function SpellPicker({
     return () => document.removeEventListener('mousedown', onDocMouseDown)
   }, [open, onClose])
 
-  // Keep the highlighted row scrolled into view as it moves.
   useEffect(() => {
     rowRefs.current[highlighted]?.scrollIntoView({ block: 'nearest' })
   }, [highlighted])
@@ -309,7 +295,6 @@ export default function SpellPicker({
                               width: 14,
                               height: 14,
                               display: 'block',
-                              // Ring the current spec's icon to flag on-spec spells.
                               border:
                                 sp === currentSpec
                                   ? `1px solid ${C.accent}`

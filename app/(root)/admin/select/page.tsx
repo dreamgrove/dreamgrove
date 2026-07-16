@@ -150,7 +150,6 @@ export default function FileSelectPage() {
           </p>
         </header>
 
-        {/* Compendiums — primary guides */}
         {!searchTerm && (
           <section className="mb-10">
             <h2 className="mb-3 text-xs font-semibold tracking-wider text-neutral-500 uppercase dark:text-neutral-400">
@@ -183,7 +182,6 @@ export default function FileSelectPage() {
           </section>
         )}
 
-        {/* All pages */}
         <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="text-xs font-semibold tracking-wider text-neutral-500 uppercase dark:text-neutral-400">
             {searchTerm ? 'Search results' : 'All pages'}
