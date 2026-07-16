@@ -35,6 +35,7 @@ CREATE TABLE spells (
   spell_family_flags  INTEGER,
   description         TEXT,
   tooltip             TEXT,
+  spec                TEXT,
   raw                 TEXT NOT NULL
 );
 `
@@ -67,6 +68,18 @@ const COLUMNS = [
   'description',
   'tooltip',
 ]
+
+// Derive the druid spec(s) that can use a spell from its talent_entry, which
+// looks like "Restoration [tree=class, row=5, ...]" or "Balance, Feral, Guardian
+// [tree=...]" or "Generic [tree=...]". We store the leading label (before "[")
+// as a real column so the editor's spell picker never parses JSON at request
+// time. Returns null when the spell has no talent_entry (most non-talent spells).
+function deriveSpec(spell) {
+  const entry = spell?.talent_entry
+  if (typeof entry !== 'string') return null
+  const label = entry.split('[')[0].trim()
+  return label || null
+}
 
 // node:sqlite only binds null | number | bigint | string | Uint8Array, so every
 // value must be coerced to one of those before it hits stmt.run().
@@ -103,7 +116,7 @@ export async function populate() {
     db.exec(CREATE_TABLE)
     db.exec(CREATE_INDEX)
 
-    const allCols = [...COLUMNS, 'raw']
+    const allCols = [...COLUMNS, 'spec', 'raw']
     const placeholders = allCols.map(() => '?').join(', ')
     const stmt = db.prepare(
       `INSERT INTO spells (${allCols.join(', ')}) VALUES (${placeholders})`
@@ -118,6 +131,7 @@ export async function populate() {
           continue
         }
         const values = COLUMNS.map((col) => coerce(spell[col]))
+        values.push(coerce(deriveSpec(spell)))
         values.push(JSON.stringify(spell))
         stmt.run(...values)
         inserted++

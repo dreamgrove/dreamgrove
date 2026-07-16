@@ -12,14 +12,26 @@ import CodeMirror from '@uiw/react-codemirror'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { javascript } from '@codemirror/lang-javascript'
 import { languages } from '@codemirror/language-data'
-import { EditorView, Decoration, DecorationSet } from '@codemirror/view'
+import { EditorView, Decoration, DecorationSet, keymap } from '@codemirror/view'
 import { darcula, darculaInit } from '@uiw/codemirror-theme-darcula'
-import { StateField, StateEffect, RangeSet } from '@codemirror/state'
+import { StateField, StateEffect, RangeSet, Prec } from '@codemirror/state'
 
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { tags } from '@lezer/highlight'
+import { autocompletion } from '@codemirror/autocomplete'
 import customMarkdownExtension from './customMarkdownExtension'
+import SpellPicker, { type Spell, type PickerPosition } from './SpellPicker'
+import { spellTokenExtension } from './spellWidget'
 import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
+
+// Maps a path folder (blog/<spec>/...) to the DB spec label used in spells.db.
+const SPEC_FOLDERS: Record<string, string> = {
+  balance: 'Balance',
+  feral: 'Feral',
+  guardian: 'Guardian',
+  resto: 'Restoration',
+  restoration: 'Restoration',
+}
 
 // Create a debounce function to prevent excessive worker updates
 function debounce<T extends (...args: any[]) => any>(
@@ -186,11 +198,51 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [editorReady, setEditorReady] = useState<boolean>(false)
   const errorHighlighter = useMemo(() => createErrorLineHighlighter(), [])
 
+  // Ctrl+Space spell picker state.
+  const [pickerOpen, setPickerOpen] = useState<boolean>(false)
+  const [pickerPos, setPickerPos] = useState<PickerPosition>({ left: 0, top: 0 })
+  // Document range to replace when a spell is chosen (the selection at open time).
+  const insertRangeRef = useRef<{ from: number; to: number }>({ from: 0, to: 0 })
+  // Called by the (stable) Ctrl+Space keymap; reassigned each render so it always
+  // sees the latest setters while editorExtensions stays referentially stable.
+  const openPickerRef = useRef<(view: EditorView) => void>(() => {})
+  openPickerRef.current = (view: EditorView) => {
+    const sel = view.state.selection.main
+    insertRangeRef.current = { from: sel.from, to: sel.to }
+    const coords = view.coordsAtPos(sel.head)
+    if (coords) setPickerPos({ left: coords.left, top: coords.bottom })
+    setPickerOpen(true)
+  }
+
+  const handleSpellSelect = (spell: Spell) => {
+    const view = editorRef.current
+    if (view) {
+      const { from, to } = insertRangeRef.current
+      const insert = `!${spell.id}|${spell.name}!`
+      view.dispatch({
+        changes: { from, to, insert },
+        selection: { anchor: from + insert.length },
+      })
+      view.focus()
+    }
+    setPickerOpen(false)
+  }
+
   // Extract filename from path for display
   const fileName = filePath.split('/').pop() || 'Unknown'
   // Extract group from path (last directory name)
   const pathParts = filePath.split('/')
   const group = pathParts.length > 1 ? pathParts[pathParts.length - 2] : 'root'
+
+  // Spec of the file being edited, from its path (e.g. blog/balance/... →
+  // "Balance"), used to prioritize on-spec spells in the picker.
+  const currentSpec = useMemo(() => {
+    const seg = filePath
+      .toLowerCase()
+      .split('/')
+      .find((s) => SPEC_FOLDERS[s])
+    return seg ? SPEC_FOLDERS[seg] : null
+  }, [filePath])
 
   // Custom highlight style for frontmatter and MDX
 
@@ -225,7 +277,7 @@ function FileEditor({ filePath }: { filePath: string }) {
           color: 'green',
         },
         '.cm-content': {
-          fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+          fontFamily: 'Consolas, ui-monospace, SFMono-Regular, Menlo, Monaco, monospace',
           padding: '10px 0',
           color: '#FFF5E4',
         },
@@ -241,6 +293,16 @@ function FileEditor({ filePath }: { filePath: string }) {
         },
         '.cm-activeLineGutter': {
           backgroundColor: 'rgba(255,255,255,0.05)',
+        },
+        '.cm-spell-token': {
+          color: '#ffb86c',
+          fontWeight: 'bold',
+          fontSize: '0.85em',
+          border: '1px solid rgba(255,184,108,0.5)',
+          borderRadius: '3px',
+          padding: '0 3px',
+          cursor: 'default',
+          textDecoration: 'none',
         },
       }),
       markdown({
@@ -269,7 +331,27 @@ function FileEditor({ filePath }: { filePath: string }) {
   )
 
   const editorExtensions = useMemo(
-    () => [...mixedLanguageSupport, errorHighlighter.extension],
+    () => [
+      ...mixedLanguageSupport,
+      errorHighlighter.extension,
+      ...spellTokenExtension,
+      // Keep autocomplete, but drop its default keymap so it no longer claims
+      // Ctrl-Space (it binds that at Prec.highest too — see basicSetup below,
+      // which disables the built-in completion keymaps to avoid the collision).
+      autocompletion({ defaultKeymap: false }),
+      // Ctrl+Space opens the spell picker. Now the only binding on this key.
+      Prec.highest(
+        keymap.of([
+          {
+            key: 'Ctrl-Space',
+            run: (view) => {
+              openPickerRef.current(view)
+              return true
+            },
+          },
+        ])
+      ),
+    ],
     [mixedLanguageSupport, errorHighlighter]
   )
 
@@ -279,7 +361,11 @@ function FileEditor({ filePath }: { filePath: string }) {
       highlightActiveLine: true,
       highlightActiveLineGutter: true,
       foldGutter: true,
-      autocompletion: true,
+      // Disable basicSetup's autocomplete + its completion keymap; we add our
+      // own autocompletion({ defaultKeymap: false }) so Ctrl-Space is free for
+      // the spell picker. (Both built-in bindings register at Prec.highest.)
+      autocompletion: false,
+      completionKeymap: false,
       closeBrackets: true,
       searchKeymap: true,
     }),
@@ -792,6 +878,13 @@ function FileEditor({ filePath }: { filePath: string }) {
                   editorRef.current = view
                   setEditorReady(true)
                 }}
+              />
+              <SpellPicker
+                open={pickerOpen}
+                position={pickerPos}
+                currentSpec={currentSpec}
+                onSelect={handleSpellSelect}
+                onClose={() => setPickerOpen(false)}
               />
             </div>
           )}

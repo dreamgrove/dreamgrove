@@ -108,6 +108,9 @@ importers:
       esbuild:
         specifier: 0.25.0
         version: 0.25.0
+      fuse.js:
+        specifier: ^7.5.0
+        version: 7.5.0
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -3578,6 +3581,10 @@ packages:
 
   fuse.js@6.6.2:
     resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
+
+  fuse.js@7.5.0:
+    resolution: {integrity: sha512-sQtrEfA+ez/3G0cCZecF70oqpCRttCexYUG4mUrtWL49ULUzUyxokt5kyqwtKzj1270RaKih+hcP3qLcumccow==}
     engines: {node: '>=10'}
 
   generator-function@2.0.1:
@@ -10211,6 +10218,8 @@ snapshots:
   functions-have-names@1.2.3: {}
 
   fuse.js@6.6.2: {}
+
+  fuse.js@7.5.0: {}
 
   generator-function@2.0.1: {}
 

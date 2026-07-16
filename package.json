@@ -47,6 +47,7 @@
     "clsx": "^2.1.1",
     "contentlayer2": "0.5.4",
     "esbuild": "0.25.0",
+    "fuse.js": "^7.5.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "hast-util-from-html-isomorphic": "^2.0.0",
