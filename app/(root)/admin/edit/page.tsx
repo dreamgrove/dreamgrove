@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
 import { FaQuestion } from 'react-icons/fa'
+import { MdWrapText } from 'react-icons/md'
 import matter from 'gray-matter'
 import CodeMirror from '@uiw/react-codemirror'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
@@ -22,6 +23,7 @@ import { autocompletion } from '@codemirror/autocomplete'
 import customMarkdownExtension from './customMarkdownExtension'
 import SpellPicker, { useSpellSearch, type Spell, type PickerPosition } from './SpellPicker'
 import { spellTokenExtension } from './spellWidget'
+import { sectionGuideExtension } from './sectionGuides'
 import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
 
 // Maps a path folder (blog/<spec>/...) to the DB spec label used in spells.db.
@@ -53,23 +55,20 @@ function createErrorLineHighlighter() {
   const addErrorLine = StateEffect.define<{ line: number }>()
   const clearErrorLines = StateEffect.define<null>()
 
-  // Create a decoration that will highlight the error line with a red background
+  // decoration that will highlight the error line with a red background
   const errorLineDecoration = Decoration.line({
     attributes: { class: 'bg-red-100 dark:bg-red-900/40' },
   })
 
-  // Define a state field that will track our error line decorations
   const errorLineField = StateField.define<DecorationSet>({
     create() {
       return RangeSet.empty
     },
     update(decorations, tr) {
-      // Update decorations based on transaction effects
       decorations = decorations.map(tr.changes)
 
       for (const effect of tr.effects) {
         if (effect.is(addErrorLine)) {
-          // Convert 1-indexed line to 0-indexed for internal use
           const line = effect.value.line - 1
           const pos = tr.state.doc.line(Math.max(1, Math.min(line + 1, tr.state.doc.lines)))
           decorations = decorations.update({
@@ -171,9 +170,12 @@ function MissingPathError() {
 
 function FileEditor({ filePath }: { filePath: string }) {
   const { data: session, status } = useSession()
-  const [rawContent, setRawContent] = useState<string>('')
   const [bodyContent, setBodyContent] = useState<string>('')
-  const [frontmatter, setFrontmatter] = useState<Record<string, string>>({})
+  const [frontmatter, setFrontmatter] = useState<Record<string, any>>({})
+  // The frontmatter fields (title/patch/draft/authors/summary) are edited via
+  // the form above the editor, not in the editor body. `authorsInput` holds the
+  // raw comma-separated text
+  const [authorsInput, setAuthorsInput] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(true)
   const [saving, setSaving] = useState<boolean>(false)
   const [viewMode, setViewMode] = useState<'edit' | 'preview' | 'split'>('edit')
@@ -183,6 +185,7 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const [splitPosition, setSplitPosition] = useState<number>(50) // Default 50% split
   const [isDragging, setIsDragging] = useState<boolean>(false)
+  const [wordWrap, setWordWrap] = useState<boolean>(true)
   // Add state for commit information and modals
   const [commitTitle, setCommitTitle] = useState<string>('')
   const [commitMessage, setCommitMessage] = useState<string>('')
@@ -190,7 +193,6 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false)
   const [prUrl, setPrUrl] = useState<string | null>(null)
   const router = useRouter()
-  const workerRef = useRef<Worker | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const previewRef = useRef<HTMLDivElement>(null)
   const [errorLine, setErrorLine] = useState<number | null>(null)
@@ -348,7 +350,6 @@ function FileEditor({ filePath }: { filePath: string }) {
         extensions: [customMarkdownExtension],
         htmlTagLanguage: javascript({ jsx: true }),
       }),
-      EditorView.lineWrapping,
     ],
     [customHighlightStyle]
   ) // Only depends on the highlight style
@@ -371,6 +372,8 @@ function FileEditor({ filePath }: { filePath: string }) {
       ...mixedLanguageSupport,
       errorHighlighter.extension,
       ...spellTokenExtension,
+      ...sectionGuideExtension,
+      ...(wordWrap ? [EditorView.lineWrapping] : []),
       // Keep autocomplete, but drop its default keymap so it no longer claims
       // Ctrl-Space (it binds that at Prec.highest too — see basicSetup below,
       // which disables the built-in completion keymaps to avoid the collision).
@@ -445,7 +448,7 @@ function FileEditor({ filePath }: { filePath: string }) {
         }
       }),
     ],
-    [mixedLanguageSupport, errorHighlighter]
+    [mixedLanguageSupport, errorHighlighter, wordWrap]
   )
 
   const editorBasicSetup = useMemo(
@@ -465,26 +468,6 @@ function FileEditor({ filePath }: { filePath: string }) {
     []
   )
 
-  // Set up the worker when the component mounts
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      workerRef.current = new Worker(new URL('./matterWorker.ts', import.meta.url))
-
-      workerRef.current.onmessage = (event) => {
-        if (event.data.type === 'parseResult') {
-          setBodyContent(event.data.content)
-          setFrontmatter(event.data.data)
-        } else if (event.data.type === 'error') {
-          console.error('Error in worker:', event.data.message)
-        }
-      }
-
-      return () => {
-        workerRef.current?.terminate()
-      }
-    }
-  }, [])
-
   useEffect(() => {
     if (status === 'authenticated') {
       fetch(`/api/compendium/content?filePath=${filePath}`)
@@ -498,25 +481,20 @@ function FileEditor({ filePath }: { filePath: string }) {
         })
         .then((data) => {
           const content = data.content || ''
-          setRawContent(content)
-
-          // Parse the initial content with the worker
-          if (workerRef.current) {
-            workerRef.current.postMessage({
-              type: 'parse',
-              content,
-            })
-          } else {
-            // Fallback if worker isn't available
-            try {
-              const { content: body, data } = matter(content)
-              setBodyContent(body)
-              setFrontmatter(data)
-            } catch (err) {
-              console.error('Error parsing markdown content:', err)
-            }
+          // Split frontmatter from body: the body is what the editor shows, the
+          // frontmatter drives the metadata fields, and both are stitched back
+          // together on save (see buildDocument).
+          try {
+            const { content: body, data: fm } = matter(content)
+            // gray-matter leaves the blank line after the closing `---` as a
+            // leading newline; drop one so the body doesn't start empty.
+            setBodyContent(body.replace(/^\n/, ''))
+            setFrontmatter(fm)
+            setAuthorsInput(Array.isArray(fm.authors) ? fm.authors.join(', ') : (fm.authors ?? ''))
+          } catch (err) {
+            console.error('Error parsing markdown content:', err)
+            setBodyContent(content)
           }
-
           setLoading(false)
         })
         .catch((err) => {
@@ -526,34 +504,31 @@ function FileEditor({ filePath }: { filePath: string }) {
     }
   }, [status, filePath])
 
-  // Debounced function to update content in worker
-  const debouncedUpdateContent = useRef(
-    debounce((content: string) => {
-      if (workerRef.current) {
-        workerRef.current.postMessage({
-          type: 'parse',
-          content,
-        })
-      } else {
-        // Fallback if worker isn't available
-        try {
-          const { content: body } = matter(content)
-          setBodyContent(body)
-        } catch (err) {
-          console.error('Error parsing markdown content:', err)
-        }
-      }
-    }, 300)
-  ).current
-
-  const handleRawContentChange = (newContent: string) => {
-    setRawContent(newContent)
-
+  const handleBodyChange = (newBody: string) => {
+    setBodyContent(newBody)
     // Clear error line when content changes
     setErrorLine(null)
+  }
 
-    // Use the debounced function to update the preview
-    debouncedUpdateContent(newContent)
+  // Metadata form updates. Only keys the user actually touches get written, so a
+  // file that never had a given field doesn't gain an empty one on save.
+  const setField = (key: string, value: any) => {
+    setFrontmatter((prev) => ({ ...prev, [key]: value }))
+  }
+
+  // Reassemble frontmatter + body into the file we send in the PR. Authors are
+  // re-parsed from the raw input here; an empty list drops the key entirely, and
+  // a document with no frontmatter at all is left as plain body (no empty ---).
+  const buildDocument = () => {
+    const data: Record<string, any> = { ...frontmatter }
+    const authors = authorsInput
+      .split(',')
+      .map((a) => a.trim())
+      .filter(Boolean)
+    if (authors.length) data.authors = authors
+    else delete data.authors
+    if (Object.keys(data).length === 0) return bodyContent
+    return matter.stringify(bodyContent, data)
   }
 
   // Modify the handleSaveClick function to open the commit modal
@@ -591,7 +566,7 @@ function FileEditor({ filePath }: { filePath: string }) {
         },
         body: JSON.stringify({
           filePath,
-          content: rawContent,
+          content: buildDocument(),
           commitTitle,
           commitMessage,
           createPr: true, // Indicate we want to create a PR
@@ -714,46 +689,199 @@ function FileEditor({ filePath }: { filePath: string }) {
       if (savedPosition) {
         setSplitPosition(Number(savedPosition))
       }
+      const savedWrap = localStorage.getItem('editor-word-wrap')
+      if (savedWrap !== null) {
+        setWordWrap(savedWrap === 'true')
+      }
     }
   }, [])
 
-  // Apply or clear error line highlight when errorLine changes
+  const toggleWordWrap = () => {
+    setWordWrap((prev) => {
+      const next = !prev
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('editor-word-wrap', String(next))
+      }
+      return next
+    })
+  }
+
+  // Apply or clear error line highlight when errorLine changes. The editor now
+  // holds only the body, so the preview's line numbers map straight across (no
+  // frontmatter offset needed).
   useEffect(() => {
     if (!editorRef.current) return
 
     if (errorLine !== null) {
-      errorHighlighter.highlightLine(
-        editorRef.current,
-        errorLine + Object.keys(frontmatter).length + 2 // +2 for the frontmatter delimiters
-      )
+      errorHighlighter.highlightLine(editorRef.current, errorLine)
     } else {
       errorHighlighter.clearHighlights(editorRef.current)
     }
-  }, [errorLine, frontmatter, errorHighlighter])
+  }, [errorLine, errorHighlighter])
 
-  // In split mode, keep the editor and preview scrolled to the same position
+  // In split mode, keep the editor and preview roughly scrolled together.
+  //
+  // The two panes have unrelated heights: the editor shows raw source (incl.
+  // frontmatter) while the preview renders collapsibles, talent trees, etc.
+  // whose height has nothing to do with their source length. So a plain
+  // scrollTop ratio drifts badly. Instead we anchor on landmarks that exist in
+  // both panes — markdown headings and <Collapsible> titles — pairing them by
+  // text in source order, so a landmark that doesn't render (e.g. a heading
+  // inside a collapsed Collapsible) is skipped rather than shifting everything
+  // after it. Between two matched anchors we interpolate linearly, so any drift
+  // is bounded to a single section. With no matched anchors it degrades to the
+  // old whole-pane ratio.
   useEffect(() => {
     if (viewMode !== 'split') return
 
-    const editorScroller = editorRef.current?.scrollDOM
+    const view = editorRef.current
+    const editorScroller = view?.scrollDOM
     const previewEl = previewRef.current
-    if (!editorScroller || !previewEl) return
+    if (!view || !editorScroller || !previewEl) return
+
+    const normHeading = (text: string) =>
+      text
+        .replace(/^\s{0,3}#{1,6}\s+/, '')
+        .replace(/[#*`_~]/g, '')
+        .trim()
+        .toLowerCase()
+
+    // A preview heading inside a collapsed <Collapsible> is clipped to zero
+    // height (grid-rows-[0fr] + overflow-hidden) rather than unmounted, so it
+    // still reports a bogus getBoundingClientRect. Those bogus tops run past the
+    // next visible anchor and would make the anchor list non-monotonic (which
+    // inverts the mapping). Detect them by an ancestor collapsed to 0 height.
+    const isClipped = (node: HTMLElement) => {
+      let p = node.parentElement
+      while (p && p !== previewEl) {
+        if (p.offsetHeight === 0) return true
+        p = p.parentElement
+      }
+      return false
+    }
+
+    // Scroll offsets (in each pane's own scroll space) of landmarks that appear
+    // in BOTH panes — markdown headings and <Collapsible> titles — matched by
+    // text in source order. Collapsible titles subdivide the long collapsed
+    // sections (tall in the editor, short in the preview) so drift stays local.
+    const buildAnchors = () => {
+      const doc = view.state.doc
+      const editorHeads: { top: number; text: string }[] = []
+      for (let i = 1; i <= doc.lines; i++) {
+        const line = doc.line(i)
+        const collapsible = line.text.match(/<Collapsible\s+title\s*=\s*["']([^"']*)["']/)
+        if (collapsible) {
+          editorHeads.push({
+            top: view.lineBlockAt(line.from).top,
+            text: normHeading(collapsible[1]),
+          })
+        } else if (/^\s{0,3}#{1,6}\s/.test(line.text)) {
+          editorHeads.push({ top: view.lineBlockAt(line.from).top, text: normHeading(line.text) })
+        }
+      }
+
+      const previewBase = previewEl.getBoundingClientRect().top - previewEl.scrollTop
+      const previewHeads: { top: number; text: string }[] = []
+      previewEl.querySelectorAll('h1,h2,h3,h4,h5,h6,[data-collapsible-title]').forEach((el) => {
+        const node = el as HTMLElement
+        if (isClipped(node)) return // inside a collapsed section
+        previewHeads.push({
+          top: node.getBoundingClientRect().top - previewBase,
+          text: normHeading(node.textContent || ''),
+        })
+      })
+
+      // Match forward-only, and never accept an anchor that isn't strictly
+      // below the previous one in either pane, so both arrays stay monotonic.
+      const editor: number[] = []
+      const preview: number[] = []
+      let p = 0
+      let lastE = -Infinity
+      let lastP = -Infinity
+      for (const eh of editorHeads) {
+        if (!eh.text || eh.top <= lastE) continue
+        for (let k = p; k < previewHeads.length; k++) {
+          if (previewHeads[k].text === eh.text) {
+            if (previewHeads[k].top > lastP) {
+              editor.push(eh.top)
+              preview.push(previewHeads[k].top)
+              lastE = eh.top
+              lastP = previewHeads[k].top
+            }
+            p = k + 1
+            break
+          }
+        }
+      }
+      return { editor, preview }
+    }
+
+    // Map a scroll offset from one pane to the other through the anchor pairs,
+    // padding with the pane edges (0 and max) so positions before the first and
+    // after the last heading still interpolate sensibly.
+    const mapScroll = (
+      value: number,
+      from: number[],
+      fromMax: number,
+      to: number[],
+      toMax: number
+    ) => {
+      if (from.length === 0 || fromMax <= 0 || toMax <= 0) {
+        return fromMax > 0 ? (value / fromMax) * toMax : 0
+      }
+      // Build the piecewise-linear map, padding with the pane edges. Clamp every
+      // anchor into [0, max] — a landmark near the bottom can report a top past
+      // the scrollable range, which would otherwise make a segment run backwards.
+      const fromPts = [0]
+      const toPts = [0]
+      for (let i = 0; i < from.length; i++) {
+        const f = Math.max(0, Math.min(from[i], fromMax))
+        const t = Math.max(0, Math.min(to[i], toMax))
+        if (f <= fromPts[fromPts.length - 1] || t <= toPts[toPts.length - 1]) continue
+        fromPts.push(f)
+        toPts.push(t)
+      }
+      fromPts.push(fromMax)
+      toPts.push(toMax)
+      let i = 0
+      while (i < fromPts.length - 2 && value >= fromPts[i + 1]) i++
+      const f0 = fromPts[i]
+      const f1 = fromPts[i + 1]
+      const frac = f1 > f0 ? (value - f0) / (f1 - f0) : 0
+      return toPts[i] + frac * (toPts[i + 1] - toPts[i])
+    }
 
     let locked = false
-    const sync = (source: HTMLElement, target: HTMLElement) => () => {
+    const syncFrom = (which: 'editor' | 'preview') => () => {
       if (locked) return
       locked = true
-      const sourceMax = source.scrollHeight - source.clientHeight
-      const targetMax = target.scrollHeight - target.clientHeight
-      const ratio = sourceMax > 0 ? source.scrollTop / sourceMax : 0
-      target.scrollTop = ratio * targetMax
+      const { editor, preview } = buildAnchors()
+      const editorMax = editorScroller.scrollHeight - editorScroller.clientHeight
+      const previewMax = previewEl.scrollHeight - previewEl.clientHeight
+      if (which === 'editor') {
+        previewEl.scrollTop = mapScroll(
+          editorScroller.scrollTop,
+          editor,
+          editorMax,
+          preview,
+          previewMax
+        )
+      } else {
+        editorScroller.scrollTop = mapScroll(
+          previewEl.scrollTop,
+          preview,
+          previewMax,
+          editor,
+          editorMax
+        )
+      }
       requestAnimationFrame(() => {
         locked = false
       })
     }
 
-    const onEditorScroll = sync(editorScroller, previewEl)
-    const onPreviewScroll = sync(previewEl, editorScroller)
+    const onEditorScroll = syncFrom('editor')
+    const onPreviewScroll = syncFrom('preview')
     editorScroller.addEventListener('scroll', onEditorScroll, { passive: true })
     previewEl.addEventListener('scroll', onPreviewScroll, { passive: true })
 
@@ -948,6 +1076,13 @@ function FileEditor({ filePath }: { filePath: string }) {
           </div>
         )}
 
+        <MetadataPanel
+          frontmatter={frontmatter}
+          authorsInput={authorsInput}
+          setAuthorsInput={setAuthorsInput}
+          setField={setField}
+        />
+
         <div
           ref={containerRef}
           className={`${viewMode === 'split' ? 'relative flex gap-0' : ''}`}
@@ -956,13 +1091,26 @@ function FileEditor({ filePath }: { filePath: string }) {
         >
           {(viewMode === 'edit' || viewMode === 'split') && (
             <div
-              className={`${viewMode === 'split' ? 'h-[85vh] shrink-0' : 'sticky top-0 h-[85vh] w-full'}`}
+              className={`relative ${viewMode === 'split' ? 'h-[85vh] shrink-0' : 'sticky top-0 h-[85vh] w-full'}`}
               style={viewMode === 'split' ? { width: `${splitPosition}%` } : undefined}
             >
+              <button
+                onClick={toggleWordWrap}
+                aria-pressed={wordWrap}
+                title={wordWrap ? 'Disable word wrap' : 'Enable word wrap'}
+                aria-label={wordWrap ? 'Disable word wrap' : 'Enable word wrap'}
+                className={`absolute top-2 right-5 z-10 flex items-center justify-center rounded-md border p-[5px] shadow-sm transition-colors ${
+                  wordWrap
+                    ? 'border-[#d57f43] bg-[#d57f43] text-white hover:bg-[#c06f37]'
+                    : 'border-neutral-600 bg-[#3a3a3a] text-neutral-300 hover:bg-[#454545]'
+                }`}
+              >
+                <MdWrapText size={16} />
+              </button>
               <CodeMirror
-                value={rawContent}
-                onChange={handleRawContentChange}
-                className="h-full overflow-auto rounded-lg border border-neutral-300 dark:border-neutral-700"
+                value={bodyContent}
+                onChange={handleBodyChange}
+                className="h-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-700"
                 theme={editorTheme}
                 extensions={editorExtensions}
                 placeholder="Enter content with frontmatter and MDX..."
@@ -1044,6 +1192,88 @@ function FileEditor({ filePath }: { filePath: string }) {
       />
 
       <PrSuccessModal isOpen={!!prUrl} prUrl={prUrl} />
+    </div>
+  )
+}
+
+// Editable frontmatter fields, shown above the editor. The editor itself only
+// holds the body; these drive the metadata that buildDocument() writes back.
+function MetadataPanel({
+  frontmatter,
+  authorsInput,
+  setAuthorsInput,
+  setField,
+}: {
+  frontmatter: Record<string, any>
+  authorsInput: string
+  setAuthorsInput: (value: string) => void
+  setField: (key: string, value: any) => void
+}) {
+  const inputCls =
+    'w-full rounded-md border border-neutral-300 bg-white p-2 text-sm text-neutral-900 focus:border-neutral-400 focus:ring-1 focus:ring-neutral-400 focus:outline-none dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-100'
+  const labelCls = 'mb-1 block text-xs font-medium text-neutral-500 dark:text-neutral-400'
+
+  return (
+    <div className="mb-4 flex flex-wrap items-end gap-3">
+      <div className="min-w-[200px] flex-[3]">
+        <label htmlFor="fm-title" className={labelCls}>
+          Title
+        </label>
+        <input
+          id="fm-title"
+          type="text"
+          value={String(frontmatter.title ?? '')}
+          onChange={(e) => setField('title', e.target.value)}
+          className={inputCls}
+        />
+      </div>
+      <div className="w-24">
+        <label htmlFor="fm-patch" className={labelCls}>
+          Patch
+        </label>
+        <input
+          id="fm-patch"
+          type="text"
+          value={String(frontmatter.patch ?? '')}
+          onChange={(e) => setField('patch', e.target.value)}
+          className={inputCls}
+          placeholder="12.0.7"
+        />
+      </div>
+      <div className="min-w-[160px] flex-[2]">
+        <label htmlFor="fm-authors" className={labelCls}>
+          Authors
+        </label>
+        <input
+          id="fm-authors"
+          type="text"
+          value={authorsInput}
+          onChange={(e) => setAuthorsInput(e.target.value)}
+          className={inputCls}
+          placeholder="Name1, Name2"
+        />
+      </div>
+      <div className="min-w-[200px] flex-[3]">
+        <label htmlFor="fm-summary" className={labelCls}>
+          Summary
+        </label>
+        <input
+          id="fm-summary"
+          type="text"
+          value={String(frontmatter.summary ?? '')}
+          onChange={(e) => setField('summary', e.target.value)}
+          className={inputCls}
+        />
+      </div>
+      <label className="flex h-[38px] items-center gap-2 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+        <input
+          type="checkbox"
+          checked={!!frontmatter.draft}
+          onChange={(e) => setField('draft', e.target.checked)}
+          className="h-4 w-4 rounded border-neutral-300 dark:border-neutral-600"
+        />
+        Draft
+      </label>
     </div>
   )
 }
