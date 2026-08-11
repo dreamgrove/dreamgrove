@@ -111,7 +111,6 @@ actions.cooldown+=/use_item,slot=trinket2,use_off_gcd=1,if=trinket.2.has_use_buf
 actions.cooldown+=/use_item,slot=trinket1,if=fight_remains<=(21<?trinket.1.proc.any_dps.duration)
 actions.cooldown+=/use_item,slot=trinket2,if=fight_remains<=(21<?trinket.2.proc.any_dps.duration)
 actions.cooldown+=/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
-#actions.cooldown+=/berserk,if=buff.tigers_fury.up&!variable.holdBerserk
 # 0-2 combo points outside zerk, 0-4 combo points inside zerk
 actions.cooldown+=/feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buff.bs_inc.up)
 # we can find some gains in dslice by holding frantic frenzy for larger target counts occasionally, but its not by a lot, whereas holding tends to devolve pretty quickly in droute. I suspect this is due to how reliant on single target droute ends up being. Further investigations should be looked into.
