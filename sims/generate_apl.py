@@ -54,7 +54,7 @@ with open(os.path.join(args.simcpath, 'engine', 'class_modules', 'apl', 'druid',
         if apl_var == 'default':
             apl_var = 'def'
 
-        inc.write('action_priority_list_t* ' + apl_var + ' = get_action_priority_list( \"' + apl + '\" );\n')
+        inc.write('action_priority_list_t* ' + apl_var + ' = p->get_action_priority_list( \"' + apl + '\" );\n')
 
     for apl in apl_lists.keys():
         apl_var = apl
