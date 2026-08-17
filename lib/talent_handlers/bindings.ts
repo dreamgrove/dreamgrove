@@ -13,6 +13,8 @@ import { focusedFrenzy } from './Feral/focusedFrenzy'
 import { cenariusGuidance } from './Resto/cenariusGuidance'
 import { elunesGuidance } from './Balance/elunesGuidance'
 import { sculptTheStars } from './Balance/sculptTheStars'
+import { bounteousBloom } from './Balance/bounteousBloom'
+import { radiantMoonlight } from './Balance/radiantMoonlight'
 
 export const bindings: TalentBindings[] = [
   {
@@ -26,6 +28,19 @@ export const bindings: TalentBindings[] = [
       resto: 'Grove Guardians cooldown reduced by 3 sec.',
     },
     specs: ['balance', 'resto'],
+    exclusiveWith: [Talents.BounteousBloom],
+  },
+  {
+    id: Talents.BounteousBloom,
+    spellId: 429215,
+    affectedSpells: [205636],
+    handler: bounteousBloom,
+    label: 'Bounteous Bloom',
+    description: {
+      balance: 'Force of Nature Treants last 4 sec longer.',
+    },
+    specs: ['balance'],
+    exclusiveWith: [Talents.EarlySpring],
   },
   {
     id: Talents.ElunesGuidance,
@@ -83,7 +98,7 @@ export const bindings: TalentBindings[] = [
     handler: sculptTheStars,
     label: 'Sculpt the Stars',
     description: {
-      balance: 'Eclipse cooldown reduced by 2 sec.',
+      balance: 'Eclipse cooldown reduced by 3 sec.',
     },
     specs: ['balance'],
   },
@@ -110,6 +125,17 @@ export const bindings: TalentBindings[] = [
     },
     specs: ['balance'],
     onByDefault: true,
+  },
+  {
+    id: Talents.RadiantMoonlight,
+    spellId: 394121,
+    affectedSpells: [202770],
+    handler: radiantMoonlight,
+    label: 'Radiant Moonlight',
+    description: {
+      balance: "Fury of Elune's cooldown is reduced by 15 sec.",
+    },
+    specs: ['balance'],
   },
   {
     id: Talents.Dreamstate,

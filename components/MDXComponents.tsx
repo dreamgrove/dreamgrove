@@ -13,6 +13,7 @@ import Npc from './custom/Npc'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
+import PlannerEmbed from './custom/PlannerEmbed'
 import YouTube from './custom/YouTube'
 import ConditionalElement from './custom/ConditionalElement'
 import CheckboxProvider from './custom/CheckboxProvider'
@@ -138,6 +139,7 @@ export const components: MDXComponents = {
   Npc,
   Collapsible,
   Timeline,
+  PlannerEmbed,
   YouTube,
   Color,
   p: ({ children, ...props }) => {

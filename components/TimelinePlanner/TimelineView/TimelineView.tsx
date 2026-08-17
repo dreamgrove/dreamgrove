@@ -12,6 +12,7 @@ import Warnings from '../Warnings'
 import MRTExport from '../MRTExport'
 import Sidebar from '../Sidebar/Sidebar'
 import LoadoutManager from '../LoadoutManager'
+import LoadoutUrlSync from '../LoadoutUrlSync'
 import SpecSelector from './SpecSelector'
 import ZoomControls from './ZoomControls'
 import SpellNames from './SpellNames'
@@ -84,17 +85,20 @@ function TimelineViewInner({
 
   return (
     <div className="flex h-full flex-col">
+      {/* ?loadout= URL import + live sync (shareable planner links) */}
+      <LoadoutUrlSync />
+
       {/* Spec selector dropdown */}
       <SpecSelector />
 
       {/* divider */}
-      <div className="my-1 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+      <div className="my-1 h-0.5 w-full shrink-0 bg-gray-700/40" />
 
       <div id="tour-effects-selector" className="my-2">
         <TalentBindings prerenderedIcons={wowheadMap} />
       </div>
 
-      <div className="my-2 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+      <div className="my-2 h-0.5 w-full shrink-0 bg-gray-700/40" />
 
       {/* Warcraft Logs panel */}
       <div className="my-2">
@@ -114,7 +118,7 @@ function TimelineViewInner({
         </WCLSection>
       </div>
 
-      <div className="my-2 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+      <div className="my-2 h-0.5 w-full shrink-0 bg-gray-700/40" />
 
       {/* Add/Remove spell buttons */}
       <div id="tour-buttons-selector">
@@ -135,7 +139,7 @@ function TimelineViewInner({
 
           {/* Right side: scrollable timeline, contains markers and casts */}
           <div
-            className="relative mt-8 min-h-[280px] flex-1 overflow-x-auto pl-6"
+            className="relative mt-8 min-h-70 flex-1 overflow-x-auto pl-6"
             ref={scrollContainerRef}
           >
             <TimelineScrollContainer
@@ -149,7 +153,7 @@ function TimelineViewInner({
       </HoverProvider>
 
       {/* divider */}
-      <div className="mx-[4px] mt-6 mb-4 h-[2px] w-full flex-shrink-0 bg-gray-700/40" />
+      <div className="mx-1 mt-6 mb-4 h-0.5 w-full shrink-0 bg-gray-700/40" />
 
       <Warnings />
 

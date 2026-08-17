@@ -74,6 +74,32 @@ Use !Fury of Elune! if you are in !194223|CA!
 
 Both will be replaced with the correct <Wowhead> component
 
+### `<PlannerEmbed>` Component
+
+Embeds a read-only cooldown timeline built with the [planner](https://dreamgrove.gg/planner). Arrange the spells in the planner, click Export in the Loadouts menu (this copies a `DG1…` code to your clipboard), and paste the code into the `code` prop. Talents encoded in the loadout are used to simulate the timeline but are not displayed. Readers get a link to open the loadout in the planner themselves.
+
+**Props:**
+
+- `code`: The loadout code produced by the planner's Export button.
+- Children (optional): A caption shown under the timeline.
+
+**Example Usage:**
+
+```jsx
+<PlannerEmbed code="DG1AQACAAgAr_YCAGQAaPkFACwB">Double Convoke opener</PlannerEmbed>
+```
+
+**Suggested planner loadouts:**
+You can also publish loadouts directly inside the planner's Loadouts menu, where every visitor can load them with one click. Edit `other/defaultLoadouts.json` and add an entry to the array of the matching spec:
+
+```json
+{
+  "balance": [{ "name": "ST Opener", "code": "DG1..." }]
+}
+```
+
+Use a code exported with the same spec as the array you add it to. The entries appear under "Suggested" in the Loadouts dropdown when that spec is selected.
+
 ### `<Checkbox/>` component
 
 Checkboxes are used to dynamically show/hide `<li>` tags. All checkboxes that use the radio function need to be wrapped within one .

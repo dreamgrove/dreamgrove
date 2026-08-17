@@ -1,7 +1,7 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
   { href: '/about', title: 'About' },
-  { href: '/planner', title: 'Planner' },
+  { href: '/planner', title: 'Spell Planner' },
   { href: 'https://discord.com/invite/dreamgrove', title: 'Discord' },
 ]
 
