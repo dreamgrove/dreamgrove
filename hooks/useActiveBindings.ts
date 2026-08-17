@@ -29,7 +29,8 @@ export function useActiveBindings(setInputActions: (actions: any[]) => void, cur
   const toggleTalent = useCallback((id: string, isSelected: boolean) => {
     setActiveTalents((prev) => {
       if (isSelected) {
-        return [...prev, id]
+        const exclusiveWith: string[] = allBindings.find((b) => b.id === id)?.exclusiveWith ?? []
+        return [...prev.filter((bindingId) => !exclusiveWith.includes(bindingId)), id]
       } else {
         return prev.filter((bindingId) => bindingId !== id)
       }

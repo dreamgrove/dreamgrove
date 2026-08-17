@@ -24,6 +24,9 @@ export type TalentBindings = {
   description: Record<string, string>
   specs: string[]
   onByDefault?: boolean
+  // Talents that cannot be active at the same time as this one (choice node).
+  // Selecting this talent deselects them.
+  exclusiveWith?: Talents[]
 }
 
 //Enum for the type of event that can happen on the timeline
@@ -56,6 +59,10 @@ export enum Talents {
   ImprovedEclipse = 'improved_eclipse',
   Predator = 'predator',
   FocusedFrenzy = 'focused_frenzy',
+  // New talents must be appended at the end: loadout codes store talents as a
+  // bitmask indexed by enum position (see TALENT_ORDER in lib/utils/loadoutCode.ts)
+  BounteousBloom = 'bounteous_bloom',
+  RadiantMoonlight = 'radiant_moonlight',
 }
 // Event type for the event queue
 export interface TimelineEvent<T extends EventType> {

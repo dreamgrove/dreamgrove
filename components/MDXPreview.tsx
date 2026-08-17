@@ -19,6 +19,7 @@ import remarkColor from '../plugins/remarkColor.js'
 import remarkGroupCheckboxes from '../plugins/remarkGroupCheckboxes.js'
 import ConditionalElement from './custom/ConditionalElement'
 import TimelineClientVersion from './csm/TimelineClientVersion'
+import PlannerEmbedClientVersion from './csm/PlannerEmbedClientVersion'
 
 import { remarkAlert } from 'remark-github-blockquote-alert'
 import remarkGfm from 'remark-gfm'
@@ -135,6 +136,7 @@ const components: MDXComponents = {
   Checkbox: CheckboxClientVersion,
   Wowhead: WowheadClientVersion,
   Timeline: TimelineClientVersion,
+  PlannerEmbed: PlannerEmbedClientVersion,
   HeroTalentsHeader,
   p: ({ children, ...props }) => {
     let id = ''

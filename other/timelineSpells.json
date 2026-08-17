@@ -28,6 +28,15 @@
       "specs": ["balance"]
     },
     {
+      "spellId": 202770,
+      "name": "Fury of Elune",
+      "channel_duration": 0,
+      "effect_duration": 8,
+      "cooldown": 60,
+      "charges": 1,
+      "specs": ["balance"]
+    },
+    {
       "spellId": 391528,
       "name": "Convoke the Spirits",
       "channel_duration": 4,

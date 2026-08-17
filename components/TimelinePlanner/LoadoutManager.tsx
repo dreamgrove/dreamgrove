@@ -1,10 +1,25 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useMemo } from 'react'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 import { useLoadouts, Loadout } from 'hooks/useLoadouts'
-import { encodeLoadout, decodeLoadout } from '@/lib/utils/loadoutCode'
-import { PlayerAction } from '@/types/timeline'
+import { useApplyLoadout } from 'hooks/useApplyLoadout'
+import { encodeLoadout } from '@/lib/utils/loadoutCode'
+import defaultLoadouts from '../../other/defaultLoadouts.json'
+
+interface PresetLoadout {
+  name: string
+  code: string
+}
+
+function getPresetsForSpec(spec: string): PresetLoadout[] {
+  const entries = (defaultLoadouts as Record<string, unknown>)[spec]
+  if (!Array.isArray(entries)) return []
+  return entries.filter(
+    (e): e is PresetLoadout =>
+      !!e && typeof e === 'object' && typeof e.name === 'string' && typeof e.code === 'string'
+  )
+}
 
 export default function LoadoutManager() {
   const {
@@ -14,12 +29,10 @@ export default function LoadoutManager() {
     setCurrentSpec,
     activeTalents,
     setActiveTalents,
-    localSpells,
-    createCustomSpell,
-    getSpellsForSpec,
   } = useTimelineContext()
 
   const { loadouts, saveLoadout, deleteLoadout, renameLoadout } = useLoadouts()
+  const applyLoadout = useApplyLoadout()
 
   const [isOpen, setIsOpen] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
@@ -31,6 +44,9 @@ export default function LoadoutManager() {
   const [importCode, setImportCode] = useState('')
   const [importError, setImportError] = useState('')
   const [exportCopied, setExportCopied] = useState(false)
+  const [presetError, setPresetError] = useState('')
+
+  const presets = useMemo(() => getPresetsForSpec(currentSpec), [currentSpec])
 
   const panelRef = useRef<HTMLDivElement>(null)
   const saveInputRef = useRef<HTMLInputElement>(null)
@@ -46,6 +62,7 @@ export default function LoadoutManager() {
         setIsImporting(false)
         setImportCode('')
         setImportError('')
+        setPresetError('')
         setEditingId(null)
         setConfirmDeleteId(null)
       }
@@ -127,56 +144,22 @@ export default function LoadoutManager() {
     setImportError('')
 
     try {
-      const decoded = decodeLoadout(code)
-
-      // Build a spell lookup from all known spells + decoded custom spells
-      const allSpells = [...localSpells, ...decoded.customSpells]
-      const spellMap = new Map(allSpells.map((s) => [s.spellId, s]))
-
-      // Reconstruct PlayerAction array
-      const events: PlayerAction[] = []
-      for (const e of decoded.events) {
-        const spell = spellMap.get(e.spellId)
-        if (!spell) continue // Skip unknown spells
-        events.push({
-          spell,
-          instant: e.instant,
-          id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
-        })
-      }
-
-      // Register custom spells so processEventQueue can find them
-      const hasNewCustomSpells = decoded.customSpells.some(
-        (cs) => !localSpells.some((s) => s.spellId === cs.spellId)
-      )
-      for (const cs of decoded.customSpells) {
-        if (!localSpells.some((s) => s.spellId === cs.spellId)) {
-          createCustomSpell(cs)
-        }
-      }
-
-      // Apply the loadout — defer to next tick so custom spell state updates
-      // have flushed before processEventQueue runs
-      const applyLoadout = () => {
-        setInputEvents(events)
-        setActiveTalents(decoded.activeTalents)
-      }
-
-      if (decoded.spec !== currentSpec) {
-        setCurrentSpec(decoded.spec)
-      }
-
-      if (decoded.spec !== currentSpec || hasNewCustomSpells) {
-        setTimeout(applyLoadout, 0)
-      } else {
-        applyLoadout()
-      }
-
+      applyLoadout(code)
       setIsImporting(false)
       setImportCode('')
       setIsOpen(false)
     } catch {
       setImportError('Invalid code')
+    }
+  }
+
+  const handlePresetLoad = (preset: PresetLoadout) => {
+    setPresetError('')
+    try {
+      applyLoadout(preset.code)
+      setIsOpen(false)
+    } catch {
+      setPresetError(`"${preset.name}" has an invalid code`)
     }
   }
 
@@ -380,6 +363,30 @@ export default function LoadoutManager() {
               <p className="mt-1 text-[0.6rem] text-neutral-500">
                 Saves current spec, talents, and timeline
               </p>
+            </div>
+          )}
+
+          {/* Suggested loadouts (from other/defaultLoadouts.json) */}
+          {presets.length > 0 && (
+            <div className="border-b border-neutral-700/50">
+              <div className="px-3 pt-2 pb-1 text-[0.6rem] font-medium tracking-wide text-neutral-500 uppercase">
+                Suggested
+              </div>
+              {presets.map((preset) => (
+                <button
+                  key={preset.name}
+                  onClick={() => handlePresetLoad(preset)}
+                  className="group flex w-full items-center justify-between px-3 py-2 text-left transition-colors hover:bg-neutral-800/40"
+                >
+                  <span className="truncate text-xs font-medium text-neutral-200 transition-colors group-hover:text-white">
+                    {preset.name}
+                  </span>
+                  <span className="shrink-0 text-[0.6rem] text-orange-300/70 opacity-0 transition-opacity group-hover:opacity-100">
+                    Load →
+                  </span>
+                </button>
+              ))}
+              {presetError && <p className="px-3 pb-2 text-[0.6rem] text-red-400">{presetError}</p>}
             </div>
           )}
 

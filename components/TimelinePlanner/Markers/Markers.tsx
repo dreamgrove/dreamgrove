@@ -71,6 +71,8 @@ const Markers: React.FC<MarkersProps> = React.memo(
 
     const size_px = marker_spacing_s * pixelsPerSecond
 
+    if (pixelsPerSecond === 0) return null
+
     if (previousSize_px === 0) {
       setPreviousSize_px(size_px)
     } else if (size_px > previousSize_px * 1.25 && effective_marker_spacing_s > 5) {
@@ -83,8 +85,6 @@ const Markers: React.FC<MarkersProps> = React.memo(
       setMarkerSpacing((prev) => prev + 2.5)
       setPreviousSize_px(size_px)
     }
-
-    if (pixelsPerSecond === 0) return null
 
     const markerPositions: number[] = []
     for (let pos = 0; pos <= total_length_s; pos += effective_marker_spacing_s) {

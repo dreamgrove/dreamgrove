@@ -1,0 +1,23 @@
+{
+  "_readme": "To add a loadout 1) build the timeline at /planner 2) click Export in the Loadouts menu 3) add an entry similar to _example to the matching spec with the exported code",
+  "_example": [
+    {
+      "name": "Element 1",
+      "code": "DG1AQAECAYAdeoSAAAAaPkFAEIARCMDAJYARCMDAGsBr_YCAI8MRCMDAAYY"
+    },
+    {
+      "name": "Element 2",
+      "code": "DG1AQAECAYAdeoSAAAAaPkFAEIARCMDAJYARCMDAGsBr_YCAI8MRCMDAAYY"
+    }
+  ],
+  "balance": [
+    {
+      "name": "Elune's Chosen - Convoke",
+      "code": "DG1AQAECAYAdeoSAAAAaPkFAEIARCMDAJYARCMDAGsBr_YCAI8MRCMDAAYY"
+    }
+  ],
+  "resto": [],
+  "feral": [],
+  "guardian": [],
+  "all": []
+}

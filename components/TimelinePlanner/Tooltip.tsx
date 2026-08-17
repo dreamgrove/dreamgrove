@@ -16,6 +16,7 @@ const Tooltip: React.FC = () => {
     scrollContainerWidth,
   } = useTimelineControls()
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [anchorPos, setAnchorPos] = useState<{ left: number; top: number } | null>(null)
   const boundingBox = scrollContainer?.getBoundingClientRect()
   const { cast, rectRef, isDragging } = useHoverContext()
 
@@ -24,6 +25,10 @@ const Tooltip: React.FC = () => {
   useEffect(() => {
     const handleMouseMove = (e: globalThis.MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY })
+      // Measure the hover-anchor element here (refs must not be read during
+      // render); the tooltip re-renders on every mousemove anyway
+      const rect = rectRef?.current?.getBoundingClientRect()
+      setAnchorPos(rect ? { left: rect.left, top: rect.top } : null)
     }
 
     window.addEventListener('mousemove', handleMouseMove)
@@ -31,25 +36,29 @@ const Tooltip: React.FC = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
     }
-  }, [])
+  }, [rectRef])
 
   const isMouseInTimeline = useMemo(() => {
     if (!boundingBox) return false
-    return (
+    const inBox =
       mousePos.x > boundingBox.left &&
       mousePos.x < boundingBox.right &&
       mousePos.y > boundingBox.top &&
       mousePos.y < boundingBox.bottom
-    )
-  }, [boundingBox, mousePos])
+    if (!inBox) return false
+    // The box check alone would show the tooltip through overlays (e.g. the
+    // Loadouts dropdown) — require the cursor to actually be over the timeline
+    const hovered = document.elementFromPoint(mousePos.x, mousePos.y)
+    return !!hovered && !!scrollContainer?.contains(hovered)
+  }, [boundingBox, mousePos, scrollContainer])
 
   if (!boundingBox) return null
 
   const renderCast = cast !== null && (isDragging || (!isDragging && isShiftKeyPressed)) //render cast only when dragging or when not dragging and shift is pressed
   const renderMouse = isShiftKeyPressed && isMouseInTimeline && !renderCast && !isDragging //default render mouse only we're in a timeline and we're pressing shift
 
-  const x = renderCast ? rectRef?.current?.getBoundingClientRect()?.left : mousePos.x - 70
-  const y = renderCast ? rectRef?.current?.getBoundingClientRect()?.top : mousePos.y - 45
+  const x = renderCast ? anchorPos?.left : mousePos.x - 70
+  const y = renderCast ? anchorPos?.top : mousePos.y - 45
 
   const c = {
     x: Math.max(0, x ?? 0),
