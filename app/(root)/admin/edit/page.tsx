@@ -126,6 +126,33 @@ function CenteredMessage({ children }: { children: React.ReactNode }) {
   )
 }
 
+function ToggleCheckbox({
+  label,
+  title,
+  checked,
+  onChange,
+}: {
+  label: string
+  title: string
+  checked: boolean
+  onChange: () => void
+}) {
+  return (
+    <label
+      title={title}
+      className="flex cursor-pointer items-center gap-1.5 text-xs font-medium whitespace-nowrap text-neutral-600 select-none dark:text-neutral-400"
+    >
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={onChange}
+        className="h-3.5 w-3.5 cursor-pointer rounded border-neutral-300 text-[#d57f43] accent-[#d57f43] dark:border-neutral-600"
+      />
+      {label}
+    </label>
+  )
+}
+
 function GithubGlyph() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -182,6 +209,11 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [splitPosition, setSplitPosition] = useState<number>(50)
   const [isDragging, setIsDragging] = useState<boolean>(false)
   const [wordWrap, setWordWrap] = useState<boolean>(true)
+  const [syncScroll, setSyncScroll] = useState<boolean>(true)
+  const [autoRefresh, setAutoRefresh] = useState<boolean>(true)
+  // What the preview actually renders. Tracks `bodyContent` while auto refresh
+  // is on, and freezes on the last snapshot while it's off.
+  const [previewContent, setPreviewContent] = useState<string>('')
   const [commitTitle, setCommitTitle] = useState<string>('')
   const [commitMessage, setCommitMessage] = useState<string>('')
   const [showCommitModal, setShowCommitModal] = useState<boolean>(false)
@@ -644,18 +676,38 @@ function FileEditor({ filePath }: { filePath: string }) {
       if (savedWrap !== null) {
         setWordWrap(savedWrap === 'true')
       }
+      const savedSyncScroll = localStorage.getItem('editor-sync-scroll')
+      if (savedSyncScroll !== null) {
+        setSyncScroll(savedSyncScroll === 'true')
+      }
+      const savedAutoRefresh = localStorage.getItem('editor-auto-refresh')
+      if (savedAutoRefresh !== null) {
+        setAutoRefresh(savedAutoRefresh === 'true')
+      }
     }
   }, [])
 
-  const toggleWordWrap = () => {
-    setWordWrap((prev) => {
+  const makeToggle = (key: string, setter: React.Dispatch<React.SetStateAction<boolean>>) => () => {
+    setter((prev) => {
       const next = !prev
       if (typeof window !== 'undefined') {
-        localStorage.setItem('editor-word-wrap', String(next))
+        localStorage.setItem(key, String(next))
       }
       return next
     })
   }
+
+  const toggleWordWrap = makeToggle('editor-word-wrap', setWordWrap)
+  const toggleSyncScroll = makeToggle('editor-sync-scroll', setSyncScroll)
+  const toggleAutoRefresh = makeToggle('editor-auto-refresh', setAutoRefresh)
+
+  // Feed the preview while auto refresh is on. Re-enabling it (or the initial
+  // load) pushes the current body through immediately.
+  useEffect(() => {
+    if (autoRefresh) setPreviewContent(bodyContent)
+  }, [bodyContent, autoRefresh])
+
+  const refreshPreview = () => setPreviewContent(bodyContent)
 
   // The editor now holds only the body, so the preview's line numbers map
   // straight across (no frontmatter offset needed).
@@ -681,7 +733,7 @@ function FileEditor({ filePath }: { filePath: string }) {
   // is bounded to a single section. With no matched anchors it degrades to the
   // old whole-pane ratio.
   useEffect(() => {
-    if (viewMode !== 'split') return
+    if (viewMode !== 'split' || !syncScroll) return
 
     const view = editorRef.current
     const editorScroller = view?.scrollDOM
@@ -836,7 +888,7 @@ function FileEditor({ filePath }: { filePath: string }) {
       editorScroller.removeEventListener('scroll', onEditorScroll)
       previewEl.removeEventListener('scroll', onPreviewScroll)
     }
-  }, [viewMode, editorReady])
+  }, [viewMode, editorReady, syncScroll])
 
   if (status === 'loading') {
     return <CenteredMessage>Loading…</CenteredMessage>
@@ -933,6 +985,30 @@ function FileEditor({ filePath }: { filePath: string }) {
             </button>
           </div>
           <div className="flex items-center gap-2">
+            {viewMode === 'split' && (
+              <div className="flex items-center gap-3 pr-1">
+                <ToggleCheckbox
+                  label="Sync scroll"
+                  title="Keep the preview scrolled to the same section as the editor"
+                  checked={syncScroll}
+                  onChange={toggleSyncScroll}
+                />
+                <ToggleCheckbox
+                  label="Auto refresh"
+                  title="Re-render the preview as you type"
+                  checked={autoRefresh}
+                  onChange={toggleAutoRefresh}
+                />
+                {!autoRefresh && (
+                  <button
+                    onClick={refreshPreview}
+                    className="rounded-md border border-neutral-300 px-2 py-1 text-xs font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                  >
+                    Refresh
+                  </button>
+                )}
+              </div>
+            )}
             <div
               className="inline-flex rounded-md border border-neutral-200 p-0.5 dark:border-neutral-700"
               role="group"
@@ -1108,10 +1184,10 @@ function FileEditor({ filePath }: { filePath: string }) {
                 {filePath.includes('raids') || filePath.includes('dungeons') ? (
                   <MDXPreview
                     setErrorLine={setErrorLine}
-                    content={'<RoleSelector isPreview={true}/>' + bodyContent}
+                    content={'<RoleSelector isPreview={true}/>' + previewContent}
                   />
                 ) : (
-                  <MDXPreview setErrorLine={setErrorLine} content={bodyContent} />
+                  <MDXPreview setErrorLine={setErrorLine} content={previewContent} />
                 )}
               </Suspense>
             </div>
