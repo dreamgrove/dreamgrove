@@ -1,6 +1,6 @@
 ---
 title: 'Restoration Druid Compendium'
-patch: '12.0.7'
+patch: '12.1'
 draft: false
 authors: ["nance"]
 summary: 'A list of the main resources for Restoration Druid'
@@ -8,18 +8,16 @@ summary: 'A list of the main resources for Restoration Druid'
 
 # News
 
+- As of 17 August there are critical bugs affecting !Overgrowth! (where its spells sometimes apply to a random target) and !Nurturing Dormancy! (where Rejuvs expire early under conditions relating to Haste value changes). This page makes recommendations that account for both bugs that will be updated when they are fixed.
+- Base game CDM now has functioning pandemic alerts (including sound) for !Lifebloom!
 - !Nature's Swiftness! no longer buffs !Regrowth! casts during !Convoke the Spirits!
 
-<Collapsible title="Midnight 12.0.7 features (Sporefall + Omnium Folio)">
+<Collapsible title="Omnium Folio (relevant all expansion)">
 
-### Sporefall
-QELive is up-to-date with these items. Refer to Top Gear for your BiS.
-
-### Omnium Folio selection:
 1. Unleashed Fire
 2. Self-Mending
 3. Lingering
-4. Burning Haste
+4. Masterful Cunning* (due to current ND bug)
 5. Overload
 
 </Collapsible>
@@ -36,7 +34,7 @@ Our official guides are all **complementary,** not intended to compete or confli
 
 - **[Questionably Epic](https://questionablyepic.com/resto-druid/spells/)**: Questionably Epic is written by Voulk and used as a blog for posting resources and articles unburdened by Wowhead/IV style guides. Any particularly useful pages are linked below:
   - [Common mistakes, and how to review your own logs](https://questionablyepic.com/resto-druid/common-mistakes) by face2face
-  - [Midnight Season One Raids QE encounter guide](https://questionablyepic.com/season-one-raids/) (general advice) by Broccoliz
+  - [Midnight Season Two Raids QE encounter guide](https://questionablyepic.com/venomous-abyss/) (general advice) by Broccoliz
 
 # Talents
 
@@ -45,31 +43,32 @@ Our official guides are all **complementary,** not intended to compete or confli
 
 ## Raid Healing
 
-We only have one raid build right now, but your mana return nodes are flexible.
+We always play Wildstalker in Raid for its healing profile, but we have two builds based on whether or not you need mana return:
 
-<Talents name="Wildstalker Raid Talents" talents="CkGA8cL7tpvige+kkmGM9zUPWbMmZb2mxMzY2GeAmZ2mxitZAAAAAAAAAAwihmNzYamBYWGzMzwwDMAAAAAMAAA22GLYamZZAAMbzs0sNzmNmZmZwMbY0MAYmZmBgB"/>
+<Talents name="Raid w/ mana return" talents="CkGADBD3hSPCL9Y9gz68WcKvMMjxMbzMjZmxsNMYmNjNmBAAAAAAAAAALDa2MjpZGDPgZZmZmZY4BGAAAAAAAAYbbsgpZmlBAwsNzSz2Mb2YMzMMzAjmBAzMzMAMA"/>
 
-In Raid, we ramp in one minute intervals. Here is the sequence you are looking to emulate:
+<Talents name="Raid w/o mana return" talents="CkGADBD3hSPCL9Y9gz68WcKvMMjxMbzMjZmxsNMYmFjNmBAAAAAAAAAALQzmZMNzAjZZMzMzihHYAAAAAAAAgttxCmmZWGAAz2MLNbzsZjZmZGmZgRzAgZmZGAGA"/>
+
 - Maintain !Lifebloom! on yourself and be mindful of your positioning for !Lifetreading!
-- !Swiftmend! yourself on cooldown to extend your Lifebloom and spend !Soul of the Forest! on !Rejuvenation!
-- Spread Rejuvs around the raid ~15 seconds before major damage events to gain !Abundance! stacks
+- !Swiftmend! yourself on cooldown to benefit from effects like our Apex talent !Everbloom!
+- Maintain !Abundance! (which has been reworked) using !Soul of the Forest! on !Rejuvenation!
 - !Convoke the Spirits! as damage starts, then !Regrowth! after for little mana cost
 
 ## M+ Healing
 
-There's currently a few different ways to approach dealing damage in M+. You'll be playing Wildstalker for its healing profile regardless, which is also relatively consistent in playstyle between builds.
+We always play Wildstalker in M+ for its healing profile, but there's a few different ways to approach dealing damage in M+ so I've provided standardised strings for the most common archetypes. tl;dr as long as you take all the healing nodes, our class tree is pretty flexible for utility and whatever kind of damage you want to do.
 
 > [!CAUTION]
-> As you push higher you will need to think for yourself in terms of your preferred playstyle and habits as well as the specific dungeon you are doing.
+> As you push higher you will need to think for yourself and consider your preferred playstyle and habits as well as the requirements of the specific dungeon you are doing. Encounter knowledge is crucial to be a successful Resto Druid.
 
-<Talents name="Certified vaultfiller"  talents="CkGA8cL7tpvige+kkmGM9zUPWPMmZbMjZmxsN8AMzsNjFbzAAAAAAAAAAgNDNbMmmBMmFzMzMLGGAAAAAMAAGwyyYBTzMLDAgZbmtmtZWsxYmZwMbY0MAAzMAMA"/>
+<Talents name="M+ #HealersHeal"  talents="CkGADBD3hSPCL9Y9gz68WcKvMMMmZbMjZmxsN8AMzsMjNbzAAAAAAAAAAgNDNbmx0MD8AmlxMzMLGeAAAAAAMAAGwyyYBTzMLDAgZbmtmtZWsxMzMwMMGNDAwMDADA"/>
 
-<Talents name="Offspec friendly (fewest buttons)"  talents="CkGA8cL7tpvige+kkmGM9zUPWPMmZbMjZmxsN8AMzsNjFbzAAAAAAAAAAgNDNbMmmBMmFzMzMLGGAAAAAMAAGwyyYBTzMLDAgZbmtmtZWsxYmZwMbY0MAAzMAMA"/>
+<Talents name="M+ Cat DPS"  talents="CkGADBD3hSPCL9Y9gz68WcKvMMMmZbMjZmxsN8AMzsMjNbzAAAAAAAAAAgtBNbGmmZMDmFzMzMLzwDYAAAAAAAwAWWGLYamZZAAMbzs1sNziNGzMwMLY0MAAzMAMA"/>
 
-<Talents name="meow i loove playing feral druid"  talents="CkGA8cL7tpvige+kkmGM9zUPWPMmZbMjZmxsNmHgxsNjFbzAAAAAAAAAAgtBNbMmmZMMmFzMzMLzwDYAAAAAAAwAWWGLYamZZAAMbzs1sNziNmZmHAmZB0MAAzMAMA"/>
+<Talents name="M+ Caster DPS"  talents="CkGADBD3hSPCL9Y9gz68WcKvMMMmZbMjZmxsN8AMzsNjNbzAAAAAAAAAAgNDNbmx0MDwsYmZmZxwDAAAAAgBAwAWWGLYamZZAAMbzs1sNziNGzMDmZzY0MAAzMAMA"/>
 
 - Maintain !Lifebloom! on a target that needs healing and will be stacked with the group for !Lifetreading!
-- Spread !Rejuvenation! using !Soul of the Forest! to prepare for heavy-hitting abilities
+- Spread !Rejuvenation! using !Power of the Archdruid! to prepare for heavy-hitting abilities
 - Cast !Regrowth! on a non-Lifebloom target to benefit from !Rampant Growth! cleave
 - !Convoke the Spirits! for big healing on the entire group
 
@@ -112,16 +111,14 @@ Resto Druids can use [WoWAnalyzer](https://wowanalyzer.com/) to receive general 
 
 ## Addons
 
-> [!CAUTION]
-> Further changes to Addons and "secret values" are coming in 12.1.
+> [!WARNING]
+> Further changes to Addons and "secret values" have arrived with 12.1.
 
-Midnight changed the addon game permanently. Here is what you need to know **as of 12.0.7** (some of these are already not functional on 12.1 PTR):
+Midnight changed the addon game permanently. Here is what you need to know as of 12.1:
 
-  - Base game raid/party frames are still bad. You will want Grid2 or Danders, and you need to understand private aura visibility settings in whichever you choose. Voulk's profiles for both linked on QE [here](https://questionablyepic.com/resto-druid/user-interface) are good bases to start from
-  - Base game Lifebloom pandemic sound alert doesn't work and uptime is ***really*** important so you ***need*** a separate solution for that
-  - WeakAuras is gone but popular fork [M33kAuras](https://github.com/m33shoq/M33kAuras) lives on. We can use it to track non-secret spell information in combat (which includes Lifebloom duration, allowing for pandemic sound alerts)
-  - We have a fully functional [Rejuv tracker](https://www.curseforge.com/wow/addons/rejuvtracker) (count and next expiry) being maintained by Pureformance
-  - [Healer External Tracker](https://www.curseforge.com/wow/addons/healer-external-tracker) by serinaa is goated for !Spatial Paradox! and !Innervate! visibility
+  - Base game raid/party frames are still bad. Many of us have now swapped to [EllesmereUI](https://www.curseforge.com/wow/addons/ellesmereui) which has an intuitive frame designer for HoT/buff placement. It functions as a complete UI replacement suite but is also modular, so you can disable whatever parts you don't need or want.
+  - Base game CDM now has functioning pandemic alerts (including sound) for !Lifebloom! so we no longer need an addon for that.
+  - There is currently no fully functioning Rejuv tracker (for count and next expiry).
 
 If you see someone playing with raid/party frames or an addon profile you like but can't find on your own, consider asking them directly for the import code, like in their stream chat or comment section.
 
