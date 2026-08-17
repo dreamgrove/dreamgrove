@@ -1,15 +1,18 @@
 ---
 title: Balance Druid Compendium
-patch: '12.0.7'
+patch: 12.0.7
 draft: false
-authors: ["Gamz", "Arctic", "Vinter"]
+authors:
+  - Gamz
+  - Arctic
+  - Vinter
 summary: A guide to Balance Druid
 ---
-
-
 # News
+
+## THE GUIDE WILL BE UPDATED ON AUGUST 18TH
+
 <Collapsible title="Midnight 12.0.7">
-  
 ### Sporefall & 298 Gear
 - Every item from Sporefall is considered best in slot at 298 item level, except for the Sporelord's Mycelial Insignia trinket. 
 
@@ -54,11 +57,8 @@ This is approximately ~11% dmg increase from having no set, depending on how man
 [Sim for tier set](https://www.dreamgrove.gg/static/sims/tiersims1m.htm)
 </Collapsible>
 
-
 # Rotation
-
 <HeroTalentsHeader id="generic" title="Openers">
-
 
 <Checkbox isIcon id="KEEPER" spellId={205636} name="Keeper of the Grove" defaultCheck radio="Keeper of the Grove" /> 
 <Checkbox isIcon id="EC" spellId={202770} name="Elune's Chosen" radio="Keeper of the Grove" />
@@ -74,7 +74,6 @@ This is approximately ~11% dmg increase from having no set, depending on how man
 
 [*KEEPER&&OpCon&&~LOP] <Timeline spellIds={[5176, 5176, 5176, 93402, 205636, 194223, 78674, 78674, 78674, 391528 ]}/> 
 
-
 [*KEEPER&&OpInc&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1239669, 78674, 78674, 78674, 5176, 202770, 205636, 102560, 78674, 78674, 78674, 194153 ]}/>
 
 [*EC&&OpInc&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1233272, 78674, 78674, 78674, 194153, 202770, 102560 ]}/> 
@@ -84,7 +83,6 @@ This is approximately ~11% dmg increase from having no set, depending on how man
 [*KEEPER&&OpCon&&LOP] <Timeline spellIds={[5176, 5176, 5176, 8921, 93402, 1239669, 78674, 78674, 78674, 5176, 205636, 194223, 78674, 391528 ]}/> 
 
 <Collapsible title= "Opener Explained">
-
 The opener for Balance Druid can change depending on the encounter and your choice of talents. You can opt into taking more active damaging cooldowns like !Fury of Elune!, !Convoke the Spirits! or !Wild Mushroom! and would have to fit them into your opener. 
 In an isolated scenario, it is generally optimal to enter !Eclipse! at the very start of combat to get the ability on cooldown. However much of that !Eclipse! window you actually play will depend on the fight and overall talent choices. You should look up other Balance Druids on Warcraftlogs for the specific fight you're preparing for and see what they do in their openers to get a general idea of what works best for that encounter. 
 
@@ -143,7 +141,6 @@ When reading the priority lists below, you should not think of these as steps to
 <Checkbox isIcon id="ConvokeEC" spellId={391528} name="Convoke the Spirits" />
 <Checkbox isIcon id="WeaverEC" spellId={393940} name="Starweaver" />
 
-
 - Use !Sunfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Use !Moonfire! if the remaining duration is less than 30% of the base duration or if you're about to use !194223|CA! / !102560|Inc! and the DoT would fall off before it expires.
 - Use !194223|Celestial Alignment!/!102560|Incarnation! if all the following conditions are true:
@@ -165,13 +162,10 @@ When reading the priority lists below, you should not think of these as steps to
   - The !Ascendant Stars! buff from your Apex Talent is up.
   - [*~WeaverEC] You have a !Touch the Cosmos! proc.
   - [*WeaverEC] You have a !Starweaver's Weft! proc.
-- Use !Starfire! inside !Lunar Eclipse!.
-- Use !Wrath! if you are not currently in an !Eclipse!.
-
+- Use !Starfire! to build Astral Power.
 </HeroTalentsHeader>
 
 ## AoE Priority (2+ targets)
-
 
 <HeroTalentsHeader id="kotg" title="Keeper of the Grove - AoE">
 <Checkbox isIcon id="Fury of EluneKAOE" spellId={202770} name="Fury of Elune" defaultCheck radio="New MoonKAOE" />
@@ -244,6 +238,7 @@ When reading the priority lists below, you should not think of these as steps to
 ## Rotational Details
 
 ### Eclipses and Fillers
+
 > [!NOTE]
 > This section is meant as a rough outline for deciding which !Eclipse! to use, when to press !Wrath! and !Starfire! and which target counts you want to spend !Starsurge! or !Starfall! on. These numbers can change heavily based on what talents you're taking and listing out every possible condition would make this section unintelligible. 
 
@@ -255,16 +250,16 @@ When reading the priority lists below, you should not think of these as steps to
 - [*Keeper Fillers] Cast !Wrath! in !194223|CA! / !102560|Inc! on 1 and 2 targets. 
 - [*Keeper Fillers] Cast !Starfire! in !194223|CA! / !102560|Inc! on 3+ targets.
 - [*EC Fillers] If talented into !Lunar Calling!, enter !Lunar Eclipse! on all target counts.
-- [*EC Fillers] Cast !Wrath! if you are outside of !Eclipse! on Single Target.
 - [*Keeper Fillers] Cast !Wrath! in !Solar Eclipse!.
 - [*Keeper Fillers] Cast !Starfire! in !Lunar Eclipse!.
-- [*EC Fillers] Cast !Starfire! in !Lunar Eclipse!.
+- [*EC Fillers] Cast !Starfire! in all situations
 - [*Keeper Fillers] Use !Starsurge! as your main spender on 2 targets if not talented into !Aetherial Kindling!/!Meteor Storm!.
 - [*EC Fillers] Use !Starsurge! as your main spender on 2 targets if not talented into !Aetherial Kindling!/!Meteor Storm!.
 - [*Keeper Fillers] Use !Starfall! as your main spender on 2+ targets if talented into !Aetherial Kindling!/!Meteor Storm!, and 3+ targets if not.
 - [*EC Fillers] Use !Starfall! as your main spender on 2+ targets if talented into !Aetherial Kindling!/!Meteor Storm!, and 3+ targets if not.
 
 ## Talent Interactions & Tips
+
 > [!NOTE]
 > This section is intended to provide more of an in-depth look into specific mechanics and interactions that are not immediately obvious, as opposed to providing a bullet list of points like in the rotation priority list. If you're new to the spec, we recommend that you read through the "Easy Mode" collapsible below. 
 
@@ -296,8 +291,7 @@ Below you can find a general overview of the Balance Druid playstyle aimed at pr
 
 By far the biggest change going into the Midnight expansion has been the complete rework of !Eclipse!, turning it from a maintenance buff into a 32 second cooldown with 2 charges. A very common mistake that players make is getting stuck on old and antiquated ways of thinking about !Eclipse!, and not fully utilizing the effect of the cooldown.
 
-Eclipse has 2 charges, and does not benefit from any CDR effect, meaning that any moment spent **__sitting at 2 charges__** is wasted damage. 
-The most important thing to note about !Eclipse! is that it is **a damage cooldown**, meaning that you want to line it up with moments where you have access to high value spells. This usually ends up in moments where you have to pool Astral Power and delay using your cooldowns for a few seconds, which can feel unintuitive at first, but will result in higher damage overall.
+Eclipse has 2 charges, and does not benefit from any CDR effect, meaning that any moment spent **__sitting at 2 charges__** is wasted damage. The most important thing to note about !Eclipse! is that it is **a damage cooldown**, meaning that you want to line it up with moments where you have access to high value spells. This usually ends up in moments where you have to pool Astral Power and delay using your cooldowns for a few seconds, which can feel unintuitive at first, but will result in higher damage overall.
 
 The distinction between what is a **good spell** and what is a **bad spell** to cast during cooldowns can sound confusing, but is not that complicated.
 Generally speaking, **bad spells** to use during cooldowns include spells that don't inherently do much damage on their own, but aim to either buff or enhance your damage in other ways. This includes spells like !Sunfire!, !Moonfire!, !Force of Nature! and !Fury of Elune!. It is optimal to press these buttons **before** starting your cooldowns. As for !Sunfire! and !Moonfire! it will depend on their remaining duration, but generally you want to refresh before starting a cooldown sequence. Getting into the habit of reapplying your DoTs during your !Eclipse! downtime ensures that you won't need to spend any globals doing it during your damage window, while also providing some quick Astral Power generation to help in pooling for a new cooldown window.
@@ -309,23 +303,17 @@ It's worth to keep in mind that !Celestial Alignment! lasts 15 seconds while !10
 </Collapsible>
 
 <Collapsible title="Starfall on Single Target">
-
 Whenever you're playing builds with !Starweaver!, there are some situations where you want to press !Starfall! on single target, even without a !Starweaver's Warp! proc. This is because !Starfall! has a higher chance of incurring a free !Starsurge! proc from !Starweaver!, and can overall earn you more casts of your spenders. Usually it would still be a damage loss to press !Starfall! like this, but because of talents like !Hail of Stars!, !Stellar Amplification!, !Meteorites! and the !Meteor Storm!/!Aetherial Kindling! choice node, there are some combinations of talents where it is a direct increase to spend your !Touch the Cosmos! procs on !Starfall!. Which talent combinations this is true for can get complicated fast due to the number of variables involved. The general rule of thumb is that if you have at least 1 of either !Meteorites! or !Meteor Storm!/!Aetherial Kindling! effects with !Stellar Amplification! then you should be spending your !Touch the Cosmos! procs on !Starfall! even on single target.
-
 </Collapsible>
 
 <Collapsible title="Juggling Stellar Amplification">
-
 In the Midnight Season 1 raids, there are a few spots where you are consistently fighting 2 targets. Because of the rise of builds using !Starweaver!, your natural instinct is to press !Starfall! as your main spender, but that is not always your best option. While it is optimal to use !Starfall! as your main spender on 2 targets, there are some different conditions to be aware of. If you are playing !Rattle the Stars! with !Stellar Amplification! for example, you want to wait with pressing !Starfall! until both targets are affected by !Stellar Amplification!. This also means that with builds taking !Starweaver! you want to use !Starfall! as your main spender while juggling which target you spend your free !Starsurge! procs on in order to keep up !Stellar Amplification! on both targets.
-
 </Collapsible>
 
 <Collapsible title="Elune's Chosen vs Keeper of the Grove">
-
 The choice between !Elune's Chosen! and !Keeper of the Grove! mostly comes down to personal preference. With the changes coming from last expansion, the spec has access to more instant casts, making the movement tax from playing !Elune's Chosen! less punishing. The highest simming builds for !Elune's Chosen! also pick up !Rattle the Stars!, making the potential value in big AoE pulls in m+ higher compared to !Starweaver! builds.
 
 The damage profiles of both hero trees are very similar now. In the previous expansion !Elune's Chosen! would provide a flat and static damage graph, while !Keeper of the Grove! played around powerful burst. With the nerf to !Harmony of the Grove! and the change to !Bounteous Bloom!, this is no longer the case, and both hero trees provide close to the same damage profile. That being said, !Keeper of the Grove! is likely to remain as the preferred choice for raid encounters and !Elune's Chosen! for mythic+.
-
 </Collapsible>
 
 <Collapsible title="How to Use Whirling Stars">
@@ -345,7 +333,6 @@ When playing !Elune's Chosen! you gain more freedom in using your cooldowns and 
 
 Depending on the fight timer, this talent is stronger than !Power of the Dream! which it shares a choice node with. As always, you should research the fight you are preparing for on [warcraftlogs](https://www.warcraftlogs.com/) or sim your character to make an educated guess.
 </Collapsible>
-
 
 # Talents
 
@@ -496,8 +483,6 @@ Both hero trees are viable and perform very close to each other. Feel free to ch
 </div>
 </Talents>
 
-
-
 # Gearing & Consumables
  
 ## Stat Priority
@@ -578,7 +563,6 @@ Later on in the season you should have this crafted on either a Belt or a Wrist 
 |  | [Void-Reaper's Libram](https://www.wowhead.com/item=251785/void-reapers-libram?bonus=12802:13577&class=11&hero=23&ilvl=276&spec=102) | |
 |  | [Sylvan Wakrapuku](https://www.wowhead.com/item=251784/sylvan-wakrapuku?bonus=12802:13577&class=11&hero=23&ilvl=276&spec=102) | |
 |  | [Lost Idol of the Hash'ey](https://www.wowhead.com/item=251783/lost-idol-of-the-hashey?bonus=12802:13577&hero=23&ilvl=276&spec=102) | |
-
 
 # FAQ
 

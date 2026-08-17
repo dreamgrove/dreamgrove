@@ -18,7 +18,9 @@ const Collapsible = ({ title, children }) => {
         className="group flex h-auto w-full cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-200"
         onClick={toggle}
       >
-        <span className="text-left text-lg font-bold">{title}</span>
+        <span data-collapsible-title className="text-left text-lg font-bold">
+          {title}
+        </span>
         <span
           className={`text-gray-400 transition-transform duration-300 ease-out group-hover:text-gray-600 dark:text-gray-500 dark:group-hover:text-gray-300 ${
             isOpen ? 'rotate-180' : 'rotate-0'
@@ -34,7 +36,7 @@ const Collapsible = ({ title, children }) => {
       >
         <div className="overflow-hidden">
           <div className="h-px bg-gray-200/50 dark:bg-gray-700/30" />
-          <div className="p-4">{children}</div>
+          <div className="collapsible-content p-4">{children}</div>
         </div>
       </div>
     </div>

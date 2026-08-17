@@ -84,6 +84,12 @@ h1.content-header::before {
   text-align: left;
 }
 
+/* The collapsible already pads its content, so drop the top margin the first
+   element (usually a heading) would otherwise add on top of that padding. */
+.collapsible-content > :first-child {
+  margin-top: 0;
+}
+
 /* Alert component styles */
 .alert-content > p:first-child {
   @apply mt-0;
@@ -97,7 +103,6 @@ h1.content-header::before {
   @apply underline;
 }
 
-/* Remove top margin from markdown alert titles */
 .markdown-alert-title {
   @apply mt-0!;
 }
@@ -423,7 +428,6 @@ div.markdown-alert-caution {
   }
 }
 
-/* Segment */
 .spec-seg {
   position: relative;
   display: flex;
@@ -464,7 +468,6 @@ div.markdown-alert-caution {
   background: color-mix(in srgb, var(--spec-accent, #d57f43) 18%, transparent);
 }
 
-/* Icon */
 .spec-seg__icon {
   position: relative;
   flex-shrink: 0;
@@ -498,7 +501,6 @@ div.markdown-alert-caution {
   filter: none;
 }
 
-/* Name */
 .spec-seg__name {
   font-family: 'thiccboi', sans-serif;
   font-weight: 600;

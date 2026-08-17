@@ -1,9 +1,8 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect } from 'react'
 import WowheadClientVersion from './WowheadClientVersion'
 import { FaCheck } from 'react-icons/fa'
 import { CheckboxContext } from '../custom/CheckboxProvider'
 
-// Define proper prop types
 interface CheckboxProps {
   id?: string
   spellId?: string | number
@@ -26,31 +25,31 @@ const Checkbox = ({
   defaultCheck = false,
   disabled = true,
 }: CheckboxProps) => {
+  // Mirror the server Checkbox: fall back to the spellId when no explicit id is given,
+  // so `[*<id>]` conditional rows resolve against the same key the checkbox registers under.
+  const checkboxId = id === '' ? spellId.toString() : id
+
   const child = <WowheadClientVersion type={type} id={spellId} name={name} disabled={disabled} />
 
-  const [checked, setChecked] = useState(defaultCheck)
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
 
+  // Derive checked state straight from the shared provider (like the server CheckboxToggler),
+  // so no local state can drift from checkboxMap and radio-group toggles stay in sync.
+  const checked = checkboxMap[checkboxId]?.checked || false
+
   useEffect(() => {
-    updateCheckbox(id, defaultCheck, radio || null)
-  }, [])
+    if (checkboxMap[checkboxId] === undefined) {
+      updateCheckbox(checkboxId, defaultCheck, radio || null)
+    }
+  }, [checkboxId, defaultCheck, radio, updateCheckbox, checkboxMap])
 
   const handleToggle = useCallback(() => {
-    const newValue = !checked
-    updateCheckbox(id, newValue, radio || null)
-    setChecked(newValue)
-  }, [checked, id, radio, updateCheckbox])
-
-  useEffect(() => {
-    // Update local state when the checkbox state changes in the provider
-    if (checkboxMap[id]) {
-      setChecked(checkboxMap[id].checked)
-    }
-  }, [checkboxMap, id])
+    updateCheckbox(checkboxId, !checked, radio || null)
+  }, [checked, checkboxId, radio, updateCheckbox])
 
   return (
     <div style={{ userSelect: 'none', height: '100%' }} className="relative flex h-full w-full">
-      <label className="flex h-full w-full" aria-label={`Toggle ${id}`}>
+      <label className="flex h-full w-full" aria-label={`Toggle ${checkboxId}`}>
         <input
           className="absolute top-0 left-0 z-10 mt-2 mr-2 h-full w-full cursor-pointer opacity-0 focus:outline-hidden"
           type="checkbox"

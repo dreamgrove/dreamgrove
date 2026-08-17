@@ -1,13 +1,39 @@
 # Paste into advanced below the output from your SimC
 
-copy="0pc"
+copy="0set s1/s2"
 set_bonus=midnight_season_1_2pc=0
 set_bonus=midnight_season_1_4pc=0
+set_bonus=midnight_season_2_2pc=0
+set_bonus=midnight_season_2_4pc=0
 
-copy="2p"
+copy="2set s1"
 set_bonus=midnight_season_1_2pc=1
 set_bonus=midnight_season_1_4pc=0
+set_bonus=midnight_season_2_2pc=0
+set_bonus=midnight_season_2_4pc=0
 
-copy="4p"
+copy="4set s1"
 set_bonus=midnight_season_1_2pc=1
 set_bonus=midnight_season_1_4pc=1
+set_bonus=midnight_season_2_2pc=0
+set_bonus=midnight_season_2_4pc=0
+
+copy="2set s2"
+set_bonus=midnight_season_1_2pc=0
+set_bonus=midnight_season_1_4pc=0
+set_bonus=midnight_season_2_2pc=1
+set_bonus=midnight_season_2_4pc=0
+
+copy="2p s1 + 2p s2"
+set_bonus=midnight_season_1_2pc=1
+set_bonus=midnight_season_1_4pc=0
+set_bonus=midnight_season_2_2pc=1
+set_bonus=midnight_season_2_4pc=0
+
+copy="4set s2"
+set_bonus=midnight_season_1_2pc=0
+set_bonus=midnight_season_1_4pc=0
+set_bonus=midnight_season_2_2pc=1
+set_bonus=midnight_season_2_4pc=1
+
+

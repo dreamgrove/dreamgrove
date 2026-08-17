@@ -3,6 +3,7 @@ import { useEffect, useState, memo, useCallback, useMemo } from 'react'
 import { wowheadCache } from './wowheadCache'
 import WowheadClientIcon from './WowheadClientIcon'
 import { getWowheadInfo, qualityToColor } from 'lib/wowhead-api'
+import spellData from '../../spellData.json'
 
 function formatUrl(url) {
   const parts = url.split('/')
@@ -47,11 +48,13 @@ function WowheadClientVersion({
 
   let displayId = id
 
-  // Handle case when id is not provided
-  if (!id && type === 'spell' && typeof window !== 'undefined') {
-    // This would need to be adapted to client-side access of spellData
-    // For now, just use the URL if provided
-    if (url) {
+  // Handle case when id is not provided: resolve the spell id from the name map
+  // (mirrors the server Wowhead component) so `!SpellName!` still shows a real icon,
+  // falling back to parsing the id out of an explicit url.
+  if (!id && type === 'spell') {
+    if (spellData[name]) {
+      displayId = spellData[name]
+    } else if (url) {
       displayId = extractIdFromUrl(url)
     }
   }
@@ -62,10 +65,8 @@ function WowheadClientVersion({
   const fetchWowhead = useCallback(async () => {
     if (typeof window === 'undefined') return
 
-    // First check our client-side cache
     const cachedData = wowheadCache.get(cacheKey)
     if (cachedData) {
-      // Use cached data
       if (cachedData.quality !== undefined) {
         setQuality(cachedData.quality)
       }
@@ -84,7 +85,6 @@ function WowheadClientVersion({
     setIsLoading(true)
 
     try {
-      // Use our new API client instead of direct server function
       const data = await getWowheadInfo({
         id: id || '',
         type,
@@ -93,7 +93,6 @@ function WowheadClientVersion({
         url: url || '',
       })
 
-      // Prepare the processed data for caching
       const processedData: {
         url: string
         timestamp: number
@@ -107,12 +106,10 @@ function WowheadClientVersion({
         display: data.display || name,
       }
 
-      // Set display name from API
       if (!name && data.display) {
         setDisplay(data.display)
       }
 
-      // Set quality and link color for items
       if (data.quality !== undefined) {
         processedData.quality = data.quality
         processedData.linkColor = qualityToColor[data.quality] || '#d57f43'
@@ -121,18 +118,15 @@ function WowheadClientVersion({
         setLinkColor(qualityToColor[data.quality] || '#d57f43')
       }
 
-      // Store icon if available
       if (data.icon) {
         processedData.icon = data.icon
       }
 
-      // Store in our client-side cache
       wowheadCache.set(cacheKey, processedData)
     } catch (error: any) {
       console.warn(
         `Failed to fetch from Wowhead for ${type}=${displayId}: ${error.message || 'Unknown error'}`
       )
-      // Use provided name or displayId as fallback
       setDisplay(name || `${type}-${displayId}`)
     } finally {
       setIsLoading(false)
@@ -140,14 +134,12 @@ function WowheadClientVersion({
   }, [whUrl, type, displayId, name, cacheKey, beta, url])
 
   useEffect(() => {
-    // Only run fetch if we're in the browser
     if (typeof window !== 'undefined') {
       fetchWowhead()
     }
 
     // Clean up expired cache entries occasionally
     if (Math.random() < 0.1) {
-      // 10% chance on each mount
       wowheadCache.cleanup()
     }
   }, [fetchWowhead])
@@ -195,6 +187,5 @@ function WowheadClientVersion({
 }
 
 export default memo(WowheadClientVersion, (prevProps, nextProps) => {
-  // Only re-render if id changes
   return prevProps.id === nextProps.id
 })
