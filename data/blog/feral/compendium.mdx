@@ -352,16 +352,94 @@ The exact opener you should choose will have a ton of variables. The !Rake! cast
 
 ## Raid Talents
 
-Coming Soon. Check back August 17th. This section will likely see several updates over the course of the tier as strategies are developed and changed over time. Both hero trees are looking extremely competitive with each other, though Wildstalker pulls cleanly ahead if you are receiving [Power Infusion](https://www.wowhead.com/spell=10060/power-infusion).
+Coming Today (for NA). Sorry this is delayed, the original update for today got lost in an accident so to speak. This section will likely see several updates over the course of the tier as strategies are developed and changed over time. Both hero trees are looking extremely competitive with each other, though Wildstalker pulls cleanly ahead if you are receiving [Power Infusion](https://www.wowhead.com/spell=10060/power-infusion).
 
 <div className="pb-6">
 </div>
 
 ## Dungeon Talents
 
-My recommendation will continue to be Druid of the Claw for mythic+. That being said, Wildstalker is just as good. Especially if you feel you need more single target. The main downside of Wildstalker is your ramp-up time is a bit longer (and its arguably more punishing as Rake uptime is more relevant).
+My recommendation will continue to be Druid of the Claw for mythic+. That being said, Wildstalker is just as good. The main downside of Wildstalker is your ramp-up time is a bit longer (and its arguably more punishing as Rake uptime is more relevant).
 
-Sample talents and explanation of choices will be provided just before the release of Mythic+ season 2. Check back in on August 17th.
+Unfortunately, the shifting of our spec tree has reduced the effectiveness of swipe oriented builds by quite a bit. It is still viable, but the difference is large enough that I will no longer be recommending them. This is due to !Infected Wounds! being locked in, and !Merciless Claws! *not* being locked in anymore, which means talenting !Wild Slashes! has a higher opportunity cost than in season 1. We, in general, have much less talent diversity as you will see (in my opinion).
+
+<Talents
+  defaultTree="Spec"
+  name="DOTC"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZ2MzMzMGzmx2YbGzMmZAAAAYJY2M8AmZmaGziZmZmFmZMAAAAAAADAAAgmZZWmZmBEYBMzAswgBAAwMbYA" 
+  colors={[
+    { color: "red", nodes: ["Coiled to Spring", "Panther's Guile", "Lunar Inspiration", "Saber Jaws", "Starfire", "Moonkin Form", "Astral Influence", "Rejuvenation", "Wild Growth", "Starsurge", "Sunfire", "Starlight Conduit", "Ironfur", "Lingering Healing", "Symbiotic Relationship"] },
+    { color: "white", nodes: ["Wild Slashes", "Merciless Claws", "Maim", "Hibernate", "Gale Winds", "Ursine Vigor"] },
+    { color: "yellow", nodes: ["Double-Clawed Rake", "Tireless Energy", "Carnivorous Instinct", "Hunger for Battle", "Ashamane's Guidance", "Remove Corruption", "Nurturing Instinct", "Matted Fur", "Typhoon", "Ursol's Vortex", "Lore of the Grove", "Perfectly-Honed Instincs", "Fluid Form", "Improved Stampeding Roar", "Lycaras Inspiration", "Forestwalk", "Innervate", "Heart of the Wild"]},
+    { color: "green", nodes: ["Incapacitating Roar", "Rake", "Frenzied Regeneration", "Ursocs Spirit", "Swipe", "Feline Swiftness", "Grievous Wounds", "Rip", "Verdant Heart", "Improved Barkskin", "Killer Instinct", "Primal Fury", "Thick Hide", "Skull Bash", "Natural Recovery", "Aessina's Renewal", "Soothe", "Wild Charge", "Well-Honed Instincts", "Stampeding Roar", "Gift of the Wild", "Lycara's Teachings", "Instincts of the Claw", "Oakskin", "Circle of the Wild"]}
+  ]} 
+> 
+
+  If you're not getting good uptime on !Hunger for Battle! stacks/need more boss damage and aren't pulling mobs onto the boss; then you can remove it for either !Ashamane's Guidance! or !Carnivorous Instinct!. The latter is better in AoE and is generally easier to play, whereas the former nets more single target.
+
+  <br />
+
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
+
+<Talents
+  defaultTree="Spec"
+  name="Wildstalker"
+  talents="CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAgZmZ2MzMzMGzmx2YbGzMmZAAAAYJY2M8AmZmaGziZmZmFmZMAAAAAAADAAAgAgZZmlmlZW2AzMALMYAAMzAgB" 
+  colors={[
+    { color: "red", nodes: ["Coiled to Spring", "Panther's Guile", "Lunar Inspiration", "Saber Jaws", "Starfire", "Moonkin Form", "Astral Influence", "Rejuvenation", "Wild Growth", "Starsurge", "Sunfire", "Starlight Conduit", "Ironfur", "Lingering Healing", "Symbiotic Relationship"] },
+    { color: "white", nodes: ["Wild Slashes", "Merciless Claws", "Maim", "Hibernate", "Gale Winds", "Ursine Vigor"] },
+    { color: "yellow", nodes: ["Double-Clawed Rake", "Tireless Energy", "Carnivorous Instinct", "Hunger for Battle", "Ashamane's Guidance", "Remove Corruption", "Nurturing Instinct", "Matted Fur", "Typhoon", "Ursol's Vortex", "Lore of the Grove", "Perfectly-Honed Instincs", "Fluid Form", "Improved Stampeding Roar", "Lycaras Inspiration", "Forestwalk", "Innervate", "Heart of the Wild"]},
+    { color: "green", nodes: ["Incapacitating Roar", "Rake", "Frenzied Regeneration", "Ursocs Spirit", "Swipe", "Feline Swiftness", "Grievous Wounds", "Rip", "Verdant Heart", "Improved Barkskin", "Killer Instinct", "Primal Fury", "Thick Hide", "Skull Bash", "Natural Recovery", "Aessina's Renewal", "Soothe", "Wild Charge", "Well-Honed Instincts", "Stampeding Roar", "Gift of the Wild", "Lycara's Teachings", "Instincts of the Claw", "Oakskin", "Circle of the Wild"]}
+  ]} 
+> 
+
+  If you're not getting good uptime on !Hunger for Battle! stacks/need more boss damage and aren't pulling mobs onto the boss; then you can remove it for either !Ashamane's Guidance! or !Carnivorous Instinct!. The latter is better in AoE and is generally easier to play, whereas the former nets more single target.
+
+  You will notice this looks identical to the DOTC build. That is not a mistake.
+
+  <br />
+
+<div className="flex justify-center">
+  <div className="flex space-x-4 items-center">
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
+      <span className="text-sm">Never Take</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-white rounded-sm"></div>
+      <span className="text-sm">Niche</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-yellow-400 rounded-sm"></div>
+      <span className="text-sm">Optional</span>
+    </div>
+    <div className="flex items-center space-x-1">
+      <div className="w-3 h-3 bg-green-500 rounded-sm"></div>
+      <span className="text-sm">Take</span>
+    </div>
+  </div>
+</div>
+</Talents>
 
 # Consumables
 
@@ -404,23 +482,44 @@ Sample talents and explanation of choices will be provided just before the relea
 No strict crafting order, as you generally want to target the highest temporary dps gain, with [Arcanoweave Lining](https://www.wowhead.com/item=240166/arcanoweave-lining) as the embellishment of choice. Long term bis is Bracers + Shoulder/Gloves. Note that you should not craft a necklace, helmet or weapon as we will acquire those via Heroic Ula'tek bonus rolls.
 
 > [!CAUTION]
-> If you will not be clearing Mythic Lair week 1, but you still care about early player power, you may want to consider crafting a weapon first (with [Hunter's Ritual Stone](https://www.wowhead.com/ptr/spell=1297382/hunters-ritual-stone) as your embellishment), as poor luck with Ula'tek bonus rolls could mean you are stuck with a low item level weapon for weeks.
+> If you will not be clearing Mythic Lair week 1, but you still care about early player power, you may want to consider crafting a weapon first (with [Darkmoon Sigil: Hunt](https://www.wowhead.com/item=245876/darkmoon-sigil-hunt) as your embellishment), as poor luck with Ula'tek bonus rolls could mean you are stuck with a low item level weapon for weeks.
 
-Endgame ideal is on Wrists + Cloak/Loa Worshipers Band, but you should try to get your item level as high as you can in all slots.
 
 ## Trinkets
 
-Coming Soon. I am anticipating a large trinket tuning pass, which includes buffing many of the suspiciously poor trinkets, and nerfing our current best ones. I am also expecting a nerf to some 12.0 raid trinkets. This will be updated shortly after those notes are released, or August 18th, whichever comes first.
+This list is in general power level order assuming the highest item level versions of the trinket. Stat on-uses other than [Heart of Ulatek](https://www.wowhead.com/item=270175/voracious-heart-of-ulatek?bonus=13848:13662&hero=21&ilvl=344&spec=103) are omitted, as they are too poor to use as a second on-use, and are nowhere near as good as [Heart of Ulatek](https://www.wowhead.com/item=270175/voracious-heart-of-ulatek?bonus=13848:13662&hero=21&ilvl=344&spec=103).
+
+**For use in Raid:**
+| Tier | Trinket | Notes |
+| :-: | :- | :- |
+| **S** | [Heart of Ulatek](https://www.wowhead.com/item=270175/voracious-heart-of-ulatek?bonus=13848:13662&hero=21&ilvl=344&spec=103) | Pair with Berserk
+| | [Zul'jin's Guillotine Technique](https://www.wowhead.com/item=270173/zuljins-guillotine-technique?bonus=40:13335:13848&hero=21&ilvl=344&spec=103) | Yes this is a single-target trinket. Yes it is so good it gets to keep this spot anyway. |
+| **B** | [Vashnik's Sanguine Rancor](https://www.wowhead.com/item=270166/vashniks-sanguine-rancor?bonus=13335:12854&class=11&hero=21&ilvl=334&spec=103) | Dropped a spot in the ranking due to its inflexibility in a raid where there is a solid amount of AoE to go around.
+| | [Gebbo's Bottomless Bag](https://www.wowhead.com/item=270164/gebbos-bottomless-bag?bonus=13335:12854&class=11&hero=21&ilvl=334&spec=103) | Standard stat stick, not much to it
+| | [Keeper's Seething Core](https://www.wowhead.com/item=270165/keepers-seething-core?bonus=13335:12854&class=11&hero=21&ilvl=334&spec=103) |
+| | [Lightspire Core](https://www.wowhead.com/item=250214/lightspire-core?bonus=13440:12854&class=11&hero=21&ilvl=334&spec=103) |
+| | [Font of Venomous Rage](https://www.wowhead.com/item=270168/font-of-venomous-rage?hero=21&ilvl=344&spec=103) | This is a bit of a controversial trinket. Its not particularly great, but if you can send this into enough damage amps then maybe it can be useful, since its a long cooldown with its budget weighted into the on use.
+| **C** | [Sapling of the Dawnroot](https://www.wowhead.com/item=250259/sapling-of-the-dawnroot?bonus=13440:12854&class=11&hero=21&ilvl=334&spec=103) | Bumped down due to inflexibility. Also, it summons a pet, and those tend to be buggy/unwieldy...
+
+**For use in Mythic+:**
+| Tier | Trinket | Notes |
+| :-: | :- | :- |
+| **S** | [Heart of Ulatek](https://www.wowhead.com/item=270175/voracious-heart-of-ulatek?bonus=13848:13662&hero=21&ilvl=344&spec=103) | Pair with Berserk
+| | [Zul'jin's Guillotine Technique](https://www.wowhead.com/item=270173/zuljins-guillotine-technique?bonus=40:13335:13848&hero=21&ilvl=344&spec=103) | You might get more overall dps out of the A tier trinkets, but this provides so much single target that its hard to argue against. Frankly, even if you are someone who tends to lean AoE, you should probably be playing this.
+| **A** | [Gebbo's Bottomless Bag](https://www.wowhead.com/item=270164/gebbos-bottomless-bag?bonus=13335:12854&class=11&hero=21&ilvl=334&spec=103) | Generic stat-stick
+| | [Lightspire Core](https://www.wowhead.com/item=250214/lightspire-core?bonus=13440:12854&class=11&hero=21&ilvl=334&spec=103) |
+| | [Keeper's Seething Core](https://www.wowhead.com/item=270165/keepers-seething-core?bonus=13335:12854&class=11&hero=21&ilvl=334&spec=103) |
+| | [Fiber of Living Agony](https://www.wowhead.com/item=265657/fiber-of-living-agony?hero=21&ilvl=321&spec=103) | Comes from delves
 
 ### Trinket FAQ
 
 Q: Should we be playing double on-use trinkets?
 
-A: No, Feral will typically play just one on-use. None of the damage on-uses look viable at this time.
+A: No, Feral will typically play just one on-use. [Font of Venomous Rage](https://www.wowhead.com/item=270168/font-of-venomous-rage?hero=21&ilvl=344&spec=103) can potentially be an exception in niche scenarios.
 
 Q: Are any of the delve trinkets good?
 
-A: Not really. Some are fine for their item level, but get quickly outscaled by trinkets from superior sources.
+A: Some are fine for their item level... which is low. Though we have a pretty poor batch of trinkets this tier outside of the top 2 that [Fiber of Living Agony](https://www.wowhead.com/item=265657/fiber-of-living-agony?hero=21&ilvl=321&spec=103) sneaks into the M+ list.
 
 Q: Why do damaging items deal more damage as Wildstalker?
 
