@@ -33,6 +33,7 @@ interface TimelineViewProps {
   onEncounterChange?: (encounterId: string) => void
   tutorialSpells?: PlayerAction[]
   bossAbilities?: BossAbilitiesResponse | null
+  bossAbilitiesLoading?: boolean
 }
 
 function TimelineViewInner({
@@ -43,6 +44,7 @@ function TimelineViewInner({
   currentEncounterId = 'empty',
   onEncounterChange = () => {},
   bossAbilities = null,
+  bossAbilitiesLoading = false,
 }: TimelineViewProps) {
   const { scrollContainerRef } = useTimelineScroll()
 
@@ -107,6 +109,17 @@ function TimelineViewInner({
             currentEncounterId={currentEncounterId}
             onEncounterChange={onEncounterChange}
           />
+          {bossAbilitiesLoading && (
+            <div className="mt-2 flex items-center gap-2 text-xs text-neutral-400">
+              <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-neutral-600 border-t-orange-500" />
+              Loading boss abilities…
+            </div>
+          )}
+          {!bossAbilitiesLoading && bossAbilities && bossAbilities.difficulty === 4 && (
+            <p className="mt-2 text-xs text-neutral-400 italic">
+              Showing Heroic timings since no Mythic logs available
+            </p>
+          )}
           {bossAbilities && bossAbilities.abilities.length > 0 && (
             <BossAbilityToggles
               abilities={bossAbilities.abilities}

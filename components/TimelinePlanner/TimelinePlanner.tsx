@@ -35,6 +35,8 @@ export default function TimelinePlanner({
 
   const bossAbilities =
     currentEncounterId === 'empty' ? null : (bossAbilitiesByEncounter[currentEncounterId] ?? null)
+  const bossAbilitiesLoading =
+    currentEncounterId !== 'empty' && bossAbilitiesByEncounter[currentEncounterId] === undefined
 
   useEffect(() => {
     if (currentEncounterId === 'empty') return
@@ -191,6 +193,7 @@ export default function TimelinePlanner({
               currentEncounterId={currentEncounterId}
               onEncounterChange={setCurrentEncounterId}
               bossAbilities={bossAbilities}
+              bossAbilitiesLoading={bossAbilitiesLoading}
             />
           </div>
         </TimelineLengthProvider>

@@ -12,15 +12,14 @@ interface FightSelectorProps {
 
 export const encounterOptions: EncounterOption[] = [
   { id: 'empty', name: 'Empty' },
-  { id: '3176', name: 'Imperator Averzian' },
-  { id: '3177', name: 'Vorasius' },
-  { id: '3179', name: 'Fallen King Salhadaar' },
-  { id: '3178', name: 'Vaelgor & Ezzorak' },
-  { id: '3180', name: 'Lightblinded Vanguard' },
-  { id: '3181', name: 'Crown of The Cosmos' },
-  { id: '3306', name: 'Chimaerus' },
-  { id: '3182', name: "Bel'oren" },
-  { id: '3183', name: 'Midnight Falls' },
+  { id: '3470', name: "Nek'zali the Soulcoiler" },
+  { id: '3445', name: 'Entombed Sentinels' },
+  { id: '3455', name: 'Vashnik the Malignant' },
+  { id: '3497', name: 'The Lost Explorers' },
+  { id: '3420', name: 'Sszorak' },
+  { id: '3421', name: 'The Twin Fangs' },
+  { id: '3429', name: 'The Coiled Altar' },
+  { id: '3492', name: "Ula'tek" },
 ]
 
 export default function FightSelector({

@@ -107,7 +107,7 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const encounterId = Number(request.nextUrl.searchParams.get('encounterId') || 3009)
+    const encounterId = Number(request.nextUrl.searchParams.get('encounterId') || 3470)
     const difficulty = Number(request.nextUrl.searchParams.get('difficulty') || 5)
 
     if (!Number.isFinite(encounterId) || encounterId <= 0) {
@@ -133,14 +133,25 @@ export async function GET(request: NextRequest) {
         }
       }
     `
-    const rankingsResp = await executeWarcraftLogsQuery('rankings', token, rankingsQuery, {
-      encounterId,
-      difficulty,
-    })
-
-    const encounter = rankingsResp?.data?.worldData?.encounter
-    const encounterName: string = encounter?.name ?? ''
-    const rankings = encounter?.characterRankings?.rankings ?? []
+    // Early in a season some encounters have no Mythic logs yet — fall back to Heroic.
+    const HEROIC = 4
+    const difficultiesToTry = difficulty === 5 ? [5, HEROIC] : [difficulty]
+    let usedDifficulty = difficulty
+    let encounterName = ''
+    let rankings: any[] = []
+    for (const tryDifficulty of difficultiesToTry) {
+      const rankingsResp = await executeWarcraftLogsQuery('rankings', token, rankingsQuery, {
+        encounterId,
+        difficulty: tryDifficulty,
+      })
+      const encounter = rankingsResp?.data?.worldData?.encounter
+      encounterName = encounter?.name ?? encounterName
+      rankings = encounter?.characterRankings?.rankings ?? []
+      if (rankings.length) {
+        usedDifficulty = tryDifficulty
+        break
+      }
+    }
     if (!rankings.length) {
       return NextResponse.json({
         ...emptyResponse(encounterId, difficulty, 'No rankings available'),
@@ -153,7 +164,11 @@ export async function GET(request: NextRequest) {
     const fightID: number | undefined = topRanking?.fightID || topRanking?.report?.fightID
     if (!reportCode || !fightID) {
       return NextResponse.json({
-        ...emptyResponse(encounterId, difficulty, 'Top ranking missing report code or fight ID'),
+        ...emptyResponse(
+          encounterId,
+          usedDifficulty,
+          'Top ranking missing report code or fight ID'
+        ),
         encounter: { id: encounterId, name: encounterName },
       })
     }
@@ -212,7 +227,7 @@ export async function GET(request: NextRequest) {
 
     if (!fight || typeof fight.startTime !== 'number' || typeof fight.endTime !== 'number') {
       return NextResponse.json({
-        ...emptyResponse(encounterId, difficulty, 'Fight data unavailable'),
+        ...emptyResponse(encounterId, usedDifficulty, 'Fight data unavailable'),
         encounter: { id: encounterId, name: encounterName },
         reportCode,
         fightID,
@@ -229,7 +244,7 @@ export async function GET(request: NextRequest) {
     )
     if (bossActors.length === 0) {
       return NextResponse.json({
-        ...emptyResponse(encounterId, difficulty, 'No boss actors in report'),
+        ...emptyResponse(encounterId, usedDifficulty, 'No boss actors in report'),
         encounter: { id: encounterId, name: encounterName },
         reportCode,
         fightID,
@@ -305,7 +320,7 @@ export async function GET(request: NextRequest) {
 
     const body: BossAbilitiesResponse = {
       encounter: { id: encounterId, name: encounterName },
-      difficulty,
+      difficulty: usedDifficulty,
       fightLengthSeconds: Math.round((fight.endTime - fight.startTime) / 1000),
       reportCode,
       fightID,
