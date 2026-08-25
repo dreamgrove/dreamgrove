@@ -10,7 +10,7 @@ import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
 import HeaderAprilFools from '../app/components/HeaderAprilFools'
 import styles from './Header.module.css'
-import { memo, useEffect, useState } from 'react'
+import { memo, useSyncExternalStore } from 'react'
 import { useTheme } from 'next-themes'
 
 interface Chapter {
@@ -72,7 +72,9 @@ const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
 
           {title && title !== '' && showTitle && (
             <div className="hidden h-full items-center lg:flex lg:text-center">
-              <PageTitle className="font-familiar-pro text-[2rem] lg:text-3xl">{title}</PageTitle>
+              <PageTitle className="font-familiar-pro text-[2rem] leading-9 lg:text-3xl lg:leading-9">
+                {title}
+              </PageTitle>
             </div>
           )}
 
@@ -107,15 +109,18 @@ const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
 // April Fools component is also memoized
 const MemoizedAprilFools = memo(HeaderAprilFools)
 
+const subscribeNoop = () => () => {}
+
 // Main Header component
 function Header(props: HeaderProps) {
   const { theme } = useTheme()
 
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // Renders the base header until hydration finishes, so the server and client markup match
+  const mounted = useSyncExternalStore(
+    subscribeNoop,
+    () => true,
+    () => false
+  )
 
   if (!mounted) {
     return <BaseHeader {...props} />

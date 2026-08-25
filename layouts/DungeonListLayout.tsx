@@ -22,6 +22,7 @@ export default function DungeonListLayout({
 
   return (
     <div className="px-3 sm:px-6 md:px-6 lg:px-6 xl:px-3">
+      <h1 className="sr-only">{title}</h1>
       {!posts.length && (
         <div className="py-16 text-center text-gray-500 dark:text-gray-400">No posts found.</div>
       )}

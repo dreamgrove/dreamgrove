@@ -1,8 +1,17 @@
 import { allCoreContent } from '@/lib/utils/contentlayer'
 import { allRaids } from 'contentlayer/generated'
 import RaidListLayout from '@/layouts/RaidListLayout'
+import { genPageMetadata } from 'app/(root)/seo'
+import { Metadata } from 'next'
 
 const POSTS_PER_PAGE = 5
+
+export async function generateMetadata(props: {
+  params: Promise<{ page: string }>
+}): Promise<Metadata> {
+  const params = await props.params
+  return genPageMetadata({ title: `Raids – Page ${params.page}` })
+}
 
 export const generateStaticParams = async () => {
   const totalPages = Math.ceil(allRaids.length / POSTS_PER_PAGE)

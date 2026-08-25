@@ -51,9 +51,30 @@ export async function generateMetadata({
     }
   })
 
+  // Link the English and Korean versions of the same guide via hreflang
+  const isKorean = slug.includes('kr/')
+  const englishSlug = isKorean ? slug.replace('kr/', '') : slug
+  const koreanSlug = isKorean ? slug : slug.replace(/([^/]+)$/, 'kr/$1')
+  const hasEnglish = allBlogs.some((p) => p.slug === englishSlug && !p.draft)
+  const hasKorean = allBlogs.some((p) => p.slug === koreanSlug && !p.draft)
+  const languages: Record<string, string> = {}
+  if (hasEnglish && hasKorean) {
+    languages['en'] = `${siteMetadata.siteUrl}/blog/${englishSlug}`
+    languages['ko'] = `${siteMetadata.siteUrl}/blog/${koreanSlug}`
+    languages['x-default'] = languages['en']
+  }
+
+  // Keep the test compendium out of search engines
+  const isTestPage = slug.startsWith('test/')
+
   return {
     title: post.title,
     description: post.summary,
+    ...(isTestPage && { robots: { index: false, follow: false } }),
+    alternates: {
+      canonical: './',
+      ...(Object.keys(languages).length > 0 && { languages }),
+    },
     openGraph: {
       title: post.title,
       description: post.summary,
@@ -111,18 +132,27 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       ? post.title.trim()
       : `Blog Post: ${slug}`
 
+  const contentLang = slug.includes('kr/') ? 'ko' : undefined
+
   const result = (
     <PageWrapper toc={post.toc as unknown as Chapter[]} title={pageTitle} isBlog={true}>
-      <Layout
-        content={mainContent}
-        toc={post.toc}
-        authorDetails={authorDetails}
-        next={next}
-        prev={prev}
-        translator={post.translator}
-      >
-        <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
-      </Layout>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div lang={contentLang}>
+        <Layout
+          content={mainContent}
+          toc={post.toc}
+          authorDetails={authorDetails}
+          next={next}
+          prev={prev}
+          translator={post.translator}
+        >
+          <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
+        </Layout>
+      </div>
     </PageWrapper>
   )
 
