@@ -6,7 +6,11 @@ import PageWrapper from '@/components/PageWrapper'
 
 const POSTS_PER_PAGE = 8
 
-export const metadata = genPageMetadata({ title: 'Dungeons' })
+export const metadata = genPageMetadata({
+  title: 'Dungeons',
+  description:
+    'Mythic+ dungeon guides for World of Warcraft Druids — boss mechanics, routes, and spec-specific tips for every dungeon in the rotation.',
+})
 
 export default function DungeonPage() {
   const posts = allCoreContent(allDungeons)

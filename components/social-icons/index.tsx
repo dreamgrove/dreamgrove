@@ -46,9 +46,10 @@ const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
       rel="noopener noreferrer"
       href={href}
     >
-      <span className="sr-only">{kind}</span>
+      <span className="sr-only">Dreamgrove on {kind}</span>
       <SocialSvg
-        className={`dark:hover:text-primary-400 fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 h-${size} w-${size}`}
+        aria-hidden="true"
+        className={`dark:hover:text-primary-400 hover:text-primary-500 fill-current text-gray-700 dark:text-gray-200 h-${size} w-${size}`}
       />
     </a>
   )

@@ -5,7 +5,11 @@ import { coreContent } from '@/lib/utils/contentlayer'
 import { genPageMetadata } from 'app/(root)/seo'
 import PageWrapper from '@/components/PageWrapper'
 
-export const metadata = genPageMetadata({ title: 'Druid Changelog' })
+export const metadata = genPageMetadata({
+  title: 'Druid Changelog',
+  description:
+    'A running changelog of Druid-related changes in World of Warcraft — patch notes, hotfixes, and tuning tracked by the Dreamgrove community.',
+})
 
 export default function Page() {
   const about = allChangelogs.find((p) => p.slug === 'changelog') as Changelog

@@ -6,7 +6,11 @@ import PageWrapper from '@/components/PageWrapper'
 
 const POSTS_PER_PAGE = 8
 
-export const metadata = genPageMetadata({ title: 'Raids' })
+export const metadata = genPageMetadata({
+  title: 'Raids',
+  description:
+    'Raid guides for World of Warcraft Druids — boss-by-boss mechanics, cooldown planning, and spec-specific advice for current raid tiers.',
+})
 
 export default function BlogPage() {
   const posts = allCoreContent(allRaids)

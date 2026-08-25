@@ -136,6 +136,7 @@ export const ChatBox = () => {
         <input
           type="text"
           placeholder="Your name..."
+          aria-label="Your name"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="font-pixel rounded-sm border border-pink-200 bg-white/80 px-3 py-1 text-sm"
@@ -144,6 +145,7 @@ export const ChatBox = () => {
           <input
             type="text"
             placeholder="Leave a message..."
+            aria-label="Message"
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             className="font-pixel flex-1 rounded-sm border border-pink-200 bg-white/80 px-3 py-1 text-sm"

@@ -25,19 +25,42 @@ export default function Home() {
   }
 
   const content = [
-    { src: dungeons, href: '/dungeons', alt: 'Dungeon Guides' },
-    { src: raids, href: '/raids', alt: 'Raid Guides', active: false },
+    { src: dungeons, href: '/dungeons', alt: 'Mythic+ dungeon guides for Druids' },
+    { src: raids, href: '/raids', alt: 'Raid guides for Druids', active: false },
   ]
 
   const images = [
-    { src: balance, href: '/blog/balance/compendium', alt: 'Balance guide', active: true },
-    { src: feral, href: '/blog/feral/compendium', alt: 'Feral guide', active: true },
-    { src: guardian, href: '/blog/guardian/compendium', alt: 'Guardian guide', active: true },
-    { src: resto, href: '/blog/resto/compendium', alt: 'Resto guide', active: true },
+    {
+      src: balance,
+      href: '/blog/balance/compendium',
+      alt: 'Balance Druid compendium',
+      active: true,
+    },
+    { src: feral, href: '/blog/feral/compendium', alt: 'Feral Druid compendium', active: true },
+    {
+      src: guardian,
+      href: '/blog/guardian/compendium',
+      alt: 'Guardian Druid compendium',
+      active: true,
+    },
+    {
+      src: resto,
+      href: '/blog/resto/compendium',
+      alt: 'Restoration Druid compendium',
+      active: true,
+    },
   ]
 
   return (
     <div className="mx-auto px-3 sm:px-6 md:px-6 xl:px-3">
+      {/* Visually hidden by design; kept in the DOM for screen readers and crawlers */}
+      <header className="sr-only">
+        <h1>World of Warcraft Druid Guides</h1>
+        <p>
+          Compendiums, theorycrafting, and community resources for Balance, Feral, Guardian, and
+          Restoration Druids — plus dungeon and raid guides.
+        </p>
+      </header>
       <div className="mt-1 grid grid-cols-1 gap-4 pt-0 lg:grid-cols-2">
         {images.map((image, index) => (
           <Link

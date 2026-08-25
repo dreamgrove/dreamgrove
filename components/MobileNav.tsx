@@ -45,10 +45,11 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
         className="h-full w-full align-middle lg:hidden"
       >
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="dark:hover:text-primary-400 mb-[-2px] h-[31px] w-[31px] text-gray-900 hover:text-primary-500 dark:text-gray-100"
+          className="dark:hover:text-primary-400 hover:text-primary-500 mb-[-2px] h-[31px] w-[31px] text-gray-900 dark:text-gray-100"
         >
           <path
             fillRule="evenodd"
@@ -85,13 +86,13 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
                   leaveFrom="translate-x-0 opacity-95"
                   leaveTo="translate-x-full opacity-0"
                 >
-                  <Dialog.Panel className="fixed left-0 top-0 z-10 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
+                  <Dialog.Panel className="fixed top-0 left-0 z-10 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
                     <nav className="fixed h-full w-full overflow-scroll pt-8 text-left">
                       {headerNavLinks.map((link) => (
                         <div key={link.title} className="px-12 py-4">
                           <Link
                             href={link.href}
-                            className="dark:hover:text-primary-400 text-2xl font-bold tracking-widest text-gray-900 hover:text-primary-500 dark:text-gray-100"
+                            className="dark:hover:text-primary-400 hover:text-primary-500 text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                             onClick={onToggleNav}
                           >
                             {link.title}
@@ -103,17 +104,18 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
                       </div>
                     </nav>
 
-                    <div className="flex justify-end pr-2 pt-1">
+                    <div className="flex justify-end pt-1 pr-2">
                       <button
-                        className="z-50 mr-8 mt-11 h-8 w-8"
+                        className="z-50 mt-11 mr-8 h-8 w-8"
                         aria-label="Toggle Menu"
                         onClick={onToggleNav}
                       >
                         <svg
+                          aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="dark:hover:text-primary-400 text-gray-900 hover:text-primary-500 dark:text-gray-100"
+                          className="dark:hover:text-primary-400 hover:text-primary-500 text-gray-900 dark:text-gray-100"
                         >
                           <path
                             fillRule="evenodd"

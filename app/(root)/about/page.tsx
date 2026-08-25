@@ -4,7 +4,11 @@ import AboutLayout from '@/layouts/AboutLayout'
 import { coreContent } from '@/lib/utils/contentlayer'
 import { genPageMetadata } from 'app/(root)/seo'
 import PageWrapper from '@/components/PageWrapper'
-export const metadata = genPageMetadata({ title: 'About' })
+export const metadata = genPageMetadata({
+  title: 'About',
+  description:
+    'About Dreamgrove — the community hub for World of Warcraft Druid guides, theorycrafting, and discussion.',
+})
 
 export default function Page() {
   const about = allAbouts.find((p) => p.slug === 'about') as About

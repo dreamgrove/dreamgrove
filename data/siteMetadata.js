@@ -4,8 +4,8 @@ const siteMetadata = {
   author: 'thevinter',
   headerTitle: 'Dreamgrove',
   description:
-    'A website for resources, guides, theorycrafting, and discussion about all things Druid.',
-  language: 'en-us',
+    'Dreamgrove is the community hub for World of Warcraft Druids — guides, compendiums, theorycrafting, and discussion for Balance, Feral, Guardian, and Restoration.',
+  language: 'en-US',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://dreamgrove.gg',
   siteRepo: 'https://github.com/dreamgrove/dreamgrove',

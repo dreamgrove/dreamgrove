@@ -85,6 +85,8 @@ const icon = fromHtmlIsomorphic(
   { fragment: true }
 )
 
+const absoluteImageUrl = (img) => (img.startsWith('http') ? img : `${siteMetadata.siteUrl}${img}`)
+
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
   slug: {
@@ -195,7 +197,7 @@ export const Blog = defineDocumentType(() => ({
         datePublished: doc.date,
         dateModified: doc.lastmod || doc.date,
         description: doc.summary,
-        image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
+        image: absoluteImageUrl(doc.images ? doc.images[0] : siteMetadata.socialBanner),
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),
     },
@@ -222,7 +224,7 @@ export const Dungeons = defineDocumentType(() => ({
         '@type': 'BlogPosting',
         headline: doc.title,
         description: doc.summary,
-        image: siteMetadata.socialBanner,
+        image: absoluteImageUrl(siteMetadata.socialBanner),
         headerImage: doc.headerImage,
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),
@@ -248,7 +250,7 @@ export const Changelog = defineDocumentType(() => ({
         '@type': 'BlogPosting',
         headline: doc.title,
         description: doc.summary,
-        image: siteMetadata.socialBanner,
+        image: absoluteImageUrl(siteMetadata.socialBanner),
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),
     },
@@ -273,7 +275,7 @@ export const About = defineDocumentType(() => ({
         '@type': 'BlogPosting',
         headline: doc.title,
         description: doc.summary,
-        image: siteMetadata.socialBanner,
+        image: absoluteImageUrl(siteMetadata.socialBanner),
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),
     },
@@ -300,7 +302,7 @@ export const Raids = defineDocumentType(() => ({
         '@type': 'BlogPosting',
         headline: doc.title,
         description: doc.summary,
-        image: siteMetadata.socialBanner,
+        image: absoluteImageUrl(siteMetadata.socialBanner),
         headerImage: doc.headerImage,
         url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
       }),

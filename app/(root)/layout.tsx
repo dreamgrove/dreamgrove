@@ -108,7 +108,15 @@ export default function RootLayout({ children }: LayoutProps) {
             <ThemeProviders>
               <Analytics />
               <KBarSearchProvider kbarConfig={siteMetadata.search.kbarConfig}>
-                <main className="mb-auto">{children}</main>
+                <a
+                  href="#main-content"
+                  className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black dark:focus:bg-black dark:focus:text-white"
+                >
+                  Skip to main content
+                </a>
+                <main id="main-content" className="mb-auto">
+                  {children}
+                </main>
                 <Footer />
               </KBarSearchProvider>
             </ThemeProviders>

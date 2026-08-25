@@ -20,8 +20,10 @@ export default function ClientCollapsible({ name, children }: ClientCollapsibleP
 
   return (
     <div className="mb-4">
-      <div
+      <button
+        type="button"
         onClick={handleToggle}
+        aria-expanded={isOpen}
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -29,12 +31,18 @@ export default function ClientCollapsible({ name, children }: ClientCollapsibleP
           cursor: 'pointer',
           width: '100%',
           height: 'auto',
+          border: 'none',
           borderBottom: '2px solid white',
+          background: 'none',
+          padding: 0,
+          textAlign: 'left',
+          color: 'inherit',
+          font: 'inherit',
         }}
       >
         <div className="my-2 text-2xl">{name}</div>
-        <span>{arrow}</span>
-      </div>
+        <span aria-hidden="true">{arrow}</span>
+      </button>
       <div className={`mt-2 ${styles.container} ${isOpen ? styles.show : styles.hide}`}>
         {children}
       </div>

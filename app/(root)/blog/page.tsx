@@ -5,7 +5,11 @@ import { genPageMetadata } from 'app/(root)/seo'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ title: 'Blog' })
+export const metadata = genPageMetadata({
+  title: 'Blog',
+  description:
+    'Druid guides and compendiums for World of Warcraft — Balance, Feral, Guardian, and Restoration theorycrafting kept up to date by the Dreamgrove community.',
+})
 
 export default function BlogPage() {
   const posts = allCoreContent(allBlogs)

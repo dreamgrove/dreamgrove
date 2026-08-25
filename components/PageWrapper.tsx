@@ -27,7 +27,7 @@ export default function PageWrapper({
     <>
       <Header toc={toc} title={title} showTitle={showTitle} isBlog={isBlog} />
       <SectionContainer>
-        <main className="mb-auto">{children}</main>
+        <div className="mb-auto">{children}</div>
       </SectionContainer>
     </>
   )

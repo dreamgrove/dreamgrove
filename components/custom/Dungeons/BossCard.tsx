@@ -35,7 +35,7 @@ export default async function BossCard({ title, image, id, children }) {
         </div>
         {hasImage && (
           <div className="boss-card__portrait">
-            <img src={imageUrl} alt={title} className="boss-card__image" />
+            <img src={imageUrl} alt="" loading="lazy" className="boss-card__image" />
           </div>
         )}
       </header>

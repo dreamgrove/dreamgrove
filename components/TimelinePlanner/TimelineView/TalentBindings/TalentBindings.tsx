@@ -8,7 +8,7 @@ export interface TalentBindingsProps {
 export default function TalentBindings({ prerenderedIcons = {} }: TalentBindingsProps) {
   return (
     <div className="">
-      <h1 className="mb-1 text-lg font-semibold">Talents:</h1>
+      <h2 className="mb-1 text-lg font-semibold">Talents:</h2>
       <TalentCardList prerenderedIcons={prerenderedIcons} />
     </div>
   )

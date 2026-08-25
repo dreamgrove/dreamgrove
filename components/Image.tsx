@@ -11,7 +11,23 @@ const Image = ({ ...rest }: ImageProps) => {
   }
 
   return (
-    <div className={isFullScreen ? styles.fullScreen : ''} onClick={toggleFullScreen}>
+    <div
+      className={isFullScreen ? styles.fullScreen : ''}
+      onClick={toggleFullScreen}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          toggleFullScreen()
+        }
+        if (e.key === 'Escape') {
+          setIsFullScreen(false)
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={isFullScreen ? 'Exit full screen image' : 'View image full screen'}
+      aria-pressed={isFullScreen}
+    >
       <NextImage {...rest} />
     </div>
   )

@@ -32,17 +32,20 @@ export default function Warnings() {
   return (
     <div className={`space-y-2 pb-12 pl-2`} id="timeline-warnings-selector">
       <div className="mb-0 flex items-center justify-between">
-        <div
+        <button
+          type="button"
           className="flex cursor-pointer items-center self-end pl-1 select-none"
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
         >
           {allWarnings.length > 0 && (
             <>
               <span className="mr-2 rounded-full bg-yellow-500/20 px-2 py-0.5 text-xs font-medium text-yellow-400">
                 {allWarnings.length}
               </span>
-              <h3 className="text-lg font-semibold">Timeline Warnings</h3>
+              <span className="text-lg font-semibold">Timeline Warnings</span>
               <svg
+                aria-hidden="true"
                 className={`ml-2 h-5 w-5 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
                 fill="none"
                 viewBox="0 0 24 24"
@@ -57,7 +60,7 @@ export default function Warnings() {
               </svg>
             </>
           )}
-        </div>
+        </button>
       </div>
 
       <div

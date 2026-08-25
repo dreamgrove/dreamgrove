@@ -33,7 +33,9 @@ export async function generateMetadata(props: {
     return
   }
 
-  const imageList = [siteMetadata.socialBanner]
+  const imageList = post.headerImage
+    ? [`/static/images/${post.headerImage}`]
+    : [siteMetadata.socialBanner]
   const ogImages = imageList.map((img) => {
     return {
       url: img.includes('http') ? img : siteMetadata.siteUrl + img,
@@ -86,6 +88,12 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
 
   return (
     <PageWrapper title={pageTitle} showTitle={false}>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="sr-only">{pageTitle}</h1>
       <Layout content={mainContent} next={next} prev={prev} showTitle={false} authorDetails={[]}>
         <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
       </Layout>

@@ -6,21 +6,14 @@ import { IoLanguage } from 'react-icons/io5'
 const LanguageSwitcher = () => {
   const pathname = usePathname()
   const router = useRouter()
-  const [currentLocale, setCurrentLocale] = useState('en-US')
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   // Check if we're on a blog page
   const isBlogPage = pathname.includes('/blog')
 
-  useEffect(() => {
-    // Determine current locale from URL
-    if (pathname.includes('/kr/')) {
-      setCurrentLocale('ko-KR')
-    } else {
-      setCurrentLocale('en-US')
-    }
-  }, [pathname])
+  // Current locale is derived straight from the URL
+  const currentLocale = pathname.includes('/kr/') ? 'ko-KR' : 'en-US'
 
   // Add click outside handler
   useEffect(() => {
@@ -164,6 +157,7 @@ const LanguageSwitcher = () => {
                 navigateToLanguage('ko-KR')
               }
             }}
+            lang="ko"
           >
             한국어
           </a>

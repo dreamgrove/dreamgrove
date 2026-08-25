@@ -36,7 +36,9 @@ export async function generateMetadata(props: {
     return
   }
 
-  const imageList = [siteMetadata.socialBanner]
+  const imageList = post.headerImage
+    ? [`/static/images/${post.headerImage}`]
+    : [siteMetadata.socialBanner]
   const ogImages = imageList.map((img) => {
     return {
       url: img.includes('http') ? img : siteMetadata.siteUrl + img,
@@ -73,36 +75,41 @@ export const generateStaticParams = async () => {
   }
 }
 
+function getDungeonPageData(slug: string) {
+  const sortedCoreContents = allCoreContent(allDungeons)
+  const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
+
+  if (postIndex === -1) {
+    return null
+  }
+
+  const post = allDungeons.find((p) => p.slug === slug) as Dungeons
+
+  return {
+    post,
+    prev: sortedCoreContents[postIndex + 1],
+    next: sortedCoreContents[postIndex - 1],
+    mainContent: coreContent(post),
+    jsonLd: post.structuredData,
+    pageTitle: post.title || `Dungeon: ${slug}`,
+  }
+}
+
 export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
+  const params = await props.params
+  const slug = decodeURI(params.slug.join('/'))
+
+  let pageData: ReturnType<typeof getDungeonPageData> = null
+  let loadFailed = false
+
   try {
-    const params = await props.params
-    const slug = decodeURI(params.slug.join('/'))
-    const sortedCoreContents = allCoreContent(allDungeons)
-    const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
-
-    if (postIndex === -1) {
-      return notFound()
-    }
-
-    const prev = sortedCoreContents[postIndex + 1]
-    const next = sortedCoreContents[postIndex - 1]
-    const post = allDungeons.find((p) => p.slug === slug) as Dungeons
-
-    const mainContent = coreContent(post)
-    const jsonLd = post.structuredData
-
-    const Layout = layouts[(post.layout || defaultLayout) as LayoutKey]
-    const pageTitle = post.title || `Dungeon: ${slug}`
-
-    return (
-      <PageWrapper title={pageTitle} showTitle={false}>
-        <Layout content={mainContent} next={next} prev={prev} authorDetails={[]}>
-          <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
-        </Layout>
-      </PageWrapper>
-    )
+    pageData = getDungeonPageData(slug)
   } catch (error) {
-    console.error(`Error rendering dungeon page for slug: ${props.params}`, error)
+    console.error(`Error loading dungeon page for slug: ${slug}`, error)
+    loadFailed = true
+  }
+
+  if (loadFailed) {
     return (
       <PageWrapper title="Error Loading Dungeon Page" showTitle={true}>
         <div className="prose dark:prose-invert max-w-none pt-8 pb-8">
@@ -111,4 +118,25 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
       </PageWrapper>
     )
   }
+
+  if (!pageData) {
+    return notFound()
+  }
+
+  const { post, prev, next, mainContent, jsonLd, pageTitle } = pageData
+  const Layout = layouts[(post.layout || defaultLayout) as LayoutKey]
+
+  return (
+    <PageWrapper title={pageTitle} showTitle={false}>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="sr-only">{pageTitle}</h1>
+      <Layout content={mainContent} next={next} prev={prev} authorDetails={[]}>
+        <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
+      </Layout>
+    </PageWrapper>
+  )
 }

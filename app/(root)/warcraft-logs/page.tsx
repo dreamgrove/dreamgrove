@@ -3,6 +3,7 @@ import WarcraftLogs from '@/components/WarcraftLogs'
 export const metadata = {
   title: 'Warcraft Logs API Test',
   description: 'Testing the integration with Warcraft Logs API',
+  robots: { index: false, follow: false },
 }
 
 export default function WarcraftLogsPage() {
