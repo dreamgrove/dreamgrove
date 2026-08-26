@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
 import Wowhead from './custom/Wowhead'
+import { parseWowheadUrl } from '../app/api/wowhead-data/utils'
 
 const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const isInternalLink = href && href.startsWith('/')
@@ -15,26 +16,18 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
     return <a href={href} {...rest} />
   }
 
-  if (href.startsWith('https://www.wowhead.com')) {
-    const parts = href.split('/')
-    const validTypes = ['item', 'spell', 'npc']
-    const possibleType = parts.at(-2)?.split('=')
-    const possibleName = parts.at(-1)?.split('?')[0]
-    if (
-      possibleType &&
-      possibleType[0] &&
-      possibleType[1] &&
-      validTypes.includes(possibleType[0])
-    ) {
-      return (
-        <Wowhead
-          type={possibleType[0]}
-          id={possibleType[1]}
-          url={href}
-          name={rest && rest.children ? rest.children : capitalize(possibleName)}
-        />
-      )
-    }
+  const wowhead = parseWowheadUrl(href)
+  if (wowhead) {
+    return (
+      <Wowhead
+        type={wowhead.type}
+        id={wowhead.id}
+        url={href}
+        // Falls back to '' for a slugless URL, which lets Wowhead use the name
+        // from the tooltip rather than inventing one from the path.
+        name={rest && rest.children ? rest.children : capitalize(wowhead.slug)}
+      />
+    )
   }
 
   return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />
