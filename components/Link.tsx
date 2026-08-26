@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
 import Wowhead from './custom/Wowhead'
-import { parseWowheadUrl } from '../app/api/wowhead-data/utils'
+import { parseWowheadUrl, titleCase } from '../app/api/wowhead-data/utils'
 
 const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const isInternalLink = href && href.startsWith('/')
@@ -23,9 +23,9 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
         type={wowhead.type}
         id={wowhead.id}
         url={href}
-        // Falls back to '' for a slugless URL, which lets Wowhead use the name
-        // from the tooltip rather than inventing one from the path.
-        name={rest && rest.children ? rest.children : capitalize(wowhead.slug)}
+        // A slugless URL gives '', which fetchWowheadData reads as "caller gave
+        // no name" and fills from the tooltip JSON instead of from the path.
+        name={rest && rest.children ? rest.children : titleCase(wowhead.slug)}
       />
     )
   }
@@ -34,11 +34,3 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
 }
 
 export default CustomLink
-
-const capitalize = (url) => {
-  if (!url) return ''
-  return url
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
-}
