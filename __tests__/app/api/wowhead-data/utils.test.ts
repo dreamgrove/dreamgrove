@@ -1,4 +1,5 @@
 import {
+  titleCase,
   parseWowheadUrl,
   extractIdFromUrl,
   formatUrl,
@@ -133,8 +134,8 @@ describe('extractIdFromUrl', () => {
 
   test('returns an empty string when there is no id to find', () => {
     expect(extractIdFromUrl('https://example.com/spell=1')).toBe('')
-    // A wowhead URL with an unusable id lands here too. Callers must not build
-    // a cache key or a tooltip URL out of the result without checking it.
+    // A wowhead URL with an unusable id lands here too. fetchWowheadData checks
+    // for '' before it builds a cache key or a tooltip URL out of the result.
     expect(extractIdFromUrl('https://www.wowhead.com/spell=')).toBe('')
   })
 })
@@ -159,5 +160,16 @@ describe('formatUrl', () => {
   test('falls back to the last path segment for anything it cannot parse', () => {
     expect(formatUrl('https://www.wowhead.com/currency=3226/valorstones')).toBe('Valorstones')
     expect(formatUrl('https://example.com/some/other-page')).toBe('Other Page')
+  })
+})
+
+describe('titleCase', () => {
+  test('capitalizes each dash-separated word and lowercases the rest', () => {
+    expect(titleCase('tigers-fury')).toBe('Tigers Fury')
+    expect(titleCase('ROTC-thing')).toBe('Rotc Thing')
+  })
+
+  test('returns an empty string for an empty slug, which Link.tsx relies on', () => {
+    expect(titleCase('')).toBe('')
   })
 })

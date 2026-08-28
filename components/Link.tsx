@@ -24,7 +24,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
         id={wowhead.id}
         url={href}
         // A slugless URL gives '', which fetchWowheadData reads as "caller gave
-        // no name" and fills from the tooltip JSON instead of from the path.
+        // no name" and fills from the tooltip JSON (or, failing that, type-id).
         name={rest && rest.children ? rest.children : titleCase(wowhead.slug)}
       />
     )

@@ -6,12 +6,16 @@ import { fetchWowheadData } from '../../../../app/api/wowhead-data/server-functi
 
 describe('fetchWowheadData', () => {
   const fetchSpy = jest.spyOn(global, 'fetch')
-  // The module persists every hit to data/wowhead-cache.json; keep the test off disk.
+  // The module reads data/wowhead-cache.json once and persists every fetched
+  // result back to it. Start it from an empty cache and keep it off disk, so
+  // the tests neither depend on the committed entries nor add to them.
+  const existsSpy = jest.spyOn(fs, 'existsSync').mockReturnValue(false)
   const writeSpy = jest.spyOn(fs, 'writeFileSync').mockImplementation(() => undefined)
 
   beforeEach(() => fetchSpy.mockReset())
   afterAll(() => {
     fetchSpy.mockRestore()
+    existsSpy.mockRestore()
     writeSpy.mockRestore()
   })
 
@@ -40,7 +44,6 @@ describe('fetchWowheadData', () => {
         status: 200,
       })
     )
-    // An id that is not in the committed cache, so the code has to go through fetch.
     const data = await fetchWowheadData({
       id: '',
       type: 'spell',
@@ -52,6 +55,33 @@ describe('fetchWowheadData', () => {
       expect.anything()
     )
     expect(data.display).toBe('Test Spell')
-    expect(writeSpy).toHaveBeenCalled()
+    const [file, json] = writeSpy.mock.calls.at(-1) as [string, string]
+    expect(file).toMatch(/data[\\/]wowhead-cache\.json$/)
+    expect(JSON.parse(json)['spell-999999901']).toMatchObject({
+      display: 'Test Spell',
+      icon: 'inv_misc_questionmark',
+    })
+  })
+
+  test('names the entry from the URL when the tooltip JSON has no name', async () => {
+    // A fresh Response per call: a body can only be read once.
+    fetchSpy.mockImplementation(
+      async () => new Response(JSON.stringify({ icon: 'x' }), { status: 200 })
+    )
+    const withSlug = await fetchWowheadData({
+      id: '',
+      type: 'spell',
+      name: '',
+      url: 'https://www.wowhead.com/spell=999999902/some-slug',
+    })
+    expect(withSlug.display).toBe('Some Slug')
+
+    const slugless = await fetchWowheadData({
+      id: '',
+      type: 'spell',
+      name: '',
+      url: 'https://www.wowhead.com/spell=999999903',
+    })
+    expect(slugless.display).toBe('spell-999999903')
   })
 })

@@ -7,9 +7,11 @@ export const qualityToColor = {
   5: '#ff8000',
 }
 
-// The types Link.tsx turns into a <Wowhead>. Wowhead has many more
-// (achievement=, quest=, currency=, ...); those stay plain anchors and get only
-// what wow.zamimg.com/js/tooltips.js gives every wowhead.com link on the page.
+// The types parseWowheadUrl recognizes, and therefore the only types Link.tsx
+// turns into a <Wowhead> and extractIdFromUrl can pull an id from. Wowhead has
+// many more (achievement=, quest=, currency=, ...); those stay plain anchors and
+// get only what wow.zamimg.com/js/tooltips.js gives wowhead.com links on the
+// pages that load it.
 const WOWHEAD_LINK_TYPES = ['item', 'spell', 'npc'] as const
 
 export type WowheadLinkType = (typeof WOWHEAD_LINK_TYPES)[number]
@@ -21,7 +23,10 @@ export interface WowheadUrlParts {
   type: WowheadLinkType
   /** Digits only. The parser rejects any other id. */
   id: string
-  /** Percent-decoded slug after the id, or '' when the URL has none. */
+  /**
+   * Slug after the id, percent-decoded when the escape is valid and kept raw
+   * otherwise, or '' when the URL has none.
+   */
   slug: string
 }
 
@@ -89,7 +94,8 @@ export function formatUrl(url: string): string {
   if (parsed) {
     return parsed.slug ? titleCase(parsed.slug) : `${parsed.type}-${parsed.id}`
   }
-  // Not a Wowhead link, so there is no id to name it by. Best effort.
+  // Not a supported Wowhead link (other host, other type, or a bad id), so
+  // there is no id to name it by. Best effort.
   return titleCase(url.split('/').pop() || '')
 }
 
