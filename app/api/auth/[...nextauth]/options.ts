@@ -18,6 +18,10 @@ const authOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_ID || '',
       clientSecret: process.env.GITHUB_SECRET || '',
+      // GitHub sends an `iss` param in OAuth callbacks since its RFC 9207
+      // rollout (April 2026); next-auth <=4.24.12 has no default issuer, so
+      // sign-in fails with "issuer must be configured on the issuer" without this.
+      issuer: 'https://github.com/login/oauth',
       authorization: {
         params: {
           scope: 'read:user user:email repo',
