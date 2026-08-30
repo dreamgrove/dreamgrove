@@ -8,6 +8,8 @@ import { MDXComponents } from 'mdx/types'
 
 import Talents from '@/components/custom/Talents/Talents'
 import Collapsible from '@/components/custom/Collapsible/Collapsible'
+import Color from '@/components/custom/Color'
+import ErrorBoundary from '@/components/custom/ErrorBoundary'
 
 import CheckboxClientVersion from './csm/CheckboxClientVersion'
 import CheckboxProvider from './custom/CheckboxProvider'
@@ -132,6 +134,7 @@ const components: MDXComponents = {
   Talents: Talents,
   BossCard: BossCardClientVersion,
   Collapsible,
+  Color,
   YouTube: YouTube,
   Checkbox: CheckboxClientVersion,
   Wowhead: WowheadClientVersion,
@@ -218,6 +221,14 @@ const components: MDXComponents = {
       <li {...props}>{children}</li>
     )
   },
+}
+
+function PreviewRenderError() {
+  return (
+    <div className="not-prose my-2 rounded-md border border-red-400 bg-red-50 p-3 text-red-700 dark:border-red-600 dark:bg-red-900 dark:text-red-300">
+      Preview Error: this content failed to render. Check the browser console for details.
+    </div>
+  )
 }
 
 const isDevelopment = process.env.NODE_ENV === 'development'
@@ -323,9 +334,15 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
         className={`${LiveComponent && !error ? 'prose dark:prose-invert mx-0 max-w-none pt-4 pb-8 text-base sm:pt-0 lg:mx-8' : ''}`}
       >
         {LiveComponent && !isEvaluating ? (
-          <CheckboxProvider>
-            <LiveComponent />
-          </CheckboxProvider>
+          // Some errors (e.g. an MDX element with no matching component) only throw
+          // while rendering, after `evaluate` has already resolved. Without a boundary
+          // they escape the try/catch above and take the whole editor down, so keep a
+          // fresh boundary per document — `key` remounts it once the content changes.
+          <ErrorBoundary key={content} fallback={<PreviewRenderError />}>
+            <CheckboxProvider>
+              <LiveComponent />
+            </CheckboxProvider>
+          </ErrorBoundary>
         ) : (
           !error &&
           !isEvaluating && (

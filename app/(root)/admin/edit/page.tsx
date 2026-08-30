@@ -25,6 +25,7 @@ import SpellPicker, { useSpellSearch, type Spell, type PickerPosition } from './
 import { spellTokenExtension } from './spellWidget'
 import { sectionGuideExtension } from './sectionGuides'
 import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
+import { readDraft, writeDraft, clearDraft, formatDraftAge, type EditorDraft } from './draftStorage'
 
 // Maps a path folder (blog/<spec>/...) to the DB spec label used in spells.db.
 const SPEC_FOLDERS: Record<string, string> = {
@@ -33,6 +34,26 @@ const SPEC_FOLDERS: Record<string, string> = {
   guardian: 'Guardian',
   resto: 'Restoration',
   restoration: 'Restoration',
+}
+
+// Serializes the editor state back into a single .mdx document. Module scope so
+// the loader, the draft autosave and the save-to-GitHub path all agree on the
+// exact bytes — otherwise "is this draft different from the file?" would report
+// spurious differences from frontmatter re-formatting alone.
+function buildDocument(
+  bodyContent: string,
+  frontmatter: Record<string, any>,
+  authorsInput: string
+): string {
+  const data: Record<string, any> = { ...frontmatter }
+  const authors = authorsInput
+    .split(',')
+    .map((a) => a.trim())
+    .filter(Boolean)
+  if (authors.length) data.authors = authors
+  else delete data.authors
+  if (Object.keys(data).length === 0) return bodyContent
+  return matter.stringify(bodyContent, data)
 }
 
 function debounce<T extends (...args: any[]) => any>(
@@ -153,6 +174,47 @@ function ToggleCheckbox({
   )
 }
 
+function DraftRecoveryBanner({
+  draft,
+  staleBaseline,
+  onRestore,
+  onDiscard,
+}: {
+  draft: EditorDraft
+  staleBaseline: boolean
+  onRestore: () => void
+  onDiscard: () => void
+}) {
+  return (
+    <div className="mb-5 rounded-lg border border-amber-300 bg-amber-50 p-4 dark:border-amber-700/60 dark:bg-amber-950/40">
+      <h2 className="text-sm font-semibold text-amber-900 dark:text-amber-200">
+        Unsaved changes recovered
+      </h2>
+      <p className="mt-1 text-sm text-amber-800 dark:text-amber-300/90">
+        This browser has edits to this file from {formatDraftAge(draft.savedAt)} that were never
+        saved to GitHub.
+        {staleBaseline
+          ? ' Heads up: the file has also changed on GitHub since then, so restoring will discard those newer changes.'
+          : ''}
+      </p>
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <button
+          onClick={onRestore}
+          className="rounded-md bg-amber-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-amber-700"
+        >
+          Restore my edits
+        </button>
+        <button
+          onClick={onDiscard}
+          className="rounded-md border border-amber-400 px-3 py-1.5 text-sm font-medium text-amber-900 hover:bg-amber-100 dark:border-amber-700 dark:text-amber-200 dark:hover:bg-amber-900/40"
+        >
+          Discard and use the file from GitHub
+        </button>
+      </div>
+    </div>
+  )
+}
+
 function GithubGlyph() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -219,6 +281,12 @@ function FileEditor({ filePath }: { filePath: string }) {
   const [showCommitModal, setShowCommitModal] = useState<boolean>(false)
   const [showConfirmModal, setShowConfirmModal] = useState<boolean>(false)
   const [prUrl, setPrUrl] = useState<string | null>(null)
+  // Crash recovery. `baselineRef` is the document as last fetched/saved, so the
+  // autosave can tell real edits from an untouched file. `pendingDraft` is a
+  // recovered draft awaiting the user's restore/discard decision.
+  const baselineRef = useRef<string>('')
+  const [pendingDraft, setPendingDraft] = useState<EditorDraft | null>(null)
+  const [draftSavedAt, setDraftSavedAt] = useState<number | null>(null)
   const router = useRouter()
   const containerRef = useRef<HTMLDivElement>(null)
   const previewRef = useRef<HTMLDivElement>(null)
@@ -489,15 +557,35 @@ function FileEditor({ filePath }: { filePath: string }) {
         })
         .then((data) => {
           const content = data.content || ''
+          let body = content
+          let fm: Record<string, any> = {}
+          let authors = ''
           try {
-            const { content: body, data: fm } = matter(content)
-            setBodyContent(body.replace(/^\n/, ''))
-            setFrontmatter(fm)
-            setAuthorsInput(Array.isArray(fm.authors) ? fm.authors.join(', ') : (fm.authors ?? ''))
+            const parsed = matter(content)
+            body = parsed.content.replace(/^\n/, '')
+            fm = parsed.data
+            authors = Array.isArray(fm.authors) ? fm.authors.join(', ') : (fm.authors ?? '')
           } catch (err) {
             console.error('Error parsing markdown content:', err)
-            setBodyContent(content)
           }
+          setBodyContent(body)
+          setFrontmatter(fm)
+          setAuthorsInput(authors)
+
+          // Round-trip through the same serializer the autosave uses, so an
+          // untouched file compares equal to its own draft.
+          const baseline = buildDocument(body, fm, authors)
+          baselineRef.current = baseline
+
+          const draft = readDraft(filePath)
+          if (draft) {
+            const draftDoc = buildDocument(draft.body, draft.frontmatter, draft.authorsInput)
+            // A draft identical to the file has nothing left to recover — that
+            // happens after someone saves elsewhere, or reloads without editing.
+            if (draftDoc === baseline) clearDraft(filePath)
+            else setPendingDraft(draft)
+          }
+
           setLoading(false)
         })
         .catch((err) => {
@@ -516,17 +604,7 @@ function FileEditor({ filePath }: { filePath: string }) {
     setFrontmatter((prev) => ({ ...prev, [key]: value }))
   }
 
-  const buildDocument = () => {
-    const data: Record<string, any> = { ...frontmatter }
-    const authors = authorsInput
-      .split(',')
-      .map((a) => a.trim())
-      .filter(Boolean)
-    if (authors.length) data.authors = authors
-    else delete data.authors
-    if (Object.keys(data).length === 0) return bodyContent
-    return matter.stringify(bodyContent, data)
-  }
+  const currentDocument = () => buildDocument(bodyContent, frontmatter, authorsInput)
 
   const handleSaveClick = () => {
     const fileNameWithoutExt = fileName.replace(/\.[^/.]+$/, '')
@@ -559,7 +637,7 @@ function FileEditor({ filePath }: { filePath: string }) {
         },
         body: JSON.stringify({
           filePath,
-          content: buildDocument(),
+          content: currentDocument(),
           commitTitle,
           commitMessage,
           createPr: true,
@@ -576,6 +654,13 @@ function FileEditor({ filePath }: { filePath: string }) {
       }
 
       const data = await res.json()
+
+      // Committed upstream: the draft has served its purpose, and leaving it
+      // behind would re-offer already-merged work on the next visit.
+      const saved = currentDocument()
+      baselineRef.current = saved
+      clearDraft(filePath)
+      setDraftSavedAt(null)
 
       if (data.prUrl) {
         setPrUrl(data.prUrl)
@@ -700,6 +785,87 @@ function FileEditor({ filePath }: { filePath: string }) {
   const toggleWordWrap = makeToggle('editor-word-wrap', setWordWrap)
   const toggleSyncScroll = makeToggle('editor-sync-scroll', setSyncScroll)
   const toggleAutoRefresh = makeToggle('editor-auto-refresh', setAutoRefresh)
+
+  // --- Draft autosave -------------------------------------------------------
+  //
+  // Mirror the in-progress document to localStorage shortly after typing stops.
+  // A tab crash never fires beforeunload, so the debounce interval is the real
+  // worst-case data loss window — keep it short.
+  const persistDraft = (
+    body: string,
+    fm: Record<string, any>,
+    authors: string,
+    baseline: string
+  ) => {
+    if (buildDocument(body, fm, authors) === baseline) {
+      // Back to the file's own contents: there is nothing to recover, and a
+      // leftover draft would pop the recovery banner on every future load.
+      clearDraft(filePath)
+      setDraftSavedAt(null)
+      return
+    }
+    const savedAt = writeDraft({
+      filePath,
+      body,
+      frontmatter: fm,
+      authorsInput: authors,
+      baseline,
+    })
+    if (savedAt) setDraftSavedAt(savedAt)
+  }
+  const persistDraftRef = useRef(persistDraft)
+  persistDraftRef.current = persistDraft
+
+  const debouncedPersistDraft = useRef(
+    debounce(
+      (body: string, fm: Record<string, any>, authors: string, baseline: string) =>
+        persistDraftRef.current(body, fm, authors, baseline),
+      600
+    )
+  ).current
+
+  useEffect(() => {
+    // Don't write while the file is still loading (state is empty then, which
+    // would look like "the user deleted everything") or while a recovered draft
+    // is still on screen awaiting a decision — that would overwrite it.
+    if (loading || pendingDraft) return
+    debouncedPersistDraft(bodyContent, frontmatter, authorsInput, baselineRef.current)
+  }, [bodyContent, frontmatter, authorsInput, loading, pendingDraft, debouncedPersistDraft])
+
+  // Navigating away or backgrounding the tab can outrun the debounce, so flush
+  // synchronously on the way out. pagehide covers the bfcache/mobile paths that
+  // beforeunload misses.
+  useEffect(() => {
+    if (loading || pendingDraft) return
+    const flush = () =>
+      persistDraftRef.current(bodyContent, frontmatter, authorsInput, baselineRef.current)
+    const onHidden = () => {
+      if (document.visibilityState === 'hidden') flush()
+    }
+    window.addEventListener('pagehide', flush)
+    window.addEventListener('beforeunload', flush)
+    document.addEventListener('visibilitychange', onHidden)
+    return () => {
+      window.removeEventListener('pagehide', flush)
+      window.removeEventListener('beforeunload', flush)
+      document.removeEventListener('visibilitychange', onHidden)
+    }
+  }, [bodyContent, frontmatter, authorsInput, loading, pendingDraft])
+
+  const restoreDraft = () => {
+    if (!pendingDraft) return
+    setBodyContent(pendingDraft.body)
+    setFrontmatter(pendingDraft.frontmatter)
+    setAuthorsInput(pendingDraft.authorsInput)
+    setDraftSavedAt(pendingDraft.savedAt)
+    setPendingDraft(null)
+  }
+
+  const discardDraft = () => {
+    clearDraft(filePath)
+    setDraftSavedAt(null)
+    setPendingDraft(null)
+  }
 
   // Feed the preview while auto refresh is on. Re-enabling it (or the initial
   // load) pushes the current body through immediately.
@@ -1042,11 +1208,27 @@ function FileEditor({ filePath }: { filePath: string }) {
             >
               {saving ? 'Saving…' : 'Save changes'}
             </button>
+            {draftSavedAt !== null && (
+              <span
+                className="text-xs whitespace-nowrap text-neutral-500 dark:text-neutral-400"
+                title="Kept in this browser only. Use “Save changes” to open a PR."
+              >
+                Draft saved locally
+              </span>
+            )}
           </div>
         </div>
       </div>
 
       <div className="w-full px-4 py-5 sm:px-6">
+        {pendingDraft && (
+          <DraftRecoveryBanner
+            draft={pendingDraft}
+            staleBaseline={!!pendingDraft.baseline && pendingDraft.baseline !== baselineRef.current}
+            onRestore={restoreDraft}
+            onDiscard={discardDraft}
+          />
+        )}
         {showHelp && (
           <div className="mb-5 rounded-lg border border-neutral-200 bg-white p-4 text-sm dark:border-neutral-800 dark:bg-[#323232]">
             <h2 className="mb-2 font-semibold text-neutral-900 dark:text-neutral-100">
