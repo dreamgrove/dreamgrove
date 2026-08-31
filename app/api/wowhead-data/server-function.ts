@@ -78,6 +78,14 @@ export async function fetchWowheadData({
     wowheadUrl = `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
   }
 
+  // Bail before the cache is involved. extractIdFromUrl returns '' for a URL
+  // it cannot parse, and a missing id would otherwise give every such call
+  // the same `${type}-` key: one stray 200 would be persisted to
+  // wowhead-cache.json and served for every later failure of that type.
+  if (!displayId) {
+    throw new Error(`No ${type} id in ${url || 'the Wowhead call'}`)
+  }
+
   // Generate cache key
   const cacheKey = `${type}-${displayId}${beta ? '-beta' : ''}`
 

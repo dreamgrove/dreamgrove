@@ -3,24 +3,8 @@ import { useEffect, useState, memo, useCallback, useMemo } from 'react'
 import { wowheadCache } from './wowheadCache'
 import WowheadClientIcon from './WowheadClientIcon'
 import { getWowheadInfo, qualityToColor } from 'lib/wowhead-api'
+import { extractIdFromUrl } from 'app/api/wowhead-data/utils'
 import spellData from '../../spellData.json'
-
-function formatUrl(url) {
-  const parts = url.split('/')
-  const lastPart = parts.pop()
-  const formatted = lastPart
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
-  return formatted
-}
-
-function extractIdFromUrl(url) {
-  const parts = url.split('/')
-  const lastPart = parts[parts.length - 1]
-  const id = lastPart.split('-')[0]
-  return id
-}
 
 // A minimal version of the Wowhead component that uses client-side fetching
 function WowheadClientVersion({
