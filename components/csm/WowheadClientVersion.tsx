@@ -169,5 +169,7 @@ function WowheadClientVersion({
 }
 
 export default memo(WowheadClientVersion, (prevProps, nextProps) => {
-  return prevProps.id === nextProps.id
+  // name participates: the href host (ko vs www) and the displayed label both
+  // derive from it, so a label edit in the admin preview must re-render.
+  return prevProps.id === nextProps.id && prevProps.name === nextProps.name
 })

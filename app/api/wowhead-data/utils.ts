@@ -104,13 +104,15 @@ export function extractIdFromUrl(url: string): string {
 }
 
 /**
- * Fallback href for a Wowhead entity the author gave no explicit URL for
- * (spell markers, checkbox spells, ...). Hosted on ko.wowhead.com when the
- * authored label is Korean, so Wowhead's tooltip script serves the Korean
- * tooltip on the Korean guides. The site ships English and Korean guides
- * only, which makes Hangul in the label a reliable locale signal; if more
- * locales ever appear, thread a real page locale down from the MDX pipeline
- * instead of extending this heuristic.
+ * Fallback href used by the Wowhead link/icon components when the author gave
+ * no explicit URL (bare spell markers, direct <Wowhead> usage without `url`).
+ * Widgets that build their own hrefs (Npc, the talent tree, Timeline's
+ * synthetic labels) are not routed through here. Hosted on ko.wowhead.com when
+ * the authored label is Korean, so Wowhead's tooltip script serves the Korean
+ * tooltip for that link. The site ships English and Korean guides only, which
+ * makes Hangul in the label a reliable locale signal; if more locales ever
+ * appear, thread a real page locale down from the MDX pipeline instead of
+ * extending this heuristic.
  */
 export function buildWowheadUrl(
   type: string,
