@@ -3,7 +3,7 @@ import { useEffect, useState, memo, useCallback, useMemo } from 'react'
 import { wowheadCache } from './wowheadCache'
 import WowheadClientIcon from './WowheadClientIcon'
 import { getWowheadInfo, qualityToColor } from 'lib/wowhead-api'
-import { extractIdFromUrl } from 'app/api/wowhead-data/utils'
+import { extractIdFromUrl, buildWowheadUrl } from 'app/api/wowhead-data/utils'
 import spellData from '../../spellData.json'
 
 // A minimal version of the Wowhead component that uses client-side fetching
@@ -20,10 +20,9 @@ function WowheadClientVersion({
 }) {
   // Use a cache key that's stable across component rerenders
   const cacheKey = useMemo(() => {
-    const whUrl =
-      url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id || ''}`
+    const whUrl = url !== '' ? url : buildWowheadUrl(type, id || '', name, beta)
     return wowheadCache.generateKey(whUrl)
-  }, [id, type, beta, url])
+  }, [id, type, beta, url, name])
 
   const [display, setDisplay] = useState(name || '')
   const [linkColor, setLinkColor] = useState('#d57f43')
@@ -43,8 +42,7 @@ function WowheadClientVersion({
     }
   }
 
-  const whUrl =
-    url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
+  const whUrl = url !== '' ? url : buildWowheadUrl(type, displayId, name, beta)
 
   const fetchWowhead = useCallback(async () => {
     if (typeof window === 'undefined') return
