@@ -37,6 +37,8 @@ actions+=/regrowth,if=buff.predatory_swiftness.up&variable.regrowth
 actions.aoe_builder=rake,target_if=refreshable,if=(talent.doubleclawed_rake&(!talent.lunar_inspiration|!talent.panthers_guile|active_dot.rake<5))|hero_tree.wildstalker&(active_dot.rake<2+!talent.panthers_guile+talent.lunar_inspiration)
 # there are scenarios where this is -0.1/-0.2% vs being under cc swipe line, but im willing to scrap that complexity
 actions.aoe_builder+=/moonfire_cat,target_if=refreshable
+# panthers guile, spend clearcast on shred
+actions.aoe_builder+=/shred,if=spell_targets=2&talent.panthers_guile&buff.clearcasting.react
 # with dotc, nodcr/nowildslashes, swipe spam in berserk at 2t. Wildstalker begins ignoring cc again if you have the energy to rake at 7t
 actions.aoe_builder+=/swipe_cat,if=hero_tree.druid_of_the_claw&buff.bs_inc.up|buff.clearcasting.react&(hero_tree.druid_of_the_claw|spell_targets<7)
 # sa swipe takes precedence over single-rake at 5t for dotc 7t for wildstalker (0.1% at 7t for wildstalker, 0.2% for dotc at 5t)
@@ -45,20 +47,9 @@ actions.aoe_builder+=/swipe_cat,if=buff.sudden_ambush.up&spell_targets.swipe_cat
 actions.aoe_builder+=/rake,target_if=refreshable,if=hero_tree.wildstalker|spell_targets.swipe_cat<=variable.dotc_rake_threshold
 # on 2t replace weaker rakes with stronger ones. (its a tiny gain for 3t too, @0.2% but keeping track of 3 snapshots is a bit much I think)
 actions.aoe_builder+=/rake,target_if=min:pmultiplier,if=persistent_multiplier>pmultiplier&spell_targets=2
-# with panther's guile, its worth using shred at 0/1 combo points on 2t
-actions.aoe_builder+=/shred,if=combo_points<=1&spell_targets=2&talent.panthers_guile
-actions.aoe_builder+=/swipe_cat,if=combo_points>1|spell_targets>2|!talent.panthers_guile
-
-actions.builder=prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
-actions.builder+=/shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
-# 0.2% for dotc, like, do we even care? Like, the only reason I even put this in is to feel something
-actions.builder+=/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
-# freely upgrade rakes
-actions.builder+=/rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
-# freely upgrade li, aggressive moonfire clipping can be a gain in some talent builds, look further into this.
-actions.builder+=/moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
-#!buff.clearcasting.react&persistent_multiplier>=pmultiplier|remains<2
-actions.builder+=/shred
+# with panther's guile, its worth using shred on 2t
+actions.aoe_builder+=/shred,if=spell_targets=2&talent.panthers_guile
+actions.aoe_builder+=/swipe_cat,if=spell_targets>2|!talent.panthers_guile
 
 # primal wrath in pandemic during berserk, else with sub 6.5s remaining
 actions.aoe_finisher=primal_wrath,target_if=min:remains,if=combo_points>=5&spell_targets.primal_wrath>1&(dot.primal_wrath.remains<6.5&!buff.bs_inc.up|dot.primal_wrath.refreshable)
@@ -73,12 +64,16 @@ actions.aoe_finisher+=/primal_wrath,if=combo_points>=5
 # if we dont have primal wrath then bite here
 actions.aoe_finisher+=/ferocious_bite,target_if=min:dot.rip.remains,if=combo_points>=5
 
-# maintain rip in single-target. 4cp rips is a ~0.1-0.2% gain, omitted for simplicity
-actions.finisher=rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)
-actions.finisher+=/pool_resource,for_next=1
-actions.finisher+=/ferocious_bite,max_energy=1,if=combo_points>=5
+actions.builder=prowl,if=!buff.shadowmeld.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+actions.builder+=/shadowmeld,if=!buff.prowl.up&(action.rake.pmultiplier<1.6|dot.rake.refreshable)
+# 0.2% for dotc, like, do we even care? Like, the only reason I even put this in is to feel something
+actions.builder+=/shred,if=buff.sudden_ambush.up&hero_tree.druid_of_the_claw
+# freely upgrade rakes
+actions.builder+=/rake,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+# freely upgrade li, aggressive moonfire clipping can be a gain in some talent builds, look further into this.
+actions.builder+=/moonfire_cat,if=(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)&(refreshable&persistent_multiplier>=pmultiplier|remains<2|persistent_multiplier>pmultiplier)
+actions.builder+=/shred
 
-# TLDR, maximize number of cooldown overlaps whilst minimizing number of casts lost.
 # these variables math out how many uses of each relevant cooldown remain, with a buffer (as a %of a cast) as we dont care if a cd comes up as the fight ends
 actions.cd_variable=variable,name=convokeCountRemaining,value=floor(cooldown.convoke_the_spirits.charges_fractional+fight_remains%cooldown.convoke_the_spirits.duration-0.05)
 actions.cd_variable+=/variable,name=zerkCountRemaining,value=floor(cooldown.bs_inc.charges_fractional+fight_remains%cooldown.bs_inc.duration-0.05)
@@ -117,3 +112,8 @@ actions.cooldown+=/feral_frenzy,if=!talent.frantic_frenzy&combo_points<=2+(2*buf
 actions.cooldown+=/frantic_frenzy,if=(!fight_style.dungeonroute&!fight_style.dungeonslice|raid_event.adds.remains>5)&(buff.tigers_fury.up&spell_targets>=2|combo_points<=2+(2*buff.bs_inc.up))
 # line up convoke with berserk
 actions.cooldown+=/convoke_the_spirits,if=(buff.bs_inc.up|talent.ashamanes_guidance&(cooldown.bs_inc.remains>45|variable.holdBerserk))&buff.tigers_fury.up&(prev_gcd.1.rip|prev_gcd.1.ferocious_bite|prev_gcd.1.primal_wrath|buff.tigers_fury.remains<=1+action.convoke_the_spirits.execute_time)|fight_remains<5
+
+# maintain rip in single-target. 4cp rips is a ~0.1-0.2% gain, omitted for simplicity
+actions.finisher=rip,if=combo_points>=5&refreshable&(buff.tigers_fury.up|remains<cooldown.tigers_fury.remains)
+actions.finisher+=/pool_resource,for_next=1
+actions.finisher+=/ferocious_bite,max_energy=1,if=combo_points>=5
