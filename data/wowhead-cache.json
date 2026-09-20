@@ -4773,5 +4773,25 @@
     "display": "Power of the Archdruid",
     "timestamp": 1787652397801,
     "icon": "spell_druid_rampantgrowth"
+  },
+  "spell-1244532": {
+    "display": "Blood Spattered",
+    "timestamp": 1789116321691,
+    "icon": "ability_druid_ferociousbite"
+  },
+  "spell-441701": {
+    "display": "표범의 잠재력",
+    "timestamp": 1789116324287,
+    "icon": "ability_druid_ferociousbite"
+  },
+  "spell-238049": {
+    "display": "반짝이는 달빛",
+    "timestamp": 1789116324453,
+    "icon": "spell_fire_twilightfireward"
+  },
+  "spell-1253461": {
+    "display": "깨어 있는 악몽",
+    "timestamp": 1789116324517,
+    "icon": "sha_spell_shadow_shadesofdarkness_nightmare"
   }
 }
