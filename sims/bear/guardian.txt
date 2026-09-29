@@ -51,7 +51,8 @@ actions.feline_potential+=/mangle,if=((buff.bs_inc.up&buff.feline_potential_coun
 actions.feline_potential+=/shred,if=(buff.feline_potential_counter.stack=6&!buff.cat_form.up&!dot.rake.refreshable&talent.fluid_form.enabled)
 actions.feline_potential+=/rake,if=(buff.feline_potential_counter.stack=6&!buff.cat_form.up&talent.fluid_form.enabled)
 
-actions.items=potion,if=buff.lunar_beam.up
+actions.items=potion,if=!potion.liquid_luster&buff.bs_inc.remains>=15
+actions.items+=/potion,if=potion.liquid_luster&(cooldown.bs_inc.remains<=10|buff.bs_inc.remains>=20)&(!raid_event.adds.up|raid_event.adds.remains>=30)
 actions.items+=/use_item,name=voracious_heart_of_ulatek,use_off_gcd=1,if=buff.bs_inc.remains>=20
 actions.items+=/use_item,name=vile_vial_of_volatile_venom,use_off_gcd=1,if=buff.bs_inc.remains>=15
 actions.items+=/use_item,name=freightrunners_flask,use_off_gcd=1,if=buff.bs_inc.remains>=15
