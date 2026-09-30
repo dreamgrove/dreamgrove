@@ -10,6 +10,7 @@ actions.precombat+=/variable,name=trinket_sync_slot,value=2,if=trinket.2.has_coo
 actions=retarget,target_if=max:target.health,line_cd=5,if=fight_style.dungeonroute
 actions+=/auto_attack
 actions+=/call_action_list,name=cooldowns
+actions+=/call_action_list,name=racial
 actions+=/call_action_list,name=items
 actions+=/call_action_list,name=bear
 
@@ -60,10 +61,11 @@ actions.items+=/use_item,name=freightrunners_flask,use_off_gcd=1,if=buff.bs_inc.
 actions.items+=/use_items,slots=trinket1,if=(variable.trinket_sync_slot=1&(buff.bs_inc.up|(!talent.ursocs_guidance.enabled&!cooldown.bs_inc.up))|(variable.trinket_sync_slot=2&(!trinket.2.cooldown.ready|(!buff.bs_inc.up&!cooldown.bs_inc.ready)))|!variable.trinket_sync_slot)
 actions.items+=/use_items,slots=trinket2,if=(variable.trinket_sync_slot=2&(buff.bs_inc.up|(!talent.ursocs_guidance.enabled&!cooldown.bs_inc.up))|(variable.trinket_sync_slot=1&(!trinket.1.cooldown.ready|(!buff.bs_inc.up&!cooldown.bs_inc.ready)))|!variable.trinket_sync_slot)
 
-actions.cooldowns+=/blood_fury
-actions.cooldowns+=/berserking
-actions.cooldowns+=/fireblood
-actions.cooldowns+=/ancestral_call
+actions.racial=blood_fury
+actions.racial+=/berserking
+actions.racial+=/fireblood
+actions.racial+=/ancestral_call
+
 actions.cooldowns+=/bristling_fur,if=!target.cooldown.pause_action.remains&cooldown.mangle.remains&cooldown.thrash.remains&(rage<60&talent.killing_blow.enabled|rage<40&!talent.killing_blow.enabled)&!buff.ravage.up
 actions.cooldowns+=/barkskin,if=buff.bear_form.up
 actions.cooldowns+=/lunar_beam
