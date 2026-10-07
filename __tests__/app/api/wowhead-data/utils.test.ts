@@ -3,6 +3,7 @@ import {
   parseWowheadUrl,
   extractIdFromUrl,
   formatUrl,
+  buildWowheadUrl,
 } from '../../../../app/api/wowhead-data/utils'
 import { describe, test, expect } from '@jest/globals'
 
@@ -160,6 +161,31 @@ describe('formatUrl', () => {
   test('falls back to the last path segment for anything it cannot parse', () => {
     expect(formatUrl('https://www.wowhead.com/currency=3226/valorstones')).toBe('Valorstones')
     expect(formatUrl('https://example.com/some/other-page')).toBe('Other Page')
+  })
+})
+
+describe('buildWowheadUrl', () => {
+  test('builds a www url for an english label', () => {
+    expect(buildWowheadUrl('spell', 194153, 'Starfire')).toBe(
+      'https://www.wowhead.com/spell=194153'
+    )
+  })
+
+  test('builds a ko url when the label is korean, so the tooltip comes back localized', () => {
+    expect(buildWowheadUrl('spell', 194153, '별빛섬광')).toBe('https://ko.wowhead.com/spell=194153')
+  })
+
+  test('keeps the beta prefix', () => {
+    expect(buildWowheadUrl('item', 1234, '어둠불꽃 정수', true)).toBe(
+      'https://ko.wowhead.com/beta/item=1234'
+    )
+  })
+
+  test('falls back to www for a missing or non-string label', () => {
+    expect(buildWowheadUrl('spell', 1)).toBe('https://www.wowhead.com/spell=1')
+    expect(buildWowheadUrl('spell', 1, { some: 'react node' })).toBe(
+      'https://www.wowhead.com/spell=1'
+    )
   })
 })
 

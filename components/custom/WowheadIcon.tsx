@@ -1,4 +1,5 @@
 import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
+import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
 import WowheadIconImage from './WowheadIconImage'
 
 interface WowheadIconProps {
@@ -26,7 +27,7 @@ export default async function WowheadIcon({
   iconId,
   fill = false,
 }: WowheadIconProps) {
-  const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
+  const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta)
 
   let imageUrl = ''
 
