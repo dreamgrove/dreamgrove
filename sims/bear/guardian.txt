@@ -21,6 +21,7 @@ actions.bear+=/ironfur,use_off_gcd=1,if=rage>=80&!talent.killing_blow.enabled&bu
 actions.bear+=/ironfur,use_off_gcd=1,if=(!buff.ironfur.up|buff.bs_inc.up)&!buff.answered_calling.up&talent.killing_blow.enabled&!buff.ravage.up&!buff.dream_conduit.up
 actions.bear+=/ironfur,use_off_gcd=1,if=(!buff.ironfur.up|buff.bs_inc.up)&rage>=80&buff.answered_calling.up&talent.killing_blow.enabled&!buff.ravage.up&!buff.dream_conduit.up
 actions.bear+=/thrash,target_if=refreshable|(dot.thrash.stack<5&talent.flashing_claws.rank=2|dot.thrash.stack<4&talent.flashing_claws.rank=1|dot.thrash.stack<3&!talent.flashing_claws.enabled)
+actions.bear+=/thrash,if=buff.sundering_roar.up&(dot.thrash.stack<10&talent.flashing_claws.rank=2|dot.thrash.stack<9&talent.flashing_claws.rank=1|dot.thrash.stack<8&!talent.flashing_claws.enabled)
 actions.bear+=/mangle,if=buff.answered_calling.up&(active_enemies=1|(buff.bs_inc.up&active_enemies=3))&talent.fount_of_strength.enabled
 actions.bear+=/thrash,if=talent.lunar_calling.enabled|set_bonus.midnight_season_2_4pc&(active_enemies>1|buff.answered_calling.up)
 actions.bear+=/maul,if=buff.dream_conduit.up&!talent.fount_of_strength.enabled&!buff.answered_calling.up
