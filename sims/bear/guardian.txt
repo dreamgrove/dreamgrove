@@ -70,3 +70,5 @@ actions.cooldowns+=/convoke_the_spirits,if=buff.bear_form.up
 actions.cooldowns+=/sundering_roar,if=(dot.thrash.stack>4&talent.flashing_claws.rank=2|dot.thrash.stack>3&talent.flashing_claws.rank=1|dot.thrash.stack>2&!talent.flashing_claws.enabled)&!cooldown.thrash.up
 actions.cooldowns+=/berserk,if=(!cooldown.heart_of_the_wild.up&(talent.heart_of_the_wild.enabled)|!talent.ravage.enabled|!talent.heart_of_the_wild.enabled)&(!cooldown.thrash.up|(buff.cat_form.up&!talent.convoke_the_spirits.enabled))&(!raid_event.adds.up|raid_event.adds.remains>=15)
 actions.cooldowns+=/wild_guardian,if=!buff.answered_calling.up&buff.lunar_beam.up
+actions.cooldowns+=/frenzied_regeneration,use_off_gcd=1,if=buff.bear_form.up&health.pct<60&!dot.frenzied_regeneration.ticking
+actions.cooldowns+=/survival_instincts,use_off_gcd=1,if=buff.bear_form.up&health.pct<35&!buff.survival_instincts.up
