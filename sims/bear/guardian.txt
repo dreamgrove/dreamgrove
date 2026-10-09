@@ -6,8 +6,7 @@ actions.precombat+=/cat_form,if=buff.bear_form.down&talent.heart_of_the_wild.ena
 actions.precombat+=/variable,name=trinket_sync_slot,value=1,if=trinket.1.has_cooldown&trinket.1.has_stat.any_dps&(!trinket.2.has_stat.any_dps|trinket.1.cooldown.duration>=trinket.2.cooldown.duration)|!trinket.2.has_cooldown
 actions.precombat+=/variable,name=trinket_sync_slot,value=2,if=trinket.2.has_cooldown&trinket.2.has_stat.any_dps&(!trinket.1.has_stat.any_dps|trinket.2.cooldown.duration>trinket.1.cooldown.duration)|!trinket.1.has_cooldown
 
-# Executed every time the actor is available.
-actions=retarget,target_if=max:target.health,line_cd=5,if=fight_style.dungeonroute
+actions=retarget,target_if=max:target.health,line_cd=5
 actions+=/auto_attack
 actions+=/call_action_list,name=cooldowns
 actions+=/call_action_list,name=items
@@ -40,7 +39,7 @@ actions.bear+=/thrash
 actions.bear+=/moonfire,if=talent.lunation.enabled&buff.bear_form.up&!talent.red_moon.enabled&(buff.galactic_guardian.up|active_enemies<3|refreshable)
 actions.bear+=/swipe_bear,if=!talent.lunation.enabled|(talent.lunation.enabled&talent.red_moon.enabled)|talent.lunation.enabled&active_enemies>3
 
-actions.heart_of_the_wild=cat_form,if=!buff.cat_form.up&!talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)&(rage<30&!talent.fount_of_strength.enabled|talent.fount_of_strength.enabled)
+actions.heart_of_the_wild=cat_form,if=!buff.cat_form.up&!talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)&(rage<30&!talent.fount_of_strength.enabled|talent.fount_of_strength.enabled)&!buff.answered_calling.up
 actions.heart_of_the_wild+=/rake,if=!buff.cat_form.up&talent.fluid_form.enabled&cooldown.heart_of_the_wild.up&talent.heart_of_the_wild.enabled&(active_enemies<=5&talent.moonkin_form.enabled|!talent.moonkin_form.enabled)
 actions.heart_of_the_wild+=/moonkin_form,if=!buff.moonkin_form.up&cooldown.heart_of_the_wild.up&active_enemies>=6&talent.moonkin_form.enabled
 
@@ -68,5 +67,5 @@ actions.cooldowns+=/lunar_beam
 actions.cooldowns+=/heart_of_the_wild,if=(active_enemies<=5&talent.moonkin_form.enabled&buff.cat_form.up|!talent.moonkin_form.enabled&buff.cat_form.up)|buff.moonkin_form.up&active_enemies>=6&talent.moonkin_form.enabled
 actions.cooldowns+=/convoke_the_spirits,if=buff.bear_form.up
 actions.cooldowns+=/sundering_roar,if=(dot.thrash.stack>4&talent.flashing_claws.rank=2|dot.thrash.stack>3&talent.flashing_claws.rank=1|dot.thrash.stack>2&!talent.flashing_claws.enabled)&!cooldown.thrash.up
-actions.cooldowns+=/berserk,if=(!cooldown.heart_of_the_wild.up&(talent.heart_of_the_wild.enabled)|!talent.ravage.enabled|!talent.heart_of_the_wild.enabled)&(!cooldown.thrash.up|(buff.cat_form.up&!talent.convoke_the_spirits.enabled))&(!raid_event.adds.up|raid_event.adds.remains>=15)
-actions.cooldowns+=/wild_guardian,if=!buff.answered_calling.up&buff.lunar_beam.up
+actions.cooldowns+=/berserk,if=!cooldown.thrash.up&((fight_style.dungeonroute&raid_event.pull.remains>=15)|(!fight_style.dungeonroute&(!raid_event.adds.up|raid_event.adds.remains>=15)))
+actions.cooldowns+=/wild_guardian,if=!buff.answered_calling.up&(buff.lunar_beam.up|!talent.fount_of_strength.enabled)
