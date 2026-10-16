@@ -102,3 +102,25 @@ export function formatUrl(url: string): string {
 export function extractIdFromUrl(url: string): string {
   return parseWowheadUrl(url)?.id ?? ''
 }
+
+/**
+ * Fallback href used by the Wowhead link/icon components when the author gave
+ * no explicit URL (bare spell markers, direct <Wowhead> usage without `url`).
+ * Widgets that build their own hrefs (Npc, the talent tree, Timeline's
+ * synthetic labels) are not routed through here. Hosted on ko.wowhead.com when
+ * the authored label is Korean, so Wowhead's tooltip script serves the Korean
+ * tooltip for that link. The site ships English and Korean guides only, which
+ * makes Hangul in the label a reliable locale signal; if more locales ever
+ * appear, thread a real page locale down from the MDX pipeline instead of
+ * extending this heuristic.
+ */
+export function buildWowheadUrl(
+  type: string,
+  id: string | number,
+  name?: unknown,
+  beta = false
+): string {
+  const host =
+    typeof name === 'string' && /[가-힣]/.test(name) ? 'ko.wowhead.com' : 'www.wowhead.com'
+  return `https://${host}/${beta ? 'beta/' : ''}${type}=${id}`
+}

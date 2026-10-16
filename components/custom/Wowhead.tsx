@@ -1,5 +1,5 @@
 import WowheadIcon from './WowheadIcon'
-import { qualityToColor, extractIdFromUrl } from '../../app/api/wowhead-data/utils'
+import { qualityToColor, buildWowheadUrl } from '../../app/api/wowhead-data/utils'
 import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 
 /*This whole component is retarded because wowhead is retarded*/
@@ -102,8 +102,7 @@ export default async function Wowhead({
     }
   }
 
-  const whUrl =
-    url != '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${displayId}`
+  const whUrl = url != '' ? url : buildWowheadUrl(type, displayId, name, beta)
 
   icon = <span className="wowhead-icon-wrap">{icon}</span>
   return disabled ? (
