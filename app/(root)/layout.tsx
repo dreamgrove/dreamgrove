@@ -120,7 +120,7 @@ export default function RootLayout({ children }: LayoutProps) {
           </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="beforeInteractive" />
-        <Script src={scriptSrc} strategy="afterInteractive" />
+        <Script src={scriptSrc} strategy="lazyOnload" />
       </body>
     </html>
   )
