@@ -57,9 +57,11 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                   </div>
                 </div>
                 <div className="pt-4 text-base leading-6 font-medium text-gray-500 lg:pt-0 lg:text-right dark:text-gray-400">
-                  <div>
-                    Patch: <span className="text-[#1a9c82]">{patch}</span>
-                  </div>
+                  {patch && (
+                    <div>
+                      Patch: <span className="text-[#1a9c82]">{patch}</span>
+                    </div>
+                  )}
                   <div>
                     Updated: <span className="text-[#1a9c82]">{lastModified}</span>
                   </div>

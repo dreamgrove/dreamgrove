@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { allBlogs, allDungeons, allRaids } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
+import { SPEC_IDS } from '@/data/specs'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = siteMetadata.siteUrl
@@ -16,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((post) => !post.draft)
     .map((post) => ({
       url: `${siteUrl}/${post.path}`,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: post.date || new Date().toISOString().split('T')[0],
     }))
 
   const raidRoutes = allRaids
@@ -26,12 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date().toISOString().split('T')[0],
     }))
 
-  const routes = ['', 'blog', 'dungeons', 'raids', 'changelog', 'about', 'planner'].map(
-    (route) => ({
-      url: `${siteUrl}/${route}`,
-      lastModified: new Date().toISOString().split('T')[0],
-    })
-  )
+  const routes = [
+    '',
+    ...SPEC_IDS,
+    'blog',
+    'dungeons',
+    'raids',
+    'guides',
+    'changelog',
+    'about',
+    'planner',
+  ].map((route) => ({
+    url: `${siteUrl}/${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
+  }))
 
   return [...routes, ...blogRoutes, ...dungeonRoutes, ...raidRoutes]
 }

@@ -62,8 +62,12 @@ module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
+    // Animates client-side navigations through React's <ViewTransition> (spec tiles -> hubs)
+    experimental: { viewTransition: true },
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     images: {
+      // Local images may carry a ?v= cache-busting query (see lib/specArt.ts)
+      localPatterns: [{ pathname: '/**' }],
       remotePatterns: [
         {
           protocol: 'https',
@@ -99,33 +103,13 @@ module.exports = () => {
           permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
         },
         {
-          source: '/balance',
-          destination: '/blog/balance/compendium',
-          permanent: true,
-        },
-        {
           source: '/feral/compendium',
-          destination: '/blog/feral/compendium',
-          permanent: true,
-        },
-        {
-          source: '/feral',
           destination: '/blog/feral/compendium',
           permanent: true,
         },
         {
           source: '/resto/compendium',
           destination: '/blog/resto/compendium',
-          permanent: true,
-        },
-        {
-          source: '/resto',
-          destination: '/blog/resto/compendium',
-          permanent: true,
-        },
-        {
-          source: '/guardian',
-          destination: '/blog/guardian/compendium',
           permanent: true,
         },
         {

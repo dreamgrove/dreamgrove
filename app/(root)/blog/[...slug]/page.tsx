@@ -135,7 +135,11 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
   const contentLang = slug.includes('kr/') ? 'ko' : undefined
 
   const result = (
-    <PageWrapper toc={post.toc as unknown as Chapter[]} title={pageTitle} isBlog={true}>
+    <PageWrapper
+      toc={post.toc as unknown as Chapter[]}
+      title={pageTitle}
+      isBlog={post.kind === 'compendium'}
+    >
       <script
         type="application/ld+json"
         suppressHydrationWarning
