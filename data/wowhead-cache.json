@@ -4773,5 +4773,33 @@
     "display": "Power of the Archdruid",
     "timestamp": 1787652397801,
     "icon": "spell_druid_rampantgrowth"
+  },
+  "item-281029": {
+    "display": "Band of the Swarmcaller",
+    "timestamp": 1792442317396,
+    "icon": "8268560",
+    "quality": 4
+  },
+  "item-281236": {
+    "display": "Chestwrap of Palpable Terror",
+    "timestamp": 1792442317421,
+    "icon": "inv_chest_leather_raidrogueulatek_d_01",
+    "quality": 4
+  },
+  "item-281215": {
+    "display": "Twisted Horror's Tendril",
+    "timestamp": 1792442317424,
+    "icon": "8268563",
+    "quality": 4
+  },
+  "spell-1309508": {
+    "display": "Ascendant Venomstones",
+    "timestamp": 1792442317919,
+    "icon": "inv_1205_voidforge_sovereignvoidcorefragments_green"
+  },
+  "spell-1244532": {
+    "display": "Blood Spattered",
+    "timestamp": 1792442363692,
+    "icon": "ability_druid_ferociousbite"
   }
 }
