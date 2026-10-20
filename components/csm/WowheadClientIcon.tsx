@@ -1,6 +1,7 @@
 import { memo, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { getWowheadInfo } from 'lib/wowhead-api'
+import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
 
 interface WowheadIconProps {
   id: string
@@ -26,7 +27,7 @@ function WowheadClientIcon({
   noLink = false,
   noMargin = false,
 }: WowheadIconProps) {
-  const whUrl = url !== '' ? url : `https://www.wowhead.com/${beta ? 'beta/' : ''}${type}=${id}`
+  const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta)
   const cacheKey = `${type}-${id + name}${beta ? '-beta' : ''}`
 
   // Spell icons are hosted on our own CDN keyed directly by spell id, so the URL is
