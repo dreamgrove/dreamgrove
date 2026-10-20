@@ -103,7 +103,7 @@ export default function RootLayout({ children }: LayoutProps) {
         className="flex h-full bg-[#F2F3F4] text-black antialiased dark:bg-[#282828] dark:text-white"
         suppressHydrationWarning
       >
-        <div className="flex h-full w-full flex-col" style={{ paddingLeft: 0 }}>
+        <div className="flex min-h-screen w-full flex-col" style={{ paddingLeft: 0 }}>
           <Providers>
             <ThemeProviders>
               <Analytics />
@@ -114,7 +114,7 @@ export default function RootLayout({ children }: LayoutProps) {
                 >
                   Skip to main content
                 </a>
-                <main id="main-content" className="mb-auto">
+                <main id="main-content" className="flex-1">
                   {children}
                 </main>
                 <Footer />
@@ -122,8 +122,8 @@ export default function RootLayout({ children }: LayoutProps) {
             </ThemeProviders>
           </Providers>
         </div>
-        <Script src={scriptSrc} strategy="beforeInteractive" />
-        <Script src="/static/scripts/tooltip.js" strategy="afterInteractive" />
+        <Script src="/static/scripts/tooltip.js" strategy="beforeInteractive" />
+        <Script src={scriptSrc} strategy="afterInteractive" />
       </body>
     </html>
   )
