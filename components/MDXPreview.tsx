@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, memo, Fragment, ComponentType, useRef } from 'react'
+import React, { useState, useEffect, memo, Fragment, ComponentType, useRef } from 'react'
 import * as runtime from 'react/jsx-runtime'
 import * as devRuntime from 'react/jsx-dev-runtime'
 import { evaluate, EvaluateOptions } from '@mdx-js/mdx'
@@ -53,9 +53,12 @@ import Image from 'next/image'
 import RoleSelector from './custom/Dungeons/RoleSelector'
 import Encounter from './spec/Encounter'
 import SpecNote from './spec/SpecNote'
+import type { PageLocale } from '@/lib/pageLocale'
 interface MDXPreviewProps {
   content: string
   setErrorLine?: (line: number | null) => void
+  // Locale of the edited file, so the preview matches the published page
+  locale?: PageLocale
 }
 
 interface MdxModule {
@@ -226,6 +229,20 @@ const components: MDXComponents = {
   },
 }
 
+// Mirrors getComponents() in MDXComponents.tsx: the locale-aware widgets get the
+// page locale as a prop, everything else is shared with the English map. Npc is
+// missing here because this preview map has never had Npc at all.
+const koComponents: MDXComponents = {
+  ...components,
+  Talents: (props: React.ComponentProps<typeof Talents>) => <Talents {...props} locale="ko" />,
+  Timeline: (props: React.ComponentProps<typeof TimelineClientVersion>) => (
+    <TimelineClientVersion {...props} locale="ko" />
+  ),
+  PlannerEmbed: (props: React.ComponentProps<typeof PlannerEmbedClientVersion>) => (
+    <PlannerEmbedClientVersion {...props} locale="ko" />
+  ),
+}
+
 function PreviewRenderError() {
   return (
     <div className="not-prose my-2 rounded-md border border-red-400 bg-red-50 p-3 text-red-700 dark:border-red-600 dark:bg-red-900 dark:text-red-300">
@@ -236,8 +253,12 @@ function PreviewRenderError() {
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 
-const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPreviewProps) {
+const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: MDXPreviewProps) {
   const [mdxModule, setMdxModule] = useState<MdxModule | null>(null)
+  // Read at render time by the compiled MDX, so a ref keeps the debounced
+  // evaluator below free of a locale dependency.
+  const componentsRef = useRef<MDXComponents>(components)
+  componentsRef.current = locale === 'ko' ? koComponents : components
   const [error, setError] = useState<string | null>(null)
   const [isEvaluating, setIsEvaluating] = useState<boolean>(false)
   const evaluateMdxRef = useRef<((...args: string[]) => void) | null>(null)
@@ -251,7 +272,7 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine }: MDXPrevie
         const evaluateOptions: EvaluateOptions = {
           ...(isDevelopment ? devRuntime : runtime),
           Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
-          useMDXComponents: () => components,
+          useMDXComponents: () => componentsRef.current,
           development: isDevelopment,
           remarkPlugins: [remarkAlert, remarkGfm, remarkSpell, remarkColor, remarkGroupCheckboxes],
           rehypePlugins: [rehypeContentHeader, rehypeGroupHeaders],

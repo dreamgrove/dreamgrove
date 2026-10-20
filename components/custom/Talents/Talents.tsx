@@ -8,6 +8,8 @@ import {
 import { buildClassTree, buildSpecTree, buildHeroTree } from './TalentTreeModel'
 import TalentsDropdown from './TalentsDropdown'
 import TalentTreeClient from './TalentTreeClient'
+import { talentStrings } from './strings'
+import type { PageLocale } from '@/lib/pageLocale'
 
 // Add type definition at the top
 interface ColorConfig {
@@ -16,21 +18,21 @@ interface ColorConfig {
 }
 
 // Loading component for the talent tree
-function TalentTreeLoading() {
+function TalentTreeLoading({ locale }: { locale?: PageLocale }) {
   return (
     <div className="flex flex-col items-center justify-center p-8">
       <div className="mb-4 h-12 w-12 animate-spin rounded-full border-t-2 border-b-2 border-blue-500"></div>
-      <p className="text-gray-600">Loading talent tree...</p>
+      <p className="text-gray-600">{talentStrings(locale).loading}</p>
     </div>
   )
 }
 
 // Error component for the talent tree
-function TalentTreeError({ error }: { error: string }) {
+function TalentTreeError({ error, locale }: { error: string; locale?: PageLocale }) {
   return (
     <div className="flex flex-col items-center justify-center rounded-lg bg-red-50 p-8">
       <div className="mb-4 text-5xl text-red-500">⚠️</div>
-      <h3 className="mb-2 text-xl font-semibold text-red-700">Error Loading Talent Tree</h3>
+      <h3 className="mb-2 text-xl font-semibold text-red-700">{talentStrings(locale).loadError}</h3>
       <p className="text-center text-gray-700">{error}</p>
     </div>
   )
@@ -540,6 +542,7 @@ export default function Talents({
   open = false,
   hideCopy = false,
   forceTree,
+  locale,
 }: {
   talents?: string
   viewOnly?: boolean
@@ -552,6 +555,7 @@ export default function Talents({
   open?: boolean
   hideCopy?: boolean
   forceTree?: 'full' | 'class' | 'spec' | 'hero'
+  locale?: PageLocale
 }) {
   // Parse the talent string and get the active data
   const activeData = parseTalentString(talents)
@@ -587,7 +591,7 @@ export default function Talents({
 
   // If there's an error, display the error component
   if (activeData.error) {
-    return <TalentTreeError error={activeData.error} />
+    return <TalentTreeError error={activeData.error} locale={locale} />
   }
 
   // Mark extra nodes as selected for highlighting
@@ -604,6 +608,7 @@ export default function Talents({
     nodeRanks: activeData.nodeRanks,
     viewOnly,
     nodeColors,
+    locale,
   })
 
   const specTree = buildSpecTree({
@@ -614,6 +619,7 @@ export default function Talents({
     nodeRanks: activeData.nodeRanks,
     viewOnly,
     nodeColors,
+    locale,
   })
 
   const heroTree = buildHeroTree({
@@ -624,10 +630,15 @@ export default function Talents({
     nodeRanks: activeData.nodeRanks,
     viewOnly,
     nodeColors,
+    locale,
   })
 
+  // Client components get the locale only on Korean pages, so the serialized props
+  // of English pages stay exactly as they were.
+  const localeProp = locale === 'ko' ? { locale } : {}
+
   return (
-    <TalentsDropdown name={name} defaultTree={defaultTree} open={open}>
+    <TalentsDropdown name={name} defaultTree={defaultTree} open={open} {...localeProp}>
       <div className="flex flex-col gap-4">
         <TalentTreeClient
           comment={comment}
@@ -639,6 +650,7 @@ export default function Talents({
           defaultTree={defaultTree}
           hideCopy={hideCopy}
           forceTree={forceTree}
+          {...localeProp}
         >
           {children}
         </TalentTreeClient>

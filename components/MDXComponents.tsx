@@ -20,6 +20,9 @@ import ConditionalElement from './custom/ConditionalElement'
 import CheckboxProvider from './custom/CheckboxProvider'
 import Color from './custom/Color'
 import React from 'react'
+import type { PageLocale } from '@/lib/pageLocale'
+
+// English registry. getComponents() below derives the Korean one from it.
 export const components: MDXComponents = {
   Image: ({ src, alt, ...props }) => {
     let id = ''
@@ -179,4 +182,31 @@ export const components: MDXComponents = {
       <p {...props}>{children}</p>
     )
   },
+}
+
+// Widgets whose UI strings or Wowhead hrefs have no other language signal get the
+// page locale as a prop. Everything else is shared with the English registry; Wowhead
+// and plain links rely on the Hangul label check in buildWowheadUrl instead.
+function withLocale(base: MDXComponents, locale: PageLocale): MDXComponents {
+  return {
+    ...base,
+    Talents: (props: React.ComponentProps<typeof Talents>) => (
+      <Talents {...props} locale={locale} />
+    ),
+    Timeline: (props: React.ComponentProps<typeof Timeline>) => (
+      <Timeline {...props} locale={locale} />
+    ),
+    PlannerEmbed: (props: React.ComponentProps<typeof PlannerEmbed>) => (
+      <PlannerEmbed {...props} locale={locale} />
+    ),
+    Npc: (props: React.ComponentProps<typeof Npc>) => <Npc {...props} locale={locale} />,
+  }
+}
+
+const koComponents = withLocale(components, 'ko')
+
+// English pages (and an undefined locale) get the plain registry object, so their
+// render is unchanged.
+export function getComponents(locale?: PageLocale): MDXComponents {
+  return locale === 'ko' ? koComponents : components
 }

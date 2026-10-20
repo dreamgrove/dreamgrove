@@ -1,13 +1,15 @@
 import WowheadIcon from './WowheadIcon'
 import React, { ReactNode } from 'react'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface TimelineProps {
   spellIds: string[]
   beta?: boolean
   children?: ReactNode
+  locale?: PageLocale
 }
 
-export default function Timeline({ spellIds, beta = false, children }: TimelineProps) {
+export default function Timeline({ spellIds, beta = false, children, locale }: TimelineProps) {
   // Process spell IDs to count occurrences
   const processedSpells = spellIds.reduce<{ id: string; count: number }[]>((acc, id) => {
     const lastSpell = acc.length > 0 ? acc[acc.length - 1] : null
@@ -37,6 +39,7 @@ export default function Timeline({ spellIds, beta = false, children }: TimelineP
                     type="spell"
                     name={`Spell ${spell.id}`}
                     beta={beta}
+                    locale={locale}
                     iconSize={50}
                     noMargin
                   />

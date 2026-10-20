@@ -1,3 +1,5 @@
+import type { PageLocale } from '@/lib/pageLocale'
+
 // Quality colors for reference
 export const qualityToColor = {
   1: '#ffffff',
@@ -105,22 +107,28 @@ export function extractIdFromUrl(url: string): string {
 
 /**
  * Fallback href used by the Wowhead link/icon components when the author gave
- * no explicit URL (bare spell markers, direct <Wowhead> usage without `url`).
- * Widgets that build their own hrefs (Npc, the talent tree, Timeline's
- * synthetic labels) are not routed through here. Hosted on ko.wowhead.com when
- * the authored label is Korean, so Wowhead's tooltip script serves the Korean
- * tooltip for that link. The site ships English and Korean guides only, which
- * makes Hangul in the label a reliable locale signal; if more locales ever
- * appear, thread a real page locale down from the MDX pipeline instead of
- * extending this heuristic.
+ * no explicit URL (bare spell markers, direct <Wowhead> usage without `url`),
+ * and by the widgets that build their own hrefs (the talent tree, Npc).
+ *
+ * An explicit `locale` decides the host: 'ko' forces ko.wowhead.com and 'en'
+ * forces www. Callers with no language-bearing label pass the page locale this
+ * way: Timeline (through WowheadIcon, with synthetic `Spell <id>` names) and the
+ * talent tree and Npc (which pass no name at all).
+ *
+ * With no `locale`, the host follows the authored label: ko.wowhead.com when it
+ * contains Hangul, so Wowhead's tooltip script serves the Korean tooltip for
+ * that link. The site ships English and Korean guides only, which makes Hangul
+ * in the label a reliable locale signal for inline markers.
  */
 export function buildWowheadUrl(
   type: string,
   id: string | number,
   name?: unknown,
-  beta = false
+  beta = false,
+  locale?: PageLocale
 ): string {
-  const host =
-    typeof name === 'string' && /[가-힣]/.test(name) ? 'ko.wowhead.com' : 'www.wowhead.com'
+  const isKorean =
+    locale !== undefined ? locale === 'ko' : typeof name === 'string' && /[가-힣]/.test(name)
+  const host = isKorean ? 'ko.wowhead.com' : 'www.wowhead.com'
   return `https://${host}/${beta ? 'beta/' : ''}${type}=${id}`
 }

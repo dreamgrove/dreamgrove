@@ -4,6 +4,8 @@ import { useState, useEffect, useContext } from 'react'
 import TalentTreeView from './TalentTreeView'
 import type { TreeView } from './TalentTreeModel'
 import { TalentsOpenedContext } from './TalentsDropdown'
+import { talentStrings } from './strings'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface TalentTreeClientProps {
   classTree: TreeView
@@ -16,6 +18,7 @@ interface TalentTreeClientProps {
   defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
   hideCopy?: boolean
   forceTree?: 'full' | 'class' | 'spec' | 'hero'
+  locale?: PageLocale
 }
 
 const TalentTreeClient = ({
@@ -29,7 +32,9 @@ const TalentTreeClient = ({
   defaultTree = 'Full',
   hideCopy = false,
   forceTree,
+  locale,
 }: TalentTreeClientProps) => {
+  const t = talentStrings(locale)
   const [activeTree, setActiveTree] = useState(() => {
     if (forceTree) return forceTree
     // Convert the defaultTree prop to the internal state format
@@ -46,9 +51,8 @@ const TalentTreeClient = ({
         return 'full'
     }
   })
-  const [copyButtonText, setCopyButtonText] = useState('Copy Talent String')
+  const [copyState, setCopyState] = useState<'idle' | 'copied' | 'failed'>('idle')
   const [isMobile, setIsMobile] = useState(false)
-  const [copyError, setCopyError] = useState<string | null>(null)
   const hasOpened = useContext(TalentsOpenedContext)
 
   // Handle mobile detection and default to 'class' view on mobile
@@ -72,20 +76,13 @@ const TalentTreeClient = ({
 
   const handleCopyTalentString = async () => {
     try {
-      setCopyError(null)
       await navigator.clipboard.writeText(talentString)
-      setCopyButtonText('Copied!')
-      setTimeout(() => {
-        setCopyButtonText('Copy Talent String')
-      }, 2000)
+      setCopyState('copied')
+      setTimeout(() => setCopyState('idle'), 2000)
     } catch (error) {
       console.error('Failed to copy talent string:', error)
-      setCopyButtonText('Failed to copy')
-      setCopyError('Failed to copy talent string to clipboard. Please try again or copy manually.')
-      setTimeout(() => {
-        setCopyButtonText('Copy Talent String')
-        setCopyError(null)
-      }, 3000)
+      setCopyState('failed')
+      setTimeout(() => setCopyState('idle'), 3000)
     }
   }
 
@@ -100,7 +97,7 @@ const TalentTreeClient = ({
 
   const renderTree = (tree: TreeView, className: string) => (
     <div className={className}>
-      <TalentTreeView tree={tree} />
+      <TalentTreeView tree={tree} locale={locale} />
     </div>
   )
 
@@ -116,7 +113,7 @@ const TalentTreeClient = ({
                 : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
             } ${isMobile ? 'hidden' : ''}`}
           >
-            Full
+            {t.full}
           </button>
           <button
             onClick={setClassTree}
@@ -126,7 +123,7 @@ const TalentTreeClient = ({
                 : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
             }`}
           >
-            Class
+            {t.class}
           </button>
           <button
             onClick={setSpecTree}
@@ -136,7 +133,7 @@ const TalentTreeClient = ({
                 : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
             }`}
           >
-            Spec
+            {t.spec}
           </button>
           <button
             onClick={setHeroTree}
@@ -146,14 +143,14 @@ const TalentTreeClient = ({
                 : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
             }`}
           >
-            Hero
+            {t.hero}
           </button>
         </div>
       )}
 
-      {copyError && (
+      {copyState === 'failed' && (
         <div className="rounded border border-red-400 bg-red-100 px-4 py-2 text-red-700">
-          {copyError}
+          {t.copyFailedDetail}
         </div>
       )}
 
@@ -183,12 +180,12 @@ const TalentTreeClient = ({
           <button
             onClick={handleCopyTalentString}
             className={`rounded-md px-4 py-2 text-white transition-all duration-300 ${
-              copyButtonText === 'Copied!'
+              copyState === 'copied'
                 ? 'scale-105 animate-pulse bg-yellow-600'
                 : 'bg-gray-700 hover:bg-gray-600'
             }`}
           >
-            {copyButtonText}
+            {copyState === 'copied' ? t.copied : copyState === 'failed' ? t.copyFailed : t.copy}
           </button>
         </div>
       )}
