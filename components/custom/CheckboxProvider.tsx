@@ -19,8 +19,14 @@ const CheckboxContext = createContext<CheckboxContextType>({
 
 export { CheckboxContext }
 
-export default function CheckboxProvider({ children }) {
-  const [checkboxMap, setCheckboxMap] = useState<Record<string, CheckboxItem>>({})
+export default function CheckboxProvider({
+  children,
+  initialMap = {},
+}: {
+  children: React.ReactNode
+  initialMap?: Record<string, CheckboxItem>
+}) {
+  const [checkboxMap, setCheckboxMap] = useState<Record<string, CheckboxItem>>(initialMap)
 
   const updateCheckbox = useCallback(
     (id: string, checked: boolean, radioGroup: string | null) => {

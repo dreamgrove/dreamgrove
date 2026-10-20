@@ -127,13 +127,12 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const Layout = layouts[(post.layout || defaultLayout) as LayoutKey]
 
   return (
-    <PageWrapper title={pageTitle} showTitle={false}>
+    <PageWrapper title={pageTitle} showTitle={false} variant="redesign">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="sr-only">{pageTitle}</h1>
       <Layout content={mainContent} next={next} prev={prev} authorDetails={[]}>
         <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
       </Layout>

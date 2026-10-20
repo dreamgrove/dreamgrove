@@ -25,7 +25,7 @@ export default function DungeonPage() {
   }
 
   return (
-    <PageWrapper>
+    <PageWrapper variant="redesign">
       <DungeonListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}

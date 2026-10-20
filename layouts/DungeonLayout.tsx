@@ -1,15 +1,15 @@
 'use client'
 import { ReactNode } from 'react'
-import { CoreContent } from '@/lib/utils/contentlayer'
-import type { Dungeons, Raids } from 'contentlayer/generated'
-import SectionContainer from '@/components/SectionContainer'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { FaArrowLeft } from 'react-icons/fa'
-import ContributeHeader from '@/components/custom/ContributeHeader'
-import RoleSelector from '@/components/custom/Dungeons/RoleSelector'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from '@/components/Link'
+import type { CoreContent } from '@/lib/utils/contentlayer'
+import type { Dungeons, Raids } from 'contentlayer/generated'
+import siteMetadata from '@/data/siteMetadata'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
+import SpecFilterChips, { ALL_SPECS_CHECKED } from '@/components/spec/SpecFilterChips'
+import EncounterRail from '@/components/spec/EncounterRail'
+import { EncounterProvider, type EncounterMeta } from '@/components/spec/EncounterContext'
+import { ArrowLeft } from '@/components/spec/icons'
 
 interface LayoutProps {
   content: CoreContent<Dungeons | Raids>
@@ -20,55 +20,76 @@ interface LayoutProps {
   showTitle?: boolean
 }
 
-export default function DungeonLayout({ content, children, showTitle = true }: LayoutProps) {
-  const { title, headerImage, path } = content
-  const parentPath = `/${path.split('/')[0]}`
+/** Shared layout for dungeon and raid guides: hero, sticky spec/encounter rail, encounters. */
+export default function DungeonLayout({ content, children }: LayoutProps) {
+  const { title, headerImage, path, authors, lastModified, filePath } = content
+  const isRaid = path.startsWith('raids/')
+  const encounters = (content.encounters ?? []) as EncounterMeta[]
+  const editUrl = `${siteMetadata.siteRepo}/edit/master/data/${filePath}`
 
   return (
-    <SectionContainer>
-      <ScrollTopAndComment />
-
-      <article>
-        <div className="toChange">
-          <header className="pt-0 pb-6">
-            <div className="space-y-6 text-center">
-              {headerImage && (
-                <div className="relative block overflow-hidden rounded-lg">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      alt={title}
-                      src={`/static/images/${headerImage}`}
-                      layout="fill"
-                      sizes="100vw"
-                      style={{
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <div className="font-thiccboi absolute inset-0 flex items-center justify-center bg-black/50 p-2 text-[50px] text-white">
-                      {title}
-                    </div>
-                  </div>
-                </div>
-              )}
-              <ContributeHeader />
-              <Link href={parentPath} className="cursor-pointer">
-                <div className="flex items-center pt-0 text-left underline md:text-xl">
-                  <FaArrowLeft className="inline" />
-                  <span className="ml-2">Go Back</span>
-                </div>
+    <CheckboxProvider initialMap={ALL_SPECS_CHECKED}>
+      <EncounterProvider encounters={encounters} editUrl={editUrl}>
+        <div className="pb-16 sm:pb-[72px]">
+          <section className="relative h-[280px] overflow-hidden bg-[#0b0906] sm:h-[340px]">
+            {headerImage && (
+              <Image
+                src={`/static/images/${headerImage}`}
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+            )}
+            <div className="absolute inset-0 bg-[rgba(11,9,6,.5)]" />
+            <div className="dg-container relative flex h-full flex-col items-start justify-between pt-7 pb-9">
+              <Link href={isRaid ? '/raids' : '/dungeons'} className="dg-back">
+                <ArrowLeft />
+                {isRaid ? 'Raids' : 'Mythic+ dungeons'}
               </Link>
-            </div>
-          </header>
-          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:grid xl:gap-x-6 xl:divide-y-0 dark:divide-gray-700">
-            <CheckboxProvider>
-              <div id="main" className="xl:col-span-12 xl:pb-0">
-                <RoleSelector />
-                <div className="prose dark:prose-invert max-w-none pt-0 pb-8">{children}</div>
+              <div className="flex flex-col gap-4">
+                <h1 className="m-0 text-[2.9rem] leading-[.9] font-semibold text-balance sm:text-[4.6rem]">
+                  {title}
+                </h1>
+                <div className="flex flex-wrap gap-x-[22px] gap-y-1 text-[.92rem] text-white/70">
+                  {authors && authors.length > 0 && (
+                    <span className="whitespace-nowrap">
+                      By <span className="font-semibold text-white">{authors.join(', ')}</span>
+                    </span>
+                  )}
+                  {lastModified && (
+                    <span className="whitespace-nowrap">
+                      Updated <span className="font-semibold text-white">{lastModified}</span>
+                    </span>
+                  )}
+                </div>
               </div>
-            </CheckboxProvider>
+            </div>
+          </section>
+
+          <div className="dg-container">
+            <div className="mt-10 flex flex-col gap-10 sm:mt-14 lg:flex-row lg:items-start lg:gap-14">
+              {/* lg:pt-[5px] lines the first label's capitals up with the first encounter heading */}
+              <aside className="flex flex-col gap-[18px] lg:sticky lg:top-24 lg:w-[220px] lg:flex-none lg:pt-[5px]">
+                <div className="flex flex-col gap-3 border-b border-[#3a3a3a] pb-[18px]">
+                  <div className="dg-eyebrow lg:px-3">Show notes for</div>
+                  <SpecFilterChips />
+                </div>
+                <EncounterRail />
+                <a
+                  href={editUrl}
+                  className="text-[.85rem] font-semibold text-white/40 transition-colors hover:text-[#d57f43] lg:px-3"
+                >
+                  Edit this guide on GitHub
+                </a>
+              </aside>
+
+              <article className="flex min-w-0 flex-1 flex-col">{children}</article>
+            </div>
           </div>
         </div>
-      </article>
-    </SectionContainer>
+      </EncounterProvider>
+    </CheckboxProvider>
   )
 }

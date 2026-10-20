@@ -26,3 +26,42 @@
 - the basic formatting language is markdown, so you can use all of its features
 - the already present compendiums should have examples of how to write everything you might need
 - There's also this thing I wrote as documentation if you need something fancy: https://github.com/dreamgrove/dreamgrove/blob/master/CONTRIBUTING.md
+
+---
+
+### Writing an article (not a compendium)
+
+Put the file in `data/blog/<spec>/<slug>.mdx`; it is served at `/blog/<spec>/<slug>`. To list it under a spec's **Guides** section (on `/balance`, `/feral`, `/guardian`, `/resto`), tag it with `specs`:
+
+```yaml
+---
+title: 'Rage pooling and defensive uptime'
+date: '2026-08-05' # used for ordering, newest first
+summary: 'When to bank rage for Ironfur and when to spend it on damage.'
+authors: ['Kitch']
+specs: ['guardian'] # one or more of balance, feral, guardian, resto
+patch: '12.1' # optional
+---
+```
+
+Dungeon and raid guides can be listed on spec hubs the same way: add `specs`, `date` and `authors` to their frontmatter.
+
+### Dungeon and raid guides
+
+Each encounter is an `<Encounter>` section with freeform content: paragraphs, `###` subheadings, lists, `!Spell!` links and alerts. Spec-specific advice goes in a `<SpecNote>`, which readers can hide with the "Show notes for" filter. Leave a blank line after each opening tag and before each closing tag so the markdown inside renders.
+
+```mdx
+<Encounter title="Trash to Kyrioss" trash>
+
+The casters open with !Bounding Void!. Pull from the hut so most bounces break line of sight.
+
+<SpecNote spec="guardian">
+
+Gather the leap pack in a corner and keep !Ironfur! stacked through the leap.
+
+</SpecNote>
+
+</Encounter>
+```
+
+An encounter with no content (or just `TBD`) is shown as "No notes yet" with a link to edit the file. The older `<BossCard>` name still works and behaves like `<Encounter>`.
