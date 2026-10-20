@@ -1,11 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import TalentTreeView from './TalentTreeView'
+import type { TreeView } from './TalentTreeModel'
+import { TalentsOpenedContext } from './TalentsDropdown'
 
 interface TalentTreeClientProps {
-  classTree: React.ReactNode
-  specTree: React.ReactNode
-  heroTree: React.ReactNode
+  classTree: TreeView
+  specTree: TreeView
+  heroTree: TreeView
   talentString: string
   viewOnly?: boolean
   comment?: string
@@ -46,6 +49,7 @@ const TalentTreeClient = ({
   const [copyButtonText, setCopyButtonText] = useState('Copy Talent String')
   const [isMobile, setIsMobile] = useState(false)
   const [copyError, setCopyError] = useState<string | null>(null)
+  const hasOpened = useContext(TalentsOpenedContext)
 
   // Handle mobile detection and default to 'class' view on mobile
   useEffect(() => {
@@ -94,17 +98,11 @@ const TalentTreeClient = ({
   const specWidth = 'w-[7/19]'
   const heroWidth = 'w-[3/19]'
 
-  const fullTreeView = (
-    <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
-      <div className={classWidth}>{classTree}</div>
-      <div className={heroWidth}>{heroTree}</div>
-      <div className={specWidth}>{specTree}</div>
+  const renderTree = (tree: TreeView, className: string) => (
+    <div className={className}>
+      <TalentTreeView tree={tree} />
     </div>
   )
-
-  const classTreeView = <div className="w-full">{classTree}</div>
-  const specTreeView = <div className="w-full">{specTree}</div>
-  const heroTreeView = <div className="w-full">{heroTree}</div>
 
   return (
     <div className="grid-co flex flex-col gap-4">
@@ -167,10 +165,16 @@ const TalentTreeClient = ({
       )}
 
       <div className="relative">
-        {activeTree === 'full' && fullTreeView}
-        {activeTree === 'class' && classTreeView}
-        {activeTree === 'spec' && specTreeView}
-        {activeTree === 'hero' && heroTreeView}
+        {hasOpened && activeTree === 'full' && (
+          <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4`}>
+            {renderTree(classTree, classWidth)}
+            {renderTree(heroTree, heroWidth)}
+            {renderTree(specTree, specWidth)}
+          </div>
+        )}
+        {hasOpened && activeTree === 'class' && renderTree(classTree, 'w-full')}
+        {hasOpened && activeTree === 'spec' && renderTree(specTree, 'w-full')}
+        {hasOpened && activeTree === 'hero' && renderTree(heroTree, 'w-full')}
       </div>
 
       {/* Add button to copy talent string at the bottom */}

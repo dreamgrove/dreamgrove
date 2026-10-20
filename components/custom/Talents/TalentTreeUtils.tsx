@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import talentData from '../../../other/talents.json'
 
 // Type definitions
@@ -466,83 +465,4 @@ export function getTalentDataForSpec(specId: number): TalentData | undefined {
 // Get all available spec IDs
 export function getAvailableSpecIds(): number[] {
   return talentData.map((spec) => spec.specId).filter(Boolean) as number[]
-}
-
-// Server-side node components
-export const TalentNode = ({
-  node,
-  selected,
-  choiceIndex = 0,
-  rank = 0,
-  disableInteraction = false,
-  borderColor,
-}: {
-  node: TalentNode
-  selected: boolean
-  choiceIndex?: number
-  rank?: number
-  disableInteraction?: boolean
-  borderColor?: string
-}) => {
-  // Check if this is a choice node and which choice is selected
-  const isChoiceNode = node.entries.length > 1
-  const selectedChoiceIndex = choiceIndex || 0
-
-  // Get the icon and name based on the selected choice
-  const icon =
-    isChoiceNode && selected
-      ? node.entries[selectedChoiceIndex]?.icon || node.entries[0]?.icon
-      : node.entries[0]?.icon
-
-  const displayName =
-    isChoiceNode && selected ? node.entries[selectedChoiceIndex]?.name || node.name : node.name
-
-  return (
-    <div
-      className={`absolute flex h-[70%] w-[70%] items-center justify-center rounded-full border-2 opacity-80 ${
-        !disableInteraction ? 'cursor-pointer hover:scale-110 hover:border-white' : ''
-      } transition-all duration-200`}
-      style={{
-        zIndex: 10, // Ensure nodes appear above connection lines
-        borderColor: borderColor || (selected ? '#00ff00' : '#ffd700'),
-      }}
-      title={displayName}
-    >
-      {icon && (
-        <>
-          <a
-            href={`https://www.wowhead.com/spell=${node.entries[selectedChoiceIndex]?.spellId || node.entries[0]?.spellId || '0'}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-[90%] w-[90%] items-center justify-center"
-          >
-            <Image
-              src={`https://wow.zamimg.com/images/wow/icons/large/${icon}.jpg`}
-              alt={displayName}
-              width={56}
-              height={56}
-              className={`rounded-full ${
-                selected ? 'brightness-125' : 'opacity-70 brightness-50 grayscale-50'
-              }`}
-              unoptimized={true}
-              priority={false}
-            />
-          </a>
-          {node.maxRanks && node.maxRanks > 1 && (
-            <div
-              className={`bg-opacity-70 absolute right-0 bottom-0 rounded-full bg-black px-1 text-xs font-bold ${selected ? 'text-white' : 'text-gray-400'}`}
-              style={{
-                zIndex: 11,
-                border: selected ? '1px solid #ffcc00' : '1px solid #666',
-                boxShadow: selected ? '0 0 3px rgba(255, 204, 0, 0.5)' : 'none',
-                fontSize: '0.65rem', // Smaller font size for the rank indicator
-              }}
-            >
-              {rank}/{node.maxRanks}
-            </div>
-          )}
-        </>
-      )}
-    </div>
-  )
 }

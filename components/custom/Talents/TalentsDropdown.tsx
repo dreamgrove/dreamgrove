@@ -1,9 +1,11 @@
 'use client'
 
-import React, { useState, ReactNode } from 'react'
+import React, { createContext, useState, ReactNode } from 'react'
 import { FaAngleDown } from 'react-icons/fa'
 import { LuSwords } from 'react-icons/lu'
 import styles from './Talents.module.css'
+
+export const TalentsOpenedContext = createContext(true)
 
 interface TalentDropdownProps {
   name?: string
@@ -19,9 +21,11 @@ export default function TalentsDropdown({
   children,
 }: TalentDropdownProps) {
   const [isVisible, setIsVisible] = useState(open)
+  const [hasOpened, setHasOpened] = useState(open)
 
   const toggleVisibility = () => {
     setIsVisible((prev) => !prev)
+    setHasOpened(true)
   }
 
   return (
@@ -52,7 +56,11 @@ export default function TalentsDropdown({
         style={{ backgroundColor: '#282828', width: '100%', overflow: 'hidden' }}
       >
         <div style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
-          <div className="p-4">{children}</div>
+          <div className="p-4">
+            <TalentsOpenedContext.Provider value={hasOpened}>
+              {children}
+            </TalentsOpenedContext.Provider>
+          </div>
         </div>
       </div>
     </div>
