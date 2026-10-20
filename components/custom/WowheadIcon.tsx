@@ -1,6 +1,7 @@
 import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
 import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
 import WowheadIconImage from './WowheadIconImage'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface WowheadIconProps {
   id: string
@@ -13,6 +14,8 @@ interface WowheadIconProps {
   iconId?: string
   iconSize?: number
   fill?: boolean
+  // Forces the href host when the name carries no language signal (Timeline)
+  locale?: PageLocale
 }
 
 export default async function WowheadIcon({
@@ -26,8 +29,9 @@ export default async function WowheadIcon({
   noMargin = false,
   iconId,
   fill = false,
+  locale,
 }: WowheadIconProps) {
-  const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta)
+  const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta, locale)
 
   let imageUrl = ''
 

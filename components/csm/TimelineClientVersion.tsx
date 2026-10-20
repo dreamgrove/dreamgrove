@@ -44,6 +44,7 @@ export default function TimelineClientVersion({
                     type="spell"
                     name={`Spell ${spell.id}`}
                     beta={beta}
+                    locale={locale}
                     size={50}
                     noMargin
                   />

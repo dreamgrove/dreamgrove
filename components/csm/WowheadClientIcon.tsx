@@ -2,6 +2,7 @@ import { memo, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { getWowheadInfo } from 'lib/wowhead-api'
 import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface WowheadIconProps {
   id: string
@@ -12,6 +13,8 @@ interface WowheadIconProps {
   size?: number
   noLink?: boolean
   noMargin?: boolean
+  // Forces the href host when the name carries no language signal (Timeline)
+  locale?: PageLocale
 }
 
 // Client-side cache for icon filenames (only used for non-spell types)
@@ -26,8 +29,9 @@ function WowheadClientIcon({
   size,
   noLink = false,
   noMargin = false,
+  locale,
 }: WowheadIconProps) {
-  const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta)
+  const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta, locale)
   const cacheKey = `${type}-${id + name}${beta ? '-beta' : ''}`
 
   // Spell icons are hosted on our own CDN keyed directly by spell id, so the URL is

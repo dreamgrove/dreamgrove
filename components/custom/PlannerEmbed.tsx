@@ -2,6 +2,7 @@ import React from 'react'
 import spellsData from '../../other/timelineSpells.json'
 import Wowhead from './Wowhead'
 import PlannerEmbedCore from '../PlannerEmbed/PlannerEmbedCore'
+import { koSpellNames } from '../PlannerEmbed/koSpellNames'
 import { decodeLoadout } from '@/lib/utils/loadoutCode'
 import { SpellInfo } from '@/types/timeline'
 import type { PageLocale } from '@/lib/pageLocale'
@@ -38,7 +39,7 @@ export default function PlannerEmbed({ code, children, locale }: PlannerEmbedPro
       <Wowhead
         type="spell"
         id={spellId}
-        name={spell.name}
+        name={(locale === 'ko' && koSpellNames[spellId]) || spell.name}
         noIcon={false}
         fill={true}
         disabled={false}
@@ -50,7 +51,13 @@ export default function PlannerEmbed({ code, children, locale }: PlannerEmbedPro
   }
 
   return (
-    <PlannerEmbedCore code={code} spells={spells} spellNames={spellNames}>
+    // locale only on Korean pages, so English pages serialize the same props as before
+    <PlannerEmbedCore
+      code={code}
+      spells={spells}
+      spellNames={spellNames}
+      {...(locale === 'ko' && { locale })}
+    >
       {children}
     </PlannerEmbedCore>
   )

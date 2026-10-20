@@ -39,6 +39,7 @@ export default function Timeline({ spellIds, beta = false, children, locale }: T
                     type="spell"
                     name={`Spell ${spell.id}`}
                     beta={beta}
+                    locale={locale}
                     iconSize={50}
                     noMargin
                   />

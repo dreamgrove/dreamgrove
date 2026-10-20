@@ -4,6 +4,8 @@ import React, { createContext, useState, ReactNode } from 'react'
 import { FaAngleDown } from 'react-icons/fa'
 import { LuSwords } from 'react-icons/lu'
 import styles from './Talents.module.css'
+import { talentStrings } from './strings'
+import type { PageLocale } from '@/lib/pageLocale'
 
 export const TalentsOpenedContext = createContext(true)
 
@@ -12,6 +14,7 @@ interface TalentDropdownProps {
   open?: boolean
   defaultTree?: 'Full' | 'Class' | 'Spec' | 'Hero'
   children: ReactNode
+  locale?: PageLocale
 }
 
 export default function TalentsDropdown({
@@ -19,7 +22,9 @@ export default function TalentsDropdown({
   open = false,
   defaultTree,
   children,
+  locale,
 }: TalentDropdownProps) {
+  const t = talentStrings(locale)
   const [isVisible, setIsVisible] = useState(open)
   const [hasOpened, setHasOpened] = useState(open)
 
@@ -36,12 +41,12 @@ export default function TalentsDropdown({
       <button
         onClick={toggleVisibility}
         aria-expanded={isVisible}
-        aria-label={`${name || 'Talent Tree'} dropdown`}
+        aria-label={t.dropdownLabel(name || t.talentTree)}
         className="group flex h-auto w-full cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-200"
       >
         <span className="talentName flex items-center text-left text-lg font-bold select-none">
           <LuSwords className="mr-2 opacity-50" />
-          {name || 'Talent Tree'}
+          {name || t.talentTree}
         </span>
         <span
           className={`text-gray-400 transition-transform duration-300 ease-out group-hover:text-gray-600 dark:text-gray-500 dark:group-hover:text-gray-300 ${

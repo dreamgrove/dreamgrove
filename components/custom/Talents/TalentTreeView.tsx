@@ -1,11 +1,13 @@
 'use client'
 
 import type { TreeView } from './TalentTreeModel'
+import type { PageLocale } from '@/lib/pageLocale'
+import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
 
 const SELECTED = '#00ff00'
 const UNSELECTED = '#ffd700'
 
-export default function TalentTreeView({ tree }: { tree: TreeView }) {
+export default function TalentTreeView({ tree, locale }: { tree: TreeView; locale?: PageLocale }) {
   const { title, rows, cols, nodes, lines, interactive, message } = tree
 
   return (
@@ -88,7 +90,13 @@ export default function TalentTreeView({ tree }: { tree: TreeView }) {
                         {node.icon && (
                           <>
                             <a
-                              href={`https://www.wowhead.com/spell=${node.spellId || 0}`}
+                              href={buildWowheadUrl(
+                                'spell',
+                                node.spellId || 0,
+                                undefined,
+                                false,
+                                locale
+                              )}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex h-[90%] w-[90%] items-center justify-center"

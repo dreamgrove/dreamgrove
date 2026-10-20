@@ -1,4 +1,6 @@
 import { buildTalentGrid, collapseGapColumns, TalentNode, GridCell } from './TalentTreeUtils'
+import { talentStrings } from './strings'
+import type { PageLocale } from '@/lib/pageLocale'
 
 // Compact, serializable description of a rendered talent tree. The server builds it
 // from the talent string and the client draws it (see TalentTreeView) only once the
@@ -45,6 +47,7 @@ interface TreeOptions {
   nodeRanks: Record<number, number>
   viewOnly?: boolean
   nodeColors?: Record<string, string>
+  locale?: PageLocale
 }
 
 const cellCenterCol = (cell: GridCell) => cell.col + (cell.colSpan ?? 1) / 2
@@ -132,30 +135,27 @@ const emptyTree = (title: string, message: TreeView['message']): TreeView => ({
 })
 
 export function buildClassTree(options: TreeOptions): TreeView {
+  const t = talentStrings(options.locale)
   const grid = buildTalentGrid(options.nodes)
-  if (grid.length === 0)
-    return emptyTree('Class Tree', { title: 'No nodes available for this tree.' })
-  return buildTreeView('Class Tree', grid, options.nodes, options)
+  if (grid.length === 0) return emptyTree(t.classTree, { title: t.noNodes })
+  return buildTreeView(t.classTree, grid, options.nodes, options)
 }
 
 export function buildSpecTree(options: TreeOptions): TreeView {
+  const t = talentStrings(options.locale)
   const grid = buildTalentGrid(options.nodes)
-  if (grid.length === 0) {
-    return emptyTree('Specialization Tree', { title: 'No nodes available for this tree.' })
-  }
-  return buildTreeView('Specialization Tree', grid, options.nodes, options)
+  if (grid.length === 0) return emptyTree(t.specTree, { title: t.noNodes })
+  return buildTreeView(t.specTree, grid, options.nodes, options)
 }
 
 export function buildHeroTree(options: TreeOptions): TreeView {
   const { nodes, selectedNodes } = options
-  const title = 'Hero Tree'
-  const noSelection = {
-    title: 'No fully selected hero trees',
-    detail: 'All talents in a hero tree must be selected to display it',
-  }
+  const t = talentStrings(options.locale)
+  const title = t.heroTree
+  const noSelection = { title: t.noHeroSelection, detail: t.noHeroSelectionDetail }
 
   if (nodes.length === 0) {
-    return emptyTree(title, { title: 'No hero nodes available for this class/spec.' })
+    return emptyTree(title, { title: t.noHeroNodes })
   }
   if (selectedNodes.length === 0) return emptyTree(title, noSelection)
 

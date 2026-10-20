@@ -4,6 +4,7 @@ import React, { useMemo } from 'react'
 import spellsData from '../../other/timelineSpells.json'
 import WowheadClientVersion from './WowheadClientVersion'
 import PlannerEmbedCore from '../PlannerEmbed/PlannerEmbedCore'
+import { koSpellNames } from '../PlannerEmbed/koSpellNames'
 import { decodeLoadout } from '@/lib/utils/loadoutCode'
 import { SpellInfo } from '@/types/timeline'
 import type { PageLocale } from '@/lib/pageLocale'
@@ -45,14 +46,19 @@ export default function PlannerEmbedClientVersion({
       const spell = spells.find((s) => s.spellId === spellId)
       if (!spell) continue
       names[spellId] = (
-        <WowheadClientVersion type="spell" id={spellId} name={spell.name} disabled={false} />
+        <WowheadClientVersion
+          type="spell"
+          id={spellId}
+          name={(locale === 'ko' && koSpellNames[spellId]) || spell.name}
+          disabled={false}
+        />
       )
     }
     return names
-  }, [code, spells])
+  }, [code, spells, locale])
 
   return (
-    <PlannerEmbedCore code={code} spells={spells} spellNames={spellNames}>
+    <PlannerEmbedCore code={code} spells={spells} spellNames={spellNames} locale={locale}>
       {children}
     </PlannerEmbedCore>
   )

@@ -8,6 +8,8 @@ import { simulateLoadout, splitCastsByCharges, SimulatedLoadout } from '@/lib/em
 import CastBars from '@/components/TimelinePlanner/Cast/CastBars'
 import CustomSpellIcon from '@/components/TimelinePlanner/CustomSpell/CustomSpellIcon'
 import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
+import type { PageLocale } from '@/lib/pageLocale'
+import { plannerEmbedStrings, PlannerEmbedStrings } from './strings'
 
 const ROW_H = 40 // h-10, matches the planner's cast rows
 const ROW_GAP = 16 // my-2 top+bottom
@@ -21,6 +23,7 @@ interface PlannerEmbedCoreProps {
   minPixelsPerSecond?: number
   maxPixelsPerSecond?: number
   children?: React.ReactNode
+  locale?: PageLocale
 }
 
 function formatTimestamp(seconds: number): string {
@@ -52,7 +55,7 @@ function EmbedFrame({ children }: { children: React.ReactNode }) {
   )
 }
 
-function OpenInPlannerLink({ code }: { code: string }) {
+function OpenInPlannerLink({ code, t }: { code: string; t: PlannerEmbedStrings }) {
   return (
     <a
       href={`/planner?loadout=${encodeURIComponent(code)}`}
@@ -60,12 +63,20 @@ function OpenInPlannerLink({ code }: { code: string }) {
       rel="noopener noreferrer"
       className="text-main text-xs hover:underline"
     >
-      Open in planner →
+      {t.openInPlanner}
     </a>
   )
 }
 
-function EmbedCast({ cast, pixelsPerSecond }: { cast: Cast; pixelsPerSecond: number }) {
+function EmbedCast({
+  cast,
+  pixelsPerSecond,
+  t,
+}: {
+  cast: Cast
+  pixelsPerSecond: number
+  t: PlannerEmbedStrings
+}) {
   return (
     <div
       className="absolute focus:outline-hidden"
@@ -83,7 +94,7 @@ function EmbedCast({ cast, pixelsPerSecond }: { cast: Cast; pixelsPerSecond: num
               className="absolute z-20 flex items-center text-[0.75rem] text-yellow-500/80"
             >
               <CiWarning className="text-yellow-500/80" />
-              <span className="pl-2">interrupted</span>
+              <span className="pl-2">{t.interrupted}</span>
             </div>
           )}
           <CastBars cast={cast} pixelsPerSecond={pixelsPerSecond} transitionStyle="" />
@@ -100,7 +111,9 @@ export default function PlannerEmbedCore({
   minPixelsPerSecond = 4,
   maxPixelsPerSecond = 16,
   children,
+  locale,
 }: PlannerEmbedCoreProps) {
+  const t = plannerEmbedStrings(locale)
   const trackRef = useRef<HTMLDivElement>(null)
   const [trackWidth, setTrackWidth] = useState(0)
 
@@ -127,9 +140,7 @@ export default function PlannerEmbedCore({
   if (result.error || !result.sim) {
     return (
       <EmbedFrame>
-        <div className="py-4 text-center text-sm text-red-400/80">
-          Invalid planner code — could not display this timeline.
-        </div>
+        <div className="py-4 text-center text-sm text-red-400/80">{t.invalidCode}</div>
       </EmbedFrame>
     )
   }
@@ -139,9 +150,9 @@ export default function PlannerEmbedCore({
   if (sim.spells.length === 0) {
     return (
       <EmbedFrame>
-        <div className="py-4 text-center text-sm text-gray-500">This loadout has no casts.</div>
+        <div className="py-4 text-center text-sm text-gray-500">{t.noCasts}</div>
         <div className="flex justify-end">
-          <OpenInPlannerLink code={code} />
+          <OpenInPlannerLink code={code} t={t} />
         </div>
       </EmbedFrame>
     )
@@ -246,6 +257,7 @@ export default function PlannerEmbedCore({
                               key={cast.id || `embed-cast-${i}`}
                               cast={cast}
                               pixelsPerSecond={pixelsPerSecond}
+                              t={t}
                             />
                           ))}
                         </div>
@@ -264,13 +276,12 @@ export default function PlannerEmbedCore({
           {children}
           {sim.skippedSpellIds.length > 0 && (
             <span className="ml-2 text-yellow-500/70">
-              {sim.skippedSpellIds.length} unknown spell
-              {sim.skippedSpellIds.length > 1 ? 's' : ''} omitted
+              {t.skippedSpells(sim.skippedSpellIds.length)}
             </span>
           )}
         </div>
         <div className="shrink-0">
-          <OpenInPlannerLink code={code} />
+          <OpenInPlannerLink code={code} t={t} />
         </div>
       </div>
     </EmbedFrame>
