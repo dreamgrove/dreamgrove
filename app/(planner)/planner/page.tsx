@@ -1,4 +1,5 @@
 import TimelinePlannerServer from '@/components/TimelinePlanner/TimelinePlannerServer'
+import { TourProvider } from '@/components/TourProvider'
 
 export const metadata = {
   title: 'Timeline Planner',
@@ -9,7 +10,9 @@ export const metadata = {
 export default function PlannerPage() {
   return (
     <div className="h-full overflow-x-hidden">
-      <TimelinePlannerServer />
+      <TourProvider>
+        <TimelinePlannerServer />
+      </TourProvider>
     </div>
   )
 }

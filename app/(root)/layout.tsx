@@ -10,7 +10,6 @@ import ThemeProviders from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
-import { Providers } from './providers'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -104,23 +103,21 @@ export default function RootLayout({ children }: LayoutProps) {
         suppressHydrationWarning
       >
         <div className="flex min-h-screen w-full flex-col" style={{ paddingLeft: 0 }}>
-          <Providers>
-            <ThemeProviders>
-              <Analytics />
-              <KBarSearchProvider kbarConfig={siteMetadata.search.kbarConfig}>
-                <a
-                  href="#main-content"
-                  className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black dark:focus:bg-black dark:focus:text-white"
-                >
-                  Skip to main content
-                </a>
-                <main id="main-content" className="flex-1">
-                  {children}
-                </main>
-                <Footer />
-              </KBarSearchProvider>
-            </ThemeProviders>
-          </Providers>
+          <ThemeProviders>
+            <Analytics />
+            <KBarSearchProvider kbarConfig={siteMetadata.search.kbarConfig}>
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black dark:focus:bg-black dark:focus:text-white"
+              >
+                Skip to main content
+              </a>
+              <main id="main-content" className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </KBarSearchProvider>
+          </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="beforeInteractive" />
         <Script src={scriptSrc} strategy="afterInteractive" />
