@@ -90,7 +90,6 @@ module.exports = () => {
     },
     env: {
       GITHUB_ID: process.env.GITHUB_ID,
-      GITHUB_SECRET: process.env.GITHUB_SECRET,
       GITHUB_REPO_OWNER: process.env.GITHUB_REPO_OWNER || 'dreamgrove',
       GITHUB_REPO_NAME: process.env.GITHUB_REPO_NAME || 'dreamgrove',
       GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
