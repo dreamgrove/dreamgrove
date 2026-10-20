@@ -1,5 +1,3 @@
-import 'katex/dist/katex.css'
-
 import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
 import { coreContent, allCoreContent } from '@/lib/utils/contentlayer'
 import { allRaids } from 'contentlayer/generated'
