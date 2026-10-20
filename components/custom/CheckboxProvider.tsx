@@ -1,5 +1,5 @@
 'use client'
-import React, { createContext, useState, useCallback } from 'react'
+import React, { createContext, useState, useCallback, useMemo } from 'react'
 
 interface CheckboxItem {
   checked: boolean
@@ -76,10 +76,10 @@ export default function CheckboxProvider({
     [setCheckboxMap]
   )
 
-  const contextValue = {
-    checkboxMap,
-    updateCheckbox,
-  }
+  const contextValue = useMemo(
+    () => ({ checkboxMap, updateCheckbox }),
+    [checkboxMap, updateCheckbox]
+  )
 
   return (
     <div className="custom-checkbox-provider">

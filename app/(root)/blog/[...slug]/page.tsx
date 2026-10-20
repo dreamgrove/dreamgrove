@@ -9,6 +9,7 @@ import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import PageWrapper from '@/components/PageWrapper'
+import { getCheckboxDefaults } from '@/lib/utils/checkboxDefaults'
 
 const defaultLayout = 'PostLayout'
 const layouts: Record<string, React.ComponentType<any>> = {
@@ -153,6 +154,7 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
           next={next}
           prev={prev}
           translator={post.translator}
+          checkboxDefaults={getCheckboxDefaults(post.body.raw)}
         >
           <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
         </Layout>
