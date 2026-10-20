@@ -1,48 +1,36 @@
 import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Raids } from 'contentlayer/generated'
 import InstanceCard from '@/components/custom/Dungeons/InstanceCard'
+import InstanceListLayout from './InstanceListLayout'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
-interface RaidLayoutProps {
+interface RaidListLayoutProps {
   posts: CoreContent<Raids>[]
   title: string
   initialDisplayPosts?: CoreContent<Raids>[]
   pagination?: PaginationProps
 }
 
-export default function RaidListLayout({
-  posts,
-  title,
-  initialDisplayPosts = [],
-}: RaidLayoutProps) {
+export default function RaidListLayout({ posts, initialDisplayPosts = [] }: RaidListLayoutProps) {
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 
   return (
-    <div className="px-3 sm:px-6 md:px-6 lg:px-6 xl:px-3">
-      <h1 className="sr-only">{title}</h1>
-      {!posts.length && (
-        <div className="py-16 text-center text-gray-500 dark:text-gray-400">No posts found.</div>
-      )}
-
-      <ul className="grid grid-cols-1 gap-6 pb-16">
-        {displayPosts.map((post, i) => {
-          const { path, title, headerImage } = post
-          return (
-            <li key={path}>
-              <InstanceCard
-                title={title}
-                headerImage={`${headerImage}`}
-                path={path}
-                index={i + 1}
-                variant="raid"
-              />
-            </li>
-          )
-        })}
+    <InstanceListLayout title="Raids" empty={!posts.length}>
+      <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0">
+        {displayPosts.map((post) => (
+          <li key={post.path}>
+            <InstanceCard
+              title={post.title}
+              headerImage={`${post.headerImage}`}
+              path={post.path}
+              variant="raid"
+            />
+          </li>
+        ))}
       </ul>
-    </div>
+    </InstanceListLayout>
   )
 }

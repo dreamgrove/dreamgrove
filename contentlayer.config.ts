@@ -137,6 +137,38 @@ const computedFields: ComputedFields = {
 }
 
 /**
+ * Lists the <Encounter>/<BossCard> sections of a dungeon or raid guide so the
+ * page can render its encounter rail without parsing the MDX at runtime.
+ */
+function extractEncounters(raw: string) {
+  const encounters: { id: string; title: string; trash: boolean; empty: boolean }[] = []
+  const re = /<(Encounter|BossCard)\b([^>]*?)(\/>|>([\s\S]*?)<\/\1>)/g
+  let match: RegExpExecArray | null
+  while ((match = re.exec(raw))) {
+    const attrs = match[2]
+    const titleMatch = attrs.match(/title=(?:"([^"]*)"|'([^']*)')/)
+    if (!titleMatch) continue
+    const title = titleMatch[1] ?? titleMatch[2]
+    const trash = /(^|\s)trash(\s|=|$)/.test(attrs) || /^trash\b/i.test(title)
+    const body = (match[4] || '').replace(/^\s*[-*]\s*/gm, '').trim()
+    encounters.push({ id: slug(title), title, trash, empty: body === '' || /^tbd$/i.test(body) })
+  }
+  return encounters
+}
+
+const instanceFields = {
+  title: { type: 'string', required: true },
+  draft: { type: 'boolean' },
+  summary: { type: 'string' },
+  headerImage: { type: 'string' },
+  layout: { type: 'string' },
+  date: { type: 'date' },
+  patch: { type: 'string' },
+  authors: { type: 'list', of: { type: 'string' } },
+  specs: { type: 'list', of: { type: 'string' }, default: [] },
+} as const
+
+/**
  * Count the occurrences of all tags across blog posts and write to json file
  */
 function createTagCount(allBlogs) {
@@ -175,8 +207,9 @@ export const Blog = defineDocumentType(() => ({
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
-    patch: { type: 'string', required: true },
+    patch: { type: 'string' },
     date: { type: 'date' },
+    specs: { type: 'list', of: { type: 'string' }, default: [] },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
     lastmod: { type: 'date' },
     draft: { type: 'boolean' },
@@ -188,6 +221,10 @@ export const Blog = defineDocumentType(() => ({
   },
   computedFields: {
     ...computedFields,
+    kind: {
+      type: 'string',
+      resolve: (doc) => (doc._raw.flattenedPath.endsWith('/compendium') ? 'compendium' : 'article'),
+    },
     structuredData: {
       type: 'json',
       resolve: (doc) => ({
@@ -208,15 +245,10 @@ export const Dungeons = defineDocumentType(() => ({
   name: 'Dungeons',
   filePathPattern: 'dungeons/**/*.mdx',
   contentType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-    draft: { type: 'boolean' },
-    summary: { type: 'string' },
-    headerImage: { type: 'string' },
-    layout: { type: 'string' },
-  },
+  fields: instanceFields,
   computedFields: {
     ...computedFields,
+    encounters: { type: 'json', resolve: (doc) => extractEncounters(doc.body.raw) },
     structuredData: {
       type: 'json',
       resolve: (doc) => ({
@@ -286,15 +318,10 @@ export const Raids = defineDocumentType(() => ({
   name: 'Raids',
   filePathPattern: 'raids/**/*.mdx',
   contentType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-    draft: { type: 'boolean' },
-    summary: { type: 'string' },
-    headerImage: { type: 'string' },
-    layout: { type: 'string' },
-  },
+  fields: instanceFields,
   computedFields: {
     ...computedFields,
+    encounters: { type: 'json', resolve: (doc) => extractEncounters(doc.body.raw) },
     structuredData: {
       type: 'json',
       resolve: (doc) => ({

@@ -51,7 +51,8 @@ function rehypeContentHeader() {
 import YouTube from './custom/YouTube'
 import Image from 'next/image'
 import RoleSelector from './custom/Dungeons/RoleSelector'
-import BossCardClientVersion from './csm/BossCardClientVersion'
+import Encounter from './spec/Encounter'
+import SpecNote from './spec/SpecNote'
 interface MDXPreviewProps {
   content: string
   setErrorLine?: (line: number | null) => void
@@ -132,7 +133,9 @@ const components: MDXComponents = {
     )
   },
   Talents: Talents,
-  BossCard: BossCardClientVersion,
+  BossCard: Encounter,
+  Encounter,
+  SpecNote,
   Collapsible,
   Color,
   YouTube: YouTube,

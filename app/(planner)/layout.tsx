@@ -6,7 +6,6 @@ import { Space_Grotesk } from 'next/font/google'
 import siteMetadata from '@/data/siteMetadata'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import { Providers } from '../(root)/providers'
 import ThemeProviders from '../(root)/theme-providers'
 import ScreenWidthWarning from '@/components/ScreenWidthWarning'
 import TimelineHeader from '@/components/TimelinePlanner/TimelineHeader'
@@ -88,13 +87,11 @@ export default function RootLayout({ children }: LayoutProps) {
           className="flex h-screen flex-col overflow-y-auto"
           style={{ paddingLeft: 0, scrollbarGutter: 'stable' }}
         >
-          <Providers>
-            <ThemeProviders>
-              <TimelineHeader />
-              <main className="flex-1">{children}</main>
-              <ScreenWidthWarning />
-            </ThemeProviders>
-          </Providers>
+          <ThemeProviders>
+            <TimelineHeader />
+            <main className="flex-1">{children}</main>
+            <ScreenWidthWarning />
+          </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="beforeInteractive" />
         <Script src={scriptSrc} strategy="afterInteractive" />

@@ -5,7 +5,7 @@ import {
   SubTreeEntry,
 } from './TalentTreeUtils'
 
-import { ClassTreeLayout, SpecTreeLayout, HeroTreeLayout } from './TalentTreeLayout'
+import { buildClassTree, buildSpecTree, buildHeroTree } from './TalentTreeModel'
 import TalentsDropdown from './TalentsDropdown'
 import TalentTreeClient from './TalentTreeClient'
 
@@ -595,42 +595,36 @@ export default function Talents({
   const extraSpecNodes = markExtraNodes(activeData.specNodes, activeData.selectedSpecNodes)
   const extraHeroNodes = markExtraNodes(activeData.heroNodes, activeData.selectedHeroNodes)
 
-  // Generate the HTML structure for the three trees
-  const classTree = (
-    <ClassTreeLayout
-      nodes={activeData.classNodes}
-      selectedNodes={extraClassNodes}
-      activeSelectedNodes={activeData.selectedClassNodes}
-      nodeChoices={activeData.nodeChoices}
-      nodeRanks={activeData.nodeRanks}
-      viewOnly={viewOnly}
-      nodeColors={nodeColors}
-    />
-  )
+  // Build compact tree models; TalentTreeClient draws them once the dropdown opens
+  const classTree = buildClassTree({
+    nodes: activeData.classNodes,
+    selectedNodes: extraClassNodes,
+    activeSelectedNodes: activeData.selectedClassNodes,
+    nodeChoices: activeData.nodeChoices,
+    nodeRanks: activeData.nodeRanks,
+    viewOnly,
+    nodeColors,
+  })
 
-  const specTree = (
-    <SpecTreeLayout
-      nodes={activeData.specNodes}
-      selectedNodes={extraSpecNodes}
-      activeSelectedNodes={activeData.selectedSpecNodes}
-      nodeChoices={activeData.nodeChoices}
-      nodeRanks={activeData.nodeRanks}
-      viewOnly={viewOnly}
-      nodeColors={nodeColors}
-    />
-  )
+  const specTree = buildSpecTree({
+    nodes: activeData.specNodes,
+    selectedNodes: extraSpecNodes,
+    activeSelectedNodes: activeData.selectedSpecNodes,
+    nodeChoices: activeData.nodeChoices,
+    nodeRanks: activeData.nodeRanks,
+    viewOnly,
+    nodeColors,
+  })
 
-  const heroTree = (
-    <HeroTreeLayout
-      nodes={activeData.heroNodes}
-      selectedNodes={extraHeroNodes}
-      activeSelectedNodes={activeData.selectedHeroNodes}
-      nodeChoices={activeData.nodeChoices}
-      nodeRanks={activeData.nodeRanks}
-      viewOnly={viewOnly}
-      nodeColors={nodeColors}
-    />
-  )
+  const heroTree = buildHeroTree({
+    nodes: activeData.heroNodes,
+    selectedNodes: extraHeroNodes,
+    activeSelectedNodes: activeData.selectedHeroNodes,
+    nodeChoices: activeData.nodeChoices,
+    nodeRanks: activeData.nodeRanks,
+    viewOnly,
+    nodeColors,
+  })
 
   return (
     <TalentsDropdown name={name} defaultTree={defaultTree} open={open}>

@@ -1,5 +1,7 @@
 import PageWrapper from '@/components/PageWrapper'
 import siteMetadata from '@/data/siteMetadata'
+import { SPECS } from '@/data/specs'
+import { getSpecArt } from '@/lib/specArt'
 import Main from './Main'
 
 // Force static generation
@@ -19,14 +21,22 @@ const websiteJsonLd = {
 }
 
 export default function Page() {
+  const tiles = SPECS.map(({ id, name, color, artPosition }) => ({
+    id,
+    name,
+    color,
+    artPosition,
+    art: getSpecArt(id),
+  }))
+
   return (
-    <PageWrapper title="Main" showTitle={false}>
+    <PageWrapper title="Main" showTitle={false} variant="redesign">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
-      <Main />
+      <Main tiles={tiles} />
     </PageWrapper>
   )
 }

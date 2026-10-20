@@ -8,7 +8,8 @@ import Wowhead from './custom/Wowhead'
 import Talents from './custom/Talents/Talents'
 import Checkbox from './custom/Checkbox'
 import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
-import BossCard from './custom/Dungeons/BossCard'
+import Encounter from './spec/Encounter'
+import SpecNote from './spec/SpecNote'
 import Npc from './custom/Npc'
 import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
@@ -135,7 +136,10 @@ export const components: MDXComponents = {
   Talents,
   Checkbox,
   HeroTalentsHeader,
-  BossCard,
+  Encounter,
+  // Legacy name for <Encounter>, kept so older guides keep rendering
+  BossCard: Encounter,
+  SpecNote,
   Npc,
   Collapsible,
   Timeline,

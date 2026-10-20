@@ -16,5 +16,15 @@ export const MDXLayoutRenderer = ({
   [key: string]: unknown
 }) => {
   const MDXContent = getMDXComponent(code)
-  return <MDXContent components={{ ...mdxComponents, ...components }} {...rest} />
+  const hasMath = code.includes('katex')
+  return (
+    <>
+      {hasMath && (
+        // eslint-disable-next-line @next/next/no-css-tags -- loaded per page on purpose
+        <link rel="stylesheet" href="/static/katex/katex.min.css" precedence="default" />
+      )}
+      {/* eslint-disable-next-line react-hooks/static-components -- compiled per post; stateless server render */}
+      <MDXContent components={{ ...mdxComponents, ...components }} {...rest} />
+    </>
+  )
 }

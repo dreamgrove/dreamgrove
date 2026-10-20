@@ -25,7 +25,7 @@ export default function BlogPage() {
   }
 
   return (
-    <PageWrapper>
+    <PageWrapper variant="redesign">
       <RaidListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}

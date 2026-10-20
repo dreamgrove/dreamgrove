@@ -1,5 +1,3 @@
-import 'katex/dist/katex.css'
-
 import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
 import { coreContent, allCoreContent } from '@/lib/utils/contentlayer'
 import { allRaids } from 'contentlayer/generated'
@@ -87,13 +85,12 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   const pageTitle = post.title || `Raid: ${slug}`
 
   return (
-    <PageWrapper title={pageTitle} showTitle={false}>
+    <PageWrapper title={pageTitle} showTitle={false} variant="redesign">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <h1 className="sr-only">{pageTitle}</h1>
       <Layout content={mainContent} next={next} prev={prev} showTitle={false} authorDetails={[]}>
         <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
       </Layout>

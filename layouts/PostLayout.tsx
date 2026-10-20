@@ -9,7 +9,10 @@ import TableOfContents from '@/components/custom/TableOfContents/TableOfContents
 import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
-import AprilFoolsAds, { AprilFoolsBanner } from '@/components/AprilFools/AprilFoolsAds'
+import type { CheckboxItem } from '@/lib/utils/checkboxDefaults'
+import AprilFoolsAds, {
+  LazyAprilFoolsBanner as AprilFoolsBanner,
+} from '@/components/AprilFools/LazyAprilFools'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -19,9 +22,16 @@ interface LayoutProps {
   children: ReactNode
   translator?: string
   toc: any
+  checkboxDefaults?: Record<string, CheckboxItem>
 }
 
-export default function PostLayout({ content, authorDetails, children, toc }: LayoutProps) {
+export default function PostLayout({
+  content,
+  authorDetails,
+  children,
+  toc,
+  checkboxDefaults,
+}: LayoutProps) {
   const { patch, slug, title, tags, lastModified, changelogUrl, translator } = content
 
   // Check if this is a compendium page
@@ -57,9 +67,11 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                   </div>
                 </div>
                 <div className="pt-4 text-base leading-6 font-medium text-gray-500 lg:pt-0 lg:text-right dark:text-gray-400">
-                  <div>
-                    Patch: <span className="text-[#1a9c82]">{patch}</span>
-                  </div>
+                  {patch && (
+                    <div>
+                      Patch: <span className="text-[#1a9c82]">{patch}</span>
+                    </div>
+                  )}
                   <div>
                     Updated: <span className="text-[#1a9c82]">{lastModified}</span>
                   </div>
@@ -96,7 +108,7 @@ export default function PostLayout({ content, authorDetails, children, toc }: La
                 style={{ counterReset: 'heading' }}
                 className="prose dark:prose-invert max-w-none pt-4 pb-8 text-base sm:pt-0"
               >
-                <CheckboxProvider>{children}</CheckboxProvider>
+                <CheckboxProvider initialMap={checkboxDefaults}>{children}</CheckboxProvider>
               </div>
             </div>
 

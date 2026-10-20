@@ -1,14 +1,13 @@
 'use client'
 
-import { useKBar } from 'kbar'
+import { openSearch } from './KBarSearchProvider'
 
 export const KBarButton = ({
   children,
   ...rest
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-  const { query } = useKBar()
   return (
-    <button {...rest} onClick={() => query.toggle()}>
+    <button {...rest} onClick={openSearch}>
       {children}
     </button>
   )

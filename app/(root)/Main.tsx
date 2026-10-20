@@ -1,19 +1,29 @@
 'use client'
 import Link from '@/components/Link'
-import balance from 'public/static/images/cards/balance-card.png'
-import feral from 'public/static/images/cards/feral-card.png'
-import resto from 'public/static/images/cards/resto-card.png'
-import guardian from 'public/static/images/cards/guardian-card.png'
-import dungeons from 'public/static/images/cards/dungeons-card.png'
-import raids from 'public/static/images/cards/raids-card.png'
 import { useTheme } from 'next-themes'
-import { useSyncExternalStore } from 'react'
-import Image from 'next/image'
+import { useState, useSyncExternalStore, ViewTransition } from 'react'
+import { FaDiscord } from 'react-icons/fa'
 import MainAprilFools from './MainAprilFools'
-import AprilFoolsAds, { AprilFoolsBanner } from '@/components/AprilFools/AprilFoolsAds'
+import SpecArt from '@/components/spec/SpecArt'
+import { setActiveSpec, useActiveSpec } from '@/components/spec/ActiveSpec'
+import { inPageTransition } from '@/components/spec/specCardMorph'
 
-export default function Home() {
+export interface SpecTile {
+  id: string
+  name: string
+  color: string
+  art?: string
+  artPosition?: string
+}
+
+const ROW =
+  'relative flex min-h-[80px] grow basis-0 items-center rounded-lg [clip-path:inset(0_round_0.5rem)] text-white'
+const NAME = 'font-gilroy text-mask-white pointer-events-none relative w-fit leading-none font-bold'
+
+export default function Home({ tiles }: { tiles: SpecTile[] }) {
   const { theme } = useTheme()
+  const [hover, setHover] = useState<string | null>(null)
+  const activeSpec = useActiveSpec()
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -24,35 +34,8 @@ export default function Home() {
     return <MainAprilFools />
   }
 
-  const content = [
-    { src: dungeons, href: '/dungeons', alt: 'Mythic+ dungeon guides for Druids' },
-    { src: raids, href: '/raids', alt: 'Raid guides for Druids', active: false },
-  ]
-
-  const images = [
-    {
-      src: balance,
-      href: '/blog/balance/compendium',
-      alt: 'Balance Druid compendium',
-      active: true,
-    },
-    { src: feral, href: '/blog/feral/compendium', alt: 'Feral Druid compendium', active: true },
-    {
-      src: guardian,
-      href: '/blog/guardian/compendium',
-      alt: 'Guardian Druid compendium',
-      active: true,
-    },
-    {
-      src: resto,
-      href: '/blog/resto/compendium',
-      alt: 'Restoration Druid compendium',
-      active: true,
-    },
-  ]
-
   return (
-    <div className="mx-auto px-3 sm:px-6 md:px-6 xl:px-3">
+    <section className="dg-container flex flex-col pt-1 pb-8 sm:min-h-[calc(100dvh-208px)]">
       {/* Visually hidden by design; kept in the DOM for screen readers and crawlers */}
       <header className="sr-only">
         <h1>World of Warcraft Druid Guides</h1>
@@ -61,69 +44,73 @@ export default function Home() {
           Restoration Druids — plus dungeon and raid guides.
         </p>
       </header>
-      <div className="mt-1 grid grid-cols-1 gap-4 pt-0 lg:grid-cols-2">
-        {images.map((image, index) => (
+      <div className="flex flex-1 flex-col gap-[11px]">
+        {tiles.map((t) => {
+          const isHover = hover === t.id
+          return (
+            <ViewTransition key={t.id} name={`spec-card-${t.id}`} share="spec-card">
+              <Link
+                href={`/${t.id}`}
+                data-spec-card={t.id}
+                onClick={() => setActiveSpec(t.id)}
+                onMouseEnter={() => !inPageTransition() && setHover(t.id)}
+                onMouseLeave={() => setHover(null)}
+                onFocus={() => !inPageTransition() && setHover(t.id)}
+                onBlur={() => setHover(null)}
+                className={`${ROW} bg-[#0b0906] px-6 sm:px-8`}
+                style={{ flexGrow: 1.56, minHeight: 125 }}
+              >
+                <div className="absolute inset-0">
+                  <SpecArt
+                    art={t.art}
+                    color={t.color}
+                    position={t.artPosition ?? 'center 20%'}
+                    tint={isHover ? 0 : 0.2}
+                    scrim={0}
+                    className={`transition-transform duration-[800ms] ease-[cubic-bezier(.22,.61,.36,1)] ${
+                      isHover ? 'scale-[1.03]' : ''
+                    }`}
+                  />
+                </div>
+                <div className="pointer-events-none absolute -inset-1 bg-[linear-gradient(90deg,rgba(20,20,20,.9)_0%,rgba(20,20,20,.7)_25%,rgba(20,20,20,0)_55%)]" />
+                <span
+                  className={`${NAME} mb-5 self-end text-[40px] sm:mb-6 sm:text-[48px]`}
+                  style={activeSpec === t.id ? { viewTransitionName: 'spec-tile-name' } : undefined}
+                >
+                  {t.name}
+                </span>
+              </Link>
+            </ViewTransition>
+          )
+        })}
+        <Link
+          href="/guides"
+          className={`${ROW} bg-[#1f1f1f] px-6 transition-colors hover:bg-[#363636] sm:px-8`}
+        >
+          <span className={`${NAME} text-[26px] sm:text-[30px]`}>Other guides</span>
+        </Link>
+        <div className="grid grow basis-0 grid-cols-[minmax(0,1fr)_80px] gap-[11px] sm:grid-cols-[3fr_1fr] lg:grid-cols-[4fr_1fr]">
           <Link
-            className={!image.active ? 'pointer-events-none' : ''}
-            aria-disabled={!image.active}
-            tabIndex={!image.active ? -1 : undefined}
-            key={index}
-            href={image.href}
+            href="/planner"
+            className={`${ROW} bg-[#1f1f1f] px-6 transition-colors hover:bg-[#363636] sm:px-8`}
           >
-            <div
-              className={`relative block ${
-                image.active
-                  ? 'cursor-pointer hover:scale-[1.02] hover:shadow-lg'
-                  : 'cursor-default opacity-30'
-              } shadow-md transition-transform duration-300`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={600}
-                height={250}
-                quality={100}
-                style={{ width: '100%', height: 'auto' }}
-                className="rounded-lg shadow-md"
-              />
+            <div className="flex flex-col gap-2">
+              <span className={`${NAME} text-[26px] sm:text-[30px]`}>Cooldown planner</span>
+              <span className="hidden text-[.9rem] leading-snug text-white/60 sm:block">
+                Plan your cooldowns on an interactive timeline.
+              </span>
             </div>
           </Link>
-        ))}
-      </div>
-      <AprilFoolsBanner className="pt-2" />
-      {
-        <div className="grid grid-cols-1 gap-4 pt-4 md:pt-4">
-          {content.map((image, index) => (
-            <Link
-              key={index}
-              href={image.href}
-              className={image.active ? 'pointer-events-none' : ''}
-              aria-disabled={image.active}
-              tabIndex={image.active ? -1 : undefined}
-            >
-              <div
-                className={`relative block ${
-                  !image.active
-                    ? 'cursor-pointer hover:scale-[1.02] hover:shadow-xl'
-                    : 'cursor-default opacity-30'
-                } shadow-md transition-transform duration-300`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={1200}
-                  height={250}
-                  style={{ width: '100%', height: 'auto' }}
-                  quality={100}
-                  className="rounded-lg shadow-md"
-                />
-              </div>
-            </Link>
-          ))}
+          <Link
+            href="https://discord.com/invite/dreamgrove"
+            aria-label="Discord"
+            className={`${ROW} justify-center gap-3 bg-[#1f1f1f] transition-colors hover:bg-[#363636] sm:px-6`}
+          >
+            <span className={`${NAME} hidden text-[30px] sm:block`}>Discord</span>
+            <FaDiscord aria-hidden className="relative size-8 shrink-0 sm:size-7" />
+          </Link>
         </div>
-      }
-      <AprilFoolsBanner className="pt-2" />
-      <AprilFoolsAds bannerCount={0} />
-    </div>
+      </div>
+    </section>
   )
 }
