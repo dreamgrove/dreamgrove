@@ -154,7 +154,7 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
           translator={post.translator}
           checkboxDefaults={getCheckboxDefaults(post.body.raw)}
         >
-          <MDXLayoutRenderer code={post.body.code} toc={post.toc} />
+          <MDXLayoutRenderer code={post.body.code} toc={post.toc} locale={contentLang} />
         </Layout>
       </div>
     </PageWrapper>

@@ -8,6 +8,7 @@ import {
 import { buildClassTree, buildSpecTree, buildHeroTree } from './TalentTreeModel'
 import TalentsDropdown from './TalentsDropdown'
 import TalentTreeClient from './TalentTreeClient'
+import type { PageLocale } from '@/lib/pageLocale'
 
 // Add type definition at the top
 interface ColorConfig {
@@ -540,6 +541,7 @@ export default function Talents({
   open = false,
   hideCopy = false,
   forceTree,
+  locale,
 }: {
   talents?: string
   viewOnly?: boolean
@@ -552,6 +554,7 @@ export default function Talents({
   open?: boolean
   hideCopy?: boolean
   forceTree?: 'full' | 'class' | 'spec' | 'hero'
+  locale?: PageLocale
 }) {
   // Parse the talent string and get the active data
   const activeData = parseTalentString(talents)

@@ -187,6 +187,33 @@ describe('buildWowheadUrl', () => {
       'https://www.wowhead.com/spell=1'
     )
   })
+
+  test('an explicit ko locale forces the ko host whatever the label', () => {
+    expect(buildWowheadUrl('spell', 1, 'Spell 1', false, 'ko')).toBe(
+      'https://ko.wowhead.com/spell=1'
+    )
+    expect(buildWowheadUrl('spell', 1, undefined, false, 'ko')).toBe(
+      'https://ko.wowhead.com/spell=1'
+    )
+    expect(buildWowheadUrl('spell', 1, 'Spell 1', true, 'ko')).toBe(
+      'https://ko.wowhead.com/beta/spell=1'
+    )
+  })
+
+  test('an explicit en locale forces www even for a Korean label', () => {
+    expect(buildWowheadUrl('spell', 194153, '별빛섬광', false, 'en')).toBe(
+      'https://www.wowhead.com/spell=194153'
+    )
+  })
+
+  test('an undefined locale keeps the label heuristic', () => {
+    expect(buildWowheadUrl('spell', 194153, '별빛섬광', false, undefined)).toBe(
+      'https://ko.wowhead.com/spell=194153'
+    )
+    expect(buildWowheadUrl('spell', 194153, 'Starfire', false, undefined)).toBe(
+      'https://www.wowhead.com/spell=194153'
+    )
+  })
 })
 
 describe('titleCase', () => {

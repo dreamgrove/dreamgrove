@@ -6,6 +6,7 @@ import { tags as t } from '@lezer/highlight'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import MDXPreview from '@/components/MDXPreview'
+import { localeFromPath } from '@/lib/pageLocale'
 import { FaQuestion } from 'react-icons/fa'
 import { MdWrapText } from 'react-icons/md'
 import matter from 'gray-matter'
@@ -1369,7 +1370,11 @@ function FileEditor({ filePath }: { filePath: string }) {
                     content={'<RoleSelector isPreview={true}/>' + previewContent}
                   />
                 ) : (
-                  <MDXPreview setErrorLine={setErrorLine} content={previewContent} />
+                  <MDXPreview
+                    setErrorLine={setErrorLine}
+                    content={previewContent}
+                    locale={localeFromPath(filePath)}
+                  />
                 )}
               </Suspense>
             </div>

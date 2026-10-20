@@ -6,10 +6,12 @@ import WowheadClientVersion from './WowheadClientVersion'
 import PlannerEmbedCore from '../PlannerEmbed/PlannerEmbedCore'
 import { decodeLoadout } from '@/lib/utils/loadoutCode'
 import { SpellInfo } from '@/types/timeline'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface PlannerEmbedClientVersionProps {
   code: string
   children?: React.ReactNode
+  locale?: PageLocale
 }
 
 // Client mirror of components/custom/PlannerEmbed.tsx for the admin live
@@ -18,6 +20,7 @@ interface PlannerEmbedClientVersionProps {
 export default function PlannerEmbedClientVersion({
   code,
   children,
+  locale,
 }: PlannerEmbedClientVersionProps) {
   const spells: SpellInfo[] = useMemo(
     () =>

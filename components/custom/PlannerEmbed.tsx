@@ -4,17 +4,19 @@ import Wowhead from './Wowhead'
 import PlannerEmbedCore from '../PlannerEmbed/PlannerEmbedCore'
 import { decodeLoadout } from '@/lib/utils/loadoutCode'
 import { SpellInfo } from '@/types/timeline'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface PlannerEmbedProps {
   code: string
   children?: React.ReactNode
+  locale?: PageLocale
 }
 
 /**
  * Read-only timeline embed for guides. Takes the loadout code produced by the
  * planner's Export button and renders the simulated timeline.
  */
-export default function PlannerEmbed({ code, children }: PlannerEmbedProps) {
+export default function PlannerEmbed({ code, children, locale }: PlannerEmbedProps) {
   const spells: SpellInfo[] = spellsData.spells.map((spell) => ({
     ...spell,
     charges: spell.charges || 1,

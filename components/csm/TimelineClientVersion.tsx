@@ -1,13 +1,20 @@
 import WowheadClientIcon from './WowheadClientIcon'
 import React, { ReactNode } from 'react'
+import type { PageLocale } from '@/lib/pageLocale'
 
 interface TimelineProps {
   spellIds: string[]
   beta?: boolean
   children?: ReactNode
+  locale?: PageLocale
 }
 
-export default function TimelineClientVersion({ spellIds, beta = false, children }: TimelineProps) {
+export default function TimelineClientVersion({
+  spellIds,
+  beta = false,
+  children,
+  locale,
+}: TimelineProps) {
   // Process spell IDs to count occurrences
   const processedSpells = spellIds.reduce<{ id: string; count: number }[]>((acc, id) => {
     const lastSpell = acc.length > 0 ? acc[acc.length - 1] : null
