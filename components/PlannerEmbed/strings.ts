@@ -5,7 +5,7 @@ import type { PageLocale } from '@/lib/pageLocale'
 const strings = {
   en: {
     openInPlanner: 'Open in planner →',
-    // The dash is escaped on purpose: this is the exact text English pages already render
+    // Written as \u2014 to keep a literal em dash out of the source; renders the same text as before
     invalidCode: 'Invalid planner code \u2014 could not display this timeline.',
     noCasts: 'This loadout has no casts.',
     interrupted: 'interrupted',

@@ -1,9 +1,12 @@
 // Official Korean names for the spells in other/timelineSpells.json, used by the
-// planner embed on Korean pages (the passed name wins over the fetched tooltip
-// name in Wowhead.tsx, so this map is the only lever). Sourced from the Korean
-// keys of spellData.json; 740 and 33891 have none there and come from Wowhead's
+// planner embed on Korean pages, both published (custom/PlannerEmbed.tsx) and in the
+// admin preview (csm/PlannerEmbedClientVersion.tsx). The passed name wins over the
+// fetched tooltip name in Wowhead.tsx, so this map is the only lever, and the Hangul
+// name is also what moves the link to ko.wowhead.com. Sourced from the Korean keys
+// of spellData.json; 740 and 33891 have no entry there and come from Wowhead's
 // Korean tooltip API (nether.wowhead.com/tooltip/spell/<id>?locale=1).
-// Add an entry here when a spell is added to timelineSpells.json.
+// Add an entry here when a spell is added to timelineSpells.json; a missing entry
+// falls back to the English name and link, which koSpellNames.test.ts catches.
 export const koSpellNames: Record<number, string> = {
   205636: '자연의 군대',
   1239669: '일월식',

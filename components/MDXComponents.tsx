@@ -184,8 +184,9 @@ export const components: MDXComponents = {
   },
 }
 
-// Widgets that render their own UI strings or build their own Wowhead hrefs get the
-// page locale as a prop. Everything else is shared with the English registry.
+// Widgets whose UI strings or Wowhead hrefs have no other language signal get the
+// page locale as a prop. Everything else is shared with the English registry; Wowhead
+// and plain links rely on the Hangul label check in buildWowheadUrl instead.
 function withLocale(base: MDXComponents, locale: PageLocale): MDXComponents {
   return {
     ...base,

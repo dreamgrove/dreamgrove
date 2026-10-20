@@ -230,7 +230,8 @@ const components: MDXComponents = {
 }
 
 // Mirrors getComponents() in MDXComponents.tsx: the locale-aware widgets get the
-// page locale as a prop, everything else is shared with the English map.
+// page locale as a prop, everything else is shared with the English map. Npc is
+// missing here because this preview map has never had Npc at all.
 const koComponents: MDXComponents = {
   ...components,
   Talents: (props: React.ComponentProps<typeof Talents>) => <Talents {...props} locale="ko" />,

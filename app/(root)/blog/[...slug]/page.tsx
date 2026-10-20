@@ -8,6 +8,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import PageWrapper from '@/components/PageWrapper'
 import { getCheckboxDefaults } from '@/lib/utils/checkboxDefaults'
+import { localeFromPath } from '@/lib/pageLocale'
 
 const defaultLayout = 'PostLayout'
 const layouts: Record<string, React.ComponentType<any>> = {
@@ -131,7 +132,8 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       ? post.title.trim()
       : `Blog Post: ${slug}`
 
-  const contentLang = slug.includes('kr/') ? 'ko' : undefined
+  // English stays undefined: it is also the page's lang attribute, which English pages never set
+  const contentLang = localeFromPath(slug) === 'ko' ? 'ko' : undefined
 
   const result = (
     <PageWrapper

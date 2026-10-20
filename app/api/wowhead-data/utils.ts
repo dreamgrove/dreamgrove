@@ -1,4 +1,4 @@
-import type { PageLocale } from '../../../lib/pageLocale'
+import type { PageLocale } from '@/lib/pageLocale'
 
 // Quality colors for reference
 export const qualityToColor = {
@@ -108,11 +108,12 @@ export function extractIdFromUrl(url: string): string {
 /**
  * Fallback href used by the Wowhead link/icon components when the author gave
  * no explicit URL (bare spell markers, direct <Wowhead> usage without `url`),
- * and by widgets that synthesize their own hrefs (Timeline, the talent tree).
+ * and by the widgets that build their own hrefs (the talent tree, Npc).
  *
  * An explicit `locale` decides the host: 'ko' forces ko.wowhead.com and 'en'
- * forces www. Widgets whose labels carry no language signal (Timeline's
- * synthetic `Spell <id>` names, talent nodes) pass the page locale this way.
+ * forces www. Callers with no language-bearing label pass the page locale this
+ * way: Timeline (through WowheadIcon, with synthetic `Spell <id>` names) and the
+ * talent tree and Npc (which pass no name at all).
  *
  * With no `locale`, the host follows the authored label: ko.wowhead.com when it
  * contains Hangul, so Wowhead's tooltip script serves the Korean tooltip for
