@@ -8,10 +8,13 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
-import HeaderAprilFools from '../app/components/HeaderAprilFools'
 import styles from './Header.module.css'
 import { memo, useSyncExternalStore } from 'react'
 import { useTheme } from 'next-themes'
+import dynamic from 'next/dynamic'
+
+// Only loaded while the April Fools theme is active
+const HeaderAprilFools = dynamic(() => import('../app/components/HeaderAprilFools'))
 
 interface Chapter {
   value: string

@@ -10,7 +10,9 @@ import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import type { CheckboxItem } from '@/lib/utils/checkboxDefaults'
-import AprilFoolsAds, { AprilFoolsBanner } from '@/components/AprilFools/AprilFoolsAds'
+import AprilFoolsAds, {
+  LazyAprilFoolsBanner as AprilFoolsBanner,
+} from '@/components/AprilFools/LazyAprilFools'
 
 interface LayoutProps {
   content: CoreContent<Blog>
