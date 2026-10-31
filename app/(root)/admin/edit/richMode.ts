@@ -2291,12 +2291,36 @@ export function richModeExtension(h: HandlersRef): Extension {
     return true
   }
 
+  // Backspace right after a quote/callout line's `>` markup joins the line onto
+  // the quoted line above, instead of the markdown keymap stripping the `>` and
+  // splitting the callout in two.
+  const backspaceQuote = (view: EditorView) => {
+    const { state } = view
+    const sel = state.selection
+    if (sel.ranges.length > 1 || !sel.main.empty) return false
+    const head = sel.main.head
+    const line = state.doc.lineAt(head)
+    if (line.number === 1 || !/^\s*(?:>\s?)+$/.test(line.text.slice(0, head - line.from)))
+      return false
+    const prev = state.doc.line(line.number - 1)
+    if (!/^\s*>/.test(prev.text)) return false
+    view.dispatch({
+      changes: { from: prev.to, to: head },
+      selection: { anchor: prev.to },
+      userEvent: 'delete.backward',
+      scrollIntoView: true,
+    })
+    return true
+  }
+
   const gapKeys = Prec.high(
     keymap.of([
       { key: 'Enter', run: (view) => openGapLine(view, '') },
       { key: 'Backspace', run: backspaceCard },
     ])
   )
+  // Must beat the markdown keymap, which is also Prec.high and registered first
+  const quoteKeys = Prec.highest(keymap.of([{ key: 'Backspace', run: backspaceQuote }]))
 
   const gapCursor = ViewPlugin.fromClass(
     class {
@@ -2361,6 +2385,7 @@ export function richModeExtension(h: HandlersRef): Extension {
     gapStep,
     gapInput,
     gapKeys,
+    quoteKeys,
     gapCursor,
     linkLines,
     spellLoader,
