@@ -2,14 +2,126 @@
 import type { BlockDef, Field, TalentColor, Values } from './registry'
 import type { ParsedAttr, TagMatch } from './tags'
 
-// Reads an attribute expression such as `{[1, 2]}` or `{"text"}`. Parsed as JSON, never
-// evaluated: the document may come from anyone. Anything else stays locked as raw text.
+// Reads an attribute expression such as `{[1, 2]}` or `{[{ color: "x", nodes: ["a"] }]}`.
+// Only JS literals are accepted (strings, numbers, booleans, null, arrays, objects with bare
+// or quoted keys, trailing commas) and nothing is ever evaluated: the document may come from
+// anyone. Anything else stays locked as raw text.
 function evalExpression(raw: string): { ok: true; value: unknown } | { ok: false } {
   try {
-    return { ok: true, value: JSON.parse(raw.slice(1, -1)) }
+    return { ok: true, value: parseLiteral(raw.slice(1, -1)) }
   } catch {
     return { ok: false }
   }
+}
+
+const ESCAPES: Record<string, string> = {
+  n: '\n',
+  t: '\t',
+  r: '\r',
+  b: '\b',
+  f: '\f',
+  v: '\v',
+  0: '\0',
+}
+
+function parseLiteral(src: string): unknown {
+  let i = 0
+  const fail = (): never => {
+    throw new SyntaxError(`Unexpected input at ${i}`)
+  }
+  const skip = () => {
+    while (i < src.length) {
+      if (/\s/.test(src[i])) i++
+      else if (src.startsWith('//', i))
+        i = src.includes('\n', i) ? src.indexOf('\n', i) : src.length
+      else if (src.startsWith('/*', i))
+        i = src.indexOf('*/', i) < 0 ? fail() : src.indexOf('*/', i) + 2
+      else break
+    }
+  }
+  const string = (): string => {
+    const q = src[i++]
+    let out = ''
+    while (src[i] !== q) {
+      if (i >= src.length || (q !== '`' && src[i] === '\n')) fail()
+      if (q === '`' && src.startsWith('${', i)) fail()
+      if (src[i] !== '\\') {
+        out += src[i++]
+        continue
+      }
+      const c = src[++i]
+      if (c === 'u') {
+        const hex = src.slice(i + 1, i + 5)
+        if (!/^[0-9a-fA-F]{4}$/.test(hex)) fail()
+        out += String.fromCharCode(parseInt(hex, 16))
+        i += 5
+      } else {
+        out += ESCAPES[c] ?? c
+        i++
+      }
+    }
+    i++
+    return out
+  }
+  const value = (): unknown => {
+    skip()
+    const c = src[i]
+    if (c === '"' || c === "'" || c === '`') return string()
+    if (c === '[') {
+      i++
+      const arr: unknown[] = []
+      for (skip(); src[i] !== ']'; skip()) {
+        arr.push(value())
+        skip()
+        if (src[i] === ',') i++
+        else if (src[i] !== ']') fail()
+      }
+      i++
+      return arr
+    }
+    if (c === '{') {
+      i++
+      const obj: Record<string, unknown> = {}
+      for (skip(); src[i] !== '}'; skip()) {
+        let key: string
+        if (src[i] === '"' || src[i] === "'") key = string()
+        else {
+          const m = /^[A-Za-z_$][\w$]*|^\d+/.exec(src.slice(i)) ?? fail()
+          key = m[0]
+          i += key.length
+        }
+        skip()
+        if (src[i++] !== ':') fail()
+        Object.defineProperty(obj, key, {
+          value: value(),
+          enumerable: true,
+          writable: true,
+          configurable: true,
+        })
+        skip()
+        if (src[i] === ',') i++
+        else if (src[i] !== '}') fail()
+      }
+      i++
+      return obj
+    }
+    const m = /^(?:-?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?|true|false|null)(?![\w$])/.exec(
+      src.slice(i)
+    )
+    if (!m) fail()
+    i += m![0].length
+    return m![0] === 'true'
+      ? true
+      : m![0] === 'false'
+        ? false
+        : m![0] === 'null'
+          ? null
+          : Number(m![0])
+  }
+  const result = value()
+  skip()
+  if (i < src.length) fail()
+  return result
 }
 
 /** Header row plus `rows - 1` body rows */
