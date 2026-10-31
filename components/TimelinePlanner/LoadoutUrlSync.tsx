@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { useApplyLoadout } from 'hooks/useApplyLoadout'
+import { useApplyLoadout } from '@/hooks/useApplyLoadout'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 import { encodeLoadout } from '@/lib/utils/loadoutCode'
 

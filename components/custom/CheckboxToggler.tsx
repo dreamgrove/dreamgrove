@@ -1,8 +1,8 @@
 'use client'
+import Icon from '@/components/Icon'
 import React, { useEffect, useContext } from 'react'
 import { CheckboxContext } from './CheckboxProvider'
 import clsx from 'clsx'
-import { FaCheck } from 'react-icons/fa'
 
 // Define the prop types to make renderChecked optional
 interface CheckboxTogglerProps {
@@ -66,7 +66,7 @@ const CheckboxToggler: React.FC<CheckboxTogglerProps> = ({
               isChecked ? 'bg-main/20 scale-100 opacity-100' : 'scale-50 opacity-0'
             }`}
           >
-            <FaCheck className="text-main" size={10} />
+            <Icon name="check" className="text-main" size={10} />
           </div>
         </div>
       </div>

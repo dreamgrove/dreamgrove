@@ -1,8 +1,6 @@
+import Icon from '@/components/Icon'
 import Collapsible from '../Collapsible/Collapsible'
 import Wowhead from '../Wowhead'
-import { FaLongArrowAltRight } from 'react-icons/fa'
-import { FaRegArrowAltCircleUp } from 'react-icons/fa'
-import { FaRegArrowAltCircleDown } from 'react-icons/fa'
 
 interface FieldDisplayProps {
   field: { [key: string]: string | number }
@@ -54,14 +52,14 @@ const FieldDiff = ({ field }) => {
       return (
         <span>
           Buffed by {diff.toFixed(2)}%{' '}
-          <FaRegArrowAltCircleUp className="inline-block align-text-top text-green-400" />
+          <Icon name="circleArrowUp" className="inline-block align-text-top text-green-400" />
         </span>
       )
     if (prev > current)
       return (
         <span>
           Nerfed by {diff.toFixed(2)}%{' '}
-          <FaRegArrowAltCircleDown className="inline-block align-text-top text-red-500" />
+          <Icon name="circleArrowDown" className="inline-block align-text-top text-red-500" />
         </span>
       )
     return null
@@ -71,7 +69,7 @@ const FieldDiff = ({ field }) => {
       <span>{field.field || field.key}: </span>
       <span className="text-red-500">{field.prev}</span>
       <span>
-        <FaLongArrowAltRight className="ml-1 inline-block" />
+        <Icon name="longArrowRight" className="ml-1 inline-block" />
       </span>
       <span className="ml-1 text-green-500">{field.new}</span>
       {false &&
@@ -104,7 +102,7 @@ const FieldDisplay: React.FC<FieldDisplayProps> = ({ field }) => {
       <span className="text-l font-bold">{key}</span>
 
       <span>
-        <FaLongArrowAltRight className="mx-1 inline-block" />
+        <Icon name="longArrowRight" className="mx-1 inline-block" />
       </span>
       <span>{value}</span>
     </div>

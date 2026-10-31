@@ -1,6 +1,6 @@
+import Icon from '@/components/Icon'
 import React, { useCallback, useContext, useEffect } from 'react'
 import WowheadClientVersion from './WowheadClientVersion'
-import { FaCheck } from 'react-icons/fa'
 import { CheckboxContext } from '../custom/CheckboxProvider'
 
 interface CheckboxProps {
@@ -69,7 +69,7 @@ const Checkbox = ({
                 checked ? 'block' : 'hidden'
               }`}
             >
-              <FaCheck className="text-main" size={12} />
+              <Icon name="check" className="text-main" size={12} />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 'use client'
+import Icon from '@/components/Icon'
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
-import { ChevronDown } from './icons'
 
 export default function RailDropdown({
   label,
@@ -40,7 +40,9 @@ export default function RailDropdown({
         className="flex w-full cursor-pointer items-center justify-between gap-3 rounded-md border border-[#3a3a3a] bg-[#1f1f1f] px-3 py-2.5 text-left text-[.98rem] font-semibold text-white transition-colors hover:border-[#4b4b4b] focus-visible:outline-2 focus-visible:outline-white"
       >
         <span className="flex min-w-0 items-center gap-3">{summary}</span>
-        <ChevronDown
+        <Icon
+          name="chevronDownThin"
+          size={20}
           className={`flex-none text-white/60 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
         />
       </button>

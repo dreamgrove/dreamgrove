@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon'
 import { useEffect, useRef, useState } from 'react'
 import { DruidSpec } from './TimelineView'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
@@ -91,14 +92,10 @@ function CustomDropdown({ value, onChange, options }: CustomDropdownProps) {
         className="flex w-full items-center justify-between gap-2 rounded-sm border border-neutral-600/60 bg-neutral-900/60 px-3 py-2 text-lg text-white transition-all duration-200 hover:border-orange-400/50 hover:bg-neutral-800/80 focus:bg-neutral-800/80 focus:ring-0 focus:ring-orange-400/30 focus:outline-none"
       >
         <span className="text-sm">{selectedOption?.label}</span>
-        <svg
+        <Icon
+          name="chevronDownOutline"
           className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        />
       </button>
 
       {isOpen && (

@@ -1,4 +1,5 @@
 'use client'
+import Icon from '@/components/Icon'
 import { ReactNode } from 'react'
 import Image from 'next/image'
 import Link from '@/components/Link'
@@ -9,7 +10,6 @@ import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import SpecFilterChips, { ALL_SPECS_CHECKED } from '@/components/spec/SpecFilterChips'
 import EncounterRail from '@/components/spec/EncounterRail'
 import { EncounterProvider, type EncounterMeta } from '@/components/spec/EncounterContext'
-import { ArrowLeft } from '@/components/spec/icons'
 
 interface LayoutProps {
   content: CoreContent<Dungeons | Raids>
@@ -45,7 +45,7 @@ export default function DungeonLayout({ content, children }: LayoutProps) {
             <div className="absolute inset-0 bg-[rgba(11,9,6,.5)]" />
             <div className="dg-container relative flex h-full flex-col items-start justify-between pt-7 pb-9">
               <Link href={isRaid ? '/raids' : '/dungeons'} className="dg-back">
-                <ArrowLeft />
+                <Icon name="arrowLeftThin" size={14} />
                 {isRaid ? 'Raids' : 'Mythic+ dungeons'}
               </Link>
               <div className="flex flex-col gap-4">

@@ -1,7 +1,7 @@
 'use client'
+import Icon from '@/components/Icon'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState, useRef } from 'react'
-import { IoLanguage } from 'react-icons/io5'
 
 const LanguageSwitcher = () => {
   const pathname = usePathname()
@@ -121,7 +121,10 @@ const LanguageSwitcher = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="font-familiar-pro inline-flex h-full items-center justify-center self-center rounded-md font-normal transition-all hover:opacity-80"
       >
-        <IoLanguage className="text-main text-3xl sm:-translate-y-[0px] sm:text-[1.4rem]" />
+        <Icon
+          name="language"
+          className="text-main text-3xl sm:-translate-y-[0px] sm:text-[1.4rem]"
+        />
       </button>
 
       <div

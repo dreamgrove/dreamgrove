@@ -1,4 +1,5 @@
 'use client'
+import Icon from '@/components/Icon'
 import { Suspense, useContext, useEffect, useRef } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { CheckboxContext } from '@/components/custom/CheckboxProvider'
@@ -114,16 +115,7 @@ function Checkbox({ color, checked }: { color: string; checked: boolean }) {
           : 'border-white/30 text-transparent'
       }`}
     >
-      <svg viewBox="0 0 12 12" width="10" height="10">
-        <path
-          d="M2.5 6.2l2.3 2.3 4.7-5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <Icon name="checkThin" size={10} />
     </span>
   )
 }

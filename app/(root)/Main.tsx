@@ -1,8 +1,8 @@
 'use client'
+import Icon from '@/components/Icon'
 import Link from '@/components/Link'
 import { useTheme } from 'next-themes'
 import { useState, useSyncExternalStore, ViewTransition } from 'react'
-import { FaDiscord } from 'react-icons/fa'
 import MainAprilFools from './MainAprilFools'
 import SpecArt from '@/components/spec/SpecArt'
 import { setActiveSpec, useActiveSpec } from '@/components/spec/ActiveSpec'
@@ -107,7 +107,7 @@ export default function Home({ tiles }: { tiles: SpecTile[] }) {
             className={`${ROW} justify-center gap-3 bg-[#1f1f1f] transition-colors hover:bg-[#363636] sm:px-6`}
           >
             <span className={`${NAME} hidden text-[30px] sm:block`}>Discord</span>
-            <FaDiscord aria-hidden className="relative size-8 shrink-0 sm:size-7" />
+            <Icon name="discord" aria-hidden className="relative size-8 shrink-0 sm:size-7" />
           </Link>
         </div>
       </div>

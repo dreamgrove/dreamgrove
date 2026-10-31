@@ -1,5 +1,6 @@
 'use client'
 
+import Icon from '@/components/Icon'
 import { ReactNode, useState } from 'react'
 
 export default function WCLSection({ children }: { children: ReactNode }) {
@@ -25,20 +26,12 @@ export default function WCLSection({ children }: { children: ReactNode }) {
           <span className="hidden transition-opacity duration-200 sm:inline">
             {expanded ? 'Hide' : 'Expand'}
           </span>
-          <svg
+          <Icon
+            name="chevronDownMini"
             className={`h-3 w-3 text-neutral-400 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover:text-orange-400 ${
               expanded ? 'rotate-180' : ''
             }`}
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.24 4.38a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-              clipRule="evenodd"
-            />
-          </svg>
+          />
         </span>
       </button>
 

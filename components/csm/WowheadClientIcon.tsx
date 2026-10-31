@@ -1,6 +1,6 @@
 import { memo, useState, useEffect } from 'react'
 import Image from 'next/image'
-import { getWowheadInfo } from 'lib/wowhead-api'
+import { getWowheadInfo } from '@/lib/wowhead-api'
 import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
 import type { PageLocale } from '@/lib/pageLocale'
 
@@ -13,7 +13,6 @@ interface WowheadIconProps {
   size?: number
   noLink?: boolean
   noMargin?: boolean
-  // Forces the href host when the name carries no language signal (Timeline)
   locale?: PageLocale
 }
 
@@ -35,14 +34,12 @@ function WowheadClientIcon({
   const cacheKey = `${type}-${id + name}${beta ? '-beta' : ''}`
 
   // Spell icons are hosted on our own CDN keyed directly by spell id, so the URL is
-  // deterministic and needs no Wowhead lookup. This mirrors the server WowheadIcon and
-  // lets the preview show real icons immediately instead of round-tripping the API.
+  // deterministic and needs no Wowhead lookup.
   const isHostedSpell = type === 'spell' && !!id
 
   const [iconFilename, setIconFilename] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
-  // Hide the icon only if the browser actually fails to load it, matching the server
-  // WowheadIconImage behaviour (a transient CDN blip shouldn't bake in a broken state).
+  // Hide the icon only if the browser actually fails to load it
   const [failed, setFailed] = useState(false)
 
   // Load icon filename on mount for non-spell types (items/npcs return a Wowhead icon slug).

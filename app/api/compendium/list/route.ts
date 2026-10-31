@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import type { ContentFile, ContentKind } from '@/lib/adminContent'
+import type { ContentFile, ContentKind } from '@/lib/admin/content'
 
 function scanDirectory(dir: string, baseDir: string): string[] {
   const files: string[] = []

@@ -1,5 +1,4 @@
-import { FaCircleInfo } from 'react-icons/fa6'
-import { CiWarning } from 'react-icons/ci'
+import Icon from '@/components/Icon'
 
 function getColor(type) {
   switch (type) {
@@ -14,9 +13,9 @@ function getIcon(type) {
   const className = 'inline text-4xl lg:text-3xl shrink-0'
   switch (type) {
     case 'warning':
-      return <CiWarning className={className} />
+      return <Icon name="warning" className={className} />
     default:
-      return <FaCircleInfo className={className} />
+      return <Icon name="info" className={className} />
   }
 }
 export default function Dialog({ children, type = 'info' }) {

@@ -1,6 +1,6 @@
+import Icon from '@/components/Icon'
 import React, { useState } from 'react'
 import { TimelineToRender } from '@/types/index'
-import { PiCaretDoubleUpBold, PiCaretDoubleDownBold } from 'react-icons/pi'
 import Settings from './SidebarSections/Settings'
 import About from './SidebarSections/About'
 import DebugTab from './SidebarSections/Debug'
@@ -141,12 +141,17 @@ export default function Sidebar() {
           >
             Additional Details
             {showPanel ? (
-              <PiCaretDoubleDownBold
+              <Icon
+                name="caretDoubleDown"
                 className="text-current transition-all duration-300"
                 size={16}
               />
             ) : (
-              <PiCaretDoubleUpBold className="text-current transition-all duration-300" size={16} />
+              <Icon
+                name="caretDoubleUp"
+                className="text-current transition-all duration-300"
+                size={16}
+              />
             )}
           </button>
         </div>

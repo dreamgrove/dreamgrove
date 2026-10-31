@@ -6,7 +6,7 @@ import path from 'path'
 import { exec } from 'child_process'
 import { promisify } from 'util'
 import authOptions from 'app/api/auth/[...nextauth]/options'
-import { MAX_IMAGE_BYTES, UPLOAD_PATH_RE } from '@/lib/imageUploads'
+import { MAX_IMAGE_BYTES, UPLOAD_PATH_RE } from '@/lib/admin/imageUploads'
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER || 'dreamgrove'
 const REPO_NAME = process.env.GITHUB_REPO_NAME || 'dreamgrove'
@@ -38,8 +38,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required parameters' }, { status: 400 })
     }
 
-    // New pages are created from user-typed slugs, and the path ends up in a shell
-    // command below, so only allow plain data/ paths
+    // only allow plain data/ paths
     if (
       typeof filePath !== 'string' ||
       !/^[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*\.mdx$/.test(filePath)
@@ -92,7 +91,6 @@ export async function POST(request: Request) {
           await fs.writeFile(uploadPath, upload.data)
         }
 
-        // Git operations
         await execPromise(`git checkout -b ${branchName}`)
         await execPromise(`git add data/${filePath} ${uploads.map((u) => u.path).join(' ')}`)
 

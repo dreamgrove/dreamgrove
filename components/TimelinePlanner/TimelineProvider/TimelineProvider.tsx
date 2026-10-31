@@ -1,8 +1,8 @@
 import React, { createContext, ReactNode, useEffect, useState } from 'react'
-import { useTimelineEvents } from 'hooks/useTimelineActions'
-import { useLocalSpells } from 'hooks/useLocalSpells'
-import { useActiveBindings } from 'hooks/useActiveBindings'
-import { useProcessedTimeline } from 'hooks/useProcessedTimeline'
+import { useTimelineEvents } from '@/hooks/useTimelineActions'
+import { useLocalSpells } from '@/hooks/useLocalSpells'
+import { useActiveBindings } from '@/hooks/useActiveBindings'
+import { useProcessedTimeline } from '@/hooks/useProcessedTimeline'
 import {
   SpellInfo,
   PlayerAction,
@@ -12,7 +12,7 @@ import {
   TimelineEvent,
   EventType,
 } from '@/types/index'
-import { useKeysToTalents } from 'hooks/useKeysToActions'
+import { useKeysToTalents } from '@/hooks/useKeysToActions'
 
 export interface TimelineContextType {
   inputEvents: PlayerAction[]

@@ -17,7 +17,7 @@ import SpecSelector from './SpecSelector'
 import ZoomControls from './ZoomControls'
 import SpellNames from './SpellNames'
 import TimelineScrollContainer from './TimelineScrollContainer'
-import { useTimelineScroll } from 'hooks/useTimelineScroll'
+import { useTimelineScroll } from '@/hooks/useTimelineScroll'
 import { SettingsProvider } from '../Providers/SettingsProvider'
 import { TimelineProvider } from '../TimelineProvider/TimelineProvider'
 

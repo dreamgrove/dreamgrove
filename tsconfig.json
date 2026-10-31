@@ -15,16 +15,21 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/data/*": ["data/*"],
-      "@/layouts/*": ["layouts/*"],
-      "@/css/*": ["css/*"],
+      "@/components/*": ["./components/*"],
+      "@/data/*": ["./data/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/layouts/*": ["./layouts/*"],
+      "@/css/*": ["./css/*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
-      "@/types/*": ["types/*"],
-      "@/lib/*": ["lib/*"],
-      "@/models/*": ["models/*"]
+      "@/types/*": ["./types/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/models/*": ["./models/*"],
+      "app/*": ["./app/*"],
+      "bot/*": ["./bot/*"],
+      "css/*": ["./css/*"],
+      "plugins/*": ["./plugins/*"],
+      "public/*": ["./public/*"]
     },
     "plugins": [
       {
@@ -32,7 +37,8 @@
       }
     ],
     "strictNullChecks": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "types": ["jest"]
   },
   "include": [
     "next-env.d.ts",
@@ -46,5 +52,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "eslint.config.mjs"]
 }

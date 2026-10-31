@@ -135,7 +135,7 @@
   },
   "packageManager": "pnpm@10.4.1",
   "overrides": {
-    "@types/react": "^19.2.0"
+    "@types/react": "$@types/react"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

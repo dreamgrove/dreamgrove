@@ -1,8 +1,5 @@
 'use client'
-import balanceIcon from '../../../public/static/images/icons/balance.jpg'
-import restoIcon from '../../../public/static/images/icons/resto.jpg'
-import feralIcon from '../../../public/static/images/icons/feral.jpg'
-import guardianIcon from '../../../public/static/images/icons/guardian.jpg'
+import { SPEC_ICONS } from '@/components/spec/specIcons'
 import Image, { StaticImageData } from 'next/image'
 import { useEffect, useRef, Suspense, useContext } from 'react'
 import { useSearchParams, usePathname } from 'next/navigation'
@@ -11,10 +8,10 @@ import { CheckboxContext } from '../CheckboxProvider'
 type SpecName = 'Guardian' | 'Feral' | 'Resto' | 'Balance'
 
 const SPEC_META: Record<SpecName, { icon: StaticImageData; accent: string; role: string }> = {
-  Guardian: { icon: guardianIcon, accent: '#d97a3b', role: 'Tank' },
-  Feral: { icon: feralIcon, accent: '#e6b16a', role: 'DPS' },
-  Resto: { icon: restoIcon, accent: '#1a9c82', role: 'Healer' },
-  Balance: { icon: balanceIcon, accent: '#8a6fd6', role: 'DPS' },
+  Guardian: { icon: SPEC_ICONS.guardian, accent: '#d97a3b', role: 'Tank' },
+  Feral: { icon: SPEC_ICONS.feral, accent: '#e6b16a', role: 'DPS' },
+  Resto: { icon: SPEC_ICONS.resto, accent: '#1a9c82', role: 'Healer' },
+  Balance: { icon: SPEC_ICONS.balance, accent: '#8a6fd6', role: 'DPS' },
 }
 
 const SegmentButton = ({ text }: { text: SpecName }) => {

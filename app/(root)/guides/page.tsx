@@ -1,8 +1,8 @@
+import Icon from '@/components/Icon'
 import Link from '@/components/Link'
 import PageWrapper from '@/components/PageWrapper'
 import GuideList from '@/components/spec/GuideList'
 import InstanceCard from '@/components/custom/Dungeons/InstanceCard'
-import { ArrowLeft } from '@/components/spec/icons'
 import { genPageMetadata } from 'app/(root)/seo'
 import { getLatestHeaderImage, getOtherGuides } from '@/lib/guides'
 import { allDungeons, allRaids } from 'contentlayer/generated'
@@ -31,7 +31,7 @@ export default function OtherGuidesPage() {
     >
       <section className="dg-container pt-7 pb-16 sm:pb-[72px]">
         <Link href="/" className="dg-back">
-          <ArrowLeft />
+          <Icon name="arrowLeftThin" size={14} />
           All specs
         </Link>
         {/* Visually hidden; the header crumb already names the page */}

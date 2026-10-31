@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState, memo, useCallback, useMemo } from 'react'
 import { wowheadCache } from './wowheadCache'
 import WowheadClientIcon from './WowheadClientIcon'
-import { getWowheadInfo, qualityToColor } from 'lib/wowhead-api'
+import { getWowheadInfo, qualityToColor } from '@/lib/wowhead-api'
 import { extractIdFromUrl, buildWowheadUrl } from 'app/api/wowhead-data/utils'
 import spellData from '../../spellData.json'
 
@@ -32,8 +32,7 @@ function WowheadClientVersion({
   let displayId = id
 
   // Handle case when id is not provided: resolve the spell id from the name map
-  // (mirrors the server Wowhead component) so `!SpellName!` still shows a real icon,
-  // falling back to parsing the id out of an explicit url.
+  // so `!SpellName!` still shows a real icon, falling back to parsing the id out of an explicit url.
   if (!id && type === 'spell') {
     if (spellData[name]) {
       displayId = spellData[name]

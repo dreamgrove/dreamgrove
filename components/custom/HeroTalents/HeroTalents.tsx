@@ -1,5 +1,5 @@
 'use client'
-import { IoIosArrowDown } from 'react-icons/io'
+import Icon from '@/components/Icon'
 import { useState } from 'react'
 
 interface HeroTalentsHeaderProps {
@@ -64,7 +64,7 @@ export default function HeroTalents({ title, id, children }: HeroTalentsHeaderPr
               isCollapsed ? 'rotate-0' : 'rotate-180'
             }`}
           >
-            <IoIosArrowDown className="block h-5 w-5" />
+            <Icon name="arrowDown" className="block h-5 w-5" />
           </span>
         </button>
       </h3>
