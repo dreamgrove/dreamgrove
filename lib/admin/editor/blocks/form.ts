@@ -2,10 +2,11 @@
 import type { BlockDef, Field, TalentColor, Values } from './registry'
 import type { ParsedAttr, TagMatch } from './tags'
 
-// Evaluates an attribute expression such as `{[1, 2]}` or `{{ a: 1 }}`.
+// Reads an attribute expression such as `{[1, 2]}` or `{"text"}`. Parsed as JSON, never
+// evaluated: the document may come from anyone. Anything else stays locked as raw text.
 function evalExpression(raw: string): { ok: true; value: unknown } | { ok: false } {
   try {
-    return { ok: true, value: new Function(`return (${raw.slice(1, -1)})`)() }
+    return { ok: true, value: JSON.parse(raw.slice(1, -1)) }
   } catch {
     return { ok: false }
   }

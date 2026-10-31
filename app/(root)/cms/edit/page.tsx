@@ -1,6 +1,7 @@
 import { genPageMetadata } from 'app/(root)/seo'
 import FileEditor from '@/components/admin/editor/FileEditor'
 import { StatusMessage } from '@/components/admin/ui/StatusShell'
+import { safeLocalPath } from '@/lib/admin/content'
 
 export const metadata = genPageMetadata({ title: 'Edit page' })
 
@@ -11,8 +12,7 @@ export default async function Page({
 }) {
   const { path, new: created, from } = await searchParams
   // Set by the pencil button on a guide; only same-site paths, so it can't send people elsewhere
-  // (browsers read both //x and /\x as another host)
-  const backHref = from && /^\/(?![/\\])/.test(from) ? from : undefined
+  const backHref = safeLocalPath(from)
 
   if (!path) {
     return (

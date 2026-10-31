@@ -5,7 +5,7 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import PageActions from '@/components/PageActions'
 
 import fs from 'fs'
 import path from 'path'
@@ -41,7 +41,7 @@ export default function ChangelogLayout({ content, next, prev, children }: Layou
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment />
+      <PageActions />
       <article>
         <div>
           <header>

@@ -7,3 +7,7 @@
 /scripts/ @dreamgrove/devs
 /next.config.* @dreamgrove/devs
 /contentlayer.config.* @dreamgrove/devs
+# remarkSafeMdx (what guides may contain) and the CMS's server code
+/plugins/ @dreamgrove/devs
+/app/api/ @dreamgrove/devs
+/lib/admin/ @dreamgrove/devs

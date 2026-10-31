@@ -13,7 +13,7 @@ const BUTTON =
  * pencil that opens the page in the CMS editor; it stays visible, while the
  * scroll-to-top arrow only shows once the page is scrolled.
  */
-const ScrollTopAndComment = ({ editPath }: { editPath?: string }) => {
+const PageActions = ({ editPath }: { editPath?: string }) => {
   const pathname = usePathname()
   const [show, setShow] = useState(false)
 
@@ -34,9 +34,6 @@ const ScrollTopAndComment = ({ editPath }: { editPath?: string }) => {
 
   const handleScrollTop = () => {
     window.scrollTo({ top: 0 })
-  }
-  const handleScrollToComment = () => {
-    document.getElementById('comment')?.scrollIntoView()
   }
   if (!editPath && !show) return null
   return (
@@ -62,4 +59,4 @@ const ScrollTopAndComment = ({ editPath }: { editPath?: string }) => {
   )
 }
 
-export default ScrollTopAndComment
+export default PageActions

@@ -19,12 +19,14 @@ import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 import remarkSpell from '../plugins/remarkSpell.js'
 import remarkColor from '../plugins/remarkColor.js'
 import remarkGroupCheckboxes from '../plugins/remarkGroupCheckboxes.js'
+import remarkSafeMdx from '../plugins/remarkSafeMdx.js'
 import ConditionalElement from './custom/ConditionalElement'
 import TimelineClientVersion from './csm/TimelineClientVersion'
 import PlannerEmbedClientVersion from './csm/PlannerEmbedClientVersion'
 
 import { remarkAlert } from 'remark-github-blockquote-alert'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
 import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
 import { visit } from 'unist-util-visit'
 
@@ -62,7 +64,7 @@ interface MDXPreviewProps {
 }
 
 interface MdxModule {
-  default: ComponentType
+  default: ComponentType<{ components?: MDXComponents }>
   [key: string]: unknown
 }
 
@@ -255,10 +257,8 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 
 const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: MDXPreviewProps) {
   const [mdxModule, setMdxModule] = useState<MdxModule | null>(null)
-  // Read at render time by the compiled MDX, so a ref keeps the debounced
-  // evaluator below free of a locale dependency.
-  const componentsRef = useRef<MDXComponents>(components)
-  componentsRef.current = locale === 'ko' ? koComponents : components
+  // Passed to the compiled MDX when it renders, so switching locale doesn't re-evaluate
+  const mdxComponents = locale === 'ko' ? koComponents : components
   const [error, setError] = useState<string | null>(null)
   const [isEvaluating, setIsEvaluating] = useState<boolean>(false)
   const evaluateMdxRef = useRef<((...args: string[]) => void) | null>(null)
@@ -272,9 +272,18 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: M
         const evaluateOptions: EvaluateOptions = {
           ...(isDevelopment ? devRuntime : runtime),
           Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
-          useMDXComponents: () => componentsRef.current,
           development: isDevelopment,
-          remarkPlugins: [remarkAlert, remarkGfm, remarkSpell, remarkColor, remarkGroupCheckboxes],
+          // Same rules as the build, so a disallowed tag or expression shows up here before saving.
+          // remarkMath keeps LaTeX braces from being read as expressions.
+          remarkPlugins: [
+            remarkSafeMdx,
+            remarkAlert,
+            remarkGfm,
+            remarkMath,
+            remarkSpell,
+            remarkColor,
+            remarkGroupCheckboxes,
+          ],
           rehypePlugins: [rehypeContentHeader, rehypeGroupHeaders],
         }
 
@@ -364,7 +373,7 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: M
           // fresh boundary per document — `key` remounts it once the content changes.
           <ErrorBoundary key={content} fallback={<PreviewRenderError />}>
             <CheckboxProvider>
-              <LiveComponent />
+              <LiveComponent components={mdxComponents} />
             </CheckboxProvider>
           </ErrorBoundary>
         ) : (

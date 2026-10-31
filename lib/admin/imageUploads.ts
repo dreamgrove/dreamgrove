@@ -1,6 +1,7 @@
 // Images uploaded from the Image block.
 export const MAX_IMAGE_BYTES = 2 * 1024 * 1024
-const MAX_TOTAL_BYTES = 3 * 1024 * 1024
+export const MAX_TOTAL_BYTES = 3 * 1024 * 1024
+export const MAX_IMAGES = 10
 
 export const IMAGE_TYPES: Record<string, string> = {
   'image/png': 'png',
@@ -11,6 +12,25 @@ export const IMAGE_TYPES: Record<string, string> = {
 
 export const UPLOAD_PATH_RE =
   /^\/static\/images\/uploads\/[a-z0-9_-]+(?:\/[a-z0-9_-]+)*\.(?:png|jpg|webp|gif)$/
+
+const ascii = (bytes: Uint8Array, start: number, end: number) =>
+  String.fromCharCode(...bytes.subarray(start, end))
+
+/** Whether the file's leading bytes match the image type its extension claims */
+export function matchesImageType(path: string, bytes: Uint8Array) {
+  switch (path.slice(path.lastIndexOf('.') + 1)) {
+    case 'png':
+      return bytes[0] === 0x89 && ascii(bytes, 1, 4) === 'PNG'
+    case 'jpg':
+      return bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff
+    case 'gif':
+      return ascii(bytes, 0, 4) === 'GIF8'
+    case 'webp':
+      return ascii(bytes, 0, 4) === 'RIFF' && ascii(bytes, 8, 12) === 'WEBP'
+    default:
+      return false
+  }
+}
 
 export interface PendingImage {
   file: File
@@ -46,6 +66,9 @@ export function uploadPath(docPath: string, file: File) {
 export async function encodeUploads(document: string, pending: Map<string, PendingImage>) {
   const used = [...pending].filter(([path]) => document.includes(path))
   const total = used.reduce((sum, [, img]) => sum + img.file.size, 0)
+  if (used.length > MAX_IMAGES) {
+    throw new Error(`A PR can add at most ${MAX_IMAGES} images; save some in a separate PR`)
+  }
   if (total > MAX_TOTAL_BYTES) {
     throw new Error('Uploaded images add up to more than 3 MB; save some in a separate PR')
   }

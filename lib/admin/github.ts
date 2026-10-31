@@ -56,17 +56,31 @@ export async function canManageContent(octokit: Octokit, username: string) {
   return { canPush: push, canManage: push || member }
 }
 
-/** Open PRs this user has opened from the editor */
+/**
+ * Open PRs this user has opened from the editor. Search finds the user's open PRs
+ * without listing the whole repository's; it can't match a branch prefix, so each
+ * hit (normally a handful) is checked for its head branch.
+ */
 export async function countOpenEditPrs(octokit: Octokit, username: string) {
-  const prs = await octokit.paginate(octokit.rest.pulls.list, {
-    owner: REPO_OWNER,
-    repo: REPO_NAME,
-    state: 'open',
+  const { data } = await octokit.rest.search.issuesAndPullRequests({
+    q: `repo:${REPO_OWNER}/${REPO_NAME} is:pr is:open author:${username}`,
     per_page: 100,
   })
-  return prs.filter(
-    (pr) => pr.user?.login === username && pr.head.ref.startsWith(EDIT_BRANCH_PREFIX)
-  ).length
+  const heads = await Promise.all(
+    data.items.map(({ number }) =>
+      octokit.rest.pulls
+        .get({ owner: REPO_OWNER, repo: REPO_NAME, pull_number: number })
+        .then(({ data: pr }) => pr.head.ref)
+    )
+  )
+  return heads.filter((ref) => ref.startsWith(EDIT_BRANCH_PREFIX)).length
+}
+
+/** Thrown while a newly created fork isn't usable yet; its message is shown to the user */
+export class ForkNotReadyError extends Error {
+  constructor() {
+    super('Your fork is still being created, try saving again in a minute')
+  }
 }
 
 /**
@@ -88,11 +102,12 @@ export async function ensureFork(octokit: Octokit) {
       const { data } = await octokit.rest.repos.get(target)
       // A fresh fork can answer before its branches exist
       await octokit.rest.repos.getBranch({ ...target, branch: data.default_branch })
-      return { ...target, defaultBranch: data.default_branch }
-    } catch {
-      if (Date.now() > deadline) {
-        throw new Error('Your fork is still being created, try saving again in a minute')
-      }
+      return target
+    } catch (error) {
+      // 404/409 mean the fork is still being set up; anything else (SSO, rate limits) won't fix itself
+      const status = (error as { status?: number }).status
+      if (status !== 404 && status !== 409) throw error
+      if (Date.now() > deadline) throw new ForkNotReadyError()
       await new Promise((resolve) => setTimeout(resolve, FORK_POLL_MS))
     }
   }

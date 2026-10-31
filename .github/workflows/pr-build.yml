@@ -5,9 +5,11 @@ name: PR Build Check
 # status check + full logs on the PR, mirroring Vercel's preview build check.
 # Deploy previews are intentionally out of scope for now.
 #
-# Anyone can open a PR from a fork (the /admin/edit editor does it for users
+# Anyone can open a PR from a fork (the /cms/edit editor does it for users
 # without write access), and fork PRs run the workflow file from the PR itself.
 # Never add secrets.*, a self-hosted runner, or a pull_request_target trigger here.
+# The content-only check below is a guide, not a security boundary: a fork can edit
+# this file. Protection comes from CODEOWNERS review and remarkSafeMdx in the build.
 on:
   pull_request:
     branches: [master]
@@ -32,10 +34,12 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          allowed='^(data/.+\.mdx|public/static/images/uploads/.+)$'
-          outside=$(git diff --name-only "$BASE_SHA...$HEAD_SHA" | grep -vE "$allowed" || true)
+          # Same shapes as CONTENT_PATH_RE and UPLOAD_PATH_RE in lib/admin
+          allowed='^(data/[A-Za-z0-9_/-]+\.mdx|public/static/images/uploads/[a-z0-9_/-]+\.(png|jpg|webp|gif))$'
+          # --no-renames lists both sides of a move, so a file can't leave a protected path unnoticed
+          outside=$(git diff --name-only --no-renames "$BASE_SHA...$HEAD_SHA" | grep -vE "$allowed" || true)
           if [ -n "$outside" ]; then
-            echo "::error::Editor PRs may only change data/*.mdx and public/static/images/uploads/. Also changed:"
+            echo "::error::Editor PRs may only change data/*.mdx and PNG/JPG/WebP/GIF images in public/static/images/uploads/. Also changed:"
             echo "$outside"
             exit 1
           fi
@@ -61,6 +65,11 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      # The build enforces the same rules (remarkSafeMdx runs in contentlayer); this
+      # just fails fast with file:line errors for every guide at once
+      - name: Check MDX
+        run: pnpm check:mdx
 
       - name: Build
         run: pnpm build

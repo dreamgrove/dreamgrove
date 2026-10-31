@@ -25,6 +25,7 @@ import remarkSpell from './plugins/remarkSpell.js'
 import remarkColor from './plugins/remarkColor.js'
 import rehypeGroupHeaders from './plugins/rehypeGroupHeaders.js'
 import remarkGroupCheckboxes from './plugins/remarkGroupCheckboxes.js'
+import remarkSafeMdx from './plugins/remarkSafeMdx.js'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -344,6 +345,8 @@ export default makeSource({
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
+      // First, so it only sees what the author wrote
+      remarkSafeMdx,
       remarkExtractFrontmatter,
       remarkAlert,
       remarkGroupCheckboxes,

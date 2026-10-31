@@ -37,6 +37,20 @@ export const SLUG_PATTERN = /^[a-z0-9]+(?:[-_][a-z0-9]+)*$/
 /** A file the editor may read or write, relative to data/ */
 export const CONTENT_PATH_RE = /^[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*\.mdx$/
 
+/**
+ * `value` as a path on this site, or undefined if it would lead elsewhere. Parsed the
+ * way the browser will, which catches tricks a regex misses (`/\evil.com`, `/%09/evil.com`).
+ */
+export function safeLocalPath(value: string | undefined): string | undefined {
+  if (!value?.startsWith('/')) return undefined
+  try {
+    const url = new URL(value, 'http://local')
+    return url.origin === 'http://local' ? url.pathname + url.search + url.hash : undefined
+  } catch {
+    return undefined
+  }
+}
+
 // Dungeon and raid files use underscores (the_dreamrift.mdx), blog posts use dashes
 export function slugify(title: string, kind: NewPageKind): string {
   const sep = kind === 'article' ? '-' : '_'

@@ -5,7 +5,7 @@ import type { Blog } from 'contentlayer/generated'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import PageActions from '@/components/PageActions'
 import TableOfContents from '@/components/custom/TableOfContents/TableOfContents'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
@@ -41,7 +41,7 @@ export default function PostLayout({
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment editPath={filePath} />
+      <PageActions editPath={filePath} />
       {isCompendium && <AprilFoolsBanner />}
       <article>
         <div>

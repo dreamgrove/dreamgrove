@@ -6,7 +6,7 @@ import Link from '@/components/Link'
 import type { CoreContent } from '@/lib/utils/contentlayer'
 import type { Dungeons, Raids } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import PageActions from '@/components/PageActions'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import SpecFilterChips, { ALL_SPECS_CHECKED } from '@/components/spec/SpecFilterChips'
 import EncounterRail from '@/components/spec/EncounterRail'
@@ -32,7 +32,7 @@ export default function DungeonLayout({ content, children }: LayoutProps) {
     <CheckboxProvider initialMap={ALL_SPECS_CHECKED}>
       <EncounterProvider encounters={encounters} editUrl={editUrl}>
         <div className="pb-16 sm:pb-[72px]">
-          <ScrollTopAndComment editPath={filePath} />
+          <PageActions editPath={filePath} />
           <section className="relative h-[280px] overflow-hidden bg-[#0b0906] sm:h-[340px]">
             {headerImage && (
               <Image
