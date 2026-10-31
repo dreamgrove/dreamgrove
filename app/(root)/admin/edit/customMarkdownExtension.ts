@@ -184,11 +184,12 @@ const jsxLineParser: BlockParser = {
     const from = cx.lineStart + line.pos
     let to = cx.lineStart + line.text.length
     if (HTML_OPEN.test(text) && !VOID_TAGS.test(text)) {
-      // Stops at a blank line so an unclosed tag can't swallow the document
+      // Stops at a blank line so an unclosed tag can't swallow the document.
+      // `line` is cx's current line, which nextLine() advances in place
       let depth = tagDepth(text)
       while (depth > 0 && cx.peekLine().trim() && cx.nextLine()) {
-        depth += tagDepth(cx.line.text)
-        to = cx.lineStart + cx.line.text.length
+        depth += tagDepth(line.text)
+        to = cx.lineStart + line.text.length
       }
     }
     cx.addElement(cx.elt('HTMLBlock', from, to))
