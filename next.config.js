@@ -62,8 +62,6 @@ module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
-    // Animates client-side navigations through React's <ViewTransition> (spec tiles -> hubs)
-    experimental: { viewTransition: true },
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     images: {
       // Local images may carry a ?v= cache-busting query (see lib/specArt.ts)
