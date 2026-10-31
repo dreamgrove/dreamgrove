@@ -1,7 +1,7 @@
 'use client'
 
+import Icon from '@/components/Icon'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { CiWarning } from 'react-icons/ci'
 import { Cast } from '@/models/Cast'
 import { SpellInfo, SpellToRender } from '@/types/timeline'
 import { simulateLoadout, splitCastsByCharges, SimulatedLoadout } from '@/lib/embed/loadoutTimeline'
@@ -93,7 +93,7 @@ function EmbedCast({
               style={{ left: cast.effect_duration * pixelsPerSecond + 14, bottom: -2 }}
               className="absolute z-20 flex items-center text-[0.75rem] text-yellow-500/80"
             >
-              <CiWarning className="text-yellow-500/80" />
+              <Icon name="warning" className="text-yellow-500/80" />
               <span className="pl-2">{t.interrupted}</span>
             </div>
           )}

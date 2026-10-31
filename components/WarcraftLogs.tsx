@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { executeWarcraftLogsQuery, queries } from 'lib/warcraftlogs'
+import { executeWarcraftLogsQuery, queries } from '@/lib/warcraftlogs'
 
 /**
  * WarcraftLogs component for testing the initial API connection

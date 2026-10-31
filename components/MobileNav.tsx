@@ -1,5 +1,6 @@
 'use client'
 
+import Icon from '@/components/Icon'
 import React, { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
@@ -42,19 +43,10 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
         onClick={onToggleNav}
         className="h-full w-full align-middle lg:hidden"
       >
-        <svg
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
+        <Icon
+          name="menu"
           className="dark:hover:text-primary-400 hover:text-primary-500 mb-[-2px] h-[31px] w-[31px] text-gray-900 dark:text-gray-100"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2 4a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM2 10a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM2 16a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
+        />
       </button>
       {/* headlessui's dialog loads on the first tap instead of with every page */}
       {hasOpened && <MobileNavPanel navShow={navShow} onToggleNav={onToggleNav} toc={toc} />}

@@ -1,7 +1,7 @@
 'use client'
+import Icon from '@/components/Icon'
 import { useState, type ReactNode } from 'react'
 import { slug } from 'github-slugger'
-import { ChevronDown } from './icons'
 import { encounterDomId, useEncounters } from './EncounterContext'
 
 interface EncounterProps {
@@ -62,7 +62,9 @@ export default function Encounter({ title, trash, children }: EncounterProps) {
         >
           {title}
         </h2>
-        <ChevronDown
+        <Icon
+          name="chevronDownThin"
+          size={20}
           className={`flex-none transition-transform duration-200 ${closed ? '-rotate-90' : ''}`}
         />
       </button>

@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon'
 import { ViewTransition } from 'react'
 import { notFound } from 'next/navigation'
 import Link from '@/components/Link'
@@ -5,7 +6,6 @@ import PageWrapper from '@/components/PageWrapper'
 import SpecArt from '@/components/spec/SpecArt'
 import GuideList from '@/components/spec/GuideList'
 import ActiveSpec from '@/components/spec/ActiveSpec'
-import { ArrowLeft, ArrowRight } from '@/components/spec/icons'
 import { genPageMetadata } from 'app/(root)/seo'
 import { allBlogs } from 'contentlayer/generated'
 import { SPECS, getSpec } from '@/data/specs'
@@ -65,7 +65,7 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
               overlapping card below (pb minus the card's -mt-24) */}
             <div className="dg-container relative flex h-full flex-col items-start justify-end gap-6 pt-7 pb-[120px] sm:gap-8 sm:pb-32">
               <Link href="/" className="dg-back" style={{ viewTransitionName: 'spec-hub-back' }}>
-                <ArrowLeft />
+                <Icon name="arrowLeftThin" size={14} />
                 All specs
               </Link>
               {/* Own transition layer so it fades in where it sits instead of growing out of the tile */}
@@ -123,7 +123,7 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
                 style={{ background: spec.color }}
               >
                 Read the compendium
-                <ArrowRight />
+                <Icon name="arrowRightThin" size={16} />
               </Link>
             </div>
 

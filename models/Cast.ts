@@ -1,4 +1,4 @@
-import { round } from 'lib/utils/utilityFunctions'
+import { round } from '@/lib/utils/utilityFunctions'
 import { CastParams, SpellInfo } from '@/types/index'
 
 /*

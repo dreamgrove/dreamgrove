@@ -1,9 +1,10 @@
 'use client'
 
+import Icon from '@/components/Icon'
 import React, { useState, useRef, useEffect, useMemo } from 'react'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
-import { useLoadouts, Loadout } from 'hooks/useLoadouts'
-import { useApplyLoadout } from 'hooks/useApplyLoadout'
+import { useLoadouts, Loadout } from '@/hooks/useLoadouts'
+import { useApplyLoadout } from '@/hooks/useApplyLoadout'
 import { encodeLoadout } from '@/lib/utils/loadoutCode'
 import defaultLoadouts from '../../other/defaultLoadouts.json'
 
@@ -198,15 +199,7 @@ export default function LoadoutManager() {
             : 'border-neutral-600/50 bg-neutral-900/40 text-neutral-300 hover:border-neutral-500/50 hover:bg-neutral-700/70 hover:text-white'
         }`}
       >
-        <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
-          <path
-            d="M2 2h8l4 4v8a1 1 0 01-1 1H2a1 1 0 01-1-1V3a1 1 0 011-1zm7 0v4h4M4 10h8M4 13h5"
-            stroke="currentColor"
-            strokeWidth="1.2"
-            fill="none"
-            strokeLinecap="round"
-          />
-        </svg>
+        <Icon name="file" className="h-3.5 w-3.5" />
         Loadouts
         {loadouts.length > 0 && (
           <span className="ml-0.5 rounded-full bg-neutral-700/80 px-1.5 text-[0.65rem] text-neutral-400">
@@ -235,17 +228,7 @@ export default function LoadoutManager() {
                 title="Import"
                 className="rounded-sm p-1 text-neutral-500 transition-colors hover:bg-neutral-700/50 hover:text-neutral-300"
               >
-                <svg
-                  className="h-3.5 w-3.5"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M8 2v8M5 7l3 3 3-3M3 12h10" />
-                </svg>
+                <Icon name="import" className="h-3.5 w-3.5" />
               </button>
               {/* Export */}
               <button
@@ -258,29 +241,9 @@ export default function LoadoutManager() {
                 }`}
               >
                 {exportCopied ? (
-                  <svg
-                    className="h-3.5 w-3.5"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M3 8.5l3 3 7-7" />
-                  </svg>
+                  <Icon name="checkThin" className="h-3.5 w-3.5" />
                 ) : (
-                  <svg
-                    className="h-3.5 w-3.5"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M8 14V6M5 9l3-3 3 3M3 4h10" />
-                  </svg>
+                  <Icon name="export" className="h-3.5 w-3.5" />
                 )}
               </button>
               <button
@@ -457,16 +420,7 @@ export default function LoadoutManager() {
                             title="Rename"
                             className="rounded p-1 text-neutral-500 transition-colors hover:bg-neutral-700/50 hover:text-neutral-300"
                           >
-                            <svg
-                              className="h-3 w-3"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                            >
-                              <path d="M11 2l3 3-9 9H2v-3z" />
-                            </svg>
+                            <Icon name="editThin" className="h-3 w-3" />
                           </button>
                           <button
                             onClick={() => handleDelete(loadout.id)}
@@ -479,16 +433,7 @@ export default function LoadoutManager() {
                                 : 'text-neutral-500 hover:bg-neutral-700/50 hover:text-red-400'
                             }`}
                           >
-                            <svg
-                              className="h-3 w-3"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              strokeLinecap="round"
-                            >
-                              <path d="M4 4l8 8M12 4l-8 8" />
-                            </svg>
+                            <Icon name="closeThin" className="h-3 w-3" />
                           </button>
                         </div>
                       </div>

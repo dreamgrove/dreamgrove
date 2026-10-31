@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useCallback, useSyncExternalStore } from 'react'
+import { useState, useEffect, useCallback } from 'react'
+import { useMounted } from '@/hooks/useMounted'
 import Image from 'next/image'
 
 // Date gate: April 1st CEST (UTC+2)
@@ -11,15 +12,6 @@ function isAprilFoolsCEST(): boolean {
   const cestMonth = cestTime.getUTCMonth() // 0-indexed, April = 3
   const cestDay = cestTime.getUTCDate()
   return cestMonth === 3 && cestDay === 1
-}
-
-// SSR-safe mounted check
-function useMounted() {
-  return useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false
-  )
 }
 
 interface FakeSite {

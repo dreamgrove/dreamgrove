@@ -1,8 +1,8 @@
 'use client'
 
+import Icon from '@/components/Icon'
 import { ReactNode, useState } from 'react'
 import styles from '../Talents/Talents.module.css'
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 
 interface ClientCollapsibleProps {
   name: string
@@ -12,7 +12,7 @@ interface ClientCollapsibleProps {
 export default function ClientCollapsible({ name, children }: ClientCollapsibleProps) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const arrow = !isOpen ? <FaAngleDown /> : <FaAngleUp />
+  const arrow = !isOpen ? <Icon name="angleDown" /> : <Icon name="angleUp" />
 
   const handleToggle = () => {
     setIsOpen((x) => !x)

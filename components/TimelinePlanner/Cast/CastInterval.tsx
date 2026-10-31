@@ -1,8 +1,7 @@
+import Icon from '@/components/Icon'
 import { useEffect, useRef } from 'react'
 import { useTimeline } from '../Providers/TimelineLengthProvider'
 import { useHoverContext } from '../Providers/HoverProvider'
-import { TiDelete } from 'react-icons/ti'
-import { CiWarning } from 'react-icons/ci'
 import { Cast } from '@/models/Cast'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 import CastBars from './CastBars'
@@ -95,7 +94,7 @@ export default function CastInterval({
             style={closeButtonPositon}
             title="Delete cast"
           >
-            <TiDelete />
+            <Icon name="delete" />
           </button>
         )}
         {/* Interrupt notification */}
@@ -104,7 +103,7 @@ export default function CastInterval({
             style={{ left: cast.effect_duration * pixelsPerSecond + 14, bottom: -2 }}
             className="absolute z-20 flex items-center text-[0.75rem] text-yellow-500/80 transition-all duration-100"
           >
-            <CiWarning className="text-yellow-500/80" />
+            <Icon name="warning" className="text-yellow-500/80" />
             <span className="pl-2">interrupted</span>
           </div>
         )}

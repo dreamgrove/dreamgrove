@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon'
 import React, { useState } from 'react'
 import { registerWarnings } from '@/lib/warnings/registerWarnings'
 import { useTimeline } from './Providers/TimelineLengthProvider'
@@ -44,20 +45,10 @@ export default function Warnings() {
                 {allWarnings.length}
               </span>
               <span className="text-lg font-semibold">Timeline Warnings</span>
-              <svg
-                aria-hidden="true"
+              <Icon
+                name="chevronDownOutline"
                 className={`ml-2 h-5 w-5 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              />
             </>
           )}
         </button>

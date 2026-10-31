@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon'
 import { ReactNode } from 'react'
 import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
@@ -6,7 +7,6 @@ import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import TableOfContents from '@/components/custom/TableOfContents/TableOfContents'
-import { FaHistory, FaEdit } from 'react-icons/fa'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import type { CheckboxItem } from '@/lib/utils/checkboxDefaults'
@@ -80,7 +80,7 @@ export default function PostLayout({
                       href={changelogUrl}
                       className="text-main mt-[-2px] text-base underline decoration-2 underline-offset-4"
                     >
-                      <FaHistory className="mr-2 inline" />
+                      <Icon name="history" className="mr-2 inline" />
                       <span className="inline">Changelog</span>
                     </a>
                   </div>
@@ -100,7 +100,7 @@ export default function PostLayout({
                   href={changelogUrl}
                   className="text-main ml-0 text-sm font-medium underline decoration-2 underline-offset-4 sm:-ml-6 sm:text-base"
                 >
-                  <FaHistory className="mr-2 inline" />
+                  <Icon name="history" className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>
                 </a>
               </div>

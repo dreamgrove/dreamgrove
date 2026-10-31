@@ -1,6 +1,6 @@
 'use client'
+import Icon from '@/components/Icon'
 import { useState } from 'react'
-import { FaAngleDown } from 'react-icons/fa'
 
 const Collapsible = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +26,7 @@ const Collapsible = ({ title, children }) => {
             isOpen ? 'rotate-180' : 'rotate-0'
           }`}
         >
-          <FaAngleDown />
+          <Icon name="angleDown" />
         </span>
       </button>
       <div
