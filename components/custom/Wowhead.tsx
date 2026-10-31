@@ -58,47 +58,50 @@ export default async function Wowhead({
       }
     }
 
-    try {
-      // Use the shared function directly
-      const data = await fetchWowheadData({
-        id: displayId,
-        type,
-        name,
-        beta,
-        url,
-      })
+    // Nothing to look up (e.g. a spell name missing from spellData.json): render the name as-is
+    if (displayId || url) {
+      try {
+        // Use the shared function directly
+        const data = await fetchWowheadData({
+          id: displayId,
+          type,
+          name,
+          beta,
+          url,
+        })
 
-      if (data.quality !== undefined) {
-        quality = data.quality
-        linkColor = qualityToColor[data.quality] || linkColor
-      }
+        if (data.quality !== undefined) {
+          quality = data.quality
+          linkColor = qualityToColor[data.quality] || linkColor
+        }
 
-      if (!name && data.display) {
-        display = data.display
-      }
+        if (!name && data.display) {
+          display = data.display
+        }
 
-      icon =
-        noIcon || type === 'npc' ? (
-          <></>
-        ) : (
-          <WowheadIcon
-            id={displayId}
-            type={type}
-            name={display}
-            beta={beta}
-            url={url}
-            noLink={true}
-            iconId={data.icon}
-            iconSize={iconSize}
-            fill={fill}
-          />
+        icon =
+          noIcon || type === 'npc' ? (
+            <></>
+          ) : (
+            <WowheadIcon
+              id={displayId}
+              type={type}
+              name={display}
+              beta={beta}
+              url={url}
+              noLink={true}
+              iconId={data.icon}
+              iconSize={iconSize}
+              fill={fill}
+            />
+          )
+      } catch (error: any) {
+        console.warn(
+          `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
         )
-    } catch (error: any) {
-      console.warn(
-        `Failed to fetch from Wowhead API for ${type}=${displayId}: ${error.message || 'Unknown error'}`
-      )
-      // Use provided name or displayId as fallback
-      display = name || `${type}-${displayId}`
+        // Use provided name or displayId as fallback
+        display = name || `${type}-${displayId}`
+      }
     }
   }
 

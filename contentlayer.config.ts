@@ -339,6 +339,7 @@ export const Raids = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
+  contentDirExclude: ['wowhead-cache.json'],
   documentTypes: [Blog, Dungeons, Raids, About, Changelog],
   mdx: {
     cwd: process.cwd(),
