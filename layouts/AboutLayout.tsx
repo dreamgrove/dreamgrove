@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import type { About } from 'contentlayer/generated'
 import SectionContainer from '@/components/SectionContainer'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import PageActions from '@/components/PageActions'
 import PageTitle from '@/components/PageTitle'
 
 interface Props {
@@ -10,11 +10,11 @@ interface Props {
 }
 
 export default function AboutLayout({ children, content }: Props) {
-  const { title } = content
+  const { title, filePath } = content
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment />
+      <PageActions editPath={filePath} />
       <article>
         <div>
           <header>

@@ -1,14 +1,10 @@
 import GithubProvider from 'next-auth/providers/github'
 import { JWT } from 'next-auth/jwt'
-import { Session } from 'next-auth'
 import { Account } from 'next-auth'
 
-// Extend Session type to include accessToken
-interface CustomSession extends Session {
-  accessToken?: string
-}
-
-// Extend JWT type to include accessToken
+// The GitHub token lives only in the encrypted JWT cookie and is read on the server
+// with getToken (lib/admin/access.ts). Never copy it onto the session: /api/auth/session
+// hands the session to client JavaScript.
 interface CustomJWT extends JWT {
   accessToken?: string
 }
@@ -30,7 +26,8 @@ const authOptions = {
       issuer: 'https://github.com/login/oauth',
       authorization: {
         params: {
-          scope: 'read:user user:email repo',
+          // public_repo is enough to fork dreamgrove, push to the fork and open PRs
+          scope: 'read:user user:email public_repo',
         },
       },
     }),
@@ -42,11 +39,6 @@ const authOptions = {
         token.accessToken = account.access_token
       }
       return token
-    },
-    async session({ session, token }: { session: CustomSession; token: CustomJWT }) {
-      // Add access_token to the session
-      session.accessToken = token.accessToken
-      return session
     },
   },
 }

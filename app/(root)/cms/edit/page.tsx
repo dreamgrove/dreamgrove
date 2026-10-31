@@ -1,0 +1,28 @@
+import { genPageMetadata } from 'app/(root)/seo'
+import FileEditor from '@/components/admin/editor/FileEditor'
+import { StatusMessage } from '@/components/admin/ui/StatusShell'
+import { safeLocalPath } from '@/lib/admin/content'
+
+export const metadata = genPageMetadata({ title: 'Edit page' })
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ path?: string; new?: string; from?: string }>
+}) {
+  const { path, new: created, from } = await searchParams
+  // Set by the pencil button on a guide; only same-site paths, so it can't send people elsewhere
+  const backHref = safeLocalPath(from)
+
+  if (!path) {
+    return (
+      <StatusMessage title="No file selected" back={{ href: '/cms', label: 'Select a file' }}>
+        This editor needs a file path to work on.
+      </StatusMessage>
+    )
+  }
+
+  // `new=1` is set by "New page" on /cms and the file only exists once its PR is merged.
+  // This is keyed by path so switching files starts from a fresh editor.
+  return <FileEditor key={path} filePath={path} isNew={created === '1'} backHref={backHref} />
+}

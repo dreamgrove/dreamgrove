@@ -7,7 +7,8 @@ export interface Segment<T extends string> {
 }
 
 const SIZES = {
-  sm: 'h-7 px-2.5 text-[.8rem]',
+  // 26px + padding and border = 32px, the height of toolbar buttons
+  sm: 'h-[26px] px-2.5 text-[.8rem]',
   md: 'h-8 px-3.5 text-[.85rem]',
 }
 

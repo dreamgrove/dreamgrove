@@ -7,6 +7,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import DungeonLayout from '@/layouts/DungeonLayout'
 import PageWrapper from '@/components/PageWrapper'
+import { jsonLdHtml } from '@/lib/utils/jsonLd'
 
 const defaultLayout = 'DungeonLayout'
 const layouts = {
@@ -129,7 +130,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
       <script
         type="application/ld+json"
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }}
       />
       <Layout content={mainContent} next={next} prev={prev} authorDetails={[]}>
         <MDXLayoutRenderer code={post.body.code} toc={post.toc} />

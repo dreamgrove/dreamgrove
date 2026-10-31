@@ -12,6 +12,7 @@ import { usePersistedState } from '@/hooks/admin/usePersistedState'
 import { useSaveChanges } from '@/hooks/admin/useSaveChanges'
 import { useScrollSync } from '@/hooks/admin/useScrollSync'
 import { useSplitPane } from '@/hooks/admin/useSplitPane'
+import Icon from '@/components/Icon'
 import AuthGate from '@/components/admin/ui/AuthGate'
 import StatusShell, { StatusMessage } from '@/components/admin/ui/StatusShell'
 import DetailsSidebar from './DetailsSidebar'
@@ -23,21 +24,37 @@ import SaveDialog, { PullRequestCreated } from './SaveDialog'
 
 const WIDE = '(min-width: 1024px)'
 
-const BACK_TO_PAGES = { href: '/admin/select', label: 'Back to pages' }
+const BACK_TO_PAGES = { href: '/cms', label: 'Back to pages' }
 
 /** Edits one content file and submits the result as a pull request */
-export default function FileEditor({ filePath, isNew }: { filePath: string; isNew: boolean }) {
+export default function FileEditor({
+  filePath,
+  isNew,
+  backHref,
+}: {
+  filePath: string
+  isNew: boolean
+  backHref?: string
+}) {
   return (
     <AuthGate reason="Sign in with GitHub to edit this page.">
-      <Editor filePath={filePath} isNew={isNew} />
+      <Editor filePath={filePath} isNew={isNew} backHref={backHref} />
     </AuthGate>
   )
 }
 
-function Editor({ filePath, isNew }: { filePath: string; isNew: boolean }) {
+function Editor({
+  filePath,
+  isNew,
+  backHref,
+}: {
+  filePath: string
+  isNew: boolean
+  backHref?: string
+}) {
   const file = useEditorFile(filePath, isNew)
   const { uploads, images } = useImageUploads(filePath)
-  const save = useSaveChanges({ filePath, uploads, onSaved: file.markSaved, onFail: file.fail })
+  const save = useSaveChanges({ filePath, uploads, onSaved: file.markSaved })
 
   const [viewMode, setViewMode] = useState<ViewMode>('edit')
   const wide = useMediaQuery(WIDE, true)
@@ -64,14 +81,6 @@ function Editor({ filePath, isNew }: { filePath: string; isNew: boolean }) {
 
   if (file.authStatus === 'loading' || file.status === 'loading') {
     return <StatusShell>Loading content…</StatusShell>
-  }
-  if (file.status === 'forbidden') {
-    return (
-      <StatusMessage title="Access denied" back={BACK_TO_PAGES}>
-        You don’t have write permission to the dreamgrove repository. Only contributors with write
-        access can edit files.
-      </StatusMessage>
-    )
   }
   if (file.status === 'error') {
     return (
@@ -113,6 +122,7 @@ function Editor({ filePath, isNew }: { filePath: string; isNew: boolean }) {
         viewMode={viewMode}
         onViewMode={changeViewMode}
         liveHref={livePageHref(filePath, file.isNewFile)}
+        backHref={backHref}
         details={
           showEditor
             ? { open: detailsOpen, toggle: () => setDetailsChoice(!showDetails) }
@@ -131,6 +141,20 @@ function Editor({ filePath, isNew }: { filePath: string; isNew: boolean }) {
           onRestore={file.restoreDraft}
           onDiscard={file.discardDraft}
         />
+      )}
+
+      {save.error && (
+        <div className="mx-4 mb-3 flex flex-shrink-0 items-start gap-3 rounded-sm border border-red-500/40 bg-red-500/10 px-4 py-3 text-[.9rem] text-red-200 sm:mx-6">
+          <span className="flex-1">{save.error}</span>
+          <button
+            type="button"
+            onClick={save.dismissError}
+            aria-label="Dismiss"
+            className="text-red-200/70 hover:text-red-100"
+          >
+            <Icon box name="close" size={14} />
+          </button>
+        </div>
       )}
 
       {save.message && (
@@ -216,6 +240,7 @@ function Editor({ filePath, isNew }: { filePath: string; isNew: boolean }) {
         <SaveDialog
           filePath={filePath}
           isNewFile={file.isNewFile}
+          viaFork={!file.canPush}
           defaultTitle={
             file.isNewFile
               ? `Add ${doc.frontmatter.title || baseName}`

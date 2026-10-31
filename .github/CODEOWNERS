@@ -1,0 +1,13 @@
+# Changes to build, CI and tooling need a review from the dev team. Content
+# (data/, uploaded images) stays open to anyone with write access.
+/.github/ @dreamgrove/devs
+/package.json @dreamgrove/devs
+/pnpm-lock.yaml @dreamgrove/devs
+/pnpm-workspace.yaml @dreamgrove/devs
+/scripts/ @dreamgrove/devs
+/next.config.* @dreamgrove/devs
+/contentlayer.config.* @dreamgrove/devs
+# remarkSafeMdx (what guides may contain) and the CMS's server code
+/plugins/ @dreamgrove/devs
+/app/api/ @dreamgrove/devs
+/lib/admin/ @dreamgrove/devs

@@ -135,6 +135,7 @@ export default function EditorToolbar({
   onModeChange,
   onLink,
   onInsertBlock,
+  onImage,
   onEditTag,
   onSpell,
   onToggleWrap,
@@ -148,6 +149,7 @@ export default function EditorToolbar({
   onModeChange: (mode: EditorMode) => void
   onLink: () => void
   onInsertBlock: () => void
+  onImage: () => void
   onEditTag: () => void
   onSpell: () => void
   onToggleWrap: () => void
@@ -230,6 +232,7 @@ export default function EditorToolbar({
         shortcut="Ctrl+K"
         onClick={mode === 'rich' ? onLink : run(insertLink)}
       />
+      <ToolButton icon="image" label="Image" onClick={onImage} />
       <ToolButton icon="spell" label="Spell tooltip" shortcut="Ctrl+Space" onClick={onSpell} />
       <Menu label="Text colour" trigger={<Icon box name="color" size={17} />}>
         {(close) => (

@@ -69,6 +69,7 @@ import {
   LuExternalLink,
   LuEye,
   LuFileText,
+  LuImage,
   LuPencil,
   LuSwords,
   LuUngroup,
@@ -150,6 +151,7 @@ const ICONS = {
   color: MdOutlineFormatColorText,
   wrap: MdWrapText,
   spell: FaMagic,
+  image: LuImage,
 
   // Things
   discord: FaDiscord,
@@ -167,7 +169,14 @@ export const iconGlyph = (name: IconName): IconType => ICONS[name]
 
 // Material, Bootstrap and Feather glyphs carry their own padding; Font Awesome
 // ones fill the box edge to edge, so in a `box` they're drawn smaller to match
-const PADDED: ReadonlySet<IconName> = new Set(['rule', 'color', 'wrap', 'details', 'plusCircle'])
+const PADDED: ReadonlySet<IconName> = new Set([
+  'rule',
+  'color',
+  'wrap',
+  'details',
+  'plusCircle',
+  'image',
+])
 const FA_SCALE = 0.75
 
 /**

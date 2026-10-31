@@ -5,7 +5,7 @@ import type { Blog } from 'contentlayer/generated'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import PageActions from '@/components/PageActions'
 import TableOfContents from '@/components/custom/TableOfContents/TableOfContents'
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
@@ -32,7 +32,7 @@ export default function PostLayout({
   toc,
   checkboxDefaults,
 }: LayoutProps) {
-  const { patch, slug, title, tags, lastModified, changelogUrl, translator } = content
+  const { patch, slug, title, tags, lastModified, changelogUrl, translator, filePath } = content
 
   // Check if this is a compendium page
   const isCompendium = slug?.endsWith('/compendium')
@@ -41,7 +41,7 @@ export default function PostLayout({
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment />
+      <PageActions editPath={filePath} />
       {isCompendium && <AprilFoolsBanner />}
       <article>
         <div>

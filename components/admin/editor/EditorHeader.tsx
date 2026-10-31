@@ -45,6 +45,7 @@ export default function EditorHeader({
   viewMode,
   onViewMode,
   liveHref,
+  backHref,
   details,
   saving,
   onSave,
@@ -58,6 +59,8 @@ export default function EditorHeader({
   viewMode: ViewMode
   onViewMode: (mode: ViewMode) => void
   liveHref: string | null
+  /** The page the editor was opened from, else the page list */
+  backHref?: string
   details?: { open: boolean; toggle: () => void }
   saving: boolean
   onSave: () => void
@@ -85,7 +88,7 @@ export default function EditorHeader({
             />
           </Link>
           <span aria-hidden>/</span>
-          <Link href="/admin/select" className="flex-shrink-0 hover:text-white">
+          <Link href="/cms" className="flex-shrink-0 hover:text-white">
             Editor
           </Link>
           <span aria-hidden>/</span>
@@ -97,9 +100,9 @@ export default function EditorHeader({
         </div>
         <div className="mt-2 flex min-w-0 items-center gap-3">
           <Link
-            href="/admin/select"
-            title="Back to pages"
-            aria-label="Back to pages"
+            href={backHref ?? '/cms'}
+            title={backHref ? 'Back to page' : 'Back to pages'}
+            aria-label={backHref ? 'Back to page' : 'Back to pages'}
             className="-mr-1 -ml-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xs text-white/50 transition-colors hover:bg-[#2a2a2a] hover:text-white"
           >
             <Icon box name="back" size={16} />

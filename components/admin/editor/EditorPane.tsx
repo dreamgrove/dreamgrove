@@ -161,6 +161,7 @@ export default function EditorPane({
         onModeChange={changeMode}
         onLink={openLink}
         onInsertBlock={blocks.openPalette}
+        onImage={() => blocks.insert('image')}
         onEditTag={blocks.editTagAtCursor}
         onSpell={spells.start}
         onToggleWrap={() => setWordWrap((w) => !w)}

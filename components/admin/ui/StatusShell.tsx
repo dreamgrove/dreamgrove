@@ -11,7 +11,7 @@ export default function StatusShell({ children }: { children: ReactNode }) {
       title="Content editor"
       showTitle={false}
       variant="redesign"
-      crumb={{ label: 'Editor', href: '/admin/select', color: ACCENT }}
+      crumb={{ label: 'Editor', href: '/cms', color: ACCENT }}
     >
       <section className="dg-container flex min-h-[60vh] items-center justify-center py-16">
         <div className="w-full max-w-md rounded-sm border border-[#3a3a3a] bg-[#1f1f1f] px-8 py-10 text-center text-[.95rem] text-white/60">

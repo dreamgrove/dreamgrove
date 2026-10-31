@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import type { ContentFile, ContentKind } from '@/lib/admin/content'
+import { getContentAccess } from '@/lib/admin/access'
 
 function scanDirectory(dir: string, baseDir: string): string[] {
   const files: string[] = []
@@ -27,8 +28,18 @@ function kindOf(relPath: string): ContentKind {
 const toDateString = (value: unknown) =>
   value instanceof Date ? value.toISOString().slice(0, 10) : value ? String(value) : undefined
 
+// Backs /cms, which is for collaborators and org members only
 export async function GET() {
   try {
+    const access = await getContentAccess()
+    if (!access) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    if (!access.canManage) {
+      return NextResponse.json(
+        { error: 'The page list is for dreamgrove members only' },
+        { status: 403 }
+      )
+    }
+
     const baseDir = path.join(process.cwd(), 'data')
     const files: ContentFile[] = scanDirectory(baseDir, baseDir).map((relPath) => {
       let data: Record<string, any> = {}

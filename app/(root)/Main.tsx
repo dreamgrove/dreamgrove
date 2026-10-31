@@ -65,6 +65,8 @@ export default function Home({ tiles }: { tiles: SpecTile[] }) {
                     art={t.art}
                     color={t.color}
                     position={t.artPosition ?? 'center 20%'}
+                    // Tiles live in .dg-container (max-width 80rem)
+                    sizes="(max-width: 1280px) 100vw, 1280px"
                     tint={isHover ? 0 : 0.2}
                     scrim={0}
                     className={`transition-transform duration-[800ms] ease-[cubic-bezier(.22,.61,.36,1)] ${

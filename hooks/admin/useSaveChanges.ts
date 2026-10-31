@@ -8,9 +8,7 @@ const REDIRECT_DELAY_MS = 2000
 /** Where to go after a save that didn't open a PR (legacy) */
 function afterSave(filePath: string) {
   const isCompendium = filePath.endsWith('/compendium.mdx') && filePath.includes('blog/')
-  return isCompendium
-    ? `/blog/${filePath.split('/').slice(1, -1).join('/')}/compendium`
-    : '/admin/select'
+  return isCompendium ? `/blog/${filePath.split('/').slice(1, -1).join('/')}/compendium` : '/cms'
 }
 
 /** Submits the document and its images to GitHub as a pull request */
@@ -18,22 +16,23 @@ export function useSaveChanges({
   filePath,
   uploads,
   onSaved,
-  onFail,
 }: {
   filePath: string
   uploads: Map<string, PendingImage>
   /** Called with the document that was committed */
   onSaved: (content: string) => void
-  onFail: (status: 'forbidden' | 'error', message?: string) => void
 }) {
   const router = useRouter()
   const [saving, setSaving] = useState(false)
   const [prUrl, setPrUrl] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
+  // Shown over the editor, so a refused save (e.g. the open-PR cap) keeps the user's work on screen
+  const [error, setError] = useState<string | null>(null)
 
   const save = async (content: string, commitTitle: string, commitMessage: string) => {
     setSaving(true)
     setMessage(null)
+    setError(null)
     try {
       const images = await encodeUploads(content, uploads)
       const res = await fetch('/api/compendium/save', {
@@ -48,9 +47,8 @@ export function useSaveChanges({
           createPr: true,
         }),
       })
-      if (res.status === 403) return onFail('forbidden')
-      if (!res.ok) throw new Error(`Error saving content: ${res.statusText}`)
-      const data = await res.json()
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(data.error || `Error saving content: ${res.statusText}`)
 
       onSaved(content)
       clearNewPage(filePath)
@@ -62,14 +60,14 @@ export function useSaveChanges({
         setMessage(data.message)
         setTimeout(() => router.push(afterSave(filePath)), REDIRECT_DELAY_MS)
       } else {
-        router.push('/admin/select')
+        router.push('/cms')
       }
     } catch (err) {
-      onFail('error', err instanceof Error ? err.message : 'Unknown error occurred')
+      setError(err instanceof Error ? err.message : 'Unknown error occurred')
     } finally {
       setSaving(false)
     }
   }
 
-  return { save, saving, prUrl, message }
+  return { save, saving, prUrl, message, error, dismissError: () => setError(null) }
 }

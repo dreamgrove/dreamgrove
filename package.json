@@ -12,7 +12,9 @@
     "lint": "eslint --fix app components lib layouts scripts",
     "prepare": "husky",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:mdx": "node --no-warnings --test __tests__/plugins/remarkSafeMdx.test.mjs",
+    "check:mdx": "node --no-warnings scripts/check-mdx.mjs"
   },
   "dependencies": {
     "@codemirror/autocomplete": "6.20.0",

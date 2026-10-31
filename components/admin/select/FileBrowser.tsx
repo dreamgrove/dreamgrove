@@ -29,7 +29,7 @@ type SectionId = (typeof SECTIONS)[number]['id']
 /** Every content file grouped by section */
 export default function FileBrowser() {
   return (
-    <AuthGate reason="Sign in with GitHub to edit content. You need write access to the repository.">
+    <AuthGate reason="Sign in with GitHub to manage content. You need write access to the repository or to be a member of the dreamgrove organization.">
       <Browser />
     </AuthGate>
   )
@@ -75,7 +75,7 @@ function Browser() {
   }
 
   const openFile = (filePath: string) =>
-    router.push(`/admin/edit?path=${encodeURIComponent(filePath)}`)
+    router.push(`/cms/edit?path=${encodeURIComponent(filePath)}`)
   const show = (id: SectionId) => section === 'all' || section === id
   const anyResults =
     grouped.compendia.length > 0 ||
@@ -91,7 +91,7 @@ function Browser() {
       title="Content editor"
       showTitle={false}
       variant="redesign"
-      crumb={{ label: 'Editor', href: '/admin/select', color: ACCENT }}
+      crumb={{ label: 'Editor', href: '/cms', color: ACCENT }}
     >
       <section className="dg-container pt-7 pb-16 sm:pb-[72px]">
         <Link href="/" className="dg-back">

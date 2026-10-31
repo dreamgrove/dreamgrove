@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation'
 import PageWrapper from '@/components/PageWrapper'
 import { getCheckboxDefaults } from '@/lib/utils/checkboxDefaults'
 import { localeFromPath } from '@/lib/pageLocale'
+import { jsonLdHtml } from '@/lib/utils/jsonLd'
 
 const defaultLayout = 'PostLayout'
 const layouts: Record<string, React.ComponentType<any>> = {
@@ -144,7 +145,7 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
       <script
         type="application/ld+json"
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }}
       />
       <div lang={contentLang}>
         <Layout
