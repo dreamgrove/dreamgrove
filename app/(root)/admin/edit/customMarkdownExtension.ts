@@ -1,4 +1,4 @@
-import { MarkdownExtension, InlineParser, InlineContext } from '@lezer/markdown'
+import { MarkdownExtension, InlineParser, InlineContext, BlockParser } from '@lezer/markdown'
 import { Tag, tags as t } from '@lezer/highlight'
 
 // Define node types for our custom syntax
@@ -153,6 +153,53 @@ const exclamationMarkParser: InlineParser = {
   },
 }
 
+// A JSX/HTML tag alone on its line. Plain CommonMark treats it as an HTML
+// block that runs to the next blank line, swallowing the markdown right below
+// it; MDX ends it at the tag.
+const TAG_LINE = /^<\/?[A-Za-z][\w.:-]*(?:\s[^<>]*?)?\/?>\s*$/
+
+// Plain HTML (lowercase) is raw source in MDX, so an element opened on its own
+// line runs to its matching close tag as one block. Otherwise its indented
+// children would parse as markdown code blocks and lose their highlighting.
+const HTML_OPEN = /^<[a-z][\w-]*(?:\s[^<>]*?)?>\s*$/
+const VOID_TAGS = /^<(?:br|img|hr|input|wbr|source)\b/
+const TAG_RE = /<(\/?)([a-z][\w-]*)(?:\s[^<>]*?)?(\/?)>/g
+
+/** Open minus close tags on a line, void and self-closing tags excluded */
+function tagDepth(text: string) {
+  let depth = 0
+  for (const m of text.matchAll(TAG_RE)) {
+    if (m[3] || VOID_TAGS.test(m[0])) continue
+    depth += m[1] ? -1 : 1
+  }
+  return depth
+}
+
+const jsxLineParser: BlockParser = {
+  name: 'JsxTagLine',
+  before: 'HTMLBlock',
+  parse(cx, line) {
+    const text = line.text.slice(line.pos)
+    if (!TAG_LINE.test(text)) return false
+    const from = cx.lineStart + line.pos
+    let to = cx.lineStart + line.text.length
+    if (HTML_OPEN.test(text) && !VOID_TAGS.test(text)) {
+      // Stops at a blank line so an unclosed tag can't swallow the document
+      let depth = tagDepth(text)
+      while (depth > 0 && cx.peekLine().trim() && cx.nextLine()) {
+        depth += tagDepth(cx.line.text)
+        to = cx.lineStart + cx.line.text.length
+      }
+    }
+    cx.addElement(cx.elt('HTMLBlock', from, to))
+    cx.nextLine()
+    return true
+  },
+  endLeaf(_cx, line) {
+    return TAG_LINE.test(line.text.slice(line.pos))
+  },
+}
+
 // Create a stable extension object that won't be recreated
 const customMarkdownExtension: MarkdownExtension = {
   defineNodes: [
@@ -166,6 +213,7 @@ const customMarkdownExtension: MarkdownExtension = {
     { name: ExclamationMarkSeparator, style: t.separator },
   ],
   parseInline: [customInlineParser, exclamationMarkParser],
+  parseBlock: [jsxLineParser],
 }
 
 export default customMarkdownExtension

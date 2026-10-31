@@ -60,7 +60,7 @@ function specParts(spec: string): string[] {
 let spellCache: IndexedSpell[] | null = null
 let spellPromise: Promise<IndexedSpell[]> | null = null
 
-function loadSpells(): Promise<IndexedSpell[]> {
+export function loadSpells(): Promise<IndexedSpell[]> {
   if (spellCache) return Promise.resolve(spellCache)
   if (!spellPromise) {
     spellPromise = fetch('/api/spells')

@@ -2,20 +2,15 @@ import 'css/tailwind.css'
 import 'css/april-fools.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Space_Grotesk, Source_Sans_3, IBM_Plex_Sans, DM_Sans } from 'next/font/google'
+import { Source_Sans_3, IBM_Plex_Sans, Geist } from 'next/font/google'
 import { KBarSearchProvider } from '@/components/search/KBarSearchProvider'
 import Footer from '@/components/Footer'
+import FooterGate from '@/components/FooterGate'
 import siteMetadata from '@/data/siteMetadata'
 import ThemeProviders from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
-
-const space_grotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-})
 
 const source_sans = Source_Sans_3({
   subsets: ['latin'],
@@ -30,10 +25,10 @@ const ibm_plex = IBM_Plex_Sans({
   variable: '--font-ibm-plex',
 })
 
-const dm_sans = DM_Sans({
+const geist = Geist({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-dm-sans',
+  variable: '--font-geist',
 })
 
 export const metadata: Metadata = {
@@ -86,7 +81,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} ${source_sans.variable} ${ibm_plex.variable} ${dm_sans.variable}`}
+      className={`${source_sans.variable} ${ibm_plex.variable} ${geist.variable}`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
@@ -115,7 +110,9 @@ export default function RootLayout({ children }: LayoutProps) {
               <main id="main-content" className="flex-1">
                 {children}
               </main>
-              <Footer />
+              <FooterGate>
+                <Footer />
+              </FooterGate>
             </KBarSearchProvider>
           </ThemeProviders>
         </div>

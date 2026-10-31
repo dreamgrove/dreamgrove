@@ -1,7 +1,7 @@
 import { mkdirSync } from 'node:fs'
 import path from 'node:path'
 import { DatabaseSync } from 'node:sqlite'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const API_URL = 'https://simcode.dev/api/spells/druid'
 
@@ -164,7 +164,7 @@ export default populateSpellDbSafe
 
 // Standalone run (e.g. `pnpm populate-spells`) uses the strict path and exits
 // non-zero on failure so deliberate runs surface problems.
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   populate().catch((e) => {
     console.error(e)
     process.exit(1)
