@@ -13,6 +13,12 @@ interface CustomJWT extends JWT {
   accessToken?: string
 }
 
+if (!process.env.GITHUB_ID || !process.env.GITHUB_SECRET) {
+  console.error(
+    '[next-auth] GITHUB_ID / GITHUB_SECRET are not set; GitHub sign-in will fail. See .env.local.example.'
+  )
+}
+
 const authOptions = {
   providers: [
     GithubProvider({

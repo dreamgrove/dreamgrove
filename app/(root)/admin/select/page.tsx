@@ -1,41 +1,64 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession, signIn } from 'next-auth/react'
 import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
+import PageWrapper from '@/components/PageWrapper'
+import { Icon } from '../edit/ui'
+import { SPECS, getSpec, type SpecId } from '@/data/specs'
+import { formatDate } from '@/lib/utils/formatShortDate'
+import type { ContentFile } from '@/lib/adminContent'
+import NewPageDialog, { type NewPagePreset } from './NewPageDialog'
 import balanceIcon from '../../../../public/static/images/icons/balance.jpg'
 import restoIcon from '../../../../public/static/images/icons/resto.jpg'
 import feralIcon from '../../../../public/static/images/icons/feral.jpg'
 import guardianIcon from '../../../../public/static/images/icons/guardian.jpg'
 
-type FileInfo = {
-  path: string
-  name: string
+const ACCENT = '#d57f43'
+
+const SPEC_ICONS: Record<SpecId, StaticImageData> = {
+  balance: balanceIcon,
+  feral: feralIcon,
+  guardian: guardianIcon,
+  resto: restoIcon,
 }
 
-type GroupedFiles = Record<string, FileInfo[]>
+const SECTIONS = [
+  { id: 'compendiums', label: 'Compendiums' },
+  { id: 'spec', label: 'Spec guides' },
+  { id: 'general', label: 'General guides' },
+  { id: 'dungeons', label: 'Dungeons' },
+  { id: 'raids', label: 'Raids' },
+  { id: 'other', label: 'Other pages' },
+] as const
 
-type Compendium = {
-  key: string
-  name: string
-  icon: StaticImageData
+type SectionId = (typeof SECTIONS)[number]['id'] | 'all'
+
+const byTitle = (a: ContentFile, b: ContentFile) => a.title.localeCompare(b.title)
+const byNewest = (a: ContentFile, b: ContentFile) =>
+  (b.date ?? '').localeCompare(a.date ?? '') || byTitle(a, b)
+
+// Same exclusions as lib/guides.ts: translations and the test page aren't listed as guides
+const isListedArticle = (f: ContentFile) =>
+  f.kind === 'article' && !f.locale && !f.path.startsWith('blog/test/')
+
+function matches(file: ContentFile, query: string) {
+  if (!query) return true
+  return [file.title, file.path, file.summary ?? '', ...file.specs].some((s) =>
+    s.toLowerCase().includes(query)
+  )
 }
-
-const COMPENDIA: Compendium[] = [
-  { key: 'balance', name: 'Balance', icon: balanceIcon },
-  { key: 'feral', name: 'Feral', icon: feralIcon },
-  { key: 'guardian', name: 'Guardian', icon: guardianIcon },
-  { key: 'resto', name: 'Restoration', icon: restoIcon },
-]
 
 export default function FileSelectPage() {
   const { data: session, status } = useSession()
-  const [files, setFiles] = useState<GroupedFiles>({})
+  const [files, setFiles] = useState<ContentFile[]>([])
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState<string>('')
+  const [section, setSection] = useState<SectionId>('all')
+  const [newPage, setNewPage] = useState<NewPagePreset | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -46,7 +69,7 @@ export default function FileSelectPage() {
           return res.json()
         })
         .then((data) => {
-          setFiles(data.files || {})
+          setFiles(data.files || [])
           setLoading(false)
         })
         .catch((err) => {
@@ -56,236 +79,424 @@ export default function FileSelectPage() {
     }
   }, [status])
 
-  const handleSelectFile = (filePath: string) => {
-    const encodedPath = encodeURIComponent(filePath)
-    router.push(`/admin/edit?path=${encodedPath}`)
+  const openFile = (filePath: string) => {
+    router.push(`/admin/edit?path=${encodeURIComponent(filePath)}`)
   }
 
-  const filteredFiles = (): GroupedFiles => {
-    if (!searchTerm) return files
+  const query = searchTerm.trim().toLowerCase()
 
-    const filtered: GroupedFiles = {}
-
-    Object.entries(files).forEach(([group, groupFiles]) => {
-      const matchingFiles = (groupFiles as FileInfo[]).filter(
-        (file) =>
-          file.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          file.path.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          group.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-
-      if (matchingFiles.length > 0) {
-        filtered[group] = matchingFiles
-      }
-    })
-
-    return filtered
-  }
+  const grouped = useMemo(() => {
+    const shown = files.filter((f) => matches(f, query))
+    const compendia = SPECS.map((spec) => ({
+      spec,
+      file: files.find((f) => f.path === `blog/${spec.id}/compendium.mdx`),
+      translations: files.filter(
+        (f) => f.kind === 'compendium' && f.locale && f.path.startsWith(`blog/${spec.id}/`)
+      ),
+    })).filter((c) => !query || [c.file, ...c.translations].some((f) => f && matches(f, query)))
+    const articles = shown.filter(isListedArticle)
+    const listed = new Set<string>([
+      ...SPECS.flatMap((spec) =>
+        files.filter((f) => f.kind === 'compendium' && f.path.startsWith(`blog/${spec.id}/`))
+      ).map((f) => f.path),
+      ...files.filter(isListedArticle).map((f) => f.path),
+    ])
+    return {
+      compendia,
+      bySpec: SPECS.map((spec) => ({
+        spec,
+        files: articles.filter((f) => f.specs.includes(spec.id)).sort(byNewest),
+      })),
+      general: articles.filter((f) => f.specs.length === 0).sort(byNewest),
+      dungeons: shown.filter((f) => f.kind === 'dungeon').sort(byTitle),
+      raids: shown.filter((f) => f.kind === 'raid').sort(byTitle),
+      other: shown
+        .filter((f) => !listed.has(f.path) && f.kind !== 'dungeon' && f.kind !== 'raid')
+        .sort(byTitle),
+    }
+  }, [files, query])
 
   if (status === 'loading') {
-    return <CenteredMessage>Loading…</CenteredMessage>
+    return <StatusShell>Loading…</StatusShell>
   }
 
   if (status === 'unauthenticated') {
     return (
-      <Centered>
-        <h1 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
-          Authentication required
-        </h1>
-        <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
+      <StatusShell>
+        <h1 className="m-0 text-[1.6rem] font-semibold text-white">Sign in to edit</h1>
+        <p className="mt-3 mb-0 text-[.95rem] leading-relaxed text-white/60">
           Sign in with GitHub to edit content. You need write access to the repository.
         </p>
         <button
           onClick={() => signIn('github')}
-          className="mt-5 inline-flex items-center gap-2 rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-white"
+          className="mt-6 inline-flex items-center gap-2 rounded-xs bg-white px-5 py-3 text-[.95rem] font-semibold text-[#1f1f1f] transition-[filter] hover:brightness-90"
         >
-          <GithubGlyph />
+          <Icon name="github" size={16} />
           Sign in with GitHub
         </button>
-      </Centered>
+      </StatusShell>
     )
   }
 
   if (loading) {
-    return <CenteredMessage>Loading files…</CenteredMessage>
+    return <StatusShell>Loading pages…</StatusShell>
   }
 
   if (error) {
     return (
-      <Centered>
-        <h1 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
-          Couldn’t load files
-        </h1>
-        <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>
-        <Link
-          href="/"
-          className="mt-5 inline-flex rounded-md border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-800"
-        >
+      <StatusShell>
+        <h1 className="m-0 text-[1.6rem] font-semibold text-white">Couldn’t load pages</h1>
+        <p className="mt-3 mb-0 text-[.95rem] text-red-400">{error}</p>
+        <Link href="/" className="dg-back mt-8">
+          <Icon name="back" size={16} />
           Return home
         </Link>
-      </Centered>
+      </StatusShell>
     )
   }
 
-  const allFiles = Object.values(files).flat()
-  const compendiaWithPaths = COMPENDIA.map((c) => ({
-    ...c,
-    file: allFiles.find((f) => f.path === `blog/${c.key}/compendium.mdx`),
-  }))
-
-  const groups = filteredFiles()
-  const groupEntries = Object.entries(groups).sort(([a], [b]) => a.localeCompare(b))
-  const totalFiles = allFiles.length
-  const shownFiles = groupEntries.reduce((sum, [, gf]) => sum + gf.length, 0)
+  const show = (id: SectionId) => section === 'all' || section === id
+  const anyResults =
+    grouped.compendia.length > 0 ||
+    grouped.bySpec.some((s) => s.files.length > 0) ||
+    grouped.general.length > 0 ||
+    grouped.dungeons.length > 0 ||
+    grouped.raids.length > 0 ||
+    grouped.other.length > 0
+  const specPanels = query ? grouped.bySpec.filter((s) => s.files.length > 0) : grouped.bySpec
 
   return (
-    <div className="min-h-screen bg-[#F2F3F4] dark:bg-[#282828]">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
-        <header className="mb-8">
-          <h1 className="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-            Content editor
-          </h1>
-          <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-            Select a page to edit. Your changes are submitted as a pull request for review.
-          </p>
-        </header>
+    <PageWrapper
+      title="Content editor"
+      showTitle={false}
+      variant="redesign"
+      crumb={{ label: 'Editor', href: '/admin/select', color: ACCENT }}
+    >
+      <section className="dg-container pt-7 pb-16 sm:pb-[72px]">
+        <Link href="/" className="dg-back">
+          <Icon name="back" size={16} />
+          Back to site
+        </Link>
 
-        {!searchTerm && (
-          <section className="mb-10">
-            <h2 className="mb-3 text-xs font-semibold tracking-wider text-neutral-500 uppercase dark:text-neutral-400">
-              Compendiums
-            </h2>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {compendiaWithPaths.map((c) => (
-                <button
-                  key={c.key}
-                  type="button"
-                  disabled={!c.file}
-                  onClick={() => c.file && handleSelectFile(c.file.path)}
-                  className="group flex items-center gap-3 rounded-lg border border-neutral-200 bg-white p-3 text-left transition-colors hover:border-[#d57f43] hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:bg-[#323232] dark:hover:border-[#d57f43] dark:hover:bg-[#3a3a3a]"
-                >
-                  <span className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-md ring-1 ring-neutral-200 dark:ring-neutral-600">
-                    <Image
-                      src={c.icon}
-                      alt=""
-                      width={40}
-                      height={40}
-                      className="h-full w-full object-cover"
-                    />
-                  </span>
-                  <span className="min-w-0 truncate text-sm font-semibold text-neutral-900 dark:text-neutral-100">
-                    {c.name}
-                  </span>
-                </button>
-              ))}
+        {/* Visually hidden since the header already names the page */}
+        <h1 className="sr-only">Content editor</h1>
+
+        <div className="mt-8 flex flex-col gap-4 border-b border-[#3a3a3a] pb-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-wrap gap-1.5">
+            {[{ id: 'all' as const, label: 'All' }, ...SECTIONS].map((s) => (
+              <button
+                key={s.id}
+                type="button"
+                className="dg-chip flex h-9 items-center rounded-xs! py-0! leading-none"
+                aria-pressed={section === s.id}
+                onClick={() => setSection(s.id)}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+          <div className="flex gap-3">
+            <div className="relative flex-1 lg:w-80">
+              <span className="pointer-events-none absolute top-1/2 left-3.5 -translate-y-1/2 text-white/40">
+                <Icon name="search" size={15} />
+              </span>
+              <input
+                type="search"
+                placeholder="Search by title, path or spec…"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="h-9 w-full rounded-xs border border-[#3a3a3a] bg-[#1f1f1f] py-0 pr-3 pl-10 text-[.9rem] text-white placeholder-white/40 focus:border-[#d57f43] focus:ring-0 focus:outline-none"
+              />
             </div>
-          </section>
-        )}
-
-        <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-xs font-semibold tracking-wider text-neutral-500 uppercase dark:text-neutral-400">
-            {searchTerm ? 'Search results' : 'All pages'}
-            <span className="ml-2 font-normal tracking-normal text-neutral-400 normal-case dark:text-neutral-500">
-              {searchTerm ? `${shownFiles} of ${totalFiles}` : `${totalFiles} files`}
-            </span>
-          </h2>
-          <div className="relative sm:w-72">
-            <span className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-neutral-400">
-              <SearchGlyph />
-            </span>
-            <input
-              type="text"
-              placeholder="Search files…"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full rounded-md border border-neutral-300 bg-white py-2 pr-3 pl-9 text-sm text-neutral-900 placeholder-neutral-400 focus:border-[#d57f43] focus:ring-1 focus:ring-[#d57f43] focus:outline-none dark:border-neutral-600 dark:bg-[#323232] dark:text-neutral-100 dark:placeholder-neutral-500"
-            />
+            <button
+              type="button"
+              onClick={() => setNewPage({})}
+              className="inline-flex h-9 flex-shrink-0 items-center gap-2 rounded-xs px-4 text-[.9rem] leading-none font-semibold text-[#2a2a2a] transition-[filter] hover:brightness-110"
+              style={{ background: ACCENT }}
+            >
+              <Icon name="plus" size={14} />
+              New page
+            </button>
           </div>
         </div>
 
-        {groupEntries.length > 0 ? (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {groupEntries.map(([group, groupFiles]) => (
-              <div
-                key={group}
-                className="overflow-hidden rounded-lg border border-neutral-200 bg-white dark:border-neutral-700 dark:bg-[#323232]"
-              >
-                <div className="flex items-center justify-between border-b border-neutral-100 px-4 py-2.5 dark:border-neutral-700">
-                  <h3 className="truncate text-sm font-semibold text-neutral-700 capitalize dark:text-neutral-200">
-                    {group}
-                  </h3>
-                  <span className="text-xs text-neutral-400 tabular-nums dark:text-neutral-500">
-                    {groupFiles.length}
-                  </span>
-                </div>
-                <ul className="divide-y divide-neutral-100 dark:divide-neutral-700">
-                  {groupFiles.map((file) => (
-                    <li key={file.path}>
-                      <button
-                        onClick={() => handleSelectFile(file.path)}
-                        className="block w-full px-4 py-2.5 text-left transition-colors hover:bg-neutral-50 dark:hover:bg-[#3a3a3a]"
-                      >
-                        <span className="block truncate text-sm font-medium text-neutral-800 dark:text-neutral-200">
-                          {file.name}
-                        </span>
-                        <span className="block truncate font-mono text-xs text-neutral-400 dark:text-neutral-500">
-                          {file.path}
-                        </span>
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-lg border border-dashed border-neutral-300 py-12 text-center text-sm text-neutral-500 dark:border-neutral-600 dark:text-neutral-400">
-            {searchTerm ? 'No files match your search.' : 'No files found.'}
-          </div>
+        {!anyResults && (
+          <p className="mt-12 text-center text-[.95rem] text-white/40">
+            No pages match “{searchTerm}”.
+          </p>
         )}
-      </div>
-    </div>
+
+        {show('compendiums') && grouped.compendia.length > 0 && (
+          <Section title="Compendiums">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              {grouped.compendia.map(({ spec, file, translations }) => (
+                <div
+                  key={spec.id}
+                  className="group relative overflow-hidden rounded-sm border border-[#3a3a3a] bg-[#242424] transition-colors hover:bg-[#2d2d2d]"
+                >
+                  <button
+                    type="button"
+                    disabled={!file}
+                    onClick={() => file && openFile(file.path)}
+                    className="flex w-full items-center gap-4 p-4 text-left disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <Image
+                      src={SPEC_ICONS[spec.id]}
+                      alt=""
+                      width={44}
+                      height={44}
+                      className="h-11 w-11 flex-shrink-0 rounded-xs object-cover"
+                    />
+                    <span className="min-w-0">
+                      <span
+                        className="block text-[1.15rem] font-semibold transition-colors group-hover:text-[var(--spec)]"
+                        style={{ ['--spec' as string]: spec.color }}
+                      >
+                        {spec.name}
+                      </span>
+                      <span className="block truncate text-[.85rem] text-white/40">
+                        {file?.date ? `Updated ${formatDate(file.date)}` : 'Compendium'}
+                      </span>
+                    </span>
+                  </button>
+                  {translations.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 px-4 pb-4">
+                      {translations.map((t) => (
+                        <button
+                          key={t.path}
+                          type="button"
+                          onClick={() => openFile(t.path)}
+                          className="dg-chip rounded-xs! px-2.5! py-1! text-[.75rem]!"
+                          title={t.path}
+                        >
+                          {t.locale?.toUpperCase()} translation
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
+        {show('spec') && specPanels.length > 0 && (
+          <Section title="Spec guides">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              {specPanels.map(({ spec, files: specFiles }) => (
+                <Panel
+                  key={spec.id}
+                  title={spec.name}
+                  tint={spec.color}
+                  onAdd={() => setNewPage({ kind: 'article', specs: [spec.id] })}
+                  addLabel={`New ${spec.name} guide`}
+                >
+                  {specFiles.length === 0 ? (
+                    <EmptyRow>No guides yet.</EmptyRow>
+                  ) : (
+                    specFiles.map((f) => (
+                      <FileRow key={f.path} file={f} onOpen={openFile} hideSpec={spec.id} />
+                    ))
+                  )}
+                </Panel>
+              ))}
+            </div>
+          </Section>
+        )}
+
+        {show('general') && (!query || grouped.general.length > 0) && (
+          <Section title="General guides">
+            <Panel
+              title="Other guides"
+              onAdd={() => setNewPage({ kind: 'article', specs: [] })}
+              addLabel="New general guide"
+            >
+              {grouped.general.length === 0 ? (
+                <EmptyRow>No general guides yet.</EmptyRow>
+              ) : (
+                grouped.general.map((f) => <FileRow key={f.path} file={f} onOpen={openFile} />)
+              )}
+            </Panel>
+          </Section>
+        )}
+
+        {(show('dungeons') || show('raids')) &&
+          (grouped.dungeons.length > 0 || grouped.raids.length > 0) && (
+            <Section title="Instances">
+              <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2">
+                {show('dungeons') && grouped.dungeons.length > 0 && (
+                  <Panel
+                    title="Mythic+ dungeons"
+                    onAdd={() => setNewPage({ kind: 'dungeon' })}
+                    addLabel="New dungeon"
+                  >
+                    {grouped.dungeons.map((f) => (
+                      <FileRow key={f.path} file={f} onOpen={openFile} />
+                    ))}
+                  </Panel>
+                )}
+                {show('raids') && grouped.raids.length > 0 && (
+                  <Panel
+                    title="Raids"
+                    onAdd={() => setNewPage({ kind: 'raid' })}
+                    addLabel="New raid"
+                  >
+                    {grouped.raids.map((f) => (
+                      <FileRow key={f.path} file={f} onOpen={openFile} />
+                    ))}
+                  </Panel>
+                )}
+              </div>
+            </Section>
+          )}
+
+        {show('other') && grouped.other.length > 0 && (
+          <Section title="Other pages">
+            <Panel title="Pages">
+              {grouped.other.map((f) => (
+                <FileRow key={f.path} file={f} onOpen={openFile} />
+              ))}
+            </Panel>
+          </Section>
+        )}
+      </section>
+
+      {newPage && (
+        <NewPageDialog
+          preset={newPage}
+          existingPaths={files.map((f) => f.path)}
+          defaultAuthor={session?.user?.name ?? ''}
+          onClose={() => setNewPage(null)}
+        />
+      )}
+    </PageWrapper>
   )
 }
 
-function Centered({ children }: { children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#F2F3F4] px-4 dark:bg-[#282828]">
-      <div className="w-full max-w-md rounded-lg border border-neutral-200 bg-white p-8 text-center dark:border-neutral-700 dark:bg-[#323232]">
-        {children}
-      </div>
-    </div>
-  )
-}
-
-function CenteredMessage({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-[#F2F3F4] text-sm text-neutral-500 dark:bg-[#282828] dark:text-neutral-400">
+    <div className="mt-12">
+      <h2 className="m-0 mb-4 text-[1.6rem] font-semibold tracking-[-0.015em]">{title}</h2>
       {children}
     </div>
   )
 }
 
-function SearchGlyph() {
+function Panel({
+  title,
+  tint,
+  onAdd,
+  addLabel,
+  children,
+}: {
+  title: string
+  /** Spec colour for the border */
+  tint?: string
+  onAdd?: () => void
+  addLabel?: string
+  children: ReactNode
+}) {
   return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    >
-      <circle cx="11" cy="11" r="7" />
-      <path d="m21 21-4.3-4.3" strokeLinecap="round" />
-    </svg>
+    <div className="flex flex-col rounded-sm bg-[#1f1f1f]">
+      <div
+        className="flex items-center justify-between gap-3 rounded-t-sm border border-[#3a3a3a] px-5 py-3.5"
+        style={tint ? { borderColor: `${tint}80` } : undefined}
+      >
+        <div className="flex min-w-0 items-center gap-2.5">
+          <h3 className="m-0 truncate text-[1.02rem] font-semibold">{title}</h3>
+        </div>
+        {onAdd && (
+          <button
+            type="button"
+            onClick={onAdd}
+            title={addLabel}
+            aria-label={addLabel}
+            className="-mr-2.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-xs px-2.5 py-1.5 text-[.82rem] font-semibold text-white/60 transition-colors hover:bg-[#2a2a2a] hover:text-white"
+          >
+            <Icon name="plus" size={12} />
+            New
+          </button>
+        )}
+      </div>
+      <ul className="m-0 flex flex-1 list-none flex-col rounded-b-sm border border-t-0 border-[#3a3a3a] p-1.5">
+        {children}
+      </ul>
+    </div>
   )
 }
 
-function GithubGlyph() {
+function FileRow({
+  file,
+  onOpen,
+  hideSpec,
+}: {
+  file: ContentFile
+  onOpen: (path: string) => void
+  hideSpec?: string
+}) {
+  const otherSpecs = file.specs.filter((s) => s !== hideSpec)
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7 0-.7 0-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" />
-    </svg>
+    <li>
+      <button
+        type="button"
+        onClick={() => onOpen(file.path)}
+        className="group grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-xs px-3.5 py-3 text-left transition-colors hover:bg-[#2a2a2a]"
+      >
+        <span className="min-w-0">
+          <span className="flex items-center gap-2">
+            <span className="truncate text-[1rem] font-semibold text-white transition-colors group-hover:text-[#d57f43]">
+              {file.title}
+            </span>
+            {file.draft && (
+              <span className="flex-shrink-0 rounded-xs border border-white/20 px-1.5 py-px text-[.68rem] font-semibold tracking-wider text-white/60 uppercase">
+                Draft
+              </span>
+            )}
+          </span>
+          <span className="mt-0.5 block truncate font-mono text-[.75rem] text-white/40">
+            {file.path}
+          </span>
+        </span>
+        <span className="flex items-center gap-3">
+          {otherSpecs.length > 0 && (
+            <span className="flex gap-1" title={otherSpecs.join(', ')}>
+              {otherSpecs.map((s) => (
+                <span
+                  key={s}
+                  className="h-2 w-2 rounded-full"
+                  style={{ background: getSpec(s)?.color ?? '#888' }}
+                />
+              ))}
+            </span>
+          )}
+          {file.date && (
+            <span className="hidden text-[.82rem] whitespace-nowrap text-white/40 sm:inline">
+              {formatDate(file.date)}
+            </span>
+          )}
+        </span>
+      </button>
+    </li>
+  )
+}
+
+function EmptyRow({ children }: { children: ReactNode }) {
+  return <li className="px-3.5 py-3 text-[.92rem] text-white/40">{children}</li>
+}
+
+function StatusShell({ children }: { children: ReactNode }) {
+  return (
+    <PageWrapper
+      title="Content editor"
+      showTitle={false}
+      variant="redesign"
+      crumb={{ label: 'Editor', href: '/admin/select', color: ACCENT }}
+    >
+      <section className="dg-container flex min-h-[60vh] items-center justify-center py-16">
+        <div className="w-full max-w-md rounded-sm border border-[#3a3a3a] bg-[#1f1f1f] px-8 py-10 text-center text-[.95rem] text-white/60">
+          {children}
+        </div>
+      </section>
+    </PageWrapper>
   )
 }

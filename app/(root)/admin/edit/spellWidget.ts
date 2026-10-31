@@ -113,7 +113,10 @@ function buildDecorations(doc: Text, editing: EditRange): DecorationSet {
     const from = m.index
     const to = from + m[0].length
     // Skip the token the user is editing so its raw text stays visible/editable.
-    if (editing && from < editing.to && to > editing.from) continue
+    if (editing && from < editing.to && to > editing.from) {
+      ranges.push(Decoration.mark({ class: 'cm-spell-editing' }).range(from, to))
+      continue
+    }
     ranges.push(
       Decoration.replace({
         widget: new SpellWidget(name, resolved, m[0]),

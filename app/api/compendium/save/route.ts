@@ -6,6 +6,7 @@ import path from 'path'
 import { exec } from 'child_process'
 import { promisify } from 'util'
 import authOptions from 'app/api/auth/[...nextauth]/options'
+import { MAX_IMAGE_BYTES, UPLOAD_PATH_RE } from '@/lib/imageUploads'
 
 const REPO_OWNER = process.env.GITHUB_REPO_OWNER || 'dreamgrove'
 const REPO_NAME = process.env.GITHUB_REPO_NAME || 'dreamgrove'
@@ -24,10 +25,45 @@ export async function POST(request: Request) {
 
   try {
     // Parse the request body
-    const { filePath, content, commitTitle, commitMessage, createPr = false } = await request.json()
+    const {
+      filePath,
+      content,
+      images = [],
+      commitTitle,
+      commitMessage,
+      createPr = false,
+    } = await request.json()
 
     if (!filePath || !content) {
       return NextResponse.json({ error: 'Missing required parameters' }, { status: 400 })
+    }
+
+    // New pages are created from user-typed slugs, and the path ends up in a shell
+    // command below, so only allow plain data/ paths
+    if (
+      typeof filePath !== 'string' ||
+      !/^[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*\.mdx$/.test(filePath)
+    ) {
+      return NextResponse.json({ error: 'Invalid file path' }, { status: 400 })
+    }
+
+    if (!Array.isArray(images)) {
+      return NextResponse.json({ error: 'Invalid images' }, { status: 400 })
+    }
+    const uploads: { path: string; data: Buffer }[] = []
+    for (const img of images) {
+      if (
+        typeof img?.path !== 'string' ||
+        typeof img?.content !== 'string' ||
+        !UPLOAD_PATH_RE.test(img.path)
+      ) {
+        return NextResponse.json({ error: 'Invalid image upload' }, { status: 400 })
+      }
+      const data = Buffer.from(img.content, 'base64')
+      if (!data.length || data.length > MAX_IMAGE_BYTES) {
+        return NextResponse.json({ error: 'Images must be 2 MB or smaller' }, { status: 400 })
+      }
+      uploads.push({ path: `public${img.path}`, data })
     }
 
     // Use provided commit message or fallback to default
@@ -50,10 +86,15 @@ export async function POST(request: Request) {
 
         // Write file content
         await fs.writeFile(fullFilePath, content)
+        for (const upload of uploads) {
+          const uploadPath = path.join(PROJECT_ROOT, upload.path)
+          await fs.mkdir(path.dirname(uploadPath), { recursive: true })
+          await fs.writeFile(uploadPath, upload.data)
+        }
 
         // Git operations
         await execPromise(`git checkout -b ${branchName}`)
-        await execPromise(`git add data/${filePath}`)
+        await execPromise(`git add data/${filePath} ${uploads.map((u) => u.path).join(' ')}`)
 
         // Use the provided commit message if available
         const fullCommitMessage = commitMessageToUse
@@ -124,6 +165,17 @@ export async function POST(request: Request) {
           ref: `refs/heads/${newBranchName}`,
           sha: baseSha,
         })
+
+        for (const upload of uploads) {
+          await octokit.rest.repos.createOrUpdateFileContents({
+            owner: REPO_OWNER,
+            repo: REPO_NAME,
+            path: upload.path,
+            message: `Add ${path.posix.basename(upload.path)}`,
+            content: upload.data.toString('base64'),
+            branch: newBranchName,
+          })
+        }
 
         // First, try to get the current file to obtain its SHA
         try {
