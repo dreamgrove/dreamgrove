@@ -16,7 +16,7 @@ const FORK_READY_TIMEOUT_MS = 30_000
 const FORK_POLL_MS = 1500
 
 /** Whether the user can push branches to the upstream repository */
-export async function canPush(octokit: Octokit, username: string) {
+export async function hasPushAccess(octokit: Octokit, username: string) {
   try {
     const { data } = await octokit.rest.repos.getCollaboratorPermissionLevel({
       owner: REPO_OWNER,
@@ -50,7 +50,7 @@ export async function isOrgMember(octokit: Octokit, username: string) {
 /** Who may browse every page and create new ones on /cms */
 export async function canManageContent(octokit: Octokit, username: string) {
   const [push, member] = await Promise.all([
-    canPush(octokit, username),
+    hasPushAccess(octokit, username),
     isOrgMember(octokit, username),
   ])
   return { canPush: push, canManage: push || member }

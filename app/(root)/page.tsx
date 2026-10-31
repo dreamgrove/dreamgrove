@@ -3,6 +3,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { SPECS } from '@/data/specs'
 import { getSpecArt } from '@/lib/specArt'
 import Main from './Main'
+import { jsonLdHtml } from '@/lib/utils/jsonLd'
 
 // Force static generation
 export const dynamic = 'force-static'
@@ -34,7 +35,7 @@ export default function Page() {
       <script
         type="application/ld+json"
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdHtml(websiteJsonLd) }}
       />
       <Main tiles={tiles} />
     </PageWrapper>

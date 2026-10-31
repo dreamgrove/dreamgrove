@@ -138,7 +138,7 @@ function isGeneratedFrontmatter(node) {
   return (
     !node.position &&
     !rest.length &&
-    statement.type === 'ExportNamedDeclaration' &&
+    statement?.type === 'ExportNamedDeclaration' &&
     declarators.length === 1 &&
     declarators[0].id.name === 'frontmatter'
   )
