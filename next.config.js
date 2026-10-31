@@ -94,6 +94,9 @@ module.exports = () => {
     },
     async redirects() {
       return [
+        // The content editor used to live under /admin
+        { source: '/admin/select', destination: '/cms', permanent: true },
+        { source: '/admin/edit', destination: '/cms/edit', permanent: true },
         {
           source: '/balance/compendium',
           destination: '/blog/balance/compendium',

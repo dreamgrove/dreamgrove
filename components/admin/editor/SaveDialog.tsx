@@ -8,6 +8,7 @@ import { BTN_GHOST, BTN_PRIMARY, INPUT, LABEL, TEXTAREA } from '@/components/adm
 export default function SaveDialog({
   filePath,
   isNewFile,
+  viaFork,
   defaultTitle,
   saving,
   onConfirm,
@@ -15,6 +16,8 @@ export default function SaveDialog({
 }: {
   filePath: string
   isNewFile: boolean
+  /** The user has no write access, so the PR is opened from their fork */
+  viaFork: boolean
   defaultTitle: string
   saving: boolean
   onConfirm: (title: string, message: string) => void
@@ -124,7 +127,9 @@ export default function SaveDialog({
         )}
       </dl>
       <p className="mt-5 mb-0 text-[.85rem] text-white/50">
-        This will create a pull request with your changes. Are you sure you want to proceed?
+        {viaFork
+          ? 'You don’t have write access to dreamgrove, so this will fork it to your GitHub account and open a pull request from there for a maintainer to review.'
+          : 'This will create a pull request with your changes. Are you sure you want to proceed?'}
       </p>
     </Dialog>
   )

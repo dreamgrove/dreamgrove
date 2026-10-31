@@ -9,6 +9,8 @@ interface SpecArtProps {
   scrim: number
   position?: string
   priority?: boolean
+  /** next/image `sizes`; defaults to full viewport width */
+  sizes?: string
   className?: string
 }
 
@@ -19,6 +21,7 @@ export default function SpecArt({
   scrim,
   position,
   priority,
+  sizes = '100vw',
   className = '',
 }: SpecArtProps) {
   return (
@@ -34,7 +37,7 @@ export default function SpecArt({
             alt=""
             fill
             priority={priority}
-            sizes="100vw"
+            sizes={sizes}
             className="object-cover"
             style={position ? { objectPosition: position } : undefined}
           />

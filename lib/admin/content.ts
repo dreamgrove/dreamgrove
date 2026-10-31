@@ -1,5 +1,5 @@
 // Content listing and new-page templates, shared between the admin file browser
-// (/admin/select), the editor (/admin/edit) and /api/compendium/list.
+// (/cms), the editor (/cms/edit) and /api/compendium/list.
 import matter from 'gray-matter'
 import { SPECS, type SpecId } from '@/data/specs'
 
@@ -19,7 +19,7 @@ export interface ContentFile {
   locale?: string
 }
 
-/** Pages that can be created from /admin/select */
+/** Pages that can be created from /cms */
 export type NewPageKind = 'article' | 'dungeon' | 'raid'
 
 export interface NewPageInput {
@@ -33,6 +33,9 @@ export interface NewPageInput {
 }
 
 export const SLUG_PATTERN = /^[a-z0-9]+(?:[-_][a-z0-9]+)*$/
+
+/** A file the editor may read or write, relative to data/ */
+export const CONTENT_PATH_RE = /^[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*\.mdx$/
 
 // Dungeon and raid files use underscores (the_dreamrift.mdx), blog posts use dashes
 export function slugify(title: string, kind: NewPageKind): string {
@@ -74,7 +77,7 @@ export function newPageDocument(input: NewPageInput, today = new Date()): string
   return matter.stringify(BODY[input.kind], data)
 }
 
-// --- Grouping for /admin/select ------------------------------------------------
+// --- Grouping for /cms ------------------------------------------------
 
 const byTitle = (a: ContentFile, b: ContentFile) => a.title.localeCompare(b.title)
 const byNewest = (a: ContentFile, b: ContentFile) =>

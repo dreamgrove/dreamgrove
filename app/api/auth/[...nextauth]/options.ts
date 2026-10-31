@@ -30,7 +30,8 @@ const authOptions = {
       issuer: 'https://github.com/login/oauth',
       authorization: {
         params: {
-          scope: 'read:user user:email repo',
+          // public_repo is enough to fork dreamgrove, push to the fork and open PRs
+          scope: 'read:user user:email public_repo',
         },
       },
     }),

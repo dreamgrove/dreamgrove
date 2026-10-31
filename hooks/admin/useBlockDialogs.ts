@@ -29,16 +29,28 @@ export function useBlockDialogs(viewRef: RefObject<EditorView | null>) {
   // Selected text when the palette opened
   const selectionRef = useRef('')
 
-  const openPalette = () => {
+  const captureSelection = () => {
     const view = viewRef.current
     const sel = view?.state.selection.main
     selectionRef.current = view && sel ? view.state.sliceDoc(sel.from, sel.to) : ''
+  }
+
+  const openPalette = () => {
+    captureSelection()
     setPaletteOpen(true)
   }
 
   const pick = (block: BlockDef) => {
     setPaletteOpen(false)
     setForm({ block, initial: emptyForm(block), mode: 'insert', selection: selectionRef.current })
+  }
+
+  /** Opens the insert form for one block directly, skipping the palette (toolbar shortcuts) */
+  const insert = (blockId: string) => {
+    const block = BLOCKS_BY_ID.get(blockId)
+    if (!block) return
+    captureSelection()
+    pick(block)
   }
 
   /** Opens the form for the component whose opening tag holds `pos`; false if none */
@@ -131,6 +143,7 @@ export function useBlockDialogs(viewRef: RefObject<EditorView | null>) {
     closePalette: () => setPaletteOpen(false),
     openPalette,
     pick,
+    insert,
     form,
     editTagAt,
     editTagAtCursor,

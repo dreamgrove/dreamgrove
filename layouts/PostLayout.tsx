@@ -32,7 +32,7 @@ export default function PostLayout({
   toc,
   checkboxDefaults,
 }: LayoutProps) {
-  const { patch, slug, title, tags, lastModified, changelogUrl, translator } = content
+  const { patch, slug, title, tags, lastModified, changelogUrl, translator, filePath } = content
 
   // Check if this is a compendium page
   const isCompendium = slug?.endsWith('/compendium')
@@ -41,7 +41,7 @@ export default function PostLayout({
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment />
+      <ScrollTopAndComment editPath={filePath} />
       {isCompendium && <AprilFoolsBanner />}
       <article>
         <div>

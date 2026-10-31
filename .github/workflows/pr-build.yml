@@ -4,6 +4,10 @@ name: PR Build Check
 # the VPS, so untrusted fork code can't touch the server). Surfaces a pass/fail
 # status check + full logs on the PR, mirroring Vercel's preview build check.
 # Deploy previews are intentionally out of scope for now.
+#
+# Anyone can open a PR from a fork (the /admin/edit editor does it for users
+# without write access), and fork PRs run the workflow file from the PR itself.
+# Never add secrets.*, a self-hosted runner, or a pull_request_target trigger here.
 on:
   pull_request:
     branches: [master]
@@ -13,7 +17,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # PRs opened by the editor (dg-edit/* branches) should only touch content.
+  # The branch lives on the contributor's fork, so they can push anything to it.
+  content-only:
+    if: startsWith(github.head_ref, 'dg-edit/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check changed paths
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          allowed='^(data/.+\.mdx|public/static/images/uploads/.+)$'
+          outside=$(git diff --name-only "$BASE_SHA...$HEAD_SHA" | grep -vE "$allowed" || true)
+          if [ -n "$outside" ]; then
+            echo "::error::Editor PRs may only change data/*.mdx and public/static/images/uploads/. Also changed:"
+            echo "$outside"
+            exit 1
+          fi
+
   build:
+    needs: content-only
+    # Still runs when content-only was skipped (ordinary PRs)
+    if: ${{ always() && needs.content-only.result != 'failure' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -10,11 +10,11 @@ interface Props {
 }
 
 export default function AboutLayout({ children, content }: Props) {
-  const { title } = content
+  const { title, filePath } = content
 
   return (
     <SectionContainer>
-      <ScrollTopAndComment />
+      <ScrollTopAndComment editPath={filePath} />
       <article>
         <div>
           <header>

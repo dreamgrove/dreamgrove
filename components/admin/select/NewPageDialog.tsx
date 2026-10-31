@@ -93,7 +93,7 @@ export default function NewPageDialog({
       draft,
     })
     stashNewPage(filePath, document)
-    router.push(`/admin/edit?path=${encodeURIComponent(filePath)}&new=1`)
+    router.push(`/cms/edit?path=${encodeURIComponent(filePath)}&new=1`)
   }
 
   return (

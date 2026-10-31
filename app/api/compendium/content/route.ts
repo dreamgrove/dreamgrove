@@ -1,55 +1,15 @@
 import { NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth/next'
-import { Octokit } from 'octokit'
 import fs from 'fs'
 import path from 'path'
-import authOptions from 'app/api/auth/[...nextauth]/options'
+import { CONTENT_PATH_RE } from '@/lib/admin/content'
+import { getContentAccess } from '@/lib/admin/access'
 
-const REPO_OWNER = process.env.GITHUB_REPO_OWNER || 'dreamgrove'
-const REPO_NAME = process.env.GITHUB_REPO_NAME || 'dreamgrove'
+const DATA_DIR = path.join(process.cwd(), 'data')
 
+// Anyone signed in can open a file in the editor; whether their save goes
+// through a fork is decided in /api/compendium/save.
 export async function GET(request: Request) {
-  // Check if the user is authenticated
-  const session = await getServerSession(authOptions)
-  if (!session || !session.accessToken) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-
   try {
-    // Initialize Octokit with the user's access token
-    const octokit = new Octokit({
-      auth: session.accessToken,
-    })
-
-    // Get the authenticated user's username
-    const { data: userData } = await octokit.rest.users.getAuthenticated()
-    const username = userData.login
-
-    // Check repository permissions directly instead of organization membership
-    try {
-      // This checks if the user has permissions on the repository
-      const { data: repoPermission } = await octokit.rest.repos.getCollaboratorPermissionLevel({
-        owner: REPO_OWNER,
-        repo: REPO_NAME,
-        username: username,
-      })
-
-      // Allow access for users with push (write) or admin permissions
-      if (!['admin', 'write', 'maintain'].includes(repoPermission.permission)) {
-        return NextResponse.json(
-          { error: 'You do not have write permission to the dreamgrove repository' },
-          { status: 403 }
-        )
-      }
-    } catch (error) {
-      console.error('Error checking repository permissions:', error)
-      return NextResponse.json(
-        { error: 'You do not have permission to edit this repository' },
-        { status: 403 }
-      )
-    }
-
-    // Get the slug from the request URL
     const { searchParams } = new URL(request.url)
     const filePath = searchParams.get('filePath')
 
@@ -57,18 +17,25 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Missing filePath parameter' }, { status: 400 })
     }
 
-    // Construct the path to the MDX file
-    const fullFilePath = path.join(process.cwd(), 'data', filePath)
-
-    // Check if the file exists
-    if (!fs.existsSync(fullFilePath)) {
-      return NextResponse.json({ error: 'File not found' }, { status: 404 })
+    // Only .mdx files inside data/, never ../ out of it
+    const fullFilePath = path.resolve(DATA_DIR, filePath)
+    if (!CONTENT_PATH_RE.test(filePath) || !fullFilePath.startsWith(DATA_DIR + path.sep)) {
+      return NextResponse.json({ error: 'Invalid file path' }, { status: 400 })
     }
 
-    // Read the file content
+    const access = await getContentAccess()
+    if (!access) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    // Tells the editor whether saving goes through the user's fork, and whether
+    // they may create pages. Also sent with the 404, which the editor treats as a new page.
+    const { canPush, canManage } = access
+
+    if (!fs.existsSync(fullFilePath)) {
+      return NextResponse.json({ error: 'File not found', canPush, canManage }, { status: 404 })
+    }
+
     const content = fs.readFileSync(fullFilePath, 'utf8')
 
-    return NextResponse.json({ content })
+    return NextResponse.json({ content, canPush, canManage })
   } catch (error) {
     console.error('Error reading file:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

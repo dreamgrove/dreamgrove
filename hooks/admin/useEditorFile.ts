@@ -10,7 +10,7 @@ import {
 import { readNewPage } from '@/lib/admin/newPageStash'
 import { useDraftAutosave } from './useDraftAutosave'
 
-export type FileStatus = 'loading' | 'ready' | 'forbidden' | 'error'
+export type FileStatus = 'loading' | 'ready' | 'error'
 
 const EMPTY: EditorDocument = { body: '', frontmatter: {}, authorsInput: '' }
 
@@ -24,6 +24,8 @@ export function useEditorFile(filePath: string, isNew: boolean) {
   const [status, setStatus] = useState<FileStatus>('loading')
   const [error, setError] = useState<string | null>(null)
   const [isNewFile, setIsNewFile] = useState(false)
+  // Without write access, saving forks the repository and opens the PR from there
+  const [canPush, setCanPush] = useState(false)
   const [doc, setDoc] = useState<EditorDocument>(EMPTY)
   // The document as last fetched/saved
   const [baseline, setBaseline] = useState('')
@@ -40,21 +42,20 @@ export function useEditorFile(filePath: string, isNew: boolean) {
   useEffect(() => {
     if (authStatus !== 'authenticated') return
     fetch(`/api/compendium/content?filePath=${encodeURIComponent(filePath)}`)
-      .then((res) => {
-        if (res.status === 403) {
-          setStatus('forbidden')
-          return null
+      .then(async (res) => {
+        if (res.status === 404 && isNew) {
+          const { canPush, canManage } = await res.json().catch(() => ({}))
+          if (!canManage) throw new Error('Only dreamgrove members can create new pages')
+          return { content: readNewPage(filePath) ?? '', isNew: true, canPush }
         }
-        if (res.status === 404 && isNew)
-          return { content: readNewPage(filePath) ?? '', isNew: true }
         if (!res.ok) throw new Error(`Error fetching content: ${res.statusText}`)
         return res.json()
       })
       .then((data) => {
-        if (!data) return
         const loaded = parseDocument(data.content || '')
         const loadedBaseline = serializeDocument(loaded)
         setIsNewFile(!!data.isNew)
+        setCanPush(!!data.canPush)
         setDoc(loaded)
         setBaseline(loadedBaseline)
 
@@ -110,11 +111,6 @@ export function useEditorFile(filePath: string, isNew: boolean) {
     setDraftSavedAt(null)
   }
 
-  const fail = (status: 'forbidden' | 'error', message?: string) => {
-    setStatus(status)
-    if (message) setError(message)
-  }
-
   const serialized = serializeDocument(doc)
 
   return {
@@ -122,6 +118,7 @@ export function useEditorFile(filePath: string, isNew: boolean) {
     status,
     error,
     isNewFile,
+    canPush,
     doc,
     serialized,
     isDirty: serialized !== baseline,
@@ -134,6 +131,5 @@ export function useEditorFile(filePath: string, isNew: boolean) {
     restoreDraft,
     discardDraft,
     markSaved,
-    fail,
   }
 }
