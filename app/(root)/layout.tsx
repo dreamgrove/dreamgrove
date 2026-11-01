@@ -3,7 +3,6 @@ import 'css/april-fools.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Source_Sans_3, IBM_Plex_Sans, Geist } from 'next/font/google'
-import { KBarSearchProvider } from '@/components/search/KBarSearchProvider'
 import Footer from '@/components/Footer'
 import FooterGate from '@/components/FooterGate'
 import siteMetadata from '@/data/siteMetadata'
@@ -100,20 +99,18 @@ export default function RootLayout({ children }: LayoutProps) {
         <div className="flex min-h-screen w-full flex-col" style={{ paddingLeft: 0 }}>
           <ThemeProviders>
             <Analytics />
-            <KBarSearchProvider kbarConfig={siteMetadata.search.kbarConfig}>
-              <a
-                href="#main-content"
-                className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black dark:focus:bg-black dark:focus:text-white"
-              >
-                Skip to main content
-              </a>
-              <main id="main-content" className="flex-1">
-                {children}
-              </main>
-              <FooterGate>
-                <Footer />
-              </FooterGate>
-            </KBarSearchProvider>
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-black dark:focus:bg-black dark:focus:text-white"
+            >
+              Skip to main content
+            </a>
+            <main id="main-content" className="flex-1">
+              {children}
+            </main>
+            <FooterGate>
+              <Footer />
+            </FooterGate>
           </ThemeProviders>
         </div>
         <Script src="/static/scripts/tooltip.js" strategy="beforeInteractive" />
