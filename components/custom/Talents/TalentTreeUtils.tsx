@@ -461,8 +461,3 @@ export const collapseGapColumns = (grid: GridCell[][]): GridCell[][] => {
 export function getTalentDataForSpec(specId: number): TalentData | undefined {
   return talentData.find((spec) => spec.specId === specId) as TalentData | undefined
 }
-
-// Get all available spec IDs
-export function getAvailableSpecIds(): number[] {
-  return talentData.map((spec) => spec.specId).filter(Boolean) as number[]
-}

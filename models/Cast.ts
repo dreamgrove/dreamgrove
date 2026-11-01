@@ -66,6 +66,7 @@ export class Cast {
   }
   set effect_duration(value: number) {
     this._effect_duration = value
+    this._ef_end_s = this.start_s + value
   }
 
   /* Cooldown */
@@ -148,8 +149,9 @@ export class Cast {
     this._channel_duration = spell.channel_duration
 
     this._cd_start_s = this.start_s
-    this._ef_end_s = this.start_s + this.effect_duration
-    this._chann_end_s = this.start_s + this.channel_duration
-    this._cd_end_s = this.start_s + this.cooldown_duration
+    // Use the backing fields: the effect_duration getter reads _ef_end_s, which isn't set yet
+    this._ef_end_s = this.start_s + this._effect_duration
+    this._chann_end_s = this.start_s + this._channel_duration
+    this._cd_end_s = this.start_s + this._cooldown_duration
   }
 }

@@ -88,20 +88,6 @@ export function removeCustomSpell(spellId: number): void {
   saveCustomSpells(filtered)
 }
 
-// Update a custom spell
-export function updateCustomSpell(
-  spellId: number,
-  updates: Partial<Omit<CustomSpell, 'spellId' | 'isCustom' | 'createdAt'>>
-): void {
-  const customSpells = loadCustomSpells()
-  const index = customSpells.findIndex((spell) => spell.spellId === spellId)
-
-  if (index !== -1) {
-    customSpells[index] = { ...customSpells[index], ...updates }
-    saveCustomSpells(customSpells)
-  }
-}
-
 // Check if a spell is custom
 export function isCustomSpell(spell: SpellInfo): spell is CustomSpell {
   return 'isCustom' in spell && spell.isCustom === true
