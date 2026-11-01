@@ -1,6 +1,6 @@
 import { Talents, TalentBindings } from '@/types/index'
 import { earlySpring } from './Balance/earlySpring'
-import { controlOfTheDream } from './Balance/controlOfTheDream'
+import { controlOfTheDream, COTD_SPELL_IDS } from './Balance/controlOfTheDream'
 import { whirlingStars } from './Balance/whirlingStars'
 import { incarnation } from './Balance/incarnation'
 import { orbitalStrike } from './Balance/orbitalStrike'
@@ -57,7 +57,7 @@ export const bindings: TalentBindings[] = [
   {
     id: Talents.ControlOfTheDream,
     spellId: 434249,
-    affectedSpells: [194223, 391528, 205636, 33891],
+    affectedSpells: COTD_SPELL_IDS,
     handler: controlOfTheDream,
     label: 'Control of the Dream',
     description: {
