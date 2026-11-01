@@ -1,5 +1,6 @@
 'use client'
 import Icon from '@/components/Icon'
+import Link from '@/components/Link'
 import { useState, type ReactNode } from 'react'
 import { slug } from 'github-slugger'
 import { encounterDomId, useEncounters } from './EncounterContext'
@@ -33,9 +34,9 @@ export default function Encounter({ title, trash, children }: EncounterProps) {
         <div className="flex gap-4 text-[.92rem]">
           <span className="text-white/40">No notes yet</span>
           {ctx?.editUrl && (
-            <a href={ctx.editUrl} className="font-semibold text-main hover:text-[#dd6b20]">
+            <Link href={ctx.editUrl} className="font-semibold text-main hover:text-[#dd6b20]">
               Write this section
-            </a>
+            </Link>
           )}
         </div>
       </section>

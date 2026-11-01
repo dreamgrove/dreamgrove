@@ -22,23 +22,22 @@ export interface SpecInfo {
 
 const compendium = (spec: SpecId, anchor: string) => `/blog/${spec}/compendium#${anchor}`
 
-// Display order used by the homepage tiles and the spec filters
+// Display order (alphabetical) used by the homepage tiles, spec filters and CMS
 export const SPECS: SpecInfo[] = [
   {
-    id: 'guardian',
-    name: 'Guardian',
-    color: '#d97a3b',
-    checkboxKey: 'Guardian',
-    compendiumSlug: 'guardian/compendium',
-    blurb:
-      'Talents, rotation, defensive usage and gear advice for tanking raids and keys as a bear.',
+    id: 'balance',
+    name: 'Balance',
+    color: '#8a6fd6',
+    checkboxKey: 'Balance',
+    compendiumSlug: 'balance/compendium',
+    blurb: 'Rotational advice, builds, consumables and everything else you need to play moonkin.',
     jumpTo: [
-      { label: 'News', href: compendium('guardian', 'news') },
-      { label: 'Rotation', href: compendium('guardian', 'rotation') },
-      { label: 'Talents', href: compendium('guardian', 'talents') },
-      { label: 'Consumables', href: compendium('guardian', 'consumables') },
-      { label: 'Gearing', href: compendium('guardian', 'gearing') },
-      { label: 'Miscellaneous', href: compendium('guardian', 'miscellaneous') },
+      { label: 'Beginner', href: compendium('balance', 'beginner') },
+      { label: 'News', href: compendium('balance', 'news') },
+      { label: 'Rotation', href: compendium('balance', 'rotation') },
+      { label: 'Talents', href: compendium('balance', 'talents') },
+      { label: 'Gearing & Consumables', href: compendium('balance', 'gearing--consumables') },
+      { label: 'FAQ', href: compendium('balance', 'faq') },
     ],
   },
   {
@@ -58,19 +57,20 @@ export const SPECS: SpecInfo[] = [
     ],
   },
   {
-    id: 'balance',
-    name: 'Balance',
-    color: '#8a6fd6',
-    checkboxKey: 'Balance',
-    compendiumSlug: 'balance/compendium',
-    blurb: 'Rotational advice, builds, consumables and everything else you need to play moonkin.',
+    id: 'guardian',
+    name: 'Guardian',
+    color: '#d97a3b',
+    checkboxKey: 'Guardian',
+    compendiumSlug: 'guardian/compendium',
+    blurb:
+      'Talents, rotation, defensive usage and gear advice for tanking raids and keys as a bear.',
     jumpTo: [
-      { label: 'Beginner', href: compendium('balance', 'beginner') },
-      { label: 'News', href: compendium('balance', 'news') },
-      { label: 'Rotation', href: compendium('balance', 'rotation') },
-      { label: 'Talents', href: compendium('balance', 'talents') },
-      { label: 'Gearing & Consumables', href: compendium('balance', 'gearing--consumables') },
-      { label: 'FAQ', href: compendium('balance', 'faq') },
+      { label: 'News', href: compendium('guardian', 'news') },
+      { label: 'Rotation', href: compendium('guardian', 'rotation') },
+      { label: 'Talents', href: compendium('guardian', 'talents') },
+      { label: 'Consumables', href: compendium('guardian', 'consumables') },
+      { label: 'Gearing', href: compendium('guardian', 'gearing') },
+      { label: 'Miscellaneous', href: compendium('guardian', 'miscellaneous') },
     ],
   },
   {

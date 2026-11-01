@@ -22,11 +22,13 @@ export default function DungeonLayout({ content, children }: LayoutProps) {
   const { title, headerImage, path, authors, lastModified, filePath } = content
   const isRaid = path.startsWith('raids/')
   const encounters = (content.encounters ?? []) as EncounterMeta[]
-  const editUrl = `${siteMetadata.siteRepo}/edit/master/data/${filePath}`
+  const githubUrl = `${siteMetadata.siteRepo}/edit/master/data/${filePath}`
+  // `from` sends the editor's back button here instead of /cms
+  const cmsUrl = `/cms/edit?path=${encodeURIComponent(filePath)}&from=${encodeURIComponent(`/${path}`)}`
 
   return (
     <CheckboxProvider initialMap={ALL_SPECS_CHECKED}>
-      <EncounterProvider encounters={encounters} editUrl={editUrl}>
+      <EncounterProvider encounters={encounters} editUrl={cmsUrl}>
         <div className="pb-16 sm:pb-[72px]">
           <PageActions editPath={filePath} />
           <section className="relative h-[280px] overflow-hidden bg-[#0b0906] sm:h-[340px]">
@@ -76,7 +78,7 @@ export default function DungeonLayout({ content, children }: LayoutProps) {
                 </div>
                 <EncounterRail />
                 <a
-                  href={editUrl}
+                  href={githubUrl}
                   className="text-[.85rem] font-semibold text-white/40 transition-colors hover:text-main lg:px-3"
                 >
                   Edit this guide on GitHub
