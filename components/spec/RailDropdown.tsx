@@ -37,7 +37,7 @@ export default function RailDropdown({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((o) => !o)}
-        className="flex w-full cursor-pointer items-center justify-between gap-3 rounded-md border border-[#3a3a3a] bg-[#1f1f1f] px-3 py-2.5 text-left text-[.98rem] font-semibold text-white transition-colors hover:border-[#4b4b4b] focus-visible:outline-2 focus-visible:outline-white"
+        className="flex w-full cursor-pointer items-center justify-between gap-3 rounded-md border border-dg-line bg-dg-panel-deep px-3 py-2.5 text-left text-[.98rem] font-semibold text-white transition-colors hover:border-[#4b4b4b] focus-visible:outline-2 focus-visible:outline-white"
       >
         <span className="flex min-w-0 items-center gap-3">{summary}</span>
         <Icon
@@ -50,7 +50,7 @@ export default function RailDropdown({
         id={panelId}
         hidden={!open}
         onClick={() => setOpen(false)}
-        className="mt-1 flex flex-col gap-0.5 rounded-md border border-[#3a3a3a] bg-[#1f1f1f] p-1"
+        className="mt-1 flex flex-col gap-0.5 rounded-md border border-dg-line bg-dg-panel-deep p-1"
       >
         {children}
       </div>

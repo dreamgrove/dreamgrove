@@ -37,7 +37,7 @@ export default function DraftRecoveryBanner({
         </button>
         <button
           onClick={onRestore}
-          className="rounded-xs bg-amber-500 px-3.5 py-2 text-[.86rem] font-semibold text-[#2a2a2a] transition-[filter] hover:brightness-110"
+          className="rounded-xs bg-amber-500 px-3.5 py-2 text-[.86rem] font-semibold text-dg-panel transition-[filter] hover:brightness-110"
         >
           Restore my edits
         </button>

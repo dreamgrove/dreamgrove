@@ -6,7 +6,7 @@ import { Kbd } from '@/components/admin/ui/Badges'
 
 function Code({ children }: { children: ReactNode }) {
   return (
-    <code className="rounded-[2px] bg-[#2a2a2a] px-1.5 py-0.5 font-mono text-[.8rem] text-[#ffb86c]">
+    <code className="rounded-[2px] bg-dg-panel px-1.5 py-0.5 font-mono text-[.8rem] text-dg-highlight">
       {children}
     </code>
   )

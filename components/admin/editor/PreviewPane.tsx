@@ -39,7 +39,7 @@ export default function PreviewPane({
 
   return (
     <div className="flex min-w-0 flex-1 flex-col bg-[#262626]">
-      <div className="flex flex-shrink-0 items-center justify-between gap-3 overflow-x-auto border-b border-[#3a3a3a] bg-[#1f1f1f] px-3 py-1.5 [scrollbar-width:none]">
+      <div className="flex flex-shrink-0 [scrollbar-width:none] items-center justify-between gap-3 overflow-x-auto border-b border-dg-line bg-dg-panel-deep px-3 py-1.5">
         <SegmentedControl
           label="Preview width"
           options={WIDTHS}
@@ -66,7 +66,7 @@ export default function PreviewPane({
             <button
               type="button"
               onClick={onRefresh}
-              className="inline-flex h-7 items-center gap-1.5 rounded-xs border border-[#3a3a3a] px-2.5 text-[.8rem] font-semibold text-white/70 hover:bg-[#2a2a2a] hover:text-white"
+              className="inline-flex h-7 items-center gap-1.5 rounded-xs border border-dg-line px-2.5 text-[.8rem] font-semibold text-white/70 hover:bg-dg-panel hover:text-white"
             >
               <Icon box name="refresh" size={13} />
               Refresh
@@ -82,7 +82,7 @@ export default function PreviewPane({
         <div
           className={`mx-auto min-h-full bg-[#262626] ${
             width === 'mobile'
-              ? 'max-w-[390px] border-x border-[#3a3a3a] px-4 py-6'
+              ? 'max-w-[390px] border-x border-dg-line px-4 py-6'
               : fullWidth
                 ? 'max-w-4xl px-6 py-10 sm:px-10'
                 : 'px-6 py-8 sm:px-10'

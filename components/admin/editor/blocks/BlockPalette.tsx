@@ -41,7 +41,7 @@ export default function BlockPalette({
       height="h-[680px]"
       bodyClassName="grid grid-cols-1 sm:grid-cols-[200px_minmax(0,1fr)]"
     >
-      <nav className="hidden flex-col gap-0.5 border-r border-[#383838] px-2.5 py-3.5 sm:flex">
+      <nav className="hidden flex-col gap-0.5 border-r border-dg-line-soft px-2.5 py-3.5 sm:flex">
         {[null, ...CATEGORIES].map((cat) => {
           const active = category === cat
           return (
@@ -60,7 +60,7 @@ export default function BlockPalette({
       </nav>
       <div className="flex min-h-0 flex-col">
         <div className="px-[18px] pt-3.5 pb-2.5">
-          <label className="flex h-[38px] items-center gap-2.5 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-3 focus-within:border-[#d57f43]">
+          <label className="flex h-[38px] items-center gap-2.5 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-3 focus-within:border-main">
             <span className="text-[#7a7a7a]">
               <Icon box name="search" size={14} />
             </span>
@@ -91,7 +91,7 @@ export default function BlockPalette({
                     key={b.id}
                     type="button"
                     onClick={() => onPick(b)}
-                    className="flex flex-col gap-0.5 rounded-[4px] border border-[#383838] bg-[#2a2a2a] px-3.5 py-2.5 text-left transition-colors hover:border-[#4a4a4a] hover:bg-[#303030] focus-visible:border-[#d57f43] focus-visible:outline-none"
+                    className="flex flex-col gap-0.5 rounded-[4px] border border-dg-line-soft bg-dg-panel px-3.5 py-2.5 text-left transition-colors hover:border-[#4a4a4a] hover:bg-[#303030] focus-visible:border-main focus-visible:outline-none"
                   >
                     <span className="text-[.9375rem] font-semibold text-white">
                       <span className="text-[#7a7a7a]">{number(b)}.</span> {b.label}

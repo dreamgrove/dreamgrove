@@ -102,7 +102,7 @@ function Browser() {
         {/* Visually hidden since the header already names the page */}
         <h1 className="sr-only">Content editor</h1>
 
-        <div className="mt-8 flex flex-col gap-4 border-b border-[#3a3a3a] pb-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-b border-dg-line pb-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-wrap gap-1.5">
             {SECTIONS.map((s) => (
               <button
@@ -126,14 +126,13 @@ function Browser() {
                 placeholder="Search by title, path or spec…"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="h-9 w-full rounded-xs border border-[#3a3a3a] bg-[#1f1f1f] py-0 pr-3 pl-10 text-[.9rem] text-white placeholder-white/40 focus:border-[#d57f43] focus:ring-0 focus:outline-none"
+                className="h-9 w-full rounded-xs border border-dg-line bg-dg-panel-deep py-0 pr-3 pl-10 text-[.9rem] text-white placeholder-white/40 focus:border-main focus:ring-0 focus:outline-none"
               />
             </div>
             <button
               type="button"
               onClick={() => setNewPage({})}
-              className="inline-flex h-9 flex-shrink-0 items-center gap-2 rounded-xs px-4 text-[.9rem] leading-none font-semibold text-[#2a2a2a] transition-[filter] hover:brightness-110"
-              style={{ background: ACCENT }}
+              className="inline-flex h-9 flex-shrink-0 items-center gap-2 rounded-xs bg-main px-4 text-[.9rem] leading-none font-semibold text-dg-panel transition-[filter] hover:brightness-110"
             >
               <Icon box name="plus" size={14} />
               New page

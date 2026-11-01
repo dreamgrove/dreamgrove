@@ -35,7 +35,7 @@ export default function SegmentedControl<T extends string>({
 }) {
   return (
     <div
-      className={`inline-flex flex-shrink-0 rounded-xs border border-[#3a3a3a] p-0.5 ${filled ? 'bg-[#1a1a1a]' : ''}`}
+      className={`inline-flex flex-shrink-0 rounded-xs border border-dg-line p-0.5 ${filled ? 'bg-[#1a1a1a]' : ''}`}
       role="group"
       aria-label={label}
     >
@@ -52,7 +52,7 @@ export default function SegmentedControl<T extends string>({
             title={opt.title}
             className={`${SIZES[size]} rounded-xs font-semibold transition-colors ${
               opt.label ? '' : 'capitalize'
-            } ${active ? 'bg-[#3a3a3a] text-white' : 'text-white/50 hover:text-white'}`}
+            } ${active ? 'bg-dg-line text-white' : 'text-white/50 hover:text-white'}`}
           >
             {opt.label ?? opt.value}
           </button>

@@ -111,7 +111,7 @@ function Checkbox({ color, checked }: { color: string; checked: boolean }) {
       style={{ ['--spec' as string]: color }}
       className={`grid size-4 flex-none place-items-center rounded-[4px] border-[1.5px] transition-colors ${
         checked
-          ? 'border-[var(--spec)] bg-[var(--spec)] text-[#1f1f1f]'
+          ? 'border-[var(--spec)] bg-[var(--spec)] text-dg-panel-deep'
           : 'border-white/30 text-transparent'
       }`}
     >

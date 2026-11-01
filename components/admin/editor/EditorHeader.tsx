@@ -23,7 +23,7 @@ function SaveState({ dirty, draftSavedAt }: { dirty: boolean; draftSavedAt: numb
     >
       <span
         aria-hidden
-        className={`h-1.5 w-1.5 rounded-full ${dirty ? 'bg-[#ffb86c]' : 'bg-white/25'}`}
+        className={`h-1.5 w-1.5 rounded-full ${dirty ? 'bg-dg-highlight' : 'bg-white/25'}`}
       />
       {!dirty
         ? 'No unsaved changes'
@@ -103,7 +103,7 @@ export default function EditorHeader({
             href={backHref ?? '/cms'}
             title={backHref ? 'Back to page' : 'Back to pages'}
             aria-label={backHref ? 'Back to page' : 'Back to pages'}
-            className="-mr-1 -ml-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xs text-white/50 transition-colors hover:bg-[#2a2a2a] hover:text-white"
+            className="-mr-1 -ml-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-xs text-white/50 transition-colors hover:bg-dg-panel hover:text-white"
           >
             <Icon box name="back" size={16} />
           </Link>
@@ -132,7 +132,7 @@ export default function EditorHeader({
           details?.open ? 'lg:w-[321px] lg:justify-between lg:gap-3' : ''
         }`}
       >
-        <span className="hidden h-6 w-px flex-shrink-0 bg-[#3a3a3a] sm:block" aria-hidden />
+        <span className="hidden h-6 w-px flex-shrink-0 bg-dg-line sm:block" aria-hidden />
         {liveHref && (
           <a
             href={liveHref}

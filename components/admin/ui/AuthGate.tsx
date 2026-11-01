@@ -16,7 +16,7 @@ export default function AuthGate({ reason, children }: { reason: string; childre
         action={
           <button
             onClick={() => signIn('github')}
-            className="mt-6 inline-flex items-center gap-2 rounded-xs bg-white px-5 py-3 text-[.95rem] font-semibold text-[#1f1f1f] transition-[filter] hover:brightness-90"
+            className="mt-6 inline-flex items-center gap-2 rounded-xs bg-white px-5 py-3 text-[.95rem] font-semibold text-dg-panel-deep transition-[filter] hover:brightness-90"
           >
             <Icon box name="github" size={16} />
             Sign in with GitHub

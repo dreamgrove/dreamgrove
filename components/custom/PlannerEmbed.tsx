@@ -1,5 +1,5 @@
 import React from 'react'
-import spellsData from '../../other/timelineSpells.json'
+import spellsData from '@/other/timelineSpells.json'
 import Wowhead from './Wowhead'
 import PlannerEmbedCore from '../PlannerEmbed/PlannerEmbedCore'
 import { koSpellNames } from '../PlannerEmbed/koSpellNames'

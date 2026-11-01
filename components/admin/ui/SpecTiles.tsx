@@ -25,7 +25,7 @@ export default function SpecTiles({
     onChange(value.includes(id) ? value.filter((s) => s !== id) : [...value, id])
 
   return (
-    <div className={`grid gap-1 rounded-xs border border-[#3a3a3a] bg-[#242424] p-1 ${className}`}>
+    <div className={`grid gap-1 rounded-xs border border-dg-line bg-[#242424] p-1 ${className}`}>
       {SPECS.map((s) => {
         const on = value.includes(s.id)
         return (
@@ -53,7 +53,7 @@ export default function SpecTiles({
           type="button"
           aria-pressed={value.length === 0}
           onClick={() => onChange([])}
-          className={`${TILE} ${value.length === 0 ? 'bg-[#3a3a3a] text-white' : 'text-white/50 hover:text-white'}`}
+          className={`${TILE} ${value.length === 0 ? 'bg-dg-line text-white' : 'text-white/50 hover:text-white'}`}
         >
           <Image
             src={logo}

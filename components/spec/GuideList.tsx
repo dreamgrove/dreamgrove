@@ -58,6 +58,7 @@ export default function GuideList({
                   className="text-[1.2rem] font-semibold tracking-[-0.01em] transition-colors group-hover:text-[var(--spec)]"
                   style={{ ['--spec' as string]: color }}
                 >
+                  {g.draft && <span className="mr-2 text-white/40">[Draft]</span>}
                   {g.title}
                 </div>
                 {g.summary && (

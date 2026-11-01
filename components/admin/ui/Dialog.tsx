@@ -43,9 +43,9 @@ export default function Dialog({
       <div
         role="dialog"
         aria-modal="true"
-        className={`flex max-h-[calc(100dvh-5rem)] w-full ${width} ${height} flex-col overflow-hidden rounded-lg border border-[#383838] bg-[#232323] text-[#f5f5f5] shadow-[0_20px_60px_rgba(0,0,0,.5)]`}
+        className={`flex max-h-[calc(100dvh-5rem)] w-full ${width} ${height} flex-col overflow-hidden rounded-lg border border-dg-line-soft bg-[#232323] text-[#f5f5f5] shadow-[0_20px_60px_rgba(0,0,0,.5)]`}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-[#383838] px-[22px] pt-4 pb-[18px]">
+        <div className="flex items-start justify-between gap-4 border-b border-dg-line-soft px-[22px] pt-4 pb-[18px]">
           <div className="flex min-w-0 flex-col gap-1">
             {eyebrow && (
               <div className="flex items-center gap-1.5 text-[.75rem] text-[#8a8a8a]">
@@ -68,7 +68,7 @@ export default function Dialog({
         </div>
         <div className={`min-h-0 flex-1 overflow-y-auto ${bodyClassName}`}>{children}</div>
         {footer && (
-          <div className="flex items-center justify-end gap-2 border-t border-[#383838] px-[22px] py-3.5">
+          <div className="flex items-center justify-end gap-2 border-t border-dg-line-soft px-[22px] py-3.5">
             {footer}
           </div>
         )}

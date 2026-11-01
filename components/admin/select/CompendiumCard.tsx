@@ -16,7 +16,7 @@ export default function CompendiumCard({
   onOpen: (path: string) => void
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-sm border border-[#3a3a3a] bg-[#242424] transition-colors hover:bg-[#2d2d2d]">
+    <div className="group relative overflow-hidden rounded-sm border border-dg-line bg-[#242424] transition-colors hover:bg-[#2d2d2d]">
       <button
         type="button"
         disabled={!file}

@@ -58,7 +58,7 @@ export default function MobileNavPanel({
                       <div key={link.title} className="px-12 py-4">
                         <Link
                           href={link.href}
-                          className="dark:hover:text-primary-400 hover:text-primary-500 text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                          className="text-2xl font-bold tracking-widest text-gray-900 hover:text-primary-500 dark:text-gray-100"
                           onClick={onToggleNav}
                         >
                           {link.title}
@@ -78,7 +78,7 @@ export default function MobileNavPanel({
                     >
                       <Icon
                         name="closeBold"
-                        className="dark:hover:text-primary-400 hover:text-primary-500 h-full w-full text-gray-900 dark:text-gray-100"
+                        className="h-full w-full text-gray-900 hover:text-primary-500 dark:text-gray-100"
                       />
                     </button>
                   </div>

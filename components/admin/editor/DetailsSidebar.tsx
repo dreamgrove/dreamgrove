@@ -27,9 +27,9 @@ export default function DetailsSidebar({
   return (
     <aside
       aria-label="Page details"
-      className="absolute inset-y-0 right-0 z-20 flex w-[min(320px,100%)] flex-shrink-0 flex-col border-l border-[#3a3a3a] bg-[#1f1f1f] shadow-2xl lg:static lg:shadow-none"
+      className="absolute inset-y-0 right-0 z-20 flex w-[min(320px,100%)] flex-shrink-0 flex-col border-l border-dg-line bg-dg-panel-deep shadow-2xl lg:static lg:shadow-none"
     >
-      <div className="flex flex-shrink-0 items-center justify-between border-b border-[#3a3a3a] px-5 py-1.5">
+      <div className="flex flex-shrink-0 items-center justify-between border-b border-dg-line px-5 py-1.5">
         {/* pt-px: thiccboi's caps sit ~0.5px above the line box's centre */}
         <h2 className="m-0 flex h-8 items-center pt-px text-[.72rem] leading-none font-semibold tracking-[0.2em] text-white/50 uppercase">
           Page details
@@ -38,7 +38,7 @@ export default function DetailsSidebar({
           type="button"
           onClick={onClose}
           aria-label="Hide page details"
-          className="-mr-2 flex h-8 w-8 items-center justify-center rounded-xs text-white/40 hover:bg-[#2a2a2a] hover:text-white"
+          className="-mr-2 flex h-8 w-8 items-center justify-center rounded-xs text-white/40 hover:bg-dg-panel hover:text-white"
         >
           <Icon box name="close" size={14} />
         </button>
@@ -110,7 +110,7 @@ export default function DetailsSidebar({
             </p>
           </div>
         )}
-        <label className="flex cursor-pointer items-center gap-3 rounded-xs border border-[#3a3a3a] bg-[#242424] p-3">
+        <label className="flex cursor-pointer items-center gap-3 rounded-xs border border-dg-line bg-[#242424] p-3">
           <input
             id="fm-draft"
             type="checkbox"
