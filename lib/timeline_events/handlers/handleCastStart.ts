@@ -1,20 +1,11 @@
-import {
-  EventType,
-  Talents,
-  TimelineEvent,
-  ICastStartHandler,
-  NormalCast,
-  RescheduledCast,
-} from '@/types/index'
+import { EventType, TimelineEvent, ICastStartHandler } from '@/types/index'
 
 import { Cast } from '@/models/Cast'
 
 export const handleCastStart: ICastStartHandler = (
   event,
   timelineState,
-  rescheduledCasts,
   eventQueue,
-  activeBindings,
   spellInfo,
   spellState
 ) => {
@@ -28,11 +19,6 @@ export const handleCastStart: ICastStartHandler = (
     event.time > reforestationCast.effect_start_s &&
     event.time < reforestationCast.effect_start_s + reforestationCast.effect_duration
   if (canCast() && isOverlapping && event.spellId === 33891) {
-    rescheduledCasts.push({
-      castId: event.castId,
-      newTime: reforestationCast.effect_start_s + reforestationCast.effect_duration + 0.1,
-    })
-
     // We can't press Incarn while reforestation is active, so we need to reschedule the cast
     const rescheduledStartEvent: TimelineEvent<EventType.CastStart> = {
       type: EventType.CastStart,
@@ -41,11 +27,7 @@ export const handleCastStart: ICastStartHandler = (
       castId: event.castId,
     }
 
-    const castReturn: RescheduledCast = {
-      rescheduledStartEvent: rescheduledStartEvent,
-      events: () => [rescheduledStartEvent],
-    }
-    return castReturn
+    return [rescheduledStartEvent]
   } else if (canCast()) {
     /* Normal Cast */
 
@@ -119,13 +101,7 @@ export const handleCastStart: ICastStartHandler = (
       }
       eventsToAdd.push(channelInterruptedEvent)
     }
-    const castReturn: NormalCast = {
-      loseChargeEvent: loseCharge,
-      effectEndEvent: effectEndEvent,
-      events: () => eventsToAdd,
-    }
-
-    return castReturn
+    return eventsToAdd
   } else {
     // if we don't have enough charges we need to find the first instant
     // where we have one charge available
@@ -133,24 +109,13 @@ export const handleCastStart: ICastStartHandler = (
     // Find the earliest time when a charge will be available
     const nextChargeTime = eventQueue.findEarliestCharge(event.spellId, event.time)
 
-    // Track this cast as needing to be rescheduled in the inputActions
-    rescheduledCasts.push({
-      castId: event.castId,
-      newTime: nextChargeTime,
-    })
-
     const rescheduledStartEvent: TimelineEvent<EventType.CastStart> = {
       type: EventType.CastStart,
       time: nextChargeTime,
       spellId: event.spellId,
       castId: event.castId,
     }
-    const castReturn: RescheduledCast = {
-      rescheduledStartEvent: rescheduledStartEvent,
-      events: () => [rescheduledStartEvent],
-    }
-
-    // Create a new cast event at the time when a charge will be available
-    return castReturn
+    // Try the cast again at the time when a charge will be available
+    return [rescheduledStartEvent]
   }
 }

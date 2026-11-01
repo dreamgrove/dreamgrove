@@ -1,87 +1,65 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  ReactNode,
+} from 'react'
+import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
-interface TimelineContextType {
-  // Timeline dimensions and scaling
+/** The timeline never gets shorter than this, even when the casts end earlier. */
+export const MIN_TOTAL_LENGTH_S = 240
+const DEFAULT_VIEW_LENGTH_S = 250
+const MARKER_SPACING_S = 10
+const MIN_VIEW_LENGTH_S = 10
+const MAX_VIEW_LENGTH_S = 300
+
+interface TimelineScaleContextType {
   total_length_s: number
   view_length_s: number
   effective_view_length_s: number
   marker_spacing_s: number
 
-  // Pixel calculations
   scrollContainerWidth: number
-  effective_num_windows: number
   effective_total_length_px: number
   total_length_px: number
   pixelsPerSecond: number
 
-  // Controls
-  setTotalLength: (length: number) => void
-  setViewLength: (length: number) => void
-  setEffectiveViewLength: (length: number) => void
-
-  // Control key state for zooming
   isControlKeyPressed: boolean
   isShiftKeyPressed: boolean
 
-  // container for width calculations
   registerScrollContainer: (element: HTMLDivElement | null) => void
   scrollContainer: HTMLDivElement | null
+
+  zoomIn: (amount?: number) => void
+  zoomOut: (amount?: number) => void
+  resetZoom: () => void
+  timeToPixels: (timeInSeconds: number) => number
+  pixelsToTime: (pixelPosition: number) => number
 }
 
-const initialContext: TimelineContextType = {
-  total_length_s: 240,
-  view_length_s: 60,
-  effective_view_length_s: 60,
-  marker_spacing_s: 10,
-  scrollContainerWidth: 0,
-  effective_num_windows: 4,
-  effective_total_length_px: 0,
-  total_length_px: 0,
-  pixelsPerSecond: 0,
-  setTotalLength: () => {},
-  setViewLength: () => {},
-  setEffectiveViewLength: () => {},
-  isControlKeyPressed: false,
-  isShiftKeyPressed: false,
-  registerScrollContainer: () => {},
-  scrollContainer: null,
-}
+const TimelineScaleContext = createContext<TimelineScaleContextType | undefined>(undefined)
 
-const TimelineContext = createContext<TimelineContextType>(initialContext)
+/**
+ * Owns the horizontal scale of the planner: how many seconds the timeline spans,
+ * the zoom level and the resulting pixels-per-second. Must sit inside
+ * TimelineProvider, since the total length follows the simulated timeline.
+ */
+export function TimelineLengthProvider({ children }: { children: ReactNode }) {
+  const { processedState } = useTimelineContext()
+  const total_length_s = Math.max(processedState.timeline_length_s, MIN_TOTAL_LENGTH_S)
 
-interface TimelineProviderProps {
-  children: ReactNode
-  initialTotalLength?: number
-  initialViewLength?: number
-  initialMarkerSpacing?: number
-}
-
-export function TimelineLengthProvider({
-  children,
-  initialTotalLength = 240, // 4 minutes d
-  initialViewLength = 60, // 1 minute
-  initialMarkerSpacing = 10, // 10 seconds
-}: TimelineProviderProps) {
-  // Core timeline settings
-  const [total_length_s, setTotalLength] = useState(initialTotalLength)
-  const [view_length_s, setViewLength] = useState(initialViewLength)
-  const [effective_view_length_s, setEffectiveViewLength] = useState(initialViewLength)
-  const [marker_spacing_s] = useState(initialMarkerSpacing)
-
+  const [effective_view_length_s, setEffectiveViewLength] = useState(DEFAULT_VIEW_LENGTH_S)
   const [scrollContainer, setScrollContainer] = useState<HTMLDivElement | null>(null)
   const [scrollContainerWidth, setScrollContainerWidth] = useState(0)
-
-  console.log(total_length_s)
-  const registerScrollContainer = (element: HTMLDivElement | null) => {
-    setScrollContainer(element)
-  }
-
   const [isControlKeyPressed, setIsControlKeyPressed] = useState(false)
   const [isShiftKeyPressed, setIsShiftKeyPressed] = useState(false)
 
-  const effective_num_windows = total_length_s / effective_view_length_s
-  const effective_total_length_px = scrollContainerWidth * effective_num_windows
-  const total_length_px = (scrollContainerWidth * total_length_s) / view_length_s
+  const effective_total_length_px =
+    (scrollContainerWidth * total_length_s) / effective_view_length_s
+  const total_length_px = (scrollContainerWidth * total_length_s) / DEFAULT_VIEW_LENGTH_S
   const pixelsPerSecond = effective_total_length_px / total_length_s
 
   useEffect(() => {
@@ -125,97 +103,71 @@ export function TimelineLengthProvider({
     }
   }, [])
 
-  const value: TimelineContextType = {
-    total_length_s,
-    view_length_s,
-    effective_view_length_s,
-    marker_spacing_s,
+  const zoomIn = useCallback((amount = 5) => {
+    setEffectiveViewLength((prev) => Math.max(MIN_VIEW_LENGTH_S, prev - amount))
+  }, [])
 
-    scrollContainerWidth,
-    scrollContainer,
-    effective_num_windows,
-    effective_total_length_px,
-    total_length_px,
-    pixelsPerSecond,
+  const zoomOut = useCallback((amount = 5) => {
+    setEffectiveViewLength((prev) => Math.min(MAX_VIEW_LENGTH_S, prev + amount))
+  }, [])
 
-    setTotalLength,
-    setViewLength,
-    setEffectiveViewLength,
+  const resetZoom = useCallback(() => setEffectiveViewLength(DEFAULT_VIEW_LENGTH_S), [])
 
-    isControlKeyPressed,
-    isShiftKeyPressed,
-
-    registerScrollContainer,
-  }
-
-  return <TimelineContext.Provider value={value}>{children}</TimelineContext.Provider>
-}
-
-export function useTimeline() {
-  const context = useContext(TimelineContext)
-  return context
-}
-
-export function useTimelineControls() {
-  const context = useTimeline()
-
-  const zoomIn = (amount = 5) => {
-    const newViewLength = Math.max(10, context.effective_view_length_s - amount)
-    context.setEffectiveViewLength(newViewLength)
-  }
-
-  const zoomOut = (amount = 5) => {
-    const newViewLength = Math.min(300, context.effective_view_length_s + amount)
-    context.setEffectiveViewLength(newViewLength)
-  }
-
-  const resetZoom = () => {
-    context.setEffectiveViewLength(context.view_length_s)
-  }
-
-  const timeToPixels = (timeInSeconds: number) => {
-    return timeInSeconds * context.pixelsPerSecond
-  }
-
-  const pixelsToTime = (pixelPosition: number) => {
-    return pixelPosition / context.pixelsPerSecond
-  }
-
-  return {
-    ...context,
-    zoomIn,
-    zoomOut,
-    resetZoom,
-    timeToPixels,
-    pixelsToTime,
-  }
-}
-
-interface TimelineScalerProps {
-  children: (props: {
-    pixelsPerSecond: number
-    effective_total_length_px: number
-    timeToPixels: (timeInSeconds: number) => number
-    pixelsToTime: (pixelPosition: number) => number
-  }) => React.ReactNode
-  className?: string
-  style?: React.CSSProperties
-}
-
-export function TimelineScaler({ children, className, style }: TimelineScalerProps) {
-  const { pixelsPerSecond, effective_total_length_px } = useTimeline()
-
-  const timeToPixels = (timeInSeconds: number) => timeInSeconds * pixelsPerSecond
-  const pixelsToTime = (pixelPosition: number) => pixelPosition / pixelsPerSecond
-
-  return (
-    <div className={className} style={style}>
-      {children({
-        pixelsPerSecond,
-        effective_total_length_px,
-        timeToPixels,
-        pixelsToTime,
-      })}
-    </div>
+  const timeToPixels = useCallback(
+    (timeInSeconds: number) => timeInSeconds * pixelsPerSecond,
+    [pixelsPerSecond]
   )
+
+  const pixelsToTime = useCallback(
+    (pixelPosition: number) => pixelPosition / pixelsPerSecond,
+    [pixelsPerSecond]
+  )
+
+  const value = useMemo<TimelineScaleContextType>(
+    () => ({
+      total_length_s,
+      view_length_s: DEFAULT_VIEW_LENGTH_S,
+      effective_view_length_s,
+      marker_spacing_s: MARKER_SPACING_S,
+      scrollContainerWidth,
+      effective_total_length_px,
+      total_length_px,
+      pixelsPerSecond,
+      isControlKeyPressed,
+      isShiftKeyPressed,
+      registerScrollContainer: setScrollContainer,
+      scrollContainer,
+      zoomIn,
+      zoomOut,
+      resetZoom,
+      timeToPixels,
+      pixelsToTime,
+    }),
+    [
+      total_length_s,
+      effective_view_length_s,
+      scrollContainerWidth,
+      effective_total_length_px,
+      total_length_px,
+      pixelsPerSecond,
+      isControlKeyPressed,
+      isShiftKeyPressed,
+      scrollContainer,
+      zoomIn,
+      zoomOut,
+      resetZoom,
+      timeToPixels,
+      pixelsToTime,
+    ]
+  )
+
+  return <TimelineScaleContext.Provider value={value}>{children}</TimelineScaleContext.Provider>
+}
+
+export function useTimelineScale() {
+  const context = useContext(TimelineScaleContext)
+  if (!context) {
+    throw new Error('useTimelineScale must be used within a TimelineLengthProvider')
+  }
+  return context
 }

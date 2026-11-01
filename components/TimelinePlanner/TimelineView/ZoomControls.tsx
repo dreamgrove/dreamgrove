@@ -1,7 +1,7 @@
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '../Providers/TimelineLengthProvider'
 
 export default function ZoomControls() {
-  const { resetZoom, zoomOut, zoomIn } = useTimelineControls()
+  const { resetZoom, zoomOut, zoomIn } = useTimelineScale()
 
   return (
     <div id="tour-zoom-selector" className="flex flex-row items-center justify-end gap-2 pr-4">

@@ -10,15 +10,14 @@ import {
   DndContextProps,
   useDroppable,
 } from '@dnd-kit/core'
-import DraggableCast from '../../Cast/DraggableCast'
+import DraggableCast from '@/components/TimelinePlanner/Cast/DraggableCast'
 import { SPELL_GCD, SpellToRender } from '@/types/index'
-import { Cast } from '@/models/Cast'
-import { useTimeline, useTimelineControls } from '../../Providers/TimelineLengthProvider'
-import CastInterval from '../../Cast/CastInterval'
+import { useTimelineScale } from '@/components/TimelinePlanner/Providers/TimelineLengthProvider'
+import CastInterval from '@/components/TimelinePlanner/Cast/CastInterval'
 import ChargesCounter from './ChargeCounter'
-import { useHoverContext } from '../../Providers/HoverProvider'
-import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
-import { splitCastsByCharges } from '@/lib/embed/loadoutTimeline'
+import { useHoverContext } from '@/components/TimelinePlanner/Providers/HoverProvider'
+import { useTimelineContext } from '@/components/TimelinePlanner/TimelineProvider/useTimelineContext'
+import { splitCastsByCharges } from '@/lib/timeline_events/splitCastsByCharges'
 
 interface SpellRowProps {
   className?: string
@@ -51,15 +50,13 @@ function DroppableChargeRow({
 
 export default function SpellRow({ spellTimeline }: SpellRowProps) {
   const { handleCastMove } = useTimelineContext()
-  const { pixelsPerSecond } = useTimeline()
+  const { pixelsPerSecond, timeToPixels, pixelsToTime, total_length_s } = useTimelineScale()
   const [activeDragId, setActiveDragId] = useState<string | null>(null)
   const activeDraggedCast = activeDragId
     ? spellTimeline.casts.find((cast) => cast.id === activeDragId)
     : null
 
   const className = 'my-2 flex h-10 items-center'
-
-  const { timeToPixels, pixelsToTime, total_length_s } = useTimelineControls()
 
   const { changeHover, setIsDragging, removeHover, isHovering, isDragging, rectRef, setDraggedId } =
     useHoverContext()
@@ -101,16 +98,7 @@ export default function SpellRow({ spellTimeline }: SpellRowProps) {
 
         if (proposedStartTime !== cast.start_s) {
           handleCastMove(castId, proposedStartTime)
-          const newCast = new Cast({
-            id: cast.id,
-            spell: cast.spell,
-            start_s: proposedStartTime,
-            interrupting_cast: cast.interrupting_cast,
-            current_charge: cast.current_charge,
-            cooldown_delay_s: cast.cooldown_delay_s,
-          })
-          newCast.is_interruped = cast.is_interruped
-          changeHover(newCast)
+          changeHover(cast.withStart(proposedStartTime))
         }
       }
     }
@@ -131,21 +119,8 @@ export default function SpellRow({ spellTimeline }: SpellRowProps) {
     if (active) {
       const castId = active.id as string
       const cast = spellTimeline.casts.find((c) => c.id === castId)
-      if (cast) {
-        const newCast = new Cast({
-          id: cast.id,
-          spell: cast.spell,
-          start_s: cast.start_s + dragDelta.x / pixelsPerSecond,
-          interrupting_cast: cast.interrupting_cast,
-          current_charge: cast.current_charge,
-          cooldown_delay_s: cast.cooldown_delay_s,
-          cooldown_duration: cast.cooldown_duration,
-        })
-        newCast.is_interruped = cast.is_interruped
-        newCast._ef_end_s = cast._ef_end_s
-        if (Math.abs(dragDelta.x) >= 1) {
-          changeHover(newCast)
-        }
+      if (cast && Math.abs(dragDelta.x) >= 1) {
+        changeHover(cast.withStart(cast.start_s + dragDelta.x / pixelsPerSecond))
       }
     }
   }

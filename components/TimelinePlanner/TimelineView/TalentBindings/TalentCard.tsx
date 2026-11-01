@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
+import { useTimelineContext } from '@/components/TimelinePlanner/TimelineProvider/useTimelineContext'
 
 interface TalentCardProps {
   id: string
@@ -48,7 +48,7 @@ const TalentCard = ({ id, name = '', description = '', prerenderedIcon }: Talent
         <div className={`relative flex-1 cursor-pointer overflow-hidden`}>
           <div
             className={`absolute inset-0 h-full w-full origin-bottom border transition-colors duration-300 ${
-              checked ? 'border-main animate-clip-up' : 'border-main/20 animate-clip-down'
+              checked ? 'animate-clip-up border-main' : 'animate-clip-down border-main/20'
             }`}
           ></div>
 

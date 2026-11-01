@@ -4,11 +4,13 @@ import Icon from '@/components/Icon'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Cast } from '@/models/Cast'
 import { SpellInfo, SpellToRender } from '@/types/timeline'
-import { simulateLoadout, splitCastsByCharges, SimulatedLoadout } from '@/lib/embed/loadoutTimeline'
+import { simulateLoadout, SimulatedLoadout } from '@/lib/embed/loadoutTimeline'
+import { splitCastsByCharges } from '@/lib/timeline_events/splitCastsByCharges'
 import CastBars from '@/components/TimelinePlanner/Cast/CastBars'
 import CustomSpellIcon from '@/components/TimelinePlanner/CustomSpell/CustomSpellIcon'
 import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
 import type { PageLocale } from '@/lib/pageLocale'
+import { formatTime } from '@/lib/utils/utilityFunctions'
 import { plannerEmbedStrings, PlannerEmbedStrings } from './strings'
 
 const ROW_H = 40 // h-10, matches the planner's cast rows
@@ -27,11 +29,7 @@ interface PlannerEmbedCoreProps {
 }
 
 function formatTimestamp(seconds: number): string {
-  if (seconds >= 60) {
-    const minutes = Math.floor(seconds / 60)
-    const remaining = Math.floor(seconds % 60)
-    return `${minutes}:${remaining.toString().padStart(2, '0')}`
-  }
+  if (seconds >= 60) return formatTime(seconds)
   return `${seconds}s`
 }
 
@@ -61,7 +59,7 @@ function OpenInPlannerLink({ code, t }: { code: string; t: PlannerEmbedStrings }
       href={`/planner?loadout=${encodeURIComponent(code)}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-main text-xs hover:underline"
+      className="text-xs text-main hover:underline"
     >
       {t.openInPlanner}
     </a>

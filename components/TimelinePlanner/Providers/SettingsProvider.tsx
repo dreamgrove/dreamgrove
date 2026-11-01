@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, { createContext, useContext, useMemo } from 'react'
+import { jsonCodec, usePersistedState } from '@/hooks/usePersistedState'
 
 interface SettingsContextType {
   showEventMarkers: boolean
@@ -28,69 +29,26 @@ interface StoredSettings {
   timestampFormat: 'seconds' | 'minutes'
 }
 
-function loadSettings(): StoredSettings {
-  if (typeof window === 'undefined') {
-    return { showEventMarkers: false, timestampFormat: 'seconds' }
-  }
-
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored) {
-      return JSON.parse(stored)
-    }
-  } catch (error) {
-    console.warn('Failed to load settings from localStorage:', error)
-  }
-
-  return { showEventMarkers: false, timestampFormat: 'seconds' }
-}
-
-function saveSettings(settings: StoredSettings) {
-  if (typeof window === 'undefined') return
-
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
-  } catch (error) {
-    console.warn('Failed to save settings to localStorage:', error)
-  }
-}
+const DEFAULT_SETTINGS: StoredSettings = { showEventMarkers: false, timestampFormat: 'seconds' }
 
 export function SettingsProvider({ children }: SettingsProviderProps) {
-  const [showEventMarkers, setShowEventMarkersState] = useState(false)
-  const [timestampFormat, setTimestampFormatState] = useState<'seconds' | 'minutes'>('seconds')
-  const [isInitialized, setIsInitialized] = useState(false)
-
-  useEffect(() => {
-    const settings = loadSettings()
-    setShowEventMarkersState(settings.showEventMarkers)
-    setTimestampFormatState(settings.timestampFormat)
-    setIsInitialized(true)
-  }, [])
-
-  useEffect(() => {
-    if (isInitialized) {
-      saveSettings({ showEventMarkers, timestampFormat })
-    }
-  }, [showEventMarkers, timestampFormat, isInitialized])
-
-  const setShowEventMarkers = (show: boolean) => {
-    setShowEventMarkersState(show)
-  }
-
-  const setTimestampFormat = (format: 'seconds' | 'minutes') => {
-    setTimestampFormatState(format)
-  }
-
-  return (
-    <SettingsContext.Provider
-      value={{
-        showEventMarkers,
-        setShowEventMarkers,
-        timestampFormat,
-        setTimestampFormat,
-      }}
-    >
-      {children}
-    </SettingsContext.Provider>
+  const [settings, setSettings] = usePersistedState<StoredSettings>(
+    STORAGE_KEY,
+    DEFAULT_SETTINGS,
+    jsonCodec
   )
+
+  const value = useMemo<SettingsContextType>(
+    () => ({
+      ...DEFAULT_SETTINGS,
+      ...settings,
+      setShowEventMarkers: (showEventMarkers) =>
+        setSettings((prev) => ({ ...prev, showEventMarkers })),
+      setTimestampFormat: (timestampFormat) =>
+        setSettings((prev) => ({ ...prev, timestampFormat })),
+    }),
+    [settings, setSettings]
+  )
+
+  return <SettingsContext.Provider value={value}>{children}</SettingsContext.Provider>
 }

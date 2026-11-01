@@ -12,10 +12,7 @@ export const handleDreamstate: IDreamstateHandler = (
       timelineState.activeEffects.delete(Talents.Dreamstate)
       reduceCastCooldowns(timelineState, eventQueue, event, 0)
     }
-    return {
-      events: () => [],
-      dreamstateEvent: event,
-    }
+    return []
   }
   reduceCastCooldowns(timelineState, eventQueue, event, -4)
   const dreamstateEvent: TimelineEvent<EventType.DreamstateCdr> = {
@@ -24,10 +21,7 @@ export const handleDreamstate: IDreamstateHandler = (
     spellId: event.spellId,
     castId: event.castId,
   }
-  return {
-    events: () => [dreamstateEvent],
-    dreamstateEvent,
-  }
+  return [dreamstateEvent]
 }
 const reduceCastCooldowns = (
   timelineState: TimelineState,
@@ -45,6 +39,5 @@ const reduceCastCooldowns = (
     }
     consideredSpells.add(cast.spell.spellId)
     eventQueue.modifyFirstEarliestOfType(cast, EventType.GainCharge, time, event.time)
-    //eventQueue.modifyFirstEarliestOfType(cast, EventType.CooldownEnd, -4, event.time)
   }
 }

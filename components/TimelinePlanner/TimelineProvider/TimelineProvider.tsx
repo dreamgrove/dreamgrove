@@ -1,16 +1,16 @@
-import React, { createContext, ReactNode, useEffect, useState } from 'react'
+import React, { createContext, ReactNode, useEffect, useMemo } from 'react'
 import { useTimelineEvents } from '@/hooks/useTimelineActions'
 import { useLocalSpells } from '@/hooks/useLocalSpells'
-import { useActiveBindings } from '@/hooks/useActiveBindings'
+import { useActiveBindings, type Plan } from '@/hooks/useActiveBindings'
 import { useProcessedTimeline } from '@/hooks/useProcessedTimeline'
 import {
   SpellInfo,
   PlayerAction,
   TalentBindings,
   TimelineToRender,
-  GlobalAction,
   TimelineEvent,
   EventType,
+  DruidSpec,
 } from '@/types/index'
 import { useKeysToTalents } from '@/hooks/useKeysToActions'
 
@@ -22,17 +22,16 @@ export interface TimelineContextType {
   localSpells: SpellInfo[]
   createCustomSpell: (params: SpellInfo) => void
   deleteCustomSpell: (spellId: number) => void
-  getSpellsForSpec: (spec: string) => SpellInfo[]
   activeTalents: string[]
   setActiveTalents: React.Dispatch<React.SetStateAction<string[]>>
   toggleTalent: (id: string, isSelected: boolean) => void
   availableTalents: TalentBindings[]
-  keysToTalents: Map<string, Set<GlobalAction>>
   processedState: TimelineToRender
   processedEvents: TimelineEvent<EventType>[]
   filteredSpells: SpellInfo[]
-  currentSpec: string
-  setCurrentSpec: React.Dispatch<React.SetStateAction<string>>
+  currentSpec: DruidSpec
+  setCurrentSpec: (spec: DruidSpec) => void
+  loadPlan: (plan: Plan) => void
 }
 
 export const TimelineContext = createContext<TimelineContextType | undefined>(undefined)
@@ -43,23 +42,21 @@ interface TimelineProviderProps {
   tutorialSpells?: PlayerAction[]
 }
 
-export function TimelineProvider({
-  children,
-  spells = [],
-  tutorialSpells = [],
-}: TimelineProviderProps) {
-  const [currentSpec, setCurrentSpec] = useState('balance')
-
-  const { inputEvents, setInputEvents, handleCastDelete, handleCastMove } =
-    useTimelineEvents(tutorialSpells)
+export function TimelineProvider({ children, spells = [], tutorialSpells }: TimelineProviderProps) {
+  const { inputEvents, setInputEvents, handleCastDelete, handleCastMove } = useTimelineEvents()
 
   const { localSpells, createCustomSpell, deleteCustomSpell, getSpellsForSpec } =
     useLocalSpells(spells)
 
-  const { activeTalents, setActiveTalents, toggleTalent, availableTalents } = useActiveBindings(
-    setInputEvents,
-    currentSpec
-  )
+  const {
+    currentSpec,
+    setCurrentSpec,
+    loadPlan,
+    activeTalents,
+    setActiveTalents,
+    toggleTalent,
+    availableTalents,
+  } = useActiveBindings(setInputEvents)
   const { keysToTalents } = useKeysToTalents(activeTalents, localSpells)
   const { processedState, processedEvents } = useProcessedTimeline(
     inputEvents,
@@ -72,30 +69,52 @@ export function TimelineProvider({
     [getSpellsForSpec, currentSpec]
   )
 
+  // The tour hands over its example casts once; add them to whatever is already planned.
   useEffect(() => {
+    if (!tutorialSpells?.length) return
     setInputEvents((prev) => [...prev, ...tutorialSpells])
-  }, [tutorialSpells])
+  }, [tutorialSpells, setInputEvents])
 
-  const value: TimelineContextType = {
-    inputEvents,
-    setInputEvents,
-    handleCastDelete,
-    handleCastMove,
-    localSpells,
-    createCustomSpell,
-    deleteCustomSpell,
-    getSpellsForSpec,
-    activeTalents,
-    setActiveTalents,
-    toggleTalent,
-    availableTalents,
-    keysToTalents,
-    processedState,
-    processedEvents,
-    filteredSpells,
-    currentSpec,
-    setCurrentSpec,
-  }
+  const value = useMemo<TimelineContextType>(
+    () => ({
+      inputEvents,
+      setInputEvents,
+      handleCastDelete,
+      handleCastMove,
+      localSpells,
+      createCustomSpell,
+      deleteCustomSpell,
+      activeTalents,
+      setActiveTalents,
+      toggleTalent,
+      availableTalents,
+      processedState,
+      processedEvents,
+      filteredSpells,
+      currentSpec,
+      setCurrentSpec,
+      loadPlan,
+    }),
+    [
+      inputEvents,
+      setInputEvents,
+      handleCastDelete,
+      handleCastMove,
+      localSpells,
+      createCustomSpell,
+      deleteCustomSpell,
+      activeTalents,
+      setActiveTalents,
+      toggleTalent,
+      availableTalents,
+      processedState,
+      processedEvents,
+      filteredSpells,
+      currentSpec,
+      setCurrentSpec,
+      loadPlan,
+    ]
+  )
 
   return <TimelineContext.Provider value={value}>{children}</TimelineContext.Provider>
 }

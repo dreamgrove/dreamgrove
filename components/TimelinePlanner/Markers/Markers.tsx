@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSettings } from '../Providers/SettingsProvider'
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '../Providers/TimelineLengthProvider'
+import { formatTime } from '@/lib/utils/utilityFunctions'
 
 interface MarkerProps {
   label: number
@@ -11,11 +12,7 @@ const Marker: React.FC<MarkerProps> = ({ label, width }) => {
   const { timestampFormat } = useSettings()
 
   const formatTimestamp = (seconds: number) => {
-    if (timestampFormat === 'minutes') {
-      const minutes = Math.floor(seconds / 60)
-      const remainingSeconds = Math.floor(seconds % 60)
-      return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`
-    }
+    if (timestampFormat === 'minutes') return formatTime(seconds)
     return `${seconds % 1 === 0 ? seconds : seconds.toFixed(0)}s`
   }
 
@@ -64,7 +61,7 @@ interface MarkersProps {
  */
 const Markers: React.FC<MarkersProps> = React.memo(
   function Markers({ className = '' }) {
-    const { total_length_s, pixelsPerSecond, marker_spacing_s } = useTimelineControls()
+    const { total_length_s, pixelsPerSecond, marker_spacing_s } = useTimelineScale()
 
     const [effective_marker_spacing_s, setMarkerSpacing] = useState(marker_spacing_s)
     const [previousSize_px, setPreviousSize_px] = useState(0)

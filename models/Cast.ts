@@ -124,6 +124,22 @@ export class Cast {
     return this._chann_end_s - this.start_s
   }
 
+  /** A copy moved to `start_s`, keeping its durations; used to preview a drag. */
+  withStart(start_s: number): Cast {
+    const moved = new Cast({
+      id: this.id,
+      spell: this.spell,
+      start_s,
+      interrupting_cast: this.interrupting_cast,
+      current_charge: this.current_charge,
+      cooldown_delay_s: this.cooldown_delay_s,
+      cooldown_duration: this.cooldown_duration,
+    })
+    moved._is_interruped = this._is_interruped
+    moved._ef_end_s = moved.start_s + this.effect_duration
+    return moved
+  }
+
   constructor(params: CastParams) {
     const {
       id,

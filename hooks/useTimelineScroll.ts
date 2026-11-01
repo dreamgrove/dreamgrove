@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react'
-import { useTimelineControls } from '@/components/TimelinePlanner/Providers/TimelineLengthProvider'
+import { useTimelineScale } from '@/components/TimelinePlanner/Providers/TimelineLengthProvider'
 
 export function useTimelineScroll() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const { isControlKeyPressed, registerScrollContainer, zoomIn, zoomOut } = useTimelineControls()
+  const { isControlKeyPressed, registerScrollContainer, zoomIn, zoomOut } = useTimelineScale()
 
   useEffect(() => {
     if (scrollContainerRef.current) {

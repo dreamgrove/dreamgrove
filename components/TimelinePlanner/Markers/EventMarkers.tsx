@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '../Providers/TimelineLengthProvider'
 import { EventType, TimelineEvent } from '@/types/index'
 import { useSettings } from '../Providers/SettingsProvider'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
@@ -77,7 +77,7 @@ const Marker = ({
  */
 const EventMarkers: React.FC = () => {
   // Get timeToPixels function from context
-  const { timeToPixels, total_length_s } = useTimelineControls()
+  const { timeToPixels, total_length_s } = useTimelineScale()
   const { processedEvents } = useTimelineContext()
 
   const { showEventMarkers } = useSettings()

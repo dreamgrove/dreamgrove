@@ -28,15 +28,8 @@ export const handleChargeGain: IChargeGainHandler = (
       spellId: event.spellId,
       castId: cdToStart!,
     }
-    return {
-      events: () => [chargeGainEvent, cooldownEndEvent],
-      cooldownEndEvent,
-      chargeGainEvent,
-    }
+    return [chargeGainEvent, cooldownEndEvent]
   }
 
-  return {
-    events: () => [cooldownEndEvent],
-    cooldownEndEvent,
-  }
+  return [cooldownEndEvent]
 }

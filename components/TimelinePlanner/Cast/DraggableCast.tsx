@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDraggable } from '@dnd-kit/core'
 import { Cast } from '@/models/Cast'
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '../Providers/TimelineLengthProvider'
 import CastInterval from './CastInterval'
 
 interface DraggableCastProps {
@@ -12,7 +12,7 @@ interface DraggableCastProps {
 }
 
 const DraggableCast = ({ idx, id, castInfo }: DraggableCastProps) => {
-  const { timeToPixels } = useTimelineControls()
+  const { timeToPixels } = useTimelineScale()
 
   const cssId = `cast-${castInfo.spell.spellId}-${castInfo.current_charge}-${idx}`
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({

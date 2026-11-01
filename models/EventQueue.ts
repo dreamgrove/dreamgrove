@@ -6,10 +6,8 @@ import { Cast } from './Cast'
  */
 export class EventQueue {
   private events: TimelineEvent<EventType>[] = []
-  private remainingDelta: number = 0
 
   push(event: TimelineEvent<EventType>): void {
-    // add +0.01 and round to 2 decimal places
     this.events.push(event)
     this.events.sort((a, b) => a.time - b.time)
   }
@@ -25,80 +23,38 @@ export class EventQueue {
     return this.events.length === 0
   }
 
-  size(): number {
-    return this.events.length
-  }
-
+  /**
+   * Shift every queued event of `type` for the cast's spell by `delta`, never
+   * moving one before `event_time`. Whatever part of the shift an event could not
+   * take is carried over to the next one.
+   */
   modifyFirstEarliestOfType(cast: Cast, type: EventType, delta: number, event_time: number) {
-    // Find all matching events and sort by time
     const matchingEvents = this.events
       .filter((event) => event.type === type && event.spellId === cast.spell.spellId)
       .sort((a, b) => a.time - b.time)
 
-    for (let i = 0; i < matchingEvents.length; i++) {
-      const event = matchingEvents[i]
-
-      const originalTime = event.time
-      const targetTime = originalTime + this.remainingDelta + delta
+    let remainingDelta = 0
+    for (const event of matchingEvents) {
+      const targetTime = event.time + remainingDelta + delta
 
       if (targetTime < event_time) {
-        const actualDelta = -(event_time - targetTime)
-        // This event would go below the minimum time
         event.time = event_time
-        this.remainingDelta = actualDelta
+        remainingDelta = targetTime - event_time
       } else {
-        // Apply all remaining delta to this event
-        event.time = targetTime
-        this.remainingDelta = 0
-      }
-    }
-  }
-
-  modifyLatestOfType(
-    cast: Cast,
-    type: EventType,
-    delta: number,
-    event_time: number
-  ): string | undefined {
-    // Find all matching events and sort by time (latest first)
-    const matchingEvents = this.events
-      .filter((event) => event.type === type && event.spellId === cast.spell.spellId)
-      .sort((a, b) => b.time - a.time)
-
-    let remainingDelta = delta
-    let modifiedCastId: string | undefined
-
-    for (let i = 0; i < matchingEvents.length; i++) {
-      const event = matchingEvents[i]
-      if (remainingDelta === 0) {
-        break
-      }
-
-      const originalTime = event.time
-      const targetTime = originalTime + remainingDelta
-
-      if (targetTime < cast.start_s) {
-        // This event would go below the minimum time
-        event.time = event_time
-        const actualDelta = event_time - originalTime
-        remainingDelta = remainingDelta - actualDelta
-        if (!modifiedCastId) modifiedCastId = event.castId
-      } else {
-        // Apply all remaining delta to this event
         event.time = targetTime
         remainingDelta = 0
-        if (!modifiedCastId) modifiedCastId = event.castId
       }
     }
 
-    return modifiedCastId
+    // Shifted events may now be out of order relative to the rest of the queue.
+    this.events.sort((a, b) => a.time - b.time)
   }
 
   /**
-   * Find the earliest CooldownEnd event for a specific spell
+   * Find the earliest GainCharge event for a specific spell
    * @param spellId - The ID of the spell to find cooldown for
-   * @param defaultTime - Default time to return if no cooldown event is found
-   * @returns The time of the earliest cooldown end for the spell
+   * @param defaultTime - Default time to return if no charge event is found
+   * @returns The time of the earliest charge gain for the spell
    */
   findEarliestCharge(spellId: number, defaultTime: number): number {
     let earliestTime = Infinity
@@ -111,11 +67,12 @@ export class EventQueue {
 
     return earliestTime === Infinity ? defaultTime : earliestTime
   }
+
   /**
-   * Find the latest CooldownEnd event for a specific spell
+   * Find the latest GainCharge event for a specific spell
    * @param spellId - The ID of the spell to find cooldown for
-   * @param defaultTime - Default time to return if no cooldown event is found
-   * @returns The time of the latest cooldown end for the spell
+   * @param defaultTime - Default time to return if no charge event is found
+   * @returns The time of the latest charge gain for the spell
    */
   findLatestCharge(spellId: number, defaultTime: number): number {
     let latestTime = -Infinity

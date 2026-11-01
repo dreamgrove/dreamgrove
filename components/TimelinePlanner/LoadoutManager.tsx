@@ -6,7 +6,7 @@ import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 import { useLoadouts, Loadout } from '@/hooks/useLoadouts'
 import { useApplyLoadout } from '@/hooks/useApplyLoadout'
 import { encodeLoadout } from '@/lib/utils/loadoutCode'
-import defaultLoadouts from '../../other/defaultLoadouts.json'
+import defaultLoadouts from '@/other/defaultLoadouts.json'
 
 interface PresetLoadout {
   name: string
@@ -23,14 +23,7 @@ function getPresetsForSpec(spec: string): PresetLoadout[] {
 }
 
 export default function LoadoutManager() {
-  const {
-    inputEvents,
-    setInputEvents,
-    currentSpec,
-    setCurrentSpec,
-    activeTalents,
-    setActiveTalents,
-  } = useTimelineContext()
+  const { inputEvents, currentSpec, activeTalents, loadPlan } = useTimelineContext()
 
   const { loadouts, saveLoadout, deleteLoadout, renameLoadout } = useLoadouts()
   const applyLoadout = useApplyLoadout()
@@ -90,19 +83,7 @@ export default function LoadoutManager() {
   }
 
   const handleLoad = (loadout: Loadout) => {
-    // Set spec first — the useEffect in useActiveBindings will reset talents & inputs,
-    // so we defer restoring those to the next tick
-    if (loadout.spec !== currentSpec) {
-      setCurrentSpec(loadout.spec)
-      // Wait for the spec-change effect to fire, then overwrite
-      setTimeout(() => {
-        setInputEvents(loadout.inputEvents)
-        setActiveTalents(loadout.activeTalents)
-      }, 0)
-    } else {
-      setInputEvents(loadout.inputEvents)
-      setActiveTalents(loadout.activeTalents)
-    }
+    loadPlan({ spec: loadout.spec, talents: loadout.activeTalents, events: loadout.inputEvents })
     setIsOpen(false)
   }
 

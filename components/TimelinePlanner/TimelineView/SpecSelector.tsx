@@ -1,7 +1,8 @@
 import Icon from '@/components/Icon'
-import { useEffect, useRef, useState } from 'react'
-import { DruidSpec } from './TimelineView'
+import { useCallback, useRef, useState } from 'react'
+import type { DruidSpec } from '@/types/timeline'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
+import { useOutsideClick } from '@/hooks/useOutsideClick'
 
 export default function SpecSelector() {
   const { currentSpec, setCurrentSpec } = useTimelineContext()
@@ -11,7 +12,7 @@ export default function SpecSelector() {
         <div className="mb-2 flex items-center gap-3">
           <CustomDropdown
             value={currentSpec}
-            onChange={(spec) => setCurrentSpec(spec as unknown as DruidSpec)}
+            onChange={setCurrentSpec}
             options={[
               { value: 'all', label: 'All Specs' },
               { value: 'balance', label: 'Balance' },
@@ -52,13 +53,13 @@ export default function SpecSelector() {
 }
 
 interface DropdownOption {
-  value: string
+  value: DruidSpec
   label: string
 }
 
 interface CustomDropdownProps {
-  value: string
-  onChange: (value: string) => void
+  value: DruidSpec
+  onChange: (value: DruidSpec) => void
   options: DropdownOption[]
 }
 
@@ -68,18 +69,10 @@ function CustomDropdown({ value, onChange, options }: CustomDropdownProps) {
 
   const selectedOption = options.find((option) => option.value === value)
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false)
-      }
-    }
+  const close = useCallback(() => setIsOpen(false), [])
+  useOutsideClick(dropdownRef, close, isOpen)
 
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
-
-  const handleOptionClick = (optionValue: string) => {
+  const handleOptionClick = (optionValue: DruidSpec) => {
     onChange(optionValue)
     setIsOpen(false)
   }

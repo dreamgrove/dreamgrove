@@ -2,31 +2,18 @@ import { TimelineEvent, SpellState, SpellInfo, EventType, TimelineState, Timelin
 
 import { EventQueue } from '@/models/EventQueue'
 
-type IGetEvents = {
-  events(): TimelineEvent<EventType>[]
-}
+/** Handlers that schedule follow-up events return them; the processor queues them. */
+type FollowUpEvents = TimelineEvent<EventType>[]
 
 /* CAST START */
 export interface ICastStartHandler {
   (
     event: TimelineEvent<EventType.CastStart>,
     timelineState: TimelineState,
-    rescheduledCasts: Array<{ castId: string; newTime: number }>,
     eventQueue: EventQueue,
-    activeBindings: string[],
     spellInfo: SpellInfo,
     spellState: SpellState
-  ): CastStartReturn
-}
-export type CastStartReturn = RescheduledCast | NormalCast
-export type RescheduledCast = IGetEvents & {
-  rescheduledStartEvent: TimelineEvent<EventType.CastStart>
-}
-export type NormalCast = IGetEvents & {
-  channelStartEvent?: TimelineEvent<EventType.ChannelStart>
-  channelInterruptedEvent?: TimelineEvent<EventType.ChannelInterrupted>
-  loseChargeEvent: TimelineEvent<EventType.LoseCharge>
-  effectEndEvent: TimelineEvent<EventType.EffectEnd>
+  ): FollowUpEvents
 }
 
 /* CHARGE GAIN */
@@ -36,10 +23,7 @@ export interface IChargeGainHandler {
     spellState: SpellState,
     spellInfo: SpellInfo,
     timelineState: TimelineState
-  ): ChargeGainReturn
-}
-export type ChargeGainReturn = IGetEvents & {
-  cooldownEndEvent: TimelineEvent<EventType.CooldownEnd>
+  ): FollowUpEvents
 }
 
 /* CHARGE LOSE */
@@ -49,10 +33,7 @@ export interface IChargeLoseHandler {
     spellInfo: SpellInfo,
     spellState: SpellState,
     timelineState: TimelineState
-  ): ChargeLoseReturn
-}
-export type ChargeLoseReturn = IGetEvents & {
-  gainChargeEvent: TimelineEvent<EventType.GainCharge> | null
+  ): FollowUpEvents
 }
 
 /* CENARIUS GUIDANCE */
@@ -71,10 +52,7 @@ export interface IChannelStartHandler {
     timelineState: TimelineState,
     spellInfo: SpellInfo,
     spellState: SpellState
-  ): ChannelStartReturn
-}
-export type ChannelStartReturn = IGetEvents & {
-  channelEndEvent: TimelineEvent<EventType.ChannelEnd>
+  ): FollowUpEvents
 }
 
 /* CHANNEL END */
@@ -110,10 +88,7 @@ export interface IDreamstateHandler {
     event: TimelineEvent<EventType.DreamstateCdr>,
     timelineState: TimelineState,
     eventQueue: EventQueue
-  ): DreamstateReturn
-}
-export type DreamstateReturn = IGetEvents & {
-  dreamstateEvent: TimelineEvent<EventType.DreamstateCdr>
+  ): FollowUpEvents
 }
 
 /* CONTROL OF THE DREAM */
@@ -136,14 +111,14 @@ export interface ICooldownEndHandler {
   ): void
 }
 
+/**
+ * A talent's hook into the simulation, run for every event on a spell the talent
+ * is bound to. It may change `state` and `spells` in place and returns the events
+ * to queue.
+ */
 export type GlobalAction = <T extends EventType>(
   event: TimelineEvent<T>,
   queue: EventQueue,
   state: TimelineState,
   spells: SpellInfo[]
-) => {
-  changedEvent: TimelineEvent<T>
-  eventsToAdd: TimelineEvent<EventType>[]
-  newState: TimelineState
-  newSpells: SpellInfo[]
-}
+) => FollowUpEvents

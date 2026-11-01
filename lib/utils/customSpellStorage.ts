@@ -1,6 +1,7 @@
 import { SpellInfo } from '@/types/index'
+import { readJson, writeJson } from '@/lib/utils/storage'
 
-const CUSTOM_SPELLS_KEY = 'dreamgrove-custom-spells'
+export const CUSTOM_SPELLS_KEY = 'dreamgrove-custom-spells'
 
 export interface CustomSpell extends SpellInfo {
   isCustom: true
@@ -10,7 +11,7 @@ export interface CustomSpell extends SpellInfo {
 }
 
 // Generate a random color for custom spells
-export function generateRandomColor(): string {
+function generateRandomColor(): string {
   const colors = [
     '#4B4376',
     '#1A3636',
@@ -24,36 +25,24 @@ export function generateRandomColor(): string {
   return colors[Math.floor(Math.random() * colors.length)]
 }
 
-// Save custom spells to localStorage
-export function saveCustomSpells(customSpells: CustomSpell[]): void {
-  try {
-    localStorage.setItem(CUSTOM_SPELLS_KEY, JSON.stringify(customSpells))
-  } catch (error) {
-    console.warn('Failed to save custom spells to localStorage:', error)
-  }
+function saveCustomSpells(customSpells: CustomSpell[]): void {
+  writeJson(CUSTOM_SPELLS_KEY, customSpells)
 }
 
-// Load custom spells from localStorage
-export function loadCustomSpells(): CustomSpell[] {
-  try {
-    const saved = localStorage.getItem(CUSTOM_SPELLS_KEY)
-    if (!saved) return []
+/** The well-formed entries of a stored custom spell list */
+export function toCustomSpells(parsed: unknown): CustomSpell[] {
+  if (!Array.isArray(parsed)) return []
+  return parsed.filter(
+    (spell) =>
+      spell &&
+      typeof spell.spellId === 'number' &&
+      typeof spell.name === 'string' &&
+      spell.isCustom === true
+  )
+}
 
-    const parsed = JSON.parse(saved)
-    // Validate the data structure
-    if (Array.isArray(parsed)) {
-      return parsed.filter(
-        (spell) =>
-          spell &&
-          typeof spell.spellId === 'number' &&
-          typeof spell.name === 'string' &&
-          spell.isCustom === true
-      )
-    }
-  } catch (error) {
-    console.warn('Failed to load custom spells from localStorage:', error)
-  }
-  return []
+function loadCustomSpells(): CustomSpell[] {
+  return toCustomSpells(readJson<unknown>(CUSTOM_SPELLS_KEY, []))
 }
 
 // Add a new custom spell

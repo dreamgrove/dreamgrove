@@ -1,5 +1,5 @@
 'use client'
-import { useTimelineControls } from '../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '../Providers/TimelineLengthProvider'
 import WowheadClientIcon from '@/components/csm/WowheadClientIcon'
 import type { BossAbilityCast } from '@/types/bossAbilities'
 import { BOSS_ABILITY_PALETTE, computeAbilityColors } from '../bossAbilityPalette'
@@ -33,7 +33,7 @@ function BossMarker({
           id={String(spellId)}
           type="spell"
           name={name}
-          size={ICON_SIZE}
+          iconSize={ICON_SIZE}
           noMargin
         />
       </span>
@@ -47,7 +47,7 @@ interface Props {
 }
 
 export default function BossAbilityMarkers({ abilities, visibleKeys }: Props) {
-  const { timeToPixels, total_length_s } = useTimelineControls()
+  const { timeToPixels, total_length_s } = useTimelineScale()
   if (!abilities || abilities.length === 0) return null
 
   const colorByName = computeAbilityColors(abilities)

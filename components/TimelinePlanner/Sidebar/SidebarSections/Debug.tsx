@@ -1,6 +1,6 @@
 import React from 'react'
 import { TimelineToRender } from '@/types/index'
-import { useTimelineControls } from '../../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '@/components/TimelinePlanner/Providers/TimelineLengthProvider'
 
 interface DebugTabProps {
   processedTimeline: TimelineToRender
@@ -19,7 +19,7 @@ export default function Debug({
   totalChargeIntervals,
   allCasts,
 }: DebugTabProps) {
-  const { total_length_s, effective_total_length_px } = useTimelineControls()
+  const { total_length_s, effective_total_length_px } = useTimelineScale()
   return (
     <>
       <div className="mt-2 text-sm">
