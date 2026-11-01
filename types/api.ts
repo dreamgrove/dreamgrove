@@ -6,6 +6,7 @@ export interface WowheadApiParams {
   url?: string
 }
 
+/** One Wowhead tooltip lookup, as cached on the server and returned by /api/get-wowhead-info. */
 export interface WowheadApiResponse {
   icon?: string
   quality?: number

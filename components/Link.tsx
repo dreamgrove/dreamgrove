@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import type { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
-import Wowhead from './custom/Wowhead'
-import { parseWowheadUrl, titleCase } from '../app/api/wowhead-data/utils'
 
+/** Internal links via next/link, anchors in place, external links in a new tab. */
 const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
   const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
@@ -14,20 +13,6 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
 
   if (isAnchorLink) {
     return <a href={href} {...rest} />
-  }
-
-  const wowhead = parseWowheadUrl(href)
-  if (wowhead) {
-    return (
-      <Wowhead
-        type={wowhead.type}
-        id={wowhead.id}
-        url={href}
-        // A slugless URL gives '', which fetchWowheadData reads as "caller gave
-        // no name" and fills from the tooltip JSON (or, failing that, type-id).
-        name={rest && rest.children ? rest.children : titleCase(wowhead.slug)}
-      />
-    )
   }
 
   return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />

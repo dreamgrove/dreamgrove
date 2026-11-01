@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useMemo } from 'react'
-import spellsData from '../../other/timelineSpells.json'
+import spellsData from '@/other/timelineSpells.json'
 import WowheadClientVersion from './WowheadClientVersion'
 import PlannerEmbedCore from '../PlannerEmbed/PlannerEmbedCore'
 import { koSpellNames } from '../PlannerEmbed/koSpellNames'

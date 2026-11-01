@@ -1,5 +1,5 @@
-import { fetchWowheadData } from 'app/api/wowhead-data/server-function'
-import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
+import { fetchWowheadData } from '@/lib/wowhead/server'
+import { buildWowheadUrl } from '@/lib/wowhead/urls'
 import WowheadIconImage from './WowheadIconImage'
 import type { PageLocale } from '@/lib/pageLocale'
 
