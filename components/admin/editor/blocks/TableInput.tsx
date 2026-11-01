@@ -52,22 +52,22 @@ export default function TableInput({
           />
         </label>
       </div>
-      <div className="overflow-x-auto rounded-md border border-[#383838]">
+      <div className="overflow-x-auto rounded-md border border-dg-line-soft">
         <table className="m-0 w-full border-collapse text-[.86rem]">
           <tbody>
             {value.map((row, r) => (
-              <tr key={r} className={r === 0 ? 'bg-[#2a2a2a]' : 'bg-[#1c1c1c]'}>
+              <tr key={r} className={r === 0 ? 'bg-dg-panel' : 'bg-[#1c1c1c]'}>
                 {row.map((cell, c) => (
                   <td
                     key={c}
-                    className="min-w-[7rem] border-r border-b border-[#383838] p-0 last:border-r-0"
+                    className="min-w-[7rem] border-r border-b border-dg-line-soft p-0 last:border-r-0"
                   >
                     <input
                       value={cell}
                       onChange={(e) => setCell(r, c, e.target.value)}
                       aria-label={r === 0 ? `Header ${c + 1}` : `Row ${r}, column ${c + 1}`}
                       placeholder={r === 0 ? `Header ${c + 1}` : ''}
-                      className={`h-9 w-full border-0 bg-transparent px-2.5 text-white placeholder-white/25 focus:bg-[#2f2f2f] focus:ring-1 focus:ring-[#d57f43] focus:outline-none focus:ring-inset ${
+                      className={`h-9 w-full border-0 bg-transparent px-2.5 text-white placeholder-white/25 focus:bg-[#2f2f2f] focus:ring-1 focus:ring-main focus:outline-none focus:ring-inset ${
                         r === 0 ? 'font-semibold' : ''
                       }`}
                     />

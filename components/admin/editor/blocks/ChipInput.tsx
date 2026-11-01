@@ -56,7 +56,7 @@ export default function ChipInput({
     <div>
       <div
         ref={boxRef}
-        className="flex min-h-10 flex-wrap items-center gap-1 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-2 py-[5px] focus-within:border-[#d57f43]"
+        className="flex min-h-10 flex-wrap items-center gap-1 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-2 py-[5px] focus-within:border-main"
       >
         {value.map((v) => {
           const unknown = suggest === 'talents' && known.size > 0 && !known.has(v.toLowerCase())

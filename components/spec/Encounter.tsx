@@ -25,7 +25,7 @@ export default function Encounter({ title, trash, children }: EncounterProps) {
     return (
       <section
         id={encounterDomId(id)}
-        className="flex scroll-mt-24 flex-wrap items-baseline justify-between gap-4 border-t border-[#3a3a3a] py-8 first:border-t-0 first:pt-0"
+        className="flex scroll-mt-24 flex-wrap items-baseline justify-between gap-4 border-t border-dg-line py-8 first:border-t-0 first:pt-0"
       >
         <h2 className="m-0 text-[1.4rem] font-semibold tracking-[-0.01em] text-white/50">
           {title}
@@ -33,7 +33,7 @@ export default function Encounter({ title, trash, children }: EncounterProps) {
         <div className="flex gap-4 text-[.92rem]">
           <span className="text-white/40">No notes yet</span>
           {ctx?.editUrl && (
-            <a href={ctx.editUrl} className="font-semibold text-[#d57f43] hover:text-[#dd6b20]">
+            <a href={ctx.editUrl} className="font-semibold text-main hover:text-[#dd6b20]">
               Write this section
             </a>
           )}
@@ -45,13 +45,13 @@ export default function Encounter({ title, trash, children }: EncounterProps) {
   return (
     <section
       id={encounterDomId(id)}
-      className="scroll-mt-24 border-t border-[#3a3a3a] py-11 first:border-t-0 first:pt-0"
+      className="scroll-mt-24 border-t border-dg-line py-11 first:border-t-0 first:pt-0"
     >
       <button
         type="button"
         onClick={toggle}
         aria-expanded={!closed}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 border-0 bg-transparent p-0 text-left text-white transition-colors hover:text-[#d57f43]"
+        className="flex w-full cursor-pointer items-center justify-between gap-4 border-0 bg-transparent p-0 text-left text-white transition-colors hover:text-main"
       >
         <h2
           className={`m-0 min-w-0 flex-1 leading-[1.15] font-semibold ${

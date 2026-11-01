@@ -101,7 +101,7 @@ export default function BlockForm({
       <form onSubmit={submit} className="flex flex-col gap-[26px]">
         {layout(block.fields).map((section, si) => (
           <Fragment key={si}>
-            {si > 0 && <div className="h-px bg-[#383838]" />}
+            {si > 0 && <div className="h-px bg-dg-line-soft" />}
             <section className="grid grid-cols-1 gap-x-3 gap-y-3.5 sm:grid-cols-2">
               {section.title && (
                 <h3 className="m-0 text-[.9375rem] font-semibold text-white sm:col-span-2">
@@ -112,13 +112,13 @@ export default function BlockForm({
                 group[0].kind === 'bool' ? (
                   <div
                     key={group[0].key}
-                    className="flex flex-col overflow-hidden rounded-md border border-[#383838] sm:col-span-2"
+                    className="flex flex-col overflow-hidden rounded-md border border-dg-line-soft sm:col-span-2"
                   >
                     {group.map((f, i) => (
                       <label
                         key={f.key}
-                        className={`flex cursor-pointer items-center gap-3 bg-[#2a2a2a] px-3.5 py-[11px] transition-colors hover:bg-[#303030] ${
-                          i ? 'border-t border-[#383838]' : ''
+                        className={`flex cursor-pointer items-center gap-3 bg-dg-panel px-3.5 py-[11px] transition-colors hover:bg-[#303030] ${
+                          i ? 'border-t border-dg-line-soft' : ''
                         }`}
                       >
                         <input

@@ -30,9 +30,9 @@ export function Panel({
   children: ReactNode
 }) {
   return (
-    <div className="flex flex-col rounded-sm bg-[#1f1f1f]">
+    <div className="flex flex-col rounded-sm bg-dg-panel-deep">
       <div
-        className="flex items-center justify-between gap-3 rounded-t-sm border border-[#3a3a3a] px-5 py-3.5"
+        className="flex items-center justify-between gap-3 rounded-t-sm border border-dg-line px-5 py-3.5"
         style={tint ? { borderColor: `${tint}80` } : undefined}
       >
         <h3 className="m-0 min-w-0 truncate text-[1.02rem] font-semibold">{title}</h3>
@@ -42,14 +42,14 @@ export function Panel({
             onClick={onAdd}
             title={addLabel}
             aria-label={addLabel}
-            className="-mr-2.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-xs px-2.5 py-1.5 text-[.82rem] font-semibold text-white/60 transition-colors hover:bg-[#2a2a2a] hover:text-white"
+            className="-mr-2.5 inline-flex flex-shrink-0 items-center gap-1.5 rounded-xs px-2.5 py-1.5 text-[.82rem] font-semibold text-white/60 transition-colors hover:bg-dg-panel hover:text-white"
           >
             <Icon box name="plus" size={12} />
             New
           </button>
         )}
       </div>
-      <ul className="m-0 flex flex-1 list-none flex-col rounded-b-sm border border-t-0 border-[#3a3a3a] p-1.5">
+      <ul className="m-0 flex flex-1 list-none flex-col rounded-b-sm border border-t-0 border-dg-line p-1.5">
         {children}
       </ul>
     </div>
@@ -89,11 +89,11 @@ function FileRow({
       <button
         type="button"
         onClick={() => onOpen(file.path)}
-        className="group grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-xs px-3.5 py-3 text-left transition-colors hover:bg-[#2a2a2a]"
+        className="group grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-xs px-3.5 py-3 text-left transition-colors hover:bg-dg-panel"
       >
         <span className="min-w-0">
           <span className="flex items-center gap-2">
-            <span className="truncate text-[1rem] font-semibold text-white transition-colors group-hover:text-[#d57f43]">
+            <span className="truncate text-[1rem] font-semibold text-white transition-colors group-hover:text-main">
               {file.title}
             </span>
             {file.draft && <Badge>Draft</Badge>}

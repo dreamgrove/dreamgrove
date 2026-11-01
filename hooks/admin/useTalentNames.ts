@@ -8,7 +8,7 @@ export function useTalentNames(enabled: boolean): string[] {
   useEffect(() => {
     if (!enabled || talentNamesCache) return
     let active = true
-    import('../../other/talents.json').then((mod) => {
+    import('@/other/talents.json').then((mod) => {
       const set = new Set<string>()
       for (const spec of mod.default as any[]) {
         for (const node of [

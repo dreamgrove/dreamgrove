@@ -58,7 +58,7 @@ export default function Popover({
       id={id}
       role={role}
       style={pos}
-      className="fixed z-[60] m-0 list-none overflow-auto overscroll-contain rounded-md border border-[#383838] bg-[#2a2a2a] p-1 shadow-xl"
+      className="fixed z-[60] m-0 list-none overflow-auto overscroll-contain rounded-md border border-dg-line-soft bg-dg-panel p-1 shadow-xl"
     >
       {children}
     </ul>,

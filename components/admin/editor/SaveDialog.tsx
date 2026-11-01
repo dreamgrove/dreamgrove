@@ -54,7 +54,7 @@ export default function SaveDialog({
         >
           <div>
             <label htmlFor="commit-title" className={LABEL}>
-              Title<span className="ml-0.5 text-[#d57f43]">*</span>
+              Title<span className="ml-0.5 text-main">*</span>
             </label>
             <input
               id="commit-title"
@@ -115,7 +115,7 @@ export default function SaveDialog({
         <dt className="text-white/45">File</dt>
         <dd className="m-0 font-mono text-[.82rem] break-all text-white/80">
           {filePath}
-          {isNewFile && <span className="ml-2 font-sans text-[#ffb86c]">(new)</span>}
+          {isNewFile && <span className="ml-2 font-sans text-dg-highlight">(new)</span>}
         </dd>
         <dt className="text-white/45">Title</dt>
         <dd className="m-0 text-white">{title}</dd>

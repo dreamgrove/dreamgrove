@@ -20,7 +20,7 @@ export default function Switch({
       <span
         aria-hidden
         className={`relative h-4 w-7 rounded-full transition-colors peer-focus-visible:outline-2 peer-focus-visible:outline-white ${
-          checked ? 'bg-[#d57f43]' : 'bg-[#3a3a3a]'
+          checked ? 'bg-main' : 'bg-dg-line'
         }`}
       >
         <span

@@ -23,7 +23,7 @@ export default function StatusBar({
 }) {
   const words = useMemo(() => countWords(text), [text])
   return (
-    <div className="flex flex-shrink-0 items-center justify-between gap-4 border-t border-[#3a3a3a] bg-[#1f1f1f] px-3 py-1 text-[.74rem] text-white/40 tabular-nums">
+    <div className="flex flex-shrink-0 items-center justify-between gap-4 border-t border-dg-line bg-dg-panel-deep px-3 py-1 text-[.74rem] text-white/40 tabular-nums">
       <span className="flex gap-3 whitespace-nowrap">
         <span>
           Ln {line}, Col {col}

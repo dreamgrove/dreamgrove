@@ -45,7 +45,7 @@ const MobileNav = ({ toc }: { toc?: Chapter[] }) => {
       >
         <Icon
           name="menu"
-          className="dark:hover:text-primary-400 hover:text-primary-500 mb-[-2px] h-[31px] w-[31px] text-gray-900 dark:text-gray-100"
+          className="mb-[-2px] h-[31px] w-[31px] text-gray-900 hover:text-primary-500 dark:text-gray-100"
         />
       </button>
       {/* headlessui's dialog loads on the first tap instead of with every page */}

@@ -24,7 +24,7 @@ export default function TalentColors({
       {value.map((c, i) => (
         <div
           key={i}
-          className="flex flex-col gap-1.5 rounded-[4px] border border-[#383838] bg-[#2a2a2a] p-1.5"
+          className="flex flex-col gap-1.5 rounded-[4px] border border-dg-line-soft bg-dg-panel p-1.5"
         >
           <div className="flex items-center gap-2 pl-1">
             <span className="font-mono text-[.75rem] text-[#7a7a7a]">

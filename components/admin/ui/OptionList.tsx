@@ -49,7 +49,7 @@ export default function OptionList<T>({
             onMouseEnter={() => onHover(i)}
             onClick={() => onPick(item)}
             className={`flex w-full items-center justify-between gap-3 rounded-[4px] px-2.5 py-1.5 text-left text-[.86rem] ${
-              i === highlighted ? 'bg-[#383838] text-white' : 'text-[#d4d4d4]'
+              i === highlighted ? 'bg-dg-line-soft text-white' : 'text-[#d4d4d4]'
             }`}
           >
             {children(item)}

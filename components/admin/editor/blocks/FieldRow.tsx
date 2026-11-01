@@ -157,7 +157,7 @@ export default function FieldRow({
       {field.label && (
         <label htmlFor={id} className={LABEL}>
           {field.label}
-          {field.required && <span className="ml-0.5 text-[#d57f43]">*</span>}
+          {field.required && <span className="ml-0.5 text-main">*</span>}
         </label>
       )}
       {control}
@@ -169,7 +169,7 @@ export default function FieldRow({
               href={field.link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-1 font-semibold text-[#ffb86c] hover:underline ${field.help ? 'ml-1.5' : ''}`}
+              className={`inline-flex items-center gap-1 font-semibold text-dg-highlight hover:underline ${field.help ? 'ml-1.5' : ''}`}
             >
               {field.link.label}
               <Icon box name="external" size={11} />

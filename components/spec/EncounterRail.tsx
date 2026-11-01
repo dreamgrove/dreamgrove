@@ -50,7 +50,7 @@ export default function EncounterRail() {
         }}
         className={`block cursor-pointer rounded-md px-3 py-2.5 text-[.98rem] transition-colors hover:bg-[#333] ${
           isActive
-            ? 'bg-[#2a2a2a] font-semibold text-[#d57f43]'
+            ? 'bg-dg-panel font-semibold text-main'
             : e.empty
               ? 'font-medium text-white/40'
               : 'font-medium text-white/80'

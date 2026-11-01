@@ -10,7 +10,7 @@ const links = [
 export default function Footer() {
   return (
     <footer className="site-footer mx-auto w-full">
-      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-gray-300 pt-9 pb-11 dark:border-[#3a3a3a]">
+      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-gray-300 pt-9 pb-11 dark:border-dg-line">
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <span className="font-familiar-pro text-lg font-bold text-gray-900 dark:text-white">
             dreamgrove<span className="text-main">.</span>gg

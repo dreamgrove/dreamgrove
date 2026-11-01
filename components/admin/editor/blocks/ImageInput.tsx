@@ -46,7 +46,7 @@ export default function ImageInput({
         setDragging(false)
         take(e.dataTransfer.files[0])
       }}
-      className={`rounded-md transition-shadow ${dragging ? 'ring-2 ring-[#d57f43]' : ''}`}
+      className={`rounded-md transition-shadow ${dragging ? 'ring-2 ring-main' : ''}`}
     >
       <div className="flex gap-2">
         <input
@@ -90,7 +90,7 @@ export default function ImageInput({
         <img
           src={previewSrc}
           alt=""
-          className="mt-3 block max-h-40 max-w-full rounded-md border border-[#383838] bg-[#1c1c1c] object-contain"
+          className="mt-3 block max-h-40 max-w-full rounded-md border border-dg-line-soft bg-[#1c1c1c] object-contain"
           onError={(e) => (e.currentTarget.style.display = 'none')}
           onLoad={(e) => (e.currentTarget.style.display = '')}
         />

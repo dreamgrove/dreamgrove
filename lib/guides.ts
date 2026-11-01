@@ -8,6 +8,7 @@ export interface GuideEntry {
   summary?: string
   date?: string
   type: GuideType
+  draft?: boolean
   href: string
 }
 
@@ -30,6 +31,7 @@ function getAllGuides(): TaggedGuide[] {
       summary: p.summary,
       date: p.date,
       type: 'Article',
+      draft: p.draft,
       href: `/${p.path}`,
       specs: p.specs ?? [],
     }))
@@ -40,6 +42,7 @@ function getAllGuides(): TaggedGuide[] {
       summary: p.summary,
       date: p.date,
       type,
+      draft: p.draft,
       href: `/${p.path}`,
       specs: p.specs ?? [],
     }))
