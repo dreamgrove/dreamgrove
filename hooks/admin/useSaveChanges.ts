@@ -5,7 +5,7 @@ import { clearNewPage } from '@/lib/admin/newPageStash'
 
 const REDIRECT_DELAY_MS = 2000
 
-/** Where to go after a save that didn't open a PR (legacy) */
+/** Where to go after a local dev save, which commits to a local branch instead of opening a PR */
 function afterSave(filePath: string) {
   const isCompendium = filePath.endsWith('/compendium.mdx') && filePath.includes('blog/')
   return isCompendium ? `/blog/${filePath.split('/').slice(1, -1).join('/')}/compendium` : '/cms'
@@ -38,14 +38,7 @@ export function useSaveChanges({
       const res = await fetch('/api/compendium/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          filePath,
-          content,
-          images,
-          commitTitle,
-          commitMessage,
-          createPr: true,
-        }),
+        body: JSON.stringify({ filePath, content, images, commitTitle, commitMessage }),
       })
       const data = await res.json().catch(() => ({}))
       if (!res.ok) throw new Error(data.error || `Error saving content: ${res.statusText}`)

@@ -10,7 +10,8 @@ import {
   UPLOAD_PATH_RE,
   matchesImageType,
 } from '@/lib/admin/imageUploads'
-import { CONTENT_PATH_RE } from '@/lib/admin/content'
+import { CONTENT_PATH_RE, kindOf } from '@/lib/admin/content'
+import { withLastmod } from '@/lib/admin/document'
 import { getGitHubContext } from '@/lib/admin/access'
 import {
   BRANCH,
@@ -69,31 +70,29 @@ export async function POST(request: Request) {
   if (!github) return fail('Unauthorized', 401)
 
   try {
-    let body: any
+    let body: Record<string, unknown> | null
     try {
-      body = await readJsonCapped(request, MAX_BODY_BYTES)
+      body = (await readJsonCapped(request, MAX_BODY_BYTES)) as Record<string, unknown> | null
     } catch (error) {
       if (error instanceof BodyTooLargeError) return fail('Request is too large', 413)
       return fail('Invalid request body')
     }
-    const {
-      filePath,
-      content,
-      images = [],
-      commitTitle,
-      commitMessage,
-      createPr = false,
-    } = body ?? {}
+    const { filePath, content: submitted, images = [], commitTitle, commitMessage } = body ?? {}
 
-    if (!filePath || !content) return fail('Missing required parameters')
+    if (!filePath || !submitted) return fail('Missing required parameters')
 
     // only allow plain data/ paths
     if (typeof filePath !== 'string' || !CONTENT_PATH_RE.test(filePath)) {
       return fail('Invalid file path')
     }
-    if (typeof content !== 'string' || content.length > MAX_CONTENT_CHARS) {
+    if (typeof submitted !== 'string' || submitted.length > MAX_CONTENT_CHARS) {
       return fail('Page content is too large')
     }
+    // Pages (about.mdx) have no lastmod field; guides and posts show it as "Updated"
+    const content =
+      kindOf(filePath) === 'page'
+        ? submitted
+        : withLastmod(submitted, new Date().toISOString().slice(0, 10))
     if (
       !optionalString(commitTitle, MAX_TITLE_CHARS) ||
       !optionalString(commitMessage, MAX_MESSAGE_CHARS)
@@ -127,10 +126,12 @@ export async function POST(request: Request) {
       return fail('Uploaded images add up to more than 3 MB')
     }
 
-    // Use provided commit message or fallback to default
     const fileName = path.basename(filePath, '.mdx')
-    const commitTitleToUse = commitTitle || `Update ${fileName}`
-    const commitMessageToUse = commitMessage || ''
+    const commitTitleToUse = (commitTitle as string | undefined) || `Update ${fileName}`
+    const commitMessageToUse = (commitMessage as string | undefined) || ''
+    const fullCommitMessage = commitMessageToUse
+      ? `${commitTitleToUse}\n\n${commitMessageToUse}`
+      : commitTitleToUse
 
     // Construct the file path
     const fullFilePath = path.join(PROJECT_ROOT, 'data', filePath)
@@ -156,12 +157,6 @@ export async function POST(request: Request) {
         // execFile passes arguments as-is, so nothing in them reaches a shell
         await git('checkout', '-b', branchName)
         await git('add', '--', `data/${filePath}`, ...uploads.map((u) => u.path))
-
-        // Use the provided commit message if available
-        const fullCommitMessage = commitMessageToUse
-          ? `${commitTitleToUse}\n\n${commitMessageToUse}`
-          : commitTitleToUse
-
         await git('commit', '-m', fullCommitMessage)
 
         return NextResponse.json({
@@ -200,70 +195,63 @@ export async function POST(request: Request) {
           ? { owner: REPO_OWNER, repo: REPO_NAME }
           : await ensureFork(octokit)
 
-        // Branch from the tip of upstream's main branch (forks share its commits)
-        const { data: refData } = await octokit.rest.git.getRef({
+        // One commit on top of upstream's main branch (forks share its objects), with
+        // the page and its images together. The branch ref is created last, so a
+        // failed upload never leaves a half-written branch behind.
+        const { data: base } = await octokit.rest.git.getRef({
           owner: REPO_OWNER,
           repo: REPO_NAME,
           ref: `heads/${BRANCH}`,
         })
+        const { data: baseCommit } = await octokit.rest.git.getCommit({
+          owner: REPO_OWNER,
+          repo: REPO_NAME,
+          commit_sha: base.object.sha,
+        })
 
+        const files = [...uploads, { path: `data/${filePath}`, data: Buffer.from(content) }]
+        const blobs = await Promise.all(
+          files.map((file) =>
+            octokit.rest.git.createBlob({
+              ...target,
+              content: file.data.toString('base64'),
+              encoding: 'base64',
+            })
+          )
+        )
+        const { data: tree } = await octokit.rest.git.createTree({
+          ...target,
+          base_tree: baseCommit.tree.sha,
+          tree: files.map((file, i) => ({
+            path: file.path,
+            mode: '100644' as const,
+            type: 'blob' as const,
+            sha: blobs[i].data.sha,
+          })),
+        })
+        const { data: commit } = await octokit.rest.git.createCommit({
+          ...target,
+          message: fullCommitMessage,
+          tree: tree.sha,
+          parents: [base.object.sha],
+        })
         await octokit.rest.git.createRef({
           ...target,
           ref: `refs/heads/${newBranchName}`,
-          sha: refData.object.sha,
+          sha: commit.sha,
         })
 
-        for (const upload of uploads) {
-          await octokit.rest.repos.createOrUpdateFileContents({
-            ...target,
-            path: upload.path,
-            message: `Add ${path.posix.basename(upload.path)}`,
-            content: upload.data.toString('base64'),
-            branch: newBranchName,
-          })
-        }
-
-        // An existing file needs its SHA to be updated
-        let fileSha: string | undefined
-        try {
-          const currentFile = await octokit.rest.repos.getContent({
-            ...target,
-            path: `data/${filePath}`,
-            ref: newBranchName,
-          })
-          if (!Array.isArray(currentFile.data)) fileSha = currentFile.data.sha
-        } catch (_) {
-          // File doesn't exist yet, create it
-        }
-
-        await octokit.rest.repos.createOrUpdateFileContents({
-          ...target,
-          path: `data/${filePath}`,
-          message: commitTitleToUse,
-          content: Buffer.from(content).toString('base64'),
-          sha: fileSha,
-          branch: newBranchName,
+        const { data: pullRequest } = await octokit.rest.pulls.create({
+          owner: REPO_OWNER,
+          repo: REPO_NAME,
+          title: commitTitleToUse,
+          body: commitMessageToUse || `Updates to ${fileName}`,
+          head: isCollaborator ? newBranchName : `${target.owner}:${newBranchName}`,
+          base: BRANCH,
+          // Lets maintainers fix up a fork PR before merging it
+          maintainer_can_modify: !isCollaborator,
         })
-
-        let prUrl: string | null = null
-
-        // Create a PR if requested
-        if (createPr) {
-          const prBody = commitMessageToUse || `Updates to ${fileName}`
-
-          const { data: pullRequest } = await octokit.rest.pulls.create({
-            owner: REPO_OWNER,
-            repo: REPO_NAME,
-            title: commitTitleToUse,
-            body: prBody,
-            head: isCollaborator ? newBranchName : `${target.owner}:${newBranchName}`,
-            base: BRANCH,
-            // Lets maintainers fix up a fork PR before merging it
-            maintainer_can_modify: !isCollaborator,
-          })
-
-          prUrl = pullRequest.html_url
-        }
+        const prUrl = pullRequest.html_url
 
         return NextResponse.json({
           success: true,
