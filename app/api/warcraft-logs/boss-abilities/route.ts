@@ -1,86 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import axios, { AxiosError } from 'axios'
 import type { BossAbilityCast, BossAbilitiesResponse } from '@/types/bossAbilities'
-
-class WclError extends Error {
-  constructor(
-    public step: string,
-    public status: number | null,
-    public detail: string
-  ) {
-    super(`[${step}] ${status ?? '?'} ${detail}`)
-  }
-}
-
-function wrapAxios(step: string, err: unknown): never {
-  if (axios.isAxiosError(err)) {
-    const ax = err as AxiosError
-    const status = ax.response?.status ?? null
-    const body = ax.response?.data
-    const detail =
-      typeof body === 'string'
-        ? body.slice(0, 400)
-        : body
-          ? JSON.stringify(body).slice(0, 400)
-          : ax.message
-    throw new WclError(step, status, detail)
-  }
-  throw err
-}
-
-async function getWarcraftLogsToken(): Promise<string> {
-  const clientId = process.env.WARCRAFT_LOGS_CLIENT_ID
-  const clientSecret = process.env.WARCRAFT_LOGS_CLIENT_SECRET
-
-  if (!clientId || !clientSecret) {
-    throw new Error('Warcraft Logs API credentials are not configured')
-  }
-
-  try {
-    const tokenResponse = await axios.post(
-      'https://www.warcraftlogs.com/oauth/token',
-      new URLSearchParams({ grant_type: 'client_credentials' }).toString(),
-      {
-        auth: { username: clientId, password: clientSecret },
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      }
-    )
-    return tokenResponse.data.access_token
-  } catch (e) {
-    wrapAxios('oauth/token', e)
-  }
-}
-
-async function executeWarcraftLogsQuery(
-  step: string,
-  token: string,
-  query: string,
-  variables: Record<string, unknown> = {}
-) {
-  try {
-    const response = await axios.post(
-      'https://www.warcraftlogs.com/api/v2/client',
-      { query, variables },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    )
-    if (response.data?.errors?.length) {
-      throw new WclError(
-        step,
-        200,
-        `GraphQL error: ${JSON.stringify(response.data.errors).slice(0, 400)}`
-      )
-    }
-    return response.data
-  } catch (e) {
-    if (e instanceof WclError) throw e
-    wrapAxios(step, e)
-  }
-}
+import { hasWarcraftLogsCredentials, queryWarcraftLogs, WclError } from '@/lib/warcraftLogs'
 
 function emptyResponse(
   encounterId: number,
@@ -100,7 +20,7 @@ function emptyResponse(
 
 export async function GET(request: NextRequest) {
   try {
-    if (!process.env.WARCRAFT_LOGS_CLIENT_ID || !process.env.WARCRAFT_LOGS_CLIENT_SECRET) {
+    if (!hasWarcraftLogsCredentials()) {
       return NextResponse.json(
         { error: 'Warcraft Logs API credentials are not configured' },
         { status: 500 }
@@ -113,8 +33,6 @@ export async function GET(request: NextRequest) {
     if (!Number.isFinite(encounterId) || encounterId <= 0) {
       return NextResponse.json(emptyResponse(encounterId, difficulty, 'Invalid encounterId'))
     }
-
-    const token = await getWarcraftLogsToken()
 
     // (a) Pick top-1 ranked report for this encounter.
     const rankingsQuery = `
@@ -140,7 +58,7 @@ export async function GET(request: NextRequest) {
     let encounterName = ''
     let rankings: any[] = []
     for (const tryDifficulty of difficultiesToTry) {
-      const rankingsResp = await executeWarcraftLogsQuery('rankings', token, rankingsQuery, {
+      const rankingsResp = await queryWarcraftLogs('rankings', rankingsQuery, {
         encounterId,
         difficulty: tryDifficulty,
       })
@@ -207,7 +125,7 @@ export async function GET(request: NextRequest) {
         }
       }
     `
-    const fightResp = await executeWarcraftLogsQuery('fight+actors', token, fightActorsQuery, {
+    const fightResp = await queryWarcraftLogs('fight+actors', fightActorsQuery, {
       code: reportCode,
       fightID,
     })
@@ -269,7 +187,7 @@ export async function GET(request: NextRequest) {
         }
       }
     `
-    const eventsResp = await executeWarcraftLogsQuery('events', token, eventsQuery, {
+    const eventsResp = await queryWarcraftLogs('events', eventsQuery, {
       code: reportCode,
       fightID,
       startTime: fight.startTime,
