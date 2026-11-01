@@ -163,42 +163,54 @@ h1.content-header::before {
   @apply underline;
 }
 
-.markdown-alert-title {
-  @apply mt-0!;
-}
-
-/* GitHub-style alert gradient backgrounds */
+/* GitHub-style alerts, matching the CMS editor's callouts */
 div.markdown-alert {
-  border-radius: 0.5rem;
-  border-left-width: 4px;
-  border-left-style: solid;
-  padding: 0.85rem 1rem 0.75rem;
+  --callout: #5b9bd5;
+  border-radius: 0 6px 6px 0;
+  border-left: 3px solid var(--callout);
+  background: color-mix(in srgb, var(--callout) 9%, transparent);
+  padding: 0.75rem 1rem;
   margin: 1rem 0;
 }
 
-div.markdown-alert-note {
-  border-color: #3b82f6;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.02) 100%);
+/* [class] outweighs the plugin's per-type title colours */
+div.markdown-alert[class] .markdown-alert-title {
+  @apply mt-0!;
+  margin-bottom: 0.35rem;
+  color: var(--callout);
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-div.markdown-alert-tip {
-  border-color: #22c55e;
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0.02) 100%);
+div.markdown-alert .markdown-alert-title svg.octicon {
+  display: none;
 }
 
-div.markdown-alert-important {
-  border-color: #a855f7;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(168, 85, 247, 0.02) 100%);
+div.markdown-alert.markdown-alert-note {
+  border-left-color: var(--callout);
+  --callout: #5b9bd5;
 }
 
-div.markdown-alert-warning {
-  border-color: #eab308;
-  background: linear-gradient(135deg, rgba(234, 179, 8, 0.08) 0%, rgba(234, 179, 8, 0.02) 100%);
+div.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--callout);
+  --callout: #5fb760;
 }
 
-div.markdown-alert-caution {
-  border-color: #ef4444;
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(239, 68, 68, 0.02) 100%);
+div.markdown-alert.markdown-alert-important {
+  border-left-color: var(--callout);
+  --callout: #a77fdc;
+}
+
+div.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--callout);
+  --callout: #e2c044;
+}
+
+div.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--callout);
+  --callout: #e05555;
 }
 
 @font-face {
@@ -822,6 +834,9 @@ html {
   flex-direction: column;
   gap: 18px;
   margin-top: 20px;
+  /* Same body font as guide prose; thiccboi has no regular weight */
+  font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  font-kerning: auto;
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--dg-text-body);
@@ -907,8 +922,6 @@ html {
 
 .dg-encounter-body div.markdown-alert {
   margin: 0;
-  border-radius: 6px;
-  background: var(--dg-row);
   font-size: 1rem;
   line-height: 1.7;
 }

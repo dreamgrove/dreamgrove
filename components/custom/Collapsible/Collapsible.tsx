@@ -10,10 +10,7 @@ const Collapsible = ({ title, children }) => {
   }
 
   return (
-    <div
-      className="mt-3 mb-3 grid overflow-hidden rounded-md border border-gray-200/60 bg-gray-50/40 dark:border-gray-700/40 dark:bg-white/[0.02]"
-      style={{ borderLeft: '2px solid rgba(120, 120, 120, 0.3)' }}
-    >
+    <div className="mt-3 mb-3 grid overflow-hidden rounded-md border border-gray-200 bg-gray-50/60 dark:border-gray-700/70 dark:bg-white/[0.035]">
       <button
         className="group flex h-auto w-full cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-200"
         onClick={toggle}

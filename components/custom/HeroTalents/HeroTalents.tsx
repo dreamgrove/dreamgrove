@@ -11,24 +11,24 @@ interface HeroTalentsHeaderProps {
 
 const specConfig: Record<string, { borderColor: string; bg: string; bottomBorder: string }> = {
   kotg: {
-    borderColor: '#2d6b2d',
-    bg: 'rgba(24, 65, 24, 0.06)',
-    bottomBorder: 'rgba(24, 65, 24, 0.2)',
+    borderColor: '#3f9a3f',
+    bg: 'rgba(63, 154, 63, 0.07)',
+    bottomBorder: 'rgba(63, 154, 63, 0.3)',
   },
   ec: {
     borderColor: '#4b62be',
-    bg: 'rgba(75, 98, 190, 0.06)',
-    bottomBorder: 'rgba(75, 98, 190, 0.2)',
+    bg: 'rgba(75, 98, 190, 0.08)',
+    bottomBorder: 'rgba(75, 98, 190, 0.3)',
   },
   dotc: {
     borderColor: '#c41e3a',
-    bg: 'rgba(196, 30, 58, 0.06)',
-    bottomBorder: 'rgba(196, 30, 58, 0.2)',
+    bg: 'rgba(196, 30, 58, 0.08)',
+    bottomBorder: 'rgba(196, 30, 58, 0.3)',
   },
   generic: {
     borderColor: '#d57f43',
-    bg: 'rgba(213, 127, 67, 0.05)',
-    bottomBorder: 'rgba(213, 127, 67, 0.15)',
+    bg: 'rgba(213, 127, 67, 0.07)',
+    bottomBorder: 'rgba(213, 127, 67, 0.25)',
   },
 }
 
@@ -40,10 +40,7 @@ export default function HeroTalents({ title, id, children }: HeroTalentsHeaderPr
     <div
       className="talentTree mt-4 mb-4 grid overflow-hidden rounded-md"
       style={{
-        borderLeft: `3px solid ${config.borderColor}`,
-        borderBottom: `1px solid ${config.bottomBorder}`,
-        borderRight: `1px solid ${config.bottomBorder}`,
-        borderTop: `1px solid ${config.bottomBorder}`,
+        border: `1px solid ${config.bottomBorder}`,
         background: config.bg,
       }}
     >

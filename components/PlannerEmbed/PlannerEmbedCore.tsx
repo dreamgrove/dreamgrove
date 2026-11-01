@@ -14,9 +14,10 @@ import { formatTime } from '@/lib/utils/utilityFunctions'
 import { plannerEmbedStrings, PlannerEmbedStrings } from './strings'
 
 const ROW_H = 40 // h-10, matches the planner's cast rows
-const ROW_GAP = 16 // my-2 top+bottom
+const ROW_GAP = 16 // space between rows, split above and below each
+const ROW_PITCH = ROW_H + ROW_GAP
 const HEADER_H = 24 // time label band above the rows
-const NAME_COL_W = 160
+const NAME_COL_W = 184 // fits names like Celestial Alignment ×2 on one line
 
 interface PlannerEmbedCoreProps {
   code: string
@@ -162,7 +163,7 @@ export default function PlannerEmbedCore({
   const measured = trackWidth > 0
 
   const totalRows = sim.spells.reduce((acc, s) => acc + rowCount(s), 0)
-  const rowsHeight = totalRows * (ROW_H + ROW_GAP)
+  const rowsHeight = totalRows * ROW_PITCH
 
   const markerSpacing = pickMarkerSpacing(pixelsPerSecond)
   const markerPositions: number[] = []
@@ -180,30 +181,30 @@ export default function PlannerEmbedCore({
           <div style={{ height: HEADER_H }} />
           {sim.spells.map((spellRow) => {
             const isCustom = isCustomSpell(spellRow.spell)
-            const extraRows = rowCount(spellRow) - 1
+            const rows = rowCount(spellRow)
+            // Fixed height per row (no margins) so names stay level with the track;
+            // a multi-charge name sits centred across all of its rows
             return (
               <div
                 key={`embed-name-${spellRow.spell.spellId}`}
-                className="flex w-full flex-col border-r-2 border-orange-500/50"
+                className="flex w-full flex-row items-center justify-end gap-2 border-r-2 border-orange-500/50 pr-2 text-right text-sm"
+                style={{ height: rows * ROW_PITCH }}
               >
-                <div className="my-2 flex h-10 w-full flex-row items-center justify-end gap-2 truncate pr-2 text-center text-sm">
-                  {isCustom && (
-                    <CustomSpellIcon
-                      spell={spellRow.spell as CustomSpell}
-                      size="sm"
-                      className="inline-block shrink-0"
-                    />
-                  )}
+                {isCustom && (
+                  <CustomSpellIcon
+                    spell={spellRow.spell as CustomSpell}
+                    size="sm"
+                    className="inline-block shrink-0"
+                  />
+                )}
+                <span className="min-w-0">
                   {spellNames[spellRow.spell.spellId] || spellRow.spell.name}
-                  {extraRows > 0 && (
-                    <span className="shrink-0 text-[0.7rem] text-orange-300/80">
-                      ×{spellRow.chargesUsed}
-                    </span>
-                  )}
-                </div>
-                {Array.from({ length: extraRows }).map((_, i) => (
-                  <div key={`embed-name-pad-${i}`} className="my-2 h-10 w-full" />
-                ))}
+                </span>
+                {rows > 1 && (
+                  <span className="shrink-0 text-[0.7rem] text-orange-300/80">
+                    ×{spellRow.chargesUsed}
+                  </span>
+                )}
               </div>
             )
           })}
@@ -249,15 +250,20 @@ export default function PlannerEmbedCore({
                   return (
                     <div key={`embed-row-${spellRow.spell.spellId}`}>
                       {chargeRows.map((casts, chargeIndex) => (
-                        <div key={`embed-charge-${chargeIndex}`} className="relative my-2 h-10">
-                          {casts.map((cast, i) => (
-                            <EmbedCast
-                              key={cast.id || `embed-cast-${i}`}
-                              cast={cast}
-                              pixelsPerSecond={pixelsPerSecond}
-                              t={t}
-                            />
-                          ))}
+                        <div
+                          key={`embed-charge-${chargeIndex}`}
+                          style={{ height: ROW_PITCH, paddingTop: ROW_GAP / 2 }}
+                        >
+                          <div className="relative h-10">
+                            {casts.map((cast, i) => (
+                              <EmbedCast
+                                key={cast.id || `embed-cast-${i}`}
+                                cast={cast}
+                                pixelsPerSecond={pixelsPerSecond}
+                                t={t}
+                              />
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
