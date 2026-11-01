@@ -10,9 +10,6 @@ import TableOfContents from '@/components/custom/TableOfContents/TableOfContents
 import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import type { CheckboxItem } from '@/lib/utils/checkboxDefaults'
-import AprilFoolsAds, {
-  LazyAprilFoolsBanner as AprilFoolsBanner,
-} from '@/components/AprilFools/LazyAprilFools'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -42,7 +39,6 @@ export default function PostLayout({
   return (
     <SectionContainer>
       <PageActions editPath={filePath} />
-      {isCompendium && <AprilFoolsBanner />}
       <article>
         <div>
           <header className="h-auto pt-4 pb-12 lg:h-28 lg:py-0">
@@ -131,8 +127,6 @@ export default function PostLayout({
           </div>
         </div>
       </article>
-      {isCompendium && <AprilFoolsBanner />}
-      {isCompendium && <AprilFoolsAds bannerCount={0} />}
     </SectionContainer>
   )
 }

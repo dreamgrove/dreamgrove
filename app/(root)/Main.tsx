@@ -1,9 +1,7 @@
 'use client'
 import Icon from '@/components/Icon'
 import Link from '@/components/Link'
-import { useTheme } from 'next-themes'
-import { useState, useSyncExternalStore, ViewTransition } from 'react'
-import MainAprilFools from './MainAprilFools'
+import { useState, ViewTransition } from 'react'
 import SpecArt from '@/components/spec/SpecArt'
 import { setActiveSpec, useActiveSpec } from '@/components/spec/ActiveSpec'
 import { inPageTransition } from '@/components/spec/specCardMorph'
@@ -21,18 +19,8 @@ const ROW =
 const NAME = 'font-gilroy text-mask-white pointer-events-none relative w-fit leading-none font-bold'
 
 export default function Home({ tiles }: { tiles: SpecTile[] }) {
-  const { theme } = useTheme()
   const [hover, setHover] = useState<string | null>(null)
   const activeSpec = useActiveSpec()
-  const mounted = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false
-  )
-
-  if (theme === 'april-fools' && mounted) {
-    return <MainAprilFools />
-  }
 
   return (
     <section className="dg-container flex flex-col pt-1 pb-8 sm:min-h-[calc(100dvh-208px)]">

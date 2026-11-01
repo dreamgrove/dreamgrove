@@ -26,7 +26,6 @@
       "@/lib/*": ["./lib/*"],
       "@/models/*": ["./models/*"],
       "app/*": ["./app/*"],
-      "bot/*": ["./bot/*"],
       "css/*": ["./css/*"],
       "plugins/*": ["./plugins/*"],
       "public/*": ["./public/*"]

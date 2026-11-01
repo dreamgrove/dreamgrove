@@ -5,16 +5,9 @@ import png from '../public/static/images/logo.png'
 import Image from 'next/image'
 import Link from './Link'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import PageTitle from './PageTitle'
 import LanguageSwitcher from './LanguageSwitcher'
 import styles from './Header.module.css'
-import { memo, useSyncExternalStore } from 'react'
-import { useTheme } from 'next-themes'
-import dynamic from 'next/dynamic'
-
-// Only loaded while the April Fools theme is active
-const HeaderAprilFools = dynamic(() => import('../app/components/HeaderAprilFools'))
 
 interface Chapter {
   value: string
@@ -37,8 +30,7 @@ export interface HeaderCrumb {
   color: string
 }
 
-// Base header component that never changes internally
-const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
+export default function Header(props: HeaderProps) {
   const { toc, title, showTitle = true, isBlog = false, crumb, variant = 'default' } = props
   const isMainPage = title === 'Main'
   const isRedesign = variant === 'redesign'
@@ -117,7 +109,6 @@ const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
               </div>
             )}
             <div className="ml-2 flex h-[31px] items-center sm:ml-6 sm:hidden">
-              {false && <ThemeSwitch />}
               <MobileNav toc={toc} />
             </div>
           </div>
@@ -125,33 +116,4 @@ const BaseHeader = memo(function BaseHeader(props: HeaderProps) {
       </div>
     </header>
   )
-})
-
-// April Fools component is also memoized
-const MemoizedAprilFools = memo(HeaderAprilFools)
-
-const subscribeNoop = () => () => {}
-
-// Main Header component
-function Header(props: HeaderProps) {
-  const { theme } = useTheme()
-
-  // Renders the base header until hydration finishes, so the server and client markup match
-  const mounted = useSyncExternalStore(
-    subscribeNoop,
-    () => true,
-    () => false
-  )
-
-  if (!mounted) {
-    return <BaseHeader {...props} />
-  }
-
-  if (theme === 'april-fools') {
-    return <MemoizedAprilFools {...props} />
-  }
-
-  return <BaseHeader {...props} />
 }
-
-export default Header

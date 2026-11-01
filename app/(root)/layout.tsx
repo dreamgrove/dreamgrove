@@ -1,5 +1,4 @@
 import 'css/tailwind.css'
-import 'css/april-fools.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Source_Sans_3, IBM_Plex_Sans, Geist } from 'next/font/google'

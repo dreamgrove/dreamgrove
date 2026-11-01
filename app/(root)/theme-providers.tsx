@@ -7,7 +7,7 @@ export default function ThemeProviders({ children }: { children: React.ReactNode
       attribute="class"
       defaultTheme={siteMetadata.theme}
       enableSystem
-      themes={['light', 'dark', 'april-fools']}
+      themes={['light', 'dark']}
       disableTransitionOnChange
     >
       {children}
