@@ -63,9 +63,7 @@ export function SpellInput({
     return (
       <div className="flex h-[38px] items-center justify-between gap-3 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-3">
         <span className="min-w-0 truncate text-[.9rem]">
-          <span className="font-semibold text-[#ffb86c]">
-            {names.get(Number(value)) ?? 'Spell'}
-          </span>
+          <span className="font-semibold text-dg-highlight">{names(value) ?? 'Spell'}</span>
           <span className="ml-2 font-mono text-[.78rem] text-white/40">{value}</span>
         </span>
         <button
@@ -94,7 +92,7 @@ export function SpellInput({
         value={search.query}
         onChange={(e) => search.type(e.target.value)}
         onFocus={() => search.setOpen(true)}
-        onBlur={() => setTimeout(() => search.setOpen(false), 120)}
+        onBlur={() => search.setOpen(false)}
         onKeyDown={(e) => {
           if (search.arrow(e) || e.key !== 'Enter') return
           e.preventDefault()
@@ -163,7 +161,7 @@ export function SpellList({
     <div
       ref={boxRef}
       onClick={() => inputRef.current?.focus()}
-      className="flex min-h-10 cursor-text flex-wrap items-center gap-1 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-2 py-[5px] focus-within:border-[#d57f43]"
+      className="flex min-h-10 cursor-text flex-wrap items-center gap-1 rounded-md border border-[#3d3d3d] bg-[#1c1c1c] px-2 py-[5px] focus-within:border-main"
     >
       {value.map((sid, i) => (
         <span
@@ -179,11 +177,11 @@ export function SpellList({
           className="flex h-7 cursor-grab items-center gap-1.5 rounded-[4px] border border-[#444] bg-[#333] pr-0.5 pl-2 text-[.82rem] active:cursor-grabbing"
         >
           <span className="font-mono text-[.7rem] text-white/30 tabular-nums">{i + 1}</span>
-          <span className="text-white/85">{names.get(Number(sid)) ?? sid}</span>
+          <span className="text-white/85">{names(sid) ?? sid}</span>
           <button
             type="button"
             onClick={() => onChange(value.filter((_, j) => j !== i))}
-            aria-label={`Remove ${names.get(Number(sid)) ?? sid}`}
+            aria-label={`Remove ${names(sid) ?? sid}`}
             className="rounded-xs p-0.5 text-white/40 hover:text-white"
           >
             <Icon box name="close" size={11} />
