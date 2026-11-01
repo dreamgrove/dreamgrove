@@ -71,6 +71,9 @@ jobs:
       - name: Check MDX
         run: pnpm check:mdx
 
+      - name: Test
+        run: pnpm test
+
       - name: Build
         run: pnpm build
         env:

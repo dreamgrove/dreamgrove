@@ -1,5 +1,4 @@
-// Runs with Node's test runner (`pnpm test:mdx`): @mdx-js/mdx is ESM-only, which ts-jest can't load.
-import { test } from 'node:test'
+import { test } from 'vitest'
 import assert from 'node:assert/strict'
 import { compile } from '@mdx-js/mdx'
 import remarkMath from 'remark-math'
