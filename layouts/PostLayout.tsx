@@ -7,17 +7,13 @@ import SectionContainer from '@/components/SectionContainer'
 import Tag from '@/components/Tag'
 import PageActions from '@/components/PageActions'
 import TableOfContents from '@/components/custom/TableOfContents/TableOfContents'
-import Link from 'next/link'
 import CheckboxProvider from '@/components/custom/CheckboxProvider'
 import type { CheckboxItem } from '@/lib/utils/checkboxDefaults'
 
 interface LayoutProps {
   content: CoreContent<Blog>
   authorDetails: string[]
-  next?: { path: string; title: string }
-  prev?: { path: string; title: string }
   children: ReactNode
-  translator?: string
   toc: any
   checkboxDefaults?: Record<string, CheckboxItem>
 }
@@ -29,12 +25,7 @@ export default function PostLayout({
   toc,
   checkboxDefaults,
 }: LayoutProps) {
-  const { patch, slug, title, tags, lastModified, changelogUrl, translator, filePath } = content
-
-  // Check if this is a compendium page
-  const isCompendium = slug?.endsWith('/compendium')
-  // Extract the spec from the slug for the edit link
-  const specSlug = isCompendium ? slug.split('/')[0] : ''
+  const { patch, title, tags, lastModified, changelogUrl, translator, filePath } = content
 
   return (
     <SectionContainer>
@@ -74,7 +65,7 @@ export default function PostLayout({
                   <div className="hidden lg:inline">
                     <a
                       href={changelogUrl}
-                      className="text-main mt-[-2px] text-base underline decoration-2 underline-offset-4"
+                      className="mt-[-2px] text-base text-main underline decoration-2 underline-offset-4"
                     >
                       <Icon name="history" className="mr-2 inline" />
                       <span className="inline">Changelog</span>
@@ -94,7 +85,7 @@ export default function PostLayout({
               <div className="absolute top-[-5px] right-0 sm:top-[-50px] sm:-right-[0px] sm:left-auto lg:hidden">
                 <a
                   href={changelogUrl}
-                  className="text-main ml-0 text-sm font-medium underline decoration-2 underline-offset-4 sm:-ml-6 sm:text-base"
+                  className="ml-0 text-sm font-medium text-main underline decoration-2 underline-offset-4 sm:-ml-6 sm:text-base"
                 >
                   <Icon name="history" className="mr-2 inline" />
                   <span className="inline align-top">Changelog</span>
@@ -102,7 +93,7 @@ export default function PostLayout({
               </div>
               <div
                 style={{ counterReset: 'heading' }}
-                className="prose dark:prose-invert max-w-none pt-4 pb-8 text-base sm:pt-0"
+                className="prose max-w-none pt-4 pb-8 text-base sm:pt-0 dark:prose-invert"
               >
                 <CheckboxProvider initialMap={checkboxDefaults}>{children}</CheckboxProvider>
               </div>

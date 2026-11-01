@@ -14,11 +14,7 @@ import { EncounterProvider, type EncounterMeta } from '@/components/spec/Encount
 
 interface LayoutProps {
   content: CoreContent<Dungeons | Raids>
-  authorDetails: string[]
-  next?: { path: string; title: string }
-  prev?: { path: string; title: string }
   children: ReactNode
-  showTitle?: boolean
 }
 
 /** Shared layout for dungeon and raid guides: hero, sticky spec/encounter rail, encounters. */
@@ -74,14 +70,14 @@ export default function DungeonLayout({ content, children }: LayoutProps) {
             <div className="mt-10 flex flex-col gap-10 sm:mt-14 lg:flex-row lg:items-start lg:gap-14">
               {/* lg:pt-[5px] lines the first label's capitals up with the first encounter heading */}
               <aside className="flex flex-col gap-[18px] lg:sticky lg:top-24 lg:w-[220px] lg:flex-none lg:pt-[5px]">
-                <div className="flex flex-col gap-3 border-b border-[#3a3a3a] pb-[18px]">
+                <div className="flex flex-col gap-3 border-b border-dg-line pb-[18px]">
                   <div className="dg-eyebrow lg:px-3">Show notes for</div>
                   <SpecFilterChips />
                 </div>
                 <EncounterRail />
                 <a
                   href={editUrl}
-                  className="text-[.85rem] font-semibold text-white/40 transition-colors hover:text-[#d57f43] lg:px-3"
+                  className="text-[.85rem] font-semibold text-white/40 transition-colors hover:text-main lg:px-3"
                 >
                   Edit this guide on GitHub
                 </a>

@@ -3,7 +3,7 @@ import Link from '@/components/Link'
 import PageWrapper from '@/components/PageWrapper'
 import GuideList from '@/components/spec/GuideList'
 import InstanceCard from '@/components/custom/Dungeons/InstanceCard'
-import { genPageMetadata } from 'app/(root)/seo'
+import { genPageMetadata } from '@/lib/seo'
 import { getLatestHeaderImage, getOtherGuides } from '@/lib/guides'
 import { allDungeons, allRaids } from 'contentlayer/generated'
 

@@ -1,13 +1,10 @@
 import GithubProvider from 'next-auth/providers/github'
-import { JWT } from 'next-auth/jwt'
-import { Account } from 'next-auth'
+import type { NextAuthOptions } from 'next-auth'
 
 // The GitHub token lives only in the encrypted JWT cookie and is read on the server
 // with getToken (lib/admin/access.ts). Never copy it onto the session: /api/auth/session
-// hands the session to client JavaScript.
-interface CustomJWT extends JWT {
-  accessToken?: string
-}
+// hands the session to client JavaScript. `accessToken` is declared on JWT in
+// types/next-auth.d.ts.
 
 if (!process.env.GITHUB_ID || !process.env.GITHUB_SECRET) {
   console.error(
@@ -15,7 +12,7 @@ if (!process.env.GITHUB_ID || !process.env.GITHUB_SECRET) {
   )
 }
 
-const authOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID || '',
@@ -33,7 +30,7 @@ const authOptions = {
     }),
   ],
   callbacks: {
-    async jwt({ token, account }: { token: CustomJWT; account: Account | null }) {
+    async jwt({ token, account }) {
       // Add access_token to the token right after signin
       if (account) {
         token.accessToken = account.access_token

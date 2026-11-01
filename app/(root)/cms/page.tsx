@@ -1,4 +1,4 @@
-import { genPageMetadata } from 'app/(root)/seo'
+import { genPageMetadata } from '@/lib/seo'
 import FileBrowser from '@/components/admin/select/FileBrowser'
 import { StatusMessage } from '@/components/admin/ui/StatusShell'
 import { getContentAccess } from '@/lib/admin/access'

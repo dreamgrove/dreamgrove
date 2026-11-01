@@ -1,88 +1,44 @@
 import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
-import { writeFileSync, statSync } from 'fs'
+import { statSync } from 'fs'
 import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
-import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic'
-// Remark packages
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import { remarkAlert } from 'remark-github-blockquote-alert'
-
-import { remarkExtractFrontmatter } from './lib/mdx-plugins/remark-extract-frontmatter.js'
-import { remarkCodeTitles } from './lib/mdx-plugins/remark-code-titles.js'
-import { remarkImgToJsx } from './lib/mdx-plugins/remark-img-to-jsx.js'
-import { extractTocHeadings } from './lib/mdx-plugins/extract-toc-headings.js'
+import { remarkPlugins, rehypePlugins } from './plugins/mdxPipeline.js'
+import { remarkImgToJsx } from './plugins/remarkImgToJsx.js'
+import { extractTocHeadings } from './plugins/extractTocHeadings.js'
 // Rehype packages
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeKatex from 'rehype-katex'
 import rehypePrismPlus from 'rehype-prism-plus'
 import siteMetadata from './data/siteMetadata'
-import remarkSpell from './plugins/remarkSpell.js'
-import remarkColor from './plugins/remarkColor.js'
-import rehypeGroupHeaders from './plugins/rehypeGroupHeaders.js'
-import remarkGroupCheckboxes from './plugins/remarkGroupCheckboxes.js'
-import remarkSafeMdx from './plugins/remarkSafeMdx.js'
-
-const isProduction = process.env.NODE_ENV === 'production'
-
-/**
- * Custom plugin to preserve spaces after closing tags
- * This plugin runs through the HTML AST and ensures spaces are preserved
- * where they're semantically important (after tags followed by text)
- */
-function rehypePreserveSpaces() {
-  return (tree) => {
-    // Process the tree to modify HTML elements
-    function processNode(node) {
-      // Skip non-element nodes
-      if (!node || !node.children) return
-
-      // Process all children
-      for (let i = 0; i < node.children.length; i++) {
-        const child = node.children[i]
-
-        // If this is a text node following an element, and starts with a letter/number
-        if (
-          i > 0 &&
-          node.children[i - 1].type === 'element' &&
-          child.type === 'text' &&
-          child.value &&
-          /^[a-zA-Z0-9]/.test(child.value.trimStart()) &&
-          !child.value.startsWith(' ')
-        ) {
-          // Add a space before the text to preserve spacing
-          child.value = ' ' + child.value
-        }
-
-        // Recursively process child elements
-        if (child.type === 'element' && child.children) {
-          processNode(child)
-        }
-      }
-    }
-
-    // Start processing from the root
-    processNode(tree)
-  }
-}
-
-// heroicon mini link
-const icon = fromHtmlIsomorphic(
-  `
-  <!--
-  <span class="content-header-link">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 linkicon">
-  <path d="M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z" />
-  <path d="M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z" />
-  </svg>
-  </span>
-  -->
-`,
-  { fragment: true }
-)
 
 const absoluteImageUrl = (img) => (img.startsWith('http') ? img : `${siteMetadata.siteUrl}${img}`)
+
+function ordinal(n: number) {
+  const j = n % 10
+  const k = n % 100
+  if (j === 1 && k !== 11) return `${n}st`
+  if (j === 2 && k !== 12) return `${n}nd`
+  if (j === 3 && k !== 13) return `${n}rd`
+  return `${n}th`
+}
+
+/** "1st of May, 2025". UTC, so a date-only `lastmod` doesn't slip back a day. */
+function formatUpdatedDate(date: Date) {
+  const month = date.toLocaleString('en-US', { month: 'long', timeZone: 'UTC' })
+  return `${ordinal(date.getUTCDate())} of ${month}, ${date.getUTCFullYear()}`
+}
+
+/** schema.org BlogPosting shared by every document type; `extra` adds or overrides fields. */
+function blogPosting(doc, extra: Record<string, unknown> = {}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: doc.title,
+    description: doc.summary,
+    image: absoluteImageUrl(siteMetadata.socialBanner),
+    url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+    ...extra,
+  }
+}
 
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
@@ -101,31 +57,12 @@ const computedFields: ComputedFields = {
   toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
   lastModified: {
     type: 'date',
-    resolve: (doc) => {
-      const stats = statSync(`data/${doc._raw.sourceFilePath}`)
-      const date = new Date(stats.mtime)
-
-      const getOrdinalSuffix = (n) => {
-        const j = n % 10,
-          k = n % 100
-        if (j === 1 && k !== 11) {
-          return n + 'st'
-        }
-        if (j === 2 && k !== 12) {
-          return n + 'nd'
-        }
-        if (j === 3 && k !== 13) {
-          return n + 'rd'
-        }
-        return n + 'th'
-      }
-
-      const dayWithSuffix = getOrdinalSuffix(date.getDate())
-      const monthName = date.toLocaleString('default', { month: 'long' })
-      const year = date.getFullYear()
-
-      return `${dayWithSuffix} of ${monthName}, ${year}`
-    },
+    // Frontmatter `lastmod` is stamped by the CMS on save. The file's mtime is
+    // only a fallback: on the deploy server it is the checkout time, not an edit.
+    resolve: (doc) =>
+      formatUpdatedDate(
+        doc.lastmod ? new Date(doc.lastmod) : statSync(`data/${doc._raw.sourceFilePath}`).mtime
+      ),
   },
   changelogUrl: {
     type: 'string',
@@ -160,30 +97,11 @@ const instanceFields = {
   headerImage: { type: 'string' },
   layout: { type: 'string' },
   date: { type: 'date' },
+  lastmod: { type: 'date' },
   patch: { type: 'string' },
   authors: { type: 'list', of: { type: 'string' } },
   specs: { type: 'list', of: { type: 'string' }, default: [] },
 } as const
-
-/**
- * Count the occurrences of all tags across blog posts and write to json file
- */
-function createTagCount(allBlogs) {
-  const tagCount: Record<string, number> = {}
-  allBlogs.forEach((file) => {
-    if (file.tags && (!isProduction || file.draft !== true)) {
-      file.tags.forEach((tag) => {
-        const formattedTag = slug(tag)
-        if (formattedTag in tagCount) {
-          tagCount[formattedTag] += 1
-        } else {
-          tagCount[formattedTag] = 1
-        }
-      })
-    }
-  })
-  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
-}
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -211,16 +129,12 @@ export const Blog = defineDocumentType(() => ({
     },
     structuredData: {
       type: 'json',
-      resolve: (doc) => ({
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: doc.title,
-        datePublished: doc.date,
-        dateModified: doc.lastmod || doc.date,
-        description: doc.summary,
-        image: absoluteImageUrl(doc.images ? doc.images[0] : siteMetadata.socialBanner),
-        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
-      }),
+      resolve: (doc) =>
+        blogPosting(doc, {
+          datePublished: doc.date,
+          dateModified: doc.lastmod || doc.date,
+          image: absoluteImageUrl(doc.images ? doc.images[0] : siteMetadata.socialBanner),
+        }),
     },
   },
 }))
@@ -235,15 +149,8 @@ export const Dungeons = defineDocumentType(() => ({
     encounters: { type: 'json', resolve: (doc) => extractEncounters(doc.body.raw) },
     structuredData: {
       type: 'json',
-      resolve: (doc) => ({
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: doc.title,
-        description: doc.summary,
-        image: absoluteImageUrl(siteMetadata.socialBanner),
-        headerImage: doc.headerImage,
-        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
-      }),
+      resolve: (doc) =>
+        blogPosting(doc, { headerImage: doc.headerImage, dateModified: doc.lastmod }),
     },
   },
 }))
@@ -261,14 +168,7 @@ export const About = defineDocumentType(() => ({
     ...computedFields,
     structuredData: {
       type: 'json',
-      resolve: (doc) => ({
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: doc.title,
-        description: doc.summary,
-        image: absoluteImageUrl(siteMetadata.socialBanner),
-        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
-      }),
+      resolve: (doc) => blogPosting(doc),
     },
   },
 }))
@@ -283,15 +183,8 @@ export const Raids = defineDocumentType(() => ({
     encounters: { type: 'json', resolve: (doc) => extractEncounters(doc.body.raw) },
     structuredData: {
       type: 'json',
-      resolve: (doc) => ({
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: doc.title,
-        description: doc.summary,
-        image: absoluteImageUrl(siteMetadata.socialBanner),
-        headerImage: doc.headerImage,
-        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
-      }),
+      resolve: (doc) =>
+        blogPosting(doc, { headerImage: doc.headerImage, dateModified: doc.lastmod }),
     },
   },
 }))
@@ -302,38 +195,11 @@ export default makeSource({
   documentTypes: [Blog, Dungeons, Raids, About],
   mdx: {
     cwd: process.cwd(),
-    remarkPlugins: [
-      // First, so it only sees what the author wrote
-      remarkSafeMdx,
-      remarkExtractFrontmatter,
-      remarkAlert,
-      remarkGroupCheckboxes,
-      remarkGfm,
-      remarkCodeTitles,
-      remarkMath,
-      remarkImgToJsx,
-      remarkSpell,
-      remarkColor,
-    ],
+    remarkPlugins: [...remarkPlugins, remarkImgToJsx],
     rehypePlugins: [
-      rehypeSlug,
-      rehypeGroupHeaders,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: 'prepend',
-          headingProperties: {
-            className: ['content-header'],
-          },
-          content: icon,
-        },
-      ],
+      ...rehypePlugins,
       rehypeKatex,
       [rehypePrismPlus, { defaultLanguage: 'text', ignoreMissing: true }],
     ],
-  },
-  onSuccess: async (importData) => {
-    const { allBlogs } = await importData()
-    createTagCount(allBlogs)
   },
 })

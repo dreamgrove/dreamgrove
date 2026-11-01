@@ -75,14 +75,14 @@ export default function Home({ tiles }: { tiles: SpecTile[] }) {
         })}
         <Link
           href="/guides"
-          className={`${ROW} bg-[#1f1f1f] px-6 transition-colors hover:bg-[#363636] sm:px-8`}
+          className={`${ROW} bg-dg-panel-deep px-6 transition-colors hover:bg-[#363636] sm:px-8`}
         >
           <span className={`${NAME} text-[26px] sm:text-[30px]`}>Other guides</span>
         </Link>
         <div className="grid grow basis-0 grid-cols-[minmax(0,1fr)_80px] gap-[11px] sm:grid-cols-[3fr_1fr] lg:grid-cols-[4fr_1fr]">
           <Link
             href="/planner"
-            className={`${ROW} bg-[#1f1f1f] px-6 transition-colors hover:bg-[#363636] sm:px-8`}
+            className={`${ROW} bg-dg-panel-deep px-6 transition-colors hover:bg-[#363636] sm:px-8`}
           >
             <div className="flex flex-col gap-2">
               <span className={`${NAME} text-[26px] sm:text-[30px]`}>Cooldown planner</span>
@@ -94,7 +94,7 @@ export default function Home({ tiles }: { tiles: SpecTile[] }) {
           <Link
             href="https://discord.com/invite/dreamgrove"
             aria-label="Discord"
-            className={`${ROW} justify-center gap-3 bg-[#1f1f1f] transition-colors hover:bg-[#363636] sm:px-6`}
+            className={`${ROW} justify-center gap-3 bg-dg-panel-deep transition-colors hover:bg-[#363636] sm:px-6`}
           >
             <span className={`${NAME} hidden text-[30px] sm:block`}>Discord</span>
             <Icon name="discord" aria-hidden className="relative size-8 shrink-0 sm:size-7" />
