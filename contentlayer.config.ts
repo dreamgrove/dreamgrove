@@ -2,7 +2,6 @@ import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/so
 import { writeFileSync, statSync } from 'fs'
 import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
-import path from 'path'
 import { fromHtmlIsomorphic } from 'hast-util-from-html-isomorphic'
 // Remark packages
 import remarkGfm from 'remark-gfm'
@@ -17,7 +16,6 @@ import { extractTocHeadings } from './lib/mdx-plugins/extract-toc-headings.js'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeKatex from 'rehype-katex'
-import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
 import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from './lib/utils/contentlayer'
@@ -27,7 +25,6 @@ import rehypeGroupHeaders from './plugins/rehypeGroupHeaders.js'
 import remarkGroupCheckboxes from './plugins/remarkGroupCheckboxes.js'
 import remarkSafeMdx from './plugins/remarkSafeMdx.js'
 
-const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
 
 /**
@@ -346,7 +343,6 @@ export default makeSource({
         },
       ],
       rehypeKatex,
-      [rehypeCitation, { path: path.join(root, 'data') }],
       [rehypePrismPlus, { defaultLanguage: 'text', ignoreMissing: true }],
     ],
   },
