@@ -2,6 +2,7 @@ name: Update APL
 
 on:
   push:
+    branches: [master]
     paths:
       - 'sims/owl/balance.txt'
       - 'sims/cat/feral.txt'
