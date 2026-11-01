@@ -1,73 +1,15 @@
 import { visit } from 'unist-util-visit'
 
+const ALERT_MARKERS = ['[!NOTE]', '[!TIP]', '[!WARNING]', '[!ERROR]', '[!SUCCESS]']
+
 export default function remarkSpell() {
   return (tree) => {
-    // Skip processing blockquotes with alert markers
-    visit(tree, 'blockquote', (node) => {
-      if (node.children && node.children.length > 0) {
-        const firstChild = node.children[0]
-
-        // If the first child is a paragraph, check its content for alert markers
-        if (
-          firstChild.type === 'paragraph' &&
-          firstChild.children &&
-          firstChild.children.length > 0
-        ) {
-          const firstTextNode = firstChild.children[0]
-
-          // If the first text contains an alert marker, skip processing this blockquote
-          if (
-            firstTextNode.type === 'text' &&
-            (firstTextNode.value.includes('[!NOTE]') ||
-              firstTextNode.value.includes('[!WARNING]') ||
-              firstTextNode.value.includes('[!ERROR]') ||
-              firstTextNode.value.includes('[!SUCCESS]') ||
-              firstTextNode.value.includes('[!NOTE]') ||
-              firstTextNode.value.includes('[!TIP]'))
-          ) {
-            // Mark this blockquote node to be skipped
-            node.data = node.data || {}
-            node.data.skip = true
-          }
-        }
-      }
-    })
-
-    // Process all text nodes that are NOT inside marked alert blockquotes
     visit(tree, 'text', (node, index, parent) => {
       if (!parent) return
 
-      // Skip if we're inside a blockquote that has been marked for skipping
-      let ancestor = parent
-      let skipProcessing = false
-
-      while (ancestor) {
-        if (ancestor.data && ancestor.data.skip) {
-          skipProcessing = true
-          break
-        }
-        ancestor = ancestor.parent
-      }
-
-      if (skipProcessing) return
-
-      // Skip processing if this text directly contains alert marker
-      if (
-        node.value.includes('[!NOTE]') ||
-        node.value.includes('[!WARNING]') ||
-        node.value.includes('[!ERROR]') ||
-        node.value.includes('[!SUCCESS]') ||
-        node.value.includes('[!NOTE]') ||
-        node.value.includes('[!TIP]')
-      ) {
-        return
-      }
-
-      // Skip if the parent or grandparent looks like it might be an alert container
-      // (This covers cases where the blockquote visitor might have missed something)
-      if (parent.type === 'paragraph' && parent.parent && parent.parent.type === 'blockquote') {
-        return
-      }
+      // remarkAlert runs first and consumes GitHub's alert markers; this only
+      // leaves `!…!` alone in text that still carries one (e.g. `[!ERROR]`)
+      if (ALERT_MARKERS.some((marker) => node.value.includes(marker))) return
 
       // Now process any spell tags
       const value = node.value

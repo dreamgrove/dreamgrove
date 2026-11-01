@@ -1,61 +1,21 @@
 'use client'
 
-import React, { useState, useEffect, memo, Fragment, ComponentType, useRef } from 'react'
+import React, { useState, useEffect, memo, ComponentType, useRef } from 'react'
 import * as runtime from 'react/jsx-runtime'
 import * as devRuntime from 'react/jsx-dev-runtime'
 import { evaluate, EvaluateOptions } from '@mdx-js/mdx'
 import { MDXComponents } from 'mdx/types'
 
-import Talents from '@/components/custom/Talents/Talents'
-import Collapsible from '@/components/custom/Collapsible/Collapsible'
-import Color from '@/components/custom/Color'
 import ErrorBoundary from '@/components/custom/ErrorBoundary'
-
-import CheckboxClientVersion from './csm/CheckboxClientVersion'
-import CheckboxProvider from './custom/CheckboxProvider'
-import WowheadClientVersion from './csm/WowheadClientVersion'
-import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
-
-import remarkSpell from '../plugins/remarkSpell.js'
-import remarkColor from '../plugins/remarkColor.js'
-import remarkGroupCheckboxes from '../plugins/remarkGroupCheckboxes.js'
-import remarkSafeMdx from '../plugins/remarkSafeMdx.js'
-import ConditionalElement from './custom/ConditionalElement'
-import TimelineClientVersion from './csm/TimelineClientVersion'
-import PlannerEmbedClientVersion from './csm/PlannerEmbedClientVersion'
-
-import { remarkAlert } from 'remark-github-blockquote-alert'
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import rehypeGroupHeaders from 'plugins/rehypeGroupHeaders'
-import { visit } from 'unist-util-visit'
-
-// The real /compendium pages number their h1 sections via `h1.content-header::before`
-// (css/tailwind.css). Contentlayer adds that class with rehype-autolink-headings at
-// build time; the live preview doesn't run that plugin, so replicate just the class
-// here to restore the "1. ", "2. " enumeration (and its left offset).
-function rehypeContentHeader() {
-  return (tree: unknown) => {
-    visit(
-      tree as never,
-      'element',
-      (node: { tagName?: string; properties?: Record<string, unknown> }) => {
-        if (!node.tagName || !/^h[1-6]$/.test(node.tagName)) return
-        node.properties = node.properties || {}
-        const existing = node.properties.className
-        const list = Array.isArray(existing) ? existing : existing ? [existing] : []
-        if (!list.includes('content-header')) list.push('content-header')
-        node.properties.className = list
-      }
-    )
-  }
-}
-import YouTube from './custom/YouTube'
-import Image from 'next/image'
-import RoleSelector from './custom/Dungeons/RoleSelector'
-import Encounter from './spec/Encounter'
-import SpecNote from './spec/SpecNote'
+import CheckboxProvider from '@/components/custom/CheckboxProvider'
+import CheckboxClientVersion from '@/components/csm/CheckboxClientVersion'
+import WowheadClientVersion from '@/components/csm/WowheadClientVersion'
+import TimelineClientVersion from '@/components/csm/TimelineClientVersion'
+import PlannerEmbedClientVersion from '@/components/csm/PlannerEmbedClientVersion'
+import { sharedComponents, withLocale } from '@/components/mdx/shared'
+import { remarkPlugins, rehypePlugins } from '../plugins/mdxPipeline.js'
 import type { PageLocale } from '@/lib/pageLocale'
+
 interface MDXPreviewProps {
   content: string
   setErrorLine?: (line: number | null) => void
@@ -68,181 +28,34 @@ interface MdxModule {
   [key: string]: unknown
 }
 
-function debounce(func: (...args: string[]) => void, wait: number): (...args: string[]) => void {
-  let timeoutId: NodeJS.Timeout | null = null
-  return (...args: string[]) => {
-    if (timeoutId) {
-      clearTimeout(timeoutId)
-    }
-    timeoutId = setTimeout(() => {
-      func(...args)
-    }, wait)
-  }
-}
+const COMPILE_DELAY_MS = 500
 
+// The live site's registry, with client-side stand-ins for the components that
+// fetch from Wowhead on the server.
 const components: MDXComponents = {
-  Image: ({ src, alt, ...props }) => {
-    let id = ''
-    const regex = /^\[\*(.*?)\]/ //Matches [*text]
-
-    if (typeof alt === 'string') {
-      const match = alt.trim().match(regex)
-      if (match) {
-        id = match[1]
-        alt = alt.replace(regex, '').trim()
-      }
-    }
-
-    const wrappedImage = <Image src={src} alt={alt} {...props} />
-    return id ? (
-      <ConditionalElement type="img" id={id}>
-        {wrappedImage}
-      </ConditionalElement>
-    ) : (
-      wrappedImage
-    )
-  },
-  RoleSelector: RoleSelector,
-  div: ({ children, ...props }) => {
-    let id = ''
-    const regex = /^\[\*(.*?)\]/ //Matches [*text]
-
-    const processChildren = (children) => {
-      if (typeof children === 'string') {
-        const match = children.trim().match(regex)
-        if (match) {
-          id = match[1]
-          return children.replace(regex, '').trim()
-        }
-      } else if (Array.isArray(children)) {
-        const firstElement = children[0]
-        if (typeof firstElement === 'string') {
-          const match = firstElement.trim().match(regex)
-          if (match) {
-            id = match[1]
-            return children.filter((_, index) => index !== 0)
-          }
-        }
-      }
-      return children
-    }
-
-    children = processChildren(children)
-
-    return id ? (
-      <ConditionalElement id={id} {...props}>
-        {children}
-      </ConditionalElement>
-    ) : (
-      <div {...props}>{children}</div>
-    )
-  },
-  Talents: Talents,
-  BossCard: Encounter,
-  Encounter,
-  SpecNote,
-  Collapsible,
-  Color,
-  YouTube: YouTube,
+  ...sharedComponents,
   Checkbox: CheckboxClientVersion,
   Wowhead: WowheadClientVersion,
   Timeline: TimelineClientVersion,
   PlannerEmbed: PlannerEmbedClientVersion,
-  HeroTalentsHeader,
-  p: ({ children, ...props }) => {
-    let id = ''
-    const regex = /^\[\*(.*?)\]/ //Matches [*text]
-    const processChildren = (children) => {
-      if (typeof children === 'string') {
-        const regex = /^\[\*(.*?)\]/
-        const match = children.match(regex)
-        if (match) {
-          id = match[1]
-          return children.replace(regex, '')
-        }
-      } else if (Array.isArray(children)) {
-        const firstElement = [...children][0]
-        if (typeof firstElement === 'string') {
-          const match = firstElement.match(/^\[\*(.*?)\]/)
-          if (match) {
-            id = match[1]
-            const modifiedFirstElement = firstElement.replace(regex, '')
-            return [modifiedFirstElement, ...children.slice(1)]
-          }
-        }
-      }
-      return children
-    }
-    children = processChildren(children)
-    return id ? (
-      <ConditionalElement type="p" id={id} {...props}>
-        {children}
-      </ConditionalElement>
-    ) : (
-      <p {...props}>{children}</p>
-    )
-  },
-  li: ({ children, ...props }) => {
-    let id = ''
-    const processChildren = (children) => {
-      if (typeof children === 'string') {
-        const regex = /^\[\*(.*?)\]/
-        const match = children.match(regex)
-        if (match) {
-          id = match[1]
-          // Remove only leading space after the tag, keep the rest
-          const afterSelector = children.slice(match[0].length)
-          return afterSelector.charAt(0) === ' ' ? afterSelector.slice(1) : afterSelector
-        }
-      } else if (Array.isArray(children)) {
-        const selectorIndex = children.findIndex(
-          (child) => typeof child === 'string' && child.match(/^\[\*(.*?)\]/)
-        )
-
-        if (selectorIndex !== -1) {
-          const match = children[selectorIndex].match(/^\[\*(.*?)\]/)
-          id = match[1]
-
-          // Preserve the remaining text in the matched node, but trim leading space
-          let remainingText = children[selectorIndex].slice(match[0].length)
-          if (remainingText.charAt(0) === ' ') {
-            remainingText = remainingText.slice(1)
-          }
-
-          const newChildren = [
-            ...(remainingText ? [remainingText] : []),
-            ...children.slice(selectorIndex + 1),
-          ]
-
-          return newChildren
-        }
-        return children
-      }
-      return children
-    }
-    children = processChildren(children)
-    return id ? (
-      <ConditionalElement type="li" id={id} {...props}>
-        {children}
-      </ConditionalElement>
-    ) : (
-      <li {...props}>{children}</li>
-    )
-  },
 }
 
-// Mirrors getComponents() in MDXComponents.tsx: the locale-aware widgets get the
-// page locale as a prop, everything else is shared with the English map. Npc is
-// missing here because this preview map has never had Npc at all.
-const koComponents: MDXComponents = {
-  ...components,
-  Talents: (props: React.ComponentProps<typeof Talents>) => <Talents {...props} locale="ko" />,
-  Timeline: (props: React.ComponentProps<typeof TimelineClientVersion>) => (
-    <TimelineClientVersion {...props} locale="ko" />
-  ),
-  PlannerEmbed: (props: React.ComponentProps<typeof PlannerEmbedClientVersion>) => (
-    <PlannerEmbedClientVersion {...props} locale="ko" />
-  ),
+const koComponents = withLocale(components, 'ko')
+
+const isDevelopment = process.env.NODE_ENV === 'development'
+
+const evaluateOptions: EvaluateOptions = {
+  ...(isDevelopment ? devRuntime : runtime),
+  Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
+  development: isDevelopment,
+  remarkPlugins,
+  rehypePlugins,
+}
+
+/** The source line a compile error points at; MDX errors are VFileMessages. */
+function errorLine(err: unknown): number | null {
+  const message = err as { line?: number; place?: { line?: number; start?: { line?: number } } }
+  return message.line ?? message.place?.line ?? message.place?.start?.line ?? null
 }
 
 function PreviewRenderError() {
@@ -253,101 +66,62 @@ function PreviewRenderError() {
   )
 }
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-
 const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: MDXPreviewProps) {
-  const [mdxModule, setMdxModule] = useState<MdxModule | null>(null)
+  // The last finished compile and the content it was for. `version` counts
+  // successful compiles; it keys the error boundary below.
+  const [result, setResult] = useState<{
+    content: string
+    module: MdxModule | null
+    error: string | null
+    version: number
+  } | null>(null)
   // Passed to the compiled MDX when it renders, so switching locale doesn't re-evaluate
   const mdxComponents = locale === 'ko' ? koComponents : components
-  const [error, setError] = useState<string | null>(null)
-  const [isEvaluating, setIsEvaluating] = useState<boolean>(false)
-  const evaluateMdxRef = useRef<((...args: string[]) => void) | null>(null)
+  const latestRun = useRef(0)
+  // Read through a ref so a parent passing a fresh callback doesn't restart the compile
+  const setErrorLineRef = useRef(setErrorLine)
+  useEffect(() => {
+    setErrorLineRef.current = setErrorLine
+  }, [setErrorLine])
 
   useEffect(() => {
-    evaluateMdxRef.current = debounce(async (mdxContent: string) => {
-      setIsEvaluating(true)
+    const run = ++latestRun.current
+    if (!content) return
+
+    const timer = setTimeout(async () => {
       try {
-        setError(null)
-
-        const evaluateOptions: EvaluateOptions = {
-          ...(isDevelopment ? devRuntime : runtime),
-          Fragment: isDevelopment ? devRuntime.Fragment : runtime.Fragment,
-          development: isDevelopment,
-          // Same rules as the build, so a disallowed tag or expression shows up here before saving.
-          // remarkMath keeps LaTeX braces from being read as expressions.
-          remarkPlugins: [
-            remarkSafeMdx,
-            remarkAlert,
-            remarkGfm,
-            remarkMath,
-            remarkSpell,
-            remarkColor,
-            remarkGroupCheckboxes,
-          ],
-          rehypePlugins: [rehypeContentHeader, rehypeGroupHeaders],
-        }
-
-        const evaluated = await evaluate(mdxContent, evaluateOptions)
-        setMdxModule(evaluated as MdxModule)
+        const compiled = (await evaluate(content, evaluateOptions)) as MdxModule
+        // A slower compile of older content must not replace a newer one.
+        if (run !== latestRun.current) return
+        setErrorLineRef.current?.(null)
+        setResult((prev) => ({
+          content,
+          module: compiled,
+          error: null,
+          version: (prev?.version ?? 0) + 1,
+        }))
       } catch (err: unknown) {
+        if (run !== latestRun.current) return
         const message =
           err instanceof Error
             ? err.message
             : 'An unknown error occurred during preview generation.'
-
-        if (err instanceof Error && setErrorLine) {
-          // Parse error message to extract line number
-          const lineMatch = err.message.match(/(?:at line (\d+)|^Line (\d+))/i)
-          const lineNumber = lineMatch ? parseInt(lineMatch[1] || lineMatch[2]) : null
-
-          // If there's a stack trace, try to extract filename and line information
-          const stackMatch = err.stack?.match(/(?:\(|\s)([^)]+):(\d+):(\d+)/)
-          const fileLineNumber = stackMatch ? parseInt(stackMatch[2]) : null
-
-          // For syntax errors in MDX content
-          const syntaxMatch = err.message.match(/position\s+\{[\s\S]*?line:\s*(\d+)/)
-          const syntaxLine = syntaxMatch ? parseInt(syntaxMatch[1]) : null
-
-          // Try to find any numbers that look like line numbers
-          const numberMatch = err.message.match(/\b(\d+)(?::\d+)?\b/)
-          const possibleLine = numberMatch ? parseInt(numberMatch[1]) : null
-
-          const extractedLine = lineNumber || syntaxLine || fileLineNumber || possibleLine
-
-          console.debug('MDX Error Details:', {
-            message: err.message,
-            extractedLine,
-            lineMatch,
-            stackMatch,
-            syntaxMatch,
-          })
-
-          if (extractedLine) {
-            setErrorLine(extractedLine)
-          } else {
-            setErrorLine(null)
-          }
-        }
-
-        setError(`Preview Error: ${message}`)
-        setMdxModule(null)
-      } finally {
-        setIsEvaluating(false)
+        setErrorLineRef.current?.(errorLine(err))
+        setResult((prev) => ({
+          content,
+          module: null,
+          error: `Preview Error: ${message}`,
+          version: prev?.version ?? 0,
+        }))
       }
-    }, 500)
-  }, [])
+    }, COMPILE_DELAY_MS)
 
-  useEffect(() => {
-    if (content && evaluateMdxRef.current) {
-      evaluateMdxRef.current(content)
-    } else {
-      setMdxModule(null)
-      setError(null)
-      setIsEvaluating(false)
-    }
+    return () => clearTimeout(timer)
   }, [content])
 
-  const LiveComponent = mdxModule ? mdxModule.default : null
+  const isEvaluating = !!content && result?.content !== content
+  const error = content ? (result?.error ?? null) : null
+  const LiveComponent = (content && result?.module?.default) || null
 
   return (
     <div className="mdx-preview divide-gray-200 bg-transparent pb-8 text-gray-900 dark:divide-gray-700 dark:text-gray-100">
@@ -356,7 +130,7 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: M
           {error}
         </div>
       )}
-      {isEvaluating && (
+      {isEvaluating && !LiveComponent && (
         <div className="text-gray-500 italic dark:text-gray-400">Generating preview...</div>
       )}
       <div
@@ -364,14 +138,15 @@ const MDXPreview = memo(function MDXPreview({ content, setErrorLine, locale }: M
         // h1.content-header::before numbers 1, 2, 3… instead of restarting each
         // header-group and always showing "1.".
         style={{ counterReset: 'heading' }}
-        className={`${LiveComponent && !error ? 'prose dark:prose-invert mx-0 max-w-none pt-4 pb-8 text-base sm:pt-0 lg:mx-8' : ''}`}
+        className={`${LiveComponent && !error ? 'prose mx-0 max-w-none pt-4 pb-8 text-base sm:pt-0 lg:mx-8 dark:prose-invert' : ''}`}
       >
-        {LiveComponent && !isEvaluating ? (
+        {LiveComponent ? (
           // Some errors (e.g. an MDX element with no matching component) only throw
           // while rendering, after `evaluate` has already resolved. Without a boundary
-          // they escape the try/catch above and take the whole editor down, so keep a
-          // fresh boundary per document — `key` remounts it once the content changes.
-          <ErrorBoundary key={content} fallback={<PreviewRenderError />}>
+          // they escape the try/catch above and take the whole editor down, so each
+          // compile gets a fresh boundary. The last good render stays up while the
+          // next compile runs.
+          <ErrorBoundary key={result?.version} fallback={<PreviewRenderError />}>
             <CheckboxProvider>
               <LiveComponent components={mdxComponents} />
             </CheckboxProvider>
