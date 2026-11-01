@@ -9,7 +9,6 @@ import { visit } from 'unist-util-visit'
 // Keys of `components` in components/MDXComponents.tsx that guides may use
 const COMPONENTS = new Set([
   'BossCard',
-  'Changelog',
   'Checkbox',
   'Collapsible',
   'Color',
