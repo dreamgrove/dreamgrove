@@ -1,55 +1,27 @@
-import { useState, useCallback } from 'react'
-import { PlayerAction, SpellInfo } from '@/types/timeline'
+import { useCallback } from 'react'
+import { jsonCodec, usePersistedState } from '@/hooks/usePersistedState'
+import { DruidSpec, PlayerAction } from '@/types/timeline'
 
 export interface Loadout {
   id: string
   name: string
-  spec: string
-  inputEvents: SerializedPlayerAction[]
+  spec: DruidSpec
+  inputEvents: PlayerAction[]
   activeTalents: string[]
   createdAt: number
 }
 
-/** PlayerAction with spell stored as plain object (no class instances) */
-interface SerializedPlayerAction {
-  spell: SpellInfo
-  instant: number
-  id: string
-}
-
 const STORAGE_KEY = 'timeline-planner-loadouts'
 
-function generateId(): string {
-  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7)
-}
-
-function loadFromStorage(): Loadout[] {
-  if (typeof window === 'undefined') return []
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return JSON.parse(raw)
-  } catch (e) {
-    console.warn('Failed to load loadouts:', e)
-  }
-  return []
-}
-
-function saveToStorage(loadouts: Loadout[]) {
-  if (typeof window === 'undefined') return
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(loadouts))
-  } catch (e) {
-    console.warn('Failed to save loadouts:', e)
-  }
-}
+const NO_LOADOUTS: Loadout[] = []
 
 export function useLoadouts() {
-  const [loadouts, setLoadouts] = useState<Loadout[]>(() => loadFromStorage())
+  const [loadouts, setLoadouts] = usePersistedState<Loadout[]>(STORAGE_KEY, NO_LOADOUTS, jsonCodec)
 
   const saveLoadout = useCallback(
-    (name: string, spec: string, inputEvents: PlayerAction[], activeTalents: string[]) => {
+    (name: string, spec: DruidSpec, inputEvents: PlayerAction[], activeTalents: string[]) => {
       const loadout: Loadout = {
-        id: generateId(),
+        id: crypto.randomUUID(),
         name,
         spec,
         inputEvents: inputEvents.map((e) => ({
@@ -60,31 +32,22 @@ export function useLoadouts() {
         activeTalents,
         createdAt: Date.now(),
       }
-      setLoadouts((prev) => {
-        const next = [loadout, ...prev]
-        saveToStorage(next)
-        return next
-      })
+      setLoadouts((prev) => [loadout, ...prev])
       return loadout
     },
-    []
+    [setLoadouts]
   )
 
-  const deleteLoadout = useCallback((id: string) => {
-    setLoadouts((prev) => {
-      const next = prev.filter((l) => l.id !== id)
-      saveToStorage(next)
-      return next
-    })
-  }, [])
+  const deleteLoadout = useCallback(
+    (id: string) => setLoadouts((prev) => prev.filter((l) => l.id !== id)),
+    [setLoadouts]
+  )
 
-  const renameLoadout = useCallback((id: string, newName: string) => {
-    setLoadouts((prev) => {
-      const next = prev.map((l) => (l.id === id ? { ...l, name: newName } : l))
-      saveToStorage(next)
-      return next
-    })
-  }, [])
+  const renameLoadout = useCallback(
+    (id: string, newName: string) =>
+      setLoadouts((prev) => prev.map((l) => (l.id === id ? { ...l, name: newName } : l))),
+    [setLoadouts]
+  )
 
   return { loadouts, saveLoadout, deleteLoadout, renameLoadout }
 }

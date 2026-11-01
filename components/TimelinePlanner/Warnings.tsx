@@ -1,12 +1,12 @@
 import Icon from '@/components/Icon'
 import React, { useState } from 'react'
 import { registerWarnings } from '@/lib/warnings/registerWarnings'
-import { useTimeline } from './Providers/TimelineLengthProvider'
+import { useTimelineScale } from './Providers/TimelineLengthProvider'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 
 export default function Warnings() {
   const { currentSpec, processedState } = useTimelineContext()
-  const { total_length_s } = useTimeline()
+  const { total_length_s } = useTimelineScale()
   const [isOpen, setIsOpen] = useState(false)
   const timeline = processedState.spells
 

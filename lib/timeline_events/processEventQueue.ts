@@ -23,32 +23,32 @@ import {
   handleChannelInterrupt,
   handleChargeGain,
 } from '@/lib/timeline_events/index'
+import { cotdAffectedSpellIds } from '@/lib/talent_handlers/Balance/controlOfTheDream'
 
 export function generateBaseQueue(inputActions: PlayerAction[]): EventQueue {
   const eventQueue = new EventQueue()
 
   let lastTime = -Infinity
 
-  inputActions
-    .sort((a, b) => a.instant - b.instant)
-    .forEach((action) => {
-      let startTime = Math.round(action.instant * 10) / 10
+  const sortedActions = [...inputActions].sort((a, b) => a.instant - b.instant)
+  sortedActions.forEach((action) => {
+    let startTime = Math.round(action.instant * 10) / 10
 
-      // Ensure at least 0.01 difference from last event
-      if (startTime < lastTime + 0.01) {
-        startTime = lastTime + 0.01
-      }
+    // Ensure at least 0.01 difference from last event
+    if (startTime < lastTime + 0.01) {
+      startTime = lastTime + 0.01
+    }
 
-      startTime = Math.round(startTime * 100) / 100
-      lastTime = startTime
+    startTime = Math.round(startTime * 100) / 100
+    lastTime = startTime
 
-      eventQueue.push({
-        type: EventType.CastStart,
-        time: startTime,
-        spellId: action.spell.spellId,
-        castId: action.id,
-      })
+    eventQueue.push({
+      type: EventType.CastStart,
+      time: startTime,
+      spellId: action.spell.spellId,
+      castId: action.id,
     })
+  })
 
   return eventQueue
 }
@@ -72,18 +72,19 @@ export function processEventQueue(
 ): {
   processedState: TimelineToRender
   processedEvents: TimelineEvent<EventType>[]
-  rescheduledCasts: Array<{ castId: string; newTime: number }>
 } {
-  let timelineState = new TimelineState()
+  const timelineState = new TimelineState()
   const processedState: TimelineToRender = { spells: [], timeline_length_s: 0 }
   const processedEvents: TimelineEvent<EventType>[] = []
-  const rescheduledCasts: Array<{ castId: string; newTime: number }> = []
-  // Create a deep copy of the spells array to prevent state preservation between calls
-  let currentSpells = JSON.parse(JSON.stringify(spells))
+  // Talents modify spell data while the timeline runs, so work on a copy
+  const currentSpells: SpellInfo[] = structuredClone(spells)
 
-  /* Control of The Dream */
+  // Control of the Dream starts with every affected spell's full 15s banked
   if (activeBindings.includes(Talents.ControlOfTheDream)) {
-    timelineState.initializeControlOfTheDream(currentSpells)
+    timelineState.activeEffects.set(
+      Talents.ControlOfTheDream,
+      new Map(cotdAffectedSpellIds(currentSpells).map((id) => [id, -15]))
+    )
   }
 
   while (!eventQueue.isEmpty()) {
@@ -91,31 +92,20 @@ export function processEventQueue(
 
     if (_el === undefined) break
 
-    let event: TimelineEvent<EventType> = _el
+    const event: TimelineEvent<EventType> = _el
 
     processedEvents.push(event)
 
-    const bucket = getMatchingActions(event, keysToActions)
-    for (const action of bucket) {
-      const { changedEvent, eventsToAdd, newState, newSpells } = action(
-        event,
-        eventQueue,
-        timelineState,
-        currentSpells
-      )
-      event = changedEvent
-      timelineState = newState
-      currentSpells = newSpells
-
-      for (const e of eventsToAdd) {
+    for (const action of getMatchingActions(event, keysToActions)) {
+      for (const e of action(event, eventQueue, timelineState, currentSpells)) {
         eventQueue.push(e)
       }
     }
 
+    const foundSpell = currentSpells.find((s) => s.spellId === event.spellId)
+    if (!foundSpell) continue
     // avoids state preservation between calls
-    const spellInfo = { ...currentSpells.find((s) => s.spellId === event.spellId) }
-
-    if (!spellInfo) continue
+    const spellInfo = { ...foundSpell }
 
     const spellState = timelineState.findOrCreateSpellState(event.spellId, spellInfo.charges || 1)
 
@@ -126,13 +116,11 @@ export function processEventQueue(
         const castReturn = handleCastStart(
           event as TimelineEvent<EventType.CastStart>,
           timelineState,
-          rescheduledCasts,
           eventQueue,
-          activeBindings,
           spellInfo,
           spellState
         )
-        for (const e of castReturn.events()) {
+        for (const e of castReturn) {
           eventQueue.push(e)
         }
 
@@ -146,7 +134,7 @@ export function processEventQueue(
           spellState,
           timelineState
         )
-        for (const e of chargeLoseReturn.events()) {
+        for (const e of chargeLoseReturn) {
           eventQueue.push(e)
         }
         break
@@ -159,7 +147,7 @@ export function processEventQueue(
           spellInfo,
           spellState
         )
-        for (const e of channelStartReturn.events()) {
+        for (const e of channelStartReturn) {
           eventQueue.push(e)
         }
         break
@@ -208,7 +196,7 @@ export function processEventQueue(
           timelineState,
           eventQueue
         )
-        for (const e of dreamstateReturn.events()) {
+        for (const e of dreamstateReturn) {
           eventQueue.push(e)
         }
         break
@@ -229,7 +217,7 @@ export function processEventQueue(
           spellInfo,
           timelineState
         )
-        for (const e of chargeGainReturn.events()) {
+        for (const e of chargeGainReturn) {
           eventQueue.push(e)
         }
         break
@@ -257,7 +245,7 @@ export function processEventQueue(
     spell.chargesUsed = findMaxUsedCharges(spell.chargeIntervals, spell.spell.charges)
   })
 
-  return { processedState, processedEvents, rescheduledCasts }
+  return { processedState, processedEvents }
 }
 
 export function isValid(timelineState: TimelineState, castId: string): boolean {

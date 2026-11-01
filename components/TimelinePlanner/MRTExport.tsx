@@ -2,6 +2,7 @@ import Icon from '@/components/Icon'
 import React, { useState, useMemo } from 'react'
 import { isCustomSpell, CustomSpell } from '@/lib/utils/customSpellStorage'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
+import { formatTime } from '@/lib/utils/utilityFunctions'
 
 export default function MRTExport() {
   const { processedState } = useTimelineContext()
@@ -30,10 +31,7 @@ export default function MRTExport() {
     // Format as MRT note
     return allCasts
       .map((cast) => {
-        const minutes = Math.floor(cast.time / 60)
-        const seconds = Math.floor(cast.time % 60)
-        const timeStr = `${minutes}:${seconds.toString().padStart(2, '0')}`
-        return `{time:${timeStr}} - {spell:${cast.spellId}}`
+        return `{time:${formatTime(cast.time)}} - {spell:${cast.spellId}}`
       })
       .join('\n')
   }, [timeline])

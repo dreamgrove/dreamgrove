@@ -14,8 +14,5 @@ export const handleChannelStart: IChannelStartHandler = (
     spellId: event.spellId,
     castId: event.castId,
   }
-  return {
-    events: () => [channelEndEvent],
-    channelEndEvent: channelEndEvent,
-  }
+  return [channelEndEvent]
 }

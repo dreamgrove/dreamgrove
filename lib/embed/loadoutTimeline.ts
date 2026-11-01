@@ -1,53 +1,7 @@
-import { GlobalAction } from '@/types/events'
-import { PlayerAction, SpellInfo, SpellToRender, Talents } from '@/types/timeline'
-import { Cast } from '@/models/Cast'
-import { bindings } from '@/lib/talent_handlers'
+import { PlayerAction, SpellInfo, SpellToRender } from '@/types/timeline'
 import { decodeLoadout } from '@/lib/utils/loadoutCode'
-import { generateBaseQueue, processEventQueue } from '@/components/TimelinePlanner/TimelineEvents'
-
-export function buildKeysToTalents(
-  activeTalents: string[],
-  spells: SpellInfo[]
-): Map<string, Set<GlobalAction>> {
-  const map = new Map<string, Set<GlobalAction>>()
-  bindings.forEach((binding) => {
-    if (activeTalents.includes(binding.id)) {
-      const affectedKeys = binding.affectedSpells.map(String)
-      // For CotD, also include custom spells that opted in
-      if (binding.id === Talents.ControlOfTheDream) {
-        for (const spell of spells) {
-          if (spell.cotdAffected && !affectedKeys.includes(String(spell.spellId))) {
-            affectedKeys.push(String(spell.spellId))
-          }
-        }
-      }
-      for (const key of affectedKeys) {
-        if (!map.has(key)) {
-          map.set(key, new Set())
-        }
-        map.get(key)!.add(binding.handler)
-      }
-    }
-  })
-  return map
-}
-
-export const splitCastsByCharges = (casts: Cast[], charges: number): Cast[][] => {
-  if (!charges || charges <= 1) {
-    return [casts]
-  }
-
-  const castsByCharge: Cast[][] = Array.from({ length: charges }, () => [])
-  const sortedCasts = [...casts].sort((a, b) => a.start_s - b.start_s)
-
-  // Distribute casts in round-robin fashion
-  sortedCasts.forEach((cast, index) => {
-    const chargeIndex = index % charges
-    castsByCharge[chargeIndex].push(cast)
-  })
-
-  return castsByCharge
-}
+import { generateBaseQueue, processEventQueue } from '@/lib/timeline_events/processEventQueue'
+import { buildKeysToTalents } from '@/lib/talent_handlers/keysToTalents'
 
 export interface SimulatedLoadout {
   spec: string

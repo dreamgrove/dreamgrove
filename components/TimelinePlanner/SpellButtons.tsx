@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 import { PlayerAction, SPELL_GCD, SpellInfo, TimelineToRender } from '@/types/index'
 import CustomElement from './CustomSpell/CustomSpellForm'
 import { isCustomSpell, removeCustomSpell } from '@/lib/utils/customSpellStorage'
@@ -41,7 +40,7 @@ export default function SpellButtons({ prerenderedIcons }: SpellButtonsProps) {
     const newAction: PlayerAction = {
       spell,
       instant: startTime,
-      id: uuidv4(),
+      id: crypto.randomUUID(),
     }
 
     setInputEvents((prevActions: PlayerAction[]) => {

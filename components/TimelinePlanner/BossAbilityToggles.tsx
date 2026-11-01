@@ -80,7 +80,7 @@ export default function BossAbilityToggles({
                     id={String(ability.spellId)}
                     type="spell"
                     name={ability.name}
-                    size={20}
+                    iconSize={20}
                     noMargin
                     noLink
                   />

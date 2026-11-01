@@ -1,5 +1,5 @@
 import { useEffect, useState, type RefObject } from 'react'
-import { usePersistedState } from './usePersistedState'
+import { usePersistedState } from '@/hooks/usePersistedState'
 
 const MIN = 20
 const MAX = 80

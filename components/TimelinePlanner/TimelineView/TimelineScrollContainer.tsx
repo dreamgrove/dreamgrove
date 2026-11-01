@@ -1,26 +1,21 @@
 import BossAbilityMarkers from '../Markers/BossAbilityMarkers'
 import EventMarkers from '../Markers/EventMarkers'
 import Markers from '../Markers/Markers'
-import SpellMarkers from '../Markers/SpellMarkers'
 import SpellRow from './SpellRow/SpellRow'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 import { useMemo } from 'react'
 import type { BossAbilitiesResponse } from '@/types/bossAbilities'
 
 export default function TimelineScrollContainer({
-  averageTimestamps,
-  wowheadMarkerMap,
   bossAbilities,
   visibleBossAbilityKeys,
 }: {
-  averageTimestamps: Record<string, number[]>
-  wowheadMarkerMap: Record<string, React.ReactNode>
   bossAbilities?: BossAbilitiesResponse | null
   visibleBossAbilityKeys: Set<string>
 }) {
   const { processedState } = useTimelineContext()
   const sortedSpells = useMemo(
-    () => processedState.spells.sort((a, b) => a.spell.spellId - b.spell.spellId),
+    () => [...processedState.spells].sort((a, b) => a.spell.spellId - b.spell.spellId),
     [processedState.spells]
   )
 
@@ -31,8 +26,6 @@ export default function TimelineScrollContainer({
         <>
           {/* Timestamps */}
           <Markers />
-          {/* Wclog markers */}
-          <SpellMarkers spellInfo={averageTimestamps} wowheadMap={wowheadMarkerMap} />
           {/* Event markers */}
           <EventMarkers />
         </>

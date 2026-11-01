@@ -1,23 +1,43 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { SpellInfo } from '@/types/timeline'
-import { loadCustomSpells, removeCustomSpell } from '@/lib/utils/customSpellStorage'
+import { usePersistedState, type StorageCodec } from '@/hooks/usePersistedState'
+import {
+  CUSTOM_SPELLS_KEY,
+  removeCustomSpell,
+  toCustomSpells,
+  type CustomSpell,
+} from '@/lib/utils/customSpellStorage'
 
+const NO_CUSTOM_SPELLS: CustomSpell[] = []
+const customSpellsCodec: StorageCodec<CustomSpell[]> = {
+  parse: (raw) => toCustomSpells(JSON.parse(raw)),
+  serialize: JSON.stringify,
+}
+
+/**
+ * The planner's spells: the built-in ones, the user's saved custom spells (kept
+ * in sync with localStorage) and custom spells that only came with an imported
+ * loadout, which last for the session.
+ */
 export function useLocalSpells(baseSpells: SpellInfo[]) {
-  const [localSpells, setLocalSpells] = useState<SpellInfo[]>(baseSpells)
+  const [savedSpells] = usePersistedState(CUSTOM_SPELLS_KEY, NO_CUSTOM_SPELLS, customSpellsCodec)
+  const [sessionSpells, setSessionSpells] = useState<SpellInfo[]>([])
 
-  // Load custom spells and merge with base spells
-  useEffect(() => {
-    const customSpells = loadCustomSpells()
-    setLocalSpells([...baseSpells, ...customSpells])
-  }, [baseSpells])
+  const localSpells = useMemo(() => {
+    const spells = [...baseSpells, ...savedSpells]
+    for (const spell of sessionSpells) {
+      if (!spells.some((s) => s.spellId === spell.spellId)) spells.push(spell)
+    }
+    return spells
+  }, [baseSpells, savedSpells, sessionSpells])
 
-  const createCustomSpell = (params: SpellInfo) => {
-    setLocalSpells((prev) => [...prev, params])
-  }
+  const createCustomSpell = useCallback((params: SpellInfo) => {
+    setSessionSpells((prev) => [...prev, params])
+  }, [])
 
   const deleteCustomSpell = useCallback((spellId: number) => {
     removeCustomSpell(spellId)
-    setLocalSpells((prev) => prev.filter((spell) => spell.spellId !== spellId))
+    setSessionSpells((prev) => prev.filter((spell) => spell.spellId !== spellId))
   }, [])
 
   // Get spells for a specific spec
@@ -33,7 +53,6 @@ export function useLocalSpells(baseSpells: SpellInfo[]) {
 
   return {
     localSpells,
-    setLocalSpells,
     createCustomSpell,
     deleteCustomSpell,
     getSpellsForSpec,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSettings } from '../../Providers/SettingsProvider'
+import { useSettings } from '@/components/TimelinePlanner/Providers/SettingsProvider'
 
 interface CheckboxProps {
   id: string

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 import SpellButtons from '../SpellButtons'
 import TalentBindings from './TalentBindings/TalentBindings'
 import WCLSection from '../WCLSection'
@@ -20,15 +20,12 @@ import TimelineScrollContainer from './TimelineScrollContainer'
 import { useTimelineScroll } from '@/hooks/useTimelineScroll'
 import { SettingsProvider } from '../Providers/SettingsProvider'
 import { TimelineProvider } from '../TimelineProvider/TimelineProvider'
-
-export type DruidSpec = 'balance' | 'resto' | 'feral' | 'guardian' | 'all'
+import { TimelineLengthProvider } from '../Providers/TimelineLengthProvider'
 
 interface TimelineViewProps {
   spells: SpellInfo[]
   wowheadMap: Record<string, React.ReactNode>
   wowheadNameMap: Record<string, React.ReactNode>
-  wowheadMarkerMap?: Record<string, React.ReactNode>
-  averageTimestamps?: Record<string, number[]>
   currentEncounterId?: string
   onEncounterChange?: (encounterId: string) => void
   tutorialSpells?: PlayerAction[]
@@ -39,8 +36,6 @@ interface TimelineViewProps {
 function TimelineViewInner({
   wowheadMap = {},
   wowheadNameMap = {},
-  wowheadMarkerMap = {},
-  averageTimestamps = {},
   currentEncounterId = 'empty',
   onEncounterChange = () => {},
   bossAbilities = null,
@@ -156,8 +151,6 @@ function TimelineViewInner({
             ref={scrollContainerRef}
           >
             <TimelineScrollContainer
-              averageTimestamps={averageTimestamps}
-              wowheadMarkerMap={wowheadMarkerMap}
               bossAbilities={bossAbilities}
               visibleBossAbilityKeys={visibleBossAbilityKeys}
             />
@@ -179,7 +172,9 @@ export default function TimelineView(props: TimelineViewProps) {
   return (
     <SettingsProvider>
       <TimelineProvider spells={props.spells} tutorialSpells={props.tutorialSpells}>
-        <TimelineViewInner {...props} />
+        <TimelineLengthProvider>
+          <TimelineViewInner {...props} />
+        </TimelineLengthProvider>
       </TimelineProvider>
     </SettingsProvider>
   )

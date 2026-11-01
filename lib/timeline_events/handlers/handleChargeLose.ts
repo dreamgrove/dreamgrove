@@ -1,6 +1,5 @@
 import { TimelineEvent, EventType, Talents, IChargeLoseHandler } from '@/types/index'
 
-// Method 1: Type the function directly
 export const handleChargeLose: IChargeLoseHandler = (
   event,
   spellInfo,
@@ -25,13 +24,7 @@ export const handleChargeLose: IChargeLoseHandler = (
 
   if (usedCharges > 1) {
     spellState.delayedCastIds.push(event.castId)
-    return {
-      events: () => [],
-      gainChargeEvent: null,
-    }
+    return []
   }
-  return {
-    events: () => [gainChargeEvent],
-    gainChargeEvent,
-  }
+  return [gainChargeEvent]
 }

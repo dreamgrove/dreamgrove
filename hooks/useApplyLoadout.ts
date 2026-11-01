@@ -9,14 +9,7 @@ import { PlayerAction } from '@/types/timeline'
  * Shared by LoadoutManager's import input and the #loadout= URL import.
  */
 export function useApplyLoadout() {
-  const {
-    setInputEvents,
-    currentSpec,
-    setCurrentSpec,
-    setActiveTalents,
-    localSpells,
-    createCustomSpell,
-  } = useTimelineContext()
+  const { loadPlan, localSpells, createCustomSpell } = useTimelineContext()
 
   return useCallback(
     (code: string) => {
@@ -32,34 +25,19 @@ export function useApplyLoadout() {
         events.push({
           spell,
           instant: e.instant,
-          id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+          id: crypto.randomUUID(),
         })
       }
 
-      const hasNewCustomSpells = decoded.customSpells.some(
-        (cs) => !localSpells.some((s) => s.spellId === cs.spellId)
-      )
       for (const cs of decoded.customSpells) {
         if (!localSpells.some((s) => s.spellId === cs.spellId)) {
           createCustomSpell(cs)
         }
       }
 
-      const applyLoadout = () => {
-        setInputEvents(events)
-        setActiveTalents(decoded.activeTalents)
-      }
-
-      if (decoded.spec !== currentSpec) {
-        setCurrentSpec(decoded.spec)
-      }
-
-      if (decoded.spec !== currentSpec || hasNewCustomSpells) {
-        setTimeout(applyLoadout, 0)
-      } else {
-        applyLoadout()
-      }
+      // Same event as createCustomSpell, so React applies both in one render
+      loadPlan({ spec: decoded.spec, talents: decoded.activeTalents, events })
     },
-    [localSpells, currentSpec, setInputEvents, setActiveTalents, setCurrentSpec, createCustomSpell]
+    [localSpells, loadPlan, createCustomSpell]
   )
 }

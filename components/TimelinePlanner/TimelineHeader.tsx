@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export default function TimelineHeader() {
   return (
-    <div className="flex w-full bg-[#2a2a2a] px-8 py-4 align-text-bottom text-xl">
+    <div className="flex w-full bg-dg-panel px-8 py-4 align-text-bottom text-xl">
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="relative flex items-center">
           {typeof siteMetadata.headerTitle === 'string' ? (
-            <div className="font-familiar-pro l mb-[-5px] flex items-center text-[1.5rem] font-bold sm:mb-0 sm:text-4xl md:text-2xl">
+            <div className="l mb-[-5px] flex items-center font-familiar-pro text-[1.5rem] font-bold sm:mb-0 sm:text-4xl md:text-2xl">
               <div className="title-effect self-end">
                 <span className="title-effect-front">
                   {siteMetadata.headerTitle.toLowerCase()}

@@ -2,7 +2,7 @@ import React from 'react'
 import TalentCard from './TalentCard'
 import TalentChoiceNode from './TalentChoiceNode'
 import { TalentBindings } from '@/types/index'
-import { useTimelineContext } from '../../TimelineProvider/useTimelineContext'
+import { useTimelineContext } from '@/components/TimelinePlanner/TimelineProvider/useTimelineContext'
 
 interface TalentCardListProps {
   prerenderedIcons?: Record<string, React.ReactNode>

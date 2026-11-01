@@ -1,6 +1,17 @@
-import React, { createContext, useState, ReactNode, useCallback, useRef, useEffect } from 'react'
+import React, {
+  createContext,
+  useState,
+  ReactNode,
+  useCallback,
+  useRef,
+  useEffect,
+  useMemo,
+} from 'react'
 import { Cast } from '@/models/Cast'
 import Tooltip from '../Tooltip'
+import { useTimelineScale } from './TimelineLengthProvider'
+
+const HOVER_CLEAR_DELAY_MS = 3000
 
 type HoverContextValue = {
   changeHover: (cast: Cast) => void
@@ -8,9 +19,7 @@ type HoverContextValue = {
   cast: Cast | null
   draggedId: string | null
   setDraggedId: (id: string) => void
-  delta: number
   isDragging: boolean
-  setDelta: (delta: number) => void
   setIsDragging: (state: boolean) => void
   rectRef: React.RefObject<HTMLDivElement | null> | null
   isHovering: boolean
@@ -21,12 +30,10 @@ const HoverContext = createContext<HoverContextValue>({
   changeHover: () => {},
   removeHover: () => {},
   cast: null,
-  setDelta: () => {},
   setIsDragging: () => {},
   isDragging: false,
   draggedId: null,
   setDraggedId: () => {},
-  delta: 0,
   rectRef: null,
   isHovering: false,
   setIsHovering: () => {},
@@ -36,25 +43,33 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [cast, setCast] = useState<Cast | null>(null)
   const [isDragging, setIsDragging] = useState<boolean>(false)
   const [isHovering, setIsHovering] = useState<boolean>(false)
-  const [delta, setDelta] = useState(0)
+  const [draggedId, setDraggedId] = useState<string | null>(null)
   const rafRef = useRef<number>(0)
   const pendingCastRef = useRef<Cast | null>(null)
   const rectRef = useRef<HTMLDivElement | null>(null)
-  const [draggedId, setDraggedId] = useState<string | null>(null)
-  const [isShiftHeld, setIsShiftHeld] = useState<boolean>(false)
   const clearTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const { isShiftKeyPressed } = useTimelineScale()
 
-  const startClearTimer = useCallback(() => {
+  const cancelClearTimer = useCallback(() => {
     if (clearTimeoutRef.current) {
       clearTimeout(clearTimeoutRef.current)
+      clearTimeoutRef.current = null
     }
+  }, [])
 
-    clearTimeoutRef.current = setTimeout(() => {
-      if (!isShiftHeld) {
-        removeHover()
-      }
-    }, 3000)
-  }, [isShiftHeld])
+  const removeHover = useCallback(() => {
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current)
+    }
+    cancelClearTimer()
+    pendingCastRef.current = null
+    setCast(null)
+  }, [cancelClearTimer])
+
+  const startClearTimer = useCallback(() => {
+    cancelClearTimer()
+    clearTimeoutRef.current = setTimeout(removeHover, HOVER_CLEAR_DELAY_MS)
+  }, [cancelClearTimer, removeHover])
 
   const changeHover = useCallback(
     (newCast: Cast) => {
@@ -66,7 +81,7 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       if (!cast) {
         setCast(newCast)
       } else {
-        rafRef.current = requestAnimationFrame((timestamp: number) => {
+        rafRef.current = requestAnimationFrame(() => {
           setCast((prevCast) => {
             const pendingCast = pendingCastRef.current
             if (!pendingCast) return prevCast
@@ -79,37 +94,25 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         })
       }
 
-      startClearTimer()
+      // Holding shift pins the tooltip until it is released.
+      if (!isShiftKeyPressed) {
+        startClearTimer()
+      }
     },
-    [pendingCastRef.current, startClearTimer]
+    [cast, isShiftKeyPressed, startClearTimer]
   )
 
+  // Pressing shift pins the current tooltip; releasing it restarts the countdown.
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Shift') {
-        setIsShiftHeld(true)
-        if (clearTimeoutRef.current) {
-          clearTimeout(clearTimeoutRef.current)
-          clearTimeoutRef.current = null
-        }
-      }
+    if (isShiftKeyPressed) {
+      cancelClearTimer()
+    } else if (pendingCastRef.current) {
+      startClearTimer()
     }
+  }, [isShiftKeyPressed, cancelClearTimer, startClearTimer])
 
-    const handleKeyUp = (e: KeyboardEvent) => {
-      if (e.key === 'Shift') {
-        setIsShiftHeld(false)
-        if (cast) {
-          startClearTimer()
-        }
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('keyup', handleKeyUp)
-
+  useEffect(() => {
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('keyup', handleKeyUp)
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current)
       }
@@ -117,37 +120,26 @@ export const HoverProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         clearTimeout(clearTimeoutRef.current)
       }
     }
-  }, [cast, startClearTimer])
-
-  const removeHover = useCallback(() => {
-    if (rafRef.current) {
-      cancelAnimationFrame(rafRef.current)
-    }
-    if (clearTimeoutRef.current) {
-      clearTimeout(clearTimeoutRef.current)
-      clearTimeoutRef.current = null
-    }
-    pendingCastRef.current = null
-    setCast(null)
   }, [])
 
+  const value = useMemo<HoverContextValue>(
+    () => ({
+      changeHover,
+      removeHover,
+      cast,
+      isDragging,
+      setIsDragging,
+      rectRef,
+      isHovering,
+      setIsHovering,
+      draggedId,
+      setDraggedId,
+    }),
+    [changeHover, removeHover, cast, isDragging, isHovering, draggedId]
+  )
+
   return (
-    <HoverContext.Provider
-      value={{
-        changeHover,
-        removeHover,
-        cast,
-        delta,
-        setDelta,
-        isDragging,
-        setIsDragging,
-        rectRef,
-        isHovering,
-        setIsHovering,
-        draggedId,
-        setDraggedId,
-      }}
-    >
+    <HoverContext.Provider value={value}>
       {children}
       <Tooltip />
     </HoverContext.Provider>

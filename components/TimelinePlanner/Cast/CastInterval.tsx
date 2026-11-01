@@ -1,6 +1,6 @@
 import Icon from '@/components/Icon'
 import { useEffect, useRef } from 'react'
-import { useTimeline } from '../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '../Providers/TimelineLengthProvider'
 import { useHoverContext } from '../Providers/HoverProvider'
 import { Cast } from '@/models/Cast'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
@@ -21,7 +21,7 @@ export default function CastInterval({
   isDragging,
   hasCollision = true,
 }: CastProps) {
-  const { pixelsPerSecond } = useTimeline()
+  const { pixelsPerSecond } = useTimelineScale()
   const { handleCastDelete } = useTimelineContext()
   const { changeHover, removeHover, rectRef, setIsHovering, isHovering, draggedId } =
     useHoverContext()
@@ -60,7 +60,7 @@ export default function CastInterval({
       <div
         className={`flex h-10 items-center outline-hidden focus:outline-hidden focus-visible:ring-0 focus-visible:outline-hidden ${
           !hasCollision
-            ? 'border-main border'
+            ? 'border border-main'
             : isDragging
               ? 'border border-zinc-400/40'
               : 'border-none'

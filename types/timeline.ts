@@ -2,10 +2,9 @@ import { Cast } from '@/models/Cast'
 
 export const SPELL_GCD = 1.5
 
-export interface SpellTimeline {
-  spell: SpellInfo
-  casts: Cast[]
-}
+/** The planner's spec filter; the order is part of the loadout code format. */
+export const DRUID_SPECS = ['balance', 'resto', 'feral', 'guardian', 'all'] as const
+export type DruidSpec = (typeof DRUID_SPECS)[number]
 
 /**
  * Result type for missed cast warnings
@@ -32,7 +31,7 @@ export type TalentBindings = {
 //Enum for the type of event that can happen on the timeline
 export enum EventType {
   CastStart = 'cast_start',
-  ChannelStart = 'channel_start ',
+  ChannelStart = 'channel_start',
   ChannelEnd = 'channel_end',
   CooldownEnd = 'cooldown_end',
   EffectEnd = 'effect_end',
@@ -131,21 +130,6 @@ export class TimelineState {
     this.channeledSpell = null
     this.activeCasts = new Map()
     this.activeEffects = new Map()
-  }
-
-  initializeControlOfTheDream(spells: SpellInfo[]) {
-    const cotdMap = new Map<number, number>([
-      [391528, -15],
-      [205636, -15],
-      [194223, -15],
-      [33891, -15],
-    ])
-    for (const spell of spells) {
-      if (spell.cotdAffected && !cotdMap.has(spell.spellId)) {
-        cotdMap.set(spell.spellId, -15)
-      }
-    }
-    this.activeEffects.set(Talents.ControlOfTheDream, cotdMap)
   }
 
   isSpellCastPresent(spellId: number): Cast | null {

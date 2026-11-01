@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { ChargeInterval } from '@/types/index'
-import { useTimelineControls } from '../../Providers/TimelineLengthProvider'
+import { useTimelineScale } from '@/components/TimelinePlanner/Providers/TimelineLengthProvider'
 
 interface ChargeCounterProps {
   maxCharges: number
@@ -26,7 +26,7 @@ export default function ChargeCounter({
   chargeIntervals,
   className,
 }: ChargeCounterProps) {
-  const { timeToPixels, total_length_px } = useTimelineControls()
+  const { timeToPixels, total_length_px } = useTimelineScale()
 
   // Process charge intervals into segments with start, end, and charges count
   const segments = useMemo(() => {
@@ -133,7 +133,7 @@ export default function ChargeCounter({
       {renderSegments.map((segment, index) => (
         <React.Fragment key={index}>
           <div
-            className="bg-main absolute top-1 h-[18px] transition-opacity"
+            className="absolute top-1 h-[18px] bg-main transition-opacity"
             style={{
               left: `${segment.start}px`,
               width: `${segment.width}px`,
@@ -152,7 +152,7 @@ export default function ChargeCounter({
                 {segment.charges}
               </div>
               <div
-                className="border-main absolute w-[2px]"
+                className="absolute w-[2px] border-main"
                 style={{
                   left: `${segment.start - 1}px`,
                   top: '20px',

@@ -1,4 +1,4 @@
-import { Talents, SpellInfo } from '@/types/timeline'
+import { Talents, SpellInfo, DRUID_SPECS, DruidSpec } from '@/types/timeline'
 
 /**
  * Compact binary encoding for loadout import/export.
@@ -17,7 +17,6 @@ import { Talents, SpellInfo } from '@/types/timeline'
  * Custom spells (negative IDs) have their SpellInfo appended as JSON after a "." separator.
  */
 
-const SPECS = ['balance', 'resto', 'feral', 'guardian', 'all'] as const
 const TALENT_ORDER = Object.values(Talents)
 
 // --- Encode ---
@@ -28,11 +27,11 @@ interface EncodableEvent {
 }
 
 export function encodeLoadout(
-  spec: string,
+  spec: DruidSpec,
   activeTalents: string[],
   events: EncodableEvent[]
 ): string {
-  const specIdx = SPECS.indexOf(spec as (typeof SPECS)[number])
+  const specIdx = DRUID_SPECS.indexOf(spec)
   if (specIdx === -1) throw new Error(`Unknown spec: ${spec}`)
 
   // Talent bitmask
@@ -97,7 +96,7 @@ export function encodeLoadout(
 // --- Decode ---
 
 interface DecodedLoadout {
-  spec: string
+  spec: DruidSpec
   activeTalents: string[]
   events: { spellId: number; instant: number }[]
   customSpells: SpellInfo[]
@@ -126,8 +125,8 @@ export function decodeLoadout(code: string): DecodedLoadout {
   if (version !== 1) throw new Error(`Unsupported version: ${version}`)
 
   const specIdx = bytes[1]
-  if (specIdx >= SPECS.length) throw new Error('Invalid spec')
-  const spec = SPECS[specIdx]
+  if (specIdx >= DRUID_SPECS.length) throw new Error('Invalid spec')
+  const spec = DRUID_SPECS[specIdx]
 
   const talentMask = view.getUint16(2, true)
   const activeTalents: string[] = []

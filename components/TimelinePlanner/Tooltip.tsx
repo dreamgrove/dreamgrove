@@ -2,8 +2,8 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import ReactDOM from 'react-dom'
 import { useHoverContext } from './Providers/HoverProvider'
-import { useTimelineControls } from './Providers/TimelineLengthProvider'
-import { formatTime } from '../../lib/utils/utilityFunctions'
+import { useTimelineScale } from './Providers/TimelineLengthProvider'
+import { formatTime } from '@/lib/utils/utilityFunctions'
 import { Cast } from '@/models/Cast'
 import { useSettings } from './Providers/SettingsProvider'
 
@@ -14,7 +14,7 @@ const Tooltip: React.FC = () => {
     isShiftKeyPressed,
     pixelsPerSecond,
     scrollContainerWidth,
-  } = useTimelineControls()
+  } = useTimelineScale()
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const [anchorPos, setAnchorPos] = useState<{ left: number; top: number } | null>(null)
   const boundingBox = scrollContainer?.getBoundingClientRect()
@@ -71,7 +71,7 @@ const Tooltip: React.FC = () => {
 
     const tooltip = (
       <div
-        className={`animate-expand box-border min-w-fit rounded-sm bg-neutral-900 text-xs`}
+        className={`box-border min-w-fit animate-expand rounded-sm bg-neutral-900 text-xs`}
         style={{
           position: 'absolute',
           top: c.y + 43,

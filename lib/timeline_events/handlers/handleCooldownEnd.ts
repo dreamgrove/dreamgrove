@@ -13,7 +13,6 @@ export const handleCooldownEnd: ICooldownEndHandler = (
     }
     const cast = timelineState.activeCasts.get(event.castId)
     if (cast) {
-      //cast.cooldown_duration = event.time - cast.start_s - cast.cooldown_delay_s
       cast._cd_end_s = event.time
       cast.cooldown_duration = event.time - cast.start_s
 
@@ -29,7 +28,5 @@ export const handleCooldownEnd: ICooldownEndHandler = (
       spellState.currentCast = null
       timelineState.activeCasts.delete(event.castId)
     }
-  } else {
-    console.log('no cast found for cooldown end. probably we already ended', event.castId)
   }
 }
