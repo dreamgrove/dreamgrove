@@ -21,7 +21,6 @@ const strings = {
       'Failed to copy talent string to clipboard. Please try again or copy manually.',
     talentTree: 'Talent Tree',
     dropdownLabel: (name: string) => `${name} dropdown`,
-    loading: 'Loading talent tree...',
     loadError: 'Error Loading Talent Tree',
   },
   ko: {
@@ -43,7 +42,6 @@ const strings = {
       '특성 코드를 클립보드에 복사하지 못했습니다. 다시 시도하거나 직접 복사해 주세요.',
     talentTree: '특성 트리',
     dropdownLabel: (name: string) => `${name} 펼치기`,
-    loading: '특성 트리를 불러오는 중...',
     loadError: '특성 트리를 불러오지 못했습니다',
   },
 }
