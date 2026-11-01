@@ -38,77 +38,68 @@ const securityHeaders = [
   },
 ]
 
-/**
- * @type {import('next/dist/next-server/server/config').NextConfig}
- **/
-module.exports = () => {
-  const plugins = [withContentlayer, withBundleAnalyzer]
-  return plugins.reduce((acc, next) => next(acc), {
-    reactStrictMode: true,
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    images: {
-      // Local images may carry a ?v= cache-busting query (see lib/specArt.ts)
-      localPatterns: [{ pathname: '/**' }],
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'wow.zamimg.com',
-        },
-        {
-          protocol: 'https',
-          hostname: 'avatars.githubusercontent.com',
-        },
-        {
-          protocol: 'https',
-          hostname: 'cdn.simcode.dev',
-        },
-      ],
-      formats: ['image/webp'],
-      deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-      imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-      minimumCacheTTL: 2592000,
-      qualities: [75, 100],
-    },
-    env: {
-      GITHUB_ID: process.env.GITHUB_ID,
-      GITHUB_REPO_OWNER: process.env.GITHUB_REPO_OWNER || 'dreamgrove',
-      GITHUB_REPO_NAME: process.env.GITHUB_REPO_NAME || 'dreamgrove',
-      GITHUB_BRANCH: process.env.GITHUB_BRANCH || 'master',
-    },
-    async redirects() {
-      return [
-        // The content editor used to live under /admin
-        { source: '/admin/select', destination: '/cms', permanent: true },
-        { source: '/admin/edit', destination: '/cms/edit', permanent: true },
-        {
-          source: '/balance/compendium',
-          destination: '/blog/balance/compendium',
-          permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
-        },
-        {
-          source: '/feral/compendium',
-          destination: '/blog/feral/compendium',
-          permanent: true,
-        },
-        {
-          source: '/resto/compendium',
-          destination: '/blog/resto/compendium',
-          permanent: true,
-        },
-        {
-          source: '/guardian/diminishing-returns',
-          destination: '/blog/guardian/diminishing-returns',
-          permanent: true,
-        },
-      ]
-    },
-    async headers() {
-      return [
-        {
-          source: '/(.*)',
-          headers: securityHeaders,
-        },
-      ]
-    },
-  })
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    // Local images may carry a ?v= cache-busting query (see lib/specArt.ts)
+    localPatterns: [{ pathname: '/**' }],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'wow.zamimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.simcode.dev',
+      },
+    ],
+    formats: ['image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 2592000,
+    qualities: [75, 100],
+  },
+  async redirects() {
+    return [
+      // The content editor used to live under /admin
+      { source: '/admin/select', destination: '/cms', permanent: true },
+      { source: '/admin/edit', destination: '/cms/edit', permanent: true },
+      {
+        source: '/balance/compendium',
+        destination: '/blog/balance/compendium',
+        permanent: true, // use `true` for a 301 redirect, `false` for a 302 redirect
+      },
+      {
+        source: '/feral/compendium',
+        destination: '/blog/feral/compendium',
+        permanent: true,
+      },
+      {
+        source: '/resto/compendium',
+        destination: '/blog/resto/compendium',
+        permanent: true,
+      },
+      {
+        source: '/guardian/diminishing-returns',
+        destination: '/blog/guardian/diminishing-returns',
+        permanent: true,
+      },
+    ]
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ]
+  },
 }
+
+module.exports = () =>
+  [withContentlayer, withBundleAnalyzer].reduce((acc, next) => next(acc), nextConfig)

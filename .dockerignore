@@ -1,0 +1,14 @@
+# Rebuilt inside the image
+node_modules
+.next
+.contentlayer
+
+# Not needed to build or run the site
+.git
+.github
+.vscode
+.claude
+__tests__
+sims
+coverage
+*.log

@@ -25,6 +25,7 @@
       "@/types/*": ["./types/*"],
       "@/lib/*": ["./lib/*"],
       "@/models/*": ["./models/*"],
+      "@/other/*": ["./other/*"],
       "app/*": ["./app/*"],
       "css/*": ["./css/*"],
       "plugins/*": ["./plugins/*"],
@@ -37,7 +38,7 @@
     ],
     "strictNullChecks": true,
     "noImplicitAny": false,
-    "types": ["jest"]
+    "types": ["vitest/globals"]
   },
   "include": [
     "next-env.d.ts",
@@ -45,11 +46,9 @@
     "**/*.mjs",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.json",
     ".contentlayer/generated",
-    ".contentlayer/generated/**/*.json",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "eslint.config.mjs"]
+  "exclude": ["node_modules", "eslint.config.mjs", "public", "sims", "coverage"]
 }

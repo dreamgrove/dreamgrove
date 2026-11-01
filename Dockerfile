@@ -1,6 +1,7 @@
 FROM node:24-alpine
 RUN apk add --no-cache libc6-compat
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# corepack picks the pnpm version from package.json's packageManager field
+RUN corepack enable
 WORKDIR /app
 COPY package.json pnpm-lock.yaml* ./
 RUN pnpm install --frozen-lockfile
