@@ -162,6 +162,7 @@ export async function POST(request: Request) {
         return NextResponse.json({
           success: true,
           message: `Changes saved locally on branch: ${branchName}`,
+          content,
         })
       } catch (error) {
         console.error('Error saving content locally:', error)
@@ -258,6 +259,7 @@ export async function POST(request: Request) {
           message: `Changes committed to branch: ${newBranchName}`,
           branch: newBranchName,
           prUrl,
+          content,
         })
       } catch (error) {
         console.error('Error creating branch or committing to GitHub:', error)

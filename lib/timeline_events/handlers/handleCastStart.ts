@@ -39,8 +39,8 @@ export const handleCastStart: ICastStartHandler = (
         treeOfLifeCast &&
         event.time < treeOfLifeCast.effect_duration + treeOfLifeCast.effect_start_s
       ) {
+        // The setter moves the effect end too
         treeOfLifeCast.effect_duration += spellInfo.effect_duration
-        treeOfLifeCast._ef_end_s += spellInfo.effect_duration
         eventQueue.modifyFirstEarliestOfType(
           treeOfLifeCast,
           EventType.EffectEnd,

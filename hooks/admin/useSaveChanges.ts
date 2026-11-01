@@ -43,7 +43,8 @@ export function useSaveChanges({
       const data = await res.json().catch(() => ({}))
       if (!res.ok) throw new Error(data.error || `Error saving content: ${res.statusText}`)
 
-      onSaved(content)
+      // The server stamps lastmod, so the committed bytes can differ from what was sent
+      onSaved(typeof data.content === 'string' ? data.content : content)
       clearNewPage(filePath)
 
       if (data.prUrl) {

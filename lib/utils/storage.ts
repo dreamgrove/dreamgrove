@@ -14,6 +14,11 @@ export function getStorage(kind: StorageKind = 'local'): Storage | null {
 
 const listeners = new Set<() => void>()
 
+// Values that could not be stored (blocked storage or quota) are kept here for the
+// rest of the page's life, so state built on this module still updates in memory.
+const memory = new Map<string, string>()
+const memoryKey = (key: string, kind: StorageKind) => `${kind}:${key}`
+
 /** Notifies on writes made through this module and on changes from other tabs. */
 export function subscribeToStorage(onChange: () => void) {
   listeners.add(onChange)
@@ -25,6 +30,8 @@ export function subscribeToStorage(onChange: () => void) {
 }
 
 export function readItem(key: string, kind: StorageKind = 'local'): string | null {
+  const fallback = memory.get(memoryKey(key, kind))
+  if (fallback !== undefined) return fallback
   try {
     return getStorage(kind)?.getItem(key) ?? null
   } catch {
@@ -44,11 +51,14 @@ export function writeItem(key: string, value: string, kind: StorageKind = 'local
   } catch {
     // Blocked or over quota
   }
+  if (stored) memory.delete(memoryKey(key, kind))
+  else memory.set(memoryKey(key, kind), value)
   listeners.forEach((l) => l())
   return stored
 }
 
 export function removeItem(key: string, kind: StorageKind = 'local'): void {
+  memory.delete(memoryKey(key, kind))
   try {
     getStorage(kind)?.removeItem(key)
   } catch {

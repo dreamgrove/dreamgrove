@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { addCustomSpell } from '@/lib/utils/customSpellStorage'
-import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 
 export default function CustomSpellForm() {
   const [isFormVisible, setIsFormVisible] = useState(false)
@@ -14,8 +13,6 @@ export default function CustomSpellForm() {
   const [errorMessage, setErrorMessage] = useState('')
   const [selectedSpecs, setSelectedSpecs] = useState<string[]>([])
   const [cotdAffected, setCotdAffected] = useState(false)
-
-  const { createCustomSpell } = useTimelineContext()
 
   const openForm = () => {
     if (!isFormVisible) {
@@ -93,7 +90,8 @@ export default function CustomSpellForm() {
     // Either use the selected specs or set to 'all'
     const specsList = selectedSpecs.length > 0 ? selectedSpecs : ['all']
 
-    const customSpell = addCustomSpell({
+    // useLocalSpells follows the saved custom spells, so storing it is enough
+    addCustomSpell({
       name: name.trim(),
       cooldown: finalCooldown,
       effect_duration: finalEffectDuration,
@@ -104,8 +102,6 @@ export default function CustomSpellForm() {
       mrtSpellId: finalSpellId,
       cotdAffected,
     })
-
-    createCustomSpell(customSpell)
 
     setName('')
     setCooldown(60)
@@ -126,7 +122,7 @@ export default function CustomSpellForm() {
         onClick={openForm}
         id="tour-custom-button-selector"
         className={`relative w-fit bg-neutral-900/50 px-4 py-2 text-white hover:bg-orange-400/5 focus:outline-hidden ${
-          isFormVisible ? 'ring-main/30 ring-1' : ''
+          isFormVisible ? 'ring-1 ring-main/30' : ''
         }`}
         title="Add custom spell"
       >
@@ -134,7 +130,7 @@ export default function CustomSpellForm() {
       </button>
       <div className="relative">
         <div
-          className={`custom-spell-form ring-main/30 absolute top-2 left-0 z-50 w-96 transform bg-neutral-900 p-4 ring-1 drop-shadow-2xl transition-all duration-300 ease-in-out ${
+          className={`custom-spell-form absolute top-2 left-0 z-50 w-96 transform bg-neutral-900 p-4 ring-1 ring-main/30 drop-shadow-2xl transition-all duration-300 ease-in-out ${
             isFormVisible
               ? 'pointer-events-auto translate-y-0 opacity-100'
               : 'pointer-events-none -translate-y-2 opacity-0'
