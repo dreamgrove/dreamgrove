@@ -1,39 +1,19 @@
-import { EventType, Talents, GlobalAction } from '../../../types'
+import { EventType, Talents, GlobalAction } from '@/types/index'
 
 export const dreamstate: GlobalAction = (event, queue, state, spells) => {
-  const spellInfo = spells.find((s) => s.spellId === event.spellId)
+  if (event.type !== EventType.ChannelStart) return []
+  if (!spells.some((s) => s.spellId === event.spellId)) return []
+  if (state.activeEffects.get(Talents.Dreamstate)) return []
 
-  if (!spellInfo || event.type !== EventType.ChannelStart) {
-    return {
-      changedEvent: event,
-      eventsToAdd: [],
-      newState: state,
-      newSpells: spells,
-    }
-  }
-
-  if (!state.activeEffects.get(Talents.Dreamstate)) {
-    state.activeEffects.set(Talents.Dreamstate, new Map([[event.spellId, event.time]]))
-    if (event.spellId === 740) {
-      const dreamstateEvent = {
-        type: EventType.DreamstateCdr,
-        time: event.time,
-        spellId: event.spellId,
-        castId: event.castId,
-      }
-      return {
-        changedEvent: event,
-        eventsToAdd: [dreamstateEvent],
-        newState: state,
-        newSpells: spells,
-      }
-    }
-  }
-
-  return {
-    changedEvent: event,
-    eventsToAdd: [],
-    newState: state,
-    newSpells: spells,
-  }
+  state.activeEffects.set(Talents.Dreamstate, new Map([[event.spellId, event.time]]))
+  // Tranquility
+  if (event.spellId !== 740) return []
+  return [
+    {
+      type: EventType.DreamstateCdr,
+      time: event.time,
+      spellId: event.spellId,
+      castId: event.castId,
+    },
+  ]
 }
