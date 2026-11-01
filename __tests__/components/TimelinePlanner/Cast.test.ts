@@ -1,6 +1,6 @@
-import { Cast } from '../../../models/Cast'
-import { SpellInfo, CastParams } from '../../../types/timeline'
-import { describe, test, expect, beforeEach } from '@jest/globals'
+import { Cast } from '@/models/Cast'
+import { SpellInfo, CastParams } from '@/types/timeline'
+import { describe, test, expect, beforeEach } from 'vitest'
 
 // Celestial Alignment spell data from spells.json
 const caSpellInfo: SpellInfo = {
