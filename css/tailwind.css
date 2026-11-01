@@ -5,6 +5,82 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary-500: #d57f43;
+  --color-main: #d57f43;
+  --color-secondary: #1a9c82;
+
+  /* Dark UI greys shared by the planner and the admin editor */
+  --color-dg-line: #3a3a3a;
+  --color-dg-line-soft: #383838;
+  --color-dg-panel: #2a2a2a;
+  --color-dg-panel-deep: #1f1f1f;
+  --color-dg-highlight: #ffb86c;
+
+  --font-sans: thiccboi, magnificent;
+  --font-thiccboi: thiccboi, sans-serif;
+  --font-magnificent: magnificent, sans-serif;
+  --font-familiar-pro: familiar-pro, sans-serif;
+
+  --text-base: 1rem;
+  --text-sm: 0.9rem;
+  --text-lg: 1.1rem;
+
+  --animate-expand: expand 0.17s ease forwards;
+  --animate-clip-up: clip-up 0.3s ease-out forwards;
+  --animate-clip-down: clip-down 0.3s ease-out forwards;
+  --animate-bounce-once: bounce-once 0.4s ease-out forwards;
+
+  @keyframes expand {
+    0% {
+      transform: scaleX(0);
+      transform-origin: center;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: center;
+    }
+  }
+  @keyframes clip-up {
+    0% {
+      clip-path: inset(100% 0 0 0);
+      opacity: 0.3;
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+  @keyframes clip-down {
+    0% {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+    100% {
+      clip-path: inset(100% 0 0 0);
+      opacity: 0.3;
+    }
+  }
+  @keyframes bounce-once {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -59,22 +135,6 @@ input:-webkit-autofill:focus {
 
 .katex-display {
   overflow: auto hidden;
-}
-
-.content-header-link {
-  opacity: 0;
-  margin-left: -24px;
-  padding-right: 4px;
-}
-
-.content-header:hover .content-header-link,
-.content-header-link:hover {
-  opacity: 1;
-}
-
-.linkicon {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 h1.content-header::before {
@@ -907,4 +967,24 @@ html {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+/* Admin editor spell picker: a slim scrollbar that matches its dark panel */
+.spell-picker-list {
+  scrollbar-width: thin;
+  scrollbar-color: #55585c transparent;
+}
+.spell-picker-list::-webkit-scrollbar {
+  width: 11px;
+}
+.spell-picker-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.spell-picker-list::-webkit-scrollbar-thumb {
+  background: #4a4d50;
+  background-clip: padding-box;
+  border: 3px solid #2b2b2b;
+}
+.spell-picker-list::-webkit-scrollbar-thumb:hover {
+  background: #5c6064;
 }

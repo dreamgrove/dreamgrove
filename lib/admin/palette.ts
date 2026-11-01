@@ -1,6 +1,6 @@
-// Colours and fonts shared by the admin editor's React chrome and its
-// CodeMirror extensions. Tailwind classes can't read these, so class strings
-// still spell out the hex values.
+// Colours and fonts for the admin editor's CodeMirror extensions, which style
+// the editor from JS. React components use the matching Tailwind tokens from
+// css/tailwind.css instead (ACCENT is `main`).
 
 export const ACCENT = '#d57f43'
 

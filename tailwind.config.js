@@ -1,69 +1,9 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
+// Tailwind 4 reads the rest of the theme from css/tailwind.css (@theme). Only the
+// typography plugin's prose overrides still need a JS config.
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,tsx}',
-    './components/**/*.{js,ts,tsx}',
-    './layouts/**/*.{js,ts,tsx}',
-    './data/**/*.mdx',
-    './plugins/**/*.js',
-  ],
-  darkMode: 'class',
   theme: {
     extend: {
-      keyframes: {
-        expand: {
-          '0%': { transform: 'scaleX(0)', transformOrigin: 'center' },
-          '100%': { transform: 'scaleX(1)', transformOrigin: 'center' },
-        },
-        'clip-up': {
-          '0%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
-          '100%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
-        },
-        'clip-down': {
-          '0%': { clipPath: 'inset(0 0 0 0)', opacity: '1' },
-          '100%': { clipPath: 'inset(100% 0 0 0)', opacity: '0.3' },
-        },
-        'bounce-once': {
-          '0%': { transform: 'scale(0.3)', opacity: '0' },
-          '50%': { transform: 'scale(1.05)', opacity: '1' },
-          '70%': { transform: 'scale(0.95)' },
-          '100%': { transform: 'scale(1)' },
-        },
-      },
-      animation: {
-        expand: 'expand 0.17s ease forwards',
-        'clip-up': 'clip-up 0.3s ease-out forwards',
-        'clip-down': 'clip-down 0.3s ease-out forwards',
-        'bounce-once': 'bounce-once 0.4s ease-out forwards',
-      },
-      lineHeight: {
-        11: '2.75rem',
-        12: '3rem',
-        13: '3.25rem',
-        14: '3.5rem',
-      },
-      fontSize: {
-        base: '1rem',
-        sm: '0.9rem',
-        lg: '1.1rem',
-      },
-      fontFamily: {
-        sans: ['thiccboi', 'magnificent'],
-        thiccboi: ['thiccboi', 'sans-serif'],
-        magnificent: ['magnificent', 'sans-serif'],
-        'familiar-pro': ['familiar-pro', 'sans-serif'],
-      },
-      colors: {
-        primary: {
-          500: '#d57f43', // Replace with your custom color
-          600: '#d57f43', // Optional: dark variant
-          light: '#d57f43', // Optional: light variant
-        },
-        main: '#d57f43',
-        secondary: '#1a9c82',
-      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -81,9 +21,8 @@ module.exports = {
               fontWeight: '500',
               textDecorationThickness: '2px',
               '&:hover': {
-                color: `${theme('colors.primary.600')}`,
+                color: theme('colors.primary.500'),
               },
-              code: { color: theme('colors.primary.400') },
             },
             /* Wowhead inline links should inherit flow */
             'a.inline': {
@@ -155,10 +94,6 @@ module.exports = {
           css: {
             a: {
               color: theme('colors.primary.500'),
-              '&:hover': {
-                color: `${theme('colors.primary.400')}`,
-              },
-              code: { color: theme('colors.primary.400') },
             },
             'h1,h2,h3,h4,h5,h6': {
               color: theme('colors.gray.100'),
@@ -168,9 +103,4 @@ module.exports = {
       }),
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
 }

@@ -1,34 +1,11 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useOutsideClick } from '@/hooks/useOutsideClick'
 import { createPortal } from 'react-dom'
 import { MONO_FONT } from '@/lib/admin/palette'
 import type { Spell } from '@/lib/admin/spells'
 import type { PickerPosition } from '@/hooks/admin/useInlineSpellSearch'
-
-const C = {
-  panel: '#2b2b2b',
-  border: '#3c3f41',
-  active: '#37393d',
-  text: '#d8d8d8',
-  dim: '#7c7f83',
-  faint: '#6a6d70',
-  accent: '#ffb86c',
-}
-
-const PICKER_CSS = `
-.spell-picker-list { scrollbar-width: thin; scrollbar-color: #55585c transparent; }
-.spell-picker-list::-webkit-scrollbar { width: 11px; }
-.spell-picker-list::-webkit-scrollbar-track { background: transparent; }
-.spell-picker-list::-webkit-scrollbar-thumb {
-  background: #4a4d50;
-  background-clip: padding-box;
-  border: 3px solid #2b2b2b;
-}
-.spell-picker-list::-webkit-scrollbar-thumb:hover { background: #5c6064; }
-`
-
-const ROW_GRID = '16px minmax(0,1fr) 52px 56px'
 
 const SPEC_ICON: Record<string, string> = {
   Balance: 'spell_nature_starfall',
@@ -71,16 +48,7 @@ export default function SpellPicker({
   const containerRef = useRef<HTMLDivElement>(null)
   const rowRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
-  useEffect(() => {
-    if (!open) return
-    const onDocMouseDown = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
-        onClose()
-      }
-    }
-    document.addEventListener('mousedown', onDocMouseDown)
-    return () => document.removeEventListener('mousedown', onDocMouseDown)
-  }, [open, onClose])
+  useOutsideClick(containerRef, onClose, open)
 
   useEffect(() => {
     rowRefs.current[highlighted]?.scrollIntoView({ block: 'nearest' })
@@ -99,39 +67,18 @@ export default function SpellPicker({
   return createPortal(
     <div
       ref={containerRef}
-      className="spell-picker"
+      className="fixed z-[10000] box-border flex flex-col border border-[#3c3f41] bg-[#2b2b2b] text-[13px] text-[#d8d8d8] shadow-[0_10px_28px_rgba(0,0,0,0.5)]"
       // Don't steal focus from the editor on click.
       onMouseDown={(e) => e.preventDefault()}
-      style={{
-        position: 'fixed',
-        left,
-        top,
-        bottom,
-        width,
-        boxSizing: 'border-box',
-        display: 'flex',
-        flexDirection: 'column',
-        background: C.panel,
-        border: `1px solid ${C.border}`,
-        boxShadow: '0 10px 28px rgba(0,0,0,0.5)',
-        zIndex: 10000,
-        fontFamily: MONO_FONT,
-        fontSize: 13,
-        color: C.text,
-      }}
+      style={{ left, top, bottom, width, fontFamily: MONO_FONT }}
     >
-      <style>{PICKER_CSS}</style>
-
       {!hasQuery ? (
-        <div style={{ padding: '10px 12px', color: C.faint }}>Type to search spells</div>
+        <div className="px-3 py-2.5 text-[#6a6d70]">Type to search spells</div>
       ) : (
         <>
-          <div
-            className="spell-picker-list"
-            style={{ maxHeight: 288, overflowY: 'auto', overflowX: 'hidden' }}
-          >
+          <div className="spell-picker-list max-h-72 overflow-x-hidden overflow-y-auto">
             {results.length === 0 ? (
-              <div style={{ padding: '10px 12px', color: C.faint }}>No matching spells</div>
+              <div className="px-3 py-2.5 text-[#6a6d70]">No matching spells</div>
             ) : (
               results.map((spell, i) => {
                 const active = i === highlighted
@@ -147,18 +94,9 @@ export default function SpellPicker({
                       onSelect(spell)
                     }}
                     onMouseEnter={() => onHover(i)}
-                    style={{
-                      boxSizing: 'border-box',
-                      display: 'grid',
-                      gridTemplateColumns: ROW_GRID,
-                      columnGap: 10,
-                      alignItems: 'center',
-                      padding: '5px 12px',
-                      textDecoration: 'none',
-                      color: 'inherit',
-                      cursor: 'pointer',
-                      background: active ? C.active : 'transparent',
-                    }}
+                    className={`box-border grid cursor-pointer grid-cols-[16px_minmax(0,1fr)_52px_56px] items-center gap-x-2.5 px-3 py-[5px] text-inherit no-underline ${
+                      active ? 'bg-[#37393d]' : 'bg-transparent'
+                    }`}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element -- tiny CDN icons; next/image would need the hosts in next.config */}
                     <img
@@ -166,35 +104,17 @@ export default function SpellPicker({
                       alt=""
                       width={16}
                       height={16}
-                      style={{
-                        width: 16,
-                        height: 16,
-                        display: 'block',
-                        border: '1px solid rgba(0,0,0,0.45)',
-                      }}
+                      className="block h-4 w-4 border border-black/45"
                       onError={(e) => {
                         ;(e.currentTarget as HTMLImageElement).style.visibility = 'hidden'
                       }}
                     />
                     <span
-                      style={{
-                        minWidth: 0,
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap',
-                        color: active ? '#fff' : C.text,
-                      }}
+                      className={`min-w-0 truncate ${active ? 'text-white' : 'text-[#d8d8d8]'}`}
                     >
                       {spell.name}
                     </span>
-                    <span
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'flex-end',
-                        alignItems: 'center',
-                        gap: 2,
-                      }}
-                    >
+                    <span className="flex items-center justify-end gap-0.5">
                       {spell.spec &&
                         specParts(spell.spec).map((sp) => (
                           // eslint-disable-next-line @next/next/no-img-element -- tiny CDN icons; next/image would need the hosts in next.config
@@ -205,46 +125,20 @@ export default function SpellPicker({
                             title={sp}
                             width={14}
                             height={14}
-                            style={{
-                              width: 14,
-                              height: 14,
-                              display: 'block',
-                              border:
-                                sp === currentSpec
-                                  ? `1px solid ${C.accent}`
-                                  : '1px solid rgba(0,0,0,0.45)',
-                            }}
+                            className={`block h-3.5 w-3.5 border ${
+                              sp === currentSpec ? 'border-dg-highlight' : 'border-black/45'
+                            }`}
                           />
                         ))}
                     </span>
-                    <span
-                      style={{
-                        textAlign: 'right',
-                        color: C.dim,
-                        fontVariantNumeric: 'tabular-nums',
-                      }}
-                    >
-                      {spell.id}
-                    </span>
+                    <span className="text-right text-[#7c7f83] tabular-nums">{spell.id}</span>
                   </a>
                 )
               })
             )}
           </div>
 
-          <div
-            style={{
-              boxSizing: 'border-box',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '5px 12px',
-              borderTop: `1px solid ${C.border}`,
-              fontSize: 11,
-              color: C.faint,
-              letterSpacing: '0.02em',
-            }}
-          >
+          <div className="box-border flex items-center justify-between border-t border-[#3c3f41] px-3 py-[5px] text-[11px] tracking-[0.02em] text-[#6a6d70]">
             <span>{results.length} shown</span>
             <span>↑↓ move · ⏎ insert · esc close</span>
           </div>
