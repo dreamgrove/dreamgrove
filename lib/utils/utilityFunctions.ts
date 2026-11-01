@@ -1,4 +1,4 @@
-import { GlobalAction, TimelineState } from '@/types/index'
+import { TimelineState } from '@/types/index'
 
 // Helper function to format time as minutes:seconds
 export function formatTime(seconds: number): string {
@@ -15,13 +15,4 @@ export function isValid(timelineState: TimelineState, castId: string): boolean {
 
 export function round(value: number, precision: number) {
   return Math.round(value * precision) / precision
-}
-
-export function bindGlobalAction(
-  key: string,
-  action: GlobalAction,
-  handlers: Map<string, GlobalAction[]>
-) {
-  if (!handlers.has(key)) handlers.set(key, [])
-  handlers.get(key)!.push(action)
 }

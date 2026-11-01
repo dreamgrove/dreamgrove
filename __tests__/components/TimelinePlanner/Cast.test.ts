@@ -106,6 +106,9 @@ describe('Cast class', () => {
     expect(castWithDelay.cooldown_start_s).toBe(start_s + 5) // start_s  + cooldown_delay_s
     expect(castWithDelay.cooldown_visual_start_s).toBe(start_s + 15) // start_s + max(channel_duration_s, effect_duration_s)
     expect(castWithDelay.delayed_cooldown_duration).toBe(35) // spell.cooldown + cooldown_delay_s
+    // duration_s follows the cooldown end recorded by the event queue (handleCooldownEnd)
+    expect(castWithDelay.duration_s).toBe(30)
+    castWithDelay._cd_end_s = start_s + 35
     expect(castWithDelay.duration_s).toBe(35) // spell.cooldown + cooldown_delay_s
     expect(castWithDelay.end_s).toBe(start_s + 30 + 5) // start_s + cooldown_s + cooldown_delay_s
     expect(castWithDelay.effect_visual_duration).toBe(15)
@@ -203,6 +206,8 @@ describe('Cast class', () => {
     expect(cast.duration_s).toBe(30) //duration is not changed
     expect(cast.cooldown_visual_duration).toBe(10) // but cooldown visual duration is updated
 
+    // Same as handleCooldownEnd: record the cooldown end, then the duration
+    cast._cd_end_s = start_s + 45
     cast.cooldown_duration = 45
     expect(cast.cooldown_duration).toBe(45)
     expect(cast.cooldown_visual_duration).toBe(25) // new cooldown - effect_visual_duration
