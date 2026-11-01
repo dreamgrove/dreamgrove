@@ -23,13 +23,10 @@ import {
   FaLink,
   FaListOl,
   FaListUl,
-  FaLongArrowAltRight,
   FaMagic,
   FaPen,
   FaPlus,
   FaQuoteRight,
-  FaRegArrowAltCircleDown,
-  FaRegArrowAltCircleUp,
   FaRegCheckSquare,
   FaRegCircle,
   FaRegDotCircle,
@@ -52,11 +49,9 @@ import {
   HiOutlineChevronDown,
   HiOutlineClipboard,
   HiOutlineClipboardCheck,
-  HiOutlineSearch,
-  HiSun,
   HiX,
 } from 'react-icons/hi'
-import { HiMiniChevronDown, HiOutlineMagnifyingGlass } from 'react-icons/hi2'
+import { HiMiniChevronDown } from 'react-icons/hi2'
 import { IoIosArrowDown } from 'react-icons/io'
 import { IoLanguage } from 'react-icons/io5'
 import {
@@ -85,9 +80,6 @@ const ICONS = {
   arrowLeftThin: LuArrowLeft,
   arrowRightThin: LuArrowRight,
   arrowUpBold: HiArrowUp,
-  longArrowRight: FaLongArrowAltRight,
-  circleArrowUp: FaRegArrowAltCircleUp,
-  circleArrowDown: FaRegArrowAltCircleDown,
   angleDown: FaAngleDown,
   angleUp: FaAngleUp,
   chevron: FaChevronDown,
@@ -109,8 +101,6 @@ const ICONS = {
   editThin: LuPencil,
   refresh: FaSyncAlt,
   search: FaSearch,
-  searchOutline: HiOutlineSearch,
-  searchThin: HiOutlineMagnifyingGlass,
   upload: FaUpload,
   import: LuArrowDownToLine,
   export: LuArrowUpToLine,
@@ -158,7 +148,6 @@ const ICONS = {
   github: FaGithub,
   file: LuFileText,
   language: IoLanguage,
-  sun: HiSun,
   swords: LuSwords,
 } satisfies Record<string, IconType>
 

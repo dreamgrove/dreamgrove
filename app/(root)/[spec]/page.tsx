@@ -6,7 +6,7 @@ import PageWrapper from '@/components/PageWrapper'
 import SpecArt from '@/components/spec/SpecArt'
 import GuideList from '@/components/spec/GuideList'
 import ActiveSpec from '@/components/spec/ActiveSpec'
-import { genPageMetadata } from 'app/(root)/seo'
+import { genPageMetadata } from '@/lib/seo'
 import { allBlogs } from 'contentlayer/generated'
 import { SPECS, getSpec } from '@/data/specs'
 import { getSpecArt } from '@/lib/specArt'
@@ -55,7 +55,6 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
             <SpecArt
               art={getSpecArt(spec.id)}
               color={spec.color}
-              // 20% below centre so the hero shows more of the top of the art
               position={spec.artPosition ?? 'center 30%'}
               tint={0.35}
               scrim={0.45}
@@ -83,7 +82,7 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
           {/* Named so it's captured as its own layer during the page transition; otherwise
               the hero's layer paints over the part of this panel that overlaps it */}
           <div
-            className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] overflow-hidden rounded-lg border border-[#3a3a3a] bg-[#1f1f1f]"
+            className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] overflow-hidden rounded-lg border border-dg-line bg-dg-panel-deep"
             style={{ viewTransitionName: 'spec-hub-panel' }}
           >
             <div className="flex flex-col px-6 py-8 sm:px-11 sm:pt-11 sm:pb-10">
@@ -119,7 +118,7 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
               <div className="min-h-[30px] flex-1" />
               <Link
                 href={`/blog/${spec.compendiumSlug}`}
-                className="inline-flex items-center gap-2.5 self-start rounded-md px-5 py-[13px] text-base font-semibold text-[#2a2a2a]! transition-[filter] hover:brightness-110"
+                className="inline-flex items-center gap-2.5 self-start rounded-md px-5 py-[13px] text-base font-semibold text-dg-panel! transition-[filter] hover:brightness-110"
                 style={{ background: spec.color }}
               >
                 Read the compendium
@@ -127,14 +126,14 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
               </Link>
             </div>
 
-            <div className="border-t border-[#3a3a3a] px-4 pt-7 pb-6 sm:px-8 sm:pt-8 sm:pb-7 lg:border-t-0 lg:border-l">
+            <div className="border-t border-dg-line px-4 pt-7 pb-6 sm:px-8 sm:pt-8 sm:pb-7 lg:border-t-0 lg:border-l">
               <div className="dg-eyebrow mx-3 mb-2.5">Jump to</div>
               <nav className="flex flex-col">
                 {spec.jumpTo.map((link, i) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="grid grid-cols-[34px_minmax(0,1fr)] items-center gap-2 rounded-md px-3 py-[13px] text-white transition-colors hover:bg-[#2a2a2a]"
+                    className="grid grid-cols-[34px_minmax(0,1fr)] items-center gap-2 rounded-md px-3 py-[13px] text-white transition-colors hover:bg-dg-panel"
                   >
                     <span
                       className="text-[.85rem] font-semibold tabular-nums"
@@ -157,7 +156,7 @@ export default async function SpecHubPage(props: { params: Promise<{ spec: strin
               <Link
                 key={o.id}
                 href={`/${o.id}`}
-                className="text-base text-white transition-colors hover:text-[#d57f43]"
+                className="text-base text-white transition-colors hover:text-main"
               >
                 {o.name}
               </Link>

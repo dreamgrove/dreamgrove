@@ -1,7 +1,6 @@
 import { MDXLayoutRenderer } from '@/components/MDXLayoutRenderer'
-import { coreContent, allCoreContent } from '@/lib/utils/contentlayer'
+import { coreContent, findPublished, slugParams } from '@/lib/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import type { Blog } from 'contentlayer/generated'
 import PostLayout from '@/layouts/PostLayout'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
@@ -10,11 +9,7 @@ import PageWrapper from '@/components/PageWrapper'
 import { getCheckboxDefaults } from '@/lib/utils/checkboxDefaults'
 import { localeFromPath } from '@/lib/pageLocale'
 import { jsonLdHtml } from '@/lib/utils/jsonLd'
-
-const defaultLayout = 'PostLayout'
-const layouts: Record<string, React.ComponentType<any>> = {
-  PostLayout,
-}
+import { genArticleMetadata } from '@/lib/seo'
 
 interface Chapter {
   value: string
@@ -29,27 +24,23 @@ export async function generateMetadata({
 }: {
   params: Params
 }): Promise<Metadata | undefined> {
-  if (process.env.NODE_ENV === 'development') {
-    return undefined
-  }
-
-  const props = await params
-  const slug = decodeURI(props.slug.join('/'))
-  const post = allBlogs.find((p) => p.slug === slug)
-
-  const authorList = post?.authors || ['default']
+  const { slug: slugSegments } = await params
+  const post = findPublished(allBlogs, slugSegments)
   if (!post) {
     return
   }
+  const slug = post.slug
+  const authorList = post.authors || ['default']
 
   let imageList = [siteMetadata.socialBanner]
   if (post.images) {
     imageList = typeof post.images === 'string' ? [post.images] : post.images
   }
-  const ogImages = imageList.map((img) => {
-    return {
-      url: img.includes('http') ? img : siteMetadata.siteUrl + img,
-    }
+  const article = genArticleMetadata({
+    title: post.title,
+    summary: post.summary,
+    images: imageList,
+    authors: authorList.length > 0 ? authorList : [siteMetadata.author],
   })
 
   // Link the English and Korean versions of the same guide via hreflang
@@ -69,65 +60,30 @@ export async function generateMetadata({
   const isTestPage = slug.startsWith('test/')
 
   return {
-    title: post.title,
-    description: post.summary,
+    ...article,
     ...(isTestPage && { robots: { index: false, follow: false } }),
     alternates: {
       canonical: './',
       ...(Object.keys(languages).length > 0 && { languages }),
     },
-    openGraph: {
-      title: post.title,
-      description: post.summary,
-      siteName: siteMetadata.title,
-      locale: 'en_US',
-      type: 'article',
-      url: './',
-      images: ogImages,
-      authors: authorList.length > 0 ? authorList : [siteMetadata.author],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.summary,
-      images: imageList,
-    },
   }
 }
 
-export const generateStaticParams = async () => {
-  return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
-}
-export default async function Page(props: { params: Promise<Params> }): Promise<React.ReactNode> {
-  const params = await props.params
-  const slug = decodeURI(params.slug.join('/'))
+export const generateStaticParams = () => slugParams(allBlogs)
 
-  const sortedCoreContents = allCoreContent(allBlogs)
-
-  const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
-
-  if (postIndex === -1) {
+export default async function Page({ params }: { params: Params }): Promise<React.ReactNode> {
+  const post = findPublished(allBlogs, (await params).slug)
+  if (!post) {
     return notFound()
   }
+  const slug = post.slug
 
-  const prev = sortedCoreContents[postIndex + 1]
-  const next = sortedCoreContents[postIndex - 1]
+  const authorDetails = post.authors || ['default']
+  const jsonLd = {
+    ...post.structuredData,
+    author: authorDetails.map((name) => ({ '@type': 'Person', name })),
+  }
 
-  const post = allBlogs.find((p) => p.slug === slug) as Blog
-
-  const authorList = post?.authors || ['default']
-  const authorDetails = authorList.map((author) => author)
-
-  const mainContent = coreContent(post)
-  const jsonLd = post.structuredData
-  jsonLd['author'] = authorDetails.map((name) => {
-    return {
-      '@type': 'Person',
-      name,
-    }
-  })
-
-  const Layout = layouts[post.layout || defaultLayout]
   const pageTitle =
     typeof post.title === 'string' && post.title.trim() !== ''
       ? post.title.trim()
@@ -136,32 +92,23 @@ export default async function Page(props: { params: Promise<Params> }): Promise<
   // English stays undefined: it is also the page's lang attribute, which English pages never set
   const contentLang = localeFromPath(slug) === 'ko' ? 'ko' : undefined
 
-  const result = (
+  return (
     <PageWrapper
       toc={post.toc as unknown as Chapter[]}
       title={pageTitle}
       isBlog={post.kind === 'compendium'}
     >
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdHtml(jsonLd) }} />
       <div lang={contentLang}>
-        <Layout
-          content={mainContent}
+        <PostLayout
+          content={coreContent(post)}
           toc={post.toc}
           authorDetails={authorDetails}
-          next={next}
-          prev={prev}
-          translator={post.translator}
           checkboxDefaults={getCheckboxDefaults(post.body.raw)}
         >
           <MDXLayoutRenderer code={post.body.code} toc={post.toc} locale={contentLang} />
-        </Layout>
+        </PostLayout>
       </div>
     </PageWrapper>
   )
-
-  return result
 }

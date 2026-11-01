@@ -1,11 +1,9 @@
-import { writeFileSync, mkdirSync } from 'fs'
-import path from 'path'
-import { slug } from 'github-slugger'
+import { writeFileSync } from 'fs'
 import { escape } from '../lib/utils/htmlEscaper.mjs'
 import siteMetadata from '../data/siteMetadata.js'
-import tagData from '../app/tag-data.json' with { type: 'json' }
 import { allBlogs } from '../.contentlayer/generated/index.mjs'
-import { sortPosts } from '../lib/utils/contentlayer.mjs'
+
+const byDateDesc = (a, b) => (a.date > b.date ? -1 : a.date < b.date ? 1 : 0)
 
 const generateRssItem = (config, post) => `
   <item>
@@ -37,20 +35,9 @@ const generateRss = (config, posts, page = 'feed.xml') => `
 
 async function generateRSS(config, allBlogs, page = 'feed.xml') {
   const publishPosts = allBlogs.filter((post) => post.draft !== true)
-  // RSS for blog post
   if (publishPosts.length > 0) {
-    const rss = generateRss(config, sortPosts(publishPosts))
+    const rss = generateRss(config, [...publishPosts].sort(byDateDesc), page)
     writeFileSync(`./public/${page}`, rss)
-  }
-
-  if (publishPosts.length > 0) {
-    for (const tag of Object.keys(tagData)) {
-      const filteredPosts = allBlogs.filter((post) => post.tags.map((t) => slug(t)).includes(tag))
-      const rss = generateRss(config, filteredPosts, `tags/${tag}/${page}`)
-      const rssPath = path.join('public', 'tags', tag)
-      mkdirSync(rssPath, { recursive: true })
-      writeFileSync(path.join(rssPath, page), rss)
-    }
   }
 }
 

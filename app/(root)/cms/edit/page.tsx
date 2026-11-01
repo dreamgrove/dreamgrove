@@ -1,4 +1,4 @@
-import { genPageMetadata } from 'app/(root)/seo'
+import { genPageMetadata } from '@/lib/seo'
 import FileEditor from '@/components/admin/editor/FileEditor'
 import { StatusMessage } from '@/components/admin/ui/StatusShell'
 import { safeLocalPath } from '@/lib/admin/content'

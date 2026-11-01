@@ -5,7 +5,6 @@ import { getSpecArt } from '@/lib/specArt'
 import Main from './Main'
 import { jsonLdHtml } from '@/lib/utils/jsonLd'
 
-// Force static generation
 export const dynamic = 'force-static'
 
 export const metadata = {
@@ -34,7 +33,6 @@ export default function Page() {
     <PageWrapper title="Main" showTitle={false} variant="redesign">
       <script
         type="application/ld+json"
-        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: jsonLdHtml(websiteJsonLd) }}
       />
       <Main tiles={tiles} />
