@@ -47,7 +47,6 @@ export function serializeDocument({ body, frontmatter, authorsInput }: EditorDoc
   return matter.stringify(body, data)
 }
 
-/** Where the page is served, for pages that are already live (English only) */
 /**
  * The page with frontmatter `lastmod` set to `date` (YYYY-MM-DD), which the site
  * shows as "Updated". Same gray-matter round trip as serializeDocument.
@@ -58,6 +57,7 @@ export function withLastmod(content: string, date: string): string {
   return matter.stringify(body, { ...data, lastmod: date })
 }
 
+/** Where the page is served, for pages that are already live (English only) */
 export function livePageHref(filePath: string, isNew: boolean) {
   return !isNew && localeFromPath(filePath) === 'en' ? `/${filePath.replace(/\.mdx?$/, '')}` : null
 }

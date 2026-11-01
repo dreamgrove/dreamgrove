@@ -135,7 +135,11 @@ export class Cast {
       cooldown_delay_s: this.cooldown_delay_s,
       cooldown_duration: this.cooldown_duration,
     })
+    // Carry over what an interrupt shortened, which the spell's durations don't know
     moved._is_interruped = this._is_interruped
+    moved._channel_duration = this._channel_duration
+    moved._effect_duration = this._effect_duration
+    moved._chann_end_s = moved.start_s + this.channel_length
     moved._ef_end_s = moved.start_s + this.effect_duration
     return moved
   }

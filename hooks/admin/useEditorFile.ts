@@ -106,7 +106,10 @@ export function useEditorFile(filePath: string, isNew: boolean) {
 
   /** The document as committed upstream */
   const markSaved = (saved: string) => {
-    setBaseline(saved)
+    // The server may have stamped lastmod, so adopt its version as the document too
+    const committed = parseDocument(saved)
+    setDoc(committed)
+    setBaseline(serializeDocument(committed))
     clearDraft(filePath)
     setDraftSavedAt(null)
   }
