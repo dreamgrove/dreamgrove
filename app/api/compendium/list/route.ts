@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import type { ContentFile, ContentKind } from '@/lib/admin/content'
+import { kindOf, type ContentFile } from '@/lib/admin/content'
 import { getContentAccess } from '@/lib/admin/access'
 
 function scanDirectory(dir: string, baseDir: string): string[] {
@@ -14,14 +14,6 @@ function scanDirectory(dir: string, baseDir: string): string[] {
       files.push(path.relative(baseDir, fullPath).split(path.sep).join('/'))
   }
   return files
-}
-
-function kindOf(relPath: string): ContentKind {
-  if (relPath.startsWith('dungeons/')) return 'dungeon'
-  if (relPath.startsWith('raids/')) return 'raid'
-  if (relPath.startsWith('blog/'))
-    return relPath.endsWith('/compendium.mdx') ? 'compendium' : 'article'
-  return 'page'
 }
 
 // gray-matter turns unquoted YAML dates into Date objects

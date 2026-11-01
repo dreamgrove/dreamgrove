@@ -5,6 +5,15 @@ import { SPECS, type SpecId } from '@/data/specs'
 
 export type ContentKind = 'compendium' | 'article' | 'dungeon' | 'raid' | 'page'
 
+/** What kind of page a path under data/ is, e.g. `raids/x.mdx` → 'raid'. */
+export function kindOf(relPath: string): ContentKind {
+  if (relPath.startsWith('dungeons/')) return 'dungeon'
+  if (relPath.startsWith('raids/')) return 'raid'
+  if (relPath.startsWith('blog/'))
+    return relPath.endsWith('/compendium.mdx') ? 'compendium' : 'article'
+  return 'page'
+}
+
 export interface ContentFile {
   /** Relative to data/, always with forward slashes (e.g. blog/feral/compendium.mdx) */
   path: string

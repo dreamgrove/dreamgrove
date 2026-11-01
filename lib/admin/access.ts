@@ -1,4 +1,5 @@
 // What the signed-in user may do in the CMS. Server only.
+import { createHash } from 'crypto'
 import { cookies } from 'next/headers'
 import { getToken } from 'next-auth/jwt'
 import { Octokit } from 'octokit'
@@ -14,12 +15,36 @@ async function getAccessToken(): Promise<string | null> {
   return token?.accessToken ?? null
 }
 
-export interface GitHubContext {
+interface GitHubContext {
   octokit: Octokit
   username: string
   canPush: boolean
   /** Write access or org membership: unlocks /cms and new pages */
   canManage: boolean
+}
+
+type Access = Omit<GitHubContext, 'octokit'>
+
+// Resolving access costs three GitHub API calls, and one editor page load makes
+// several requests, so the answer is kept briefly per token (by hash). A revoked
+// token keeps its access for at most this long; GitHub rejects its writes anyway.
+const ACCESS_TTL_MS = 5 * 60 * 1000
+const accessCache = new Map<string, { access: Access; expires: number }>()
+
+async function resolveAccess(octokit: Octokit, token: string): Promise<Access | null> {
+  const key = createHash('sha256').update(token).digest('hex')
+  const now = Date.now()
+  const hit = accessCache.get(key)
+  if (hit && hit.expires > now) return hit.access
+
+  const user = await octokit.rest.users.getAuthenticated().catch(() => null)
+  if (!user) return null
+  const username = user.data.login
+  const access = { username, ...(await canManageContent(octokit, username)) }
+
+  for (const [k, entry] of accessCache) if (entry.expires <= now) accessCache.delete(k)
+  accessCache.set(key, { access, expires: now + ACCESS_TTL_MS })
+  return access
 }
 
 /**
@@ -30,10 +55,8 @@ export async function getGitHubContext(): Promise<GitHubContext | null> {
   const accessToken = await getAccessToken()
   if (!accessToken) return null
   const octokit = new Octokit({ auth: accessToken })
-  const user = await octokit.rest.users.getAuthenticated().catch(() => null)
-  if (!user) return null
-  const username = user.data.login
-  return { octokit, username, ...(await canManageContent(octokit, username)) }
+  const access = await resolveAccess(octokit, accessToken)
+  return access && { octokit, ...access }
 }
 
 /** getGitHubContext without the client, for pages and routes that only check access */

@@ -6,6 +6,8 @@
 // the file on GitHub may have moved on since, and silently replaying a stale
 // draft over it would be worse than losing it.
 
+import { getStorage } from '@/lib/utils/storage'
+
 const PREFIX = 'dreamgrove:editor-draft:v1:'
 const MAX_AGE_MS = 14 * 24 * 60 * 60 * 1000
 
@@ -22,15 +24,6 @@ export interface EditorDraft {
 }
 
 const keyFor = (filePath: string) => `${PREFIX}${filePath}`
-
-function storage(): Storage | null {
-  // Private-mode Safari and hardened profiles throw on access, not just on use.
-  try {
-    return typeof window === 'undefined' ? null : window.localStorage
-  } catch {
-    return null
-  }
-}
 
 function isDraft(value: unknown): value is EditorDraft {
   if (!value || typeof value !== 'object') return false
@@ -53,7 +46,7 @@ function pruneExpired(store: Storage, now: number): void {
 }
 
 export function readDraft(filePath: string): EditorDraft | null {
-  const store = storage()
+  const store = getStorage()
   if (!store) return null
 
   const now = Date.now()
@@ -77,7 +70,7 @@ export function readDraft(filePath: string): EditorDraft | null {
 
 /** Returns the timestamp actually stored, or null if the write couldn't happen. */
 export function writeDraft(draft: Omit<EditorDraft, 'savedAt'>): number | null {
-  const store = storage()
+  const store = getStorage()
   if (!store) return null
 
   const savedAt = Date.now()
@@ -102,7 +95,7 @@ export function writeDraft(draft: Omit<EditorDraft, 'savedAt'>): number | null {
 }
 
 export function clearDraft(filePath: string): void {
-  storage()?.removeItem(keyFor(filePath))
+  getStorage()?.removeItem(keyFor(filePath))
 }
 
 export function formatDraftAge(savedAt: number, now: number = Date.now()): string {

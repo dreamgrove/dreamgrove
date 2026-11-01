@@ -1,28 +1,17 @@
-// A page created from /admin/select only exists once its PR is merged, so the
-// editor picks its starting document up from session storage instead.
+// A page created from /cms only exists once its PR is merged, so the editor
+// picks its starting document up from session storage instead.
+import { readItem, removeItem, writeItem } from '@/lib/utils/storage'
 
 const NEW_PAGE_PREFIX = 'dreamgrove:new-page:v1:'
 
 export function stashNewPage(filePath: string, document: string) {
-  try {
-    window.sessionStorage.setItem(NEW_PAGE_PREFIX + filePath, document)
-  } catch {
-    // Storage blocked
-  }
+  writeItem(NEW_PAGE_PREFIX + filePath, document, 'session')
 }
 
 export function readNewPage(filePath: string): string | null {
-  try {
-    return window.sessionStorage.getItem(NEW_PAGE_PREFIX + filePath)
-  } catch {
-    return null
-  }
+  return readItem(NEW_PAGE_PREFIX + filePath, 'session')
 }
 
 export function clearNewPage(filePath: string) {
-  try {
-    window.sessionStorage.removeItem(NEW_PAGE_PREFIX + filePath)
-  } catch {
-    // Nothing to clean up if storage is unavailable
-  }
+  removeItem(NEW_PAGE_PREFIX + filePath, 'session')
 }

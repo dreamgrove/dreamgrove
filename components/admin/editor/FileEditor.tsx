@@ -2,13 +2,14 @@
 
 import { useMemo, useRef, useState } from 'react'
 import type { EditorView } from '@codemirror/view'
+import { kindOf } from '@/lib/admin/content'
 import { livePageHref } from '@/lib/admin/document'
 import { specFromPath } from '@/lib/admin/spells'
 import { localeFromPath } from '@/lib/pageLocale'
 import { useEditorFile } from '@/hooks/admin/useEditorFile'
 import { useImageUploads, withUploadUrls } from '@/hooks/admin/useImageUploads'
 import { useMediaQuery } from '@/hooks/admin/useMediaQuery'
-import { usePersistedState } from '@/hooks/admin/usePersistedState'
+import { usePersistedState } from '@/hooks/usePersistedState'
 import { useSaveChanges } from '@/hooks/admin/useSaveChanges'
 import { useScrollSync } from '@/hooks/admin/useScrollSync'
 import { useSplitPane } from '@/hooks/admin/useSplitPane'
@@ -53,6 +54,7 @@ function Editor({
   backHref?: string
 }) {
   const file = useEditorFile(filePath, isNew)
+  const kind = kindOf(filePath)
   const { uploads, images } = useImageUploads(filePath)
   const save = useSaveChanges({ filePath, uploads, onSaved: file.markSaved })
 
@@ -163,7 +165,7 @@ function Editor({
         </div>
       )}
 
-      <div className="relative mx-4 mb-4 flex min-h-0 flex-1 overflow-hidden rounded-sm border border-[#3a3a3a] bg-[#1f1f1f] sm:mx-6 sm:mb-6">
+      <div className="relative mx-4 mb-4 flex min-h-0 flex-1 overflow-hidden rounded-sm border border-dg-line bg-dg-panel-deep sm:mx-6 sm:mb-6">
         <div ref={splitRef} className="flex min-w-0 flex-1">
           {showEditor && (
             <div
@@ -193,7 +195,7 @@ function Editor({
             >
               <div
                 className={`w-px transition-colors ${
-                  split.dragging ? 'bg-[#d57f43]' : 'bg-[#3a3a3a] group-hover:bg-[#d57f43]/60'
+                  split.dragging ? 'bg-main' : 'bg-dg-line group-hover:bg-main/60'
                 }`}
               />
             </div>
@@ -204,7 +206,7 @@ function Editor({
               scrollRef={previewRef}
               content={previewSource}
               locale={localeFromPath(filePath)}
-              withRoleSelector={filePath.includes('raids') || filePath.includes('dungeons')}
+              withRoleSelector={kind === 'dungeon' || kind === 'raid'}
               fullWidth={viewMode === 'preview'}
               syncScroll={
                 viewMode === 'split'
@@ -224,9 +226,7 @@ function Editor({
 
         {detailsOpen && (
           <DetailsSidebar
-            showSpecs={
-              /^(blog|dungeons|raids)\//.test(filePath) && !filePath.endsWith('/compendium.mdx')
-            }
+            showSpecs={kind === 'article' || kind === 'dungeon' || kind === 'raid'}
             frontmatter={doc.frontmatter}
             authorsInput={doc.authorsInput}
             setAuthorsInput={file.setAuthors}
