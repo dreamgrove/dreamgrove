@@ -11,7 +11,6 @@ import HeroTalentsHeader from './custom/HeroTalents/HeroTalentsHeader'
 import Encounter from './spec/Encounter'
 import SpecNote from './spec/SpecNote'
 import Npc from './custom/Npc'
-import Changelog from './custom/Changelog/Changelog'
 import Collapsible from './custom/Collapsible/Collapsible'
 import Timeline from './custom/Timeline'
 import PlannerEmbed from './custom/PlannerEmbed'
@@ -134,7 +133,6 @@ export const components: MDXComponents = {
   },
   pre: Pre,
   table: TableWrapper,
-  Changelog,
   Wowhead,
   Talents,
   Checkbox,

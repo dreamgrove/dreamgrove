@@ -27,20 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date().toISOString().split('T')[0],
     }))
 
-  const routes = [
-    '',
-    ...SPEC_IDS,
-    'blog',
-    'dungeons',
-    'raids',
-    'guides',
-    'changelog',
-    'about',
-    'planner',
-  ].map((route) => ({
-    url: `${siteUrl}/${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
-  }))
+  const routes = ['', ...SPEC_IDS, 'blog', 'dungeons', 'raids', 'guides', 'about', 'planner'].map(
+    (route) => ({
+      url: `${siteUrl}/${route}`,
+      lastModified: new Date().toISOString().split('T')[0],
+    })
+  )
 
   return [...routes, ...blogRoutes, ...dungeonRoutes, ...raidRoutes]
 }
