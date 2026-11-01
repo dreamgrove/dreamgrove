@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useCallback, useRef, useState, type ReactNode } from 'react'
+import { useOutsideClick } from '@/hooks/useOutsideClick'
 import type { EditorView } from '@codemirror/view'
 import type { TagMatch } from '@/lib/admin/editor/blocks/tags'
 import {
@@ -24,7 +25,7 @@ const MODES = [
 const HEADINGS = ['Body', 'Heading 1', 'Heading 2', 'Heading 3', 'Heading 4']
 
 function Divider() {
-  return <span className="mx-1 h-5 w-px flex-shrink-0 bg-[#3a3a3a]" aria-hidden />
+  return <span className="mx-1 h-5 w-px flex-shrink-0 bg-dg-line" aria-hidden />
 }
 
 function ToolButton({
@@ -51,9 +52,7 @@ function ToolButton({
       aria-label={label}
       aria-pressed={active}
       className={`flex h-8 flex-shrink-0 items-center gap-1.5 rounded-xs px-2 text-[.84rem] font-semibold transition-colors ${
-        active
-          ? 'bg-[#d57f43]/20 text-[#ffb86c]'
-          : 'text-white/60 hover:bg-[#2a2a2a] hover:text-white'
+        active ? 'bg-main/20 text-dg-highlight' : 'text-white/60 hover:bg-dg-panel hover:text-white'
       }`}
     >
       {icon && <Icon box name={icon} size={17} />}
@@ -75,14 +74,8 @@ function Menu({
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    if (!open) return
-    const onDown = (e: MouseEvent) => {
-      if (!ref.current?.contains(e.target as Node)) setOpen(false)
-    }
-    document.addEventListener('mousedown', onDown)
-    return () => document.removeEventListener('mousedown', onDown)
-  }, [open])
+  const close = useCallback(() => setOpen(false), [])
+  useOutsideClick(ref, close, open)
 
   return (
     <div ref={ref} className="relative flex-shrink-0">
@@ -93,7 +86,7 @@ function Menu({
         aria-haspopup="menu"
         aria-expanded={open}
         title={label}
-        className="flex h-8 items-center gap-1 rounded-xs px-2 text-[.84rem] font-semibold text-white/70 transition-colors hover:bg-[#2a2a2a] hover:text-white"
+        className="flex h-8 items-center gap-1 rounded-xs px-2 text-[.84rem] font-semibold text-white/70 transition-colors hover:bg-dg-panel hover:text-white"
       >
         {trigger}
         <Icon box name="chevron" size={13} />
@@ -101,7 +94,7 @@ function Menu({
       {open && (
         <div
           role="menu"
-          className={`absolute top-full z-30 mt-1 min-w-[11rem] rounded-xs border border-[#3a3a3a] bg-[#2a2a2a] p-1 shadow-xl ${
+          className={`absolute top-full z-30 mt-1 min-w-[11rem] rounded-xs border border-dg-line bg-dg-panel p-1 shadow-xl ${
             align === 'right' ? 'right-0' : 'left-0'
           }`}
         >
@@ -119,7 +112,7 @@ function MenuItem({ onClick, children }: { onClick: () => void; children: ReactN
       role="menuitem"
       onMouseDown={(e) => e.preventDefault()}
       onClick={onClick}
-      className="flex w-full items-center gap-2 rounded-xs px-2.5 py-1.5 text-left text-[.86rem] text-white/80 hover:bg-[#3a3a3a] hover:text-white"
+      className="flex w-full items-center gap-2 rounded-xs px-2.5 py-1.5 text-left text-[.86rem] text-white/80 hover:bg-dg-line hover:text-white"
     >
       {children}
     </button>
@@ -159,13 +152,13 @@ export default function EditorToolbar({
 
   return (
     // Wrap instead of scrolling because an overflow container clips the dropdown menus
-    <div className="relative z-20 flex flex-wrap items-center gap-0.5 border-b border-[#3a3a3a] bg-[#1f1f1f] px-2 py-1.5">
+    <div className="relative z-20 flex flex-wrap items-center gap-0.5 border-b border-dg-line bg-dg-panel-deep px-2 py-1.5">
       <button
         type="button"
         onMouseDown={(e) => e.preventDefault()}
         onClick={onInsertBlock}
         title="Insert component (Ctrl+/)"
-        className="flex h-8 flex-shrink-0 items-center gap-1 rounded-xs bg-[#d57f43]/15 pr-3 pl-2 text-[.84rem] leading-none font-semibold text-[#ffb86c] transition-colors hover:bg-[#d57f43]/25"
+        className="flex h-8 flex-shrink-0 items-center gap-1 rounded-xs bg-main/15 pr-3 pl-2 text-[.84rem] leading-none font-semibold text-dg-highlight transition-colors hover:bg-main/25"
       >
         <Icon box name="plus" size={14} />
         {/* thiccboi's caps sit ~0.5px above the line box's centre */}
@@ -283,7 +276,7 @@ export default function EditorToolbar({
           onMouseDown={(e) => e.preventDefault()}
           onClick={onEditTag}
           title="Edit this component in a form (Ctrl+E)"
-          className="flex h-8 flex-shrink-0 items-center gap-1.5 rounded-xs border border-[#d57f43]/50 px-2.5 text-[.82rem] font-semibold text-[#ffb86c] transition-colors hover:bg-[#d57f43]/15"
+          className="flex h-8 flex-shrink-0 items-center gap-1.5 rounded-xs border border-main/50 px-2.5 text-[.82rem] font-semibold text-dg-highlight transition-colors hover:bg-main/15"
         >
           <Icon box name="edit" size={14} />
           Edit {activeTag.block.label.toLowerCase()}

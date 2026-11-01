@@ -1,5 +1,5 @@
 import type { EditorView } from '@codemirror/view'
-import type { BlockField } from '../../blocks/summary'
+import type { BlockField } from '@/lib/admin/editor/blocks/summary'
 import { frameDom } from '../boxes'
 import { condChip } from '../conditions'
 import { actionButton, el, toggleIcon } from '../dom'

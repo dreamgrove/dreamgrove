@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useOutsideClick } from '@/hooks/useOutsideClick'
 import { createPortal } from 'react-dom'
 import type { EditorView } from '@codemirror/view'
 import { replaceRange } from '@/lib/admin/editor/commands'
@@ -61,12 +62,8 @@ export default function LinkPopover({
 
   useEffect(() => {
     if (!isLink) urlRef.current?.focus()
-    const onDown = (e: MouseEvent) => {
-      if (!boxRef.current?.contains(e.target as Node)) onClose()
-    }
-    document.addEventListener('mousedown', onDown)
-    return () => document.removeEventListener('mousedown', onDown)
-  }, [isLink, onClose])
+  }, [isLink])
+  useOutsideClick(boxRef, onClose)
 
   const save = () => {
     const label = text.trim() || url.trim()
@@ -87,7 +84,7 @@ export default function LinkPopover({
       role="dialog"
       aria-label={isLink ? 'Edit link' : 'Add link'}
       style={{ left: pos.left, top: pos.top, width: 340 }}
-      className="fixed z-[60] rounded-xs border border-[#3a3a3a] bg-[#2a2a2a] p-3 shadow-xl"
+      className="fixed z-[60] rounded-xs border border-dg-line bg-dg-panel p-3 shadow-xl"
       onKeyDown={(e) => {
         if (e.key === 'Escape') {
           e.preventDefault()
