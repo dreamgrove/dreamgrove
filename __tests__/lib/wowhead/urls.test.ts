@@ -4,8 +4,8 @@ import {
   extractIdFromUrl,
   formatUrl,
   buildWowheadUrl,
-} from '../../../../app/api/wowhead-data/utils'
-import { describe, test, expect } from '@jest/globals'
+} from '@/lib/wowhead/urls'
+import { describe, test, expect } from 'vitest'
 
 describe('parseWowheadUrl', () => {
   test('parses a url with a slug', () => {

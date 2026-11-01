@@ -45,7 +45,7 @@ export default function TimelineClientVersion({
                     name={`Spell ${spell.id}`}
                     beta={beta}
                     locale={locale}
-                    size={50}
+                    iconSize={50}
                     noMargin
                   />
                   {spell.count > 1 && (

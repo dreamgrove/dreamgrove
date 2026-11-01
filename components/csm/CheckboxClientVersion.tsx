@@ -10,10 +10,7 @@ interface CheckboxProps {
   type?: string
   radio?: string
   defaultCheck?: boolean
-  isText?: boolean
   disabled?: boolean
-  isIcon?: boolean
-  children?: React.ReactNode
 }
 
 const Checkbox = ({
@@ -29,7 +26,12 @@ const Checkbox = ({
   // so `[*<id>]` conditional rows resolve against the same key the checkbox registers under.
   const checkboxId = id === '' ? spellId.toString() : id
 
-  const child = <WowheadClientVersion type={type} id={spellId} name={name} disabled={disabled} />
+  const child =
+    spellId === '' && id === '' ? (
+      <div className="text-gray-500">[FIX ME]</div>
+    ) : (
+      <WowheadClientVersion type={type} id={spellId} name={name} disabled={disabled} />
+    )
 
   const { checkboxMap, updateCheckbox } = useContext(CheckboxContext)
 
@@ -58,14 +60,14 @@ const Checkbox = ({
         />
         <div className={'h-full w-full flex-1'}>
           <div
-            className={`border-main relative flex h-full w-full items-center rounded border px-2 py-1.5 sm:px-3 ${
+            className={`relative flex h-full w-full items-center rounded border border-main px-2 py-1.5 sm:px-3 ${
               checked ? 'border-main' : 'border-main/20'
             }`}
           >
             <div className="text-left leading-tight break-words normal-case">{child}</div>
 
             <div
-              className={`bg-main/20 absolute right-1 bottom-1 flex h-5 w-5 items-center justify-center rounded-full md:top-1/2 md:right-2 md:bottom-auto md:-translate-y-1/2 ${
+              className={`absolute right-1 bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-main/20 md:top-1/2 md:right-2 md:bottom-auto md:-translate-y-1/2 ${
                 checked ? 'block' : 'hidden'
               }`}
             >

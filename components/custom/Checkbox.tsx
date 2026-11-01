@@ -8,10 +8,7 @@ interface CheckboxProps {
   type?: string
   radio?: string
   defaultCheck?: boolean
-  isText?: boolean
   disabled?: boolean
-  isIcon?: boolean
-  children?: React.ReactNode
 }
 
 const PlaceHolder = ({ name }: { name: string }) => {
@@ -30,7 +27,7 @@ const Checkbox = ({
   const checkboxId = id === '' ? spellId.toString() : id
 
   const child =
-    (spellId === '' && id === '') || (spellId !== '' && id === '') ? (
+    spellId === '' && id === '' ? (
       <PlaceHolder name={'[FIX ME]'} />
     ) : (
       <Wowhead type={type} id={spellId} name={name} disabled={disabled} />
@@ -43,7 +40,7 @@ const Checkbox = ({
         defaultCheck={defaultCheck}
         radio={radio}
         isIcon={true}
-        className="absolute left-0 top-0 z-10 h-full w-full cursor-pointer opacity-0"
+        className="absolute top-0 left-0 z-10 h-full w-full cursor-pointer opacity-0"
       >
         {child}
       </CheckboxToggler>

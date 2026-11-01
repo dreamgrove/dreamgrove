@@ -1,7 +1,7 @@
 import { memo, useState, useEffect } from 'react'
 import Image from 'next/image'
-import { getWowheadInfo } from '@/lib/wowhead-api'
-import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
+import { getWowheadInfo } from '@/lib/wowhead/client'
+import { buildWowheadUrl } from '@/lib/wowhead/urls'
 import type { PageLocale } from '@/lib/pageLocale'
 
 interface WowheadIconProps {
@@ -10,14 +10,11 @@ interface WowheadIconProps {
   name: string
   beta?: boolean
   url?: string
-  size?: number
+  iconSize?: number
   noLink?: boolean
   noMargin?: boolean
   locale?: PageLocale
 }
-
-// Client-side cache for icon filenames (only used for non-spell types)
-const iconCache = new Map<string, string>()
 
 function WowheadClientIcon({
   id,
@@ -25,13 +22,12 @@ function WowheadClientIcon({
   name,
   beta = false,
   url = '',
-  size,
+  iconSize: size,
   noLink = false,
   noMargin = false,
   locale,
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta, locale)
-  const cacheKey = `${type}-${id + name}${beta ? '-beta' : ''}`
 
   // Spell icons are hosted on our own CDN keyed directly by spell id, so the URL is
   // deterministic and needs no Wowhead lookup.
@@ -47,11 +43,6 @@ function WowheadClientIcon({
     if (isHostedSpell) return
     if (iconFilename) return
 
-    if (iconCache.has(cacheKey)) {
-      setIconFilename(iconCache.get(cacheKey) || null)
-      return
-    }
-
     const fetchIcon = async () => {
       if (typeof window === 'undefined') return
 
@@ -66,10 +57,7 @@ function WowheadClientIcon({
           url: url || '',
         })
 
-        if (data.icon) {
-          iconCache.set(cacheKey, data.icon)
-          setIconFilename(data.icon)
-        }
+        if (data.icon) setIconFilename(data.icon)
       } catch (err) {
         console.warn(`Error fetching icon for ${type}=${id}:`, err)
       } finally {
@@ -78,7 +66,7 @@ function WowheadClientIcon({
     }
 
     fetchIcon()
-  }, [id, type, beta, cacheKey, isHostedSpell, iconFilename, name, url])
+  }, [id, type, beta, isHostedSpell, iconFilename, name, url])
 
   const imageSrc = isHostedSpell
     ? `https://cdn.simcode.dev/${id}.jpg`
@@ -149,6 +137,6 @@ export default memo(WowheadClientIcon, (prevProps, nextProps) => {
   return (
     prevProps.id === nextProps.id &&
     prevProps.type === nextProps.type &&
-    prevProps.size === nextProps.size
+    prevProps.iconSize === nextProps.iconSize
   )
 })

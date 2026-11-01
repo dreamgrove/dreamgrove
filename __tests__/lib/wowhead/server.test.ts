@@ -1,19 +1,22 @@
-/**
- * @jest-environment node
- */
 import fs from 'fs'
-import { fetchWowheadData } from '../../../../app/api/wowhead-data/server-function'
+import { vi } from 'vitest'
+import { fetchWowheadData } from '@/lib/wowhead/server'
 
 describe('fetchWowheadData', () => {
-  const fetchSpy = jest.spyOn(global, 'fetch')
+  const fetchSpy = vi.spyOn(global, 'fetch')
   // The module reads data/wowhead-cache.json once and persists every fetched
   // result back to it. Start it from an empty cache and keep it off disk, so
   // the tests neither depend on the committed entries nor add to them.
-  const existsSpy = jest.spyOn(fs, 'existsSync').mockReturnValue(false)
-  const writeSpy = jest.spyOn(fs, 'writeFileSync').mockImplementation(() => undefined)
+  const existsSpy = vi.spyOn(fs, 'existsSync').mockReturnValue(false)
+  const writeSpy = vi.spyOn(fs, 'writeFileSync').mockImplementation(() => undefined)
 
-  beforeEach(() => fetchSpy.mockReset())
+  // Cache writes are debounced; fake timers let a test flush them on demand.
+  beforeAll(() => vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] }))
+  beforeEach(() => {
+    fetchSpy.mockReset()
+  })
   afterAll(() => {
+    vi.useRealTimers()
     fetchSpy.mockRestore()
     existsSpy.mockRestore()
     writeSpy.mockRestore()
@@ -55,6 +58,7 @@ describe('fetchWowheadData', () => {
       expect.anything()
     )
     expect(data.display).toBe('Test Spell')
+    vi.runOnlyPendingTimers()
     const [file, json] = writeSpy.mock.calls.at(-1) as [string, string]
     expect(file).toMatch(/data[\\/]wowhead-cache\.json$/)
     expect(JSON.parse(json)['spell-999999901']).toMatchObject({

@@ -2,7 +2,7 @@
 
 import type { TreeView } from './TalentTreeModel'
 import type { PageLocale } from '@/lib/pageLocale'
-import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
+import { buildWowheadUrl } from '@/lib/wowhead/urls'
 
 const SELECTED = '#00ff00'
 const UNSELECTED = '#ffd700'

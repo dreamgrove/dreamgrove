@@ -1,4 +1,4 @@
-import { WowheadApiParams, WowheadApiResponse } from '@/types/index'
+import type { WowheadApiParams, WowheadApiResponse } from '@/types/api'
 
 const resultCache = new Map<string, WowheadApiResponse>()
 const inflight = new Map<string, Promise<WowheadApiResponse>>()
@@ -64,13 +64,4 @@ export async function getWowheadInfo({
 
   inflight.set(key, promise)
   return applyName(await promise, name)
-}
-
-// Quality colors mapping for convenience
-export const qualityToColor = {
-  1: '#ffffff', // Common/White
-  2: '#1eff00', // Uncommon/Green
-  3: '#0070dd', // Rare/Blue
-  4: '#a335ee', // Epic/Purple
-  5: '#ff8000', // Legendary/Orange
 }

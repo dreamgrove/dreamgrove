@@ -1,5 +1,5 @@
 import type { PageLocale } from '@/lib/pageLocale'
-import { buildWowheadUrl } from 'app/api/wowhead-data/utils'
+import { buildWowheadUrl } from '@/lib/wowhead/urls'
 
 export default function Npc({
   id,

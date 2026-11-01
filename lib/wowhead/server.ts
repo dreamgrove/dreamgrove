@@ -1,18 +1,12 @@
-'use server'
+import 'server-only'
 
 import fs from 'fs'
 import path from 'path'
-import { extractIdFromUrl, formatUrl } from './utils'
+import type { WowheadApiResponse as CacheEntry, WowheadDataParams } from '@/types/api'
+import { extractIdFromUrl, formatUrl } from './urls'
 
 function getCacheFile(): string {
   return path.join(process.cwd(), 'data', 'wowhead-cache.json')
-}
-
-interface CacheEntry {
-  icon?: string
-  quality?: number
-  display: string
-  timestamp: number
 }
 
 // In-memory cache, loaded from disk on first access
@@ -39,7 +33,14 @@ function loadCache() {
   }
 }
 
-function saveCache() {
+// A build renders many pages at once, so misses arrive in bursts. Coalesce them
+// into one write instead of rewriting the whole file per entry. The timer is
+// not unref'd, so a pending write still lands before the build process exits.
+const SAVE_DELAY_MS = 1000
+let saveTimer: ReturnType<typeof setTimeout> | null = null
+
+function writeCache() {
+  saveTimer = null
   try {
     const obj: Record<string, CacheEntry> = Object.fromEntries(cache)
     fs.writeFileSync(getCacheFile(), JSON.stringify(obj, null, 2))
@@ -48,18 +49,15 @@ function saveCache() {
   }
 }
 
-interface WowheadDataParams {
-  id: string
-  type: string
-  name: string
-  beta?: boolean
-  url?: string
+function scheduleSave() {
+  if (saveTimer) return
+  saveTimer = setTimeout(writeCache, SAVE_DELAY_MS)
 }
 
 export async function fetchWowheadData({
-  id,
+  id = '',
   type,
-  name,
+  name = '',
   beta = false,
   url = '',
 }: WowheadDataParams) {
@@ -141,7 +139,7 @@ export async function fetchWowheadData({
       }
 
       cache.set(cacheKey, result)
-      saveCache()
+      scheduleSave()
       console.log(`[wowhead-cache] Fetched and cached: ${cacheKey}`)
 
       return result

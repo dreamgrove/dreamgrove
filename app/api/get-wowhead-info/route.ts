@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { fetchWowheadData } from '../wowhead-data/server-function'
+import { fetchWowheadData } from '@/lib/wowhead/server'
 
 export async function GET(request: NextRequest) {
-  // Get query parameters
   const searchParams = request.nextUrl.searchParams
   const id = searchParams.get('id') || ''
   const type = searchParams.get('type')
@@ -16,7 +15,6 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Call the existing server function
     const data = await fetchWowheadData({
       id,
       type: type || '',
@@ -25,7 +23,6 @@ export async function GET(request: NextRequest) {
       url,
     })
 
-    // Return the data
     return NextResponse.json(data)
   } catch (error: any) {
     console.error('Error fetching Wowhead data:', error)
@@ -34,9 +31,4 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     )
   }
-}
-
-// Configure CORS and response caching
-export const config = {
-  runtime: 'edge',
 }
