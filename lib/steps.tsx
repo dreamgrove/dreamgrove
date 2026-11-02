@@ -146,9 +146,9 @@ export const steps: Tour[] = [
 
       {
         icon: 'X',
-        title: 'MRT Export',
+        title: 'Export',
         content:
-          'When you are satisfied with your cooldowns, you can export them to an MRT note. This will allow you to import them directly in-game.',
+          'When you are satisfied with your cooldowns, you can export them as an MRT note to import them directly in-game, or as a loadout string to share your setup.',
         side: 'top-right',
         selector: '#mrt-export-selector',
         pointerRadius: 3,

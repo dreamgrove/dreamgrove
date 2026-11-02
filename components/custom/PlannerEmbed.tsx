@@ -11,13 +11,23 @@ interface PlannerEmbedProps {
   code: string
   children?: React.ReactNode
   locale?: PageLocale
+  /** Warcraft Logs encounter id, e.g. 3492 */
+  encounter?: string | number
+  /** Boss abilities to overlay, by name or spell id */
+  abilities?: (string | number)[] | string
 }
 
 /**
  * Read-only timeline embed for guides. Takes the loadout code produced by the
  * planner's Export button and renders the simulated timeline.
  */
-export default function PlannerEmbed({ code, children, locale }: PlannerEmbedProps) {
+export default function PlannerEmbed({
+  code,
+  children,
+  locale,
+  encounter,
+  abilities,
+}: PlannerEmbedProps) {
   const spells: SpellInfo[] = spellsData.spells.map((spell) => ({
     ...spell,
     charges: spell.charges || 1,
@@ -56,6 +66,8 @@ export default function PlannerEmbed({ code, children, locale }: PlannerEmbedPro
       code={code}
       spells={spells}
       spellNames={spellNames}
+      encounter={encounter}
+      abilities={abilities}
       {...(locale === 'ko' && { locale })}
     >
       {children}

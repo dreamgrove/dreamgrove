@@ -1,6 +1,6 @@
 'use client'
 import { useTimelineScale } from '../Providers/TimelineLengthProvider'
-import WowheadClientIcon from '@/components/csm/WowheadClientIcon'
+import WowheadClientIcon from '@/components/cms/WowheadClientIcon'
 import type { BossAbilityCast } from '@/types/bossAbilities'
 import { BOSS_ABILITY_PALETTE, computeAbilityColors } from '../bossAbilityPalette'
 
@@ -12,11 +12,13 @@ function BossMarker({
   colorClass,
   name,
   spellId,
+  icon,
 }: {
   position: number
   colorClass: string
   name: string
   spellId: number
+  icon?: string
 }) {
   return (
     <div
@@ -33,6 +35,7 @@ function BossMarker({
           id={String(spellId)}
           type="spell"
           name={name}
+          icon={icon}
           iconSize={ICON_SIZE}
           noMargin
         />
@@ -70,6 +73,7 @@ export default function BossAbilityMarkers({ abilities, visibleKeys }: Props) {
               colorClass={colorClass}
               name={ability.name}
               spellId={ability.spellId}
+              icon={ability.icon}
             />
           ))
       })}

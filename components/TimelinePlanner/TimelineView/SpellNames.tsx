@@ -2,6 +2,7 @@ import { SpellToRender } from '@/types/index'
 
 import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
 import CustomSpellIcon from '../CustomSpell/CustomSpellIcon'
+import CustomSpellName from '../CustomSpell/CustomSpellName'
 import { useTimelineContext } from '../TimelineProvider/useTimelineContext'
 import { useMemo } from 'react'
 
@@ -64,7 +65,11 @@ const SpellName = ({
             className="inline-block"
           />
         )}
-        {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
+        {isCustom ? (
+          <CustomSpellName spell={spellCast.spell as CustomSpell} />
+        ) : (
+          wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name
+        )}
       </div>
     </div>
   )
@@ -92,7 +97,11 @@ const SpellNameWithCharges = ({
           className={`flex h-[38px] w-full flex-row items-center justify-end gap-2 truncate text-right`}
         >
           {isCustom && <CustomSpellIcon spell={spellCast.spell as CustomSpell} size="sm" />}
-          {wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name}
+          {isCustom ? (
+            <CustomSpellName spell={spellCast.spell as CustomSpell} />
+          ) : (
+            wowheadNameMap[spellCast.spell.spellId] || spellCast.spell.name
+          )}
         </div>
         {Array.from({ length: spellCast.chargesUsed - 1 }).map((_, index) => (
           <div

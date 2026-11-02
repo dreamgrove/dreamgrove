@@ -2,6 +2,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import type { BossAbilityCast, BossAbilitiesResponse } from '@/types/bossAbilities'
 import { hasWarcraftLogsCredentials, queryWarcraftLogs, WclError } from '@/lib/warcraftLogs'
 
+// Guide embeds fetch this on every page view, and the top log rarely changes within hours,
+// so successful responses are kept in memory per encounter + difficulty.
+const CACHE_TTL_MS = 6 * 60 * 60 * 1000
+const responseCache = new Map<string, { body: BossAbilitiesResponse; expiresAt: number }>()
+
 function emptyResponse(
   encounterId: number,
   difficulty: number,
@@ -32,6 +37,12 @@ export async function GET(request: NextRequest) {
 
     if (!Number.isFinite(encounterId) || encounterId <= 0) {
       return NextResponse.json(emptyResponse(encounterId, difficulty, 'Invalid encounterId'))
+    }
+
+    const cacheKey = `${encounterId}:${difficulty}`
+    const cached = responseCache.get(cacheKey)
+    if (cached && Date.now() < cached.expiresAt) {
+      return NextResponse.json(cached.body)
     }
 
     // (a) Pick top-1 ranked report for this encounter.
@@ -134,13 +145,17 @@ export async function GET(request: NextRequest) {
     const fight = report?.fights?.[0]
     const actors: Array<{ id: number; name: string; subType: string; gameID: number }> =
       report?.masterData?.actors ?? []
-    const abilityCatalog: Array<{ gameID: number; name: string }> =
+    const abilityCatalog: Array<{ gameID: number; name: string; icon?: string }> =
       report?.masterData?.abilities ?? []
     const abilityNameById = new Map<number, string>()
+    // WCL icon filenames match Wowhead's (e.g. "spell_nature_starfall.jpg"); boss spells
+    // aren't on our spell CDN, so the client needs these to render an icon.
+    const abilityIconById = new Map<number, string>()
     for (const a of abilityCatalog) {
-      if (typeof a?.gameID === 'number' && a?.name) {
-        abilityNameById.set(a.gameID, a.name)
-      }
+      if (typeof a?.gameID !== 'number') continue
+      if (a?.name) abilityNameById.set(a.gameID, a.name)
+      const icon = a?.icon?.replace(/\.jpg$/i, '')
+      if (icon && icon !== 'inv_misc_questionmark') abilityIconById.set(a.gameID, icon)
     }
 
     if (!fight || typeof fight.startTime !== 'number' || typeof fight.endTime !== 'number') {
@@ -198,11 +213,19 @@ export async function GET(request: NextRequest) {
     const bossActorIds = new Set(bossActors.map((a) => a.id))
     const eventBatches = [allEvents.filter((e) => bossActorIds.has(Number(e?.sourceID)))]
 
-    // Group by abilityGameID; union across multiple boss actors for multi-boss encounters.
-    // Merge near-simultaneous casts (council-style fights where several boss actors cast
-    // the same ability within a fraction of a second).
+    // Group by ability name
+    // The earliest-cast ID represents the group for its icon and tooltip.
+    // Merge near-simultaneous casts.
     const DEDUPE_WINDOW_S = 0.5
-    const grouped = new Map<number, { name: string; timestamps: number[] }>()
+    const grouped = new Map<
+      string,
+      {
+        spellId: number
+        spellIds: number[]
+        icon?: string
+        timestamps: number[]
+      }
+    >()
     for (const batch of eventBatches) {
       if (!Array.isArray(batch)) continue
       for (const evt of batch) {
@@ -212,14 +235,19 @@ export async function GET(request: NextRequest) {
         const ts = (Number(evt.timestamp) - fight.startTime) / 1000
         if (!Number.isFinite(ts)) continue
         const rounded = Math.round(ts * 10) / 10
-        const existing = grouped.get(abilityId)
+        const name = abilityNameById.get(abilityId) || `Ability ${abilityId}`
+        const existing = grouped.get(name)
         if (existing) {
+          if (!existing.spellIds.includes(abilityId)) existing.spellIds.push(abilityId)
+          existing.icon ??= abilityIconById.get(abilityId)
           const lastTs = existing.timestamps[existing.timestamps.length - 1]
-          if (rounded - lastTs < DEDUPE_WINDOW_S) continue
+          if (Math.abs(rounded - lastTs) < DEDUPE_WINDOW_S) continue
           existing.timestamps.push(rounded)
         } else {
-          grouped.set(abilityId, {
-            name: abilityNameById.get(abilityId) || `Ability ${abilityId}`,
+          grouped.set(name, {
+            spellId: abilityId,
+            spellIds: [abilityId],
+            icon: abilityIconById.get(abilityId),
             timestamps: [rounded],
           })
         }
@@ -227,10 +255,12 @@ export async function GET(request: NextRequest) {
     }
 
     const abilities: BossAbilityCast[] = Array.from(grouped.entries())
-      .map(([abilityId, { name, timestamps }]) => ({
-        key: `boss-${abilityId}`,
-        spellId: abilityId,
+      .map(([name, { spellId, spellIds, icon, timestamps }]) => ({
+        key: `boss-${spellId}`,
+        spellId,
+        spellIds,
         name,
+        icon,
         timestamps: timestamps.slice().sort((a, b) => a - b),
       }))
       .filter((a) => a.timestamps.length > 0)
@@ -244,6 +274,7 @@ export async function GET(request: NextRequest) {
       fightID,
       abilities,
     }
+    responseCache.set(cacheKey, { body, expiresAt: Date.now() + CACHE_TTL_MS })
     return NextResponse.json(body)
   } catch (error: any) {
     const encounterId = Number(request.nextUrl.searchParams.get('encounterId') || 0)

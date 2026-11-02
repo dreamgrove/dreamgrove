@@ -1,13 +1,34 @@
 import Icon from '@/components/Icon'
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { isCustomSpell, CustomSpell } from '@/lib/utils/customSpellStorage'
+import { encodeLoadout } from '@/lib/utils/loadoutCode'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 import { formatTime } from '@/lib/utils/utilityFunctions'
 
+type ExportFormat = 'mrt' | 'loadout'
+
+const EXPORT_OPTIONS: { format: ExportFormat; label: string }[] = [
+  { format: 'mrt', label: 'MRT Note' },
+  { format: 'loadout', label: 'Loadout String' },
+]
+
 export default function MRTExport() {
-  const { processedState } = useTimelineContext()
+  const { processedState, currentSpec, activeTalents, inputEvents } = useTimelineContext()
   const timeline = processedState.spells
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle')
+  const [isOpen, setIsOpen] = useState(false)
+  const panelRef = useRef<HTMLDivElement>(null)
+
+  // Close on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
 
   // Generate MRT note from timeline
   const mrtNote = useMemo(() => {
@@ -36,9 +57,12 @@ export default function MRTExport() {
       .join('\n')
   }, [timeline])
 
-  const handleExportClick = async () => {
+  const handleExport = async (format: ExportFormat) => {
+    setIsOpen(false)
     try {
-      await navigator.clipboard.writeText(mrtNote)
+      const text =
+        format === 'mrt' ? mrtNote : encodeLoadout(currentSpec, activeTalents, inputEvents)
+      await navigator.clipboard.writeText(text)
       setCopyStatus('copied')
       setTimeout(() => setCopyStatus('idle'), 2000)
     } catch (err) {
@@ -54,11 +78,11 @@ export default function MRTExport() {
 
   return (
     <div className="pr-2">
-      <div className="">
+      <div ref={panelRef} className="relative">
         <button
-          onClick={handleExportClick}
+          onClick={() => setIsOpen((p) => !p)}
           id="mrt-export-selector"
-          className={`min-w-[140px] shrink-0 rounded-sm border border-transparent px-3 py-[5px] text-sm font-medium text-white transition-colors duration-200 focus:ring-0 focus:ring-offset-0 focus:outline-none ${
+          className={`flex min-w-[140px] shrink-0 items-center justify-center gap-1 rounded-sm border border-transparent px-3 py-[5px] text-sm font-medium text-white transition-colors duration-200 focus:ring-0 focus:ring-offset-0 focus:outline-none ${
             copyStatus === 'copied'
               ? 'bg-emerald-600 hover:bg-emerald-700'
               : copyStatus === 'error'
@@ -77,9 +101,31 @@ export default function MRTExport() {
               Error
             </span>
           ) : (
-            'Export MRT Note'
+            <>
+              Export as...
+              <Icon
+                name="chevronDownThin"
+                className={`h-3.5 w-3.5 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+              />
+            </>
           )}
         </button>
+
+        {isOpen && (
+          <div className="absolute top-full right-0 z-50 mt-1.5 w-40 overflow-hidden rounded border border-neutral-600/60 bg-neutral-900/98 shadow-xl shadow-black/40 backdrop-blur-md">
+            {EXPORT_OPTIONS.map((option) => (
+              <button
+                key={option.format}
+                onClick={() => handleExport(option.format)}
+                className="group flex w-full items-center border-b border-neutral-800/60 px-3 py-2 text-left transition-colors last:border-b-0 hover:bg-neutral-800/40"
+              >
+                <span className="text-sm font-medium text-neutral-200 transition-colors group-hover:text-white">
+                  {option.label}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )

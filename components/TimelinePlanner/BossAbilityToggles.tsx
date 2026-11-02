@@ -1,6 +1,7 @@
 'use client'
 
-import WowheadClientIcon from '@/components/csm/WowheadClientIcon'
+import WowheadClientIcon from '@/components/cms/WowheadClientIcon'
+import { buildWowheadUrl } from '@/lib/wowhead/urls'
 import type { BossAbilityCast } from '@/types/bossAbilities'
 import { BOSS_ABILITY_PALETTE, computeAbilityColors } from './bossAbilityPalette'
 
@@ -75,16 +76,25 @@ export default function BossAbilityToggles({
                     checked ? 'opacity-90' : 'opacity-40'
                   }`}
                 />
-                <span className="h-5 w-5 flex-shrink-0">
+                {/* The href only exists so Wowhead's tooltips.js attaches a tooltip */}
+                <a
+                  href={buildWowheadUrl('spell', String(ability.spellId), ability.name)}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    onToggle(ability.key)
+                  }}
+                  className="h-5 w-5 flex-shrink-0"
+                >
                   <WowheadClientIcon
                     id={String(ability.spellId)}
                     type="spell"
                     name={ability.name}
+                    icon={ability.icon}
                     iconSize={20}
                     noMargin
                     noLink
                   />
-                </span>
+                </a>
                 <span className="truncate" title={ability.name}>
                   {ability.name}
                 </span>

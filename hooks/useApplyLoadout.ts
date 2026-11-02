@@ -15,7 +15,7 @@ export function useApplyLoadout() {
     (code: string) => {
       const decoded = decodeLoadout(code)
 
-      const allSpells = [...localSpells, ...decoded.customSpells]
+      const allSpells = [...decoded.customSpells, ...localSpells]
       const spellMap = new Map(allSpells.map((s) => [s.spellId, s]))
 
       const events: PlayerAction[] = []

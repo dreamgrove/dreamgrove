@@ -10,19 +10,25 @@ export interface CustomSpell extends SpellInfo {
   mrtSpellId?: number // Optional spell ID for MRT export
 }
 
+const CUSTOM_SPELL_COLORS = [
+  '#4B4376',
+  '#1A3636',
+  '#49243E',
+  '#344955',
+  '#331D2C',
+  '#27374D',
+  '#393053',
+  '#3F4E4F',
+]
+
 // Generate a random color for custom spells
 function generateRandomColor(): string {
-  const colors = [
-    '#4B4376',
-    '#1A3636',
-    '#49243E',
-    '#344955',
-    '#331D2C',
-    '#27374D',
-    '#393053',
-    '#3F4E4F',
-  ]
-  return colors[Math.floor(Math.random() * colors.length)]
+  return CUSTOM_SPELL_COLORS[Math.floor(Math.random() * CUSTOM_SPELL_COLORS.length)]
+}
+
+/** A stable color for a custom spell decoded without one, so server and client agree */
+export function customSpellColorFor(spellId: number): string {
+  return CUSTOM_SPELL_COLORS[Math.abs(spellId) % CUSTOM_SPELL_COLORS.length]
 }
 
 function saveCustomSpells(customSpells: CustomSpell[]): void {

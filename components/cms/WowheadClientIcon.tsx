@@ -14,6 +14,8 @@ interface WowheadIconProps {
   noLink?: boolean
   noMargin?: boolean
   locale?: PageLocale
+  /** Wowhead icon filename (no extension). When set, it's used directly and no lookup runs. */
+  icon?: string
 }
 
 function WowheadClientIcon({
@@ -26,12 +28,14 @@ function WowheadClientIcon({
   noLink = false,
   noMargin = false,
   locale,
+  icon,
 }: WowheadIconProps) {
   const whUrl = url !== '' ? url : buildWowheadUrl(type, id, name, beta, locale)
 
   // Spell icons are hosted on our own CDN keyed directly by spell id, so the URL is
   // deterministic and needs no Wowhead lookup.
-  const isHostedSpell = type === 'spell' && !!id
+  // Boss/NPC spells aren't on that CDN, so callers that know the icon (e.g. from WCL) pass it.
+  const isHostedSpell = !icon && type === 'spell' && !!id
 
   const [iconFilename, setIconFilename] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -40,7 +44,7 @@ function WowheadClientIcon({
 
   // Load icon filename on mount for non-spell types (items/npcs return a Wowhead icon slug).
   useEffect(() => {
-    if (isHostedSpell) return
+    if (isHostedSpell || icon) return
     if (iconFilename) return
 
     const fetchIcon = async () => {
@@ -66,12 +70,13 @@ function WowheadClientIcon({
     }
 
     fetchIcon()
-  }, [id, type, beta, isHostedSpell, iconFilename, name, url])
+  }, [id, type, beta, isHostedSpell, icon, iconFilename, name, url])
 
+  const resolvedIcon = icon || iconFilename
   const imageSrc = isHostedSpell
     ? `https://cdn.simcode.dev/${id}.jpg`
-    : iconFilename
-      ? `https://wow.zamimg.com/images/wow/icons/large/${iconFilename}.jpg`
+    : resolvedIcon
+      ? `https://wow.zamimg.com/images/wow/icons/large/${resolvedIcon}.jpg`
       : null
 
   if (!size) {
@@ -137,6 +142,7 @@ export default memo(WowheadClientIcon, (prevProps, nextProps) => {
   return (
     prevProps.id === nextProps.id &&
     prevProps.type === nextProps.type &&
+    prevProps.icon === nextProps.icon &&
     prevProps.iconSize === nextProps.iconSize
   )
 })

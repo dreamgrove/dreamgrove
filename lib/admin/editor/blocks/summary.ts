@@ -74,9 +74,22 @@ export function blockFields(match: TagMatch): BlockField[] {
       )
       break
     }
-    case 'planner':
-      out.push({ label: 'Share code', value: str('code') || '—', mono: true, wide: true })
+    case 'planner': {
+      const abilities = values.abilities as string[]
+      out.push(
+        { label: 'Share code', value: str('code') || '—', mono: true, wide: true },
+        !!str('encounter') && {
+          label: 'Encounter',
+          value: option('encounter') ?? str('encounter'),
+        },
+        !!str('encounter') && {
+          label: 'Boss abilities',
+          value: abilities.length ? abilities.join(', ') : 'None selected',
+          wide: true,
+        }
+      )
       break
+    }
     case 'youtube': {
       const start = Number(str('start'))
       out.push(
