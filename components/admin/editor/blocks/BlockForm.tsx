@@ -2,7 +2,7 @@
 
 import { Fragment, useState } from 'react'
 import type { BlockDef, Field } from '@/lib/admin/editor/blocks/registry'
-import { validate, type FormState } from '@/lib/admin/editor/blocks/form'
+import { emptyForm, validate, type FormState } from '@/lib/admin/editor/blocks/form'
 import type { ImageUploads } from '@/lib/admin/imageUploads'
 import Dialog from '@/components/admin/ui/Dialog'
 import Icon from '@/components/Icon'
@@ -49,7 +49,16 @@ export default function BlockForm({
   const error = validate(block, state)
 
   const set = (key: string, value: unknown) =>
-    setState((s) => ({ ...s, values: { ...s.values, [key]: value } }))
+    setState((s) => {
+      const values = { ...s.values, [key]: value }
+      const resets = block.fields.find((f) => f.key === key)?.resets ?? []
+      if (resets.length) {
+        const empty = emptyForm(block).values
+        for (const k of resets) values[k] = empty[k]
+      }
+      return { ...s, values }
+    })
+  const shown = block.fields.filter((f) => !f.dependsOn || !!state.values[f.dependsOn])
 
   const submit = (e?: React.FormEvent) => {
     e?.preventDefault()
@@ -99,7 +108,7 @@ export default function BlockForm({
       }
     >
       <form onSubmit={submit} className="flex flex-col gap-[26px]">
-        {layout(block.fields).map((section, si) => (
+        {layout(shown).map((section, si) => (
           <Fragment key={si}>
             {si > 0 && <div className="h-px bg-dg-line-soft" />}
             <section className="grid grid-cols-1 gap-x-3 gap-y-3.5 sm:grid-cols-2">
@@ -141,6 +150,7 @@ export default function BlockForm({
                     key={group[0].key}
                     field={group[0]}
                     value={state.values[group[0].key]}
+                    values={state.values}
                     locked={state.locked.includes(group[0].key)}
                     currentSpec={currentSpec}
                     images={images}

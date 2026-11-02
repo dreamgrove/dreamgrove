@@ -13,6 +13,8 @@ interface PlannerEmbedClientVersionProps {
   code: string
   children?: React.ReactNode
   locale?: PageLocale
+  encounter?: string | number
+  abilities?: (string | number)[] | string
 }
 
 // Client mirror of components/custom/PlannerEmbed.tsx for the admin live
@@ -22,6 +24,8 @@ export default function PlannerEmbedClientVersion({
   code,
   children,
   locale,
+  encounter,
+  abilities,
 }: PlannerEmbedClientVersionProps) {
   const spells: SpellInfo[] = useMemo(
     () =>
@@ -58,7 +62,14 @@ export default function PlannerEmbedClientVersion({
   }, [code, spells, locale])
 
   return (
-    <PlannerEmbedCore code={code} spells={spells} spellNames={spellNames} locale={locale}>
+    <PlannerEmbedCore
+      code={code}
+      spells={spells}
+      spellNames={spellNames}
+      locale={locale}
+      encounter={encounter}
+      abilities={abilities}
+    >
       {children}
     </PlannerEmbedCore>
   )

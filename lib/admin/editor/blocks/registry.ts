@@ -2,6 +2,7 @@
 // block menu. tags.ts finds them in a document, form.ts reads and writes their
 // attributes, summary.ts describes them for rich mode's cards.
 
+import { ENCOUNTERS } from '@/data/encounters'
 import { SPECS } from '@/data/specs'
 
 export type FieldKind =
@@ -16,6 +17,7 @@ export type FieldKind =
   | 'talentColors'
   | 'image'
   | 'table'
+  | 'bossAbilities'
 
 export interface Field {
   key: string
@@ -39,14 +41,14 @@ export interface Field {
   section?: string
   /** Content between the opening and closing tags rather than an attribute */
   body?: boolean
+  /** Only shown once this other field has a value; `bossAbilities` reads it as the encounter */
+  dependsOn?: string
+  /** Fields cleared when this one changes, e.g. abilities when the encounter does */
+  resets?: string[]
 }
 
 export type BlockCategory =
-  | 'Spells and Talents'
-  | 'Structural'
-  | 'Conditionals'
-  | 'Spells & items'
-  | 'Media'
+  'Spells and Talents' | 'Structural' | 'Conditionals' | 'Spells & items' | 'Media'
 
 export interface BlockDef {
   id: string
@@ -205,6 +207,24 @@ export const BLOCKS: BlockDef[] = [
         placeholder: 'DG1AQ…',
         help: 'Copy the share code from the planner.',
         link: { href: '/planner', label: 'Open the planner' },
+      },
+      {
+        key: 'encounter',
+        label: 'Show boss abilities',
+        kind: 'select',
+        options: [
+          { value: '', label: 'None' },
+          ...ENCOUNTERS.map((e) => ({ value: e.id, label: e.name })),
+        ],
+        resets: ['abilities'],
+      },
+      {
+        key: 'abilities',
+        // Drawn by the picker itself, beside Show all / Hide all
+        label: '',
+        kind: 'bossAbilities',
+        dependsOn: 'encounter',
+        wide: true,
       },
     ],
   },

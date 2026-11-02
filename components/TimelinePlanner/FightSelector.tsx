@@ -1,27 +1,12 @@
 import Icon from '@/components/Icon'
-import React from 'react'
-
-export interface EncounterOption {
-  id: string
-  name: string
-}
+import { ENCOUNTERS, type EncounterOption } from '@/data/encounters'
 
 interface FightSelectorProps {
   currentEncounterId: string
   onEncounterChange: (encounterId: string) => void
 }
 
-export const encounterOptions: EncounterOption[] = [
-  { id: 'empty', name: 'Empty' },
-  { id: '3470', name: "Nek'zali the Soulcoiler" },
-  { id: '3445', name: 'Entombed Sentinels' },
-  { id: '3455', name: 'Vashnik the Malignant' },
-  { id: '3497', name: 'The Lost Explorers' },
-  { id: '3420', name: 'Sszorak' },
-  { id: '3421', name: 'The Twin Fangs' },
-  { id: '3429', name: 'The Coiled Altar' },
-  { id: '3492', name: "Ula'tek" },
-]
+export const encounterOptions: EncounterOption[] = [{ id: 'empty', name: 'Empty' }, ...ENCOUNTERS]
 
 export default function FightSelector({
   currentEncounterId,

@@ -140,6 +140,7 @@ function coerce(field: Field, value: unknown): unknown {
       return value === '' || value == null ? '' : String(value)
     case 'spells':
     case 'strings':
+    case 'bossAbilities':
       return Array.isArray(value) ? value.map(String) : []
     case 'table':
       return Array.isArray(value)
@@ -229,7 +230,8 @@ function serializeField(field: Field, value: unknown): string | null {
       if (!s) return null
       return /^-?\d+(\.\d+)?$/.test(s) ? `${field.key}={${s}}` : `${field.key}=${jsString(s)}`
     }
-    case 'spells': {
+    case 'spells':
+    case 'bossAbilities': {
       const ids = (value as string[]).filter(Boolean)
       if (!ids.length) return null
       return `${field.key}={[${ids.map((id) => (/^\d+$/.test(id) ? id : jsString(id))).join(', ')}]}`

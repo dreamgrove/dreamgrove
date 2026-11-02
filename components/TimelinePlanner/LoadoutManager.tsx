@@ -5,7 +5,6 @@ import React, { useState, useRef, useEffect, useMemo } from 'react'
 import { useTimelineContext } from './TimelineProvider/useTimelineContext'
 import { useLoadouts, Loadout } from '@/hooks/useLoadouts'
 import { useApplyLoadout } from '@/hooks/useApplyLoadout'
-import { encodeLoadout } from '@/lib/utils/loadoutCode'
 import defaultLoadouts from '@/other/defaultLoadouts.json'
 
 interface PresetLoadout {
@@ -37,7 +36,6 @@ export default function LoadoutManager() {
   const [isImporting, setIsImporting] = useState(false)
   const [importCode, setImportCode] = useState('')
   const [importError, setImportError] = useState('')
-  const [exportCopied, setExportCopied] = useState(false)
   const [presetError, setPresetError] = useState('')
 
   const presets = useMemo(() => getPresetsForSpec(currentSpec), [currentSpec])
@@ -108,17 +106,6 @@ export default function LoadoutManager() {
   useEffect(() => {
     if (isImporting) importInputRef.current?.focus()
   }, [isImporting])
-
-  const handleExport = () => {
-    try {
-      const code = encodeLoadout(currentSpec, activeTalents, inputEvents)
-      navigator.clipboard.writeText(code)
-      setExportCopied(true)
-      setTimeout(() => setExportCopied(false), 2000)
-    } catch {
-      // Silently fail
-    }
-  }
 
   const handleImport = () => {
     const code = importCode.trim()
@@ -210,22 +197,6 @@ export default function LoadoutManager() {
                 className="rounded-sm p-1 text-neutral-500 transition-colors hover:bg-neutral-700/50 hover:text-neutral-300"
               >
                 <Icon name="import" className="h-3.5 w-3.5" />
-              </button>
-              {/* Export */}
-              <button
-                onClick={handleExport}
-                title={exportCopied ? 'Copied!' : 'Export to clipboard'}
-                className={`rounded-sm p-1 transition-colors ${
-                  exportCopied
-                    ? 'text-green-400'
-                    : 'text-neutral-500 hover:bg-neutral-700/50 hover:text-neutral-300'
-                }`}
-              >
-                {exportCopied ? (
-                  <Icon name="checkThin" className="h-3.5 w-3.5" />
-                ) : (
-                  <Icon name="export" className="h-3.5 w-3.5" />
-                )}
               </button>
               <button
                 onClick={() => {

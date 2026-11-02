@@ -1,4 +1,5 @@
 import { Talents, SpellInfo, DRUID_SPECS, DruidSpec } from '@/types/timeline'
+import { CustomSpell, customSpellColorFor, isCustomSpell } from '@/lib/utils/customSpellStorage'
 
 /**
  * Compact binary encoding for loadout import/export.
@@ -84,6 +85,8 @@ export function encodeLoadout(
       ch: s.charges,
       ...(s.channeled ? { cn: 1 } : {}),
       ...(s.can_interrupt === false ? { ci: 0 } : {}),
+      ...(isCustomSpell(s) && s.mrtSpellId ? { m: s.mrtSpellId } : {}),
+      ...(isCustomSpell(s) ? { co: s.color } : {}),
     }))
     const customJson = JSON.stringify(customArr)
     const customB64 = btoa(customJson).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
@@ -99,7 +102,7 @@ interface DecodedLoadout {
   spec: DruidSpec
   activeTalents: string[]
   events: { spellId: number; instant: number }[]
-  customSpells: SpellInfo[]
+  customSpells: CustomSpell[]
 }
 
 function b64urlToBytes(b64url: string): Uint8Array {
@@ -145,7 +148,7 @@ export function decodeLoadout(code: string): DecodedLoadout {
   }
 
   // Decode custom spells if present
-  const customSpells: SpellInfo[] = []
+  const customSpells: CustomSpell[] = []
   if (customB64) {
     try {
       let b64 = customB64.replace(/-/g, '+').replace(/_/g, '/')
@@ -162,6 +165,10 @@ export function decodeLoadout(code: string): DecodedLoadout {
           charges: s.ch,
           channeled: s.cn === 1,
           can_interrupt: s.ci !== 0,
+          isCustom: true,
+          color: /^#[0-9a-f]{6}$/i.test(s.co) ? s.co : customSpellColorFor(s.i),
+          createdAt: 0,
+          ...(typeof s.m === 'number' ? { mrtSpellId: s.m } : {}),
         })
       }
     } catch {

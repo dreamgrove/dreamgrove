@@ -6,6 +6,7 @@ import type { ImageUploads } from '@/lib/admin/imageUploads'
 import type { Spell } from '@/lib/admin/spells'
 import Icon from '@/components/Icon'
 import { HELP, INPUT, LABEL, TEXTAREA } from '@/components/admin/ui/styles'
+import BossAbilityPicker from './BossAbilityPicker'
 import ChipInput from './ChipInput'
 import ImageInput from './ImageInput'
 import { SpellInput, SpellList } from './SpellInputs'
@@ -17,6 +18,7 @@ import TalentColors from './TalentColors'
 export default function FieldRow({
   field,
   value,
+  values,
   locked,
   currentSpec,
   images,
@@ -25,6 +27,8 @@ export default function FieldRow({
 }: {
   field: Field
   value: unknown
+  /** The whole form, for fields that read another one (`dependsOn`) */
+  values: Record<string, unknown>
   locked: boolean
   currentSpec: string | null
   images: ImageUploads
@@ -115,6 +119,17 @@ export default function FieldRow({
             value={(value as string[]) ?? []}
             onChange={onChange}
             suggest={field.suggest}
+          />
+        )
+        break
+      case 'bossAbilities':
+        control = (
+          <BossAbilityPicker
+            id={id}
+            label="Boss abilities"
+            encounterId={String(values[field.dependsOn ?? ''] ?? '')}
+            value={(value as string[]) ?? []}
+            onChange={onChange}
           />
         )
         break

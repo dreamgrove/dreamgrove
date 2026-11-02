@@ -8,16 +8,26 @@ import { simulateLoadout, SimulatedLoadout } from '@/lib/embed/loadoutTimeline'
 import { splitCastsByCharges } from '@/lib/timeline_events/splitCastsByCharges'
 import CastBars from '@/components/TimelinePlanner/Cast/CastBars'
 import CustomSpellIcon from '@/components/TimelinePlanner/CustomSpell/CustomSpellIcon'
+import CustomSpellName from '@/components/TimelinePlanner/CustomSpell/CustomSpellName'
 import { CustomSpell, isCustomSpell } from '@/lib/utils/customSpellStorage'
 import type { PageLocale } from '@/lib/pageLocale'
 import { formatTime } from '@/lib/utils/utilityFunctions'
 import { plannerEmbedStrings, PlannerEmbedStrings } from './strings'
+import WowheadClientIcon from '@/components/cms/WowheadClientIcon'
+import {
+  BOSS_ABILITY_PALETTE,
+  computeAbilityColors,
+} from '@/components/TimelinePlanner/bossAbilityPalette'
+import { useBossAbilities } from '@/hooks/useBossAbilities'
+import { parseAbilityRefs, selectBossAbilities } from '@/lib/bossAbilities'
 
 const ROW_H = 40 // h-10, matches the planner's cast rows
 const ROW_GAP = 16 // space between rows, split above and below each
 const ROW_PITCH = ROW_H + ROW_GAP
 const HEADER_H = 24 // time label band above the rows
 const NAME_COL_W = 184 // fits names like Celestial Alignment ×2 on one line
+const BOSS_H = 30 // boss ability icon band, between the time labels and the rows
+const BOSS_ICON = 20
 
 interface PlannerEmbedCoreProps {
   code: string
@@ -27,6 +37,10 @@ interface PlannerEmbedCoreProps {
   maxPixelsPerSecond?: number
   children?: React.ReactNode
   locale?: PageLocale
+  /** Warcraft Logs encounter id */
+  encounter?: string | number
+  /** Boss abilities to show, by name or spell id (array or comma-separated string) */
+  abilities?: unknown
 }
 
 function formatTimestamp(seconds: number): string {
@@ -111,8 +125,13 @@ export default function PlannerEmbedCore({
   maxPixelsPerSecond = 16,
   children,
   locale,
+  encounter,
+  abilities,
 }: PlannerEmbedCoreProps) {
   const t = plannerEmbedStrings(locale)
+  const abilityRefs = parseAbilityRefs(abilities)
+  const encounterId = encounter && abilityRefs.length ? String(encounter) : null
+  const { data: bossData } = useBossAbilities(encounterId)
   const trackRef = useRef<HTMLDivElement>(null)
   const [trackWidth, setTrackWidth] = useState(0)
 
@@ -165,6 +184,11 @@ export default function PlannerEmbedCore({
   const totalRows = sim.spells.reduce((acc, s) => acc + rowCount(s), 0)
   const rowsHeight = totalRows * ROW_PITCH
 
+  const bossAbilities = bossData ? selectBossAbilities(bossData.abilities, abilityRefs) : []
+  const bossColors = computeAbilityColors(bossAbilities)
+  const bossH = bossAbilities.length ? BOSS_H : 0
+  const rowsTop = HEADER_H + bossH
+
   const markerSpacing = pickMarkerSpacing(pixelsPerSecond)
   const markerPositions: number[] = []
   if (measured) {
@@ -179,6 +203,14 @@ export default function PlannerEmbedCore({
         {/* Left: spell names */}
         <div className="shrink-0" style={{ width: NAME_COL_W, minWidth: 100 }}>
           <div style={{ height: HEADER_H }} />
+          {bossH > 0 && (
+            <div
+              className="flex items-center justify-end border-r-2 border-orange-500/50 pr-2 text-right text-xs text-gray-400"
+              style={{ height: bossH }}
+            >
+              <span className="truncate">{bossData?.encounter.name || t.bossAbilities}</span>
+            </div>
+          )}
           {sim.spells.map((spellRow) => {
             const isCustom = isCustomSpell(spellRow.spell)
             const rows = rowCount(spellRow)
@@ -198,7 +230,11 @@ export default function PlannerEmbedCore({
                   />
                 )}
                 <span className="min-w-0">
-                  {spellNames[spellRow.spell.spellId] || spellRow.spell.name}
+                  {isCustom ? (
+                    <CustomSpellName spell={spellRow.spell as CustomSpell} locale={locale} />
+                  ) : (
+                    spellNames[spellRow.spell.spellId] || spellRow.spell.name
+                  )}
                 </span>
                 {rows > 1 && (
                   <span className="shrink-0 text-[0.7rem] text-orange-300/80">
@@ -214,7 +250,7 @@ export default function PlannerEmbedCore({
         <div ref={trackRef} className="relative flex-1 overflow-x-auto overflow-y-hidden">
           <div
             className="relative"
-            style={{ width: measured ? contentWidth : '100%', height: HEADER_H + rowsHeight }}
+            style={{ width: measured ? contentWidth : '100%', height: rowsTop + rowsHeight }}
           >
             {/* Time markers */}
             {measured && (
@@ -239,8 +275,46 @@ export default function PlannerEmbedCore({
               </div>
             )}
 
+            {/* Boss abilities */}
+            {measured &&
+              bossAbilities.flatMap((ability) => {
+                const colorClass = bossColors.get(ability.name) ?? BOSS_ABILITY_PALETTE[0]
+                return ability.timestamps
+                  .filter((ts) => ts >= 0 && ts <= sim.timelineLengthS)
+                  .map((ts, i) => (
+                    <div
+                      key={`embed-boss-${ability.key}-${i}`}
+                      className="absolute top-0 h-full"
+                      style={{ left: `${ts * pixelsPerSecond}px` }}
+                    >
+                      <div
+                        className={`pointer-events-none absolute w-px ${colorClass} opacity-40`}
+                        style={{ top: HEADER_H + BOSS_H - 4, bottom: 0 }}
+                      />
+                      <span
+                        className="absolute z-20 -translate-x-1/2"
+                        style={{
+                          top: HEADER_H + (BOSS_H - BOSS_ICON) / 2 - 2,
+                          width: BOSS_ICON,
+                          height: BOSS_ICON,
+                        }}
+                      >
+                        <WowheadClientIcon
+                          id={String(ability.spellId)}
+                          type="spell"
+                          name={ability.name}
+                          icon={ability.icon}
+                          iconSize={BOSS_ICON}
+                          noMargin
+                          locale={locale}
+                        />
+                      </span>
+                    </div>
+                  ))
+              })}
+
             {/* Cast rows */}
-            <div className="absolute right-0 left-0" style={{ top: HEADER_H }}>
+            <div className="absolute right-0 left-0" style={{ top: rowsTop }}>
               {measured &&
                 sim.spells.map((spellRow) => {
                   const chargeRows =
